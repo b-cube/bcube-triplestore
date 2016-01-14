@@ -1,0 +1,65 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:0ac8b99e-9413-42c1-878e-56ea95277f31> bcube:hasType "theme" ;
+    bcube:hasValue "NGDA",
+        "National Geospatial Data Asset",
+        "Water Inland Theme" ;
+    dc:partOf "NGDA Portfolio Themes" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:2ff20c3e-6210-4312-8263-acc4e9867604> a "ISO 19115:2003/19139" ;
+    bcube:dateCreated "2015-08-09T05:39:44.961Z" ;
+    bcube:lastUpdated "2015-08-09T05:39:44.961Z" ;
+    bcube:originatedFrom <urn:uuid:456a1067-14fd-4765-8be1-99378e8dc0cb> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:6f4dbc98-f051-449b-9fb3-85edcf4e25fa> .
+
+<urn:uuid:456a1067-14fd-4765-8be1-99378e8dc0cb> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-09T05:39:44.961Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-09T05:39:44.961Z" ;
+    dc:identifier "urn:sha:5710ca7ed757705ee3a6d28743940ce221333e3ed97e708e7ea5a2cc" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "https://catalog.data.gov/harvest/object/1cfbbef1-d793-49c8-81da-3ed224a82825" .
+
+<urn:uuid:6b300281-baf4-4c02-8ea7-06d51768aa07> bcube:hasValue "inlandWaters" ;
+    dc:partOf "IsoTopicCategories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:6f4dbc98-f051-449b-9fb3-85edcf4e25fa> bcube:dateCreated "2015-08-09T05:39:44.961Z" ;
+    bcube:hasMetadataRecord <urn:uuid:2ff20c3e-6210-4312-8263-acc4e9867604> ;
+    bcube:lastUpdated "2015-08-09T05:39:44.961Z" ;
+    dc:conformsTo <urn:uuid:0ac8b99e-9413-42c1-878e-56ea95277f31>,
+        <urn:uuid:6b300281-baf4-4c02-8ea7-06d51768aa07>,
+        <urn:uuid:7735440f-ac46-4b25-9772-d5889e6630f1> ;
+    dc:description "The National Inventory of Dams (NID) is a congressionally authorized database documenting dams in the United States and its territories. It is maintained and published by the US Army Corps of Engineers. It contains information about a dam's location, size, purpose, type, last inspection and regulatory facts. More information can be found at http://nid.usace.army.mil/." ;
+    dc:spatial "POLYGON ((-159.666594 13.397614,-159.666594 64.802932,-63.669317 64.802932,-63.669317 13.397614,-159.666594 13.397614))" ;
+    dcterms:title "National Inventory of Dams (NID)" ;
+    esip:eastBound "-63.669317"^^xsd:float ;
+    esip:northBound "64.802932"^^xsd:float ;
+    esip:southBound "13.397614"^^xsd:float ;
+    esip:westBound "-159.666594"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:7735440f-ac46-4b25-9772-d5889e6630f1> bcube:hasType "theme" ;
+    bcube:hasValue "National Inventory of Dams",
+        "dams" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+

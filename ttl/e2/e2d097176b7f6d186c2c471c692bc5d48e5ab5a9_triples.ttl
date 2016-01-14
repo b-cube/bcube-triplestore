@@ -1,0 +1,89 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:0dd1e120-de8f-4558-bdbe-9925b51f9199> bcube:hasType "theme" ;
+    bcube:hasValue "Area landmark identifier",
+        "Landmark",
+        "Permanent face ID",
+        "State FIPS Code",
+        "State GNIS Code",
+        "State or equivalent entity",
+        "Table",
+        "Topological Faces" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:3a094488-6510-4621-9bde-8168388dc057> bcube:dateCreated "2015-11-06T12:57:46.414Z" ;
+    bcube:hasMetadataRecord <urn:uuid:674d2dec-f520-4be4-a8e1-79a9a4ffb859> ;
+    bcube:lastUpdated "2015-11-06T12:57:46.414Z" ;
+    dc:conformsTo <urn:uuid:0dd1e120-de8f-4558-bdbe-9925b51f9199>,
+        <urn:uuid:a5602099-8d06-47d0-8051-0171377ac482>,
+        <urn:uuid:cf4ef239-6322-4e8b-bbeb-577a5d0f5736> ;
+    dc:description "The TIGER/Line shapefiles and related database files (.dbf) are an extract of selected geographic and cartographic information from the U.S. Census Bureau's Master Address File / Topologically Integrated Geographic Encoding and Referencing (MAF/TIGER) Database (MTDB). The MTDB represents a seamless national file with no overlaps or gaps between parts, however, each TIGER/Line shapefile is designed to stand alone as an independent data set, or they can be combined to cover the entire nation. The Topological Faces / Area Landmark Relationship File (FACESAL.dbf) contains a record for each face / area landmark relationship. Face refers to the areal (polygon) topological primitives that make up MTDB. A face is bounded by one or more edges; its boundary includes only the edges that separate it from other faces, not any interior edges contained within the area of the face. The face to which a record in the Topological Faces / Area Landmark Relationship File (FACESAL.dbf) applies can be determined by linking to the Topological Faces Shapefile (FACES.shp) on the permanent topological face identifier (TFID) attribute. The area landmark to which a record in the Topological Faces / Area Landmark Relationship File (FACESAL.dbf) applies can be determined by linking to the Area Landmark Shapefile (AREALM.shp) on the area landmark identifier (AREAID) attribute. A face may be part of multiple area landmarks. An area landmark may consist of multiple faces." ;
+    dc:spatial "POLYGON ((-124.848974 45.543541,-124.848974 49.002494,-116.91558 49.002494,-116.91558 45.543541,-124.848974 45.543541))" ;
+    dcterms:references <urn:uuid:dbab6437-0090-4d58-ba97-d09a4e176fa4> ;
+    dcterms:title "TIGER/Line Shapefile, 2014, state, Washington, Topological Faces-Area Landmark State-based Relationship File" ;
+    esip:eastBound "-116.91558"^^xsd:float ;
+    esip:endDate "2014-05-05"^^xsd:date ;
+    esip:northBound "49.002494"^^xsd:float ;
+    esip:southBound "45.543541"^^xsd:float ;
+    esip:startDate "2013-06-05"^^xsd:date ;
+    esip:westBound "-124.848974"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:4581065b-3fff-4bb6-b35c-02dcbc7cb186> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-06T12:57:46.414Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-06T12:57:46.414Z" ;
+    dc:identifier "urn:sha:535baad2df4197a70bbc432ccc7e6382689d8fc37ba0c4b4b1f4c4ce" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://meta.geo.census.gov/data/existing/decennial/GEO/GPMB/TIGERline/TIGER2014/facesal/tl_2014_53_facesal.dbf.iso.xml" .
+
+<urn:uuid:674d2dec-f520-4be4-a8e1-79a9a4ffb859> a "ISO 19115:2003/19139" ;
+    bcube:dateCreated "2015-11-06T12:57:46.414Z" ;
+    bcube:lastUpdated "2015-11-06T12:57:46.414Z" ;
+    bcube:originatedFrom <urn:uuid:4581065b-3fff-4bb6-b35c-02dcbc7cb186> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:3a094488-6510-4621-9bde-8168388dc057> .
+
+<urn:uuid:a5602099-8d06-47d0-8051-0171377ac482> bcube:hasType "place" ;
+    bcube:hasValue "53",
+        "State or Equivalent Entity",
+        "U.S.",
+        "United States",
+        "WA",
+        "Washington" ;
+    dc:partOf "ANSI INCITS 38:2009 (Formerly FIPS 5-2), ANSI INCITS 31:2009 (Formerly FIPS 6-4),ANSI INCITS 454:2009 (Formerly FIPS 8-6), ANSI INCITS 455:2009(Formerly FIPS 9-1), ANSI INCITS 446:2008 (Geographic Names Information System (GNIS))" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:cf4ef239-6322-4e8b-bbeb-577a5d0f5736> bcube:hasValue "boundaries" ;
+    dc:partOf "IsoTopicCategories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:dbab6437-0090-4d58-ba97-d09a4e176fa4> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-06T12:57:46.414Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-06T12:57:46.414Z" ;
+    dc:identifier "urn:sha:ecc46ce454292473f659679fdd7ccdf37ff439fa9e9924b44f57c4be" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www2.census.gov/geo/tiger/TIGER2014/FACESAL/tl_2014_53_facesal.zip" .
+

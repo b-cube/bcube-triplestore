@@ -1,0 +1,79 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:0e486f5e-0d3d-48b8-81c2-c064cbd8924d> bcube:hasType "theme" ;
+    bcube:hasValue "Land Use",
+        "NRRC",
+        "Summaries",
+        "usginres:service" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:10c9413f-5822-406e-b4ef-dd5b32b5052b> a "ISO 19115:2003/19139" ;
+    bcube:dateCreated "2015-10-17T20:37:32.876Z" ;
+    bcube:lastUpdated "2015-10-17T20:37:32.876Z" ;
+    bcube:originatedFrom <urn:uuid:9fdf504a-3d26-4d26-a7ec-3f509cf87e79> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:1a592f91-68a6-4028-bac0-dbe5b56ae89b> .
+
+<urn:uuid:1a592f91-68a6-4028-bac0-dbe5b56ae89b> bcube:dateCreated "2015-10-17T20:37:32.876Z" ;
+    bcube:hasMetadataRecord <urn:uuid:10c9413f-5822-406e-b4ef-dd5b32b5052b> ;
+    bcube:lastUpdated "2015-10-17T20:37:32.876Z" ;
+    dc:conformsTo <urn:uuid:0e486f5e-0d3d-48b8-81c2-c064cbd8924d>,
+        <urn:uuid:413d3ea3-2d51-4836-8457-4943d7faeb3c>,
+        <urn:uuid:c6852ecf-274b-4d6f-979e-c52dbd0f4e7b> ;
+    dc:description "Contains 2010 MAG EXLU and FLU summarized by land use type, for places and Maricopa County. Used by the 2010 land use viewer." ;
+    dc:spatial "POLYGON ((-111.71 34.81,-111.71 32.58,-113.42 32.58,-113.42 34.81,-111.71 34.81))" ;
+    dcterms:references <urn:uuid:f21df2ba-e892-46a7-8374-cc5adde7e2cc> ;
+    dcterms:title "2010 Existing and Future Land Use Summarized by Land Use Type for Maricopa County, Arizona - maps/LandUseSummaries" ;
+    esip:eastBound "-113.42"^^xsd:float ;
+    esip:endDate "1900-01-01"^^xsd:date ;
+    esip:northBound "32.58"^^xsd:float ;
+    esip:southBound "34.81"^^xsd:float ;
+    esip:startDate "1900-01-01"^^xsd:date ;
+    esip:westBound "-111.71"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:413d3ea3-2d51-4836-8457-4943d7faeb3c> bcube:hasValue "geoscientificInformation" ;
+    dc:partOf "IsoTopicCategories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:9fdf504a-3d26-4d26-a7ec-3f509cf87e79> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-10-17T20:37:32.876Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-10-17T20:37:32.876Z" ;
+    dc:identifier "urn:sha:eea34b34f0ce591f6bc496d608b4601c4658c63f3728488393f1d9c2" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://repository.stategeothermaldata.org/resources/metadata/TestNRRC/4D629EDCC1D240B3AD069E718651597A.xml" .
+
+<urn:uuid:c6852ecf-274b-4d6f-979e-c52dbd0f4e7b> bcube:hasType "place" ;
+    bcube:hasValue "Arizona",
+        "Maricopa County" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:f21df2ba-e892-46a7-8374-cc5adde7e2cc> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-10-17T20:37:32.876Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-10-17T20:37:32.876Z" ;
+    dc:identifier "urn:sha:d87f101e83ce8d4eada59fd6acfc8415a2e9d6e6cdfb28a9024b5e66" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "https://geo.azmag.gov/gismag/rest/services/maps/LandUseSummaries/MapServer" .
+

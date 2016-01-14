@@ -1,0 +1,80 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:0b67b3ac-6f1a-4fb0-97b4-abffbd56f822> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-08-10T00:34:20.916Z" ;
+    bcube:lastUpdated "2015-08-10T00:34:20.916Z" ;
+    bcube:originatedFrom <urn:uuid:8899da23-e8f4-4f1d-babc-6a81445d95de> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:c02c59aa-5c3b-48c6-8731-9af41fee7695> .
+
+<urn:uuid:30878486-8b30-4b92-9229-13ffd1a71d75> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-10T00:34:20.916Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-10T00:34:20.916Z" ;
+    dc:identifier "urn:sha:8d06189e91554821a84896b1b18df73964f4cf54949729d8ad3c0a2b" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://water.usgs.gov/GIS/dsdl/ds412/index.html" .
+
+<urn:uuid:55d71f88-95bb-4ae8-8957-145f41bcbb1e> bcube:hasType "place" ;
+    bcube:hasValue "Idaho ID",
+        "NORTH AMERICA",
+        "UNITED STATES",
+        "UNITED STATES OF AMERICA" ;
+    dc:partOf "GCMD Location Keywords" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:57f8a031-d3ac-4dc7-9d76-6ae3a40e284f> owl:a foaf:Organization ;
+    foaf:name "U.S. Geological Survey" .
+
+<urn:uuid:8899da23-e8f4-4f1d-babc-6a81445d95de> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-10T00:34:20.916Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-10T00:34:20.916Z" ;
+    dc:identifier "urn:sha:1dca28df05cc4e5851c4b60510dbf56831835204846db840acd15570" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://water.usgs.gov/lookup/getspatial?ds412_syntheticperennialstreams" .
+
+<urn:uuid:b5aeb466-da1a-41f3-aabd-721a4340c6bd> bcube:hasType "theme" ;
+    bcube:hasValue "hydrography",
+        "inlandWaters",
+        "perennial streams" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:c02c59aa-5c3b-48c6-8731-9af41fee7695> bcube:dateCreated "2015-08-10T00:34:20.916Z" ;
+    bcube:hasMetadataRecord <urn:uuid:0b67b3ac-6f1a-4fb0-97b4-abffbd56f822> ;
+    bcube:lastUpdated "2015-08-10T00:34:20.916Z" ;
+    dc:conformsTo <urn:uuid:55d71f88-95bb-4ae8-8957-145f41bcbb1e>,
+        <urn:uuid:b5aeb466-da1a-41f3-aabd-721a4340c6bd> ;
+    dc:description "Perennial streams in Idaho have been modeled using regression equations for 7-day, 2-year low flows (7Q2) described in Wood and others (2009, U.S. Geological Survey Scientific Investigations Report 2009-5015). The model produces \"synthetic\" streams based on 10-meter resolution digitial elevation models that have been processed to agree closely with 1:24,000-scale National Hydrography Dataset flowlines. Lines having attribute PerCode = 1 represent model grid cells having 7Q2 flow estimates between 0.1 cubic feet per second (ft3/s) and 0.1 minus the standard error for the applicable regional regression equation. Lines having attribute PerCode = 2 represent model grid cells having 7Q2 flow estimates between 0.1 ft3/s and 0.1 plus the standard error for the applicable regional regression equation. Lines having attribute PerCode = 3 represent model grid cells having 7Q2 flow estimates greater than 0.1 ft3/s plus the standard error for the applicable regional regression equation. These three categories of lines indicate approximate levels of uncertainty in the model results, with lines having PerCode = 1 representing the most uncertainty, and lines having PerCode = 3 representing the least uncertainty with respect to representing a perennial stream." ;
+    dc:spatial "POLYGON ((-118.56635 41.088104,-118.56635 49.04867,-110.219926 49.04867,-110.219926 41.088104,-118.56635 41.088104))" ;
+    dcterms:publisher <urn:uuid:57f8a031-d3ac-4dc7-9d76-6ae3a40e284f> ;
+    dcterms:references <urn:uuid:30878486-8b30-4b92-9229-13ffd1a71d75> ;
+    dcterms:title "Estimated Perennial Streams in Idaho" ;
+    esip:eastBound "-110.219926"^^xsd:float ;
+    esip:northBound "49.04867"^^xsd:float ;
+    esip:southBound "41.088104"^^xsd:float ;
+    esip:startDate "2009-01-01"^^xsd:date ;
+    esip:westBound "-118.56635"^^xsd:float ;
+    owl:a dcat:Dataset .
+

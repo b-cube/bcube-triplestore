@@ -1,0 +1,94 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:1d175f24-9e87-46a1-95b5-9b11952c3621> owl:a foaf:Organization ;
+    foaf:name "U.S. Geological Survey" .
+
+<urn:uuid:4c011ad2-6800-41ba-8e3a-98c532bebacb> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-08-05T04:46:25.693Z" ;
+    bcube:lastUpdated "2015-08-05T04:46:25.693Z" ;
+    bcube:originatedFrom <urn:uuid:cce678e5-f588-4025-a985-19cfdc5f2b5b> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:92573a56-1d0d-45ed-a612-026c591351ff> .
+
+<urn:uuid:4d97fa22-94ee-4e7c-bbfd-9678c6652a69> bcube:hasType "theme" ;
+    bcube:hasValue "geoscientificinformation",
+        "oceans" ;
+    dc:partOf "ISO 19115 Topic Category" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:92573a56-1d0d-45ed-a612-026c591351ff> bcube:dateCreated "2015-08-05T04:46:25.693Z" ;
+    bcube:hasMetadataRecord <urn:uuid:4c011ad2-6800-41ba-8e3a-98c532bebacb> ;
+    bcube:lastUpdated "2015-08-05T04:46:25.693Z" ;
+    dc:conformsTo <urn:uuid:4d97fa22-94ee-4e7c-bbfd-9678c6652a69>,
+        <urn:uuid:95e5914e-0363-4bb8-8912-f57757cea952>,
+        <urn:uuid:dd497776-a533-45a7-a131-f1d3e642a6cd> ;
+    dc:description "Single-beam bathymetry and magnetic data along with DGPS navigation data was collected as part of field activity F-1-84-SC in Southern California from 04/26/1984 to 05/21/1984, http://walrus.wr.usgs.gov/infobank/f/f184sc/html/f-1-84-sc.meta.html The geophysical source was a Knudsen 12 kHz 320B/R echosounder. These data are reformatted from space-delimited ASCII text files located in the Coastal and Marine Geology Program (CMGP) InfoBank field activity catalog at field activity F-1-84-SC in Southern California from 04/26/1984 to 05/21/1984, http://walrus.wr.usgs.gov/infobank/f/f184sc/html/f-1-84-sc.bath.html into MGD77T format provided by the NOAA's National Geophysical Data Center(NGDC). The MGD77T format includes a header (documentation) file (.h77t) and a data file (.m77t). More information regarding this format can be found in the publication listed in the Cross_reference section of this metadata file." ;
+    dc:spatial "POLYGON ((-124.809 31.3377,-124.809 34.5812,-117.1378 34.5812,-117.1378 31.3377,-124.809 31.3377))" ;
+    dcterms:publisher <urn:uuid:1d175f24-9e87-46a1-95b5-9b11952c3621> ;
+    dcterms:references <urn:uuid:fe423b2e-c122-405d-96f4-dcd00d0a7fe4> ;
+    dcterms:title "f184sc.m77t - MGD77 data file for Geophysical data from field activity F-1-84-SC in Southern California from 04/26/1984 to 05/21/1984" ;
+    esip:eastBound "-117.1378"^^xsd:float ;
+    esip:endDate "1984-08-14"^^xsd:date ;
+    esip:northBound "34.5812"^^xsd:float ;
+    esip:southBound "31.3377"^^xsd:float ;
+    esip:startDate "1984-04-26"^^xsd:date ;
+    esip:westBound "-124.809"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:95e5914e-0363-4bb8-8912-f57757cea952> bcube:hasType "theme" ;
+    bcube:hasValue "Bathymetry",
+        "Magnetic Anomalies",
+        "Marine Geology",
+        "Marine Geophysics",
+        "Marine Magnetic Field",
+        "Seafloor Topography",
+        "Water Depth" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:cce678e5-f588-4025-a985-19cfdc5f2b5b> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-05T04:46:25.693Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-05T04:46:25.693Z" ;
+    dc:identifier "urn:sha:70fb8ab703147f6cb457c3197731fee655aff1492bb4300300bf0a58" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://data.usgs.gov/metadata/Coastal_and_Marine_Geology_Program/5418b6bee4b03f26b3225efe.xml" .
+
+<urn:uuid:dd497776-a533-45a7-a131-f1d3e642a6cd> bcube:hasType "place" ;
+    bcube:hasValue "CA",
+        "North Pacific Ocean",
+        "Northern Pacific Ocean",
+        "Pacific Coast, US",
+        "Southern California",
+        "USA" ;
+    dc:partOf "Geographic Names Information System (GNIS)" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:fe423b2e-c122-405d-96f4-dcd00d0a7fe4> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-05T04:46:25.693Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-05T04:46:25.693Z" ;
+    dc:identifier "urn:sha:364cfd8f6d88c357008822e9bff963b3581a4b0f3b6b8ee942fe3f79" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www.ngdc.noaa.gov/mgg/trk/trackline/farnella/f184sc/mgd77/" .
+

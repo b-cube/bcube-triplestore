@@ -1,0 +1,71 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:12f30201-1930-4b8b-bccc-f0f39c36bec5> bcube:hasValue "elevation" ;
+    dc:partOf "IsoTopicCategories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:37b85823-901e-40a8-a1e6-ca76213ff02d> a "ISO 19115:2003/19139" ;
+    bcube:dateCreated "2015-08-06T20:16:58.749Z" ;
+    bcube:lastUpdated "2015-08-06T20:16:58.749Z" ;
+    bcube:originatedFrom <urn:uuid:c90d1db5-0bcd-40ed-9c50-1d139abc11d1> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:87e956f8-c115-4a03-b5c2-910e29b06c15> .
+
+<urn:uuid:48dc4ff4-7f8d-463f-919d-788bf0b9a04f> bcube:hasType "place" ;
+    bcube:hasValue "King William County",
+        "Virginia" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:8053564e-e36c-4b76-8178-8128aee4b01a> bcube:hasType "theme" ;
+    bcube:hasValue "Breaklines",
+        "DEM",
+        "Elevation",
+        "FEMA",
+        "LAS",
+        "Lidar",
+        "USGS" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:87e956f8-c115-4a03-b5c2-910e29b06c15> bcube:dateCreated "2015-08-06T20:16:58.749Z" ;
+    bcube:hasMetadataRecord <urn:uuid:37b85823-901e-40a8-a1e6-ca76213ff02d> ;
+    bcube:lastUpdated "2015-08-06T20:16:58.749Z" ;
+    dc:conformsTo <urn:uuid:12f30201-1930-4b8b-bccc-f0f39c36bec5>,
+        <urn:uuid:48dc4ff4-7f8d-463f-919d-788bf0b9a04f>,
+        <urn:uuid:8053564e-e36c-4b76-8178-8128aee4b01a> ;
+    dc:description "Dewberry collected LiDAR for ~3,341 square miles in various Virginia Counties, a part of Worcester County, and Hooper's Island. The acquisition was performed by Terrapoint. This metadata covers the LiDAR produced for the King William project area. The nominal pulse spacing for this project is 1.6 ft (0.5 meters). This project was collected with a sensor which collects intensity values for each discrete pulse extracted from the waveform. GPS Week Time, Intensity, Flightline and echo number attributes were provided for each LiDAR point. Dewberry used proprietary procedures to classify the LAS according to contract specifications: 1-Unclassified, 2-Ground, 7-Noise, 9-Water, 10-Ignored Ground due to breakline proximity, and 11-Withheld (reclassified by OCM to Class 15). Dewberry produced 3D breaklines and combined these with the final LiDAR data to produce seamless hydro flattened DEMs for the 415 tiles (5000 ft x 5000 ft) that cover the project area." ;
+    dc:spatial "POLYGON ((-77.370438879 37.510110491,-77.370438879 37.919034743,-76.716798791 37.919034743,-76.716798791 37.510110491,-77.370438879 37.510110491))" ;
+    dcterms:title "King William - VA FEMA LiDAR" ;
+    esip:eastBound "-76.716798791"^^xsd:float ;
+    esip:endDate "2011-10-27"^^xsd:date ;
+    esip:northBound "37.919034743"^^xsd:float ;
+    esip:southBound "37.510110491"^^xsd:float ;
+    esip:startDate "2011-04-19"^^xsd:date ;
+    esip:westBound "-77.370438879"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:c90d1db5-0bcd-40ed-9c50-1d139abc11d1> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-06T20:16:58.749Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-06T20:16:58.749Z" ;
+    dc:identifier "urn:sha:3386055e31bca190d1f8ba7bbe5531204a813107becdea7f8a7f5880" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://coast.noaa.gov/data/Documents/Metadata/isoharvest/Lidar/var/tmp/va2011_usgs_fema_kingwilliam_m4726_ISOmetadata_cleaned.xml" .
+

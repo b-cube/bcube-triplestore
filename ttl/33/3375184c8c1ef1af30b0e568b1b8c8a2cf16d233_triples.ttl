@@ -1,0 +1,54 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:15e85ec4-3407-41d6-acbc-a6105d9d8a69> bcube:hasType "theme" ;
+    bcube:hasValue "geospatial datasets",
+        "h07 = Upper Mississippi",
+        "land use and land cover",
+        "rivers" ;
+    dc:partOf "Alexandria Digital Library Feature Type Thesaurus" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:26a07df8-e292-49fa-810b-f562772e94bd> a "ISO 19115:2003/19139" ;
+    bcube:dateCreated "2014-10-30T02:41:35.753Z" ;
+    bcube:lastUpdated "2014-10-30T02:41:35.753Z" ;
+    bcube:originatedFrom <urn:uuid:3b17e150-f209-476e-8ae3-c1158c4c5e30> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:c7b63021-a084-4b3a-81e0-80f6dbcd6927> .
+
+<urn:uuid:3b17e150-f209-476e-8ae3-c1158c4c5e30> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2014-10-30T02:41:35.753Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2014-10-30T02:41:35.753Z" ;
+    dc:identifier "urn:sha:87d805298e6d478ec24f66b59eb1e09a90a5b224ad6429da17d0266e" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www.usgs.gov/science/iso.php?cite=1587" .
+
+<urn:uuid:7dc13117-3298-43c8-86ed-9a1c925ca77f> bcube:hasValue "geoscientificInformation" ;
+    dc:partOf "IsoTopicCategories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:c7b63021-a084-4b3a-81e0-80f6dbcd6927> bcube:dateCreated "2014-10-30T02:41:35.753Z" ;
+    bcube:hasMetadataRecord <urn:uuid:26a07df8-e292-49fa-810b-f562772e94bd> ;
+    bcube:lastUpdated "2014-10-30T02:41:35.753Z" ;
+    dc:conformsTo <urn:uuid:15e85ec4-3407-41d6-acbc-a6105d9d8a69>,
+        <urn:uuid:7dc13117-3298-43c8-86ed-9a1c925ca77f> ;
+    dc:description "Maps and GIS data depicting land use and land cover in areas near the upper Mississippi River. Historical data are available, dating from the 1890s, 1975, and more regularly from the late 1980s to 2000." ;
+    dcterms:title "Upper Mississippi River land cover and land use data" ;
+    owl:a dcat:Dataset .
+

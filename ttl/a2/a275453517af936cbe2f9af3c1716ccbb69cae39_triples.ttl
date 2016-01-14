@@ -1,0 +1,77 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:0f827f3b-78eb-43c2-b5d4-5199abb3d92e> bcube:hasType "theme" ;
+    bcube:hasValue "groundfish surveys",
+        "habitat",
+        "hydroaccoustic",
+        "time series",
+        "trawl" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:392e0251-d94a-4ee4-bae5-9902fbad2ed4> bcube:hasType "place" ;
+    bcube:hasValue "Alaska",
+        "Aleutian Islands",
+        "Eastern Bering Sea Shelf",
+        "Gulf of Alaska" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:51d9a938-e3f9-4fd6-8084-7b91bc07ae91> bcube:dateCreated "2015-07-12T00:15:19.88Z" ;
+    bcube:hasMetadataRecord <urn:uuid:5bb10cd5-1f24-474f-8b90-c477791200d8> ;
+    bcube:lastUpdated "2015-07-12T00:15:19.88Z" ;
+    dc:conformsTo <urn:uuid:0f827f3b-78eb-43c2-b5d4-5199abb3d92e>,
+        <urn:uuid:392e0251-d94a-4ee4-bae5-9902fbad2ed4>,
+        <urn:uuid:db2a208d-0ca3-4162-a002-4e13603ac97d> ;
+    dc:description "Calibrated midwater and bottom backscatter data collected continuously with ES-60 echosounders throughout the bottom trawlsurvey period, continuing a time series of such data begun in 2005. Raw acoustic data was logged continuously 24 hours/day for each of the four legs of the cruise. The data is stored as raw files on the AFSC network drive." ;
+    dc:spatial "POLYGON ((170 50,170.0 73.04425,-117.4167 73.04425,-117.4167 50.0,170 50))" ;
+    dcterms:identifier "gov.noaa.nmfs.inport:22415" ;
+    dcterms:publisher <urn:uuid:c9bc472b-a230-400d-a318-fcebcaa39fbe> ;
+    dcterms:title "AFSC/RACE/GAP/vonSzalay: The Eastern Bering Sea Shelf, Gulf of Alaska, and Aleutian Islands Simrad ES 60 Acoustic Data Collected on Bottom Trawl Surveys" ;
+    esip:eastBound "-117.4167"^^xsd:float ;
+    esip:endDate "2014-01-01"^^xsd:date ;
+    esip:northBound "73.04425"^^xsd:float ;
+    esip:southBound "50.0"^^xsd:float ;
+    esip:startDate "2005-01-01"^^xsd:date ;
+    esip:westBound "170.0"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:5bb10cd5-1f24-474f-8b90-c477791200d8> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-07-12T00:15:19.88Z" ;
+    bcube:lastUpdated "2015-07-12T00:15:19.88Z" ;
+    bcube:originatedFrom <urn:uuid:fcbf847c-d16f-42f9-9dfa-8b67ad9a4bf2> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:51d9a938-e3f9-4fd6-8084-7b91bc07ae91> .
+
+<urn:uuid:c9bc472b-a230-400d-a318-fcebcaa39fbe> owl:a foaf:Organization ;
+    foaf:name "" .
+
+<urn:uuid:db2a208d-0ca3-4162-a002-4e13603ac97d> bcube:hasType "temporal" ;
+    bcube:hasValue "summer" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:fcbf847c-d16f-42f9-9dfa-8b67ad9a4bf2> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-07-12T00:15:19.88Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-07-12T00:15:19.88Z" ;
+    dc:identifier "urn:sha:68716b3d5fc30132ba986915c9049273ca77eb8ac02a5ecda31443d9" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "https://inport.nmfs.noaa.gov/inport/item/22415/fgdc" .
+

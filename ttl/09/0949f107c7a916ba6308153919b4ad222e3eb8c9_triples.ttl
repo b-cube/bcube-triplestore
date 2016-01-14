@@ -1,0 +1,100 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:03b55089-92d2-4ebb-8ba2-9f033286e892> bcube:hasType "theme" ;
+    bcube:hasValue "0.2-Percent-Annual-Chance Flood",
+        "1-Percent-Annual-Chance Flood",
+        "10-Percent-Annual-Chance Flood",
+        "2-Percent-Annual-Chance Flood",
+        "DFIRM",
+        "Digital Flood Insurance Rate Map",
+        "Flood Hazard data",
+        "Hydrograph",
+        "Hydrology",
+        "Landuse",
+        "Link",
+        "Node",
+        "Sheet Runoff",
+        "Soil",
+        "Soil Type",
+        "Stage",
+        "Stream",
+        "Unit Hydrograph",
+        "Water Body",
+        "Watershed/Basin" ;
+    dc:partOf "FEMA NFIP Topic Category" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:2a864542-6c16-49e7-b275-1cd867243a42> bcube:hasValue "environment",
+        "inlandWaters" ;
+    dc:partOf "IsoTopicCategories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:2d7ca108-36be-4d5e-8a5b-07cecd94be2a> a "ISO 19115:2003/19139" ;
+    bcube:dateCreated "2015-08-09T05:20:15.883Z" ;
+    bcube:lastUpdated "2015-08-09T05:20:15.883Z" ;
+    bcube:originatedFrom <urn:uuid:eb3fcc49-5505-4c6b-9c9f-5b1417921046> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:471905c8-ea99-409f-a573-4f3eb9068217> .
+
+<urn:uuid:471905c8-ea99-409f-a573-4f3eb9068217> bcube:dateCreated "2015-08-09T05:20:15.883Z" ;
+    bcube:hasMetadataRecord <urn:uuid:2d7ca108-36be-4d5e-8a5b-07cecd94be2a> ;
+    bcube:lastUpdated "2015-08-09T05:20:15.883Z" ;
+    dc:conformsTo <urn:uuid:03b55089-92d2-4ebb-8ba2-9f033286e892>,
+        <urn:uuid:2a864542-6c16-49e7-b275-1cd867243a42>,
+        <urn:uuid:bdd70768-487e-442e-a1ac-ce04f83a1479> ;
+    dc:description "Hydrology data include spatial datasets and data tables necessary for documenting the hydrologic procedures for estimating flood discharges for a flood insurance study, which includes the hydrologic data expected by FEMA for new riverline studies. (Source: FEMA Guidelines and Specifications, Appendix N)" ;
+    dc:spatial "POLYGON ((-83.75 43.2,-83.75 43.75,-83.05 43.75,-83.05 43.2,-83.75 43.2))" ;
+    dcterms:references <urn:uuid:5b1a49f6-4a75-4577-ade0-36e9d494246a> ;
+    dcterms:title "HYDROLOGY, TUSCOLA COUNTY, MI, USA" ;
+    esip:eastBound "-83.05"^^xsd:float ;
+    esip:northBound "43.75"^^xsd:float ;
+    esip:southBound "43.2"^^xsd:float ;
+    esip:westBound "-83.75"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:5b1a49f6-4a75-4577-ade0-36e9d494246a> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-09T05:20:15.883Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-09T05:20:15.883Z" ;
+    dc:identifier "urn:sha:37c915397238031daced09ae0e2dd3bf54e84a6477f749c2cc9dcbdf" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://hazards.fema.gov" .
+
+<urn:uuid:bdd70768-487e-442e-a1ac-ce04f83a1479> bcube:hasType "place" ;
+    bcube:hasValue "COMMUNITY TUSCOLA COUNTY, MICHIGAN AND INCORPORATED AREAS",
+        "COUNTY SANILAC",
+        "COUNTY-FIPS 0157",
+        "FEMA-CID 26157C",
+        "REGION 05",
+        "STATE MI" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:eb3fcc49-5505-4c6b-9c9f-5b1417921046> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-09T05:20:15.883Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-09T05:20:15.883Z" ;
+    dc:identifier "urn:sha:d673db8c021e8b55117d1388311c39a367f15f37aa6d9775b3eb04bc" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "https://catalog.data.gov/harvest/object/692939b5-1f02-493b-9e56-69abc08525cb" .
+

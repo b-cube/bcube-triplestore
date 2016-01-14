@@ -1,0 +1,89 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:1d816177-2ffb-4ac2-ac72-104b6fbdd4f0> bcube:hasType "place" ;
+    bcube:hasValue "49",
+        "State or Equivalent Entity",
+        "U.S.",
+        "UT",
+        "United States",
+        "Utah" ;
+    dc:partOf "FIPS Publication 5-2, FIPS Publication 6-4, FIPS Publication 8-6, FIPS Publication 9-1,FIPS Publication55-4" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:34aa7a90-1b39-4fb7-897f-818e9ebcde60> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-11-05T07:30:48.169Z" ;
+    bcube:lastUpdated "2015-11-05T07:30:48.169Z" ;
+    bcube:originatedFrom <urn:uuid:9b12bd23-4af7-4104-9621-a7d8626a888b> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:663676ad-e255-4538-ada0-a6093bef549b> .
+
+<urn:uuid:640c3938-3c21-4570-832d-c942e5c944b1> bcube:hasType "theme" ;
+    bcube:hasValue "boundaries" ;
+    dc:partOf "ISO 19115 Topic Categories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:663676ad-e255-4538-ada0-a6093bef549b> bcube:dateCreated "2015-11-05T07:30:48.169Z" ;
+    bcube:hasMetadataRecord <urn:uuid:34aa7a90-1b39-4fb7-897f-818e9ebcde60> ;
+    bcube:lastUpdated "2015-11-05T07:30:48.169Z" ;
+    dc:conformsTo <urn:uuid:1d816177-2ffb-4ac2-ac72-104b6fbdd4f0>,
+        <urn:uuid:640c3938-3c21-4570-832d-c942e5c944b1>,
+        <urn:uuid:e79c4e08-bdb8-4a44-9cd7-3c17616005ea> ;
+    dc:description "The TIGER/Line Shapefiles are an extract of selected geographic and cartographic information from the Census MAF/TIGER database. The Census MAF/TIGER database represents a seamless national file with no overlaps or gaps between parts. However, each TIGER/Line Shapefile is designed to stand alone as an independent data set or the shapefiles can be combined to cover the whole nation." ;
+    dc:spatial "POLYGON ((-114.052998 36.997905,-114.052998 42.001618,-109.041058 42.001618,-109.041058 36.997905,-114.052998 36.997905))" ;
+    dcterms:publisher <urn:uuid:d2b27ba4-e75e-44c5-8134-3eb88c0444b8> ;
+    dcterms:references <urn:uuid:cfe47039-edca-47d6-b219-1b09d2fd204a> ;
+    dcterms:title "TIGER/Line Shapefile, 2008, state, Utah, State Legislative District (SLD) Upper Chamber" ;
+    esip:eastBound "-109.041058"^^xsd:float ;
+    esip:endDate "2008-07-01"^^xsd:date ;
+    esip:northBound "42.001618"^^xsd:float ;
+    esip:southBound "36.997905"^^xsd:float ;
+    esip:startDate "2008-01-01"^^xsd:date ;
+    esip:westBound "-114.052998"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:9b12bd23-4af7-4104-9621-a7d8626a888b> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-05T07:30:48.169Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-05T07:30:48.169Z" ;
+    dc:identifier "urn:sha:8a5ca1f375e418c74136e621b54c4fbcfbc073b8eac4e1e652f6939d" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://meta.geo.census.gov/data/existing/decennial/GEO/GPMB/TIGERline/fe_2008/sldu/tl_2008_49_sldu_url.shp.xml" .
+
+<urn:uuid:cfe47039-edca-47d6-b219-1b09d2fd204a> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-05T07:30:48.169Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-05T07:30:48.169Z" ;
+    dc:identifier "urn:sha:d4934b3594a7a4e74bc79790438cb5fbcd1bd6526a982c9d513c083d" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www2.census.gov/geo/tiger/TIGER2008/49_UTAH/tl_2008_49_sldu.zip" .
+
+<urn:uuid:d2b27ba4-e75e-44c5-8134-3eb88c0444b8> owl:a foaf:Organization ;
+    foaf:name "" .
+
+<urn:uuid:e79c4e08-bdb8-4a44-9cd7-3c17616005ea> bcube:hasType "theme" ;
+    bcube:hasValue "Legislative District",
+        "Polygon",
+        "State or equivalent entity" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+

@@ -1,0 +1,83 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:2ca2c53c-7c1d-4f1a-b28c-d21b36911c36> bcube:hasType "place" ;
+    bcube:hasValue "01121",
+        "County or Equivalent Entity",
+        "Talladega",
+        "U.S.",
+        "United States" ;
+    dc:partOf "ANSI INCITS 38:2009 (Formerly FIPS 5-2), ANSI INCITS 31:2009 (Formerly FIPS 6-4),ANSI INCITS 454:2009 (Formerly FIPS 8-6), ANSI INCITS 455:2009(Formerly FIPS 9-1), ANSI INCITS 446:2008 (Geographic Names Information System (GNIS))" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:a9fa7604-9dff-44ae-9d67-33a378a492dd> a "ISO 19115:2003/19139" ;
+    bcube:dateCreated "2015-11-01T22:44:36.945Z" ;
+    bcube:lastUpdated "2015-11-01T22:44:36.945Z" ;
+    bcube:originatedFrom <urn:uuid:eb95da51-7753-4a82-9a57-dbdb84dceb33> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:b3934c19-3e29-47c1-8d36-9b59238852ed> .
+
+<urn:uuid:b0308579-dae0-4e91-a917-985406077777> bcube:hasType "theme" ;
+    bcube:hasValue "County or equivalent entity",
+        "Hydrography",
+        "Polygon" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:b3934c19-3e29-47c1-8d36-9b59238852ed> bcube:dateCreated "2015-11-01T22:44:36.945Z" ;
+    bcube:hasMetadataRecord <urn:uuid:a9fa7604-9dff-44ae-9d67-33a378a492dd> ;
+    bcube:lastUpdated "2015-11-01T22:44:36.945Z" ;
+    dc:conformsTo <urn:uuid:2ca2c53c-7c1d-4f1a-b28c-d21b36911c36>,
+        <urn:uuid:b0308579-dae0-4e91-a917-985406077777>,
+        <urn:uuid:c10d0d8d-5239-4c75-9f2a-fc7c65b3a350> ;
+    dc:description "The TIGER/Line shapefiles and related database files (.dbf) are an extract of selected geographic and cartographic information from the U.S. Census Bureau's Master Address File / Topologically Integrated Geographic Encoding and Referencing (MAF/TIGER) Database (MTDB). The MTDB represents a seamless national file with no overlaps or gaps between parts, however, each TIGER/Line File is designed to stand alone as an independent data set, or they can be combined to cover the entire nation. The Area Hydrography Shapefile contains the geometry and attributes of both perennial and intermittent area hydrography features, including ponds, lakes, oceans, swamps (up to the U.S. nautical three-mile limit), glaciers, and the area covered by large rivers, streams, and/or canals that are represented as double-line drainage. Single-line drainage water features can be found in the Linear Hydrography Shapefile (LINEARWATER.shp). Linear water features includes single-line drainage water features and artificial path features, where they exist, that run through double-line drainage features such as rivers, streams, and/or canals, and serve as a linear representation of these features." ;
+    dc:spatial "POLYGON ((-86.50359 33.102944,-86.50359 33.699495,-85.794559 33.699495,-85.794559 33.102944,-86.50359 33.102944))" ;
+    dcterms:references <urn:uuid:b4b62485-a24a-49a1-afd1-b0ab8cb84ced> ;
+    dcterms:title "TIGER/Line Shapefile, 2014, county, Talladega County, AL, Area Hydrography County-based Shapefile" ;
+    esip:eastBound "-85.794559"^^xsd:float ;
+    esip:endDate "2014-05-30"^^xsd:date ;
+    esip:northBound "33.699495"^^xsd:float ;
+    esip:southBound "33.102944"^^xsd:float ;
+    esip:startDate "2013-06-30"^^xsd:date ;
+    esip:westBound "-86.50359"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:b4b62485-a24a-49a1-afd1-b0ab8cb84ced> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-01T22:44:36.945Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-01T22:44:36.945Z" ;
+    dc:identifier "urn:sha:fd5c6518558a4c6b5bad26a3d94829f80dcc67e3b0ba0b14dceeb6c2" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www2.census.gov/geo/tiger/TIGER2014/AREAWATER/tl_2014_01121_areawater.zip" .
+
+<urn:uuid:c10d0d8d-5239-4c75-9f2a-fc7c65b3a350> bcube:hasValue "inlandWaters" ;
+    dc:partOf "IsoTopicCategories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:eb95da51-7753-4a82-9a57-dbdb84dceb33> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-01T22:44:36.945Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-01T22:44:36.945Z" ;
+    dc:identifier "urn:sha:c7b80a7194fecae2c139b0fa124fb62ef43b33fcd012c3cad84a25a8" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://meta.geo.census.gov/data/existing/decennial/GEO/GPMB/TIGERline/TIGER2014/areawater/tl_2014_01121_areawater.shp.iso.xml" .
+

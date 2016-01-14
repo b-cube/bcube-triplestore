@@ -1,0 +1,80 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:27db17bc-c4fb-4f74-ba8e-0e59e5710280> bcube:hasType "theme" ;
+    bcube:hasValue "location" ;
+    dc:partOf "ISO 19115 Topic Category" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:45a3f0fe-17a9-44a1-ae6e-3a14671146ed> bcube:hasType "place" ;
+    bcube:hasValue "Montana" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:54ea92d4-fa54-4f87-8415-f2be6fde2c3d> owl:a foaf:Organization ;
+    foaf:name "Montana State Library" .
+
+<urn:uuid:55c18231-cc30-4ded-88ac-1a6be8908320> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-08-10T08:30:00.094Z" ;
+    bcube:lastUpdated "2015-08-10T08:30:00.094Z" ;
+    bcube:originatedFrom <urn:uuid:9887723d-61ce-4dbf-ab0f-c8c39a44c038> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:fe0eeae3-9e5f-427f-a933-a94479eefa3b> .
+
+<urn:uuid:9887723d-61ce-4dbf-ab0f-c8c39a44c038> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-10T08:30:00.094Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-10T08:30:00.094Z" ;
+    dc:identifier "urn:sha:f78f32f03024a43dcc3dd699966881f043bd0ca517d24f3d34611dd0" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://mslapps.mt.gov/Geographic_Information/Data/DataList/datalist_MetadataDetailRaw.aspx?did={7DA41650-6C7E-4B4F-9BBA-B47F1416299D}" .
+
+<urn:uuid:c260ab70-6c3e-4150-93ef-3f3bd08fcad8> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-10T08:30:00.094Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-10T08:30:00.094Z" ;
+    dc:identifier "urn:sha:9c272c1f688c27ced8b919d4029d3809d0e0ced27f603e682bb360e0" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "ftp://ftp.geoinfo.msl.mt.gov/Data/Spatial/NonMSDI/Shapefiles/Quads250k_1997.zip" .
+
+<urn:uuid:dfd75761-d10d-48a8-8946-5212a6b1f48c> bcube:hasType "theme" ;
+    bcube:hasValue "coordinate frame",
+        "quadrangle" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:fe0eeae3-9e5f-427f-a933-a94479eefa3b> bcube:dateCreated "2015-08-10T08:30:00.094Z" ;
+    bcube:hasMetadataRecord <urn:uuid:55c18231-cc30-4ded-88ac-1a6be8908320> ;
+    bcube:lastUpdated "2015-08-10T08:30:00.094Z" ;
+    dc:conformsTo <urn:uuid:27db17bc-c4fb-4f74-ba8e-0e59e5710280>,
+        <urn:uuid:45a3f0fe-17a9-44a1-ae6e-3a14671146ed>,
+        <urn:uuid:dfd75761-d10d-48a8-8946-5212a6b1f48c> ;
+    dc:description "Boundaries of the 1x2 degree 1:250,000 scale quadrangles in Montana." ;
+    dc:spatial "POLYGON ((-117.506104 43.7038727,-117.506104 49.1499748,-103.448555 49.1499748,-103.448555 43.7038727,-117.506104 43.7038727))" ;
+    dcterms:publisher <urn:uuid:54ea92d4-fa54-4f87-8415-f2be6fde2c3d> ;
+    dcterms:references <urn:uuid:c260ab70-6c3e-4150-93ef-3f3bd08fcad8> ;
+    dcterms:title "1:250,000 Scale (1x2 degree) Quadrangle Boundaries, Montana" ;
+    esip:eastBound "-103.448555"^^xsd:float ;
+    esip:northBound "49.1499748"^^xsd:float ;
+    esip:southBound "43.7038727"^^xsd:float ;
+    esip:startDate "1997-07-02"^^xsd:date ;
+    esip:westBound "-117.506104"^^xsd:float ;
+    owl:a dcat:Dataset .
+

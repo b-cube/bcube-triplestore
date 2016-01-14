@@ -1,0 +1,85 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:3b2a8e8e-676c-483d-aa4a-cb6b11893b20> bcube:hasType "temporal" ;
+    bcube:hasValue "2012" ;
+    dc:partOf "none" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:749f92d5-50d1-439a-9fd7-6a48db7d3af2> bcube:dateCreated "2015-08-05T15:46:29.388Z" ;
+    bcube:hasMetadataRecord <urn:uuid:9b0b86b2-d166-4dd5-a3b2-dd0a8b6bc184> ;
+    bcube:lastUpdated "2015-08-05T15:46:29.388Z" ;
+    dc:conformsTo <urn:uuid:3b2a8e8e-676c-483d-aa4a-cb6b11893b20>,
+        <urn:uuid:91989bc8-ff57-4375-b4b3-53d593116480>,
+        <urn:uuid:af6df5cd-f5c5-4d3b-a154-93bce53c24a4>,
+        <urn:uuid:b9363e09-3cd1-445f-bb64-78847eca5ad0> ;
+    dc:description "Dewberry collected LiDAR for ~3,341 square miles in various Virginia Counties, a part of Worcester County, and Hoopers Island. The acquisition was performed by Terrapoint. This metadata covers the LiDAR produced for the Virginia Counties North project area. The nominal pulse spacing for this project is 1.6 ft (0.5 meters). This project was collected with a sensor which collects intensity values for each discrete pulse extracted from the waveform. GPS Week Time, Intensity, Flightline and echo number attributes were provided for each LiDAR point. Dewberry used proprietary procedures to classify the LAS according to contract specifications: 1-Unclassified, 2-Ground, 7-Noise, 9-Water, 10-Ignored Ground due to breakline proximity, and 11-Withheld (Reclassed to 15). Dewberry produced 3D breaklines and combined these with the final LiDAR data to produce seamless hydro flattened DEMs for the 2,140 tiles (5000 ft x 5000 ft) that cover the project area. This collection has been divided into 2 parts (North and South), due to a portion of the data being collected in two zones: Virginia State Plane North 4501 and Virginia State Plane South 4502." ;
+    dc:spatial "POLYGON ((-77.713172 37.746085,-77.713172 38.944008,-76.506493 38.944008,-76.506493 37.746085,-77.713172 37.746085))" ;
+    dcterms:title "2012 USGS-FEMA Lidar: Virginia Northern Counties (South)" ;
+    esip:eastBound "-76.506493"^^xsd:float ;
+    esip:endDate "2012-02-10"^^xsd:date ;
+    esip:northBound "38.944008"^^xsd:float ;
+    esip:southBound "37.746085"^^xsd:float ;
+    esip:startDate "2011-04-19"^^xsd:date ;
+    esip:westBound "-77.713172"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:91989bc8-ff57-4375-b4b3-53d593116480> bcube:hasValue "elevation" ;
+    dc:partOf "IsoTopicCategories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:9b0b86b2-d166-4dd5-a3b2-dd0a8b6bc184> a "ISO 19115:2003/19139" ;
+    bcube:dateCreated "2015-08-05T15:46:29.388Z" ;
+    bcube:lastUpdated "2015-08-05T15:46:29.388Z" ;
+    bcube:originatedFrom <urn:uuid:d3712fc5-1633-46a2-931e-0fdae407e60c> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:749f92d5-50d1-439a-9fd7-6a48db7d3af2> .
+
+<urn:uuid:af6df5cd-f5c5-4d3b-a154-93bce53c24a4> bcube:hasType "place" ;
+    bcube:hasValue "Essex",
+        "Fredericksburg",
+        "King George",
+        "Manassas",
+        "Manassas Park",
+        "Prince William",
+        "Richmond",
+        "Stafford",
+        "Virginia",
+        "Westmoreland" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:b9363e09-3cd1-445f-bb64-78847eca5ad0> bcube:hasType "theme" ;
+    bcube:hasValue "Breaklines",
+        "DEM",
+        "DTM",
+        "Elevation",
+        "Hydro Flattened",
+        "LAS",
+        "Lidar" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:d3712fc5-1633-46a2-931e-0fdae407e60c> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-05T15:46:29.388Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-05T15:46:29.388Z" ;
+    dc:identifier "urn:sha:d7df5ff0124b31bf3dc4ddccb9947e64d22d6504d60b437f8fc7f7e2" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://coast.noaa.gov/data/Documents/Metadata/isoharvest/Lidar/va2012_usgs_fema_northco_S_m4729_ISOmetadata.xml" .
+

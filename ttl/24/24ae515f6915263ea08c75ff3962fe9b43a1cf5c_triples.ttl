@@ -1,0 +1,86 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:54afb74a-70c1-426e-8482-60c90b90e239> bcube:hasType "place" ;
+    bcube:hasValue "Illinois",
+        "Indiana",
+        "Iowa",
+        "Kentucky",
+        "Michigan",
+        "Missouri",
+        "Ohio",
+        "Tennessee",
+        "United States",
+        "Wisconsin" ;
+    dc:partOf "Geographic Names Information System (GNIS)" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:97121641-b430-458b-a6da-45650930321e> bcube:hasType "theme" ;
+    bcube:hasValue "Devonian",
+        "Silurian",
+        "Silurian-Devonian",
+        "aquifer",
+        "aquifer system",
+        "extent",
+        "groundwater",
+        "inlandWaters" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:dde1c7e8-c4ed-47e0-abc9-0dea9466d6ea> a "ISO 19115:2003/19139" ;
+    bcube:dateCreated "2015-10-12T20:57:56.09Z" ;
+    bcube:lastUpdated "2015-10-12T20:57:56.09Z" ;
+    bcube:originatedFrom <urn:uuid:ff1c7849-56a5-43d2-bf29-f380ed7fdf82> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:e048264d-cbd2-49de-a792-b508ae94e1a6> .
+
+<urn:uuid:e048264d-cbd2-49de-a792-b508ae94e1a6> bcube:dateCreated "2015-10-12T20:57:56.09Z" ;
+    bcube:hasMetadataRecord <urn:uuid:dde1c7e8-c4ed-47e0-abc9-0dea9466d6ea> ;
+    bcube:lastUpdated "2015-10-12T20:57:56.09Z" ;
+    dc:conformsTo <urn:uuid:54afb74a-70c1-426e-8482-60c90b90e239>,
+        <urn:uuid:97121641-b430-458b-a6da-45650930321e> ;
+    dc:description "This geodatabase includes spatial datasets that represent the Silurian-Devonian aquifers in the States of Illinois, Indiana, Iowa, Kentucky, Michigan, Missouri, Ohio, Tennessee, and Wisconsin. Included are: (1) polygon extents; datasets that represent the aquifer system extent, and the entire extent subdivided into subareas, (2) raster datasets for the altitude of the top and bottom surfaces of the entire aquifer (where data are available), and (3) altitude contours used to generate the surface rasters. The digitized contours are supplied for reference. The extent of the Silurian-Devonian aquifers is from the linework of the Silurian-Devonian aquifer extent maps in U.S. Geological Survey U.S. Geological Survey Hydrologic Atlas 730, Chapters J and K, (USGS HA 730-J, -K) and a digital version of the aquifer extent presented in the National Aquifer Code Reference List, available at http://water.usgs.gov/ogw/NatlAqCode-reflist.html , \"silurian.zip\". The extent was then modified for each subarea: Subarea 1 (sa1): Primarily in Ohio and Indiana, subject of U.S. Geological Survey Professional Paper 1423 B (USGS PP 1423B). Subarea 2 (sa2): In Iowa. Digital data were available from the Iowa Geologic Survey. Subarea 3 (sa3): Remaining area in Illinois, Wisconsin, Michigan, and Kentucky. Extent is that part of the National Aquifer Code Reference List polygon that remained when the areas of sa1 and sa2 were removed. The altitude and thickness contours that were available for each subarea were compiled or generated from georeferenced figures of altitude contours in USGS PP 1423B for sa1, digital data from IAGS for sa2. There were no vertical data for sa3. The resultant top and bottom altitude values were interpolated into surface rasters within a GIS using tools that create hydrologically correct surfaces from contour data, derive the altitude from the thickness (depth from the land surface), and merge the subareas into a single surface. The primary tool was an enhanced version of \"Topo to Raster\" used in ArcGIS, ArcMap, Esri 2014. The raster surfaces were corrected in the areas where the altitude of an underlying layer of the aquifer exceeded the altitude of an overlying layer." ;
+    dc:spatial "POLYGON ((-96.46726919699999 34.679503069,-96.46726919699999 46.716678272,-81.580344116 46.716678272,-81.580344116 34.679503069,-96.46726919699999 34.679503069))" ;
+    dcterms:references <urn:uuid:f9f4289b-9f97-4d36-9204-cc77a3eb60df> ;
+    dcterms:title "Geodatabase of the datasets that represent the three subareas of the Silurian-Devonian aquifer, Illinois, Indiana, Iowa, Kentucky, Michigan, Missouri, Ohio, Tennessee, and Wisconsin" ;
+    esip:eastBound "-81.580344116"^^xsd:float ;
+    esip:northBound "46.716678272"^^xsd:float ;
+    esip:southBound "34.679503069"^^xsd:float ;
+    esip:westBound "-96.467269197"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:f9f4289b-9f97-4d36-9204-cc77a3eb60df> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-10-12T20:57:56.09Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-10-12T20:57:56.09Z" ;
+    dc:identifier "urn:sha:973ccb9a59df0f07ddbab68a88a5eb99c725ca32d2244eb2049bc2eb" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://water.usgs.gov/GIS/dsdl/ds47SLRDVN_A10_gdb.zip" .
+
+<urn:uuid:ff1c7849-56a5-43d2-bf29-f380ed7fdf82> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-10-12T20:57:56.09Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-10-12T20:57:56.09Z" ;
+    dc:identifier "urn:sha:bf6bf799291f35de5ca1db5abea74a4cc361293bfe00a5b688d8bac1" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "https://catalog.data.gov/harvest/object/d004152c-ebc1-4892-9a8f-567ec4c89e60" .
+

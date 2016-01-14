@@ -1,0 +1,71 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:12a6801a-c68d-480e-bc89-4547c2f26c98> bcube:dateCreated "2015-10-30T11:09:15.721Z" ;
+    bcube:hasMetadataRecord <urn:uuid:82541155-f2ed-403f-9a68-960f24a27b8a> ;
+    bcube:lastUpdated "2015-10-30T11:09:15.721Z" ;
+    dc:conformsTo <urn:uuid:4d1cef51-7ae9-45fa-b098-122904ca794f>,
+        <urn:uuid:78940990-d633-49f3-9d59-170c10e19487>,
+        <urn:uuid:f6989afb-38f5-477f-a701-5fc4cc90f3a7> ;
+    dc:description "The U.S. Census Bureau's year 2010 census block group boundaries and data for the City and County of Denver. The original census block group boundaries have been adjusted to various Denver GIS data layers to increase the spatial accuracy of this data. Although every effort was made to ensure the accurate rectification of the data, due to geographic problems inherent in the original 2010 TIGER shapefiles, errors may exist. This data-set includes the housing and population data from redistricting file P.L. 94-171 of the 2010 census. The data-set does not contain data for any enclaves administered by other jurisdictions that are located within the City and County of Denver's boundary." ;
+    dc:spatial "POLYGON ((-105.109967 39.614311,-105.109967 39.914209,-104.599538 39.914209,-104.599538 39.614311,-105.109967 39.614311))" ;
+    dcterms:publisher <urn:uuid:41b3d61f-6ee2-421a-b183-babfcd0e4cd7> ;
+    dcterms:title "Census Block Groups (2010)" ;
+    esip:eastBound "-104.599538"^^xsd:float ;
+    esip:northBound "39.914209"^^xsd:float ;
+    esip:southBound "39.614311"^^xsd:float ;
+    esip:westBound "-105.109967"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:41b3d61f-6ee2-421a-b183-babfcd0e4cd7> owl:a foaf:Organization ;
+    foaf:name "" .
+
+<urn:uuid:4d1cef51-7ae9-45fa-b098-122904ca794f> bcube:hasType "theme" ;
+    bcube:hasValue "society" ;
+    dc:partOf "ISO 19115 Topic Categories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:78940990-d633-49f3-9d59-170c10e19487> bcube:hasType "theme" ;
+    bcube:hasValue "census",
+        "demographics" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:82541155-f2ed-403f-9a68-960f24a27b8a> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-10-30T11:09:15.721Z" ;
+    bcube:lastUpdated "2015-10-30T11:09:15.721Z" ;
+    bcube:originatedFrom <urn:uuid:84c338b5-fd84-4ea1-bb6c-e2eee91b9b7c> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:12a6801a-c68d-480e-bc89-4547c2f26c98> .
+
+<urn:uuid:84c338b5-fd84-4ea1-bb6c-e2eee91b9b7c> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-10-30T11:09:15.721Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-10-30T11:09:15.721Z" ;
+    dc:identifier "urn:sha:b50026b4745a8623733e2272cd556ac923ab524af0551f7c55b95323" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://data.denvergov.org/download/gis/census_block_groups_2010/metadata/census_block_groups_2010.xml" .
+
+<urn:uuid:f6989afb-38f5-477f-a701-5fc4cc90f3a7> bcube:hasType "place" ;
+    bcube:hasValue "Colorado",
+        "Denver",
+        "Denver County",
+        "USA" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+

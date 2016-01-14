@@ -1,0 +1,101 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:0d0bd19b-89cd-4141-9290-bf826ef4ea88> bcube:hasType "theme" ;
+    bcube:hasValue "Earth Science",
+        "NCDDC",
+        "NCOM",
+        "Ocean NOMAD",
+        "oceans" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:271d77c3-ff73-45f8-9e6f-f9d8ed264d04> bcube:hasValue "geoscientificInformation" ;
+    dc:partOf "IsoTopicCategories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:51153712-0b2b-4a13-a126-c4c16550f6c4> bcube:hasType "project" ;
+    bcube:hasValue "Naval Oceanographic Office via NOAA NCEI" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:54bfa03c-4b4c-469c-8612-a5b8d8f7e2c0> a "ISO 19115:2003/19139" ;
+    bcube:dateCreated "2015-11-01T02:10:14.203Z" ;
+    bcube:lastUpdated "2015-11-01T02:10:14.203Z" ;
+    bcube:originatedFrom <urn:uuid:c99f86ed-a740-4801-9559-8b120d5efdbf> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:7541c97f-1177-48c1-a479-bb65706b92dd> .
+
+<urn:uuid:7541c97f-1177-48c1-a479-bb65706b92dd> bcube:dateCreated "2015-11-01T02:10:14.203Z" ;
+    bcube:hasMetadataRecord <urn:uuid:54bfa03c-4b4c-469c-8612-a5b8d8f7e2c0> ;
+    bcube:lastUpdated "2015-11-01T02:10:14.203Z" ;
+    dc:conformsTo <urn:uuid:0d0bd19b-89cd-4141-9290-bf826ef4ea88>,
+        <urn:uuid:271d77c3-ff73-45f8-9e6f-f9d8ed264d04>,
+        <urn:uuid:51153712-0b2b-4a13-a126-c4c16550f6c4>,
+        <urn:uuid:d765ed7f-4be6-4cec-92c3-b8eb4fc35089> ;
+    dc:description "NCOM US East data from November 19, 2009 to Apr 04, 2013. (includes 3 day forecast)" ;
+    dc:identifier "NCOM_us_east_20091119_to_20130404_2d" ;
+    dc:spatial "POLYGON ((-82 20,-82.0 41.951023,-64.0455 41.951023,-64.0455 20.0,-82 20))" ;
+    dcterms:references <urn:uuid:b404ed1e-2dd2-4e4b-bad7-82874d1193d7>,
+        <urn:uuid:e6246ca8-8c18-464e-b6ca-bc126dd4054c> ;
+    dcterms:title "US East 2D (Nov 19, 2009 to Apr 04, 2013)" ;
+    esip:eastBound "-64.0455"^^xsd:float ;
+    esip:endDate "2013-04-04"^^xsd:date ;
+    esip:northBound "41.951023"^^xsd:float ;
+    esip:southBound "20.0"^^xsd:float ;
+    esip:startDate "2009-11-19"^^xsd:date ;
+    esip:westBound "-82.0"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:b404ed1e-2dd2-4e4b-bad7-82874d1193d7> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-01T02:10:14.203Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-01T02:10:14.203Z" ;
+    dc:identifier "urn:sha:d6e9b23d4754c28bf0ab2f2f5e23dbb16fd79313ae36273643211129" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://ecowatch.ncddc.noaa.gov/erddap/griddap/NCOM_us_east_20091119_to_20130404_2d.html" .
+
+<urn:uuid:c99f86ed-a740-4801-9559-8b120d5efdbf> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-01T02:10:14.203Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-01T02:10:14.203Z" ;
+    dc:identifier "urn:sha:7ca4b3cf17a7d4a1af2feffc8f3d8fa4cc2a84d190f6ddbd74217929" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://ecowatch.ncddc.noaa.gov/erddap/griddap/NCOM_us_east_20091119_to_20130404_2d.iso19115" .
+
+<urn:uuid:d765ed7f-4be6-4cec-92c3-b8eb4fc35089> bcube:hasType "theme" ;
+    bcube:hasValue "latitude",
+        "longitude",
+        "time" ;
+    dc:partOf "CF-1.0" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:e6246ca8-8c18-464e-b6ca-bc126dd4054c> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-01T02:10:14.203Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-01T02:10:14.203Z" ;
+    dc:identifier "urn:sha:6a05a58b0a26cc6095cddb6ec9f9d5aca455f8b5fc633f402120a40b" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://ecowatch.ncddc.noaa.gov/erddap/griddap/NCOM_us_east_20091119_to_20130404_2d.graph" .
+

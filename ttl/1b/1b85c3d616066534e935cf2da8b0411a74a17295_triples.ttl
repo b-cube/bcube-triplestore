@@ -1,0 +1,99 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:39dd540f-b318-4964-a8d3-0fb5b2dec4d1> owl:a foaf:Organization ;
+    foaf:name "National Oceanic and Atmospheric Administration (NOAA), National Ocean Service, Office of Response and Restoration, Emergency Response Division (formerly Hazardous Materials Response Division), Seattle, Washington." .
+
+<urn:uuid:4659424a-4953-40b1-9cdc-513793cffe64> bcube:dateCreated "2015-07-11T00:00:45.833Z" ;
+    bcube:hasMetadataRecord <urn:uuid:94c129ae-a53f-472f-9674-1b54e4fd126d> ;
+    bcube:lastUpdated "2015-07-11T00:00:45.833Z" ;
+    dc:conformsTo <urn:uuid:5722e8ae-3b1b-4148-aa30-de5842591e35>,
+        <urn:uuid:5e5d9c3e-7120-458c-ae81-6cf2c6f9d332>,
+        <urn:uuid:854e1ac3-cf2e-4373-ba44-3f792be00683>,
+        <urn:uuid:c8efbe4b-6d6c-44fd-b992-d7d89479b82a> ;
+    dc:description "This data set contains human-use resource data for airports, archaeological and historic sites, beaches, boat ramps, state borders, bridges, and marinas for Alabama. Vector points and lines in this data set represent the human-use site locations. Location-specific type and source information are stored in relational data tables (described below) designed to be used in conjunction with this spatial data layer. This data set comprises a portion of the Environmental Sensitivity Index (ESI) data for Alabama. ESI data characterize the marine and coastal environments and wildlife by their sensitivity to spilled oil. The ESI data include information for three main components: shoreline habitats, sensitive biological resources, and human-use resources. See also the MGT (Management Area Polygons) data layer, part of the larger Alabama ESI database, for additional human-use information." ;
+    dc:spatial "POLYGON ((-88.5 30.125,-88.5 30.875,-87.375 30.875,-87.375 30.125,-88.5 30.125))" ;
+    dcterms:publisher <urn:uuid:39dd540f-b318-4964-a8d3-0fb5b2dec4d1> ;
+    dcterms:references <urn:uuid:67351860-80f4-497a-9913-ecfe865cb641> ;
+    dcterms:title "Alabama ESI: SOCECON (Socioeconomic Resource Points and Lines)" ;
+    esip:eastBound "-87.375"^^xsd:float ;
+    esip:endDate "2006-01-01"^^xsd:date ;
+    esip:northBound "30.875"^^xsd:float ;
+    esip:southBound "30.125"^^xsd:float ;
+    esip:startDate "1974-01-01"^^xsd:date ;
+    esip:westBound "-88.5"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:5722e8ae-3b1b-4148-aa30-de5842591e35> bcube:hasType "theme" ;
+    bcube:hasValue "Coastal Zone Management",
+        "Coastal resources",
+        "ESI",
+        "Human use resources",
+        "Oil spill planning",
+        "Sensitivity maps",
+        "Socioeconomic resources",
+        "Wildlife" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:5e5d9c3e-7120-458c-ae81-6cf2c6f9d332> bcube:hasType "theme" ;
+    bcube:hasValue "Environmental Monitoring" ;
+    dc:partOf "NOS Data Explorer Topic Category" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:67351860-80f4-497a-9913-ecfe865cb641> dcterms:references <urn:uuid:bfc9ab0d-ce3f-4795-825d-d295fb4cd6f1> ;
+    owl:a bibo:WebPage .
+
+<urn:uuid:854e1ac3-cf2e-4373-ba44-3f792be00683> bcube:hasType "place" ;
+    bcube:hasValue "Alabama" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:94c129ae-a53f-472f-9674-1b54e4fd126d> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-07-11T00:00:45.833Z" ;
+    bcube:lastUpdated "2015-07-11T00:00:45.833Z" ;
+    bcube:originatedFrom <urn:uuid:a5375826-4571-4540-a62f-5d2458482425> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:4659424a-4953-40b1-9cdc-513793cffe64> .
+
+<urn:uuid:a5375826-4571-4540-a62f-5d2458482425> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-07-11T00:00:45.833Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-07-11T00:00:45.833Z" ;
+    dc:identifier "urn:sha:711d4456ad9647b5847d81fb300be19ccf8d91832e9c997737c2593b" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://catalog.data.gov/harvest/object/b1a10880-9877-4034-bf5a-3bfdd6fc18a1/original" .
+
+<urn:uuid:bfc9ab0d-ce3f-4795-825d-d295fb4cd6f1> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-07-11T00:00:45.833Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-07-11T00:00:45.833Z" ;
+    dc:identifier "urn:sha:cc7e6972d4082c8d7915e557416f5c072ca01017a811220098682652" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://response.restoration.noaa.gov/esi" .
+
+<urn:uuid:c8efbe4b-6d6c-44fd-b992-d7d89479b82a> bcube:hasType "theme" ;
+    bcube:hasValue "biota",
+        "environment" ;
+    dc:partOf "ISO 19115 Topic Category" ;
+    owl:a bcube:thesaurusSubset .
+

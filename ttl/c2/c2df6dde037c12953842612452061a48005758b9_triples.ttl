@@ -1,0 +1,101 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:3336faac-0d8f-4227-ab3e-ce04fcece324> bcube:hasType "theme" ;
+    bcube:hasValue "Hillshade" ;
+    dc:partOf "NONE" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:5263148f-f091-4a7c-93b9-8ef9fb3a4411> bcube:hasType "stratum" ;
+    bcube:hasValue "Bare earth topography" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:543b8364-e77b-4262-a204-e782ddc9e693> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-10-11T22:37:01.011Z" ;
+    bcube:lastUpdated "2015-10-11T22:37:01.011Z" ;
+    bcube:originatedFrom <urn:uuid:ee5949bd-1cb0-474d-8e61-fe853b124fd4> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:f2f8de8a-cab9-48c3-bdf3-923a8f2dad64> .
+
+<urn:uuid:59701354-2285-411f-90ec-ae405a6f1b53> bcube:hasType "place" ;
+    bcube:hasValue "Cape Cod National Seashore",
+        "Massachusetts",
+        "United States East Coast" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:5fa49ab7-405a-4d7c-9144-4371aba0edea> owl:a foaf:Organization ;
+    foaf:name "USGS" .
+
+<urn:uuid:acffdfe9-0b28-46ea-9bc0-6b6a390957c8> dcterms:references <urn:uuid:ea88d004-18e3-4913-83a4-e0bf1d2eb530> ;
+    owl:a bibo:WebPage .
+
+<urn:uuid:ea88d004-18e3-4913-83a4-e0bf1d2eb530> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-10-11T22:37:01.011Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-10-11T22:37:01.011Z" ;
+    dc:identifier "urn:sha:f60147855f5543e73f9bb77747835af13c6382db652fa29071b64c3a" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "\\\\\\\\\\\\\\\\" .
+
+<urn:uuid:ee5949bd-1cb0-474d-8e61-fe853b124fd4> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-10-11T22:37:01.011Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-10-11T22:37:01.011Z" ;
+    dc:identifier "urn:sha:791474230240eb555d7bdf06d6cbcdbee5cedae9b09d2bdf2d21ccfd" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://pubs.usgs.gov/of/2007/1375/Lidar/be_e420_n4632/hil420_4632-2/metadata.xml" .
+
+<urn:uuid:f2f8de8a-cab9-48c3-bdf3-923a8f2dad64> bcube:dateCreated "2015-10-11T22:37:01.011Z" ;
+    bcube:hasMetadataRecord <urn:uuid:543b8364-e77b-4262-a204-e782ddc9e693> ;
+    bcube:lastUpdated "2015-10-11T22:37:01.011Z" ;
+    dc:conformsTo <urn:uuid:3336faac-0d8f-4227-ab3e-ce04fcece324>,
+        <urn:uuid:5263148f-f091-4a7c-93b9-8ef9fb3a4411>,
+        <urn:uuid:59701354-2285-411f-90ec-ae405a6f1b53>,
+        <urn:uuid:f4c6d57c-1622-4c32-8cfe-3a02bdb25fe3> ;
+    dc:description "A hillshade generated from a LiDAR GeoTIFF file." ;
+    dc:spatial "POLYGON ((-69.963489 41.817841,-69.963489 41.836061,-69.939129 41.836061,-69.939129 41.817841,-69.963489 41.817841))" ;
+    dcterms:publisher <urn:uuid:5fa49ab7-405a-4d7c-9144-4371aba0edea> ;
+    dcterms:references <urn:uuid:acffdfe9-0b28-46ea-9bc0-6b6a390957c8>,
+        <urn:uuid:f7f9edb0-737e-4c11-9a4e-7c50dec52390> ;
+    dcterms:title "hil420_4632-2" ;
+    esip:eastBound "-69.939129"^^xsd:float ;
+    esip:northBound "41.836061"^^xsd:float ;
+    esip:southBound "41.817841"^^xsd:float ;
+    esip:startDate "2005-05-04"^^xsd:date ;
+    esip:westBound "-69.963489"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:f4c6d57c-1622-4c32-8cfe-3a02bdb25fe3> bcube:hasType "temporal" ;
+    bcube:hasValue "20050504" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:f7f9edb0-737e-4c11-9a4e-7c50dec52390> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-10-11T22:37:01.011Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-10-11T22:37:01.011Z" ;
+    dc:identifier "urn:sha:d14a028c2a3a2bc9476102bb288234c415a2b01f828ea62ac5b3e42f" ;
+    owl:a bcube:Url .
+

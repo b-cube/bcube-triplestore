@@ -1,0 +1,79 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:18fb70e4-150a-41ea-921a-402200f6a807> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-07T07:28:30.6Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-07T07:28:30.6Z" ;
+    dc:identifier "urn:sha:933f8c86e6d5d6662db628c4895f297aa99ab4bf26d82e515f200fc4" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "https://data.noaa.gov/harvest/object/013a0f9c-b099-4194-8574-99399cb689ce" .
+
+<urn:uuid:1d2b1771-745d-452b-8adb-c59748793365> bcube:hasType "theme" ;
+    bcube:hasValue "Bare Earth",
+        "Bathymetry/Topography",
+        "Digital Terrain Model",
+        "Elevation Data",
+        "Ground Control",
+        "LAS Point Files",
+        "LIDAR",
+        "Land Surface",
+        "Point Cloud",
+        "Topography" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:882812e6-fd47-493c-8641-38c8708dbca6> bcube:hasType "place" ;
+    bcube:hasValue "Hillsborough County",
+        "Massachusetts",
+        "Middlesex County",
+        "Nashua River Watershed",
+        "New Hampshire",
+        "United States",
+        "Worcester County" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:95d6d2e0-41e2-4fec-bb66-9b823f9abea1> bcube:dateCreated "2015-08-07T07:28:30.6Z" ;
+    bcube:hasMetadataRecord <urn:uuid:e0a3d0fe-b04a-4d3e-a756-51a72bba6e1c> ;
+    bcube:lastUpdated "2015-08-07T07:28:30.6Z" ;
+    dc:conformsTo <urn:uuid:1d2b1771-745d-452b-8adb-c59748793365>,
+        <urn:uuid:882812e6-fd47-493c-8641-38c8708dbca6>,
+        <urn:uuid:ba90b924-4662-4e30-b374-fe2dd6b800c2> ;
+    dc:description "These data are the lidar points collected for FEMA Risk Mapping, Assessment, and Planning (Risk MAP) for the Nashua River Watershed. This area falls in portions of Hillsborough County in New Hampshire and portions of Middlesex and Worcester counties in Massachusetts. Using a Leica ALS60 LiDAR system, a total of 35 flight lines of high density (Nominal Pulse Spacing of 2.0 m) were collected over the Nashua area which encompasses 530.3 square miles. A total of 3 missions were flown on May 6, 2011 and May 7, 2011. One airborne global positioning system (GPS) base station was used to support the LiDAR data acquisition: FIT B. The data were received by the NOAA Office for Coastal Management from NH GRANIT. For data storage and Digital Coast provisioning purposes the data were: 1. Converted from UTM Zone 19, meters, NAD83 to geographic coordinates. 2. Converted from NAVD88 (Geoid09), meters to ellipsoid heights, using Geoid09 3. Converted overlap points that were classified as 11 to class 12 (Overlap). Data available for download from the Digital Coast include the following classifications: 1. 1 (Unclassified) 2. 2 (Ground) 3. 7 (Low Point Noise) 4. 9 (Model Key Points) 5. 12 (Overlap)" ;
+    dc:spatial "POLYGON ((-71.987399 42.315652,-71.987399 42.820656,-71.425869 42.820656,-71.425869 42.315652,-71.987399 42.315652))" ;
+    dcterms:title "2011 FEMA Risk Mapping, Assessment, and Planning (Risk MAP) Lidar: Nashua River Watershed (Massachusetts, New Hampshire)" ;
+    esip:eastBound "-71.425869"^^xsd:float ;
+    esip:endDate "2011-05-07"^^xsd:date ;
+    esip:northBound "42.820656"^^xsd:float ;
+    esip:southBound "42.315652"^^xsd:float ;
+    esip:startDate "2011-05-06"^^xsd:date ;
+    esip:westBound "-71.987399"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:ba90b924-4662-4e30-b374-fe2dd6b800c2> bcube:hasValue "elevation" ;
+    dc:partOf "IsoTopicCategories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:e0a3d0fe-b04a-4d3e-a756-51a72bba6e1c> a "ISO 19115:2003/19139" ;
+    bcube:dateCreated "2015-08-07T07:28:30.6Z" ;
+    bcube:lastUpdated "2015-08-07T07:28:30.6Z" ;
+    bcube:originatedFrom <urn:uuid:18fb70e4-150a-41ea-921a-402200f6a807> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:95d6d2e0-41e2-4fec-bb66-9b823f9abea1> .
+

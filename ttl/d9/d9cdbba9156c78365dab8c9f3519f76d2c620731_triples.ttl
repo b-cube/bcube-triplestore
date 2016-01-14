@@ -1,0 +1,78 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:274b6161-7d4e-4ed5-b76d-411fc858d2a8> bcube:hasType "theme" ;
+    bcube:hasValue "digital image",
+        "geologic map",
+        "georeferenced image",
+        "rectified raster image" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:3cfdcc60-596a-4629-b802-28994c5d6e07> owl:a foaf:Organization ;
+    foaf:name "U.S. Geological Survey" .
+
+<urn:uuid:7f027997-1f47-4eb9-bcf5-fbabd5c2afaa> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-07T07:40:23.47Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-07T07:40:23.47Z" ;
+    dc:identifier "urn:sha:d14a028c2a3a2bc9476102bb288234c415a2b01f828ea62ac5b3e42f" ;
+    owl:a bcube:Url .
+
+<urn:uuid:80aff0bc-675d-4904-ad80-3e244979807d> bcube:hasType "place" ;
+    bcube:hasValue "Blackfeet Indian Reservation",
+        "Montana",
+        "USA" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:8ea9e395-976a-403a-97d4-7a3fc91c5336> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-08-07T07:40:23.47Z" ;
+    bcube:lastUpdated "2015-08-07T07:40:23.47Z" ;
+    bcube:originatedFrom <urn:uuid:db40d5fc-4468-453a-a1f4-da06b0f0d15b> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:cefd1d53-d5e9-4d56-86fd-0f9df2a48e3b> .
+
+<urn:uuid:cefd1d53-d5e9-4d56-86fd-0f9df2a48e3b> bcube:dateCreated "2015-08-07T07:40:23.47Z" ;
+    bcube:hasMetadataRecord <urn:uuid:8ea9e395-976a-403a-97d4-7a3fc91c5336> ;
+    bcube:lastUpdated "2015-08-07T07:40:23.47Z" ;
+    dc:conformsTo <urn:uuid:274b6161-7d4e-4ed5-b76d-411fc858d2a8>,
+        <urn:uuid:80aff0bc-675d-4904-ad80-3e244979807d> ;
+    dc:description "This rectified map image was created for the purpose of directly comparing an image of the original geologic map with other geospatial information. The rectified image includes the map and coordinate labels; titles, text, explanations, cross sections, and collar information were cropped." ;
+    dc:spatial "POLYGON ((-113.622991 48.137318,-113.622991 49.026113,-112.207231 49.026113,-112.207231 48.137318,-113.622991 48.137318))" ;
+    dcterms:publisher <urn:uuid:3cfdcc60-596a-4629-b802-28994c5d6e07> ;
+    dcterms:references <urn:uuid:7f027997-1f47-4eb9-bcf5-fbabd5c2afaa> ;
+    dcterms:title "Rectified images of selected geologic maps of the northern Rockies area, Idaho, Montana, Washington, and Wyoming" ;
+    esip:eastBound "-112.207231"^^xsd:float ;
+    esip:northBound "49.026113"^^xsd:float ;
+    esip:southBound "48.137318"^^xsd:float ;
+    esip:startDate "1996-01-01"^^xsd:date ;
+    esip:westBound "-113.622991"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:db40d5fc-4468-453a-a1f4-da06b0f0d15b> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-07T07:40:23.47Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-07T07:40:23.47Z" ;
+    dc:identifier "urn:sha:2923e063e1b81d5984f9729b7e7627ae382962f366849cd8ce289f22" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://pubs.usgs.gov/ds/106/GEOREFERENCED/Blkfeet_bed_rect.sid.xml" .
+

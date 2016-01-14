@@ -1,0 +1,74 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:21035d56-0db0-46ad-9c04-43b941404185> bcube:hasType "theme" ;
+    bcube:hasValue "Bathymetry/Topography",
+        "Elevation",
+        "LAS",
+        "LiDAR" ;
+    dc:partOf "Keywords" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:2ba1ecee-9a51-44ed-b5a0-d49413ce8096> a "ISO 19115:2003/19139" ;
+    bcube:dateCreated "2015-08-04T21:43:53.654Z" ;
+    bcube:lastUpdated "2015-08-04T21:43:53.654Z" ;
+    bcube:originatedFrom <urn:uuid:8246ee42-e7f1-4854-9cd7-1640810d4311> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:52672a1a-0963-468d-9651-857958ec2a08> .
+
+<urn:uuid:3f13417b-7a9e-485d-8a49-cb0a88344d80> bcube:hasValue "elevation" ;
+    dc:partOf "IsoTopicCategories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:52672a1a-0963-468d-9651-857958ec2a08> bcube:dateCreated "2015-08-04T21:43:53.654Z" ;
+    bcube:hasMetadataRecord <urn:uuid:2ba1ecee-9a51-44ed-b5a0-d49413ce8096> ;
+    bcube:lastUpdated "2015-08-04T21:43:53.654Z" ;
+    dc:conformsTo <urn:uuid:21035d56-0db0-46ad-9c04-43b941404185>,
+        <urn:uuid:3f13417b-7a9e-485d-8a49-cb0a88344d80>,
+        <urn:uuid:945d2f40-e37e-47c2-8109-a03dc770adbd> ;
+    dc:description "This topographic elevation point data derived from multiple return light detection and ranging (LiDAR) represents 354.272 square miles of coastline for Rhode Island and Massachusetts. The LiDAR point cloud is delivered in LAS 1.2 format with the following classifications: Class 1: Unclassified Class 2: Ground Class 9: Water Class 10: Ignored Points Class 12: Overlap" ;
+    dc:spatial "POLYGON ((-71.9092352 41.1295003,-71.9092352 41.6023329,-69.944377 41.6023329,-69.944377 41.1295003,-71.9092352 41.1295003))" ;
+    dcterms:title "2012 USACE Post Sandy Topographic LiDAR: Rhode Island and Massachusetts Coast" ;
+    esip:eastBound "-69.944377"^^xsd:float ;
+    esip:endDate "2012-11-22"^^xsd:date ;
+    esip:northBound "41.6023329"^^xsd:float ;
+    esip:southBound "41.1295003"^^xsd:float ;
+    esip:startDate "2012-11-11"^^xsd:date ;
+    esip:westBound "-71.9092352"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:8246ee42-e7f1-4854-9cd7-1640810d4311> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-04T21:43:53.654Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-04T21:43:53.654Z" ;
+    dc:identifier "urn:sha:eaa34ee96330efd13caed2f90ddf2a2d3e601657501fc5ea35bbaf8f" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://catalog.data.gov/harvest/object/597e2649-583b-4eb4-84a5-ee5d7a376a6d" .
+
+<urn:uuid:945d2f40-e37e-47c2-8109-a03dc770adbd> bcube:hasType "place" ;
+    bcube:hasValue "Barnstable County",
+        "Bristol County",
+        "Dukes County",
+        "Massachusetts",
+        "Nantucket County",
+        "Newport County",
+        "Rhode Island",
+        "Washington County" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+

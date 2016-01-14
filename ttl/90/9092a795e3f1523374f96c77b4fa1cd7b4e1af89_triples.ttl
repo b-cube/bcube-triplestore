@@ -1,0 +1,89 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:1542dc0d-e50c-4e3d-83c4-70c9b440b899> owl:a foaf:Organization ;
+    foaf:name "" .
+
+<urn:uuid:465ab4b3-b2ab-48df-a077-c4dd360716d3> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-11-02T11:27:40.017Z" ;
+    bcube:lastUpdated "2015-11-02T11:27:40.017Z" ;
+    bcube:originatedFrom <urn:uuid:fd73c003-1709-44b8-a647-09ddec4a81e8> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:724ee532-0c1b-41c0-8f02-a18b39697131> .
+
+<urn:uuid:61c05a05-1b66-41af-8d39-e7f0c915bfc9> bcube:hasType "theme" ;
+    bcube:hasValue "County or equivalent entity",
+        "Polygon",
+        "TAZ",
+        "Traffic Analysis Zone" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:657dbbc7-9b08-4ed3-b235-5a30dc2f0123> bcube:hasType "place" ;
+    bcube:hasValue "12071",
+        "County or Equivalent Entity",
+        "Lee",
+        "U.S.",
+        "United States" ;
+    dc:partOf "INCITS.38-200x (R2004),INCITS.31-200x (R2007),INCITS.454-200x,INCITS 455-200x,INCITS 446-2008" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:724ee532-0c1b-41c0-8f02-a18b39697131> bcube:dateCreated "2015-11-02T11:27:40.017Z" ;
+    bcube:hasMetadataRecord <urn:uuid:465ab4b3-b2ab-48df-a077-c4dd360716d3> ;
+    bcube:lastUpdated "2015-11-02T11:27:40.017Z" ;
+    dc:conformsTo <urn:uuid:61c05a05-1b66-41af-8d39-e7f0c915bfc9>,
+        <urn:uuid:657dbbc7-9b08-4ed3-b235-5a30dc2f0123>,
+        <urn:uuid:e9f56da7-a8c4-48bc-9131-2d32f44a37be> ;
+    dc:description "The TIGER/Line Shapefiles are an extract of selected geographic and cartographic information from the Census MAF/TIGER database. The Census MAF/TIGER database represents a seamless national file with no overlaps or gaps between parts. However, each TIGER/Line Shapefile is designed to stand alone as an independent data set or the shapefiles can be combined to cover the whole nation." ;
+    dc:spatial "POLYGON ((-82.33504 26.316234,-82.33504 26.789551,-81.56218 26.789551,-81.56218 26.316234,-82.33504 26.316234))" ;
+    dcterms:publisher <urn:uuid:1542dc0d-e50c-4e3d-83c4-70c9b440b899> ;
+    dcterms:references <urn:uuid:dbba2d03-a1a4-41f4-b585-bc981f88b7c0> ;
+    dcterms:title "TIGER/Line Shapefile, 2009, 2000 county, Lee County, FL, Census 2000 Traffic Analysis Zone (TAZ)" ;
+    esip:eastBound "-81.56218"^^xsd:float ;
+    esip:endDate "2009-05-01"^^xsd:date ;
+    esip:northBound "26.789551"^^xsd:float ;
+    esip:southBound "26.316234"^^xsd:float ;
+    esip:startDate "2009-01-01"^^xsd:date ;
+    esip:westBound "-82.33504"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:dbba2d03-a1a4-41f4-b585-bc981f88b7c0> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-02T11:27:40.017Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-02T11:27:40.017Z" ;
+    dc:identifier "urn:sha:387c0aca33d511e096518b32f1a3afe94ac300e02080d57cbe1a5abc" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www2.census.gov/geo/tiger/TIGER2009/12_FLORIDA/12071_Lee_County/tl_2009_12071_taz00.zip" .
+
+<urn:uuid:e9f56da7-a8c4-48bc-9131-2d32f44a37be> bcube:hasType "theme" ;
+    bcube:hasValue "boundaries" ;
+    dc:partOf "ISO 19115 Topic Categories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:fd73c003-1709-44b8-a647-09ddec4a81e8> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-02T11:27:40.017Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-02T11:27:40.017Z" ;
+    dc:identifier "urn:sha:3a4a47ca5b6794df5327959fc5104ee2f414e13eeefc6439b0f914d3" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://meta.geo.census.gov/data/existing/decennial/GEO/GPMB/TIGERline/fe_2009/taz00/tl_2009_12071_taz00_url.shp.xml" .
+

@@ -1,0 +1,82 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:0f9461a8-01db-400d-83bd-4ef43af2b700> bcube:hasType "theme" ;
+    bcube:hasValue "Geophysical",
+        "drift buoy",
+        "ocean currents" ;
+    dc:partOf "none" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:10ab103c-5e45-476d-9e38-0b3a0f69b2db> bcube:dateCreated "2015-03-06T00:51:46.468Z" ;
+    bcube:hasMetadataRecord <urn:uuid:3f372877-bf20-4728-a03c-40dc95e6de2f> ;
+    bcube:lastUpdated "2015-03-06T00:51:46.468Z" ;
+    dc:conformsTo <urn:uuid:0f9461a8-01db-400d-83bd-4ef43af2b700>,
+        <urn:uuid:b7d62a2a-5095-42d2-90b2-22b4a3bd8a45> ;
+    dc:description "This is one data set of a data package consisting of thirteen point data setsthat have as attributes the direction and velocity of ocean currentsin the 'eastern' Gulf of Mexico asdetermined by drift buoys from February 1996 to June 1997. The data are summarized by quarter degree cellsand represent the time weighted average of drift direction and velocity forall drift buoys that entered the cell during the summary time period. Twelveof the data sets are one month averages, one data set is a one year averagefrom all the months. The area covered is nominally the eastern Gulf of Mexico,but during the course of the study, the buoys drifted as far west asTexas.These spatial extent, object count and range attribute metadataitems apply in particular to the one-year average data set, howeverthe general characteristics of the dataset (coordinate system,attributes and attribute definitions) apply to all thirteen." ;
+    dc:spatial "POLYGON ((-97.125 25.125,-97.125 30.125,-83.125 30.125,-83.125 25.125,-97.125 25.125))" ;
+    dcterms:publisher <urn:uuid:cbf17b8b-a3d0-4bac-9c7b-33fdb04b2372> ;
+    dcterms:references <urn:uuid:3e454c72-8920-4c19-a156-3d4d7a4b81a0> ;
+    dcterms:title "Eastern Gulf of Mexico November 1997 Ocean Currents, Geographic NAD83, MMS (1999) [ocean_currents_egom_Nov_MMS_1997]" ;
+    esip:eastBound "-83.125"^^xsd:float ;
+    esip:endDate "1997-06-28"^^xsd:date ;
+    esip:northBound "30.125"^^xsd:float ;
+    esip:southBound "25.125"^^xsd:float ;
+    esip:startDate "1996-02-05"^^xsd:date ;
+    esip:westBound "-97.125"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:3e454c72-8920-4c19-a156-3d4d7a4b81a0> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-03-06T00:51:46.468Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-03-06T00:51:46.468Z" ;
+    dc:identifier "urn:sha:aff974e44a602f8185da0173a3e0cfa5c07e59f96a60158f8f54978a" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://lagic.lsu.edu/data/losco/ocean_currents_egom_Nov_MMS_1997.zip" .
+
+<urn:uuid:3f372877-bf20-4728-a03c-40dc95e6de2f> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-03-06T00:51:46.468Z" ;
+    bcube:lastUpdated "2015-03-06T00:51:46.468Z" ;
+    bcube:originatedFrom <urn:uuid:e86e7c55-dabf-4f68-b47e-f9515989627a> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:10ab103c-5e45-476d-9e38-0b3a0f69b2db> .
+
+<urn:uuid:b7d62a2a-5095-42d2-90b2-22b4a3bd8a45> bcube:hasType "place" ;
+    bcube:hasValue "Alabama",
+        "Florida",
+        "Gulf of Mexico",
+        "Louisiana",
+        "Mississippi" ;
+    dc:partOf "none" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:cbf17b8b-a3d0-4bac-9c7b-33fdb04b2372> owl:a foaf:Organization ;
+    foaf:name "" .
+
+<urn:uuid:e86e7c55-dabf-4f68-b47e-f9515989627a> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-03-06T00:51:46.468Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-03-06T00:51:46.468Z" ;
+    dc:identifier "urn:sha:6866388c1a1a5dbf81e1ba184f820ca4c37256a7f3761fd7a76fb08f" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://catalog.data.gov/harvest/object/f7bd220c-8ac4-47a7-b313-1178bad1cead/original" .
+

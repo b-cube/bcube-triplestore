@@ -1,0 +1,97 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:410f7f39-3647-4a50-a730-cab5d8343699> bcube:hasType "place" ;
+    bcube:hasValue "Juan de Fuca Ridge",
+        "North Pacific Ocean",
+        "Northern Pacific Ocean",
+        "OR",
+        "USA",
+        "WA",
+        "Washington / Oregon",
+        "Washington, Oregon",
+        "Washington-Oregon" ;
+    dc:partOf "Geographic Names Information System (GNIS)" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:70513d23-8c35-4e2e-8055-1c1a9754c8fc> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-05T01:20:24.157Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-05T01:20:24.157Z" ;
+    dc:identifier "urn:sha:d3f4c2a0efcd0bb68a54fbd8aa90a810f0356656e52fbae0be5b29e8" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://data.usgs.gov/metadata/Coastal_and_Marine_Geology_Program/5418b6cae4b03f26b3225f2c.xml" .
+
+<urn:uuid:8e910a15-8301-438a-805b-4796eb60d950> owl:a foaf:Organization ;
+    foaf:name "U.S. Geological Survey" .
+
+<urn:uuid:8f9634fb-dbbd-46ce-84fd-883ef8059ccf> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-08-05T01:20:24.157Z" ;
+    bcube:lastUpdated "2015-08-05T01:20:24.157Z" ;
+    bcube:originatedFrom <urn:uuid:70513d23-8c35-4e2e-8055-1c1a9754c8fc> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:e3ef3313-cb61-4af0-b35e-f21eda30f16c> .
+
+<urn:uuid:a09a8c12-374e-40c8-b1a5-26ad078c711c> bcube:hasType "theme" ;
+    bcube:hasValue "geoscientificinformation",
+        "oceans" ;
+    dc:partOf "ISO 19115 Topic Category" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:abcaf268-6ce8-490d-9566-6a4d24aaed34> bcube:hasType "theme" ;
+    bcube:hasValue "Bathymetry",
+        "Magnetic Anomalies",
+        "Marine Geology",
+        "Marine Geophysics",
+        "Marine Magnetic Field",
+        "Seafloor Topography",
+        "Water Depth" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:e3ef3313-cb61-4af0-b35e-f21eda30f16c> bcube:dateCreated "2015-08-05T01:20:24.157Z" ;
+    bcube:hasMetadataRecord <urn:uuid:8f9634fb-dbbd-46ce-84fd-883ef8059ccf> ;
+    bcube:lastUpdated "2015-08-05T01:20:24.157Z" ;
+    dc:conformsTo <urn:uuid:410f7f39-3647-4a50-a730-cab5d8343699>,
+        <urn:uuid:a09a8c12-374e-40c8-b1a5-26ad078c711c>,
+        <urn:uuid:abcaf268-6ce8-490d-9566-6a4d24aaed34> ;
+    dc:description "Single-beam bathymetry and magnetic data along with DGPS navigation data was collected as part of field activity L-12-80-WF in Juan de Fuca from 10/29/1980 to 11/13/1980, http://walrus.wr.usgs.gov/infobank/l/l1280wf/html/l-12-80-wf.meta.html These data are reformatted from space-delimited ASCII text files located in the Coastal and Marine Geology Program (CMGP) InfoBank field activity catalog at http://walrus.wr.usgs.gov/infobank/l/l1280wf/html/l-12-80-wf.bath.html and http://walrus.wr.usgs.gov/infobank/l/l1280wf/html/l-12-80-wf.mag.html into MGD77T format provided by the NOAA's National Geophysical Data Center(NGDC). The MGD77T format includes a header (documentation) file (.h77t) and a data file (.m77t). More information regarding this format can be found in the publication listed in the Cross_reference section of this metadata file." ;
+    dc:spatial "POLYGON ((-130.77483 36.60505,-130.77483 46.1741,-123.70733 46.1741,-123.70733 36.60505,-130.77483 36.60505))" ;
+    dcterms:publisher <urn:uuid:8e910a15-8301-438a-805b-4796eb60d950> ;
+    dcterms:references <urn:uuid:f2414d83-66b4-4430-b3ea-4143e07ce5c3> ;
+    dcterms:title "l1280wf.m77t - MGD77 data file for Geophysical data from field activity L-12-80-WF in Juan de Fuca from 10/29/1980 to 11/13/1980" ;
+    esip:eastBound "-123.70733"^^xsd:float ;
+    esip:endDate "1980-11-13"^^xsd:date ;
+    esip:northBound "46.1741"^^xsd:float ;
+    esip:southBound "36.60505"^^xsd:float ;
+    esip:startDate "1980-10-29"^^xsd:date ;
+    esip:westBound "-130.77483"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:f2414d83-66b4-4430-b3ea-4143e07ce5c3> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-05T01:20:24.157Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-05T01:20:24.157Z" ;
+    dc:identifier "urn:sha:9e713277cc06bca1817ab4ca95f810cdc84de18821a7695d7da8ae44" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www.ngdc.noaa.gov/mgg/trk/trackline/samuel_p._lee/l1280wf/mgd77/" .
+

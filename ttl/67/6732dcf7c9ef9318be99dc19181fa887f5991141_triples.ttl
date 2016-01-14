@@ -1,0 +1,128 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:42e8c4cc-63ff-41ce-aa08-1567cd9e07e0> bcube:hasType "theme" ;
+    bcube:hasValue "adcp",
+        "buoys",
+        "centered",
+        "circulation",
+        "currents",
+        "daily",
+        "eastward",
+        "identifier",
+        "noaa",
+        "northward",
+        "ocean",
+        "oceans",
+        "pirata",
+        "pmel",
+        "quality",
+        "rama",
+        "sea",
+        "seawater",
+        "station",
+        "tao",
+        "triton",
+        "velocity",
+        "water" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:4c1728e2-a368-4aa1-a38b-e57cb6c94919> a "ISO 19115:2003/19139" ;
+    bcube:dateCreated "2015-11-02T15:49:36.773Z" ;
+    bcube:lastUpdated "2015-11-02T15:49:36.773Z" ;
+    bcube:originatedFrom <urn:uuid:522b8b8f-5233-480a-a3ab-2133f5af7f91> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:d376cf55-b064-414d-ab1e-1d4a1427c889> .
+
+<urn:uuid:522b8b8f-5233-480a-a3ab-2133f5af7f91> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-02T15:49:36.773Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-02T15:49:36.773Z" ;
+    dc:identifier "urn:sha:ab991534a470d766e5c3e7cd9e17ea8635b39e85b8fd78ee1967ebfa" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://osmc.noaa.gov/erddap/tabledap/pmelTaoDyAdcp.iso19115" .
+
+<urn:uuid:527d8295-687d-4cf8-8482-132a935e602d> bcube:hasValue "geoscientificInformation" ;
+    dc:partOf "IsoTopicCategories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:71abdfe5-0408-437a-83b7-8564e6497356> bcube:hasType "theme" ;
+    bcube:hasValue "depth",
+        "eastward_sea_water_velocity",
+        "latitude",
+        "longitude",
+        "northward_sea_water_velocity",
+        "time" ;
+    dc:partOf "CF Standard Name Table v29" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:93a14118-b822-4818-a1e2-a431520b6c93> bcube:hasType "theme" ;
+    bcube:hasValue "Oceans > Ocean Circulation > Ocean Currents" ;
+    dc:partOf "GCMD Science Keywords" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:d376cf55-b064-414d-ab1e-1d4a1427c889> bcube:dateCreated "2015-11-02T15:49:36.773Z" ;
+    bcube:hasMetadataRecord <urn:uuid:4c1728e2-a368-4aa1-a38b-e57cb6c94919> ;
+    bcube:lastUpdated "2015-11-02T15:49:36.773Z" ;
+    dc:conformsTo <urn:uuid:42e8c4cc-63ff-41ce-aa08-1567cd9e07e0>,
+        <urn:uuid:527d8295-687d-4cf8-8482-132a935e602d>,
+        <urn:uuid:71abdfe5-0408-437a-83b7-8564e6497356>,
+        <urn:uuid:93a14118-b822-4818-a1e2-a431520b6c93>,
+        <urn:uuid:ebce9827-4d72-4c84-bda2-58ecb61d4a1d> ;
+    dc:description "This dataset has daily Acoustic Doppler Current Profiler (ADCP) water currents data from the TAO/TRITON (Pacific Ocean, http://www.pmel.noaa.gov/tao/), RAMA (Indian Ocean, http://www.pmel.noaa.gov/tao/rama/), and PIRATA (Atlantic Ocean, http://www.pmel.noaa.gov/pirata/) arrays of moored buoys which transmit oceanographic and meteorological data to shore in real-time via the Argos satellite system. These buoys are major components of the CLIVAR climate analysis project and the GOOS, GCOS, and GEOSS observing systems. Daily averages are computed starting at 00:00Z and are assigned an observation 'time' of 12:00Z. ADCP data are available only after mooring recoveries, which are scheduled on an annual basis. For more information, see http://www.pmel.noaa.gov/tao/proj_over/proj_over.html ." ;
+    dc:identifier "pmelTaoDyAdcp" ;
+    dc:spatial "POLYGON ((67 -8,67 8,180 8,180 -8,67 -8))" ;
+    dcterms:references <urn:uuid:fba98dac-0b38-4db0-a571-8400f6cdb0d6>,
+        <urn:uuid:fc938223-c8f1-4047-b75c-bf7d964126a8> ;
+    dcterms:title "TAO/TRITON, RAMA, and PIRATA Buoys, Daily, ADCP" ;
+    esip:eastBound "180.0"^^xsd:float ;
+    esip:endDate "2012-11-04"^^xsd:date ;
+    esip:northBound "8.0"^^xsd:float ;
+    esip:southBound "-8.0"^^xsd:float ;
+    esip:startDate "1988-05-16"^^xsd:date ;
+    esip:westBound "67.0"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:ebce9827-4d72-4c84-bda2-58ecb61d4a1d> bcube:hasType "project" ;
+    bcube:hasValue "TAO/TRITON, RAMA, PIRATA" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:fba98dac-0b38-4db0-a571-8400f6cdb0d6> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-02T15:49:36.773Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-02T15:49:36.773Z" ;
+    dc:identifier "urn:sha:44b0b746f5c3ef11ce49e7bdc27b982b83a3e2ed9c2565acd26dd333" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://coastwatch.pfeg.noaa.gov/erddap/tabledap/pmelTaoDyAdcp.graph" .
+
+<urn:uuid:fc938223-c8f1-4047-b75c-bf7d964126a8> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-02T15:49:36.773Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-02T15:49:36.773Z" ;
+    dc:identifier "urn:sha:0180178602ff4a4dfd76a5d77e7a1678f9b125c9693d94ebbff38d9d" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://coastwatch.pfeg.noaa.gov/erddap/tabledap/pmelTaoDyAdcp.html" .
+

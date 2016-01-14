@@ -1,0 +1,64 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:0ad58052-0831-4019-9c41-f0c5eff77a55> owl:a foaf:Organization ;
+    foaf:name "" .
+
+<urn:uuid:47fbe4c6-5ef9-4ee6-8f64-91e1c0e12db2> bcube:hasType "theme" ;
+    bcube:hasValue "wastewater" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:4d95878e-b06b-47d1-a0b5-e14c0bf5f4e4> bcube:hasType "place" ;
+    bcube:hasValue "Colorado",
+        "Denver",
+        "Denver County",
+        "USA" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:6e0690d4-e217-478d-be28-5f7c265ce1e4> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-10-18T06:22:24.121Z" ;
+    bcube:lastUpdated "2015-10-18T06:22:24.121Z" ;
+    bcube:originatedFrom <urn:uuid:aabafe37-0d98-4c8e-a5cb-54a2f36c63f0> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:797e217a-add3-4fbb-b628-75cb269c7096> .
+
+<urn:uuid:797e217a-add3-4fbb-b628-75cb269c7096> bcube:dateCreated "2015-10-18T06:22:24.121Z" ;
+    bcube:hasMetadataRecord <urn:uuid:6e0690d4-e217-478d-be28-5f7c265ce1e4> ;
+    bcube:lastUpdated "2015-10-18T06:22:24.121Z" ;
+    dc:conformsTo <urn:uuid:47fbe4c6-5ef9-4ee6-8f64-91e1c0e12db2>,
+        <urn:uuid:4d95878e-b06b-47d1-a0b5-e14c0bf5f4e4> ;
+    dc:description "An Index of the Existing Waste Water Plat Maps for the City and County of Denver." ;
+    dc:spatial "POLYGON ((-105.110139 39.612136,-105.110139 39.839927,-104.690292 39.839927,-104.690292 39.612136,-105.110139 39.612136))" ;
+    dcterms:publisher <urn:uuid:0ad58052-0831-4019-9c41-f0c5eff77a55> ;
+    dcterms:title "Wastewater Plat Map Index" ;
+    esip:eastBound "-104.690292"^^xsd:float ;
+    esip:northBound "39.839927"^^xsd:float ;
+    esip:southBound "39.612136"^^xsd:float ;
+    esip:westBound "-105.110139"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:aabafe37-0d98-4c8e-a5cb-54a2f36c63f0> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-10-18T06:22:24.121Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-10-18T06:22:24.121Z" ;
+    dc:identifier "urn:sha:b07bc3f230718b8f7aa5cfa62383bfccd031ebf4ba74dd07813a4890" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://data.denvergov.org/download/gis/wastewater_plat_map_index/metadata/wastewater_plat_map_index.xml" .
+

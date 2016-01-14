@@ -1,0 +1,83 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:40d866d0-b468-46e7-afa2-8a70b320c9f1> bcube:hasType "theme" ;
+    bcube:hasValue "GIRAS",
+        "LULC",
+        "digital",
+        "geographic",
+        "inlandWaters",
+        "land",
+        "landcover",
+        "landuse" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:95a4dd42-2687-4964-b089-f4f7161c1808> bcube:dateCreated "2015-08-08T20:16:23.662Z" ;
+    bcube:hasMetadataRecord <urn:uuid:a8e7748c-ae3f-492d-af4d-e1059f49c7a6> ;
+    bcube:lastUpdated "2015-08-08T20:16:23.662Z" ;
+    dc:conformsTo <urn:uuid:40d866d0-b468-46e7-afa2-8a70b320c9f1>,
+        <urn:uuid:b5f3f84a-10bb-4284-b076-dbc63ccea3c2> ;
+    dc:description "This polygon data set provides ancillary information to supplement a release of enhanced U.S. Geological Survey (USGS) historical land-use and land-cover data. The data set presents some of the original file-header documentation, as well as some details describing how the data files were used in the data release, in a geographic context." ;
+    dc:spatial "POLYGON ((-157.330542 18.87223,-157.330542 61.999559,-65.999375 61.999559,-65.999375 18.87223,-157.330542 18.87223))" ;
+    dcterms:publisher <urn:uuid:ea13b1f6-f19f-4f84-b7fb-af215e6d46de> ;
+    dcterms:references <urn:uuid:dd4588dd-18b3-4e4c-b441-7f75a168b940> ;
+    dcterms:title "Enhanced Historical Land-Use and Land-Cover Data Sets of the U.S. Geological Survey: Data Source Index Polygons" ;
+    esip:eastBound "-65.999375"^^xsd:float ;
+    esip:northBound "61.999559"^^xsd:float ;
+    esip:southBound "18.87223"^^xsd:float ;
+    esip:startDate "2005-01-02"^^xsd:date ;
+    esip:westBound "-157.330542"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:99b3fa5e-01dc-4e9a-8723-8e6bdf2e10e7> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-08T20:16:23.662Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-08T20:16:23.662Z" ;
+    dc:identifier "urn:sha:23d783291be885d24e9cbec37d89c20a47c1640a29cd01c039799b4c" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://water.usgs.gov/lookup/getspatial?ds240_landuse_src_poly" .
+
+<urn:uuid:a8e7748c-ae3f-492d-af4d-e1059f49c7a6> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-08-08T20:16:23.662Z" ;
+    bcube:lastUpdated "2015-08-08T20:16:23.662Z" ;
+    bcube:originatedFrom <urn:uuid:99b3fa5e-01dc-4e9a-8723-8e6bdf2e10e7> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:95a4dd42-2687-4964-b089-f4f7161c1808> .
+
+<urn:uuid:b5f3f84a-10bb-4284-b076-dbc63ccea3c2> bcube:hasType "place" ;
+    bcube:hasValue "USA",
+        "United States" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:dd4588dd-18b3-4e4c-b441-7f75a168b940> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-08T20:16:23.662Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-08T20:16:23.662Z" ;
+    dc:identifier "urn:sha:027f22640ca0bb11bdbbc93fc7396299758727cfa6180b9fb0670981" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://water.usgs.gov/GIS/dsdl/ds240/polygon/src_poly.zip" .
+
+<urn:uuid:ea13b1f6-f19f-4f84-b7fb-af215e6d46de> owl:a foaf:Organization ;
+    foaf:name "U.S. Geological Survey" .
+

@@ -1,0 +1,79 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:14963b0d-85ac-45c3-b704-39e38c2123e6> bcube:hasType "place" ;
+    bcube:hasValue "Florida" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:244c6d95-aa11-442c-a8c7-570a925f298a> bcube:hasType "theme" ;
+    bcube:hasValue "County Roads",
+        "RCI",
+        "Roads",
+        "Roadway Characteristics Inventory",
+        "Transportation" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:56d178fa-304b-40de-a70d-392cb51f439e> bcube:dateCreated "2015-11-04T11:53:09.217Z" ;
+    bcube:hasMetadataRecord <urn:uuid:6901d7b9-d364-437d-87ba-f352aceb336f> ;
+    bcube:lastUpdated "2015-11-04T11:53:09.217Z" ;
+    dc:conformsTo <urn:uuid:14963b0d-85ac-45c3-b704-39e38c2123e6>,
+        <urn:uuid:244c6d95-aa11-442c-a8c7-570a925f298a> ;
+    dc:description "The County Roads feature class covers the state of Florida at a scale of 1:24,000 with a projection system of Universal Transverse Mercator (UTM) 17 North zone and a horizontal datum of North American 1983 (NAD 1983). The map units are in meters." ;
+    dc:spatial "POLYGON ((-87.58836 24.424993,-87.58836 31.150989,-80.009638 31.150989,-80.009638 24.424993,-87.58836 24.424993))" ;
+    dcterms:publisher <urn:uuid:bf840a38-378a-43aa-b0fb-5a3af1297d18> ;
+    dcterms:references <urn:uuid:d11a29da-f5c8-4ec3-8a32-48f641ad1d70> ;
+    dcterms:title "County Roads" ;
+    esip:eastBound "-80.009638"^^xsd:float ;
+    esip:northBound "31.150989"^^xsd:float ;
+    esip:southBound "24.424993"^^xsd:float ;
+    esip:startDate "2008-06-02"^^xsd:date ;
+    esip:westBound "-87.58836"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:6901d7b9-d364-437d-87ba-f352aceb336f> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-11-04T11:53:09.217Z" ;
+    bcube:lastUpdated "2015-11-04T11:53:09.217Z" ;
+    bcube:originatedFrom <urn:uuid:d908a378-c852-40f9-aa74-38d012f3710a> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:56d178fa-304b-40de-a70d-392cb51f439e> .
+
+<urn:uuid:bf840a38-378a-43aa-b0fb-5a3af1297d18> owl:a foaf:Organization ;
+    foaf:name "" .
+
+<urn:uuid:d11a29da-f5c8-4ec3-8a32-48f641ad1d70> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-04T11:53:09.217Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-04T11:53:09.217Z" ;
+    dc:identifier "urn:sha:1c569b2b1a6a7a9f559455e24929bd1a928c78e31016484ba4b462dc" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "ftp://ftp.dot.state.fl.us/fdot/co/planning/transtat/gis/shapefiles/county_roads.zip" .
+
+<urn:uuid:d908a378-c852-40f9-aa74-38d012f3710a> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-04T11:53:09.217Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-04T11:53:09.217Z" ;
+    dc:identifier "urn:sha:5b6674e828d0386dc43f98e35852d36e35017bd236020d8e615cb711" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www.envirobase.usgs.gov/FlGisData/FDOT/metadata/county_roads.shp.xml" .
+

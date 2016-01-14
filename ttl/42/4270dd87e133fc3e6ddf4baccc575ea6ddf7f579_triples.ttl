@@ -1,0 +1,102 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:0982f522-2e54-4da4-bce9-088658498464> bcube:hasType "theme" ;
+    bcube:hasValue "Base Flood Elevation",
+        "CBRS",
+        "Coastal Barrier Resources System",
+        "Coastal Flooding",
+        "DFIRM",
+        "DFIRM Database",
+        "FEMA Flood Hazard Zone",
+        "FIRM",
+        "Flood Insurance Rate Map",
+        "Floodplain Mapping",
+        "Floodway",
+        "NFIP",
+        "Riverine Flooding",
+        "SFHA",
+        "Special Flood Hazard Area" ;
+    dc:partOf "FEMA NFIP Topic Category" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:36cf2182-b9de-4cfb-a76e-60e0db3fdf18> bcube:hasType "place" ;
+    bcube:hasValue "COMMUNITY AUSTIN COUNTY AND INCORPORATED AREAS",
+        "COUNTY AUSTIN",
+        "COUNTY-FIPS 48015",
+        "FEMA-CID 48015C",
+        "REGION VI",
+        "STATE TX" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:464c5d77-6a3f-4ea1-8fad-3f615e187785> owl:a foaf:Organization ;
+    foaf:name "Federal Emergency Management Agency" .
+
+<urn:uuid:4f80bcab-0aec-4da8-8c9a-df1b951653fc> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-01T18:51:23.495Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-01T18:51:23.495Z" ;
+    dc:identifier "urn:sha:cd666c99642791888dc283c536225a70e66e2a7e4cd84e3d5b0c0f65" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://catalog.data.gov/harvest/object/9e6db303-81ae-4712-8d0f-1437b896169d/original" .
+
+<urn:uuid:5647b5be-3857-498f-99fe-6dfee39e913f> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-11-01T18:51:23.495Z" ;
+    bcube:lastUpdated "2015-11-01T18:51:23.495Z" ;
+    bcube:originatedFrom <urn:uuid:4f80bcab-0aec-4da8-8c9a-df1b951653fc> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:6e6d0447-ac3a-497b-a6f4-cd522db6ec28> .
+
+<urn:uuid:62ec4a45-7cca-4573-917d-7834a2c2e47c> bcube:hasType "theme" ;
+    bcube:hasValue "enviroment",
+        "hydrology",
+        "inlandwaters" ;
+    dc:partOf "ISO 19115 Topic Category" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:6e6d0447-ac3a-497b-a6f4-cd522db6ec28> bcube:dateCreated "2015-11-01T18:51:23.495Z" ;
+    bcube:hasMetadataRecord <urn:uuid:5647b5be-3857-498f-99fe-6dfee39e913f> ;
+    bcube:lastUpdated "2015-11-01T18:51:23.495Z" ;
+    dc:conformsTo <urn:uuid:0982f522-2e54-4da4-bce9-088658498464>,
+        <urn:uuid:36cf2182-b9de-4cfb-a76e-60e0db3fdf18>,
+        <urn:uuid:62ec4a45-7cca-4573-917d-7834a2c2e47c> ;
+    dc:description "The Floodplain Mapping/Redelineation study deliverables depict and quantify the flood risks for the study area. The primary risk classificatinos used are the 1-percent-annual-chance flood event, the 0.2-percent-annual-chance flood event, and areas of minimal flood risk. The Floodplain Mapping/Redelineation flood risk boundaries are derived from the engineering information Flood Insurance Studies (FISs), previously published Flood Insurance Rate Maps (FIRMs), flood harzard analyses performed in support of the FISs and FIRMs, and new mapping data, where available. The FISs and FIRMs are published by the Federal Emergency Managemeng Agency (FEMA)." ;
+    dc:spatial "POLYGON ((-96.62 29.6,-96.62 30.1,-96.0 30.1,-96.0 29.6,-96.62 29.6))" ;
+    dcterms:publisher <urn:uuid:464c5d77-6a3f-4ea1-8fad-3f615e187785> ;
+    dcterms:references <urn:uuid:c0305cde-0a37-4e57-a385-b9e0150bfaab> ;
+    dcterms:title "FLOODPLAIN, AUSTIN COUNTY, TEXAS" ;
+    esip:eastBound "-96.0"^^xsd:float ;
+    esip:northBound "30.1"^^xsd:float ;
+    esip:southBound "29.6"^^xsd:float ;
+    esip:startDate "2008-10-20"^^xsd:date ;
+    esip:westBound "-96.62"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:c0305cde-0a37-4e57-a385-b9e0150bfaab> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-01T18:51:23.495Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-01T18:51:23.495Z" ;
+    dc:identifier "urn:sha:a03be7662235073fd4caa08367ab7ad0a475b0ae4de9c4780a3691ed" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "https://hazards.fema.gov" .
+

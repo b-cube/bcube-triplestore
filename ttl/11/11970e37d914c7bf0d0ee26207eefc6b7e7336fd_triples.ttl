@@ -1,0 +1,77 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:010a533c-fa52-4635-94cd-5776070d3152> bcube:hasType "place" ;
+    bcube:hasValue "APFO",
+        "Aerial Photography Field Office",
+        "FIPS 18089",
+        "FSA",
+        "Field Service Center",
+        "IN",
+        "LAKE CO., IN",
+        "Lake",
+        "USA",
+        "USDA",
+        "United States Department of Agriculture (USDA)" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:2291f87b-7d70-4985-aaf6-be9f2d94e4e7> bcube:dateCreated "2015-11-12T09:55:53.969Z" ;
+    bcube:hasMetadataRecord <urn:uuid:b280db11-2ff2-44d2-9516-931f4b4b28b7> ;
+    bcube:lastUpdated "2015-11-12T09:55:53.969Z" ;
+    dc:conformsTo <urn:uuid:010a533c-fa52-4635-94cd-5776070d3152>,
+        <urn:uuid:7f893371-a301-45d6-99f9-8324c8257537> ;
+    dc:description "This data set contains polygons delineating the seamline boundaries of imagery acquired as part of the National Agriculture Imagery Program (NAIP), and used in the creation of DOQQs and compressed county mosaics (CCM). These seam polygons can be used as a tool in determining the image source and date of each portion of the DOQQ or the CCM. The NAIP acquires 4 band digital ortho imagery from airborne and/or space based platforms during the agricultural growing seasons in the U.S.. A primary goal of the NAIP program is to enable availability of ortho imagery within sixty days of acquisition. The NAIP provides 1 meter or 1/2 meter GSD ortho imagery rectified within +/- 6 meters to true ground at a 95% confidence level. The tiling format of NAIP imagery is based on a 3.75' x 3.75' quarter quadrangle with a 300 (plus or minus 30) pixel buffer on all four sides. The NAIP quarter quads are formatted to the UTM coordinate system using the North American Datum of 1983 (NAD83)." ;
+    dc:spatial "POLYGON ((-87.592388759299993 40.911511336799997,-87.592388759299993 41.793400511199998,-87.161998531699993 41.793400511199998,-87.161998531699993 40.911511336799997,-87.592388759299993 40.911511336799997))" ;
+    dcterms:publisher <urn:uuid:7a9caf1d-2b51-47ff-b818-b360edec641f> ;
+    dcterms:title "Index of source acquisition dates." ;
+    esip:eastBound "-87.1619985317"^^xsd:float ;
+    esip:northBound "41.7934005112"^^xsd:float ;
+    esip:southBound "40.9115113368"^^xsd:float ;
+    esip:startDate "2014-12-04"^^xsd:date ;
+    esip:westBound "-87.5923887593"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:5fc28047-80fd-41da-a68d-e82396bffe0c> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-12T09:55:53.969Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-12T09:55:53.969Z" ;
+    dc:identifier "urn:sha:a4e01b1fbf346fe195d7b6b5a6ed94a66bada4b44b10a2cb4c4a53fe" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "https://spatialdata.iu.edu/DOQQS/naip/county/y2014/in_naip_2014/in_ccm_2014/18089/ortho_1-1_1n_s_in089_2014_1.shp.xml" .
+
+<urn:uuid:7a9caf1d-2b51-47ff-b818-b360edec641f> owl:a foaf:Organization ;
+    foaf:name "USDA-FSA Aerial Photography Field Office" .
+
+<urn:uuid:7f893371-a301-45d6-99f9-8324c8257537> bcube:hasType "theme" ;
+    bcube:hasValue "Acquisition Date",
+        "Digital",
+        "Mosaic",
+        "Ortho Imagery",
+        "United States Department of Agriculture (USDA)",
+        "farming" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:b280db11-2ff2-44d2-9516-931f4b4b28b7> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-11-12T09:55:53.969Z" ;
+    bcube:lastUpdated "2015-11-12T09:55:53.969Z" ;
+    bcube:originatedFrom <urn:uuid:5fc28047-80fd-41da-a68d-e82396bffe0c> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:2291f87b-7d70-4985-aaf6-be9f2d94e4e7> .
+

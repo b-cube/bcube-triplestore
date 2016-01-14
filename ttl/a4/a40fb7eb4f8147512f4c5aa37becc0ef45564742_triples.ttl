@@ -1,0 +1,88 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:11c793b6-4242-434a-aeaf-4f536148a1b0> owl:a foaf:Organization ;
+    foaf:name "" .
+
+<urn:uuid:3e2ac953-d7b8-4a0a-8964-f708c23c649f> bcube:hasType "theme" ;
+    bcube:hasValue "Nation",
+        "Polygon" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:4ca45932-5aba-48af-bb0e-2c386ef8a39e> bcube:hasType "place" ;
+    bcube:hasValue "05",
+        "AR",
+        "Arkansas",
+        "State or Equivalent Entity",
+        "U.S.",
+        "United States" ;
+    dc:partOf "INCITS.38-200x (R2004),INCITS.31-200x (R2007),INCITS.454-200x,INCITS 455-200x,INCITS 446-2008" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:81387f60-7dfc-4fca-b21d-6587da431af0> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-01T02:16:16.735Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-01T02:16:16.735Z" ;
+    dc:identifier "urn:sha:26c4a6ba68cef818c4599531c08e1eb495b7e0c868a9e1d611709dc8" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://meta.geo.census.gov/data/existing/decennial/GEO/GPMB/TIGERline/fe_2010/MIL/tl_2010_05_mil_url.shp.xml" .
+
+<urn:uuid:9bbfe6a3-51a5-410b-8a51-63d477843ebf> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-11-01T02:16:16.735Z" ;
+    bcube:lastUpdated "2015-11-01T02:16:16.735Z" ;
+    bcube:originatedFrom <urn:uuid:81387f60-7dfc-4fca-b21d-6587da431af0> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:9df3de54-42db-491a-8fef-8e439ec0e91e> .
+
+<urn:uuid:9df3de54-42db-491a-8fef-8e439ec0e91e> bcube:dateCreated "2015-11-01T02:16:16.735Z" ;
+    bcube:hasMetadataRecord <urn:uuid:9bbfe6a3-51a5-410b-8a51-63d477843ebf> ;
+    bcube:lastUpdated "2015-11-01T02:16:16.735Z" ;
+    dc:conformsTo <urn:uuid:3e2ac953-d7b8-4a0a-8964-f708c23c649f>,
+        <urn:uuid:4ca45932-5aba-48af-bb0e-2c386ef8a39e>,
+        <urn:uuid:ed3c2b96-d852-4d10-89e2-1588f3730113> ;
+    dc:description "The TIGER/Line Files are shapefiles and related database files (.dbf) that are an extract of selected geographic and cartographic information from the U.S. Census Bureau's Master Address File / Topologically Integrated Geographic Encoding and Referencing (MAF/TIGER) Database (MTDB). The MTDB represents a seamless national file with no overlaps or gaps between parts, however, each TIGER/Line File is designed to stand alone as an independent data set, or they can be combined to cover the entire nation. The Census Bureau includes landmarks such as military installations in the MTDB for locating special features and to help enumerators during field operations. In 2008, the Census Bureau obtained the inventory and boundaries of most military installations from the U.S. Department of Defense (DOD) for Air Force, Army, Marine, and Navy installations and from the U.S. Department of Homeland Security (DHS) for Coast Guard installations. In a few cases, the files supplied to the Census Bureau contained older, unverified information than that obtained from the DOD for Census 2000; in those cases the military installations in MTDB were reviewed, but not updated to match the files obtained in 2008." ;
+    dc:spatial "POLYGON ((-94.617919 33.004106,-94.617919 36.499749,-89.644395 36.499749,-89.644395 33.004106,-94.617919 33.004106))" ;
+    dcterms:publisher <urn:uuid:11c793b6-4242-434a-aeaf-4f536148a1b0> ;
+    dcterms:references <urn:uuid:e52d72d2-b415-4772-99fa-c33660230665> ;
+    dcterms:title "TIGER/Line Shapefile, 2010, state, Arkansas, Military Installation State-based Shapefile" ;
+    esip:eastBound "-89.644395"^^xsd:float ;
+    esip:endDate "2010-07-01"^^xsd:date ;
+    esip:northBound "36.499749"^^xsd:float ;
+    esip:southBound "33.004106"^^xsd:float ;
+    esip:startDate "2010-01-01"^^xsd:date ;
+    esip:westBound "-94.617919"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:e52d72d2-b415-4772-99fa-c33660230665> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-01T02:16:16.735Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-01T02:16:16.735Z" ;
+    dc:identifier "urn:sha:06bc9daa116a5fdcb673bd06f31fa13f96980963fca52e8514317f77" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www2.census.gov/geo/tiger/TIGER2010/MIL/tl_2010_05_mil.zip" .
+
+<urn:uuid:ed3c2b96-d852-4d10-89e2-1588f3730113> bcube:hasType "theme" ;
+    bcube:hasValue "boundaries" ;
+    dc:partOf "ISO 19115 Topic Categories" ;
+    owl:a bcube:thesaurusSubset .
+

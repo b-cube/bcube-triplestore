@@ -1,0 +1,55 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:4a77ed65-1056-4898-9eb9-54159cb418ca> owl:a foaf:Organization ;
+    foaf:name "" .
+
+<urn:uuid:5aa35ed7-59ab-4c2e-9d72-e97f16da1ac1> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-11-16T22:30:50.958Z" ;
+    bcube:lastUpdated "2015-11-16T22:30:50.958Z" ;
+    bcube:originatedFrom <urn:uuid:83c6936f-3b2b-49c3-8945-ff5d9ac6b159> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:cb389ca1-9a5c-442d-8a6d-d3230ea5f81e> .
+
+<urn:uuid:72ead6a4-935d-4636-b462-01aa43bb5fac> bcube:hasType "theme" ;
+    bcube:hasValue "REQUIRED: Common-use word or phrase used to describe the subject of the data set." ;
+    dc:partOf "REQUIRED: Reference to a formally registered thesaurus or a similar authoritative source of theme keywords." ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:83c6936f-3b2b-49c3-8945-ff5d9ac6b159> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-16T22:30:50.958Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-16T22:30:50.958Z" ;
+    dc:identifier "urn:sha:97b703b762a79548630d7461dc3df3f7a4d12041f7444577f8480cd7" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://rmgsc.cr.usgs.gov/outgoing/GeoMAC/2011_fire_data/Montana/Hawk/mt_hawk_20110719_1309_dd83.shp.xml" .
+
+<urn:uuid:cb389ca1-9a5c-442d-8a6d-d3230ea5f81e> bcube:dateCreated "2015-11-16T22:30:50.958Z" ;
+    bcube:hasMetadataRecord <urn:uuid:5aa35ed7-59ab-4c2e-9d72-e97f16da1ac1> ;
+    bcube:lastUpdated "2015-11-16T22:30:50.958Z" ;
+    dc:conformsTo <urn:uuid:72ead6a4-935d-4636-b462-01aa43bb5fac> ;
+    dc:description "Work in progress to attempt to collect statewide Fire Perimeter data existing from various sources and organized with the Final BLM Fire Perimeter DATA STANDARDS- 2010 . Data was obtained by MSO Fire and Aviation GIS , collected from BLM sharedrives folders (ie: P drive) as well as through other data requests. Some data for years 1956-2008 were obtained from the NOC in Denver- Susan Goodman and 1889-2003 fire history obtained from Forest Service Region 1: This dataset contains historic large-area fires (10 acres or greater). Data was compiled from different sources. The coarsest scale data was 1:250,000. Some data is as fine as 1:24,000, however, this information was not tracked during the creation of the dataset. ftp://ftp.blm.gov/pub/gis/wildfire/BLM_Historic_Perimeters. All of the Geomac historical perimeters were at: http://rmgsc.cr.usgs.gov/outgoing/geomac/historic_fire_data/ us_hist_fire_perims_2001_2009_dd83.zip" ;
+    dc:spatial "POLYGON ((-118.332508 2.877349,-118.332508 49.415374,-100.111984 49.415374,-100.111984 2.877349,-118.332508 2.877349))" ;
+    dcterms:publisher <urn:uuid:4a77ed65-1056-4898-9eb9-54159cb418ca> ;
+    dcterms:title "Data_1" ;
+    esip:eastBound "-100.111984"^^xsd:float ;
+    esip:northBound "49.415374"^^xsd:float ;
+    esip:southBound "2.877349"^^xsd:float ;
+    esip:westBound "-118.332508"^^xsd:float ;
+    owl:a dcat:Dataset .
+

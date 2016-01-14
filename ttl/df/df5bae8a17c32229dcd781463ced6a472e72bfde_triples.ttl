@@ -1,0 +1,98 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:1b95ea37-194c-4462-9bda-ceb1f35f6e02> bcube:hasType "place" ;
+    bcube:hasValue "Census Block Groups",
+        "Coastal States",
+        "United States" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:37411f24-7282-4419-baee-e96e5859ff02> bcube:hasType "theme" ;
+    bcube:hasValue "Comparative Index",
+        "Demographics",
+        "Environmental Hazards",
+        "Indicators",
+        "Resilience",
+        "Social Vulnerability Index",
+        "Socioeconomics",
+        "Vulnerability" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:462644f5-41db-43b8-96d7-07c4626aceca> bcube:dateCreated "2015-08-05T07:50:07.735Z" ;
+    bcube:hasMetadataRecord <urn:uuid:f9cde60d-1753-4127-a5a6-8388b9383a35> ;
+    bcube:lastUpdated "2015-08-05T07:50:07.735Z" ;
+    dc:conformsTo <urn:uuid:1b95ea37-194c-4462-9bda-ceb1f35f6e02>,
+        <urn:uuid:37411f24-7282-4419-baee-e96e5859ff02>,
+        <urn:uuid:ead98d09-0b5f-47f5-b417-4cb517528b72> ;
+    dc:description "This data depicts the social vulnerability of Texas census block groups to environmental hazards. Data were culled primarily from the 2000 Decennial Census." ;
+    dc:spatial "POLYGON ((-178.217598 18.921786,-178.217598 71.406235,-66.969271 71.406235,-66.969271 18.921786,-178.217598 18.921786))" ;
+    dcterms:publisher <urn:uuid:5bc7e50c-23b2-463c-b2ca-9ba014283391> ;
+    dcterms:references <urn:uuid:a4a55776-06fe-45af-b8ae-dfea8b2e74f4> ;
+    dcterms:title "Social Vulnerability Index (SoVI) for Texas based on 2000 Census Block Groups" ;
+    esip:eastBound "-66.969271"^^xsd:float ;
+    esip:northBound "71.406235"^^xsd:float ;
+    esip:southBound "18.921786"^^xsd:float ;
+    esip:startDate "2000-01-01"^^xsd:date ;
+    esip:westBound "-178.217598"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:5bc7e50c-23b2-463c-b2ca-9ba014283391> owl:a foaf:Organization ;
+    foaf:name "Hazards and Vulnerability Research Institute (HVRI), University of South Carolina" .
+
+<urn:uuid:a4a55776-06fe-45af-b8ae-dfea8b2e74f4> dcterms:references <urn:uuid:c1330a64-83a6-457d-b552-c1e1899508cf> ;
+    owl:a bibo:WebPage .
+
+<urn:uuid:c1330a64-83a6-457d-b552-c1e1899508cf> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-05T07:50:07.735Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-05T07:50:07.735Z" ;
+    dc:identifier "urn:sha:30cf345e633e286b856e2d494158a7a0073272646fff2597a42435eb" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www.coast.noaa.gov/digitalcoast/data/SoVI/" .
+
+<urn:uuid:ead98d09-0b5f-47f5-b417-4cb517528b72> bcube:hasType "theme" ;
+    bcube:hasValue "economy",
+        "environment",
+        "oceans",
+        "society",
+        "structure",
+        "transportation" ;
+    dc:partOf "ISO 19115 Topic Category" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:f9cde60d-1753-4127-a5a6-8388b9383a35> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-08-05T07:50:07.735Z" ;
+    bcube:lastUpdated "2015-08-05T07:50:07.735Z" ;
+    bcube:originatedFrom <urn:uuid:fc0ee841-e214-4c83-84d3-119e440f0daa> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:462644f5-41db-43b8-96d7-07c4626aceca> .
+
+<urn:uuid:fc0ee841-e214-4c83-84d3-119e440f0daa> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-05T07:50:07.735Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-05T07:50:07.735Z" ;
+    dc:identifier "urn:sha:523ebfa2d19fa0e0549f8f67d9f86e7b352171c74245597ac2c628e9" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://coast.noaa.gov/data/Documents/Metadata/harvest/Demographic/SOVI_BlkGrp_2000_TX_shp.xml" .
+

@@ -1,0 +1,102 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:3384a5d4-2712-4ca4-91e2-6b94d0cce2fc> owl:a foaf:Organization ;
+    foaf:name "Federal Emergency Management Agency" .
+
+<urn:uuid:72271b54-6bc9-4f3b-ab96-f27e226de880> bcube:dateCreated "2015-08-12T00:23:14.164Z" ;
+    bcube:hasMetadataRecord <urn:uuid:7ec88d4b-237a-476d-820a-ffbeb1ea8ddf> ;
+    bcube:lastUpdated "2015-08-12T00:23:14.164Z" ;
+    dc:conformsTo <urn:uuid:784cb4e5-cc22-4547-b994-98b05838edc4>,
+        <urn:uuid:ebfcc4d6-1b4c-48b2-a34c-e243f48f1de7>,
+        <urn:uuid:eeeefbe3-f699-43ab-b3fe-e2dc29a7d965> ;
+    dc:description "Survey data includes spatial datasets and data tables necessary to digitally represent data collected in the survey phase of the study. (Source: FEMA Guidelines and Specs, Appendix M)" ;
+    dc:spatial "POLYGON ((-70.6734 41.51568,-70.6734 42.05542,-69.94544 42.05542,-69.94544 41.51568,-70.6734 41.51568))" ;
+    dcterms:publisher <urn:uuid:3384a5d4-2712-4ca4-91e2-6b94d0cce2fc> ;
+    dcterms:references <urn:uuid:7bcfe730-873b-414c-b669-478407fbe46a> ;
+    dcterms:title "SURVEY, BARNSTABLE COUNTY, MA" ;
+    esip:eastBound "-69.94544"^^xsd:float ;
+    esip:northBound "42.05542"^^xsd:float ;
+    esip:southBound "41.51568"^^xsd:float ;
+    esip:startDate "2011-09-28"^^xsd:date ;
+    esip:westBound "-70.6734"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:784cb4e5-cc22-4547-b994-98b05838edc4> bcube:hasType "theme" ;
+    bcube:hasValue "elevation",
+        "location",
+        "structure",
+        "transportation" ;
+    dc:partOf "ISO 19115 Topic Category" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:7bcfe730-873b-414c-b669-478407fbe46a> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-12T00:23:14.164Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-12T00:23:14.164Z" ;
+    dc:identifier "urn:sha:37c915397238031daced09ae0e2dd3bf54e84a6477f749c2cc9dcbdf" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://hazards.fema.gov" .
+
+<urn:uuid:7ec88d4b-237a-476d-820a-ffbeb1ea8ddf> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-08-12T00:23:14.164Z" ;
+    bcube:lastUpdated "2015-08-12T00:23:14.164Z" ;
+    bcube:originatedFrom <urn:uuid:fc3cb734-be60-4ecb-914d-76e5122c31a6> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:72271b54-6bc9-4f3b-ab96-f27e226de880> .
+
+<urn:uuid:ebfcc4d6-1b4c-48b2-a34c-e243f48f1de7> bcube:hasType "place" ;
+    bcube:hasValue "COMMUNITY BARNSTABLE, BOURNE, BREWSTER, CHATHAM, DENNIS, EASTHAM, FALMOUTH, HARWICH, MASHPEE, ORLEANS, PROVINCETOWN, SANDWICH, TRURO, WELLFLEET, YARMOUTH",
+        "COUNTY BARNSTABLE",
+        "COUNTY-FIPS 25001",
+        "FEMA-CID 25001C",
+        "REGION 01",
+        "STATE MA" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:eeeefbe3-f699-43ab-b3fe-e2dc29a7d965> bcube:hasType "theme" ;
+    bcube:hasValue "Bridges",
+        "Creeks",
+        "Cross Section Lines",
+        "Cross Sections",
+        "Culverts",
+        "DFIRM",
+        "Dams",
+        "Digital Flood Insurance Rate Map",
+        "Flood Hazard Data",
+        "Levees",
+        "Streams",
+        "Survey",
+        "Transects",
+        "Water Body" ;
+    dc:partOf "FEMA NFIP Topic Category" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:fc3cb734-be60-4ecb-914d-76e5122c31a6> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-12T00:23:14.164Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-12T00:23:14.164Z" ;
+    dc:identifier "urn:sha:222cae797c12b890b6ada9fd926409154537238a36031a737b4e8f17" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "https://catalog.data.gov/harvest/object/4bcb635b-4b7b-4580-ba84-f4605c1d58c2/original" .
+

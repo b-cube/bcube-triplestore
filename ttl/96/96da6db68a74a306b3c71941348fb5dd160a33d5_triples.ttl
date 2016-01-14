@@ -1,0 +1,71 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:2b1ea33f-e350-434b-849e-33e9010d613f> owl:a foaf:Organization ;
+    foaf:name "" .
+
+<urn:uuid:3aecc229-0c38-4084-80d9-7ad2b231c889> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-11-04T11:53:32.871Z" ;
+    bcube:lastUpdated "2015-11-04T11:53:32.871Z" ;
+    bcube:originatedFrom <urn:uuid:aa6bb07a-ee23-48fe-a1ea-bf8980064e2c> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:43e73013-c2d2-47ef-949e-e414d0eadf44> .
+
+<urn:uuid:3fd15ad1-bbae-40d3-aaa2-e20b874439bf> bcube:hasType "place" ;
+    bcube:hasValue "Colorado",
+        "Denver",
+        "Denver County",
+        "USA" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:401886ba-395f-41c5-875f-26bb95874bce> bcube:hasType "theme" ;
+    bcube:hasValue "transportation" ;
+    dc:partOf "ISO 19115 Topic Categories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:43e73013-c2d2-47ef-949e-e414d0eadf44> bcube:dateCreated "2015-11-04T11:53:32.871Z" ;
+    bcube:hasMetadataRecord <urn:uuid:3aecc229-0c38-4084-80d9-7ad2b231c889> ;
+    bcube:lastUpdated "2015-11-04T11:53:32.871Z" ;
+    dc:conformsTo <urn:uuid:3fd15ad1-bbae-40d3-aaa2-e20b874439bf>,
+        <urn:uuid:401886ba-395f-41c5-875f-26bb95874bce>,
+        <urn:uuid:bc31093c-e350-491b-bb3b-ffe573f11836> ;
+    dc:description "The streets and alleys of the City and County of Denver, Colorado. This dataset is continually undergoing change as they occur within the city. To determine the last change made on a particular street, consult the Editdate field for the particular road segment." ;
+    dc:spatial "POLYGON ((-105.109946 39.614371,-105.109946 39.943399,-104.578886 39.943399,-104.578886 39.614371,-105.109946 39.614371))" ;
+    dcterms:publisher <urn:uuid:2b1ea33f-e350-434b-849e-33e9010d613f> ;
+    dcterms:title "Street and Alley Centerline" ;
+    esip:eastBound "-104.578886"^^xsd:float ;
+    esip:northBound "39.943399"^^xsd:float ;
+    esip:southBound "39.614371"^^xsd:float ;
+    esip:westBound "-105.109946"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:aa6bb07a-ee23-48fe-a1ea-bf8980064e2c> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-04T11:53:32.871Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-04T11:53:32.871Z" ;
+    dc:identifier "urn:sha:2ae301e0499e226ec3a974fe34b26f3cbb3e1e23baefb1a6faffd354" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://data.denvergov.org/download/gis/street_centerline/metadata/street_centerline.xml" .
+
+<urn:uuid:bc31093c-e350-491b-bb3b-ffe573f11836> bcube:hasType "theme" ;
+    bcube:hasValue "road",
+        "roadway" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+

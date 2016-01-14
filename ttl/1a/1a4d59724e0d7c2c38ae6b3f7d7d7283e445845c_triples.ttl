@@ -1,0 +1,75 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:19af1aef-862d-44ca-bd61-8ae3856391e9> bcube:hasType "theme" ;
+    bcube:hasValue "AIS",
+        "Fishing",
+        "Vessel Traffic",
+        "ship traffic",
+        "track lines" ;
+    dc:partOf "MarineCadastre" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:2e566f0f-d313-4c16-9d79-ef5e573f8aa2> a "ISO 19115:2003/19139" ;
+    bcube:dateCreated "2015-07-29T19:08:55.691Z" ;
+    bcube:lastUpdated "2015-07-29T19:08:55.691Z" ;
+    bcube:originatedFrom <urn:uuid:ee93b885-67e7-496e-94b4-81a6122131d2> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:be546e8f-1114-4ad6-a275-f83ca7286145> .
+
+<urn:uuid:4075d639-88d0-4d5b-b978-a70f6caca710> bcube:hasValue "oceans" ;
+    dc:partOf "IsoTopicCategories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:be546e8f-1114-4ad6-a275-f83ca7286145> bcube:dateCreated "2015-07-29T19:08:55.691Z" ;
+    bcube:hasMetadataRecord <urn:uuid:2e566f0f-d313-4c16-9d79-ef5e573f8aa2> ;
+    bcube:lastUpdated "2015-07-29T19:08:55.691Z" ;
+    dc:conformsTo <urn:uuid:19af1aef-862d-44ca-bd61-8ae3856391e9>,
+        <urn:uuid:4075d639-88d0-4d5b-b978-a70f6caca710>,
+        <urn:uuid:c3ad2739-00f2-42b7-9d7f-91b8e2687673>,
+        <urn:uuid:f947d2b8-7d1e-4cef-acd9-478d76e3fd8d> ;
+    dc:description "Automatic Identification Systems (AIS) are a navigation safety device that transmits and monitors the location and characteristics of many vessels in U.S. and international waters in real-time. In the U.S. the Coast Guard and industry collect AIS data, which can also be used for a variety of coastal planning purposes. NOAA and BOEM have worked jointly to re-task and make available some of the most important records from the U.S. Coast Guard's national network of AIS receivers. Information such as location, time, ship type, length, width, and draft have been extracted from the raw data and prepared as track lines for analyses in desktop GIS software. The data represented in this dataset is a subset of the 2011 Gulf of Mexico Vessel Traffic showing only fishing vessel traffic." ;
+    dc:spatial "POLYGON ((-97.919325572 16.453447851,-97.919325572 31.982964192,-83.999996233 31.982964192,-83.999996233 16.453447851,-97.919325572 16.453447851))" ;
+    dcterms:title "2011 Gulf of Mexico Fishing Vessel Traffic" ;
+    esip:eastBound "-83.999996233"^^xsd:float ;
+    esip:endDate "2011-12-31"^^xsd:date ;
+    esip:northBound "31.982964192"^^xsd:float ;
+    esip:southBound "16.453447851"^^xsd:float ;
+    esip:startDate "2011-01-01"^^xsd:date ;
+    esip:westBound "-97.919325572"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:c3ad2739-00f2-42b7-9d7f-91b8e2687673> bcube:hasType "place" ;
+    bcube:hasValue "Gulf of Mexico",
+        "United States" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:ee93b885-67e7-496e-94b4-81a6122131d2> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-07-29T19:08:55.691Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-07-29T19:08:55.691Z" ;
+    dc:identifier "urn:sha:6479d8f0252df0c9ad8b25e4dc46cdf3204ab46fc48f57bba0cc2f7c" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://catalog.data.gov/harvest/object/a44fef93-e129-43c6-8158-ce284adf6ba3" .
+
+<urn:uuid:f947d2b8-7d1e-4cef-acd9-478d76e3fd8d> bcube:hasType "temporal" ;
+    bcube:hasValue "2011" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+

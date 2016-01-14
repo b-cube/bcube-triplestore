@@ -1,0 +1,91 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:21c53bce-9464-45f5-9a55-da0402cfbe71> bcube:hasType "theme" ;
+    bcube:hasValue "Area hydrography identifier",
+        "County FIPS Code",
+        "County GNIS Code",
+        "County or equivalent entity",
+        "Hydrography",
+        "Land/water flag",
+        "Permanent face ID",
+        "State FIPS Code",
+        "State GNIS Code",
+        "Table",
+        "Topological Faces" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:52358704-c915-4efb-9ccd-80f9dc0a4336> bcube:hasValue "inlandWaters" ;
+    dc:partOf "IsoTopicCategories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:614631af-c2f8-4e49-ae00-424063e78fdf> a "ISO 19115:2003/19139" ;
+    bcube:dateCreated "2015-08-05T07:58:33.191Z" ;
+    bcube:lastUpdated "2015-08-05T07:58:33.191Z" ;
+    bcube:originatedFrom <urn:uuid:e5459907-073b-47de-941f-9e6b97c9d1ac> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:e80dfa29-bda6-4bc0-8a2b-5ac02045c87a> .
+
+<urn:uuid:755838a1-fbed-4b2e-958c-7a3252f23970> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-05T07:58:33.191Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-05T07:58:33.191Z" ;
+    dc:identifier "urn:sha:8cac4b91be0afd1c95a71fce42e096cbc6aa07ec772bd2ce51af5b1c" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www2.census.gov/geo/tiger/TIGER2014/FACESAH/tl_2014_23005_facesah.zip" .
+
+<urn:uuid:9296693c-4bc9-4685-9d73-109c25c9fa98> bcube:hasType "place" ;
+    bcube:hasValue "23005",
+        "County or Equivalent Entity",
+        "Cumberland",
+        "U.S.",
+        "United States" ;
+    dc:partOf "ANSI INCITS 38:2009 (Formerly FIPS 5-2), ANSI INCITS 31:2009 (Formerly FIPS 6-4),ANSI INCITS 454:2009 (Formerly FIPS 8-6), ANSI INCITS 455:2009(Formerly FIPS 9-1), ANSI INCITS 446:2008 (Geographic Names Information System (GNIS))" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:e5459907-073b-47de-941f-9e6b97c9d1ac> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-05T07:58:33.191Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-05T07:58:33.191Z" ;
+    dc:identifier "urn:sha:3f1c65e6dd747c421286df5f2f9cf66b44c8c95703206b2fe2cc1961" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://catalog.data.gov/harvest/object/ad90dc60-e486-4086-9160-43f0958e9f82" .
+
+<urn:uuid:e80dfa29-bda6-4bc0-8a2b-5ac02045c87a> bcube:dateCreated "2015-08-05T07:58:33.191Z" ;
+    bcube:hasMetadataRecord <urn:uuid:614631af-c2f8-4e49-ae00-424063e78fdf> ;
+    bcube:lastUpdated "2015-08-05T07:58:33.191Z" ;
+    dc:conformsTo <urn:uuid:21c53bce-9464-45f5-9a55-da0402cfbe71>,
+        <urn:uuid:52358704-c915-4efb-9ccd-80f9dc0a4336>,
+        <urn:uuid:9296693c-4bc9-4685-9d73-109c25c9fa98> ;
+    dc:description "The TIGER/Line shapefiles and related database files (.dbf) are an extract of selected geographic and cartographic information from the U.S. Census Bureau's Master Address File / Topologically Integrated Geographic Encoding and Referencing (MAF/TIGER) Database (MTDB). The MTDB represents a seamless national file with no overlaps or gaps between parts, however, each TIGER/Line shapefile is designed to stand alone as an independent data set, or they can be combined to cover the entire nation. The Topological Faces / Area Hydrography Relationship File (FACESAH.dbf) contains a record for each face / area hydrography feature relationship. Face refers to the areal (polygon) topological primitives that make up MTDB. A face is bounded by one or more edges; its boundary includes only the edges that separate it from other faces, not any interior edges contained within the area of the face. The face to which a record in the Topological Faces / Area Hydrography Relationship File (FACESAH.dbf) applies can be determined by linking to the Topological Faces Shapefile (FACES.shp) using the permanent topological face identifier (TFID) attribute. The area hydrography feature to which a record in the Topological Faces / Area Hydrography Relationship File (FACESAH.dbf) applies can be determined by linking to the Area Hydrography Shapefile (AREAWATER.shp) using the area hydrography identifier (HYDROID) attribute. A face may be part of multiple area water features. An area water feature may consist of multiple faces." ;
+    dc:spatial "POLYGON ((-70.866623 43.466878,-70.866623 44.171036,-69.857032 44.171036,-69.857032 43.466878,-70.866623 43.466878))" ;
+    dcterms:references <urn:uuid:755838a1-fbed-4b2e-958c-7a3252f23970> ;
+    dcterms:title "TIGER/Line Shapefile, 2014, county, Cumberland County, ME, Topological Faces-Area Hydrography County-based Relationship File" ;
+    esip:eastBound "-69.857032"^^xsd:float ;
+    esip:endDate "2014-05-29"^^xsd:date ;
+    esip:northBound "44.171036"^^xsd:float ;
+    esip:southBound "43.466878"^^xsd:float ;
+    esip:startDate "2013-06-29"^^xsd:date ;
+    esip:westBound "-70.866623"^^xsd:float ;
+    owl:a dcat:Dataset .
+

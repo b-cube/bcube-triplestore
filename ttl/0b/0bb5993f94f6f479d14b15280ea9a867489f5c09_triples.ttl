@@ -1,0 +1,95 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:349afead-5a57-413a-ad9a-b6bdc663a5ad> bcube:hasType "theme" ;
+    bcube:hasValue "5-digit ZIP code",
+        "County ANSI Code",
+        "County FIPS Code",
+        "From House Number",
+        "Permanent edge ID",
+        "Side indicator flag",
+        "State ANSI Code",
+        "State FIPS Code",
+        "To House Number",
+        "ZIP +4 code" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:4daf6ddd-fbe6-4bd2-84f2-5b05d9d9545b> bcube:hasType "theme" ;
+    bcube:hasValue "Transportation" ;
+    dc:partOf "ISO 19115 Topic Categories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:5bc16518-9124-4158-89b5-d73102b7b920> bcube:hasType "place" ;
+    bcube:hasValue "02070",
+        "County or Equivalent Entity",
+        "Dillingham",
+        "U.S.",
+        "United States" ;
+    dc:partOf "ANSI INCITS 38:2009 (Formerly FIPS 5-2), ANSI INCITS 31:2009 (Formerly FIPS 6-4),ANSI INCITS 454:2009 (Formerly FIPS 8-6), ANSI INCITS 455:2009(Formerly FIPS 9-1), ANSI INCITS 446:2008 (Geographic Names Information System (GNIS))" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:7c5958b6-efa4-4243-988b-a6d88514fffd> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-01T10:19:35.032Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-01T10:19:35.032Z" ;
+    dc:identifier "urn:sha:8e5bf2e3983fa8395f70bb4f4ff1c7db937833ab379e004b7f08f508" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www2.census.gov/geo/tiger/TIGER2012/ADDRFN/tl_2012_02070_addrfn.zip" .
+
+<urn:uuid:a409ac38-5604-4431-a889-36b9877765e5> owl:a foaf:Organization ;
+    foaf:name "" .
+
+<urn:uuid:ab248a8d-a772-4aa3-a718-d1e13dfe752c> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-11-01T10:19:35.032Z" ;
+    bcube:lastUpdated "2015-11-01T10:19:35.032Z" ;
+    bcube:originatedFrom <urn:uuid:cbc35457-549d-40e7-a0b6-a37478f809ca> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:c1c16ff8-b740-4f07-aede-da6f98070218> .
+
+<urn:uuid:c1c16ff8-b740-4f07-aede-da6f98070218> bcube:dateCreated "2015-11-01T10:19:35.032Z" ;
+    bcube:hasMetadataRecord <urn:uuid:ab248a8d-a772-4aa3-a718-d1e13dfe752c> ;
+    bcube:lastUpdated "2015-11-01T10:19:35.032Z" ;
+    dc:conformsTo <urn:uuid:349afead-5a57-413a-ad9a-b6bdc663a5ad>,
+        <urn:uuid:4daf6ddd-fbe6-4bd2-84f2-5b05d9d9545b>,
+        <urn:uuid:5bc16518-9124-4158-89b5-d73102b7b920> ;
+    dc:description "The TIGER/Line shapefiles and related database files (.dbf) are an extract of selected geographic and cartographic information from the U.S. Census Bureau's Master Address File / Topologically Integrated Geographic Encoding and Referencing (MAF/TIGER) Database (MTDB). The MTDB represents a seamless national file with no overlaps or gaps between parts, however, each TIGER/Line shapefile is designed to stand alone as an independent data set, or they can be combined to cover the entire nation. The Address Range / Feature Name Relationship File (ADDRFN.dbf) contains a record for each address range / linear feature name relationship. The purpose of this relationship file is to identify all street names associated with each address range. An edge can have several feature names; an address range located on an edge can be associated with one or any combination of the available feature names (an address range can be linked to multiple feature names). The address range is identified by the address range identifier (ARID) attribute that can be used to link to the Address Ranges Relationship File (ADDR.dbf). The linear feature name is identified by the linear feature identifier (LINEARID) attribute that can be used to link to the Feature Names Relationship File (FEATNAMES.dbf)." ;
+    dc:spatial "POLYGON ((-161.368728 58.33414,-161.368728 61.00057,-155.953624 61.00057,-155.953624 58.33414,-161.368728 58.33414))" ;
+    dcterms:publisher <urn:uuid:a409ac38-5604-4431-a889-36b9877765e5> ;
+    dcterms:references <urn:uuid:7c5958b6-efa4-4243-988b-a6d88514fffd> ;
+    dcterms:title "TIGER/Line Shapefile, 2012, county, Dillingham Census Area, AK, Current Address Range-Feature Name Relationship File" ;
+    esip:eastBound "-155.953624"^^xsd:float ;
+    esip:endDate "2012-06-01"^^xsd:date ;
+    esip:northBound "61.00057"^^xsd:float ;
+    esip:southBound "58.33414"^^xsd:float ;
+    esip:startDate "2011-08-01"^^xsd:date ;
+    esip:westBound "-161.368728"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:cbc35457-549d-40e7-a0b6-a37478f809ca> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-01T10:19:35.032Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-01T10:19:35.032Z" ;
+    dc:identifier "urn:sha:8e665e8681bf1f85ae8cab64a24b6edec8884679eb288b430c3ba3e7" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://meta.geo.census.gov/data/existing/decennial/GEO/GPMB/TIGERline/TL2012/FGDC/addrfn/tl_2012_02070_addrfn.dbf.xml" .
+

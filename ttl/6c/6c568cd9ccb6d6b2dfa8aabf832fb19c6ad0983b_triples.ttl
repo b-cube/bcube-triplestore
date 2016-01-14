@@ -1,0 +1,68 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:093c7206-b7f0-4d1e-b95d-63155b9559d5> bcube:hasValue "climatologyMeteorologyAtmosphere" ;
+    dc:partOf "IsoTopicCategories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:3a36551f-4b18-4d7c-862d-5086b5fe94d1> bcube:dateCreated "2015-11-02T07:06:56.916Z" ;
+    bcube:hasMetadataRecord <urn:uuid:673103ec-75d3-4c02-9efc-6960294466ae> ;
+    bcube:lastUpdated "2015-11-02T07:06:56.916Z" ;
+    dc:conformsTo <urn:uuid:093c7206-b7f0-4d1e-b95d-63155b9559d5>,
+        <urn:uuid:50f45882-66a0-4510-9612-e1daf9aa57b9>,
+        <urn:uuid:63cb37ac-a37f-49f1-8906-50fbd8885e33>,
+        <urn:uuid:82d0a1c2-6130-4502-a5a6-bde87aba4e75> ;
+    dc:description "NOTICE: A significant issue with the precipitation variables in this dataset was found in January 2015. The precipitation data has two fewer columns than the temperature data, one from each edge. When merged into the same coordinate system, this caused the temperature data to be offset to the west by one pixel. The dataset is now broken into two sub-datasets, one for precipitation and one for temperature. This corrects the pixel location. Any use of precipitation data from this dataset from September 2013, when new precipitation files containing the issue were introduced, should be considered slightly in error. For more information please contact gdp@usgs.gov. In this project, we used an advanced statistical downscaling method that combines high-resolution observations with outputs from 16 different global climate models based on 4 future emission scenarios to generate the most comprehensive dataset of daily temperature and precipitation projections available for climate change impacts in the U.S. The gridded dataset covers the continental United States, southern Canada and northern Mexico at one-eighth degree resolution and Alaska at one-half degree resolution. The high-resolution projections produced by this work have been rigorously quality-controlled for both errors and biases in the global climate and statistical downscaling models. We also calculated projected future changes in a broad range of impact-relevant indicators, from seasonal temperature to extreme precipitation days. The results of the error and bias tests and the indicator calculations are made available as part of this database. Additional information and raw data from this dataset can be found here: http://cida.usgs.gov/thredds/catalog.html Before using this dataset, please review the material summarized here: https://my.usgs.gov/confluence/display/GeoDataPortal/2014/04/16/Notice%3A+Evaluation+of+Maurer+gridded+observational+datasets+and+their+impacts+on+downscaled+products Note that the CONUS temperature and precipitation data were split into two sub datasets in January 2015. This was done because the precipitation data uses a slightly different longitude axis than the temperature data." ;
+    dc:identifier "cida.usgs.gov/thredds/dcp/conus" ;
+    dc:spatial "POLYGON ((-127.96875 21.4453125,-127.96875 51.6796875,-65.7421875 51.6796875,-65.7421875 21.4453125,-127.96875 21.4453125))" ;
+    dcterms:title "Eighth degree-CONUS Statistical Asynchronous Regional Regression Daily Downscaled Climate Projections" ;
+    esip:eastBound "-65.7421875"^^xsd:float ;
+    esip:endDate "2099-11-26"^^xsd:date ;
+    esip:northBound "51.6796875"^^xsd:float ;
+    esip:southBound "21.4453125"^^xsd:float ;
+    esip:startDate "1960-01-01"^^xsd:date ;
+    esip:westBound "-127.96875"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:50f45882-66a0-4510-9612-e1daf9aa57b9> bcube:hasValue "gov.usgs.cida.gdp.wps.algorithm.FeatureCoverageOPeNDAPIntersectionAlgorithm",
+        "gov.usgs.cida.gdp.wps.algorithm.FeatureGridStatisticsAlgorithm",
+        "gov.usgs.cida.gdp.wps.algorithm.FeatureWeightedGridStatisticsAlgorithm" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:63cb37ac-a37f-49f1-8906-50fbd8885e33> bcube:hasValue "Center for Integrated Data Analytics" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:673103ec-75d3-4c02-9efc-6960294466ae> a "ISO 19115:2003/19139" ;
+    bcube:dateCreated "2015-11-02T07:06:56.916Z" ;
+    bcube:lastUpdated "2015-11-02T07:06:56.916Z" ;
+    bcube:originatedFrom <urn:uuid:83a78add-b220-41b1-a847-801fee9efc37> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:3a36551f-4b18-4d7c-862d-5086b5fe94d1> .
+
+<urn:uuid:82d0a1c2-6130-4502-a5a6-bde87aba4e75> bcube:hasType "theme" ;
+    bcube:hasValue "Atmospheric Temperature > Air Temperature Atmosphere > Precipitation > Rain > Maximum Daily Temperature > Minimum Daily Temperature" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:83a78add-b220-41b1-a847-801fee9efc37> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-02T07:06:56.916Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-02T07:06:56.916Z" ;
+    dc:identifier "urn:sha:2043bf06f9b038f6d2243a4dfbe638bab3ab0b9b9fa39d69333ae585" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://catalog.data.gov/harvest/object/83b9c8fe-e5b9-4214-82bd-f950cbd87239" .
+

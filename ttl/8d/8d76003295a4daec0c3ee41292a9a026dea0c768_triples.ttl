@@ -1,0 +1,206 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:2529e5cd-531d-43af-809a-bd55b523db52> bcube:hasType "theme" ;
+    bcube:hasValue "elevation",
+        "imageryBaseMapsEarthCover",
+        "location",
+        "oceans" ;
+    dc:partOf "ISO 19115 Topic Categories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:25f2565f-177a-40ac-90bd-e3c1bb8d308c> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-08T13:06:21.386Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-08T13:06:21.386Z" ;
+    dc:identifier "urn:sha:ae8d447b565b0826ca3200ac8ee6e393825a349d49938bfbbf40fef3" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://coast.noaa.gov/dataviewer/index.html?action=advsearch&qType=in&qFld=ID&qVal=4846" .
+
+<urn:uuid:2a1e1b76-b87d-4a03-9567-8ed9e80612e3> owl:a foaf:Organization ;
+    foaf:name "NOAA's Ocean Service, Office for Coastal Management (OCM)" .
+
+<urn:uuid:2bef1bc7-4240-44b6-81f4-ffa7f137b67c> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-08T13:06:21.386Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-08T13:06:21.386Z" ;
+    dc:identifier "urn:sha:f0ba98168fdcd26037159fd39fa9a342739c54929ded1470b6e8b98b" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://coast.noaa.gov/htdata/lidar1_z/geoid12a/data/4846/mi2013_USACE_NCMP_lakemichigan_m4846_metadata.xml" .
+
+<urn:uuid:3d1a3af9-0843-45aa-96b3-564f5c63c757> bcube:dateCreated "2015-08-08T13:06:21.386Z" ;
+    bcube:hasMetadataRecord <urn:uuid:4ba76c1a-d4a9-452f-991f-13c03122ea7a> ;
+    bcube:lastUpdated "2015-08-08T13:06:21.386Z" ;
+    dc:conformsTo <urn:uuid:2529e5cd-531d-43af-809a-bd55b523db52>,
+        <urn:uuid:3f80ff3e-b4fe-4f95-978e-479fdf516ac9>,
+        <urn:uuid:81947484-b76f-4a40-89aa-186facbdd8e9>,
+        <urn:uuid:91e6fcf1-aede-4d3f-92b0-0f1a1a7b74a4>,
+        <urn:uuid:a5ef805e-1cc4-4c51-b548-7a26c85db284>,
+        <urn:uuid:c769f031-4332-44f0-95a1-6ab010953624>,
+        <urn:uuid:d26eb1e6-dcb0-4f40-a0bb-a0d2d09e227f>,
+        <urn:uuid:de5fb997-1c07-433a-87ab-758f0ac6a36f>,
+        <urn:uuid:e19973fa-96f8-480c-ba75-508b07025b63>,
+        <urn:uuid:eb9e0267-658a-47fd-b17f-887c547a0cc3> ;
+    dc:description "This data set is an LAZ (compressed LAS) format file containing LIDAR point cloud data. These files contain classified topo/bathy lidar data. Data are classified as 1 (valid non-ground topographic data), 2 (valid ground topographic data), and 29 (valid bathymetric data). Classes 1 and 2 are defined in accordance with the American Society for Photogrammetry and Remote Sensing (ASPRS) classification standards. These data were collected by the Coastal Zone Mapping and Imaging Lidar (CZMIL) system. CZMIL integrates a lidar sensor with simultaneous topographic and bathymetric capabilities, a digital camera and a hyperspectral imager on a single remote sensing platform for use in coastal mapping and charting activities. Native lidar data is not generally in a format accessible to most Geographic Information Systems (GIS). Specialized in-house and commercial software packages are used to process the native lidar data into 3-dimensional positions that can be imported into GIS software for visualization and further analysis. Horizontal positions, provided in decimal degrees of latitude and longitude, are referenced to the North American Datum of 1983 National Adjustment of 2011 (NAD83 NA2011). Vertical positions are referenced to the NAD83 NA11 ellipsoid and provided in meters. The National Geodetic Survey's (NGS) GEOID12A model is used to transform the vertical positions from ellipsoid to orthometric heights referenced to the North American Vertical Datum of 1988 (NAVD88). Upon arrival at NOAA's Office for Coastal Management the data were converted from NAVD88 (orthometric) heights in meters to GRS80 (ellipsoid) heights in meters using Geoid 12a for Digital Coast provisioning purposes. The 3-D position data are sub-divided into a series of LAS files, which are tiled into quarter-quads or 5km boxes. The LAS file index is provided by the shape file, \"mi_huron_boxes.shp\", and the numbers used to identify files are in the \"Box\" field of the shape file. The data file naming convention is based on the year, effort, area name, \"Box\" number and product type. An example file name is \"2013_NCMP_MI_Huron_01_GeoClassified_NAVD88.las\", where 2013 is the year of data collection, NCMP is the project under which data were collected, MI_Huron is the area of data collection, 01 is the \"Box\" number and GeoClassified_NAVD88 is the product type. This collection was divided into two parts by NOAA's Office for Coastal Management due to the difference in point spacing. The northern project is in Mackinac County and the southern project is in Cheboygan and Emmet Counties respectively. Upon arrival to NOAA's Office for Coastal Management the data were converted to geographic coordinates and to GRS80 (ellipsoid) in meters." ;
+    dc:spatial "POLYGON ((-84.7328364 45.8375313,-84.7328364 45.851205100100003,-84.7225531 45.851205100100003,-84.7225531 45.8375313,-84.7328364 45.8375313))" ;
+    dcterms:publisher <urn:uuid:2a1e1b76-b87d-4a03-9567-8ed9e80612e3> ;
+    dcterms:references <urn:uuid:4fef3a05-b560-431a-9ae1-8f88acdb1317>,
+        <urn:uuid:5473b48d-923f-40a4-9fa2-777a10189e01>,
+        <urn:uuid:8f0e37df-375c-409b-8e30-8fd52a004e22>,
+        <urn:uuid:8faf800a-96e7-4988-9630-e2ffd356fa1c> ;
+    dcterms:title "2013 USACE NCMP Topobathy Lidar: Lake Michigan (MI) - Northern Collection" ;
+    esip:eastBound "-84.7225531"^^xsd:float ;
+    esip:endDate "2013-07-08"^^xsd:date ;
+    esip:northBound "45.8512051001"^^xsd:float ;
+    esip:southBound "45.8375313"^^xsd:float ;
+    esip:startDate "2013-07-05"^^xsd:date ;
+    esip:westBound "-84.7328364"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:3f80ff3e-b4fe-4f95-978e-479fdf516ac9> bcube:hasType "theme" ;
+    bcube:hasValue "DOD/USARMY/USACE/SAM/MOBILE/OPJ/JALBTCX > Department of Defense",
+        "Joint Airborne Lidar Bathymetry Technical Center of Expertise",
+        "Mobile District",
+        "Spatial Data Branch",
+        "United States Army",
+        "United States Army Corps of Engineers" ;
+    dc:partOf "GCMD Data Center Keywords v7" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:4ba76c1a-d4a9-452f-991f-13c03122ea7a> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-08-08T13:06:21.386Z" ;
+    bcube:lastUpdated "2015-08-08T13:06:21.386Z" ;
+    bcube:originatedFrom <urn:uuid:2bef1bc7-4240-44b6-81f4-ffa7f137b67c> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:3d1a3af9-0843-45aa-96b3-564f5c63c757> .
+
+<urn:uuid:4fef3a05-b560-431a-9ae1-8f88acdb1317> dcterms:references <urn:uuid:6dc99306-fe94-4cea-8b36-8dbd7db9ff6f> ;
+    owl:a bibo:WebPage .
+
+<urn:uuid:5473b48d-923f-40a4-9fa2-777a10189e01> dcterms:references <urn:uuid:c8b369ac-dfef-4bbc-84e2-5a438e60ec99> ;
+    owl:a bibo:WebPage .
+
+<urn:uuid:6dc99306-fe94-4cea-8b36-8dbd7db9ff6f> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-08T13:06:21.386Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-08T13:06:21.386Z" ;
+    dc:identifier "urn:sha:b3f3157b506c9f96ca4472bc7b712fe2188c89f702d62ff103f06784" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "ftp://coast.noaa.gov/pub/DigitalCoast/lidar1_z/geoid12a/data/4846" .
+
+<urn:uuid:81947484-b76f-4a40-89aa-186facbdd8e9> bcube:hasType "theme" ;
+    bcube:hasValue "EARTH SCIENCE > OCEANS >COASTAL PROCESSES > COASTAL ELEVATION",
+        "HUMAN DIMENSIONS > LAND USE/LAND COVER > LAND USE CLASSES",
+        "LAND SURFACE > TOPOGRAPHY> TERRAIN ELEVATION",
+        "OCEANS > BATHYMETRY/SEAFLOOR TOPOGRAPHY > BATHYMETRY",
+        "OCEANS > BATHYMETRY/SEAFLOOR TOPOGRAPHY > SEAFLOOR TOPOGRAPHY",
+        "OCEANS > COASTAL PROCESSES > COASTAL ELEVATION",
+        "SOLID EARTH > GEOMORPHOLOGY > COASTAL LANDFORMS/PROCESSES" ;
+    dc:partOf "GCMD Earth Sciences Keywords v7" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:8f0e37df-375c-409b-8e30-8fd52a004e22> dcterms:references <urn:uuid:25f2565f-177a-40ac-90bd-e3c1bb8d308c> ;
+    owl:a bibo:WebPage .
+
+<urn:uuid:8faf800a-96e7-4988-9630-e2ffd356fa1c> dcterms:references <urn:uuid:df60a6f2-2121-4c10-af54-1068b4715de8> ;
+    owl:a bibo:WebPage .
+
+<urn:uuid:91e6fcf1-aede-4d3f-92b0-0f1a1a7b74a4> bcube:hasType "theme" ;
+    bcube:hasValue "LIDAR > LIGHT DETECTION AND RANGING" ;
+    dc:partOf "GCMD Instrument Keywords v7" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:a5ef805e-1cc4-4c51-b548-7a26c85db284> bcube:hasType "theme" ;
+    bcube:hasValue "elevation",
+        "imageryBaseMapsEarthCover",
+        "location" ;
+    dc:partOf "ISO 19115 Topic Categories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:c769f031-4332-44f0-95a1-6ab010953624> bcube:hasType "place" ;
+    bcube:hasValue "Lake Michigan",
+        "Mackinac County",
+        "Michigan",
+        "United States" ;
+    dc:partOf "Geographic Names Information System" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:c8b369ac-dfef-4bbc-84e2-5a438e60ec99> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-08T13:06:21.386Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-08T13:06:21.386Z" ;
+    dc:identifier "urn:sha:a5b99394df9de624ffbb3c2adc9cf66de5e977198bfd73c402bcbce4" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://coast.noaa.gov" .
+
+<urn:uuid:d26eb1e6-dcb0-4f40-a0bb-a0d2d09e227f> bcube:hasType "temporal" ;
+    bcube:hasValue "2013",
+        "July" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:de5fb997-1c07-433a-87ab-758f0ac6a36f> bcube:hasType "theme" ;
+    bcube:hasValue "elevation",
+        "imageryBaseMapsEarthCover",
+        "oceans" ;
+    dc:partOf "ISO 19115 Topic Category" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:df60a6f2-2121-4c10-af54-1068b4715de8> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-08T13:06:21.386Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-08T13:06:21.386Z" ;
+    dc:identifier "urn:sha:84938e08930479dda9e192462eea09d0a70efb1d7cc5ac388f322dd1" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://coast.noaa.gov/dataviewer" .
+
+<urn:uuid:e19973fa-96f8-480c-ba75-508b07025b63> bcube:hasType "theme" ;
+    bcube:hasValue "Bathymetry",
+        "Classified LAS",
+        "Coastal Zone Mapping Imaging Lidar (CZMIL)",
+        "IWG-OCM",
+        "Joint Airborne Lidar Bathymetry Technical Center of eXpertise (JALBTCX)",
+        "Mobile District",
+        "National Coastal Mapping Program (NCMP)",
+        "Topography",
+        "U.S. Army Corps of Engineers (USACE)" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:eb9e0267-658a-47fd-b17f-887c547a0cc3> bcube:hasType "place" ;
+    bcube:hasValue "VERTICAL LOCATION > LAND SURFACE",
+        "VERTICAL LOCATION > SEA FLOOR" ;
+    dc:partOf "GCMD Location Keywords v7" ;
+    owl:a bcube:thesaurusSubset .
+

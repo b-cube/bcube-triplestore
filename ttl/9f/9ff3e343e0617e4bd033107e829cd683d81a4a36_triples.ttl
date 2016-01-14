@@ -1,0 +1,134 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:1cf099a4-5c21-487e-85cb-830dcb80439f> bcube:hasType "place" ;
+    bcube:hasValue "Connecticut",
+        "Delaware",
+        "Maine",
+        "Maryland",
+        "Massachusetts",
+        "New Hampshire",
+        "New Jersey",
+        "New York",
+        "Pennsylvania",
+        "Rhode Island",
+        "United States",
+        "Vermont",
+        "Virginia",
+        "Washington DC",
+        "West Virginia" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:20a902ba-40b3-44c7-8152-ed65c89e052a> owl:a foaf:Organization ;
+    foaf:name "U.S. EPA Office of Research & Development (ORD) - National Health and Environmental Effects Research Laboratory (NHEERL)" .
+
+<urn:uuid:2dc6a31a-e513-47c3-8072-32cfcf686722> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-09-10T20:53:08.035Z" ;
+    bcube:lastUpdated "2015-09-10T20:53:08.035Z" ;
+    bcube:originatedFrom <urn:uuid:4fd80028-de7e-4d17-af8b-c64eafefbc82> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:3ca4ee39-3b44-4a5d-8d9d-7a562633bcb9> .
+
+<urn:uuid:326cbed2-d5c0-49b6-8a7a-03d558513dc8> bcube:hasType "theme" ;
+    bcube:hasValue "Lakes Ecosystem Services",
+        "National Lakes Assessment",
+        "Secchi depth",
+        "acid neutralizing capacity",
+        "calcium",
+        "chloride",
+        "chlorophyll a",
+        "color",
+        "conductivity",
+        "dissolved organic carbon",
+        "dissolved oxygen",
+        "magnesium",
+        "nitrate",
+        "nitrate + nitrite",
+        "nutrient concentrations",
+        "phosphorus",
+        "physical measurements",
+        "silica",
+        "sodium",
+        "sulfate",
+        "total ammonium",
+        "total nitrogen",
+        "total organic carbon",
+        "total potassium",
+        "turbidity" ;
+    dc:partOf "NLA" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:3ca4ee39-3b44-4a5d-8d9d-7a562633bcb9> bcube:dateCreated "2015-09-10T20:53:08.035Z" ;
+    bcube:hasMetadataRecord <urn:uuid:2dc6a31a-e513-47c3-8072-32cfcf686722> ;
+    bcube:lastUpdated "2015-09-10T20:53:08.035Z" ;
+    dc:conformsTo <urn:uuid:1cf099a4-5c21-487e-85cb-830dcb80439f>,
+        <urn:uuid:326cbed2-d5c0-49b6-8a7a-03d558513dc8>,
+        <urn:uuid:76a129af-6a7f-4840-b655-1eda815baec1>,
+        <urn:uuid:f28f638e-6082-4fd7-8f7e-135f88e1b8ca> ;
+    dc:description "The Water Quality data set reports physical water quality parameters measured in the field and concentrations of nutrients measured from samples collected from lakes in the National Lake Assessment program during the summer of 2007. Water samples reflect lake conditions from an 'index site' located at the deepest point of a lake (</=50 meters, and near the center if sampling a reservoir). Data reported include dissolved oxygen at 2 m or less, depth, conductivity, acid neutralizing capacity, turbidity, total organic carbon, dissolved organic carbon, total ammonium, nitrate + nitrite, total nitrogen, total potassium, color, chloride, nitrate, sulfate, calcium, magnesium, sodium, silica, chlorophyll a, Secchi depth (mean), and phosphorus. Dissolved oxygen was measured with a probe on a vertical profiler. Secchi depth was recorded from a Secchi disk, while nutrients were measured from samples taken from the upper 2 m of the water column with a depth integrated water sampler." ;
+    dc:spatial "POLYGON ((-79.2277 36.8415,-79.2277 47.1778,-67.6993 47.1778,-67.6993 36.8415,-79.2277 36.8415))" ;
+    dcterms:publisher <urn:uuid:20a902ba-40b3-44c7-8152-ed65c89e052a> ;
+    dcterms:references <urn:uuid:43bd2205-7171-4a2b-871c-e77964841656> ;
+    dcterms:title "National Lake Assessment Database Northeast Region 2007 Water Quality Data: Physical and Nutrient" ;
+    esip:eastBound "-67.6993"^^xsd:float ;
+    esip:endDate "2007-10-18"^^xsd:date ;
+    esip:northBound "47.1778"^^xsd:float ;
+    esip:southBound "36.8415"^^xsd:float ;
+    esip:startDate "2007-05-08"^^xsd:date ;
+    esip:westBound "-79.2277"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:43bd2205-7171-4a2b-871c-e77964841656> dcterms:references <urn:uuid:89b37772-0bf9-482e-8e10-34e4171b6616> ;
+    owl:a bibo:WebPage .
+
+<urn:uuid:4fd80028-de7e-4d17-af8b-c64eafefbc82> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-09-10T20:53:08.035Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-09-10T20:53:08.035Z" ;
+    dc:identifier "urn:sha:70e5de7d82ed27d3955760660ac8d5353e7f13eb87b1337f59cfa556" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://epa.gov/aed/lakesecoservices/docs/NLAWaterQuality.xml" .
+
+<urn:uuid:76a129af-6a7f-4840-b655-1eda815baec1> bcube:hasType "theme" ;
+    bcube:hasValue "Ecosystem",
+        "Environment",
+        "Monitoring",
+        "Quality",
+        "Surface Water" ;
+    dc:partOf "EPA GIS Keyword Thesaurus" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:89b37772-0bf9-482e-8e10-34e4171b6616> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-09-10T20:53:08.035Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-09-10T20:53:08.035Z" ;
+    dc:identifier "urn:sha:d7df9d20fdebb698af907e9a5f27cbd3e9408bb40831149b03538b3d" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www.epa.gov/aed/lakesecoservices" .
+
+<urn:uuid:f28f638e-6082-4fd7-8f7e-135f88e1b8ca> bcube:hasType "theme" ;
+    bcube:hasValue "environment",
+        "inlandWaters" ;
+    dc:partOf "ISO 19115 Topic Category" ;
+    owl:a bcube:thesaurusSubset .
+

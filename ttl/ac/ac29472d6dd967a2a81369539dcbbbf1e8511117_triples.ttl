@@ -1,0 +1,88 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:18016231-0ff7-4d5b-98c4-df54d927b04d> owl:a foaf:Organization ;
+    foaf:name "Federal Emergency Management Agency" .
+
+<urn:uuid:731dc79d-c83e-4612-b292-2bc85ebccd16> bcube:dateCreated "2015-08-01T14:42:36.744Z" ;
+    bcube:hasMetadataRecord <urn:uuid:dc33956a-6340-41b8-8ec2-bef9ee6d2b2a> ;
+    bcube:lastUpdated "2015-08-01T14:42:36.744Z" ;
+    dc:conformsTo <urn:uuid:75e01628-e834-434e-abc9-4f034db3104e>,
+        <urn:uuid:d446093a-a36f-4dc5-9f07-8626cb85725e>,
+        <urn:uuid:f0f680b2-f68c-4d45-a50c-dc7e60dbe9e3> ;
+    dc:description "Digital 4 band ortho imagery covering 41 counties in southwest Iowa was flown Spring 2009. Imagery was collected with Lecia ADS80-SH82 and ADS40-SH51 digital cameras at a flight height of 20'000 agl. 4Band imagery in tif format was rectified and cut into a tiled grid for the Iowa DNR. County mosaics were created in MrSid format using 3 bands." ;
+    dc:spatial "POLYGON ((-93.721829 41.846299,-93.721829 42.232687,-93.203484 42.232687,-93.203484 41.846299,-93.721829 41.846299))" ;
+    dcterms:publisher <urn:uuid:18016231-0ff7-4d5b-98c4-df54d927b04d> ;
+    dcterms:references <urn:uuid:aa2034c1-cff1-4d9e-a029-28b024de1b6a> ;
+    dcterms:title "Basemap Framework Submission for Poweshiek County IA" ;
+    esip:eastBound "-93.203484"^^xsd:float ;
+    esip:northBound "42.232687"^^xsd:float ;
+    esip:southBound "41.846299"^^xsd:float ;
+    esip:startDate "2009-04-17"^^xsd:date ;
+    esip:westBound "-93.721829"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:75e01628-e834-434e-abc9-4f034db3104e> bcube:hasType "place" ;
+    bcube:hasValue "19157C",
+        "COUNTY POWESHIEK",
+        "COUNTY-FIPS 19157",
+        "FEMA-CID 19157C",
+        "REGION 7",
+        "STATE IA" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:aa2034c1-cff1-4d9e-a029-28b024de1b6a> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-01T14:42:36.744Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-01T14:42:36.744Z" ;
+    dc:identifier "urn:sha:37c915397238031daced09ae0e2dd3bf54e84a6477f749c2cc9dcbdf" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://hazards.fema.gov" .
+
+<urn:uuid:d446093a-a36f-4dc5-9f07-8626cb85725e> bcube:hasType "theme" ;
+    bcube:hasValue "geoscientificInformation",
+        "imageryBaseMapsEarthCover",
+        "transportation" ;
+    dc:partOf "ISO 19115 Topic Category" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:dc33956a-6340-41b8-8ec2-bef9ee6d2b2a> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-08-01T14:42:36.744Z" ;
+    bcube:lastUpdated "2015-08-01T14:42:36.744Z" ;
+    bcube:originatedFrom <urn:uuid:fb9278a1-503e-4812-92a8-ad4c17939f5a> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:731dc79d-c83e-4612-b292-2bc85ebccd16> .
+
+<urn:uuid:f0f680b2-f68c-4d45-a50c-dc7e60dbe9e3> bcube:hasType "theme" ;
+    bcube:hasValue "Basemap" ;
+    dc:partOf "FEMA NFIP Topic Category" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:fb9278a1-503e-4812-92a8-ad4c17939f5a> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-01T14:42:36.744Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-01T14:42:36.744Z" ;
+    dc:identifier "urn:sha:59eb2c30b9b5ba386a3f1f63e1ee16a28553e8b992460ed4a04faa0c" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "https://catalog.data.gov/harvest/object/95cf650b-4d1e-4b41-98ea-2fab6356559a/original" .
+

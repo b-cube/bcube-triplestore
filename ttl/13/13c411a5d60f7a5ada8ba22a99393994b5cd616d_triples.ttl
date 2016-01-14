@@ -1,0 +1,98 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:041f45d7-e59a-4c50-86ed-2671958fb5f2> owl:a foaf:Organization ;
+    foaf:name "" .
+
+<urn:uuid:32909ff9-9f43-41be-9f6c-e9596622473c> bcube:hasType "place" ;
+    bcube:hasValue "01099",
+        "County or Equivalent Entity",
+        "Monroe",
+        "U.S.",
+        "United States" ;
+    dc:partOf "FIPS Publication 5-2, FIPS Publication 6-4, FIPS Publication 8-6, FIPS Publication 9-1,FIPS Publication55-4" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:842a7dc7-f3cd-4821-a2fb-c8ae8de4de38> bcube:hasType "theme" ;
+    bcube:hasValue "Barrio",
+        "CCD",
+        "Census County Division",
+        "County Subdivision",
+        "County or equivalent entity",
+        "MCD",
+        "Minor Civil Division",
+        "Polygon",
+        "Subdivision",
+        "Town",
+        "Township",
+        "UT",
+        "Unorganized Territory" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:ae68d42f-0ee5-4caa-b20d-a877009c3f8c> bcube:hasType "theme" ;
+    bcube:hasValue "boundaries" ;
+    dc:partOf "ISO 19115 Topic Categories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:b76af593-e884-438d-86bb-20eb9f67bb48> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-11-02T07:13:21.398Z" ;
+    bcube:lastUpdated "2015-11-02T07:13:21.398Z" ;
+    bcube:originatedFrom <urn:uuid:df0327b6-08af-4d12-94af-5adcf70b84f6> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:f5cacf5a-1eab-4ee9-b50c-051444e9be54> .
+
+<urn:uuid:df0327b6-08af-4d12-94af-5adcf70b84f6> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-02T07:13:21.398Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-02T07:13:21.398Z" ;
+    dc:identifier "urn:sha:ae8cd8498484d132221f04fc757a82cada51bd8ab467d06604999648" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://meta.geo.census.gov/data/existing/decennial/GEO/GPMB/TIGERline/fe_2008/cousub/tl_2008_01099_cousub_url.shp.xml" .
+
+<urn:uuid:f5cacf5a-1eab-4ee9-b50c-051444e9be54> bcube:dateCreated "2015-11-02T07:13:21.398Z" ;
+    bcube:hasMetadataRecord <urn:uuid:b76af593-e884-438d-86bb-20eb9f67bb48> ;
+    bcube:lastUpdated "2015-11-02T07:13:21.398Z" ;
+    dc:conformsTo <urn:uuid:32909ff9-9f43-41be-9f6c-e9596622473c>,
+        <urn:uuid:842a7dc7-f3cd-4821-a2fb-c8ae8de4de38>,
+        <urn:uuid:ae68d42f-0ee5-4caa-b20d-a877009c3f8c> ;
+    dc:description "The TIGER/Line Shapefiles are an extract of selected geographic and cartographic information from the Census MAF/TIGER database. The Census MAF/TIGER database represents a seamless national file with no overlaps or gaps between parts. However, each TIGER/Line Shapefile is designed to stand alone as an independent data set or the shapefiles can be combined to cover the whole nation." ;
+    dc:spatial "POLYGON ((-87.784796 31.227268,-87.784796 31.831795,-86.905899 31.831795,-86.905899 31.227268,-87.784796 31.227268))" ;
+    dcterms:publisher <urn:uuid:041f45d7-e59a-4c50-86ed-2671958fb5f2> ;
+    dcterms:references <urn:uuid:f7f13678-832b-4e03-8325-0f62fab5152e> ;
+    dcterms:title "TIGER/Line Shapefile, 2008, county, Monroe County, AL, County Subdivision" ;
+    esip:eastBound "-86.905899"^^xsd:float ;
+    esip:endDate "2008-07-01"^^xsd:date ;
+    esip:northBound "31.831795"^^xsd:float ;
+    esip:southBound "31.227268"^^xsd:float ;
+    esip:startDate "2008-01-01"^^xsd:date ;
+    esip:westBound "-87.784796"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:f7f13678-832b-4e03-8325-0f62fab5152e> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-02T07:13:21.398Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-02T07:13:21.398Z" ;
+    dc:identifier "urn:sha:e6547b364af3385d753f2a1448f6f4a458cd979f40ddbf5ff7cad37d" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www2.census.gov/geo/tiger/TIGER2008/01_ALABAMA/01099_Monroe_County/tl_2008_01099_cousub.zip" .
+

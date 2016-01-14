@@ -1,0 +1,92 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:10e8d333-5ff0-49f2-9b83-29ad06a124c6> bcube:hasType "theme" ;
+    bcube:hasValue "Address Range",
+        "County or equivalent entity",
+        "Linear Feature",
+        "Road Feature",
+        "Roads",
+        "Street Centerline" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:3d32d7c0-6719-452e-980a-d8f0a3c7dc02> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-07-22T12:06:58.428Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-07-22T12:06:58.428Z" ;
+    dc:identifier "urn:sha:99166bf46642d8b1f376bb6f78f7e0e0269ada9d59e74c56471c667c" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www2.census.gov/geo/tiger/TIGER2013/ROADS/tl_2013_13059_roads.zip" .
+
+<urn:uuid:51a5c68c-7241-4192-9d70-04d05cd9ee5a> bcube:hasType "place" ;
+    bcube:hasValue "13059",
+        "Clarke",
+        "County or Equivalent Entity",
+        "U.S.",
+        "United States" ;
+    dc:partOf "ANSI INCITS 38:2009 (Formerly FIPS 5-2), ANSI INCITS 31:2009 (Formerly FIPS 6-4),ANSI INCITS 454:2009 (Formerly FIPS 8-6), ANSI INCITS 455:2009(Formerly FIPS 9-1), ANSI INCITS 446:2008 (Geographic Names Information System (GNIS))" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:553b8afb-f13e-46a4-82c1-1b28de7cc989> bcube:hasValue "transportation" ;
+    dc:partOf "IsoTopicCategories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:83a8c50e-fbe8-4196-9478-85e10b3f259d> a "ISO 19115:2003/19139" ;
+    bcube:dateCreated "2015-07-22T12:06:58.428Z" ;
+    bcube:lastUpdated "2015-07-22T12:06:58.428Z" ;
+    bcube:originatedFrom <urn:uuid:ee97aa66-a3d3-44fe-8900-43976600aac4> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:dd379813-957a-4729-b7ed-694a9de6a81c> .
+
+<urn:uuid:dd379813-957a-4729-b7ed-694a9de6a81c> bcube:dateCreated "2015-07-22T12:06:58.428Z" ;
+    bcube:hasMetadataRecord <urn:uuid:83a8c50e-fbe8-4196-9478-85e10b3f259d> ;
+    bcube:lastUpdated "2015-07-22T12:06:58.428Z" ;
+    dc:conformsTo <urn:uuid:10e8d333-5ff0-49f2-9b83-29ad06a124c6>,
+        <urn:uuid:51a5c68c-7241-4192-9d70-04d05cd9ee5a>,
+        <urn:uuid:553b8afb-f13e-46a4-82c1-1b28de7cc989>,
+        <urn:uuid:ea764869-7c41-4f06-aedc-c673f4a02ec4> ;
+    dc:description "The TIGER/Line shapefiles and related database files (.dbf) are an extract of selected geographic and cartographic information from the U.S. Census Bureau's Master Address File / Topologically Integrated Geographic Encoding and Referencing (MAF/TIGER) Database (MTDB). The MTDB represents a seamless national file with no overlaps or gaps between parts, however, each TIGER/Line shapefile is designed to stand alone as an independent data set, or they can be combined to cover the entire nation. The All Roads Shapefile includes all features within the MTDB Super Class \"Road/Path Features\" distinguished where the MAF/TIGER Feature Classification Code (MTFCC) for the feature in MTDB that begins with \"S\". This includes all primary, secondary, local neighborhood, and rural roads, city streets, vehicular trails (4wd), ramps, service drives, alleys, parking lot roads, private roads for service vehicles (logging, oil fields, ranches, etc.), bike paths or trails, bridle/horse paths, walkways/pedestrian trails, and stairways." ;
+    dc:spatial "POLYGON ((-83.537385 33.847977,-83.537385 34.040572,-83.24086 34.040572,-83.24086 33.847977,-83.537385 33.847977))" ;
+    dcterms:references <urn:uuid:3d32d7c0-6719-452e-980a-d8f0a3c7dc02> ;
+    dcterms:title "TIGER/Line Shapefile, 2013, county, Clarke County, GA, All Roads County-based Shapefile" ;
+    esip:eastBound "-83.24086"^^xsd:float ;
+    esip:endDate "2013-05-01"^^xsd:date ;
+    esip:northBound "34.040572"^^xsd:float ;
+    esip:southBound "33.847977"^^xsd:float ;
+    esip:startDate "2012-06-01"^^xsd:date ;
+    esip:westBound "-83.537385"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:ea764869-7c41-4f06-aedc-c673f4a02ec4> bcube:hasType "theme" ;
+    bcube:hasValue "Transportation" ;
+    dc:partOf "NGDA Portfolio Themes" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:ee97aa66-a3d3-44fe-8900-43976600aac4> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-07-22T12:06:58.428Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-07-22T12:06:58.428Z" ;
+    dc:identifier "urn:sha:48244e3906ba12ea97e9bfdea2724d91184d7dd3e2bdf26a25302d26" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "https://catalog.data.gov/harvest/object/57a1bd6d-667d-4605-bb0b-169aef34defe" .
+

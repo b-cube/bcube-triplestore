@@ -1,0 +1,89 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:1ab3fd84-8f54-46c0-9ae0-efbd5d95b574> bcube:hasType "place" ;
+    bcube:hasValue "French Frigate Shoals (FFS)",
+        "Hawaiian Archipelago",
+        "Kure (KU)",
+        "Laysan (LA)",
+        "Lisianski (LI)",
+        "Midway (MD)",
+        "Pacific Ocean",
+        "Pearl and Hermes Atoll (PH)",
+        "atoll",
+        "island",
+        "islet" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:1d1c61c9-ca3a-4eb8-a425-d88bca687cff> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-10-30T11:08:15.636Z" ;
+    bcube:lastUpdated "2015-10-30T11:08:15.636Z" ;
+    bcube:originatedFrom <urn:uuid:6280e670-3469-4fe5-9668-5ba0385eb1fd> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:2aaccf15-3bf3-48b9-9c2c-0e4d0c298b60> .
+
+<urn:uuid:2aab42e1-b1d0-446f-9056-e0a5a54c1a69> owl:a foaf:Organization ;
+    foaf:name "" .
+
+<urn:uuid:2aaccf15-3bf3-48b9-9c2c-0e4d0c298b60> bcube:dateCreated "2015-10-30T11:08:15.636Z" ;
+    bcube:hasMetadataRecord <urn:uuid:1d1c61c9-ca3a-4eb8-a425-d88bca687cff> ;
+    bcube:lastUpdated "2015-10-30T11:08:15.636Z" ;
+    dc:conformsTo <urn:uuid:1ab3fd84-8f54-46c0-9ae0-efbd5d95b574>,
+        <urn:uuid:a0acb017-2564-4a49-b2da-c65a98f59d0d>,
+        <urn:uuid:c1d2aa6b-28d1-46ce-bca2-8796152f5174> ;
+    dc:description "This data set contains records of green turtle sightings in the Northwestern Hawaiian Islands (NWHI) since 1982 at Lisianski Island, and since 1983 for most other locations. Data are collected during standardized whole-island surveys, both timed (censuses/atoll counts) and not timed (patrols/behavior patrols). Other types of surveys and incidental observations are also included in the data set. Although turtles may be recorded on any survey, turtle data collection is only required during censuses/atoll counts and this dataset is focused on these survey counts. Though most of the data have been entered, some data are housed at PIFSC in paper form, including the most recent year(s)." ;
+    dc:spatial "POLYGON ((180 10,180 30,-150 30,-150 10,180 10))" ;
+    dcterms:identifier "gov.noaa.nmfs.inport:5817" ;
+    dcterms:publisher <urn:uuid:2aab42e1-b1d0-446f-9056-e0a5a54c1a69> ;
+    dcterms:title "NWHI Basking Green Turtle Data (Turtle Sightings from Seal Surveys)" ;
+    esip:eastBound "-150.0"^^xsd:float ;
+    esip:northBound "30.0"^^xsd:float ;
+    esip:southBound "10.0"^^xsd:float ;
+    esip:startDate "1982-03-19"^^xsd:date ;
+    esip:westBound "180.0"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:6280e670-3469-4fe5-9668-5ba0385eb1fd> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-10-30T11:08:15.636Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-10-30T11:08:15.636Z" ;
+    dc:identifier "urn:sha:f2684565ea3214e7bcb40e6fa082db34e7fd17d3e339575854a06a0e" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "https://inport.nmfs.noaa.gov/inport/item/5817/fgdc" .
+
+<urn:uuid:a0acb017-2564-4a49-b2da-c65a98f59d0d> bcube:hasType "temporal" ;
+    bcube:hasValue "Spring-summer",
+        "opportunistic",
+        "sighting date",
+        "survey date",
+        "time" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:c1d2aa6b-28d1-46ce-bca2-8796152f5174> bcube:hasType "theme" ;
+    bcube:hasValue "MTAP",
+        "PIFSC",
+        "PSD",
+        "basking",
+        "green sea turtles",
+        "protected species",
+        "surveys" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+

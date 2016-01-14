@@ -1,0 +1,94 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:0c2b0312-9035-48c5-94a0-c9af75c33436> owl:a foaf:Organization ;
+    foaf:name "State Climatologist" .
+
+<urn:uuid:15a7b904-30ce-4b13-b0bd-97499714fa6e> bcube:hasType "theme" ;
+    bcube:hasValue "climatologyMeteorologyAtmosphere",
+        "environment",
+        "geoscientificInformation" ;
+    dc:partOf "ISO 19115 Topic Categories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:852b7d4c-bc4f-43b8-95f7-1a241b6867fd> bcube:dateCreated "2015-08-11T06:28:47.091Z" ;
+    bcube:hasMetadataRecord <urn:uuid:cb74df3e-ae82-4566-b8ff-69657b0e9ddf> ;
+    bcube:lastUpdated "2015-08-11T06:28:47.091Z" ;
+    dc:conformsTo <urn:uuid:15a7b904-30ce-4b13-b0bd-97499714fa6e>,
+        <urn:uuid:f36f1479-5e41-4fab-909d-112376236ca4>,
+        <urn:uuid:fdd18b09-72ff-4201-bf90-c426d80304f4> ;
+    dc:description "This raster dataset shows daily, monthly, yearly, monthly normal, and yearly normal mean temperature in degrees Celsius with a nominal grid cell resolution of 800 meters for the years 1948-2012." ;
+    dc:spatial "POLYGON ((-119.579258 41.669866,-119.579258 51.17014,-99.472717 51.17014,-99.472717 41.669866,-119.579258 41.669866))" ;
+    dcterms:publisher <urn:uuid:0c2b0312-9035-48c5-94a0-c9af75c33436> ;
+    dcterms:references <urn:uuid:e664c036-2226-4e48-a7e1-665d7c60bd20> ;
+    dcterms:title "Mean Temperature for 1948-2012 from TopoWx" ;
+    esip:eastBound "-99.472717"^^xsd:float ;
+    esip:endDate "2012-12-31"^^xsd:date ;
+    esip:northBound "51.17014"^^xsd:float ;
+    esip:southBound "41.669866"^^xsd:float ;
+    esip:startDate "1948-01-01"^^xsd:date ;
+    esip:westBound "-119.579258"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:89be7d9c-f8ec-4860-ae1b-e46d51ea4615> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-11T06:28:47.091Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-11T06:28:47.091Z" ;
+    dc:identifier "urn:sha:ff9b01f9bd5efadbb765a51994bf95f39f0b3dfba95e771a56c09ca9" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://mslapps.mt.gov/Geographic_Information/Data/DataList/datalist_MetadataDetailRaw.aspx?did={200E04DA-745A-4B26-AA38-356A981A79AD}" .
+
+<urn:uuid:cb74df3e-ae82-4566-b8ff-69657b0e9ddf> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-08-11T06:28:47.091Z" ;
+    bcube:lastUpdated "2015-08-11T06:28:47.091Z" ;
+    bcube:originatedFrom <urn:uuid:89be7d9c-f8ec-4860-ae1b-e46d51ea4615> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:852b7d4c-bc4f-43b8-95f7-1a241b6867fd> .
+
+<urn:uuid:e664c036-2226-4e48-a7e1-665d7c60bd20> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-11T06:28:47.091Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-11T06:28:47.091Z" ;
+    dc:identifier "urn:sha:fb8b6280f40c64fbb33eb870c36c25c8d267501b7cdd63eb4ae4b378" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "ftp://mco.cfc.umt.edu/tmean/Readme.html" .
+
+<urn:uuid:f36f1479-5e41-4fab-909d-112376236ca4> bcube:hasType "theme" ;
+    bcube:hasValue "MSDI",
+        "Montana",
+        "Montana Climate Office",
+        "Montana Spatial Data Infrastructure",
+        "TopoWx",
+        "climate",
+        "maximum temperature",
+        "mean temperature",
+        "minimum temperature",
+        "normal temperature",
+        "temperature" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:fdd18b09-72ff-4201-bf90-c426d80304f4> bcube:hasType "place" ;
+    bcube:hasValue "Montana" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+

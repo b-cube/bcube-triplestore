@@ -1,0 +1,91 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:7b53abc7-570d-4b9d-b731-13a12608c9d6> a "ISO 19115:2003/19139" ;
+    bcube:dateCreated "2015-11-05T16:50:35.814Z" ;
+    bcube:lastUpdated "2015-11-05T16:50:35.814Z" ;
+    bcube:originatedFrom <urn:uuid:d9269848-4265-42eb-a2ef-8092397bb8ed> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:8d9ac401-8ba3-466f-99b3-99d68e12e01e> .
+
+<urn:uuid:8d9ac401-8ba3-466f-99b3-99d68e12e01e> bcube:dateCreated "2015-11-05T16:50:35.814Z" ;
+    bcube:hasMetadataRecord <urn:uuid:7b53abc7-570d-4b9d-b731-13a12608c9d6> ;
+    bcube:lastUpdated "2015-11-05T16:50:35.814Z" ;
+    dc:conformsTo <urn:uuid:8eac9b62-df84-41cc-b61d-6ebd70944c2f>,
+        <urn:uuid:d02502d2-7879-4e6f-8473-9b49aba6dce6>,
+        <urn:uuid:e87cb378-0f35-431d-8756-0d56fed0cc0f> ;
+    dc:description "The TIGER/Line shapefiles and related database files (.dbf) are an extract of selected geographic and cartographic information from the U.S. Census Bureau's Master Address File / Topologically Integrated Geographic Encoding and Referencing (MAF/TIGER) Database (MTDB). The MTDB represents a seamless national file with no overlaps or gaps between parts, however, each TIGER/Line shapefile is designed to stand alone as an independent data set, or they can be combined to cover the entire nation. The Topological Faces / Area Hydrography Relationship File (FACESAH.dbf) contains a record for each face / area hydrography feature relationship. Face refers to the areal (polygon) topological primitives that make up MTDB. A face is bounded by one or more edges; its boundary includes only the edges that separate it from other faces, not any interior edges contained within the area of the face. The face to which a record in the Topological Faces / Area Hydrography Relationship File (FACESAH.dbf) applies can be determined by linking to the Topological Faces Shapefile (FACES.shp) using the permanent topological face identifier (TFID) attribute. The area hydrography feature to which a record in the Topological Faces / Area Hydrography Relationship File (FACESAH.dbf) applies can be determined by linking to the Area Hydrography Shapefile (AREAWATER.shp) using the area hydrography identifier (HYDROID) attribute. A face may be part of multiple area water features. An area water feature may consist of multiple faces." ;
+    dc:spatial "POLYGON ((-88.340432 32.991199,-88.340432 33.534008,-87.836596 33.534008,-87.836596 32.991199,-88.340432 32.991199))" ;
+    dcterms:references <urn:uuid:c5f0fc1c-5317-48d2-ae3f-53ecab541cae> ;
+    dcterms:title "TIGER/Line Shapefile, 2014, county, Pickens County, AL, Topological Faces-Area Hydrography County-based Relationship File" ;
+    esip:eastBound "-87.836596"^^xsd:float ;
+    esip:endDate "2014-05-07"^^xsd:date ;
+    esip:northBound "33.534008"^^xsd:float ;
+    esip:southBound "32.991199"^^xsd:float ;
+    esip:startDate "2013-06-07"^^xsd:date ;
+    esip:westBound "-88.340432"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:8eac9b62-df84-41cc-b61d-6ebd70944c2f> bcube:hasValue "inlandWaters" ;
+    dc:partOf "IsoTopicCategories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:c5f0fc1c-5317-48d2-ae3f-53ecab541cae> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-05T16:50:35.814Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-05T16:50:35.814Z" ;
+    dc:identifier "urn:sha:1a1bb812733c25743fab505a2a0d66ffce13cb5fda3526645581c312" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www2.census.gov/geo/tiger/TIGER2014/FACESAH/tl_2014_01107_facesah.zip" .
+
+<urn:uuid:d02502d2-7879-4e6f-8473-9b49aba6dce6> bcube:hasType "theme" ;
+    bcube:hasValue "Area hydrography identifier",
+        "County FIPS Code",
+        "County GNIS Code",
+        "County or equivalent entity",
+        "Hydrography",
+        "Land/water flag",
+        "Permanent face ID",
+        "State FIPS Code",
+        "State GNIS Code",
+        "Table",
+        "Topological Faces" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:d9269848-4265-42eb-a2ef-8092397bb8ed> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-05T16:50:35.814Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-05T16:50:35.814Z" ;
+    dc:identifier "urn:sha:9dc5f41ec609edc1c41f0a4fc2776370d163bc8cbc0b51d2f466b6ea" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://meta.geo.census.gov/data/existing/decennial/GEO/GPMB/TIGERline/TIGER2014/facesah/tl_2014_01107_facesah.dbf.iso.xml" .
+
+<urn:uuid:e87cb378-0f35-431d-8756-0d56fed0cc0f> bcube:hasType "place" ;
+    bcube:hasValue "01107",
+        "County or Equivalent Entity",
+        "Pickens",
+        "U.S.",
+        "United States" ;
+    dc:partOf "ANSI INCITS 38:2009 (Formerly FIPS 5-2), ANSI INCITS 31:2009 (Formerly FIPS 6-4),ANSI INCITS 454:2009 (Formerly FIPS 8-6), ANSI INCITS 455:2009(Formerly FIPS 9-1), ANSI INCITS 446:2008 (Geographic Names Information System (GNIS))" ;
+    owl:a bcube:thesaurusSubset .
+

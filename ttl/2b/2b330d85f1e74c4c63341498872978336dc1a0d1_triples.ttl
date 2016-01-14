@@ -1,0 +1,77 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:0e2cf7cb-785e-45d9-92d7-e4bfd0d36532> bcube:hasType "place" ;
+    bcube:hasValue "North America",
+        "United States",
+        "Washington" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:4626545d-4235-4e29-87b7-7bf4479a4063> a "ISO 19115:2003/19139" ;
+    bcube:dateCreated "2015-11-14T07:23:16.255Z" ;
+    bcube:lastUpdated "2015-11-14T07:23:16.255Z" ;
+    bcube:originatedFrom <urn:uuid:db3652b6-1696-4b7a-bd37-6a94219c2326> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:57fff690-dd0e-4280-93b5-8afbefcb0e49> .
+
+<urn:uuid:4628dcf5-7e69-4240-8dac-0ab330c81872> bcube:hasValue "geoscientificInformation" ;
+    dc:partOf "IsoTopicCategories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:57fff690-dd0e-4280-93b5-8afbefcb0e49> bcube:dateCreated "2015-11-14T07:23:16.255Z" ;
+    bcube:hasMetadataRecord <urn:uuid:4626545d-4235-4e29-87b7-7bf4479a4063> ;
+    bcube:lastUpdated "2015-11-14T07:23:16.255Z" ;
+    dc:conformsTo <urn:uuid:0e2cf7cb-785e-45d9-92d7-e4bfd0d36532>,
+        <urn:uuid:4628dcf5-7e69-4240-8dac-0ab330c81872>,
+        <urn:uuid:5ef273ad-3f0f-4b11-ad0d-c4421bbb6876> ;
+    dc:description "This data set is a compilation of geothermal area features from sources in Washington state, provided by the Washington Division of Geology and Earth Resources for the National Geothermal Data System. The package contains a personal geodatabase (Access Database) with 11 tables, 10 of which should not be edited. The table GeothermalAreas contains the geometry and shape information for display using GIS software. Data for 16 records are included. Fields in the GeothermalAreas data table include OBJECTID, GeothermalAreaURI, FieldName, OtherLocationName, Notes, ResourceType, GeologicSetting, GeothermTempCharacterization, LandOwner, County, State, Source and SourceURI. In addition to the database, a Microsoft Word Document containing metadata is included with the data set and is directly from the data provider." ;
+    dc:spatial "POLYGON ((-125.826 45.3482,-125.826 49.1196,-116.686 49.1196,-116.686 45.3482,-125.826 45.3482))" ;
+    dcterms:references <urn:uuid:7e250f10-5392-4642-88c4-8bd6b9d032c9> ;
+    dcterms:title "Washington Geothermal Area Features" ;
+    esip:eastBound "-116.686"^^xsd:float ;
+    esip:northBound "49.1196"^^xsd:float ;
+    esip:southBound "45.3482"^^xsd:float ;
+    esip:westBound "-125.826"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:5ef273ad-3f0f-4b11-ad0d-c4421bbb6876> bcube:hasType "theme" ;
+    bcube:hasValue "Geology",
+        "Geothermal",
+        "Geothermal area" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:7e250f10-5392-4642-88c4-8bd6b9d032c9> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-14T07:23:16.255Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-14T07:23:16.255Z" ;
+    dc:identifier "urn:sha:b2e39f7bea7afc68961237f928dbb35ca40d89f61da1f75b1476ffbb" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://repository.usgin.org/uri_gin/usgin/dlio/536" .
+
+<urn:uuid:db3652b6-1696-4b7a-bd37-6a94219c2326> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-14T07:23:16.255Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-14T07:23:16.255Z" ;
+    dc:identifier "urn:sha:ff12da853bb8b9684d18e42c06b24c143ae70719751c9890efa56704" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://repository.usgin.org/uri_gin/usgin/dlio/536/iso19139.xml" .
+

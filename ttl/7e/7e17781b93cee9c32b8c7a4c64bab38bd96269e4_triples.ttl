@@ -1,0 +1,95 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:006cb201-a350-439b-ae59-5d7c1680b6d5> bcube:hasType "theme" ;
+    bcube:hasValue "5-digit ZIP code",
+        "County ANSI Code",
+        "County FIPS Code",
+        "From House Number",
+        "Permanent edge ID",
+        "Side indicator flag",
+        "State ANSI Code",
+        "State FIPS Code",
+        "To House Number",
+        "ZIP +4 code" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:1f006732-e18a-48d3-a0d4-d562959c2edf> bcube:hasType "theme" ;
+    bcube:hasValue "transportation" ;
+    dc:partOf "ISO 19115 Topic Categories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:29e37d9d-47c4-4e44-a781-4654e3de9de7> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-11-02T15:44:56.44Z" ;
+    bcube:lastUpdated "2015-11-02T15:44:56.44Z" ;
+    bcube:originatedFrom <urn:uuid:86de7c4c-8388-4ac5-8417-b3e0de0729ee> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:911e9f6d-c2b3-4a0e-85d7-22d5b9dd399f> .
+
+<urn:uuid:86de7c4c-8388-4ac5-8417-b3e0de0729ee> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-02T15:44:56.44Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-02T15:44:56.44Z" ;
+    dc:identifier "urn:sha:11684ad97517795b640f67626dc873c48c4a14e85f71866e5e038600" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://meta.geo.census.gov/data/existing/decennial/GEO/GPMB/TIGERline/fe_2008/addrfn/tl_2008_04007_addrfn_url.dbf.xml" .
+
+<urn:uuid:911e9f6d-c2b3-4a0e-85d7-22d5b9dd399f> bcube:dateCreated "2015-11-02T15:44:56.44Z" ;
+    bcube:hasMetadataRecord <urn:uuid:29e37d9d-47c4-4e44-a781-4654e3de9de7> ;
+    bcube:lastUpdated "2015-11-02T15:44:56.44Z" ;
+    dc:conformsTo <urn:uuid:006cb201-a350-439b-ae59-5d7c1680b6d5>,
+        <urn:uuid:1f006732-e18a-48d3-a0d4-d562959c2edf>,
+        <urn:uuid:c9489e3b-7698-4fe8-9edf-4b5751f43f81> ;
+    dc:description "The TIGER/Line relationship files are an extract of selected geographic information from the Census MAF/TIGER database. Each TIGER/Line relationship file is designed to stand alone as an independent data set or can be used jointly with the shapefiles." ;
+    dc:spatial "POLYGON ((-111.720728 32.983673,-111.720728 34.499312,-110.00058 34.499312,-110.00058 32.983673,-111.720728 32.983673))" ;
+    dcterms:publisher <urn:uuid:b98e1ed1-ebe2-4af5-bff0-93cf65ac386f> ;
+    dcterms:references <urn:uuid:f610b22e-0b68-4e4f-8665-f30a2d6b1445> ;
+    dcterms:title "TIGER/Line Shapefile, 2008, county, Gila County, AZ, Address Range-Feature Name" ;
+    esip:eastBound "-110.00058"^^xsd:float ;
+    esip:endDate "2008-07-01"^^xsd:date ;
+    esip:northBound "34.499312"^^xsd:float ;
+    esip:southBound "32.983673"^^xsd:float ;
+    esip:startDate "2008-01-01"^^xsd:date ;
+    esip:westBound "-111.720728"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:b98e1ed1-ebe2-4af5-bff0-93cf65ac386f> owl:a foaf:Organization ;
+    foaf:name "" .
+
+<urn:uuid:c9489e3b-7698-4fe8-9edf-4b5751f43f81> bcube:hasType "place" ;
+    bcube:hasValue "04007",
+        "County or Equivalent Entity",
+        "Gila",
+        "U.S.",
+        "United States" ;
+    dc:partOf "FIPS Publication 5-2, FIPS Publication 6-4, FIPS Publication 8-6, FIPS Publication 9-1,FIPS Publication55-4" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:f610b22e-0b68-4e4f-8665-f30a2d6b1445> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-02T15:44:56.44Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-02T15:44:56.44Z" ;
+    dc:identifier "urn:sha:b6e0e86ccaee9eb47f7925cf90f63d3a5f1f87b04cd0eeaf317276f5" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www2.census.gov/geo/tiger/TIGER2008/04_ARIZONA/04007_Gila_County/tl_2008_04007_addrfn.zip" .
+

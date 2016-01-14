@@ -1,0 +1,67 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:02ff56bd-bb66-41d6-b0ae-250c7e144aa0> bcube:hasType "theme" ;
+    bcube:hasValue "NGDA",
+        "National Geospatial Data Asset",
+        "National Levee Infrastructure Theme",
+        "Water Inland Theme" ;
+    dc:partOf "NGDA Portfolio Themes" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:13a85ae9-f435-4ef5-b6cf-31828ab11c2d> bcube:hasType "theme" ;
+    bcube:hasValue "Water Inland Theme" ;
+    dc:partOf "National Levee Database" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:7a5a857e-313c-41e8-b275-510466d5cd34> a "ISO 19115:2003/19139" ;
+    bcube:dateCreated "2015-08-09T16:57:41.42Z" ;
+    bcube:lastUpdated "2015-08-09T16:57:41.42Z" ;
+    bcube:originatedFrom <urn:uuid:9cbed790-57ff-42a4-9962-e976397d9a3e> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:dbce8d7c-e8cb-4cd1-ba24-1a84bd86918b> .
+
+<urn:uuid:9cbed790-57ff-42a4-9962-e976397d9a3e> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-09T16:57:41.42Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-09T16:57:41.42Z" ;
+    dc:identifier "urn:sha:3e7b21a7136d594e3affca429a7088cfca91657a30cc206df895573c" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "https://catalog.data.gov/harvest/object/485fd130-425c-4889-b631-e3b761e767e6" .
+
+<urn:uuid:dbce8d7c-e8cb-4cd1-ba24-1a84bd86918b> bcube:dateCreated "2015-08-09T16:57:41.42Z" ;
+    bcube:hasMetadataRecord <urn:uuid:7a5a857e-313c-41e8-b275-510466d5cd34> ;
+    bcube:lastUpdated "2015-08-09T16:57:41.42Z" ;
+    dc:conformsTo <urn:uuid:02ff56bd-bb66-41d6-b0ae-250c7e144aa0>,
+        <urn:uuid:13a85ae9-f435-4ef5-b6cf-31828ab11c2d>,
+        <urn:uuid:ea5a349b-1093-4ad7-bed4-49c7de290d6b> ;
+    dc:description "The National Levee Database is authoritative database that describes the location and condition of the Nations levees. The database contains 21 feature classes and associated levee business tables in a relational geodatabase. The spatial accuracy of the data is of mixed quality documented in each feature class. The levee data is available for the United States at the website at nld.usace.army.mil." ;
+    dc:spatial "POLYGON ((-159.666594 13.397614,-159.666594 64.802932,-63.669317 64.802932,-63.669317 13.397614,-159.666594 13.397614))" ;
+    dcterms:title "National Levee Database, series information for the current inventory of the Nation's levees" ;
+    esip:eastBound "-63.669317"^^xsd:float ;
+    esip:endDate "2014-11-26"^^xsd:date ;
+    esip:northBound "64.802932"^^xsd:float ;
+    esip:southBound "13.397614"^^xsd:float ;
+    esip:startDate "2014-01-01"^^xsd:date ;
+    esip:westBound "-159.666594"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:ea5a349b-1093-4ad7-bed4-49c7de290d6b> bcube:hasValue "inlandWaters" ;
+    dc:partOf "IsoTopicCategories" ;
+    owl:a bcube:thesaurusSubset .
+

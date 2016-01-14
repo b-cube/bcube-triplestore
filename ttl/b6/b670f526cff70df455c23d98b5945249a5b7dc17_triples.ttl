@@ -1,0 +1,175 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:0ea1b57d-c408-4f45-82e0-c48215e6c70a> owl:a foaf:Organization ;
+    foaf:name "NOAA's National Ocean Service (NOS), National Centers for Coastal Ocean Science (NCCOS)" .
+
+<urn:uuid:0eaa088e-8d2d-4250-8b44-82808995ed81> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2014-07-31T05:10:31.751Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2014-07-31T05:10:31.751Z" ;
+    dc:identifier "urn:sha:c3ed29161a74733c27feeaac1e4b539417f460c976ad00980472230b" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://ccma.nos.noaa.gov/products/biogeography/usvi_nps/data/" .
+
+<urn:uuid:150b540e-a5d2-459f-a0af-5b1f3e5d7ea8> bcube:hasType "place" ;
+    bcube:hasValue "St. John",
+        "US Virgin Islands",
+        "USVI",
+        "VICR",
+        "VICRNM",
+        "VIIS",
+        "Virgin Islands Coral Reef National Monument" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:1f094737-d780-432a-9afc-08d69e61e5b2> bcube:hasType "place" ;
+    bcube:hasValue "COUNTRY/TERRITORY > United States of America > U. S. Virgin Islands > St. John > St. John (18N064W0011)",
+        "OCEAN BASIN > Atlantic Ocean > Caribbean Sea > Virgin Islands > Virgin Islands > St. John (18N064W0011)" ;
+    dc:partOf "CoRIS Place Thesaurus" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:320a79bb-e640-4235-86d0-eae168bff3bf> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2014-07-31T05:10:31.751Z" ;
+    bcube:lastUpdated "2014-07-31T05:10:31.751Z" ;
+    bcube:originatedFrom <urn:uuid:fdd3ba31-569a-4f3c-8a89-67f6028fa4e3> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:5d820ef3-8811-4e86-8621-e986afe63cdc> .
+
+<urn:uuid:5d820ef3-8811-4e86-8621-e986afe63cdc> bcube:dateCreated "2014-07-31T05:10:31.751Z" ;
+    bcube:hasMetadataRecord <urn:uuid:320a79bb-e640-4235-86d0-eae168bff3bf> ;
+    bcube:lastUpdated "2014-07-31T05:10:31.751Z" ;
+    dc:conformsTo <urn:uuid:150b540e-a5d2-459f-a0af-5b1f3e5d7ea8>,
+        <urn:uuid:1f094737-d780-432a-9afc-08d69e61e5b2>,
+        <urn:uuid:61e22161-849c-4e9e-810f-a68f15301f93>,
+        <urn:uuid:699460c7-8d13-4ae5-a600-d7b41a349690>,
+        <urn:uuid:6f7f61cb-e5d8-4fdc-a75a-45ff2ac2bb4a>,
+        <urn:uuid:73ebb134-697f-4d29-abe1-b4b9465829fd>,
+        <urn:uuid:7db28927-5cad-47c1-aef5-04baf26506d8>,
+        <urn:uuid:8142e287-d98f-472c-b9be-1f7c278c1287>,
+        <urn:uuid:b63567df-5b85-4ca8-bfda-4a9b12017bff> ;
+    dc:description "This dataset contains an ESRI Grid representing the rugosity of the bathymetry of the south shore of St. John, including a portion of the NPS's Virgin Islands Coral Reef National Monument in the US Virgin Islands, based on a 1m bathymetric grid. Due to the large file size of the 1m St. John grid, it was divided into four component grids for improved manageability, named stj04_1_1rug, stj04_1_2rug, stj04_1_3rug, and stj04_1_4rug from west to east. Rugosity is defined as the ratio of surface area to planar area and is used as a measure of benthic terrain complexity or \"roughness\". Rugosity values near 1 represent flat, smooth terrain, while higher values reflect increasing rugosity or terrain roughness. For rugosity grid interpretation, is is recommended that the grid be reclassified according to standard deviation divisions.NOAA's NOS/NCCOS/CCMA Biogeography Team and NOAA/NOS/OCS/HSD personnel, in collaboration with NOAA vessel Nancy Foster and territory, federal, and private sector partners, acquired multibeam bathymetry data in the US Virgin Islands from 2/18/04 to 3/5/04. Data was acquired with a pole-mounted Reson 8101 ER multibeam echosounder (240 kHz) and processed by a NOAA contractor using CARIS HIPS v5.4 software. Data has all correctors applied (attitude, sound velocity) and has been reduced to mean lower low water (MLLW) using final approved tides from NOAA COOPS. Data is in UTM zone 20 north, datum WGS84. The processed CARIS data was used to generate a CARIS BASE surface based on swath angle with footprint size 3*3. An ASCII XYZ file was exported from the BASE surface and opened in ESRI ArcMap 9 as an XY event. Then the ArcToolbox conversion tool 'Feature to Raster' was used to generate an ESRI Grid of bathymetry. The Benthic Terrain Modeller (BTM) tool, a collection of ArcGIS terrain visualization tools developed by the Oregon State University (OSU) Department of Geosciences and the National Oceanic and Atmospheric Administration (NOAA) Coastal Services Center, was used to calculate the rugosity of that bathymetric grid. More information on the specific algorithms used can be found in the BTM's documentation.While the project was conducted to meet IHO Order 2 accuracy standards, there is a roll artifact (averaging 0.5m high) in the dataset that the user should take into consideration when performing any analysis." ;
+    dc:spatial "POLYGON ((-64.866736 18.211218,-64.866736 18.263521,-64.810857 18.263521,-64.810857 18.211218,-64.866736 18.211218))" ;
+    dcterms:publisher <urn:uuid:0ea1b57d-c408-4f45-82e0-c48215e6c70a> ;
+    dcterms:references <urn:uuid:9fb61892-87da-4a25-8a5c-b740ff4600d1>,
+        <urn:uuid:a41c0592-50cd-4cec-b63c-46067cc3d4e6> ;
+    dcterms:title "NOAA ESRI Grid- 1m Bathymetric Rugosity of St. John (NPS's Virgin Islands Coral Reef National Monument- Area 1), US Virgin Islands, Project NF-04-06, 2004, UTM 20 WGS84" ;
+    esip:eastBound "-64.810857"^^xsd:float ;
+    esip:endDate "2004-03-05"^^xsd:date ;
+    esip:northBound "18.263521"^^xsd:float ;
+    esip:southBound "18.211218"^^xsd:float ;
+    esip:startDate "2004-02-18"^^xsd:date ;
+    esip:westBound "-64.866736"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:61e22161-849c-4e9e-810f-a68f15301f93> bcube:hasType "theme" ;
+    bcube:hasValue "EARTH SCIENCE > Biosphere > Aquatic Habitat > Reef Habitat > Description",
+        "EARTH SCIENCE > Oceans > Bathymetry/Seafloor Topography > Bathymetry",
+        "EARTH SCIENCE > Oceans > Bathymetry/Seafloor Topography > Rugosity" ;
+    dc:partOf "CoRIS Theme Thesaurus" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:699460c7-8d13-4ae5-a600-d7b41a349690> bcube:hasType "stratum" ;
+    bcube:hasValue "Seafloor" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:6f7f61cb-e5d8-4fdc-a75a-45ff2ac2bb4a> bcube:hasType "theme" ;
+    bcube:hasValue "Bathymetry",
+        "Benthic",
+        "Biogeography",
+        "Coral",
+        "GIS",
+        "Grid",
+        "Habitat",
+        "IOCM",
+        "Integrated Ocean and Coastal Mapping",
+        "MBES",
+        "Multibeam",
+        "NF-04-06",
+        "NOAA",
+        "NPS",
+        "Nancy Foster",
+        "Raster",
+        "Reef",
+        "Reson 8101",
+        "Rugosity",
+        "SWMB",
+        "Seafloor",
+        "Sonar",
+        "US Virgin Islands",
+        "USVI" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:73ebb134-697f-4d29-abe1-b4b9465829fd> bcube:hasType "theme" ;
+    bcube:hasValue "006",
+        "007",
+        "008",
+        "010",
+        "014",
+        "elevation",
+        "environment",
+        "geoscientificInformation",
+        "imageryBaseMapsEarthCover",
+        "oceans" ;
+    dc:partOf "ISO 19115 Topic Category" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:7db28927-5cad-47c1-aef5-04baf26506d8> bcube:hasType "temporal" ;
+    bcube:hasValue "2004" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:8142e287-d98f-472c-b9be-1f7c278c1287> bcube:hasType "theme" ;
+    bcube:hasValue "Bathymetry/Topography" ;
+    dc:partOf "NOS Data Explorer Topic Category" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:9fb61892-87da-4a25-8a5c-b740ff4600d1> dcterms:references <urn:uuid:0eaa088e-8d2d-4250-8b44-82808995ed81> ;
+    owl:a bibo:WebPage .
+
+<urn:uuid:a41c0592-50cd-4cec-b63c-46067cc3d4e6> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2014-07-31T05:10:31.751Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2014-07-31T05:10:31.751Z" ;
+    dc:identifier "urn:sha:223322135f8fa78402203ae2f199fd68d76fba26aa72a5a93aff681c" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://coastalscience.noaa.gov/datasets/ccma/biogeo/usvi_nps/2004/Rugosity/stj04_1_rug_all.zip" .
+
+<urn:uuid:b63567df-5b85-4ca8-bfda-4a9b12017bff> bcube:hasType "theme" ;
+    bcube:hasValue "Geographic Information > Habitats" ;
+    dc:partOf "CoRIS Discovery Thesaurus" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:fdd3ba31-569a-4f3c-8a89-67f6028fa4e3> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2014-07-31T05:10:31.751Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2014-07-31T05:10:31.751Z" ;
+    dc:identifier "urn:sha:fdd5c6d70b2475cc27ab58264dfa0b154e32afe3c98a500c08ee1a7c" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "https://data.noaa.gov/harvest/object/f5b35b25-d9d1-4298-aa9f-dcc4cce7a621/original" .
+

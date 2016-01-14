@@ -1,0 +1,88 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:01d865ec-ab85-4266-a030-af9e589013a9> bcube:hasType "theme" ;
+    bcube:hasValue "County or equivalent entity",
+        "Polygon" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:17af56ce-0c2d-4d7f-8a01-9d1e18ac8401> bcube:hasType "place" ;
+    bcube:hasValue "66",
+        "GU",
+        "Guam",
+        "State or Equivalent Entity",
+        "U.S.",
+        "United States" ;
+    dc:partOf "FIPS Publication 5-2, FIPS Publication 6-4, FIPS Publication 8-6, FIPS Publication 9-1" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:19effa37-99d2-468a-addd-9cfd655d511f> bcube:dateCreated "2015-11-06T22:59:49.401Z" ;
+    bcube:hasMetadataRecord <urn:uuid:842d55d4-767d-41d7-8b55-8b51a2dc7345> ;
+    bcube:lastUpdated "2015-11-06T22:59:49.401Z" ;
+    dc:conformsTo <urn:uuid:01d865ec-ab85-4266-a030-af9e589013a9>,
+        <urn:uuid:17af56ce-0c2d-4d7f-8a01-9d1e18ac8401>,
+        <urn:uuid:35bf132d-282f-465c-9814-b32216814f86> ;
+    dc:description "The TIGER/Line Shapefiles are an extract of selected geographic and cartographic information from the Census MAF/TIGER database. The Census MAF/TIGER database represents a seamless national file with no overlaps or gaps between parts. However, each TIGER/Line Shapefile is designed to stand alone as an independent data set or the shapefiles can be combined to cover the whole nation." ;
+    dc:spatial "POLYGON ((144.563426 13.182335,144.563426 13.706179,145.009167 13.706179,145.009167 13.182335,144.563426 13.182335))" ;
+    dcterms:publisher <urn:uuid:bdf7e6d7-7f5b-44a1-89a6-b13aedd3a091> ;
+    dcterms:references <urn:uuid:85887870-1ff7-4918-8879-ee0f913cf080> ;
+    dcterms:title "TIGER/Line Shapefile, 2007, state, Guam, County and Equivalent" ;
+    esip:eastBound "145.009167"^^xsd:float ;
+    esip:endDate "2007-07-01"^^xsd:date ;
+    esip:northBound "13.706179"^^xsd:float ;
+    esip:southBound "13.182335"^^xsd:float ;
+    esip:startDate "2007-01-01"^^xsd:date ;
+    esip:westBound "144.563426"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:35bf132d-282f-465c-9814-b32216814f86> bcube:hasType "theme" ;
+    bcube:hasValue "boundaries" ;
+    dc:partOf "ISO 19115 Topic Categories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:842d55d4-767d-41d7-8b55-8b51a2dc7345> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-11-06T22:59:49.401Z" ;
+    bcube:lastUpdated "2015-11-06T22:59:49.401Z" ;
+    bcube:originatedFrom <urn:uuid:dc1d4a13-fe1a-4f77-a666-8cbfd49b3e3c> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:19effa37-99d2-468a-addd-9cfd655d511f> .
+
+<urn:uuid:85887870-1ff7-4918-8879-ee0f913cf080> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-06T22:59:49.401Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-06T22:59:49.401Z" ;
+    dc:identifier "urn:sha:8ef177c38eb784297ec01892424353a56dddc31ec8473d58abfa5187" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www2.census.gov/geo/tiger/TIGER2007FE/66_GUAM/fe_2007_66_county.zip" .
+
+<urn:uuid:bdf7e6d7-7f5b-44a1-89a6-b13aedd3a091> owl:a foaf:Organization ;
+    foaf:name "" .
+
+<urn:uuid:dc1d4a13-fe1a-4f77-a666-8cbfd49b3e3c> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-06T22:59:49.401Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-06T22:59:49.401Z" ;
+    dc:identifier "urn:sha:e0715eedaec2567bbac19e9bf31d8155e2c827e90ba0492ab3dac8ea" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://meta.geo.census.gov/data/existing/decennial/GEO/GPMB/TIGERline/fe_2007/county/fe_2007_66_county_url.shp.xml" .
+

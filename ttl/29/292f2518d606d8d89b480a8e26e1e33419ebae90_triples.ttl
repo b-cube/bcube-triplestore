@@ -1,0 +1,72 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:30d9b478-7536-4d10-a966-dfff3988cb3c> bcube:hasType "place" ;
+    bcube:hasValue "Colorado",
+        "Denver",
+        "Denver County",
+        "USA" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:31a7fa91-6933-41ed-8906-e15ee67a62c6> bcube:hasType "theme" ;
+    bcube:hasValue "society",
+        "transportation" ;
+    dc:partOf "ISO 19115 Topic Categories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:7509900e-d165-4d00-9f73-e92520486b8d> bcube:hasType "theme" ;
+    bcube:hasValue "infrastructure" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:8908e10b-ac0b-4c8f-ba86-593594808c08> owl:a foaf:Organization ;
+    foaf:name "" .
+
+<urn:uuid:afdd5120-5530-4d1d-80da-4ffa9c680319> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-04T11:49:42.565Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-04T11:49:42.565Z" ;
+    dc:identifier "urn:sha:efa97437602e8a449e7cec9844fd0757175ba235b2f8063a3d63a8b2" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://data.denvergov.org/download/gis/pedestrian_routes/metadata/pedestrian_routes.xml" .
+
+<urn:uuid:eeb3f00a-0cc2-41ee-8b39-70f62b30e81d> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-11-04T11:49:42.565Z" ;
+    bcube:lastUpdated "2015-11-04T11:49:42.565Z" ;
+    bcube:originatedFrom <urn:uuid:afdd5120-5530-4d1d-80da-4ffa9c680319> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:f4984e41-5ae2-4745-acd5-188b7fe0cdfe> .
+
+<urn:uuid:f4984e41-5ae2-4745-acd5-188b7fe0cdfe> bcube:dateCreated "2015-11-04T11:49:42.565Z" ;
+    bcube:hasMetadataRecord <urn:uuid:eeb3f00a-0cc2-41ee-8b39-70f62b30e81d> ;
+    bcube:lastUpdated "2015-11-04T11:49:42.565Z" ;
+    dc:conformsTo <urn:uuid:30d9b478-7536-4d10-a966-dfff3988cb3c>,
+        <urn:uuid:31a7fa91-6933-41ed-8906-e15ee67a62c6>,
+        <urn:uuid:7509900e-d165-4d00-9f73-e92520486b8d> ;
+    dc:description "Pedestrian routes identified by City and County of Denver staff via field investigation." ;
+    dc:spatial "POLYGON ((-105.102548 39.62898,-105.102548 39.812954,-104.734605 39.812954,-104.734605 39.62898,-105.102548 39.62898))" ;
+    dcterms:publisher <urn:uuid:8908e10b-ac0b-4c8f-ba86-593594808c08> ;
+    dcterms:title "Pedestrian Routes" ;
+    esip:eastBound "-104.734605"^^xsd:float ;
+    esip:northBound "39.812954"^^xsd:float ;
+    esip:southBound "39.62898"^^xsd:float ;
+    esip:startDate "2004-01-01"^^xsd:date ;
+    esip:westBound "-105.102548"^^xsd:float ;
+    owl:a dcat:Dataset .
+

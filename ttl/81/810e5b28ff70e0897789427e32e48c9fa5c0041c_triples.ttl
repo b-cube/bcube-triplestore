@@ -1,0 +1,83 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:41b6fb9c-88e3-4734-9bcc-063d23a3eb66> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-10-29T19:58:33.916Z" ;
+    bcube:lastUpdated "2015-10-29T19:58:33.916Z" ;
+    bcube:originatedFrom <urn:uuid:deaff9a6-fb57-4d2b-8f39-943e0da72ada> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:4f97d425-d1ca-488f-873e-55312b9b295a> .
+
+<urn:uuid:4f97d425-d1ca-488f-873e-55312b9b295a> bcube:dateCreated "2015-10-29T19:58:33.916Z" ;
+    bcube:hasMetadataRecord <urn:uuid:41b6fb9c-88e3-4734-9bcc-063d23a3eb66> ;
+    bcube:lastUpdated "2015-10-29T19:58:33.916Z" ;
+    dc:conformsTo <urn:uuid:9d6fa8b9-832c-4290-a419-67367de6c21e>,
+        <urn:uuid:a5b94bf1-7a93-4cb0-93f7-22acd9971ae5> ;
+    dc:description "Polygons representing the area of drivable pavement citywide, as well as interior non-street polygons. Note: Curb polygons captured north of Stenton Ave in Montgomery County was captured at the request of PWD for their facilities in that region. Feature update 2004" ;
+    dc:spatial "POLYGON ((-75.284774 39.867989,-75.284774 40.144365,-74.955645 40.144365,-74.955645 39.867989,-75.284774 39.867989))" ;
+    dcterms:publisher <urn:uuid:6ab3bfed-5520-46e0-a48f-d405250c6c1d> ;
+    dcterms:references <urn:uuid:fe789765-0120-4170-8036-63f8aaa176ef> ;
+    dcterms:title "Philadelphia curb edges" ;
+    esip:eastBound "-74.955645"^^xsd:float ;
+    esip:northBound "40.144365"^^xsd:float ;
+    esip:southBound "39.867989"^^xsd:float ;
+    esip:westBound "-75.284774"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:6ab3bfed-5520-46e0-a48f-d405250c6c1d> owl:a foaf:Organization ;
+    foaf:name "City of Philadelphia, Department of Streets" .
+
+<urn:uuid:9d6fa8b9-832c-4290-a419-67367de6c21e> bcube:hasType "theme" ;
+    bcube:hasValue "Transportation" ;
+    dc:partOf "none" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:a5b94bf1-7a93-4cb0-93f7-22acd9971ae5> bcube:hasType "place" ;
+    bcube:hasValue "Delaware Valley",
+        "Philadelphia",
+        "Philadelphia County",
+        "Philly",
+        "South East PA",
+        "South East Pennsylvania",
+        "Southeastern PA",
+        "Southeastern Pennsylvania" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:deaff9a6-fb57-4d2b-8f39-943e0da72ada> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-10-29T19:58:33.916Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-10-29T19:58:33.916Z" ;
+    dc:identifier "urn:sha:e24725255ef29a16720ac60553a04a258034b6723cc6175d1b10510f" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www.pasda.psu.edu/pasda/UCI_Metadata/PhiladelphiaCurbEdges201201.xml" .
+
+<urn:uuid:fe7772a3-b0d0-4a7e-9d8c-ef78f1277f5a> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-10-29T19:58:33.916Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-10-29T19:58:33.916Z" ;
+    dc:identifier "urn:sha:3ecf224faabfef79b5bfcee322bdb4371ff0d08b81b3642ee2038a83" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www.pasda.psu.edu" .
+
+<urn:uuid:fe789765-0120-4170-8036-63f8aaa176ef> dcterms:references <urn:uuid:fe7772a3-b0d0-4a7e-9d8c-ef78f1277f5a> ;
+    owl:a bibo:WebPage .
+

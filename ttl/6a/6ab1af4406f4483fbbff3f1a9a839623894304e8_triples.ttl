@@ -1,0 +1,74 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:0593f9dd-8485-4894-95a8-156dbfaae23c> bcube:hasType "theme" ;
+    bcube:hasValue "depth",
+        "eastward_sea_water_velocity",
+        "forecast_period",
+        "forecast_reference_time",
+        "ice_concentration",
+        "ice_thickness",
+        "ice_u_veloctiy",
+        "ice_v_veloctiy",
+        "latitude",
+        "longitude",
+        "northward_sea_water_velocity",
+        "ocean_sigma_coordinate",
+        "sea_surface_elevation",
+        "time",
+        "wave_direction_to",
+        "wave_height",
+        "wave_period" ;
+    dc:partOf "http://www.cgd.ucar.edu/cms/eaton/cf-metadata/standard_name.html" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:05e0dcd2-65e1-47cd-a6e0-0192e8a74cfc> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-07-02T14:01:51.047Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-07-02T14:01:51.047Z" ;
+    dc:identifier "urn:sha:9a15bbd4e19b87ca1fc8b5beccd5b3cec76048a8d2627f37f9d8f469" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://tds.glos.us/thredds/iso/glos/glcfs/ontario/fcfmrc-2d/Lake_Ontario_-_2D_best.ncd?catalog=http%3A%2F%2Fferret.pmel.noaa.gov%2Fgeoide%2FCleanCatalogs%2Ftds.glos.us%2Fthredds%2Fcatalog%2Fglos%2Fglcfs%2Fontario%2Ffcfmrc-2d%2Fcatalog.html&dataset=glos.glcfs.ontario.fcfmrc-2d.Lake_Ontario_-_2D_best.ncd" .
+
+<urn:uuid:52efce13-81b9-4e08-8cf2-19a0a01d56b9> bcube:hasValue "climatologyMeteorologyAtmosphere" ;
+    dc:partOf "IsoTopicCategories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:687a99a6-b076-4462-94e3-5dc0d8990e25> a "ISO 19115:2003/19139" ;
+    bcube:dateCreated "2015-07-02T14:01:51.047Z" ;
+    bcube:lastUpdated "2015-07-02T14:01:51.047Z" ;
+    bcube:originatedFrom <urn:uuid:05e0dcd2-65e1-47cd-a6e0-0192e8a74cfc> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:7b189192-a2ec-42f1-a139-25d9fc1ff6e4> .
+
+<urn:uuid:7b189192-a2ec-42f1-a139-25d9fc1ff6e4> bcube:dateCreated "2015-07-02T14:01:51.047Z" ;
+    bcube:hasMetadataRecord <urn:uuid:687a99a6-b076-4462-94e3-5dc0d8990e25> ;
+    bcube:lastUpdated "2015-07-02T14:01:51.047Z" ;
+    dc:conformsTo <urn:uuid:0593f9dd-8485-4894-95a8-156dbfaae23c>,
+        <urn:uuid:52efce13-81b9-4e08-8cf2-19a0a01d56b9> ;
+    dc:description "Aggregation of the 2D Forecast output for Lake Ontario from GLCFS" ;
+    dc:spatial "POLYGON ((-79.820953369099996 43.141616821299998,-79.820953369099996 44.237491607700001,-76.066490173299997 44.237491607700001,-76.066490173299997 43.141616821299998,-79.820953369099996 43.141616821299998))" ;
+    dcterms:title "GLCFS - Lake Ontario - Forecast - 2D" ;
+    esip:eastBound "-76.0664901733"^^xsd:float ;
+    esip:endDate "2015-07-07"^^xsd:date ;
+    esip:northBound "44.2374916077"^^xsd:float ;
+    esip:southBound "43.1416168213"^^xsd:float ;
+    esip:startDate "2015-01-01"^^xsd:date ;
+    esip:westBound "-79.8209533691"^^xsd:float ;
+    owl:a dcat:Dataset .
+

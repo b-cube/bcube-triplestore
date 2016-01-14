@@ -1,0 +1,105 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:1d2c3653-0133-4be2-9810-e44060460d20> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-10T00:35:31.72Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-10T00:35:31.72Z" ;
+    dc:identifier "urn:sha:ef1871eab3eaf2fff3631d131db707c294d92278315fb26ccebccbdb" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://water.usgs.gov/lookup/getspatial?ds889_KR_SEPP_EggMatNetwork_Myrtle_Bend_Shortys_Island" .
+
+<urn:uuid:82725a73-7b19-4bc3-b513-8c1cda3bcbb4> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-08-10T00:35:31.72Z" ;
+    bcube:lastUpdated "2015-08-10T00:35:31.72Z" ;
+    bcube:originatedFrom <urn:uuid:1d2c3653-0133-4be2-9810-e44060460d20> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:de8cae46-1d01-438c-b6f3-d467a28cee14> .
+
+<urn:uuid:ba2e73fd-d377-4fbf-ab2f-60b9cf43aa40> bcube:hasType "theme" ;
+    bcube:hasValue "Bathymetry",
+        "Geology",
+        "Multibeam",
+        "U.S. Geological Survey",
+        "U.S. National Grid",
+        "USGS",
+        "Water Depth",
+        "contour",
+        "geographic names",
+        "hydrography",
+        "inland waters",
+        "inlandWaters",
+        "orthoimage",
+        "topographic" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:c442b1f4-8157-42dd-b0d5-a6d90e0e5732> bcube:hasType "place" ;
+    bcube:hasValue "Bonners Ferry",
+        "ID",
+        "Idaho",
+        "Kootenai River",
+        "USA" ;
+    dc:partOf "Geographic Names Information System (GNIS)" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:c6e53ca4-c87d-47e2-bee3-9aba3d2c75c5> owl:a foaf:Organization ;
+    foaf:name "U.S. Geological Survey" .
+
+<urn:uuid:de8cae46-1d01-438c-b6f3-d467a28cee14> bcube:dateCreated "2015-08-10T00:35:31.72Z" ;
+    bcube:hasMetadataRecord <urn:uuid:82725a73-7b19-4bc3-b513-8c1cda3bcbb4> ;
+    bcube:lastUpdated "2015-08-10T00:35:31.72Z" ;
+    dc:conformsTo <urn:uuid:ba2e73fd-d377-4fbf-ab2f-60b9cf43aa40>,
+        <urn:uuid:c442b1f4-8157-42dd-b0d5-a6d90e0e5732>,
+        <urn:uuid:e4f1c90b-b5be-425e-8413-218abd5414f9> ;
+    dc:description "The egg-mat data describe a sub-set of the egg-mat network operated by the Idaho Department of Fish and Game. The sub-set inlcudes two sites, 1. near an area commonly known as Shorty's Island, and 2. near the Kootenai River confluence with Myrtle Creek at an area commonly known as Myrtle Bend. The egg-mats consist of artificial substrate mats that are deployed and retrieved every 24-48 hours by IDFG personnel. The egg-mat material is designed to trap eggs that come in contact with the mat, allow personnel to quanitify the number of eggs for the deployed period. The egg-mat data is described by date, quantity of eggs retrieved, and the spatial location (geographic and projected coordinates)." ;
+    dc:spatial "POLYGON ((-116.416119 48.737352,-116.416119 48.772017,-116.384919 48.772017,-116.384919 48.737352,-116.416119 48.737352))" ;
+    dcterms:publisher <urn:uuid:c6e53ca4-c87d-47e2-bee3-9aba3d2c75c5> ;
+    dcterms:references <urn:uuid:efb09af1-ea55-4451-b137-96b0fbfcb0eb> ;
+    dcterms:title "White Sturgeon Egg-Mat Network near Shorty's Island and Myrtle Bend, 2007-2013, Koootenai River near Bonners Ferry, ID" ;
+    esip:eastBound "-116.384919"^^xsd:float ;
+    esip:endDate "2013-01-01"^^xsd:date ;
+    esip:northBound "48.772017"^^xsd:float ;
+    esip:southBound "48.737352"^^xsd:float ;
+    esip:startDate "2007-01-01"^^xsd:date ;
+    esip:westBound "-116.416119"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:e4f1c90b-b5be-425e-8413-218abd5414f9> bcube:hasType "theme" ;
+    bcube:hasValue "bathymetry",
+        "capacity",
+        "elevation",
+        "inland waters",
+        "islands",
+        "lakes",
+        "lidar" ;
+    dc:partOf "ISO 19115 Topic Category" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:efb09af1-ea55-4451-b137-96b0fbfcb0eb> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-10T00:35:31.72Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-10T00:35:31.72Z" ;
+    dc:identifier "urn:sha:59e7ce9255fa5f2a72defd075aedeaa85ead69d51c8dba4a75cb9319" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://water.usgs.gov/GIS/dsdl/ds889_KR_SEPP_EggMatNetwork_Myrtle_Bend_Shortys_Island.zip" .
+

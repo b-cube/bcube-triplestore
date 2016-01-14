@@ -1,0 +1,96 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:1b85a99b-9ac6-409a-9da6-3afe89bc2804> owl:a foaf:Organization ;
+    foaf:name "Federal Emergency Management Agency" .
+
+<urn:uuid:4d0678ab-1e1b-4b25-9bef-7af415c68749> bcube:hasType "theme" ;
+    bcube:hasValue "elevation" ;
+    dc:partOf "ISO 19115 Topic Category" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:53ce6600-d656-4089-be62-120593be931f> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-07-10T00:37:03.637Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-07-10T00:37:03.637Z" ;
+    dc:identifier "urn:sha:37c915397238031daced09ae0e2dd3bf54e84a6477f749c2cc9dcbdf" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://hazards.fema.gov" .
+
+<urn:uuid:55f75a67-1460-4762-85a1-d2d42775f362> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-07-10T00:37:03.637Z" ;
+    bcube:lastUpdated "2015-07-10T00:37:03.637Z" ;
+    bcube:originatedFrom <urn:uuid:baadcff6-f74c-4394-81a3-688187166b6e> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:b5d41179-0888-490e-8fe1-c41acaca0fe1> .
+
+<urn:uuid:64caf17d-bdd9-48d4-bdcf-84b7b417c9b3> bcube:hasType "theme" ;
+    bcube:hasValue "DEM",
+        "Digital Terrain Model",
+        "Elevation Data",
+        "Land Surface",
+        "Topography" ;
+    dc:partOf "FEMA NFIP Topic Category" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:b5d41179-0888-490e-8fe1-c41acaca0fe1> bcube:dateCreated "2015-07-10T00:37:03.637Z" ;
+    bcube:hasMetadataRecord <urn:uuid:55f75a67-1460-4762-85a1-d2d42775f362> ;
+    bcube:lastUpdated "2015-07-10T00:37:03.637Z" ;
+    dc:conformsTo <urn:uuid:4d0678ab-1e1b-4b25-9bef-7af415c68749>,
+        <urn:uuid:64caf17d-bdd9-48d4-bdcf-84b7b417c9b3>,
+        <urn:uuid:f80127d5-02f9-4410-9c00-50359a983bec> ;
+    dc:description "Terrain data, as defined in FEMA Guidelines and Specifications, Appendix M: Data Capture Standards, describe the digital topographic data that were used to create the elevation data representing the terrain environment of a watershed and/or floodplain. Terrain data requirements allow for flexibility in the types of information provided as sources used to produce final terrain deliverables. Once this type of data is provided, FEMA will be able to account for the origins of the flood study elevation data. (Source: FEMA Guidelines and Specifications, Appendix M, Section 4)" ;
+    dc:spatial "POLYGON ((-108.726345 32.475246,-108.726345 35.580312,-105.523958 35.580312,-105.523958 32.475246,-108.726345 32.475246))" ;
+    dcterms:publisher <urn:uuid:1b85a99b-9ac6-409a-9da6-3afe89bc2804> ;
+    dcterms:references <urn:uuid:53ce6600-d656-4089-be62-120593be931f> ;
+    dcterms:title "DCS Terrain Submittal for Socorro County NM" ;
+    esip:eastBound "-105.523958"^^xsd:float ;
+    esip:northBound "35.580312"^^xsd:float ;
+    esip:southBound "32.475246"^^xsd:float ;
+    esip:startDate "2010-09-17"^^xsd:date ;
+    esip:westBound "-108.726345"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:baadcff6-f74c-4394-81a3-688187166b6e> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-07-10T00:37:03.637Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-07-10T00:37:03.637Z" ;
+    dc:identifier "urn:sha:f9deb56c3cdf3d39c2d3fe7e53611ac8628311e37656773e140ddb16" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "https://catalog.data.gov/harvest/object/d309ace1-3c95-4d50-9605-f7ec695135e1/original" .
+
+<urn:uuid:f80127d5-02f9-4410-9c00-50359a983bec> bcube:hasType "place" ;
+    bcube:hasValue "COMMUNITY CITY OF SOCORRO",
+        "COMMUNITY Socorro County",
+        "COMMUNITY Socorro County-wide",
+        "COMMUNITY VILLAGE OF MAGDALENA",
+        "COUNTY Socorro",
+        "COUNTY-FIPS 053",
+        "FEMA-CID 350075",
+        "FEMA-CID 350076",
+        "FEMA-CID 350077",
+        "FEMA-CID 35053C",
+        "REGION 06",
+        "STATE NM" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+

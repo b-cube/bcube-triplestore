@@ -1,0 +1,89 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:1fbdd247-9867-45b8-a54a-bb31a680d575> owl:a foaf:Organization ;
+    foaf:name "" .
+
+<urn:uuid:3aa73e3e-a81b-4a35-bac2-7f316d6c1e11> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-11-03T05:33:48.059Z" ;
+    bcube:lastUpdated "2015-11-03T05:33:48.059Z" ;
+    bcube:originatedFrom <urn:uuid:ce67733c-4063-4479-ae79-b54dca0fd05c> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:55e912a5-96ad-4c2c-94c9-14cc5fcc1adb> .
+
+<urn:uuid:55e912a5-96ad-4c2c-94c9-14cc5fcc1adb> bcube:dateCreated "2015-11-03T05:33:48.059Z" ;
+    bcube:hasMetadataRecord <urn:uuid:3aa73e3e-a81b-4a35-bac2-7f316d6c1e11> ;
+    bcube:lastUpdated "2015-11-03T05:33:48.059Z" ;
+    dc:conformsTo <urn:uuid:6afa9701-dd55-4a80-9603-eb1c4a30c478>,
+        <urn:uuid:be04fd96-7902-407a-a89a-2a3d2d3c30d0>,
+        <urn:uuid:c5ef876e-8482-44f4-9f4b-2834235f3510> ;
+    dc:description "The TIGER/Line Shapefiles are an extract of selected geographic and cartographic information from the Census MAF/TIGER database. The Census MAF/TIGER database represents a seamless national file with no overlaps or gaps between parts. However, each TIGER/Line Shapefile is designed to stand alone as an independent data set or the shapefiles can be combined to cover the whole nation." ;
+    dc:spatial "POLYGON ((144.563426 13.182335,144.563426 13.706179,145.009167 13.706179,145.009167 13.182335,144.563426 13.182335))" ;
+    dcterms:publisher <urn:uuid:1fbdd247-9867-45b8-a54a-bb31a680d575> ;
+    dcterms:references <urn:uuid:fe695920-8fc4-4397-84dd-5ea515d8d980> ;
+    dcterms:title "TIGER/Line Shapefile, 2008, 2000 state, Guam, 108th Congressional District" ;
+    esip:eastBound "145.009167"^^xsd:float ;
+    esip:endDate "2008-07-01"^^xsd:date ;
+    esip:northBound "13.706179"^^xsd:float ;
+    esip:southBound "13.182335"^^xsd:float ;
+    esip:startDate "2008-01-01"^^xsd:date ;
+    esip:westBound "144.563426"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:6afa9701-dd55-4a80-9603-eb1c4a30c478> bcube:hasType "place" ;
+    bcube:hasValue "66",
+        "GU",
+        "Guam",
+        "State or Equivalent Entity",
+        "U.S.",
+        "United States" ;
+    dc:partOf "FIPS Publication 5-2, FIPS Publication 6-4, FIPS Publication 8-6, FIPS Publication 9-1,FIPS Publication55-4" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:be04fd96-7902-407a-a89a-2a3d2d3c30d0> bcube:hasType "theme" ;
+    bcube:hasValue "boundaries" ;
+    dc:partOf "ISO 19115 Topic Categories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:c5ef876e-8482-44f4-9f4b-2834235f3510> bcube:hasType "theme" ;
+    bcube:hasValue "Congressional Districts",
+        "Polygon",
+        "State or equivalent entity" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:ce67733c-4063-4479-ae79-b54dca0fd05c> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-03T05:33:48.059Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-03T05:33:48.059Z" ;
+    dc:identifier "urn:sha:c7bd48edf10e37833d60b9fc6fc1b9f4d98425b9a099bad4da632f6a" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://meta.geo.census.gov/data/existing/decennial/GEO/GPMB/TIGERline/fe_2008/cd108/tl_2008_66_cd108_url.shp.xml" .
+
+<urn:uuid:fe695920-8fc4-4397-84dd-5ea515d8d980> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-03T05:33:48.059Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-03T05:33:48.059Z" ;
+    dc:identifier "urn:sha:212c3664df69ddcc814d4e5c1364c9c30ecc53585116526c5dff23dc" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www2.census.gov/geo/tiger/TIGER2008/66_GUAM/tl_2008_66_cd108.zip" .
+

@@ -1,0 +1,88 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:10812b07-4d26-4993-b073-4c54d97eae77> owl:a foaf:Organization ;
+    foaf:name "" .
+
+<urn:uuid:14de5293-2587-4d79-8e4f-a830ae6eadf7> bcube:hasType "place" ;
+    bcube:hasValue "01125",
+        "County or Equivalent Entity",
+        "Tuscaloosa",
+        "U.S.",
+        "United States" ;
+    dc:partOf "FIPS Publication 5-2, FIPS Publication 6-4, FIPS Publication 8-6, FIPS Publication 9-1" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:2f2236b1-3783-494a-91d9-b428289c098f> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-11-07T20:21:47.31Z" ;
+    bcube:lastUpdated "2015-11-07T20:21:47.31Z" ;
+    bcube:originatedFrom <urn:uuid:f60614cd-3ab3-4988-adef-e64780a9ab71> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:84c37008-6806-4582-8880-363b65dc335d> .
+
+<urn:uuid:6094de73-c6dd-440d-81a3-1c9c2bd2271d> bcube:hasType "theme" ;
+    bcube:hasValue "County or equivalent entity",
+        "Hydrography",
+        "Polygon" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:68aace93-6bda-4d5d-bc9c-6f004476749c> bcube:hasType "theme" ;
+    bcube:hasValue "inlandWaters" ;
+    dc:partOf "ISO 19115 Topic Categories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:84c37008-6806-4582-8880-363b65dc335d> bcube:dateCreated "2015-11-07T20:21:47.31Z" ;
+    bcube:hasMetadataRecord <urn:uuid:2f2236b1-3783-494a-91d9-b428289c098f> ;
+    bcube:lastUpdated "2015-11-07T20:21:47.31Z" ;
+    dc:conformsTo <urn:uuid:14de5293-2587-4d79-8e4f-a830ae6eadf7>,
+        <urn:uuid:6094de73-c6dd-440d-81a3-1c9c2bd2271d>,
+        <urn:uuid:68aace93-6bda-4d5d-bc9c-6f004476749c> ;
+    dc:description "The TIGER/Line Shapefiles are an extract of selected geographic and cartographic information from the Census MAF/TIGER database. The Census MAF/TIGER database represents a seamless national file with no overlaps or gaps between parts. However, each TIGER/Line Shapefile is designed to stand alone as an independent data set or the shapefiles can be combined to cover the whole nation." ;
+    dc:spatial "POLYGON ((-87.840711 33.003379,-87.840711 33.609833,-87.065738 33.609833,-87.065738 33.003379,-87.840711 33.003379))" ;
+    dcterms:publisher <urn:uuid:10812b07-4d26-4993-b073-4c54d97eae77> ;
+    dcterms:references <urn:uuid:f19357e5-b94e-40f2-bca4-80d24082fe5a> ;
+    dcterms:title "TIGER/Line Shapefile, 2007, county, Tuscaloosa County, Area Hydrography" ;
+    esip:eastBound "-87.065738"^^xsd:float ;
+    esip:endDate "2007-07-01"^^xsd:date ;
+    esip:northBound "33.609833"^^xsd:float ;
+    esip:southBound "33.003379"^^xsd:float ;
+    esip:startDate "2007-01-01"^^xsd:date ;
+    esip:westBound "-87.840711"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:f19357e5-b94e-40f2-bca4-80d24082fe5a> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-07T20:21:47.31Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-07T20:21:47.31Z" ;
+    dc:identifier "urn:sha:664d57726d5afc3ee6e1f64ca0de17854a72776cc6a9fa555dc30ec0" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www2.census.gov/geo/tiger/TIGER2007FE/01_ALABAMA/01125_Tuscaloosa/fe_2007_01125_areawater.zip" .
+
+<urn:uuid:f60614cd-3ab3-4988-adef-e64780a9ab71> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-07T20:21:47.31Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-07T20:21:47.31Z" ;
+    dc:identifier "urn:sha:f8356efdfa823a41dde222353108d035be19c87571317abf66c202ac" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://meta.geo.census.gov/data/existing/decennial/GEO/GPMB/TIGERline/fe_2007/areawater/fe_2007_01125_areawater_url.shp.xml" .
+

@@ -1,0 +1,105 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:0222dfaa-d5af-44db-8cc3-06ca11a89e34> owl:a foaf:Organization ;
+    foaf:name "U.S. Geological Survey" .
+
+<urn:uuid:49bdf595-1ae4-4876-bbac-8ccb18b51f35> bcube:hasType "theme" ;
+    bcube:hasValue "bathymetry",
+        "capacity",
+        "elevation",
+        "inland waters",
+        "islands",
+        "lakes",
+        "lidar" ;
+    dc:partOf "ISO 19115 Topic Category" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:71b3fca8-609c-425c-9bb0-4d2ed06669f5> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-08-04T14:51:06.559Z" ;
+    bcube:lastUpdated "2015-08-04T14:51:06.559Z" ;
+    bcube:originatedFrom <urn:uuid:f4f2c6b6-1d95-4f88-a342-4cff8c64c529> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:c0220eae-44b0-4a23-89c3-ad0396cd414f> .
+
+<urn:uuid:9b496185-3668-4ac5-abb4-3088e697756b> bcube:hasType "theme" ;
+    bcube:hasValue "ASCII",
+        "Bathymetry",
+        "Geology",
+        "Hypack",
+        "Hysweep",
+        "Multibeam",
+        "U.S. Geological Survey",
+        "USGS",
+        "Water Depth",
+        "XYZ",
+        "inland waters",
+        "inlandWaters",
+        "swath bathymetry",
+        "topography" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:bd9baef3-ef6d-44e4-bf5e-54ef1d82b9b0> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-04T14:51:06.559Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-04T14:51:06.559Z" ;
+    dc:identifier "urn:sha:587f98c8ace7560cef2aa005a4043faa825a90c67766133323743946" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://water.usgs.gov/GIS/dsdl/ds889_KR_SEPP_Minor_Clay_Steps_Shortys_Island.zip" .
+
+<urn:uuid:c0220eae-44b0-4a23-89c3-ad0396cd414f> bcube:dateCreated "2015-08-04T14:51:06.559Z" ;
+    bcube:hasMetadataRecord <urn:uuid:71b3fca8-609c-425c-9bb0-4d2ed06669f5> ;
+    bcube:lastUpdated "2015-08-04T14:51:06.559Z" ;
+    dc:conformsTo <urn:uuid:49bdf595-1ae4-4876-bbac-8ccb18b51f35>,
+        <urn:uuid:9b496185-3668-4ac5-abb4-3088e697756b>,
+        <urn:uuid:c5c2d705-75b0-44dd-a23b-fc8675dccbe7> ;
+    dc:description "The minor clay step features are defined as having a vertical face that is less than or equal to 1.5 meters. The clay step features were qualitately identified using an underwater video monitoring sysyem. The extent and magnitude of the clay steps were mapped using a muliteam bathymetric echosounder system." ;
+    dc:spatial "POLYGON ((-116.396619 48.761979,-116.396619 48.779101,-116.38557 48.779101,-116.38557 48.761979,-116.396619 48.761979))" ;
+    dcterms:publisher <urn:uuid:0222dfaa-d5af-44db-8cc3-06ca11a89e34> ;
+    dcterms:references <urn:uuid:bd9baef3-ef6d-44e4-bf5e-54ef1d82b9b0> ;
+    dcterms:title "Minor Clay Step features near Shorty's Island on the Kootenai River near Bonners Ferry, ID" ;
+    esip:eastBound "-116.38557"^^xsd:float ;
+    esip:endDate "2013-01-01"^^xsd:date ;
+    esip:northBound "48.779101"^^xsd:float ;
+    esip:southBound "48.761979"^^xsd:float ;
+    esip:startDate "2007-01-01"^^xsd:date ;
+    esip:westBound "-116.396619"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:c5c2d705-75b0-44dd-a23b-fc8675dccbe7> bcube:hasType "place" ;
+    bcube:hasValue "Bonners Ferry",
+        "ID",
+        "Idaho",
+        "Kootenai River",
+        "USA" ;
+    dc:partOf "Geographic Names Information System (GNIS)" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:f4f2c6b6-1d95-4f88-a342-4cff8c64c529> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-04T14:51:06.559Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-04T14:51:06.559Z" ;
+    dc:identifier "urn:sha:8d8c0e06fa22ef61ab25efc017158385e28eb2b2c45c5ff628895f6b" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://water.usgs.gov/lookup/getspatial?ds889_KR_SEPP_Minor_Clay_Steps_Shortys_Island" .
+

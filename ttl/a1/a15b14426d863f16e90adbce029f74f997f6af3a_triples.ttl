@@ -1,0 +1,83 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:0294b0ee-a8ab-4973-a354-69820b5da9ac> owl:a foaf:Organization ;
+    foaf:name "U.S. Geological Survey" .
+
+<urn:uuid:0875ec11-a960-46ce-b829-3e4e9569ecd5> bcube:hasType "place" ;
+    bcube:hasValue "f04005 = Coconino" ;
+    dc:partOf "Augmented FIPS 10-4 and FIPS 6-4" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:19de0b20-ebfc-4281-995d-431258426a25> bcube:dateCreated "2014-10-30T01:05:30.972Z" ;
+    bcube:hasMetadataRecord <urn:uuid:1d4d266e-b5a0-4ff9-bf5d-59f4f2bbb063> ;
+    bcube:lastUpdated "2014-10-30T01:05:30.972Z" ;
+    dc:conformsTo <urn:uuid:0875ec11-a960-46ce-b829-3e4e9569ecd5>,
+        <urn:uuid:6b3fbd68-a5b0-4c2e-8011-2e9a2602399c> ;
+    dc:description "We removed non-native fish from a section of the river and the endangered native species humpback chub increased in abundance. But it is not yet clear that decreased competition explains the rebound in population." ;
+    dc:spatial "POLYGON ((-121.5 35.0,-121.5 37.5,-110.5 37.5,-110.5 35.0,-121.5 35.0))" ;
+    dcterms:publisher <urn:uuid:0294b0ee-a8ab-4973-a354-69820b5da9ac> ;
+    dcterms:references <urn:uuid:dc93b67f-d864-4df2-bca9-d0dfb5bb7c4a> ;
+    dcterms:title "An experiment to control nonnative fish in the Colorado River, Grand Canyon, Arizona" ;
+    esip:eastBound "-110.5"^^xsd:float ;
+    esip:northBound "37.5"^^xsd:float ;
+    esip:southBound "35.0"^^xsd:float ;
+    esip:westBound "-121.5"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:1ca53751-b9bc-4eb2-8804-d39fb02368a8> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2014-10-30T01:05:30.972Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2014-10-30T01:05:30.972Z" ;
+    dc:identifier "urn:sha:e4237caf3ca1f1de123bea95e140ae88e078d82824d819ebc0a69130" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www.usgs.gov/science/xml.php?cite=2785" .
+
+<urn:uuid:1d4d266e-b5a0-4ff9-bf5d-59f4f2bbb063> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2014-10-30T01:05:30.972Z" ;
+    bcube:lastUpdated "2014-10-30T01:05:30.972Z" ;
+    bcube:originatedFrom <urn:uuid:1ca53751-b9bc-4eb2-8804-d39fb02368a8> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:19de0b20-ebfc-4281-995d-431258426a25> .
+
+<urn:uuid:2773ea1b-0962-426f-93ed-2d798573a70b> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2014-10-30T01:05:30.972Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2014-10-30T01:05:30.972Z" ;
+    dc:identifier "urn:sha:0788af0691857f7c53db102071f43c2c5c344ba5fc3ff7e91284d009" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://pubs.usgs.gov/fs/2011/3093/" .
+
+<urn:uuid:6b3fbd68-a5b0-4c2e-8011-2e9a2602399c> bcube:hasType "theme" ;
+    bcube:hasValue "aquatic biology",
+        "community ecology",
+        "endangered species",
+        "fish",
+        "fishery management",
+        "nonindigenous species",
+        "population dynamics" ;
+    dc:partOf "USGS Thesaurus" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:dc93b67f-d864-4df2-bca9-d0dfb5bb7c4a> dcterms:references <urn:uuid:2773ea1b-0962-426f-93ed-2d798573a70b> ;
+    owl:a bibo:WebPage .
+

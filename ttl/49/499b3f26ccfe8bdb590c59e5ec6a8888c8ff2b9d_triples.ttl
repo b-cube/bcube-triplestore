@@ -1,0 +1,109 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:057a425e-3a78-4c7b-ae69-4810177a507a> bcube:hasValue "Borehole Temperature Observations",
+        "Downloadable Files",
+        "ESRI Services",
+        "WFS Services",
+        "WMS Services",
+        "Wyoming",
+        "Wyoming State Geological Survey" ;
+    dc:partOf "Server Collections" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:0bc98d8b-56b6-4ace-9617-8f6d8ccaefe0> bcube:hasType "theme" ;
+    bcube:hasValue "borehole temperature",
+        "bottom hole temperature",
+        "geothermal",
+        "united states",
+        "wyoming" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:3188a7b5-0676-481c-8643-a2a803ebd7c4> a "ISO 19115:2003/19139" ;
+    bcube:dateCreated "2015-10-30T14:54:17.411Z" ;
+    bcube:lastUpdated "2015-10-30T14:54:17.411Z" ;
+    bcube:originatedFrom <urn:uuid:ad17235b-0bca-40a9-8862-8b8ece414399> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:9c7ad098-d187-4a31-9724-b23478311441> .
+
+<urn:uuid:5793ce79-6dca-429e-9f95-7fb7f030cf67> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-10-30T14:54:17.411Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-10-30T14:54:17.411Z" ;
+    dc:identifier "urn:sha:383665f46092c05f74f4c17132b9b27e1861c76ac06cab291868b456" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://web2.nbmg.unr.edu/ArcGIS/services/WY_data/WYBoreholeTemperatures/MapServer/WFSServer?request=GetCapabilities&service=WFS" .
+
+<urn:uuid:9c7ad098-d187-4a31-9724-b23478311441> bcube:dateCreated "2015-10-30T14:54:17.411Z" ;
+    bcube:hasMetadataRecord <urn:uuid:3188a7b5-0676-481c-8643-a2a803ebd7c4> ;
+    bcube:lastUpdated "2015-10-30T14:54:17.411Z" ;
+    dc:conformsTo <urn:uuid:057a425e-3a78-4c7b-ae69-4810177a507a>,
+        <urn:uuid:0bc98d8b-56b6-4ace-9617-8f6d8ccaefe0>,
+        <urn:uuid:ffc538cb-a7e8-48a9-855b-c442b76e7e2d> ;
+    dc:description "This dataset contains borehole temperature observation data compiled by the Wyoming Geological Survey, and published as a Web feature service for the National Geothermal Data System. This dataset includes data from both year 1 and year 3 submissions, from both the Wyoming Geological Survey and data from an AAPG publication compiled by Richard W. Davis. See author information (below) for details. Fields in the Borehole Temperature Observation Content Model will become XML elements in interchange documents for WMS simple features provided by a node in the USGIN network. Each feature includes a label, drilled depth (if available), measured temperature and source. The dataset is spatially referenced to EPSG: 4326 (for interoperability). The data contained in the submitted dataset is available as an Excel Spreadsheet, ESRI service, WMS and WFS service. Link to Borehole Temperature Observation Content Model: <html>http://stategeothermaldata.org/data_delivery/content_models/borehole_temperature_observation<html>." ;
+    dc:spatial "POLYGON ((-111.533203125 41.013065787,-111.533203125 45.058001435400001,-104.106445312 45.058001435400001,-104.106445312 41.013065787,-111.533203125 41.013065787))" ;
+    dcterms:references <urn:uuid:5793ce79-6dca-429e-9f95-7fb7f030cf67>,
+        <urn:uuid:d4673442-785a-46a4-88e8-248ae9ca2c57>,
+        <urn:uuid:dfa21027-cf81-49db-8292-055c556392db> ;
+    dcterms:title "Wyoming Borehole Temperature Observations" ;
+    esip:eastBound "-104.106445312"^^xsd:float ;
+    esip:northBound "45.0580014354"^^xsd:float ;
+    esip:southBound "41.013065787"^^xsd:float ;
+    esip:westBound "-111.533203125"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:ad17235b-0bca-40a9-8862-8b8ece414399> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-10-30T14:54:17.411Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-10-30T14:54:17.411Z" ;
+    dc:identifier "urn:sha:9866ee6dd66dc3acb98e41cea8425fa8aad3981932dcf4c00c79d67d" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "https://catalog.data.gov/harvest/object/be38088b-f326-4990-bbc1-7372d8d5d156" .
+
+<urn:uuid:d4673442-785a-46a4-88e8-248ae9ca2c57> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-10-30T14:54:17.411Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-10-30T14:54:17.411Z" ;
+    dc:identifier "urn:sha:e92139e2753ec2db6300b77601d9465986cc6cae89125849f29a550c" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://web2.nbmg.unr.edu/ArcGIS/services/WY_data/WYBoreholeTemperatures/MapServer/WMSServer?request=GetCapabilities&service=WMS" .
+
+<urn:uuid:dfa21027-cf81-49db-8292-055c556392db> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-10-30T14:54:17.411Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-10-30T14:54:17.411Z" ;
+    dc:identifier "urn:sha:82e82f28f834845a3166e886ac4b5665ffb802d81865ad568ae34381" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://web2.nbmg.unr.edu/ArcGIS/rest/services/WY_data/WYBoreholeTemperatures/MapServer" .
+
+<urn:uuid:ffc538cb-a7e8-48a9-855b-c442b76e7e2d> bcube:hasValue "geoscientificInformation" ;
+    dc:partOf "IsoTopicCategories" ;
+    owl:a bcube:thesaurusSubset .
+

@@ -1,0 +1,72 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:0958bb18-3786-4dd8-b81f-b1fd41d4397f> bcube:hasType "theme" ;
+    bcube:hasValue "perimeter",
+        "wildfire" ;
+    dc:partOf "REQUIRED: Reference to a formally registered thesaurus or a similar authoritative source of theme keywords." ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:37a7a840-fa2b-4b73-9f07-4eb6611a2b2f> owl:a foaf:Organization ;
+    foaf:name "" .
+
+<urn:uuid:4f0416c3-b3d3-43c2-a64f-107a547baac7> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-08-08T13:03:58.76Z" ;
+    bcube:lastUpdated "2015-08-08T13:03:58.76Z" ;
+    bcube:originatedFrom <urn:uuid:8fa83a8f-c452-49ea-bfb5-770460069c6e> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:f1081cc1-ea16-4ca9-aaca-b66b0236da03> .
+
+<urn:uuid:716e08dc-e5b2-4ea1-b892-8f1ab6da5eb3> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-08T13:03:58.76Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-08T13:03:58.76Z" ;
+    dc:identifier "urn:sha:5e6a28d1af65408ca874fb05b614b9b3f585e7a943622a2e57c766e3" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "Server=sql_dev; Service=5151; Database=baselayer; User=bl_vector; Version=sde.DEFAULT" .
+
+<urn:uuid:8fa83a8f-c452-49ea-bfb5-770460069c6e> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-08T13:03:58.76Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-08T13:03:58.76Z" ;
+    dc:identifier "urn:sha:f0c4b16c15e10ad2fb98900ba035b0b0f7cec597ba4ef7c945fdda33" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://rmgsc.cr.usgs.gov/outgoing/GeoMAC/2014_fire_data/Washington/Chiwaukum_Creek/wa_chiwaukum_creek_20140716_1727_dd83.shp.xml" .
+
+<urn:uuid:a85c879c-a3e5-4e6f-af69-82f690aadf78> dcterms:references <urn:uuid:716e08dc-e5b2-4ea1-b892-8f1ab6da5eb3> ;
+    owl:a bibo:WebPage .
+
+<urn:uuid:f1081cc1-ea16-4ca9-aaca-b66b0236da03> bcube:dateCreated "2015-08-08T13:03:58.76Z" ;
+    bcube:hasMetadataRecord <urn:uuid:4f0416c3-b3d3-43c2-a64f-107a547baac7> ;
+    bcube:lastUpdated "2015-08-08T13:03:58.76Z" ;
+    dc:conformsTo <urn:uuid:0958bb18-3786-4dd8-b81f-b1fd41d4397f> ;
+    dc:description "The Geospatial Multi-Agency Coordination Group, or GeoMAC, is an internet-based mapping tool originally designed for fire managers to access online maps of current fire locations and perimeters in the conterminous 48 states and Alaska. Perimeters are submitted to GeoMAC by field offices and then posted to an FTP site for downloading. This file contains all fire perimeters that were submitted to GeoMAC by field offices for the current year. The projection is geographic and the datum is NAD83." ;
+    dc:spatial "POLYGON ((-164.370754 25.863797,-164.370754 68.359367,-80.894983 68.359367,-80.894983 25.863797,-164.370754 25.863797))" ;
+    dcterms:publisher <urn:uuid:37a7a840-fa2b-4b73-9f07-4eb6611a2b2f> ;
+    dcterms:references <urn:uuid:a85c879c-a3e5-4e6f-af69-82f690aadf78> ;
+    dcterms:title "PERIMETERS_DD83" ;
+    esip:eastBound "-80.894983"^^xsd:float ;
+    esip:northBound "68.359367"^^xsd:float ;
+    esip:southBound "25.863797"^^xsd:float ;
+    esip:westBound "-164.370754"^^xsd:float ;
+    owl:a dcat:Dataset .
+

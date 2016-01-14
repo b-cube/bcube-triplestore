@@ -1,0 +1,83 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:1671dcab-7aea-4934-a5f2-894e27d16846> bcube:hasType "theme" ;
+    bcube:hasValue "boundaries" ;
+    dc:partOf "ISO 19115 Topic Category" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:322419d8-afcf-493f-b357-bd3fb4b7d39e> bcube:hasType "place" ;
+    bcube:hasValue "Idaho State" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:4a95b146-3457-4a94-acc6-3f2c7f17f34c> owl:a foaf:Organization ;
+    foaf:name "Idaho Legislative Services Office" .
+
+<urn:uuid:6044c5f4-271e-436e-a23b-f3c25a6e3f37> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-09-16T10:03:03.021Z" ;
+    bcube:lastUpdated "2015-09-16T10:03:03.021Z" ;
+    bcube:originatedFrom <urn:uuid:74b394e5-21b4-4817-8f69-f6d6ff120037> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:87464902-f5e9-4a81-beaf-b04d1db5ab95> .
+
+<urn:uuid:7104efda-844e-4a7c-b583-228413184379> bcube:hasType "theme" ;
+    bcube:hasValue "Census Blocks",
+        "Reapportionment",
+        "Redistricting" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:74b394e5-21b4-4817-8f69-f6d6ff120037> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-09-16T10:03:03.021Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-09-16T10:03:03.021Z" ;
+    dc:identifier "urn:sha:0e6667933cc6f9645801ec89714c8753d37e767fbcbb84751cedf09e" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://cloud.insideidaho.org/appsOutput/metadataWAF/xml/CensusBlocksfortheStateofIdahoRedistricting2001Process.xml" .
+
+<urn:uuid:87464902-f5e9-4a81-beaf-b04d1db5ab95> bcube:dateCreated "2015-09-16T10:03:03.021Z" ;
+    bcube:hasMetadataRecord <urn:uuid:6044c5f4-271e-436e-a23b-f3c25a6e3f37> ;
+    bcube:lastUpdated "2015-09-16T10:03:03.021Z" ;
+    dc:conformsTo <urn:uuid:1671dcab-7aea-4934-a5f2-894e27d16846>,
+        <urn:uuid:322419d8-afcf-493f-b357-bd3fb4b7d39e>,
+        <urn:uuid:7104efda-844e-4a7c-b583-228413184379> ;
+    dc:description "This data set reflects census blocks boundaries for Idaho. Numerous demographic attributes are included." ;
+    dc:spatial "POLYGON ((-117.529546 41.945874,-117.529546 49.039091,-110.655498 49.039091,-110.655498 41.945874,-117.529546 41.945874))" ;
+    dcterms:publisher <urn:uuid:4a95b146-3457-4a94-acc6-3f2c7f17f34c> ;
+    dcterms:references <urn:uuid:f82594a0-6b77-4c84-a7a9-1515346d0a3f> ;
+    dcterms:title "Census Blocks for the State of Idaho Redistricting 2001 Process" ;
+    esip:eastBound "-110.655498"^^xsd:float ;
+    esip:northBound "49.039091"^^xsd:float ;
+    esip:southBound "41.945874"^^xsd:float ;
+    esip:startDate "2000-01-01"^^xsd:date ;
+    esip:westBound "-117.529546"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:f82594a0-6b77-4c84-a7a9-1515346d0a3f> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-09-16T10:03:03.021Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-09-16T10:03:03.021Z" ;
+    dc:identifier "urn:sha:114fa00c50daaf4601002955ff4cf231931e95301268349b31de9f91" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://cloud.insideidaho.org/webApps/util/zip.ashx?fn=http://cloud.insideidaho.org/data/ilso/blocks_id_ilso.shp" .
+

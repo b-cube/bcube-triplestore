@@ -1,0 +1,93 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:0245bbf8-a323-4ab3-b17f-6ea6cff167e4> bcube:hasType "theme" ;
+    bcube:hasValue "CDP",
+        "Census Designated Place",
+        "City",
+        "Polygon",
+        "State or equivalent entity",
+        "Town",
+        "Village" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:3c90d206-5e2a-4c11-a954-cc652f3d16a6> bcube:hasType "theme" ;
+    bcube:hasValue "boundaries" ;
+    dc:partOf "ISO 19115 Topic Categories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:45f0a0ff-d7c8-46cd-8ce0-de25018665a1> bcube:hasType "place" ;
+    bcube:hasValue "27",
+        "MN",
+        "Minnesota",
+        "State or Equivalent Entity",
+        "U.S.",
+        "United States" ;
+    dc:partOf "INCITS.38-200x (R2004),INCITS.31-200x (R2007),INCITS.454-200x,INCITS 455-200x,INCITS 446-2008" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:523dcd8a-aa2a-4aa0-9591-bc295c78f3cb> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-11-02T11:24:06.122Z" ;
+    bcube:lastUpdated "2015-11-02T11:24:06.122Z" ;
+    bcube:originatedFrom <urn:uuid:a3538cfe-5cb7-4a96-b267-9166fcbf86a0> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:bb14d1a8-29dd-493a-8175-97d8d59d8ae5> .
+
+<urn:uuid:5a02ab7c-cbb5-477b-946a-c5aa630a1ba0> owl:a foaf:Organization ;
+    foaf:name "" .
+
+<urn:uuid:8dcb732e-acb9-493a-bfa9-53b51bd82273> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-02T11:24:06.122Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-02T11:24:06.122Z" ;
+    dc:identifier "urn:sha:44317ca5e18a532e215154e3514610302e5daa528dff1a9c1f3997bc" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www2.census.gov/geo/tiger/TIGER2009/27_MINNESOTA/tl_2009_27_placeec.zip" .
+
+<urn:uuid:a3538cfe-5cb7-4a96-b267-9166fcbf86a0> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-02T11:24:06.122Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-02T11:24:06.122Z" ;
+    dc:identifier "urn:sha:71d38b1a1510cf73faad0ffced02ae5f27239afbcc18d29f17054b03" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://meta.geo.census.gov/data/existing/decennial/GEO/GPMB/TIGERline/fe_2009/placeec/tl_2009_27_placeec_url.shp.xml" .
+
+<urn:uuid:bb14d1a8-29dd-493a-8175-97d8d59d8ae5> bcube:dateCreated "2015-11-02T11:24:06.122Z" ;
+    bcube:hasMetadataRecord <urn:uuid:523dcd8a-aa2a-4aa0-9591-bc295c78f3cb> ;
+    bcube:lastUpdated "2015-11-02T11:24:06.122Z" ;
+    dc:conformsTo <urn:uuid:0245bbf8-a323-4ab3-b17f-6ea6cff167e4>,
+        <urn:uuid:3c90d206-5e2a-4c11-a954-cc652f3d16a6>,
+        <urn:uuid:45f0a0ff-d7c8-46cd-8ce0-de25018665a1> ;
+    dc:description "The TIGER/Line Shapefiles are an extract of selected geographic and cartographic information from the Census MAF/TIGER database. The Census MAF/TIGER database represents a seamless national file with no overlaps or gaps between parts. However, each TIGER/Line Shapefile is designed to stand alone as an independent data set or the shapefiles can be combined to cover the whole nation." ;
+    dc:spatial "POLYGON ((-97.239196 43.499361,-97.239196 49.384358,-89.483385 49.384358,-89.483385 43.499361,-97.239196 43.499361))" ;
+    dcterms:publisher <urn:uuid:5a02ab7c-cbb5-477b-946a-c5aa630a1ba0> ;
+    dcterms:references <urn:uuid:8dcb732e-acb9-493a-bfa9-53b51bd82273> ;
+    dcterms:title "TIGER/Line Shapefile, 2009, econ state, Minnesota, Economic Census Place Shapefile" ;
+    esip:eastBound "-89.483385"^^xsd:float ;
+    esip:endDate "2009-05-01"^^xsd:date ;
+    esip:northBound "49.384358"^^xsd:float ;
+    esip:southBound "43.499361"^^xsd:float ;
+    esip:startDate "2009-01-01"^^xsd:date ;
+    esip:westBound "-97.239196"^^xsd:float ;
+    owl:a dcat:Dataset .
+

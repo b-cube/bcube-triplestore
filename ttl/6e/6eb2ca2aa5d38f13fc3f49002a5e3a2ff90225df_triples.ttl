@@ -1,0 +1,62 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:6fee9424-d8c7-4373-927a-b86192bd017d> a "OGC:WMS" ;
+    bcube:contains <urn:uuid:9b1ad565-e6bb-44a7-80f4-9504873d74ca> ;
+    bcube:dateCreated "2015-07-12T05:52:14.625Z" ;
+    bcube:lastUpdated "2015-07-12T05:52:14.625Z" ;
+    bcube:originatedFrom <urn:uuid:4209d0a1-60ba-4c34-8f62-5fdb0732c2e6> ;
+    dc:conformsTo <urn:uuid:057e2b28-6694-4a04-b9fc-53b1ba39f97f> ;
+    dc:description "This map service presents spatial information for Coastal and Marine Spatial Planning. The service is maintained by National Oceanic and Atmospheric Administration (NOAA) Office for Coastal Management (OCM), in partnership with Department of the Interior (DOI) Bureau of Ocean Energy Management (BOEM). More information about this product can be found at www.MarineCadastre.gov." ;
+    owl:a bcube:service .
+
+<urn:uuid:057e2b28-6694-4a04-b9fc-53b1ba39f97f> bcube:hasValue "Oceans, Marine, National, Renewable energy, offshore, NOAA OCM, BOEM" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:4209d0a1-60ba-4c34-8f62-5fdb0732c2e6> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-07-12T05:52:14.625Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-07-12T05:52:14.625Z" ;
+    dc:identifier "urn:sha:8151459c52f16844f7fdd35ea2a6a1e5475e03bbc2ba19a2f66018b3" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://coast.noaa.gov/arcgis/services/MarineCadastre/OffshoreWindResourcePotential/MapServer/WMSServer?request=GetCapabilities&service=WMS" .
+
+<urn:uuid:9b1ad565-e6bb-44a7-80f4-9504873d74ca> bcube:dateCreated "2015-07-12T05:52:14.625Z" ;
+    bcube:lastUpdated "2015-07-12T05:52:14.625Z" ;
+    dc:description "Depicts estimates of the annual average wind resource (speed) for the United States. Annual average wind speeds are closely related to the available energy at a particular location and are categorized by their value at a height of 90m above the surface. Modifications to preliminary 90m wind speed model outputs were based on extrapolation of 50m validation results. This adds some uncertainty to the final potential estimates, but should not significantly affect the scope of the offshore potential. The horizontal resolution of the model output is 200m and values are measured in meters per second (m/s)." ;
+    dc:spatial "POLYGON ((-160.686301 18.074017,-160.686301 49.002895,-66.885361 49.002895,-66.885361 18.074017,-160.686301 18.074017))" ;
+    dc:title "Offshore Wind Resource Potential" ;
+    dcterms:references <urn:uuid:f7838c6f-262a-4484-8d30-f7edd7159814> ;
+    esip:eastBound "-66.885361"^^xsd:float ;
+    esip:northBound "49.002895"^^xsd:float ;
+    esip:southBound "18.074017"^^xsd:float ;
+    esip:westBound "-160.686301"^^xsd:float ;
+    owl:a bcube:Layer .
+
+<urn:uuid:f7838c6f-262a-4484-8d30-f7edd7159814> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-07-12T05:52:14.625Z" ;
+    bcube:hasConfidence "Not Sure" ;
+    bcube:hasUrlSource "Generated" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-07-12T05:52:14.625Z" ;
+    dc:identifier "urn:sha:f789d16a41542e413826ee0bf6bff16478597115b382e1000b363536" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://coast.noaa.gov/arcgis/services/MarineCadastre/OffshoreWindResourcePotential/MapServer/WMSServer?layers=0&width=500&version=1.3.0&bbox=-160.686301%2C18.074017%2C-66.885361%2C49.002895&service=WMS&format=image%2Fpng&styles=&crs=CRS%3A84&request=GetMap&height=500" .
+

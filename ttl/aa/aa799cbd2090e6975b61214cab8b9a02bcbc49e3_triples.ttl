@@ -1,0 +1,73 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:406f87f2-2201-40e3-8f7d-57247de1a5a6> owl:a foaf:Organization ;
+    foaf:name "U.S. Geological Survey" .
+
+<urn:uuid:56bffe6c-6932-4771-8572-267aca1724c3> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2014-10-30T00:04:15.289Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2014-10-30T00:04:15.289Z" ;
+    dc:identifier "urn:sha:3a680bbe244ec89d2a9c12f79b3e2615b83af7e66c1e178511254e1a" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://geo-nsdi.er.usgs.gov/" .
+
+<urn:uuid:9a0168c7-04e1-4d74-a1ba-d558e1d586ed> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2014-10-30T00:04:15.289Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2014-10-30T00:04:15.289Z" ;
+    dc:identifier "urn:sha:2df38ffde9f78f640b1d2bbe2560a867f4de09466e633ab4a4ebdab3" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www.usgs.gov/science/xml.php?cite=1" .
+
+<urn:uuid:b533fff9-1b9a-4f44-a75c-dcfc4de7c2f9> dcterms:references <urn:uuid:56bffe6c-6932-4771-8572-267aca1724c3> ;
+    owl:a bibo:WebPage .
+
+<urn:uuid:c3222f6b-a864-4ce6-906f-735467509f7c> bcube:hasType "theme" ;
+    bcube:hasValue "catalogs and indexes",
+        "earth characteristics",
+        "earth sciences",
+        "information services",
+        "information technology methods",
+        "maps and atlases",
+        "metadata development",
+        "mineral resources" ;
+    dc:partOf "USGS Thesaurus" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:e2ba9d80-db88-4970-a5cd-93b91abab05b> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2014-10-30T00:04:15.289Z" ;
+    bcube:lastUpdated "2014-10-30T00:04:15.289Z" ;
+    bcube:originatedFrom <urn:uuid:9a0168c7-04e1-4d74-a1ba-d558e1d586ed> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:e7fd72a5-7180-4bab-bb77-cca45f4c608f> .
+
+<urn:uuid:e7fd72a5-7180-4bab-bb77-cca45f4c608f> bcube:dateCreated "2014-10-30T00:04:15.289Z" ;
+    bcube:hasMetadataRecord <urn:uuid:e2ba9d80-db88-4970-a5cd-93b91abab05b> ;
+    bcube:lastUpdated "2014-10-30T00:04:15.289Z" ;
+    dc:conformsTo <urn:uuid:c3222f6b-a864-4ce6-906f-735467509f7c> ;
+    dc:description "A catalog of earth science data produced by the U.S. Geological Survey with documentation and links to the data files. Catalog is searchable by geographic location and publication series number. Includes links to information on metadata and its use." ;
+    dcterms:publisher <urn:uuid:406f87f2-2201-40e3-8f7d-57247de1a5a6> ;
+    dcterms:references <urn:uuid:b533fff9-1b9a-4f44-a75c-dcfc4de7c2f9> ;
+    dcterms:title "Geoscience Data Catalog" ;
+    owl:a dcat:Dataset .
+

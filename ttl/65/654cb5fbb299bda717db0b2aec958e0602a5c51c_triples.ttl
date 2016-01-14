@@ -1,0 +1,83 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:f3115921-7e30-4553-b37d-578d308f4437> a "OGC:WMS" ;
+    bcube:contains <urn:uuid:65fd6e36-d7f1-4ae3-9fe9-653c5d8fc002>,
+        <urn:uuid:d0b679db-2de3-4db2-a06a-9c2a9b779bb9> ;
+    bcube:dateCreated "2015-06-24T05:23:36.751Z" ;
+    bcube:lastUpdated "2015-06-24T05:23:36.751Z" ;
+    bcube:originatedFrom <urn:uuid:92601c9a-f22e-428d-a5fe-2172a8519154> ;
+    dc:description "WMS" ;
+    owl:a bcube:service .
+
+<urn:uuid:40778ae6-ef7e-48cb-8b51-503b9f648f10> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-06-24T05:23:36.751Z" ;
+    bcube:hasConfidence "Not Sure" ;
+    bcube:hasUrlSource "Generated" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-06-24T05:23:36.751Z" ;
+    dc:identifier "urn:sha:c54776cb8cd7ed4328a84e583a412a4d14cf867188b85124783e362c" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://gis.fema.gov/SOAP/FEMA/RegHQs/MapServer/WMSServer?layers=0&width=500&version=1.3.0&bbox=-179.168566%2C17.881241%2C179.748709%2C71.38961&service=WMS&format=image%2Fpng&styles=&crs=CRS%3A84&request=GetMap&height=500" .
+
+<urn:uuid:65fd6e36-d7f1-4ae3-9fe9-653c5d8fc002> bcube:dateCreated "2015-06-24T05:23:36.751Z" ;
+    bcube:lastUpdated "2015-06-24T05:23:36.751Z" ;
+    dc:description "FEMA Regional Offices" ;
+    dc:spatial "POLYGON ((-157.883165 18.426533,-157.883165 61.21454,-66.062003 61.21454,-66.062003 18.426533,-157.883165 18.426533))" ;
+    dc:title "FEMA Regional Offices" ;
+    dcterms:references <urn:uuid:f64407ed-43c3-4245-854e-1e420694ad8c> ;
+    esip:eastBound "-66.062003"^^xsd:float ;
+    esip:northBound "61.21454"^^xsd:float ;
+    esip:southBound "18.426533"^^xsd:float ;
+    esip:westBound "-157.883165"^^xsd:float ;
+    owl:a bcube:Layer .
+
+<urn:uuid:92601c9a-f22e-428d-a5fe-2172a8519154> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-06-24T05:23:36.751Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-06-24T05:23:36.751Z" ;
+    dc:identifier "urn:sha:9196e738400e65cfc75b8aa24356040ef2aa70d5f4d8b4897358a24e" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://gis.fema.gov/SOAP/FEMA/RegHQs/MapServer/WMSServer?request=GetCapabilities&service=WMS" .
+
+<urn:uuid:d0b679db-2de3-4db2-a06a-9c2a9b779bb9> bcube:dateCreated "2015-06-24T05:23:36.751Z" ;
+    bcube:lastUpdated "2015-06-24T05:23:36.751Z" ;
+    dc:description "FEMA Regions" ;
+    dc:spatial "POLYGON ((-179.168566 17.881241,-179.168566 71.38961,179.748709 71.38961,179.748709 17.881241,-179.168566 17.881241))" ;
+    dc:title "FEMA Regions" ;
+    dcterms:references <urn:uuid:40778ae6-ef7e-48cb-8b51-503b9f648f10> ;
+    esip:eastBound "179.748709"^^xsd:float ;
+    esip:northBound "71.38961"^^xsd:float ;
+    esip:southBound "17.881241"^^xsd:float ;
+    esip:westBound "-179.168566"^^xsd:float ;
+    owl:a bcube:Layer .
+
+<urn:uuid:f64407ed-43c3-4245-854e-1e420694ad8c> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-06-24T05:23:36.751Z" ;
+    bcube:hasConfidence "Not Sure" ;
+    bcube:hasUrlSource "Generated" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-06-24T05:23:36.751Z" ;
+    dc:identifier "urn:sha:080cffa1cff145a8fa91d6e549e70fd90f41a34e9c12506b8f45c47c" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://gis.fema.gov/SOAP/FEMA/RegHQs/MapServer/WMSServer?layers=1&width=500&version=1.3.0&bbox=-157.883165%2C18.426533%2C-66.062003%2C61.21454&service=WMS&format=image%2Fpng&styles=&crs=CRS%3A84&request=GetMap&height=500" .
+

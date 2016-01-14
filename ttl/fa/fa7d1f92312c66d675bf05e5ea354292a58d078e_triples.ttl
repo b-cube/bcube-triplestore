@@ -1,0 +1,89 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:159c668b-9e61-4bd1-b3b9-72bf5b356ecb> owl:a foaf:Organization ;
+    foaf:name "" .
+
+<urn:uuid:3c565e23-0367-4e95-8eca-9690a76e43bc> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-11-01T18:46:26.094Z" ;
+    bcube:lastUpdated "2015-11-01T18:46:26.094Z" ;
+    bcube:originatedFrom <urn:uuid:fb2d5c4c-7f57-46ca-95e6-f2887442a5a3> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:e3a8aba1-8a8a-4c61-a089-689fe0374a2a> .
+
+<urn:uuid:4138413c-dad0-41e6-8968-312640c97cd2> bcube:hasType "theme" ;
+    bcube:hasValue "Congressional Districts",
+        "Polygon",
+        "State or equivalent entity" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:5e61120d-242c-4b3a-bd6f-a225dab079c0> bcube:hasType "place" ;
+    bcube:hasValue "36",
+        "NY",
+        "New York",
+        "State or Equivalent Entity",
+        "U.S.",
+        "United States" ;
+    dc:partOf "FIPS Publication 5-2, FIPS Publication 6-4, FIPS Publication 8-6, FIPS Publication 9-1,FIPS Publication55-4" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:90ed4625-340a-47f5-936f-a5e5ec15af29> bcube:hasType "theme" ;
+    bcube:hasValue "boundaries" ;
+    dc:partOf "ISO 19115 Topic Categories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:e3a8aba1-8a8a-4c61-a089-689fe0374a2a> bcube:dateCreated "2015-11-01T18:46:26.094Z" ;
+    bcube:hasMetadataRecord <urn:uuid:3c565e23-0367-4e95-8eca-9690a76e43bc> ;
+    bcube:lastUpdated "2015-11-01T18:46:26.094Z" ;
+    dc:conformsTo <urn:uuid:4138413c-dad0-41e6-8968-312640c97cd2>,
+        <urn:uuid:5e61120d-242c-4b3a-bd6f-a225dab079c0>,
+        <urn:uuid:90ed4625-340a-47f5-936f-a5e5ec15af29> ;
+    dc:description "The TIGER/Line Shapefiles are an extract of selected geographic and cartographic information from the Census MAF/TIGER database. The Census MAF/TIGER database represents a seamless national file with no overlaps or gaps between parts. However, each TIGER/Line Shapefile is designed to stand alone as an independent data set or the shapefiles can be combined to cover the whole nation." ;
+    dc:spatial "POLYGON ((-79.76259 40.477399,-79.76259 45.015865,-71.777491 45.015865,-71.777491 40.477399,-79.76259 40.477399))" ;
+    dcterms:publisher <urn:uuid:159c668b-9e61-4bd1-b3b9-72bf5b356ecb> ;
+    dcterms:references <urn:uuid:ea637f0c-5c76-465f-94ef-5592e0ba8037> ;
+    dcterms:title "TIGER/Line Shapefile, 2008, 2000 state, New York, 108th Congressional District" ;
+    esip:eastBound "-71.777491"^^xsd:float ;
+    esip:endDate "2008-07-01"^^xsd:date ;
+    esip:northBound "45.015865"^^xsd:float ;
+    esip:southBound "40.477399"^^xsd:float ;
+    esip:startDate "2008-01-01"^^xsd:date ;
+    esip:westBound "-79.76259"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:ea637f0c-5c76-465f-94ef-5592e0ba8037> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-01T18:46:26.094Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-01T18:46:26.094Z" ;
+    dc:identifier "urn:sha:93e29d1fc13bf0d2369db36458559499a82474ba7037d9b04d3fd700" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www2.census.gov/geo/tiger/TIGER2008/36_NEW_YORK/tl_2008_36_cd108.zip" .
+
+<urn:uuid:fb2d5c4c-7f57-46ca-95e6-f2887442a5a3> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-01T18:46:26.094Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-01T18:46:26.094Z" ;
+    dc:identifier "urn:sha:d780e23ffecbb0ad1662199ff9c0f92888a81f45a4d119aa41021e89" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://meta.geo.census.gov/data/existing/decennial/GEO/GPMB/TIGERline/fe_2008/cd108/tl_2008_36_cd108_url.shp.xml" .
+

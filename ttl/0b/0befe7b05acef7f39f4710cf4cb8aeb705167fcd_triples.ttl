@@ -1,0 +1,69 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:5c57faf3-7d60-4ca7-b0f1-ec5a2331eaf8> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-05T01:10:26.104Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-05T01:10:26.104Z" ;
+    dc:identifier "urn:sha:101d9f1ed894d882c10b30603eeb1481bcfe4cc872ca5744035aa09e" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www.weather.gov/mdl/psurge" .
+
+<urn:uuid:a0250431-b7e2-4825-852c-ae6bed1373f4> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-05T01:10:26.104Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-05T01:10:26.104Z" ;
+    dc:identifier "urn:sha:e2beeaf07cd2d9c97ba26671fee889e4e6bb8e8d855ffdaf4f72147c" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www.nhc.noaa.gov/gis/metadata_ex_gt5_at.xml" .
+
+<urn:uuid:bd52c0a9-9712-4980-8c75-c27943dafdc1> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-08-05T01:10:26.104Z" ;
+    bcube:lastUpdated "2015-08-05T01:10:26.104Z" ;
+    bcube:originatedFrom <urn:uuid:a0250431-b7e2-4825-852c-ae6bed1373f4> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:c2469694-556d-440c-bc41-ed4038fcc189> .
+
+<urn:uuid:c2469694-556d-440c-bc41-ed4038fcc189> bcube:dateCreated "2015-08-05T01:10:26.104Z" ;
+    bcube:hasMetadataRecord <urn:uuid:bd52c0a9-9712-4980-8c75-c27943dafdc1> ;
+    bcube:lastUpdated "2015-08-05T01:10:26.104Z" ;
+    dc:conformsTo <urn:uuid:d3ee4ada-c190-445d-b76a-ffc5b7af2634> ;
+    dc:description "The Tropical Cyclone Storm Surge Probabilities data shows the probability, in percent, of a specified storm surge occurring during the forecast period indicated. The product is based upon an ensemble of Sea, Lake, and Overland Surge from Hurricanes (SLOSH) model runs using the National Hurricane Center (NHC) official advisory and accounts for track, size, and intensity errors based on historical errors." ;
+    dc:spatial "POLYGON ((-93.219948 28.617868,-93.219948 31.024118,-82.745415 31.024118,-82.745415 28.617868,-93.219948 28.617868))" ;
+    dcterms:publisher <urn:uuid:f906063b-ac56-4452-9605-670bd99cfaec> ;
+    dcterms:references <urn:uuid:5c57faf3-7d60-4ca7-b0f1-ec5a2331eaf8> ;
+    dcterms:title "{file}" ;
+    esip:eastBound "-82.745415"^^xsd:float ;
+    esip:northBound "31.024118"^^xsd:float ;
+    esip:southBound "28.617868"^^xsd:float ;
+    esip:startDate "2008-07-22"^^xsd:date ;
+    esip:westBound "-93.219948"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:d3ee4ada-c190-445d-b76a-ffc5b7af2634> bcube:hasType "theme" ;
+    bcube:hasValue "Prob. of surge > 5 feet" ;
+    dc:partOf "http://www.nws.noaa.gov/directives/sym/pd01006001curr.pdf" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:f906063b-ac56-4452-9605-670bd99cfaec> owl:a foaf:Organization ;
+    foaf:name "" .
+

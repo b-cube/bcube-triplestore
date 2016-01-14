@@ -1,0 +1,95 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:4eb66496-5fed-4c26-af90-fa05678f00f9> owl:a foaf:Organization ;
+    foaf:name "" .
+
+<urn:uuid:53e56edf-3897-4172-a413-b41461e28de5> bcube:hasType "theme" ;
+    bcube:hasValue "County ANSI Code",
+        "County FIPS Code",
+        "County or equivalent entity",
+        "Local GIS Identifier",
+        "National Hydrography Dataset common identifier",
+        "Permanent edge ID",
+        "State ANSI Code",
+        "State FIPS Code",
+        "Table" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:670b5556-c777-4dd0-9aac-e28172c9cc4a> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-06T02:39:22.099Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-06T02:39:22.099Z" ;
+    dc:identifier "urn:sha:283f9950dfefbb978dbe3e93a1fe00b5b9a58e04b8dbc869faea3c32" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www2.census.gov/geo/tiger/TIGER2009/01_ALABAMA/01089_Madison_County/tl_2009_01089_otherid.zip" .
+
+<urn:uuid:b8af00a2-9b74-4fa2-be30-da51c8a07bf6> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-06T02:39:22.099Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-06T02:39:22.099Z" ;
+    dc:identifier "urn:sha:4b076caa394ed966ae64aa454cc502d538ba6292ad793c4d4743e99a" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://meta.geo.census.gov/data/existing/decennial/GEO/GPMB/TIGERline/fe_2009/otherid/tl_2009_01089_otherid_url.dbf.xml" .
+
+<urn:uuid:c3c48647-9280-4157-8ed2-28f0377369b6> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-11-06T02:39:22.099Z" ;
+    bcube:lastUpdated "2015-11-06T02:39:22.099Z" ;
+    bcube:originatedFrom <urn:uuid:b8af00a2-9b74-4fa2-be30-da51c8a07bf6> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:cfc13c46-7bd8-48df-93ca-ec218e3933f5> .
+
+<urn:uuid:cfc13c46-7bd8-48df-93ca-ec218e3933f5> bcube:dateCreated "2015-11-06T02:39:22.099Z" ;
+    bcube:hasMetadataRecord <urn:uuid:c3c48647-9280-4157-8ed2-28f0377369b6> ;
+    bcube:lastUpdated "2015-11-06T02:39:22.099Z" ;
+    dc:conformsTo <urn:uuid:53e56edf-3897-4172-a413-b41461e28de5>,
+        <urn:uuid:d0584548-9126-42a8-bc28-b176ecaf0fe7>,
+        <urn:uuid:e3e023af-86f4-46bc-b376-80e3e39461b8> ;
+    dc:description "The TIGER/Line relationship files are an extract of selected geographic information from the Census MAF/TIGER database. Each TIGER/Line relationship file is designed to stand alone as an independent data set or can be used jointly with the shapefiles." ;
+    dc:spatial "POLYGON ((-86.790056 34.475633,-86.790056 34.992339,-86.255771 34.992339,-86.255771 34.475633,-86.790056 34.475633))" ;
+    dcterms:publisher <urn:uuid:4eb66496-5fed-4c26-af90-fa05678f00f9> ;
+    dcterms:references <urn:uuid:670b5556-c777-4dd0-9aac-e28172c9cc4a> ;
+    dcterms:title "TIGER/Line Shapefile, 2009, county, Madison County, AL, Current Other Identifiers Relationship File" ;
+    esip:eastBound "-86.255771"^^xsd:float ;
+    esip:endDate "2009-05-01"^^xsd:date ;
+    esip:northBound "34.992339"^^xsd:float ;
+    esip:southBound "34.475633"^^xsd:float ;
+    esip:startDate "2009-01-01"^^xsd:date ;
+    esip:westBound "-86.790056"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:d0584548-9126-42a8-bc28-b176ecaf0fe7> bcube:hasType "theme" ;
+    bcube:hasValue "transportation",
+        "water" ;
+    dc:partOf "ISO 19115 Topic Categories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:e3e023af-86f4-46bc-b376-80e3e39461b8> bcube:hasType "place" ;
+    bcube:hasValue "01089",
+        "County or Equivalent Entity",
+        "Madison",
+        "U.S.",
+        "United States" ;
+    dc:partOf "INCITS.38-200x (R2004),INCITS.31-200x (R2007),INCITS.454-200x,INCITS 455-200x,INCITS 446-2008" ;
+    owl:a bcube:thesaurusSubset .
+

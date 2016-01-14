@@ -1,0 +1,84 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:21c850e5-7293-450a-a56b-d00ef7155c8a> bcube:hasType "theme" ;
+    bcube:hasValue "Bathymetry/Topography",
+        "DSM",
+        "Digital elevation model (DEM)",
+        "Elevation",
+        "GeoSAR",
+        "Height variance data",
+        "IfSAR",
+        "Interferometric",
+        "Interferometric Synthetic Aperture Radar (IfSAR)",
+        "Mapping",
+        "RADAR",
+        "Raw magnitude radar imagery (MAG)" ;
+    dc:partOf "none" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:474077c0-94da-4b83-bd88-2e5842e568de> a "ISO 19115:2003/19139" ;
+    bcube:dateCreated "2015-08-13T17:29:59.926Z" ;
+    bcube:lastUpdated "2015-08-13T17:29:59.926Z" ;
+    bcube:originatedFrom <urn:uuid:958fe6be-f6d0-4622-ab60-4e54a529936b> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:61a75d81-cdbe-4e7b-b97e-a35d2d58e499> .
+
+<urn:uuid:61a75d81-cdbe-4e7b-b97e-a35d2d58e499> bcube:dateCreated "2015-08-13T17:29:59.926Z" ;
+    bcube:hasMetadataRecord <urn:uuid:474077c0-94da-4b83-bd88-2e5842e568de> ;
+    bcube:lastUpdated "2015-08-13T17:29:59.926Z" ;
+    dc:conformsTo <urn:uuid:21c850e5-7293-450a-a56b-d00ef7155c8a>,
+        <urn:uuid:80f6ac16-5d74-4ef8-8ae9-6052b0618ca3>,
+        <urn:uuid:c1e13a93-74d3-4ea9-8baa-3062dcf722b9> ;
+    dc:description "This metadata document describes the collection and processing of topographic elevation point data derived from Interferometric Synthetic Aperture Radar (IfSAR) measurement for coastal Southern California. Collection consists of topographic elevations from the California counties of Santa Barbara, Ventura, Los Angeles, Orange, and San Diego, and the hydrologic units within those counties that drain to the Pacific Ocean along with offshore islands within the Channel Islands. The resulting data available for download, include the Digital Elevation Model (DEM), and the Raw magnitude radar reflectance data. Height Variance data is available upon request from NOAA OCM. The elevation data is first surface return (vegetation is in the dataset) X-band IfSAR with three meter point spacing and approximately one meter vertical accuracy in non-vegetated areas. The elevation data is available in NAVD88 vertical datum." ;
+    dc:spatial "POLYGON ((-118.00415 32.489551,-118.00415 33.631677,-115.973179 33.631677,-115.973179 32.489551,-118.00415 32.489551))" ;
+    dcterms:title "2002/2003 IfSAR data for Southern California: Digital Elevation Model (NAVD88)" ;
+    esip:eastBound "-115.973179"^^xsd:float ;
+    esip:endDate "2003-01-01"^^xsd:date ;
+    esip:northBound "33.631677"^^xsd:float ;
+    esip:southBound "32.489551"^^xsd:float ;
+    esip:startDate "2002-01-01"^^xsd:date ;
+    esip:westBound "-118.00415"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:80f6ac16-5d74-4ef8-8ae9-6052b0618ca3> bcube:hasValue "elevation" ;
+    dc:partOf "IsoTopicCategories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:958fe6be-f6d0-4622-ab60-4e54a529936b> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-13T17:29:59.926Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-13T17:29:59.926Z" ;
+    dc:identifier "urn:sha:88b61ced72176169ca88257e74a4a551bdbb885859a689027a760dab" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://coast.noaa.gov/data/Documents/Metadata/isoharvest/Imagery/socal_ifsar_dem_navd88_ISO.xml" .
+
+<urn:uuid:c1e13a93-74d3-4ea9-8baa-3062dcf722b9> bcube:hasType "place" ;
+    bcube:hasValue "CA",
+        "California",
+        "Channel Islands",
+        "Coastal",
+        "Los Angeles County",
+        "Orange county",
+        "San Diego County",
+        "Santa Barbara County",
+        "United States of America (USA)",
+        "Ventura County" ;
+    dc:partOf "Geographic Names Information System" ;
+    owl:a bcube:thesaurusSubset .
+

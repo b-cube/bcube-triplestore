@@ -1,0 +1,88 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:1c913c21-4367-4e5e-b8c4-e2d07aef52c5> bcube:hasType "temporal" ;
+    bcube:hasValue "Temporal_Keyword" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:56a8a720-d592-4dfa-aa7a-09f14b31a522> bcube:hasType "stratum" ;
+    bcube:hasValue "Stratum_Keyword" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:9ddaa0a4-82b5-47ed-9a43-ba7d9d268c61> bcube:hasType "theme" ;
+    bcube:hasValue "Hillshading generated from ElevationDEM_DEM10M (USGS 1/3 arc-second NED)",
+        "elevation",
+        "shadows",
+        "terrain",
+        "topographic",
+        "topography" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:af932dde-ec24-4a8d-ae9b-ed1acb9af72c> a "ISO 19115:2003/19139" ;
+    bcube:dateCreated "2015-08-08T09:27:03.225Z" ;
+    bcube:lastUpdated "2015-08-08T09:27:03.225Z" ;
+    bcube:originatedFrom <urn:uuid:c726f852-885c-4f1c-9e0a-72a654fd404b> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:d78977f4-82e7-45f7-966a-38ea475c7ef2> .
+
+<urn:uuid:b1279ef5-8600-426c-bd26-cc3b72306c1b> bcube:hasType "place" ;
+    bcube:hasValue "Statewide",
+        "Vermont" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:c1a0b504-f946-4346-a614-6110403c6726> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-08T09:27:03.225Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-08T09:27:03.225Z" ;
+    dc:identifier "urn:sha:4ec347580c890b3e9309d76886774a4f1410f7b116ead321f51f16a0" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www.vcgi.org/dataware/default.cfm?layer=ElevationOther_HILSHD10M" .
+
+<urn:uuid:c726f852-885c-4f1c-9e0a-72a654fd404b> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-08T09:27:03.225Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-08T09:27:03.225Z" ;
+    dc:identifier "urn:sha:a587bcc3c233d5298ec7ed8c20d26b64ee06d09e45009b1e635971e5" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://catalog.data.gov/harvest/object/74feeb61-495e-41eb-8356-aaecee8a8ab0" .
+
+<urn:uuid:d78977f4-82e7-45f7-966a-38ea475c7ef2> bcube:dateCreated "2015-08-08T09:27:03.225Z" ;
+    bcube:hasMetadataRecord <urn:uuid:af932dde-ec24-4a8d-ae9b-ed1acb9af72c> ;
+    bcube:lastUpdated "2015-08-08T09:27:03.225Z" ;
+    dc:conformsTo <urn:uuid:1c913c21-4367-4e5e-b8c4-e2d07aef52c5>,
+        <urn:uuid:56a8a720-d592-4dfa-aa7a-09f14b31a522>,
+        <urn:uuid:9ddaa0a4-82b5-47ed-9a43-ba7d9d268c61>,
+        <urn:uuid:b1279ef5-8600-426c-bd26-cc3b72306c1b> ;
+    dc:description "Used ElevationDEM_DEM10M and the Arc/Info HILLSHADE command with \"Shade\", \"z_units = .3048\", azimuth = 315 degrees and altitude = 45 degrees options to create this data layer. Input source dataset is derived from the multi-resolution National Elevation Dataset (NED), at resolutions of both 1/3 arc-second (approx. 10 meters) and in limited areas, 1/9 arc-second (approx. 3 meters). VCGI extracted the Vermont portion of the NED and re-projected into Vermont State Plane Meters NAD83 (vertical units in feet). Production artifacts were filtered out of this source data prior to acquisition resulting in a much-improved base of elevation data for calculating contours, slope and hydrologic derivatives. The NED is the primary elevation data product produced and distributed by the USGS. The NED provides the best available public domain raster elevation data of the conterminous United States, Alaska, Hawaii, and territorial islands in a seamless format. The NED is derived from diverse source data, processed to a common coordinate system and unit of vertical measure. The source data are distributed in geographic coordinates in units of decimal degrees, and in conformance with the North American Datum of 1983 (NAD 83). The source elevation values are provided in units of meters, and are referenced to the North American Vertical Datum of 1988 (NAVD 88) over the conterminous United States." ;
+    dc:spatial "POLYGON ((-73.454162 42.722789,-73.454162 45.018361,-71.465281 45.018361,-71.465281 42.722789,-73.454162 42.722789))" ;
+    dcterms:references <urn:uuid:c1a0b504-f946-4346-a614-6110403c6726> ;
+    dcterms:title "ElevationOther_HILSHD10M" ;
+    esip:eastBound "-71.465281"^^xsd:float ;
+    esip:northBound "45.018361"^^xsd:float ;
+    esip:southBound "42.722789"^^xsd:float ;
+    esip:westBound "-73.454162"^^xsd:float ;
+    owl:a dcat:Dataset .
+

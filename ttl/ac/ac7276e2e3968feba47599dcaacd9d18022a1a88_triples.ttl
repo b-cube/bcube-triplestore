@@ -1,0 +1,83 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:1a90ef5d-2f20-45de-aad8-9ca1ad5fa79e> bcube:hasType "theme" ;
+    bcube:hasValue "Bathymetry/Topography",
+        "Elevation",
+        "LiDAR",
+        "Model",
+        "Surface",
+        "Terrain" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:2b65009b-0fa7-4925-87ef-fe641ad57c65> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-05T11:18:26.188Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-05T11:18:26.188Z" ;
+    dc:identifier "urn:sha:783d7a668fab28db921d2b0487c6b7959c4848b5c6256717ff922330" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://coast.noaa.gov/data/Documents/Metadata/isotest/ca2010_coastal_m1124_metadata_iso.xml" .
+
+<urn:uuid:33ed332f-452a-47f0-b600-9bee16f3b153> a "ISO 19115:2003/19139" ;
+    bcube:dateCreated "2015-08-05T11:18:26.188Z" ;
+    bcube:lastUpdated "2015-08-05T11:18:26.188Z" ;
+    bcube:originatedFrom <urn:uuid:2b65009b-0fa7-4925-87ef-fe641ad57c65> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:a81b670e-686d-42de-8a92-ef35492560cc> .
+
+<urn:uuid:468ea4a9-3e2d-499f-b485-b2a30c12f337> bcube:hasType "place" ;
+    bcube:hasValue "California",
+        "United States" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:58f00b8e-54fa-48e7-9631-c985acf652a5> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-05T11:18:26.188Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-05T11:18:26.188Z" ;
+    dc:identifier "urn:sha:8a4558b9fc76a761e84a54e0c4572957aeed2ff2596f34686f87ea7d" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://coast.noaa.gov/dataviewer/index.html?action=advsearchVal=1124" .
+
+<urn:uuid:a81b670e-686d-42de-8a92-ef35492560cc> bcube:dateCreated "2015-08-05T11:18:26.188Z" ;
+    bcube:hasMetadataRecord <urn:uuid:33ed332f-452a-47f0-b600-9bee16f3b153> ;
+    bcube:lastUpdated "2015-08-05T11:18:26.188Z" ;
+    dc:conformsTo <urn:uuid:1a90ef5d-2f20-45de-aad8-9ca1ad5fa79e>,
+        <urn:uuid:468ea4a9-3e2d-499f-b485-b2a30c12f337>,
+        <urn:uuid:bec859d3-d619-4def-9162-7a39cfcbbb7e> ;
+    dc:description "Light Detection and Ranging (LiDAR) data is remotely sensed high-resolution elevation data collected by an airborne collection platform. This LiDAR dataset is a survey of Coastal California. The project area consists of approximately 2616 square miles. The project design of the LiDAR data acquisition was developed to support a nominal post spacing of 1 meter. Fugro EarthData, Inc. acquired 1546 flight lines in 108 lifts between October 2009 and August 2011. This collection was a joint effort by the NOAA Office for Coastal Management (OCM); the California State Coastal Conservancy (SCC) Ocean Protection Council (OPC); Scripps Institution of Oceanography; and the Joint Airborne Lidar Bathymetry Technical Center of Expertise (JALBTCX). The data coverage extends landward 500 m from the shoreline, along the entire California coastline. The data collection was performed with two Piper Navajo twin engine aircrafts, utilizing a Leica ALS60 MPiA sensor; collecting multiple return x, y, and z as well as intensity data. The data were classified as Unclassified (1), Ground (2), Low Point (Noise) (7), Water (9), Mudflats (10), and 12 (Overlap). Only the Unclassified (1), Ground (2), Water (9), and Overlap (12) points are available for download from the NOAA OCM Digital Coast." ;
+    dc:spatial "POLYGON ((-124.44374 32.521695,-124.44374 42.012737,-116.267734 42.012737,-116.267734 32.521695,-124.44374 32.521695))" ;
+    dcterms:references <urn:uuid:58f00b8e-54fa-48e7-9631-c985acf652a5> ;
+    dcterms:title "2009 - 2011 CA Coastal Conservancy Coastal Lidar Project" ;
+    esip:eastBound "-116.267734"^^xsd:float ;
+    esip:endDate "2011-10-01"^^xsd:date ;
+    esip:northBound "42.012737"^^xsd:float ;
+    esip:southBound "32.521695"^^xsd:float ;
+    esip:startDate "2009-09-01"^^xsd:date ;
+    esip:westBound "-124.44374"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:bec859d3-d619-4def-9162-7a39cfcbbb7e> bcube:hasValue "elevation" ;
+    dc:partOf "IsoTopicCategories" ;
+    owl:a bcube:thesaurusSubset .
+

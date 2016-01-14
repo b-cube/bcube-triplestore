@@ -1,0 +1,92 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:67f7102a-0598-4691-9167-63783884b37d> bcube:hasType "stratum" ;
+    bcube:hasValue "Bare Earth" ;
+    dc:partOf "http://lidar.cr.usgs.gov/" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:76bf2ef4-8dd0-42de-a505-a5432bae9929> owl:a foaf:Organization ;
+    foaf:name "U.S. Geological Survey" .
+
+<urn:uuid:8646afa1-932d-4f2f-b329-02c1da1c8a69> bcube:hasType "place" ;
+    bcube:hasValue "Jean Lafitte",
+        "Jean Lafitte National Historical Park",
+        "Louisiana" ;
+    dc:partOf "http://nationalmap.gov" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:9aef452b-8a92-4d50-81a4-b0265d65ce8f> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-11-09T15:07:33.84Z" ;
+    bcube:lastUpdated "2015-11-09T15:07:33.84Z" ;
+    bcube:originatedFrom <urn:uuid:ebb2d02b-2a14-4b03-a1cd-c47b188012ea> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:b1781fcc-b67e-447e-8518-00c3b4512c80> .
+
+<urn:uuid:a0e81493-dd78-407a-ba8b-2fb93d350092> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-09T15:07:33.84Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-09T15:07:33.84Z" ;
+    dc:identifier "urn:sha:d14a028c2a3a2bc9476102bb288234c415a2b01f828ea62ac5b3e42f" ;
+    owl:a bcube:Url .
+
+<urn:uuid:b0335d67-9f82-4703-bc7f-78a1592446c3> bcube:hasType "theme" ;
+    bcube:hasValue "ALPS",
+        "Airborne Lidar Processing System",
+        "DEM",
+        "Digital Elevation Model",
+        "EAARL",
+        "Experimental Advanced Airborne Research Lidar",
+        "Lidar",
+        "laser altimetry",
+        "remote sensing",
+        "topography" ;
+    dc:partOf "http://remotesensing.usgs.gov" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:b1781fcc-b67e-447e-8518-00c3b4512c80> bcube:dateCreated "2015-11-09T15:07:33.84Z" ;
+    bcube:hasMetadataRecord <urn:uuid:9aef452b-8a92-4d50-81a4-b0265d65ce8f> ;
+    bcube:lastUpdated "2015-11-09T15:07:33.84Z" ;
+    dc:conformsTo <urn:uuid:67f7102a-0598-4691-9167-63783884b37d>,
+        <urn:uuid:8646afa1-932d-4f2f-b329-02c1da1c8a69>,
+        <urn:uuid:b0335d67-9f82-4703-bc7f-78a1592446c3>,
+        <urn:uuid:b8f63322-e6e6-447d-a929-2bba6aae9063> ;
+    dc:description "A bare earth elevation map (also known as a Digital Elevation Model or DEM) of the Jean Lafitte National Historical Park in Louisiana was produced from remotely sensed, geographically referenced elevation measurements cooperatively by the U.S. Geological Survey (USGS), the National Park Service (NPS), and the National Aeronautics and Space Administration (NASA). Elevation measurements were collected over the area using the NASA Experimental Advanced Airborne Research Lidar (EAARL), a pulsed laser ranging system mounted onboard an aircraft to measure ground elevation, vegetation canopy, and coastal topography. The system uses high frequency laser beams directed at the Earth's surface through an opening in the bottom of the aircraft's fuselage. The laser system records the time difference between emission of the laser beam and the reception of the reflected laser signal in the aircraft. The plane travels over the target area at approximately 50 meters per second at an elevation of approximately 300 meters. The EAARL, developed by NASA at Wallops Flight Facility in Virginia, measures ground elevation with a vertical resolution of 15 centimeters. A sampling rate of 3 kilohertz or higher results in an extremely dense spatial elevation dataset. Over 100 kilometers of coastline can be easily surveyed within a 3- to 4-hour mission time period. When subsequent elevation maps for an area are analyzed, they provide a useful tool to make management decisions regarding land development." ;
+    dcterms:publisher <urn:uuid:76bf2ef4-8dd0-42de-a505-a5432bae9929> ;
+    dcterms:references <urn:uuid:a0e81493-dd78-407a-ba8b-2fb93d350092> ;
+    dcterms:title "EAARL Topography Jean Lafitte National Historical Park 2006" ;
+    esip:startDate "2006-09-22"^^xsd:date ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:b8f63322-e6e6-447d-a929-2bba6aae9063> bcube:hasType "temporal" ;
+    bcube:hasValue "2006" ;
+    dc:partOf "http://www.esri.com/news/arcuser/1104/temporal.html" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:ebb2d02b-2a14-4b03-a1cd-c47b188012ea> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-09T15:07:33.84Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-09T15:07:33.84Z" ;
+    dc:identifier "urn:sha:c6ac15ca141422a90130e486b18db550d626a08388ace86f50440c1e" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://pubs.usgs.gov/ds/389/data_files/be/be_e774_n3302_15/be_e774_n3302_15.las.xml" .
+

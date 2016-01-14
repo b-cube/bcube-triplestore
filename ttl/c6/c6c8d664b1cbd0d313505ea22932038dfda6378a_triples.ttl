@@ -1,0 +1,62 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:3ad40e74-87ff-4acd-b91b-3d14516786b0> owl:a foaf:Organization ;
+    foaf:name "" .
+
+<urn:uuid:5fe3dd3f-de82-47f4-b5db-383d45b544bd> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-01T14:40:57.155Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-01T14:40:57.155Z" ;
+    dc:identifier "urn:sha:42c7ab9df936c28d0c19ea518c282a507fc60cc8ce22d7ae8bc24ee5" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://data.fs.usda.gov/geodata/edw/edw_resources/meta/S_USA.LargeTank_X.xml" .
+
+<urn:uuid:8458654c-a6fa-4e36-914f-1ab84f72ce54> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-11-01T14:40:57.155Z" ;
+    bcube:lastUpdated "2015-11-01T14:40:57.155Z" ;
+    bcube:originatedFrom <urn:uuid:5fe3dd3f-de82-47f4-b5db-383d45b544bd> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:b629f819-70dc-441b-b38d-9bcaa8c01cdd> .
+
+<urn:uuid:b629f819-70dc-441b-b38d-9bcaa8c01cdd> bcube:dateCreated "2015-11-01T14:40:57.155Z" ;
+    bcube:hasMetadataRecord <urn:uuid:8458654c-a6fa-4e36-914f-1ab84f72ce54> ;
+    bcube:lastUpdated "2015-11-01T14:40:57.155Z" ;
+    dc:conformsTo <urn:uuid:ec72ddfe-a268-47c6-bd04-af19138518bd> ;
+    dc:description "Large Tank_X portrays variable size point features, where the 'tank_radius' field defines the size. This feature class was derived from the Cartographic Feature File (CFF).Within the FSTopo database, features are represented as lines, points, or polygons, with descriptive subtype attribute codes attached to describe the cartographic symbology characteristics of features. Annotation features are represented as stand-alone map text collected relative to the scale of the topographic quadrangle. The FSTopo database was originally populated with Cartographic Feature File (CFF) data which was digitized from either the Primary Base Series (PBS) quadrangles or U.S. Geological Survey (USGS) topographic map series quadrangles. Over time, the legacy CFF data is being replaced (at least partially) with data from nationally standardized sources. Data completeness reflects the content of the original source graphic, digital correction guide information, stereoscopic source, monoscopic source, supplemented with cadastral source information. Forests and Quadrangles may have undergone revision at varying dates. The update revision uses a variety of sources, including Digital Orthophoto Quad (DOQ) imagery, NAIP imagery, cadastral information, other vector data sources, and field-prepared correction guides in hardcopy or digital format." ;
+    dc:spatial "POLYGON ((-149.42835 18.150696,-149.42835 61.1266,-65.627086 61.1266,-65.627086 18.150696,-149.42835 18.150696))" ;
+    dcterms:publisher <urn:uuid:3ad40e74-87ff-4acd-b91b-3d14516786b0> ;
+    dcterms:title "S_USA.LargeTank_X" ;
+    esip:eastBound "-65.627086"^^xsd:float ;
+    esip:northBound "61.1266"^^xsd:float ;
+    esip:southBound "18.150696"^^xsd:float ;
+    esip:westBound "-149.42835"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:ec72ddfe-a268-47c6-bd04-af19138518bd> bcube:hasType "theme" ;
+    bcube:hasValue "Cartographic",
+        "Cultural",
+        "FSTopo",
+        "Large Tank",
+        "Quadrangle",
+        "Structure",
+        "Topographic",
+        "imageryBaseMapsEarthCover" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+

@@ -1,0 +1,93 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:4c17e218-a147-4208-ba02-2af8e99549e8> owl:a foaf:Organization ;
+    foaf:name "" .
+
+<urn:uuid:52124993-6d1d-4045-a43a-180c2326419b> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-10-17T05:50:59.997Z" ;
+    bcube:lastUpdated "2015-10-17T05:50:59.997Z" ;
+    bcube:originatedFrom <urn:uuid:e4989d4e-4bb9-45d6-aaef-08b23f203e62> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:dcd380a3-e88b-4898-9b4b-31c2328d6406> .
+
+<urn:uuid:a37ab054-125d-4be7-ad23-296c7d40ace3> bcube:hasType "place" ;
+    bcube:hasValue "16",
+        "ID",
+        "Idaho",
+        "State or Equivalent Entity",
+        "U.S.",
+        "United States" ;
+    dc:partOf "FIPS Publication 5-2, FIPS Publication 6-4, FIPS Publication 8-6, FIPS Publication 9-1" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:ceb49754-f531-4cd8-8a76-2702bc30e82f> bcube:hasType "theme" ;
+    bcube:hasValue "boundaries" ;
+    dc:partOf "ISO 19115 Topic Categories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:dcd380a3-e88b-4898-9b4b-31c2328d6406> bcube:dateCreated "2015-10-17T05:50:59.997Z" ;
+    bcube:hasMetadataRecord <urn:uuid:52124993-6d1d-4045-a43a-180c2326419b> ;
+    bcube:lastUpdated "2015-10-17T05:50:59.997Z" ;
+    dc:conformsTo <urn:uuid:a37ab054-125d-4be7-ad23-296c7d40ace3>,
+        <urn:uuid:ceb49754-f531-4cd8-8a76-2702bc30e82f>,
+        <urn:uuid:f904f281-25ef-478b-860f-e45f32d24e15> ;
+    dc:description "The TIGER/Line Shapefiles are an extract of selected geographic and cartographic information from the Census MAF/TIGER database. The Census MAF/TIGER database represents a seamless national file with no overlaps or gaps between parts. However, each TIGER/Line Shapefile is designed to stand alone as an independent data set or the shapefiles can be combined to cover the whole nation." ;
+    dc:spatial "POLYGON ((-117.243027 41.988005,-117.243027 49.001146,-111.043495 49.001146,-111.043495 41.988005,-117.243027 41.988005))" ;
+    dcterms:publisher <urn:uuid:4c17e218-a147-4208-ba02-2af8e99549e8> ;
+    dcterms:references <urn:uuid:e1cb5a2c-57b7-4c27-ab96-316a3f0b8e03> ;
+    dcterms:title "TIGER/Line Shapefile, 2007, state, Idaho, Place" ;
+    esip:eastBound "-111.043495"^^xsd:float ;
+    esip:endDate "2007-07-01"^^xsd:date ;
+    esip:northBound "49.001146"^^xsd:float ;
+    esip:southBound "41.988005"^^xsd:float ;
+    esip:startDate "2007-01-01"^^xsd:date ;
+    esip:westBound "-117.243027"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:e1cb5a2c-57b7-4c27-ab96-316a3f0b8e03> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-10-17T05:50:59.997Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-10-17T05:50:59.997Z" ;
+    dc:identifier "urn:sha:1356d0ce2d4e707e0c484e14a005818c0efdd975858d603d52c4424d" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www.census.gov/geo/www/tiger" .
+
+<urn:uuid:e4989d4e-4bb9-45d6-aaef-08b23f203e62> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-10-17T05:50:59.997Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-10-17T05:50:59.997Z" ;
+    dc:identifier "urn:sha:9c1dfecef607e183a9575747bf545e1a37b4aac0f09f0e4be636b15f" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www.idwr.idaho.gov/ftp/gisdata/Spatial/Cities/IncorporatedPlaces/incorp2007.shp.xml" .
+
+<urn:uuid:f904f281-25ef-478b-860f-e45f32d24e15> bcube:hasType "theme" ;
+    bcube:hasValue "CDP",
+        "Census Designated Place",
+        "City",
+        "Polygon",
+        "State or equivalent entity",
+        "Town",
+        "Village" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+

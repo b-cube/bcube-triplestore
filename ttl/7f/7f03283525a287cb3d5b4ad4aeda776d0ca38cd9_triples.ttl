@@ -1,0 +1,75 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:0fb541ba-3c35-4197-bb19-acc4e3d7916e> bcube:hasValue "elevation",
+        "environment",
+        "hydrology",
+        "inlandWaters",
+        "structure",
+        "transportation" ;
+    dc:partOf "IsoTopicCategories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:73a0aa1d-5775-4c9c-92b1-a95e9bf0132a> a "ISO 19115:2003/19139" ;
+    bcube:dateCreated "2015-08-04T14:52:36.422Z" ;
+    bcube:lastUpdated "2015-08-04T14:52:36.422Z" ;
+    bcube:originatedFrom <urn:uuid:e553d516-ea66-4062-b338-129b20d1748d> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:a674e14c-5b82-4a14-a887-48430d2b6152> .
+
+<urn:uuid:a674e14c-5b82-4a14-a887-48430d2b6152> bcube:dateCreated "2015-08-04T14:52:36.422Z" ;
+    bcube:hasMetadataRecord <urn:uuid:73a0aa1d-5775-4c9c-92b1-a95e9bf0132a> ;
+    bcube:lastUpdated "2015-08-04T14:52:36.422Z" ;
+    dc:conformsTo <urn:uuid:0fb541ba-3c35-4197-bb19-acc4e3d7916e>,
+        <urn:uuid:f4720eb6-a2d2-4a06-b573-2b90ec4c1a56> ;
+    dc:description "FEMA provides access to the National Flood Hazard Layer through a Web Map Service. The National Flood Hazard Layer is a computer database that contains FEMA's flood hazard map data. The data depict flood hazard information and supporting data used to develop the information. The primary hazard classifications are the 1 percent-annual-chance flood event, the 0.2 percent-annual-chance flood event, and areas of minimal flood hazard. Flood hazard and supporting data are developed using specifications for horizontal control consistent with 1:12,000-scale mapping. If you plan to display maps from the National Flood Hazard Layer with other map data for official purposes, ensure that the other information meets FEMA's standards for map accuracy. The NFHL data are from FEMA's Digital Flood Insurance Rate Map (DFIRM) databases. New data are added continually. The NFHL also contains changes to DFIRM data made by Letters of Map Revision (LOMRs). The service provides map images geo-referenced to the earth's surface using the North American Datum of 1983, Geodetic Reference System 80 coordinate system." ;
+    dc:spatial "POLYGON ((-94.711888 33.102621,-94.711888 36.55728,-89.855393 36.55728,-89.855393 33.102621,-94.711888 33.102621))" ;
+    dcterms:title "FEMA DFIRM Web Map Service" ;
+    esip:eastBound "-89.855393"^^xsd:float ;
+    esip:northBound "36.55728"^^xsd:float ;
+    esip:southBound "33.102621"^^xsd:float ;
+    esip:westBound "-94.711888"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:e553d516-ea66-4062-b338-129b20d1748d> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-04T14:52:36.422Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-04T14:52:36.422Z" ;
+    dc:identifier "urn:sha:f1221271761c30def6b0ef2892cf90d3921e44c32ce3b40691ebd5bc" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://catalog.data.gov/harvest/object/3b7e27e3-0dcb-450d-a46f-eea44ffb0c17" .
+
+<urn:uuid:f4720eb6-a2d2-4a06-b573-2b90ec4c1a56> bcube:hasType "theme" ;
+    bcube:hasValue "Base Flood Elevation",
+        "CBRS",
+        "Coastal Barrier Resources System",
+        "Coastal Flooding",
+        "DFIRM",
+        "DFIRM Database",
+        "Digital Flood Insurance Rate Map",
+        "FEMA Flood Hazard Zone",
+        "FIRM",
+        "Flood Insurance Rate Map",
+        "Floodway",
+        "NFIP",
+        "Riverine Flooding",
+        "SFHA",
+        "Special Flood Hazard Area" ;
+    dc:partOf "FEMA NFIP Topic Category" ;
+    owl:a bcube:thesaurusSubset .
+

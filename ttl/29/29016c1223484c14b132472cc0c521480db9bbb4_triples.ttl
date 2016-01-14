@@ -1,0 +1,89 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:02f7d1f5-1b46-4ebd-b6ae-cfc17d8f43a5> owl:a foaf:Organization ;
+    foaf:name "" .
+
+<urn:uuid:0a58ae57-bb1d-4dd5-9893-904b79656892> bcube:hasType "place" ;
+    bcube:hasValue "01",
+        "AL",
+        "Alabama",
+        "State or Equivalent Entity",
+        "U.S.",
+        "United States" ;
+    dc:partOf "FIPS Publication 5-2, FIPS Publication 6-4, FIPS Publication 8-6, FIPS Publication 9-1,FIPS Publication55-4" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:2f8cfabb-c8c2-40b7-87bf-4833184254c3> bcube:hasType "theme" ;
+    bcube:hasValue "Legislative District",
+        "Polygon",
+        "State or equivalent entity" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:840c3cc7-1f78-4728-a089-dd03cd5fb0e1> bcube:dateCreated "2015-11-05T16:50:02.588Z" ;
+    bcube:hasMetadataRecord <urn:uuid:be69371d-9f82-4687-abe1-89bfc0297a6c> ;
+    bcube:lastUpdated "2015-11-05T16:50:02.588Z" ;
+    dc:conformsTo <urn:uuid:0a58ae57-bb1d-4dd5-9893-904b79656892>,
+        <urn:uuid:2f8cfabb-c8c2-40b7-87bf-4833184254c3>,
+        <urn:uuid:e3b12de5-0dfb-4eca-89cd-9ffb18a02435> ;
+    dc:description "The TIGER/Line Shapefiles are an extract of selected geographic and cartographic information from the Census MAF/TIGER database. The Census MAF/TIGER database represents a seamless national file with no overlaps or gaps between parts. However, each TIGER/Line Shapefile is designed to stand alone as an independent data set or the shapefiles can be combined to cover the whole nation." ;
+    dc:spatial "POLYGON ((-88.473227 30.144425,-88.473227 35.008028,-84.888246 35.008028,-84.888246 30.144425,-88.473227 30.144425))" ;
+    dcterms:publisher <urn:uuid:02f7d1f5-1b46-4ebd-b6ae-cfc17d8f43a5> ;
+    dcterms:references <urn:uuid:936bbc53-0ef8-4ddb-a764-869cc5bca794> ;
+    dcterms:title "TIGER/Line Shapefile, 2008, state, Alabama, State Legislative District (SLD) Upper Chamber" ;
+    esip:eastBound "-84.888246"^^xsd:float ;
+    esip:endDate "2008-07-01"^^xsd:date ;
+    esip:northBound "35.008028"^^xsd:float ;
+    esip:southBound "30.144425"^^xsd:float ;
+    esip:startDate "2008-01-01"^^xsd:date ;
+    esip:westBound "-88.473227"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:8785e4c0-2ee9-4102-a2ca-1a0df64a5e4e> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-05T16:50:02.588Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-05T16:50:02.588Z" ;
+    dc:identifier "urn:sha:b49cfc5009a5a1926efc8bd59ac323ac62cdfa53d46896403696aa2e" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://meta.geo.census.gov/data/existing/decennial/GEO/GPMB/TIGERline/fe_2008/sldu/tl_2008_01_sldu_url.shp.xml" .
+
+<urn:uuid:936bbc53-0ef8-4ddb-a764-869cc5bca794> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-05T16:50:02.588Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-05T16:50:02.588Z" ;
+    dc:identifier "urn:sha:b56dc44703f102e4c60162691485a9dccda39f220bab6ab09c319c3f" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www2.census.gov/geo/tiger/TIGER2008/01_ALABAMA/tl_2008_01_sldu.zip" .
+
+<urn:uuid:be69371d-9f82-4687-abe1-89bfc0297a6c> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-11-05T16:50:02.588Z" ;
+    bcube:lastUpdated "2015-11-05T16:50:02.588Z" ;
+    bcube:originatedFrom <urn:uuid:8785e4c0-2ee9-4102-a2ca-1a0df64a5e4e> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:840c3cc7-1f78-4728-a089-dd03cd5fb0e1> .
+
+<urn:uuid:e3b12de5-0dfb-4eca-89cd-9ffb18a02435> bcube:hasType "theme" ;
+    bcube:hasValue "boundaries" ;
+    dc:partOf "ISO 19115 Topic Categories" ;
+    owl:a bcube:thesaurusSubset .
+

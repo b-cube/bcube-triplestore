@@ -1,0 +1,81 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:769b63aa-c64f-44ab-b330-0ece999f1bd5> bcube:hasType "temporal" ;
+    bcube:hasValue "fall",
+        "summer",
+        "winter" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:7b297e26-460f-4c53-bc61-b89bafa9d10a> bcube:hasType "theme" ;
+    bcube:hasValue "Biota",
+        "Oceans" ;
+    dc:partOf "ISO19115" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:7e8023c1-5a04-4cc0-9852-ee78c536be95> owl:a foaf:Organization ;
+    foaf:name "" .
+
+<urn:uuid:9231c089-7353-43f2-b6ca-7cf9f733a037> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-09-04T03:18:31.587Z" ;
+    bcube:lastUpdated "2015-09-04T03:18:31.587Z" ;
+    bcube:originatedFrom <urn:uuid:93f45160-5ac4-46aa-9e21-fd0427bdfc4d> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:c82f517c-1020-494a-a4aa-c0faf378734b> .
+
+<urn:uuid:93f45160-5ac4-46aa-9e21-fd0427bdfc4d> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-09-04T03:18:31.587Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-09-04T03:18:31.587Z" ;
+    dc:identifier "urn:sha:a1b5de45d70cfdf1a6f3950e8813c71ba762993b100b6f83e7269f1c" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "https://inport.nmfs.noaa.gov/inport/item/23351/fgdc" .
+
+<urn:uuid:b65525a1-1ef4-4f48-a7fc-60168b5ceac1> bcube:hasType "place" ;
+    bcube:hasValue "AK",
+        "Alaska",
+        "Aleutian Islands",
+        "Bering Sea",
+        "Chukchi Sea",
+        "Gulf of Alaska",
+        "Norton Sound",
+        "Pacific Ocean",
+        "Prince William Sound" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:c82f517c-1020-494a-a4aa-c0faf378734b> bcube:dateCreated "2015-09-04T03:18:31.587Z" ;
+    bcube:hasMetadataRecord <urn:uuid:9231c089-7353-43f2-b6ca-7cf9f733a037> ;
+    bcube:lastUpdated "2015-09-04T03:18:31.587Z" ;
+    dc:conformsTo <urn:uuid:769b63aa-c64f-44ab-b330-0ece999f1bd5>,
+        <urn:uuid:7b297e26-460f-4c53-bc61-b89bafa9d10a>,
+        <urn:uuid:b65525a1-1ef4-4f48-a7fc-60168b5ceac1> ;
+    dc:description "The core function of the Resource Assessment and Conservation Engineering (RACE) Groundfish Assessment Program (GAP) is to conduct quantitative fishery surveys and related ecological and oceanographic research to measure and describe the distribution and abundance of commercially important fish and crab stocks in the eastern Bering Sea, Aleutian Islands, Gulf of Alaska. As part of the quality control and general documentation of these efforts, digital photographs are taken during each of the surveys. These photos are stored on an AFSC server as .jpg files." ;
+    dc:spatial "POLYGON ((170 51,170 73,-132 73,-132 51,170 51))" ;
+    dcterms:identifier "gov.noaa.nmfs.inport:23351" ;
+    dcterms:publisher <urn:uuid:7e8023c1-5a04-4cc0-9852-ee78c536be95> ;
+    dcterms:title "AFSC/RACE/GAP: RACE Groundfish Survey Photo Database" ;
+    esip:eastBound "-132.0"^^xsd:float ;
+    esip:endDate "2014-01-01"^^xsd:date ;
+    esip:northBound "73.0"^^xsd:float ;
+    esip:southBound "51.0"^^xsd:float ;
+    esip:startDate "2003-01-01"^^xsd:date ;
+    esip:westBound "170.0"^^xsd:float ;
+    owl:a dcat:Dataset .
+

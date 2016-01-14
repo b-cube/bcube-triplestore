@@ -1,0 +1,93 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:5290a4af-3790-4be8-91c7-f393e1b9e40b> bcube:hasType "place" ;
+    bcube:hasValue "Alaska Highway Corridor",
+        "Alaska, State of",
+        "Talkeetna Mountains Quadrangle",
+        "Trans-Alaska Pipeline" ;
+    dc:partOf "Alaska Division of Geological & Geophysical Surveys" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:58718b83-ed3f-4a90-8b76-adfe4908ea1d> bcube:hasType "theme" ;
+    bcube:hasValue "geoscientificInformation" ;
+    dc:partOf "ISO 19115 Topic Category" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:6ed74aa1-8c59-4a21-b13a-f98b29a2dad0> bcube:dateCreated "2015-03-06T00:44:27.135Z" ;
+    bcube:hasMetadataRecord <urn:uuid:82ff95bd-de3d-455c-8946-b3bdc1a10bb8> ;
+    bcube:lastUpdated "2015-03-06T00:44:27.135Z" ;
+    dc:conformsTo <urn:uuid:5290a4af-3790-4be8-91c7-f393e1b9e40b>,
+        <urn:uuid:58718b83-ed3f-4a90-8b76-adfe4908ea1d>,
+        <urn:uuid:ae56eddf-542a-4015-9c78-a49feea1263e> ;
+    dc:description "In advance of design, permitting, and construction of a pipeline to deliver North Slope natural gas to out-of-state customers and Alaska communities, the Division of Geological & Geophysical Surveys (DGGS) has acquired lidar (light detection and ranging) data along proposed pipeline routes, nearby areas of infrastructure, and regions where significant geologic hazards have been identified. Lidar data will serve multiple purposes, but have primarily been collected to (1) evaluate active faulting, slope instability, thaw settlement, erosion, and other engineering constraints along proposed pipeline routes, and (2) provide a base layer for the state-federal GIS database that will be used to evaluate permit applications and construction plans. The digital surface model represents percent canopy cover (between 0 and 1). Cover metric was computed in Fusion (McGaughey 2007), which assesses the percentage of total first returns within each cell that were returned from the canopy. For more specifics on Fusion Gridmetric outputs see the fusion manual (page 56)." ;
+    dc:spatial "POLYGON ((-150 62,-150 63,-147 63,-147 62,-150 62))" ;
+    dcterms:publisher <urn:uuid:bb200dbd-72f3-4e73-8f04-bb91ea45b454> ;
+    dcterms:references <urn:uuid:c64af167-76a7-44cf-aa8c-8d33ffcb1e63> ;
+    dcterms:title "High-resolution lidar data for infrastructure corridors, Talkeetna Mountains Quadrangle, Alaska" ;
+    esip:eastBound "-147.0"^^xsd:float ;
+    esip:endDate "2011-01-01"^^xsd:date ;
+    esip:northBound "63.0"^^xsd:float ;
+    esip:southBound "62.0"^^xsd:float ;
+    esip:startDate "2010-01-01"^^xsd:date ;
+    esip:westBound "-150.0"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:82ff95bd-de3d-455c-8946-b3bdc1a10bb8> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-03-06T00:44:27.135Z" ;
+    bcube:lastUpdated "2015-03-06T00:44:27.135Z" ;
+    bcube:originatedFrom <urn:uuid:fbaad408-90ca-41b2-a328-4f4de5d27560> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:6ed74aa1-8c59-4a21-b13a-f98b29a2dad0> .
+
+<urn:uuid:ae56eddf-542a-4015-9c78-a49feea1263e> bcube:hasType "theme" ;
+    bcube:hasValue "Alaska Pipeline",
+        "Gasline",
+        "Geomorphology",
+        "Lidar",
+        "Lidar Canopy Cover",
+        "Pipeline",
+        "Proposed Natural Gas Pipeline",
+        "Raster Image",
+        "Remote Sensing" ;
+    dc:partOf "Alaska Division of Geological & Geophysical Surveys" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:bb200dbd-72f3-4e73-8f04-bb91ea45b454> owl:a foaf:Organization ;
+    foaf:name "State of Alaska, Department of Natural Resources, Division of Geological & Geophysical Surveys" .
+
+<urn:uuid:c64af167-76a7-44cf-aa8c-8d33ffcb1e63> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-03-06T00:44:27.135Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-03-06T00:44:27.135Z" ;
+    dc:identifier "urn:sha:6f0a6889fc57ea24d2bf5122c80864a89b4ba1d0df763ad4bd27062e" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www.dggs.alaska.gov/pubs/id/23164" .
+
+<urn:uuid:fbaad408-90ca-41b2-a328-4f4de5d27560> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-03-06T00:44:27.135Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-03-06T00:44:27.135Z" ;
+    dc:identifier "urn:sha:2c9cd95d8617bb75e17d1e737c01bff646eaafa9fe0868c119f0f6aa" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://catalog.data.gov/harvest/object/d601937e-3ccf-4767-aa95-e6624a9bdc4c/original" .
+

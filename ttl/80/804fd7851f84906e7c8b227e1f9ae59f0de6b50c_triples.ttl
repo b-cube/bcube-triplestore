@@ -1,0 +1,80 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:3aff34ed-c3a5-470c-a936-8375c4ebf69b> bcube:hasType "place" ;
+    bcube:hasValue "United States of America, Arkansas" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:6980d119-1e80-4258-89b4-d612ec77ad26> a "ISO 19115:2003/19139" ;
+    bcube:dateCreated "2015-10-18T14:44:11.655Z" ;
+    bcube:lastUpdated "2015-10-18T14:44:11.655Z" ;
+    bcube:originatedFrom <urn:uuid:ecac18fd-6b98-49df-9f92-00fabb55dbb9> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:9506f503-9b31-4002-8cf4-8e68deb44c5d> .
+
+<urn:uuid:9506f503-9b31-4002-8cf4-8e68deb44c5d> bcube:dateCreated "2015-10-18T14:44:11.655Z" ;
+    bcube:hasMetadataRecord <urn:uuid:6980d119-1e80-4258-89b4-d612ec77ad26> ;
+    bcube:lastUpdated "2015-10-18T14:44:11.655Z" ;
+    dc:conformsTo <urn:uuid:3aff34ed-c3a5-470c-a936-8375c4ebf69b>,
+        <urn:uuid:a07e38a3-7ad3-4703-a5b8-48f9f21c2eb2>,
+        <urn:uuid:c1f41198-64f6-4d0d-9064-c099e7963177> ;
+    dc:description "Data available online through GeoStor at http://www.geostor.arkansas.gov. AHTD County Boundaries for year end 2000 information. This file contains location information for County Boundaries in the state of Arkansas. These locations were extracted from the Arkansas Highway and Transportation Department county mapping files for the year 2000." ;
+    dc:spatial "POLYGON ((-94.618315 32.969262,-94.618315 36.531986,-89.616931 36.531986,-89.616931 32.969262,-94.618315 32.969262))" ;
+    dcterms:references <urn:uuid:cba0b8ee-ecd7-45bd-b1c0-a41c76803a47> ;
+    dcterms:title "County Boundary (polygon)" ;
+    esip:eastBound "-89.616931"^^xsd:float ;
+    esip:endDate "2011-01-18"^^xsd:date ;
+    esip:northBound "36.531986"^^xsd:float ;
+    esip:southBound "32.969262"^^xsd:float ;
+    esip:startDate "2005-12-21"^^xsd:date ;
+    esip:westBound "-94.618315"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:a07e38a3-7ad3-4703-a5b8-48f9f21c2eb2> bcube:hasValue "boundaries" ;
+    dc:partOf "IsoTopicCategories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:c1f41198-64f6-4d0d-9064-c099e7963177> bcube:hasType "theme" ;
+    bcube:hasValue "boundaries",
+        "boundary",
+        "counties",
+        "county" ;
+    dc:partOf "Arkansas Geographic Information Office" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:cba0b8ee-ecd7-45bd-b1c0-a41c76803a47> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-10-18T14:44:11.655Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-10-18T14:44:11.655Z" ;
+    dc:identifier "urn:sha:e28ad883d47b10383f22a6cf8d1216a779b0c99d4c67de913a9a25d3" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "www.gis.state.ar.us click GeoStor" .
+
+<urn:uuid:ecac18fd-6b98-49df-9f92-00fabb55dbb9> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-10-18T14:44:11.655Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-10-18T14:44:11.655Z" ;
+    dc:identifier "urn:sha:57b6b383d338cb14f9d991bded73dc4d851ccec14a3a0b27e2340a9f" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "https://catalog.data.gov/harvest/object/9ae03ec4-ae12-49c9-93ab-72201724593e" .
+

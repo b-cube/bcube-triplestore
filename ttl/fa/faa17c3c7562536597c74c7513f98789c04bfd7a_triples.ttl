@@ -1,0 +1,92 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:0d7d657a-1b0f-4831-957a-d4fb80d38020> owl:a foaf:Organization ;
+    foaf:name "U.S. Geological Survey" .
+
+<urn:uuid:6317e671-1a3d-472a-aafa-d4fe6de62ec4> bcube:hasType "place" ;
+    bcube:hasValue "Africa",
+        "Continental Margin Liberia",
+        "Liberia" ;
+    dc:partOf "Geographic Names Information System (GNIS)" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:78540d23-73d9-4c91-a637-072883ed289f> bcube:hasType "theme" ;
+    bcube:hasValue "geoscientificinformation",
+        "oceans" ;
+    dc:partOf "ISO 19115 Topic Category" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:889948de-271a-4df7-8bd1-02828a2b8afa> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-05T01:11:28.496Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-05T01:11:28.496Z" ;
+    dc:identifier "urn:sha:8fb99bfd74ae69bf992872a41ce21d60e68513c2a2756b3f562aa8d7" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://data.usgs.gov/metadata/Coastal_and_Marine_Geology_Program/5418b6bbe4b03f26b3225ef2.xml" .
+
+<urn:uuid:8fd3a1cf-845a-4b7d-a787-0ab891b30f71> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-08-05T01:11:28.496Z" ;
+    bcube:lastUpdated "2015-08-05T01:11:28.496Z" ;
+    bcube:originatedFrom <urn:uuid:889948de-271a-4df7-8bd1-02828a2b8afa> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:b4e4180d-c090-4b4b-8e09-2db2d4e81c1c> .
+
+<urn:uuid:b4e4180d-c090-4b4b-8e09-2db2d4e81c1c> bcube:dateCreated "2015-08-05T01:11:28.496Z" ;
+    bcube:hasMetadataRecord <urn:uuid:8fd3a1cf-845a-4b7d-a787-0ab891b30f71> ;
+    bcube:lastUpdated "2015-08-05T01:11:28.496Z" ;
+    dc:conformsTo <urn:uuid:6317e671-1a3d-472a-aafa-d4fe6de62ec4>,
+        <urn:uuid:78540d23-73d9-4c91-a637-072883ed289f>,
+        <urn:uuid:bac05893-ecbc-45e2-b594-8ef2b32ed3e7> ;
+    dc:description "Single-beam bathymetry, gravity, and magnetic data along with transit satellite navigation data was collected as part of field activity 71005 (U-5-71-AF) in Continental Margin Liberia from 10/30/1971 to 11/20/1971, http://walrus.wr.usgs.gov/infobank/u/u571af/html/u-5-71-af.meta.html These data are reformatted from space-delimited ASCII text files located in the Coastal and Marine Geology Program (CMGP) InfoBank field activity catalog at http://walrus.wr.usgs.gov/infobank/u/u571af/html/u-5-71-af.bath.html http://walrus.wr.usgs.gov/infobank/u/u571af/html/u-5-71-af.grav.html http://walrus.wr.usgs.gov/infobank/u/u571af/html/u-5-71-af.mag.html into MGD77T format provided by the NOAA's National Geophysical Data Center(NGDC). The MGD77T format includes a header (documentation) file (.h77t) and a data file (.m77t). More information regarding this format can be found in the publication listed in the Cross_reference section of this metadata file." ;
+    dc:spatial "POLYGON ((-12.2204 3.1946,-12.2204 6.7912,-7.29 6.7912,-7.29 3.1946,-12.2204 3.1946))" ;
+    dcterms:publisher <urn:uuid:0d7d657a-1b0f-4831-957a-d4fb80d38020> ;
+    dcterms:references <urn:uuid:dfbdb352-c760-4d61-ab6b-39f722df406d> ;
+    dcterms:title "u571af.m77t: MGD77T data file for Geophysical data from field activity 71005 (U-5-71-AF) in Continental Margin Liberia from 10/30/1971 to 11/20/1971" ;
+    esip:eastBound "-7.29"^^xsd:float ;
+    esip:endDate "1971-11-20"^^xsd:date ;
+    esip:northBound "6.7912"^^xsd:float ;
+    esip:southBound "3.1946"^^xsd:float ;
+    esip:startDate "1971-10-30"^^xsd:date ;
+    esip:westBound "-12.2204"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:bac05893-ecbc-45e2-b594-8ef2b32ed3e7> bcube:hasType "theme" ;
+    bcube:hasValue "Bathymetry",
+        "Magnetic Anomalies",
+        "Marine Geology",
+        "Marine Geophysics",
+        "Marine Gravity Field",
+        "Marine Magnetic Field",
+        "Seafloor Topography",
+        "Water Depth" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:dfbdb352-c760-4d61-ab6b-39f722df406d> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-05T01:11:28.496Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-05T01:11:28.496Z" ;
+    dc:identifier "urn:sha:97cbfac0c03e31a3387b63d8f4947a175b206e975c532a61332c8ba9" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www.ngdc.noaa.gov/mgg/trk/trackline/united_geo_i/u571af/mgd77/" .
+

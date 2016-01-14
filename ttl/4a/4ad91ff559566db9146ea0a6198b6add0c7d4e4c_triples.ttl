@@ -1,0 +1,71 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:15ac8b17-aac5-49b8-abfe-bc2664737096> bcube:hasValue "elevation" ;
+    dc:partOf "IsoTopicCategories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:381c65f6-8ccc-4846-b573-b5300f76254a> bcube:hasType "place" ;
+    bcube:hasValue "Franklin City",
+        "Southampton County",
+        "Virginia" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:aa26b665-8bec-42d8-9edd-4ab7f023fa6f> bcube:dateCreated "2015-08-05T15:46:25.886Z" ;
+    bcube:hasMetadataRecord <urn:uuid:b63c50cf-abce-44dd-9596-3e3c00a0528f> ;
+    bcube:lastUpdated "2015-08-05T15:46:25.886Z" ;
+    dc:conformsTo <urn:uuid:15ac8b17-aac5-49b8-abfe-bc2664737096>,
+        <urn:uuid:381c65f6-8ccc-4846-b573-b5300f76254a>,
+        <urn:uuid:b6802334-69c8-427d-95bb-728e7528d18e> ;
+    dc:description "Dewberry collected LiDAR for ~3,341 square miles in various Virginia Counties, a part of Worcester County, and Hoopers Island. The acquisition was performed by Terrapoint. This metadata covers the LiDAR produced for the King William project area. The nominal pulse spacing for this project is 1.6 ft (0.5 meters). This project was collected with a sensor which collects intensity values for each discrete pulse extracted from the waveform. GPS Week Time, Intensity, Flightline and echo number attributes were provided for each LiDAR point. Dewberry used proprietary procedures to classify the LAS according to contract specifications: 1-Unclassified, 2-Ground, 7-Noise, 9-Water, 10-Ignored Ground due to breakline proximity, and 11-Withheld (reclassed to 15 by OCM). Dewberry produced 3D breaklines and combined these with the final LiDAR data to produce seamless hydro flattened DEMs for the 774 tiles (5000 ft x 5000 ft) that cover the project area." ;
+    dc:spatial "POLYGON ((-77.4991925 36.5376074,-77.4991925 37.0049261,-76.821323 37.0049261,-76.821323 36.5376074,-77.4991925 36.5376074))" ;
+    dcterms:title "South Counties - VA FEMA LiDAR 2012" ;
+    esip:eastBound "-76.821323"^^xsd:float ;
+    esip:endDate "2011-10-27"^^xsd:date ;
+    esip:northBound "37.0049261"^^xsd:float ;
+    esip:southBound "36.5376074"^^xsd:float ;
+    esip:startDate "2011-04-19"^^xsd:date ;
+    esip:westBound "-77.4991925"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:b63c50cf-abce-44dd-9596-3e3c00a0528f> a "ISO 19115:2003/19139" ;
+    bcube:dateCreated "2015-08-05T15:46:25.886Z" ;
+    bcube:lastUpdated "2015-08-05T15:46:25.886Z" ;
+    bcube:originatedFrom <urn:uuid:dcbe085d-a112-4001-94aa-67c8aba13681> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:aa26b665-8bec-42d8-9edd-4ab7f023fa6f> .
+
+<urn:uuid:b6802334-69c8-427d-95bb-728e7528d18e> bcube:hasType "theme" ;
+    bcube:hasValue "DEM",
+        "Elevation",
+        "FEMA",
+        "LAS",
+        "Lidar",
+        "USGS" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:dcbe085d-a112-4001-94aa-67c8aba13681> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-05T15:46:25.886Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-05T15:46:25.886Z" ;
+    dc:identifier "urn:sha:3a5da943ed8fd8c2a3e2612a44e5e50375e3d1fe6863f2c6811d3036" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://coast.noaa.gov/data/Documents/Metadata/isoharvest/Lidar/va2012_usgs_fema_southerncounties_m2635_ISOmetadata.xml" .
+

@@ -1,0 +1,66 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:758e8228-cfe6-4392-88ef-9c6a543a0cd3> a "OGC:WMS" ;
+    bcube:contains <urn:uuid:340b7bd0-69cf-4e1f-b781-3694f917c26c> ;
+    bcube:dateCreated "2015-03-04T11:36:53.966Z" ;
+    bcube:lastUpdated "2015-03-04T11:36:53.966Z" ;
+    bcube:originatedFrom <urn:uuid:62b43cfd-6f1d-4e42-a958-95396f2b60f0> ;
+    dc:conformsTo <urn:uuid:b730feea-23d6-4590-989f-f75f7c8358fb> ;
+    dc:description "Scientific data from the Pacific Islands Ocean Observing System (PacIOOS) of the School of Ocean and Earth Science and Technology (SOEST) at the University of Hawaii. PacIOOS is one of eleven regional observing programs in the U.S. supporting the Integrated Ocean Observing System (IOOS). The PacIOOS region includes the U.S. Pacific Region (Hawaii, Guam, American Samoa, Commonwealth of the Northern Mariana Islands), the Pacific nations in Free Association with the U.S. (Republic of the Marshall Islands, Federated States of Micronesia, Republic of Palau), and the U.S. Minor Outlying Islands (Howland, Baker, Johnston, Jarvis, Kingman, Palmyra, Midway, Wake). These data are served by Unidata's Thematic Realtime Environmental Distributed Data Services (THREDDS) Data Server (TDS) in a variety of interoperable data services and output formats." ;
+    owl:a bcube:service .
+
+<urn:uuid:340b7bd0-69cf-4e1f-b781-3694f917c26c> bcube:dateCreated "2015-03-04T11:36:53.966Z" ;
+    bcube:lastUpdated "2015-03-04T11:36:53.966Z" ;
+    dc:description "distance to nearest coastline" ;
+    dc:spatial "POLYGON ((-179.98 -89.98,-179.98 89.98,179.98 89.98,179.98 -89.98,-179.98 -89.98))" ;
+    dc:title "distance to nearest coastline" ;
+    dcterms:references <urn:uuid:35b3dcf4-5759-43db-afa2-eab1665cc76b> ;
+    esip:eastBound "179.98"^^xsd:float ;
+    esip:northBound "89.98"^^xsd:float ;
+    esip:southBound "-89.98"^^xsd:float ;
+    esip:westBound "-179.98"^^xsd:float ;
+    owl:a bcube:Layer .
+
+<urn:uuid:35b3dcf4-5759-43db-afa2-eab1665cc76b> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-03-04T11:36:53.966Z" ;
+    bcube:hasConfidence "Not Sure" ;
+    bcube:hasUrlSource "Generated" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-03-04T11:36:53.966Z" ;
+    dc:identifier "urn:sha:44159794d2e1b9ec260488d3ad34e53dfb3843595eb4686081d55a6c" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://oos.soest.hawaii.edu/thredds/wms/dist2coast_4deg_ocean?layers=dist&width=500&version=1.3.0&bbox=-179.98%2C-89.98%2C179.98%2C89.98&service=WMS&format=image%2Fpng&styles=&crs=CRS%3A84&request=GetMap&height=500" .
+
+<urn:uuid:62b43cfd-6f1d-4e42-a958-95396f2b60f0> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-03-04T11:36:53.966Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-03-04T11:36:53.966Z" ;
+    dc:identifier "urn:sha:944a992ccdb2a81b530dc9eae097720a1780fd41b2a51b700cb6de19" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://oos.soest.hawaii.edu/thredds/wms/dist2coast_4deg_ocean?service=WMS&version=1.3.0&request=GetCapabilities" .
+
+<urn:uuid:b730feea-23d6-4590-989f-f75f7c8358fb> bcube:hasValue "atmosphere",
+        "climate",
+        "earth science",
+        "meteorology",
+        "ocean" ;
+    owl:a bcube:thesaurusSubset .
+

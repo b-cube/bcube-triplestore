@@ -1,0 +1,109 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:000fcad4-bc3a-4102-b5fb-1954d7125405> bcube:hasType "theme" ;
+    bcube:hasValue "coastal",
+        "elevation",
+        "environment" ;
+    dc:partOf "ISO 19115 Topic Category" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:0b250b67-9c69-41d7-a62b-a4af47877e5d> owl:a foaf:Organization ;
+    foaf:name "" .
+
+<urn:uuid:1af5ebb4-4aee-4801-a723-34dd3b208227> bcube:hasType "place" ;
+    bcube:hasValue "Atlantic Ocean",
+        "Maine",
+        "Massachusetts",
+        "New Hampshire",
+        "Rhode Island",
+        "U.S. Northeast Atlantic" ;
+    dc:partOf "General" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:283babc8-8584-4b63-96f9-2dbb305a3b02> bcube:hasType "place" ;
+    bcube:hasValue "Atlantic Ocean",
+        "Delaware",
+        "Maryland",
+        "New Jersey",
+        "New York",
+        "North Carolina",
+        "U.S. Mid-Atlantic",
+        "Virginia" ;
+    dc:partOf "General" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:4751388e-6f02-44f4-a15f-273d0ce280eb> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-11-01T10:30:33.427Z" ;
+    bcube:lastUpdated "2015-11-01T10:30:33.427Z" ;
+    bcube:originatedFrom <urn:uuid:efc5b2b0-f57d-48b4-a5fb-aeeae9be5618> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:bb5f04f0-0720-4eb8-9dfb-902d65344d07> .
+
+<urn:uuid:73d174c6-3eed-44d4-a4c2-73a987032bb0> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-01T10:30:33.427Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-01T10:30:33.427Z" ;
+    dc:identifier "urn:sha:baa7aad41e0a750ca1e31debe5ed786422c7eff318de32a30e4f0ada" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://olga.er.usgs.gov/data/NACCH/Noreasters_erosion_hazards.zip" .
+
+<urn:uuid:bb5f04f0-0720-4eb8-9dfb-902d65344d07> bcube:dateCreated "2015-11-01T10:30:33.427Z" ;
+    bcube:hasMetadataRecord <urn:uuid:4751388e-6f02-44f4-a15f-273d0ce280eb> ;
+    bcube:lastUpdated "2015-11-01T10:30:33.427Z" ;
+    dc:conformsTo <urn:uuid:000fcad4-bc3a-4102-b5fb-1954d7125405>,
+        <urn:uuid:1af5ebb4-4aee-4801-a723-34dd3b208227>,
+        <urn:uuid:283babc8-8584-4b63-96f9-2dbb305a3b02>,
+        <urn:uuid:d7473725-9526-4ae4-8309-86871ff83717> ;
+    dc:description "These datasets contain information on the probabilities of nor'easter-induced erosion (collision, overwash and inundation) for each 1-km section of the Mid- and Northeast Atlantic coast, from North Carolina through Maine, for class 1-3 nor'easters. The analysis is based on a storm-impact scaling model that uses observations of beach morphology combined with sophisticated hydrodynamic models to predict how the coast will respond to the direct impact of class 1-3 nor'easters. Nor'easter-induced water levels, due to both surge and waves, are compared to beach and dune elevations to determine the probabilities of three types of coastal change: collision (dune erosion), overwash, and inundation. Data on dune morphology (dune crest and toe elevation) and hydrodynamics (storm surge, wave setup and runup) are also included in this dataset. As new beach morphology observations and storm predictions become available, this analysis will be updated to describe how coastal vulnerability to storms will vary in the future. The data presented here include dune morphology observations, as derived from lidar surveys taken between May and July 2010 and in November 2012." ;
+    dc:spatial "POLYGON ((-78.548858 33.850068,-78.548858 43.780844,-69.725425 43.780844,-69.725425 33.850068,-78.548858 33.850068))" ;
+    dcterms:publisher <urn:uuid:0b250b67-9c69-41d7-a62b-a4af47877e5d> ;
+    dcterms:references <urn:uuid:73d174c6-3eed-44d4-a4c2-73a987032bb0> ;
+    dcterms:title "Probability Model Outputs: National Assessment of Nor'easter-Induced Coastal Erosion Hazards: Mid- and Northeast Atlantic Coast (Polyline Shapefile)" ;
+    esip:eastBound "-69.725425"^^xsd:float ;
+    esip:endDate "2012-11-29"^^xsd:date ;
+    esip:northBound "43.780844"^^xsd:float ;
+    esip:southBound "33.850068"^^xsd:float ;
+    esip:startDate "2010-05-04"^^xsd:date ;
+    esip:westBound "-78.548858"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:d7473725-9526-4ae4-8309-86871ff83717> bcube:hasType "theme" ;
+    bcube:hasValue "CMGP",
+        "Coastal and Marine Geology Program",
+        "OFR 2015-1154",
+        "Open-File Report 2015-1154",
+        "SPCMSC",
+        "St. Petersburg Coastal and Marine Science Center",
+        "U.S. Geological Survey",
+        "USGS" ;
+    dc:partOf "General" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:efc5b2b0-f57d-48b4-a5fb-aeeae9be5618> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-01T10:30:33.427Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-01T10:30:33.427Z" ;
+    dc:identifier "urn:sha:fc7b19008a99e972f9fd75b7b7956877914e9ab150803da03ba32dc6" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://olga.er.usgs.gov/data/NACCH/Noreasters_erosion_hazards_metadata.xml" .
+

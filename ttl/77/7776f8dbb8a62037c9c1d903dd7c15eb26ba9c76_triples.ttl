@@ -1,0 +1,90 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:17511bd7-7297-4cae-a103-2b4f1a6a8298> bcube:hasType "theme" ;
+    bcube:hasValue "5-digit ZIP code",
+        "County FIPS Code",
+        "County GNIS Code",
+        "From House Number",
+        "Permanent edge ID",
+        "Side indicator flag",
+        "State FIPS Code",
+        "State GNIS Code",
+        "To House Number",
+        "ZIP +4 code" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:2bc24fce-0e7d-441c-81eb-1106667e9eeb> bcube:hasType "place" ;
+    bcube:hasValue "02090",
+        "County or Equivalent Entity",
+        "Fairbanks North Star",
+        "U.S.",
+        "United States" ;
+    dc:partOf "ANSI INCITS 38:2009 (Formerly FIPS 5-2), ANSI INCITS 31:2009 (Formerly FIPS 6-4),ANSI INCITS 454:2009 (Formerly FIPS 8-6), ANSI INCITS 455:2009(Formerly FIPS 9-1), ANSI INCITS 446:2008 (Geographic Names Information System (GNIS))" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:72a54e20-b905-4a19-a1c7-b0ba3b9416ba> a "ISO 19115:2003/19139" ;
+    bcube:dateCreated "2015-11-01T02:10:00.278Z" ;
+    bcube:lastUpdated "2015-11-01T02:10:00.278Z" ;
+    bcube:originatedFrom <urn:uuid:e4f8f456-a609-4b32-bc18-6ec0c1200d00> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:ed31072e-3b7e-4e02-8eaf-4612935fb9c1> .
+
+<urn:uuid:d5f1b9ee-29ca-4100-9a6d-d122470f3d1f> bcube:hasValue "transportation" ;
+    dc:partOf "IsoTopicCategories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:e4f8f456-a609-4b32-bc18-6ec0c1200d00> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-01T02:10:00.278Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-01T02:10:00.278Z" ;
+    dc:identifier "urn:sha:b2c5e0deffe859d3c8ee1dee602bed86eb11a5466ff5886e64d9cb0a" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://meta.geo.census.gov/data/existing/decennial/GEO/GPMB/TIGERline/TIGER2014/addr/tl_2014_02090_addr.dbf.iso.xml" .
+
+<urn:uuid:ed31072e-3b7e-4e02-8eaf-4612935fb9c1> bcube:dateCreated "2015-11-01T02:10:00.278Z" ;
+    bcube:hasMetadataRecord <urn:uuid:72a54e20-b905-4a19-a1c7-b0ba3b9416ba> ;
+    bcube:lastUpdated "2015-11-01T02:10:00.278Z" ;
+    dc:conformsTo <urn:uuid:17511bd7-7297-4cae-a103-2b4f1a6a8298>,
+        <urn:uuid:2bc24fce-0e7d-441c-81eb-1106667e9eeb>,
+        <urn:uuid:d5f1b9ee-29ca-4100-9a6d-d122470f3d1f> ;
+    dc:description "The TIGER/Line shapefiles and related database files (.dbf) are an extract of selected geographic and cartographic information from the U.S. Census Bureau's Master Address File / Topologically Integrated Geographic Encoding and Referencing (MAF/TIGER) Database (MTDB). The MTDB represents a seamless national file with no overlaps or gaps between parts, however, each TIGER/Line shapefile is designed to stand alone as an independent data set, or they can be combined to cover the entire nation. The Address Ranges Relationship File (ADDR.dbf) contains the attributes of each address range. Each address range applies to a single edge and has a unique address range identifier (ARID) value. The edge to which an address range applies can be determined by linking the address range to the All Lines Shapefile (EDGES.shp) using the permanent topological edge identifier (TLID) attribute. Multiple address ranges can apply to the same edge since an edge can have multiple address ranges. Note that the most inclusive address range associated with each side of a street edge already appears in the All Lines Shapefile (EDGES.shp). The TIGER/Line Files contain potential address ranges, not individual addresses. The term \"address range\" refers to the collection of all possible structure numbers from the first structure number to the last structure number and all numbers of a specified parity in between along an edge side relative to the direction in which the edge is coded. The address ranges in the TIGER/Line Files are potential ranges that include the full range of possible structure numbers even though the actual structures may not exist." ;
+    dc:spatial "POLYGON ((-148.667164 64.257854,-148.667164 65.454475,-143.884795 65.454475,-143.884795 64.257854,-148.667164 64.257854))" ;
+    dcterms:references <urn:uuid:ef2be8f4-0500-4135-9c42-eb73cde6ba97> ;
+    dcterms:title "TIGER/Line Shapefile, 2014, county, Fairbanks North Star Borough, AK, Address Ranges County-based Relationship File" ;
+    esip:eastBound "-143.884795"^^xsd:float ;
+    esip:endDate "2014-05-01"^^xsd:date ;
+    esip:northBound "65.454475"^^xsd:float ;
+    esip:southBound "64.257854"^^xsd:float ;
+    esip:startDate "2013-06-01"^^xsd:date ;
+    esip:westBound "-148.667164"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:ef2be8f4-0500-4135-9c42-eb73cde6ba97> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-01T02:10:00.278Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-01T02:10:00.278Z" ;
+    dc:identifier "urn:sha:ad4a977a76ffb94a48d169e2063183c65bfdbea273a5d698141cd1ff" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www2.census.gov/geo/tiger/TIGER2014/ADDR/tl_2014_02090_addr.zip" .
+

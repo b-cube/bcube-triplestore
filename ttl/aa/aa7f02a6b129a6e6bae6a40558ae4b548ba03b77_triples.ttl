@@ -1,0 +1,88 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:031acb84-289f-4ba2-8273-205f2c47948c> owl:a foaf:Organization ;
+    foaf:name "" .
+
+<urn:uuid:0a42ec6d-23ff-413b-a92a-be57a2289b2b> bcube:dateCreated "2015-11-05T16:58:42.703Z" ;
+    bcube:hasMetadataRecord <urn:uuid:ab4f6888-10e0-4b0c-8e0f-7b491223b5ad> ;
+    bcube:lastUpdated "2015-11-05T16:58:42.703Z" ;
+    dc:conformsTo <urn:uuid:56da36d2-2ac2-4246-b2c2-4ce532a3711a>,
+        <urn:uuid:7da8eed1-94eb-4f87-8c38-7a40f854ab0e>,
+        <urn:uuid:f5176664-9d36-4422-9dac-d9d9beac8fd1> ;
+    dc:description "U.S. National Oceanic and Atmospheric Administration (NOAA) National Centers for Environmental Prediction (NCEP) Global Forecast System (GFS) numerical weather prediction model 8-day, 3-hourly forecast for the globe at approximately 50-km or 0.5-deg resolution." ;
+    dc:spatial "POLYGON ((-180 -90,-180 90,180 90,180 -90,-180 -90))" ;
+    dcterms:identifier "ncep_global" ;
+    dcterms:publisher <urn:uuid:031acb84-289f-4ba2-8273-205f2c47948c> ;
+    dcterms:title "NOAA/NCEP Global Forecast System (GFS) Atmospheric Model" ;
+    esip:eastBound "180.0"^^xsd:float ;
+    esip:northBound "90.0"^^xsd:float ;
+    esip:southBound "-90.0"^^xsd:float ;
+    esip:westBound "-180.0"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:56da36d2-2ac2-4246-b2c2-4ce532a3711a> bcube:hasType "place" ;
+    bcube:hasValue "Geographic Region > Global Ocean" ;
+    dc:partOf "GCMD Location Keywords" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:7da8eed1-94eb-4f87-8c38-7a40f854ab0e> bcube:hasType "theme" ;
+    bcube:hasValue "air_pressure_at_sea_level",
+        "air_temperature",
+        "eastward_wind",
+        "forecast_period",
+        "forecast_reference_time",
+        "latitude",
+        "longitude",
+        "northward_wind",
+        "precipitation_flux",
+        "relative_humidity",
+        "surface_net_downward_longwave_flux",
+        "surface_net_downward_shortwave_flux",
+        "surface_temperature",
+        "time" ;
+    dc:partOf "CF-1.4" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:ab4f6888-10e0-4b0c-8e0f-7b491223b5ad> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-11-05T16:58:42.703Z" ;
+    bcube:lastUpdated "2015-11-05T16:58:42.703Z" ;
+    bcube:originatedFrom <urn:uuid:f70bfff9-9cca-47f6-a632-557243ea1de7> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:0a42ec6d-23ff-413b-a92a-be57a2289b2b> .
+
+<urn:uuid:f5176664-9d36-4422-9dac-d9d9beac8fd1> bcube:hasType "theme" ;
+    bcube:hasValue "Earth Science > Atmosphere > Atmospheric Pressure > Sea Level Pressure",
+        "Earth Science > Atmosphere > Atmospheric Radiation > Longwave Radiation",
+        "Earth Science > Atmosphere > Atmospheric Radiation > Shortwave Radiation",
+        "Earth Science > Atmosphere > Atmospheric Temperature > Surface Air Temperature",
+        "Earth Science > Atmosphere > Atmospheric Water Vapor > Humidity",
+        "Earth Science > Atmosphere > Atmospheric Winds > Surface Winds",
+        "Earth Science > Atmosphere > Precipitation > Rain",
+        "Earth Science Services > Models > Weather Research/Forecast Models" ;
+    dc:partOf "GCMD Science Keywords" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:f70bfff9-9cca-47f6-a632-557243ea1de7> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-05T16:58:42.703Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-05T16:58:42.703Z" ;
+    dc:identifier "urn:sha:1dd584ff8a7efe6830eb4d8f80d98e1733f2f24ce4ba69b5c7e44722" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://oos.soest.hawaii.edu/pacioos/metadata/fgdc/ncep_global.xml" .
+

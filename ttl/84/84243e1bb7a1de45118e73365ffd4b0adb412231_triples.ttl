@@ -1,0 +1,95 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:1b83f07d-54bf-4cc7-a60d-a5648b59a120> owl:a foaf:Organization ;
+    foaf:name "" .
+
+<urn:uuid:321dda38-e758-4772-ac10-c8266fbbec7b> bcube:hasType "place" ;
+    bcube:hasValue "02090",
+        "County or Equivalent Entity",
+        "Fairbanks North Star",
+        "U.S.",
+        "United States" ;
+    dc:partOf "FIPS Publication 5-2, FIPS Publication 6-4, FIPS Publication 8-6, FIPS Publication 9-1,FIPS Publication55-4" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:b996678b-fac1-4966-9d6e-879c6d93cd8f> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-11-02T15:45:37.07Z" ;
+    bcube:lastUpdated "2015-11-02T15:45:37.07Z" ;
+    bcube:originatedFrom <urn:uuid:e8d11921-0ed0-4e5e-9686-13b535397432> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:cb89e4df-cc6a-493a-b995-07c0d30394f1> .
+
+<urn:uuid:cb89e4df-cc6a-493a-b995-07c0d30394f1> bcube:dateCreated "2015-11-02T15:45:37.07Z" ;
+    bcube:hasMetadataRecord <urn:uuid:b996678b-fac1-4966-9d6e-879c6d93cd8f> ;
+    bcube:lastUpdated "2015-11-02T15:45:37.07Z" ;
+    dc:conformsTo <urn:uuid:321dda38-e758-4772-ac10-c8266fbbec7b>,
+        <urn:uuid:e5262015-c265-4e7f-af16-afeb190a797c>,
+        <urn:uuid:e8d262e0-204b-4839-97a2-7d7ef563a47d> ;
+    dc:description "The TIGER/Line Shapefiles are an extract of selected geographic and cartographic information from the Census MAF/TIGER database. The Census MAF/TIGER database represents a seamless national file with no overlaps or gaps between parts. However, each TIGER/Line Shapefile is designed to stand alone as an independent data set or the shapefiles can be combined to cover the whole nation." ;
+    dc:spatial "POLYGON ((-148.667164 64.257854,-148.667164 65.454475,-143.884795 65.454475,-143.884795 64.257854,-148.667164 64.257854))" ;
+    dcterms:publisher <urn:uuid:1b83f07d-54bf-4cc7-a60d-a5648b59a120> ;
+    dcterms:references <urn:uuid:db123217-c738-4195-a00b-4d510de62e61> ;
+    dcterms:title "TIGER/Line Shapefile, 2008, county, Fairbanks North Star Borough, AK, All Lines" ;
+    esip:eastBound "-143.884795"^^xsd:float ;
+    esip:endDate "2008-07-01"^^xsd:date ;
+    esip:northBound "65.454475"^^xsd:float ;
+    esip:southBound "64.257854"^^xsd:float ;
+    esip:startDate "2008-01-01"^^xsd:date ;
+    esip:westBound "-148.667164"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:db123217-c738-4195-a00b-4d510de62e61> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-02T15:45:37.07Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-02T15:45:37.07Z" ;
+    dc:identifier "urn:sha:1aaef9bb384b16d536c6e36fd08c094781a6174b05c20a650f9aec9a" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www2.census.gov/geo/tiger/TIGER2008/02_ALASKA/02090_Fairbanks_North_Star_Borough/tl_2008_02090_edges.zip" .
+
+<urn:uuid:e5262015-c265-4e7f-af16-afeb190a797c> bcube:hasType "theme" ;
+    bcube:hasValue "boundaries",
+        "inlandWaters",
+        "transportation" ;
+    dc:partOf "ISO 19115 Topic Categories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:e8d11921-0ed0-4e5e-9686-13b535397432> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-02T15:45:37.07Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-02T15:45:37.07Z" ;
+    dc:identifier "urn:sha:54eef82c305aeaeebd871716921d6fee2f1622cbbb318f0906133736" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://meta.geo.census.gov/data/existing/decennial/GEO/GPMB/TIGERline/fe_2008/edges/tl_2008_02090_edges_url.shp.xml" .
+
+<urn:uuid:e8d262e0-204b-4839-97a2-7d7ef563a47d> bcube:hasType "theme" ;
+    bcube:hasValue "Address Range",
+        "County or equivalent entity",
+        "Feature",
+        "Hydrography",
+        "Linear",
+        "Road Feature",
+        "Roads",
+        "Street Centerline" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+

@@ -1,0 +1,97 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:0ed5b272-aa8a-4965-aeaf-3f5bdf7cf238> owl:a foaf:Organization ;
+    foaf:name "" .
+
+<urn:uuid:2d15073b-afd6-4750-9e8f-861b828de2b2> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-11-06T13:04:16.282Z" ;
+    bcube:lastUpdated "2015-11-06T13:04:16.282Z" ;
+    bcube:originatedFrom <urn:uuid:3498a1b5-5b3f-435d-ac3a-abcc3a7b95cd> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:adb78af9-ef1d-4966-a35b-a85124cc3138> .
+
+<urn:uuid:3498a1b5-5b3f-435d-ac3a-abcc3a7b95cd> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-06T13:04:16.282Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-06T13:04:16.282Z" ;
+    dc:identifier "urn:sha:07a0e7518dd1efdbd823ef9d806a8365d86b1075359ffbf07f5021d9" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://meta.geo.census.gov/data/existing/decennial/GEO/GPMB/TIGERline/TL2012/FGDC/facesah/tl_2012_02290_facesah.dbf.xml" .
+
+<urn:uuid:49d23fa9-1bfd-4bf8-9f3f-962575ec2c68> bcube:hasType "place" ;
+    bcube:hasValue "02290",
+        "County or Equivalent Entity",
+        "U.S.",
+        "United States",
+        "Yukon-Koyukuk" ;
+    dc:partOf "ANSI INCITS 38:2009 (Formerly FIPS 5-2), ANSI INCITS 31:2009 (Formerly FIPS 6-4),ANSI INCITS 454:2009 (Formerly FIPS 8-6), ANSI INCITS 455:2009(Formerly FIPS 9-1), ANSI INCITS 446:2008 (Geographic Names Information System (GNIS))" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:4e9f8eb5-6f7a-4db5-a745-400b9f2d68b2> bcube:hasType "theme" ;
+    bcube:hasValue "Boundaries",
+        "InlandWaters" ;
+    dc:partOf "ISO 19115 Topic Categories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:adb78af9-ef1d-4966-a35b-a85124cc3138> bcube:dateCreated "2015-11-06T13:04:16.282Z" ;
+    bcube:hasMetadataRecord <urn:uuid:2d15073b-afd6-4750-9e8f-861b828de2b2> ;
+    bcube:lastUpdated "2015-11-06T13:04:16.282Z" ;
+    dc:conformsTo <urn:uuid:49d23fa9-1bfd-4bf8-9f3f-962575ec2c68>,
+        <urn:uuid:4e9f8eb5-6f7a-4db5-a745-400b9f2d68b2>,
+        <urn:uuid:b3a968d3-73ce-4af0-9b26-0631118f68e0> ;
+    dc:description "The TIGER/Line shapefiles and related database files (.dbf) are an extract of selected geographic and cartographic information from the U.S. Census Bureau's Master Address File / Topologically Integrated Geographic Encoding and Referencing (MAF/TIGER) Database (MTDB). The MTDB represents a seamless national file with no overlaps or gaps between parts, however, each TIGER/Line shapefile is designed to stand alone as an independent data set, or they can be combined to cover the entire nation. The Topological Faces / Area Hydrography Relationship File (FACESAH.dbf) contains a record for each face / area hydrography feature relationship. Face refers to the areal (polygon) topological primitives that make up MTDB. A face is bounded by one or more edges; its boundary includes only the edges that separate it from other faces, not any interior edges contained within the area of the face. The face to which a record in the Topological Faces / Area Hydrography Relationship File (FACESAH.dbf) applies can be determined by linking to the Topological Faces Shapefile (FACES.shp) using the permanent topological face identifier (TFID) attribute. The area hydrography feature to which a record in the Topological Faces / Area Hydrography Relationship File (FACESAH.dbf) applies can be determined by linking to the Area Hydrography Shapefile (AREAWATER.shp) using the area hydrography identifier (HYDROID) attribute. A face may be part of multiple area water features. An area water feature may consist of multiple faces." ;
+    dc:spatial "POLYGON ((-161.047821 61.945454,-161.047821 68.507297,-141.00246 68.507297,-141.00246 61.945454,-161.047821 61.945454))" ;
+    dcterms:publisher <urn:uuid:0ed5b272-aa8a-4965-aeaf-3f5bdf7cf238> ;
+    dcterms:references <urn:uuid:e8ca778f-b9da-4ffe-930d-ff43545b8c1a> ;
+    dcterms:title "TIGER/Line Shapefile, 2012, county, Yukon-Koyukuk Census Area, AK, Current Topological Faces-Area Hydrography Relationship File" ;
+    esip:eastBound "-141.00246"^^xsd:float ;
+    esip:endDate "2012-06-01"^^xsd:date ;
+    esip:northBound "68.507297"^^xsd:float ;
+    esip:southBound "61.945454"^^xsd:float ;
+    esip:startDate "2011-08-01"^^xsd:date ;
+    esip:westBound "-161.047821"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:b3a968d3-73ce-4af0-9b26-0631118f68e0> bcube:hasType "theme" ;
+    bcube:hasValue "Area hydrography identifier",
+        "County ANSI Code",
+        "County FIPS Code",
+        "County or equivalent entity",
+        "Hydrography",
+        "Land/water flag",
+        "Permanent face ID",
+        "State ANSI Code",
+        "State FIPS Code",
+        "Table",
+        "Topological Faces" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:e8ca778f-b9da-4ffe-930d-ff43545b8c1a> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-06T13:04:16.282Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-06T13:04:16.282Z" ;
+    dc:identifier "urn:sha:5834d607ba334cbf9372a76d1dcb53c132da01be801f37703fc350cb" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www2.census.gov/geo/tiger/TIGER2012/FACESAH/tl_2012_02290_facesah.zip" .
+

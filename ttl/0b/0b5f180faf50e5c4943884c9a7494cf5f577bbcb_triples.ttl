@@ -1,0 +1,83 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:2c6ce818-51d9-4c58-90b5-46e0123715c5> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-08-11T10:52:21.076Z" ;
+    bcube:lastUpdated "2015-08-11T10:52:21.076Z" ;
+    bcube:originatedFrom <urn:uuid:d482a861-f55a-438a-94ae-22b45533838c> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:a29852cf-7cb5-4621-b68f-941c91ec318c> .
+
+<urn:uuid:8f1bfba6-c0e7-4190-9188-8ed3465aaf92> owl:a foaf:Organization ;
+    foaf:name "Montana Department of Transportation" .
+
+<urn:uuid:a0d1ef3b-afee-4963-9e11-2f047cee9213> bcube:hasType "place" ;
+    bcube:hasValue "Montana" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:a29852cf-7cb5-4621-b68f-941c91ec318c> bcube:dateCreated "2015-08-11T10:52:21.076Z" ;
+    bcube:hasMetadataRecord <urn:uuid:2c6ce818-51d9-4c58-90b5-46e0123715c5> ;
+    bcube:lastUpdated "2015-08-11T10:52:21.076Z" ;
+    dc:conformsTo <urn:uuid:a0d1ef3b-afee-4963-9e11-2f047cee9213>,
+        <urn:uuid:a5537d13-d7e4-4001-beee-ade60d4322db>,
+        <urn:uuid:d6acd271-c695-4f8c-94a7-a3d2dcb66a95> ;
+    dc:description "Locations of parking and rest areas along Montana's On-system routes (Interstate, non-Interstate National Highway, and Primary highways). Dataset includes city and state maintained rest areas and year-round parking areas. Rest areas are attributed with seasonal and year-round availability." ;
+    dc:spatial "POLYGON ((-115.901401 44.509772,-115.901401 49.018933,-103.983418 49.018933,-103.983418 44.509772,-115.901401 44.509772))" ;
+    dcterms:publisher <urn:uuid:8f1bfba6-c0e7-4190-9188-8ed3465aaf92> ;
+    dcterms:references <urn:uuid:d3d4b925-5d2f-45cd-9451-873fad033954> ;
+    dcterms:title "Montana Rest Areas" ;
+    esip:eastBound "-103.983418"^^xsd:float ;
+    esip:northBound "49.018933"^^xsd:float ;
+    esip:southBound "44.509772"^^xsd:float ;
+    esip:startDate "2008-01-01"^^xsd:date ;
+    esip:westBound "-115.901401"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:a5537d13-d7e4-4001-beee-ade60d4322db> bcube:hasType "theme" ;
+    bcube:hasValue "structure",
+        "transportation" ;
+    dc:partOf "ISO 19115 Topic Category" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:d3d4b925-5d2f-45cd-9451-873fad033954> dcterms:references <urn:uuid:df20c9c8-5696-4b58-978b-1a989483d2aa> ;
+    owl:a bibo:WebPage .
+
+<urn:uuid:d482a861-f55a-438a-94ae-22b45533838c> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-11T10:52:21.076Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-11T10:52:21.076Z" ;
+    dc:identifier "urn:sha:514f8e41fe88df8ce11a79dd28ab4cbb045f4faef9d40db852521525" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://mslapps.mt.gov/Geographic_Information/Data/DataList/datalist_MetadataDetailRaw.aspx?did={6D40F192-7062-4978-8F84-8B2DBE7F123F}" .
+
+<urn:uuid:d6acd271-c695-4f8c-94a7-a3d2dcb66a95> bcube:hasType "stratum" ;
+    bcube:hasValue "parking areas" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:df20c9c8-5696-4b58-978b-1a989483d2aa> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-11T10:52:21.076Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-11T10:52:21.076Z" ;
+    dc:identifier "urn:sha:b72c3225efa8c6e7690c359e84368af42fe7cf19cec267aff58f3b1d" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www.mdt.mt.gov/other/traffcount/external/gis_datasets/rest_areas.zip" .
+

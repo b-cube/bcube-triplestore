@@ -1,0 +1,88 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:115d99c9-2fc5-452d-9921-53ed856427e8> owl:a foaf:Organization ;
+    foaf:name "" .
+
+<urn:uuid:1b1b79ce-7f62-4733-b1b0-7c7c5c2a949a> bcube:dateCreated "2014-07-31T06:57:01.531Z" ;
+    bcube:hasMetadataRecord <urn:uuid:7ac64680-e449-4680-8d4c-d0647115af7c> ;
+    bcube:lastUpdated "2014-07-31T06:57:01.531Z" ;
+    dc:conformsTo <urn:uuid:74b0430d-08ee-4c9d-b1d4-4a3a4ffbfdf3>,
+        <urn:uuid:8494acc3-af68-4f69-85e6-58d9c0d74fbb> ;
+    dc:description "Dataset shows measurements made by selected ship sensors on the NOAA ship Okeanos Explorer during expeditions from 2008 to the present time. These cruises were sponsored by the National Oceanic and Atmospheric Administration (NOAA) Office of Ocean Exploration and Research. Measurements include ship's position and heading, wind speed and direction, air temperature, etc." ;
+    dc:spatial "POLYGON ((-180.0 0.276822,-180.0 48.61784,180.0 48.61784,180.0 0.276822,-180.0 0.276822))" ;
+    dcterms:publisher <urn:uuid:115d99c9-2fc5-452d-9921-53ed856427e8> ;
+    dcterms:references <urn:uuid:ab6a4b87-331b-455f-a2c8-9fc03c28483c> ;
+    dcterms:title "Ship Sensor Observations from missions of the NOAA ship Okeanos Explorer from 2008 to present." ;
+    esip:eastBound "180.0"^^xsd:float ;
+    esip:northBound "48.61784"^^xsd:float ;
+    esip:southBound "0.276822"^^xsd:float ;
+    esip:startDate "2008-01-01"^^xsd:date ;
+    esip:westBound "-180.0"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:59b26e9b-ea5d-4ba2-bc0b-535ad10fd252> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2014-07-31T06:57:01.531Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2014-07-31T06:57:01.531Z" ;
+    dc:identifier "urn:sha:c5e3cd78167d40b99911844304234948656bbf8f76bd21a720c2ebc6" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www.ncddc.noaa.gov/arcgis/rest/services/OceanExploration/OE_OkeanosShipObs/MapServer" .
+
+<urn:uuid:74b0430d-08ee-4c9d-b1d4-4a3a4ffbfdf3> bcube:hasType "theme" ;
+    bcube:hasValue "air temperature",
+        "barometric pressure",
+        "bottom depths",
+        "meteorology",
+        "relative humidity",
+        "salinity",
+        "sea surface temperature",
+        "water temperature",
+        "wind direction",
+        "wind speed" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:7ac64680-e449-4680-8d4c-d0647115af7c> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2014-07-31T06:57:01.531Z" ;
+    bcube:lastUpdated "2014-07-31T06:57:01.531Z" ;
+    bcube:originatedFrom <urn:uuid:ba2fdb17-d61d-475d-91ec-685819595395> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:1b1b79ce-7f62-4733-b1b0-7c7c5c2a949a> .
+
+<urn:uuid:8494acc3-af68-4f69-85e6-58d9c0d74fbb> bcube:hasType "theme" ;
+    bcube:hasValue "climatologyMeteorologyAtmosphere",
+        "oceans" ;
+    dc:partOf "ISO 19115 Topic Category" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:ab6a4b87-331b-455f-a2c8-9fc03c28483c> dcterms:references <urn:uuid:59b26e9b-ea5d-4ba2-bc0b-535ad10fd252> ;
+    owl:a bibo:WebPage .
+
+<urn:uuid:ba2fdb17-d61d-475d-91ec-685819595395> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2014-07-31T06:57:01.531Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2014-07-31T06:57:01.531Z" ;
+    dc:identifier "urn:sha:02cd9b18c36e816fd848ea35a853796c74ad777cbcaf52e5ba19e7f4" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "https://data.noaa.gov/harvest/object/f65770e5-9925-4f59-8270-9da1f8ac6628/original" .
+

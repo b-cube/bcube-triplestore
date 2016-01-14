@@ -1,0 +1,75 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:281bee30-6568-4d6b-832a-5c66dbc9969c> bcube:hasType "theme" ;
+    bcube:hasValue "Boundaries",
+        "Boundary",
+        "Flood",
+        "Mine",
+        "Operable Unit",
+        "Superfund" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:4b2dd3af-fcc9-4168-b37d-fbb1cbbf5f7c> bcube:hasType "place" ;
+    bcube:hasValue "Butte",
+        "MT",
+        "Montana",
+        "USA",
+        "United States" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:5711d14e-0c93-4c59-b1b2-93521e8b6b54> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-08-11T15:19:33.427Z" ;
+    bcube:lastUpdated "2015-08-11T15:19:33.427Z" ;
+    bcube:originatedFrom <urn:uuid:b3692a49-d083-4453-aef9-9ad72cf4da0c> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:951690d1-198a-41f4-904e-3f8918e401af> .
+
+<urn:uuid:951690d1-198a-41f4-904e-3f8918e401af> bcube:dateCreated "2015-08-11T15:19:33.427Z" ;
+    bcube:hasMetadataRecord <urn:uuid:5711d14e-0c93-4c59-b1b2-93521e8b6b54> ;
+    bcube:lastUpdated "2015-08-11T15:19:33.427Z" ;
+    dc:conformsTo <urn:uuid:281bee30-6568-4d6b-832a-5c66dbc9969c>,
+        <urn:uuid:4b2dd3af-fcc9-4168-b37d-fbb1cbbf5f7c>,
+        <urn:uuid:c8d401d5-dab4-4b26-9afe-96e93ce4ecce> ;
+    dc:description "These data were formerly available from the Montana State Library web site but were removed because they are potentially out of date. Please contact the Federal Superfund Bureau of the Montana Department of Environmental Quality if you want these data so they may tell you if newer or better data are available. If the data are not available from the Department of Environmental Quality, you may request a copy from the Montana State Library data archive. The actual mine flooding operable unit study area. Created from a map provided by Ginette Abdo, MBMG. In most cases, the boundary lines were created using section lines from the /gis3/24k/uspls coverage. The other lines were added with the terminal cursor from a 1:15000 map. The entire proposed study area is outlined in /gis2/butte/mflgarea. The proposal was not actually used for fieldwork." ;
+    dc:spatial "POLYGON ((-112.6101 45.9742012,-112.6101 46.0499992,-112.459297 46.0499992,-112.459297 45.9742012,-112.6101 45.9742012))" ;
+    dcterms:publisher <urn:uuid:cad31cef-42d2-4896-bbe8-9c2ca6bca6f3> ;
+    dcterms:title "Butte Mine Flooding Operable Unit Study Area, 1993" ;
+    esip:eastBound "-112.459297"^^xsd:float ;
+    esip:northBound "46.0499992"^^xsd:float ;
+    esip:southBound "45.9742012"^^xsd:float ;
+    esip:startDate "1993-08-15"^^xsd:date ;
+    esip:westBound "-112.6101"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:b3692a49-d083-4453-aef9-9ad72cf4da0c> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-11T15:19:33.427Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-11T15:19:33.427Z" ;
+    dc:identifier "urn:sha:fac085458acad3136286485fa0c1c77595b09eb8c1db3ed7298fe315" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://mslapps.mt.gov/Geographic_Information/Data/DataList/datalist_MetadataDetailRaw.aspx?did={220656C3-F0C6-45F8-9750-109F890BF4CC}" .
+
+<urn:uuid:c8d401d5-dab4-4b26-9afe-96e93ce4ecce> bcube:hasType "theme" ;
+    bcube:hasValue "environment" ;
+    dc:partOf "ISO 19115 Topic Category" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:cad31cef-42d2-4896-bbe8-9c2ca6bca6f3> owl:a foaf:Organization ;
+    foaf:name "Montana State Library" .
+

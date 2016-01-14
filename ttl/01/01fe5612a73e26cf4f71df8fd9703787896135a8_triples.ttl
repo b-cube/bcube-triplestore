@@ -1,0 +1,71 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:35f04b9e-0f85-42fd-a09b-de830b4a1405> owl:a foaf:Organization ;
+    foaf:name "USDA - Forest Service" .
+
+<urn:uuid:7cdbc905-49ad-46d3-abd2-f184c246da76> bcube:hasType "theme" ;
+    bcube:hasValue "Ecomap",
+        "Ecoregion",
+        "Potential Natural Vegetation",
+        "Subsection",
+        "Vegetation" ;
+    dc:partOf "ECOMAP_2007" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:93bd58ac-dde4-4457-86a2-42cb4a37c305> bcube:hasType "theme" ;
+    bcube:hasValue "biota" ;
+    dc:partOf "ISO 19115 Topic Categories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:db36c57e-7403-45c0-8882-88de6f58a7b8> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-10-18T01:39:02.004Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-10-18T01:39:02.004Z" ;
+    dc:identifier "urn:sha:8d15936714123b71028992f52fd5073e28e4cae72ffdd9722399b717" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://data.fs.usda.gov/geodata/edw/edw_resources/meta/S_USA.PNV_2000Subsections.xml" .
+
+<urn:uuid:df856257-051c-4ca7-a0ce-8a84ebe282ae> bcube:hasType "place" ;
+    bcube:hasValue "United States" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:ed5b6ae5-20e3-4a46-958f-5af862ed5515> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-10-18T01:39:02.004Z" ;
+    bcube:lastUpdated "2015-10-18T01:39:02.004Z" ;
+    bcube:originatedFrom <urn:uuid:db36c57e-7403-45c0-8882-88de6f58a7b8> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:f613acf6-3a31-4b2b-8f5d-13c1a20e875b> .
+
+<urn:uuid:f613acf6-3a31-4b2b-8f5d-13c1a20e875b> bcube:dateCreated "2015-10-18T01:39:02.004Z" ;
+    bcube:hasMetadataRecord <urn:uuid:ed5b6ae5-20e3-4a46-958f-5af862ed5515> ;
+    bcube:lastUpdated "2015-10-18T01:39:02.004Z" ;
+    dc:conformsTo <urn:uuid:7cdbc905-49ad-46d3-abd2-f184c246da76>,
+        <urn:uuid:93bd58ac-dde4-4457-86a2-42cb4a37c305>,
+        <urn:uuid:df856257-051c-4ca7-a0ce-8a84ebe282ae> ;
+    dc:description "This data set includes polygons for ecological subsections within the conterminous United States. This data set contains regional geographic delineations for analysis of ecological relationships across ecological units. These delineations show the relationships between ECOMAP 2007 and potential natural vegetation groups developed through coarse-scale mapping for wildland fire and fuel management (USDA-FS, 2002)." ;
+    dc:spatial "POLYGON ((-124.762615 24.530689,-124.762615 49.386392,-66.798038 49.386392,-66.798038 24.530689,-124.762615 24.530689))" ;
+    dcterms:publisher <urn:uuid:35f04b9e-0f85-42fd-a09b-de830b4a1405> ;
+    dcterms:title "S_USA.PNV_2000Subsections" ;
+    esip:eastBound "-66.798038"^^xsd:float ;
+    esip:northBound "49.386392"^^xsd:float ;
+    esip:southBound "24.530689"^^xsd:float ;
+    esip:westBound "-124.762615"^^xsd:float ;
+    owl:a dcat:Dataset .
+

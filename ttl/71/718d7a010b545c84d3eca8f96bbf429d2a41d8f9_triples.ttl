@@ -1,0 +1,95 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:28032dcc-9dd2-4404-b4da-a13da4643a69> bcube:hasType "project" ;
+    bcube:hasValue "NOAA NGDC" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:2ba8f17b-3621-45d2-837d-36cbe838ba7c> bcube:hasType "theme" ;
+    bcube:hasValue "Earth science",
+        "oceans" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:3236685a-5bae-4c1b-8b5e-c0c087a7b419> bcube:hasType "theme" ;
+    bcube:hasValue "latitude",
+        "longitude" ;
+    dc:partOf "CF" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:5abe4c8f-593a-4cf1-ab7a-9267cb698fba> bcube:hasValue "geoscientificInformation" ;
+    dc:partOf "IsoTopicCategories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:675dbe49-eb33-4fb7-bf10-c873117d6ca2> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-10T00:55:09.268Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-10T00:55:09.268Z" ;
+    dc:identifier "urn:sha:b199dc396fcc39fcf29a3e2763b48fb08d34773dd04b4d26cd471021" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://oos.soest.hawaii.edu/erddap/griddap/etopo1_ice.graph" .
+
+<urn:uuid:9b6769ff-65bf-417a-9aa0-81f525efac4e> a "ISO 19115:2003/19139" ;
+    bcube:dateCreated "2015-08-10T00:55:09.268Z" ;
+    bcube:lastUpdated "2015-08-10T00:55:09.268Z" ;
+    bcube:originatedFrom <urn:uuid:a3e40b6f-149c-4d96-9104-067ba34c5e27> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:db0b6b5e-18f1-4b84-bb5a-ce5fadf3b1c8> .
+
+<urn:uuid:a3e40b6f-149c-4d96-9104-067ba34c5e27> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-10T00:55:09.268Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-10T00:55:09.268Z" ;
+    dc:identifier "urn:sha:70aa53cd9a0341f9156d27eb0a370b18b412c99032f21661e34fd522" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://oos.soest.hawaii.edu/erddap/griddap/etopo1_ice.iso19115" .
+
+<urn:uuid:db0b6b5e-18f1-4b84-bb5a-ce5fadf3b1c8> bcube:dateCreated "2015-08-10T00:55:09.268Z" ;
+    bcube:hasMetadataRecord <urn:uuid:9b6769ff-65bf-417a-9aa0-81f525efac4e> ;
+    bcube:lastUpdated "2015-08-10T00:55:09.268Z" ;
+    dc:conformsTo <urn:uuid:28032dcc-9dd2-4404-b4da-a13da4643a69>,
+        <urn:uuid:2ba8f17b-3621-45d2-837d-36cbe838ba7c>,
+        <urn:uuid:3236685a-5bae-4c1b-8b5e-c0c087a7b419>,
+        <urn:uuid:5abe4c8f-593a-4cf1-ab7a-9267cb698fba> ;
+    dc:description "ETOPO1 is a 1 arc-minute global relief model of Earth's surface that integrates land topography and ocean bathymetry. It was built from numerous global and regional data sets, and is available in \"Ice Surface\" (top of Antarctic and Greenland ice sheets) and \"Bedrock\" (base of the ice sheets) versions." ;
+    dc:identifier "etopo1_ice" ;
+    dc:spatial "POLYGON ((-180 -90,-180 90,180 90,180 -90,-180 -90))" ;
+    dcterms:references <urn:uuid:675dbe49-eb33-4fb7-bf10-c873117d6ca2>,
+        <urn:uuid:f6ce2ba7-77a8-4b46-98da-e079e396ca32> ;
+    dcterms:title "ETOPO1 Global Surface Relief: Ice Surface" ;
+    esip:eastBound "180.0"^^xsd:float ;
+    esip:northBound "90.0"^^xsd:float ;
+    esip:southBound "-90.0"^^xsd:float ;
+    esip:westBound "-180.0"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:f6ce2ba7-77a8-4b46-98da-e079e396ca32> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-10T00:55:09.268Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-10T00:55:09.268Z" ;
+    dc:identifier "urn:sha:e6804019c7215da492e9a4454550f754a65b13a542fa72facb5ac220" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://oos.soest.hawaii.edu/erddap/griddap/etopo1_ice.html" .
+

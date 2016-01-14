@@ -1,0 +1,104 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:166aefb4-b630-4784-a025-6566480e448c> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-11-06T02:42:31.923Z" ;
+    bcube:lastUpdated "2015-11-06T02:42:31.923Z" ;
+    bcube:originatedFrom <urn:uuid:21002660-5f07-46f8-b68c-bf8a260caaf7> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:c9a33d48-4f37-4ea9-88f6-5ba7238aa7a2> .
+
+<urn:uuid:21002660-5f07-46f8-b68c-bf8a260caaf7> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-06T02:42:31.923Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-06T02:42:31.923Z" ;
+    dc:identifier "urn:sha:03633d6603942c8e8a7c74e78440261fa28488699ca2ab48c136fa88" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://woodshole.er.usgs.gov/pubs/sim2840/DATA/slope/slopeimage/slopeimage.tif.xml" .
+
+<urn:uuid:2995a347-fcb5-4a0b-a75a-5708078289e1> owl:a foaf:Organization ;
+    foaf:name "U.S. Geological Survey, Coastal and Marine Geology Program" .
+
+<urn:uuid:4ba13fb0-dfb6-4f32-8cde-0b12c56d2b2f> bcube:hasType "place" ;
+    bcube:hasValue "Atlantic Ocean",
+        "Boston",
+        "EEZ",
+        "Gulf of Maine",
+        "MA",
+        "Massachusetts",
+        "SBNMS",
+        "Shallow EEZ",
+        "Stellwagen Bank National Marine Sanctuary" ;
+    dc:partOf "General" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:5887f1d9-5870-4e90-bb49-86c502021449> bcube:hasType "theme" ;
+    bcube:hasValue "elevation",
+        "geoscientificInformation",
+        "imageryBaseMapsEarthCover",
+        "oceans and estuaries" ;
+    dc:partOf "ISO 19115 Topic Category" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:86d3a1a8-aecb-44fe-96f1-7f472c6720ee> bcube:hasType "theme" ;
+    bcube:hasValue "CMGP",
+        "Coastal and Marine Geology Program",
+        "GIS",
+        "GeoTIFF image",
+        "Geographic Information Systems",
+        "U.S. Geological Survey",
+        "USGS",
+        "WHSC",
+        "Woods Hole Science Center",
+        "bathymetry",
+        "sea floor topography",
+        "slope",
+        "topographic data" ;
+    dc:partOf "General" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:c9a33d48-4f37-4ea9-88f6-5ba7238aa7a2> bcube:dateCreated "2015-11-06T02:42:31.923Z" ;
+    bcube:hasMetadataRecord <urn:uuid:166aefb4-b630-4784-a025-6566480e448c> ;
+    bcube:lastUpdated "2015-11-06T02:42:31.923Z" ;
+    dc:conformsTo <urn:uuid:4ba13fb0-dfb6-4f32-8cde-0b12c56d2b2f>,
+        <urn:uuid:5887f1d9-5870-4e90-bb49-86c502021449>,
+        <urn:uuid:86d3a1a8-aecb-44fe-96f1-7f472c6720ee> ;
+    dc:description "The slope analysis of the Stellwagen Bank National Marine Sanctuary region off Boston, Massachusetts was performed using the slope tool in the Spatial Analyst extension in ArcGIS 8.3. The slope tool calculates the maximum rate of change in elevation over a pixel and its eight neighbors for a surface. The slope calculations were carried out for the bathymetric grids of the seafloor of this region. This raster data set was then converted to a GeoTIFF image." ;
+    dc:spatial "POLYGON ((-70.600077 42.083366,-70.600077 42.800106,-70.033436 42.800106,-70.033436 42.083366,-70.600077 42.083366))" ;
+    dcterms:publisher <urn:uuid:2995a347-fcb5-4a0b-a75a-5708078289e1> ;
+    dcterms:references <urn:uuid:ccd2f389-fdd3-48ba-b801-c88426c53d24> ;
+    dcterms:title "slopeimage.tif: GeoTIFF image of sea floor slope analysis for the Stellwagen Bank National Marine Sanctuary region." ;
+    esip:eastBound "-70.033436"^^xsd:float ;
+    esip:northBound "42.800106"^^xsd:float ;
+    esip:southBound "42.083366"^^xsd:float ;
+    esip:startDate "2005-01-01"^^xsd:date ;
+    esip:westBound "-70.600077"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:ccd2f389-fdd3-48ba-b801-c88426c53d24> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-06T02:42:31.923Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-06T02:42:31.923Z" ;
+    dc:identifier "urn:sha:1dce8c466acd9aef5168f12e2ae5781a5703daa600800de27b547573" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://pubs.usgs.gov/sim/2005/2840/data/slope/slopeimage/slopeimage.zip" .
+

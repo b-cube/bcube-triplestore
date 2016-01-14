@@ -1,0 +1,93 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:832601af-e662-4944-8290-8c6105659da4> owl:a foaf:Organization ;
+    foaf:name "" .
+
+<urn:uuid:93edc981-dc91-43e2-a34e-f19e79f3a0c2> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-07-17T21:25:00.823Z" ;
+    bcube:lastUpdated "2015-07-17T21:25:00.823Z" ;
+    bcube:originatedFrom <urn:uuid:dd9d9f39-1683-4bfa-81df-ad959618583b> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:e8dc2db4-58ea-4cc3-baf2-6edb5a17b5b5> .
+
+<urn:uuid:bb79367c-8db0-47c1-b303-d7dd884f2c48> bcube:hasType "theme" ;
+    bcube:hasValue "boundaries",
+        "economy",
+        "oceans",
+        "transportation" ;
+    dc:partOf "ISO 19115 Topic Categories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:d4bc642d-ae4a-44fe-9b04-9d99a603fd3f> bcube:hasType "theme" ;
+    bcube:hasValue "fairways",
+        "shipping" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:d71b1bf2-c05a-4612-ad9c-0f4c0d259397> dcterms:references <urn:uuid:e0f1e39a-0ae1-43c5-b496-1884d0806abf> ;
+    owl:a bibo:WebPage .
+
+<urn:uuid:dd9d9f39-1683-4bfa-81df-ad959618583b> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-07-17T21:25:00.823Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-07-17T21:25:00.823Z" ;
+    dc:identifier "urn:sha:d2669b84041ca2dd3814571fb179604f169e6c3d764a49a5fd00b762" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "https://catalog.data.gov/harvest/object/05e6d32e-003a-4fc5-a922-096762f40d06/original" .
+
+<urn:uuid:e0f1e39a-0ae1-43c5-b496-1884d0806abf> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-07-17T21:25:00.823Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-07-17T21:25:00.823Z" ;
+    dc:identifier "urn:sha:7219aab77d6e6ed393d74776f00016316fdaf133067934278bde9f8a" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://service.ncddc.noaa.gov/website/google_maps/FGB/mapsFGB.htm" .
+
+<urn:uuid:e8dc2db4-58ea-4cc3-baf2-6edb5a17b5b5> bcube:dateCreated "2015-07-17T21:25:00.823Z" ;
+    bcube:hasMetadataRecord <urn:uuid:93edc981-dc91-43e2-a34e-f19e79f3a0c2> ;
+    bcube:lastUpdated "2015-07-17T21:25:00.823Z" ;
+    dc:conformsTo <urn:uuid:bb79367c-8db0-47c1-b303-d7dd884f2c48>,
+        <urn:uuid:d4bc642d-ae4a-44fe-9b04-9d99a603fd3f>,
+        <urn:uuid:f1f532af-fbdc-4021-9f40-bd626f5fc980> ;
+    dc:description "Polygon data for all major shipping lanes associated with all ports in the Gulf of Mexico are presented. These layers were modified from GIS data acquired from the U. S. Department of the Interior Bureau of Ocean Energy Management (BOEM) website. Although file description reports are available, no FGDC-compliant metadata are available for the original files from BOEM. The current layers are non-projected with coordinates in decimal degrees." ;
+    dc:spatial "POLYGON ((-97.268097 25.466698,-97.268097 30.665301,-82.306702 30.665301,-82.306702 25.466698,-97.268097 25.466698))" ;
+    dcterms:publisher <urn:uuid:832601af-e662-4944-8290-8c6105659da4> ;
+    dcterms:references <urn:uuid:d71b1bf2-c05a-4612-ad9c-0f4c0d259397> ;
+    dcterms:title "Shipping Fairways in the Gulf of Mexico, from BOEM" ;
+    esip:eastBound "-82.306702"^^xsd:float ;
+    esip:northBound "30.665301"^^xsd:float ;
+    esip:southBound "25.466698"^^xsd:float ;
+    esip:startDate "2013-03-15"^^xsd:date ;
+    esip:westBound "-97.268097"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:f1f532af-fbdc-4021-9f40-bd626f5fc980> bcube:hasType "place" ;
+    bcube:hasValue "Alabama",
+        "Florida",
+        "Gulf of Mexico",
+        "Louisiana",
+        "Mississippi",
+        "Texas" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+

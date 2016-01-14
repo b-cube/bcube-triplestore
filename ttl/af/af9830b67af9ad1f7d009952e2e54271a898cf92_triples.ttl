@@ -1,0 +1,97 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:38cd3b58-01af-43a7-9187-9f3c464b156f> bcube:hasType "theme" ;
+    bcube:hasValue "Area hydrography identifier",
+        "County ANSI Code",
+        "County FIPS Code",
+        "County or equivalent entity",
+        "Hydrography",
+        "Land/water flag",
+        "Permanent face ID",
+        "State ANSI Code",
+        "State FIPS Code",
+        "Table",
+        "Topological Faces" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:47baa481-e4d5-46e6-a920-06f729bfb2e5> bcube:hasType "place" ;
+    bcube:hasValue "01017",
+        "Chambers",
+        "County or Equivalent Entity",
+        "U.S.",
+        "United States" ;
+    dc:partOf "FIPS Publication 5-2, FIPS Publication 6-4, FIPS Publication 8-6, FIPS Publication 9-1" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:598ec3c2-804d-4cb3-a815-be97d0cd9984> bcube:hasType "theme" ;
+    bcube:hasValue "boundaries",
+        "inlandWaters" ;
+    dc:partOf "ISO 19115 Topic Categories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:640c6529-3359-459c-b9ce-cdfdf14b8eb1> owl:a foaf:Organization ;
+    foaf:name "" .
+
+<urn:uuid:65fc5031-14a7-4c69-8518-662749f209a7> bcube:dateCreated "2015-11-08T06:47:23.419Z" ;
+    bcube:hasMetadataRecord <urn:uuid:73cb126f-7107-4662-a243-a3a7bcf689cc> ;
+    bcube:lastUpdated "2015-11-08T06:47:23.419Z" ;
+    dc:conformsTo <urn:uuid:38cd3b58-01af-43a7-9187-9f3c464b156f>,
+        <urn:uuid:47baa481-e4d5-46e6-a920-06f729bfb2e5>,
+        <urn:uuid:598ec3c2-804d-4cb3-a815-be97d0cd9984> ;
+    dc:description "The TIGER/Line relationship files are an extract of selected geographic information from the Census MAF/TIGER database. Each TIGER/Line relationship file is designed to stand alone as an independent data set or can be used jointly with the shapefiles." ;
+    dc:spatial "POLYGON ((-85.593653 32.72853,-85.593653 33.109038,-85.122189 33.109038,-85.122189 32.72853,-85.593653 32.72853))" ;
+    dcterms:publisher <urn:uuid:640c6529-3359-459c-b9ce-cdfdf14b8eb1> ;
+    dcterms:references <urn:uuid:f9711fe2-3571-4ab9-b6f3-77325ace44c0> ;
+    dcterms:title "TIGER/Line Shapefile, 2007, county, Chambers County, Topological Faces-Area Hydrography" ;
+    esip:eastBound "-85.122189"^^xsd:float ;
+    esip:endDate "2007-07-01"^^xsd:date ;
+    esip:northBound "33.109038"^^xsd:float ;
+    esip:southBound "32.72853"^^xsd:float ;
+    esip:startDate "2007-01-01"^^xsd:date ;
+    esip:westBound "-85.593653"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:73cb126f-7107-4662-a243-a3a7bcf689cc> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-11-08T06:47:23.419Z" ;
+    bcube:lastUpdated "2015-11-08T06:47:23.419Z" ;
+    bcube:originatedFrom <urn:uuid:abc80e91-481f-4528-831e-debbf98870c7> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:65fc5031-14a7-4c69-8518-662749f209a7> .
+
+<urn:uuid:abc80e91-481f-4528-831e-debbf98870c7> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-08T06:47:23.419Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-08T06:47:23.419Z" ;
+    dc:identifier "urn:sha:17a0f3f6db53b0e5223e973b3894323c89f83fb490100bd205f4649c" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://meta.geo.census.gov/data/existing/decennial/GEO/GPMB/TIGERline/fe_2007/facesah/fe_2007_01017_facesah_url.dbf.xml" .
+
+<urn:uuid:f9711fe2-3571-4ab9-b6f3-77325ace44c0> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-08T06:47:23.419Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-08T06:47:23.419Z" ;
+    dc:identifier "urn:sha:ac1b77ea7735cc66f00bdfd722adcbb53d3b1351e111e9c4d7c30c0d" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www2.census.gov/geo/tiger/TIGER2007FE/01_ALABAMA/01017_Chambers/fe_2007_01017_facesah.zip" .
+

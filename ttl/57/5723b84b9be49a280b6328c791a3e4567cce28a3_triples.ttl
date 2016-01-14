@@ -1,0 +1,73 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:1082a9c7-3bd5-4157-8e87-f687b15db7cd> bcube:hasType "theme" ;
+    bcube:hasValue "EARTH SCIENCE > Solid Earth > Geomagnetism > Magnetic Declination",
+        "EARTH SCIENCE > Solid Earth > Geomagnetism > Magnetic Field",
+        "EARTH SCIENCE > Solid Earth > Geomagnetism > Magnetic Inclination",
+        "EARTH SCIENCE > Solid Earth > Geomagnetism > Magnetic Intensity" ;
+    dc:partOf "NASA/GCMD Science Keywords" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:5ed5d0ff-b5bf-4dfe-98b0-8500800303d8> bcube:hasType "dataCenter" ;
+    bcube:hasValue "DOC/NOAA/NESDIS/NGDC > National Geophysical Data Center, NESDIS, NOAA, U.S. Department of Commerce" ;
+    dc:partOf "NASA/GCMD Data Center Keywords" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:68f000ea-46be-419a-9a29-b0aed55b4db9> bcube:hasType "place" ;
+    bcube:hasValue "Geographic Region > Global" ;
+    dc:partOf "NASA/GCMD Location Keywords" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:6bca8b47-ce7f-4b74-8a1e-fae606a23bde> bcube:dateCreated "2015-09-08T03:04:06.378Z" ;
+    bcube:hasMetadataRecord <urn:uuid:cc9864c1-8940-423f-9b56-a483f28705c7> ;
+    bcube:lastUpdated "2015-09-08T03:04:06.378Z" ;
+    dc:conformsTo <urn:uuid:1082a9c7-3bd5-4157-8e87-f687b15db7cd>,
+        <urn:uuid:5ed5d0ff-b5bf-4dfe-98b0-8500800303d8>,
+        <urn:uuid:68f000ea-46be-419a-9a29-b0aed55b4db9>,
+        <urn:uuid:90810713-9024-4858-8e12-584e892f57a9> ;
+    dc:description "The Magnetic Field Properties Calculator will computes the estimated values of Earth's magnetic field(declination, inclination, vertical component, northerly component, easterly component, horizontal intensity, or total intensity), for a specific location, elevation and date or range of dates based on the current International Geomagnetic Reference Field (IGRF). The calculated result is a grid that contains the calculated component and the annual change of the component over the geographical area specified. WDeclination is calculated using the current World Magnetic Model (WMM) or International Geomagnetic Reference Field (IGRF) model. While results are typically accurate to 30 minutes of arc, users should be aware that several environmental factors can cause disturbances in the magnetic field." ;
+    dc:spatial "POLYGON ((-180 -90,-180 90,180 90,180 -90,-180 -90))" ;
+    dcterms:title "Magnetic Field Grid Calculator" ;
+    esip:eastBound "180.0"^^xsd:float ;
+    esip:endDate "2014-12-31"^^xsd:date ;
+    esip:northBound "90.0"^^xsd:float ;
+    esip:southBound "-90.0"^^xsd:float ;
+    esip:startDate "1900-01-01"^^xsd:date ;
+    esip:westBound "-180.0"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:90810713-9024-4858-8e12-584e892f57a9> bcube:hasValue "geoscientificInformation" ;
+    dc:partOf "IsoTopicCategories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:cc9864c1-8940-423f-9b56-a483f28705c7> a "ISO 19115:2003/19139" ;
+    bcube:dateCreated "2015-09-08T03:04:06.378Z" ;
+    bcube:lastUpdated "2015-09-08T03:04:06.378Z" ;
+    bcube:originatedFrom <urn:uuid:dac7ce72-0cae-4d98-88f7-38d2d380d4f6> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:6bca8b47-ce7f-4b74-8a1e-fae606a23bde> .
+
+<urn:uuid:dac7ce72-0cae-4d98-88f7-38d2d380d4f6> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-09-08T03:04:06.378Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-09-08T03:04:06.378Z" ;
+    dc:identifier "urn:sha:383a3a0bbd458fa8a382c8a59a8aaa59d3cafd38ebe23acb4c7f950c" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "https://catalog.data.gov/harvest/object/e82b68aa-8730-41f1-a9cc-7dcc4bc7f7c8" .
+

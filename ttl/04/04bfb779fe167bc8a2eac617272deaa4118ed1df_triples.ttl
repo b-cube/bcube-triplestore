@@ -1,0 +1,85 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:00a1ec90-f33d-4463-b027-c22cdb258f8c> bcube:hasType "theme" ;
+    bcube:hasValue "Multibeam bathymetry",
+        "environment",
+        "geoscientificInformation",
+        "imageryBaseMapsEarthCover",
+        "oceans" ;
+    dc:partOf "ISO 19115 Topic Category" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:068cfa9c-f06f-4727-84ca-3c218785a746> bcube:hasType "theme" ;
+    bcube:hasValue "Oceans > Bathymetry/SeafloorTopography > Bathymetry",
+        "Oceans > Bathymetry/SeafloorTopography > Seafloor Topography" ;
+    dc:partOf "Global Change Master Directory (GCMD)" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:0b850794-0de4-44da-a9ea-dccdf48e7980> bcube:hasType "theme" ;
+    bcube:hasValue "Benthic marine habitat",
+        "GIS",
+        "Offshore geology",
+        "Seafloor mapping" ;
+    dc:partOf "General" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:0f49d1d9-1edb-472c-b331-d31e1fd066a4> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-11-03T05:41:30.886Z" ;
+    bcube:lastUpdated "2015-11-03T05:41:30.886Z" ;
+    bcube:originatedFrom <urn:uuid:1147e842-4dca-4df4-98b5-3a424380e335> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:9e3e4725-2f04-4d55-a95a-ebba09e5a3f4> .
+
+<urn:uuid:1147e842-4dca-4df4-98b5-3a424380e335> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-03T05:41:30.886Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-03T05:41:30.886Z" ;
+    dc:identifier "urn:sha:e4b1297c3605acd3f7cfc5b0dff72e804a24f727eb8177921a210b3e" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://pubs.usgs.gov/ds/781/OffshoreFortRoss/metadata/Habitat_OffshoreFortRoss_metadata.xml" .
+
+<urn:uuid:9585a1f4-e62d-4f3f-b047-2b2ddaf90707> owl:a foaf:Organization ;
+    foaf:name "" .
+
+<urn:uuid:9e3e4725-2f04-4d55-a95a-ebba09e5a3f4> bcube:dateCreated "2015-11-03T05:41:30.886Z" ;
+    bcube:hasMetadataRecord <urn:uuid:0f49d1d9-1edb-472c-b331-d31e1fd066a4> ;
+    bcube:lastUpdated "2015-11-03T05:41:30.886Z" ;
+    dc:conformsTo <urn:uuid:00a1ec90-f33d-4463-b027-c22cdb258f8c>,
+        <urn:uuid:068cfa9c-f06f-4727-84ca-3c218785a746>,
+        <urn:uuid:0b850794-0de4-44da-a9ea-dccdf48e7980>,
+        <urn:uuid:dbbac47f-79b8-4a7b-9403-b1f9b9188031> ;
+    dc:description "This part of DS 781 presents data for the habitat map of the seafloor of the Offshore of Fort Ross map area, California. The polygon shapefile is included in \"Habitat_OffshoreFortRoss.zip,\" which is accessible from http://pubs.usgs.gov/ds/781/OffshoreFortRoss/data_catalog_OffshoreFortRoss.html. Using multibeam echosounder (MBES) bathymetry and backscatter data, potential marine benthic habitat maps were constructed. The habitats were based on substrate types and documented or \"ground truthed\" using underwater video images and seafloor samples obtained by the USGS. These maps display various habitat types that range from flat, soft, unconsolidated sediment-covered seafloor to hard, deformed (folded), or highly rugose and differentially eroded bedrock exposures. Rugged, high-relief, rocky outcrops that have been eroded to form ledges and small caves are ideal habitat for rockfish (Sebastes spp.) and other bottom fish such as lingcod (Ophiodon elongatus). Habitat map is presented in a map format generated in a GIS (ArcMap), and both digital and hard-copy versions will be produced." ;
+    dc:spatial "POLYGON ((-123.31 38.4,-123.31 38.55,-123.1 38.55,-123.1 38.4,-123.31 38.4))" ;
+    dcterms:publisher <urn:uuid:9585a1f4-e62d-4f3f-b047-2b2ddaf90707> ;
+    dcterms:title "Habitat--Offshore of Fort Ross, California" ;
+    esip:eastBound "-123.1"^^xsd:float ;
+    esip:northBound "38.55"^^xsd:float ;
+    esip:southBound "38.4"^^xsd:float ;
+    esip:startDate "2014-01-01"^^xsd:date ;
+    esip:westBound "-123.31"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:dbbac47f-79b8-4a7b-9403-b1f9b9188031> bcube:hasType "place" ;
+    bcube:hasValue "California",
+        "Fort Ross",
+        "Pacific Ocean",
+        "Sonoma County" ;
+    dc:partOf "Geographic Names Information System (GNIS)" ;
+    owl:a bcube:thesaurusSubset .
+

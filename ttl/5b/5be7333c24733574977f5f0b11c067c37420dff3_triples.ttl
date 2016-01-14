@@ -1,0 +1,67 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:2079362c-5b4b-4a19-a5f6-8b71b9c70fcb> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-08-04T17:57:27.938Z" ;
+    bcube:lastUpdated "2015-08-04T17:57:27.938Z" ;
+    bcube:originatedFrom <urn:uuid:c5fe5ce1-7b65-4478-9697-ccf8dacee3e1> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:929280c7-c465-4c35-853f-b2dedcbc5c97> .
+
+<urn:uuid:2530f2cb-e363-405c-80d7-69f6759d10f3> bcube:hasType "theme" ;
+    bcube:hasValue "Air" ;
+    dc:partOf "EPA GIS Keyword Thesaurus" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:35b6c3d5-8414-42d0-9cb5-a30d203619d7> bcube:hasType "place" ;
+    bcube:hasValue "United States" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:712ac53e-9236-4caf-8813-b140e8e587a9> bcube:hasType "theme" ;
+    bcube:hasValue "environment" ;
+    dc:partOf "ISO 19115 Topic Category" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:929280c7-c465-4c35-853f-b2dedcbc5c97> bcube:dateCreated "2015-08-04T17:57:27.938Z" ;
+    bcube:hasMetadataRecord <urn:uuid:2079362c-5b4b-4a19-a5f6-8b71b9c70fcb> ;
+    bcube:lastUpdated "2015-08-04T17:57:27.938Z" ;
+    dc:conformsTo <urn:uuid:2530f2cb-e363-405c-80d7-69f6759d10f3>,
+        <urn:uuid:35b6c3d5-8414-42d0-9cb5-a30d203619d7>,
+        <urn:uuid:712ac53e-9236-4caf-8813-b140e8e587a9> ;
+    dc:description "The pm25Surface_36km_2004 file is the output data file from a hierarchical Bayesian model (HBM) that combines PM2.5 monitoring data from National Air Monitoring Stations/State and Local Air Monitoring Stations (NAMS/SLAMS) and simulated PM2.5 data from the deterministic prediction model, Models-3/Community Multiscale Air Quality (CMAQ). The file contains estimates of the mean and standard error for 36 km x 36 km grids across the contiguous US for each day of the modeling year." ;
+    dc:spatial "POLYGON ((-128.09 23.1,-128.09 51.46,-65.47 51.46,-65.47 23.1,-128.09 23.1))" ;
+    dcterms:publisher <urn:uuid:aeeefc8a-1097-4e79-97ae-5a0a13bf96c3> ;
+    dcterms:title "EPA statistical predictions of PM2.5 for 2004 at 36km grid" ;
+    esip:eastBound "-65.47"^^xsd:float ;
+    esip:northBound "51.46"^^xsd:float ;
+    esip:southBound "23.1"^^xsd:float ;
+    esip:westBound "-128.09"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:aeeefc8a-1097-4e79-97ae-5a0a13bf96c3> owl:a foaf:Organization ;
+    foaf:name "U.S. EPA Office of Research & Development (ORD) - National Exposure Research Laboratory (NERL)" .
+
+<urn:uuid:c5fe5ce1-7b65-4478-9697-ccf8dacee3e1> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-04T17:57:27.938Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-04T17:57:27.938Z" ;
+    dc:identifier "urn:sha:decd6b16a22519c78cd4198f7d35e1f0e9ed5cbf4513ce886e868225" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www.epa.gov/heasd/documents/cdc/HBM/pm25/HBM_PM25_2004_36km_metadata.xml" .
+

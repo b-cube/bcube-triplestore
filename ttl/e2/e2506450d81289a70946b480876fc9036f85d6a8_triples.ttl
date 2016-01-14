@@ -1,0 +1,97 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:0f1654bf-5b4f-4aa6-ba7f-48279f397c1b> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-10-30T19:09:56.192Z" ;
+    bcube:lastUpdated "2015-10-30T19:09:56.192Z" ;
+    bcube:originatedFrom <urn:uuid:fcc2c6ba-d829-4c4b-8bbb-85b44d248f54> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:f1f18381-9514-4df0-afaa-2ac578772458> .
+
+<urn:uuid:279fbaf8-f1bb-4667-b910-f9215d482403> bcube:hasType "theme" ;
+    bcube:hasValue "borough",
+        "boundaries",
+        "city",
+        "congressional",
+        "municipal boundaries",
+        "town",
+        "township" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:2f00d1f3-7a70-440c-9505-a5a78b51f947> bcube:hasType "place" ;
+    bcube:hasValue "Pennsylvania" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:38d1ba07-ad7a-4840-b7d9-116b80b516aa> dcterms:references <urn:uuid:39924fd4-c53f-4aee-ba45-cd01241c16ed> ;
+    owl:a bibo:WebPage .
+
+<urn:uuid:39924fd4-c53f-4aee-ba45-cd01241c16ed> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-10-30T19:09:56.192Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-10-30T19:09:56.192Z" ;
+    dc:identifier "urn:sha:76dc93da66ee537db3ac5f90e6b6ab19d480af0a2096e8d1d2bc65c5" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www.pasda.psu.edu/data/padot/boundary_layers/padot-municipalities_2005.zip" .
+
+<urn:uuid:c2b65c6d-28ff-4bbf-bc28-308fd3105cfa> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-10-30T19:09:56.192Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-10-30T19:09:56.192Z" ;
+    dc:identifier "urn:sha:9ed4025250321ff44731f7d88b7d6a151fb3adb37cb926ccb35e6e10" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "ftp://www.pasda.psu.edu/pub/pasda/padot/boundary_layers/padot-municipalities_2005.zip" .
+
+<urn:uuid:ca95b856-8408-4f15-a894-dbaf25a0dec2> owl:a foaf:Organization ;
+    foaf:name "Pennsylvania Department of Transportation" .
+
+<urn:uuid:f1f18381-9514-4df0-afaa-2ac578772458> bcube:dateCreated "2015-10-30T19:09:56.192Z" ;
+    bcube:hasMetadataRecord <urn:uuid:0f1654bf-5b4f-4aa6-ba7f-48279f397c1b> ;
+    bcube:lastUpdated "2015-10-30T19:09:56.192Z" ;
+    dc:conformsTo <urn:uuid:279fbaf8-f1bb-4667-b910-f9215d482403>,
+        <urn:uuid:2f00d1f3-7a70-440c-9505-a5a78b51f947> ;
+    dc:description "Boundaries of municipalities within Pennsylvania as delineated for the PennDOT Type 10 general highway maps. Additional information comes from the Pennsylvania Bureau of Municipal Services. This layer contains all classifications of municipality including first and second class townships, boroughs, cities and the town." ;
+    dc:spatial "POLYGON ((-80.519349 39.71986,-80.519349 42.269479,-74.689583 42.269479,-74.689583 39.71986,-80.519349 39.71986))" ;
+    dcterms:publisher <urn:uuid:ca95b856-8408-4f15-a894-dbaf25a0dec2> ;
+    dcterms:references <urn:uuid:38d1ba07-ad7a-4840-b7d9-116b80b516aa>,
+        <urn:uuid:c2b65c6d-28ff-4bbf-bc28-308fd3105cfa> ;
+    dcterms:title "PA_MUNICIPAL_COUNTIES" ;
+    esip:eastBound "-74.689583"^^xsd:float ;
+    esip:northBound "42.269479"^^xsd:float ;
+    esip:southBound "39.71986"^^xsd:float ;
+    esip:startDate "2005-10-01"^^xsd:date ;
+    esip:westBound "-80.519349"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:fcc2c6ba-d829-4c4b-8bbb-85b44d248f54> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-10-30T19:09:56.192Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-10-30T19:09:56.192Z" ;
+    dc:identifier "urn:sha:bd1ce939239ada2f81706bc07e863f5fc022c1820af46b5243f1dcb0" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www.pasda.psu.edu/data/heritage_conservancy/RBA_Berks_County/Act167_Watershed_Data/Tulpehocken_Creek/Layers/Boundaries/regional_counties83s.shp.xml" .
+

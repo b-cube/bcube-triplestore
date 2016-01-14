@@ -1,0 +1,72 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:23e7e5a0-5365-4b1c-bf08-7680bd95fdd1> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-03-06T01:18:21.307Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-03-06T01:18:21.307Z" ;
+    dc:identifier "urn:sha:d28aa103f229b4533988944ff4837ba3480673bd8ac5fc5c2c9b32b8" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://catalog.data.gov/harvest/object/1ce5c816-79e4-42b5-9ff5-6541c94d94bc" .
+
+<urn:uuid:28c04aae-5881-4478-b472-ed794da9ae46> a "ISO 19115:2003/19139" ;
+    bcube:dateCreated "2015-03-06T01:18:21.307Z" ;
+    bcube:lastUpdated "2015-03-06T01:18:21.307Z" ;
+    bcube:originatedFrom <urn:uuid:23e7e5a0-5365-4b1c-bf08-7680bd95fdd1> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:63608271-45b0-41c4-94bc-bd62e00f85bc> .
+
+<urn:uuid:63608271-45b0-41c4-94bc-bd62e00f85bc> bcube:dateCreated "2015-03-06T01:18:21.307Z" ;
+    bcube:hasMetadataRecord <urn:uuid:28c04aae-5881-4478-b472-ed794da9ae46> ;
+    bcube:lastUpdated "2015-03-06T01:18:21.307Z" ;
+    dc:conformsTo <urn:uuid:84b97763-9afe-41c8-b35f-207610f233a7>,
+        <urn:uuid:ce9b3de9-727f-4d5e-a93f-bb77c4c1e527>,
+        <urn:uuid:d39fb6c9-9036-4068-afb9-fe453b7077c4> ;
+    dc:description "The rainfall-runoff erosivity factor (R-Factor) quantifies the effects of raindrop impacts and reflects the amount and rate of runoff associated with the rain. The R-factor is one of the parameters used by the Revised Unified Soil Loss Equation (RUSLE) to estimate annual rates of erosion. This product is a raster representation of R-Factor derived from isoerodent maps published in the Runoff Estimates for Small Rural Watersheds and Development of a Sound Design method. Volume II. (Fletcher et al., 1977). Lines connecting points of equal rainfall erosivity are called isoerodents. The isoerodents plotted on a map of the Island of Puerto Rico were digitized, then values between these lines were obtained by linear interpolation. The final R-Factor data are in raster GeoTiff format at 30 meter resolution in UTM, Zone 20, GRS80, NAD83." ;
+    dc:spatial "POLYGON ((-67.957335 17.874067,-67.957335 18.529654,-65.218506 18.529654,-65.218506 17.874067,-67.957335 17.874067))" ;
+    dcterms:title "R-Factor for the Island of Puerto Rico" ;
+    esip:eastBound "-65.218506"^^xsd:float ;
+    esip:endDate "1975-01-01"^^xsd:date ;
+    esip:northBound "18.529654"^^xsd:float ;
+    esip:southBound "17.874067"^^xsd:float ;
+    esip:startDate "1965-01-01"^^xsd:date ;
+    esip:westBound "-67.957335"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:84b97763-9afe-41c8-b35f-207610f233a7> bcube:hasType "theme" ;
+    bcube:hasValue "Environmental Monitoring",
+        "Erosion",
+        "R-Factor",
+        "RUSLE",
+        "RUSLE2",
+        "Rainfall-Runoff Erosivity",
+        "Revised Universal Soil Loss Equation" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:ce9b3de9-727f-4d5e-a93f-bb77c4c1e527> bcube:hasValue "climatologyMeteorologyAtmosphere" ;
+    dc:partOf "IsoTopicCategories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:d39fb6c9-9036-4068-afb9-fe453b7077c4> bcube:hasType "place" ;
+    bcube:hasValue "Coastal zone",
+        "Commonwealth of Puerto Rico",
+        "Puerto Rico" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+

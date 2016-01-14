@@ -1,0 +1,134 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:00f539ce-f4de-4abb-bb29-53a4ce81b6cd> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-11-06T22:59:05.09Z" ;
+    bcube:lastUpdated "2015-11-06T22:59:05.09Z" ;
+    bcube:originatedFrom <urn:uuid:ef0cf4a4-b2d6-4a31-b67f-9e09427cb972> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:9e557aac-fb36-4e1a-8d8c-17c117b9009b> .
+
+<urn:uuid:03410ac0-8ddb-47bb-bd66-d5c5262011df> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-06T22:59:05.09Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-06T22:59:05.09Z" ;
+    dc:identifier "urn:sha:20d6e2a843338aba4a64efb370ab9e8e68291e05b7a79be30bdfdc5a" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://coastwatch.pfeg.noaa.gov/erddap/tabledap/pmelTaoDySss.subset" .
+
+<urn:uuid:05ebcef8-5278-4a14-977a-ead36b96aa90> dcterms:references <urn:uuid:03410ac0-8ddb-47bb-bd66-d5c5262011df> ;
+    owl:a bibo:WebPage .
+
+<urn:uuid:8b1d6c0e-fe68-45fb-9666-6914a9211deb> bcube:hasType "theme" ;
+    bcube:hasValue "Oceans > Salinity/Density > Salinity",
+        "buoys",
+        "centered",
+        "code",
+        "daily",
+        "density",
+        "depth",
+        "identifier",
+        "instrument",
+        "noaa",
+        "oceans",
+        "pirata",
+        "pmel",
+        "quality",
+        "rama",
+        "salinity",
+        "sea",
+        "sea_water_practical_salinity",
+        "seawater",
+        "source",
+        "station",
+        "surface",
+        "tao",
+        "time",
+        "triton",
+        "water" ;
+    dc:partOf "GCMD Science Keywords" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:9e557aac-fb36-4e1a-8d8c-17c117b9009b> bcube:dateCreated "2015-11-06T22:59:05.09Z" ;
+    bcube:hasMetadataRecord <urn:uuid:00f539ce-f4de-4abb-bb29-53a4ce81b6cd> ;
+    bcube:lastUpdated "2015-11-06T22:59:05.09Z" ;
+    dc:conformsTo <urn:uuid:8b1d6c0e-fe68-45fb-9666-6914a9211deb>,
+        <urn:uuid:a9b33037-7c3b-4251-b051-f9fa25be72fe> ;
+    dc:description "This dataset has daily Sea Surface Salinity data from the TAO/TRITON (Pacific Ocean, http://www.pmel.noaa.gov/tao/), RAMA (Indian Ocean, http://www.pmel.noaa.gov/tao/rama/), and PIRATA (Atlantic Ocean, http://www.pmel.noaa.gov/pirata/) arrays of moored buoys which transmit oceanographic and meteorological data to shore in real-time via the Argos satellite system. These buoys are major components of the CLIVAR climate analysis project and the GOOS, GCOS, and GEOSS observing systems. Daily averages are computed starting at 00:00Z and are assigned an observation 'time' of 12:00Z. For more information, see http://www.pmel.noaa.gov/tao/proj_over/proj_over.html ." ;
+    dc:spatial "POLYGON ((-180 -25,-180 21,180 21,180 -25,-180 -25))" ;
+    dcterms:publisher <urn:uuid:af814b89-ab39-4090-9776-9801b4475c88> ;
+    dcterms:references <urn:uuid:05ebcef8-5278-4a14-977a-ead36b96aa90>,
+        <urn:uuid:b51063fc-51e4-4123-83f9-24ca1b2456d3>,
+        <urn:uuid:f1c27fe2-e3c5-4e90-bad6-761ff03c0cf6> ;
+    dcterms:title "TAO/TRITON, RAMA, and PIRATA Buoys, Daily, Sea Surface Salinity" ;
+    esip:eastBound "180.0"^^xsd:float ;
+    esip:endDate "2015-11-05"^^xsd:date ;
+    esip:northBound "21.0"^^xsd:float ;
+    esip:southBound "-25.0"^^xsd:float ;
+    esip:startDate "1992-02-08"^^xsd:date ;
+    esip:westBound "-180.0"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:a9b33037-7c3b-4251-b051-f9fa25be72fe> bcube:hasType "theme" ;
+    bcube:hasValue "depth",
+        "latitude",
+        "longitude",
+        "sea_water_practical_salinity",
+        "time" ;
+    dc:partOf "CF Standard Name Table v29" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:af814b89-ab39-4090-9776-9801b4475c88> owl:a foaf:Organization ;
+    foaf:name "ERDDAP, version 1.65, at NOAA NMFS SWFSC Environmental Research Division" .
+
+<urn:uuid:b51063fc-51e4-4123-83f9-24ca1b2456d3> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-06T22:59:05.09Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-06T22:59:05.09Z" ;
+    dc:identifier "urn:sha:28f7b74eea2c4ffa4c42943bdfecd6f8482fa30378a76613208441ae" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://coastwatch.pfeg.noaa.gov/erddap/tabledap/pmelTaoDySss.html" .
+
+<urn:uuid:ef0cf4a4-b2d6-4a31-b67f-9e09427cb972> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-06T22:59:05.09Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-06T22:59:05.09Z" ;
+    dc:identifier "urn:sha:f06de5021e68b36be3bdd01a1b62f9770a4329d4c3999fa2be8c29e8" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://coastwatch.pfeg.noaa.gov/erddap/metadata/fgdc/xml/pmelTaoDySss_fgdc.xml" .
+
+<urn:uuid:f1c27fe2-e3c5-4e90-bad6-761ff03c0cf6> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-06T22:59:05.09Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-06T22:59:05.09Z" ;
+    dc:identifier "urn:sha:b47fd004979ee422314a88cf75864233430781d1c4f315fd92fc13f8" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://coastwatch.pfeg.noaa.gov/erddap/tabledap/pmelTaoDySss.graph" .
+

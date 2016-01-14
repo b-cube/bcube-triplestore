@@ -1,0 +1,83 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:0c51e31c-924d-43ac-ae51-78e5484ac930> bcube:hasType "theme" ;
+    bcube:hasValue "Earthquake Hazards",
+        "Liquefaction",
+        "Regional Water Table" ;
+    dc:partOf "none" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:219316ff-679f-44df-ab94-be921020c0f8> bcube:dateCreated "2015-11-02T11:29:16.505Z" ;
+    bcube:hasMetadataRecord <urn:uuid:a1ad9b31-9582-4d50-bbc5-f8c3ad64dff8> ;
+    bcube:lastUpdated "2015-11-02T11:29:16.505Z" ;
+    dc:conformsTo <urn:uuid:0c51e31c-924d-43ac-ae51-78e5484ac930>,
+        <urn:uuid:d7161ad1-d577-4853-9837-b38595b22ab5> ;
+    dc:description "This dataset provides preliminary liquefaction susceptibility maps for the metro Boise area. Liquefaction occurs during strong earthquake ground shaking when saturated, coheionsless earth materials lose strength because of high excess pore-water pressure. The database was produced using 1) a standard methodology relating deposit age, texture (grain size and sorting), and environment of deposition to liquefaction susceptibility, and, 2) depth to the local water table. The database uses 1:100,000-scale geologic map information and water well records. The water well data have uncertainities in data quality and location. For these reasons, this product is not suited for detailed engineering use. On-site geotechnical studies are required to establish actual liquefaction potential for any specific location. It is best used as a regional screening tool to focus further attention on areas with apparently high liquefaction hazards." ;
+    dc:spatial "POLYGON ((-117.033325 43.493161,-117.033325 43.881349,-115.999582 43.881349,-115.999582 43.493161,-117.033325 43.493161))" ;
+    dcterms:publisher <urn:uuid:3a3320a2-2338-4c72-8c28-11abd6c2be29> ;
+    dcterms:references <urn:uuid:c5ea918c-fc7a-4902-9ba0-968181a60abb> ;
+    dcterms:title "BoiseMetroAreaLiquefaction" ;
+    esip:eastBound "-115.999582"^^xsd:float ;
+    esip:northBound "43.881349"^^xsd:float ;
+    esip:southBound "43.493161"^^xsd:float ;
+    esip:westBound "-117.033325"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:3a3320a2-2338-4c72-8c28-11abd6c2be29> owl:a foaf:Organization ;
+    foaf:name "Idaho Geological Survey" .
+
+<urn:uuid:a1ad9b31-9582-4d50-bbc5-f8c3ad64dff8> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-11-02T11:29:16.505Z" ;
+    bcube:lastUpdated "2015-11-02T11:29:16.505Z" ;
+    bcube:originatedFrom <urn:uuid:d24c7b2f-c91d-41a3-9c68-fce87abfb80b> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:219316ff-679f-44df-ab94-be921020c0f8> .
+
+<urn:uuid:c5ea918c-fc7a-4902-9ba0-968181a60abb> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-02T11:29:16.505Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-02T11:29:16.505Z" ;
+    dc:identifier "urn:sha:fbb4b735969c1f25c96bd17480dfa917363f414e50344b6ecdf40051" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www.idahogeology.org/Products/reverselook.asp?switch=title&value=NEHRP_Site_Class_and_Liquefaction_Susceptibility_Maps_for_the_Boise_Metro_Area,_Idaho" .
+
+<urn:uuid:d24c7b2f-c91d-41a3-9c68-fce87abfb80b> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-02T11:29:16.505Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-02T11:29:16.505Z" ;
+    dc:identifier "urn:sha:e302f1874cca241a09758d4755efcd8d730c0c0accf9e03354452f7a" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://insideidaho.org/appsOutput/metadataWAF/xml/BoiseMetroAreaLiquefaction.xml" .
+
+<urn:uuid:d7161ad1-d577-4853-9837-b38595b22ab5> bcube:hasType "place" ;
+    bcube:hasValue "Ada County",
+        "Boise",
+        "Caldwell",
+        "Canyon County",
+        "Idaho",
+        "Meridian",
+        "Nampa",
+        "Owyhee County" ;
+    dc:partOf "none" ;
+    owl:a bcube:thesaurusSubset .
+

@@ -1,0 +1,76 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:1a5f3451-dc42-4e44-a0a1-c56102f07d3f> bcube:hasType "theme" ;
+    bcube:hasValue "Atmosphere > Air Quality > Carbon Monoxide",
+        "Atmosphere > Air Quality > Emissions",
+        "Atmosphere > Air Quality > Nitrogen Oxides",
+        "Atmosphere > Air Quality > Sulfur Oxides",
+        "Human Dimensions > Environmental Impacts" ;
+    dc:partOf "GCMD Keyword Thesaurus" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:4e849ecf-6ca7-49cf-8560-7ef61cb83ce4> bcube:hasType "place" ;
+    bcube:hasValue "US" ;
+    dc:partOf "Uncontrolled Keywords" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:613b75cf-96ba-4385-a214-250370a633ec> a "ISO 19115:2003/19139" ;
+    bcube:dateCreated "2015-08-05T04:43:46.435Z" ;
+    bcube:lastUpdated "2015-08-05T04:43:46.435Z" ;
+    bcube:originatedFrom <urn:uuid:99a3a951-38a9-46f4-bb54-be6fa2e77165> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:cea31585-47b3-460f-ae65-d54c945aa759> .
+
+<urn:uuid:83c3a098-a8f5-4ba6-9c46-0ad2a317388f> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-05T04:43:46.435Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-05T04:43:46.435Z" ;
+    dc:identifier "urn:sha:66dab25e1a7882a2017ecc7eeb0b59cec346dea5e58435aa6d9aa60b" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://webapps.datafed.net/wcs_query.aspx?dataset_abbr=Astrophoto&amp;view_id=map" .
+
+<urn:uuid:99a3a951-38a9-46f4-bb54-be6fa2e77165> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-05T04:43:46.435Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-05T04:43:46.435Z" ;
+    dc:identifier "urn:sha:4579646dda659ff8f5889e469745613c8196d36142b5fad08aeead4d" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://catalog.data.gov/harvest/object/35388193-ccb8-446b-bc3b-d59e3f4c75e5" .
+
+<urn:uuid:cea31585-47b3-460f-ae65-d54c945aa759> bcube:dateCreated "2015-08-05T04:43:46.435Z" ;
+    bcube:hasMetadataRecord <urn:uuid:613b75cf-96ba-4385-a214-250370a633ec> ;
+    bcube:lastUpdated "2015-08-05T04:43:46.435Z" ;
+    dc:conformsTo <urn:uuid:1a5f3451-dc42-4e44-a0a1-c56102f07d3f>,
+        <urn:uuid:4e849ecf-6ca7-49cf-8560-7ef61cb83ce4> ;
+    dc:description "Most complete online collection of astronaut photographs of the Earth from the Space Shuttle flights, International Space Station, etc." ;
+    dc:spatial "POLYGON ((-180 -90,-180 90,180 90,180 -90,-180 -90))" ;
+    dcterms:references <urn:uuid:83c3a098-a8f5-4ba6-9c46-0ad2a317388f> ;
+    dcterms:title "The Gateway to Astronaut Photography of Earth" ;
+    esip:eastBound "180.0"^^xsd:float ;
+    esip:endDate "9999-01-01"^^xsd:date ;
+    esip:northBound "90.0"^^xsd:float ;
+    esip:southBound "-90.0"^^xsd:float ;
+    esip:startDate "9999-01-01"^^xsd:date ;
+    esip:westBound "-180.0"^^xsd:float ;
+    owl:a dcat:Dataset .
+

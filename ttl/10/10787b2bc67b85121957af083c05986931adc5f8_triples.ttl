@@ -1,0 +1,91 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:217bf0a3-826b-45be-8ae0-d25717ca4cf5> owl:a foaf:Organization ;
+    foaf:name "" .
+
+<urn:uuid:24c5a4bd-98ae-424f-b6b3-5777d33bc4c6> bcube:hasType "theme" ;
+    bcube:hasValue "Transportation" ;
+    dc:partOf "ISO 19115 Topic Categories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:3dcd1c68-8dec-4614-8b9e-8abf5ce929d9> bcube:hasType "theme" ;
+    bcube:hasValue "Address Range",
+        "County or equivalent entity",
+        "Linear Feature",
+        "Road Feature",
+        "Roads",
+        "Street Centerline" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:72c77627-8482-419b-91a5-4381734ba985> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-01T14:38:33.982Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-01T14:38:33.982Z" ;
+    dc:identifier "urn:sha:19d80a2e827f06a26e1e11b4d7f43c677a6dfeb86926dae10947fd40" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://meta.geo.census.gov/data/existing/decennial/GEO/GPMB/TIGERline/TL2012/FGDC/roads/tl_2012_01037_roads.shp.xml" .
+
+<urn:uuid:ac3d844f-6058-474f-bfbe-a5e17f59e6fc> bcube:dateCreated "2015-11-01T14:38:33.982Z" ;
+    bcube:hasMetadataRecord <urn:uuid:e28cdb50-ebe4-4f17-8752-22689a6cd6f8> ;
+    bcube:lastUpdated "2015-11-01T14:38:33.982Z" ;
+    dc:conformsTo <urn:uuid:24c5a4bd-98ae-424f-b6b3-5777d33bc4c6>,
+        <urn:uuid:3dcd1c68-8dec-4614-8b9e-8abf5ce929d9>,
+        <urn:uuid:f12ebf21-0bf3-4d0a-8da5-6830878f58b0> ;
+    dc:description "The TIGER/Line shapefiles and related database files (.dbf) are an extract of selected geographic and cartographic information from the U.S. Census Bureau's Master Address File / Topologically Integrated Geographic Encoding and Referencing (MAF/TIGER) Database (MTDB). The MTDB represents a seamless national file with no overlaps or gaps between parts, however, each TIGER/Line shapefile is designed to stand alone as an independent data set, or they can be combined to cover the entire nation. The All Roads Shapefile includes all features within the MTDB Super Class \"Road/Path Features\" distinguished where the MAF/TIGER Feature Classification Code (MTFCC) for the feature in MTDB that begins with \"S\". This includes all primary, secondary, local neighborhood, and rural roads, city streets, vehicular trails (4wd), ramps, service drives, alleys, parking lot roads, private roads for service vehicles (logging, oil fields, ranches, etc.), bike paths or trails, bridle/horse paths, walkways/pedestrian trails, and stairways." ;
+    dc:spatial "POLYGON ((-86.522283 32.753434,-86.522283 33.104702,-85.999748 33.104702,-85.999748 32.753434,-86.522283 32.753434))" ;
+    dcterms:publisher <urn:uuid:217bf0a3-826b-45be-8ae0-d25717ca4cf5> ;
+    dcterms:references <urn:uuid:f17de0c3-e5f4-4e8a-b0bb-b7b359b4eb37> ;
+    dcterms:title "TIGER/Line Shapefile, 2012, county, Coosa County, AL, All Roads County-based Shapefile" ;
+    esip:eastBound "-85.999748"^^xsd:float ;
+    esip:endDate "2012-06-01"^^xsd:date ;
+    esip:northBound "33.104702"^^xsd:float ;
+    esip:southBound "32.753434"^^xsd:float ;
+    esip:startDate "2011-08-01"^^xsd:date ;
+    esip:westBound "-86.522283"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:e28cdb50-ebe4-4f17-8752-22689a6cd6f8> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-11-01T14:38:33.982Z" ;
+    bcube:lastUpdated "2015-11-01T14:38:33.982Z" ;
+    bcube:originatedFrom <urn:uuid:72c77627-8482-419b-91a5-4381734ba985> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:ac3d844f-6058-474f-bfbe-a5e17f59e6fc> .
+
+<urn:uuid:f12ebf21-0bf3-4d0a-8da5-6830878f58b0> bcube:hasType "place" ;
+    bcube:hasValue "01037",
+        "Coosa",
+        "County or Equivalent Entity",
+        "U.S.",
+        "United States" ;
+    dc:partOf "ANSI INCITS 38:2009 (Formerly FIPS 5-2), ANSI INCITS 31:2009 (Formerly FIPS 6-4),ANSI INCITS 454:2009 (Formerly FIPS 8-6), ANSI INCITS 455:2009(Formerly FIPS 9-1), ANSI INCITS 446:2008 (Geographic Names Information System (GNIS))" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:f17de0c3-e5f4-4e8a-b0bb-b7b359b4eb37> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-01T14:38:33.982Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-01T14:38:33.982Z" ;
+    dc:identifier "urn:sha:3cb81fd0c425b00c3a83d3bdb86e0bcbb30586566b2ca3b16645e0b1" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www2.census.gov/geo/tiger/TIGER2012/ROADS/tl_2012_01037_roads.zip" .
+

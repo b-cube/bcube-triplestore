@@ -1,0 +1,78 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:44238feb-427c-4f2f-8892-e1c1e880dc43> bcube:hasType "theme" ;
+    bcube:hasValue "Ground Water",
+        "Monitoring",
+        "Water Quality",
+        "Wells" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:4d5decc5-0021-4c41-86ea-3cf84cd3b9e7> owl:a foaf:Organization ;
+    foaf:name "Hydrology Section" .
+
+<urn:uuid:83925e83-9cc0-4df8-90ba-576dff820f1d> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-02T02:52:01.131Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-02T02:52:01.131Z" ;
+    dc:identifier "urn:sha:d14a028c2a3a2bc9476102bb288234c415a2b01f828ea62ac5b3e42f" ;
+    owl:a bcube:Url .
+
+<urn:uuid:95ccd542-ac9c-489b-b97d-a344d116c116> bcube:hasType "place" ;
+    bcube:hasValue "Idaho" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:cc54a4d1-71b7-4321-8ea5-a8d671bb3bf2> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-02T02:52:01.131Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-02T02:52:01.131Z" ;
+    dc:identifier "urn:sha:83538c1d776328350e3d9f92637354f25867da331607f01a38dbd400" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www.idwr.idaho.gov/ftp/gisdata/Spatial/GroundWater/GWQualMon/gwqm2005.shp.xml" .
+
+<urn:uuid:d7bd10ba-70ae-4d0f-8ecb-47b0a96330e4> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-11-02T02:52:01.131Z" ;
+    bcube:lastUpdated "2015-11-02T02:52:01.131Z" ;
+    bcube:originatedFrom <urn:uuid:cc54a4d1-71b7-4321-8ea5-a8d671bb3bf2> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:dd12e3cc-0cee-472a-85cc-1e308b843d14> .
+
+<urn:uuid:dd12e3cc-0cee-472a-85cc-1e308b843d14> bcube:dateCreated "2015-11-02T02:52:01.131Z" ;
+    bcube:hasMetadataRecord <urn:uuid:d7bd10ba-70ae-4d0f-8ecb-47b0a96330e4> ;
+    bcube:lastUpdated "2015-11-02T02:52:01.131Z" ;
+    dc:conformsTo <urn:uuid:44238feb-427c-4f2f-8892-e1c1e880dc43>,
+        <urn:uuid:95ccd542-ac9c-489b-b97d-a344d116c116> ;
+    dc:description "Coverage of Statewide Program Monitoring Sites with approx 1900+ sites shown . Contains physical information about each site, such as location, well depth, and lithology." ;
+    dc:spatial "POLYGON ((-117.375163 41.992896,-117.375163 48.987677,-110.689955 48.987677,-110.689955 41.992896,-117.375163 41.992896))" ;
+    dcterms:publisher <urn:uuid:4d5decc5-0021-4c41-86ea-3cf84cd3b9e7> ;
+    dcterms:references <urn:uuid:83925e83-9cc0-4df8-90ba-576dff820f1d> ;
+    dcterms:title "GWQM2005" ;
+    esip:eastBound "-110.689955"^^xsd:float ;
+    esip:endDate "2003-01-01"^^xsd:date ;
+    esip:northBound "48.987677"^^xsd:float ;
+    esip:southBound "41.992896"^^xsd:float ;
+    esip:startDate "1990-01-01"^^xsd:date ;
+    esip:westBound "-117.375163"^^xsd:float ;
+    owl:a dcat:Dataset .
+

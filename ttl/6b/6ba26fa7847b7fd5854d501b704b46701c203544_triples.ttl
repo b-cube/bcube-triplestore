@@ -1,0 +1,87 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:0e89a019-6aa5-4ba4-8c06-182195017d2e> bcube:hasType "theme" ;
+    bcube:hasValue "Address Range",
+        "Linear Feature",
+        "Road Feature",
+        "Roads",
+        "State or equivalent entity",
+        "Street Centerline" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:24de4d9b-155a-4b73-a1ef-b8d3b78c85f9> a "ISO 19115:2003/19139" ;
+    bcube:dateCreated "2015-09-08T03:02:00.361Z" ;
+    bcube:lastUpdated "2015-09-08T03:02:00.361Z" ;
+    bcube:originatedFrom <urn:uuid:27d1c790-ce13-4422-bc73-2fbcf7fe7f20> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:afb3e3ad-5a03-4c7d-aab8-00c4c4fdec26> .
+
+<urn:uuid:27d1c790-ce13-4422-bc73-2fbcf7fe7f20> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-09-08T03:02:00.361Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-09-08T03:02:00.361Z" ;
+    dc:identifier "urn:sha:9e63efae9c4524f19e8b33b7385ca9e3b2bc166b9fb56134590ac12a" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "https://catalog.data.gov/harvest/object/04c3052f-457e-4a11-8beb-da3e00c4a5bd" .
+
+<urn:uuid:a821f93a-7210-4654-a4dd-3374386efe6a> bcube:hasType "place" ;
+    bcube:hasValue "26",
+        "MI",
+        "Michigan",
+        "State or Equivalent Entity",
+        "U.S.",
+        "United States" ;
+    dc:partOf "ANSI INCITS 38:2009 (Formerly FIPS 5-2), ANSI INCITS 31:2009 (Formerly FIPS 6-4),ANSI INCITS 454:2009 (Formerly FIPS 8-6), ANSI INCITS 455:2009(Formerly FIPS 9-1), ANSI INCITS 446:2008 (Geographic Names Information System (GNIS))" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:afb3e3ad-5a03-4c7d-aab8-00c4c4fdec26> bcube:dateCreated "2015-09-08T03:02:00.361Z" ;
+    bcube:hasMetadataRecord <urn:uuid:24de4d9b-155a-4b73-a1ef-b8d3b78c85f9> ;
+    bcube:lastUpdated "2015-09-08T03:02:00.361Z" ;
+    dc:conformsTo <urn:uuid:0e89a019-6aa5-4ba4-8c06-182195017d2e>,
+        <urn:uuid:a821f93a-7210-4654-a4dd-3374386efe6a>,
+        <urn:uuid:b5f0b65e-b9e0-4786-a3db-649ea7acf784> ;
+    dc:description "The TIGER/Line shapefiles and related database files (.dbf) are an extract of selected geographic and cartographic information from the U.S. Census Bureau's Master Address File / Topologically Integrated Geographic Encoding and Referencing (MAF/TIGER) Database (MTDB). The MTDB represents a seamless national file with no overlaps or gaps between parts, however, each TIGER/Line shapefile is designed to stand alone as an independent data set, or they can be combined to cover the entire nation. Primary roads are generally divided, limited-access highways within the interstate highway system or under State management, and are distinguished by the presence of interchanges. These highways are accessible by ramps and may include some toll highways. The MAF/TIGER Feature Classification Code (MTFCC) is S1100 for primary roads. Secondary roads are main arteries, usually in the U.S. Highway, State Highway, and/or County Highway system. These roads have one or more lanes of traffic in each direction, may or may not be divided, and usually have at-grade intersections with many other roads and driveways. They usually have both a local name and a route number. The MAF/TIGER Feature Classification Code (MTFCC) is S1200 for secondary roads." ;
+    dc:spatial "POLYGON ((-90.418392 41.696118,-90.418392 48.306063,-82.122971 48.306063,-82.122971 41.696118,-90.418392 41.696118))" ;
+    dcterms:references <urn:uuid:dc04352d-1c71-49e9-afd6-e13170a20f0b> ;
+    dcterms:title "TIGER/Line Shapefile, 2013, state, Michigan, Primary and Secondary Roads State-based Shapefile" ;
+    esip:eastBound "-82.122971"^^xsd:float ;
+    esip:endDate "2013-05-01"^^xsd:date ;
+    esip:northBound "48.306063"^^xsd:float ;
+    esip:southBound "41.696118"^^xsd:float ;
+    esip:startDate "2012-06-01"^^xsd:date ;
+    esip:westBound "-90.418392"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:b5f0b65e-b9e0-4786-a3db-649ea7acf784> bcube:hasValue "transportation" ;
+    dc:partOf "IsoTopicCategories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:dc04352d-1c71-49e9-afd6-e13170a20f0b> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-09-08T03:02:00.361Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-09-08T03:02:00.361Z" ;
+    dc:identifier "urn:sha:38d89876b2934aeabd9553204a76a22dedfea587f104876c8c61a544" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www2.census.gov/geo/tiger/TIGER2013/PRISECROADS/tl_2013_26_prisecroads.zip" .
+

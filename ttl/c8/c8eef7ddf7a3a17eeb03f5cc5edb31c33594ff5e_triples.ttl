@@ -1,0 +1,62 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:33dfdf9e-4641-44ce-9c0c-5cce6edc8526> bcube:dateCreated "2015-10-30T03:21:07.767Z" ;
+    bcube:hasMetadataRecord <urn:uuid:8e5629bf-813f-4e56-a1a7-69de9946e6ac> ;
+    bcube:lastUpdated "2015-10-30T03:21:07.767Z" ;
+    dc:conformsTo <urn:uuid:c29d7653-6e3a-471b-a9c6-09f4c8edfe25>,
+        <urn:uuid:fa96d49c-bef4-409d-a7d5-9337e29c9172> ;
+    dc:description "Township boundaries were generated from geodetic latitude and longitude coordinate pairs as recorded on BLM's official protraction diagrams of the state of Alaska. The SDMS_PROD protraction tables were modified to include pro_pt83, section83, and township83. The latitude and longitude values in the pro_pt83 table were transformed from geographic NAD27 coordinates to geographic NAD83 coordinates using NADCON for Alaska. The Informix Township table is a spatially-enabled table that contains all of the protraction information for each of the 18,654 townships. Township shapes are stored as NAD83 geographic multipolygons. Each township was individually constructed from NAD83 geographic pro_pt83 (Protracted Point) table and is fully densified by including all township/section offset corners from adjacent township/sections. The geometry for a single township may include as many as 44 coordinates on the exterior ring. The township table identifies 18,654 townships as 18,654 multi-polygons (four townships require two polygons each), as depicted on the official BLM protraction diagrams. MTR Number of Geometries ----------------------------------------------------------- C034S048E 2 C040S073E 2 C066S098E 2 C034S067E 2" ;
+    dc:spatial "POLYGON ((-179.230436 51.201455,-179.230436 71.468273,179.893985 71.468273,179.893985 51.201455,-179.230436 51.201455))" ;
+    dcterms:publisher <urn:uuid:f3187d82-76b6-4873-8949-1e101f5ed730> ;
+    dcterms:title "Protracted Township Grid for Alaska (NAD83)" ;
+    esip:eastBound "179.893985"^^xsd:float ;
+    esip:northBound "71.468273"^^xsd:float ;
+    esip:southBound "51.201455"^^xsd:float ;
+    esip:startDate "2006-11-01"^^xsd:date ;
+    esip:westBound "-179.230436"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:8e5629bf-813f-4e56-a1a7-69de9946e6ac> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-10-30T03:21:07.767Z" ;
+    bcube:lastUpdated "2015-10-30T03:21:07.767Z" ;
+    bcube:originatedFrom <urn:uuid:b2c57c40-9d68-442f-bcbe-df5d6770e9e5> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:33dfdf9e-4641-44ce-9c0c-5cce6edc8526> .
+
+<urn:uuid:b2c57c40-9d68-442f-bcbe-df5d6770e9e5> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-10-30T03:21:07.767Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-10-30T03:21:07.767Z" ;
+    dc:identifier "urn:sha:d0071e713a771371430551c1734b028c5eb1a1fbf3f86345e9867ea7" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://sdms.ak.blm.gov/download/protracted_grid_gis/metadata/township83.xml" .
+
+<urn:uuid:c29d7653-6e3a-471b-a9c6-09f4c8edfe25> bcube:hasType "place" ;
+    bcube:hasValue "Alaska" ;
+    dc:partOf "BLM-STATE" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:f3187d82-76b6-4873-8949-1e101f5ed730> owl:a foaf:Organization ;
+    foaf:name "" .
+
+<urn:uuid:fa96d49c-bef4-409d-a7d5-9337e29c9172> bcube:hasType "theme" ;
+    bcube:hasValue "Framework" ;
+    dc:partOf "BLM-THEME" ;
+    owl:a bcube:thesaurusSubset .
+

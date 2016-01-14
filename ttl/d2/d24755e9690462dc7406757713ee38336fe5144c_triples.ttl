@@ -1,0 +1,83 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:164b923d-7cb1-46a4-ad24-5dac8ee9e11d> bcube:hasType "theme" ;
+    bcube:hasValue "disposal/waste/tailings sites",
+        "garbage",
+        "hazardous waste",
+        "solid waste" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:51f69e4e-99ed-4964-82e6-f20b22281e3d> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-08-11T10:37:45.844Z" ;
+    bcube:lastUpdated "2015-08-11T10:37:45.844Z" ;
+    bcube:originatedFrom <urn:uuid:d0906f7e-0726-4d03-85b2-ccfa1898c94f> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:645d883f-187b-421d-b6fe-3ea11e569885> .
+
+<urn:uuid:645d883f-187b-421d-b6fe-3ea11e569885> bcube:dateCreated "2015-08-11T10:37:45.844Z" ;
+    bcube:hasMetadataRecord <urn:uuid:51f69e4e-99ed-4964-82e6-f20b22281e3d> ;
+    bcube:lastUpdated "2015-08-11T10:37:45.844Z" ;
+    dc:conformsTo <urn:uuid:164b923d-7cb1-46a4-ad24-5dac8ee9e11d>,
+        <urn:uuid:6a3c4d02-fdda-48c4-a318-bd9cbd823a57>,
+        <urn:uuid:80d2fb64-9a27-4c1d-971a-7fafd107f82d> ;
+    dc:description "Active and retired landfills in Montana, listed in the Montana Department of Environmental Quality - Solid Waste Management Program archives. Attributes associated with the point data describe landfill status, regulatory class, and location." ;
+    dc:spatial "POLYGON ((-115.931122 44.488266,-115.931122 48.9558868,-103.690483 48.9558868,-103.690483 44.488266,-115.931122 44.488266))" ;
+    dcterms:publisher <urn:uuid:6769ca6f-05df-4dfc-afbc-9b4a20ba7835> ;
+    dcterms:references <urn:uuid:e56159f0-e350-4262-b1e9-5aebe02de3d2> ;
+    dcterms:title "Montana Landfills, 1996" ;
+    esip:eastBound "-103.690483"^^xsd:float ;
+    esip:northBound "48.9558868"^^xsd:float ;
+    esip:southBound "44.488266"^^xsd:float ;
+    esip:startDate "1996-01-01"^^xsd:date ;
+    esip:westBound "-115.931122"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:6769ca6f-05df-4dfc-afbc-9b4a20ba7835> owl:a foaf:Organization ;
+    foaf:name "Montana State Library" .
+
+<urn:uuid:6a3c4d02-fdda-48c4-a318-bd9cbd823a57> bcube:hasType "place" ;
+    bcube:hasValue "Montana",
+        "statewide" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:80d2fb64-9a27-4c1d-971a-7fafd107f82d> bcube:hasType "theme" ;
+    bcube:hasValue "environment" ;
+    dc:partOf "ISO 19115 Topic Category" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:d0906f7e-0726-4d03-85b2-ccfa1898c94f> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-11T10:37:45.844Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-11T10:37:45.844Z" ;
+    dc:identifier "urn:sha:4c981fc43b87841bb59062616208df7396fd443888518d1007d286a4" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://mslapps.mt.gov/Geographic_Information/Data/DataList/datalist_MetadataDetailRaw.aspx?did={F30D3756-6AF4-404A-AEB0-F93A0FBD7A65}" .
+
+<urn:uuid:e56159f0-e350-4262-b1e9-5aebe02de3d2> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-11T10:37:45.844Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-11T10:37:45.844Z" ;
+    dc:identifier "urn:sha:3999ac939e93c7a520ad4273194202a72af9b4fce2f03f44463ec07d" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "ftp://ftp.geoinfo.msl.mt.gov/Data/Spatial/NonMSDI/Shapefiles/Landfills1996.zip" .
+

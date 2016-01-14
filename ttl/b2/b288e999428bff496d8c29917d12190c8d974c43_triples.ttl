@@ -1,0 +1,93 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:0c46ddda-79c7-4e67-93fd-52de7263294d> bcube:hasType "theme" ;
+    bcube:hasValue "CDP",
+        "Census Designated Place",
+        "City",
+        "Polygon",
+        "State or equivalent entity",
+        "Town",
+        "Village" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:95a6717c-a6ca-4649-8f16-4fb28287b137> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-11-06T22:59:32.3Z" ;
+    bcube:lastUpdated "2015-11-06T22:59:32.3Z" ;
+    bcube:originatedFrom <urn:uuid:bcc304dd-a9fd-4ed0-9fda-51b4d311410f> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:d5c8ccf2-70bf-4a44-b96b-0e0992fea078> .
+
+<urn:uuid:9945b9b4-f096-44b6-b1cc-06f16430a8a0> bcube:hasType "theme" ;
+    bcube:hasValue "boundaries" ;
+    dc:partOf "ISO 19115 Topic Categories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:bcc304dd-a9fd-4ed0-9fda-51b4d311410f> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-06T22:59:32.3Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-06T22:59:32.3Z" ;
+    dc:identifier "urn:sha:b975d673701fd95cc7616e44b0fac1bbb197990e5bed4a51ee8a3fdb" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://meta.geo.census.gov/data/existing/decennial/GEO/GPMB/TIGERline/fe_2007/place/fe_2007_41_place_url.shp.xml" .
+
+<urn:uuid:c6058532-cd90-4f45-8d93-23c8301c7104> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-06T22:59:32.3Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-06T22:59:32.3Z" ;
+    dc:identifier "urn:sha:3c1668c61847c377f7b357b055a8b75dbe74e746f77a1528a5fd3b89" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www2.census.gov/geo/tiger/TIGER2007FE/41_OREGON/fe_2007_41_place.zip" .
+
+<urn:uuid:d5c8ccf2-70bf-4a44-b96b-0e0992fea078> bcube:dateCreated "2015-11-06T22:59:32.3Z" ;
+    bcube:hasMetadataRecord <urn:uuid:95a6717c-a6ca-4649-8f16-4fb28287b137> ;
+    bcube:lastUpdated "2015-11-06T22:59:32.3Z" ;
+    dc:conformsTo <urn:uuid:0c46ddda-79c7-4e67-93fd-52de7263294d>,
+        <urn:uuid:9945b9b4-f096-44b6-b1cc-06f16430a8a0>,
+        <urn:uuid:fbffdfa5-6b44-4053-b55c-c4ad2a6950fe> ;
+    dc:description "The TIGER/Line Shapefiles are an extract of selected geographic and cartographic information from the Census MAF/TIGER database. The Census MAF/TIGER database represents a seamless national file with no overlaps or gaps between parts. However, each TIGER/Line Shapefile is designed to stand alone as an independent data set or the shapefiles can be combined to cover the whole nation." ;
+    dc:spatial "POLYGON ((-124.703541 41.991794,-124.703541 46.299099,-116.463262 46.299099,-116.463262 41.991794,-124.703541 41.991794))" ;
+    dcterms:publisher <urn:uuid:de8974cc-0a77-4b9b-8295-36c777f67132> ;
+    dcterms:references <urn:uuid:c6058532-cd90-4f45-8d93-23c8301c7104> ;
+    dcterms:title "TIGER/Line Shapefile, 2007, state, Oregon, Place" ;
+    esip:eastBound "-116.463262"^^xsd:float ;
+    esip:endDate "2007-07-01"^^xsd:date ;
+    esip:northBound "46.299099"^^xsd:float ;
+    esip:southBound "41.991794"^^xsd:float ;
+    esip:startDate "2007-01-01"^^xsd:date ;
+    esip:westBound "-124.703541"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:de8974cc-0a77-4b9b-8295-36c777f67132> owl:a foaf:Organization ;
+    foaf:name "" .
+
+<urn:uuid:fbffdfa5-6b44-4053-b55c-c4ad2a6950fe> bcube:hasType "place" ;
+    bcube:hasValue "41",
+        "OR",
+        "Oregon",
+        "State or Equivalent Entity",
+        "U.S.",
+        "United States" ;
+    dc:partOf "FIPS Publication 5-2, FIPS Publication 6-4, FIPS Publication 8-6, FIPS Publication 9-1" ;
+    owl:a bcube:thesaurusSubset .
+

@@ -1,0 +1,83 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:3a31b4dc-f00c-4738-b375-781e883747c8> owl:a foaf:Organization ;
+    foaf:name "" .
+
+<urn:uuid:3fafb7f3-9c99-4630-bc43-1cac6e5a1add> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-07-29T19:07:07.343Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-07-29T19:07:07.343Z" ;
+    dc:identifier "urn:sha:f99e0741f9a04b09c2b3c76a2a2132daa03142ecde9a9824e531b006" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "https://inport.nmfs.noaa.gov/inport/item/17091/fgdc" .
+
+<urn:uuid:48290340-33ce-466e-8f40-7053d2124b16> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-07-29T19:07:07.343Z" ;
+    bcube:lastUpdated "2015-07-29T19:07:07.343Z" ;
+    bcube:originatedFrom <urn:uuid:3fafb7f3-9c99-4630-bc43-1cac6e5a1add> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:fc07a1f2-187d-4fe7-bc1a-4b153549c94b> .
+
+<urn:uuid:6dfe7adc-8819-4a7b-8746-1d1705b8620c> bcube:hasType "theme" ;
+    bcube:hasValue "Arctic cod",
+        "Biological data",
+        "Euphausiids",
+        "Fish",
+        "Fish eggs",
+        "Fish juveniles",
+        "Fish larvae",
+        "Ichthyoplankton",
+        "Multi-frequency acoustics",
+        "Oceanographic data",
+        "Pacific cod",
+        "Plankton",
+        "Saffron cod",
+        "SeaBird CTD",
+        "SeaBird FastCAT CTD",
+        "Tucker Sled",
+        "Zooplankton" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:7d3133a6-ebbb-48be-9533-c332cca6313d> bcube:hasType "place" ;
+    bcube:hasValue "Arctic Ocean",
+        "Barrow Canyon",
+        "Bering Strait",
+        "Chukchi Sea" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:fc07a1f2-187d-4fe7-bc1a-4b153549c94b> bcube:dateCreated "2015-07-29T19:07:07.343Z" ;
+    bcube:hasMetadataRecord <urn:uuid:48290340-33ce-466e-8f40-7053d2124b16> ;
+    bcube:lastUpdated "2015-07-29T19:07:07.343Z" ;
+    dc:conformsTo <urn:uuid:6dfe7adc-8819-4a7b-8746-1d1705b8620c>,
+        <urn:uuid:7d3133a6-ebbb-48be-9533-c332cca6313d> ;
+    dc:description "A total of 64 stations were occupied along onshore-offshore transect lines from the Bering Strait to Barrow Canyon. At each station we sampled zooplankton using a 1m^2 Tucker Sled with 333 micron mesh nets. One net was fished entirely along the bottom. The second net collected zooplankton from the bottom to the surface. Inside this second net was a 150 micron mesh, 25 cm diamter Clarke-Bumpus net to collect the smaller zooplankton species. Both Tucker nets had a calibrated General Oceanics flow meter mounted inside the net mouth. A SeaBird FastCat (SBE 49) was attached to the top of the Tucker Sled to determine the depth of the samplers in real time and to measure temperature and conductivity. A multi-frequecy acoustic systems (TAPS-6) was also mounted on the top of the sled frame for acoustic determination of zooplankton biomass and size composition. The device insonified a small volume directly in the path of the net. During the cruise we recovered a multi-frequency acoustic device that had been moored off of Icy Cape for almost one year and then deployed two more acoustic devices to overwinter." ;
+    dc:spatial "POLYGON ((-168.5 56.0,-168.5 70.2,-157.2 70.2,-157.2 56.0,-168.5 56.0))" ;
+    dcterms:identifier "gov.noaa.nmfs.inport:17091" ;
+    dcterms:publisher <urn:uuid:3a31b4dc-f00c-4738-b375-781e883747c8> ;
+    dcterms:title "AFSC/RACE/Eco-FOCI: 2011 Chukchi Sea Cruise MB11-01/1MB11" ;
+    esip:eastBound "-157.2"^^xsd:float ;
+    esip:endDate "2011-09-01"^^xsd:date ;
+    esip:northBound "70.2"^^xsd:float ;
+    esip:southBound "56.0"^^xsd:float ;
+    esip:startDate "2011-08-18"^^xsd:date ;
+    esip:westBound "-168.5"^^xsd:float ;
+    owl:a dcat:Dataset .
+

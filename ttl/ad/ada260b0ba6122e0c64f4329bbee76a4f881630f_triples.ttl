@@ -1,0 +1,93 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:3aee62cd-3cce-4869-a65e-6d49400387ca> owl:a foaf:Organization ;
+    foaf:name "" .
+
+<urn:uuid:48f48a2a-b9fb-4698-ba4f-ee4d22b9ba3f> bcube:dateCreated "2015-07-16T21:37:06.792Z" ;
+    bcube:hasMetadataRecord <urn:uuid:e63053ef-2d01-4c08-bbd1-c9304e4b05ea> ;
+    bcube:lastUpdated "2015-07-16T21:37:06.792Z" ;
+    dc:conformsTo <urn:uuid:70db8b3f-2a04-4b0a-8ef7-eab925783a76>,
+        <urn:uuid:7201f95b-f47f-49c4-afb9-bd6574569f10>,
+        <urn:uuid:83381dc8-671d-4a6a-a304-d2b6afec9ee6> ;
+    dc:description "The 'GEONAMES- populated places (ppl)' layer is a subset of the larger 'GEONAMES' layer. This layer contain names of places or areas 'with clustered or scattered buildings and a permanent human population (city, settlement, town, village)' in California." ;
+    dc:spatial "POLYGON ((-124.459544 32.444251,-124.459544 42.042936,-113.515762 42.042936,-113.515762 32.444251,-124.459544 32.444251))" ;
+    dcterms:publisher <urn:uuid:3aee62cd-3cce-4869-a65e-6d49400387ca> ;
+    dcterms:references <urn:uuid:7d32bf06-9427-4f46-887b-430f11a2568d> ;
+    dcterms:title "GNIS Populated Places" ;
+    esip:eastBound "-113.515762"^^xsd:float ;
+    esip:northBound "42.042936"^^xsd:float ;
+    esip:southBound "32.444251"^^xsd:float ;
+    esip:westBound "-124.459544"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:70db8b3f-2a04-4b0a-8ef7-eab925783a76> bcube:hasType "theme" ;
+    bcube:hasValue "population" ;
+    dc:partOf "ceres:themes" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:7201f95b-f47f-49c4-afb9-bd6574569f10> bcube:hasType "theme" ;
+    bcube:hasValue "city boundaries",
+        "gnis",
+        "places" ;
+    dc:partOf "keyword" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:7d32bf06-9427-4f46-887b-430f11a2568d> dcterms:references <urn:uuid:bd4b901d-1cc6-41a0-a6f3-f6f8fb884ed4> ;
+    owl:a bibo:WebPage .
+
+<urn:uuid:83381dc8-671d-4a6a-a304-d2b6afec9ee6> bcube:hasType "theme" ;
+    bcube:hasValue "base maps",
+        "boundaries",
+        "demographics",
+        "elevation",
+        "environment",
+        "recreation",
+        "services",
+        "society",
+        "society cultural" ;
+    dc:partOf "ISO Topic Categories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:bd4b901d-1cc6-41a0-a6f3-f6f8fb884ed4> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-07-16T21:37:06.792Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-07-16T21:37:06.792Z" ;
+    dc:identifier "urn:sha:e840d9933e2582517d64d5fe618f1a218bc14dc6067275fee20534b1" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://atlas.ca.gov/geoportal/data/atlas/GNISPopulatedPlaces/2006/geonamea_ppl_2006.shp.zip" .
+
+<urn:uuid:e63053ef-2d01-4c08-bbd1-c9304e4b05ea> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-07-16T21:37:06.792Z" ;
+    bcube:lastUpdated "2015-07-16T21:37:06.792Z" ;
+    bcube:originatedFrom <urn:uuid:fb85a30f-7978-421b-bbdc-ef1bb700211d> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:48f48a2a-b9fb-4698-ba4f-ee4d22b9ba3f> .
+
+<urn:uuid:fb85a30f-7978-421b-bbdc-ef1bb700211d> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-07-16T21:37:06.792Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-07-16T21:37:06.792Z" ;
+    dc:identifier "urn:sha:76130eff6262936a4f4835a985ece9b1f4b97521caf9b05f955b7b8d" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://catalog.data.gov/harvest/object/e64776e0-db15-4854-897d-3c035860d2ef/original" .
+

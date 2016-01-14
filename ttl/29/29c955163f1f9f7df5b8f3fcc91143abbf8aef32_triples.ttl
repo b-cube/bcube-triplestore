@@ -1,0 +1,90 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:166b27a7-9e79-4c8c-9231-0c4f30e97f82> owl:a foaf:Organization ;
+    foaf:name "" .
+
+<urn:uuid:733814af-c796-4ebe-8872-18c989961c89> bcube:hasType "theme" ;
+    bcube:hasValue "boundaries" ;
+    dc:partOf "ISO 19115 Topic Categories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:8a4c9026-cc7c-4f7f-ba71-feb4384d3a66> bcube:hasType "theme" ;
+    bcube:hasValue "Polygon",
+        "School District",
+        "Secondary School District",
+        "State or equivalent entity" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:8f649194-324b-49ee-b398-b34305577542> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-11-01T22:50:51.985Z" ;
+    bcube:lastUpdated "2015-11-01T22:50:51.985Z" ;
+    bcube:originatedFrom <urn:uuid:9e5d6bd8-04f5-4bef-9789-3e93486af1fb> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:d5c9080a-e3df-43e0-93b3-88d028f46fbf> .
+
+<urn:uuid:9e5d6bd8-04f5-4bef-9789-3e93486af1fb> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-01T22:50:51.985Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-01T22:50:51.985Z" ;
+    dc:identifier "urn:sha:91363e6c277b3d4b9c938d8e1e2cdb6b5687e3833bb356015585253e" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://meta.geo.census.gov/data/existing/decennial/GEO/GPMB/TIGERline/fe_2008/scsd/tl_2008_47_scsd_url.shp.xml" .
+
+<urn:uuid:d4adf747-6dec-48ba-a6bf-181c66804f88> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-01T22:50:51.985Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-01T22:50:51.985Z" ;
+    dc:identifier "urn:sha:deaf9893bee3a6a82894b22b6446ff32374e1ae22828874d6a815e04" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www2.census.gov/geo/tiger/TIGER2008/47_TENNESSEE/tl_2008_47_scsd.zip" .
+
+<urn:uuid:d5c9080a-e3df-43e0-93b3-88d028f46fbf> bcube:dateCreated "2015-11-01T22:50:51.985Z" ;
+    bcube:hasMetadataRecord <urn:uuid:8f649194-324b-49ee-b398-b34305577542> ;
+    bcube:lastUpdated "2015-11-01T22:50:51.985Z" ;
+    dc:conformsTo <urn:uuid:733814af-c796-4ebe-8872-18c989961c89>,
+        <urn:uuid:8a4c9026-cc7c-4f7f-ba71-feb4384d3a66>,
+        <urn:uuid:e6aae6bf-8c2b-4bbe-a00c-cbb52bf4e451> ;
+    dc:description "The TIGER/Line Shapefiles are an extract of selected geographic and cartographic information from the Census MAF/TIGER database. The Census MAF/TIGER database represents a seamless national file with no overlaps or gaps between parts. However, each TIGER/Line Shapefile is designed to stand alone as an independent data set or the shapefiles can be combined to cover the whole nation." ;
+    dc:spatial "POLYGON ((-90.310298 34.982924,-90.310298 36.678118,-81.6469 36.678118,-81.6469 34.982924,-90.310298 34.982924))" ;
+    dcterms:publisher <urn:uuid:166b27a7-9e79-4c8c-9231-0c4f30e97f82> ;
+    dcterms:references <urn:uuid:d4adf747-6dec-48ba-a6bf-181c66804f88> ;
+    dcterms:title "TIGER/Line Shapefile, 2008, state, Tennessee, Secondary School District" ;
+    esip:eastBound "-81.6469"^^xsd:float ;
+    esip:endDate "2008-07-01"^^xsd:date ;
+    esip:northBound "36.678118"^^xsd:float ;
+    esip:southBound "34.982924"^^xsd:float ;
+    esip:startDate "2008-01-01"^^xsd:date ;
+    esip:westBound "-90.310298"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:e6aae6bf-8c2b-4bbe-a00c-cbb52bf4e451> bcube:hasType "place" ;
+    bcube:hasValue "47",
+        "State or Equivalent Entity",
+        "TN",
+        "Tennessee",
+        "U.S.",
+        "United States" ;
+    dc:partOf "FIPS Publication 5-2, FIPS Publication 6-4, FIPS Publication 8-6, FIPS Publication 9-1,FIPS Publication55-4" ;
+    owl:a bcube:thesaurusSubset .
+

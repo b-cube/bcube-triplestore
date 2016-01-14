@@ -1,0 +1,87 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:46fab89f-3c2c-4863-9beb-02b2470c4b57> bcube:hasType "theme" ;
+    bcube:hasValue "Bathymetry/Topography",
+        "Elevation",
+        "LAS",
+        "LiDAR" ;
+    dc:partOf "Keywords" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:5e94d7b2-4fe6-4ddb-8600-75bbde0420da> bcube:hasValue "elevation" ;
+    dc:partOf "IsoTopicCategories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:a13ef88b-9000-4b57-93b8-bed974a80f75> a "ISO 19115:2003/19139" ;
+    bcube:dateCreated "2015-08-05T11:22:31.546Z" ;
+    bcube:lastUpdated "2015-08-05T11:22:31.546Z" ;
+    bcube:originatedFrom <urn:uuid:f5a5bf02-40e4-4bd6-8c24-4170672e1cf1> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:a2085f77-6fa7-423c-a672-c2166d20b520> .
+
+<urn:uuid:a2085f77-6fa7-423c-a672-c2166d20b520> bcube:dateCreated "2015-08-05T11:22:31.546Z" ;
+    bcube:hasMetadataRecord <urn:uuid:a13ef88b-9000-4b57-93b8-bed974a80f75> ;
+    bcube:lastUpdated "2015-08-05T11:22:31.546Z" ;
+    dc:conformsTo <urn:uuid:46fab89f-3c2c-4863-9beb-02b2470c4b57>,
+        <urn:uuid:5e94d7b2-4fe6-4ddb-8600-75bbde0420da>,
+        <urn:uuid:d6979e7c-87ad-4f9b-a7aa-30e3908832f9> ;
+    dc:description "This topographic elevation point data derived from multiple return light detection and ranging (LiDAR) represents 354.272 square miles of coastline for Rhode Island and Massachusetts. The LiDAR point cloud is delivered in LAS 1.2 format with the following classifications: Class 1: Unclassified Class 2: Ground Class 9: Water Class 10: Ignored Points Class 12: Overlap" ;
+    dc:spatial "POLYGON ((-71.9092352 41.1295003,-71.9092352 41.6023329,-69.944377 41.6023329,-69.944377 41.1295003,-71.9092352 41.1295003))" ;
+    dcterms:references <urn:uuid:bdd61994-bc7e-4b29-a181-bad989e832d5> ;
+    dcterms:title "2012 USACE Post Sandy Topographic LiDAR: Rhode Island and Massachusetts Coast" ;
+    esip:eastBound "-69.944377"^^xsd:float ;
+    esip:endDate "2012-11-22"^^xsd:date ;
+    esip:northBound "41.6023329"^^xsd:float ;
+    esip:southBound "41.1295003"^^xsd:float ;
+    esip:startDate "2012-11-11"^^xsd:date ;
+    esip:westBound "-71.9092352"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:bdd61994-bc7e-4b29-a181-bad989e832d5> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-05T11:22:31.546Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-05T11:22:31.546Z" ;
+    dc:identifier "urn:sha:4ed1deac68572bd663e1de3e054ac59e946586396654265d363dbf4d" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://coast.noaa.gov/dataviewer/index.html?action=advsearchVal=1435" .
+
+<urn:uuid:d6979e7c-87ad-4f9b-a7aa-30e3908832f9> bcube:hasType "place" ;
+    bcube:hasValue "Barnstable County",
+        "Bristol County",
+        "Dukes County",
+        "Massachusetts",
+        "Nantucket County",
+        "Newport County",
+        "Rhode Island",
+        "Washington County" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:f5a5bf02-40e4-4bd6-8c24-4170672e1cf1> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-05T11:22:31.546Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-05T11:22:31.546Z" ;
+    dc:identifier "urn:sha:0938cd6f43504feae232b7fdbf51377600c53f742ceffcdad552f3c9" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://coast.noaa.gov/data/Documents/Metadata/isotest/2012_USACE_PostSandy_MA_RI_lidar_m1435_metadata_iso.xml" .
+

@@ -1,0 +1,93 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:15e6cd1c-bd1a-4269-a6a1-c27fc8b0176f> bcube:hasType "theme" ;
+    bcube:hasValue "Bridges",
+        "Creeks",
+        "Cross Section Lines",
+        "Cross Sections",
+        "Culverts",
+        "DFIRM",
+        "Digital Flood Insurance Rate Map",
+        "Flood Hazard Data",
+        "Streams",
+        "Survey",
+        "Waterbody" ;
+    dc:partOf "FEMA NFIP Topic Category" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:67a400e2-b7ba-4efb-b843-eb75e57e903c> a "ISO 19115:2003/19139" ;
+    bcube:dateCreated "2015-07-12T02:42:32.787Z" ;
+    bcube:lastUpdated "2015-07-12T02:42:32.787Z" ;
+    bcube:originatedFrom <urn:uuid:f0cd9ead-8b89-4edc-95c2-397efd9c972b> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:8a1aa2e7-1b85-4a78-9894-12901296a3a6> .
+
+<urn:uuid:8a1aa2e7-1b85-4a78-9894-12901296a3a6> bcube:dateCreated "2015-07-12T02:42:32.787Z" ;
+    bcube:hasMetadataRecord <urn:uuid:67a400e2-b7ba-4efb-b843-eb75e57e903c> ;
+    bcube:lastUpdated "2015-07-12T02:42:32.787Z" ;
+    dc:conformsTo <urn:uuid:15e6cd1c-bd1a-4269-a6a1-c27fc8b0176f>,
+        <urn:uuid:8c1aef5f-ae6e-4f3c-8812-109baff38922>,
+        <urn:uuid:d9e26510-48fa-4ba0-9480-0224e897e0f3> ;
+    dc:description "Survey data includes spatial datasets and data tables necessary to digitally represent data collected in the survey phase of the study. (Source: FEMA Guidelines and Specs, Appendix N)" ;
+    dc:spatial "POLYGON ((-89.128 42.496,-89.128 43.457,-88.538 43.457,-88.538 42.496,-89.128 42.496))" ;
+    dcterms:references <urn:uuid:a382420a-7be6-407f-8514-738f4991c1a9> ;
+    dcterms:title "DCS Survey Submission for Rock River in Jefferson County, WI" ;
+    esip:eastBound "-88.538"^^xsd:float ;
+    esip:northBound "43.457"^^xsd:float ;
+    esip:southBound "42.496"^^xsd:float ;
+    esip:westBound "-89.128"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:8c1aef5f-ae6e-4f3c-8812-109baff38922> bcube:hasValue "elevation",
+        "location",
+        "structure",
+        "transportation" ;
+    dc:partOf "IsoTopicCategories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:a382420a-7be6-407f-8514-738f4991c1a9> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-07-12T02:42:32.787Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-07-12T02:42:32.787Z" ;
+    dc:identifier "urn:sha:37c915397238031daced09ae0e2dd3bf54e84a6477f749c2cc9dcbdf" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://hazards.fema.gov" .
+
+<urn:uuid:d9e26510-48fa-4ba0-9480-0224e897e0f3> bcube:hasType "place" ;
+    bcube:hasValue "COMMUNITY JEFFERSON COUNTY",
+        "COUNTY JEFFERSON",
+        "COUNTY-FIPS 055",
+        "FEMA-CID 55055C",
+        "REGION 05",
+        "STATE WI" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:f0cd9ead-8b89-4edc-95c2-397efd9c972b> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-07-12T02:42:32.787Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-07-12T02:42:32.787Z" ;
+    dc:identifier "urn:sha:1542f30e55ba183cd201238ce9a33330f915e973367b9677e3670c63" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "https://catalog.data.gov/harvest/object/6ec101da-c7cc-4515-8ab0-53806e17e435" .
+

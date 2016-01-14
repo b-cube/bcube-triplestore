@@ -1,0 +1,76 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:0e234f1c-3a03-4f70-a794-8a9dcd4a5395> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-08-13T03:02:47.65Z" ;
+    bcube:lastUpdated "2015-08-13T03:02:47.65Z" ;
+    bcube:originatedFrom <urn:uuid:314e8359-87ef-4295-95ff-eb995caf1896> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:e0921fe3-27e5-4b6e-b75b-c29a27b3e376> .
+
+<urn:uuid:314e8359-87ef-4295-95ff-eb995caf1896> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-13T03:02:47.65Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-13T03:02:47.65Z" ;
+    dc:identifier "urn:sha:1aa90ff8444171a79f05babe652d4e47c34b1c418ad5e34891bb477b" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://rocky2.ess.washington.edu/data/raster/naip2006/Stevens/sp/naip_1-1_1n_wa065_2006_1.xml" .
+
+<urn:uuid:37dc21c8-729e-422e-83c0-98d2dd3832c3> owl:a foaf:Organization ;
+    foaf:name "USDA-FSA Aerial Photography Field Office" .
+
+<urn:uuid:774ae238-0d67-4302-aad7-9a279c6b65de> bcube:hasType "theme" ;
+    bcube:hasValue "Digital",
+        "Farming",
+        "Mosaic",
+        "United States Department of Agriculture (USDA)",
+        "ortho imagery" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:9b666a6c-1348-4a24-ba33-5e25746a8f80> bcube:hasType "place" ;
+    bcube:hasValue "APFO",
+        "Aerial Photography Field Office",
+        "FIPS 53065",
+        "FSA",
+        "Field Service Center",
+        "STEVENS",
+        "STEVENS CO., WA FSA",
+        "USA",
+        "USDA",
+        "United State Department of Agriculture (USDA)",
+        "Washington" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:e0921fe3-27e5-4b6e-b75b-c29a27b3e376> bcube:dateCreated "2015-08-13T03:02:47.65Z" ;
+    bcube:hasMetadataRecord <urn:uuid:0e234f1c-3a03-4f70-a794-8a9dcd4a5395> ;
+    bcube:lastUpdated "2015-08-13T03:02:47.65Z" ;
+    dc:conformsTo <urn:uuid:774ae238-0d67-4302-aad7-9a279c6b65de>,
+        <urn:uuid:9b666a6c-1348-4a24-ba33-5e25746a8f80> ;
+    dc:description "This data set contains lines and/or polygons delineating the boundary between DOQQ imagery used in the creation of a compressed county mosaic (CCM). The DOQQ and CCM products were created from imagery acquired in the National Agriculture Imagery Program (NAIP). These boundary lines can be used as a tool in determining the image source and date of each portion of the CCM. The boundary lines separating each DOQQ may be the actual seam line location or an approximation. This is because the various vendors acquiring and processing the data use different algorithms to create the DOQQ and CCM products. Since the seam line may be an approximation, portions of the CCM along the boundary may actually come from the imagery on the other side of the seam line. The NAIP acquires digital ortho imagery during the agricultural growing seasons in the continental U.S.. A primary goal of the NAIP program is to enable availability of ortho imagery within a year of acquisition. NAIP provides two main products: 1 meter ground sample distance (GSD) ortho imagery rectified to a horizontal accuracy of within +/- 5 meters of reference digital ortho quarter quads (DOQQ's) from the National Digital Ortho Program (NDOP); and, 2 meter GSD ortho imagery rectified to within +/- 10 meters of reference DOQQs. The tiling format of NAIP imagery is based on a 3.75' x 3.75' quarter quadrangle with a 300 meter buffer on all four sides. NAIP quarter quads are formatted to the UTM coordinate system using NAD83. NAIP imagery may contain as much as 10% cloud cover per tile." ;
+    dc:spatial "POLYGON ((-118.443399 47.746621,-118.443399 49.065806,-117.369276 49.065806,-117.369276 47.746621,-118.443399 47.746621))" ;
+    dcterms:publisher <urn:uuid:37dc21c8-729e-422e-83c0-98d2dd3832c3> ;
+    dcterms:title "Index of source acquisition dates." ;
+    esip:eastBound "-117.369276"^^xsd:float ;
+    esip:northBound "49.065806"^^xsd:float ;
+    esip:southBound "47.746621"^^xsd:float ;
+    esip:startDate "2006-09-15"^^xsd:date ;
+    esip:westBound "-118.443399"^^xsd:float ;
+    owl:a dcat:Dataset .
+

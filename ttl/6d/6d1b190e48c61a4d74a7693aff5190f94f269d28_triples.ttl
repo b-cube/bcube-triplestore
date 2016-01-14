@@ -1,0 +1,82 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:0366df29-a554-4264-af77-fb211dec2e3a> owl:a foaf:Organization ;
+    foaf:name "" .
+
+<urn:uuid:45f86200-b611-4e50-ba3e-65efbba96c10> bcube:hasType "theme" ;
+    bcube:hasValue "lead",
+        "sea ice",
+        "spring leads" ;
+    dc:partOf "Aquatic Sciences and Fisheries Thesaurus" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:9b27ef18-193b-40fa-b627-37e3770325ed> bcube:dateCreated "2015-11-16T01:14:17.65Z" ;
+    bcube:hasMetadataRecord <urn:uuid:fde15145-6c6a-41db-8195-808cb00cd83b> ;
+    bcube:lastUpdated "2015-11-16T01:14:17.65Z" ;
+    dc:conformsTo <urn:uuid:45f86200-b611-4e50-ba3e-65efbba96c10>,
+        <urn:uuid:d95ef8ff-d164-439e-b399-682e3204d334> ;
+    dc:description "This vector based data set was derived from an ArcGIS grid (of 1.1 km cells) and represents spring leads along the coast of Northern Alaska (West of Barrow) and Northwest Canada (East of the Mackenzie Delta) for the study area which ranges from approximately 130 to 164 degrees West and 68.5 to 74 degrees North." ;
+    dc:spatial "POLYGON ((-164.176389 68.481396,-164.176389 73.947199,-129.978654 73.947199,-129.978654 68.481396,-164.176389 68.481396))" ;
+    dcterms:publisher <urn:uuid:0366df29-a554-4264-af77-fb211dec2e3a> ;
+    dcterms:references <urn:uuid:f1a92234-4733-4e5c-ad8e-8f1059a42548> ;
+    dcterms:title "Vectorized Lead Segmentation covering the Chukchi and Beaufort Seas offshore of Northern Alaska, USA and Northwest Canada." ;
+    esip:eastBound "-129.978654"^^xsd:float ;
+    esip:northBound "73.947199"^^xsd:float ;
+    esip:southBound "68.481396"^^xsd:float ;
+    esip:startDate "1972-01-01"^^xsd:date ;
+    esip:westBound "-164.176389"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:d6e5fb9d-4253-4314-aa24-f713d733f890> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-16T01:14:17.65Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-16T01:14:17.65Z" ;
+    dc:identifier "urn:sha:f17732e6c6d403910eb79219ec60b746920a3fd561d72f0fb5d84ad2" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://mms.gina.alaska.edu/supp/Leads_shape_template.xml" .
+
+<urn:uuid:d95ef8ff-d164-439e-b399-682e3204d334> bcube:hasType "place" ;
+    bcube:hasValue "Alaska",
+        "Arctic Ocean",
+        "Beaufort Sea",
+        "Canada",
+        "Chukchi Sea",
+        "North Slope" ;
+    dc:partOf "Dictionary of Alaska Place Names" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:f1a92234-4733-4e5c-ad8e-8f1059a42548> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-16T01:14:17.65Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-16T01:14:17.65Z" ;
+    dc:identifier "urn:sha:a3ba6edb99118483a6073782abbda41794ae107cdfa0114611210840" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://mms.gina.alaska.edu" .
+
+<urn:uuid:fde15145-6c6a-41db-8195-808cb00cd83b> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-11-16T01:14:17.65Z" ;
+    bcube:lastUpdated "2015-11-16T01:14:17.65Z" ;
+    bcube:originatedFrom <urn:uuid:d6e5fb9d-4253-4314-aa24-f713d733f890> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:9b27ef18-193b-40fa-b627-37e3770325ed> .
+

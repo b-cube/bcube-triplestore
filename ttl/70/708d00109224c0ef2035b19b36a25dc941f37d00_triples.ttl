@@ -1,0 +1,90 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:2a0ba2e8-e641-4fa4-8c39-5f8cf163c7b5> bcube:hasType "theme" ;
+    bcube:hasValue "5-digit ZIP code",
+        "County FIPS Code",
+        "County GNIS Code",
+        "From House Number",
+        "Permanent edge ID",
+        "Side indicator flag",
+        "State FIPS Code",
+        "State GNIS Code",
+        "To House Number",
+        "ZIP +4 code" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:913d1304-6082-4818-b175-32934d5709dc> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-04T11:49:45.279Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-04T11:49:45.279Z" ;
+    dc:identifier "urn:sha:b558dce67a91f6c9c5dcf174b65cce0f62f41f37aac23f860c13efd6" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://meta.geo.census.gov/data/existing/decennial/GEO/GPMB/TIGERline/TIGER2014/addr/tl_2014_02105_addr.dbf.iso.xml" .
+
+<urn:uuid:9b958128-9a99-468f-9b4f-6cd5a8555500> bcube:hasValue "transportation" ;
+    dc:partOf "IsoTopicCategories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:9d0f87de-9e47-4cdd-ab76-767414069682> a "ISO 19115:2003/19139" ;
+    bcube:dateCreated "2015-11-04T11:49:45.279Z" ;
+    bcube:lastUpdated "2015-11-04T11:49:45.279Z" ;
+    bcube:originatedFrom <urn:uuid:913d1304-6082-4818-b175-32934d5709dc> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:f921f416-7cc5-42c6-9518-1c7066c58db3> .
+
+<urn:uuid:af250ab1-711a-4ed7-bcbd-1e7ee0df95ca> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-04T11:49:45.279Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-04T11:49:45.279Z" ;
+    dc:identifier "urn:sha:97405bce982c75fc7df9a6dfaf947e102cc66e34b8a01dad40a5e219" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www2.census.gov/geo/tiger/TIGER2014/ADDR/tl_2014_02105_addr.zip" .
+
+<urn:uuid:d053b3fa-759f-4f7f-9317-a73d5808ea50> bcube:hasType "place" ;
+    bcube:hasValue "02105",
+        "County or Equivalent Entity",
+        "Hoonah-Angoon",
+        "U.S.",
+        "United States" ;
+    dc:partOf "ANSI INCITS 38:2009 (Formerly FIPS 5-2), ANSI INCITS 31:2009 (Formerly FIPS 6-4),ANSI INCITS 454:2009 (Formerly FIPS 8-6), ANSI INCITS 455:2009(Formerly FIPS 9-1), ANSI INCITS 446:2008 (Geographic Names Information System (GNIS))" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:f921f416-7cc5-42c6-9518-1c7066c58db3> bcube:dateCreated "2015-11-04T11:49:45.279Z" ;
+    bcube:hasMetadataRecord <urn:uuid:9d0f87de-9e47-4cdd-ab76-767414069682> ;
+    bcube:lastUpdated "2015-11-04T11:49:45.279Z" ;
+    dc:conformsTo <urn:uuid:2a0ba2e8-e641-4fa4-8c39-5f8cf163c7b5>,
+        <urn:uuid:9b958128-9a99-468f-9b4f-6cd5a8555500>,
+        <urn:uuid:d053b3fa-759f-4f7f-9317-a73d5808ea50> ;
+    dc:description "The TIGER/Line shapefiles and related database files (.dbf) are an extract of selected geographic and cartographic information from the U.S. Census Bureau's Master Address File / Topologically Integrated Geographic Encoding and Referencing (MAF/TIGER) Database (MTDB). The MTDB represents a seamless national file with no overlaps or gaps between parts, however, each TIGER/Line shapefile is designed to stand alone as an independent data set, or they can be combined to cover the entire nation. The Address Ranges Relationship File (ADDR.dbf) contains the attributes of each address range. Each address range applies to a single edge and has a unique address range identifier (ARID) value. The edge to which an address range applies can be determined by linking the address range to the All Lines Shapefile (EDGES.shp) using the permanent topological edge identifier (TLID) attribute. Multiple address ranges can apply to the same edge since an edge can have multiple address ranges. Note that the most inclusive address range associated with each side of a street edge already appears in the All Lines Shapefile (EDGES.shp). The TIGER/Line Files contain potential address ranges, not individual addresses. The term \"address range\" refers to the collection of all possible structure numbers from the first structure number to the last structure number and all numbers of a specified parity in between along an edge side relative to the direction in which the edge is coded. The address ranges in the TIGER/Line Files are potential ranges that include the full range of possible structure numbers even though the actual structures may not exist." ;
+    dc:spatial "POLYGON ((-138.028575 56.86397,-138.028575 59.41062,-132.649796 59.41062,-132.649796 56.86397,-138.028575 56.86397))" ;
+    dcterms:references <urn:uuid:af250ab1-711a-4ed7-bcbd-1e7ee0df95ca> ;
+    dcterms:title "TIGER/Line Shapefile, 2014, county, Hoonah-Angoon Census Area, AK, Address Ranges County-based Relationship File" ;
+    esip:eastBound "-132.649796"^^xsd:float ;
+    esip:endDate "2014-05-30"^^xsd:date ;
+    esip:northBound "59.41062"^^xsd:float ;
+    esip:southBound "56.86397"^^xsd:float ;
+    esip:startDate "2013-06-30"^^xsd:date ;
+    esip:westBound "-138.028575"^^xsd:float ;
+    owl:a dcat:Dataset .
+

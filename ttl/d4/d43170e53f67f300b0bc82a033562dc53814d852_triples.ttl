@@ -1,0 +1,99 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:42c624b8-04ce-4feb-a22c-722827d3f7e2> bcube:hasType "theme" ;
+    bcube:hasValue "geoscientificInformation",
+        "location",
+        "oceans and estuaries" ;
+    dc:partOf "ISO 19115 Topic Category" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:5f8b6f2c-f86e-4a95-a71d-82dacdbdb906> owl:a foaf:Organization ;
+    foaf:name "U.S. Geological Survey, Coastal and Marine Geology Program" .
+
+<urn:uuid:7f365981-fb5c-4d6d-bd5a-77fb6707fc42> bcube:hasType "place" ;
+    bcube:hasValue "Continental Slope",
+        "Gulf of Mexico",
+        "offshore Louisiana",
+        "offshore Texas" ;
+    dc:partOf "General" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:84f8266c-fa25-4b36-9021-152dd8ce2435> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-05T04:45:33.541Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-05T04:45:33.541Z" ;
+    dc:identifier "urn:sha:c9cc4923c5580694077b86f1fe8b5026b90e41328c0f1b4ff4c8bb47" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://pubs.usgs.gov/of/2005/1071/data/seismic/1999/mcs/nav/gom99lmcs.zip" .
+
+<urn:uuid:c6ed2472-ce70-4325-ab57-654370216fa9> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-08-05T04:45:33.541Z" ;
+    bcube:lastUpdated "2015-08-05T04:45:33.541Z" ;
+    bcube:originatedFrom <urn:uuid:ffd2b722-f253-4600-a380-8a22eb037efd> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:e9a63415-2897-4bab-815b-a070f7d483d9> .
+
+<urn:uuid:e9a63415-2897-4bab-815b-a070f7d483d9> bcube:dateCreated "2015-08-05T04:45:33.541Z" ;
+    bcube:hasMetadataRecord <urn:uuid:c6ed2472-ce70-4325-ab57-654370216fa9> ;
+    bcube:lastUpdated "2015-08-05T04:45:33.541Z" ;
+    dc:conformsTo <urn:uuid:42c624b8-04ce-4feb-a22c-722827d3f7e2>,
+        <urn:uuid:7f365981-fb5c-4d6d-bd5a-77fb6707fc42>,
+        <urn:uuid:ed7990e8-9b0f-4af8-b3cc-b5eaf158c0b6> ;
+    dc:description "This GIS data layer represents the tracklines along which multichannel seismic data were collected during USGS cruise G1-99-GM aboard the R/V GYRE. Seismic data were collected in the Gulf of Mexico along 1,268 km of tracklines on the upper and middle continental slope offshore of Texas and Louisiana to study the distribution and acoustic nature of gas hydrates in this region." ;
+    dc:spatial "POLYGON ((-92.99103 27.36783,-92.99103 27.94401,-91.42877 27.94401,-91.42877 27.36783,-92.99103 27.36783))" ;
+    dcterms:publisher <urn:uuid:5f8b6f2c-f86e-4a95-a71d-82dacdbdb906> ;
+    dcterms:references <urn:uuid:84f8266c-fa25-4b36-9021-152dd8ce2435> ;
+    dcterms:title "GOM99LMCS.SHP - R/V GYRE cruise G1-99-GM (99002) multi channel seismic tracklines" ;
+    esip:eastBound "-91.42877"^^xsd:float ;
+    esip:endDate "1999-04-30"^^xsd:date ;
+    esip:northBound "27.94401"^^xsd:float ;
+    esip:southBound "27.36783"^^xsd:float ;
+    esip:startDate "1999-04-01"^^xsd:date ;
+    esip:westBound "-92.99103"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:ed7990e8-9b0f-4af8-b3cc-b5eaf158c0b6> bcube:hasType "theme" ;
+    bcube:hasValue "CMGP",
+        "Coastal and Marine Geology Program",
+        "G1-99-GM",
+        "U.S. Geological Survey",
+        "USGS",
+        "WHSC",
+        "Woods Hole Science Center",
+        "field activity serial number 99002",
+        "hydrophone",
+        "multichannel",
+        "navigation",
+        "navigation trackline",
+        "polyline shapefile" ;
+    dc:partOf "General" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:ffd2b722-f253-4600-a380-8a22eb037efd> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-05T04:45:33.541Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-05T04:45:33.541Z" ;
+    dc:identifier "urn:sha:e585e5809f28fa279fd9e9bc008545ed9eeb67527e693024ff40620b" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://woodshole.er.usgs.gov/pubs/of2005-1071/data/seismic/1999/mcs/nav/gom99lmcs.shp.xml" .
+

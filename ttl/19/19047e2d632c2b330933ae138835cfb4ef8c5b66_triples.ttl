@@ -1,0 +1,96 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:160b2b2a-6d64-4eb2-a96c-b1f575223485> owl:a foaf:Organization ;
+    foaf:name "Federal Emergency Management Agency" .
+
+<urn:uuid:34db76f2-7297-4d6b-98f5-d6ae6336a1d4> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-07-12T02:42:36.682Z" ;
+    bcube:lastUpdated "2015-07-12T02:42:36.682Z" ;
+    bcube:originatedFrom <urn:uuid:eae677df-fcf3-476e-9fef-5bb46003d94e> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:b76a8eba-a165-49f2-b086-5d8521e619b9> .
+
+<urn:uuid:5dc806b5-6329-46c9-8f57-90cc968cb178> bcube:hasType "place" ;
+    bcube:hasValue "COMMUNITY CRAWFORD COUNTY",
+        "COUNTY ANDROSCOGGIN",
+        "COUNTY-FIPS 001",
+        "FEMA-CID 23001C",
+        "REGION I",
+        "STATE ME" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:5fea33e4-b92a-4704-9136-d9337737ff6a> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-07-12T02:42:36.682Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-07-12T02:42:36.682Z" ;
+    dc:identifier "urn:sha:37c915397238031daced09ae0e2dd3bf54e84a6477f749c2cc9dcbdf" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://hazards.fema.gov" .
+
+<urn:uuid:77f678dd-42bc-410f-a569-6084a87b21d5> bcube:hasType "theme" ;
+    bcube:hasValue "elevation" ;
+    dc:partOf "ISO 19115 Topic Category" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:88fcb80c-9f66-4d9f-9dcb-4c45b2d6ffd3> bcube:hasType "theme" ;
+    bcube:hasValue "Breaklines",
+        "Contours",
+        "DEM",
+        "Digital Terrain Model",
+        "Elevation Data",
+        "Flow vectors",
+        "LIDAR",
+        "Land Surface",
+        "Relief",
+        "Slope",
+        "Topography" ;
+    dc:partOf "FEMA NFIP Topic Category" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:b76a8eba-a165-49f2-b086-5d8521e619b9> bcube:dateCreated "2015-07-12T02:42:36.682Z" ;
+    bcube:hasMetadataRecord <urn:uuid:34db76f2-7297-4d6b-98f5-d6ae6336a1d4> ;
+    bcube:lastUpdated "2015-07-12T02:42:36.682Z" ;
+    dc:conformsTo <urn:uuid:5dc806b5-6329-46c9-8f57-90cc968cb178>,
+        <urn:uuid:77f678dd-42bc-410f-a569-6084a87b21d5>,
+        <urn:uuid:88fcb80c-9f66-4d9f-9dcb-4c45b2d6ffd3> ;
+    dc:description "Terrain data, as defined in FEMA Guidelines and Specifications, Appendix M: Data Capture Standards, describes the digital topographic data that was used to create the elevation data representing the terrain environment of a watershed and/or floodplain. Terrain data requirements allow for flexibility in the types of information provided as sources used to produce final terrain deliverables. Once this type of data is provided, FEMA will be able to account for the origins of the flood study elevation data. (Source: FEMA Guidelines and Specifications, Appendix N, Section N.1.2)." ;
+    dc:spatial "POLYGON ((-70.520292 43.899833,-70.520292 44.506474,-69.904795 44.506474,-69.904795 43.899833,-70.520292 43.899833))" ;
+    dcterms:publisher <urn:uuid:160b2b2a-6d64-4eb2-a96c-b1f575223485> ;
+    dcterms:references <urn:uuid:5fea33e4-b92a-4704-9136-d9337737ff6a> ;
+    dcterms:title "TERRAIN, Androscoggin COUNTY, MAINE" ;
+    esip:eastBound "-69.904795"^^xsd:float ;
+    esip:northBound "44.506474"^^xsd:float ;
+    esip:southBound "43.899833"^^xsd:float ;
+    esip:startDate "2009-12-02"^^xsd:date ;
+    esip:westBound "-70.520292"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:eae677df-fcf3-476e-9fef-5bb46003d94e> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-07-12T02:42:36.682Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-07-12T02:42:36.682Z" ;
+    dc:identifier "urn:sha:3676b3deb72230514eeaf1d932a6f8f9653e28a84763984db1c9aa76" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "https://catalog.data.gov/harvest/object/20412e02-e2d5-48ca-9b9a-9f2d4f337f33/original" .
+

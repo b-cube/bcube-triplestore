@@ -1,0 +1,77 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:23c6b9ac-e1b3-4b50-b9d3-515329e9d151> bcube:hasType "place" ;
+    bcube:hasValue "APFO",
+        "Aerial Photography Field Office",
+        "FIPS 18171",
+        "FSA",
+        "Field Service Center",
+        "IN",
+        "USA",
+        "USDA",
+        "United States Department of Agriculture (USDA)",
+        "WARREN CO., IN",
+        "Warren" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:4125251c-46f3-4789-82c8-5f64cfbc191b> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-11-12T09:55:50.219Z" ;
+    bcube:lastUpdated "2015-11-12T09:55:50.219Z" ;
+    bcube:originatedFrom <urn:uuid:94e6d527-5bb8-4634-980d-b617fc899501> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:9b9f1676-0bef-4859-9c69-c696965b652c> .
+
+<urn:uuid:484002f6-f8b6-4f4f-959c-4bd6ea1f07d8> owl:a foaf:Organization ;
+    foaf:name "USDA-FSA Aerial Photography Field Office" .
+
+<urn:uuid:94e6d527-5bb8-4634-980d-b617fc899501> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-12T09:55:50.219Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-12T09:55:50.219Z" ;
+    dc:identifier "urn:sha:43f2d2a754005224fc7f1cb7b5f0855e8ab15d6581622eac648ee7ef" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "https://spatialdata.iu.edu/DOQQS/naip/county/y2014/in_naip_2014/in_ccm_2014/18171/ortho_1-1_1n_s_in171_2014_1.shp.xml" .
+
+<urn:uuid:9b9f1676-0bef-4859-9c69-c696965b652c> bcube:dateCreated "2015-11-12T09:55:50.219Z" ;
+    bcube:hasMetadataRecord <urn:uuid:4125251c-46f3-4789-82c8-5f64cfbc191b> ;
+    bcube:lastUpdated "2015-11-12T09:55:50.219Z" ;
+    dc:conformsTo <urn:uuid:23c6b9ac-e1b3-4b50-b9d3-515329e9d151>,
+        <urn:uuid:af7bd9c2-a8a8-415b-89de-73bcf3cdb92f> ;
+    dc:description "This data set contains polygons delineating the seamline boundaries of imagery acquired as part of the National Agriculture Imagery Program (NAIP), and used in the creation of DOQQs and compressed county mosaics (CCM). These seam polygons can be used as a tool in determining the image source and date of each portion of the DOQQ or the CCM. The NAIP acquires 4 band digital ortho imagery from airborne and/or space based platforms during the agricultural growing seasons in the U.S.. A primary goal of the NAIP program is to enable availability of ortho imagery within sixty days of acquisition. The NAIP provides 1 meter or 1/2 meter GSD ortho imagery rectified within +/- 6 meters to true ground at a 95% confidence level. The tiling format of NAIP imagery is based on a 3.75' x 3.75' quarter quadrangle with a 300 (plus or minus 30) pixel buffer on all four sides. The NAIP quarter quads are formatted to the UTM coordinate system using the North American Datum of 1983 (NAD83)." ;
+    dc:spatial "POLYGON ((-87.582112627300006 40.021218611099997,-87.582112627300006 40.964257284,-87.030448690699998 40.964257284,-87.030448690699998 40.021218611099997,-87.582112627300006 40.021218611099997))" ;
+    dcterms:publisher <urn:uuid:484002f6-f8b6-4f4f-959c-4bd6ea1f07d8> ;
+    dcterms:title "Index of source acquisition dates." ;
+    esip:eastBound "-87.0304486907"^^xsd:float ;
+    esip:northBound "40.964257284"^^xsd:float ;
+    esip:southBound "40.0212186111"^^xsd:float ;
+    esip:startDate "2014-12-04"^^xsd:date ;
+    esip:westBound "-87.5821126273"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:af7bd9c2-a8a8-415b-89de-73bcf3cdb92f> bcube:hasType "theme" ;
+    bcube:hasValue "Acquisition Date",
+        "Digital",
+        "Mosaic",
+        "Ortho Imagery",
+        "United States Department of Agriculture (USDA)",
+        "farming" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+

@@ -1,0 +1,88 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:09240fbb-0079-480f-b11c-3668e9ff6379> owl:a foaf:Organization ;
+    foaf:name "USDA-FSA-APFO Aerial Photography Field Office" .
+
+<urn:uuid:2d8a1ee6-9b39-48ec-a1ba-a7918ff298f0> bcube:hasType "theme" ;
+    bcube:hasValue "Aerial Photography",
+        "ArcGIS Online",
+        "Dates",
+        "FGDC",
+        "FSA",
+        "Historical",
+        "Imagery",
+        "Metadata",
+        "NAIP",
+        "Web Map",
+        "farming" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:2f68ee8c-8e85-4d17-be88-3306f7ab68ec> bcube:dateCreated "2015-10-12T17:48:10.386Z" ;
+    bcube:hasMetadataRecord <urn:uuid:92a76873-b15f-4a9b-a8b1-070311e90e4d> ;
+    bcube:lastUpdated "2015-10-12T17:48:10.386Z" ;
+    dc:conformsTo <urn:uuid:2d8a1ee6-9b39-48ec-a1ba-a7918ff298f0>,
+        <urn:uuid:89f24d22-dcc2-4665-a84b-2bf16164ff86> ;
+    dc:description "The NAIP National Metadata Map contains USGS Quarter Quad and NAIP Seamline boundaries for every year NAIP imagery has been collected. Clicking on the map also makes available a number of metadata fields which describe the day, time, camera, aircraft, and location of NAIP collection. There is also a link which will open an FGDC compliant metadata text file for each NAIP USGS Quarter Quad collected." ;
+    dc:spatial "POLYGON ((-126.2 21.79,-126.2 50.1,-61.3 50.1,-61.3 21.79,-126.2 21.79))" ;
+    dcterms:publisher <urn:uuid:09240fbb-0079-480f-b11c-3668e9ff6379> ;
+    dcterms:references <urn:uuid:9bf7428e-4c52-4a6b-a859-71f4e0dcfd91> ;
+    dcterms:title "NAIP National Metadata" ;
+    esip:eastBound "-61.3"^^xsd:float ;
+    esip:northBound "50.1"^^xsd:float ;
+    esip:southBound "21.79"^^xsd:float ;
+    esip:startDate "2014-01-01"^^xsd:date ;
+    esip:westBound "-126.2"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:89f24d22-dcc2-4665-a84b-2bf16164ff86> bcube:hasType "place" ;
+    bcube:hasValue "\"United States\"",
+        "North America",
+        "State",
+        "US" ;
+    dc:partOf "Geographic Names Information System" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:92a76873-b15f-4a9b-a8b1-070311e90e4d> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-10-12T17:48:10.386Z" ;
+    bcube:lastUpdated "2015-10-12T17:48:10.386Z" ;
+    bcube:originatedFrom <urn:uuid:dda13829-6742-4834-b2ca-9c1d45dfbbaa> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:2f68ee8c-8e85-4d17-be88-3306f7ab68ec> .
+
+<urn:uuid:9bf7428e-4c52-4a6b-a859-71f4e0dcfd91> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-10-12T17:48:10.386Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-10-12T17:48:10.386Z" ;
+    dc:identifier "urn:sha:d8ae8fb5377ac4188b400dcc7ee6813b79b35263cffa57284659e682" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://usdaonline.maps.arcgis.com/home/webmap/viewer.html?webmap=d7eb04e3a14343b39cdc3503f5037003" .
+
+<urn:uuid:dda13829-6742-4834-b2ca-9c1d45dfbbaa> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-10-12T17:48:10.386Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-10-12T17:48:10.386Z" ;
+    dc:identifier "urn:sha:28bf93134d3a763077581ae47b1370bbbdc3e8de84d2c97fbf9d2df2" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://gis.apfo.usda.gov/geoharvest/AGOL1/NAIP_National_Metadata_Map_Metadata.xml" .
+

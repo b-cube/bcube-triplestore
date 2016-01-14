@@ -1,0 +1,78 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:1a14a5f0-29f2-44b0-a9ef-aa1d306c4ce7> bcube:hasType "theme" ;
+    bcube:hasValue "coal",
+        "energy",
+        "fuel",
+        "gas",
+        "geothermal",
+        "hydro",
+        "nuclear",
+        "oil",
+        "plant",
+        "power",
+        "solar",
+        "solar thermal",
+        "transmission",
+        "waste",
+        "wind" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:1da535f9-32c6-4737-ba17-a79506c96fd5> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-07-31T15:17:49.311Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-07-31T15:17:49.311Z" ;
+    dc:identifier "urn:sha:3308cd5a9f10380cbf239e369de89ab0c1d6ec815d619c554f4fd0b8" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "https://catalog.data.gov/harvest/object/7481e6d3-a1c8-486e-b2a1-71257874d2ac" .
+
+<urn:uuid:5f58d1d3-e054-44c8-9447-daec2fecf704> a "ISO 19115:2003/19139" ;
+    bcube:dateCreated "2015-07-31T15:17:49.311Z" ;
+    bcube:lastUpdated "2015-07-31T15:17:49.311Z" ;
+    bcube:originatedFrom <urn:uuid:1da535f9-32c6-4737-ba17-a79506c96fd5> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:c5ccdbd6-8a7d-455f-b667-1352d5ec436f> .
+
+<urn:uuid:a3c3bba7-e9e6-45de-9cc7-cc63b563eb5c> bcube:hasValue "environment",
+        "oceans" ;
+    dc:partOf "IsoTopicCategories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:b9f357fc-9854-4a04-8301-7ca768424f43> bcube:hasType "place" ;
+    bcube:hasValue "National",
+        "United States" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:c5ccdbd6-8a7d-455f-b667-1352d5ec436f> bcube:dateCreated "2015-07-31T15:17:49.311Z" ;
+    bcube:hasMetadataRecord <urn:uuid:5f58d1d3-e054-44c8-9447-daec2fecf704> ;
+    bcube:lastUpdated "2015-07-31T15:17:49.311Z" ;
+    dc:conformsTo <urn:uuid:1a14a5f0-29f2-44b0-a9ef-aa1d306c4ce7>,
+        <urn:uuid:a3c3bba7-e9e6-45de-9cc7-cc63b563eb5c>,
+        <urn:uuid:b9f357fc-9854-4a04-8301-7ca768424f43> ;
+    dc:description "This data product depicts the locations of facilities that generate electricity. Only facilities adjacent to the coast and Great Lakes are identified. Contained within the database are records that define the fuel source and other characteristics of the facility that may benefit ocean planners. In some cases, the presence of a facility may indicate that certain power transmission infrastructure exists nearby. Absence of a facility or lack of sufficient capacity at a facility in a given area may also be an important characteristic in future energy planning activities." ;
+    dc:spatial "POLYGON ((-171.737523 18.974204,-171.737523 71.2789,-67.003299 71.2789,-67.003299 18.974204,-171.737523 18.974204))" ;
+    dcterms:title "Coastal Energy Facilities" ;
+    esip:eastBound "-67.003299"^^xsd:float ;
+    esip:northBound "71.2789"^^xsd:float ;
+    esip:southBound "18.974204"^^xsd:float ;
+    esip:westBound "-171.737523"^^xsd:float ;
+    owl:a dcat:Dataset .
+

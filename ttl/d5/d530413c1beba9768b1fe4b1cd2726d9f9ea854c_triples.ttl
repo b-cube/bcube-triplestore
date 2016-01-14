@@ -1,0 +1,86 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:1672a4fb-6542-4f3c-8e74-24b0812969f5> bcube:hasType "theme" ;
+    bcube:hasValue "Address Range",
+        "County or equivalent entity",
+        "Linear Feature",
+        "Road Feature",
+        "Roads",
+        "Street Centerline" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:8f34d759-a77a-4d18-adc9-613726cea2b4> bcube:hasType "place" ;
+    bcube:hasValue "02090",
+        "County or Equivalent Entity",
+        "Fairbanks North Star",
+        "U.S.",
+        "United States" ;
+    dc:partOf "ANSI INCITS 38:2009 (Formerly FIPS 5-2), ANSI INCITS 31:2009 (Formerly FIPS 6-4),ANSI INCITS 454:2009 (Formerly FIPS 8-6), ANSI INCITS 455:2009(Formerly FIPS 9-1), ANSI INCITS 446:2008 (Geographic Names Information System (GNIS))" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:b53c7492-54e1-49f2-b159-a6f1be762201> a "ISO 19115:2003/19139" ;
+    bcube:dateCreated "2015-10-30T07:10:00.9Z" ;
+    bcube:lastUpdated "2015-10-30T07:10:00.9Z" ;
+    bcube:originatedFrom <urn:uuid:bdd0a66e-0f36-4171-bd77-18b24770c3f0> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:d4d175d2-8f6a-4d62-b526-831db6c96f8c> .
+
+<urn:uuid:bdd0a66e-0f36-4171-bd77-18b24770c3f0> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-10-30T07:10:00.9Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-10-30T07:10:00.9Z" ;
+    dc:identifier "urn:sha:521127a36792bdff780586c6ee1245dbfcc6362d5b0d74bf5466fb70" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://meta.geo.census.gov/data/existing/decennial/GEO/GPMB/TIGERline/TIGER2014/roads/tl_2014_02090_roads.shp.iso.xml" .
+
+<urn:uuid:d4d175d2-8f6a-4d62-b526-831db6c96f8c> bcube:dateCreated "2015-10-30T07:10:00.9Z" ;
+    bcube:hasMetadataRecord <urn:uuid:b53c7492-54e1-49f2-b159-a6f1be762201> ;
+    bcube:lastUpdated "2015-10-30T07:10:00.9Z" ;
+    dc:conformsTo <urn:uuid:1672a4fb-6542-4f3c-8e74-24b0812969f5>,
+        <urn:uuid:8f34d759-a77a-4d18-adc9-613726cea2b4>,
+        <urn:uuid:f248cd82-8775-4062-98fb-b05525127bff> ;
+    dc:description "The TIGER/Line shapefiles and related database files (.dbf) are an extract of selected geographic and cartographic information from the U.S. Census Bureau's Master Address File / Topologically Integrated Geographic Encoding and Referencing (MAF/TIGER) Database (MTDB). The MTDB represents a seamless national file with no overlaps or gaps between parts, however, each TIGER/Line shapefile is designed to stand alone as an independent data set, or they can be combined to cover the entire nation. The All Roads Shapefile includes all features within the MTDB Super Class \"Road/Path Features\" distinguished where the MAF/TIGER Feature Classification Code (MTFCC) for the feature in MTDB that begins with \"S\". This includes all primary, secondary, local neighborhood, and rural roads, city streets, vehicular trails (4wd), ramps, service drives, alleys, parking lot roads, private roads for service vehicles (logging, oil fields, ranches, etc.), bike paths or trails, bridle/horse paths, walkways/pedestrian trails, and stairways." ;
+    dc:spatial "POLYGON ((-148.667164 64.257854,-148.667164 65.454475,-143.884795 65.454475,-143.884795 64.257854,-148.667164 64.257854))" ;
+    dcterms:references <urn:uuid:e716bdb6-6e3d-4bad-98cd-dd3fdb7b446f> ;
+    dcterms:title "TIGER/Line Shapefile, 2014, county, Fairbanks North Star Borough, AK, All Roads County-based Shapefile" ;
+    esip:eastBound "-143.884795"^^xsd:float ;
+    esip:endDate "2014-05-02"^^xsd:date ;
+    esip:northBound "65.454475"^^xsd:float ;
+    esip:southBound "64.257854"^^xsd:float ;
+    esip:startDate "2013-06-02"^^xsd:date ;
+    esip:westBound "-148.667164"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:e716bdb6-6e3d-4bad-98cd-dd3fdb7b446f> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-10-30T07:10:00.9Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-10-30T07:10:00.9Z" ;
+    dc:identifier "urn:sha:57f6866c45b55adc3c1c5347267fdf399b7082a260f47df2f28d8792" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www2.census.gov/geo/tiger/TIGER2014/ROADS/tl_2014_02090_roads.zip" .
+
+<urn:uuid:f248cd82-8775-4062-98fb-b05525127bff> bcube:hasValue "transportation" ;
+    dc:partOf "IsoTopicCategories" ;
+    owl:a bcube:thesaurusSubset .
+

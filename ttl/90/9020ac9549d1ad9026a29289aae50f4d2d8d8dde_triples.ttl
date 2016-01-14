@@ -1,0 +1,58 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:2132cec0-2e96-47c2-befd-19629879e2f9> a "OGC:WMS" ;
+    bcube:contains <urn:uuid:2229ac12-3f77-4a63-9528-c53ff63d01b7> ;
+    bcube:dateCreated "2015-08-10T04:04:36.496Z" ;
+    bcube:lastUpdated "2015-08-10T04:04:36.496Z" ;
+    bcube:originatedFrom <urn:uuid:6970fbc2-b58f-4f8c-be2f-a2a1cd75a811> ;
+    dc:description "WMS" ;
+    owl:a bcube:service .
+
+<urn:uuid:2229ac12-3f77-4a63-9528-c53ff63d01b7> bcube:dateCreated "2015-08-10T04:04:36.496Z" ;
+    bcube:lastUpdated "2015-08-10T04:04:36.496Z" ;
+    dc:description "The polygon dataset represents average indoor radon screening levels in counties across the United States. The graphic produced by these layers can be found on page 75 of the Environmental Protection Agency s Report on the Environment - 2008 (EPAROE_Final_2008.pdf). The Exhibit for this map is Exhibit 2-56 in the report. Summary data in this indicator were provided by EPA s Office of Radiation and Indoor Air, based on two types of information. The number of homes with estimated indoor air concentrations at or above EPA s radon action level was originally derived from the National Residential Radon Survey (U.S. EPA, 1992a) and is updated with U.S. Census data; and the number of homes with radon mitigation systems was developed from unpublished sales data provided by radon vent fan manufacturers (U.S. EPA, 2007). Data were collected by the US Environmental Protection Agency.<br><A HREF=\"https://edg.epa.gov/metadata/catalog/search/resource/details.page?uuid={5AD08978-EAFB-4FBC-B6A4-3A604797FF0E}\" target=\"_blank\"><IMG SRC=\"https://edg.epa.gov/clipship/doc/metadata.png\" BORDER=0></A>" ;
+    dc:spatial "POLYGON ((-179.231086 -14.601813,-179.231086 71.441059,179.859681 71.441059,179.859681 -14.601813,-179.231086 -14.601813))" ;
+    dc:title "Radon Data" ;
+    dcterms:references <urn:uuid:70a00e9e-9a63-46b3-ac03-a2c199b1682c> ;
+    esip:eastBound "179.859681"^^xsd:float ;
+    esip:northBound "71.441059"^^xsd:float ;
+    esip:southBound "-14.601813"^^xsd:float ;
+    esip:westBound "-179.231086"^^xsd:float ;
+    owl:a bcube:Layer .
+
+<urn:uuid:6970fbc2-b58f-4f8c-be2f-a2a1cd75a811> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-10T04:04:36.496Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-10T04:04:36.496Z" ;
+    dc:identifier "urn:sha:afb130e931be2c35bbef111c8bcd5cb6b0106ba231a743ad0819624f" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://gispub10.epa.gov/arcgis/services/ORD/ROE_Radon/MapServer/WMSServer?request=GetCapabilities&service=WMS" .
+
+<urn:uuid:70a00e9e-9a63-46b3-ac03-a2c199b1682c> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-10T04:04:36.496Z" ;
+    bcube:hasConfidence "Not Sure" ;
+    bcube:hasUrlSource "Generated" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-10T04:04:36.496Z" ;
+    dc:identifier "urn:sha:5296fd6cda91190c16888f29e304676694682ad2b697bcc62cda9440" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://gispub10.epa.gov/arcgis/services/ORD/ROE_Radon/MapServer/WMSServer?layers=0&width=500&version=1.3.0&bbox=-179.231086%2C-14.601813%2C179.859681%2C71.441059&service=WMS&format=image%2Fpng&styles=&crs=CRS%3A84&request=GetMap&height=500" .
+

@@ -1,0 +1,89 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:23327be8-069c-4890-8bfc-144703931950> bcube:hasType "theme" ;
+    bcube:hasValue "boundaries" ;
+    dc:partOf "ISO 19115 Topic Categories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:23e9c464-567b-42b8-99cd-2ce31127c032> bcube:hasType "place" ;
+    bcube:hasValue "30",
+        "MT",
+        "Montana",
+        "State or Equivalent Entity",
+        "U.S.",
+        "United States" ;
+    dc:partOf "FIPS Publication 5-2, FIPS Publication 6-4, FIPS Publication 8-6, FIPS Publication 9-1" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:3b12e63b-9439-4a37-a29c-f185eea323e7> owl:a foaf:Organization ;
+    foaf:name "" .
+
+<urn:uuid:9e5c59e8-5c11-4d81-81a0-8b9fa10a6dda> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-11-08T06:48:46.789Z" ;
+    bcube:lastUpdated "2015-11-08T06:48:46.789Z" ;
+    bcube:originatedFrom <urn:uuid:baa882f7-fade-4c12-ae2c-53f3d9718376> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:a251a29f-28c2-4a77-a1f9-b168f89c72ed> .
+
+<urn:uuid:a251a29f-28c2-4a77-a1f9-b168f89c72ed> bcube:dateCreated "2015-11-08T06:48:46.789Z" ;
+    bcube:hasMetadataRecord <urn:uuid:9e5c59e8-5c11-4d81-81a0-8b9fa10a6dda> ;
+    bcube:lastUpdated "2015-11-08T06:48:46.789Z" ;
+    dc:conformsTo <urn:uuid:23327be8-069c-4890-8bfc-144703931950>,
+        <urn:uuid:23e9c464-567b-42b8-99cd-2ce31127c032>,
+        <urn:uuid:d3c22d0b-574b-4d88-a2ac-3c3bc40ec8a1> ;
+    dc:description "The TIGER/Line Shapefiles are an extract of selected geographic and cartographic information from the Census MAF/TIGER database. The Census MAF/TIGER database represents a seamless national file with no overlaps or gaps between parts. However, each TIGER/Line Shapefile is designed to stand alone as an independent data set or the shapefiles can be combined to cover the whole nation." ;
+    dc:spatial "POLYGON ((-116.050003 44.358209,-116.050003 49.00139,-104.039563 49.00139,-104.039563 44.358209,-116.050003 44.358209))" ;
+    dcterms:publisher <urn:uuid:3b12e63b-9439-4a37-a29c-f185eea323e7> ;
+    dcterms:references <urn:uuid:c2d13421-fa23-4906-95de-70638d182dcd> ;
+    dcterms:title "TIGER/Line Shapefile, 2007, 2000 state, Montana, Consolidated City" ;
+    esip:eastBound "-104.039563"^^xsd:float ;
+    esip:endDate "2007-07-01"^^xsd:date ;
+    esip:northBound "49.00139"^^xsd:float ;
+    esip:southBound "44.358209"^^xsd:float ;
+    esip:startDate "2007-01-01"^^xsd:date ;
+    esip:westBound "-116.050003"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:baa882f7-fade-4c12-ae2c-53f3d9718376> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-08T06:48:46.789Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-08T06:48:46.789Z" ;
+    dc:identifier "urn:sha:4011d2ff64831c18827df00ae477c77fd6f9bd1c884d27fc790ad639" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://meta.geo.census.gov/data/existing/decennial/GEO/GPMB/TIGERline/fe_2007/concity00/fe_2007_30_concity00_url.shp.xml" .
+
+<urn:uuid:c2d13421-fa23-4906-95de-70638d182dcd> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-08T06:48:46.789Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-08T06:48:46.789Z" ;
+    dc:identifier "urn:sha:9e95af109c681cdddff82801165482381c2c58f8a4e02de982b5b0b0" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www2.census.gov/geo/tiger/TIGER2007FE/30_MONTANA/fe_2007_30_concity00.zip" .
+
+<urn:uuid:d3c22d0b-574b-4d88-a2ac-3c3bc40ec8a1> bcube:hasType "theme" ;
+    bcube:hasValue "Consolidated City",
+        "Polygon",
+        "State or equivalent entity" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+

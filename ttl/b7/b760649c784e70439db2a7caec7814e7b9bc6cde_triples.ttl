@@ -1,0 +1,62 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:1b37439b-af22-4249-8eb7-6357b1180a24> a "OGC:WMS" ;
+    bcube:contains <urn:uuid:72c89008-5d29-4db9-8b7c-1bb9c9b142b8> ;
+    bcube:dateCreated "2015-08-14T03:40:14.58Z" ;
+    bcube:lastUpdated "2015-08-14T03:40:14.58Z" ;
+    bcube:originatedFrom <urn:uuid:9947091d-42a2-4138-9b47-08a429a9a299> ;
+    dc:conformsTo <urn:uuid:85cd6aef-05c9-479f-98c8-64253abb6d54> ;
+    dc:description "MississippianGradient in the state of Indiana" ;
+    owl:a bcube:service .
+
+<urn:uuid:72c89008-5d29-4db9-8b7c-1bb9c9b142b8> bcube:dateCreated "2015-08-14T03:40:14.58Z" ;
+    bcube:lastUpdated "2015-08-14T03:40:14.58Z" ;
+    dc:description "This resource provides contour data representing the distribution of thermal gradients within a specified geologic unit in Indiana in a geodatabase and shapefile, as well as a web feature and web map service. The data includes attributes (bottom-hole temperature, well depth, location) extracted from the Indiana Geological Survey petroleum database (http://igs.indiana.edu/pdms/), as well as average surface temperature data derived from PRISM climate data (http://www.prism.oregonstate.edu). This resource was compiled by the Indiana Geological Survey and made available for distribution through the National Geothermal Data System. The original data and metadata can be viewed or downloaded from the USGIN Repository at <a href=\"http://repository.stategeothermaldata.org/repository/resource/50ec3aefb656b70647f32e38bcf3d61b/\">State Geothermal Data Repository</a>(http://repository.stategeothermaldata.org/repository/resource/50ec3aefb656b70647f32e38bcf3d61b/)." ;
+    dc:spatial "POLYGON ((-90.265125 37.320213,-90.265125 39.876589,-85.6837 39.876589,-85.6837 37.320213,-90.265125 37.320213))" ;
+    dc:title "MississippiGradient" ;
+    dcterms:references <urn:uuid:eebc6f86-ca80-450a-bcf7-736e86f592a0> ;
+    esip:eastBound "-85.6837"^^xsd:float ;
+    esip:northBound "39.876589"^^xsd:float ;
+    esip:southBound "37.320213"^^xsd:float ;
+    esip:westBound "-90.265125"^^xsd:float ;
+    owl:a bcube:Layer .
+
+<urn:uuid:85cd6aef-05c9-479f-98c8-64253abb6d54> bcube:hasValue "Geothermal" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:9947091d-42a2-4138-9b47-08a429a9a299> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-14T03:40:14.58Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-14T03:40:14.58Z" ;
+    dc:identifier "urn:sha:d68b66e14bfefb9f02486fe41519c1963a946efa91ad0c0c557e79a4" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://geothermal.isgs.illinois.edu/ArcGIS/services/aasggeothermal/INMississippianGradient/MapServer/WMSServer?request=GetCapabilities&service=WMS" .
+
+<urn:uuid:eebc6f86-ca80-450a-bcf7-736e86f592a0> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-14T03:40:14.58Z" ;
+    bcube:hasConfidence "Not Sure" ;
+    bcube:hasUrlSource "Generated" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-14T03:40:14.58Z" ;
+    dc:identifier "urn:sha:22a13ccc8a1b0aca4cbd4febb0afd01db2627aa89a69a055ddec56c6" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://geothermal.isgs.illinois.edu/ArcGIS/services/aasggeothermal/INMississippianGradient/MapServer/WMSServer?layers=MississippiGradient&width=500&version=1.3.0&bbox=-90.265125%2C37.320213%2C-85.6837%2C39.876589&service=WMS&format=image%2Fpng&styles=&crs=CRS%3A84&request=GetMap&height=500" .
+

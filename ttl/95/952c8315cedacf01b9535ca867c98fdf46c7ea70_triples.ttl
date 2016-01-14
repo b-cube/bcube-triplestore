@@ -1,0 +1,80 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:062e5ba8-9b1b-4f97-92c6-06a2561a63a4> owl:a foaf:Organization ;
+    foaf:name "U.S. Geological Survey" .
+
+<urn:uuid:529efa54-36c9-48cc-8f5d-183ec2deea1e> bcube:hasType "place" ;
+    bcube:hasValue "fUS = United States",
+        "fUS78 = Virgin Islands of the United States" ;
+    dc:partOf "Augmented FIPS 10-4 and FIPS 6-4" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:6fef48bf-3133-45d8-b7c8-8b7698317c6a> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2014-10-30T01:25:08.149Z" ;
+    bcube:lastUpdated "2014-10-30T01:25:08.149Z" ;
+    bcube:originatedFrom <urn:uuid:710850c4-58af-4f7a-8a58-9fb912c69ad7> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:eb77a141-237f-4ded-b2b8-5940cfb99cf9> .
+
+<urn:uuid:710850c4-58af-4f7a-8a58-9fb912c69ad7> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2014-10-30T01:25:08.149Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2014-10-30T01:25:08.149Z" ;
+    dc:identifier "urn:sha:355e900a1194641bc3c98cecb8db6e5a5a1aaba01fb7c993e16fd831" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www.usgs.gov/science/xml.php?cite=250" .
+
+<urn:uuid:ddb5beb0-0b2a-4327-8cc9-14e97d18aaa0> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2014-10-30T01:25:08.149Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2014-10-30T01:25:08.149Z" ;
+    dc:identifier "urn:sha:e2baa582f7ddc26b911e680dcf79a8e4ba48af5a7d3a3370eef76049" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://nhd.usgs.gov/" .
+
+<urn:uuid:eb77a141-237f-4ded-b2b8-5940cfb99cf9> bcube:dateCreated "2014-10-30T01:25:08.149Z" ;
+    bcube:hasMetadataRecord <urn:uuid:6fef48bf-3133-45d8-b7c8-8b7698317c6a> ;
+    bcube:lastUpdated "2014-10-30T01:25:08.149Z" ;
+    dc:conformsTo <urn:uuid:529efa54-36c9-48cc-8f5d-183ec2deea1e>,
+        <urn:uuid:f0e2cb6a-b29f-4030-8695-d706edd365d5> ;
+    dc:description "Main page for National Hydrography Dataset (NHD), a comprehensive set of digital spatial data about surface water features, with links to references, data, software tools, applications, tutorials, technical support, and data maintenance." ;
+    dcterms:publisher <urn:uuid:062e5ba8-9b1b-4f97-92c6-06a2561a63a4> ;
+    dcterms:references <urn:uuid:fb8f8eb3-b936-4753-a56a-1b7140c382d8> ;
+    dcterms:title "National Hydrography Dataset (NHD)" ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:f0e2cb6a-b29f-4030-8695-d706edd365d5> bcube:hasType "theme" ;
+    bcube:hasValue "data services",
+        "geospatial datasets",
+        "hydrographic datasets",
+        "hydrology",
+        "land surface characteristics",
+        "river reaches",
+        "river systems",
+        "scientific software" ;
+    dc:partOf "USGS Thesaurus" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:fb8f8eb3-b936-4753-a56a-1b7140c382d8> dcterms:references <urn:uuid:ddb5beb0-0b2a-4327-8cc9-14e97d18aaa0> ;
+    owl:a bibo:WebPage .
+

@@ -1,0 +1,78 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:3768cd7c-9868-4629-a5da-5f7de6428008> bcube:hasType "place" ;
+    bcube:hasValue "Essex",
+        "Fredericksburg",
+        "King George",
+        "Manassas",
+        "Manassas Park",
+        "Prince William",
+        "Richmond",
+        "Stafford",
+        "Virginia",
+        "Westmoreland" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:40712ebd-ee2d-465d-8d24-e020ce3e6a40> bcube:dateCreated "2015-03-04T06:41:51.804Z" ;
+    bcube:hasMetadataRecord <urn:uuid:ef942e81-111a-4ad7-9a22-a3a5b2e40eea> ;
+    bcube:lastUpdated "2015-03-04T06:41:51.804Z" ;
+    dc:conformsTo <urn:uuid:3768cd7c-9868-4629-a5da-5f7de6428008>,
+        <urn:uuid:448c82d0-eb34-40be-addb-f2bf496facf8> ;
+    dc:description "Dewberry collected LiDAR for ~3,341 square miles in various Virginia Counties, a part of Worcester County, and Hooper's Island. The acquisition was performed by Terrapoint. This metadata covers the LiDAR produced for the Virginia Counties North project area. The nominal pulse spacing for this project is 1.6 ft (0.5 meters). This project was collected with a sensor which collects intensity values for each discrete pulse extracted from the waveform. GPS Week Time, Intensity, Flightline and echo number attributes were provided for each LiDAR point. Dewberry used proprietary procedures to classify the LAS according to contract specifications: 1-Unclassified, 2-Ground, 7-Noise, 9-Water, 10-Ignored Ground due to breakline proximity, and 11-Withheld. Dewberry produced 3D breaklines and combined these with the final LiDAR data to produce seamless hydro flattened DEMs for the 2,140 tiles (5000 ft x 5000 ft) that cover the project area." ;
+    dc:spatial "POLYGON ((-77.639869 38.22226,-77.639869 38.790665,-77.213781 38.790665,-77.213781 38.22226,-77.639869 38.22226))" ;
+    dcterms:publisher <urn:uuid:89c0056c-6f21-47c1-8884-6a1ef1b787fd> ;
+    dcterms:title "Project" ;
+    esip:eastBound "-77.213781"^^xsd:float ;
+    esip:endDate "2012-02-10"^^xsd:date ;
+    esip:northBound "38.790665"^^xsd:float ;
+    esip:southBound "38.22226"^^xsd:float ;
+    esip:startDate "2011-04-19"^^xsd:date ;
+    esip:westBound "-77.639869"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:448c82d0-eb34-40be-addb-f2bf496facf8> bcube:hasType "theme" ;
+    bcube:hasValue "Breaklines",
+        "DEM",
+        "DTM",
+        "Elevation",
+        "Hydro Flattened",
+        "LAS",
+        "Lidar" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:622117e2-4725-45b7-b1e2-8f16118b9c01> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-03-04T06:41:51.804Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-03-04T06:41:51.804Z" ;
+    dc:identifier "urn:sha:0fed20a539e4346e2c59fdaf49989b82ace2dbe5ac48f44b9fe6abb7" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "https://cloud.sdsc.edu/v1/AUTH_opentopography/www/metadata/com_contributed/VACounties_RawLAS_South.xml" .
+
+<urn:uuid:89c0056c-6f21-47c1-8884-6a1ef1b787fd> owl:a foaf:Organization ;
+    foaf:name "" .
+
+<urn:uuid:ef942e81-111a-4ad7-9a22-a3a5b2e40eea> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-03-04T06:41:51.804Z" ;
+    bcube:lastUpdated "2015-03-04T06:41:51.804Z" ;
+    bcube:originatedFrom <urn:uuid:622117e2-4725-45b7-b1e2-8f16118b9c01> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:40712ebd-ee2d-465d-8d24-e020ce3e6a40> .
+

@@ -1,0 +1,105 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:1fa469da-435b-4633-9d19-62d424016169> bcube:hasType "stratum" ;
+    bcube:hasValue "Bare Earth" ;
+    dc:partOf "General" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:2126df4b-2f74-4f0a-a26a-905ab4a06c34> bcube:hasType "place" ;
+    bcube:hasValue "Cape Hatteras National Seashore",
+        "North America",
+        "North Carolina",
+        "United States" ;
+    dc:partOf "General" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:308f9750-4a6f-440d-a751-1a8e7a10422a> bcube:dateCreated "2015-11-02T11:28:31.661Z" ;
+    bcube:hasMetadataRecord <urn:uuid:abe2fbd8-1cf1-4444-8b37-f6dda1d98d97> ;
+    bcube:lastUpdated "2015-11-02T11:28:31.661Z" ;
+    dc:conformsTo <urn:uuid:1fa469da-435b-4633-9d19-62d424016169>,
+        <urn:uuid:2126df4b-2f74-4f0a-a26a-905ab4a06c34>,
+        <urn:uuid:347e8c18-47e2-47d9-91f6-6318da9dfdd4>,
+        <urn:uuid:c7389f8c-34b0-4263-9f19-c9bc13cc9f91>,
+        <urn:uuid:dfc3f6c5-a8e8-45cc-8691-2d198905eb31> ;
+    dc:description "ASCII xyz point cloud data were produced from remotely sensed, geographically referenced elevation measurements cooperatively by the U.S. Geological Survey (USGS) and the National Park Service (NPS). Elevation measurements were collected over the area using the Experimental Advanced Airborne Research Lidar (EAARL), a pulsed laser ranging system mounted onboard an aircraft to measure ground elevation, vegetation canopy, and coastal topography. The system uses high-frequency laser beams directed at the Earth's surface through an opening in the bottom of the aircraft's fuselage. The laser system records the time difference between emission of the laser beam and the reception of the reflected laser signal in the aircraft. The plane travels over the target area at approximately 50 meters per second at an elevation of approximately 300 meters, resulting in a laser swath of approximately 240 meters with an average point spacing of 2-3 meters. The EAARL, developed originally by the National Aeronautics and Space Administration (NASA) at Wallops Flight Facility in Virginia, measures ground elevation with a vertical resolution of 15 centimeters. A sampling rate of 3 kilohertz or higher results in an extremely dense spatial elevation dataset. Over 100 kilometers of coastline can be easily surveyed within a 3- to 4-hour mission. When resultant elevation maps for an area are analyzed, they provide a useful tool to make management decisions regarding land development." ;
+    dc:spatial "POLYGON ((-75.878287576227635 35.059560727012098,-75.878287576227635 35.150469002610997,-75.767665135410468 35.150469002610997,-75.767665135410468 35.059560727012098,-75.878287576227635 35.059560727012098))" ;
+    dcterms:publisher <urn:uuid:c1cdce94-8ae9-4cf7-8d2a-c286c8373aaa> ;
+    dcterms:references <urn:uuid:b4de43f9-473e-4102-bc0c-ef688fa88153> ;
+    dcterms:title "EAARL Coastal Topography--Cape Hatteras National Seashore, North Carolina, Post-Nor'Ida, 2009: Bare Earth" ;
+    esip:eastBound "-75.7676651354"^^xsd:float ;
+    esip:northBound "35.1504690026"^^xsd:float ;
+    esip:southBound "35.059560727"^^xsd:float ;
+    esip:westBound "-75.8782875762"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:347e8c18-47e2-47d9-91f6-6318da9dfdd4> bcube:hasType "theme" ;
+    bcube:hasValue "elevation" ;
+    dc:partOf "ISO 19115 Topic Category" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:5e3cc091-cb96-4e22-9a37-81fa72119999> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-02T11:28:31.661Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-02T11:28:31.661Z" ;
+    dc:identifier "urn:sha:36f62878e415d6c3a74907f4c1e80958b1fa8dc0ca2c6c6f886b8712" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://pubs.usgs.gov/ds/578/data_files/be/be_e420_n3890_18/be_e420_n3890_18.xyz.xml" .
+
+<urn:uuid:abe2fbd8-1cf1-4444-8b37-f6dda1d98d97> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-11-02T11:28:31.661Z" ;
+    bcube:lastUpdated "2015-11-02T11:28:31.661Z" ;
+    bcube:originatedFrom <urn:uuid:5e3cc091-cb96-4e22-9a37-81fa72119999> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:308f9750-4a6f-440d-a751-1a8e7a10422a> .
+
+<urn:uuid:b4de43f9-473e-4102-bc0c-ef688fa88153> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-02T11:28:31.661Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-02T11:28:31.661Z" ;
+    dc:identifier "urn:sha:d14a028c2a3a2bc9476102bb288234c415a2b01f828ea62ac5b3e42f" ;
+    owl:a bcube:Url .
+
+<urn:uuid:c1cdce94-8ae9-4cf7-8d2a-c286c8373aaa> owl:a foaf:Organization ;
+    foaf:name "U.S. Geological Survey" .
+
+<urn:uuid:c7389f8c-34b0-4263-9f19-c9bc13cc9f91> bcube:hasType "temporal" ;
+    bcube:hasValue "2009",
+        "Post-Nor'Ida" ;
+    dc:partOf "General" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:dfc3f6c5-a8e8-45cc-8691-2d198905eb31> bcube:hasType "theme" ;
+    bcube:hasValue "ALPS",
+        "Airborne Lidar Processing System",
+        "DEM",
+        "Digital Elevation Model",
+        "EAARL",
+        "Experimental Advanced Airborne Research Lidar",
+        "Pilatus PC-6",
+        "laser altimetry",
+        "lidar",
+        "remote sensing",
+        "topography" ;
+    dc:partOf "General" ;
+    owl:a bcube:thesaurusSubset .
+

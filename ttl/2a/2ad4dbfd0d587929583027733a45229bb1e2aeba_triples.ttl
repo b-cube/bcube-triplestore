@@ -1,0 +1,75 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:0ef35e46-7e14-4a9b-b88f-006e6b725649> owl:a foaf:Organization ;
+    foaf:name "" .
+
+<urn:uuid:1e59a8cd-6c4a-4a7f-b74f-9fcb8ed74876> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-07-30T17:06:02.937Z" ;
+    bcube:lastUpdated "2015-07-30T17:06:02.937Z" ;
+    bcube:originatedFrom <urn:uuid:ca4fd6f5-5663-4a87-b920-daaeb9a4312b> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:d37c6904-4e09-487d-8fbe-332b9ff624fe> .
+
+<urn:uuid:4456b9d0-6614-4e9e-8bd5-a34e2e68a560> bcube:hasType "theme" ;
+    bcube:hasValue "Biologic",
+        "bears" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:8e8e3166-573d-44b6-9391-5c0397c5607b> bcube:hasType "place" ;
+    bcube:hasValue "Louisiana" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:ab4bed3d-fd76-4dae-a978-49a2d8876fa3> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-07-30T17:06:02.937Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-07-30T17:06:02.937Z" ;
+    dc:identifier "urn:sha:fa0b6eecb9a150f95d582081990743627672e15fa53900557b176b64" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://lagic.lsu.edu/data/losco/Breeding_Bear_Populations_LDWF_2005.zip" .
+
+<urn:uuid:ca4fd6f5-5663-4a87-b920-daaeb9a4312b> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-07-30T17:06:02.937Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-07-30T17:06:02.937Z" ;
+    dc:identifier "urn:sha:cf177f647f11187f4136c3147515bc16c8650b913f3060dbbe1d41d8" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "https://catalog.data.gov/harvest/object/beed4571-0b9a-4808-bb6e-c7d0ba621620/original" .
+
+<urn:uuid:d37c6904-4e09-487d-8fbe-332b9ff624fe> bcube:dateCreated "2015-07-30T17:06:02.937Z" ;
+    bcube:hasMetadataRecord <urn:uuid:1e59a8cd-6c4a-4a7f-b74f-9fcb8ed74876> ;
+    bcube:lastUpdated "2015-07-30T17:06:02.937Z" ;
+    dc:conformsTo <urn:uuid:4456b9d0-6614-4e9e-8bd5-a34e2e68a560>,
+        <urn:uuid:8e8e3166-573d-44b6-9391-5c0397c5607b> ;
+    dc:description "Breeding Bear populations." ;
+    dc:spatial "POLYGON ((-91.966125 29.488541,-91.966125 32.546024,-91.080868 32.546024,-91.080868 29.488541,-91.966125 29.488541))" ;
+    dcterms:publisher <urn:uuid:0ef35e46-7e14-4a9b-b88f-006e6b725649> ;
+    dcterms:references <urn:uuid:ab4bed3d-fd76-4dae-a978-49a2d8876fa3> ;
+    dcterms:title "Breeding Bear Populations, Geographic NAD83, LDWF (2005) [Breeding_Bear_Populations_LDWF_2005]" ;
+    esip:eastBound "-91.080868"^^xsd:float ;
+    esip:northBound "32.546024"^^xsd:float ;
+    esip:southBound "29.488541"^^xsd:float ;
+    esip:westBound "-91.966125"^^xsd:float ;
+    owl:a dcat:Dataset .
+

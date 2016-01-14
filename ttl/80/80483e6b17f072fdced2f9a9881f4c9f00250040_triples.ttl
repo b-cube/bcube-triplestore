@@ -1,0 +1,90 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:1b080102-4d4f-48ed-96fa-7860f98447f1> owl:a foaf:Organization ;
+    foaf:name "" .
+
+<urn:uuid:22e2e1de-2373-462b-9678-3f592129c974> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-01T02:11:13.636Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-01T02:11:13.636Z" ;
+    dc:identifier "urn:sha:6d8845e0bd88265f27cd7c0c39bc539260803c7d8ceea4b7435d5a7a" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www2.census.gov/geo/tiger/TIGER2010/PUMA10/tl_2010_24_puma10.zip" .
+
+<urn:uuid:725ff9fb-118f-446a-a44b-00ab9096f462> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-11-01T02:11:13.636Z" ;
+    bcube:lastUpdated "2015-11-01T02:11:13.636Z" ;
+    bcube:originatedFrom <urn:uuid:f40cd823-9e65-42ef-9d84-734d8b684369> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:c9e79802-da33-49f3-9deb-2f66fe94c064> .
+
+<urn:uuid:93b4b2f2-5e69-417e-b288-b1970f39de9c> bcube:hasType "theme" ;
+    bcube:hasValue "boundaries" ;
+    dc:partOf "ISO 19115 Topic Categories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:bc287778-fd28-4d71-814c-ddd36b668408> bcube:hasType "theme" ;
+    bcube:hasValue "PUMA",
+        "Polygon",
+        "Public Use Microdata Area",
+        "State or equivalent entity" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:c9e79802-da33-49f3-9deb-2f66fe94c064> bcube:dateCreated "2015-11-01T02:11:13.636Z" ;
+    bcube:hasMetadataRecord <urn:uuid:725ff9fb-118f-446a-a44b-00ab9096f462> ;
+    bcube:lastUpdated "2015-11-01T02:11:13.636Z" ;
+    dc:conformsTo <urn:uuid:93b4b2f2-5e69-417e-b288-b1970f39de9c>,
+        <urn:uuid:bc287778-fd28-4d71-814c-ddd36b668408>,
+        <urn:uuid:db1426c3-a520-4930-a191-c228cd75f664> ;
+    dc:description "The TIGER/Line Files are shapefiles and related database files (.dbf) that are an extract of selected geographic and cartographic information from the U.S. Census Bureau's Master Address File / Topologically Integrated Geographic Encoding and Referencing (MAF/TIGER) Database (MTDB). The MTDB represents a seamless national file with no overlaps or gaps between parts, however, each TIGER/Line File is designed to stand alone as an independent data set, or they can be combined to cover the entire nation. After each decennial census, the Census Bureau delineates Public Use Microdata Areas (PUMAs) for the tabulation and dissemination of decennial census Public Use Microdata Sample (PUMS) data, American Community Survey (ACS) PUMS data, and ACS period estimates. Nesting within states, or equivalent entities, PUMAs cover the entirety of the United States, Puerto Rico, Guam, and the U.S. Virgin Islands. PUMA delineations are subject to population, building block geography, geographic nesting, and contiguity criteria. Each PUMA is identified by a 5-character numeric census code that may contain leading zeros and a descriptive name." ;
+    dc:spatial "POLYGON ((-79.487651 37.886605,-79.487651 39.723037,-74.986282 39.723037,-74.986282 37.886605,-79.487651 37.886605))" ;
+    dcterms:publisher <urn:uuid:1b080102-4d4f-48ed-96fa-7860f98447f1> ;
+    dcterms:references <urn:uuid:22e2e1de-2373-462b-9678-3f592129c974> ;
+    dcterms:title "TIGER/Line Shapefile, 2010, 2010 state, Maryland, 2010 Census Public Use Microdata Area State-based" ;
+    esip:eastBound "-74.986282"^^xsd:float ;
+    esip:endDate "2011-12-01"^^xsd:date ;
+    esip:northBound "39.723037"^^xsd:float ;
+    esip:southBound "37.886605"^^xsd:float ;
+    esip:startDate "2011-03-01"^^xsd:date ;
+    esip:westBound "-79.487651"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:db1426c3-a520-4930-a191-c228cd75f664> bcube:hasType "place" ;
+    bcube:hasValue "24",
+        "MD",
+        "Maryland",
+        "State or Equivalent Entity",
+        "U.S.",
+        "United States" ;
+    dc:partOf "ANSI INCITS 38:2009 (Formerly FIPS 5-2), ANSI INCITS 31:2009 (Formerly FIPS 6-4),ANSI INCITS 454:2009 (Formerly FIPS 8-6), ANSI INCITS 455:2009(Formerly FIPS 9-1), ANSI INCITS 446:2008 (Geographic Names Information System (GNIS))" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:f40cd823-9e65-42ef-9d84-734d8b684369> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-01T02:11:13.636Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-01T02:11:13.636Z" ;
+    dc:identifier "urn:sha:a6b9adcf34c3265b6a9f6d7ee5f1a60c2f3509e270970fa08a5de092" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://meta.geo.census.gov/data/existing/decennial/GEO/GPMB/TIGERline/fe_2010/2010PUMA/tl_2010_24_puma10.shp.xml" .
+

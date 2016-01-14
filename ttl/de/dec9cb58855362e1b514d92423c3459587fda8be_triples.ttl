@@ -1,0 +1,95 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:32940257-f1b9-45ac-bdea-8b489555291f> owl:a foaf:Organization ;
+    foaf:name "" .
+
+<urn:uuid:727f5812-dd5a-4e79-8bb7-7580d140a328> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-11-02T11:28:25.324Z" ;
+    bcube:lastUpdated "2015-11-02T11:28:25.324Z" ;
+    bcube:originatedFrom <urn:uuid:a59691a7-e5a6-4738-9f4b-0c61f688a0cf> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:92729950-3582-4b0e-b135-6400d592b668> .
+
+<urn:uuid:75ac5781-6c9f-4da7-b339-e369f4dc5ec1> bcube:hasType "place" ;
+    bcube:hasValue "01037",
+        "Coosa",
+        "County or Equivalent Entity",
+        "U.S.",
+        "United States" ;
+    dc:partOf "FIPS Publication 5-2, FIPS Publication 6-4, FIPS Publication 8-6, FIPS Publication 9-1,FIPS Publication55-4" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:89dd5319-7229-4993-b03e-46cff9b7f82d> bcube:hasType "theme" ;
+    bcube:hasValue "5-digit ZIP code",
+        "County ANSI Code",
+        "County FIPS Code",
+        "From House Number",
+        "Permanent edge ID",
+        "Side indicator flag",
+        "State ANSI Code",
+        "State FIPS Code",
+        "To House Number",
+        "ZIP +4 code" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:92729950-3582-4b0e-b135-6400d592b668> bcube:dateCreated "2015-11-02T11:28:25.324Z" ;
+    bcube:hasMetadataRecord <urn:uuid:727f5812-dd5a-4e79-8bb7-7580d140a328> ;
+    bcube:lastUpdated "2015-11-02T11:28:25.324Z" ;
+    dc:conformsTo <urn:uuid:75ac5781-6c9f-4da7-b339-e369f4dc5ec1>,
+        <urn:uuid:89dd5319-7229-4993-b03e-46cff9b7f82d>,
+        <urn:uuid:ea875839-9592-43ec-8298-d7ae39f67fb2> ;
+    dc:description "The TIGER/Line relationship files are an extract of selected geographic information from the Census MAF/TIGER database. Each TIGER/Line relationship file is designed to stand alone as an independent data set or can be used jointly with the shapefiles." ;
+    dc:spatial "POLYGON ((-86.522283 32.753434,-86.522283 33.104702,-85.999748 33.104702,-85.999748 32.753434,-86.522283 32.753434))" ;
+    dcterms:publisher <urn:uuid:32940257-f1b9-45ac-bdea-8b489555291f> ;
+    dcterms:references <urn:uuid:cd9b63dd-7af6-4c56-bcc8-54167ab55dd8> ;
+    dcterms:title "TIGER/Line Shapefile, 2008, county, Coosa County, AL, Address Range-Feature Name" ;
+    esip:eastBound "-85.999748"^^xsd:float ;
+    esip:endDate "2008-07-01"^^xsd:date ;
+    esip:northBound "33.104702"^^xsd:float ;
+    esip:southBound "32.753434"^^xsd:float ;
+    esip:startDate "2008-01-01"^^xsd:date ;
+    esip:westBound "-86.522283"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:a59691a7-e5a6-4738-9f4b-0c61f688a0cf> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-02T11:28:25.324Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-02T11:28:25.324Z" ;
+    dc:identifier "urn:sha:a52ea6de6e44980df5e4c7f2904cc77546e17d069f932a5d19a46b4a" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://meta.geo.census.gov/data/existing/decennial/GEO/GPMB/TIGERline/fe_2008/addrfn/tl_2008_01037_addrfn_url.dbf.xml" .
+
+<urn:uuid:cd9b63dd-7af6-4c56-bcc8-54167ab55dd8> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-02T11:28:25.324Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-02T11:28:25.324Z" ;
+    dc:identifier "urn:sha:380811c288a78c812a5f724ba32e70a1e023a3b387aa68d4142b3ce1" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www2.census.gov/geo/tiger/TIGER2008/01_ALABAMA/01037_Coosa_County/tl_2008_01037_addrfn.zip" .
+
+<urn:uuid:ea875839-9592-43ec-8298-d7ae39f67fb2> bcube:hasType "theme" ;
+    bcube:hasValue "transportation" ;
+    dc:partOf "ISO 19115 Topic Categories" ;
+    owl:a bcube:thesaurusSubset .
+

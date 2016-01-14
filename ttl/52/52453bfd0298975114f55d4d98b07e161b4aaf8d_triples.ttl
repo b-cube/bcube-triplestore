@@ -1,0 +1,98 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:20a14047-a726-4d2d-a5f3-6415e6c0bf92> bcube:hasType "theme" ;
+    bcube:hasValue "Barrio",
+        "CCD",
+        "Census County Division",
+        "County Subdivision",
+        "County or equivalent entity",
+        "MCD",
+        "Minor Civil Division",
+        "Polygon",
+        "Subdivision",
+        "Town",
+        "Township",
+        "UT",
+        "Unorganized Territory" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:2c3bbead-be66-452e-95e8-c453640865e5> bcube:hasType "place" ;
+    bcube:hasValue "01009",
+        "Blount",
+        "County or Equivalent Entity",
+        "U.S.",
+        "United States" ;
+    dc:partOf "INCITS.38-200x (R2004),INCITS.31-200x (R2007),INCITS.454-200x,INCITS 455-200x,INCITS 446-2008" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:44947a29-e67d-4dbd-b9eb-59c11538a771> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-11-02T07:13:15.276Z" ;
+    bcube:lastUpdated "2015-11-02T07:13:15.276Z" ;
+    bcube:originatedFrom <urn:uuid:a26e623a-6e9a-4ceb-a04a-a81392ffecd6> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:563eb02f-36aa-4779-8c30-370b1f9106b1> .
+
+<urn:uuid:563eb02f-36aa-4779-8c30-370b1f9106b1> bcube:dateCreated "2015-11-02T07:13:15.276Z" ;
+    bcube:hasMetadataRecord <urn:uuid:44947a29-e67d-4dbd-b9eb-59c11538a771> ;
+    bcube:lastUpdated "2015-11-02T07:13:15.276Z" ;
+    dc:conformsTo <urn:uuid:20a14047-a726-4d2d-a5f3-6415e6c0bf92>,
+        <urn:uuid:2c3bbead-be66-452e-95e8-c453640865e5>,
+        <urn:uuid:7cbbdab7-6484-4f2e-9aa2-2769185d5c9b> ;
+    dc:description "The TIGER/Line Shapefiles are an extract of selected geographic and cartographic information from the Census MAF/TIGER database. The Census MAF/TIGER database represents a seamless national file with no overlaps or gaps between parts. However, each TIGER/Line Shapefile is designed to stand alone as an independent data set or the shapefiles can be combined to cover the whole nation." ;
+    dc:spatial "POLYGON ((-86.963358 33.765171,-86.963358 34.260483,-86.303516 34.260483,-86.303516 33.765171,-86.963358 33.765171))" ;
+    dcterms:publisher <urn:uuid:9388a7ab-12cb-4207-87e5-719f05c58a33> ;
+    dcterms:references <urn:uuid:ed7e82e7-4ee8-4556-b421-dbb23195a246> ;
+    dcterms:title "TIGER/Line Shapefile, 2009, county, Blount County, AL, Current County Subdivision" ;
+    esip:eastBound "-86.303516"^^xsd:float ;
+    esip:endDate "2009-05-01"^^xsd:date ;
+    esip:northBound "34.260483"^^xsd:float ;
+    esip:southBound "33.765171"^^xsd:float ;
+    esip:startDate "2009-01-01"^^xsd:date ;
+    esip:westBound "-86.963358"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:7cbbdab7-6484-4f2e-9aa2-2769185d5c9b> bcube:hasType "theme" ;
+    bcube:hasValue "boundaries" ;
+    dc:partOf "ISO 19115 Topic Categories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:9388a7ab-12cb-4207-87e5-719f05c58a33> owl:a foaf:Organization ;
+    foaf:name "" .
+
+<urn:uuid:a26e623a-6e9a-4ceb-a04a-a81392ffecd6> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-02T07:13:15.276Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-02T07:13:15.276Z" ;
+    dc:identifier "urn:sha:87b4d193033dea86ccf378d4dc65cb6b7f6d3d4dd22a8c301bca4ee9" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://meta.geo.census.gov/data/existing/decennial/GEO/GPMB/TIGERline/fe_2009/cousub/tl_2009_01009_cousub_url.shp.xml" .
+
+<urn:uuid:ed7e82e7-4ee8-4556-b421-dbb23195a246> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-02T07:13:15.276Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-02T07:13:15.276Z" ;
+    dc:identifier "urn:sha:e9e941be0d4d25f08669d6f44d661129a234004e6148b208895bfcbd" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www2.census.gov/geo/tiger/TIGER2009/01_ALABAMA/01009_Blount_County/tl_2009_01009_cousub.zip" .
+

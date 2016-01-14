@@ -1,0 +1,91 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:17facff5-948e-4db5-8a2a-8c0ad860f198> bcube:hasType "theme" ;
+    bcube:hasValue "geoscientificinformation",
+        "oceans" ;
+    dc:partOf "ISO 19115 Topic Category" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:19cdc16b-04f7-4a85-a220-07d38217f9ca> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-08-05T07:43:17.817Z" ;
+    bcube:lastUpdated "2015-08-05T07:43:17.817Z" ;
+    bcube:originatedFrom <urn:uuid:ecedbbd4-fa48-49ee-9605-0cef47203e2e> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:c4dec948-9282-4b88-aa7b-3d915c31936c> .
+
+<urn:uuid:521628ee-83f6-4a34-bbc2-f8e5aedf92b7> owl:a foaf:Organization ;
+    foaf:name "U.S. Geological Survey" .
+
+<urn:uuid:5f1d016a-c55b-42f5-92b0-7c50da8eebb5> bcube:hasType "place" ;
+    bcube:hasValue "AK",
+        "Alaska",
+        "Arctic",
+        "Arctic Ocean",
+        "Beaufort Sea" ;
+    dc:partOf "Geographic Names Information System (GNIS)" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:60de7a94-6f84-411a-b62e-94395a3ded17> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-05T07:43:17.817Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-05T07:43:17.817Z" ;
+    dc:identifier "urn:sha:ee4b3d0692a37e601ba3adddb77b41033dd56109059cee03394299eb" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www.ngdc.noaa.gov/mgg/trk/trackline/karluk/k283ar/mgd77/" .
+
+<urn:uuid:87f9dc85-4649-404b-b400-d9eeb1f0b987> bcube:hasType "theme" ;
+    bcube:hasValue "Bathymetry",
+        "Marine Geology",
+        "Marine Geophysics",
+        "Seafloor Topography",
+        "Water Depth" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:c4dec948-9282-4b88-aa7b-3d915c31936c> bcube:dateCreated "2015-08-05T07:43:17.817Z" ;
+    bcube:hasMetadataRecord <urn:uuid:19cdc16b-04f7-4a85-a220-07d38217f9ca> ;
+    bcube:lastUpdated "2015-08-05T07:43:17.817Z" ;
+    dc:conformsTo <urn:uuid:17facff5-948e-4db5-8a2a-8c0ad860f198>,
+        <urn:uuid:5f1d016a-c55b-42f5-92b0-7c50da8eebb5>,
+        <urn:uuid:87f9dc85-4649-404b-b400-d9eeb1f0b987> ;
+    dc:description "Single-beam bathymetry data along with DGPS navigation data was collected as part of field activity K-2-83-AR in Arctic and Beaufort Sea, Alaska from 08/05/1983 to 08/22/1983, http://walrus.wr.usgs.gov/infobank/k/k283ar/html/k-2-83-ar.meta.html The geophysical source was a Knudsen 12 kHz 320B/R echosounder. These data are reformatted from space-delimited ASCII text files located in the Coastal and Marine Geology Program (CMGP) InfoBank field activity catalog at http://walrus.wr.usgs.gov/infobank/k/k283ar/html/k-2-83-ar.bath.html into MGD77T format provided by the NOAA's National Geophysical Data Center(NGDC). The MGD77T format includes a header (documentation) file (.h77t) and a data file (.m77t). More information regarding this format can be found in the publication listed in the Cross_reference section of this metadata file." ;
+    dc:spatial "POLYGON ((-150.4752 70.62042,-150.4752 70.62276,-150.46655 70.62276,-150.46655 70.62042,-150.4752 70.62042))" ;
+    dcterms:publisher <urn:uuid:521628ee-83f6-4a34-bbc2-f8e5aedf92b7> ;
+    dcterms:references <urn:uuid:60de7a94-6f84-411a-b62e-94395a3ded17> ;
+    dcterms:title "k283ar.m77t - MGD77 data file for Geophysical data from field activity K-2-83-AR in Arctic and Beaufort Sea, Alaska from 08/05/1983 to 08/22/1983" ;
+    esip:eastBound "-150.46655"^^xsd:float ;
+    esip:endDate "1983-08-22"^^xsd:date ;
+    esip:northBound "70.62276"^^xsd:float ;
+    esip:southBound "70.62042"^^xsd:float ;
+    esip:startDate "1983-08-05"^^xsd:date ;
+    esip:westBound "-150.4752"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:ecedbbd4-fa48-49ee-9605-0cef47203e2e> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-05T07:43:17.817Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-05T07:43:17.817Z" ;
+    dc:identifier "urn:sha:aa6bbb8b73148c18c566da386c1009593792da187c914d7acdb36c2e" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://data.usgs.gov/metadata/Coastal_and_Marine_Geology_Program/5418b6c0e4b03f26b3225f1c.xml" .
+

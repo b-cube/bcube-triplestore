@@ -1,0 +1,80 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:249fd225-f2bb-415e-9759-331ba487e3ce> bcube:hasValue "geoscientificInformation" ;
+    dc:partOf "IsoTopicCategories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:6a58ca3b-2674-4208-939d-5e7fcd40066d> a "ISO 19115:2003/19139" ;
+    bcube:dateCreated "2015-10-17T08:45:55.133Z" ;
+    bcube:lastUpdated "2015-10-17T08:45:55.133Z" ;
+    bcube:originatedFrom <urn:uuid:a38b5a8e-86d7-4991-a5c4-58e146791075> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:8b0ac19d-d04f-4e01-9ada-34d68607646a> .
+
+<urn:uuid:804c8384-9354-4063-95ba-3ced50fd9a71> bcube:hasType "place" ;
+    bcube:hasValue "Nevada",
+        "Tuscarora" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:8aafe7b8-457f-4663-aabd-0e03beda9fd1> bcube:hasType "theme" ;
+    bcube:hasValue "geothermal",
+        "microearthquaks",
+        "p-wave",
+        "seismicity",
+        "survey" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:8b0ac19d-d04f-4e01-9ada-34d68607646a> bcube:dateCreated "2015-10-17T08:45:55.133Z" ;
+    bcube:hasMetadataRecord <urn:uuid:6a58ca3b-2674-4208-939d-5e7fcd40066d> ;
+    bcube:lastUpdated "2015-10-17T08:45:55.133Z" ;
+    dc:conformsTo <urn:uuid:249fd225-f2bb-415e-9759-331ba487e3ce>,
+        <urn:uuid:804c8384-9354-4063-95ba-3ced50fd9a71>,
+        <urn:uuid:8aafe7b8-457f-4663-aabd-0e03beda9fd1> ;
+    dc:description "The objective of this survey is to provide infromation on microearthquakes." ;
+    dc:spatial "POLYGON ((-116.25 41.15,-116.25 41.35,-115.52 41.35,-115.52 41.15,-116.25 41.15))" ;
+    dcterms:references <urn:uuid:e9814e8f-c2a5-43b0-86bc-d15577536bd6> ;
+    dcterms:title "Tuscarora Seismicity: Microearthquake and P-Wave survey" ;
+    esip:eastBound "-115.52"^^xsd:float ;
+    esip:endDate "1979-01-01"^^xsd:date ;
+    esip:northBound "41.35"^^xsd:float ;
+    esip:southBound "41.15"^^xsd:float ;
+    esip:startDate "1979-01-01"^^xsd:date ;
+    esip:westBound "-116.25"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:a38b5a8e-86d7-4991-a5c4-58e146791075> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-10-17T08:45:55.133Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-10-17T08:45:55.133Z" ;
+    dc:identifier "urn:sha:b7a0278f0f961a95c3a07df30161f7117fc202f9134ff30a6e746d56" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://repository.stategeothermaldata.org/resources/metadata/test-CSV-XML-tool/241a16cc-2d93-4c8e-82c2-d17a2f58b6ac.xml" .
+
+<urn:uuid:e9814e8f-c2a5-43b0-86bc-d15577536bd6> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-10-17T08:45:55.133Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-10-17T08:45:55.133Z" ;
+    dc:identifier "urn:sha:f224c291be26a43f8230667fb39b5d92c9cd7615fdb5fef013aa607b" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "ftp://ftp.nbmg.unr.edu/pub/Geothermal/11_Documents/AMAX_MicroErthqks_Tuscarora_1979.pdf" .
+

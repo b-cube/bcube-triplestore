@@ -1,0 +1,78 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:1a34b2f6-1953-4143-9394-9de2eb8beb55> owl:a foaf:Organization ;
+    foaf:name "U.S. Geological Survey" .
+
+<urn:uuid:2e77b412-fd97-4add-9df0-6543738dafb7> bcube:hasType "theme" ;
+    bcube:hasValue "biostratigraphy",
+        "conodonts",
+        "geochronology",
+        "geologic history",
+        "lithostratigraphy",
+        "paleontology",
+        "trilobites" ;
+    dc:partOf "USGS Thesaurus" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:496adbf7-50d2-4eeb-8d56-78c7f7adbb3d> bcube:dateCreated "2014-10-30T05:36:29.6Z" ;
+    bcube:hasMetadataRecord <urn:uuid:c4ef87bc-9187-4ae4-b49d-bbc5becdd37d> ;
+    bcube:lastUpdated "2014-10-30T05:36:29.6Z" ;
+    dc:conformsTo <urn:uuid:2e77b412-fd97-4add-9df0-6543738dafb7>,
+        <urn:uuid:f79e6eb7-edc6-4c9e-905a-0c3278c00aed> ;
+    dc:description "Publication (PDF format) in three parts on the biostratigraphy and lithostratigraphy of the Ibexian Series in the North American Ordovician, with sections on the southern Egan Range, Nevada and the biostratigraphy of the eastern Great Basin." ;
+    dcterms:publisher <urn:uuid:1a34b2f6-1953-4143-9394-9de2eb8beb55> ;
+    dcterms:references <urn:uuid:b34300bb-66af-4432-a13a-1d628af2fbfa> ;
+    dcterms:title "Early Paleozoic biochronology of the Great Basin, western United States" ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:b34300bb-66af-4432-a13a-1d628af2fbfa> dcterms:references <urn:uuid:efd7f532-cb20-4806-9c09-b9f80a105a84> ;
+    owl:a bibo:WebPage .
+
+<urn:uuid:c4ef87bc-9187-4ae4-b49d-bbc5becdd37d> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2014-10-30T05:36:29.6Z" ;
+    bcube:lastUpdated "2014-10-30T05:36:29.6Z" ;
+    bcube:originatedFrom <urn:uuid:daebfb74-2573-49fc-b6f9-941f430525ca> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:496adbf7-50d2-4eeb-8d56-78c7f7adbb3d> .
+
+<urn:uuid:daebfb74-2573-49fc-b6f9-941f430525ca> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2014-10-30T05:36:29.6Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2014-10-30T05:36:29.6Z" ;
+    dc:identifier "urn:sha:9c29acf593791f2f05a71acd8f41740c03e68b22b330ea7f37abf239" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www.usgs.gov/science/xml.php?cite=1396" .
+
+<urn:uuid:efd7f532-cb20-4806-9c09-b9f80a105a84> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2014-10-30T05:36:29.6Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2014-10-30T05:36:29.6Z" ;
+    dc:identifier "urn:sha:23118b3e0f103bca2eded688fafb07543ed210b661dfce6558e0591c" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://pubs.usgs.gov/pp/p1579/" .
+
+<urn:uuid:f79e6eb7-edc6-4c9e-905a-0c3278c00aed> bcube:hasType "place" ;
+    bcube:hasValue "h16 = Great Basin" ;
+    dc:partOf "Augmented FIPS 10-4 and FIPS 6-4" ;
+    owl:a bcube:thesaurusSubset .
+

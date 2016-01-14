@@ -1,0 +1,84 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:3cb56c91-722c-46a9-9e74-7eab84e04f6f> owl:a foaf:Organization ;
+    foaf:name "Boise National Forest" .
+
+<urn:uuid:4e1c1058-9aa3-4581-90ce-2b7a981517f9> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-11-02T19:53:04.534Z" ;
+    bcube:lastUpdated "2015-11-02T19:53:04.534Z" ;
+    bcube:originatedFrom <urn:uuid:efada927-eab5-4e74-846a-826a0e62de20> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:68b07d71-7667-4c0d-b93a-ebfb38e215b3> .
+
+<urn:uuid:68b07d71-7667-4c0d-b93a-ebfb38e215b3> bcube:dateCreated "2015-11-02T19:53:04.534Z" ;
+    bcube:hasMetadataRecord <urn:uuid:4e1c1058-9aa3-4581-90ce-2b7a981517f9> ;
+    bcube:lastUpdated "2015-11-02T19:53:04.534Z" ;
+    dc:conformsTo <urn:uuid:c1a0c7fc-c4c0-4016-85cd-74ee1cceeb35>,
+        <urn:uuid:d8181c2d-0b2b-42a3-8a30-714b2976d59f>,
+        <urn:uuid:df0e089a-c0fc-4510-a7c5-05f2bcdbd89a> ;
+    dc:description "This data set reflects fire intensity as measured by canopy scorch for the 1989 Lowman Fire along the South Fork of the Payette River within Boise National Forest, Idaho." ;
+    dc:spatial "POLYGON ((-115.65612305 44.0147306,-115.65612305 44.18525805,-115.39172974 44.18525805,-115.39172974 44.0147306,-115.65612305 44.0147306))" ;
+    dcterms:publisher <urn:uuid:3cb56c91-722c-46a9-9e74-7eab84e04f6f> ;
+    dcterms:references <urn:uuid:77fa5edf-57eb-4869-8efe-ef9f8c71b0ba> ;
+    dcterms:title "Burn Intensity for the 1989 Lowman Fire within Boise National Forest, Idaho" ;
+    esip:eastBound "-115.39172974"^^xsd:float ;
+    esip:northBound "44.18525805"^^xsd:float ;
+    esip:southBound "44.0147306"^^xsd:float ;
+    esip:startDate "1989-01-01"^^xsd:date ;
+    esip:westBound "-115.65612305"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:77fa5edf-57eb-4869-8efe-ef9f8c71b0ba> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-02T19:53:04.534Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-02T19:53:04.534Z" ;
+    dc:identifier "urn:sha:8eb5606e8f074e4f893863f1e9ecfa8ae07dae51db0d3b07b9a66c7b" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://cloud.insideidaho.org/webApps/util/zip.ashx?fn=http://cloud.insideidaho.org/data/bnf/lowmfire" .
+
+<urn:uuid:c1a0c7fc-c4c0-4016-85cd-74ee1cceeb35> bcube:hasType "place" ;
+    bcube:hasValue "Boise National Forest" ;
+    dc:partOf "Geographic Names Information System (GNIS). U.S. Geological Survey (<http://geonames.usgs.gov/gnishome.html>)" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:d8181c2d-0b2b-42a3-8a30-714b2976d59f> bcube:hasType "theme" ;
+    bcube:hasValue "Burn Intensity",
+        "Canopy Scorch",
+        "Fire",
+        "Wildfire" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:df0e089a-c0fc-4510-a7c5-05f2bcdbd89a> bcube:hasType "theme" ;
+    bcube:hasValue "environment" ;
+    dc:partOf "ISO 19115 Topic Category" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:efada927-eab5-4e74-846a-826a0e62de20> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-02T19:53:04.534Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-02T19:53:04.534Z" ;
+    dc:identifier "urn:sha:3011b5e26c8b8ff10421b09064eb0c575b2f1babde875deb1b26b117" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://insideidaho.org/appsOutput/metadataWAF/xml/BurnIntensityforthe1989LowmanFirewithinBoiseNationalForestIdaho.xml" .
+

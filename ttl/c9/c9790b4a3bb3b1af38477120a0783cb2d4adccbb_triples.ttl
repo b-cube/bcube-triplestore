@@ -1,0 +1,65 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:24879e22-8ac3-42a8-a3a8-42027e6dcef5> bcube:hasType "place" ;
+    bcube:hasValue "California" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:3c890f81-adde-4f60-b16c-a255eb2fd84b> bcube:hasValue "geoscientificInformation" ;
+    dc:partOf "IsoTopicCategories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:820a5336-95ea-48d4-bbb3-d798c245139a> bcube:hasType "theme" ;
+    bcube:hasValue "Fauna",
+        "NECO Plan",
+        "habitat model",
+        "sensitive animals" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:967961c1-5269-49be-96c2-2c79bac6ca44> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-10-31T22:19:10.789Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-10-31T22:19:10.789Z" ;
+    dc:identifier "urn:sha:00914b980bfd57f32089e8a7dd11f3ab7ed263bdbd8188397e3e30c4" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://repository.stategeothermaldata.org/resources/metadata/TestNRRC/WRP/20173b25-ca18-4e74-86e5-04e3f063d05a.xml" .
+
+<urn:uuid:99202a2e-13a6-4f54-8ebe-d3a3e8eeb873> a "ISO 19115:2003/19139" ;
+    bcube:dateCreated "2015-10-31T22:19:10.789Z" ;
+    bcube:lastUpdated "2015-10-31T22:19:10.789Z" ;
+    bcube:originatedFrom <urn:uuid:967961c1-5269-49be-96c2-2c79bac6ca44> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:bf0b4290-3746-4ea7-8ea9-6315aaaea9b0> .
+
+<urn:uuid:bf0b4290-3746-4ea7-8ea9-6315aaaea9b0> bcube:dateCreated "2015-10-31T22:19:10.789Z" ;
+    bcube:hasMetadataRecord <urn:uuid:99202a2e-13a6-4f54-8ebe-d3a3e8eeb873> ;
+    bcube:lastUpdated "2015-10-31T22:19:10.789Z" ;
+    dc:conformsTo <urn:uuid:24879e22-8ac3-42a8-a3a8-42027e6dcef5>,
+        <urn:uuid:3c890f81-adde-4f60-b16c-a255eb2fd84b>,
+        <urn:uuid:820a5336-95ea-48d4-bbb3-d798c245139a> ;
+    dc:description "NECO Plan Area modeled habitat of the Mountain Plover, a sensitive vertebrate species." ;
+    dc:spatial "POLYGON ((-124.5656 32.5343,-124.5656 42.0,-114.1312 42.0,-114.1312 32.5343,-124.5656 32.5343))" ;
+    dcterms:title "NECO Ca Mountain Plover Habitat Areas" ;
+    esip:eastBound "-114.1312"^^xsd:float ;
+    esip:endDate "1900-01-01"^^xsd:date ;
+    esip:northBound "42.0"^^xsd:float ;
+    esip:southBound "32.5343"^^xsd:float ;
+    esip:startDate "1900-01-01"^^xsd:date ;
+    esip:westBound "-124.5656"^^xsd:float ;
+    owl:a dcat:Dataset .
+

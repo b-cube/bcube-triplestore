@@ -1,0 +1,75 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:33bd17e3-82fb-44d2-8d23-839e3377ce24> a "ISO 19115:2003/19139" ;
+    bcube:dateCreated "2015-08-05T01:26:01.249Z" ;
+    bcube:lastUpdated "2015-08-05T01:26:01.249Z" ;
+    bcube:originatedFrom <urn:uuid:856c17f4-764f-4aa6-b9d2-16fe8a3a4af8> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:bb1f8267-4385-4739-bc6d-0c49d4016492> .
+
+<urn:uuid:856c17f4-764f-4aa6-b9d2-16fe8a3a4af8> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-05T01:26:01.249Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-05T01:26:01.249Z" ;
+    dc:identifier "urn:sha:2362260d38362bf45f722fae6dc505a36f0a89db2204e3f368c964a6" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "https://catalog.data.gov/harvest/object/6bfe1504-f6b8-4b54-a50e-cb753089c0b9" .
+
+<urn:uuid:9b79d1c9-9b8f-47fc-b58b-8bb221e8acbb> bcube:hasType "theme" ;
+    bcube:hasValue "BOEM",
+        "Bureau of Ocean Energy Management",
+        "Cadastre",
+        "Federal State Boundary",
+        "Lease blocks",
+        "Limit of \"8(g) Zone\"",
+        "OCS",
+        "OCS blocks",
+        "OPD",
+        "Official Protraction Diagram",
+        "Offshore",
+        "Oil and Gas",
+        "Outer Continental Shelf",
+        "Revenue Sharing",
+        "SLA",
+        "SOBD",
+        "SSB",
+        "State Seaward Boundary",
+        "Submerged Lands Act Boundary",
+        "Supplemental Official OCS Block Diagram" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:bb058e7e-7f16-4053-9d2b-73cc2d8116e3> bcube:hasValue "biota" ;
+    dc:partOf "IsoTopicCategories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:bb1f8267-4385-4739-bc6d-0c49d4016492> bcube:dateCreated "2015-08-05T01:26:01.249Z" ;
+    bcube:hasMetadataRecord <urn:uuid:33bd17e3-82fb-44d2-8d23-839e3377ce24> ;
+    bcube:lastUpdated "2015-08-05T01:26:01.249Z" ;
+    dc:conformsTo <urn:uuid:9b79d1c9-9b8f-47fc-b58b-8bb221e8acbb>,
+        <urn:uuid:bb058e7e-7f16-4053-9d2b-73cc2d8116e3> ;
+    dc:description "This data set contains BOEM Planning Area outlines in ESRI shapefile format for the BOEM Alaska Region. The Submerged Lands Act (SLA) boundary, along with the Continental Shelf Boundary (CSB), the Limit of Protraction were used to complete the polygons for the Planning Areas. Because GIS projection and topology functions can change or generalize coordinates, and because shapefiles can not represent true arcs, these GIS files are considered to be approximate and are NOT an OFFICIAL record for the exact block coordinates or areas. The Official Protraction Diagrams (OPDs) and Supplemental Official OCS Block Diagrams (SOBDs) serve as the legal definition for BOEM offshore boundary coordinates and area descriptions. If any discrepancies are found between these shapefiles and the OPDs and SOBDs, it is the OPD and SOBD diagrams which take precidence. Also note that the BOEM cadastre is developed on a UTM projection, and most Planning Areas span multiple UTM zones. This means that area values computed from these shapefiles will not match the official BOEM areas." ;
+    dc:spatial "POLYGON ((13.05807 46.943007,13.05807 74.996354,-130.651104 74.996354,-130.651104 46.943007,13.05807 46.943007))" ;
+    dcterms:title "OCS Planning Areas Alaska NAD 83" ;
+    esip:eastBound "-130.651104"^^xsd:float ;
+    esip:northBound "74.996354"^^xsd:float ;
+    esip:southBound "46.943007"^^xsd:float ;
+    esip:westBound "13.05807"^^xsd:float ;
+    owl:a dcat:Dataset .
+

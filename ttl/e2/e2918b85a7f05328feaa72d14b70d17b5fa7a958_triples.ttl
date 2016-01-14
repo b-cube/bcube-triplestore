@@ -1,0 +1,62 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:0c245824-c30f-470c-91ab-5f03f8544e1b> a "OGC:WMS" ;
+    bcube:contains <urn:uuid:6841d4e3-5b58-443e-844c-a56decf7e876> ;
+    bcube:dateCreated "2015-07-02T13:38:23.482Z" ;
+    bcube:lastUpdated "2015-07-02T13:38:23.482Z" ;
+    bcube:originatedFrom <urn:uuid:6b008d29-6711-4813-aac2-b5a518f3de2c> ;
+    dc:conformsTo <urn:uuid:4db568ba-c8dd-4f0e-ac44-5e0bb9b7b83f> ;
+    dc:description "HeatFlow1_23 in the state of Massachusetts" ;
+    owl:a bcube:service .
+
+<urn:uuid:4db568ba-c8dd-4f0e-ac44-5e0bb9b7b83f> bcube:hasValue "heat flow, thermal conductivity, temperatures, lithology, geothermal, Massachusetts" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:6841d4e3-5b58-443e-844c-a56decf7e876> bcube:dateCreated "2015-07-02T13:38:23.482Z" ;
+    bcube:lastUpdated "2015-07-02T13:38:23.482Z" ;
+    dc:description "This layer contains data related to heat flow measurements at sites in Massachusetts, obtained by the AASG for the Geothermal Data Project. The data table includes general information on the location of the well or site, location uncertainty, gradient, standard error and conductivity. Information sources are included in the dataset. The HeaderURI for a particular well is the cross-referencing link (foreign key) used to associate the feature with web based information on the feature including pictures or other information. The data is displayed using a red, yellow and orange triangle. Layer files containing the symbology for these data layers can be found in the AASG repository at <a href=\"http://repository.stategeothermaldata.org/repository/resource/98ddf901b9782a25982e01af3b068fdc/\">http://repository.stategeothermaldata.org/repository/resource/98ddf901b9782a25982e01af3b068fdc/</a>. The original data and metadata can be viewed or downloaded from the AASG repository at <a href=\"http://repository.stategeothermaldata.org/repository/resource/50ec3aefb656b70647f32e38bc2a6482/\">http://repository.stategeothermaldata.org/repository/resource/50ec3aefb656b70647f32e38bc2a6482/</a>." ;
+    dc:spatial "POLYGON ((-72.4422 41.52781,-72.4422 42.68269,-70.962 42.68269,-70.962 41.52781,-72.4422 41.52781))" ;
+    dc:title "HeatFlow" ;
+    dcterms:references <urn:uuid:780e5c80-a166-4fd6-bfd9-008e594bb4a4> ;
+    esip:eastBound "-70.962"^^xsd:float ;
+    esip:northBound "42.68269"^^xsd:float ;
+    esip:southBound "41.52781"^^xsd:float ;
+    esip:westBound "-72.4422"^^xsd:float ;
+    owl:a bcube:Layer .
+
+<urn:uuid:6b008d29-6711-4813-aac2-b5a518f3de2c> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-07-02T13:38:23.482Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-07-02T13:38:23.482Z" ;
+    dc:identifier "urn:sha:dbf386db9ab4e21391b0a03cd0656f6dc11709040e8f1c5d2f2359ea" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://geothermal.isgs.illinois.edu/ArcGIS/services/aasggeothermal/MAHeatFlow1_23/MapServer/WMSServer?request=GetCapabilities&service=WMS" .
+
+<urn:uuid:780e5c80-a166-4fd6-bfd9-008e594bb4a4> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-07-02T13:38:23.482Z" ;
+    bcube:hasConfidence "Not Sure" ;
+    bcube:hasUrlSource "Generated" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-07-02T13:38:23.482Z" ;
+    dc:identifier "urn:sha:082338dcfd10b4270603333e8fc029af782818c8a3d12c51290d08d9" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://geothermal.isgs.illinois.edu/ArcGIS/services/aasggeothermal/MAHeatFlow1_23/MapServer/WMSServer?layers=HeatFlow&width=500&version=1.3.0&bbox=-72.4422%2C41.52781%2C-70.962%2C42.68269&service=WMS&format=image%2Fpng&styles=&crs=CRS%3A84&request=GetMap&height=500" .
+

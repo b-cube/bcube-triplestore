@@ -1,0 +1,86 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:026dedef-a4b2-4bb9-9327-6c559099706f> bcube:hasType "theme" ;
+    bcube:hasValue "Address Range",
+        "County or equivalent entity",
+        "Linear Feature",
+        "Road Feature",
+        "Roads",
+        "Street Centerline" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:39549261-1f6f-4868-a6b7-a1a5bdddd7c3> bcube:hasValue "transportation" ;
+    dc:partOf "IsoTopicCategories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:601fcf2c-6e47-4cae-b066-3fd84b1c29e1> bcube:hasType "place" ;
+    bcube:hasValue "02170",
+        "County or Equivalent Entity",
+        "Matanuska-Susitna",
+        "U.S.",
+        "United States" ;
+    dc:partOf "ANSI INCITS 38:2009 (Formerly FIPS 5-2), ANSI INCITS 31:2009 (Formerly FIPS 6-4),ANSI INCITS 454:2009 (Formerly FIPS 8-6), ANSI INCITS 455:2009(Formerly FIPS 9-1), ANSI INCITS 446:2008 (Geographic Names Information System (GNIS))" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:604a7dd1-98ae-48a2-9a17-fff3b7e123da> a "ISO 19115:2003/19139" ;
+    bcube:dateCreated "2015-10-29T23:29:22.777Z" ;
+    bcube:lastUpdated "2015-10-29T23:29:22.777Z" ;
+    bcube:originatedFrom <urn:uuid:8419c58b-b559-4470-a92a-d29779aa2c2a> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:a4bf5db0-e790-4f93-90f2-b9608ef9e580> .
+
+<urn:uuid:8419c58b-b559-4470-a92a-d29779aa2c2a> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-10-29T23:29:22.777Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-10-29T23:29:22.777Z" ;
+    dc:identifier "urn:sha:c313159b290a8286f13a91c5f2232c3f1d5d5bd922fd75d80ecac29d" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://meta.geo.census.gov/data/existing/decennial/GEO/GPMB/TIGERline/TIGER2013/roads/tl_2013_02170_roads.shp.iso.xml" .
+
+<urn:uuid:a4bf5db0-e790-4f93-90f2-b9608ef9e580> bcube:dateCreated "2015-10-29T23:29:22.777Z" ;
+    bcube:hasMetadataRecord <urn:uuid:604a7dd1-98ae-48a2-9a17-fff3b7e123da> ;
+    bcube:lastUpdated "2015-10-29T23:29:22.777Z" ;
+    dc:conformsTo <urn:uuid:026dedef-a4b2-4bb9-9327-6c559099706f>,
+        <urn:uuid:39549261-1f6f-4868-a6b7-a1a5bdddd7c3>,
+        <urn:uuid:601fcf2c-6e47-4cae-b066-3fd84b1c29e1> ;
+    dc:description "The TIGER/Line shapefiles and related database files (.dbf) are an extract of selected geographic and cartographic information from the U.S. Census Bureau's Master Address File / Topologically Integrated Geographic Encoding and Referencing (MAF/TIGER) Database (MTDB). The MTDB represents a seamless national file with no overlaps or gaps between parts, however, each TIGER/Line shapefile is designed to stand alone as an independent data set, or they can be combined to cover the entire nation. The All Roads Shapefile includes all features within the MTDB Super Class \"Road/Path Features\" distinguished where the MAF/TIGER Feature Classification Code (MTFCC) for the feature in MTDB that begins with \"S\". This includes all primary, secondary, local neighborhood, and rural roads, city streets, vehicular trails (4wd), ramps, service drives, alleys, parking lot roads, private roads for service vehicles (logging, oil fields, ranches, etc.), bike paths or trails, bridle/horse paths, walkways/pedestrian trails, and stairways." ;
+    dc:spatial "POLYGON ((-153.005115 61.07796,-153.005115 63.482913,-146.42522 63.482913,-146.42522 61.07796,-153.005115 61.07796))" ;
+    dcterms:references <urn:uuid:e374c98e-34a1-43a2-84f1-60477683724a> ;
+    dcterms:title "TIGER/Line Shapefile, 2013, county, Matanuska-Susitna Borough, AK, All Roads County-based Shapefile" ;
+    esip:eastBound "-146.42522"^^xsd:float ;
+    esip:endDate "2013-05-05"^^xsd:date ;
+    esip:northBound "63.482913"^^xsd:float ;
+    esip:southBound "61.07796"^^xsd:float ;
+    esip:startDate "2012-06-05"^^xsd:date ;
+    esip:westBound "-153.005115"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:e374c98e-34a1-43a2-84f1-60477683724a> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-10-29T23:29:22.777Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-10-29T23:29:22.777Z" ;
+    dc:identifier "urn:sha:a101ffead6d08b842559de1f5eda5009cb550e61abd52e6a75936f97" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www2.census.gov/geo/tiger/TIGER2013/ROADS/tl_2013_02170_roads.zip" .
+

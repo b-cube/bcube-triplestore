@@ -1,0 +1,91 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:00eee5d7-b7c1-4426-9e33-270cffe4be65> bcube:hasType "temporal" ;
+    bcube:hasValue "Spring",
+        "Summer" ;
+    dc:partOf "Seasons" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:01cb4385-f07e-4b69-8ddc-8b1f1ae89683> bcube:hasType "stratum" ;
+    bcube:hasValue "upper water column" ;
+    dc:partOf "Depths" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:09f6b8de-a922-4ba3-97be-0024246c7d64> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-08-04T17:59:57.951Z" ;
+    bcube:lastUpdated "2015-08-04T17:59:57.951Z" ;
+    bcube:originatedFrom <urn:uuid:8a9655ed-3895-4bd2-ba75-22c220b58ef3> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:8c595a0a-ac03-485c-af53-0560cd014f60> .
+
+<urn:uuid:0f408d83-edcc-41af-8f16-b87e7d9b0325> bcube:hasType "place" ;
+    bcube:hasValue "Alaska",
+        "Bristol Bay",
+        "St. Lawrence Island",
+        "arctic",
+        "eastern Bering Sea shelf" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:801fabaa-11d9-469e-992e-ff9c84873283> bcube:hasType "theme" ;
+    bcube:hasValue "chlorophyll",
+        "phaeopigments",
+        "phytoplankton" ;
+    dc:partOf "oceans" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:8a9655ed-3895-4bd2-ba75-22c220b58ef3> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-04T17:59:57.951Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-04T17:59:57.951Z" ;
+    dc:identifier "urn:sha:4edf1ac4d7056680eaaab07c0209c52030e5f87ca7644c1f7fed64b3" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "https://inport.nmfs.noaa.gov/inport/item/17101/fgdc" .
+
+<urn:uuid:8c595a0a-ac03-485c-af53-0560cd014f60> bcube:dateCreated "2015-08-04T17:59:57.951Z" ;
+    bcube:hasMetadataRecord <urn:uuid:09f6b8de-a922-4ba3-97be-0024246c7d64> ;
+    bcube:lastUpdated "2015-08-04T17:59:57.951Z" ;
+    dc:conformsTo <urn:uuid:00eee5d7-b7c1-4426-9e33-270cffe4be65>,
+        <urn:uuid:01cb4385-f07e-4b69-8ddc-8b1f1ae89683>,
+        <urn:uuid:0f408d83-edcc-41af-8f16-b87e7d9b0325>,
+        <urn:uuid:801fabaa-11d9-469e-992e-ff9c84873283>,
+        <urn:uuid:f21f2771-6d47-46f7-8b0f-27af84b64b07> ;
+    dc:description "These data are part of an ocean observation study by Stabeno, Napp, and Whitledge sponsored, in part, by the North Pacific Research Board (Project 602; http://doc.nprb.org). The grant was titled \"Sentinels for Bering Sea ecosystem change.\" Moorings have been maintained on the southeastern Bering Sea shelf at four sites: M2 (56.9B0N, 164.1B0W) since 1995, M4 (57.9B0N, 168.9B0W) since 1996; M5 (59.9B0N, 171.7B0W) and; M8 (62.2B0N 174.7B0W) since 2004. Shipboard measurements of temperature, salinity, nutrients, chlorophyll, fluorescence and zooplankton were collected around the moorings and along the 70-m isobath on 2 cruises (2MF06, 12 April b?? 6 May; 7MF06, 25 September b?? 10 October) to groundtruth the in situ sensors on the moorings and to learn the factors that distinguish the upper water column of the central and southeastern middle shelf." ;
+    dc:spatial "POLYGON ((-175 55,-175 65,-160 65,-160 55,-175 55))" ;
+    dcterms:identifier "gov.noaa.nmfs.inport:17101" ;
+    dcterms:publisher <urn:uuid:bace4ac7-661a-4690-b1fb-129541af1230> ;
+    dcterms:title "Chlorophyll" ;
+    esip:eastBound "-160.0"^^xsd:float ;
+    esip:endDate "2006-10-03"^^xsd:date ;
+    esip:northBound "65.0"^^xsd:float ;
+    esip:southBound "55.0"^^xsd:float ;
+    esip:startDate "2006-05-02"^^xsd:date ;
+    esip:westBound "-175.0"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:bace4ac7-661a-4690-b1fb-129541af1230> owl:a foaf:Organization ;
+    foaf:name "" .
+
+<urn:uuid:f21f2771-6d47-46f7-8b0f-27af84b64b07> bcube:hasType "theme" ;
+    bcube:hasValue "chlorophyll",
+        "phaeopigments",
+        "phytoplankton" ;
+    dc:partOf "biota" ;
+    owl:a bcube:thesaurusSubset .
+

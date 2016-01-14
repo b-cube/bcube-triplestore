@@ -1,0 +1,77 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:0e234610-4400-48d8-b6f4-e35bca2f43a0> bcube:dateCreated "2015-11-12T21:10:27.117Z" ;
+    bcube:hasMetadataRecord <urn:uuid:eae3ec4e-f9c3-48d3-a78b-e6ea9b0c8dbb> ;
+    bcube:lastUpdated "2015-11-12T21:10:27.117Z" ;
+    dc:conformsTo <urn:uuid:ef4f0003-549f-4ab9-8387-434acf57bc36>,
+        <urn:uuid:ff5700f8-a2cb-4aac-8a16-aadbab29a6f1> ;
+    dc:description "This data set contains polygons delineating the seamline boundaries of imagery acquired as part of the National Agriculture Imagery Program (NAIP), and used in the creation of DOQQs and compressed county mosaics (CCM). These seam polygons can be used as a tool in determining the image source and date of each portion of the DOQQ or the CCM. The NAIP acquires 4 band digital ortho imagery from airborne and/or space based platforms during the agricultural growing seasons in the U.S.. A primary goal of the NAIP program is to enable availability of ortho imagery within sixty days of acquisition. The NAIP provides 1 meter or 1/2 meter GSD ortho imagery rectified within +/- 6 meters to true ground at a 95% confidence level. The tiling format of NAIP imagery is based on a 3.75' x 3.75' quarter quadrangle with a 300 (plus or minus 30) pixel buffer on all four sides. The NAIP quarter quads are formatted to the UTM coordinate system using the North American Datum of 1983 (NAD83)." ;
+    dc:spatial "POLYGON ((-85.327660046899993 39.187006129899999,-85.327660046899993 40.963458854800002,-84.706840537 40.963458854800002,-84.706840537 39.187006129899999,-85.327660046899993 39.187006129899999))" ;
+    dcterms:publisher <urn:uuid:7a80fff7-3bc5-4017-a392-470dd144eee5> ;
+    dcterms:title "Index of source acquisition dates." ;
+    esip:eastBound "-84.706840537"^^xsd:float ;
+    esip:northBound "40.9634588548"^^xsd:float ;
+    esip:southBound "39.1870061299"^^xsd:float ;
+    esip:startDate "2014-12-04"^^xsd:date ;
+    esip:westBound "-85.3276600469"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:4d4739d9-81b4-4397-80be-2fa65f124bc7> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-12T21:10:27.117Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-12T21:10:27.117Z" ;
+    dc:identifier "urn:sha:e02c4cc1b2cc9283afd3c06e46a4e316358a33530e043b9ab5eee31d" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "https://spatialdata.iu.edu/DOQQS/naip/county/y2014/in_naip_2014/in_ccm_2014/18135/ortho_1-1_1n_s_in135_2014_1.shp.xml" .
+
+<urn:uuid:7a80fff7-3bc5-4017-a392-470dd144eee5> owl:a foaf:Organization ;
+    foaf:name "USDA-FSA Aerial Photography Field Office" .
+
+<urn:uuid:eae3ec4e-f9c3-48d3-a78b-e6ea9b0c8dbb> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-11-12T21:10:27.117Z" ;
+    bcube:lastUpdated "2015-11-12T21:10:27.117Z" ;
+    bcube:originatedFrom <urn:uuid:4d4739d9-81b4-4397-80be-2fa65f124bc7> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:0e234610-4400-48d8-b6f4-e35bca2f43a0> .
+
+<urn:uuid:ef4f0003-549f-4ab9-8387-434acf57bc36> bcube:hasType "theme" ;
+    bcube:hasValue "Acquisition Date",
+        "Digital",
+        "Mosaic",
+        "Ortho Imagery",
+        "United States Department of Agriculture (USDA)",
+        "farming" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:ff5700f8-a2cb-4aac-8a16-aadbab29a6f1> bcube:hasType "place" ;
+    bcube:hasValue "APFO",
+        "Aerial Photography Field Office",
+        "FIPS 18135",
+        "FSA",
+        "Field Service Center",
+        "IN",
+        "RANDOLPH CO., IN",
+        "Randolph",
+        "USA",
+        "USDA",
+        "United States Department of Agriculture (USDA)" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+

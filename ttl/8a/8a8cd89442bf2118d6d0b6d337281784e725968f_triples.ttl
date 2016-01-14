@@ -1,0 +1,80 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:0ea4099c-a2ad-45c6-997e-b42827495729> bcube:hasType "theme" ;
+    bcube:hasValue "wind" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:290e593d-dfd9-49a8-b67a-e26ca8518cda> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-08-10T08:23:42.29Z" ;
+    bcube:lastUpdated "2015-08-10T08:23:42.29Z" ;
+    bcube:originatedFrom <urn:uuid:65f69e47-e8a5-4eff-8a93-5838ac4b96ff> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:77c6c769-cfd8-4fc3-8d48-97b191345726> .
+
+<urn:uuid:39df7955-9b76-46d5-8745-4894b1f251e9> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-10T08:23:42.29Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-10T08:23:42.29Z" ;
+    dc:identifier "urn:sha:08d56256c0bcbf36edff16b96614017006540442271de7750fe8ab3c" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "ftp://ftp.geoinfo.msl.mt.gov/Data/Spatial/NonMSDI/Raster/WindSpeed2002.zip" .
+
+<urn:uuid:40a6208d-ca17-41f7-bd0c-cb2d73872567> owl:a foaf:Organization ;
+    foaf:name "Montana State Library" .
+
+<urn:uuid:65f69e47-e8a5-4eff-8a93-5838ac4b96ff> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-10T08:23:42.29Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-10T08:23:42.29Z" ;
+    dc:identifier "urn:sha:10332017314c15c717183d0bab109accc99b9120a6be30599a6c1497" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://mslapps.mt.gov/Geographic_Information/Data/DataList/datalist_MetadataDetailRaw.aspx?did={5B448838-DFD5-4579-985D-F000672B6C60}" .
+
+<urn:uuid:6a6ff534-4897-46dc-85bc-86c4f605e9fd> bcube:hasType "place" ;
+    bcube:hasValue "Montana" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:6db6e768-9790-4bc2-abc0-f487534c27d3> bcube:hasType "theme" ;
+    bcube:hasValue "climatologyMeteorologyAtmosphere",
+        "economy" ;
+    dc:partOf "ISO 19115 Topic Category" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:77c6c769-cfd8-4fc3-8d48-97b191345726> bcube:dateCreated "2015-08-10T08:23:42.29Z" ;
+    bcube:hasMetadataRecord <urn:uuid:290e593d-dfd9-49a8-b67a-e26ca8518cda> ;
+    bcube:lastUpdated "2015-08-10T08:23:42.29Z" ;
+    dc:conformsTo <urn:uuid:0ea4099c-a2ad-45c6-997e-b42827495729>,
+        <urn:uuid:6a6ff534-4897-46dc-85bc-86c4f605e9fd>,
+        <urn:uuid:6db6e768-9790-4bc2-abc0-f487534c27d3> ;
+    dc:description "Estimated wind speed distribution of Montana. This is a raster data set in which each 400-meter pixel represents the average speed of the wind in meters per second at an elevation of 50 meters above the ground. These wind speed estimates were produced by TrueWind Solutions using their Mesomap system and historical weather data. This map has been validated with available suface data by the National Renewable Energy Laboratory and wind energy meteorological consultants. The estimates tend to be more accurate for the plains than for mountainous areas. For more information, see http://www.windpowermaps.org and read the Use_Constraints section below." ;
+    dc:spatial "POLYGON ((-116.216991 44.209897,-116.216991 49.198999,-103.579015 49.198999,-103.579015 44.209897,-116.216991 44.209897))" ;
+    dcterms:publisher <urn:uuid:40a6208d-ca17-41f7-bd0c-cb2d73872567> ;
+    dcterms:references <urn:uuid:39df7955-9b76-46d5-8745-4894b1f251e9> ;
+    dcterms:title "Wind Speed Distribution of Montana, 2002" ;
+    esip:eastBound "-103.579015"^^xsd:float ;
+    esip:northBound "49.198999"^^xsd:float ;
+    esip:southBound "44.209897"^^xsd:float ;
+    esip:startDate "2002-01-01"^^xsd:date ;
+    esip:westBound "-116.216991"^^xsd:float ;
+    owl:a dcat:Dataset .
+

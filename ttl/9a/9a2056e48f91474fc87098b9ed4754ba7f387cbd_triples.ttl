@@ -1,0 +1,63 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:7421c69e-2a3e-4d7a-a8dc-13dec484e10a> bcube:hasType "theme" ;
+    bcube:hasValue "LIDAR",
+        "aerial photography",
+        "beaches",
+        "coastal zones",
+        "dunes",
+        "fUS37 = North Carolina",
+        "hurricanes",
+        "storm surge" ;
+    dc:partOf "Alexandria Digital Library Feature Type Thesaurus" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:76c3f793-aa7e-4935-a9c5-5dd0fcecbca7> a "ISO 19115:2003/19139" ;
+    bcube:dateCreated "2014-07-30T00:01:46.868Z" ;
+    bcube:lastUpdated "2014-07-30T00:01:46.868Z" ;
+    bcube:originatedFrom <urn:uuid:bb957209-3c68-4e23-9142-1af4179a6fa1> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:f49c3e40-dedb-470a-8a81-6a64217cafff> .
+
+<urn:uuid:8635f89a-e0f2-49dd-8db6-750b2931504b> bcube:hasValue "geoscientificInformation" ;
+    dc:partOf "IsoTopicCategories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:bb957209-3c68-4e23-9142-1af4179a6fa1> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2014-07-30T00:01:46.868Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2014-07-30T00:01:46.868Z" ;
+    dc:identifier "urn:sha:8171a834eb2e5b7fa08b2cc5e539f1f592811375c7d991cb0e1f072e" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www.usgs.gov/science/iso.php?cite=2176" .
+
+<urn:uuid:f49c3e40-dedb-470a-8a81-6a64217cafff> bcube:dateCreated "2014-07-30T00:01:46.868Z" ;
+    bcube:hasMetadataRecord <urn:uuid:76c3f793-aa7e-4935-a9c5-5dd0fcecbca7> ;
+    bcube:lastUpdated "2014-07-30T00:01:46.868Z" ;
+    dc:conformsTo <urn:uuid:7421c69e-2a3e-4d7a-a8dc-13dec484e10a>,
+        <urn:uuid:8635f89a-e0f2-49dd-8db6-750b2931504b> ;
+    dc:description "Summary of study to document the impact of Hurricane Isabel in the Outer Banks of North Carolina, near Cape Hatteras. Methods included pre- and post-storm photography, videography, and lidar." ;
+    dc:spatial "POLYGON ((-75.8 35.1,-75.8 35.3,-75.4 35.3,-75.4 35.1,-75.8 35.1))" ;
+    dcterms:title "Coastal Change During Hurricane Isabel 2003" ;
+    esip:eastBound "-75.4"^^xsd:float ;
+    esip:northBound "35.3"^^xsd:float ;
+    esip:southBound "35.1"^^xsd:float ;
+    esip:westBound "-75.8"^^xsd:float ;
+    owl:a dcat:Dataset .
+

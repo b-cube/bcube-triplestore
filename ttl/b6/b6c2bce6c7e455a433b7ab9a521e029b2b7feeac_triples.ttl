@@ -1,0 +1,100 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:2c4f12bf-7803-4b24-bb92-ffadb97b432c> bcube:dateCreated "2015-11-02T19:56:01.872Z" ;
+    bcube:hasMetadataRecord <urn:uuid:541399ed-9a59-4e67-8bc0-cafd43c1a39b> ;
+    bcube:lastUpdated "2015-11-02T19:56:01.872Z" ;
+    dc:conformsTo <urn:uuid:eaba0ffa-d0c6-49e8-a309-2e340b88617b>,
+        <urn:uuid:eb435c36-8d63-468c-85d1-4d0f819bd6cc>,
+        <urn:uuid:f5deff60-fc27-4bd9-b489-ec515f052a82> ;
+    dc:description "Terrain data, as defined in FEMA Guidelines and Specifications, Appendix N: Data Capture Standards, describes the digital topographic data that was used to create the elevation data representing the terrain environment of a watershed and/or floodplain. Terrain data requirements allow for flexibility in the types of information provided as sources used to produce final terrain deliverables. Once this type of data is provided, FEMA will be able to account for the origins of the flood study elevation data. (Source: FEMA Guidelines and Specifications, Appendix N, Section N.1.2)." ;
+    dc:spatial "POLYGON ((-113.64023 34.680188,-113.64023 34.721497,-113.563635 34.721497,-113.563635 34.680188,-113.64023 34.680188))" ;
+    dcterms:publisher <urn:uuid:7a4d452d-ba2f-4838-a52d-c0890ab32d0d> ;
+    dcterms:references <urn:uuid:9f83b258-e7d9-4f6a-b027-0ebc393b35ab> ;
+    dcterms:title "DCS Terrain Submission for Mohave, AZ" ;
+    esip:eastBound "-113.563635"^^xsd:float ;
+    esip:northBound "34.721497"^^xsd:float ;
+    esip:southBound "34.680188"^^xsd:float ;
+    esip:startDate "2010-07-12"^^xsd:date ;
+    esip:westBound "-113.64023"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:541399ed-9a59-4e67-8bc0-cafd43c1a39b> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-11-02T19:56:01.872Z" ;
+    bcube:lastUpdated "2015-11-02T19:56:01.872Z" ;
+    bcube:originatedFrom <urn:uuid:fad61c8a-fbbf-4216-b321-1da614ca2671> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:2c4f12bf-7803-4b24-bb92-ffadb97b432c> .
+
+<urn:uuid:7a4d452d-ba2f-4838-a52d-c0890ab32d0d> owl:a foaf:Organization ;
+    foaf:name "Federal Emergency Management Agency" .
+
+<urn:uuid:9f83b258-e7d9-4f6a-b027-0ebc393b35ab> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-02T19:56:01.872Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-02T19:56:01.872Z" ;
+    dc:identifier "urn:sha:37c915397238031daced09ae0e2dd3bf54e84a6477f749c2cc9dcbdf" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://hazards.fema.gov" .
+
+<urn:uuid:eaba0ffa-d0c6-49e8-a309-2e340b88617b> bcube:hasType "place" ;
+    bcube:hasValue "COMMUNITY KINGMAN",
+        "COMMUNITY LAKE HAVASU",
+        "COMMUNITY MOHAVE COUNTY-WIDE",
+        "COUNTY MOHAVE",
+        "COUNTY-FIPS 015C",
+        "FEMA-CID 040060",
+        "FEMA-CID 040116",
+        "FEMA-CID 04015C",
+        "REGION 09",
+        "STATE AZ" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:eb435c36-8d63-468c-85d1-4d0f819bd6cc> bcube:hasType "theme" ;
+    bcube:hasValue "elevation" ;
+    dc:partOf "ISO 19115 Topic Category" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:f5deff60-fc27-4bd9-b489-ec515f052a82> bcube:hasType "theme" ;
+    bcube:hasValue "Breaklines",
+        "Contours",
+        "DEM",
+        "Digital Terrain Model",
+        "Elevation Data",
+        "Flow vectors",
+        "LIDAR",
+        "Land Surface",
+        "Relief",
+        "Slope",
+        "Topography" ;
+    dc:partOf "FEMA NFIP Topic Category" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:fad61c8a-fbbf-4216-b321-1da614ca2671> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-02T19:56:01.872Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-02T19:56:01.872Z" ;
+    dc:identifier "urn:sha:74245dbb9c340e10bde49579fb47e91c35ae7c6ec40c2c1c90feb4fc" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://catalog.data.gov/harvest/object/354f136a-9704-47aa-a3d9-ac4add1eea5e/original" .
+

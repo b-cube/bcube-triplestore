@@ -1,0 +1,83 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:c2b7b442-8b40-4a65-9a7f-446f4b456518> a "OGC:WMS" ;
+    bcube:contains <urn:uuid:516aaa48-9593-412a-8ee3-fe4d78449ff7>,
+        <urn:uuid:a15f2aa4-8684-4c64-a734-c858c60e94c2> ;
+    bcube:dateCreated "2015-03-18T07:01:29.939Z" ;
+    bcube:lastUpdated "2015-03-18T07:01:29.939Z" ;
+    bcube:originatedFrom <urn:uuid:cf099d92-7d98-4199-be5b-66e2f4d2a6db> ;
+    dc:description "Watches Warnings and Advisories" ;
+    owl:a bcube:service .
+
+<urn:uuid:516aaa48-9593-412a-8ee3-fe4d78449ff7> bcube:dateCreated "2015-03-18T07:01:29.939Z" ;
+    bcube:lastUpdated "2015-03-18T07:01:29.939Z" ;
+    dc:description "Forecast River Stages" ;
+    dc:spatial "POLYGON ((-180 -90,-180 90,180 90,180 -90,-180 -90))" ;
+    dc:title "Forecast" ;
+    dcterms:references <urn:uuid:7ef041bb-c472-40a9-a237-10af74969769> ;
+    esip:eastBound "180.0"^^xsd:float ;
+    esip:northBound "90.0"^^xsd:float ;
+    esip:southBound "-90.0"^^xsd:float ;
+    esip:westBound "-180.0"^^xsd:float ;
+    owl:a bcube:Layer .
+
+<urn:uuid:7ef041bb-c472-40a9-a237-10af74969769> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-03-18T07:01:29.939Z" ;
+    bcube:hasConfidence "Not Sure" ;
+    bcube:hasUrlSource "Generated" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-03-18T07:01:29.939Z" ;
+    dc:identifier "urn:sha:3505a0d886fb6625e92fb5059ae6b3fbb930adc0b521b67494e9daab" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://gis.srh.noaa.gov/arcgis/services/ahps_gauges/MapServer/WMSServer?layers=1&width=500&version=1.3.0&bbox=-180.0%2C-90.0%2C180.0%2C90.0&service=WMS&format=image%2Fpng&styles=&crs=CRS%3A84&request=GetMap&height=500" .
+
+<urn:uuid:815b5a14-4f4d-49f0-a99f-07d11dbdb8c2> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-03-18T07:01:29.939Z" ;
+    bcube:hasConfidence "Not Sure" ;
+    bcube:hasUrlSource "Generated" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-03-18T07:01:29.939Z" ;
+    dc:identifier "urn:sha:d09899e7bc858d0f030bdf53558e4406a808fc19bb1cf7b789675cd0" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://gis.srh.noaa.gov/arcgis/services/ahps_gauges/MapServer/WMSServer?layers=0&width=500&version=1.3.0&bbox=-180.0%2C-90.0%2C180.0%2C90.0&service=WMS&format=image%2Fpng&styles=&crs=CRS%3A84&request=GetMap&height=500" .
+
+<urn:uuid:a15f2aa4-8684-4c64-a734-c858c60e94c2> bcube:dateCreated "2015-03-18T07:01:29.939Z" ;
+    bcube:lastUpdated "2015-03-18T07:01:29.939Z" ;
+    dc:description "Observed River Stages" ;
+    dc:spatial "POLYGON ((-180 -90,-180 90,180 90,180 -90,-180 -90))" ;
+    dc:title "Observed" ;
+    dcterms:references <urn:uuid:815b5a14-4f4d-49f0-a99f-07d11dbdb8c2> ;
+    esip:eastBound "180.0"^^xsd:float ;
+    esip:northBound "90.0"^^xsd:float ;
+    esip:southBound "-90.0"^^xsd:float ;
+    esip:westBound "-180.0"^^xsd:float ;
+    owl:a bcube:Layer .
+
+<urn:uuid:cf099d92-7d98-4199-be5b-66e2f4d2a6db> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-03-18T07:01:29.939Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-03-18T07:01:29.939Z" ;
+    dc:identifier "urn:sha:e5fa77d55f235f666166fe5063b678eaa9de3e9adfc36a214a8feb7c" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://gis.srh.noaa.gov/arcgis/services/ahps_gauges/MapServer/WMSServer?request=GetCapabilities&service=WMS" .
+

@@ -1,0 +1,95 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:02bd922e-db32-460a-afd1-f7e772b18e6b> bcube:hasType "theme" ;
+    bcube:hasValue "County ANSI Code",
+        "County FIPS Code",
+        "County or equivalent entity",
+        "Local GIS Identifier",
+        "National Hydrography Dataset common identifier",
+        "Permanent edge ID",
+        "State ANSI Code",
+        "State FIPS Code",
+        "Table" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:2ce5a8b6-ec4a-4678-b900-308a6da397e2> bcube:dateCreated "2015-11-06T02:38:39.917Z" ;
+    bcube:hasMetadataRecord <urn:uuid:b596794a-f8c8-4212-aa2d-62e15398adc9> ;
+    bcube:lastUpdated "2015-11-06T02:38:39.917Z" ;
+    dc:conformsTo <urn:uuid:02bd922e-db32-460a-afd1-f7e772b18e6b>,
+        <urn:uuid:caec196b-c370-4e7a-bcc7-9d8fedb34ca1>,
+        <urn:uuid:ed5ee2c0-d6b6-4968-86fe-5eba2149b541> ;
+    dc:description "The TIGER/Line shapefiles and related database files (.dbf) are an extract of selected geographic and cartographic information from the U.S. Census Bureau's Master Address File / Topologically Integrated Geographic Encoding and Referencing (MAF/TIGER) Database (MTDB). The MTDB represents a seamless national file with no overlaps or gaps between parts, however, each TIGER/Line shapefile is designed to stand alone as an independent data set, or they can be combined to cover the entire nation. The Other Identifiers Relationship File contains external identifier codes, such as National Hydrographic Dataset (NHD) codes and individual county identifiers. The edge to which an Other Identifiers Relationship File record applies can be determined by linking to the All Lines shapefile on the permanent edge identifier (TLID) attribute. Not every TLID has an external identifier associated with it and some TLIDs may have more than one." ;
+    dc:spatial "POLYGON ((-88.037309 30.146561,-88.037309 31.319017,-87.366591 31.319017,-87.366591 30.146561,-88.037309 30.146561))" ;
+    dcterms:publisher <urn:uuid:6ab2413f-f0fc-452f-a5ad-28c353411812> ;
+    dcterms:references <urn:uuid:71757e29-638b-4b02-bc2c-920988a241c2> ;
+    dcterms:title "TIGER/Line Shapefile, 2012, county, Baldwin County, AL, Current Other Identifiers Relationship File" ;
+    esip:eastBound "-87.366591"^^xsd:float ;
+    esip:endDate "2012-06-01"^^xsd:date ;
+    esip:northBound "31.319017"^^xsd:float ;
+    esip:southBound "30.146561"^^xsd:float ;
+    esip:startDate "2011-08-01"^^xsd:date ;
+    esip:westBound "-88.037309"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:6ab2413f-f0fc-452f-a5ad-28c353411812> owl:a foaf:Organization ;
+    foaf:name "" .
+
+<urn:uuid:71757e29-638b-4b02-bc2c-920988a241c2> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-06T02:38:39.917Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-06T02:38:39.917Z" ;
+    dc:identifier "urn:sha:98435ca5f915ff46c9b7fa59b0cc006397ea7a7655cc3bce99bf3219" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www2.census.gov/geo/tiger/TIGER2012/OTHERID/tl_2012_01003_otherid.zip" .
+
+<urn:uuid:b596794a-f8c8-4212-aa2d-62e15398adc9> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-11-06T02:38:39.917Z" ;
+    bcube:lastUpdated "2015-11-06T02:38:39.917Z" ;
+    bcube:originatedFrom <urn:uuid:eb730aa0-d6ec-4f6a-b6bb-90fdbc53f290> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:2ce5a8b6-ec4a-4678-b900-308a6da397e2> .
+
+<urn:uuid:caec196b-c370-4e7a-bcc7-9d8fedb34ca1> bcube:hasType "place" ;
+    bcube:hasValue "01003",
+        "Baldwin",
+        "County or Equivalent Entity",
+        "U.S.",
+        "United States" ;
+    dc:partOf "ANSI INCITS 38:2009 (Formerly FIPS 5-2), ANSI INCITS 31:2009 (Formerly FIPS 6-4),ANSI INCITS 454:2009 (Formerly FIPS 8-6), ANSI INCITS 455:2009(Formerly FIPS 9-1), ANSI INCITS 446:2008 (Geographic Names Information System (GNIS))" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:eb730aa0-d6ec-4f6a-b6bb-90fdbc53f290> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-06T02:38:39.917Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-06T02:38:39.917Z" ;
+    dc:identifier "urn:sha:bb4b5e094c56ea4dd77a25841b63d698ac3495d3f59b4df7c6fad077" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://meta.geo.census.gov/data/existing/decennial/GEO/GPMB/TIGERline/TL2012/FGDC/otherid/tl_2012_01003_otherid.dbf.xml" .
+
+<urn:uuid:ed5ee2c0-d6b6-4968-86fe-5eba2149b541> bcube:hasType "theme" ;
+    bcube:hasValue "InlandWaters",
+        "Transportation" ;
+    dc:partOf "ISO 19115 Topic Categories" ;
+    owl:a bcube:thesaurusSubset .
+

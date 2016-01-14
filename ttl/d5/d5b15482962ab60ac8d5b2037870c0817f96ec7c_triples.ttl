@@ -1,0 +1,77 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:03e0aae7-787c-47f8-829b-a0a04491ff9f> a "ISO 19115:2003/19139" ;
+    bcube:dateCreated "2015-08-08T13:23:51.267Z" ;
+    bcube:lastUpdated "2015-08-08T13:23:51.267Z" ;
+    bcube:originatedFrom <urn:uuid:20228898-e56a-4634-b7d5-2250a5cb89b6> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:a9b7390b-4db9-41fc-b592-df68aba5d457> .
+
+<urn:uuid:0aa70f20-ca4f-40b1-85df-c86df722aa56> bcube:hasValue "Earthquakes",
+        "Historical geology",
+        "Seismic event",
+        "Seismology" ;
+    dc:partOf "BGS Thesaurus of Geosciences" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:20228898-e56a-4634-b7d5-2250a5cb89b6> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-08T13:23:51.267Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-08T13:23:51.267Z" ;
+    dc:identifier "urn:sha:eab49598f058e62d90e6ec2008711737ac89f0ec44286bfdcde1e304" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://webarchive.nationalarchives.gov.uk/20130402145952/http:/data.gov.uk/api/2/rest/harvestobject/c5dfdde3-554c-46be-9ba3-39795a32c84c/xml" .
+
+<urn:uuid:3a28744b-0b3b-4d2c-b027-5ba2752ddf36> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-08T13:23:51.267Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-08T13:23:51.267Z" ;
+    dc:identifier "urn:sha:d76ce261f322e118af006df86bda8dc77c201314014e529c942e0047" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://webarchive.nationalarchives.gov.uk/20130402145952/http://www.quakes.bgs.ac.uk/index.html" .
+
+<urn:uuid:51a32fcc-7f20-4a2a-bca7-3cf9da24d054> bcube:hasValue "NERC_DDC" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:7f53749d-63ac-42ea-8435-fb0f05c03455> bcube:hasValue "geoscientificInformation" ;
+    dc:partOf "IsoTopicCategories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:a9b7390b-4db9-41fc-b592-df68aba5d457> bcube:dateCreated "2015-08-08T13:23:51.267Z" ;
+    bcube:hasMetadataRecord <urn:uuid:03e0aae7-787c-47f8-829b-a0a04491ff9f> ;
+    bcube:lastUpdated "2015-08-08T13:23:51.267Z" ;
+    dc:conformsTo <urn:uuid:0aa70f20-ca4f-40b1-85df-c86df722aa56>,
+        <urn:uuid:51a32fcc-7f20-4a2a-bca7-3cf9da24d054>,
+        <urn:uuid:7f53749d-63ac-42ea-8435-fb0f05c03455> ;
+    dc:description "This dataset contains parametric data (epicentre, magnitude, depth, etc) for over one million earthquakes worldwide. The dataset has been compiled gradually over a period of thirty years from original third-party catalogues, and parameters have not been revised by BGS, although erroneous entries have been flagged where found. The dataset is kept in two versions: the complete \"master\" version, in which all entries for any single earthquake from contributing catalogue are preserved, and the \"pruned\" version, in which each earthquake is represented by a single entry, selected from the contributing sources according to a hierarchy of preferences. The pruned version, which is intended to be free from duplicate entries for the same event, provides a starting point for studies of seismicity and seismic hazard anywhere in the world." ;
+    dc:spatial "POLYGON ((-180 -90,-180 90,180 90,180 -90,-180 -90))" ;
+    dcterms:references <urn:uuid:3a28744b-0b3b-4d2c-b027-5ba2752ddf36> ;
+    dcterms:title "World Seismicity Database" ;
+    esip:eastBound "180.0"^^xsd:float ;
+    esip:endDate "1975-12-06"^^xsd:date ;
+    esip:northBound "90.0"^^xsd:float ;
+    esip:southBound "-90.0"^^xsd:float ;
+    esip:startDate "1975-12-06"^^xsd:date ;
+    esip:westBound "-180.0"^^xsd:float ;
+    owl:a dcat:Dataset .
+

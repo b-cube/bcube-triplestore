@@ -1,0 +1,85 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:010e0692-7fb3-48bf-aaed-37d9b988e01a> bcube:hasType "theme" ;
+    bcube:hasValue "Breaklines",
+        "DEM",
+        "DTM",
+        "Elevation",
+        "Hydro Flattened",
+        "LAS",
+        "Lidar" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:039d6645-46b5-4ff6-bc56-0845b492ea13> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-09T16:54:41.987Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-09T16:54:41.987Z" ;
+    dc:identifier "urn:sha:b53e5bc87f497a08ebe96f10291f34cfad4b7d13132654f748b32fa6" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://coast.noaa.gov/data/Documents/Metadata/isoharvest/Lidar/va2012_usgs_fema_northco_N_m4728_ISOmetadata.xml" .
+
+<urn:uuid:3c48eb31-8198-4f7b-bfb2-f5502ed30236> a "ISO 19115:2003/19139" ;
+    bcube:dateCreated "2015-08-09T16:54:41.987Z" ;
+    bcube:lastUpdated "2015-08-09T16:54:41.987Z" ;
+    bcube:originatedFrom <urn:uuid:039d6645-46b5-4ff6-bc56-0845b492ea13> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:cc7741ee-0132-437d-a3de-db182cc738c6> .
+
+<urn:uuid:90f71366-cffe-48bf-a768-70043ab109a7> bcube:hasValue "elevation" ;
+    dc:partOf "IsoTopicCategories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:964d571b-afed-42f6-a82b-6f6acf8ad99a> bcube:hasType "temporal" ;
+    bcube:hasValue "2012" ;
+    dc:partOf "none" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:cc7741ee-0132-437d-a3de-db182cc738c6> bcube:dateCreated "2015-08-09T16:54:41.987Z" ;
+    bcube:hasMetadataRecord <urn:uuid:3c48eb31-8198-4f7b-bfb2-f5502ed30236> ;
+    bcube:lastUpdated "2015-08-09T16:54:41.987Z" ;
+    dc:conformsTo <urn:uuid:010e0692-7fb3-48bf-aaed-37d9b988e01a>,
+        <urn:uuid:90f71366-cffe-48bf-a768-70043ab109a7>,
+        <urn:uuid:964d571b-afed-42f6-a82b-6f6acf8ad99a>,
+        <urn:uuid:db023602-56d0-4eae-a7a9-11adea5d58b0> ;
+    dc:description "Dewberry collected LiDAR for ~3,341 square miles in various Virginia Counties, a part of Worcester County, and Hoopers Island. The acquisition was performed by Terrapoint. This metadata covers the LiDAR produced for the Virginia Counties North project area. The nominal pulse spacing for this project is 1.6 ft (0.5 meters). This project was collected with a sensor which collects intensity values for each discrete pulse extracted from the waveform. GPS Week Time, Intensity, Flightline and echo number attributes were provided for each LiDAR point. Dewberry used proprietary procedures to classify the LAS according to contract specifications: 1-Unclassified, 2-Ground, 7-Noise, 9-Water, 10-Ignored Ground due to breakline proximity, and 11-Withheld (Reclassed to 15). Dewberry produced 3D breaklines and combined these with the final LiDAR data to produce seamless hydro flattened DEMs for the 2,140 tiles (5000 ft x 5000 ft) that cover the project area. This collection has been divided into 2 parts (North and South), due to a portion of the data being collected in two zones: Virginia State Plane North 4501 and Virginia State Plane South 4502." ;
+    dc:spatial "POLYGON ((-77.713172 37.746085,-77.713172 38.944008,-76.506493 38.944008,-76.506493 37.746085,-77.713172 37.746085))" ;
+    dcterms:title "2012 USGS-FEMA Lidar: Virginia Northern Counties (North)" ;
+    esip:eastBound "-76.506493"^^xsd:float ;
+    esip:endDate "2012-02-10"^^xsd:date ;
+    esip:northBound "38.944008"^^xsd:float ;
+    esip:southBound "37.746085"^^xsd:float ;
+    esip:startDate "2011-04-19"^^xsd:date ;
+    esip:westBound "-77.713172"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:db023602-56d0-4eae-a7a9-11adea5d58b0> bcube:hasType "place" ;
+    bcube:hasValue "Essex",
+        "Fredericksburg",
+        "King George",
+        "Manassas",
+        "Manassas Park",
+        "Prince William",
+        "Richmond",
+        "Stafford",
+        "Virginia",
+        "Westmoreland" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+

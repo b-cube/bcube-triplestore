@@ -1,0 +1,89 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:040a474a-71b1-4656-8d34-804df5c45a3f> bcube:hasType "theme" ;
+    bcube:hasValue "Marine Geology",
+        "Marine Geophysics",
+        "Marine Gravity",
+        "Marine Magnetics",
+        "Marine Seismic",
+        "Seafloor Topography",
+        "Single-beam Bathymetry",
+        "Water Depth" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:162f0498-2bef-4527-97d8-9f73133b75c9> bcube:hasType "place" ;
+    bcube:hasValue "AK",
+        "Alaska",
+        "Bering Sea",
+        "Bering Sea, Alaska",
+        "USA" ;
+    dc:partOf "none" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:271c4d4c-b323-40aa-af9e-fbbfca901b37> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-10-31T22:22:02.289Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-10-31T22:22:02.289Z" ;
+    dc:identifier "urn:sha:4eedee680d6c86dca791870b2c539932e981ad899b313b18472e5e93" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://catalog.data.gov/harvest/object/0fcd9586-61d6-41e3-ab82-dc48455f8c63" .
+
+<urn:uuid:54116245-b3bd-4e14-b928-b8cd66264c5e> a "ISO 19115:2003/19139" ;
+    bcube:dateCreated "2015-10-31T22:22:02.289Z" ;
+    bcube:lastUpdated "2015-10-31T22:22:02.289Z" ;
+    bcube:originatedFrom <urn:uuid:271c4d4c-b323-40aa-af9e-fbbfca901b37> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:c2cfdcdd-45ad-4b94-bfb5-a6af4aac21c7> .
+
+<urn:uuid:9d772c86-1766-4a13-b5dc-6e5cb4e01843> bcube:hasValue "geoscientificinformation",
+        "oceans" ;
+    dc:partOf "IsoTopicCategories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:c2cfdcdd-45ad-4b94-bfb5-a6af4aac21c7> bcube:dateCreated "2015-10-31T22:22:02.289Z" ;
+    bcube:hasMetadataRecord <urn:uuid:54116245-b3bd-4e14-b928-b8cd66264c5e> ;
+    bcube:lastUpdated "2015-10-31T22:22:02.289Z" ;
+    dc:conformsTo <urn:uuid:040a474a-71b1-4656-8d34-804df5c45a3f>,
+        <urn:uuid:162f0498-2bef-4527-97d8-9f73133b75c9>,
+        <urn:uuid:9d772c86-1766-4a13-b5dc-6e5cb4e01843> ;
+    dc:description "Single-beam bathymetry, magnetics, and gravity data along with transit satellite navigation data was collected as part of field activity L-8-77-BS in Bering Sea, Alaska from 07/29/1977 to 08/21/1977, http://walrus.wr.usgs.gov/infobank/l/l877bs/html/l-8-77-bs.meta.html These data are reformatted from space-delimited ASCII text files located in the Coastal and Marine Geology Program (CMGP) InfoBank field activity catalog at http://walrus.wr.usgs.gov/infobank/l/l877bs/html/l-8-77-bs.bath.html http://walrus.wr.usgs.gov/infobank/l/l877bs/html/l-8-77-bs.grav.html http://walrus.wr.usgs.gov/infobank/l/l877bs/html/l-8-77-bs.mag.html into MGD77T format provided by the NOAA's National Geophysical Data Center(NGDC). The MGD77T format includes a header (documentation) file (.h77t) and a data file (.m77t). More information regarding this format can be found in the publication listed in the Cross_reference section of this metadata file." ;
+    dc:spatial "POLYGON ((176.71246 54.18311,176.71246 64.48405,-152.02892 64.48405,-152.02892 54.18311,176.71246 54.18311))" ;
+    dcterms:references <urn:uuid:f7a32ef4-fc6a-44d0-8666-fbfc5b1ab51a> ;
+    dcterms:title "l877bs.m77t - MGD77 data file for Geophysical data from field activity L-8-77-BS in Bering Sea, Alaska from 07/29/1977 to 08/21/1977" ;
+    esip:eastBound "-152.02892"^^xsd:float ;
+    esip:endDate "1977-08-21"^^xsd:date ;
+    esip:northBound "64.48405"^^xsd:float ;
+    esip:southBound "54.18311"^^xsd:float ;
+    esip:startDate "1977-07-29"^^xsd:date ;
+    esip:westBound "176.71246"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:f7a32ef4-fc6a-44d0-8666-fbfc5b1ab51a> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-10-31T22:22:02.289Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-10-31T22:22:02.289Z" ;
+    dc:identifier "urn:sha:fefbd582228a9d07e5b156336fd699c1e80a2e447fc48469b64416c9" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www.ngdc.noaa.gov/mgg/trk/trackline/samuel_p._lee/l877bs/mgd77/" .
+

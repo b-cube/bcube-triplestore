@@ -1,0 +1,83 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:05a666de-b81f-4e2f-8772-667a4ad66356> owl:a foaf:Organization ;
+    foaf:name "" .
+
+<urn:uuid:6f4f248b-1e6c-4741-9630-8b7a7569b0af> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-10-18T09:12:51.611Z" ;
+    bcube:lastUpdated "2015-10-18T09:12:51.611Z" ;
+    bcube:originatedFrom <urn:uuid:c08b0a60-3334-4e6f-b5f5-f6af29ff5633> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:ee3c5449-eab7-4c80-8516-7f6219b41d9a> .
+
+<urn:uuid:864fa681-0e48-4bdf-a9bd-9ef95b15a52c> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-10-18T09:12:51.611Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-10-18T09:12:51.611Z" ;
+    dc:identifier "urn:sha:8bf49cca67c4ef868d593929f5538138555b69f3c9c40baf4d5974bc" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www.lmmp.nasa.gov" .
+
+<urn:uuid:af4340a0-4d8b-4a22-bcc9-bcd828d899ea> bcube:hasType "place" ;
+    bcube:hasValue "Earth",
+        "The Moon" ;
+    dc:partOf "http://www.lmmp.nasa.gov/redmine/projects/lmmpwiki/wiki/Glossary" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:b56ec242-9db1-4399-86f7-b440b051d645> dcterms:references <urn:uuid:864fa681-0e48-4bdf-a9bd-9ef95b15a52c> ;
+    owl:a bibo:WebPage .
+
+<urn:uuid:c08b0a60-3334-4e6f-b5f5-f6af29ff5633> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-10-18T09:12:51.611Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-10-18T09:12:51.611Z" ;
+    dc:identifier "urn:sha:f4cbe3a7da1b0ae310c7e86a974fa9f5c3ad21d7c2eb4260d6d83649" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://astropedia.astrogeology.usgs.gov/download/Moon/LRO/LROC_WAC/ancillary/LRO_WAC_Mosaic_Global_303ppd_v2.cub.xml" .
+
+<urn:uuid:e3ab5e24-5252-495a-8056-5a9ae90a1053> bcube:hasType "theme" ;
+    bcube:hasValue "LOLA Gridded Data Record (GDR)",
+        "Lunar Mapping and Modeling Project (LMMP)",
+        "Lunar Orbiter Laser Altimeter (LOLA)",
+        "Lunar Reconnaissance Orbiter (LRO)",
+        "Lunar Reconnaissance Orbiter Camera (LROC)" ;
+    dc:partOf "http://www.lmmp.nasa.gov/redmine/projects/lmmpwiki/wiki/Glossary" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:ee3c5449-eab7-4c80-8516-7f6219b41d9a> bcube:dateCreated "2015-10-18T09:12:51.611Z" ;
+    bcube:hasMetadataRecord <urn:uuid:6f4f248b-1e6c-4741-9630-8b7a7569b0af> ;
+    bcube:lastUpdated "2015-10-18T09:12:51.611Z" ;
+    dc:conformsTo <urn:uuid:af4340a0-4d8b-4a22-bcc9-bcd828d899ea>,
+        <urn:uuid:e3ab5e24-5252-495a-8056-5a9ae90a1053> ;
+    dc:description "This is a preliminary global mosaic of the Wide Angle Camera (WAC) of the Lunar Reconnaissance Orbiter Camera (LROC). The WAC global mosaic is comprised of over 15,000 images acquired between November 2009 and February 2011. The WAC maps the whole Moon in one month, however the solar incidence angle at the equator changes about 28 deg from the beginning to the end of the month. This version corrects the polar illumination differences seen in previous mosaics." ;
+    dc:spatial "POLYGON ((-180 -90,-180 90,180 90,180 -90,-180 -90))" ;
+    dcterms:publisher <urn:uuid:05a666de-b81f-4e2f-8772-667a4ad66356> ;
+    dcterms:references <urn:uuid:b56ec242-9db1-4399-86f7-b440b051d645> ;
+    dcterms:title "LRO WAC Mosaic v2" ;
+    esip:eastBound "180.0"^^xsd:float ;
+    esip:northBound "90.0"^^xsd:float ;
+    esip:southBound "-90.0"^^xsd:float ;
+    esip:startDate "2013-01-01"^^xsd:date ;
+    esip:westBound "-180.0"^^xsd:float ;
+    owl:a dcat:Dataset .
+

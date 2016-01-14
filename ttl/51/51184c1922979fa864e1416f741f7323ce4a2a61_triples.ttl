@@ -1,0 +1,89 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:21234cd1-9c09-41f6-9a53-5e715026a956> bcube:hasType "theme" ;
+    bcube:hasValue "transportation" ;
+    dc:partOf "ISO 19115 Topic Category" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:2b56b963-2250-478c-9d36-d2d67275f8b4> owl:a foaf:Organization ;
+    foaf:name "Montana Dept. of Transportation/Planning/Data & Statistics Bureau/RIM" .
+
+<urn:uuid:3555c55a-000b-45ee-ae50-f33a2be0fb9f> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-10T08:30:02.218Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-10T08:30:02.218Z" ;
+    dc:identifier "urn:sha:27b7041e0548c2523edf3c88875b140084102609589fa70e9ada0463" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www.mdt.mt.gov/other/traffcount/external/gis_datasets/signed_routes.zip" .
+
+<urn:uuid:3fd7f4f6-7fea-48e7-a525-0b2220ed6ae0> bcube:hasType "theme" ;
+    bcube:hasValue "highway",
+        "highway shield",
+        "road",
+        "route",
+        "route number",
+        "sign" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:4c623e2c-bd98-4b11-995a-2193458cd35d> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-10T08:30:02.218Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-10T08:30:02.218Z" ;
+    dc:identifier "urn:sha:5100298003802500129e8bac3f552ea68d2576061d08045c207efb41" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://mslapps.mt.gov/Geographic_Information/Data/DataList/datalist_MetadataDetailRaw.aspx?did={7166987B-03B8-4526-9276-7E4FBEAEEE95}" .
+
+<urn:uuid:6b65d2f4-cc4f-42fb-bdff-d5739ebe6f7c> bcube:hasType "place" ;
+    bcube:hasValue "Montana" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:84f42303-2384-4361-a690-64c6cf520a69> dcterms:references <urn:uuid:3555c55a-000b-45ee-ae50-f33a2be0fb9f> ;
+    owl:a bibo:WebPage .
+
+<urn:uuid:a8f5b099-6385-4089-9a2c-9ec0534246b7> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-08-10T08:30:02.218Z" ;
+    bcube:lastUpdated "2015-08-10T08:30:02.218Z" ;
+    bcube:originatedFrom <urn:uuid:4c623e2c-bd98-4b11-995a-2193458cd35d> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:ab73865f-f3c5-4c1c-bf3c-eab30a26b2c7> .
+
+<urn:uuid:ab73865f-f3c5-4c1c-bf3c-eab30a26b2c7> bcube:dateCreated "2015-08-10T08:30:02.218Z" ;
+    bcube:hasMetadataRecord <urn:uuid:a8f5b099-6385-4089-9a2c-9ec0534246b7> ;
+    bcube:lastUpdated "2015-08-10T08:30:02.218Z" ;
+    dc:conformsTo <urn:uuid:21234cd1-9c09-41f6-9a53-5e715026a956>,
+        <urn:uuid:3fd7f4f6-7fea-48e7-a525-0b2220ed6ae0>,
+        <urn:uuid:6b65d2f4-cc4f-42fb-bdff-d5739ebe6f7c> ;
+    dc:description "Dataset of Montana's signed routes which include Interstate, US, Montana, and Secondary routes. Routes are segmented by signed route name that travelers see along the roadway. Signed refers to the route number such as US 93, MT 19, S-204, I-90." ;
+    dc:spatial "POLYGON ((-116.157396 44.420047,-116.157396 49.129227,-103.676014 49.129227,-103.676014 44.420047,-116.157396 44.420047))" ;
+    dcterms:publisher <urn:uuid:2b56b963-2250-478c-9d36-d2d67275f8b4> ;
+    dcterms:references <urn:uuid:84f42303-2384-4361-a690-64c6cf520a69> ;
+    dcterms:title "Montana Signed Route Markers" ;
+    esip:eastBound "-103.676014"^^xsd:float ;
+    esip:northBound "49.129227"^^xsd:float ;
+    esip:southBound "44.420047"^^xsd:float ;
+    esip:startDate "2010-11-01"^^xsd:date ;
+    esip:westBound "-116.157396"^^xsd:float ;
+    owl:a dcat:Dataset .
+

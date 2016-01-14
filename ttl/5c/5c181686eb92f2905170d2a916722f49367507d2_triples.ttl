@@ -1,0 +1,77 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:1e42307b-7906-4216-a462-4e8053fa951f> bcube:hasType "place" ;
+    bcube:hasValue "Arizona" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:3c03348e-ed0a-4b25-a9c3-a36ad4f42ba8> bcube:hasType "theme" ;
+    bcube:hasValue "GIS",
+        "Township Lines",
+        "map" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:5429c2f6-8a2e-4cb4-9df4-dfcd6bfa90cd> a "ISO 19115:2003/19139" ;
+    bcube:dateCreated "2015-11-02T07:13:32.349Z" ;
+    bcube:lastUpdated "2015-11-02T07:13:32.349Z" ;
+    bcube:originatedFrom <urn:uuid:dbc51b94-6752-4c57-87bf-5187ce523509> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:8e4b8822-89bc-420f-9407-68f4afe2bed9> .
+
+<urn:uuid:8e4b8822-89bc-420f-9407-68f4afe2bed9> bcube:dateCreated "2015-11-02T07:13:32.349Z" ;
+    bcube:hasMetadataRecord <urn:uuid:5429c2f6-8a2e-4cb4-9df4-dfcd6bfa90cd> ;
+    bcube:lastUpdated "2015-11-02T07:13:32.349Z" ;
+    dc:conformsTo <urn:uuid:1e42307b-7906-4216-a462-4e8053fa951f>,
+        <urn:uuid:3c03348e-ed0a-4b25-a9c3-a36ad4f42ba8>,
+        <urn:uuid:a51e850e-c41c-4c93-a428-1ddf9dc2e277> ;
+    dc:description "PLSS Township Lines" ;
+    dc:spatial "POLYGON ((-114.799 31.3325,-114.799 37.00361,-109.047 37.00361,-109.047 31.3325,-114.799 31.3325))" ;
+    dcterms:references <urn:uuid:eb8131d4-b9f2-49e6-866a-79306a731828> ;
+    dcterms:title "PLSS Township Lines" ;
+    esip:eastBound "-109.047"^^xsd:float ;
+    esip:endDate "1900-01-01"^^xsd:date ;
+    esip:northBound "37.00361"^^xsd:float ;
+    esip:southBound "31.3325"^^xsd:float ;
+    esip:startDate "1900-01-01"^^xsd:date ;
+    esip:westBound "-114.799"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:a51e850e-c41c-4c93-a428-1ddf9dc2e277> bcube:hasValue "geoscientificInformation" ;
+    dc:partOf "IsoTopicCategories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:dbc51b94-6752-4c57-87bf-5187ce523509> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-02T07:13:32.349Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-02T07:13:32.349Z" ;
+    dc:identifier "urn:sha:663dfbd40608d12abce819d7f874b78b24c219790c3e7c59f15a48cb" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://repository.stategeothermaldata.org/resources/metadata/TestNRRC/AZLand/a412d39b-fe61-414d-9913-c66f02df55d9.xml" .
+
+<urn:uuid:eb8131d4-b9f2-49e6-866a-79306a731828> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-02T07:13:32.349Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-02T07:13:32.349Z" ;
+    dc:identifier "urn:sha:fb60fe468858ac25ee2090f0890c7b374a66aa33bc398586a5497de1" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://gis.azland.gov/adaptor/rest/services/Reference/TownshipLines/MapServer" .
+

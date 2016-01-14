@@ -1,0 +1,117 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:114a1adf-5f5c-4a58-a51f-18603da7556c> owl:a foaf:Organization ;
+    foaf:name "Federal Emergency Management Agency" .
+
+<urn:uuid:1e241366-ce0a-4180-b553-d666d70ab37d> bcube:hasType "theme" ;
+    bcube:hasValue "elevation",
+        "environment",
+        "hydrology",
+        "inlandWaters",
+        "structure",
+        "transportation" ;
+    dc:partOf "ISO 19115 Topic Category" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:3c6cf160-9e77-43cc-a7aa-767cb71b77fc> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-11-01T10:19:56.601Z" ;
+    bcube:lastUpdated "2015-11-01T10:19:56.601Z" ;
+    bcube:originatedFrom <urn:uuid:cc3f9a4f-a3a0-4a84-a006-29d18d8d05f8> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:41f823a0-85e0-481e-b1ec-84042ca9138b> .
+
+<urn:uuid:41f823a0-85e0-481e-b1ec-84042ca9138b> bcube:dateCreated "2015-11-01T10:19:56.601Z" ;
+    bcube:hasMetadataRecord <urn:uuid:3c6cf160-9e77-43cc-a7aa-767cb71b77fc> ;
+    bcube:lastUpdated "2015-11-01T10:19:56.601Z" ;
+    dc:conformsTo <urn:uuid:1e241366-ce0a-4180-b553-d666d70ab37d>,
+        <urn:uuid:a1835c1d-869f-4be4-9899-9a05cdeee398>,
+        <urn:uuid:d4f168f0-eecb-45ba-a55d-df9835d12b86> ;
+    dc:description "The Digital Flood Insurance Rate Map (DFIRM) Database depicts flood risk information and supporting data used to develop the risk data. The primary risk classifications used are the 1-percent-annual-chance flood event, the 0.2-percent-annual- chance flood event, and areas of minimal flood risk. The DFIRM Database is derived from Flood Insurance Studies (FISs), previously published Flood Insurance Rate Maps (FIRMs), flood hazard analyses performed in support of the FISs and FIRMs, and new mapping data, where available. The FISs and FIRMs are published by the Federal Emergency Management Agency (FEMA). The file is georeferenced to earth's surface using the Pennsylvania State Plane Coordinate System (North Zone) and Lambert Conformal conic projection. The specifications for the horizontal control of DFIRM data files are consistent with those required for mapping at a scale of 1:12,000." ;
+    dc:spatial "POLYGON ((-79.8 40.8,-79.8 41.52,-79.09 41.52,-79.09 40.8,-79.8 40.8))" ;
+    dcterms:publisher <urn:uuid:114a1adf-5f5c-4a58-a51f-18603da7556c> ;
+    dcterms:references <urn:uuid:7fa0610c-c767-43d2-a9ad-1c0b7bc57910>,
+        <urn:uuid:acd5035d-7a19-4fd9-9679-672c2972c6be> ;
+    dcterms:title "DIGITAL FLOOD INSURANCE RATE MAP DATABASE, CLARION COUNTY, PA, USA" ;
+    esip:eastBound "-79.09"^^xsd:float ;
+    esip:northBound "41.52"^^xsd:float ;
+    esip:southBound "40.8"^^xsd:float ;
+    esip:startDate "2007-05-31"^^xsd:date ;
+    esip:westBound "-79.8"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:7fa0610c-c767-43d2-a9ad-1c0b7bc57910> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-01T10:19:56.601Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-01T10:19:56.601Z" ;
+    dc:identifier "urn:sha:5994e2f2713f2f8ef4c668a7ed31b1398f73b7c3c4108017276569a1" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www.fema.gov/msc" .
+
+<urn:uuid:a1835c1d-869f-4be4-9899-9a05cdeee398> bcube:hasType "theme" ;
+    bcube:hasValue "Base Flood Elevation",
+        "CBRS",
+        "Coastal Barrier Resources System",
+        "Coastal Flooding",
+        "DFIRM",
+        "DFIRM Database",
+        "Digital Flood Insurance Rate Map",
+        "FEMA Flood Hazard Zone",
+        "FIRM",
+        "Flood Insurance Rate Map",
+        "Floodway",
+        "NFIP",
+        "Riverine Flooding",
+        "SFHA",
+        "Special Flood Hazard Area" ;
+    dc:partOf "FEMA NFIP Topic Category" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:acd5035d-7a19-4fd9-9679-672c2972c6be> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-01T10:19:56.601Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-01T10:19:56.601Z" ;
+    dc:identifier "urn:sha:d14a028c2a3a2bc9476102bb288234c415a2b01f828ea62ac5b3e42f" ;
+    owl:a bcube:Url .
+
+<urn:uuid:cc3f9a4f-a3a0-4a84-a006-29d18d8d05f8> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-01T10:19:56.601Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-01T10:19:56.601Z" ;
+    dc:identifier "urn:sha:476577e88f3366bde5ca8586ce56badad4c4663b422103aa639b7dc5" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://catalog.data.gov/harvest/object/6e9dd74a-7f8a-4c4d-83a0-f1353f6717ca/original" .
+
+<urn:uuid:d4f168f0-eecb-45ba-a55d-df9835d12b86> bcube:hasType "place" ;
+    bcube:hasValue "COMMUNITY Clarion County (all jurisdictions)",
+        "COUNTY Clarion",
+        "COUNTY-FIPS 031",
+        "FEMA-CID 42031C",
+        "REGION 3",
+        "STATE PA" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+

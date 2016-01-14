@@ -1,0 +1,96 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:340a1662-fdd3-4011-8e71-7bbb0ac3fe35> owl:a foaf:Organization ;
+    foaf:name "Federal Emergency Management Agency" .
+
+<urn:uuid:6f958ded-8a2b-4d54-8494-0aca06c4f5a5> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-08-05T16:08:31.012Z" ;
+    bcube:lastUpdated "2015-08-05T16:08:31.012Z" ;
+    bcube:originatedFrom <urn:uuid:704a4e8c-49b6-48c1-b29a-a168713e7520> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:d4d84475-81cb-4b8e-bf8f-50be84fc1c9f> .
+
+<urn:uuid:704a4e8c-49b6-48c1-b29a-a168713e7520> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-05T16:08:31.012Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-05T16:08:31.012Z" ;
+    dc:identifier "urn:sha:a7e94f1200003e00d1d0a27db10ae0028d3439ac08fc673c143a0d59" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "https://catalog.data.gov/harvest/object/54719bfb-8a62-4ce1-a686-bda454eba790/original" .
+
+<urn:uuid:8d420468-340a-4443-b45b-cf9b71ded0b8> bcube:hasType "theme" ;
+    bcube:hasValue "Breaklines",
+        "Contours",
+        "DEM",
+        "Digital Terrain Model",
+        "Elevation Data",
+        "Flow vectors",
+        "LIDAR",
+        "Land Surface",
+        "Relief",
+        "Slope",
+        "Topography" ;
+    dc:partOf "FEMA NFIP Topic Category" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:c04243b2-85c9-4a01-b6e7-be76d8cf7a2d> bcube:hasType "place" ;
+    bcube:hasValue "COMMUNITY name",
+        "COUNTY SEDGWICK",
+        "COUNTY-FIPS 20173",
+        "FEMA-CID 20173C",
+        "REGION 07",
+        "STATE KS" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:d4d84475-81cb-4b8e-bf8f-50be84fc1c9f> bcube:dateCreated "2015-08-05T16:08:31.012Z" ;
+    bcube:hasMetadataRecord <urn:uuid:6f958ded-8a2b-4d54-8494-0aca06c4f5a5> ;
+    bcube:lastUpdated "2015-08-05T16:08:31.012Z" ;
+    dc:conformsTo <urn:uuid:8d420468-340a-4443-b45b-cf9b71ded0b8>,
+        <urn:uuid:c04243b2-85c9-4a01-b6e7-be76d8cf7a2d>,
+        <urn:uuid:f29ad380-55b1-4180-8b92-d9138d270434> ;
+    dc:description "Terrain data, as defined in FEMA Guidelines and Specifications, Appendix N: Data Capture Standards, describes the digital topographic data that was used to create the elevation data representing the terrain environment of a watershed and/or floodplain. Terrain data requirements allow for flexibility in the types of information provided as sources used to produce final terrain deliverables. Once this type of data is provided, FEMA will be able to account for the origins of the flood study elevation data. (Source: FEMA Guidelines and Specifications, Appendix N, Section N.1.2). NAD83 UTM Zone 14 North is the projection and coordinate system for this project." ;
+    dc:spatial "POLYGON ((-97.5643 37.624198,-97.5643 37.751173,-97.43554 37.751173,-97.43554 37.624198,-97.5643 37.624198))" ;
+    dcterms:publisher <urn:uuid:340a1662-fdd3-4011-8e71-7bbb0ac3fe35> ;
+    dcterms:references <urn:uuid:f44c3db5-dc5f-41e5-be17-cda5345cfe46> ;
+    dcterms:title "TERRAIN, Sedgwick COUNTY, Kansas USA" ;
+    esip:eastBound "-97.43554"^^xsd:float ;
+    esip:northBound "37.751173"^^xsd:float ;
+    esip:southBound "37.624198"^^xsd:float ;
+    esip:startDate "2009-11-06"^^xsd:date ;
+    esip:westBound "-97.5643"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:f29ad380-55b1-4180-8b92-d9138d270434> bcube:hasType "theme" ;
+    bcube:hasValue "elevation" ;
+    dc:partOf "ISO 19115 Topic Category" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:f44c3db5-dc5f-41e5-be17-cda5345cfe46> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-05T16:08:31.012Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-05T16:08:31.012Z" ;
+    dc:identifier "urn:sha:37c915397238031daced09ae0e2dd3bf54e84a6477f749c2cc9dcbdf" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://hazards.fema.gov" .
+

@@ -1,0 +1,61 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:5ab5af3c-259d-4f8d-984e-8d2f1c14c123> a "ISO 19115:2003/19139" ;
+    bcube:dateCreated "2014-10-30T05:23:04.384Z" ;
+    bcube:lastUpdated "2014-10-30T05:23:04.384Z" ;
+    bcube:originatedFrom <urn:uuid:c8b167fb-abc5-4bec-ac0a-0ba54ab15b61> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:d8f75922-4c15-4314-9523-73d0bae1e185> .
+
+<urn:uuid:6d68a94b-9224-4d53-afa2-90b14571b2bc> bcube:hasType "place" ;
+    bcube:hasValue "LIDAR",
+        "fUS13 = Georgia",
+        "geography",
+        "interagency programs",
+        "strategic plans",
+        "topography" ;
+    dc:partOf "Augmented FIPS 10-4 and FIPS 6-4" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:8b011530-cdee-4074-b15f-fc80b556f038> bcube:hasValue "geoscientificInformation" ;
+    dc:partOf "IsoTopicCategories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:c8b167fb-abc5-4bec-ac0a-0ba54ab15b61> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2014-10-30T05:23:04.384Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2014-10-30T05:23:04.384Z" ;
+    dc:identifier "urn:sha:4d6fc9df396d4142d71a20ae258c6eae65d7274095252a5059482933" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www.usgs.gov/science/iso.php?cite=4323" .
+
+<urn:uuid:d8f75922-4c15-4314-9523-73d0bae1e185> bcube:dateCreated "2014-10-30T05:23:04.384Z" ;
+    bcube:hasMetadataRecord <urn:uuid:5ab5af3c-259d-4f8d-984e-8d2f1c14c123> ;
+    bcube:lastUpdated "2014-10-30T05:23:04.384Z" ;
+    dc:conformsTo <urn:uuid:6d68a94b-9224-4d53-afa2-90b14571b2bc>,
+        <urn:uuid:8b011530-cdee-4074-b15f-fc80b556f038> ;
+    dc:description "Summarizes the expected value over the next decade of the 3D Elevation Program for this state." ;
+    dc:spatial "POLYGON ((-85.6052 30.3556,-85.6052 35.0007,-80.8408 35.0007,-80.8408 30.3556,-85.6052 30.3556))" ;
+    dcterms:title "The 3D Elevation Program: summary for Georgia" ;
+    esip:eastBound "-80.8408"^^xsd:float ;
+    esip:northBound "35.0007"^^xsd:float ;
+    esip:southBound "30.3556"^^xsd:float ;
+    esip:westBound "-85.6052"^^xsd:float ;
+    owl:a dcat:Dataset .
+

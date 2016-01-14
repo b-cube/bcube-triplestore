@@ -1,0 +1,95 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:046c1da6-5331-44e1-8917-7f5dd7f0c6e8> owl:a foaf:Organization ;
+    foaf:name "Bureau of the Census" .
+
+<urn:uuid:104b5f10-23aa-46ff-94f7-799ffad2d23e> dcterms:references <urn:uuid:5bd7b5b4-a53d-4706-b8e1-6e89370f5967> ;
+    owl:a bibo:WebPage .
+
+<urn:uuid:2cf37317-53d7-401b-80ac-a16943e64672> bcube:dateCreated "2015-10-18T03:49:48.003Z" ;
+    bcube:hasMetadataRecord <urn:uuid:da77b42a-e782-482f-adbb-86fb8c520cb2> ;
+    bcube:lastUpdated "2015-10-18T03:49:48.003Z" ;
+    dc:conformsTo <urn:uuid:59cd82f9-26da-4a8d-87b2-52757a22c481>,
+        <urn:uuid:9ddf0574-9445-44be-bfe3-251f725d2635>,
+        <urn:uuid:ae8cd8d1-e75a-4ec1-aa23-18c49b550966> ;
+    dc:description "This shapefile is an extract of selected geographic and cartographic information from the 1995 TIGER/Line files detailing unified school districts." ;
+    dc:spatial "POLYGON ((-78.309 41.998,-78.309 42.522,-77.723 42.522,-77.723 41.998,-78.309 41.998))" ;
+    dcterms:publisher <urn:uuid:046c1da6-5331-44e1-8917-7f5dd7f0c6e8> ;
+    dcterms:references <urn:uuid:104b5f10-23aa-46ff-94f7-799ffad2d23e> ;
+    dcterms:title "Unified School Districts, Allegany County (Shapefile : 1998)" ;
+    esip:eastBound "-77.723"^^xsd:float ;
+    esip:northBound "42.522"^^xsd:float ;
+    esip:southBound "41.998"^^xsd:float ;
+    esip:startDate "1995-01-01"^^xsd:date ;
+    esip:westBound "-78.309"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:54813a42-464a-4586-b1e0-cb179ce69c32> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-10-18T03:49:48.003Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-10-18T03:49:48.003Z" ;
+    dc:identifier "urn:sha:9e05da2349456e7f7789a1551f1d54d66a9a53887909a6cde193fab5" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://cugirmetadata.mannlib.cornell.edu/003uss.xml" .
+
+<urn:uuid:59cd82f9-26da-4a8d-87b2-52757a22c481> bcube:hasType "place" ;
+    bcube:hasValue "003",
+        "Allegany" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:5bd7b5b4-a53d-4706-b8e1-6e89370f5967> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-10-18T03:49:48.003Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-10-18T03:49:48.003Z" ;
+    dc:identifier "urn:sha:301d79b9b1068f333576838dc7c7a8b1598c4d992d249e32d49ff3c0" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://cugir.mannlib.cornell.edu/bucketinfo.jsp?id=1537" .
+
+<urn:uuid:9ddf0574-9445-44be-bfe3-251f725d2635> bcube:hasType "theme" ;
+    bcube:hasValue "Line Feature",
+        "Point Feature",
+        "Polygon Feature",
+        "School Districts",
+        "Schools",
+        "Shapefile",
+        "TIGER/Line",
+        "Unified Districts",
+        "Unified School Districts",
+        "Vector" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:ae8cd8d1-e75a-4ec1-aa23-18c49b550966> bcube:hasType "theme" ;
+    bcube:hasValue "boundaries",
+        "society" ;
+    dc:partOf "ISO 19115 Topic Category" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:da77b42a-e782-482f-adbb-86fb8c520cb2> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-10-18T03:49:48.003Z" ;
+    bcube:lastUpdated "2015-10-18T03:49:48.003Z" ;
+    bcube:originatedFrom <urn:uuid:54813a42-464a-4586-b1e0-cb179ce69c32> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:2cf37317-53d7-401b-80ac-a16943e64672> .
+

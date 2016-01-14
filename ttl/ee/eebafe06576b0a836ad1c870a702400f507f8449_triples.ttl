@@ -1,0 +1,98 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:1aaa838f-fe87-41f5-94f9-6b7e9546917b> bcube:hasType "theme" ;
+    bcube:hasValue "Barrio",
+        "CCD",
+        "Census County Division",
+        "County Subdivision",
+        "County or equivalent entity",
+        "MCD",
+        "Minor Civil Division",
+        "Polygon",
+        "Subdivision",
+        "Town",
+        "Township",
+        "UT",
+        "Unorganized Territory" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:3eff39a3-c0c6-4819-ad04-f930b79c6e1c> bcube:hasType "place" ;
+    bcube:hasValue "02070",
+        "County or Equivalent Entity",
+        "Dillingham",
+        "U.S.",
+        "United States" ;
+    dc:partOf "INCITS.38-200x (R2004),INCITS.31-200x (R2007),INCITS.454-200x,INCITS 455-200x,INCITS 446-2008" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:41dd576d-a101-4b39-a484-512cdfa800de> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-11-05T07:24:44.429Z" ;
+    bcube:lastUpdated "2015-11-05T07:24:44.429Z" ;
+    bcube:originatedFrom <urn:uuid:5937218f-c2d9-44aa-8bca-44ff1fb3d4c3> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:4347a097-450c-459c-93a3-f18c6c0e6b9d> .
+
+<urn:uuid:4347a097-450c-459c-93a3-f18c6c0e6b9d> bcube:dateCreated "2015-11-05T07:24:44.429Z" ;
+    bcube:hasMetadataRecord <urn:uuid:41dd576d-a101-4b39-a484-512cdfa800de> ;
+    bcube:lastUpdated "2015-11-05T07:24:44.429Z" ;
+    dc:conformsTo <urn:uuid:1aaa838f-fe87-41f5-94f9-6b7e9546917b>,
+        <urn:uuid:3eff39a3-c0c6-4819-ad04-f930b79c6e1c>,
+        <urn:uuid:ab75b6b1-9805-4d50-af08-29947dd549a8> ;
+    dc:description "The TIGER/Line Shapefiles are an extract of selected geographic and cartographic information from the Census MAF/TIGER database. The Census MAF/TIGER database represents a seamless national file with no overlaps or gaps between parts. However, each TIGER/Line Shapefile is designed to stand alone as an independent data set or the shapefiles can be combined to cover the whole nation." ;
+    dc:spatial "POLYGON ((-161.368728 58.33414,-161.368728 61.00057,-155.953029 61.00057,-155.953029 58.33414,-161.368728 58.33414))" ;
+    dcterms:publisher <urn:uuid:47226a7c-b495-4131-9e1e-4b82c386bd95> ;
+    dcterms:references <urn:uuid:781a76da-896b-4253-8073-b518c289b423> ;
+    dcterms:title "TIGER/Line Shapefile, 2009, county, Dillingham Census Area, AK, Current County Subdivision" ;
+    esip:eastBound "-155.953029"^^xsd:float ;
+    esip:endDate "2009-05-01"^^xsd:date ;
+    esip:northBound "61.00057"^^xsd:float ;
+    esip:southBound "58.33414"^^xsd:float ;
+    esip:startDate "2009-01-01"^^xsd:date ;
+    esip:westBound "-161.368728"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:47226a7c-b495-4131-9e1e-4b82c386bd95> owl:a foaf:Organization ;
+    foaf:name "" .
+
+<urn:uuid:5937218f-c2d9-44aa-8bca-44ff1fb3d4c3> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-05T07:24:44.429Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-05T07:24:44.429Z" ;
+    dc:identifier "urn:sha:9d7503f1a984b4499e42105b2415a002c7e485f4c36fffc2bffe70b6" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://meta.geo.census.gov/data/existing/decennial/GEO/GPMB/TIGERline/fe_2009/cousub/tl_2009_02070_cousub_url.shp.xml" .
+
+<urn:uuid:781a76da-896b-4253-8073-b518c289b423> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-05T07:24:44.429Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-05T07:24:44.429Z" ;
+    dc:identifier "urn:sha:263ff80211b0e3d28b179c3148cf624e0f61b8c54e72e6fee4ecf2c2" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www2.census.gov/geo/tiger/TIGER2009/02_ALASKA/02070_Dillingham_Census_Area/tl_2009_02070_cousub.zip" .
+
+<urn:uuid:ab75b6b1-9805-4d50-af08-29947dd549a8> bcube:hasType "theme" ;
+    bcube:hasValue "boundaries" ;
+    dc:partOf "ISO 19115 Topic Categories" ;
+    owl:a bcube:thesaurusSubset .
+

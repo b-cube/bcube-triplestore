@@ -1,0 +1,91 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:26443882-d912-4c16-b7a5-b450e422d4f8> bcube:hasType "theme" ;
+    bcube:hasValue "ALPS",
+        "ATM",
+        "Airborne Lidar Processing System",
+        "Airborne Topographic Mapper",
+        "DEM",
+        "Digital Elevation Model",
+        "Lidar",
+        "laser altimetry",
+        "remote sensing",
+        "topography" ;
+    dc:partOf "http://remotesensing.usgs.gov/" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:4a152aa6-665e-4a91-8d7c-aada2f5ac1f4> bcube:hasType "stratum" ;
+    bcube:hasValue "First Surface" ;
+    dc:partOf "http://lidar.cr.usgs.gov/" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:6be84777-5138-44e8-bad8-f43db300dca9> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-07-10T15:22:50.925Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-07-10T15:22:50.925Z" ;
+    dc:identifier "urn:sha:4a028705c7993c7ad765a18f24f6b02899ad2e797e30ee04477bc86f" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://pubs.usgs.gov/ds/430/data_files/fs/30086c8b/30086c8b_fs.las.xml" .
+
+<urn:uuid:8652c638-0250-4261-86ca-f0b93583084f> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-07-10T15:22:50.925Z" ;
+    bcube:lastUpdated "2015-07-10T15:22:50.925Z" ;
+    bcube:originatedFrom <urn:uuid:6be84777-5138-44e8-bad8-f43db300dca9> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:e728e7f1-4dbb-4ee2-8bde-cd927f44710e> .
+
+<urn:uuid:8cd412b6-926f-4ec9-85e4-6fc819fd330c> bcube:hasType "temporal" ;
+    bcube:hasValue "2001" ;
+    dc:partOf "http://www.esri.com/news/arcuser/1104/temporal.html" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:b6d60c94-0c66-422d-aa54-d004a579d9d2> owl:a foaf:Organization ;
+    foaf:name "U.S. Geological Survey" .
+
+<urn:uuid:c2140906-3b7e-4db1-9e95-3b0fc520a071> bcube:hasType "place" ;
+    bcube:hasValue "Florida",
+        "Norther Gulf of Mexico",
+        "Western Panhandle" ;
+    dc:partOf "http://nationalmap.gov/" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:c21d495e-3a93-40b6-a948-f63f53179a91> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-07-10T15:22:50.925Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-07-10T15:22:50.925Z" ;
+    dc:identifier "urn:sha:d14a028c2a3a2bc9476102bb288234c415a2b01f828ea62ac5b3e42f" ;
+    owl:a bcube:Url .
+
+<urn:uuid:e728e7f1-4dbb-4ee2-8bde-cd927f44710e> bcube:dateCreated "2015-07-10T15:22:50.925Z" ;
+    bcube:hasMetadataRecord <urn:uuid:8652c638-0250-4261-86ca-f0b93583084f> ;
+    bcube:lastUpdated "2015-07-10T15:22:50.925Z" ;
+    dc:conformsTo <urn:uuid:26443882-d912-4c16-b7a5-b450e422d4f8>,
+        <urn:uuid:4a152aa6-665e-4a91-8d7c-aada2f5ac1f4>,
+        <urn:uuid:8cd412b6-926f-4ec9-85e4-6fc819fd330c>,
+        <urn:uuid:c2140906-3b7e-4db1-9e95-3b0fc520a071> ;
+    dc:description "ASCII xyz point cloud data were produced from remotely sensed, geographically referenced elevation measurements cooperatively by the U.S. Geological Survey (USGS) and National Aeronautics and Space Administration (NASA). Elevation measurements were collected over the area using the NASA Airborne Topographic Mapper (ATM), a scanning Lidar system that measures high-resolution topography of the land surface. The ATM system is deployed on a twin-otter or P3 aircraft and incorporates a green-wavelength laser operating at pulse rates of 2 to 10 kilohertz. Measurements from the laser ranging device are coupled with data acquired from inertial navigation system (INS) attitude sensors and differentially-corrected global positioning system (GPS) receivers to measure topography of the surface at accuracies of +/-15 centimeters." ;
+    dcterms:publisher <urn:uuid:b6d60c94-0c66-422d-aa54-d004a579d9d2> ;
+    dcterms:references <urn:uuid:c21d495e-3a93-40b6-a948-f63f53179a91> ;
+    dcterms:title "ATM Coastal Topography--Florida 2001: Western Panhandle" ;
+    owl:a dcat:Dataset .
+

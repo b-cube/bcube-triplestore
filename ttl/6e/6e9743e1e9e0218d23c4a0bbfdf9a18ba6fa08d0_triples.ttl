@@ -1,0 +1,214 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:95e70548-8822-44d9-a9cc-f42eacd27ce6> bcube:originatedFrom <urn:uuid:d84184b8-21f1-448c-9c70-cd690e82636c> ;
+    dc:describes <urn:uuid:3ab6aa78-5539-4e4e-acad-3cac0b417187> ;
+    owl:a dcat:CatalogRecord .
+
+<urn:uuid:e5b46eb6-0fc9-434e-bc4f-6a680df0195e> a "OGC:WMS" ;
+    bcube:contains <urn:uuid:07ebd524-d602-4e2c-be60-62b1e8b791ba>,
+        <urn:uuid:3ab6aa78-5539-4e4e-acad-3cac0b417187>,
+        <urn:uuid:4abf522f-f175-49f6-bf57-df24245ecd1a>,
+        <urn:uuid:9df02c8b-2f34-4c0c-b25e-e475232ce76f>,
+        <urn:uuid:b2131ca3-f365-44f5-ba19-cc801967d193>,
+        <urn:uuid:cb609a29-78b3-4ec9-a17d-9c999252023b> ;
+    bcube:dateCreated "2015-06-28T16:23:19.246Z" ;
+    bcube:lastUpdated "2015-06-28T16:23:19.246Z" ;
+    bcube:originatedFrom <urn:uuid:9f573060-5971-4ff5-893f-803cd72332ea> ;
+    dc:conformsTo <urn:uuid:27cf48db-2011-4408-9710-ae9a7ec94475> ;
+    dc:description "This web map service presents a geologic map of the United States, including Puerto Rico and the offshore exclusive economic zone, but not the Pacific Island territories. Data are from the Geologic Map of North America (scale 1:2500000, Reed et al., 2005), as digitized by Garrity and Soller (2009, USGS DDS 424) and Sherrod et al. (2007) compilation of the Geology of Hawai i (scale 1:100000). Faults (5529 features) and non-faulted contacts (17304 features) are portrayed in separate layers. Three portrayals of the geologic unit outcrops are included, based on age, lithology, and lithostratigraphy (original map units). There are 13,132 polygons in the dataset for the layer; WMS getFeatureInfo requests for the polygon layers report GeoSciML Portrayal GeologicUnitView feature properties name, description, lithology, geologic history, along with CGI URI identifiers for representative lithology and age (representative, older bound, younger bound), URI for geologic unit type, and a URI identifying the metadata record for the dataset. The five (5) layers included in this service are: 1. USA_USGIN_3M_Contacts layer includes all depositional, intrusive, or metamorphic contact between units, but not faults. 2. USA_USGIN_3M_Faults layer includes all faults (GeoSciML shear displacement structures). 3. USA_USGIN_3M_Geologic_Age is a portrayal in which units are categorized according to the representative geologic age of the unit using the ICS 2009 geologic time scale. 4. USA_USGIN_3M_Lithology is a portrayal in which units are categorized according to the representative lithology from the CGI SimpleLithology vocabulary as specified by the representativeLithology_URI property in the underlying dataset. 5. USA_USGIN_3M_Lithostratigraphy is a portrayal in which units are categorized according to the original map units defined in Reed et al. (2005). Three layers for use with SLD portrayal. These have a single solid color for polygons and a single solid line styling for lines. 6. gsmlp2.0:geologicunitview 7. gsmlp2.0:sheardisplacementstructureview 8. gsmlp2.0:contactview See metadata record http://metadata.stategeothermaldata.org/resource/4e6b8f72f7d6c3856f092c6b8501c570/html for more information on the dataset." ;
+    owl:a bcube:service .
+
+<urn:uuid:07ebd524-d602-4e2c-be60-62b1e8b791ba> bcube:dateCreated "2015-06-28T16:23:19.246Z" ;
+    bcube:lastUpdated "2015-06-28T16:23:19.246Z" ;
+    dc:spatial "POLYGON ((-180 12,-180 76,-60 76,-60 12,-180 12))" ;
+    dc:title "AZGS USGIN Geology" ;
+    dcterms:references <urn:uuid:114237b5-3e6f-4d2d-95eb-fbc8d5f31df6> ;
+    esip:eastBound "-60.0"^^xsd:float ;
+    esip:northBound "76.0"^^xsd:float ;
+    esip:southBound "12.0"^^xsd:float ;
+    esip:westBound "-180.0"^^xsd:float ;
+    owl:a bcube:Layer .
+
+<urn:uuid:114237b5-3e6f-4d2d-95eb-fbc8d5f31df6> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-06-28T16:23:19.246Z" ;
+    bcube:hasConfidence "Not Sure" ;
+    bcube:hasUrlSource "Generated" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-06-28T16:23:19.246Z" ;
+    dc:identifier "urn:sha:70ae9ee1167087157e1ac85006f05a0388bf330d5ca516f5dcb1d873" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://services.azgs.az.gov/arcgis/services/OneGeology/AZGS_USGIN_Geology/MapServer/WMSServer?layers=AZGS_USGIN_Geology&width=500&version=1.3.0&bbox=-180.0%2C12.0%2C-60.0%2C76.0&service=WMS&format=image%2Fpng&styles=&crs=CRS%3A84&request=GetMap&height=500" .
+
+<urn:uuid:27cf48db-2011-4408-9710-ae9a7ec94475> bcube:hasValue "GeoSciML",
+        "Geologic Map",
+        "Geology",
+        "Geosciml_portrayal_age_or_litho_queryable",
+        "Geoserver",
+        "MD_DATE@2013-11-13",
+        "MD_LANG@eng",
+        "WMS",
+        "continent@Northern America",
+        "dataprovider@USGIN",
+        "geographicarea@United States",
+        "onegeology",
+        "serviceprovider@Arizona Geological Survey" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:2b888afb-a057-42cd-bac6-f789fc36437c> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-06-28T16:23:19.246Z" ;
+    bcube:hasConfidence "Not Sure" ;
+    bcube:hasUrlSource "Generated" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-06-28T16:23:19.246Z" ;
+    dc:identifier "urn:sha:6f02a0d626353eaad1414378e05cf432dc2bfdb8e4eab44af5a69aeb" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://services.azgs.az.gov/arcgis/services/OneGeology/AZGS_USGIN_Geology/MapServer/WMSServer?layers=USA_USGIN_3M_Geologic_Age&width=500&version=1.3.0&bbox=-180.0%2C12.0%2C-60.0%2C76.0&service=WMS&format=image%2Fpng&styles=&crs=CRS%3A84&request=GetMap&height=500" .
+
+<urn:uuid:2e2e30be-48dd-4e7d-a8b8-fbfdc2ee49f2> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-06-28T16:23:19.246Z" ;
+    bcube:hasConfidence "Not Sure" ;
+    bcube:hasUrlSource "Generated" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-06-28T16:23:19.246Z" ;
+    dc:identifier "urn:sha:dbca2045555ea7b747ba9a1348c5bf689a8ae99238121f0b02a1bbf9" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://services.azgs.az.gov/arcgis/services/OneGeology/AZGS_USGIN_Geology/MapServer/WMSServer?layers=USA_USGIN_3M_Faults&width=500&version=1.3.0&bbox=-180.0%2C12.0%2C-60.0%2C76.0&service=WMS&format=image%2Fpng&styles=&crs=CRS%3A84&request=GetMap&height=500" .
+
+<urn:uuid:4abf522f-f175-49f6-bf57-df24245ecd1a> bcube:dateCreated "2015-06-28T16:23:19.246Z" ;
+    bcube:lastUpdated "2015-06-28T16:23:19.246Z" ;
+    dc:description "This layer provides a portrayal in which units are categorized according to the representative geologic age of the unit using the ICS 2009 geologic time scale. For units with extended histories, the representative age choice is interpretive, and typically the older bounding age is used in this portrayal. An SLD specifying the symbolization for this layer is at http://repository.azgs.az.gov/resources/slds/xml/GeologicAgeIUGS2009URI.sld" ;
+    dc:spatial "POLYGON ((-180 12,-180 76,-60 76,-60 12,-180 12))" ;
+    dc:title "USA USGIN 3M Geologic Age" ;
+    dcterms:references <urn:uuid:2b888afb-a057-42cd-bac6-f789fc36437c> ;
+    esip:eastBound "-60.0"^^xsd:float ;
+    esip:northBound "76.0"^^xsd:float ;
+    esip:southBound "12.0"^^xsd:float ;
+    esip:westBound "-180.0"^^xsd:float ;
+    owl:a bcube:Layer .
+
+<urn:uuid:82775a9b-e683-4e59-bef0-bc49757e1159> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-06-28T16:23:19.246Z" ;
+    bcube:hasConfidence "Not Sure" ;
+    bcube:hasUrlSource "Generated" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-06-28T16:23:19.246Z" ;
+    dc:identifier "urn:sha:dfc05ee15ddedee37a0eebcc57713b39b2bf585c59b5f6b57bd6a0f4" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://services.azgs.az.gov/arcgis/services/OneGeology/AZGS_USGIN_Geology/MapServer/WMSServer?layers=USA_USGIN_3M_Lithology&width=500&version=1.3.0&bbox=-180.0%2C12.0%2C-60.0%2C76.0&service=WMS&format=image%2Fpng&styles=&crs=CRS%3A84&request=GetMap&height=500" .
+
+<urn:uuid:9ccc1ced-cf2e-4e7e-982e-b3aa031a41cc> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-06-28T16:23:19.246Z" ;
+    bcube:hasConfidence "Not Sure" ;
+    bcube:hasUrlSource "Generated" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-06-28T16:23:19.246Z" ;
+    dc:identifier "urn:sha:a159ba665e50c18499f36ab42fc5259bc6a28fa0b8a40bff698e3ff0" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://services.azgs.az.gov/arcgis/services/OneGeology/AZGS_USGIN_Geology/MapServer/WMSServer?layers=USA_USGIN_3M_Contacts&width=500&version=1.3.0&bbox=-180.0%2C12.0%2C-60.0%2C76.0&service=WMS&format=image%2Fpng&styles=&crs=CRS%3A84&request=GetMap&height=500" .
+
+<urn:uuid:9df02c8b-2f34-4c0c-b25e-e475232ce76f> bcube:dateCreated "2015-06-28T16:23:19.246Z" ;
+    bcube:lastUpdated "2015-06-28T16:23:19.246Z" ;
+    dc:description "Portrayal in which units are categorized according to the representative lithology from the CGI SimpleLithology vocabulary as specified by the representativeLithology_URI property in the underlying dataset. The data in this layer are portrayed based on lithology using the color scheme encoded in http://repository.azgs.az.gov/resources/slds/xml/LithologyCGI201001URI.sld. Lithology for polygons was assigned by intersecting polygon from Reed at al, 2005 with polygons in the state geologic map compilation for the lower 48 states by the USGS Mineral Resources division. In that map compilation, lithology was generalized to a major and minor rock type using the scheme documented in Ludington et al. 2007 (also known as LithClass 6). The LithClass6 categories were mapped into the CGI Simple Lithology vocabulary (see https://www.seegrid.csiro.au/wiki/CGIModel/ConceptDefinitionsTG) for OneGeology data integration by SM Richard. Lithology for polygons in Hawaii is based on generalization of map units from Sherrod et al. 2007 and assignment of those units to lithology categories in the CGI simple Lithology vocabulary (see https://www.seegrid.csiro.au/wiki/CGIModel/ConceptDefinitionsTG) for OneGeology data integration by SM Richard. Lithology for polygons in Alaska, marine areas, Puerto Rico and Virgin Islands is based on mapping of lithogenetic categories from Reed et al, 2005 into the CGI simple Lithology vocabulary (see https://www.seegrid.csiro.au/wiki/CGIModel/ConceptDefinitionsTG) for OneGeology data integration by SM Richard." ;
+    dc:spatial "POLYGON ((-180 12,-180 76,-60 76,-60 12,-180 12))" ;
+    dc:title "USA USGIN 3M Lithology" ;
+    dcterms:references <urn:uuid:82775a9b-e683-4e59-bef0-bc49757e1159> ;
+    esip:eastBound "-60.0"^^xsd:float ;
+    esip:northBound "76.0"^^xsd:float ;
+    esip:southBound "12.0"^^xsd:float ;
+    esip:westBound "-180.0"^^xsd:float ;
+    owl:a bcube:Layer .
+
+<urn:uuid:9f573060-5971-4ff5-893f-803cd72332ea> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-06-28T16:23:19.246Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-06-28T16:23:19.246Z" ;
+    dc:identifier "urn:sha:58edada7181b4e4164af8891a54391c1caebdfd5ccb11cdc60bfa25a" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://services.azgs.az.gov/arcgis/services/OneGeology/AZGS_USGIN_Geology/MapServer/WMSServer?request=GetCapabilities&service=WMS" .
+
+<urn:uuid:b2131ca3-f365-44f5-ba19-cc801967d193> bcube:dateCreated "2015-06-28T16:23:19.246Z" ;
+    bcube:lastUpdated "2015-06-28T16:23:19.246Z" ;
+    dc:description "This layer includes all faults (GeoSciML shear displacement structures). Symbolization provides decorations along major thrust faults and growth faults in the Gulf Coast region. There are 5,529 features in this dataset; getFeatureInfo reports GeoSciML Portrayal FaultView feature properties contact type, positional accuracy and generic symbolizer (populated with geologic symbol code from FGDC-STD-013-2006 )." ;
+    dc:spatial "POLYGON ((-180 12,-180 76,-60 76,-60 12,-180 12))" ;
+    dc:title "USA USGIN 3M Faults" ;
+    dcterms:references <urn:uuid:2e2e30be-48dd-4e7d-a8b8-fbfdc2ee49f2> ;
+    esip:eastBound "-60.0"^^xsd:float ;
+    esip:northBound "76.0"^^xsd:float ;
+    esip:southBound "12.0"^^xsd:float ;
+    esip:westBound "-180.0"^^xsd:float ;
+    owl:a bcube:Layer .
+
+<urn:uuid:c21f2de8-ee84-4cca-bec7-5a548d65c1d7> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-06-28T16:23:19.246Z" ;
+    bcube:hasConfidence "Not Sure" ;
+    bcube:hasUrlSource "Generated" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-06-28T16:23:19.246Z" ;
+    dc:identifier "urn:sha:b4a5bfd06472eafb00af5391da3be26642c5a4412fe6ed2ea7e66b6a" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://services.azgs.az.gov/arcgis/services/OneGeology/AZGS_USGIN_Geology/MapServer/WMSServer?layers=USA_USGIN_3M_Lithostratigraphy&width=500&version=1.3.0&bbox=-180.0%2C12.0%2C-60.0%2C76.0&service=WMS&format=image%2Fpng&styles=&crs=CRS%3A84&request=GetMap&height=500" .
+
+<urn:uuid:cb609a29-78b3-4ec9-a17d-9c999252023b> bcube:dateCreated "2015-06-28T16:23:19.246Z" ;
+    bcube:lastUpdated "2015-06-28T16:23:19.246Z" ;
+    dc:description "portrayal in which units are categorized according to the original map units defined in Reed et al. (2005). The color scheme has been adopted from that provided by Garrity and Soller (2009) to make it compatible with simple WMS service by removing the overlay patterns and adjusting colors slightly to get sufficient distinction between units. An SLD specifying the symbolization for this layer is at http://repository.azgs.az.gov/resources/slds/xml/LithostratigraphyGMNAMapUnit.sld. This legend assigns colors based on the unit abbreviations (simplied slightly) from Reed et al, which are in the GenericSymbolizer field in the data for the layer, so this sld is quite specific to the data for this layer." ;
+    dc:spatial "POLYGON ((-180 12,-180 76,-60 76,-60 12,-180 12))" ;
+    dc:title "USA USGIN 3M Lithostratigraphy" ;
+    dcterms:references <urn:uuid:c21f2de8-ee84-4cca-bec7-5a548d65c1d7> ;
+    esip:eastBound "-60.0"^^xsd:float ;
+    esip:northBound "76.0"^^xsd:float ;
+    esip:southBound "12.0"^^xsd:float ;
+    esip:westBound "-180.0"^^xsd:float ;
+    owl:a bcube:Layer .
+
+<urn:uuid:d84184b8-21f1-448c-9c70-cd690e82636c> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-06-28T16:23:19.246Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-06-28T16:23:19.246Z" ;
+    dc:identifier "urn:sha:48c689a03a43e3c8b061b94a92b59f074f92d77b6a776539f9f202c4" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://catalog.stategeothermaldata.org/geoportal/csw?request=GetRecordById&id=4e6b8f72f7d6c3856f092c6b8501c570&service=CSW&version=2.0.2&outputSchema=http%3A%2F%2Fwww.isotc211.org%2F2005%2Fgmd&elementSetName=full" .
+
+<urn:uuid:3ab6aa78-5539-4e4e-acad-3cac0b417187> bcube:dateCreated "2015-06-28T16:23:19.246Z" ;
+    bcube:lastUpdated "2015-06-28T16:23:19.246Z" ;
+    dc:description "This layer includes all depositional, intrusive, or metamorphic contact between units, but not faults. The portrayal scheme is simple, with solid lines representing contacts that have been mapped, dashed lines representing inferred contacts, and dotted lines for concealed contacts. Contacts between units in Hawaii are not included. There are 17,304 features in the dataset for the layer; getFeatureInfo reports GeoSciML Portrayal ContactView feature properties contact type, positional accuracy and generic symbolizer (populated with geologic symbol code from FGDC-STD-013-2006 )" ;
+    dc:spatial "POLYGON ((-180 12,-180 76,-60 76,-60 12,-180 12))" ;
+    dc:title "USA USGIN 3M Contacts" ;
+    dcterms:references <urn:uuid:9ccc1ced-cf2e-4e7e-982e-b3aa031a41cc> ;
+    esip:eastBound "-60.0"^^xsd:float ;
+    esip:northBound "76.0"^^xsd:float ;
+    esip:southBound "12.0"^^xsd:float ;
+    esip:westBound "-180.0"^^xsd:float ;
+    owl:a bcube:Layer .
+

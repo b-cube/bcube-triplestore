@@ -1,0 +1,72 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:31bca1fd-bbb1-4e3a-8370-d4e95c8cb07e> bcube:dateCreated "2015-11-06T23:09:19.568Z" ;
+    bcube:hasMetadataRecord <urn:uuid:d13f0b3c-19ad-4d1b-ae28-fd04f7b4809c> ;
+    bcube:lastUpdated "2015-11-06T23:09:19.568Z" ;
+    dc:conformsTo <urn:uuid:3c9c2389-092e-44a0-bd72-17667212dbfb>,
+        <urn:uuid:ca5adad7-7c75-41ee-a34d-172fff9f5fbd> ;
+    dc:description "Hoogtemodel van project Noordwaard in de vorm van een grid met een resolutie van 2 meter waarbij de hoogtewaarde is opgenomen in meters. Een digitaal hoogte model (DHM) is een bestand waarbij de hoogte wordt weergegeven volgens een regelmatig, rechthoekig raster. Iedere cel van het raster (ook wel een gridcel genoemd) krijgt een hoogtewaarde. Deze hoogtewaarde wordt berekend uit de omliggende laserpunten van het gefilterde basisbestand. De hiervoor gebruikte techniek is een zogenaamde \"gewogen gemiddelde interpolatie\". Meer informatie en uitleg over de interpolatie vindt U in de handleiding \"de grids van het AHN\" te vinden op www.ahn.nl. Als er geen laserpunten in de buurt van een gridcel liggen blijft de cel leeg (de cel krijgt een \"nodata\" waarde). Belangrijk om te weten is dat de waarde van een 2x2 meter gridcel wordt berekend uit meerdere laserpunten (het aantal is afhankelijk van de puntdichtheid van het basisbestand). Hierdoor neemt de invloed van de meetruis en uitschieters af en treedt er een lichte mate van vervlakking op. Voor verdere informatie zie kwaliteitsdocument" ;
+    dc:identifier "1b956c0a-d368-453d-b8ab-82408edb07db" ;
+    dc:spatial "POLYGON ((4.61449 51.68188,4.61449 51.83546,4.91807 51.83546,4.91807 51.68188,4.61449 51.68188))" ;
+    dcterms:references <urn:uuid:baca99d7-62a5-46cd-b8b6-05e0a6228ede> ;
+    dcterms:title "Hoogtebestand Noordwaard 2010" ;
+    esip:eastBound "4.91807"^^xsd:float ;
+    esip:endDate "2010-03-18"^^xsd:date ;
+    esip:northBound "51.83546"^^xsd:float ;
+    esip:southBound "51.68188"^^xsd:float ;
+    esip:startDate "2010-03-18"^^xsd:date ;
+    esip:westBound "4.61449"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:3c9c2389-092e-44a0-bd72-17667212dbfb> bcube:hasValue "elevation" ;
+    dc:partOf "IsoTopicCategories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:baca99d7-62a5-46cd-b8b6-05e0a6228ede> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-06T23:09:19.568Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-06T23:09:19.568Z" ;
+    dc:identifier "urn:sha:a8f2ccd2108f699b2ab27714190d05c07e813792b3f23bb33ad9788b" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://geoservices.rijkswaterstaat.nl/hoogte_divers?" .
+
+<urn:uuid:ca5adad7-7c75-41ee-a34d-172fff9f5fbd> bcube:hasValue "Elevation",
+        "Hoogtegegevens" ;
+    dc:partOf "GEMET - INSPIRE themes, version 1.0" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:d13f0b3c-19ad-4d1b-ae28-fd04f7b4809c> a "ISO 19115:2003/19139" ;
+    bcube:dateCreated "2015-11-06T23:09:19.568Z" ;
+    bcube:lastUpdated "2015-11-06T23:09:19.568Z" ;
+    bcube:originatedFrom <urn:uuid:ef074ca2-f7b7-4477-be26-9e6ebfa1debc> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:31bca1fd-bbb1-4e3a-8370-d4e95c8cb07e> .
+
+<urn:uuid:ef074ca2-f7b7-4477-be26-9e6ebfa1debc> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-06T23:09:19.568Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-06T23:09:19.568Z" ;
+    dc:identifier "urn:sha:9c0dac986ef68ce895cc32a8a2e7bb16da092f97bbaa4dc8fd3afe54" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www.rijkswaterstaat.nl/apps/geoservices/geodata/dmc/hoogte_divers/productinfo/metainfo/noordwrd_2010.xml" .
+

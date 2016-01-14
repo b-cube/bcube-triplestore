@@ -1,0 +1,83 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:0f75b066-274b-4079-a5f9-6501d0875905> owl:a foaf:Organization ;
+    foaf:name "U.S. Geological Survey" .
+
+<urn:uuid:1b3b18e0-a366-4b32-8f51-a79c551d9617> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2014-10-30T01:24:07.268Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2014-10-30T01:24:07.268Z" ;
+    dc:identifier "urn:sha:2b47a636c4fd6d1bc9609c2aceae53f15e0780cf9dd2f0e42851407c" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www.usgs.gov/science/xml.php?cite=2279" .
+
+<urn:uuid:33526f79-7918-44c2-a8c0-25118a257cb4> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2014-10-30T01:24:07.268Z" ;
+    bcube:lastUpdated "2014-10-30T01:24:07.268Z" ;
+    bcube:originatedFrom <urn:uuid:1b3b18e0-a366-4b32-8f51-a79c551d9617> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:34dd6d01-2c8f-4964-927d-4bbcbfae9264> .
+
+<urn:uuid:34dd6d01-2c8f-4964-927d-4bbcbfae9264> bcube:dateCreated "2014-10-30T01:24:07.268Z" ;
+    bcube:hasMetadataRecord <urn:uuid:33526f79-7918-44c2-a8c0-25118a257cb4> ;
+    bcube:lastUpdated "2014-10-30T01:24:07.268Z" ;
+    dc:conformsTo <urn:uuid:562c05c5-25e8-48ec-a15d-06c3c638fdfd>,
+        <urn:uuid:a0d17c0d-54a0-411c-8eb8-48828ade88f4> ;
+    dc:description "Recent physical changes over time, including trends toward earlier snowmelt runoff, decreasing river ice, and increasing spring water temperatures, may affect salmon populations; we want to know how important these effects are." ;
+    dc:spatial "POLYGON ((-74 40,-74 48,-66 48,-66 40,-74 40))" ;
+    dcterms:publisher <urn:uuid:0f75b066-274b-4079-a5f9-6501d0875905> ;
+    dcterms:references <urn:uuid:fee201b5-17b3-4f4c-b1cd-e10752517b12> ;
+    dcterms:title "Impacts of Low-Flow and Stream-Temperature Changes on Endangered Atlantic Salmon - Current Research" ;
+    esip:eastBound "-66.0"^^xsd:float ;
+    esip:northBound "48.0"^^xsd:float ;
+    esip:southBound "40.0"^^xsd:float ;
+    esip:westBound "-74.0"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:562c05c5-25e8-48ec-a15d-06c3c638fdfd> bcube:hasType "theme" ;
+    bcube:hasValue "climate change",
+        "ecology",
+        "fish",
+        "mathematical modeling",
+        "population dynamics" ;
+    dc:partOf "USGS Thesaurus" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:7236baee-1f88-4e80-871f-d8af7580537c> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2014-10-30T01:24:07.268Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2014-10-30T01:24:07.268Z" ;
+    dc:identifier "urn:sha:dbd8c54ff8d1cade9651a2037ce1fb0816e7e50cda440e25ea527634" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://pubs.usgs.gov/fs/2008/3044/" .
+
+<urn:uuid:a0d17c0d-54a0-411c-8eb8-48828ade88f4> bcube:hasType "place" ;
+    bcube:hasValue "fUS23 = Maine",
+        "fUS25 = Massachusetts",
+        "fUS33 = New Hampshire" ;
+    dc:partOf "Augmented FIPS 10-4 and FIPS 6-4" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:fee201b5-17b3-4f4c-b1cd-e10752517b12> dcterms:references <urn:uuid:7236baee-1f88-4e80-871f-d8af7580537c> ;
+    owl:a bibo:WebPage .
+

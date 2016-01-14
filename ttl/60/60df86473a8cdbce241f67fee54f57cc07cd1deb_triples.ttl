@@ -1,0 +1,102 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:044d60be-a6d2-43eb-ab35-b3057a90008a> bcube:hasType "place" ;
+    bcube:hasValue "Global" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:0c807cf0-0bc1-4930-92a3-d976216e0173> bcube:hasType "project" ;
+    bcube:hasValue "PIFSC OceanWatch (OW) Metadata Portfolio" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:1bc3407e-f22b-4dfa-ae49-4c156e6ea1f2> bcube:hasType "dataCenter" ;
+    bcube:hasValue "DOC/NOAA/NMFS > National Marine Fisheries Service, NOAA, U.S. Department of Commerce" ;
+    dc:partOf "NASA/GCMD Science Keywords" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:43e2667d-6cac-42f4-93c7-1e886c10fa29> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-09T04:05:21.124Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-09T04:05:21.124Z" ;
+    dc:identifier "urn:sha:0f2f40ef7cf40a95f8d61a73fb201219b6e30460f3e3cbf077cc4211" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "https://inport.nmfs.noaa.gov/inport/item/5704" .
+
+<urn:uuid:75370d15-4058-4da8-99c0-10d7138ba5f6> a "ISO 19115:2003/19139" ;
+    bcube:dateCreated "2015-11-09T04:05:21.124Z" ;
+    bcube:lastUpdated "2015-11-09T04:05:21.124Z" ;
+    bcube:originatedFrom <urn:uuid:f1038309-66a3-4ff6-a842-113efc95250b> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:8241b659-c75d-4acb-9dcb-1642b74521f6> .
+
+<urn:uuid:8241b659-c75d-4acb-9dcb-1642b74521f6> bcube:dateCreated "2015-11-09T04:05:21.124Z" ;
+    bcube:hasMetadataRecord <urn:uuid:75370d15-4058-4da8-99c0-10d7138ba5f6> ;
+    bcube:lastUpdated "2015-11-09T04:05:21.124Z" ;
+    dc:conformsTo <urn:uuid:044d60be-a6d2-43eb-ab35-b3057a90008a>,
+        <urn:uuid:0c807cf0-0bc1-4930-92a3-d976216e0173>,
+        <urn:uuid:1bc3407e-f22b-4dfa-ae49-4c156e6ea1f2>,
+        <urn:uuid:b79de5c2-6257-484f-944c-136fc297ee9c>,
+        <urn:uuid:ba615c18-16ad-4a29-ba4e-161a1288ba9b>,
+        <urn:uuid:cb5914dc-c742-4f0f-ab14-f09353d1736a> ;
+    dc:description "The dataset contains satellite-derived sea-surface ocean color (chlorophyll-a) measurements collected by means of the Sea-viewing Wide Field-of-view Sensor (SeaWiFS) onboard the NASA SeaStar satellite. The data is available at weekly and monthly intervals at a spatial resolution of 0.1 degrees. The geographic coverage extends globally, and the temporal coverage ranges from 1997-present." ;
+    dc:spatial "POLYGON ((-180 -50,-180 65,180 65,180 -50,-180 -50))" ;
+    dcterms:references <urn:uuid:43e2667d-6cac-42f4-93c7-1e886c10fa29> ;
+    dcterms:title "OW NASA SeaWIFS Ocean Color" ;
+    esip:eastBound "180.0"^^xsd:float ;
+    esip:endDate "2010-12-18"^^xsd:date ;
+    esip:northBound "65.0"^^xsd:float ;
+    esip:southBound "-50.0"^^xsd:float ;
+    esip:startDate "1997-08-29"^^xsd:date ;
+    esip:westBound "-180.0"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:b79de5c2-6257-484f-944c-136fc297ee9c> bcube:hasType "temporal" ;
+    bcube:hasValue "Weekly",
+        "monthly" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:ba615c18-16ad-4a29-ba4e-161a1288ba9b> bcube:hasType "theme" ;
+    bcube:hasValue "NASA",
+        "Ocean Color",
+        "SeaWiFS",
+        "chlorophyll",
+        "ow",
+        "pifsc",
+        "remote sensing",
+        "satellite" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:cb5914dc-c742-4f0f-ab14-f09353d1736a> bcube:hasValue "oceans" ;
+    dc:partOf "IsoTopicCategories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:f1038309-66a3-4ff6-a842-113efc95250b> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-09T04:05:21.124Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-09T04:05:21.124Z" ;
+    dc:identifier "urn:sha:efe4f731d9195d601ea0f3f89a67812028c6be677b959a5f074b3603" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "https://inport.nmfs.noaa.gov/inport/item/5704/iso19115" .
+

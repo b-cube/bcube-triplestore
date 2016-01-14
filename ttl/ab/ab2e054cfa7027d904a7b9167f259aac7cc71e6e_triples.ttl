@@ -1,0 +1,79 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:15a71e79-02fe-4a86-8bf1-9f6cef6a55c7> owl:a foaf:Organization ;
+    foaf:name "" .
+
+<urn:uuid:32d7e8a9-0670-43bc-8dbc-192f15555c35> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-07-31T04:21:34.988Z" ;
+    bcube:lastUpdated "2015-07-31T04:21:34.988Z" ;
+    bcube:originatedFrom <urn:uuid:bf05bf82-d38e-429e-b3a9-b3f16bdc8964> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:f7e83781-e125-469f-b03d-9acec40e5b7a> .
+
+<urn:uuid:3e169c4a-887d-46f7-89c2-42d92d5b3e9c> bcube:hasType "place" ;
+    bcube:hasValue "Louisiana" ;
+    dc:partOf "none" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:738f2b04-2be1-4da3-b8d1-11b44453cc4a> bcube:hasType "theme" ;
+    bcube:hasValue "Coast Guard",
+        "Governmental Units",
+        "USCG",
+        "office",
+        "station" ;
+    dc:partOf "none" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:bf05bf82-d38e-429e-b3a9-b3f16bdc8964> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-07-31T04:21:34.988Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-07-31T04:21:34.988Z" ;
+    dc:identifier "urn:sha:c036231f1fe6b981dc9aa4227583c051e4e29a6e4622f0d7f6fbb68f" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "https://catalog.data.gov/harvest/object/ebd367b0-35d7-4ef0-bc61-beedc55aefa1/original" .
+
+<urn:uuid:df0c9dad-134a-4e78-b9cd-94780fa703b6> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-07-31T04:21:34.988Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-07-31T04:21:34.988Z" ;
+    dc:identifier "urn:sha:395a8470583750b9341b20706d2d8a79411af035e663bd349118d673" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://lagic.lsu.edu/data/losco/coast_guard_stations_USCG_1997.zip" .
+
+<urn:uuid:f7e83781-e125-469f-b03d-9acec40e5b7a> bcube:dateCreated "2015-07-31T04:21:34.988Z" ;
+    bcube:hasMetadataRecord <urn:uuid:32d7e8a9-0670-43bc-8dbc-192f15555c35> ;
+    bcube:lastUpdated "2015-07-31T04:21:34.988Z" ;
+    dc:conformsTo <urn:uuid:3e169c4a-887d-46f7-89c2-42d92d5b3e9c>,
+        <urn:uuid:738f2b04-2be1-4da3-b8d1-11b44453cc4a> ;
+    dc:description "This is is a point dataset for the locations and attributes of eight US Coast Guard stations in Louisiana. The attributes include name, address, latitude (NAD27), and longitude (NAD27). The attribute countycode was not defined and is of an unknown codeset." ;
+    dc:spatial "POLYGON ((-93.253761 29.598825,-93.253761 30.449635,-90.065071 30.449635,-90.065071 29.598825,-93.253761 29.598825))" ;
+    dcterms:publisher <urn:uuid:15a71e79-02fe-4a86-8bf1-9f6cef6a55c7> ;
+    dcterms:references <urn:uuid:df0c9dad-134a-4e78-b9cd-94780fa703b6> ;
+    dcterms:title "US Coast Guard Stations in Louisiana, Geographic NAD83, USCG [coast_guard_stations_USCG_1997]" ;
+    esip:eastBound "-90.065071"^^xsd:float ;
+    esip:northBound "30.449635"^^xsd:float ;
+    esip:southBound "29.598825"^^xsd:float ;
+    esip:startDate "1997-01-01"^^xsd:date ;
+    esip:westBound "-93.253761"^^xsd:float ;
+    owl:a dcat:Dataset .
+

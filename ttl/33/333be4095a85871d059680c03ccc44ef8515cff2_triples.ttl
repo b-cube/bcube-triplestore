@@ -1,0 +1,93 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:05595c2d-ba1e-41ef-8c78-bd442ff9ac23> bcube:hasType "theme" ;
+    bcube:hasValue "DEM",
+        "altitude",
+        "bathymetry",
+        "depth",
+        "digital bathymetric model",
+        "digital elevation model",
+        "digital terrain model",
+        "elevation",
+        "estuarine bathymetry",
+        "estuary",
+        "height",
+        "hydrographic survey",
+        "marine navigation" ;
+    dc:partOf "none" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:26f3249e-d7d8-4c6b-9772-51c121e573da> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-08T13:03:58.519Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-08T13:03:58.519Z" ;
+    dc:identifier "urn:sha:1c008adbf18433a5a6db575f483d5c98917b23d5287782519276683b" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://estuarinebathymetry.noaa.gov/finddata.html" .
+
+<urn:uuid:2a52d764-5e37-4209-b28e-cf19e8564c6e> bcube:hasType "place" ;
+    bcube:hasValue "Buzzards Bay, MA",
+        "Massachusetts",
+        "United States" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:7cb02a95-c188-4661-8a22-ffaffe7012c6> a "ISO 19115:2003/19139" ;
+    bcube:dateCreated "2015-08-08T13:03:58.519Z" ;
+    bcube:lastUpdated "2015-08-08T13:03:58.519Z" ;
+    bcube:originatedFrom <urn:uuid:f43ae928-dd61-4428-a497-e3c2468dec8e> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:8a3e6f60-3868-4f65-9ca1-0f364411b4d0> .
+
+<urn:uuid:7ed05ff8-9194-4a73-9fe8-5fc27ddcc3f1> bcube:hasValue "ImageryBaseMapsEarthCover",
+        "elevation",
+        "oceans" ;
+    dc:partOf "IsoTopicCategories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:8a3e6f60-3868-4f65-9ca1-0f364411b4d0> bcube:dateCreated "2015-08-08T13:03:58.519Z" ;
+    bcube:hasMetadataRecord <urn:uuid:7cb02a95-c188-4661-8a22-ffaffe7012c6> ;
+    bcube:lastUpdated "2015-08-08T13:03:58.519Z" ;
+    dc:conformsTo <urn:uuid:05595c2d-ba1e-41ef-8c78-bd442ff9ac23>,
+        <urn:uuid:2a52d764-5e37-4209-b28e-cf19e8564c6e>,
+        <urn:uuid:7ed05ff8-9194-4a73-9fe8-5fc27ddcc3f1> ;
+    dc:description "Bathymetry for Buzzards Bay was derived from twenty-two surveyscontaining 220,615 soundings. Eight older, less accurate, overlapping surveyswere omitted, and the overlap from six older, less accurate surveys wasomitted before tinning. The average separation between the soundings was54 meters. There were five surveys in the southwest that dated from 1934 to1939. The remaining seventeen surveys dated from 1954 to 1992. The total rangeof sounding data was 2.3 meters to - 44.6 meters at mean low water. Meanhigh water values between 0.8 and 1.9 meters were assigned to the shoreline.Thirteen points were found that were not consistent with the surrounding data. These wereremoved prior to tinning. DEM grid values outside the shoreline (on land) were assigned null values (-32676).Buzzards Bay has fourteen 7.5 minute DEMs and two one degree DEMs. The1 degree DEMs were generated from the higher resolution 7.5 minuteDEMs which covered the estuary. A Digital Elevation Model (DEM)contains a series of elevations ordered from south to north with theorder of the columns from west to east. The DEM is formatted as oneASCII header record (A- record), followed by a series of profilerecords (B- records) each of which include a short B-record headerfollowed by a series of ASCII integer elevations (typically in unitsof 1 centimeter) per each profile. The last physical record of theDEM is an accuracy record (C-record).The 7.5-minute DEM (30- by 30-m data spacing) is cast on theUniversal Transverse Mercator (UTM) projection. It provides coveragein 7.5- by 7.5-minute blocks. Each product provides the samecoverage as a standard USGS 7.5-minute quadrangle but the DEMcontains over edge data. Coverage is available for many estuaries ofthe contiguous United States but is not complete." ;
+    dc:spatial "POLYGON ((-71.12218 41.411697,-71.12218 41.771922,-70.558882 41.771922,-70.558882 41.411697,-71.12218 41.411697))" ;
+    dcterms:references <urn:uuid:26f3249e-d7d8-4c6b-9772-51c121e573da> ;
+    dcterms:title "Buzzards Bay, MA (M010) Bathymetric Digital Elevation Model(30 meter resolution) Derived From Source Hydrographic SurveySoundings Collected by NOAA" ;
+    esip:eastBound "-70.558882"^^xsd:float ;
+    esip:endDate "1992-01-01"^^xsd:date ;
+    esip:northBound "41.771922"^^xsd:float ;
+    esip:southBound "41.411697"^^xsd:float ;
+    esip:startDate "1934-01-01"^^xsd:date ;
+    esip:westBound "-71.12218"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:f43ae928-dd61-4428-a497-e3c2468dec8e> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-08T13:03:58.519Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-08T13:03:58.519Z" ;
+    dc:identifier "urn:sha:6c7a2ea5c64a05cf849b6c9104c225c8956c723fac895a4b87111a39" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://catalog.data.gov/harvest/object/924aec9b-492a-413b-8ceb-8320bcb2b92b" .
+

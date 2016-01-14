@@ -1,0 +1,84 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:1724f4a8-45b8-4151-bc1c-03f63c92e8d3> bcube:hasType "place" ;
+    bcube:hasValue "Montana" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:1fd7ac59-c3a8-48b6-8b3b-c4c094aaa8b9> bcube:hasType "theme" ;
+    bcube:hasValue "assembly",
+        "legislator",
+        "legislature",
+        "representative",
+        "senator" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:555e873b-652e-45b6-96d9-4ef6bb4e5882> owl:a foaf:Organization ;
+    foaf:name "Montana State Library" .
+
+<urn:uuid:85b334e1-1311-456e-8013-d01a48be493d> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-08-11T06:21:15.149Z" ;
+    bcube:lastUpdated "2015-08-11T06:21:15.149Z" ;
+    bcube:originatedFrom <urn:uuid:c76d16bc-3320-4919-abec-307496810ecf> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:ac43081c-1c8d-4da9-a158-9fe329fe1592> .
+
+<urn:uuid:9db3f511-2210-4425-bb82-703cbc9350aa> bcube:hasType "theme" ;
+    bcube:hasValue "boundaries" ;
+    dc:partOf "ISO 19115 Topic Category" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:ac43081c-1c8d-4da9-a158-9fe329fe1592> bcube:dateCreated "2015-08-11T06:21:15.149Z" ;
+    bcube:hasMetadataRecord <urn:uuid:85b334e1-1311-456e-8013-d01a48be493d> ;
+    bcube:lastUpdated "2015-08-11T06:21:15.149Z" ;
+    dc:conformsTo <urn:uuid:1724f4a8-45b8-4151-bc1c-03f63c92e8d3>,
+        <urn:uuid:1fd7ac59-c3a8-48b6-8b3b-c4c094aaa8b9>,
+        <urn:uuid:9db3f511-2210-4425-bb82-703cbc9350aa> ;
+    dc:description "Montana Legislative Districts for the 2005 through 2013 Legislatures. Each polygon represents a House District. Senate Districts are each composed of two House Districts, whose district numbers equal twice the Senate District number and twice the Senate District number, minus one" ;
+    dc:spatial "POLYGON ((-116.178342 44.238014,-116.178342 49.180943,-103.611153 49.180943,-103.611153 44.238014,-116.178342 44.238014))" ;
+    dcterms:publisher <urn:uuid:555e873b-652e-45b6-96d9-4ef6bb4e5882> ;
+    dcterms:references <urn:uuid:f4658ccf-1adc-496d-8c03-880792c37bf1> ;
+    dcterms:title "Montana 2005-2013 Legislative Districts" ;
+    esip:eastBound "-103.611153"^^xsd:float ;
+    esip:endDate "2014-01-01"^^xsd:date ;
+    esip:northBound "49.180943"^^xsd:float ;
+    esip:southBound "44.238014"^^xsd:float ;
+    esip:startDate "2004-01-01"^^xsd:date ;
+    esip:westBound "-116.178342"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:c76d16bc-3320-4919-abec-307496810ecf> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-11T06:21:15.149Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-11T06:21:15.149Z" ;
+    dc:identifier "urn:sha:00bee4dad593903b9fdb0643c767327efe70d51236810862af892684" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://mslapps.mt.gov/Geographic_Information/Data/DataList/datalist_MetadataDetailRaw.aspx?did={36DAD891-E451-4D4E-BF99-DF2B8C398D0A}" .
+
+<urn:uuid:f4658ccf-1adc-496d-8c03-880792c37bf1> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-11T06:21:15.149Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-11T06:21:15.149Z" ;
+    dc:identifier "urn:sha:20fab40c000346cc483935841d2e9606d92c85a9e442f555439d0b8c" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "ftp://ftp.geoinfo.msl.mt.gov/Data/Spatial/NonMSDI/Shapefiles/Legislature2005.zip" .
+

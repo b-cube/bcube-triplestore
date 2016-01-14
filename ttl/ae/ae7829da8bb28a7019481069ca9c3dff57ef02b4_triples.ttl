@@ -1,0 +1,91 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:1e62128d-ec3b-40e9-9ffd-668a5665ae03> bcube:hasType "theme" ;
+    bcube:hasValue "ALPS",
+        "Airborne Lidar Processing System",
+        "DEM",
+        "Digital Elevation Model",
+        "EAARL",
+        "Experimental Advanced Airborne Research Lidar",
+        "Lidar",
+        "laser altimetry",
+        "remote sensing",
+        "topography" ;
+    dc:partOf "http://remotesensing.usgs.gov" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:224f2b1e-3567-4723-9ce3-17cdcba97c44> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-07-15T12:30:46.647Z" ;
+    bcube:lastUpdated "2015-07-15T12:30:46.647Z" ;
+    bcube:originatedFrom <urn:uuid:2e879fc7-8b63-4bf9-8199-56bfa8b9531d> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:2cad00d0-9b8f-462a-9ce5-0a7106ea6544> .
+
+<urn:uuid:2cad00d0-9b8f-462a-9ce5-0a7106ea6544> bcube:dateCreated "2015-07-15T12:30:46.647Z" ;
+    bcube:hasMetadataRecord <urn:uuid:224f2b1e-3567-4723-9ce3-17cdcba97c44> ;
+    bcube:lastUpdated "2015-07-15T12:30:46.647Z" ;
+    dc:conformsTo <urn:uuid:1e62128d-ec3b-40e9-9ffd-668a5665ae03>,
+        <urn:uuid:5fb9f401-8086-4835-8980-a52ca8e0571c>,
+        <urn:uuid:6b4309c4-b51f-468b-9289-4cca564c55e7>,
+        <urn:uuid:da3671d0-a2b8-4891-9666-b78e969e8174> ;
+    dc:description "A bare earth elevation map (also known as a Digital Elevation Model or DEM) of the Gateway National Recreation Area's Sandy Hook Unit in New Jersey was produced from remotely sensed, geographically referenced elevation measurements cooperatively by the U.S. Geological Survey (USGS), the National Park Service (NPS), and the National Aeronautics and Space Administration (NASA). Elevation measurements were collected over the area using the NASA Experimental Advanced Airborne Research Lidar (EAARL), a pulsed laser ranging system mounted onboard an aircraft to measure ground elevation, vegetation canopy, and coastal topography. The system uses high frequency laser beams directed at the Earth's surface through an opening in the bottom of the aircraft's fuselage. The laser system records the time difference between emission of the laser beam and the reception of the reflected laser signal in the aircraft. The plane travels over the target area at approximately 50 meters per second at an elevation of approximately 300 meters. The EAARL, developed by NASA at Wallops Flight Facility in Virginia, measures ground elevation with a vertical resolution of 15 centimeters. A sampling rate of 3 kilohertz or higher results in an extremely dense spatial elevation dataset. Over 100 kilometers of coastline can be easily surveyed within a 3- to 4-hour mission time period. When subsequent elevation maps for an area are analyzed, they provide a useful tool to make management decisions regarding land development." ;
+    dcterms:publisher <urn:uuid:63938a93-1584-45a2-b339-39a8c613c89c> ;
+    dcterms:references <urn:uuid:ca8b1e97-6730-41b5-a845-11946d921312> ;
+    dcterms:title "EAARL Coastal Topography Sandy Hook 2007" ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:2e879fc7-8b63-4bf9-8199-56bfa8b9531d> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-07-15T12:30:46.647Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-07-15T12:30:46.647Z" ;
+    dc:identifier "urn:sha:6641408a4a0b314cef2700fc3fa02a361c7429105115e4cba99429fd" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://pubs.usgs.gov/ds/393/data_files/be/be_e586_n4480_18/be_e586_n4480_18.tif.xml" .
+
+<urn:uuid:5fb9f401-8086-4835-8980-a52ca8e0571c> bcube:hasType "place" ;
+    bcube:hasValue "Gateway National Recreation Area",
+        "New Jersey",
+        "Sandy Hook Unit" ;
+    dc:partOf "http://nationalmap.gov" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:63938a93-1584-45a2-b339-39a8c613c89c> owl:a foaf:Organization ;
+    foaf:name "U.S. Geological Survey" .
+
+<urn:uuid:6b4309c4-b51f-468b-9289-4cca564c55e7> bcube:hasType "stratum" ;
+    bcube:hasValue "Bare Earth" ;
+    dc:partOf "http://lidar.cr.usgs.gov/" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:ca8b1e97-6730-41b5-a845-11946d921312> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-07-15T12:30:46.647Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-07-15T12:30:46.647Z" ;
+    dc:identifier "urn:sha:d14a028c2a3a2bc9476102bb288234c415a2b01f828ea62ac5b3e42f" ;
+    owl:a bcube:Url .
+
+<urn:uuid:da3671d0-a2b8-4891-9666-b78e969e8174> bcube:hasType "temporal" ;
+    bcube:hasValue "2007" ;
+    dc:partOf "http://www.esri.com/news/arcuser/1104/temporal.html" ;
+    owl:a bcube:thesaurusSubset .
+

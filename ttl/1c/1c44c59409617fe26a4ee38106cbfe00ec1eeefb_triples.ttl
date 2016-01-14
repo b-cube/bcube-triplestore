@@ -1,0 +1,95 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:02a7c140-dfd0-4d60-8e64-fc8c0593cff4> owl:a foaf:Organization ;
+    foaf:name "" .
+
+<urn:uuid:0efc1d1c-cfea-4ca2-8aab-2a0bddf334e8> bcube:hasType "theme" ;
+    bcube:hasValue "5-digit ZIP code",
+        "County ANSI Code",
+        "County FIPS Code",
+        "From House Number",
+        "Permanent edge ID",
+        "Side indicator flag",
+        "State ANSI Code",
+        "State FIPS Code",
+        "To House Number",
+        "ZIP +4 code" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:2f8081e6-3bb5-4472-a4f0-eb2f0b75f0b8> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-11-02T02:51:54.634Z" ;
+    bcube:lastUpdated "2015-11-02T02:51:54.634Z" ;
+    bcube:originatedFrom <urn:uuid:dc7663ef-68d7-4763-a913-aaa87b16e57c> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:4d7907e8-26ac-4b5f-810e-44102a7c1740> .
+
+<urn:uuid:36bea894-13bd-4e2d-8c97-19f808e2b1ab> bcube:hasType "theme" ;
+    bcube:hasValue "transportation" ;
+    dc:partOf "ISO 19115 Topic Categories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:49b6a337-8e94-41ec-9f9b-860536f8328c> bcube:hasType "place" ;
+    bcube:hasValue "01015",
+        "Calhoun",
+        "County or Equivalent Entity",
+        "U.S.",
+        "United States" ;
+    dc:partOf "INCITS.38-200x (R2004),INCITS.31-200x (R2007),INCITS.454-200x,INCITS 455-200x,INCITS 446-2008" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:4d7907e8-26ac-4b5f-810e-44102a7c1740> bcube:dateCreated "2015-11-02T02:51:54.634Z" ;
+    bcube:hasMetadataRecord <urn:uuid:2f8081e6-3bb5-4472-a4f0-eb2f0b75f0b8> ;
+    bcube:lastUpdated "2015-11-02T02:51:54.634Z" ;
+    dc:conformsTo <urn:uuid:0efc1d1c-cfea-4ca2-8aab-2a0bddf334e8>,
+        <urn:uuid:36bea894-13bd-4e2d-8c97-19f808e2b1ab>,
+        <urn:uuid:49b6a337-8e94-41ec-9f9b-860536f8328c> ;
+    dc:description "The TIGER/Line relationship files are an extract of selected geographic information from the Census MAF/TIGER database. Each TIGER/Line relationship file is designed to stand alone as an independent data set or can be used jointly with the shapefiles." ;
+    dc:spatial "POLYGON ((-86.146225 33.55593,-86.146225 33.96846,-85.529432 33.96846,-85.529432 33.55593,-86.146225 33.55593))" ;
+    dcterms:publisher <urn:uuid:02a7c140-dfd0-4d60-8e64-fc8c0593cff4> ;
+    dcterms:references <urn:uuid:9e0b7913-6160-4617-9d36-1f4d89adb371> ;
+    dcterms:title "TIGER/Line Shapefile, 2009, county, Calhoun County, AL, Current Address Range-Feature Name Relationship File" ;
+    esip:eastBound "-85.529432"^^xsd:float ;
+    esip:endDate "2009-05-01"^^xsd:date ;
+    esip:northBound "33.96846"^^xsd:float ;
+    esip:southBound "33.55593"^^xsd:float ;
+    esip:startDate "2009-01-01"^^xsd:date ;
+    esip:westBound "-86.146225"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:9e0b7913-6160-4617-9d36-1f4d89adb371> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-02T02:51:54.634Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-02T02:51:54.634Z" ;
+    dc:identifier "urn:sha:4feb941b746da91224ebf052148d6e68b104cbfa48b4153fbf5f9d5c" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www2.census.gov/geo/tiger/TIGER2009/01_ALABAMA/01015_Calhoun_County/tl_2009_01015_addrfn.zip" .
+
+<urn:uuid:dc7663ef-68d7-4763-a913-aaa87b16e57c> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-02T02:51:54.634Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-02T02:51:54.634Z" ;
+    dc:identifier "urn:sha:0e2a891989687846a144ad4f4c44f822e91ef5ad320b96e9aba358f3" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://meta.geo.census.gov/data/existing/decennial/GEO/GPMB/TIGERline/fe_2009/addrfn/tl_2009_01015_addrfn_url.dbf.xml" .
+

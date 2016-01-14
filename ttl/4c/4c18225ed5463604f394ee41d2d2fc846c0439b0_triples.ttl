@@ -1,0 +1,65 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:151b1360-20a1-4fe8-be39-253b388124ff> bcube:hasType "theme" ;
+    bcube:hasValue "Land Cover",
+        "Land Cover Analysis",
+        "Remotely Sensed Imagery/Photos" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:58b7e74a-de8e-4744-9593-deb704caccad> a "ISO 19115:2003/19139" ;
+    bcube:dateCreated "2015-08-10T04:06:50.752Z" ;
+    bcube:lastUpdated "2015-08-10T04:06:50.752Z" ;
+    bcube:originatedFrom <urn:uuid:fbb90087-a976-4701-84d5-aad1bb5cb2a9> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:d580cc9f-6396-45d1-a113-7e189c861511> .
+
+<urn:uuid:64ab99fb-cd6d-4031-906d-7ea02fe7ff11> bcube:hasType "place" ;
+    bcube:hasValue "Coastal Zone",
+        "Tutuila" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:d580cc9f-6396-45d1-a113-7e189c861511> bcube:dateCreated "2015-08-10T04:06:50.752Z" ;
+    bcube:hasMetadataRecord <urn:uuid:58b7e74a-de8e-4744-9593-deb704caccad> ;
+    bcube:lastUpdated "2015-08-10T04:06:50.752Z" ;
+    dc:conformsTo <urn:uuid:151b1360-20a1-4fe8-be39-253b388124ff>,
+        <urn:uuid:64ab99fb-cd6d-4031-906d-7ea02fe7ff11>,
+        <urn:uuid:db3da76b-f266-46b5-af9c-5a20e58b45b6> ;
+    dc:description "This data set consists of land derived from high resolution imagery and was analyzed according to the Coastal Change Analysis Program (C-CAP) protocol to determine land cover. This data set utilized 24 full or partial 2010 WorldView2 multispectral scenes and the 2003 high-resolution Tutuila, American Samoa C-CAP data set. The imagery and base classification were included in a multi-step change detection process to extract land cover features in the 2010 imagery." ;
+    dc:spatial "POLYGON ((-170.505598 -14.223306,-170.505598 -14.134013,-170.323589 -14.134013,-170.323589 -14.223306,-170.505598 -14.223306))" ;
+    dcterms:title "2010 C-CAP Land Cover, Territory of American Samoa, Tutuila" ;
+    esip:eastBound "-170.323589"^^xsd:float ;
+    esip:northBound "-14.134013"^^xsd:float ;
+    esip:southBound "-14.223306"^^xsd:float ;
+    esip:westBound "-170.505598"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:db3da76b-f266-46b5-af9c-5a20e58b45b6> bcube:hasValue "imageryBaseMapsEarthCover" ;
+    dc:partOf "IsoTopicCategories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:fbb90087-a976-4701-84d5-aad1bb5cb2a9> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-10T04:06:50.752Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-10T04:06:50.752Z" ;
+    dc:identifier "urn:sha:00807cbd2f12893608517ff298112d3baddbc73cea82cf22fab29290" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://coast.noaa.gov/data/Documents/Metadata/isoharvest/Imagery/2010_era_as_tutuila_landcover_cleaned_ISO.xml" .
+

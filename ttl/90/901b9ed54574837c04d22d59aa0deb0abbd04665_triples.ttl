@@ -1,0 +1,89 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:00ca8485-adaf-4cda-8bbf-eb5534907e93> bcube:hasType "theme" ;
+    bcube:hasValue "geoscientificInformation",
+        "imageryBaseMapsEarthCover",
+        "oceans" ;
+    dc:partOf "ISO 19115 Topic Category" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:0fae490a-f0a2-4b8c-a3d1-78ddb751e2d5> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-11-02T02:51:20.42Z" ;
+    bcube:lastUpdated "2015-11-02T02:51:20.42Z" ;
+    bcube:originatedFrom <urn:uuid:81867b76-8181-4db0-9737-5709ef10dcf4> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:117a2fe2-573f-4e77-9f39-d401a168e6b1> .
+
+<urn:uuid:117a2fe2-573f-4e77-9f39-d401a168e6b1> bcube:dateCreated "2015-11-02T02:51:20.42Z" ;
+    bcube:hasMetadataRecord <urn:uuid:0fae490a-f0a2-4b8c-a3d1-78ddb751e2d5> ;
+    bcube:lastUpdated "2015-11-02T02:51:20.42Z" ;
+    dc:conformsTo <urn:uuid:00ca8485-adaf-4cda-8bbf-eb5534907e93>,
+        <urn:uuid:89b77131-edc3-4347-a035-86d351b8049a>,
+        <urn:uuid:ded4b6f6-f171-4d52-9574-36e8eb18ddc6>,
+        <urn:uuid:fee7f2f4-9ca8-4626-9545-9eb35676aefc> ;
+    dc:description "This part of DS 781 presents data for the bathymetric contours for several seafloor maps of the Offshore of Half Moon map area, California. The vector data file is included in \"Contours_OffshoreHalfMoonBay.zip,\" which is accessible from http://pubs.usgs.gov/ds/781/OffshoreSanGregorio/data_catalog_OffshoreSanGregorio.html. 10-m interval contours of the Offshore of Half Moon Bay map area, California, were generated from bathymetry data collected by Fugro Pelagos and by California State University, Monterey Bay, Seafloor Mapping Lab (CSUMB). Mapping was completed in 2006 and 2007, using a combination of 400-kHz Reson 7125 and 244-kHz Reson 8101 multibeam echosounders. These mapping missions combined to collect bathymetry from about the 10-m isobath to beyond the 3-nautical-mile limit of California's State Waters. Bathymetric contours at 10-m intervals were generated from the merged 2-m bathymetric surface. The most continuous contour segments were preserved while smaller segments and isolated island polygons were excluded from the final output. Contours were smoothed via a polynomial approximation with exponential kernel (PAEK) algorithm using a tolerance value of 60 m. The contours were then clipped to the boundary of the map area. These data are not intended for navigational purposes." ;
+    dc:spatial "POLYGON ((-122.58 37.39,-122.58 37.55,-122.42 37.55,-122.42 37.39,-122.58 37.39))" ;
+    dcterms:publisher <urn:uuid:749ae8c6-c63d-4fa8-9767-755698b77b60> ;
+    dcterms:title "Contours--Offshore of Half Moon Bay, California" ;
+    esip:eastBound "-122.42"^^xsd:float ;
+    esip:endDate "2007-01-01"^^xsd:date ;
+    esip:northBound "37.55"^^xsd:float ;
+    esip:southBound "37.39"^^xsd:float ;
+    esip:startDate "2006-01-01"^^xsd:date ;
+    esip:westBound "-122.58"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:749ae8c6-c63d-4fa8-9767-755698b77b60> owl:a foaf:Organization ;
+    foaf:name "" .
+
+<urn:uuid:81867b76-8181-4db0-9737-5709ef10dcf4> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-02T02:51:20.42Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-02T02:51:20.42Z" ;
+    dc:identifier "urn:sha:8419e710952da1671d7d36e044068c037814cea1975ab23d30e427b4" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://pubs.usgs.gov/ds/781/OffshoreHalfMoonBay/metadata/Contours_OffshoreHalfMoonBay_metadata.xml" .
+
+<urn:uuid:89b77131-edc3-4347-a035-86d351b8049a> bcube:hasType "place" ;
+    bcube:hasValue "Half Moon Bay",
+        "San Gregorio",
+        "State of California" ;
+    dc:partOf "Geographic Names Information System (GNIS)" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:ded4b6f6-f171-4d52-9574-36e8eb18ddc6> bcube:hasType "theme" ;
+    bcube:hasValue "Oceans > Bathymetry/SeafloorTopography > Bathymetry",
+        "Oceans > Bathymetry/SeafloorTopography > Seafloor Topography" ;
+    dc:partOf "Global Change Master Directory (GCMD)" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:fee7f2f4-9ca8-4626-9545-9eb35676aefc> bcube:hasType "theme" ;
+    bcube:hasValue "Bathymetry",
+        "CMGP",
+        "Contours",
+        "Marine Geology",
+        "Multibeam",
+        "Ocean Floor Topography",
+        "Pacific Coastal and Marine Science Center",
+        "U.S. Geological Survey",
+        "USGS",
+        "Water Depth" ;
+    dc:partOf "General" ;
+    owl:a bcube:thesaurusSubset .
+

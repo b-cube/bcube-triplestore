@@ -1,0 +1,81 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:3c33f433-fd38-4a2a-89dc-7aff4bd1fc26> owl:a foaf:Organization ;
+    foaf:name "U.S. Geological Survey" .
+
+<urn:uuid:43b384ae-853c-49f9-bea5-46c5a7cb469d> bcube:dateCreated "2015-08-10T00:35:10.565Z" ;
+    bcube:hasMetadataRecord <urn:uuid:5616dc57-d02b-484e-bdd3-9e72f8c9537f> ;
+    bcube:lastUpdated "2015-08-10T00:35:10.565Z" ;
+    dc:conformsTo <urn:uuid:e3e313fe-dc3b-4f0b-bb8e-086ee0416c39>,
+        <urn:uuid:ff54103b-00b2-4f01-b638-e571ae8ecae4> ;
+    dc:description "This subset of a Landsat-5 image shows part of the upper Klamath Basin. The original images were obtained from the U.S. Geological Survey Earth Resources Observation and Science Center (EROS). EROS is responsible for archive management and distribution of Landsat data products. The Landsat-5 satellite is part of an ongoing mission to provide quality remote sensing data in support of research and applications activities. The launch of Landsat-5 on March 1, 1984 marks the addition of the fifth satellite to the Landsat series. The Landsat-5 satellite carries the Thematic Mapper (TM) sensor. More information on the Landsat program can be found online at http://landsat.usgs.gov/." ;
+    dc:spatial "POLYGON ((-123.3826 41.99176,-123.3826 43.492919,-120.601579 43.492919,-120.601579 41.99176,-123.3826 41.99176))" ;
+    dcterms:publisher <urn:uuid:3c33f433-fd38-4a2a-89dc-7aff4bd1fc26> ;
+    dcterms:references <urn:uuid:ebce22a3-b312-4c6f-acbc-382edc7fdc5c> ;
+    dcterms:title "Upper Klamath Basin Landsat Image for October 22, 2006: Path 44 Row 31" ;
+    esip:eastBound "-120.601579"^^xsd:float ;
+    esip:northBound "43.492919"^^xsd:float ;
+    esip:southBound "41.99176"^^xsd:float ;
+    esip:startDate "2006-10-22"^^xsd:date ;
+    esip:westBound "-123.3826"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:5616dc57-d02b-484e-bdd3-9e72f8c9537f> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-08-10T00:35:10.565Z" ;
+    bcube:lastUpdated "2015-08-10T00:35:10.565Z" ;
+    bcube:originatedFrom <urn:uuid:e66c2b15-58df-4c45-b276-cf36079d8703> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:43b384ae-853c-49f9-bea5-46c5a7cb469d> .
+
+<urn:uuid:e3e313fe-dc3b-4f0b-bb8e-086ee0416c39> bcube:hasType "theme" ;
+    bcube:hasValue "Klamath Basin Restoration Agreement",
+        "Landsat",
+        "inlandWaters" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:e66c2b15-58df-4c45-b276-cf36079d8703> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-10T00:35:10.565Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-10T00:35:10.565Z" ;
+    dc:identifier "urn:sha:f42471119fff313a04eb040836918d8955cf378cba6c686e15f6f266" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://water.usgs.gov/lookup/getspatial?erosl1t_10222006_p44r31_l5_usgs_1_NAD83" .
+
+<urn:uuid:ebce22a3-b312-4c6f-acbc-382edc7fdc5c> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-10T00:35:10.565Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-10T00:35:10.565Z" ;
+    dc:identifier "urn:sha:5768e9e00f6ac13f5638ea4bd5deb8af3637ccd0e49d47b54aa56608" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://water.usgs.gov/GIS/dsdl/erosl1t_10222006_p44r31_l5_usgs_1_NAD83.zip" .
+
+<urn:uuid:ff54103b-00b2-4f01-b638-e571ae8ecae4> bcube:hasType "place" ;
+    bcube:hasValue "Oregon",
+        "Sprague River Basin",
+        "Upper Klamath Basin",
+        "Williamson River Basin",
+        "Wood River Basin" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+

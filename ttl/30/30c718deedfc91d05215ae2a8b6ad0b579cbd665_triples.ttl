@@ -1,0 +1,139 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:1b032059-d134-48ee-9387-8d53c43d453a> owl:a foaf:Organization ;
+    foaf:name "" .
+
+<urn:uuid:23f16465-7042-4412-823a-ea3cff2973a5> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-11-06T23:01:05.828Z" ;
+    bcube:lastUpdated "2015-11-06T23:01:05.828Z" ;
+    bcube:originatedFrom <urn:uuid:36c80fe0-0add-4680-a266-a3449b283203> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:cbb57136-edc7-4ac9-8651-57f0ad9a42bf> .
+
+<urn:uuid:36c80fe0-0add-4680-a266-a3449b283203> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-06T23:01:05.828Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-06T23:01:05.828Z" ;
+    dc:identifier "urn:sha:9b70779306526e9ce1b1013b4bfb2cbeff9001a5e24592e2d0b0eebf" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://meta.geo.census.gov/data/existing/decennial/GEO/CPMB/boundary/C/DC10BLK_C_st04.xml" .
+
+<urn:uuid:48516dfc-2e75-494f-b588-25e1661c7ed1> bcube:hasType "place" ;
+    bcube:hasValue "Apache County",
+        "Cochise County",
+        "Coconino County",
+        "Gila County",
+        "Graham County",
+        "Greenlee County",
+        "La Paz County",
+        "Maricopa County",
+        "Mohave County",
+        "Navajo County",
+        "Pima County",
+        "Pinal County",
+        "Santa Cruz County",
+        "Yavapai County",
+        "Yuma County" ;
+    dc:partOf "INCITS 31:2009" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:cbb57136-edc7-4ac9-8651-57f0ad9a42bf> bcube:dateCreated "2015-11-06T23:01:05.828Z" ;
+    bcube:hasMetadataRecord <urn:uuid:23f16465-7042-4412-823a-ea3cff2973a5> ;
+    bcube:lastUpdated "2015-11-06T23:01:05.828Z" ;
+    dc:conformsTo <urn:uuid:48516dfc-2e75-494f-b588-25e1661c7ed1>,
+        <urn:uuid:cd4e28e2-457e-427a-a453-4385cfe5c6a9>,
+        <urn:uuid:f317ff7e-88bc-471b-a7db-533eeab4327c>,
+        <urn:uuid:feb60258-b36f-434e-92ca-2bd9309bb9d7> ;
+    dc:description "These large-scale maps show the boundaries and numbers for all census blocks within an entity. In addition to state and county, these maps show the boundaries, names and codes for American Indian areas, Alaska Native areas, Hawaiian home lands, county subdivisions, places and census tracts. These maps also show and label base features, such as roads, railroads and hydrography. The intent of this series is to show each entity on the fewest number of map sheets possible and at the maximum practical scale, depending on the size and shape of the entity and the density of the census blocks it contains. Census block density affects the display of the census blocks numbers and feature identifiers. Each entity is covered by one or more parent map sheets at a single scale. Inset map sheets at larger scales were created as required to show the map content described above. An index map showing the sheet configuration is included for all entities requiring more than one parent map sheet. The map sheet size is 36 x 32 inches. Each of these large format maps is produced in Adobe's portable document format (PDF). These georeferenced PDF files were created in compliance with the OGC PDF Geo-registration Encoding Best Practice Version 2.2 (OGC project document reference number OGC 08-139r2)." ;
+    dc:spatial "POLYGON ((-114.816591 31.332177,-114.816591 37.00426,-109.045223 37.00426,-109.045223 31.332177,-114.816591 31.332177))" ;
+    dcterms:publisher <urn:uuid:1b032059-d134-48ee-9387-8d53c43d453a> ;
+    dcterms:references <urn:uuid:d4868aba-6df9-4a03-9faa-3e35d9cc0dc7>,
+        <urn:uuid:dac50bc8-f666-499d-8479-55ba918a5154> ;
+    dcterms:title "2010 Census - Census Block Maps for Arizona (Counties or County Equivalents)" ;
+    esip:eastBound "-109.045223"^^xsd:float ;
+    esip:endDate "2011-05-01"^^xsd:date ;
+    esip:northBound "37.00426"^^xsd:float ;
+    esip:southBound "31.332177"^^xsd:float ;
+    esip:startDate "2011-05-01"^^xsd:date ;
+    esip:westBound "-114.816591"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:cd4e28e2-457e-427a-a453-4385cfe5c6a9> bcube:hasType "theme" ;
+    bcube:hasValue "Boundaries" ;
+    dc:partOf "ISO 19115 Topic Categories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:d4868aba-6df9-4a03-9faa-3e35d9cc0dc7> dcterms:references <urn:uuid:f9b95e39-c85b-4062-a5fb-a6af1ca87122> ;
+    owl:a bibo:WebPage .
+
+<urn:uuid:dac50bc8-f666-499d-8479-55ba918a5154> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-06T23:01:05.828Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-06T23:01:05.828Z" ;
+    dc:identifier "urn:sha:8160a6fbe8aa93e1d4202d5cae56d6e884a9308f47550cea720f0048" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www.census.gov/geo/www/maps/DC10_GUBlkMap/dc10blk_main.html" .
+
+<urn:uuid:f317ff7e-88bc-471b-a7db-533eeab4327c> bcube:hasType "theme" ;
+    bcube:hasValue "2010 Census",
+        "2010 Census publication map",
+        "Decennial",
+        "Summary File 1",
+        "Summary File 2",
+        "borough",
+        "boundary",
+        "census area",
+        "census block",
+        "census geography",
+        "city and burough",
+        "county",
+        "county-based",
+        "data dissemination",
+        "district",
+        "island",
+        "map",
+        "municipality",
+        "municipio",
+        "parish",
+        "statistical" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:f9b95e39-c85b-4062-a5fb-a6af1ca87122> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-06T23:01:05.828Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-06T23:01:05.828Z" ;
+    dc:identifier "urn:sha:4b6f1996c5e4433376813987b915617911bc6d54a99ebc24be46ef45" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www.census.gov/geo/www/maps/DC10_GUBlkMap/county/dc10blk_st04_county.html" .
+
+<urn:uuid:feb60258-b36f-434e-92ca-2bd9309bb9d7> bcube:hasType "place" ;
+    bcube:hasValue "AZ",
+        "Arizona" ;
+    dc:partOf "INCITS 38:2009" ;
+    owl:a bcube:thesaurusSubset .
+

@@ -1,0 +1,97 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:017b8924-371d-4c7d-bac9-c812052b2d14> bcube:hasType "theme" ;
+    bcube:hasValue "Area hydrography identifier",
+        "County ANSI Code",
+        "County FIPS Code",
+        "County or equivalent entity",
+        "Hydrography",
+        "Land/water flag",
+        "Permanent face ID",
+        "State ANSI Code",
+        "State FIPS Code",
+        "Table",
+        "Topological Faces" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:06aae39f-b4c4-42b4-a059-d66f3053bf80> owl:a foaf:Organization ;
+    foaf:name "" .
+
+<urn:uuid:1c3f0d83-9a42-41df-ac7b-709e9404a524> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-11-08T06:46:30.081Z" ;
+    bcube:lastUpdated "2015-11-08T06:46:30.081Z" ;
+    bcube:originatedFrom <urn:uuid:9db98711-e39f-44bb-9878-8f06755c18af> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:6f4c594e-9ef7-427f-bf70-9f20f40db11c> .
+
+<urn:uuid:6f4c594e-9ef7-427f-bf70-9f20f40db11c> bcube:dateCreated "2015-11-08T06:46:30.081Z" ;
+    bcube:hasMetadataRecord <urn:uuid:1c3f0d83-9a42-41df-ac7b-709e9404a524> ;
+    bcube:lastUpdated "2015-11-08T06:46:30.081Z" ;
+    dc:conformsTo <urn:uuid:017b8924-371d-4c7d-bac9-c812052b2d14>,
+        <urn:uuid:b163085a-6518-479c-bcf5-3570939b5f49>,
+        <urn:uuid:d563f692-b920-4977-83bf-f6a3d4eb75d4> ;
+    dc:description "The TIGER/Line relationship files are an extract of selected geographic information from the Census MAF/TIGER database. Each TIGER/Line relationship file is designed to stand alone as an independent data set or can be used jointly with the shapefiles." ;
+    dc:spatial "POLYGON ((-87.421989 32.831522,-87.421989 33.246926,-86.876023 33.246926,-86.876023 32.831522,-87.421989 32.831522))" ;
+    dcterms:publisher <urn:uuid:06aae39f-b4c4-42b4-a059-d66f3053bf80> ;
+    dcterms:references <urn:uuid:87206ce5-322a-4211-a093-fcee0c2fa602> ;
+    dcterms:title "TIGER/Line Shapefile, 2007, county, Bibb County, Topological Faces-Area Hydrography" ;
+    esip:eastBound "-86.876023"^^xsd:float ;
+    esip:endDate "2007-07-01"^^xsd:date ;
+    esip:northBound "33.246926"^^xsd:float ;
+    esip:southBound "32.831522"^^xsd:float ;
+    esip:startDate "2007-01-01"^^xsd:date ;
+    esip:westBound "-87.421989"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:87206ce5-322a-4211-a093-fcee0c2fa602> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-08T06:46:30.081Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-08T06:46:30.081Z" ;
+    dc:identifier "urn:sha:f32345d8981d361d0ae5eca21e8660fa193f92d42101c631e387a72b" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www2.census.gov/geo/tiger/TIGER2007FE/01_ALABAMA/01007_Bibb/fe_2007_01007_facesah.zip" .
+
+<urn:uuid:9db98711-e39f-44bb-9878-8f06755c18af> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-08T06:46:30.081Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-08T06:46:30.081Z" ;
+    dc:identifier "urn:sha:451daa1c68b0656fdb72128c0c04c4999a5c0fbf40c7aeac648c4c86" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://meta.geo.census.gov/data/existing/decennial/GEO/GPMB/TIGERline/fe_2007/facesah/fe_2007_01007_facesah_url.dbf.xml" .
+
+<urn:uuid:b163085a-6518-479c-bcf5-3570939b5f49> bcube:hasType "theme" ;
+    bcube:hasValue "boundaries",
+        "inlandWaters" ;
+    dc:partOf "ISO 19115 Topic Categories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:d563f692-b920-4977-83bf-f6a3d4eb75d4> bcube:hasType "place" ;
+    bcube:hasValue "01007",
+        "Bibb",
+        "County or Equivalent Entity",
+        "U.S.",
+        "United States" ;
+    dc:partOf "FIPS Publication 5-2, FIPS Publication 6-4, FIPS Publication 8-6, FIPS Publication 9-1" ;
+    owl:a bcube:thesaurusSubset .
+

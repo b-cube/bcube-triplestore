@@ -1,0 +1,91 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:11fb3094-034a-4133-9fb9-a1ed240aaf7e> bcube:hasType "place" ;
+    bcube:hasValue "North Dakota" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:1b745063-0304-49ee-a30d-1ab410fb0d65> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-03-06T04:38:22.7Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-03-06T04:38:22.7Z" ;
+    dc:identifier "urn:sha:0f5e88217bb3ec986409fe3250b1d800a8fe658632eea8e97a8a0b13" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://catalog.data.gov/harvest/object/9d411444-51f2-4c1f-b4d4-9063399bcd5f" .
+
+<urn:uuid:6610d434-1f26-44f7-bf60-7807abc1c25f> bcube:hasValue "inlandWaters" ;
+    dc:partOf "IsoTopicCategories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:71ed976c-5859-4f5c-9975-ea0ca3b4fb5a> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-03-06T04:38:22.7Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-03-06T04:38:22.7Z" ;
+    dc:identifier "urn:sha:7cce5b94a157cc554291772b808bce37ea24e5fea08f4309574368eb" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www.nd.gov/gis" .
+
+<urn:uuid:8a666533-4af7-4293-969c-0315e86007a9> a "ISO 19115:2003/19139" ;
+    bcube:dateCreated "2015-03-06T04:38:22.7Z" ;
+    bcube:lastUpdated "2015-03-06T04:38:22.7Z" ;
+    bcube:originatedFrom <urn:uuid:1b745063-0304-49ee-a30d-1ab410fb0d65> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:f621b076-0ee5-4c68-bb7d-531d05cae9e3> .
+
+<urn:uuid:e2c3f876-538d-4e43-82a1-e8e4e3f32d52> bcube:hasType "theme" ;
+    bcube:hasValue "Canal",
+        "Double-line stream",
+        "Hydrography",
+        "Intracoastal Waterway",
+        "Lake",
+        "Marsh",
+        "Pond",
+        "Reservoir",
+        "River",
+        "Shoreline",
+        "Stream",
+        "Swamp",
+        "Water",
+        "inlandWaters" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:f621b076-0ee5-4c68-bb7d-531d05cae9e3> bcube:dateCreated "2015-03-06T04:38:22.7Z" ;
+    bcube:hasMetadataRecord <urn:uuid:8a666533-4af7-4293-969c-0315e86007a9> ;
+    bcube:lastUpdated "2015-03-06T04:38:22.7Z" ;
+    dc:conformsTo <urn:uuid:11fb3094-034a-4133-9fb9-a1ed240aaf7e>,
+        <urn:uuid:6610d434-1f26-44f7-bf60-7807abc1c25f>,
+        <urn:uuid:e2c3f876-538d-4e43-82a1-e8e4e3f32d52>,
+        <urn:uuid:fd16f930-7352-4363-bf8c-ef19cfe96964> ;
+    dc:description "This data set was designed for cartographic presentation only and should not be used for hydrologic analysis. 1/31/08 - Removed USGS fields as this dataset has changed considerably from it's original USGS format - Water bodies w/same flow type and feature type have been merged into single entities. For example, water bodies split by a road or swamp feature, but are actually a single lake are merged to one feature - Added Label field to make it easier to symbolize - i.e. you can label lakes but exclude linear river features that are being labeled in the generalized rivers and streams layer - Changed field names to 10 characters or less for ease of conversion to shapefiles - Alias' added so above field name changes were easier to interpret The data set portrays the polygon water features (lakes, reservoirs, and rivers) of North Dakota. The file was produced by joining the individual State hydrography layers from the 1:2,000,000-scale Digital Line Graph (DLG) data produced by the USGS. This data setwas formerly distributed as Hydrography Features of the United States. This is a revised version of the November 1999 data set." ;
+    dc:spatial "POLYGON ((170 17,170 72,-64 72,-64 17,170 17))" ;
+    dcterms:references <urn:uuid:71ed976c-5859-4f5c-9975-ea0ca3b4fb5a> ;
+    dcterms:title "Generalized Lakes, Reservoirs, and Rivers" ;
+    esip:eastBound "-64.0"^^xsd:float ;
+    esip:northBound "72.0"^^xsd:float ;
+    esip:southBound "17.0"^^xsd:float ;
+    esip:westBound "170.0"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:fd16f930-7352-4363-bf8c-ef19cfe96964> bcube:hasType "place" ;
+    bcube:hasValue "North Dakota" ;
+    owl:a bcube:thesaurusSubset .
+

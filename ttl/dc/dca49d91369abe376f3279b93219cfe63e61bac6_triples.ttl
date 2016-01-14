@@ -1,0 +1,89 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:05508e26-a37f-4838-9979-097eaa9c27ab> owl:a foaf:Organization ;
+    foaf:name "" .
+
+<urn:uuid:38f26f4f-1c5e-43b4-8de3-1bb325936bad> bcube:hasType "theme" ;
+    bcube:hasValue "boundaries" ;
+    dc:partOf "ISO 19115 Topic Categories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:465ef9ff-501f-4358-b6fd-1ffe94c86f43> bcube:hasType "theme" ;
+    bcube:hasValue "Block",
+        "Census Block",
+        "County or equivalent entity",
+        "Polygon" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:607ce2a1-5cb2-483b-a6d8-ec0771b9a2f0> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-11-06T12:57:34.654Z" ;
+    bcube:lastUpdated "2015-11-06T12:57:34.654Z" ;
+    bcube:originatedFrom <urn:uuid:645529f9-5bc7-4dec-8b6d-064a99a07070> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:d81d3f99-db48-4282-9b28-fb1715a31ef8> .
+
+<urn:uuid:645529f9-5bc7-4dec-8b6d-064a99a07070> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-06T12:57:34.654Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-06T12:57:34.654Z" ;
+    dc:identifier "urn:sha:0e34879dbfc0e1b2d9b3e9659a2bdb512b1a437a2c05eb264b504b82" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://meta.geo.census.gov/data/existing/decennial/GEO/GPMB/TIGERline/fe_2008/tabblock/tl_2008_01027_tabblock_url.shp.xml" .
+
+<urn:uuid:c74742ef-6433-4eb1-895c-ca0ce1769a78> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-06T12:57:34.654Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-06T12:57:34.654Z" ;
+    dc:identifier "urn:sha:ff6d73e58e601578b74de20ca00196475143c7efcaac45bf8822930e" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www2.census.gov/geo/tiger/TIGER2008/01_ALABAMA/01027_Clay_County/tl_2008_01027_tabblock.zip" .
+
+<urn:uuid:ca7672c3-9524-4de3-ae9c-87d64fc05e97> bcube:hasType "place" ;
+    bcube:hasValue "01027",
+        "Clay",
+        "County or Equivalent Entity",
+        "U.S.",
+        "United States" ;
+    dc:partOf "FIPS Publication 5-2, FIPS Publication 6-4, FIPS Publication 8-6, FIPS Publication 9-1,FIPS Publication55-4" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:d81d3f99-db48-4282-9b28-fb1715a31ef8> bcube:dateCreated "2015-11-06T12:57:34.654Z" ;
+    bcube:hasMetadataRecord <urn:uuid:607ce2a1-5cb2-483b-a6d8-ec0771b9a2f0> ;
+    bcube:lastUpdated "2015-11-06T12:57:34.654Z" ;
+    dc:conformsTo <urn:uuid:38f26f4f-1c5e-43b4-8de3-1bb325936bad>,
+        <urn:uuid:465ef9ff-501f-4358-b6fd-1ffe94c86f43>,
+        <urn:uuid:ca7672c3-9524-4de3-ae9c-87d64fc05e97> ;
+    dc:description "The TIGER/Line Shapefiles are an extract of selected geographic and cartographic information from the Census MAF/TIGER database. The Census MAF/TIGER database represents a seamless national file with no overlaps or gaps between parts. However, each TIGER/Line Shapefile is designed to stand alone as an independent data set or the shapefiles can be combined to cover the whole nation." ;
+    dc:spatial "POLYGON ((-86.17437 33.09026,-86.17437 33.498904,-85.641129 33.498904,-85.641129 33.09026,-86.17437 33.09026))" ;
+    dcterms:publisher <urn:uuid:05508e26-a37f-4838-9979-097eaa9c27ab> ;
+    dcterms:references <urn:uuid:c74742ef-6433-4eb1-895c-ca0ce1769a78> ;
+    dcterms:title "TIGER/Line Shapefile, 2008, county, Clay County, AL, Block" ;
+    esip:eastBound "-85.641129"^^xsd:float ;
+    esip:endDate "2008-07-01"^^xsd:date ;
+    esip:northBound "33.498904"^^xsd:float ;
+    esip:southBound "33.09026"^^xsd:float ;
+    esip:startDate "2008-01-01"^^xsd:date ;
+    esip:westBound "-86.17437"^^xsd:float ;
+    owl:a dcat:Dataset .
+

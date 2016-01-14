@@ -1,0 +1,71 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:295a0f32-7d4f-463f-a64d-6e0081058659> bcube:hasType "theme" ;
+    bcube:hasValue "census feature class code (cfcc)",
+        "feature identifier",
+        "line feature",
+        "street centerline",
+        "street segment",
+        "tiger/line" ;
+    dc:partOf "keyword" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:490e9224-9735-4686-b6a0-edc8a5a7fb8c> a "ISO 19115:2003/19139" ;
+    bcube:dateCreated "2015-08-04T21:46:46.856Z" ;
+    bcube:lastUpdated "2015-08-04T21:46:46.856Z" ;
+    bcube:originatedFrom <urn:uuid:8e455b59-38eb-4ac2-abd5-cff8380d612b> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:8bccc0a9-a07d-482e-9e9b-640c658e4028> .
+
+<urn:uuid:8bccc0a9-a07d-482e-9e9b-640c658e4028> bcube:dateCreated "2015-08-04T21:46:46.856Z" ;
+    bcube:hasMetadataRecord <urn:uuid:490e9224-9735-4686-b6a0-edc8a5a7fb8c> ;
+    bcube:lastUpdated "2015-08-04T21:46:46.856Z" ;
+    dc:conformsTo <urn:uuid:295a0f32-7d4f-463f-a64d-6e0081058659>,
+        <urn:uuid:cf23e981-085d-476a-9164-4ad4c7f8401f>,
+        <urn:uuid:f49ba8c6-dadc-497a-baf5-6ad0720d0ab8> ;
+    dc:description "Roads of California." ;
+    dc:spatial "POLYGON ((-124 32,-124 42,-114 42,-114 32,-124 32))" ;
+    dcterms:title "Tiger roads" ;
+    esip:eastBound "-114.0"^^xsd:float ;
+    esip:northBound "42.0"^^xsd:float ;
+    esip:southBound "32.0"^^xsd:float ;
+    esip:westBound "-124.0"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:8e455b59-38eb-4ac2-abd5-cff8380d612b> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-04T21:46:46.856Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-04T21:46:46.856Z" ;
+    dc:identifier "urn:sha:a151f9e1d61b3c908b9291c325883a1a74f44dea5e09f3e1d0ddba2c" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "https://catalog.data.gov/harvest/object/d4a16c0d-9064-4bd7-89d0-732b9a445c7a" .
+
+<urn:uuid:cf23e981-085d-476a-9164-4ad4c7f8401f> bcube:hasType "theme" ;
+    bcube:hasValue "society",
+        "transportation" ;
+    dc:partOf "ISO TOPIC CATEGORIES" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:f49ba8c6-dadc-497a-baf5-6ad0720d0ab8> bcube:hasType "theme" ;
+    bcube:hasValue "Transportation",
+        "society",
+        "transportation" ;
+    dc:partOf "ceres:themes" ;
+    owl:a bcube:thesaurusSubset .
+

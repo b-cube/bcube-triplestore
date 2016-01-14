@@ -1,0 +1,60 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:191ebec4-b94d-41fc-8f17-d103511b5889> owl:a foaf:Organization ;
+    foaf:name "" .
+
+<urn:uuid:260db7ef-e03d-4718-83a1-4ef7e3783dc8> bcube:hasType "place" ;
+    bcube:hasValue "Ann Arbor" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:49ea9bfb-dc4a-431a-b228-6e83e9619240> bcube:dateCreated "2015-10-29T23:32:16.886Z" ;
+    bcube:hasMetadataRecord <urn:uuid:fe816964-87a3-4ae6-86de-5fbdf4e95dd4> ;
+    bcube:lastUpdated "2015-10-29T23:32:16.886Z" ;
+    dc:conformsTo <urn:uuid:260db7ef-e03d-4718-83a1-4ef7e3783dc8>,
+        <urn:uuid:6e8f965a-ddbe-4e79-88ec-274b4af5a182> ;
+    dc:description "The City of Ann Arbor created the Ann Arbor DDA (Ordinance No. 14-82) in 1982 and renewed it in 2003 with a substantial amendment to its original Development Plan. Over its history, the DDA has been a significant and influential catalyst for the revitalization and renewal of downtown Ann Arbor. The Ann Arbor Downtown Development District encompasses all or part of 66 city blocks, or approximately 271 acres, of which 80 acres are public rights-of-way." ;
+    dc:spatial "POLYGON ((-83.754133 42.272584,-83.754133 42.285079,-83.730953 42.285079,-83.730953 42.272584,-83.754133 42.272584))" ;
+    dcterms:publisher <urn:uuid:191ebec4-b94d-41fc-8f17-d103511b5889> ;
+    dcterms:title "Downtown Development Authority" ;
+    esip:eastBound "-83.730953"^^xsd:float ;
+    esip:northBound "42.285079"^^xsd:float ;
+    esip:southBound "42.272584"^^xsd:float ;
+    esip:westBound "-83.754133"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:6e8f965a-ddbe-4e79-88ec-274b4af5a182> bcube:hasType "theme" ;
+    bcube:hasValue "DDA",
+        "Downtown" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:aa9e3450-07e3-45d2-9081-b1fc520e233f> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-10-29T23:32:16.886Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-10-29T23:32:16.886Z" ;
+    dc:identifier "urn:sha:70998f810a1a147e5bda862b886233a9bc262e2e6916121d3035551e" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://data.a2gov.org/feeds/GIS/AA%20DDA%20Boundary/AA_DDA_Boundary.shp.xml" .
+
+<urn:uuid:fe816964-87a3-4ae6-86de-5fbdf4e95dd4> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-10-29T23:32:16.886Z" ;
+    bcube:lastUpdated "2015-10-29T23:32:16.886Z" ;
+    bcube:originatedFrom <urn:uuid:aa9e3450-07e3-45d2-9081-b1fc520e233f> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:49ea9bfb-dc4a-431a-b228-6e83e9619240> .
+

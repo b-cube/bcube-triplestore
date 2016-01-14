@@ -1,0 +1,104 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:0401827d-c783-43fc-b5f8-9b2de91ffaa2> a "ISO 19115:2003/19139" ;
+    bcube:dateCreated "2015-11-03T00:31:03.217Z" ;
+    bcube:lastUpdated "2015-11-03T00:31:03.217Z" ;
+    bcube:originatedFrom <urn:uuid:2318fc9d-7cf8-4db8-81a3-6a0e6747ed26> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:6f9cff91-5a1f-40df-a939-9735106b4215> .
+
+<urn:uuid:2318fc9d-7cf8-4db8-81a3-6a0e6747ed26> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-03T00:31:03.217Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-03T00:31:03.217Z" ;
+    dc:identifier "urn:sha:59c89ad7f994acb05def28c27e7b3f6b2fb03a033279e72d629cf348" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "https://bluehub.jrc.ec.europa.eu/erddap/metadata/iso19115/xml/ais_hi_20112012_iso19115.xml" .
+
+<urn:uuid:5d6f42bc-039e-459c-96a9-a9f79a4cc535> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-03T00:31:03.217Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-03T00:31:03.217Z" ;
+    dc:identifier "urn:sha:70f2dcdb28214bea94ccb257e794bf0342903298ca21f000fdbb02c0" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "https://bluehub.jrc.ec.europa.eu/erddap/tabledap/ais_hi_20112012.graph" .
+
+<urn:uuid:6f9cff91-5a1f-40df-a939-9735106b4215> bcube:dateCreated "2015-11-03T00:31:03.217Z" ;
+    bcube:hasMetadataRecord <urn:uuid:0401827d-c783-43fc-b5f8-9b2de91ffaa2> ;
+    bcube:lastUpdated "2015-11-03T00:31:03.217Z" ;
+    dc:conformsTo <urn:uuid:891a95df-4081-4f66-837a-6e7d5f64b02f>,
+        <urn:uuid:e094f1f8-796c-4917-84b0-83e257aed10c>,
+        <urn:uuid:f8ba76f7-e944-4cae-bec6-239c6ec632af>,
+        <urn:uuid:fa09e7d8-c38a-497e-8fb4-12db9463c4de> ;
+    dc:description "Ship position data from a satellite-based Automatic Identification System (AIS) were obtained jointly by PacIOOS (J. Potemra), SOEST/ORE of the University of Hawaii (E. Roth), and the Papahanaumokuakea Marine National Monument (PNMN) (D. Graham) through a one-time purchase from ORBCOMM LLC. The purchase agreement was made in late 2012 and was for a 30-by-30 degree section of historical AIS data that included the region of the Hawaiian Islands. The data include AIS long and unchecked reports for a one year period: August 2011 through mid-August 2012. The raw, monthly GPS files were locally converted to NetCDF for the PacIOOS data servers. Due to vendor constraints, release of the raw data is limited." ;
+    dc:identifier "ais_hi_20112012" ;
+    dc:spatial "POLYGON ((-178 5,-178 35,-152 35,-152 5,-178 5))" ;
+    dcterms:references <urn:uuid:5d6f42bc-039e-459c-96a9-a9f79a4cc535>,
+        <urn:uuid:e8fd6672-39ba-4b08-9385-41974fffa112> ;
+    dcterms:title "AIS Ship Traffic: Hawaii: 2011-2012" ;
+    esip:eastBound "-152.0"^^xsd:float ;
+    esip:endDate "2012-08-16"^^xsd:date ;
+    esip:northBound "35.0"^^xsd:float ;
+    esip:southBound "5.0"^^xsd:float ;
+    esip:startDate "2011-08-01"^^xsd:date ;
+    esip:westBound "-178.0"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:891a95df-4081-4f66-837a-6e7d5f64b02f> bcube:hasType "theme" ;
+    bcube:hasValue "latitude",
+        "longitude",
+        "platform_course",
+        "platform_speed_wrt_ground",
+        "time" ;
+    dc:partOf "CF" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:e094f1f8-796c-4917-84b0-83e257aed10c> bcube:hasType "theme" ;
+    bcube:hasValue "atmosphere",
+        "biology",
+        "biosphere",
+        "earth science",
+        "environment",
+        "ocean" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:e8fd6672-39ba-4b08-9385-41974fffa112> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-03T00:31:03.217Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-03T00:31:03.217Z" ;
+    dc:identifier "urn:sha:28fd876b5dee4034e002b0aee17044a1b8b95da7573defa3d0d13a10" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "https://bluehub.jrc.ec.europa.eu/erddap/tabledap/ais_hi_20112012.html" .
+
+<urn:uuid:f8ba76f7-e944-4cae-bec6-239c6ec632af> bcube:hasValue "geoscientificInformation" ;
+    dc:partOf "IsoTopicCategories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:fa09e7d8-c38a-497e-8fb4-12db9463c4de> bcube:hasType "project" ;
+    bcube:hasValue "University of Hawaii" ;
+    owl:a bcube:thesaurusSubset .
+

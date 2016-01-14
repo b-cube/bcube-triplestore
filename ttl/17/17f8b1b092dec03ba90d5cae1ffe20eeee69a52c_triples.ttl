@@ -1,0 +1,61 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:03b7dd09-5b14-4ce3-add7-7b02fd8382a1> bcube:hasValue "geoscientificInformation" ;
+    dc:partOf "IsoTopicCategories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:253df321-eada-4dac-b61b-342b668bb696> a "ISO 19115:2003/19139" ;
+    bcube:dateCreated "2014-10-30T01:13:13.241Z" ;
+    bcube:lastUpdated "2014-10-30T01:13:13.241Z" ;
+    bcube:originatedFrom <urn:uuid:5878db76-b8ed-4d45-bf42-58dc0beacefb> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:806a0d9a-c8f0-480c-8885-91dbeb844487> .
+
+<urn:uuid:5878db76-b8ed-4d45-bf42-58dc0beacefb> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2014-10-30T01:13:13.241Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2014-10-30T01:13:13.241Z" ;
+    dc:identifier "urn:sha:c2451f1fe89a47d01117c380f04331f6e23c30299054b034f1f8474d" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www.usgs.gov/science/iso.php?cite=4523" .
+
+<urn:uuid:806a0d9a-c8f0-480c-8885-91dbeb844487> bcube:dateCreated "2014-10-30T01:13:13.241Z" ;
+    bcube:hasMetadataRecord <urn:uuid:253df321-eada-4dac-b61b-342b668bb696> ;
+    bcube:lastUpdated "2014-10-30T01:13:13.241Z" ;
+    dc:conformsTo <urn:uuid:03b7dd09-5b14-4ce3-add7-7b02fd8382a1>,
+        <urn:uuid:82e1bbc7-1904-4a4d-b0e5-34f6ee6a6438> ;
+    dc:description "Summarizes the expected value over the next decade of the 3D Elevation Program for this state." ;
+    dc:spatial "POLYGON ((-91.51 36.97,-91.51 42.51,-87.5 42.51,-87.5 36.97,-91.51 36.97))" ;
+    dcterms:title "The 3D Elevation Program: summary for Illinois" ;
+    esip:eastBound "-87.5"^^xsd:float ;
+    esip:northBound "42.51"^^xsd:float ;
+    esip:southBound "36.97"^^xsd:float ;
+    esip:westBound "-91.51"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:82e1bbc7-1904-4a4d-b0e5-34f6ee6a6438> bcube:hasType "place" ;
+    bcube:hasValue "LIDAR",
+        "fUS17 = Illinois",
+        "geography",
+        "interagency programs",
+        "strategic plans",
+        "topography" ;
+    dc:partOf "Augmented FIPS 10-4 and FIPS 6-4" ;
+    owl:a bcube:thesaurusSubset .
+

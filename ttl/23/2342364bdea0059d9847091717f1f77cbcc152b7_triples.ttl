@@ -1,0 +1,59 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:51d7a11d-33d9-4c90-8e28-875315e60eda> a "ISO 19115:2003/19139" ;
+    bcube:dateCreated "2015-07-31T04:17:13.264Z" ;
+    bcube:lastUpdated "2015-07-31T04:17:13.264Z" ;
+    bcube:originatedFrom <urn:uuid:faf16517-4dd5-4957-846d-2b080fb16598> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:99441589-4a47-4d6b-910b-525b4a48e394> .
+
+<urn:uuid:6f79303c-3542-4ec6-8b1b-b0c1bd8ac6eb> bcube:hasType "place" ;
+    bcube:hasValue "California" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:99441589-4a47-4d6b-910b-525b4a48e394> bcube:dateCreated "2015-07-31T04:17:13.264Z" ;
+    bcube:hasMetadataRecord <urn:uuid:51d7a11d-33d9-4c90-8e28-875315e60eda> ;
+    bcube:lastUpdated "2015-07-31T04:17:13.264Z" ;
+    dc:conformsTo <urn:uuid:6f79303c-3542-4ec6-8b1b-b0c1bd8ac6eb>,
+        <urn:uuid:d23b955e-f3ac-49d5-afc8-7006172ea79c> ;
+    dc:description "These data are a Kernel Density layers produced using ArcGIS. The Kernel analysis is a nonparametric statistical method for estimating probability densities from a set of points. Conceptually, a smooth raster surface is fitted over each point. The surface value is highest at the location of the point and diminishes with increasing distance (i.e.search radius), eventually reaching zero. A default value is calculated by the analysis tool for the search radius based on the input data; increasing the radius has little affect on the density value. Although more points will fall inside a larger search radius the number will be divided by a larger area when calculating density resulting in a more generalized output raster. The volume under the surface equals the weighted value for the point. The weights were created by Knowledge Networks and applied to the points based on demographics. The density of the output raster is calculated by adding the values of all the individual surfaces where they overlap. The point's weighted value determines the number of times to count the point. For example, a weighted value of 1.5 would cause the point to be counted one and half times. The resulting dataset is a smooth raster surface depicting the intensity use or density of an activity. Based on previous experience and after conducting some tests, all of the activity datasets were given a search radius of one mile. In discussing a similar project with the Oregon Department of Parks and Recreation we discovered that most visitors to the coast stay within a mile of their activity location. This distance also proved to be a good match to the mapped activities.Link to the Dataset - ftp://ftp.dfg.ca.gov/R7_MR/NONCONSUMPTIVE/NCCSR/Photo.zip" ;
+    dc:spatial "POLYGON ((-123.758972 37.126117,-123.758972 39.059291,-122.208729 39.059291,-122.208729 37.126117,-123.758972 37.126117))" ;
+    dcterms:title "An Economic and Spatial Baseline of Coastal Recreation in the North Central Coast of California Photography" ;
+    esip:eastBound "-122.208729"^^xsd:float ;
+    esip:northBound "39.059291"^^xsd:float ;
+    esip:southBound "37.126117"^^xsd:float ;
+    esip:westBound "-123.758972"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:d23b955e-f3ac-49d5-afc8-7006172ea79c> bcube:hasValue "environment",
+        "location",
+        "oceans",
+        "planningCadastre" ;
+    dc:partOf "IsoTopicCategories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:faf16517-4dd5-4957-846d-2b080fb16598> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-07-31T04:17:13.264Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-07-31T04:17:13.264Z" ;
+    dc:identifier "urn:sha:21f202c77a252464bf434c34399d08845dedf68ee36fc2e2648100fa" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "https://catalog.data.gov/harvest/object/ae677f09-5ad2-4503-bd5f-15af9acda253" .
+

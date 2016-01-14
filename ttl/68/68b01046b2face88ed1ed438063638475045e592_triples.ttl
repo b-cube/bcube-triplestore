@@ -1,0 +1,115 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:1266ce08-d957-4438-96fb-2da887529994> bcube:hasType "stratum" ;
+    bcube:hasValue "Sediment Water Interface",
+        "Surface Sediment Mapping" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:1427899d-2f3d-4ca9-8be1-258d48f2e395> owl:a foaf:Organization ;
+    foaf:name "NOAA's Ocean Service, Office for Coastal Management (OCM)" .
+
+<urn:uuid:34d1b6b9-2469-4849-9dbb-1e8366bf5656> bcube:hasType "theme" ;
+    bcube:hasValue "Benthic Habitat",
+        "Bottom Sediments",
+        "Environmental Monitoring" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:35e789d8-8392-44d3-9d05-15654bee7362> bcube:dateCreated "2015-08-05T11:18:20.923Z" ;
+    bcube:hasMetadataRecord <urn:uuid:d6663948-0a7a-4cae-a335-402eb9e8d32a> ;
+    bcube:lastUpdated "2015-08-05T11:18:20.923Z" ;
+    dc:conformsTo <urn:uuid:1266ce08-d957-4438-96fb-2da887529994>,
+        <urn:uuid:34d1b6b9-2469-4849-9dbb-1e8366bf5656>,
+        <urn:uuid:74fd1dec-ec62-4e38-9f25-185508120bcd>,
+        <urn:uuid:bd298a08-5a5d-4303-899b-27648eba2da7> ;
+    dc:description "The area of coverage consists of 38 square miles of benthic habitat mapped from 2003 to 2004 along the middle to lower Delaware Bay Coast. The bottom sediment map was constructed by the utilization of a Roxann Seabed Classification System and extensive sediment grab samples. Data was collected in a gridded trackline configuration, with tracklines spacing of 100 meters parallel to the shoreline and 200 meters perpendicular to the shoreline.This project is an extension of the work currently being performed in Delaware waters by DNREC's Delaware Coastal Program's Delaware Bay Benthic Mapping Project.The bottom sediment point data, which has been classified according to the existing benthic mapping Roxann box plot, are converted from a number that categorizes the point according to its corresponding box (in the Roxann) into a number which reflects the sediment properties of each box in relation to one another. A ranking scale is used to allow a statistical griding scheme to interpolate between sediment data points, while minimizing erroneous sediment classifications and allowing gradational sediment deposits to be grided. A ranking scale from 0 to 28 was used for this project, with 0 representing the finest grained classifications (fluidized clay) and 28 representing the coarsest grained classifications (dense shell material). Table 1 illustrates the distribution of sediment classifications along the ranking scale, which takes into account the relation of sediment types and grain sizes to one another using both the Wentworth Scale and Shepard's classification system. Finer grains are more similar in their deposition environments, such as clay and silts, because they reflect similar current regimes, sorting, and reworking patterns (Poppe et al., 2003). While coarse sediments are much more dissimilar to finer grains, with respect to current velocities, sorting, and winnowing, the finer grains are much more closely related in their sediment diameters that the coarser grains as you increase in Phi size and/or diameter. These account for the close clustering of coarse grained deposit descriptions at the upper end of the ranking scale, while the finer grained sediments show a gradation as you increase in the rating scale.The bottom sediment data is grided in Surfer 8, a surface and terrain modeling program, using block kriging and a nugget effect. This statistical griding technique estimates the average value of a variable within a prescribed local area (Isaaks and Srivastava, 1989). Block kriging utilizes the existing point data values, weights the values of the data depending upon the proximity to the point being estimated, to discretize the local area into an array of estimated data value points and then averaging those individual point estimates together to get an average estimated value over the area of interest (Isaaks and Srivastava, 1989). A variogram is constructed for the data, and the resultant spatial model that is developed from the variogram is used in the block kriging surface model to more accurately interpolate the sediment data . The fitted model was a nugget effect (with an error variance of 21.8%) and a linear model (with a slope of 0.00286 and an anisotropy of 1, which represents a complete lack of spatial correlation). The accuracy of the estimation is dependent upon the grid size of the area of interpolation, the size of each cell within the grid, and the number of discretized data points that are necessary to estimate the cells within that grid spacing. The grid size that was used to interpolate the bottom sediment maps was 442 lines x 454 lines, with a cell size of 44.93 m2. The nugget effect is added to allow the griding to assume there is very little, if any, lateral correlation or trends within the bottom sediment (Isaaks and Srivastava, 1989). The nugget effect model entails a complete lack of spatial correlation; the point data values at any particular location bear no similarity even to adjacent data values (Isaaks and Srivastava, 1989). Without the nugget effect the griding would assume that you could only have a linear progression of sediment types and would insert all the sediment types along the scale between two sediment types (i.e. silty fine to medium sands and fine to medium sand with varing amounts of pebbles would beinserted between fine sand and coarse sand even though that is not what is occurring along the bottom. The sediment data is grided with no drift for the data interpolation, also helping to minimize erroneous classifications. Sediment Classification Ranking Sediment Description 0-11-2 Clay, 2-33-44-55-66-7 Silt, 7-88-9 Sandy Silts,9-1010-11 Fine Sand, 11-1212-13 Silty Fine to Medium Sands, 13-14 Silty Medium Sand, 14-1515-16 Fine to Medium Sand,16-1717-18 Fine to Medium Sand with abundant shell material and/or pebbles, 18-1919-20 Coarse Sand with varying amounts of pebbles, 20-2121-2222-23 Moderate Shell Material/Sandy Pebbles, 23-2424-2525-26 Abundant Shell Material/Gravel 26-2727-28, Dense Oyster Shell" ;
+    dc:spatial "POLYGON ((-75.406713 38.803595,-75.406713 39.204797,-75.16328 39.204797,-75.16328 38.803595,-75.406713 38.803595))" ;
+    dcterms:publisher <urn:uuid:1427899d-2f3d-4ca9-8be1-258d48f2e395> ;
+    dcterms:references <urn:uuid:4d15be9b-9d94-406a-8240-aa6a3cb80a16>,
+        <urn:uuid:7b688f49-b016-417e-a40e-3d3278240e0a> ;
+    dcterms:title "Delaware Bay, Delaware Sediment Distribution 2003 to 2004" ;
+    esip:eastBound "-75.16328"^^xsd:float ;
+    esip:endDate "2004-01-01"^^xsd:date ;
+    esip:northBound "39.204797"^^xsd:float ;
+    esip:southBound "38.803595"^^xsd:float ;
+    esip:startDate "2003-01-01"^^xsd:date ;
+    esip:westBound "-75.406713"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:4d15be9b-9d94-406a-8240-aa6a3cb80a16> dcterms:references <urn:uuid:5632c277-a2be-476f-8580-078c2adaf495> ;
+    owl:a bibo:WebPage .
+
+<urn:uuid:5632c277-a2be-476f-8580-078c2adaf495> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-05T11:18:20.923Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-05T11:18:20.923Z" ;
+    dc:identifier "urn:sha:f51935e6e27588420356e7a8d2f65ff4c63ceeab099adea67c6d17aa" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www.coast.noaa.gov/" .
+
+<urn:uuid:74fd1dec-ec62-4e38-9f25-185508120bcd> bcube:hasType "place" ;
+    bcube:hasValue "Delaware",
+        "Delaware Bay",
+        "Delaware River",
+        "State of Delaware",
+        "State of New Jersey",
+        "USA" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:7b688f49-b016-417e-a40e-3d3278240e0a> dcterms:references <urn:uuid:ace474f2-f0d6-496a-a288-633f8a7f7188> ;
+    owl:a bibo:WebPage .
+
+<urn:uuid:986be51c-97a3-4190-afbc-3b195500fd31> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-05T11:18:20.923Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-05T11:18:20.923Z" ;
+    dc:identifier "urn:sha:18bb5a62612985c525be1fc2b923143d0022590e88d30ac38cca09f7" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://coast.noaa.gov/data/Documents/Metadata/harvest/Benthic/west_shore-meta.xml" .
+
+<urn:uuid:ace474f2-f0d6-496a-a288-633f8a7f7188> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-05T11:18:20.923Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-05T11:18:20.923Z" ;
+    dc:identifier "urn:sha:8e4b33990eea8ae7cb28898a05a2d685398dbe9cd608457869e87504" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "ftp://ftp.coast.noaa.gov/pub/benthic/Benthic_Cover_Data/DE_DelawareBay.zip" .
+
+<urn:uuid:bd298a08-5a5d-4303-899b-27648eba2da7> bcube:hasType "theme" ;
+    bcube:hasValue "environment" ;
+    dc:partOf "ISO 19115 Topic Category" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:d6663948-0a7a-4cae-a335-402eb9e8d32a> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-08-05T11:18:20.923Z" ;
+    bcube:lastUpdated "2015-08-05T11:18:20.923Z" ;
+    bcube:originatedFrom <urn:uuid:986be51c-97a3-4190-afbc-3b195500fd31> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:35e789d8-8392-44d3-9d05-15654bee7362> .
+

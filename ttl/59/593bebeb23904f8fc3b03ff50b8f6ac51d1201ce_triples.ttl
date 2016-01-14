@@ -1,0 +1,88 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:2435d67d-183f-4ebd-94ba-302dc284d565> owl:a foaf:Organization ;
+    foaf:name "" .
+
+<urn:uuid:3654ad78-f305-4b7e-bc5e-aa29d97d26f9> bcube:hasType "place" ;
+    bcube:hasValue "33",
+        "NH",
+        "New Hampshire",
+        "State or Equivalent Entity",
+        "U.S.",
+        "United States" ;
+    dc:partOf "FIPS Publication 5-2, FIPS Publication 6-4, FIPS Publication 8-6, FIPS Publication 9-1,FIPS Publication55-4" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:4ed0f009-6bce-4d73-a54c-07c499952d1d> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-11-08T17:07:31.67Z" ;
+    bcube:lastUpdated "2015-11-08T17:07:31.67Z" ;
+    bcube:originatedFrom <urn:uuid:674b2c26-2025-4d02-8c7a-19c70f92d1d9> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:cd9a04ae-83a8-4ff2-bf77-de24cfbc862b> .
+
+<urn:uuid:5fee1217-a6e7-4380-9e3b-92ffc0ad783f> bcube:hasType "theme" ;
+    bcube:hasValue "Polygon",
+        "State or equivalent entity" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:674b2c26-2025-4d02-8c7a-19c70f92d1d9> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-08T17:07:31.67Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-08T17:07:31.67Z" ;
+    dc:identifier "urn:sha:f4e6a3e66b8c774d57b9a22e55f58a3d364a3c42fb1f7b390c2a4c2d" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://meta.geo.census.gov/data/existing/decennial/GEO/GPMB/TIGERline/fe_2008/county00/tl_2008_33_county00_url.shp.xml" .
+
+<urn:uuid:b0232d79-58ce-4507-855e-dcd58f2285a4> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-08T17:07:31.67Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-08T17:07:31.67Z" ;
+    dc:identifier "urn:sha:c1841b956f0814ba41a8d7a0a68de7122d01d5da2e77681b672236f9" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www2.census.gov/geo/tiger/TIGER2008/33_NEW_HAMPSHIRE/tl_2008_33_county00.zip" .
+
+<urn:uuid:cd9a04ae-83a8-4ff2-bf77-de24cfbc862b> bcube:dateCreated "2015-11-08T17:07:31.67Z" ;
+    bcube:hasMetadataRecord <urn:uuid:4ed0f009-6bce-4d73-a54c-07c499952d1d> ;
+    bcube:lastUpdated "2015-11-08T17:07:31.67Z" ;
+    dc:conformsTo <urn:uuid:3654ad78-f305-4b7e-bc5e-aa29d97d26f9>,
+        <urn:uuid:5fee1217-a6e7-4380-9e3b-92ffc0ad783f>,
+        <urn:uuid:f181a226-8b63-4835-908d-a46390741748> ;
+    dc:description "The TIGER/Line Shapefiles are an extract of selected geographic and cartographic information from the Census MAF/TIGER database. The Census MAF/TIGER database represents a seamless national file with no overlaps or gaps between parts. However, each TIGER/Line Shapefile is designed to stand alone as an independent data set or the shapefiles can be combined to cover the whole nation." ;
+    dc:spatial "POLYGON ((-72.557185 42.696985,-72.557185 45.305476,-70.575094 45.305476,-70.575094 42.696985,-72.557185 42.696985))" ;
+    dcterms:publisher <urn:uuid:2435d67d-183f-4ebd-94ba-302dc284d565> ;
+    dcterms:references <urn:uuid:b0232d79-58ce-4507-855e-dcd58f2285a4> ;
+    dcterms:title "TIGER/Line Shapefile, 2008, 2000 state, New Hampshire, County and Equivalent" ;
+    esip:eastBound "-70.575094"^^xsd:float ;
+    esip:endDate "2008-07-01"^^xsd:date ;
+    esip:northBound "45.305476"^^xsd:float ;
+    esip:southBound "42.696985"^^xsd:float ;
+    esip:startDate "2008-01-01"^^xsd:date ;
+    esip:westBound "-72.557185"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:f181a226-8b63-4835-908d-a46390741748> bcube:hasType "theme" ;
+    bcube:hasValue "boundaries" ;
+    dc:partOf "ISO 19115 Topic Categories" ;
+    owl:a bcube:thesaurusSubset .
+

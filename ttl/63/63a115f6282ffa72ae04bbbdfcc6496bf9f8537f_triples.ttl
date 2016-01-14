@@ -1,0 +1,81 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:2e1fdfba-0dbd-4219-af0d-8eb180dc8ff6> bcube:hasType "place" ;
+    bcube:hasValue "f08045 = Garfield",
+        "f08077 = Mesa",
+        "f08103 = Rio Blanco" ;
+    dc:partOf "Augmented FIPS 10-4 and FIPS 6-4" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:541e22f8-d829-490f-b8eb-67076f639444> owl:a foaf:Organization ;
+    foaf:name "U.S. Geological Survey" .
+
+<urn:uuid:9b96e2e6-f370-49a8-b1e6-2a6b3bee80fb> dcterms:references <urn:uuid:deac08bf-8a13-4706-aa3e-591bc03a4d14> ;
+    owl:a bibo:WebPage .
+
+<urn:uuid:9c36caf1-f0ee-4f85-a5d4-2efe945caf5e> bcube:hasType "theme" ;
+    bcube:hasValue "economic geology",
+        "natural resource assessment",
+        "oil shale resources" ;
+    dc:partOf "USGS Thesaurus" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:a9a150f7-16fd-42c9-8888-dcd27921732c> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2014-07-31T11:38:58.924Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2014-07-31T11:38:58.924Z" ;
+    dc:identifier "urn:sha:21dccc75ee7d4b3ee54a4f7a40dbe1d907cbffb3617cdce8077bc998" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www.usgs.gov/science/xml.php?cite=2166" .
+
+<urn:uuid:dbf64d7f-72e8-445e-9da5-e412344aa9bb> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2014-07-31T11:38:58.924Z" ;
+    bcube:lastUpdated "2014-07-31T11:38:58.924Z" ;
+    bcube:originatedFrom <urn:uuid:a9a150f7-16fd-42c9-8888-dcd27921732c> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:decd4d51-f6b1-41a3-a2f4-6cb5f3dba95b> .
+
+<urn:uuid:deac08bf-8a13-4706-aa3e-591bc03a4d14> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2014-07-31T11:38:58.924Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2014-07-31T11:38:58.924Z" ;
+    dc:identifier "urn:sha:aa27cad95f54603838212add83b36d67caceb319521d68e4513c0b92" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://pubs.usgs.gov/fs/2009/3012/" .
+
+<urn:uuid:decd4d51-f6b1-41a3-a2f4-6cb5f3dba95b> bcube:dateCreated "2014-07-31T11:38:58.924Z" ;
+    bcube:hasMetadataRecord <urn:uuid:dbf64d7f-72e8-445e-9da5-e412344aa9bb> ;
+    bcube:lastUpdated "2014-07-31T11:38:58.924Z" ;
+    dc:conformsTo <urn:uuid:2e1fdfba-0dbd-4219-af0d-8eb180dc8ff6>,
+        <urn:uuid:9c36caf1-f0ee-4f85-a5d4-2efe945caf5e> ;
+    dc:description "We estimated a total of 1.525 trillion barrels of oil are in place in seventeen oil shale zones in this area using a geology-based assessment methodology." ;
+    dc:spatial "POLYGON ((-109 39,-109.0 40.25,-107.5 40.25,-107.5 39.0,-109 39))" ;
+    dcterms:publisher <urn:uuid:541e22f8-d829-490f-b8eb-67076f639444> ;
+    dcterms:references <urn:uuid:9b96e2e6-f370-49a8-b1e6-2a6b3bee80fb> ;
+    dcterms:title "Assessment of In-Place Oil Shale Resources of the Green River Formation, Piceance Basin, Western Colorado" ;
+    esip:eastBound "-107.5"^^xsd:float ;
+    esip:northBound "40.25"^^xsd:float ;
+    esip:southBound "39.0"^^xsd:float ;
+    esip:westBound "-109.0"^^xsd:float ;
+    owl:a dcat:Dataset .
+

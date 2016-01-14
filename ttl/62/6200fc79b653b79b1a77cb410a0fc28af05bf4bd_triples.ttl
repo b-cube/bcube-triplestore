@@ -1,0 +1,70 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:65900241-a822-4a71-a5b2-6f9143704d91> owl:a foaf:Organization ;
+    foaf:name "" .
+
+<urn:uuid:6647e241-fe20-4e00-9055-692f99ac0e0e> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-10-29T23:37:42.007Z" ;
+    bcube:lastUpdated "2015-10-29T23:37:42.007Z" ;
+    bcube:originatedFrom <urn:uuid:9d32a7e8-b78b-44dc-8eab-fdbe5f37d021> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:7de78088-4152-4f31-8ef9-92012daf378d> .
+
+<urn:uuid:7de78088-4152-4f31-8ef9-92012daf378d> bcube:dateCreated "2015-10-29T23:37:42.007Z" ;
+    bcube:hasMetadataRecord <urn:uuid:6647e241-fe20-4e00-9055-692f99ac0e0e> ;
+    bcube:lastUpdated "2015-10-29T23:37:42.007Z" ;
+    dc:conformsTo <urn:uuid:827edf93-8efc-4857-95f2-983a1beb08cd>,
+        <urn:uuid:a861db2a-482d-417d-8409-854001c56fce>,
+        <urn:uuid:c270650a-3afe-443c-a532-e368fadf6dab> ;
+    dc:description "This feature class is a point database with that shows where the tie books are located and has fields that can be used to link to the scanned images of the tiebooks." ;
+    dc:spatial "POLYGON ((-105.108252 39.614508,-105.108252 39.894607,-104.734536 39.894607,-104.734536 39.614508,-105.108252 39.614508))" ;
+    dcterms:publisher <urn:uuid:65900241-a822-4a71-a5b2-6f9143704d91> ;
+    dcterms:title "TIE BOOK LOCATIONS" ;
+    esip:eastBound "-104.734536"^^xsd:float ;
+    esip:northBound "39.894607"^^xsd:float ;
+    esip:southBound "39.614508"^^xsd:float ;
+    esip:westBound "-105.108252"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:827edf93-8efc-4857-95f2-983a1beb08cd> bcube:hasType "theme" ;
+    bcube:hasValue "survey" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:9d32a7e8-b78b-44dc-8eab-fdbe5f37d021> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-10-29T23:37:42.007Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-10-29T23:37:42.007Z" ;
+    dc:identifier "urn:sha:45ad15bcd3e1f1f5c1085aeff5c559ae57b0dbccc38db6cd7ba435c0" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://data.denvergov.org/download/gis/tie_book_locations/metadata/tie_book_locations.xml" .
+
+<urn:uuid:a861db2a-482d-417d-8409-854001c56fce> bcube:hasType "theme" ;
+    bcube:hasValue "location" ;
+    dc:partOf "ISO 19115 Topic Categories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:c270650a-3afe-443c-a532-e368fadf6dab> bcube:hasType "place" ;
+    bcube:hasValue "Colorado",
+        "Denver",
+        "Denver County",
+        "USA" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+

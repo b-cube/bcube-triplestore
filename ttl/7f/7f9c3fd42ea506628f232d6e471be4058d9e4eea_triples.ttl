@@ -1,0 +1,67 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:106992eb-a81f-48fe-b64c-2b4a395baea8> bcube:hasType "theme" ;
+    bcube:hasValue "BLM",
+        "Bureau of Land Management",
+        "Cadastre",
+        "WSA",
+        "Wilderness",
+        "Wilderness Study Areas" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:62be33f2-1de3-4785-8a23-630812340ef5> a "ISO 19115:2003/19139" ;
+    bcube:dateCreated "2015-11-04T11:55:36Z" ;
+    bcube:lastUpdated "2015-11-04T11:55:36Z" ;
+    bcube:originatedFrom <urn:uuid:ab366e3e-2b96-4cbb-9855-7ee65720d493> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:f6ba0457-b836-472e-ae42-b8c318f11cd1> .
+
+<urn:uuid:7845a5b8-f8c7-4b7a-a567-2ebe6b23ee77> bcube:hasValue "geoscientificInformation" ;
+    dc:partOf "IsoTopicCategories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:ab366e3e-2b96-4cbb-9855-7ee65720d493> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-04T11:55:36Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-04T11:55:36Z" ;
+    dc:identifier "urn:sha:7e5d62f451b6f8a14aef2e3ddaec2f6441d5ac496d9e080c4717659f" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://repository.stategeothermaldata.org/resources/metadata/TestNRRC/WRP/0bd0774e-5ed6-471b-a8e2-7e28064f5f7e.xml" .
+
+<urn:uuid:bb3b6265-f1c8-4977-8909-a2495461c458> bcube:hasType "place" ;
+    bcube:hasValue "New Mexico" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:f6ba0457-b836-472e-ae42-b8c318f11cd1> bcube:dateCreated "2015-11-04T11:55:36Z" ;
+    bcube:hasMetadataRecord <urn:uuid:62be33f2-1de3-4785-8a23-630812340ef5> ;
+    bcube:lastUpdated "2015-11-04T11:55:36Z" ;
+    dc:conformsTo <urn:uuid:106992eb-a81f-48fe-b64c-2b4a395baea8>,
+        <urn:uuid:7845a5b8-f8c7-4b7a-a567-2ebe6b23ee77>,
+        <urn:uuid:bb3b6265-f1c8-4977-8909-a2495461c458> ;
+    dc:description "This dataset is meant to depict Wilderness Study Areas (WSA's), within the state of New Mexico, identified by the U.S. Bureau of Land Management (BLM) as having potential for wilderness designation. Each study areas has been valuated for its resource values, present and projected future uses, public input, the manageability of the area as wilderness, the environmental consequences of designating (or not) the area as wilderness, and mineral surveys." ;
+    dc:spatial "POLYGON ((-109.0472 31.3324,-109.0472 37.0,-103 37,-103.0 31.3324,-109.0472 31.3324))" ;
+    dcterms:title "New Mexico Wilderness Study Areas" ;
+    esip:eastBound "-103.0"^^xsd:float ;
+    esip:endDate "1900-01-01"^^xsd:date ;
+    esip:northBound "37.0"^^xsd:float ;
+    esip:southBound "31.3324"^^xsd:float ;
+    esip:startDate "1900-01-01"^^xsd:date ;
+    esip:westBound "-109.0472"^^xsd:float ;
+    owl:a dcat:Dataset .
+

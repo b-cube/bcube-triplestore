@@ -1,0 +1,73 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:356272f6-bd13-4759-9f0b-88cedd3419d7> bcube:hasType "place" ;
+    bcube:hasValue "Butte",
+        "MT",
+        "Montana",
+        "USA",
+        "United States" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:36a5e9f8-4ce7-4e83-9852-17dcf85f7d47> bcube:hasType "theme" ;
+    bcube:hasValue "inlandWaters",
+        "structure" ;
+    dc:partOf "ISO 19115 Topic Category" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:529ef4c5-d0d8-4eed-b84b-594e2a541328> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-08-11T15:27:57.687Z" ;
+    bcube:lastUpdated "2015-08-11T15:27:57.687Z" ;
+    bcube:originatedFrom <urn:uuid:8dd6c096-2876-4ed0-9bda-b5366b76c6f3> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:bafe4a07-9e07-4944-88eb-b17b49ba4793> .
+
+<urn:uuid:86f57495-0caf-4d50-8394-ed31182c8579> owl:a foaf:Organization ;
+    foaf:name "Montana State Library" .
+
+<urn:uuid:8dd6c096-2876-4ed0-9bda-b5366b76c6f3> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-11T15:27:57.687Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-11T15:27:57.687Z" ;
+    dc:identifier "urn:sha:82942cd132bca2f3559671e9d2a1f9ebef372b2781cb05d08907afd9" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://mslapps.mt.gov/Geographic_Information/Data/DataList/datalist_MetadataDetailRaw.aspx?did={84E61C36-1CC4-40EC-B254-67F9E5260E93}" .
+
+<urn:uuid:b46890be-1f52-4d6b-93f9-67dffc61c051> bcube:hasType "theme" ;
+    bcube:hasValue "basin",
+        "catchment",
+        "storm sewer" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:bafe4a07-9e07-4944-88eb-b17b49ba4793> bcube:dateCreated "2015-08-11T15:27:57.687Z" ;
+    bcube:hasMetadataRecord <urn:uuid:529ef4c5-d0d8-4eed-b84b-594e2a541328> ;
+    bcube:lastUpdated "2015-08-11T15:27:57.687Z" ;
+    dc:conformsTo <urn:uuid:356272f6-bd13-4759-9f0b-88cedd3419d7>,
+        <urn:uuid:36a5e9f8-4ce7-4e83-9852-17dcf85f7d47>,
+        <urn:uuid:b46890be-1f52-4d6b-93f9-67dffc61c051> ;
+    dc:description "These data were formerly available from the Montana State Library web site but were removed because they are potentially out of date. Please contact the Federal Superfund Bureau of the Montana Department of Environmental Quality if you want these data so they may tell you if newer or better data are available. If the data are not available from the Department of Environmental Quality, you may request a copy from the Montana State Library data archive. This coverage came from a map drawn by Ted Johnson of CDM-Denver. After consulting with him on the phone, the basins were redrawn slightly based on a map provided by Hydrometrics." ;
+    dc:spatial "POLYGON ((-112.558296 45.9938011,-112.558296 46.0344009,-112.516098 46.0344009,-112.516098 45.9938011,-112.558296 45.9938011))" ;
+    dcterms:publisher <urn:uuid:86f57495-0caf-4d50-8394-ed31182c8579> ;
+    dcterms:title "Butte Storm Sewer Drainage Basins, 1990" ;
+    esip:eastBound "-112.516098"^^xsd:float ;
+    esip:northBound "46.0344009"^^xsd:float ;
+    esip:southBound "45.9938011"^^xsd:float ;
+    esip:startDate "1990-01-30"^^xsd:date ;
+    esip:westBound "-112.558296"^^xsd:float ;
+    owl:a dcat:Dataset .
+

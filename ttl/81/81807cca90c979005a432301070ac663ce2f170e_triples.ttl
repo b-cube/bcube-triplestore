@@ -1,0 +1,86 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:0f6e7e07-0833-4add-b8de-2bb090f6d26a> bcube:hasType "theme" ;
+    bcube:hasValue "1 Percent-Annual-Chance Flood",
+        "Channel",
+        "DFIRM",
+        "Digital Flood Insurance Rate Map",
+        "Flood Hazard data",
+        "Hydrology" ;
+    dc:partOf "FEMA NFIP Topic Category" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:1f0cc492-a48e-4f2b-a4d3-71a39a5307b6> a "ISO 19115:2003/19139" ;
+    bcube:dateCreated "2015-07-19T07:17:57.846Z" ;
+    bcube:lastUpdated "2015-07-19T07:17:57.846Z" ;
+    bcube:originatedFrom <urn:uuid:bbc6222a-57e2-4368-ae2a-35e60d75d618> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:81298cb7-4533-4b91-919f-a5a624b2e50d> .
+
+<urn:uuid:81298cb7-4533-4b91-919f-a5a624b2e50d> bcube:dateCreated "2015-07-19T07:17:57.846Z" ;
+    bcube:hasMetadataRecord <urn:uuid:1f0cc492-a48e-4f2b-a4d3-71a39a5307b6> ;
+    bcube:lastUpdated "2015-07-19T07:17:57.846Z" ;
+    dc:conformsTo <urn:uuid:0f6e7e07-0833-4add-b8de-2bb090f6d26a>,
+        <urn:uuid:84554f57-9309-46e1-95d3-e8199f77d7e3>,
+        <urn:uuid:dc5636f4-cdb1-43ee-becc-993795e6c0aa> ;
+    dc:description "Hydrology data include spatial datasets and data tables necessary for documenting the hydrologic procedures for estimating flood discharges for a flood insurance study which includes the hydrologic data expected by FEMA for existing riverine studies. (Source: FEMA Guidelines and Specifications, Appendix M)" ;
+    dc:spatial "POLYGON ((-83.505341 38.870942,-83.505341 39.254036,-82.748672 39.254036,-82.748672 38.870942,-83.505341 38.870942))" ;
+    dcterms:references <urn:uuid:e3d46b24-fac7-4132-931f-07d751803eb1> ;
+    dcterms:title "APPROXIMATE HYDROLOGY, PIKE COUNTY,OH USA" ;
+    esip:eastBound "-82.748672"^^xsd:float ;
+    esip:northBound "39.254036"^^xsd:float ;
+    esip:southBound "38.870942"^^xsd:float ;
+    esip:westBound "-83.505341"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:84554f57-9309-46e1-95d3-e8199f77d7e3> bcube:hasType "place" ;
+    bcube:hasValue "COMMUNITY PIKE COUNTY OH AND INCORPORATED AREAS",
+        "COUNTY PIKE",
+        "COUNTY-FIPS 131",
+        "FEMA-CID 39131C",
+        "REGION 5",
+        "STATE OH" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:bbc6222a-57e2-4368-ae2a-35e60d75d618> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-07-19T07:17:57.846Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-07-19T07:17:57.846Z" ;
+    dc:identifier "urn:sha:ed0633b48f5bdcbe575359d55f812f2e6c0484765a1144400c01dc75" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "https://catalog.data.gov/harvest/object/55534b1d-11ef-4494-a757-de080e139bbe" .
+
+<urn:uuid:dc5636f4-cdb1-43ee-becc-993795e6c0aa> bcube:hasValue "environment",
+        "inlandWaters" ;
+    dc:partOf "IsoTopicCategories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:e3d46b24-fac7-4132-931f-07d751803eb1> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-07-19T07:17:57.846Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-07-19T07:17:57.846Z" ;
+    dc:identifier "urn:sha:37c915397238031daced09ae0e2dd3bf54e84a6477f749c2cc9dcbdf" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://hazards.fema.gov" .
+

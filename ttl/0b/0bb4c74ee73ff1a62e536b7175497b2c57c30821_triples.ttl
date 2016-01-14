@@ -1,0 +1,61 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:08cc91fe-7918-44c7-907d-1b7248ba15d4> bcube:dateCreated "2014-10-30T01:09:11.666Z" ;
+    bcube:hasMetadataRecord <urn:uuid:a1702d54-4f32-4634-8412-8b16044e90dd> ;
+    bcube:lastUpdated "2014-10-30T01:09:11.666Z" ;
+    dc:conformsTo <urn:uuid:e2db2016-3f51-4f3d-9c5b-71fe8292c3c4>,
+        <urn:uuid:ee57b509-a797-44d6-aa5e-2c3dcbe70ed5> ;
+    dc:description "Summarizes the expected value over the next decade of the 3D Elevation Program for this state." ;
+    dc:spatial "POLYGON ((-75.5598 38.9286,-75.5598 41.3574,-73.9024 41.3574,-73.9024 38.9286,-75.5598 38.9286))" ;
+    dcterms:title "The 3D Elevation Program: summary for New Jersey" ;
+    esip:eastBound "-73.9024"^^xsd:float ;
+    esip:northBound "41.3574"^^xsd:float ;
+    esip:southBound "38.9286"^^xsd:float ;
+    esip:westBound "-75.5598"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:6e28f6c9-39f2-4853-8d5d-b8245673586c> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2014-10-30T01:09:11.666Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2014-10-30T01:09:11.666Z" ;
+    dc:identifier "urn:sha:1fc9a5357122f8f6fa8c83b73721a939208e34901c95f70aebf6cd90" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www.usgs.gov/science/iso.php?cite=4532" .
+
+<urn:uuid:a1702d54-4f32-4634-8412-8b16044e90dd> a "ISO 19115:2003/19139" ;
+    bcube:dateCreated "2014-10-30T01:09:11.666Z" ;
+    bcube:lastUpdated "2014-10-30T01:09:11.666Z" ;
+    bcube:originatedFrom <urn:uuid:6e28f6c9-39f2-4853-8d5d-b8245673586c> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:08cc91fe-7918-44c7-907d-1b7248ba15d4> .
+
+<urn:uuid:e2db2016-3f51-4f3d-9c5b-71fe8292c3c4> bcube:hasValue "geoscientificInformation" ;
+    dc:partOf "IsoTopicCategories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:ee57b509-a797-44d6-aa5e-2c3dcbe70ed5> bcube:hasType "place" ;
+    bcube:hasValue "LIDAR",
+        "fUS34 = New Jersey",
+        "geography",
+        "interagency programs",
+        "strategic plans",
+        "topography" ;
+    dc:partOf "Augmented FIPS 10-4 and FIPS 6-4" ;
+    owl:a bcube:thesaurusSubset .
+

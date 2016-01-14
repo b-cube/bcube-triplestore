@@ -1,0 +1,95 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:0ab2ec4d-c5e1-47d9-854c-d2622a6c2957> owl:a foaf:Organization ;
+    foaf:name "U.S. Geological Survey" .
+
+<urn:uuid:1ecfc54c-c20c-462e-b269-10a0834cfc03> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-03-19T11:48:28.308Z" ;
+    bcube:lastUpdated "2015-03-19T11:48:28.308Z" ;
+    bcube:originatedFrom <urn:uuid:f7488378-77ad-4284-b93d-0fbafff92924> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:395fe142-9569-464c-b3ad-c4c1d4ef3a55> .
+
+<urn:uuid:395fe142-9569-464c-b3ad-c4c1d4ef3a55> bcube:dateCreated "2015-03-19T11:48:28.308Z" ;
+    bcube:hasMetadataRecord <urn:uuid:1ecfc54c-c20c-462e-b269-10a0834cfc03> ;
+    bcube:lastUpdated "2015-03-19T11:48:28.308Z" ;
+    dc:conformsTo <urn:uuid:5df08624-13d9-4463-bab2-74c1ef943b4a>,
+        <urn:uuid:5e3e326a-cca5-45ff-ab95-fb0348aeaa52>,
+        <urn:uuid:65a39e3b-bfe3-4664-99a7-899467a9f3b0>,
+        <urn:uuid:7939a795-efa0-4815-a1ea-afda2012b646>,
+        <urn:uuid:8b3d6355-c852-44e3-9545-f384ea95a7c3> ;
+    dc:description "USGS map quandrangle boundaries with names and unique identifiers for the 1:24,000 (7.5 minute) quadrangles. Additional attributes provide unique identifiers and hierarchical relationships between these quadrangles and the enclosing 1:100,000 (30 x 60 minute) and 1:250,000 (1 x 2 degree) quadrangles." ;
+    dc:spatial "POLYGON ((-160.283342 18.873871,-160.283342 49.499996,-66.874999 49.499996,-66.874999 18.873871,-160.283342 18.873871))" ;
+    dcterms:publisher <urn:uuid:0ab2ec4d-c5e1-47d9-854c-d2622a6c2957> ;
+    dcterms:references <urn:uuid:7bf0f328-77e9-4419-870f-e93869c5f64e> ;
+    dcterms:title "USGS map quadrangles" ;
+    esip:eastBound "-66.874999"^^xsd:float ;
+    esip:northBound "49.499996"^^xsd:float ;
+    esip:southBound "18.873871"^^xsd:float ;
+    esip:westBound "-160.283342"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:5df08624-13d9-4463-bab2-74c1ef943b4a> bcube:hasType "theme" ;
+    bcube:hasValue "culture and demographics",
+        "gazetteers",
+        "geospatial datasets",
+        "maps and atlases" ;
+    dc:partOf "USGS Thesaurus" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:5e3e326a-cca5-45ff-ab95-fb0348aeaa52> bcube:hasType "theme" ;
+    bcube:hasValue "map quadrangle regions" ;
+    dc:partOf "Alexandria Digital Library Feature Type Thesaurus" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:65a39e3b-bfe3-4664-99a7-899467a9f3b0> bcube:hasType "theme" ;
+    bcube:hasValue "geoscientificInformation" ;
+    dc:partOf "ISO 19115 Topic Categories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:7939a795-efa0-4815-a1ea-afda2012b646> bcube:hasType "theme" ;
+    bcube:hasValue "Geology" ;
+    dc:partOf "NGDA Portfolio Themes" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:7bf0f328-77e9-4419-870f-e93869c5f64e> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-03-19T11:48:28.308Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-03-19T11:48:28.308Z" ;
+    dc:identifier "urn:sha:2f5ef3d3ac6f2b123eb217bf8a64009778c61e469a689a32f0c5c4ab" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://mrdata.usgs.gov/reference/quad24.zip" .
+
+<urn:uuid:8b3d6355-c852-44e3-9545-f384ea95a7c3> bcube:hasType "place" ;
+    bcube:hasValue "Conterminous United States" ;
+    dc:partOf "none" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:f7488378-77ad-4284-b93d-0fbafff92924> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-03-19T11:48:28.308Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-03-19T11:48:28.308Z" ;
+    dc:identifier "urn:sha:bfce10d47ec2889deb5f01b32a71e10a63bcb188fac348b700b4c5f7" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "https://catalog.data.gov/harvest/object/41734670-4cfd-426b-9972-d4087645ad54/original" .
+

@@ -1,0 +1,102 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:0fa2b888-d5ac-4464-8ccb-396b73738992> bcube:hasType "place" ;
+    bcube:hasValue "Coastal zone",
+        "Diamond Head",
+        "Hawaii",
+        "Honolulu",
+        "Kaneohe",
+        "Oahu",
+        "Pearl City",
+        "Pearl Harbor",
+        "Wahiawa",
+        "Waialua",
+        "Waianae",
+        "Waikiki" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:5e7fc6ed-7673-4cb3-bd55-2bbd316b2f92> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2014-07-31T08:22:59.683Z" ;
+    bcube:lastUpdated "2014-07-31T08:22:59.683Z" ;
+    bcube:originatedFrom <urn:uuid:be966252-cd0a-4235-b298-8b3a69d8f908> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:8e72afce-6079-426e-9b04-f6f48a15454a> .
+
+<urn:uuid:75c42696-a97f-4250-9a0d-b2e268e5a472> dcterms:references <urn:uuid:b768f967-d7b6-4c66-8c86-d5c67ddadfc6> ;
+    owl:a bibo:WebPage .
+
+<urn:uuid:87766ad9-7c05-468f-affc-fad945b8c4a1> bcube:hasType "theme" ;
+    bcube:hasValue "Environmental Monitoring",
+        "Erosion",
+        "R-Factor",
+        "RUSLE",
+        "RUSLE2",
+        "Rainfall-Runoff Erosivity",
+        "Revised Universal Soil Loss Equation" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:8b59565c-cb74-4f54-949e-920c70817696> bcube:hasType "theme" ;
+    bcube:hasValue "climatologyMeteorologyAtmosphere" ;
+    dc:partOf "ISO 19115 Topic Category" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:8e72afce-6079-426e-9b04-f6f48a15454a> bcube:dateCreated "2014-07-31T08:22:59.683Z" ;
+    bcube:hasMetadataRecord <urn:uuid:5e7fc6ed-7673-4cb3-bd55-2bbd316b2f92> ;
+    bcube:lastUpdated "2014-07-31T08:22:59.683Z" ;
+    dc:conformsTo <urn:uuid:0fa2b888-d5ac-4464-8ccb-396b73738992>,
+        <urn:uuid:87766ad9-7c05-468f-affc-fad945b8c4a1>,
+        <urn:uuid:8b59565c-cb74-4f54-949e-920c70817696> ;
+    dc:description "The rainfall-runoff erosivity factor (R-Factor) quantifies the effects of raindrop impacts and reflects the amount and rate of runoff associated with the rain. The R-factor is one of the parameters used by the Revised Unified Soil Loss Equation (RUSLE) to estimate annual rates of erosion. This product is a raster representation of R-Factor derived from isoerodent maps published in the Agriculture Handbook Number 703 (Renard et al.,1997). Lines connecting points of equal rainfall ersoivity are called isoerodents. The iserodents plotted on a map of the Island of Oahu were digitized, then values between these lines were obtained by linear interpolation. The final R-Factor data are in raster GeoTiff format at 30 meter resolution in UTM, Zone 4, GRS80, NAD83." ;
+    dc:spatial "POLYGON ((-158.386092 21.149339,-158.386092 21.792525,-157.537389 21.792525,-157.537389 21.149339,-158.386092 21.149339))" ;
+    dcterms:publisher <urn:uuid:c2350c7e-48d6-423e-a61f-42130e2870e7> ;
+    dcterms:references <urn:uuid:75c42696-a97f-4250-9a0d-b2e268e5a472> ;
+    dcterms:title "R-Factor for the Island of Oahu" ;
+    esip:eastBound "-157.537389"^^xsd:float ;
+    esip:endDate "1997-01-01"^^xsd:date ;
+    esip:northBound "21.792525"^^xsd:float ;
+    esip:southBound "21.149339"^^xsd:float ;
+    esip:startDate "1975-01-01"^^xsd:date ;
+    esip:westBound "-158.386092"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:b768f967-d7b6-4c66-8c86-d5c67ddadfc6> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2014-07-31T08:22:59.683Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2014-07-31T08:22:59.683Z" ;
+    dc:identifier "urn:sha:b06e61ec8bbcb81fe331f7bfaa836163567ec6597d0063d648d5f20e" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://csc.noaa.gov/digitalcoast/tools/opennspect" .
+
+<urn:uuid:be966252-cd0a-4235-b298-8b3a69d8f908> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2014-07-31T08:22:59.683Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2014-07-31T08:22:59.683Z" ;
+    dc:identifier "urn:sha:10ed4cfaadeb5611cc14429d8d4cb1eff36b960db4f295ff914ef0f6" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "https://data.noaa.gov/harvest/object/d525db20-ce99-4127-87c7-c1d8579716d7/original" .
+
+<urn:uuid:c2350c7e-48d6-423e-a61f-42130e2870e7> owl:a foaf:Organization ;
+    foaf:name "NOAA's Ocean Service, Coastal Services Center (CSC)" .
+

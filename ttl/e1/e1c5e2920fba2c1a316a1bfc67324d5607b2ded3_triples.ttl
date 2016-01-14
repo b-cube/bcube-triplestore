@@ -1,0 +1,99 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:009aa590-e362-4754-8d4a-6e4a0b1fa8b8> bcube:hasType "place" ;
+    bcube:hasValue "06027 = Inyo",
+        "06029 = Kern",
+        "06051 = Mono",
+        "06071 = San Bernardino",
+        "06107 = Tulare",
+        "32003 = Clark",
+        "32009 = Esmeralda",
+        "32017 = Lincoln",
+        "32023 = Nye" ;
+    dc:partOf "Augmented FIPS 10-4 and FIPS 6-4" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:29e9f8c5-ee64-4043-9106-b03e33ad3e06> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-05T01:20:23.145Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-05T01:20:23.145Z" ;
+    dc:identifier "urn:sha:a479309d408405e6a508b446dab62a3360f21de6b67e8441615961f0" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://data.usgs.gov/metadata/USGS_Geoscience_Data_Catalog/537e4af8e4b05ed6215c0b73.xml" .
+
+<urn:uuid:3bcd1d6f-0875-46a7-9ae1-4fb972d26f05> bcube:hasType "theme" ;
+    bcube:hasValue "geoscientificInformation" ;
+    dc:partOf "ISO 19115 Topic Categories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:3e76df87-15c5-4214-9aed-af5880bb04b2> bcube:hasType "place" ;
+    bcube:hasValue "California",
+        "Southwest Nevada" ;
+    dc:partOf "none" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:4e3b612c-3b29-4693-8fb3-07ff6af8f200> bcube:hasType "theme" ;
+    bcube:hasValue "aeromagnetic surveying",
+        "geospatial datasets",
+        "magnetic field (earth)",
+        "maps and atlases" ;
+    dc:partOf "USGS Thesaurus" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:5018db65-d41d-495a-aa67-1f00108b35f8> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-08-05T01:20:23.145Z" ;
+    bcube:lastUpdated "2015-08-05T01:20:23.145Z" ;
+    bcube:originatedFrom <urn:uuid:29e9f8c5-ee64-4043-9106-b03e33ad3e06> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:a617c325-3fb9-4aa0-a3a1-4e10e6ea05b0> .
+
+<urn:uuid:a617c325-3fb9-4aa0-a3a1-4e10e6ea05b0> bcube:dateCreated "2015-08-05T01:20:23.145Z" ;
+    bcube:hasMetadataRecord <urn:uuid:5018db65-d41d-495a-aa67-1f00108b35f8> ;
+    bcube:lastUpdated "2015-08-05T01:20:23.145Z" ;
+    dc:conformsTo <urn:uuid:009aa590-e362-4754-8d4a-6e4a0b1fa8b8>,
+        <urn:uuid:3bcd1d6f-0875-46a7-9ae1-4fb972d26f05>,
+        <urn:uuid:3e76df87-15c5-4214-9aed-af5880bb04b2>,
+        <urn:uuid:4e3b612c-3b29-4693-8fb3-07ff6af8f200> ;
+    dc:description "An aeromagnetic map of the Death Valley groundwater model area was prepared from published aeromagnetic surveys as part of an interagency effort by the U.S. Geological Survey and the U.S. Department of Energy to help characterize the geology and hydrology of southwest Nevada and parts of California." ;
+    dc:spatial "POLYGON ((-118 35,-118.0 38.25,-115.0 38.25,-115 35,-118 35))" ;
+    dcterms:publisher <urn:uuid:aafd3894-8b91-4d7d-99af-032f025305d8> ;
+    dcterms:references <urn:uuid:c14af96d-41a8-4060-a699-b1ab88917dad> ;
+    dcterms:title "Aeromagnetic Map of the Death Valley Ground-Water Model Area, Nevada and California" ;
+    esip:eastBound "-115.0"^^xsd:float ;
+    esip:northBound "38.25"^^xsd:float ;
+    esip:southBound "35.0"^^xsd:float ;
+    esip:startDate "2001-01-01"^^xsd:date ;
+    esip:westBound "-118.0"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:aafd3894-8b91-4d7d-99af-032f025305d8> owl:a foaf:Organization ;
+    foaf:name "U.S. Geological Survey" .
+
+<urn:uuid:c14af96d-41a8-4060-a699-b1ab88917dad> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-05T01:20:23.145Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-05T01:20:23.145Z" ;
+    dc:identifier "urn:sha:0f645b2f3bad93a9d999e6b311812f0008c45c8970aeeff4a0f640dd" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://geology.cr.usgs.gov/pub/mf-maps/mf-2381/" .
+

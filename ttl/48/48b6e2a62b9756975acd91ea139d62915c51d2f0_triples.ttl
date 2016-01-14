@@ -1,0 +1,83 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:057c0ca0-17a3-45af-9cfe-32e0186bd1fa> owl:a foaf:Organization ;
+    foaf:name "Idaho Geospatial Data Clearinghouse" .
+
+<urn:uuid:2dd0714b-bb88-436d-89a8-2a4ebea0c8b3> bcube:hasType "place" ;
+    bcube:hasValue "Idaho State" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:45fb54aa-af26-4abb-8a05-565d9fadf18e> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-11-12T21:13:14.593Z" ;
+    bcube:lastUpdated "2015-11-12T21:13:14.593Z" ;
+    bcube:originatedFrom <urn:uuid:7a29c6df-3e5c-4bae-ad64-46f5d47ea21b> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:a6417510-1e6b-4563-b2c4-275e58053835> .
+
+<urn:uuid:7a29c6df-3e5c-4bae-ad64-46f5d47ea21b> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-12T21:13:14.593Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-12T21:13:14.593Z" ;
+    dc:identifier "urn:sha:3889c40c8a50cf44cd8c11374230a9d6c97a48b906066783419cd91c" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://inside.uidaho.edu/appsOutput/metadataWAF/xml/ColorShadedReliefofIdahowithaHorizontalGridSpacingof30meters.xml" .
+
+<urn:uuid:a6417510-1e6b-4563-b2c4-275e58053835> bcube:dateCreated "2015-11-12T21:13:14.593Z" ;
+    bcube:hasMetadataRecord <urn:uuid:45fb54aa-af26-4abb-8a05-565d9fadf18e> ;
+    bcube:lastUpdated "2015-11-12T21:13:14.593Z" ;
+    dc:conformsTo <urn:uuid:2dd0714b-bb88-436d-89a8-2a4ebea0c8b3>,
+        <urn:uuid:afda1956-1053-48e7-b4c2-1bae733c2123>,
+        <urn:uuid:ef21e369-4d38-41ca-8fff-62771569cb06> ;
+    dc:description "The 30-meter Color Shaded Relief of Idaho data set was derived from the 1 arc second National Elevation Dataset and USGS DEM elevation data. The NED is a seamless mosaic of best-available elevation data. The 7.5-minute elevation data for the conterminous United States are the primary initial source data. In addition to the availability of complete 7.5-minute data, efficient processing methods were developed to filter production artifacts in the existing data, convert to the NAD83 datum, edge-match, and fill slivers of missing data at quadrangle seams. One of the effects of the NED processing steps is a much-improved base of elevation data for calculating slope and hydrologic derivatives. The specifications for the NED 1 arc second and 1/3 arc second data are: Geographic coordinate system Horizontal datum of NAD83, except for AK which is NAD27 Vertical datum of NAVD88, except for AK which is NAVD29 Z units of meters." ;
+    dc:spatial "POLYGON ((-117.532059 41.945007,-117.532059 49.039809,-110.655139 49.039809,-110.655139 41.945007,-117.532059 41.945007))" ;
+    dcterms:publisher <urn:uuid:057c0ca0-17a3-45af-9cfe-32e0186bd1fa> ;
+    dcterms:references <urn:uuid:d3cd02a0-dba1-4a18-963f-01b9cc5b2280> ;
+    dcterms:title "Color Shaded Relief of Idaho with a Horizontal Grid Spacing of 30-meters" ;
+    esip:eastBound "-110.655139"^^xsd:float ;
+    esip:northBound "49.039809"^^xsd:float ;
+    esip:southBound "41.945007"^^xsd:float ;
+    esip:startDate "1999-01-01"^^xsd:date ;
+    esip:westBound "-117.532059"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:afda1956-1053-48e7-b4c2-1bae733c2123> bcube:hasType "theme" ;
+    bcube:hasValue "elevation" ;
+    dc:partOf "ISO 19115 Topic Category" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:d3cd02a0-dba1-4a18-963f-01b9cc5b2280> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-12T21:13:14.593Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-12T21:13:14.593Z" ;
+    dc:identifier "urn:sha:13c58d2b458ca3e2ec1d31d13474be4f493b53ccac4043d8dbf58393" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://cloud.insideidaho.org/webApps/util/zip.ashx?fn=http://cloud.insideidaho.org/data/igdc/shdrlfcolor30m_id_igdc.tif" .
+
+<urn:uuid:ef21e369-4d38-41ca-8fff-62771569cb06> bcube:hasType "theme" ;
+    bcube:hasValue "Hillshade",
+        "Shaded Relief",
+        "Topography" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+

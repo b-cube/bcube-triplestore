@@ -1,0 +1,78 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:54ba19b3-cbba-45c6-8326-95b2577d00ce> bcube:hasType "place" ;
+    bcube:hasValue "Global" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:717fe6f0-9ab3-4abf-b9ea-1bfbba4cf09b> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-11T22:26:40.104Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-11T22:26:40.104Z" ;
+    dc:identifier "urn:sha:5ee2e6ec05fe5d2b25ff9cac5e0ef4c4ebc801c6f252b4de9aab36dd" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "https://inport.nmfs.noaa.gov/inport/item/5701/fgdc" .
+
+<urn:uuid:73dbce16-26f1-4cf2-a3c0-711003c5207f> owl:a foaf:Organization ;
+    foaf:name "" .
+
+<urn:uuid:9d882c66-9e81-46a7-9ed5-0feb927cda8d> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-11-11T22:26:40.104Z" ;
+    bcube:lastUpdated "2015-11-11T22:26:40.104Z" ;
+    bcube:originatedFrom <urn:uuid:717fe6f0-9ab3-4abf-b9ea-1bfbba4cf09b> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:9e778e4d-b34e-41f9-99b6-4308cddb2a26> .
+
+<urn:uuid:9e778e4d-b34e-41f9-99b6-4308cddb2a26> bcube:dateCreated "2015-11-11T22:26:40.104Z" ;
+    bcube:hasMetadataRecord <urn:uuid:9d882c66-9e81-46a7-9ed5-0feb927cda8d> ;
+    bcube:lastUpdated "2015-11-11T22:26:40.104Z" ;
+    dc:conformsTo <urn:uuid:54ba19b3-cbba-45c6-8326-95b2577d00ce>,
+        <urn:uuid:bae18f1b-40b2-40a7-ae79-fed228160fed>,
+        <urn:uuid:dcff8e7c-2d2b-446d-a859-bb7f0a3a6ef9> ;
+    dc:description "The dataset contains satellite-derived sea-surface temperature measurements collected by means of the Advanced Very High Resolution Radiometer - Global Area Coverage (AVHRR-GAC) sensor onboard the NOAA polar orbiting satellite constellation. The data consists of Pathfinder AVHRR SST data collected between 1985-2003; existing data thereafter consists of AVHRR-GAC data. Dataset contains weekly and monthly composites at a spatial resolution of 0.1 degrees. The geographic coverage extends for the entire globe." ;
+    dc:spatial "POLYGON ((-180 -75,-180 75,180 75,180 -75,-180 -75))" ;
+    dcterms:identifier "gov.noaa.nmfs.inport:5701" ;
+    dcterms:publisher <urn:uuid:73dbce16-26f1-4cf2-a3c0-711003c5207f> ;
+    dcterms:title "OW NOAA Pathfinder/GAC Sea-Surface Temperature" ;
+    esip:eastBound "180.0"^^xsd:float ;
+    esip:northBound "75.0"^^xsd:float ;
+    esip:southBound "-75.0"^^xsd:float ;
+    esip:startDate "1985-01-01"^^xsd:date ;
+    esip:westBound "-180.0"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:bae18f1b-40b2-40a7-ae79-fed228160fed> bcube:hasType "temporal" ;
+    bcube:hasValue "Weekly",
+        "monthly" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:dcff8e7c-2d2b-446d-a859-bb7f0a3a6ef9> bcube:hasType "theme" ;
+    bcube:hasValue "AVHRR",
+        "GAC",
+        "Pathfinder",
+        "SST",
+        "ow",
+        "pifsc",
+        "remote sensing",
+        "satellite",
+        "sea surface temperature" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+

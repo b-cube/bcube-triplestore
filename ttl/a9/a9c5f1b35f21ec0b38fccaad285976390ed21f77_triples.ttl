@@ -1,0 +1,97 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:16ffcd3e-28ce-4a2a-bf0c-fea524c0c775> bcube:dateCreated "2015-11-11T22:21:37.545Z" ;
+    bcube:hasMetadataRecord <urn:uuid:844600b3-0283-4a4c-8f53-915da3a748ff> ;
+    bcube:lastUpdated "2015-11-11T22:21:37.545Z" ;
+    dc:conformsTo <urn:uuid:1b94ae11-8d9d-4765-8f50-642283505fde>,
+        <urn:uuid:993e914d-31b8-4e4f-9a27-11f1fee1ec0d>,
+        <urn:uuid:bca3eaba-f9ea-4f27-a494-b27cce39e3cc> ;
+    dc:description "This Esri FileGeodatabase contains five feature classes - Census Block Groups in Florida with Decennial Census of 1990, 2000, and 2010 and 5-year estimates from the 2006-2010 American Communities Survey (ACS) and 2007-2011 ACS. This layer was created for use by the Florida Department of Transportation for use in the Sociocultural Data Report (SDR). The spatial portion of this data was retrieved from TIGER at the block group level. Depending on the census vintage, demographic data has been collected at 100% count (Summary File 1) and sample basis (Summary File 3 or ACS). The tabular demographic portion of the data was taken from a variety of sources. 1990 data was collected from www.nhgis.org. 2000, 2010, and ACS data was taken directly from the Census Bureau. Data was downloaded from the Census Bureau in text file format and converted to file geodatabase. A variety of GIS techniques including python scripting were used to parse, aggregate, and join the tabular demographic data to the spatial data. The spatial portion of the data was retrieved from TIGER at the block, block group, and county level." ;
+    dc:spatial "POLYGON ((-87.639356 24.354693,-87.639356 31.042641,-79.812215 31.042641,-79.812215 24.354693,-87.639356 24.354693))" ;
+    dcterms:publisher <urn:uuid:cee55f7d-6d4d-4b5a-baf6-d0d066be99e2> ;
+    dcterms:references <urn:uuid:f4e85c18-9efe-4056-a1b2-dd339717d43f>,
+        <urn:uuid:ffcbf7b7-3fc1-4c48-b9b8-c5c9b0921c13> ;
+    dcterms:title "CENSUS BLOCK GROUPS IN FLORIDA (1990, 2000, 2010) AND AMERICAN COMMUNITIES SURVEY (ACS)" ;
+    esip:eastBound "-79.812215"^^xsd:float ;
+    esip:northBound "31.042641"^^xsd:float ;
+    esip:southBound "24.354693"^^xsd:float ;
+    esip:startDate "2010-01-01"^^xsd:date ;
+    esip:westBound "-87.639356"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:1b94ae11-8d9d-4765-8f50-642283505fde> bcube:hasType "theme" ;
+    bcube:hasValue "Block Group" ;
+    dc:partOf "NONE" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:844600b3-0283-4a4c-8f53-915da3a748ff> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-11-11T22:21:37.545Z" ;
+    bcube:lastUpdated "2015-11-11T22:21:37.545Z" ;
+    bcube:originatedFrom <urn:uuid:d0340a12-417a-4f77-99b4-85e21c3e3b62> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:16ffcd3e-28ce-4a2a-bf0c-fea524c0c775> .
+
+<urn:uuid:993e914d-31b8-4e4f-9a27-11f1fee1ec0d> bcube:hasType "theme" ;
+    bcube:hasValue "economy",
+        "planningCadastre",
+        "society" ;
+    dc:partOf "ISO 19115 Topic Category" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:a9f05696-bcff-49d2-a9e3-9073ee6f0c37> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-11T22:21:37.545Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-11T22:21:37.545Z" ;
+    dc:identifier "urn:sha:a552ec971b26ccbcf3dd5a42b4c521740e244b4d5ec9f9c56e51dabe" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www.census.gov/geo/maps-data/data/tiger.html" .
+
+<urn:uuid:bca3eaba-f9ea-4f27-a494-b27cce39e3cc> bcube:hasType "place" ;
+    bcube:hasValue "Florida" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:cee55f7d-6d4d-4b5a-baf6-d0d066be99e2> owl:a foaf:Organization ;
+    foaf:name "University of Florida GeoPlan Center" .
+
+<urn:uuid:d0340a12-417a-4f77-99b4-85e21c3e3b62> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-11T22:21:37.545Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-11T22:21:37.545Z" ;
+    dc:identifier "urn:sha:d4f94ade3d24e2d82e36b662618af27a7a15552548df0ceec79f2464" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www.fgdl.org/metadata/fgdc_xml/cenblkgrp_1990-2010.shp.xml" .
+
+<urn:uuid:f4e85c18-9efe-4056-a1b2-dd339717d43f> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-11T22:21:37.545Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-11T22:21:37.545Z" ;
+    dc:identifier "urn:sha:d14a028c2a3a2bc9476102bb288234c415a2b01f828ea62ac5b3e42f" ;
+    owl:a bcube:Url .
+
+<urn:uuid:ffcbf7b7-3fc1-4c48-b9b8-c5c9b0921c13> dcterms:references <urn:uuid:a9f05696-bcff-49d2-a9e3-9073ee6f0c37> ;
+    owl:a bibo:WebPage .
+

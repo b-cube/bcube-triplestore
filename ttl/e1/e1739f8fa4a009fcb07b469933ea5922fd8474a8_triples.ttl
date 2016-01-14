@@ -1,0 +1,95 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:13e1902e-1b3c-426d-a89d-d33a2294ffc1> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-05T01:12:24.404Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-05T01:12:24.404Z" ;
+    dc:identifier "urn:sha:74b2de301d3c927b7b8d93b24f961620773b236a45e3d6cd0bf1b338" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://water.usgs.gov/GIS/dsdl/mdwu_98.e00.gz" .
+
+<urn:uuid:237e104d-f0b5-46fb-8dc2-8979fa51a5f7> bcube:hasType "theme" ;
+    bcube:hasValue "Ground-water",
+        "Water-use",
+        "Well",
+        "Withdrawal",
+        "inlandWaters" ;
+    dc:partOf "none" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:2c8ff617-270f-4514-b812-1322d1117093> dcterms:references <urn:uuid:65089746-eb53-4684-acc7-ce8fafd35782> ;
+    owl:a bibo:WebPage .
+
+<urn:uuid:41baa242-6645-4174-ae4d-b5df4881a66a> bcube:hasType "place" ;
+    bcube:hasValue "Maryland" ;
+    dc:partOf "none" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:65089746-eb53-4684-acc7-ce8fafd35782> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-05T01:12:24.404Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-05T01:12:24.404Z" ;
+    dc:identifier "urn:sha:315b7dcfb16bccff2a4a918bbe9019fa9d258e8d9d58157779506564" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://water.usgs.gov/lookup/getspatial?mdwu_98" .
+
+<urn:uuid:8cfa18fa-e26e-4bfd-b263-8e291ded283c> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-08-05T01:12:24.404Z" ;
+    bcube:lastUpdated "2015-08-05T01:12:24.404Z" ;
+    bcube:originatedFrom <urn:uuid:ceff8d6c-ab95-4921-855d-6cf387730962> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:cc529c68-e3ce-4374-a67c-91aa5c043c33> .
+
+<urn:uuid:a489cea5-94ff-4dc5-9bf4-25cd33d6cf06> owl:a foaf:Organization ;
+    foaf:name "U.S. Geological Survey" .
+
+<urn:uuid:cc529c68-e3ce-4374-a67c-91aa5c043c33> bcube:dateCreated "2015-08-05T01:12:24.404Z" ;
+    bcube:hasMetadataRecord <urn:uuid:8cfa18fa-e26e-4bfd-b263-8e291ded283c> ;
+    bcube:lastUpdated "2015-08-05T01:12:24.404Z" ;
+    dc:conformsTo <urn:uuid:237e104d-f0b5-46fb-8dc2-8979fa51a5f7>,
+        <urn:uuid:41baa242-6645-4174-ae4d-b5df4881a66a> ;
+    dc:description "MDWU98 is a point coverage that represents the locations of wells for the State of Maryland that are permitted to withdraw 10,000 gallons or more per day by the Maryland Department of the Environment (MDE). Each site has the permit number, permit amount, reported withdrawal, aquifer code, and type of use. Information contained in the dataset comes from the U.S.Geological Survey site-specific water-use database (SWUDS)." ;
+    dc:spatial "POLYGON ((-79.40368872 37.99119635,-79.40368872 39.7417308,-75.12260266 39.7417308,-75.12260266 37.99119635,-79.40368872 37.99119635))" ;
+    dcterms:publisher <urn:uuid:a489cea5-94ff-4dc5-9bf4-25cd33d6cf06> ;
+    dcterms:references <urn:uuid:13e1902e-1b3c-426d-a89d-d33a2294ffc1>,
+        <urn:uuid:2c8ff617-270f-4514-b812-1322d1117093> ;
+    dcterms:title "Maryland Water-Use Data, 1998" ;
+    esip:eastBound "-75.12260266"^^xsd:float ;
+    esip:northBound "39.7417308"^^xsd:float ;
+    esip:southBound "37.99119635"^^xsd:float ;
+    esip:startDate "1998-01-01"^^xsd:date ;
+    esip:westBound "-79.40368872"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:ceff8d6c-ab95-4921-855d-6cf387730962> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-05T01:12:24.404Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-05T01:12:24.404Z" ;
+    dc:identifier "urn:sha:01ce3d8f706ac7a8a4b7ece702ce33a41fc85777281a0f890dc642cc" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://data.usgs.gov/metadata/Water_National_Spatial_Data_Infrastructure_Node/535ea2c6e4b08e65d60fa8db.xml" .
+

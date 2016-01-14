@@ -1,0 +1,88 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:05572fe6-54fe-49ac-b6b9-50db300ad48c> owl:a foaf:Organization ;
+    foaf:name "" .
+
+<urn:uuid:2e236da5-b01c-4ae2-b2f8-c99d9a1fffdf> bcube:hasType "place" ;
+    bcube:hasValue "78",
+        "State or Equivalent Entity",
+        "U.S.",
+        "United States",
+        "VI",
+        "Virgin Islands of the United States" ;
+    dc:partOf "FIPS Publication 5-2, FIPS Publication 6-4, FIPS Publication 8-6, FIPS Publication 9-1" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:60f415c9-2169-40e3-9387-b78b78f9ded9> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-11-07T20:16:25.716Z" ;
+    bcube:lastUpdated "2015-11-07T20:16:25.716Z" ;
+    bcube:originatedFrom <urn:uuid:bf5d590e-217c-46a8-952e-8e73f46999da> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:8e5a2089-eabf-41f2-be31-668514154980> .
+
+<urn:uuid:85850cab-ace3-4cb3-98ae-7317564f2bd3> bcube:hasType "theme" ;
+    bcube:hasValue "boundaries" ;
+    dc:partOf "ISO 19115 Topic Categories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:8e5a2089-eabf-41f2-be31-668514154980> bcube:dateCreated "2015-11-07T20:16:25.716Z" ;
+    bcube:hasMetadataRecord <urn:uuid:60f415c9-2169-40e3-9387-b78b78f9ded9> ;
+    bcube:lastUpdated "2015-11-07T20:16:25.716Z" ;
+    dc:conformsTo <urn:uuid:2e236da5-b01c-4ae2-b2f8-c99d9a1fffdf>,
+        <urn:uuid:85850cab-ace3-4cb3-98ae-7317564f2bd3>,
+        <urn:uuid:ecd9f59c-e270-4841-b9aa-1b5b4773fe1c> ;
+    dc:description "The TIGER/Line Shapefiles are an extract of selected geographic and cartographic information from the Census MAF/TIGER database. The Census MAF/TIGER database represents a seamless national file with no overlaps or gaps between parts. However, each TIGER/Line Shapefile is designed to stand alone as an independent data set or the shapefiles can be combined to cover the whole nation." ;
+    dc:spatial "POLYGON ((-65.159095 17.623468,-65.159095 18.464984,-64.512674 18.464984,-64.512674 17.623468,-65.159095 17.623468))" ;
+    dcterms:publisher <urn:uuid:05572fe6-54fe-49ac-b6b9-50db300ad48c> ;
+    dcterms:references <urn:uuid:f9c0e7ef-fa6f-4c95-99dd-733edd40cc9e> ;
+    dcterms:title "TIGER/Line Shapefile, 2007, state, Virgin Islands of the United States, County and Equivalent" ;
+    esip:eastBound "-64.512674"^^xsd:float ;
+    esip:endDate "2007-07-01"^^xsd:date ;
+    esip:northBound "18.464984"^^xsd:float ;
+    esip:southBound "17.623468"^^xsd:float ;
+    esip:startDate "2007-01-01"^^xsd:date ;
+    esip:westBound "-65.159095"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:bf5d590e-217c-46a8-952e-8e73f46999da> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-07T20:16:25.716Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-07T20:16:25.716Z" ;
+    dc:identifier "urn:sha:575427304bf00c0ff83e9987bdb140a85890d6d4f96dc8c7fd9b5478" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://meta.geo.census.gov/data/existing/decennial/GEO/GPMB/TIGERline/fe_2007/county/fe_2007_78_county_url.shp.xml" .
+
+<urn:uuid:ecd9f59c-e270-4841-b9aa-1b5b4773fe1c> bcube:hasType "theme" ;
+    bcube:hasValue "County or equivalent entity",
+        "Polygon" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:f9c0e7ef-fa6f-4c95-99dd-733edd40cc9e> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-07T20:16:25.716Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-07T20:16:25.716Z" ;
+    dc:identifier "urn:sha:6c5bc157ed7d2a2a65c4f8c796749b2ad62f21a7c938c25833729dda" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www2.census.gov/geo/tiger/TIGER2007FE/78_VIRGIN_ISLANDS_OF_THE_UNITED_STATES/fe_2007_78_county.zip" .
+

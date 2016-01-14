@@ -1,0 +1,57 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:2bda6543-8c03-491a-b4e2-bb032cdda64f> owl:a foaf:Organization ;
+    foaf:name "" .
+
+<urn:uuid:4770ce13-a7e6-41ab-be58-4f237f6d7997> bcube:hasType "theme" ;
+    bcube:hasValue "Methane, biomethane, biogas" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:5b837651-2ec2-4e5b-98d6-28f5f855eb21> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-10-30T19:09:17.108Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-10-30T19:09:17.108Z" ;
+    dc:identifier "urn:sha:a46be00867f85b12d47f7cf948c6b081a4fbe00e47af8321e6e8aa0d" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www.nrel.gov/gis/data/GIS_Data_Technology_Specific/United_States/Biomass/metadata/metadata_files/Biomethane.xml" .
+
+<urn:uuid:9b7b0537-135e-47d7-990d-e749e1e9ca52> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-10-30T19:09:17.108Z" ;
+    bcube:lastUpdated "2015-10-30T19:09:17.108Z" ;
+    bcube:originatedFrom <urn:uuid:5b837651-2ec2-4e5b-98d6-28f5f855eb21> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:c79e5961-408c-446e-9880-e467a624d5b6> .
+
+<urn:uuid:c79e5961-408c-446e-9880-e467a624d5b6> bcube:dateCreated "2015-10-30T19:09:17.108Z" ;
+    bcube:hasMetadataRecord <urn:uuid:9b7b0537-135e-47d7-990d-e749e1e9ca52> ;
+    bcube:lastUpdated "2015-10-30T19:09:17.108Z" ;
+    dc:conformsTo <urn:uuid:4770ce13-a7e6-41ab-be58-4f237f6d7997> ;
+    dc:description "This dataset contains estimates of the methane generation potential by county from the following biogas sources: landfills, animal manure; wastewater treatment; and industrial, institutional, and commercial organic waste (IIC)." ;
+    dc:spatial "POLYGON ((-178.227822 18.910787,-178.227822 71.390482,-66.950005 71.390482,-66.950005 18.910787,-178.227822 18.910787))" ;
+    dcterms:publisher <urn:uuid:2bda6543-8c03-491a-b4e2-bb032cdda64f> ;
+    dcterms:title "Biomethane" ;
+    esip:eastBound "-66.950005"^^xsd:float ;
+    esip:endDate "2013-04-30"^^xsd:date ;
+    esip:northBound "71.390482"^^xsd:float ;
+    esip:southBound "18.910787"^^xsd:float ;
+    esip:startDate "2007-10-30"^^xsd:date ;
+    esip:westBound "-178.227822"^^xsd:float ;
+    owl:a dcat:Dataset .
+

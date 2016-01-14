@@ -1,0 +1,78 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:39de17bc-061e-4d10-94e1-56cb808ab464> bcube:hasType "theme" ;
+    bcube:hasValue "Micronekton",
+        "ground truthing acoustics",
+        "mid-water trawl samples",
+        "scattering layer",
+        "trawls" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:6ecf6d7d-4797-4eed-ad62-46f1daa26b57> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-11-01T22:52:30.245Z" ;
+    bcube:lastUpdated "2015-11-01T22:52:30.245Z" ;
+    bcube:originatedFrom <urn:uuid:94e430f3-d7cf-40e6-80ad-79317dcd8130> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:bbbad1e7-7e14-46ac-aa70-bc573da43049> .
+
+<urn:uuid:94e430f3-d7cf-40e6-80ad-79317dcd8130> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-01T22:52:30.245Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-01T22:52:30.245Z" ;
+    dc:identifier "urn:sha:077c0bee296eb9a31055fa8b1344809c1eb91b0c8179d1260b9e95b5" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "https://inport.nmfs.noaa.gov/inport/item/5590/fgdc" .
+
+<urn:uuid:bbbad1e7-7e14-46ac-aa70-bc573da43049> bcube:dateCreated "2015-11-01T22:52:30.245Z" ;
+    bcube:hasMetadataRecord <urn:uuid:6ecf6d7d-4797-4eed-ad62-46f1daa26b57> ;
+    bcube:lastUpdated "2015-11-01T22:52:30.245Z" ;
+    dc:conformsTo <urn:uuid:39de17bc-061e-4d10-94e1-56cb808ab464>,
+        <urn:uuid:f212167e-5341-488e-a3e9-f1d68c8bd92f>,
+        <urn:uuid:f52627ed-6cec-4a27-84b7-29517e04a327> ;
+    dc:description "These data contain micronekton samples collected during mid-water trawling operations in the Pacific in pelagic environments and at sea mounts. Data is collected by a \"Stauffer modified Cobb Trawl\", specialized for micronekton tows. During daytimes, trawling operations are conducted in the deep acoustic scattering layer (500-750m), while during nighttimes both in the deep and the shallow (20-200m) scattering layers. Samples are weighed and sorted into main groups (approximately family level), then preserved. Preserved samples are measured for length and sorted into the smallest taxonomic groups possible (mostly species level)." ;
+    dc:spatial "POLYGON ((180 -15,180 20,-150 20,-150 -15,180 -15))" ;
+    dcterms:identifier "gov.noaa.nmfs.inport:5590" ;
+    dcterms:publisher <urn:uuid:e37edea0-fe4e-4c6e-988c-767330c5cfde> ;
+    dcterms:title "EOD Micronekton Trawl Samples" ;
+    esip:eastBound "-150.0"^^xsd:float ;
+    esip:northBound "20.0"^^xsd:float ;
+    esip:southBound "-15.0"^^xsd:float ;
+    esip:startDate "2005-04-01"^^xsd:date ;
+    esip:westBound "180.0"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:e37edea0-fe4e-4c6e-988c-767330c5cfde> owl:a foaf:Organization ;
+    foaf:name "" .
+
+<urn:uuid:f212167e-5341-488e-a3e9-f1d68c8bd92f> bcube:hasType "temporal" ;
+    bcube:hasValue "continuous sampling for 1 hour",
+        "intermittent" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:f52627ed-6cec-4a27-84b7-29517e04a327> bcube:hasType "place" ;
+    bcube:hasValue "Hawaii",
+        "Pacific Ocean",
+        "South Central Pacific",
+        "mesoscale oceanographic features",
+        "seamounts" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+

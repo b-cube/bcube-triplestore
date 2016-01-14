@@ -1,0 +1,89 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:357cacbc-8816-474f-b755-d86432886ffe> bcube:hasType "place" ;
+    bcube:hasValue "01125",
+        "County or Equivalent Entity",
+        "Tuscaloosa",
+        "U.S.",
+        "United States" ;
+    dc:partOf "FIPS Publication 5-2, FIPS Publication 6-4, FIPS Publication 8-6, FIPS Publication 9-1" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:4391c36a-a9f8-4295-8493-07e555ad60ac> owl:a foaf:Organization ;
+    foaf:name "" .
+
+<urn:uuid:b33014b6-fb1b-489c-bb11-e8adbdbe513b> bcube:hasType "theme" ;
+    bcube:hasValue "boundaries" ;
+    dc:partOf "ISO 19115 Topic Categories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:d1af34f8-56f0-491c-a2d5-b34596b9af6c> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-11-07T20:16:18.796Z" ;
+    bcube:lastUpdated "2015-11-07T20:16:18.796Z" ;
+    bcube:originatedFrom <urn:uuid:e665f798-a439-4bd0-b529-c27f0df14f10> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:d532811b-68fc-4dba-8c48-185d6f6cbc49> .
+
+<urn:uuid:d532811b-68fc-4dba-8c48-185d6f6cbc49> bcube:dateCreated "2015-11-07T20:16:18.796Z" ;
+    bcube:hasMetadataRecord <urn:uuid:d1af34f8-56f0-491c-a2d5-b34596b9af6c> ;
+    bcube:lastUpdated "2015-11-07T20:16:18.796Z" ;
+    dc:conformsTo <urn:uuid:357cacbc-8816-474f-b755-d86432886ffe>,
+        <urn:uuid:b33014b6-fb1b-489c-bb11-e8adbdbe513b>,
+        <urn:uuid:e69c4dae-be23-4f08-bc92-0453f001f7f0> ;
+    dc:description "The TIGER/Line Shapefiles are an extract of selected geographic and cartographic information from the Census MAF/TIGER database. The Census MAF/TIGER database represents a seamless national file with no overlaps or gaps between parts. However, each TIGER/Line Shapefile is designed to stand alone as an independent data set or the shapefiles can be combined to cover the whole nation." ;
+    dc:spatial "POLYGON ((-87.840711 33.003379,-87.840711 33.609833,-87.065738 33.609833,-87.065738 33.003379,-87.840711 33.003379))" ;
+    dcterms:publisher <urn:uuid:4391c36a-a9f8-4295-8493-07e555ad60ac> ;
+    dcterms:references <urn:uuid:d8fb61f9-7e70-4d66-95ae-f78cc4e5ca19> ;
+    dcterms:title "TIGER/Line Shapefile, 2007, 2000 county, Tuscaloosa County, Census Tract" ;
+    esip:eastBound "-87.065738"^^xsd:float ;
+    esip:endDate "2007-07-01"^^xsd:date ;
+    esip:northBound "33.609833"^^xsd:float ;
+    esip:southBound "33.003379"^^xsd:float ;
+    esip:startDate "2007-01-01"^^xsd:date ;
+    esip:westBound "-87.840711"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:d8fb61f9-7e70-4d66-95ae-f78cc4e5ca19> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-07T20:16:18.796Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-07T20:16:18.796Z" ;
+    dc:identifier "urn:sha:3ac3df9cee5552e81126d20090d7a93dcb8109dab10eb110f90249ee" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www2.census.gov/geo/tiger/TIGER2007FE/01_ALABAMA/01125_Tuscaloosa/fe_2007_01125_tract00.zip" .
+
+<urn:uuid:e665f798-a439-4bd0-b529-c27f0df14f10> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-07T20:16:18.796Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-07T20:16:18.796Z" ;
+    dc:identifier "urn:sha:cc1c4c9f056bf720d674d59a88fbb8742d414571f2ac8cc09399ffe7" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://meta.geo.census.gov/data/existing/decennial/GEO/GPMB/TIGERline/fe_2007/tract00/fe_2007_01125_tract00_url.shp.xml" .
+
+<urn:uuid:e69c4dae-be23-4f08-bc92-0453f001f7f0> bcube:hasType "theme" ;
+    bcube:hasValue "Census Tract",
+        "County or equivalent entity",
+        "Polygon",
+        "Tract" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+

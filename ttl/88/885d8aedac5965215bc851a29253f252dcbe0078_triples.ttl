@@ -1,0 +1,78 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:04c39af4-89b7-4835-8a3f-c9f2cc4b58b2> owl:a foaf:Organization ;
+    foaf:name "" .
+
+<urn:uuid:32a50efb-8a93-4d41-a7ce-5b5b0a2d86ae> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-10-17T11:10:33.172Z" ;
+    bcube:lastUpdated "2015-10-17T11:10:33.172Z" ;
+    bcube:originatedFrom <urn:uuid:cca83406-3550-4dee-98dc-c30670082c59> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:4673de77-48e5-4631-a593-8a8edd8ae9ae> .
+
+<urn:uuid:4673de77-48e5-4631-a593-8a8edd8ae9ae> bcube:dateCreated "2015-10-17T11:10:33.172Z" ;
+    bcube:hasMetadataRecord <urn:uuid:32a50efb-8a93-4d41-a7ce-5b5b0a2d86ae> ;
+    bcube:lastUpdated "2015-10-17T11:10:33.172Z" ;
+    dc:conformsTo <urn:uuid:6dc7cf97-6bff-4b81-b1f8-1e163ae4536e>,
+        <urn:uuid:a92e9e72-e058-4dc6-ba69-944694bc58ca> ;
+    dc:description "CDIP's station 053 data sets consist of coastal environment measurements taken in the vicinity of Umpqua River, Or. Wave measurements were made in water 42 meters deep. The station is operated by CDIP, and funded by USACE." ;
+    dc:spatial "POLYGON ((-124.238335 43.676666,-124.238335 43.676666,-124.238335 43.676666,-124.238335 43.676666,-124.238335 43.676666))" ;
+    dcterms:publisher <urn:uuid:04c39af4-89b7-4835-8a3f-c9f2cc4b58b2> ;
+    dcterms:references <urn:uuid:895bd9a6-7c94-4908-a63a-1be7fab1d0c7> ;
+    dcterms:title "CDIP Station 053, Set p1 - UMPQUA RIVER, OR BUOY" ;
+    esip:eastBound "-124.238335"^^xsd:float ;
+    esip:endDate "1985-06-29"^^xsd:date ;
+    esip:northBound "43.676666"^^xsd:float ;
+    esip:southBound "43.676666"^^xsd:float ;
+    esip:startDate "1984-05-20"^^xsd:date ;
+    esip:westBound "-124.238335"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:6dc7cf97-6bff-4b81-b1f8-1e163ae4536e> bcube:hasType "theme" ;
+    bcube:hasValue "oceans",
+        "wave energy" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:895bd9a6-7c94-4908-a63a-1be7fab1d0c7> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-10-17T11:10:33.172Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-10-17T11:10:33.172Z" ;
+    dc:identifier "urn:sha:aa3fd5cc74c0091cbc29cff7c395d981eb3caa4fa9ef1f925010eb2c" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://cdip.ucsd.edu/?sub=data&nav=historic&pub=public&stn=053&stream=p1" .
+
+<urn:uuid:a92e9e72-e058-4dc6-ba69-944694bc58ca> bcube:hasType "place" ;
+    bcube:hasValue "Oregon",
+        "Umpqua River, Or" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:cca83406-3550-4dee-98dc-c30670082c59> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-10-17T11:10:33.172Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-10-17T11:10:33.172Z" ;
+    dc:identifier "urn:sha:2a922fc80c0ac61595c42d97499e26411c1e37af148c3e5c770e788d" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://cdip.ucsd.edu/data_access/metadata/053p1.xml" .
+

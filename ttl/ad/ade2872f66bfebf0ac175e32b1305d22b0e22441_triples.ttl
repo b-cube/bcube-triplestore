@@ -1,0 +1,91 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:0793be73-bcf5-461b-85f8-07d8dd8f5f31> owl:a foaf:Organization ;
+    foaf:name "Delaware Coastal Programs" .
+
+<urn:uuid:0a788da1-1e46-435e-9663-e7c43e0cfa83> bcube:hasType "theme" ;
+    bcube:hasValue "aerial photography",
+        "forest mapping",
+        "historic images",
+        "imageryBaseMapsEarthCover",
+        "orthophotography",
+        "scanned images" ;
+    dc:partOf "none" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:58c7f3ff-b29b-48d2-bf05-17e6541e0ff9> bcube:hasType "place" ;
+    bcube:hasValue "Delaware",
+        "Delaware Bay",
+        "Delaware River",
+        "Dover",
+        "Georgetown",
+        "Kent County",
+        "Lewes",
+        "New Castle County",
+        "Newark",
+        "Rehoboth Beach",
+        "Smyrna",
+        "Sussex County",
+        "Wilmington" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:5a3384ac-1efd-46ec-8dd1-cfc77d5bcd91> bcube:dateCreated "2015-11-06T13:04:39.762Z" ;
+    bcube:hasMetadataRecord <urn:uuid:78bcebfd-d810-4ef8-aef3-d56d00b3d3de> ;
+    bcube:lastUpdated "2015-11-06T13:04:39.762Z" ;
+    dc:conformsTo <urn:uuid:0a788da1-1e46-435e-9663-e7c43e0cfa83>,
+        <urn:uuid:58c7f3ff-b29b-48d2-bf05-17e6541e0ff9> ;
+    dc:description "These are scanned images from aerial photography flow in 1937/38 by the Agricultural Stabilization and Conservation Service, maintained by the National Archives. These images are presented as individual tiles, county-wide and state-wide mosaics." ;
+    dc:spatial "POLYGON ((-75.884835 38.374114,-75.884835 39.875899,-74.991046 39.875899,-74.991046 38.374114,-75.884835 38.374114))" ;
+    dcterms:publisher <urn:uuid:0793be73-bcf5-461b-85f8-07d8dd8f5f31> ;
+    dcterms:references <urn:uuid:90afc8ed-6d6e-478e-b758-e1d3dfb0b4ef> ;
+    dcterms:title "Delaware 1937 Orthophotography" ;
+    esip:eastBound "-74.991046"^^xsd:float ;
+    esip:endDate "1938-01-01"^^xsd:date ;
+    esip:northBound "39.875899"^^xsd:float ;
+    esip:southBound "38.374114"^^xsd:float ;
+    esip:startDate "1937-01-01"^^xsd:date ;
+    esip:westBound "-75.884835"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:78bcebfd-d810-4ef8-aef3-d56d00b3d3de> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-11-06T13:04:39.762Z" ;
+    bcube:lastUpdated "2015-11-06T13:04:39.762Z" ;
+    bcube:originatedFrom <urn:uuid:eefbd7dd-fd61-4302-928b-44ddd58515ee> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:5a3384ac-1efd-46ec-8dd1-cfc77d5bcd91> .
+
+<urn:uuid:90afc8ed-6d6e-478e-b758-e1d3dfb0b4ef> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-06T13:04:39.762Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-06T13:04:39.762Z" ;
+    dc:identifier "urn:sha:d14a028c2a3a2bc9476102bb288234c415a2b01f828ea62ac5b3e42f" ;
+    owl:a bcube:Url .
+
+<urn:uuid:eefbd7dd-fd61-4302-928b-44ddd58515ee> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-06T13:04:39.762Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-06T13:04:39.762Z" ;
+    dc:identifier "urn:sha:c819dc29817e336d08bbc7d4e7035269af4135af7c2420032fef35ef" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://map.demac.udel.edu/data/metadata/de_orthos1937.xml" .
+

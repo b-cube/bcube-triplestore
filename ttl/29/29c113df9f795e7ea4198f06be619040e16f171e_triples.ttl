@@ -1,0 +1,86 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:1ab1dc66-be03-4b13-9f2d-d55cd2042bc4> bcube:hasType "theme" ;
+    bcube:hasValue "transportation" ;
+    dc:partOf "ISO 19115 Topic Category" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:374ca98a-2a22-42a8-846b-0a456e882c7a> owl:a foaf:Organization ;
+    foaf:name "Federal Emergency Management Agency" .
+
+<urn:uuid:4a2cb4fd-26b1-4114-9c45-6e5418f6b2e1> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-07-22T15:30:26.516Z" ;
+    bcube:lastUpdated "2015-07-22T15:30:26.516Z" ;
+    bcube:originatedFrom <urn:uuid:f803484e-ee5b-47ed-8561-4ecf55add110> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:6c2824ce-2963-44d2-9a17-19b3a05f19f2> .
+
+<urn:uuid:578ba51d-5231-41fe-8140-dea42eb2cf62> bcube:hasType "theme" ;
+    bcube:hasValue "Basemap" ;
+    dc:partOf "FEMA NFIP Topic Category" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:6c2824ce-2963-44d2-9a17-19b3a05f19f2> bcube:dateCreated "2015-07-22T15:30:26.516Z" ;
+    bcube:hasMetadataRecord <urn:uuid:4a2cb4fd-26b1-4114-9c45-6e5418f6b2e1> ;
+    bcube:lastUpdated "2015-07-22T15:30:26.516Z" ;
+    dc:conformsTo <urn:uuid:1ab1dc66-be03-4b13-9f2d-d55cd2042bc4>,
+        <urn:uuid:578ba51d-5231-41fe-8140-dea42eb2cf62>,
+        <urn:uuid:8d8317e9-2d6d-406e-8acd-868e17d71790> ;
+    dc:description "FEMA Framework Basemap datasets comprise six of the seven FGDC themes of geospatial data that are used by most GIS applications (Note: the seventh framework theme, orthographic imagery, is packaged in a separate NFIP Metadata Profile): cadastral, geodetic control, governmental unit, transportation, general structures, hydrography (water areas & lines. These data include an encoding of the geographic extent of the features and a minimal number of attributes needed to identify and describe the features. (Source: Circular A16, p. 13)" ;
+    dc:spatial "POLYGON ((-88.257038 32.495378,-88.257038 33.252446,-87.62064 33.252446,-87.62064 32.495378,-88.257038 32.495378))" ;
+    dcterms:publisher <urn:uuid:374ca98a-2a22-42a8-846b-0a456e882c7a> ;
+    dcterms:references <urn:uuid:8f898972-d32b-4032-92b4-c31c9a128fe6> ;
+    dcterms:title "BASEMAP, RANDOLPH COUNTY, ALABAMA USA" ;
+    esip:eastBound "-87.62064"^^xsd:float ;
+    esip:northBound "33.252446"^^xsd:float ;
+    esip:southBound "32.495378"^^xsd:float ;
+    esip:startDate "2010-01-25"^^xsd:date ;
+    esip:westBound "-88.257038"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:8d8317e9-2d6d-406e-8acd-868e17d71790> bcube:hasType "place" ;
+    bcube:hasValue "COMMUNITY name",
+        "COUNTY RANDOLPH",
+        "COUNTY-FIPS 111",
+        "FEMA-CID 01111C",
+        "REGION 04",
+        "STATE AL" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:8f898972-d32b-4032-92b4-c31c9a128fe6> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-07-22T15:30:26.516Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-07-22T15:30:26.516Z" ;
+    dc:identifier "urn:sha:37c915397238031daced09ae0e2dd3bf54e84a6477f749c2cc9dcbdf" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://hazards.fema.gov" .
+
+<urn:uuid:f803484e-ee5b-47ed-8561-4ecf55add110> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-07-22T15:30:26.516Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-07-22T15:30:26.516Z" ;
+    dc:identifier "urn:sha:6eb3fbbdfd61ff5cb559ace5caa21eb357c411a44c723faca19562d2" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "https://catalog.data.gov/harvest/object/596edf08-a3c6-48c8-bb51-9c2e8ccdba97/original" .
+

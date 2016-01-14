@@ -1,0 +1,88 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:01dc85d3-a3fc-47fa-9ac6-85bb76f0a0a8> owl:a foaf:Organization ;
+    foaf:name "" .
+
+<urn:uuid:0324d250-fe24-4248-b990-585277141a95> bcube:hasType "place" ;
+    bcube:hasValue "American Indian Area" ;
+    dc:partOf "FIPS Publication 5-2, FIPS Publication 6-4, FIPS Publication 8-6, FIPS Publication 9-1" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:4423ec54-4d84-44a4-89f3-6422283a4818> bcube:hasType "theme" ;
+    bcube:hasValue "boundaries" ;
+    dc:partOf "ISO 19115 Topic Categories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:5f9a1fe5-14b2-4b60-a18d-a649e5a37c11> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-11-08T06:47:24.398Z" ;
+    bcube:lastUpdated "2015-11-08T06:47:24.398Z" ;
+    bcube:originatedFrom <urn:uuid:9302cdfa-27fa-4a17-b1ef-eee75c31000e> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:9133d94e-defc-43c0-84fe-dbf005c43939> .
+
+<urn:uuid:9133d94e-defc-43c0-84fe-dbf005c43939> bcube:dateCreated "2015-11-08T06:47:24.398Z" ;
+    bcube:hasMetadataRecord <urn:uuid:5f9a1fe5-14b2-4b60-a18d-a649e5a37c11> ;
+    bcube:lastUpdated "2015-11-08T06:47:24.398Z" ;
+    dc:conformsTo <urn:uuid:0324d250-fe24-4248-b990-585277141a95>,
+        <urn:uuid:4423ec54-4d84-44a4-89f3-6422283a4818>,
+        <urn:uuid:b4573188-2641-4bb0-99d2-6e98dd87c79e> ;
+    dc:description "The TIGER/Line Shapefiles are an extract of selected geographic and cartographic information from the Census MAF/TIGER database. The Census MAF/TIGER database represents a seamless national file with no overlaps or gaps between parts. However, each TIGER/Line Shapefile is designed to stand alone as an independent data set or the shapefiles can be combined to cover the whole nation." ;
+    dc:spatial "POLYGON ((-89.178938 46.149162,-89.178938 46.291419,-89.078819 46.291419,-89.078819 46.149162,-89.178938 46.149162))" ;
+    dcterms:publisher <urn:uuid:01dc85d3-a3fc-47fa-9ac6-85bb76f0a0a8> ;
+    dcterms:references <urn:uuid:c986b856-7b59-4f36-8074-bc43515bf824> ;
+    dcterms:title "TIGER/Line Shapefile, 2007, entity, Lac Vieux Desert Reservation, American Indian Tribal Subdivision (AITS) AIA-based Shapefile" ;
+    esip:eastBound "-89.078819"^^xsd:float ;
+    esip:endDate "2007-07-01"^^xsd:date ;
+    esip:northBound "46.291419"^^xsd:float ;
+    esip:southBound "46.149162"^^xsd:float ;
+    esip:startDate "2007-01-01"^^xsd:date ;
+    esip:westBound "-89.178938"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:9302cdfa-27fa-4a17-b1ef-eee75c31000e> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-08T06:47:24.398Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-08T06:47:24.398Z" ;
+    dc:identifier "urn:sha:ef686d4ff0b6dda40f86d5ce03b21e652e6e09725b290453c3ed22f9" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://meta.geo.census.gov/data/existing/decennial/GEO/GPMB/TIGERline/fe_2007/aitsaia/fe_2007_1830_aitsaia_url.shp.xml" .
+
+<urn:uuid:b4573188-2641-4bb0-99d2-6e98dd87c79e> bcube:hasType "theme" ;
+    bcube:hasValue "AIA",
+        "AIR",
+        "American Indian Area",
+        "American Indian Reservation",
+        "Entity",
+        "Polygon",
+        "Tribal Subdivision" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:c986b856-7b59-4f36-8074-bc43515bf824> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-08T06:47:24.398Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-08T06:47:24.398Z" ;
+    dc:identifier "urn:sha:ce73bb040794dfe507cd530fae8edc58b929d861fbd54c91a16f55ad" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www2.census.gov/geo/tiger/TIGER2007FE/AITS_BY_AIA/1830_Lac_Vieux_Desert_Reservation/fe_2007_1830_aitsaia.zip" .
+

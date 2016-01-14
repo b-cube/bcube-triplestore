@@ -1,0 +1,97 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:05db2bb2-8c0b-4e65-bcc7-aef775e7ed82> bcube:hasType "place" ;
+    bcube:hasValue "Pennsylvania" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:17a8e391-77b9-4fc9-9cf6-853c63e37dab> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-10-30T07:15:07.461Z" ;
+    bcube:lastUpdated "2015-10-30T07:15:07.461Z" ;
+    bcube:originatedFrom <urn:uuid:753af5f7-af30-4e10-b760-741e8473bf8d> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:98fae3ae-8ef5-4333-8855-b22135dbebf3> .
+
+<urn:uuid:2e56392a-3e16-44f4-91a9-786e8b0137a2> bcube:hasType "theme" ;
+    bcube:hasValue "borough",
+        "boundaries",
+        "city",
+        "congressional",
+        "municipal boundaries",
+        "town",
+        "township" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:753af5f7-af30-4e10-b760-741e8473bf8d> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-10-30T07:15:07.461Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-10-30T07:15:07.461Z" ;
+    dc:identifier "urn:sha:e0bc7225e5fdc72f243b09953d9b5a06633a0c8a111157e18c930ca4" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www.pasda.psu.edu/data/heritage_conservancy/RBA_Berks_County/Act167_Watershed_Data/Manatawny_Creek/Layers/Boundaries/berks_mun83s.shp.xml" .
+
+<urn:uuid:8dab4671-0e80-410c-9201-76c9834d1944> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-10-30T07:15:07.461Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-10-30T07:15:07.461Z" ;
+    dc:identifier "urn:sha:76dc93da66ee537db3ac5f90e6b6ab19d480af0a2096e8d1d2bc65c5" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www.pasda.psu.edu/data/padot/boundary_layers/padot-municipalities_2005.zip" .
+
+<urn:uuid:8f2f3c3e-1895-4d7b-b440-6ed12b3fc5cf> dcterms:references <urn:uuid:8dab4671-0e80-410c-9201-76c9834d1944> ;
+    owl:a bibo:WebPage .
+
+<urn:uuid:98fae3ae-8ef5-4333-8855-b22135dbebf3> bcube:dateCreated "2015-10-30T07:15:07.461Z" ;
+    bcube:hasMetadataRecord <urn:uuid:17a8e391-77b9-4fc9-9cf6-853c63e37dab> ;
+    bcube:lastUpdated "2015-10-30T07:15:07.461Z" ;
+    dc:conformsTo <urn:uuid:05db2bb2-8c0b-4e65-bcc7-aef775e7ed82>,
+        <urn:uuid:2e56392a-3e16-44f4-91a9-786e8b0137a2> ;
+    dc:description "Boundaries of municipalities within Pennsylvania as delineated for the PennDOT Type 10 general highway maps. Additional information comes from the Pennsylvania Bureau of Municipal Services. This layer contains all classifications of municipality including first and second class townships, boroughs, cities and the town." ;
+    dc:spatial "POLYGON ((-76.446836 40.130982,-76.446836 40.684621,-75.521985 40.684621,-75.521985 40.130982,-76.446836 40.130982))" ;
+    dcterms:publisher <urn:uuid:b9f2a785-7965-4e83-913d-c1e588750ee1> ;
+    dcterms:references <urn:uuid:8f2f3c3e-1895-4d7b-b440-6ed12b3fc5cf>,
+        <urn:uuid:c9f5a5e5-1fac-48e8-a32b-47cff5fd2f45> ;
+    dcterms:title "berks_mun83s" ;
+    esip:eastBound "-75.521985"^^xsd:float ;
+    esip:northBound "40.684621"^^xsd:float ;
+    esip:southBound "40.130982"^^xsd:float ;
+    esip:startDate "2005-10-01"^^xsd:date ;
+    esip:westBound "-76.446836"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:b9f2a785-7965-4e83-913d-c1e588750ee1> owl:a foaf:Organization ;
+    foaf:name "Pennsylvania Department of Transportation" .
+
+<urn:uuid:c9f5a5e5-1fac-48e8-a32b-47cff5fd2f45> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-10-30T07:15:07.461Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-10-30T07:15:07.461Z" ;
+    dc:identifier "urn:sha:9ed4025250321ff44731f7d88b7d6a151fb3adb37cb926ccb35e6e10" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "ftp://www.pasda.psu.edu/pub/pasda/padot/boundary_layers/padot-municipalities_2005.zip" .
+

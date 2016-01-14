@@ -1,0 +1,78 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:36711278-ee2d-4bc0-9c23-59f456b184a5> bcube:hasType "place" ;
+    bcube:hasValue "fLD10 = North America" ;
+    dc:partOf "Augmented FIPS 10-4 and FIPS 6-4" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:3fdb00fa-7ee4-442c-8252-6c1b47d2cf40> bcube:hasType "theme" ;
+    bcube:hasValue "crust (earth)",
+        "earth structure",
+        "geophysics",
+        "maps and atlases",
+        "seismic methods",
+        "structure contours",
+        "tectonic processes" ;
+    dc:partOf "USGS Thesaurus" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:76568643-11a1-44b0-96f5-75b20e2ad992> owl:a foaf:Organization ;
+    foaf:name "U.S. Geological Survey" .
+
+<urn:uuid:9cc2207b-e46b-4d79-9dac-727b71a1d791> dcterms:references <urn:uuid:fb13c7e8-0a50-45cf-a84a-a4c657bd28a6> ;
+    owl:a bibo:WebPage .
+
+<urn:uuid:9e1d76fc-5e6a-4870-a87b-8871a62f74a2> bcube:dateCreated "2014-07-30T02:25:08.734Z" ;
+    bcube:hasMetadataRecord <urn:uuid:a4f88a0f-0c45-47e1-a0c6-69f7b8006ce4> ;
+    bcube:lastUpdated "2014-07-30T02:25:08.734Z" ;
+    dc:conformsTo <urn:uuid:36711278-ee2d-4bc0-9c23-59f456b184a5>,
+        <urn:uuid:3fdb00fa-7ee4-442c-8252-6c1b47d2cf40> ;
+    dc:description "Presentation of maps of the seismic properties of North America and the surrounding ocean basins compiled from seismic refraction and reflection data, earthquake studies, and surface wave analyses showing crustal thickness and geologic provinces." ;
+    dcterms:publisher <urn:uuid:76568643-11a1-44b0-96f5-75b20e2ad992> ;
+    dcterms:references <urn:uuid:9cc2207b-e46b-4d79-9dac-727b71a1d791> ;
+    dcterms:title "Seismic properties of North America and the surrounding ocean basins" ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:a4f88a0f-0c45-47e1-a0c6-69f7b8006ce4> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2014-07-30T02:25:08.734Z" ;
+    bcube:lastUpdated "2014-07-30T02:25:08.734Z" ;
+    bcube:originatedFrom <urn:uuid:b7513382-fce4-4cb0-97b4-74c8d08361b2> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:9e1d76fc-5e6a-4870-a87b-8871a62f74a2> .
+
+<urn:uuid:b7513382-fce4-4cb0-97b4-74c8d08361b2> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2014-07-30T02:25:08.734Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2014-07-30T02:25:08.734Z" ;
+    dc:identifier "urn:sha:dcdc28eef3d682ebca38355f6d77b9ad5252897d24d3071a3f1ba927" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www.usgs.gov/science/xml.php?cite=1474" .
+
+<urn:uuid:fb13c7e8-0a50-45cf-a84a-a4c657bd28a6> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2014-07-30T02:25:08.734Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2014-07-30T02:25:08.734Z" ;
+    dc:identifier "urn:sha:8589c2bc62fbaff47e650ece9bc7339ae2b4343d72802640539593ae" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://earthquake.usgs.gov/research/structure/crust/nam.php" .
+

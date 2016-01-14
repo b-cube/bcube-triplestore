@@ -1,0 +1,89 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:1f97ff03-0bbc-483e-abce-d6f48cd2e8c8> bcube:hasType "theme" ;
+    bcube:hasValue "Bathymetry",
+        "CSMP",
+        "Geology",
+        "Marine Geology",
+        "Multibeam",
+        "Ocean Floor Topography",
+        "Pacific Coastal and Marine Science Center",
+        "U.S. Geological Survey",
+        "USGS",
+        "Water Depth" ;
+    dc:partOf "General" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:279598c6-fd43-4270-8848-7ae2aa161a68> bcube:hasType "theme" ;
+    bcube:hasValue "Oceans > Bathymetry/SeafloorTopography > Bathymetry",
+        "Oceans > Bathymetry/SeafloorTopography > Seafloor Topography" ;
+    dc:partOf "Global Change Master Directory (GCMD)" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:2a3d9e06-a991-4174-a2d5-d586ea120e38> owl:a foaf:Organization ;
+    foaf:name "" .
+
+<urn:uuid:5c9767b0-f1b2-4521-85a3-a664338dcd2d> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-10-12T13:05:07.889Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-10-12T13:05:07.889Z" ;
+    dc:identifier "urn:sha:5d60893d2588fc655314f69c5ca191cdf9f228549af65e88bf763862" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://pubs.usgs.gov/ds/781/OffshoreSanGregorio/metadata/BathymetryHS_OffshoreSanGregorio_metadata.xml" .
+
+<urn:uuid:847e143c-99f4-4fbc-b2ae-096ab5c0b471> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-10-12T13:05:07.889Z" ;
+    bcube:lastUpdated "2015-10-12T13:05:07.889Z" ;
+    bcube:originatedFrom <urn:uuid:5c9767b0-f1b2-4521-85a3-a664338dcd2d> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:a08e5628-0fa2-471d-b632-41d775103e85> .
+
+<urn:uuid:a08e5628-0fa2-471d-b632-41d775103e85> bcube:dateCreated "2015-10-12T13:05:07.889Z" ;
+    bcube:hasMetadataRecord <urn:uuid:847e143c-99f4-4fbc-b2ae-096ab5c0b471> ;
+    bcube:lastUpdated "2015-10-12T13:05:07.889Z" ;
+    dc:conformsTo <urn:uuid:1f97ff03-0bbc-483e-abce-d6f48cd2e8c8>,
+        <urn:uuid:279598c6-fd43-4270-8848-7ae2aa161a68>,
+        <urn:uuid:cf69c613-3029-421a-9a78-0b0ef245b177>,
+        <urn:uuid:e1853ceb-6149-4a84-ac99-780730cf7c61> ;
+    dc:description "This part of SIM 3306 presents data for the bathymetry and shaded-relief maps (see sheet 1 and 2, SIM 3306) of the Offshore of San Gregorio map area, California. The raster data file is included in \"Bathymetry_OffshoreSanGregorio.zip,\" which is accessible from http://pubs.usgs.gov/ds/781/OffshoreSanGregorio/data_catalog_OffshoreSanGregorio.html. The bathymetry and shaded-relief maps of Offshore San Gregorio, California, were generated from bathymetry data collected by Fugro Pelagos and by California State University, Monterey Bay (CSUMB). Mapping was completed in 2006 and 2007, using a combination of 400-kHz Reson 7125 and 244-kHz Reson 8101 multibeam echosounders. These mapping missions combined to collect bathymetry (sheets 1, 2) from about the 10-m isobath to beyond the 3-nautical-mile limit of California s State Waters." ;
+    dc:spatial "POLYGON ((-122.54 37.23,-122.54 37.39,-122.34 37.39,-122.34 37.23,-122.54 37.23))" ;
+    dcterms:publisher <urn:uuid:2a3d9e06-a991-4174-a2d5-d586ea120e38> ;
+    dcterms:title "Bathymetry--Offshore San Gregorio, California" ;
+    esip:eastBound "-122.34"^^xsd:float ;
+    esip:endDate "2007-01-01"^^xsd:date ;
+    esip:northBound "37.39"^^xsd:float ;
+    esip:southBound "37.23"^^xsd:float ;
+    esip:startDate "2006-01-01"^^xsd:date ;
+    esip:westBound "-122.54"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:cf69c613-3029-421a-9a78-0b0ef245b177> bcube:hasType "place" ;
+    bcube:hasValue "Half Moon Bay",
+        "San Gregorio",
+        "State of California" ;
+    dc:partOf "Geographic Names Information System (GNIS)" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:e1853ceb-6149-4a84-ac99-780730cf7c61> bcube:hasType "theme" ;
+    bcube:hasValue "geoscientificInformation",
+        "imageryBaseMapsEarthCover",
+        "oceans" ;
+    dc:partOf "ISO 19115 Topic Category" ;
+    owl:a bcube:thesaurusSubset .
+

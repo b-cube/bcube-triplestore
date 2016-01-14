@@ -1,0 +1,83 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:353e253c-6a48-403d-b854-8fb3b22986fe> owl:a foaf:Organization ;
+    foaf:name "Idaho Department of Parks and Recreation" .
+
+<urn:uuid:5d085ecc-a078-401d-8e8c-2fedd7f41c7f> bcube:dateCreated "2015-11-03T00:35:20.37Z" ;
+    bcube:hasMetadataRecord <urn:uuid:790797ae-8eb8-4db6-a7d6-4cd96d5c8f42> ;
+    bcube:lastUpdated "2015-11-03T00:35:20.37Z" ;
+    dc:conformsTo <urn:uuid:b293e885-0276-4d24-a13d-05be587ed8f5>,
+        <urn:uuid:e5a72158-2bf6-492e-8da2-9be79832497a>,
+        <urn:uuid:f248ece1-b2cf-4cd6-8dab-f1f70156a96a> ;
+    dc:description "Idaho Boating Facilities. Includes both motorized (power boats, jet skis) and non-motorized (rafts, kayaks) boat ramps, access points, and parking." ;
+    dc:spatial "POLYGON ((-117.508642 42.018286,-117.508642 49.025921,-110.779868 49.025921,-110.779868 42.018286,-117.508642 42.018286))" ;
+    dcterms:publisher <urn:uuid:353e253c-6a48-403d-b854-8fb3b22986fe> ;
+    dcterms:references <urn:uuid:b5e24e93-d09e-4667-bc28-3cad88fc1ed3> ;
+    dcterms:title "Boating Facilities of Idaho" ;
+    esip:eastBound "-110.779868"^^xsd:float ;
+    esip:northBound "49.025921"^^xsd:float ;
+    esip:southBound "42.018286"^^xsd:float ;
+    esip:startDate "2006-03-21"^^xsd:date ;
+    esip:westBound "-117.508642"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:790797ae-8eb8-4db6-a7d6-4cd96d5c8f42> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-11-03T00:35:20.37Z" ;
+    bcube:lastUpdated "2015-11-03T00:35:20.37Z" ;
+    bcube:originatedFrom <urn:uuid:880254d0-001b-471d-a6d8-8699d487bd8e> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:5d085ecc-a078-401d-8e8c-2fedd7f41c7f> .
+
+<urn:uuid:880254d0-001b-471d-a6d8-8699d487bd8e> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-03T00:35:20.37Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-03T00:35:20.37Z" ;
+    dc:identifier "urn:sha:4295af099d8c9bbd39b76eb2801046474c7b2124dd5a738f4801899b" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://cloud.insideidaho.org/appsOutput/metadataWAF/xml/BoatingFacilitiesofIdaho.xml" .
+
+<urn:uuid:b293e885-0276-4d24-a13d-05be587ed8f5> bcube:hasType "theme" ;
+    bcube:hasValue "Boat",
+        "Facilities",
+        "Parking",
+        "Ramp" ;
+    dc:partOf "Idaho Boating Facilites" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:b5e24e93-d09e-4667-bc28-3cad88fc1ed3> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-03T00:35:20.37Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-03T00:35:20.37Z" ;
+    dc:identifier "urn:sha:abd65b7271dc97af871f8402f300ee1c12ea34be3552d5d0322acaff" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://cloud.insideidaho.org/webApps/util/zip.ashx?fn=http://cloud.insideidaho.org/data/idpr/boatFac_id_idpr.shp" .
+
+<urn:uuid:e5a72158-2bf6-492e-8da2-9be79832497a> bcube:hasType "theme" ;
+    bcube:hasValue "location" ;
+    dc:partOf "ISO 19115 Topic Category" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:f248ece1-b2cf-4cd6-8dab-f1f70156a96a> bcube:hasType "place" ;
+    bcube:hasValue "Idaho" ;
+    owl:a bcube:thesaurusSubset .
+

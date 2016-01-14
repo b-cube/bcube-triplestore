@@ -1,0 +1,94 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:0d882cdc-d624-42d1-96cd-acba862cb8d5> dcterms:references <urn:uuid:637356f2-7b33-4d13-bfc9-ac3930e2c7ba> ;
+    owl:a bibo:WebPage .
+
+<urn:uuid:2a36c0d5-039f-4477-9dda-b59ff9dce650> owl:a foaf:Organization ;
+    foaf:name "" .
+
+<urn:uuid:377be7a3-2e00-41dd-af0e-ac94b21a0ebc> bcube:hasType "place" ;
+    bcube:hasValue "Alabama",
+        "Florida",
+        "Florida Shelf",
+        "Georgia",
+        "Gulf of Mexico",
+        "North America",
+        "Pulley Ridge",
+        "United States" ;
+    dc:partOf "General" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:5b94526c-0d31-463c-8463-2191cdc108e9> bcube:hasType "theme" ;
+    bcube:hasValue "Coastal and Marine Geology Program",
+        "OF 2004-1228",
+        "Open-File Report",
+        "U.S. Geological Survey",
+        "USGS",
+        "Woods Hole Science Center",
+        "bounds",
+        "polygon",
+        "shapefile",
+        "shoreline" ;
+    dc:partOf "General" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:637356f2-7b33-4d13-bfc9-ac3930e2c7ba> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-05T11:48:00.222Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-05T11:48:00.222Z" ;
+    dc:identifier "urn:sha:6c1fdfae3f086dd7070184eab9d4a8ac0d322c34b3f03ca654c7c860" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://pubs.usgs.gov/of/2004/1228/data/gis/partstates.zip" .
+
+<urn:uuid:ca9f12b1-1a3d-4e2b-ab94-ff819bb4600f> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-08-05T11:48:00.222Z" ;
+    bcube:lastUpdated "2015-08-05T11:48:00.222Z" ;
+    bcube:originatedFrom <urn:uuid:e40c7518-1f23-4e53-978f-6bdf5989c801> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:e689a564-28ca-4618-8739-58af439fc199> .
+
+<urn:uuid:e40c7518-1f23-4e53-978f-6bdf5989c801> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-05T11:48:00.222Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-05T11:48:00.222Z" ;
+    dc:identifier "urn:sha:effbaec2a0a69b6742f7ed9a3868929dcad13ea161fd534302838fd5" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://pubs.usgs.gov/of/2004/1228/data/gis/partstates.shp.xml" .
+
+<urn:uuid:e689a564-28ca-4618-8739-58af439fc199> bcube:dateCreated "2015-08-05T11:48:00.222Z" ;
+    bcube:hasMetadataRecord <urn:uuid:ca9f12b1-1a3d-4e2b-ab94-ff819bb4600f> ;
+    bcube:lastUpdated "2015-08-05T11:48:00.222Z" ;
+    dc:conformsTo <urn:uuid:377be7a3-2e00-41dd-af0e-ac94b21a0ebc>,
+        <urn:uuid:5b94526c-0d31-463c-8463-2191cdc108e9> ;
+    dc:description "This ArcView shapefile represents a portion of state boundaries of the United States." ;
+    dc:spatial "POLYGON ((-88.378995 24.544089,-88.378995 31.736854,-80.031363 31.736854,-80.031363 24.544089,-88.378995 24.544089))" ;
+    dcterms:publisher <urn:uuid:2a36c0d5-039f-4477-9dda-b59ff9dce650> ;
+    dcterms:references <urn:uuid:0d882cdc-d624-42d1-96cd-acba862cb8d5> ;
+    dcterms:title "Portion of US state bounds along the Gulf of Mexico" ;
+    esip:eastBound "-80.031363"^^xsd:float ;
+    esip:northBound "31.736854"^^xsd:float ;
+    esip:southBound "24.544089"^^xsd:float ;
+    esip:startDate "2002-01-01"^^xsd:date ;
+    esip:westBound "-88.378995"^^xsd:float ;
+    owl:a dcat:Dataset .
+

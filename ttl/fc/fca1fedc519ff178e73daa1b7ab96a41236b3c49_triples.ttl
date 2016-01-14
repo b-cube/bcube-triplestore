@@ -1,0 +1,89 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:2f2ec9eb-8dc3-4850-b9e0-5adbe9572d16> owl:a foaf:Organization ;
+    foaf:name "" .
+
+<urn:uuid:3ce523eb-a765-4700-94bd-7812b36f5098> bcube:hasType "place" ;
+    bcube:hasValue "10",
+        "DE",
+        "Delaware",
+        "State or Equivalent Entity",
+        "U.S.",
+        "United States" ;
+    dc:partOf "FIPS Publication 5-2, FIPS Publication 6-4, FIPS Publication 8-6, FIPS Publication 9-1" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:88f7fd16-3e96-4ad3-8db6-df72decd5953> bcube:hasType "theme" ;
+    bcube:hasValue "boundaries" ;
+    dc:partOf "ISO 19115 Topic Categories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:8f04c94b-a351-4f40-889a-773650453578> bcube:hasType "theme" ;
+    bcube:hasValue "Congressional Districts",
+        "Polygon",
+        "State or equivalent entity" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:a40983fb-7cc2-4188-ad70-b012aa0dbbc6> bcube:dateCreated "2015-11-07T09:56:07.711Z" ;
+    bcube:hasMetadataRecord <urn:uuid:eb233efe-ee67-49ec-bd00-6f7ceb52d1ee> ;
+    bcube:lastUpdated "2015-11-07T09:56:07.711Z" ;
+    dc:conformsTo <urn:uuid:3ce523eb-a765-4700-94bd-7812b36f5098>,
+        <urn:uuid:88f7fd16-3e96-4ad3-8db6-df72decd5953>,
+        <urn:uuid:8f04c94b-a351-4f40-889a-773650453578> ;
+    dc:description "The TIGER/Line Shapefiles are an extract of selected geographic and cartographic information from the Census MAF/TIGER database. The Census MAF/TIGER database represents a seamless national file with no overlaps or gaps between parts. However, each TIGER/Line Shapefile is designed to stand alone as an independent data set or the shapefiles can be combined to cover the whole nation." ;
+    dc:spatial "POLYGON ((-75.789148 38.451018,-75.789148 39.839484,-74.984165 39.839484,-74.984165 38.451018,-75.789148 38.451018))" ;
+    dcterms:publisher <urn:uuid:2f2ec9eb-8dc3-4850-b9e0-5adbe9572d16> ;
+    dcterms:references <urn:uuid:c18ce226-6006-4fc3-b5f7-d78ba8f7498d> ;
+    dcterms:title "TIGER/Line Shapefile, 2007, 2000 state, Delaware, 108th Congressional District" ;
+    esip:eastBound "-74.984165"^^xsd:float ;
+    esip:endDate "2007-07-01"^^xsd:date ;
+    esip:northBound "39.839484"^^xsd:float ;
+    esip:southBound "38.451018"^^xsd:float ;
+    esip:startDate "2007-01-01"^^xsd:date ;
+    esip:westBound "-75.789148"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:c18ce226-6006-4fc3-b5f7-d78ba8f7498d> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-07T09:56:07.711Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-07T09:56:07.711Z" ;
+    dc:identifier "urn:sha:7936c0455d2143e684074b4180422c36c33d4725e1e7ddacbbe30138" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www2.census.gov/geo/tiger/TIGER2007FE/10_DELAWARE/fe_2007_10_cd108.zip" .
+
+<urn:uuid:cb6c3327-70bc-4ca1-81fb-5467694417cc> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-07T09:56:07.711Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-07T09:56:07.711Z" ;
+    dc:identifier "urn:sha:6ba8da131c35658518c5c76ac50fb7240454ef99bad66445d98b7c8d" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://meta.geo.census.gov/data/existing/decennial/GEO/GPMB/TIGERline/fe_2007/cd108/fe_2007_10_cd108_url.shp.xml" .
+
+<urn:uuid:eb233efe-ee67-49ec-bd00-6f7ceb52d1ee> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-11-07T09:56:07.711Z" ;
+    bcube:lastUpdated "2015-11-07T09:56:07.711Z" ;
+    bcube:originatedFrom <urn:uuid:cb6c3327-70bc-4ca1-81fb-5467694417cc> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:a40983fb-7cc2-4188-ad70-b012aa0dbbc6> .
+

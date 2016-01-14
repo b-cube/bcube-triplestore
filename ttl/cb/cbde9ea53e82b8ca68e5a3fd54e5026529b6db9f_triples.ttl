@@ -1,0 +1,90 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:031f9ba9-32d0-4e55-890a-93367f241a6f> bcube:hasValue "boundaries" ;
+    dc:partOf "IsoTopicCategories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:193e9d93-5f13-4496-b45b-bf28819272c4> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-07-28T18:30:46.004Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-07-28T18:30:46.004Z" ;
+    dc:identifier "urn:sha:fdec0724f5d06266382dbe11000ff7f3faf6bd8f01532b1382f809fd" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www2.census.gov/geo/tiger/TIGER2014/BG" .
+
+<urn:uuid:1ede2493-efae-44d9-acab-9caffb2018aa> bcube:hasType "theme" ;
+    bcube:hasValue "Governmental Units and Administrative and Statistical Boundaries Theme",
+        "NGDA",
+        "National Geospatial Data Asset" ;
+    dc:partOf "NGDA Portfolio Themes" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:236a8dec-4b57-4a93-bed1-37b4b13dd25e> bcube:hasType "theme" ;
+    bcube:hasValue "BG",
+        "Block Group",
+        "Boundaries",
+        "Polygon",
+        "State or equivalent entity" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:64bfecc4-326e-477b-8a70-4a61d34e8981> a "ISO 19115:2003/19139" ;
+    bcube:dateCreated "2015-07-28T18:30:46.004Z" ;
+    bcube:lastUpdated "2015-07-28T18:30:46.004Z" ;
+    bcube:originatedFrom <urn:uuid:f4860889-d19d-469f-afde-7e1ab8913ac3> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:c79ee349-3c0c-4acb-977f-0136904f7e30> .
+
+<urn:uuid:c79ee349-3c0c-4acb-977f-0136904f7e30> bcube:dateCreated "2015-07-28T18:30:46.004Z" ;
+    bcube:hasMetadataRecord <urn:uuid:64bfecc4-326e-477b-8a70-4a61d34e8981> ;
+    bcube:lastUpdated "2015-07-28T18:30:46.004Z" ;
+    dc:conformsTo <urn:uuid:031f9ba9-32d0-4e55-890a-93367f241a6f>,
+        <urn:uuid:1ede2493-efae-44d9-acab-9caffb2018aa>,
+        <urn:uuid:236a8dec-4b57-4a93-bed1-37b4b13dd25e>,
+        <urn:uuid:caac80ee-51f1-46f6-8bab-4acd92bea860> ;
+    dc:description "Block Groups (BGs) are clusters of blocks within the same census tract. Each census tract contains at least one BG, and BGs are uniquely numbered within census tracts. BGs have a valid code range of 0 through 9. BGs have the same first digit of their 4-digit census block number from the same decennial census. For example, tabulation blocks numbered 3001, 3002, 3003,.., 3999 within census tract 1210.02 are also within BG 3 within that census tract. BGs coded 0 are intended to only include water area, no land area, and they are generally in territorial seas, coastal water, and Great Lakes water areas. Block groups generally contain between 600 and 3,000 people. A BG usually covers a contiguous area but never crosses county or census tract boundaries. They may, however, cross the boundaries of other geographic entities like county subdivisions, places, urban areas, voting districts, congressional districts, and American Indian / Alaska Native / Native Hawaiian areas. The BG boundaries in this release are those that were delineated as part of the Census Bureau's Participant Statistical Areas Program (PSAP) for the 2010 Census." ;
+    dc:spatial "POLYGON ((-179.231086 -14.601813,-179.231086 71.441059,179.859681 71.441059,179.859681 -14.601813,-179.231086 -14.601813))" ;
+    dcterms:references <urn:uuid:193e9d93-5f13-4496-b45b-bf28819272c4> ;
+    dcterms:title "TIGER/Line Shapefile, 2014, Series Information File for the Current Block Group State-based Shapefile" ;
+    esip:eastBound "179.859681"^^xsd:float ;
+    esip:endDate "2014-05-03"^^xsd:date ;
+    esip:northBound "71.441059"^^xsd:float ;
+    esip:southBound "-14.601813"^^xsd:float ;
+    esip:startDate "2013-06-03"^^xsd:date ;
+    esip:westBound "-179.231086"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:caac80ee-51f1-46f6-8bab-4acd92bea860> bcube:hasType "place" ;
+    bcube:hasValue "State or Equivalent Entity",
+        "U.S." ;
+    dc:partOf "ANSI INCITS 38:2009 (Formerly FIPS 5-2), ANSI INCITS 31:2009 (Formerly FIPS 6-4),ANSI INCITS 454:2009 (Formerly FIPS 8-6), ANSI INCITS 455:2009(Formerly FIPS 9-1), ANSI INCITS 446:2008 (Geographic Names Information System (GNIS))" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:f4860889-d19d-469f-afde-7e1ab8913ac3> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-07-28T18:30:46.004Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-07-28T18:30:46.004Z" ;
+    dc:identifier "urn:sha:fc47ab6a4e4741fce0039f94ec6ea3d9aee56b657ef2fe02b3ec846a" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "https://catalog.data.gov/harvest/object/375a481f-bac7-4b57-8cf4-0e79ff902d77" .
+

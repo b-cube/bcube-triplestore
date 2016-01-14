@@ -1,0 +1,80 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:0d9fbfb8-d682-431c-96d9-a6f496679b10> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-10-19T01:23:39.331Z" ;
+    bcube:lastUpdated "2015-10-19T01:23:39.331Z" ;
+    bcube:originatedFrom <urn:uuid:6e7fb759-f8f7-421a-9086-6657390e40b4> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:0feb7fb9-5860-4275-b61e-06fd61f682c1> .
+
+<urn:uuid:0feb7fb9-5860-4275-b61e-06fd61f682c1> bcube:dateCreated "2015-10-19T01:23:39.331Z" ;
+    bcube:hasMetadataRecord <urn:uuid:0d9fbfb8-d682-431c-96d9-a6f496679b10> ;
+    bcube:lastUpdated "2015-10-19T01:23:39.331Z" ;
+    dc:conformsTo <urn:uuid:bb20662c-997a-4703-a8bd-88e7eebb04c9>,
+        <urn:uuid:c112e29e-688f-48b5-9688-62249f6c1088> ;
+    dc:description "These data are a Kernel Density layers produced using ArcGIS. The Kernel analysis is a nonparametric statistical method for estimating probability densities from a set of points. Conceptually, a smooth raster surface is fitted over each point. The surface value is highest at the location of the point and diminishes with increasing distance (i.e. search radius), eventually reaching zero. A default value is calculated by the analysis tool for the search radius based on the input data; increasing the radius has little affect on the density value. Although more points will fall inside a larger search radius the number will be divided by a larger area when calculating density resulting in a more generalized output raster. The volume under the surface equals the weighted value for the point. The weights were created by Knowledge Networks and applied to the points based on demographics. The density of the output raster is calculated by adding the values of all the individual surfaces where they overlap. The point's weighted value determines the number of times to count the point. For example, a weighted value of 1.5 would cause the point to be counted one and half times. The resulting dataset is a smooth raster surface depicting the intensity use or density of an activity. Based on previous experience and after conducting some tests, all of the activity datasets were given a search radius of one mile. In discussing a similar project with the Oregon Department of Parks and Recreation we discovered that most visitors to the coast stay within a mile of their activity location. This distance also proved to be a good match to the mapped activities" ;
+    dc:spatial "POLYGON ((-123.751734 37.113692,-123.751734 39.070819,-122.20839 39.070819,-122.20839 37.113692,-123.751734 37.113692))" ;
+    dcterms:publisher <urn:uuid:d8087d1c-472a-46ef-b866-e769c29e32c6> ;
+    dcterms:references <urn:uuid:a2cb10e9-fd24-431c-a672-6a8c975d5516> ;
+    dcterms:title "An Economic and Spatial Baseline of Coastal Recreation in the North Central Coast of California Scenic Enjoyment" ;
+    esip:eastBound "-122.20839"^^xsd:float ;
+    esip:northBound "39.070819"^^xsd:float ;
+    esip:southBound "37.113692"^^xsd:float ;
+    esip:westBound "-123.751734"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:3514ff33-6bee-476c-98ad-3a26a4989b12> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-10-19T01:23:39.331Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-10-19T01:23:39.331Z" ;
+    dc:identifier "urn:sha:7d5169439fa6399775f99a28c822f2fcc0f61cff2127d59517e68353" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "ftp://ftp.dfg.ca.gov/R7_MR/NONCONSUMPTIVE/NCCSR/Scenic.zip" .
+
+<urn:uuid:6e7fb759-f8f7-421a-9086-6657390e40b4> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-10-19T01:23:39.331Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-10-19T01:23:39.331Z" ;
+    dc:identifier "urn:sha:970b40c1931acc3820439b012507671dbd43984dc8c0b87d60327544" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "https://catalog.data.gov/harvest/object/6d5500a8-5221-4ee1-a1e7-640a17b3ef32/original" .
+
+<urn:uuid:a2cb10e9-fd24-431c-a672-6a8c975d5516> dcterms:references <urn:uuid:3514ff33-6bee-476c-98ad-3a26a4989b12> ;
+    owl:a bibo:WebPage .
+
+<urn:uuid:bb20662c-997a-4703-a8bd-88e7eebb04c9> bcube:hasType "place" ;
+    bcube:hasValue "California" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:c112e29e-688f-48b5-9688-62249f6c1088> bcube:hasType "theme" ;
+    bcube:hasValue "environment",
+        "location",
+        "oceans",
+        "planningCadastre" ;
+    dc:partOf "ISO 19115 Topic Categories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:d8087d1c-472a-46ef-b866-e769c29e32c6> owl:a foaf:Organization ;
+    foaf:name "" .
+

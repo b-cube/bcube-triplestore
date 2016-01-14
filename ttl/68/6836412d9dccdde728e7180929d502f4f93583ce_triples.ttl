@@ -1,0 +1,72 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:1d8f64df-f892-4180-98aa-c636398bf29d> bcube:hasType "place" ;
+    bcube:hasValue "Anaconda",
+        "Butte",
+        "Clark Fork",
+        "Missoula",
+        "Montana" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:3ebefb85-e394-48fb-9602-569ed9667011> bcube:hasType "theme" ;
+    bcube:hasValue "boundaries" ;
+    dc:partOf "ISO 19115 Topic Category" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:8a64720a-d469-42d5-91dd-3d5dbb78bc6a> bcube:hasType "theme" ;
+    bcube:hasValue "Boundaries",
+        "Boundary" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:9a6ee2de-f6d2-4f50-bacd-2ebbcf3388db> owl:a foaf:Organization ;
+    foaf:name "Montana State Library" .
+
+<urn:uuid:ab522536-9076-49b0-9480-2e3d21f79f8a> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-08-11T06:18:20.021Z" ;
+    bcube:lastUpdated "2015-08-11T06:18:20.021Z" ;
+    bcube:originatedFrom <urn:uuid:cfb8b049-9545-4b51-a4cd-d24827d4e388> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:e5308977-0118-45fe-969c-ecd7a6448dd3> .
+
+<urn:uuid:cfb8b049-9545-4b51-a4cd-d24827d4e388> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-11T06:18:20.021Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-11T06:18:20.021Z" ;
+    dc:identifier "urn:sha:0acd4a72b992f6a82213dc661794e14134c873b84a615e1907dfd1a3" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://mslapps.mt.gov/Geographic_Information/Data/DataList/datalist_MetadataDetailRaw.aspx?did={17F8C0DF-1A87-48C4-8C0D-953DB6ABE0BB}" .
+
+<urn:uuid:e5308977-0118-45fe-969c-ecd7a6448dd3> bcube:dateCreated "2015-08-11T06:18:20.021Z" ;
+    bcube:hasMetadataRecord <urn:uuid:ab522536-9076-49b0-9480-2e3d21f79f8a> ;
+    bcube:lastUpdated "2015-08-11T06:18:20.021Z" ;
+    dc:conformsTo <urn:uuid:1d8f64df-f892-4180-98aa-c636398bf29d>,
+        <urn:uuid:3ebefb85-e394-48fb-9602-569ed9667011>,
+        <urn:uuid:8a64720a-d469-42d5-91dd-3d5dbb78bc6a> ;
+    dc:description "These data were formerly available from the Montana State Library web site but were removed because they are potentially out of date. Please contact the Federal Superfund Bureau of the Montana Department of Environmental Quality if you want these data so they may tell you if newer or better data are available. If the data are not available from the Department of Environmental Quality, you may request a copy from the Montana State Library data archive. Boundaries from USGS 1:24,000 scale quadrangles, Upper Clark Fork Basin, Montana. The quadrangles have been joined into a single data set, but have not been edgematched, except to perserve polygon topology. The USGS major and minor attribute codes have been replaced with the codes shown in this metadata record. County boundaries from the 44 quadrangles imported in 1992 have been lost. The county boundaries from the additional quadrangles imported in 1997 are not in this coverage, but are still available in the original DLG files in the /montana/dlg24k/rawdata directory. See http://docs.msl.mt.gov/geoinfo/images/metadata/superfund/ClarkFork24kIndex1989.gif for dates of the source quadrangles." ;
+    dc:spatial "POLYGON ((-114.03241 45.7078362,-114.03241 47.0574188,-112.297913 47.0574188,-112.297913 45.7078362,-114.03241 45.7078362))" ;
+    dcterms:publisher <urn:uuid:9a6ee2de-f6d2-4f50-bacd-2ebbcf3388db> ;
+    dcterms:title "Upper Clark Fork Boundaries from U.S.G.S. 1:24,000 scale quadrangles, 1989" ;
+    esip:eastBound "-112.297913"^^xsd:float ;
+    esip:endDate "1989-01-01"^^xsd:date ;
+    esip:northBound "47.0574188"^^xsd:float ;
+    esip:southBound "45.7078362"^^xsd:float ;
+    esip:startDate "1961-01-01"^^xsd:date ;
+    esip:westBound "-114.03241"^^xsd:float ;
+    owl:a dcat:Dataset .
+

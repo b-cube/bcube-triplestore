@@ -1,0 +1,77 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:23ec9682-b991-4cd7-afb4-13a4ebb16837> bcube:hasType "place" ;
+    bcube:hasValue "Montana" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:2e20ffb3-6d85-4c45-8f72-8f218ad1fb00> bcube:hasType "theme" ;
+    bcube:hasValue "elevation",
+        "environment",
+        "geoscientificInformation",
+        "imageryBaseMapsEarthCover",
+        "inlandWaters",
+        "location",
+        "structure" ;
+    dc:partOf "ISO 19115 Topic Category" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:483527fd-3733-420c-bc3c-ad644a542e84> bcube:hasType "theme" ;
+    bcube:hasValue "GNIS",
+        "Geographic Names Framework",
+        "MSDI",
+        "Montana Spatial Data Infrastructure",
+        "Place name",
+        "geonames" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:6bdd082d-3eba-4c36-9bab-51acaf8d6299> owl:a foaf:Organization ;
+    foaf:name "Montana State Library" .
+
+<urn:uuid:752d4fd3-9a4a-4744-a50b-02b0b9885938> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-11T06:28:53.366Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-11T06:28:53.366Z" ;
+    dc:identifier "urn:sha:b0e2b5f02dc3c64100f60ca14d21534cb38e6bd5e2afe572ccba4ba4" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://mslapps.mt.gov/Geographic_Information/Data/DataList/datalist_MetadataDetailRaw.aspx?did={1930b8b4-b730-4c5e-b95f-666a3533c9ae}" .
+
+<urn:uuid:84781e4b-59e4-4ebe-a740-c544c96369d0> bcube:dateCreated "2015-08-11T06:28:53.366Z" ;
+    bcube:hasMetadataRecord <urn:uuid:bb24c6fe-4044-4905-a119-5e681d76d9ed> ;
+    bcube:lastUpdated "2015-08-11T06:28:53.366Z" ;
+    dc:conformsTo <urn:uuid:23ec9682-b991-4cd7-afb4-13a4ebb16837>,
+        <urn:uuid:2e20ffb3-6d85-4c45-8f72-8f218ad1fb00>,
+        <urn:uuid:483527fd-3733-420c-bc3c-ad644a542e84> ;
+    dc:description "The Montana Geographic Names Framework holds names and locations for cultural and geographic featues in Montana. For natural physical features and most other features, this is the Federally recognized name from the Geographic Names Information System (GNIS). This is intended to include the names of all features, current and historical, that are shown on maps, except for roads and highways. The Geographic Names Information System (GNIS) is the Federal standard for geographic nomenclature. The U.S. Geological Survey developed the GNIS for the U.S. Board on Geographic Names, a Federal inter-agency body chartered by public law to maintain uniform feature name usage throughout the Government and to promulgate standard names to the public. The GNIS is the official repository of domestic geographic names data; the official vehicle for geographic names use by all departments of the Federal Government; and the source for applying geographic names to Federal electronic and printed products of all types. This version of the GNIS was developed from the Montana GNIS text file dated October 1, 2012 that was available on the USGS web site at http://geonames.usgs.gov/domestic/download_data.htm. The State Library has performed extensive edits to the data, which are described in the Supplemental Information section of this metadata document." ;
+    dc:spatial "POLYGON ((-116.1 44.25,-116.1 49.1,-104.0 49.1,-104.0 44.25,-116.1 44.25))" ;
+    dcterms:publisher <urn:uuid:6bdd082d-3eba-4c36-9bab-51acaf8d6299> ;
+    dcterms:title "Montana Geographic Names Framework, 2013" ;
+    esip:eastBound "-104.0"^^xsd:float ;
+    esip:northBound "49.1"^^xsd:float ;
+    esip:southBound "44.25"^^xsd:float ;
+    esip:startDate "2013-10-18"^^xsd:date ;
+    esip:westBound "-116.1"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:bb24c6fe-4044-4905-a119-5e681d76d9ed> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-08-11T06:28:53.366Z" ;
+    bcube:lastUpdated "2015-08-11T06:28:53.366Z" ;
+    bcube:originatedFrom <urn:uuid:752d4fd3-9a4a-4744-a50b-02b0b9885938> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:84781e4b-59e4-4ebe-a740-c544c96369d0> .
+

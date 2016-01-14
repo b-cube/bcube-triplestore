@@ -1,0 +1,95 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:0b570937-5047-45d2-be96-a85efffd0229> owl:a foaf:Organization ;
+    foaf:name "U.S. Geological Survey" .
+
+<urn:uuid:14f83bf9-f19f-4ea6-8d89-876ab72257fc> bcube:hasType "stratum" ;
+    bcube:hasValue "First Surface" ;
+    dc:partOf "http://lidar.cr.usgs.gov/" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:399b5de0-4aae-4aa5-8936-72eaaa27e635> bcube:hasType "temporal" ;
+    bcube:hasValue "2007" ;
+    dc:partOf "http://www.esri.com/news/arcuser/1104/temporal.html" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:3acb0086-fbfe-4560-b42a-cea629a23319> bcube:hasType "place" ;
+    bcube:hasValue "Fire Island",
+        "Long Island",
+        "Montauk Point",
+        "New Jersey",
+        "New York",
+        "Northeast Coastal Barrier Islands",
+        "Sandy Hook" ;
+    dc:partOf "http://nationalmap.gov" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:6e700e1f-f820-4e0e-9be5-97b55dfdf3f6> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-08-13T17:09:30.664Z" ;
+    bcube:lastUpdated "2015-08-13T17:09:30.664Z" ;
+    bcube:originatedFrom <urn:uuid:7f4aed3a-f235-4736-acf6-aaba2b88ad62> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:c495d12d-fc67-479c-aeea-0b219c8e98e0> .
+
+<urn:uuid:7f4aed3a-f235-4736-acf6-aaba2b88ad62> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-13T17:09:30.664Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-13T17:09:30.664Z" ;
+    dc:identifier "urn:sha:dba4f8e45985e1f92c47cce7e048fe900f91c7771ad749deadf4f19e" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://pubs.usgs.gov/ds/397/data_files/fs/40074d1b/40074d1b_fs.tif.xml" .
+
+<urn:uuid:8db6c21c-f8f6-4300-bb69-00e1908b2a2a> bcube:hasType "theme" ;
+    bcube:hasValue "ALPS",
+        "Airborne Lidar Processing System",
+        "DEM",
+        "Digital Elevation Model",
+        "EAARL",
+        "Experimental Advanced Airborne Research Lidar",
+        "Lidar",
+        "laser altimetry",
+        "remote sensing",
+        "topography" ;
+    dc:partOf "http://remotesensing.usgs.gov" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:c495d12d-fc67-479c-aeea-0b219c8e98e0> bcube:dateCreated "2015-08-13T17:09:30.664Z" ;
+    bcube:hasMetadataRecord <urn:uuid:6e700e1f-f820-4e0e-9be5-97b55dfdf3f6> ;
+    bcube:lastUpdated "2015-08-13T17:09:30.664Z" ;
+    dc:conformsTo <urn:uuid:14f83bf9-f19f-4ea6-8d89-876ab72257fc>,
+        <urn:uuid:399b5de0-4aae-4aa5-8936-72eaaa27e635>,
+        <urn:uuid:3acb0086-fbfe-4560-b42a-cea629a23319>,
+        <urn:uuid:8db6c21c-f8f6-4300-bb69-00e1908b2a2a> ;
+    dc:description "ASCII xyz point cloud data were produced from remotely sensed, geographically referenced elevation measurements cooperatively by the U.S. Geological Survey (USGS) and National Aeronautics and Space Administration (NASA). Elevation measurements were collected over the area using the NASA Experimental Advanced Airborne Research Lidar (EAARL), a pulsed laser ranging system mounted onboard an aircraft to measure ground elevation, vegetation canopy, and coastal topography. The system uses high-frequency laser beams directed at the Earth's surface through an opening in the bottom of the aircraft's fuselage. The laser system records the time difference between emission of the laser beam and the reception of the reflected laser signal in the aircraft. The plane travels over the target area at approximately 50 meters per second at an elevation of approximately 300 meters. The EAARL, developed by NASA at Wallops Flight Facility in Virginia, measures ground elevation with a vertical resolution of 15 centimeters. A sampling rate of 3 kilohertz or higher results in an extremely dense spatial elevation dataset. Over 100 kilometers of coastline can be easily surveyed within a 3- to 4-hour mission time period. When subsequent elevation maps for an area are analyzed, they provide a useful tool to make management decisions regarding land development." ;
+    dcterms:publisher <urn:uuid:0b570937-5047-45d2-be96-a85efffd0229> ;
+    dcterms:references <urn:uuid:e43d7359-1ca4-44d3-9ca0-ed405211dcff> ;
+    dcterms:title "EAARL Coastal Topography Northeast Coastal Barrier Islands 2007" ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:e43d7359-1ca4-44d3-9ca0-ed405211dcff> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-13T17:09:30.664Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-13T17:09:30.664Z" ;
+    dc:identifier "urn:sha:d14a028c2a3a2bc9476102bb288234c415a2b01f828ea62ac5b3e42f" ;
+    owl:a bcube:Url .
+

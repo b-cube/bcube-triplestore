@@ -1,0 +1,89 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:28a6e3a8-26d7-4699-a907-47774dddfb35> bcube:hasType "theme" ;
+    bcube:hasValue "Block",
+        "Census Block",
+        "County or equivalent entity",
+        "Polygon" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:33c16c9f-94a7-41af-880f-f9047c5f5c51> owl:a foaf:Organization ;
+    foaf:name "" .
+
+<urn:uuid:7047c735-5a52-48f5-b77a-e98ebdbd46a0> bcube:hasType "place" ;
+    bcube:hasValue "02180",
+        "County or Equivalent Entity",
+        "Nome",
+        "U.S.",
+        "United States" ;
+    dc:partOf "FIPS Publication 5-2, FIPS Publication 6-4, FIPS Publication 8-6, FIPS Publication 9-1,FIPS Publication55-4" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:927bde93-ab76-491a-ac76-d796ca34d055> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-11-01T22:49:52.686Z" ;
+    bcube:lastUpdated "2015-11-01T22:49:52.686Z" ;
+    bcube:originatedFrom <urn:uuid:c1515038-6a2f-4935-bff3-c940bce6d3ef> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:cfbf04dd-f512-46a1-b9b9-273e920fdba9> .
+
+<urn:uuid:b879d8d8-a2bc-4d13-bfe8-6527c313112b> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-01T22:49:52.686Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-01T22:49:52.686Z" ;
+    dc:identifier "urn:sha:f783046aa859e84128377e26750af07938184c8f63da2acbedf526cf" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www2.census.gov/geo/tiger/TIGER2008/02_ALASKA/02180_Nome_Census_Area/tl_2008_02180_tabblock00.zip" .
+
+<urn:uuid:c1515038-6a2f-4935-bff3-c940bce6d3ef> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-01T22:49:52.686Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-01T22:49:52.686Z" ;
+    dc:identifier "urn:sha:5fc0b224d4b0e27a15d31370ac179ef36fc2ada43c3f0b91c39b870a" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://meta.geo.census.gov/data/existing/decennial/GEO/GPMB/TIGERline/fe_2008/tabblock00/tl_2008_02180_tabblock00_url.shp.xml" .
+
+<urn:uuid:cfbf04dd-f512-46a1-b9b9-273e920fdba9> bcube:dateCreated "2015-11-01T22:49:52.686Z" ;
+    bcube:hasMetadataRecord <urn:uuid:927bde93-ab76-491a-ac76-d796ca34d055> ;
+    bcube:lastUpdated "2015-11-01T22:49:52.686Z" ;
+    dc:conformsTo <urn:uuid:28a6e3a8-26d7-4699-a907-47774dddfb35>,
+        <urn:uuid:7047c735-5a52-48f5-b77a-e98ebdbd46a0>,
+        <urn:uuid:d74e4c12-64be-4ede-9c10-2fe47c1ee09f> ;
+    dc:description "The TIGER/Line Shapefiles are an extract of selected geographic and cartographic information from the Census MAF/TIGER database. The Census MAF/TIGER database represents a seamless national file with no overlaps or gaps between parts. However, each TIGER/Line Shapefile is designed to stand alone as an independent data set or the shapefiles can be combined to cover the whole nation." ;
+    dc:spatial "POLYGON ((-171.965319 62.884908,-171.965319 66.626301,-159.37937 66.626301,-159.37937 62.884908,-171.965319 62.884908))" ;
+    dcterms:publisher <urn:uuid:33c16c9f-94a7-41af-880f-f9047c5f5c51> ;
+    dcterms:references <urn:uuid:b879d8d8-a2bc-4d13-bfe8-6527c313112b> ;
+    dcterms:title "TIGER/Line Shapefile, 2008, 2000 county, Nome Census Area, AK, Block" ;
+    esip:eastBound "-159.37937"^^xsd:float ;
+    esip:endDate "2008-07-01"^^xsd:date ;
+    esip:northBound "66.626301"^^xsd:float ;
+    esip:southBound "62.884908"^^xsd:float ;
+    esip:startDate "2008-01-01"^^xsd:date ;
+    esip:westBound "-171.965319"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:d74e4c12-64be-4ede-9c10-2fe47c1ee09f> bcube:hasType "theme" ;
+    bcube:hasValue "boundaries" ;
+    dc:partOf "ISO 19115 Topic Categories" ;
+    owl:a bcube:thesaurusSubset .
+

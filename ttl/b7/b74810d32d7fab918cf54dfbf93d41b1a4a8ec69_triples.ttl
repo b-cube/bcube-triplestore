@@ -1,0 +1,106 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:094e8698-7d5f-46fc-9d49-806478dec56c> owl:a foaf:Organization ;
+    foaf:name "U.S. Geological Survey" .
+
+<urn:uuid:144aba34-d565-4302-9036-e8f2ffd9e206> bcube:dateCreated "2015-09-03T13:26:20.796Z" ;
+    bcube:hasMetadataRecord <urn:uuid:e6e19b20-72b8-450c-a98f-99277f763c4f> ;
+    bcube:lastUpdated "2015-09-03T13:26:20.796Z" ;
+    dc:conformsTo <urn:uuid:4d567821-4d47-48ef-8ad5-ea314416f097>,
+        <urn:uuid:a70d2874-8139-4fcf-a197-68ca246aa308>,
+        <urn:uuid:eb4d482e-18b3-44c9-af87-ba6f3b36bfb0> ;
+    dc:description "This data set provides an index for the Light Detection and Ranging (LiDAR) survey conducted on August 10, 2006 on a total of 47 square miles of the Platte River near Grand Island, Nebraska. The data obtained from this survey were in the format XYZI (Easting, Northing, Elevation referenced to the North American Vertical Datum of 1988 (NAVD88), and Intensity). The data were collected using an Airborne Laser Terrain Mapper (ALTM) LiDAR system. Filtering and manual editing the orginal data set removed non-ground points from the point cloud. The final data set provided here includes several text files; each contains the bare-earth points covering a subsection of the 47 square miles." ;
+    dc:spatial "POLYGON ((-98.757417 40.678316,-98.757417 40.8849,-98.261729 40.8849,-98.261729 40.678316,-98.757417 40.678316))" ;
+    dcterms:publisher <urn:uuid:094e8698-7d5f-46fc-9d49-806478dec56c> ;
+    dcterms:references <urn:uuid:1823d92f-ad2b-4f43-b8eb-2515e839fc6c>,
+        <urn:uuid:5775798e-3ee4-4993-ae64-c49e5097dbfc> ;
+    dcterms:title "Index of Bare-Earth LiDAR Points for Platte River Channel Survey, August 2006" ;
+    esip:eastBound "-98.261729"^^xsd:float ;
+    esip:northBound "40.8849"^^xsd:float ;
+    esip:southBound "40.678316"^^xsd:float ;
+    esip:startDate "2006-08-10"^^xsd:date ;
+    esip:westBound "-98.757417"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:1823d92f-ad2b-4f43-b8eb-2515e839fc6c> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-09-03T13:26:20.796Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-09-03T13:26:20.796Z" ;
+    dc:identifier "urn:sha:85332b7b911aa046969d6cbfb98f6bbff2d9e123d6b658874a6bd288" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://water.usgs.gov/GIS/dsdl/SIR_Platte_LiDAR_index.shp" .
+
+<urn:uuid:4d567821-4d47-48ef-8ad5-ea314416f097> bcube:hasType "theme" ;
+    bcube:hasValue "inlandWaters" ;
+    dc:partOf "ISO 19115" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:531a76ce-a9aa-4424-b301-65b988776ee2> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-09-03T13:26:20.796Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-09-03T13:26:20.796Z" ;
+    dc:identifier "urn:sha:d2c99100e50c2c746361ff34c3d906fe121569751cb83b5aba576d89" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "/lookup/getspatial?SIR2008-5106_Platte_LiDAR_index" .
+
+<urn:uuid:5775798e-3ee4-4993-ae64-c49e5097dbfc> dcterms:references <urn:uuid:531a76ce-a9aa-4424-b301-65b988776ee2> ;
+    owl:a bibo:WebPage .
+
+<urn:uuid:a70d2874-8139-4fcf-a197-68ca246aa308> bcube:hasType "place" ;
+    bcube:hasValue "Grand Island",
+        "Hall County",
+        "Nebraska",
+        "Platte River" ;
+    dc:partOf "Geographic Names Information System (GNIS)" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:e6e19b20-72b8-450c-a98f-99277f763c4f> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-09-03T13:26:20.796Z" ;
+    bcube:lastUpdated "2015-09-03T13:26:20.796Z" ;
+    bcube:originatedFrom <urn:uuid:f9657658-43e3-450a-8f33-b7436891c66c> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:144aba34-d565-4302-9036-e8f2ffd9e206> .
+
+<urn:uuid:eb4d482e-18b3-44c9-af87-ba6f3b36bfb0> bcube:hasType "theme" ;
+    bcube:hasValue "Bare-earth",
+        "LiDAR",
+        "Light Detection and Ranging",
+        "channel morphology",
+        "river channels",
+        "terrain",
+        "topography" ;
+    dc:partOf "none" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:f9657658-43e3-450a-8f33-b7436891c66c> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-09-03T13:26:20.796Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-09-03T13:26:20.796Z" ;
+    dc:identifier "urn:sha:6f8ee2339a1b6beddd46d3431e67993b60db875b434bf200e91931c9" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://pubs.usgs.gov/sir/2008/5106/LiDAR/SIR2008-5106_Platte_LiDAR_index.xml" .
+

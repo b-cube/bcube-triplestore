@@ -1,0 +1,86 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:371c5c70-ad15-4b41-a177-eecd2cdded57> bcube:hasType "theme" ;
+    bcube:hasValue "Address Range",
+        "County or equivalent entity",
+        "Linear Feature",
+        "Road Feature",
+        "Roads",
+        "Street Centerline" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:954cb460-1abd-4353-ab26-8fe1cd6c9d54> a "ISO 19115:2003/19139" ;
+    bcube:dateCreated "2015-10-17T06:08:54.789Z" ;
+    bcube:lastUpdated "2015-10-17T06:08:54.789Z" ;
+    bcube:originatedFrom <urn:uuid:c194f766-4af7-4fd9-8819-6232e8531965> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:cae3b7b5-53d6-40b1-b15d-edda6298eca0> .
+
+<urn:uuid:95d77a99-f5c3-48d2-99ec-25cbc9f3cef3> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-10-17T06:08:54.789Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-10-17T06:08:54.789Z" ;
+    dc:identifier "urn:sha:d8dccb33e783198754cd564311d06e574ecb0e02ca7fb8a8ca556343" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www2.census.gov/geo/tiger/TIGER2013/ROADS/tl_2013_01033_roads.zip" .
+
+<urn:uuid:c194f766-4af7-4fd9-8819-6232e8531965> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-10-17T06:08:54.789Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-10-17T06:08:54.789Z" ;
+    dc:identifier "urn:sha:2744648bed774a261028254fc0bc4470d965ec76913cb6a11cacafbb" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://meta.geo.census.gov/data/existing/decennial/GEO/GPMB/TIGERline/TIGER2013/roads/tl_2013_01033_roads.shp.iso.xml" .
+
+<urn:uuid:cae3b7b5-53d6-40b1-b15d-edda6298eca0> bcube:dateCreated "2015-10-17T06:08:54.789Z" ;
+    bcube:hasMetadataRecord <urn:uuid:954cb460-1abd-4353-ab26-8fe1cd6c9d54> ;
+    bcube:lastUpdated "2015-10-17T06:08:54.789Z" ;
+    dc:conformsTo <urn:uuid:371c5c70-ad15-4b41-a177-eecd2cdded57>,
+        <urn:uuid:e7e632f8-27df-4746-9fbb-70bcbc579db1>,
+        <urn:uuid:fd15949d-f750-4ab2-853d-7c5497c0415f> ;
+    dc:description "The TIGER/Line shapefiles and related database files (.dbf) are an extract of selected geographic and cartographic information from the U.S. Census Bureau's Master Address File / Topologically Integrated Geographic Encoding and Referencing (MAF/TIGER) Database (MTDB). The MTDB represents a seamless national file with no overlaps or gaps between parts, however, each TIGER/Line shapefile is designed to stand alone as an independent data set, or they can be combined to cover the entire nation. The All Roads Shapefile includes all features within the MTDB Super Class \"Road/Path Features\" distinguished where the MAF/TIGER Feature Classification Code (MTFCC) for the feature in MTDB that begins with \"S\". This includes all primary, secondary, local neighborhood, and rural roads, city streets, vehicular trails (4wd), ramps, service drives, alleys, parking lot roads, private roads for service vehicles (logging, oil fields, ranches, etc.), bike paths or trails, bridle/horse paths, walkways/pedestrian trails, and stairways." ;
+    dc:spatial "POLYGON ((-88.139988 34.56623,-88.139988 34.906694,-87.415888 34.906694,-87.415888 34.56623,-88.139988 34.56623))" ;
+    dcterms:references <urn:uuid:95d77a99-f5c3-48d2-99ec-25cbc9f3cef3> ;
+    dcterms:title "TIGER/Line Shapefile, 2013, county, Colbert County, AL, All Roads County-based Shapefile" ;
+    esip:eastBound "-87.415888"^^xsd:float ;
+    esip:endDate "2013-05-30"^^xsd:date ;
+    esip:northBound "34.906694"^^xsd:float ;
+    esip:southBound "34.56623"^^xsd:float ;
+    esip:startDate "2012-06-30"^^xsd:date ;
+    esip:westBound "-88.139988"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:e7e632f8-27df-4746-9fbb-70bcbc579db1> bcube:hasValue "transportation" ;
+    dc:partOf "IsoTopicCategories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:fd15949d-f750-4ab2-853d-7c5497c0415f> bcube:hasType "place" ;
+    bcube:hasValue "01033",
+        "Colbert",
+        "County or Equivalent Entity",
+        "U.S.",
+        "United States" ;
+    dc:partOf "ANSI INCITS 38:2009 (Formerly FIPS 5-2), ANSI INCITS 31:2009 (Formerly FIPS 6-4),ANSI INCITS 454:2009 (Formerly FIPS 8-6), ANSI INCITS 455:2009(Formerly FIPS 9-1), ANSI INCITS 446:2008 (Geographic Names Information System (GNIS))" ;
+    owl:a bcube:thesaurusSubset .
+

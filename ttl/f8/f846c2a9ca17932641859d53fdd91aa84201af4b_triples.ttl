@@ -1,0 +1,88 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:118e7d3d-8427-499e-84d4-f0caaf04d1c1> bcube:hasType "theme" ;
+    bcube:hasValue "GIS",
+        "geographic information system",
+        "oil and gas",
+        "petroleum",
+        "pipeline" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:136d694c-b2b4-4fbe-8af9-89a76d22d961> a "ISO 19115:2003/19139" ;
+    bcube:dateCreated "2014-10-28T06:59:43.149Z" ;
+    bcube:lastUpdated "2014-10-28T06:59:43.149Z" ;
+    bcube:originatedFrom <urn:uuid:d55b2d6f-6978-42f3-a86e-920a6332b438> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:5410eda7-d6ff-4d19-956b-f267490c19b9> .
+
+<urn:uuid:34834ac8-886e-4363-890d-51fe9603a677> bcube:hasType "place" ;
+    bcube:hasValue "Alabama",
+        "Florida",
+        "Gulf of Mexico",
+        "Louisiana",
+        "Mississippi",
+        "Texas",
+        "United States of America" ;
+    dc:partOf "Geographic Names Information System" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:5410eda7-d6ff-4d19-956b-f267490c19b9> bcube:dateCreated "2014-10-28T06:59:43.149Z" ;
+    bcube:hasMetadataRecord <urn:uuid:136d694c-b2b4-4fbe-8af9-89a76d22d961> ;
+    bcube:lastUpdated "2014-10-28T06:59:43.149Z" ;
+    dc:conformsTo <urn:uuid:118e7d3d-8427-499e-84d4-f0caaf04d1c1>,
+        <urn:uuid:34834ac8-886e-4363-890d-51fe9603a677>,
+        <urn:uuid:ea28b671-4fb4-427b-9193-b7815f9f31a4> ;
+    dc:description "A line file representing locations of the pipeline infrastructure in the Gulf of Mexico associated with the oil and gas industry is presented. These layers were modified from GIS data acquired from the U. S. Department of the Interior, Bureau of Ocean Energy Management (BOEM) website. We note that pipelines are being added or modified continuously, thus regular updates of this database are required to know the true distribution of pipelines. The current layers are non-projected with coordinates in decimal degrees." ;
+    dc:spatial "POLYGON ((-97.366877 26.021433,-97.366877 30.375579,-82.574911 30.375579,-82.574911 26.021433,-97.366877 26.021433))" ;
+    dcterms:references <urn:uuid:c5a4a92e-9d62-478c-8f3b-b18c7f504299> ;
+    dcterms:title "Oil and Gas Pipelines in the Gulf of Mexico from BOEM" ;
+    esip:eastBound "-82.574911"^^xsd:float ;
+    esip:northBound "30.375579"^^xsd:float ;
+    esip:southBound "26.021433"^^xsd:float ;
+    esip:westBound "-97.366877"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:c5a4a92e-9d62-478c-8f3b-b18c7f504299> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2014-10-28T06:59:43.149Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2014-10-28T06:59:43.149Z" ;
+    dc:identifier "urn:sha:3127a24a84b01fd3a3c35ad27773313697c218f168fb0caff796f900" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www.ncddc.noaa.gov/arcgis/rest/services/NMSP/FGB/MapServer/5" .
+
+<urn:uuid:d55b2d6f-6978-42f3-a86e-920a6332b438> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2014-10-28T06:59:43.149Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2014-10-28T06:59:43.149Z" ;
+    dc:identifier "urn:sha:5c864ac00244e96bfca153f3f9cf1d81715e27a7f5d4626292fd1345" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "https://data.noaa.gov/harvest/object/7d782774-9b7e-438f-975d-869ef7f7cfb4" .
+
+<urn:uuid:ea28b671-4fb4-427b-9193-b7815f9f31a4> bcube:hasValue "economy",
+        "oceans",
+        "transportation",
+        "utilitiesCommunication" ;
+    dc:partOf "IsoTopicCategories" ;
+    owl:a bcube:thesaurusSubset .
+

@@ -1,0 +1,74 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:06a3c5af-3ef9-4c6d-a3b6-80e90209b68c> bcube:hasType "theme" ;
+    bcube:hasValue "Change Detection Analysis",
+        "Land Cover Analysis",
+        "Remotely Sensed Imagery/Photos" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:5438273e-e2fc-4e65-a7de-7e8a02bc967b> bcube:hasValue "imageryBaseMapsEarthCover" ;
+    dc:partOf "IsoTopicCategories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:57390eaf-5863-4e43-a82e-01d639580d0a> a "ISO 19115:2003/19139" ;
+    bcube:dateCreated "2015-08-10T04:04:44.32Z" ;
+    bcube:lastUpdated "2015-08-10T04:04:44.32Z" ;
+    bcube:originatedFrom <urn:uuid:cdab8665-a725-4a7c-8435-08d76d236682> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:e8c4dd64-58f6-4cb4-a7a3-db98b12adc1f> .
+
+<urn:uuid:a8ef56e1-596d-479d-880b-94a454d20510> bcube:hasType "place" ;
+    bcube:hasValue "Coastal Zone",
+        "Coastal zone",
+        "Hawaii",
+        "Hawaii Volcanoes National Park",
+        "Hilo",
+        "Kilauea",
+        "Kona",
+        "Mauna Kea",
+        "Mauna Loa" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:cdab8665-a725-4a7c-8435-08d76d236682> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-10T04:04:44.32Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-10T04:04:44.32Z" ;
+    dc:identifier "urn:sha:c0093a2231a5a29e9b2b54ba5868d69b0a4eef41fb47cadfb9631d89" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://coast.noaa.gov/data/Documents/Metadata/isoharvest/Imagery/hi_hi_01_ISO.xml" .
+
+<urn:uuid:e8c4dd64-58f6-4cb4-a7a3-db98b12adc1f> bcube:dateCreated "2015-08-10T04:04:44.32Z" ;
+    bcube:hasMetadataRecord <urn:uuid:57390eaf-5863-4e43-a82e-01d639580d0a> ;
+    bcube:lastUpdated "2015-08-10T04:04:44.32Z" ;
+    dc:conformsTo <urn:uuid:06a3c5af-3ef9-4c6d-a3b6-80e90209b68c>,
+        <urn:uuid:5438273e-e2fc-4e65-a7de-7e8a02bc967b>,
+        <urn:uuid:a8ef56e1-596d-479d-880b-94a454d20510> ;
+    dc:description "This data set consists of portions of four Landsat Enhanced Thematic Mapper scenes which were analyzed according to the Coastal Change Analysis Program (C-CAP) protocol to determine land cover. The data were field validated to produce a land cover inventory for the island of Hawaii. If you wish to create an attribute table to identify the different land cover classifications, an easy reference table is available under the Process_Description section." ;
+    dc:spatial "POLYGON ((-156.080306 18.861389,-156.080306 20.303919,-154.776683 20.303919,-154.776683 18.861389,-156.080306 18.861389))" ;
+    dcterms:title "2001 Hawaii Land Cover, Hawaii Island" ;
+    esip:eastBound "-154.776683"^^xsd:float ;
+    esip:endDate "2001-08-15"^^xsd:date ;
+    esip:northBound "20.303919"^^xsd:float ;
+    esip:southBound "18.861389"^^xsd:float ;
+    esip:startDate "2000-09-01"^^xsd:date ;
+    esip:westBound "-156.080306"^^xsd:float ;
+    owl:a dcat:Dataset .
+

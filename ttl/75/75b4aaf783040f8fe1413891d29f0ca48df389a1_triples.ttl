@@ -1,0 +1,80 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:031bc5e8-8cd1-45fb-a9b0-e3492920bc2b> bcube:hasValue "geoscientificInformation" ;
+    dc:partOf "IsoTopicCategories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:0661b39d-a5ae-4271-8fd2-df85403dbee9> bcube:hasType "theme" ;
+    bcube:hasValue "MAG",
+        "NRRC",
+        "Zoning",
+        "usginres:service" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:7c7d1056-3a11-457c-8129-5acd3346a0db> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-04T11:53:11.596Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-04T11:53:11.596Z" ;
+    dc:identifier "urn:sha:bfccf6b8c17f81419d4cfb361c0cae0b43ae5a5575ddbc77a6715fdb" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "https://geo.azmag.gov/gismag/rest/services/maps/WI_Zoning/MapServer" .
+
+<urn:uuid:ac8ce631-dbb4-475f-921d-4d757b085e12> bcube:hasType "place" ;
+    bcube:hasValue "Arizona",
+        "Maricopa County",
+        "Wickenburg" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:bb1c62a0-48cd-4c02-9c8d-4a2520d0e51c> a "ISO 19115:2003/19139" ;
+    bcube:dateCreated "2015-11-04T11:53:11.596Z" ;
+    bcube:lastUpdated "2015-11-04T11:53:11.596Z" ;
+    bcube:originatedFrom <urn:uuid:c38f8302-6127-4078-b988-0d4ac66643e1> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:f6dca2ba-58c6-416a-a92c-60fa1e7e9271> .
+
+<urn:uuid:c38f8302-6127-4078-b988-0d4ac66643e1> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-04T11:53:11.596Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-04T11:53:11.596Z" ;
+    dc:identifier "urn:sha:027c40b4d20f76e02139bcf35df45b0d4cf4f0202ec8d36ea4bb3714" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://repository.stategeothermaldata.org/resources/metadata/TestNRRC/D31C9D5DD17447BAA4980066B6EAA61F.xml" .
+
+<urn:uuid:f6dca2ba-58c6-416a-a92c-60fa1e7e9271> bcube:dateCreated "2015-11-04T11:53:11.596Z" ;
+    bcube:hasMetadataRecord <urn:uuid:bb1c62a0-48cd-4c02-9c8d-4a2520d0e51c> ;
+    bcube:lastUpdated "2015-11-04T11:53:11.596Z" ;
+    dc:conformsTo <urn:uuid:031bc5e8-8cd1-45fb-a9b0-e3492920bc2b>,
+        <urn:uuid:0661b39d-a5ae-4271-8fd2-df85403dbee9>,
+        <urn:uuid:ac8ce631-dbb4-475f-921d-4d757b085e12> ;
+    dc:description "This map depicts zoning for the Town of Wickenburg, Arizona." ;
+    dc:spatial "POLYGON ((-112.7639616 33.93495002,-112.7639616 33.97937428,-112.70491 33.97937428,-112.70491 33.93495002,-112.7639616 33.93495002))" ;
+    dcterms:references <urn:uuid:7c7d1056-3a11-457c-8129-5acd3346a0db> ;
+    dcterms:title "Zoning for the Town of Wickenburg, Arizona - Wickenburg Zoning" ;
+    esip:eastBound "-112.70491"^^xsd:float ;
+    esip:endDate "1900-01-01"^^xsd:date ;
+    esip:northBound "33.97937428"^^xsd:float ;
+    esip:southBound "33.93495002"^^xsd:float ;
+    esip:startDate "1900-01-01"^^xsd:date ;
+    esip:westBound "-112.7639616"^^xsd:float ;
+    owl:a dcat:Dataset .
+

@@ -1,0 +1,57 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:6a3c01cc-53a0-47df-9b82-65a97558c77b> a "OGC:WCS" ;
+    bcube:contains <urn:uuid:42971119-7b69-4721-8630-e5c9352ca63a> ;
+    bcube:dateCreated "2014-10-28T06:04:37.544Z" ;
+    bcube:lastUpdated "2014-10-28T06:04:37.544Z" ;
+    bcube:originatedFrom <urn:uuid:77701956-700a-43a0-a12a-f6867bfa7db9> ;
+    owl:a bcube:service .
+
+<urn:uuid:42971119-7b69-4721-8630-e5c9352ca63a> bcube:dateCreated "2014-10-28T06:04:37.544Z" ;
+    bcube:lastUpdated "2014-10-28T06:04:37.544Z" ;
+    dc:description "Five year mean for spring, as estimated from MODIS/Aqua satellite imagery, for sea surface temperature in northern Gulf of Mexico. MODIS-Aqua satellite imagery from January 2005 - December 2009 was used to calculate sea-surface temperatures using standard NASA processing algorithms. In situ data from the Southeast Area Monitoring and Assessment Program (SEAMAP) program were overlaid on the modeled data. Both the satellite data and the SEAMAP data were then reclassified into Coastal and Marine Ecological Classification Standard (CMECS) Water Column component categories. The CMECS is a catalog of terms that provides a means for classifying ecological units using a simple, standard format and common terminology. CMECS offers a way to organize and interpret data about the marine environment, and it provides a common platform for inter-relating data." ;
+    dc:spatial "POLYGON ((-99.001007500100002 19.284116384,-99.001007500100002 36.119455820900001,-79.09370239 36.119455820900001,-79.09370239 19.284116384,-99.001007500100002 19.284116384))" ;
+    dc:title "Spring_1" ;
+    dcterms:references <urn:uuid:e734e14f-e7d1-4b57-96a4-fe96fe397546> ;
+    esip:eastBound "-79.09370239"^^xsd:float ;
+    esip:northBound "36.1194558209"^^xsd:float ;
+    esip:southBound "19.284116384"^^xsd:float ;
+    esip:westBound "-99.0010075001"^^xsd:float ;
+    owl:a bcube:Layer .
+
+<urn:uuid:77701956-700a-43a0-a12a-f6867bfa7db9> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2014-10-28T06:04:37.544Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2014-10-28T06:04:37.544Z" ;
+    dc:identifier "urn:sha:9c060c3ddc3472095163e7a1aed7aa1bce734c71adbbba5bdbbef3cc" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www.ncddc.noaa.gov/arcgis/services/DataAtlas/CMECS_Temperature_Spring/MapServer/WCSServer?request=GetCapabilities&service=WCS" .
+
+<urn:uuid:e734e14f-e7d1-4b57-96a4-fe96fe397546> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2014-10-28T06:04:37.544Z" ;
+    bcube:hasConfidence "Not Sure" ;
+    bcube:hasUrlSource "Generated" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2014-10-28T06:04:37.544Z" ;
+    dc:identifier "urn:sha:8d7d8c0d2ba286a8ccc0944631ea08b56b9778cedbd1fb5ca6220370" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www.ncddc.noaa.gov/arcgis/services/DataAtlas/CMECS_Temperature_Spring/MapServer/WCSServer?width=500&version=1.1.2&coverage=1&service=WCS&crs=CRS%3A84&format=GTiff&request=GetCoverage&bbox=-99.0010075001%2C19.284116384%2C-79.09370239%2C36.1194558209&height=500" .
+

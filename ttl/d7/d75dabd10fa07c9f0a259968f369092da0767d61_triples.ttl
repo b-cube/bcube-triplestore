@@ -1,0 +1,89 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:1b2bff20-199d-4803-85f0-4c01c3cbeded> bcube:hasType "place" ;
+    bcube:hasValue "01063",
+        "County or Equivalent Entity",
+        "Greene",
+        "U.S.",
+        "United States" ;
+    dc:partOf "FIPS Publication 5-2, FIPS Publication 6-4, FIPS Publication 8-6, FIPS Publication 9-1" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:383cb335-06fb-416e-926d-110c3b8a5c7f> owl:a foaf:Organization ;
+    foaf:name "" .
+
+<urn:uuid:8a68babf-6d99-4885-a047-550bb8f89219> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-11-06T23:00:34.714Z" ;
+    bcube:lastUpdated "2015-11-06T23:00:34.714Z" ;
+    bcube:originatedFrom <urn:uuid:e7939522-53dc-46e9-9def-1dae30d01844> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:e4ac23d3-00e6-4023-9d16-09aa5b3e7560> .
+
+<urn:uuid:a290f0d4-9364-4334-90f1-7fab0a4a3651> bcube:hasType "theme" ;
+    bcube:hasValue "Census Tract",
+        "County or equivalent entity",
+        "Polygon",
+        "Tract" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:c5eec1c2-c156-459d-a3b2-a31f53c19877> bcube:hasType "theme" ;
+    bcube:hasValue "boundaries" ;
+    dc:partOf "ISO 19115 Topic Categories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:e4ac23d3-00e6-4023-9d16-09aa5b3e7560> bcube:dateCreated "2015-11-06T23:00:34.714Z" ;
+    bcube:hasMetadataRecord <urn:uuid:8a68babf-6d99-4885-a047-550bb8f89219> ;
+    bcube:lastUpdated "2015-11-06T23:00:34.714Z" ;
+    dc:conformsTo <urn:uuid:1b2bff20-199d-4803-85f0-4c01c3cbeded>,
+        <urn:uuid:a290f0d4-9364-4334-90f1-7fab0a4a3651>,
+        <urn:uuid:c5eec1c2-c156-459d-a3b2-a31f53c19877> ;
+    dc:description "The TIGER/Line Shapefiles are an extract of selected geographic and cartographic information from the Census MAF/TIGER database. The Census MAF/TIGER database represents a seamless national file with no overlaps or gaps between parts. However, each TIGER/Line Shapefile is designed to stand alone as an independent data set or the shapefiles can be combined to cover the whole nation." ;
+    dc:spatial "POLYGON ((-88.207497 32.517727,-88.207497 33.153657,-87.706271 33.153657,-87.706271 32.517727,-88.207497 32.517727))" ;
+    dcterms:publisher <urn:uuid:383cb335-06fb-416e-926d-110c3b8a5c7f> ;
+    dcterms:references <urn:uuid:efa6781a-d4de-40eb-b468-f08906a1f2da> ;
+    dcterms:title "TIGER/Line Shapefile, 2007, 2000 county, Greene County, Census Tract" ;
+    esip:eastBound "-87.706271"^^xsd:float ;
+    esip:endDate "2007-07-01"^^xsd:date ;
+    esip:northBound "33.153657"^^xsd:float ;
+    esip:southBound "32.517727"^^xsd:float ;
+    esip:startDate "2007-01-01"^^xsd:date ;
+    esip:westBound "-88.207497"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:e7939522-53dc-46e9-9def-1dae30d01844> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-06T23:00:34.714Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-06T23:00:34.714Z" ;
+    dc:identifier "urn:sha:8c6368f387228febda514508bd6f01c05c4b400c273455bd09093b38" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://meta.geo.census.gov/data/existing/decennial/GEO/GPMB/TIGERline/fe_2007/tract00/fe_2007_01063_tract00_url.shp.xml" .
+
+<urn:uuid:efa6781a-d4de-40eb-b468-f08906a1f2da> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-06T23:00:34.714Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-06T23:00:34.714Z" ;
+    dc:identifier "urn:sha:2346ea8dac75cebfce62741a8e300fb85dbb3e16c79d080b336680e8" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www2.census.gov/geo/tiger/TIGER2007FE/01_ALABAMA/01063_Greene/fe_2007_01063_tract00.zip" .
+

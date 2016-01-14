@@ -1,0 +1,179 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:21bd7392-56b7-42f4-891f-a9503959c1c8> bcube:hasType "place" ;
+    bcube:hasValue "California",
+        "San Mateo",
+        "United States" ;
+    dc:partOf "Geographic Names Information System" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:23042c5c-411a-40a2-a5ce-770860b611c3> dcterms:references <urn:uuid:5b92e43a-4d8f-478e-ad18-2e400138c3fa> ;
+    owl:a bibo:WebPage .
+
+<urn:uuid:32cc2431-2c73-4c36-9383-f54db686e440> bcube:hasType "place" ;
+    bcube:hasValue "VERTICAL LOCATION > LAND SURFACE",
+        "VERTICAL LOCATION > SEA FLOOR" ;
+    dc:partOf "GCMD Location Keywords" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:5926260c-2d63-46f4-ba17-741cb3b548cb> bcube:dateCreated "2015-08-08T16:38:56.985Z" ;
+    bcube:hasMetadataRecord <urn:uuid:79f3098d-7cfd-4f4a-a6ff-09a9b7b3a539> ;
+    bcube:lastUpdated "2015-08-08T16:38:56.985Z" ;
+    dc:conformsTo <urn:uuid:21bd7392-56b7-42f4-891f-a9503959c1c8>,
+        <urn:uuid:32cc2431-2c73-4c36-9383-f54db686e440>,
+        <urn:uuid:a82c0f8a-1d06-4650-8254-04fbe30a5f18>,
+        <urn:uuid:d3b2c9a7-30ca-42be-85ed-6ee239225894>,
+        <urn:uuid:d713c91e-caac-423e-98c1-c25236c2419b>,
+        <urn:uuid:dd078ea8-1f0b-493f-af33-29f4bcbe9137>,
+        <urn:uuid:f254911a-9146-42f9-b9ad-fc5486b49274>,
+        <urn:uuid:f845f7db-aee3-4156-8109-8d5ea538976e> ;
+    dc:description "These files contain bathymetric lidar data collected by the SHOALS-1000T system along the coast of California. Data coverage generally extends along the coastline from the waterline offshore 1,000 meters or to laser extinction. Exclusively on areas where Fugro Pelagos acquired or planned to acquire multibeam sonar data by December 31, 2009, data coverage extends from the shoreline either to the 10-m contour, the 20-m contour or the landward extend of the multibeam data plus an additional 100 m offshore. The SHOALS system has a pulse repetition rate of 1 kHz at 532 nm (green wavelength). Native lidar data is not generally in a format accessible to most Geographical Information Systems (GIS). Specialized in-house and commercial software packages are used to process the native lidar data into 3-dimensional positions that can be imported into GIS software for visualization and further analysis. Horizontal positions, provided in decimal degrees of latitude and longitude, are referenced to the North American Datum of 1983 (NAD83). Vertical positions are referenced to the NAD83 ellipsoid and provided in meters. The National Geodetic Survey's (NGS) GEOID09 model is used to transform the vertical positions from ellipsoid to orthometric heights referenced to the North American Vertical Datum of 1988 (NAVD88). The 3-D position data are sub-divided into a series of ASCII file products, with each covering approximately 5 kilometers of shoreline. The file index is provided by the shape file, \"CA_Boxes\", and the numbers used to identify files are in the \"Box\" field of the shape file. The data file naming convention is based on the year, project, area name, \"Box\" number and product type (H - bathymetry). An example file name is \"2009_NCMP_CA_001_H.xyz\", where <2009> is the project year, <NCMP> is the project under which data were collected, <CA> is the area of data collection, <001> is the \"Box\" number and <H> is the product type. The ASCII columns are Longitude, Latitude, UTM Zone, Easting, Northing, Elevation (orthometric), Elevation (ellipsoid), Date, and Time. Upon arrival to NOAA's Office for Coastal Management the data were converted to geographic coordinates and to GRS80 (ellipsoid) in meters." ;
+    dc:spatial "POLYGON ((-122.33955532 37.10125917,-122.33955532 37.12550127,-122.2902606 37.12550127,-122.2902606 37.10125917,-122.33955532 37.10125917))" ;
+    dcterms:publisher <urn:uuid:5d23db75-3506-4b12-bdae-6cb057a6db2d> ;
+    dcterms:references <urn:uuid:23042c5c-411a-40a2-a5ce-770860b611c3>,
+        <urn:uuid:8e735844-6f72-4127-bfe9-f67739aa26de>,
+        <urn:uuid:afce8af2-f112-4c2a-a455-85e04f505cfa>,
+        <urn:uuid:f5461f32-693a-4011-a1cc-ca82aa2241c1> ;
+    dcterms:title "2011 USACE Topobathy Lidar: California" ;
+    esip:eastBound "-122.2902606"^^xsd:float ;
+    esip:endDate "2011-05-28"^^xsd:date ;
+    esip:northBound "37.12550127"^^xsd:float ;
+    esip:southBound "37.10125917"^^xsd:float ;
+    esip:startDate "2010-06-10"^^xsd:date ;
+    esip:westBound "-122.33955532"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:5b92e43a-4d8f-478e-ad18-2e400138c3fa> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-08T16:38:56.985Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-08T16:38:56.985Z" ;
+    dc:identifier "urn:sha:84938e08930479dda9e192462eea09d0a70efb1d7cc5ac388f322dd1" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://coast.noaa.gov/dataviewer" .
+
+<urn:uuid:5d23db75-3506-4b12-bdae-6cb057a6db2d> owl:a foaf:Organization ;
+    foaf:name "NOAA Office for Coastal Management (OCM)" .
+
+<urn:uuid:79f3098d-7cfd-4f4a-a6ff-09a9b7b3a539> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-08-08T16:38:56.985Z" ;
+    bcube:lastUpdated "2015-08-08T16:38:56.985Z" ;
+    bcube:originatedFrom <urn:uuid:e4de67a7-7596-4419-acf7-8d6f69c54941> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:5926260c-2d63-46f4-ba17-741cb3b548cb> .
+
+<urn:uuid:8e735844-6f72-4127-bfe9-f67739aa26de> dcterms:references <urn:uuid:fc01ac3b-0aad-44c1-84c8-655229a7f85d> ;
+    owl:a bibo:WebPage .
+
+<urn:uuid:a82c0f8a-1d06-4650-8254-04fbe30a5f18> bcube:hasType "temporal" ;
+    bcube:hasValue "2010",
+        "2011",
+        "June",
+        "May" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:afce8af2-f112-4c2a-a455-85e04f505cfa> dcterms:references <urn:uuid:e147f130-ccf8-41dc-addf-e25483b5a464> ;
+    owl:a bibo:WebPage .
+
+<urn:uuid:d3b2c9a7-30ca-42be-85ed-6ee239225894> bcube:hasType "theme" ;
+    bcube:hasValue "EARTH SCIENCE > OCEANS >COASTAL PROCESSES > COASTAL ELEVATION",
+        "LAND SURFACE > LAND USE/LAND COVER > LAND COVER",
+        "LAND SURFACE > TOPOGRAPHY> TERRAIN ELEVATION",
+        "OCEANS > BATHYMETRY > SEAFLOOR TOPOGRAPHY > BATHYMETRY" ;
+    dc:partOf "GCMD Earth Sciences Keywords" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:d713c91e-caac-423e-98c1-c25236c2419b> bcube:hasType "theme" ;
+    bcube:hasValue "LIDAR > LIGHT DETECTION AND RANGING" ;
+    dc:partOf "GCMD Instrument Keywords" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:dd078ea8-1f0b-493f-af33-29f4bcbe9137> bcube:hasType "theme" ;
+    bcube:hasValue "DOD/USARMY/USACE/SAM/MOBILE" ;
+    dc:partOf "GCMD Data Center Keywords" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:dfb56956-4be7-4805-84dd-6521f6acd67c> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-08T16:38:56.985Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-08T16:38:56.985Z" ;
+    dc:identifier "urn:sha:a5b99394df9de624ffbb3c2adc9cf66de5e977198bfd73c402bcbce4" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://coast.noaa.gov" .
+
+<urn:uuid:e147f130-ccf8-41dc-addf-e25483b5a464> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-08T16:38:56.985Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-08T16:38:56.985Z" ;
+    dc:identifier "urn:sha:1f81e72d078ed0862caa5491f3f336fa35ddf34e8f87b8bbedb3ba1c" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "ftp://coast.noaa.gov/pub/DigitalCoast/lidar1_z/geoid12a/data/4826" .
+
+<urn:uuid:e4de67a7-7596-4419-acf7-8d6f69c54941> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-08T16:38:56.985Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-08T16:38:56.985Z" ;
+    dc:identifier "urn:sha:902f4df0ac828821924f959640d37fd8681ac8f71437af8f730a13ca" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://coast.noaa.gov/data/Documents/Metadata/Lidar/no_harvest/ca2011_ncmp_m4826_metadata.xml" .
+
+<urn:uuid:f254911a-9146-42f9-b9ad-fc5486b49274> bcube:hasType "theme" ;
+    bcube:hasValue "elevation",
+        "oceans" ;
+    dc:partOf "ISO 19115 Topic Category" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:f5461f32-693a-4011-a1cc-ca82aa2241c1> dcterms:references <urn:uuid:dfb56956-4be7-4805-84dd-6521f6acd67c> ;
+    owl:a bibo:WebPage .
+
+<urn:uuid:f845f7db-aee3-4156-8109-8d5ea538976e> bcube:hasType "theme" ;
+    bcube:hasValue "ALS60",
+        "Bathymetry",
+        "Classified LAZ",
+        "JALBTCX",
+        "SHOALS",
+        "Topography",
+        "U.S. Army Corps of Engineers, Mobile District" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:fc01ac3b-0aad-44c1-84c8-655229a7f85d> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-08T16:38:56.985Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-08T16:38:56.985Z" ;
+    dc:identifier "urn:sha:7d627d40aa611c2f9aa87ac2a0ca10185751e572e5926cbd5bb04291" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://coast.noaa.gov/dataviewer/index.html?action=advsearch&qType=in&qFld=ID&qVal=4826" .
+

@@ -1,0 +1,59 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:64cc5107-d05b-4d9c-a09c-85ebaa33b7ac> owl:a foaf:Organization ;
+    foaf:name "USDA Forest Service" .
+
+<urn:uuid:9fd16e7f-6a8c-4fe0-b4f5-690ccacae3af> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-11-02T15:45:57.69Z" ;
+    bcube:lastUpdated "2015-11-02T15:45:57.69Z" ;
+    bcube:originatedFrom <urn:uuid:ecd81885-e61c-417d-80e4-12ad8f6231e3> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:a98e6ea1-c8da-4594-9003-57ddc8b458cd> .
+
+<urn:uuid:a98e6ea1-c8da-4594-9003-57ddc8b458cd> bcube:dateCreated "2015-11-02T15:45:57.69Z" ;
+    bcube:hasMetadataRecord <urn:uuid:9fd16e7f-6a8c-4fe0-b4f5-690ccacae3af> ;
+    bcube:lastUpdated "2015-11-02T15:45:57.69Z" ;
+    dc:conformsTo <urn:uuid:de87ff52-236f-493e-bf5f-062b5c845f25> ;
+    dc:description "These data are projections of the percent change in timberland area, 1995-2040, by projection scenario, by FIA Survey Unit, developed using the Subregional Timber Supply Model." ;
+    dc:spatial "POLYGON ((-97.104246 23.957495,-97.104246 39.961157,-74.773082 39.961157,-74.773082 23.957495,-97.104246 23.957495))" ;
+    dcterms:publisher <urn:uuid:64cc5107-d05b-4d9c-a09c-85ebaa33b7ac> ;
+    dcterms:title "areachange.xls" ;
+    esip:eastBound "-74.773082"^^xsd:float ;
+    esip:endDate "2040-01-01"^^xsd:date ;
+    esip:northBound "39.961157"^^xsd:float ;
+    esip:southBound "23.957495"^^xsd:float ;
+    esip:startDate "1995-01-01"^^xsd:date ;
+    esip:westBound "-97.104246"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:de87ff52-236f-493e-bf5f-062b5c845f25> bcube:hasType "theme" ;
+    bcube:hasValue "biota",
+        "economy",
+        "environment",
+        "timberland" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:ecd81885-e61c-417d-80e4-12ad8f6231e3> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-02T15:45:57.69Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-02T15:45:57.69Z" ;
+    dc:identifier "urn:sha:de218f452e0a8ef2176c17c1d2a0b65ae7674535ad1fb0731aa0353a" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www.srs.fs.usda.gov/sustain/data/areachange/areachange.xml" .
+

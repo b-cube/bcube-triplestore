@@ -1,0 +1,83 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:3a5cfb15-c424-4619-beeb-37a72ba3ce9c> bcube:hasType "theme" ;
+    bcube:hasValue "County or equivalent entity",
+        "Hydrography",
+        "LinearFeature" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:6a3636e1-aa3c-4cac-acfb-f7b0b836411f> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-01T02:17:54.211Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-01T02:17:54.211Z" ;
+    dc:identifier "urn:sha:6ce314c974b30f20830350ccde4324e0f085500621ab375c4e2ecb92" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://meta.geo.census.gov/data/existing/decennial/GEO/GPMB/TIGERline/TIGER2014/linearwater/tl_2014_02270_linearwater.shp.iso.xml" .
+
+<urn:uuid:a8206cda-a5a0-4add-913b-3a7cfb5f7070> a "ISO 19115:2003/19139" ;
+    bcube:dateCreated "2015-11-01T02:17:54.211Z" ;
+    bcube:lastUpdated "2015-11-01T02:17:54.211Z" ;
+    bcube:originatedFrom <urn:uuid:6a3636e1-aa3c-4cac-acfb-f7b0b836411f> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:d3b90ec5-9b79-4aa6-9e5e-e42dfc24291a> .
+
+<urn:uuid:d26b0469-6694-4f84-8075-32818aa9746d> bcube:hasType "place" ;
+    bcube:hasValue "02270",
+        "County or Equivalent Entity",
+        "U.S.",
+        "United States",
+        "Wade Hampton" ;
+    dc:partOf "ANSI INCITS 38:2009 (Formerly FIPS 5-2), ANSI INCITS 31:2009 (Formerly FIPS 6-4),ANSI INCITS 454:2009 (Formerly FIPS 8-6), ANSI INCITS 455:2009(Formerly FIPS 9-1), ANSI INCITS 446:2008 (Geographic Names Information System (GNIS))" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:d3b90ec5-9b79-4aa6-9e5e-e42dfc24291a> bcube:dateCreated "2015-11-01T02:17:54.211Z" ;
+    bcube:hasMetadataRecord <urn:uuid:a8206cda-a5a0-4add-913b-3a7cfb5f7070> ;
+    bcube:lastUpdated "2015-11-01T02:17:54.211Z" ;
+    dc:conformsTo <urn:uuid:3a5cfb15-c424-4619-beeb-37a72ba3ce9c>,
+        <urn:uuid:d26b0469-6694-4f84-8075-32818aa9746d>,
+        <urn:uuid:d564aa36-a8a0-4503-a91a-fd0456a35006> ;
+    dc:description "The TIGER/Line shapefiles and related database files (.dbf) are an extract of selected geographic and cartographic information from the U.S. Census Bureau's Master Address File / Topologically Integrated Geographic Encoding and Referencing (MAF/TIGER) Database (MTDB). The MTDB represents a seamless national file with no overlaps or gaps between parts, however, each TIGER/Line shapefile is designed to stand alone as an independent data set, or they can be combined to cover the entire nation. Linear Water Features includes single-line drainage water features and artificial path features that run through double-line drainage features such as rivers and streams, and serve as a linear representation of these features. The artificial path features may correspond to those in the USGS National Hydrographic Dataset (NHD). However, in many cases the features do not match NHD equivalent feature and will not carry the NHD metadata codes. These features have a MAF/TIGER Feature Classification Code (MTFCC) beginning with an \"H\" to indicate the super class of Hydrographic Features." ;
+    dc:spatial "POLYGON ((-166.288613 60.917108,-166.288613 63.317355,-160.18666 63.317355,-160.18666 60.917108,-166.288613 60.917108))" ;
+    dcterms:references <urn:uuid:df9d626b-453e-447a-804b-629ad6061d19> ;
+    dcterms:title "TIGER/Line Shapefile, 2014, county, Wade Hampton Census Area, AK, Linear Hydrography County-based Shapefile" ;
+    esip:eastBound "-160.18666"^^xsd:float ;
+    esip:endDate "2014-05-30"^^xsd:date ;
+    esip:northBound "63.317355"^^xsd:float ;
+    esip:southBound "60.917108"^^xsd:float ;
+    esip:startDate "2013-06-30"^^xsd:date ;
+    esip:westBound "-166.288613"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:d564aa36-a8a0-4503-a91a-fd0456a35006> bcube:hasValue "inlandWaters" ;
+    dc:partOf "IsoTopicCategories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:df9d626b-453e-447a-804b-629ad6061d19> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-01T02:17:54.211Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-01T02:17:54.211Z" ;
+    dc:identifier "urn:sha:e73dfd77936996cd111003e1af236ca7f78bb2dd8df713c0a447fa68" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www2.census.gov/geo/tiger/TIGER2014/LINEARWATER/tl_2014_02270_linearwater.zip" .
+

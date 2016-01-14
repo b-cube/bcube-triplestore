@@ -1,0 +1,158 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:17726783-61a6-4378-88b2-ed473942a404> bcube:hasType "theme" ;
+    bcube:hasValue "deposit",
+        "groundwater",
+        "hydrogeology",
+        "hydrology",
+        "model",
+        "storage",
+        "subsidence" ;
+    dc:partOf "American Geological Institute Glossary of Geology (http://glossary.agiweb.org/dbtw-wpd/glossary/search.aspx)" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:1dd0e7f2-3d6a-414b-a4ea-e5761c0b6d45> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-05T07:28:34.249Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-05T07:28:34.249Z" ;
+    dc:identifier "urn:sha:1672b38251013c5a2fe40c70803c1499e100f0bbc1d53200ed1b114d" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://water.usgs.gov/GIS/metadata/usgswrd/XML/pp1766_SUB.xml" .
+
+<urn:uuid:2919ac78-6398-449f-a233-3c2ee48eafe8> bcube:hasType "theme" ;
+    bcube:hasValue "CV-RASA",
+        "Central Valley Aquifer",
+        "Central Valley Hydrologic Model",
+        "Flow Model CVHM",
+        "Groundwater Availability of the Central Valley Aquifer",
+        "Texture model" ;
+    dc:partOf "none" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:416433de-957a-4a11-b56d-1b4569429d43> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-11-05T07:28:34.249Z" ;
+    bcube:lastUpdated "2015-11-05T07:28:34.249Z" ;
+    bcube:originatedFrom <urn:uuid:1dd0e7f2-3d6a-414b-a4ea-e5761c0b6d45> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:8ef4e744-8d53-4335-b637-4f1189e63d4f> .
+
+<urn:uuid:801989c0-0020-42a4-a388-c9f8dd7367e9> bcube:hasType "theme" ;
+    bcube:hasValue "geoscientificinformation",
+        "inlandWaters" ;
+    dc:partOf "ISO 19115 Topic Category" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:8ef4e744-8d53-4335-b637-4f1189e63d4f> bcube:dateCreated "2015-11-05T07:28:34.249Z" ;
+    bcube:hasMetadataRecord <urn:uuid:416433de-957a-4a11-b56d-1b4569429d43> ;
+    bcube:lastUpdated "2015-11-05T07:28:34.249Z" ;
+    dc:conformsTo <urn:uuid:17726783-61a6-4378-88b2-ed473942a404>,
+        <urn:uuid:2919ac78-6398-449f-a233-3c2ee48eafe8>,
+        <urn:uuid:801989c0-0020-42a4-a388-c9f8dd7367e9>,
+        <urn:uuid:f08b5fcf-0a82-472c-8a95-b8645d271a53> ;
+    dc:description "This digital dataset defines the SUB package arrays for the model grid, critical head, thickness of fine-grained deposits, and skeletal-elastic-storage used in the transient hydrologic model of the Central Valley flow system. The Central Valley encompasses an approximate 50,000 square-kilometer region of California. The complex hydrologic system of the Central Valley is simulated using the USGS numerical modeling code MODFLOW-FMP (Schmid 2006b). This simulation is referred to here as the Central Valley Hydrologic Model (CVHM) (Faunt, 2009). Utilizing MODFLOW-FMP, the CVHM simulates groundwater- and surface-water flow, irrigated agriculture, land subsidence, and other key processes in the Central Valley on a monthly basis from 1961-2003. The total active modeled area is 20,334 square-miles on a finite-difference grid comprising 441 rows and 98 columns. Slightly less than 50 percent of the cells are active. The CVHM model grid has a uniform horizontal discretization of 1x1 square mile and is oriented parallel to the valley axis, 34 degrees west of north (Faunt, 2009). Both the elastic and inelastic components of skeletal specific storage (Ssf) were simulated with the SUB package. The elastic and inelastic skeletal storage coefficients were calculated as the product of the estimated elastic- and inelastic-specific storage values for coarse- and fine-grained materials and the aggregate thicknesses of those materials in each cell. The elastic skeletal storage coefficient of the coarse-grained deposits was estimated from the product of the aggregate thickness of coarse-grained deposits and the difference between estimated elastic-specific storage and the specific storage representing the compressibility of water (Hanson, 1988; Faunt, 2009). Critical head is another parameter used by the SUB package that strongly affects storage changes, particularly the timing of those changes. Critical head is the equivalent head at which effective or intergranular stress is equal to the pre-consolidation stress (Faunt, 2009). The equivalent critical head, or preconsolidation stress, represents the threshold stress that determines whether changes in stress deform the granular skeleton elastically or inelastically. For head changes (whether positive or negative) in the range of heads greater than the critical head, the skeleton deforms elastically. For head changes in the range of heads less than the critical head, the mode of skeletal deformation depends on the sense of the head change--a positive change (head increase) causes elastic deformation, and a negative change (head decrease) causes inelastic deformation and re-establishes a new critical head. In the upper three model layers, specified initial critical-head values were equal to the water levels estimated for the spring of 1961 (starting head values used in CVHM). In the lower seven model layers, the initial critical heads initially were derived from those estimated by Williamson and others (1989). These heads are approximate and were interpolated from the minimum historical head values simulated in the CV-RASA model. In the final calibration, specified initial critical heads were equal to the head simulated in CVHM in September 1961. These values approximate the minimum historical head value in 1961 (Faunt, 2009).The CVHM is the most recent regional-scale model of the Central Valley developed by the U.S. Geological Survey (USGS). The CVHM was developed as part of the USGS Groundwater Resources Program (see \"Foreword\", Chapter A, page iii, for details)." ;
+    dc:spatial "POLYGON ((-123.831528 34.519871,-123.831528 40.748631,-117.916328 40.748631,-117.916328 34.519871,-123.831528 34.519871))" ;
+    dcterms:publisher <urn:uuid:eacdb3e1-bbec-4f77-9c71-26aac46fd039> ;
+    dcterms:references <urn:uuid:acb3a3a6-a90b-4eb9-b716-934f0c7df970>,
+        <urn:uuid:b76e77ed-5827-4026-9fdf-fcf97a401f87> ;
+    dcterms:title "Critical head, thickness of fine-grained deposit, and skeletal elastic storage arrays of the SUB package of the Central Valley Hydrologic Model" ;
+    esip:eastBound "-117.916328"^^xsd:float ;
+    esip:northBound "40.748631"^^xsd:float ;
+    esip:southBound "34.519871"^^xsd:float ;
+    esip:startDate "2009-01-01"^^xsd:date ;
+    esip:westBound "-123.831528"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:916e3a31-c4e5-44c7-8daf-4f0ecc58ec69> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-05T07:28:34.249Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-05T07:28:34.249Z" ;
+    dc:identifier "urn:sha:79f8a3ac70fa2752dbb91dbefb8fd60ecdbde31d9746f96144fc3b2d" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://water.usgs.gov/lookup/getspatial?pp1766_SUB" .
+
+<urn:uuid:acb3a3a6-a90b-4eb9-b716-934f0c7df970> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-05T07:28:34.249Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-05T07:28:34.249Z" ;
+    dc:identifier "urn:sha:f2c006f3bea4d395930ec3849a98822f1553c19422df066debacac25" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://water.usgs.gov/GIS/dsdl/pp1766_SUB.zip" .
+
+<urn:uuid:b76e77ed-5827-4026-9fdf-fcf97a401f87> dcterms:references <urn:uuid:916e3a31-c4e5-44c7-8daf-4f0ecc58ec69> ;
+    owl:a bibo:WebPage .
+
+<urn:uuid:eacdb3e1-bbec-4f77-9c71-26aac46fd039> owl:a foaf:Organization ;
+    foaf:name "U.S. Geological Survey" .
+
+<urn:uuid:f08b5fcf-0a82-472c-8a95-b8645d271a53> bcube:hasType "place" ;
+    bcube:hasValue "Alameda County",
+        "Amador County",
+        "Butte County",
+        "Calaveras County",
+        "California",
+        "Central Valley",
+        "Central Valley, California",
+        "Colusa County",
+        "Contra Costa County",
+        "El Dorado County",
+        "Fresno County",
+        "Glenn County",
+        "Humboldt County",
+        "Kern County",
+        "Kings County",
+        "Lake County",
+        "Madera County",
+        "Mariposa County",
+        "Mendocino County",
+        "Merced County",
+        "Monterey County",
+        "Napa County",
+        "Nevada County",
+        "Placer County",
+        "Sacramento County",
+        "Sacramento Valley",
+        "San Benito County",
+        "San Joaquin County",
+        "San Joaquin Valley",
+        "San Luis Obispo County",
+        "Santa Barbara County",
+        "Santa Clara County",
+        "Shasta County",
+        "Solano County",
+        "Sonoma County",
+        "Stanislaus County",
+        "Sutter County",
+        "Tehama County",
+        "Trinity County",
+        "Tulare County",
+        "Tuolumne County",
+        "Ventura County",
+        "Yolo County",
+        "Yuba County" ;
+    dc:partOf "U.S. Board of Geographic Names (BGN) and Geographic Names Information System (GNIS)" ;
+    owl:a bcube:thesaurusSubset .
+

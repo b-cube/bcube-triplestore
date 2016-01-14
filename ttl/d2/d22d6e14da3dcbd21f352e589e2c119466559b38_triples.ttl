@@ -1,0 +1,72 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:06f60eb9-254f-4013-9b9c-7d63f4215ab4> owl:a foaf:Organization ;
+    foaf:name "" .
+
+<urn:uuid:96ba6881-0c40-423d-a872-e1f836297db8> bcube:hasType "place" ;
+    bcube:hasValue "Colorado",
+        "Denver",
+        "Denver County",
+        "USA" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:a56771b7-0430-4a6a-94ac-521c019985d1> bcube:hasType "theme" ;
+    bcube:hasValue "location",
+        "structure" ;
+    dc:partOf "ISO 19115 Topic Categories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:b245a592-90ec-41c3-963b-bf0d68799541> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-10-17T23:06:35.169Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-10-17T23:06:35.169Z" ;
+    dc:identifier "urn:sha:f342e430144c7739a16f5935a86fafe3f86bf4460a026d5fd6beb873" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://data.denvergov.org/download/gis/fire_stations/metadata/fire_stations.xml" .
+
+<urn:uuid:cf17979a-0b40-4b4a-a10e-17d74c2f80e9> bcube:dateCreated "2015-10-17T23:06:35.169Z" ;
+    bcube:hasMetadataRecord <urn:uuid:e8916a5a-a831-4cf3-9b0c-c5bfb81e864e> ;
+    bcube:lastUpdated "2015-10-17T23:06:35.169Z" ;
+    dc:conformsTo <urn:uuid:96ba6881-0c40-423d-a872-e1f836297db8>,
+        <urn:uuid:a56771b7-0430-4a6a-94ac-521c019985d1>,
+        <urn:uuid:daf18d87-548f-4c60-9b22-2e137eeb0bf0> ;
+    dc:description "A point layer of Fire Stations within the City and County of Denver." ;
+    dc:spatial "POLYGON ((-105.094288 39.627456,-105.094288 39.88196,-104.646071 39.88196,-104.646071 39.627456,-105.094288 39.627456))" ;
+    dcterms:publisher <urn:uuid:06f60eb9-254f-4013-9b9c-7d63f4215ab4> ;
+    dcterms:title "Fire Stations" ;
+    esip:eastBound "-104.646071"^^xsd:float ;
+    esip:northBound "39.88196"^^xsd:float ;
+    esip:southBound "39.627456"^^xsd:float ;
+    esip:westBound "-105.094288"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:daf18d87-548f-4c60-9b22-2e137eeb0bf0> bcube:hasType "theme" ;
+    bcube:hasValue "fire",
+        "public safety" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:e8916a5a-a831-4cf3-9b0c-c5bfb81e864e> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-10-17T23:06:35.169Z" ;
+    bcube:lastUpdated "2015-10-17T23:06:35.169Z" ;
+    bcube:originatedFrom <urn:uuid:b245a592-90ec-41c3-963b-bf0d68799541> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:cf17979a-0b40-4b4a-a10e-17d74c2f80e9> .
+

@@ -1,0 +1,106 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:0622ac83-7e74-4f4a-8396-0f353e9f28c3> owl:a foaf:Organization ;
+    foaf:name "Federal Emergency Management Agency" .
+
+<urn:uuid:28256559-f626-476d-9ef6-2ea0c2e01de5> bcube:hasType "place" ;
+    bcube:hasValue "COMMUNITY JEFFERSON COUNTY, WISCONSIN AND INCORPORATED AREAS",
+        "COUNTY JEFFERSON",
+        "COUNTY-FIPS 055",
+        "FEMA-CID 55055C",
+        "REGION 05",
+        "STATE WI" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:47a35feb-fccc-4466-98d7-94d0e289f7ce> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-10-31T22:20:00.428Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-10-31T22:20:00.428Z" ;
+    dc:identifier "urn:sha:37c915397238031daced09ae0e2dd3bf54e84a6477f749c2cc9dcbdf" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://hazards.fema.gov" .
+
+<urn:uuid:5ca566b0-7950-4aba-b329-9307d26a3e88> bcube:hasType "theme" ;
+    bcube:hasValue "environment",
+        "inlandWaters" ;
+    dc:partOf "ISO 19115 Topic Category" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:9c3b0368-cf82-4da1-baa3-264e4339e764> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-10-31T22:20:00.428Z" ;
+    bcube:lastUpdated "2015-10-31T22:20:00.428Z" ;
+    bcube:originatedFrom <urn:uuid:f510241c-4aff-4519-8f86-89d1be872574> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:ca4a3ae3-5400-4dee-829e-a83a21fd3419> .
+
+<urn:uuid:c07f7cd7-21e7-4f36-be86-2ac5f65ded18> bcube:hasType "theme" ;
+    bcube:hasValue "0.2-Percent-Annual-Chance Flood",
+        "1-Percent-Annual-Chance Flood",
+        "10-Percent-Annual-Chance Flood",
+        "2-Percent-Annual-Chance Flood",
+        "DFIRM",
+        "Digital Flood Insurance Rate Map",
+        "Flood Hazard data",
+        "Hydrograph",
+        "Hydrology",
+        "Landuse",
+        "Link",
+        "Node",
+        "Sheet Runoff",
+        "Soil",
+        "Soil Type",
+        "Stage",
+        "Stream",
+        "Unit Hydrograph",
+        "Water Body",
+        "Watershed/Basin" ;
+    dc:partOf "FEMA NFIP Topic Category" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:ca4a3ae3-5400-4dee-829e-a83a21fd3419> bcube:dateCreated "2015-10-31T22:20:00.428Z" ;
+    bcube:hasMetadataRecord <urn:uuid:9c3b0368-cf82-4da1-baa3-264e4339e764> ;
+    bcube:lastUpdated "2015-10-31T22:20:00.428Z" ;
+    dc:conformsTo <urn:uuid:28256559-f626-476d-9ef6-2ea0c2e01de5>,
+        <urn:uuid:5ca566b0-7950-4aba-b329-9307d26a3e88>,
+        <urn:uuid:c07f7cd7-21e7-4f36-be86-2ac5f65ded18> ;
+    dc:description "Hydrology data include spatial datasets and data tables necessary for documenting the hydrologic procedures for estimating flood discharges for a flood insurance study, which includes the hydrologic data expected by FEMA for new riverine studies. (Source: FEMA Guidelines and Specifications, Appendix N)" ;
+    dc:spatial "POLYGON ((-89.604 42.495,-89.604 43.784,-88.183 43.784,-88.183 42.495,-89.604 42.495))" ;
+    dcterms:publisher <urn:uuid:0622ac83-7e74-4f4a-8396-0f353e9f28c3> ;
+    dcterms:references <urn:uuid:47a35feb-fccc-4466-98d7-94d0e289f7ce> ;
+    dcterms:title "HYDROLOGY, JEFFERSON COUNTY, WI, USA" ;
+    esip:eastBound "-88.183"^^xsd:float ;
+    esip:northBound "43.784"^^xsd:float ;
+    esip:southBound "42.495"^^xsd:float ;
+    esip:startDate "2010-05-14"^^xsd:date ;
+    esip:westBound "-89.604"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:f510241c-4aff-4519-8f86-89d1be872574> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-10-31T22:20:00.428Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-10-31T22:20:00.428Z" ;
+    dc:identifier "urn:sha:4ff0c025c3c123dad32febbe296ce2954fa294f4defd8e593868ec3e" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://catalog.data.gov/harvest/object/8269ae5a-fc2b-4b71-9859-14fc97a9be90/original" .
+

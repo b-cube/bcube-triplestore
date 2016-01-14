@@ -1,0 +1,70 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:17903742-154f-45fa-add7-ed769874de79> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-10-29T16:13:22.75Z" ;
+    bcube:lastUpdated "2015-10-29T16:13:22.75Z" ;
+    bcube:originatedFrom <urn:uuid:8d3750ff-c502-4820-9e53-faf45c55611e> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:667173d6-fc21-40f0-bf7a-1dbe68ef03f0> .
+
+<urn:uuid:3e725bd9-df96-44be-9667-ca7d9f42a7c9> bcube:hasType "theme" ;
+    bcube:hasValue "boundaries" ;
+    dc:partOf "ISO 19115 Topic Categories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:64b86844-514c-4a8e-8ee0-46ef2c5ff7c0> bcube:hasType "place" ;
+    bcube:hasValue "Colorado",
+        "Denver",
+        "Denver County",
+        "USA" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:667173d6-fc21-40f0-bf7a-1dbe68ef03f0> bcube:dateCreated "2015-10-29T16:13:22.75Z" ;
+    bcube:hasMetadataRecord <urn:uuid:17903742-154f-45fa-add7-ed769874de79> ;
+    bcube:lastUpdated "2015-10-29T16:13:22.75Z" ;
+    dc:conformsTo <urn:uuid:3e725bd9-df96-44be-9667-ca7d9f42a7c9>,
+        <urn:uuid:64b86844-514c-4a8e-8ee0-46ef2c5ff7c0>,
+        <urn:uuid:ad5e9af4-bc1e-475d-8f95-f202c0e82d17> ;
+    dc:description "The Denver Police Districts boundaries for the Denver Police Department." ;
+    dc:spatial "POLYGON ((-105.109967 39.614311,-105.109967 39.914178,-104.599581 39.914178,-104.599581 39.614311,-105.109967 39.614311))" ;
+    dcterms:publisher <urn:uuid:8698b34d-0fed-41f3-967e-6b5d71385b38> ;
+    dcterms:title "Police Districts" ;
+    esip:eastBound "-104.599581"^^xsd:float ;
+    esip:northBound "39.914178"^^xsd:float ;
+    esip:southBound "39.614311"^^xsd:float ;
+    esip:westBound "-105.109967"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:8698b34d-0fed-41f3-967e-6b5d71385b38> owl:a foaf:Organization ;
+    foaf:name "" .
+
+<urn:uuid:8d3750ff-c502-4820-9e53-faf45c55611e> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-10-29T16:13:22.75Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-10-29T16:13:22.75Z" ;
+    dc:identifier "urn:sha:ad5953a60b7f7834e17cf548b53525fc43f479d29a4e911c037844c8" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://data.denvergov.org/download/gis/police_districts/metadata/police_districts.xml" .
+
+<urn:uuid:ad5e9af4-bc1e-475d-8f95-f202c0e82d17> bcube:hasType "theme" ;
+    bcube:hasValue "public safety" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+

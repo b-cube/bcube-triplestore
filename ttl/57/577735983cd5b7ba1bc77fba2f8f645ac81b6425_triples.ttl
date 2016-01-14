@@ -1,0 +1,90 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:1ac0b760-85cf-4c27-9af1-031caa1b4d24> owl:a foaf:Organization ;
+    foaf:name "" .
+
+<urn:uuid:294c7676-c367-4ba9-9daa-83ec9f102c22> bcube:hasType "place" ;
+    bcube:hasValue "33",
+        "NH",
+        "New Hampshire",
+        "State or Equivalent Entity",
+        "U.S.",
+        "United States" ;
+    dc:partOf "FIPS Publication 5-2, FIPS Publication 6-4, FIPS Publication 8-6, FIPS Publication 9-1,FIPS Publication55-4" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:47f2b89d-874d-4a76-820d-1dddc88907bd> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-11-01T18:47:02.514Z" ;
+    bcube:lastUpdated "2015-11-01T18:47:02.514Z" ;
+    bcube:originatedFrom <urn:uuid:ee0afe79-42dc-4091-a0af-2eb3962c2c9b> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:adaeecae-b869-48ca-9624-4b85215825be> .
+
+<urn:uuid:66fc4b37-58b2-4df6-b3d7-50788c08ce89> bcube:hasType "theme" ;
+    bcube:hasValue "boundaries" ;
+    dc:partOf "ISO 19115 Topic Categories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:97d027b8-d4a5-4bf1-9244-0c73be2791e6> bcube:hasType "theme" ;
+    bcube:hasValue "Elementary School District",
+        "Polygon",
+        "School District",
+        "State or equivalent entity" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:adaeecae-b869-48ca-9624-4b85215825be> bcube:dateCreated "2015-11-01T18:47:02.514Z" ;
+    bcube:hasMetadataRecord <urn:uuid:47f2b89d-874d-4a76-820d-1dddc88907bd> ;
+    bcube:lastUpdated "2015-11-01T18:47:02.514Z" ;
+    dc:conformsTo <urn:uuid:294c7676-c367-4ba9-9daa-83ec9f102c22>,
+        <urn:uuid:66fc4b37-58b2-4df6-b3d7-50788c08ce89>,
+        <urn:uuid:97d027b8-d4a5-4bf1-9244-0c73be2791e6> ;
+    dc:description "The TIGER/Line Shapefiles are an extract of selected geographic and cartographic information from the Census MAF/TIGER database. The Census MAF/TIGER database represents a seamless national file with no overlaps or gaps between parts. However, each TIGER/Line Shapefile is designed to stand alone as an independent data set or the shapefiles can be combined to cover the whole nation." ;
+    dc:spatial "POLYGON ((-72.557185 42.696985,-72.557185 45.305476,-70.575094 45.305476,-70.575094 42.696985,-72.557185 42.696985))" ;
+    dcterms:publisher <urn:uuid:1ac0b760-85cf-4c27-9af1-031caa1b4d24> ;
+    dcterms:references <urn:uuid:f980847c-02f4-4c5d-b835-aaf671b732c0> ;
+    dcterms:title "TIGER/Line Shapefile, 2008, 2000 state, New Hampshire, Elementary School District" ;
+    esip:eastBound "-70.575094"^^xsd:float ;
+    esip:endDate "2008-07-01"^^xsd:date ;
+    esip:northBound "45.305476"^^xsd:float ;
+    esip:southBound "42.696985"^^xsd:float ;
+    esip:startDate "2008-01-01"^^xsd:date ;
+    esip:westBound "-72.557185"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:ee0afe79-42dc-4091-a0af-2eb3962c2c9b> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-01T18:47:02.514Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-01T18:47:02.514Z" ;
+    dc:identifier "urn:sha:fb55f8cb9588bba9d349406ad5180b1e47d3d1a98ac2cd00f784a6f5" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://meta.geo.census.gov/data/existing/decennial/GEO/GPMB/TIGERline/fe_2008/elsd00/tl_2008_33_elsd00_url.shp.xml" .
+
+<urn:uuid:f980847c-02f4-4c5d-b835-aaf671b732c0> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-01T18:47:02.514Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-01T18:47:02.514Z" ;
+    dc:identifier "urn:sha:f294bd509ab30e0a28af0d45b76ae98595f38145d3745ca636aa48a3" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www2.census.gov/geo/tiger/TIGER2008/33_NEW_HAMPSHIRE/tl_2008_33_elsd00.zip" .
+

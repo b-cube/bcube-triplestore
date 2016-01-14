@@ -1,0 +1,103 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:16920c3e-5008-4901-a8e0-74dfc53350fb> bcube:hasType "place" ;
+    bcube:hasValue "COUNTRY/TERRITORY > United States of America > USA Minor Outlying Islands > Baker Island (00N176W0001)",
+        "OCEAN BASIN > Pacific Ocean > Central Pacific Ocean > Baker Island > Baker Island (00N176W0001)" ;
+    dc:partOf "CoRIS Place Thesaurus" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:2f63596c-761e-4fbd-835f-f0aaa1409728> a "ISO 19115:2003/19139" ;
+    bcube:dateCreated "2015-08-05T07:36:48.728Z" ;
+    bcube:lastUpdated "2015-08-05T07:36:48.728Z" ;
+    bcube:originatedFrom <urn:uuid:c64f0a59-ccdd-451d-ac23-79d61d2e625d> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:44e47be6-6e28-4747-b2b8-13bc2918ee93> .
+
+<urn:uuid:370ebb60-b70a-40c0-8e3c-1107b69c6d1a> bcube:hasType "place" ;
+    bcube:hasValue "Baker Island",
+        "Central Pacific",
+        "Pacific Ocean",
+        "Pacific Remote Island Areas" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:44e47be6-6e28-4747-b2b8-13bc2918ee93> bcube:dateCreated "2015-08-05T07:36:48.728Z" ;
+    bcube:hasMetadataRecord <urn:uuid:2f63596c-761e-4fbd-835f-f0aaa1409728> ;
+    bcube:lastUpdated "2015-08-05T07:36:48.728Z" ;
+    dc:conformsTo <urn:uuid:16920c3e-5008-4901-a8e0-74dfc53350fb>,
+        <urn:uuid:370ebb60-b70a-40c0-8e3c-1107b69c6d1a>,
+        <urn:uuid:60306de1-14d9-42c2-bf58-a171304ba5c4>,
+        <urn:uuid:8354caa4-dfdc-4552-8f4b-9de0e0c503e5>,
+        <urn:uuid:da8d66f6-fede-45ea-b595-65ae7687b3cd>,
+        <urn:uuid:e41e7ebc-d1cf-4b3b-afee-bef68141cf1f> ;
+    dc:description "Bathymetric data derived from a multipectral World View-2 satellite image mosaiced to provide near complete coverage of nearshore terrain around the islands. Bathymetry values shallower than ~20 m were derived by gauging the reletive attenuation of coastal, blue, green and yellow spectral radiance as a function of depth. A multiple linear regression analysis of coastal, blue, green and yellow band spectral values against depth determined the variables of y-intercept, coastal,blue, green and yellow slope values. Variables then used in multivariate slope intercept formula to derive depth. Variables were adjusted to improve the statistical accuracy and spatial coverage of the final derived bathymetry product. Digital image processing to derive depths conducted with the ENVI 4.8 software program while data editing and integration was performed using ArcGIS 10.1 This data set is for the shelf environment of Baker Island." ;
+    dc:spatial "POLYGON ((-176.494544 0.180621,-176.494544 0.21482,-176.449566 0.21482,-176.449566 0.180621,-176.494544 0.180621))" ;
+    dcterms:references <urn:uuid:57a9fca4-4e9a-4027-8f6b-7d83c7dbc47e> ;
+    dcterms:title "Mosaic of bathymetry derived from multispectral WV-2 satellite imagery of Baker Island, Pacific Remote Island Areas, Central Pacific." ;
+    esip:eastBound "-176.449566"^^xsd:float ;
+    esip:endDate "2013-02-09"^^xsd:date ;
+    esip:northBound "0.21482"^^xsd:float ;
+    esip:southBound "0.180621"^^xsd:float ;
+    esip:startDate "2001-02-09"^^xsd:date ;
+    esip:westBound "-176.494544"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:57a9fca4-4e9a-4027-8f6b-7d83c7dbc47e> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-05T07:36:48.728Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-05T07:36:48.728Z" ;
+    dc:identifier "urn:sha:8a5e9001306089dc3dd37ddea5624a3629b86acd809f949f51d353ce" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "ftp://ftp.soest.hawaii.edu/pibhmc/website/data/pria/bathymetry/BAK_DBALL_5m.zip" .
+
+<urn:uuid:60306de1-14d9-42c2-bf58-a171304ba5c4> bcube:hasType "theme" ;
+    bcube:hasValue "EARTH SCIENCE > Biosphere > Zoology > Corals > Reef Monitoring and Assessment > Remote Sensing > Satellite (digital scans) > World View-2",
+        "EARTH SCIENCE > Oceans > Bathymetry/Seafloor Topography > Bathymetry",
+        "EARTH SCIENCE > Oceans > Bathymetry/Seafloor Topography > Water Depth" ;
+    dc:partOf "CoRIS Theme Thesaurus" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:8354caa4-dfdc-4552-8f4b-9de0e0c503e5> bcube:hasValue "elevation" ;
+    dc:partOf "IsoTopicCategories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:c64f0a59-ccdd-451d-ac23-79d61d2e625d> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-05T07:36:48.728Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-05T07:36:48.728Z" ;
+    dc:identifier "urn:sha:6455b74830b2a2e3d01553d847e18361d445215e70a35727ef04728f" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www.coris.noaa.gov/metadata/records/CREDISO/BAK_Metadata_DBALL_5m_ISO.xml" .
+
+<urn:uuid:da8d66f6-fede-45ea-b595-65ae7687b3cd> bcube:hasType "theme" ;
+    bcube:hasValue "Geographic Information > Bathymetry" ;
+    dc:partOf "CoRIS Discovery Thesaurus" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:e41e7ebc-d1cf-4b3b-afee-bef68141cf1f> bcube:hasType "theme" ;
+    bcube:hasValue "Bathymetry",
+        "Multibeam sonar",
+        "Slope" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+

@@ -1,0 +1,93 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:1d2f172e-cd92-452a-ab76-12f7ebf7b55c> a "ISO 19115:2003/19139" ;
+    bcube:dateCreated "2015-08-08T13:03:38.188Z" ;
+    bcube:lastUpdated "2015-08-08T13:03:38.188Z" ;
+    bcube:originatedFrom <urn:uuid:b50474c0-19de-48b1-95f6-ddbab35e91a8> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:94e6da18-fc34-452f-9ba3-8457ac084f5f> .
+
+<urn:uuid:3bc43129-58fd-4d0d-896a-360cdf1d7d2e> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-08T13:03:38.188Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-08T13:03:38.188Z" ;
+    dc:identifier "urn:sha:1c008adbf18433a5a6db575f483d5c98917b23d5287782519276683b" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://estuarinebathymetry.noaa.gov/finddata.html" .
+
+<urn:uuid:93b836a6-6749-404e-add9-d14360d8fef4> bcube:hasValue "ImageryBaseMapsEarthCover",
+        "elevation",
+        "oceans" ;
+    dc:partOf "IsoTopicCategories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:94e6da18-fc34-452f-9ba3-8457ac084f5f> bcube:dateCreated "2015-08-08T13:03:38.188Z" ;
+    bcube:hasMetadataRecord <urn:uuid:1d2f172e-cd92-452a-ab76-12f7ebf7b55c> ;
+    bcube:lastUpdated "2015-08-08T13:03:38.188Z" ;
+    dc:conformsTo <urn:uuid:93b836a6-6749-404e-add9-d14360d8fef4>,
+        <urn:uuid:a24f2af0-bda6-48df-9133-5b331cef1870>,
+        <urn:uuid:d8491a19-21cb-405e-a3b4-47f2f787421a> ;
+    dc:description "Bathymetry for the New Jersey Inland Bays was derived from nineteen surveyscontaining 127,502 soundings. Four older, overlapping, less accurate surveyswere omitted before tinning the data. The average separation betweensoundings was 45 meters. Eighteen of the nineteen surveys used dated from1935 to 1940. The remaining survey, located in the southwest, dated from1972. The total range of sounding data was 1.2 to -16.2 meters at mean low water.Mean high water values between 0.6 and 1.3 meters were assigned to the shoreline. Six points werefound that were not consistent with the surrounding data. These were removed prior to tinning. DEM gridvalues outside the shoreline (on land) were assigned null values (-32676).The New Jersey Inland Bays have seventeen 7.5 minute DEMs and two onedegree DEMs. The 1 degree DEMs were generated from the higherresolution 7.5 minute DEMs which covered the estuary. A DigitalElevation Model (DEM) contains a series of elevations ordered fromsouth to north with the order of the columns from west to east. TheDEM is formatted as one ASCII header record (A- record), followed bya series of profile records (B- records) each of which include ashort B-record header followed by a series of ASCII integerelevations (typically in units of 1 centimeter) per each profile.The last physical record of the DEM is an accuracy record(C-record).The 7.5-minute DEM (30- by 30-m data spacing) is cast on theUniversal Transverse Mercator (UTM) projection. It provides coveragein 7.5- by 7.5-minute blocks. Each product provides the samecoverage as a standard USGS 7.5-minute quadrangle but the DEMcontains over edge data. Coverage is available for many estuaries ofthe contiguous United States but is not complete." ;
+    dc:spatial "POLYGON ((-74.925845 38.944322,-74.925845 39.677634,-74.16454 39.677634,-74.16454 38.944322,-74.925845 38.944322))" ;
+    dcterms:references <urn:uuid:3bc43129-58fd-4d0d-896a-360cdf1d7d2e> ;
+    dcterms:title "New Jersey Inland Bays, NJ (M080) Bathymetric DigitalElevation Model (30 meter resolution) Derived From SourceHydrographic Survey Soundings Collected by NOAA" ;
+    esip:eastBound "-74.16454"^^xsd:float ;
+    esip:endDate "1972-01-01"^^xsd:date ;
+    esip:northBound "39.677634"^^xsd:float ;
+    esip:southBound "38.944322"^^xsd:float ;
+    esip:startDate "1935-01-01"^^xsd:date ;
+    esip:westBound "-74.925845"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:a24f2af0-bda6-48df-9133-5b331cef1870> bcube:hasType "place" ;
+    bcube:hasValue "New Jersey",
+        "New Jersey Inland Bays, NJ",
+        "United States" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:b50474c0-19de-48b1-95f6-ddbab35e91a8> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-08T13:03:38.188Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-08T13:03:38.188Z" ;
+    dc:identifier "urn:sha:7191ea6e4826837153473fed259b72b6f335687f87a954c426b82ebb" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://catalog.data.gov/harvest/object/b0ade95d-1a0c-480e-99cc-b78e1f7db4c6" .
+
+<urn:uuid:d8491a19-21cb-405e-a3b4-47f2f787421a> bcube:hasType "theme" ;
+    bcube:hasValue "DEM",
+        "altitude",
+        "bathymetry",
+        "depth",
+        "digital bathymetric model",
+        "digital elevation model",
+        "digital terrain model",
+        "elevation",
+        "estuarine bathymetry",
+        "estuary",
+        "height",
+        "hydrographic survey",
+        "marine navigation" ;
+    dc:partOf "none" ;
+    owl:a bcube:thesaurusSubset .
+

@@ -1,0 +1,71 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:00b4a1c8-6ecd-43b5-ad62-dd8524d6ef7f> owl:a foaf:Organization ;
+    foaf:name "U.S. Geological Survey" .
+
+<urn:uuid:1fb86ff1-8bc4-43e3-bb8d-e5b75a200250> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2014-10-29T23:55:56.773Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2014-10-29T23:55:56.773Z" ;
+    dc:identifier "urn:sha:82d047d3e0db15bc00b62c991eb1c62f3f9ea374c7476fd0222ef5bd" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www.usgs.gov/science/xml.php?cite=736" .
+
+<urn:uuid:51a8af55-d5ba-4c61-b4cc-ebb3355559d2> dcterms:references <urn:uuid:774049bc-e9d6-4ff2-8e43-d14ee158e9ed> ;
+    owl:a bibo:WebPage .
+
+<urn:uuid:774049bc-e9d6-4ff2-8e43-d14ee158e9ed> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2014-10-29T23:55:56.773Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2014-10-29T23:55:56.773Z" ;
+    dc:identifier "urn:sha:7ce61f605cc124329eef1db1b0bbceeb1755f78ea6f589fa90210fee" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://earthquake.usgs.gov/learn/glossary.php" .
+
+<urn:uuid:8604396d-b0f1-47d6-b65e-190a73a777e3> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2014-10-29T23:55:56.773Z" ;
+    bcube:lastUpdated "2014-10-29T23:55:56.773Z" ;
+    bcube:originatedFrom <urn:uuid:1fb86ff1-8bc4-43e3-bb8d-e5b75a200250> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:dc2a582d-08ef-4ce9-b434-f5e0ec90b618> .
+
+<urn:uuid:dc2a582d-08ef-4ce9-b434-f5e0ec90b618> bcube:dateCreated "2014-10-29T23:55:56.773Z" ;
+    bcube:hasMetadataRecord <urn:uuid:8604396d-b0f1-47d6-b65e-190a73a777e3> ;
+    bcube:lastUpdated "2014-10-29T23:55:56.773Z" ;
+    dc:conformsTo <urn:uuid:f0ee8a37-e395-4ffe-a949-16cf154cb1d6> ;
+    dc:description "Dictionary of terms associated with earthquakes with simple definitions and photographs especially suited for students." ;
+    dcterms:publisher <urn:uuid:00b4a1c8-6ecd-43b5-ad62-dd8524d6ef7f> ;
+    dcterms:references <urn:uuid:51a8af55-d5ba-4c61-b4cc-ebb3355559d2> ;
+    dcterms:title "Earthquake glossary" ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:f0ee8a37-e395-4ffe-a949-16cf154cb1d6> bcube:hasType "theme" ;
+    bcube:hasValue "earthquakes",
+        "hazards",
+        "image collections",
+        "seismology",
+        "tectonic processes",
+        "terminologies and classifications" ;
+    dc:partOf "USGS Thesaurus" ;
+    owl:a bcube:thesaurusSubset .
+

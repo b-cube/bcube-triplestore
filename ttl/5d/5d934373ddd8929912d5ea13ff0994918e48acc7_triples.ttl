@@ -1,0 +1,65 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:df028155-0e5c-4f6c-9a97-c76e907bd793> a "OGC:WMS" ;
+    bcube:contains <urn:uuid:786ba428-01f2-4977-bb83-341148f47d76> ;
+    bcube:dateCreated "2015-08-11T15:35:02.081Z" ;
+    bcube:lastUpdated "2015-08-11T15:35:02.081Z" ;
+    bcube:originatedFrom <urn:uuid:6451dabf-b01b-489c-a8e2-698d9f71ede4> ;
+    dc:conformsTo <urn:uuid:4ec3be77-e347-452b-ab96-77ca82d51f6d> ;
+    dc:description "Scientific Data" ;
+    owl:a bcube:service .
+
+<urn:uuid:4ec3be77-e347-452b-ab96-77ca82d51f6d> bcube:hasValue "atmosphere",
+        "climate",
+        "earth science",
+        "meteorology",
+        "ocean" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:6451dabf-b01b-489c-a8e2-698d9f71ede4> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-11T15:35:02.081Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-11T15:35:02.081Z" ;
+    dc:identifier "urn:sha:2adb7d806a683da25a7b55b881a82a798774008d5317945ed6a0ca39" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://geoport.whoi.edu/thredds/wms/hydro/national/4km?service=WMS&version=1.3.0&request=GetCapabilities" .
+
+<urn:uuid:786ba428-01f2-4977-bb83-341148f47d76> bcube:dateCreated "2015-08-11T15:35:02.081Z" ;
+    bcube:lastUpdated "2015-08-11T15:35:02.081Z" ;
+    dc:spatial "POLYGON ((-124.81199646 24.5209999084,-124.81199646 49.437667846700002,-66.978668212900004 49.437667846700002,-66.978668212900004 24.5209999084,-124.81199646 24.5209999084))" ;
+    dc:title "runoff" ;
+    dcterms:references <urn:uuid:dec2e13b-131a-40e1-b7c5-4b08405de0b8> ;
+    esip:eastBound "-66.9786682129"^^xsd:float ;
+    esip:northBound "49.4376678467"^^xsd:float ;
+    esip:southBound "24.5209999084"^^xsd:float ;
+    esip:westBound "-124.81199646"^^xsd:float ;
+    owl:a bcube:Layer .
+
+<urn:uuid:dec2e13b-131a-40e1-b7c5-4b08405de0b8> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-11T15:35:02.081Z" ;
+    bcube:hasConfidence "Not Sure" ;
+    bcube:hasUrlSource "Generated" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-11T15:35:02.081Z" ;
+    dc:identifier "urn:sha:81361aa668c20b61e2c8dbe0ecee8676b62404d619ce9d2d910e31f8" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://geoport.whoi.edu/thredds/wms/hydro/national/4km?layers=runoff&width=500&version=1.3.0&bbox=-124.81199646%2C24.5209999084%2C-66.9786682129%2C49.4376678467&service=WMS&format=image%2Fpng&styles=&crs=CRS%3A84&request=GetMap&height=500" .
+

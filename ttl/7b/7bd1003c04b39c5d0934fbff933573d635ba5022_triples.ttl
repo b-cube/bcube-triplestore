@@ -1,0 +1,141 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:2e517cce-59cc-4a80-a51b-c9430d9cf267> bcube:hasType "theme" ;
+    bcube:hasValue "ASCII XYZ",
+        "CHARTS",
+        "JALBTCX",
+        "Light Detection and Ranging",
+        "SHOALS",
+        "Topography/Bathymetry",
+        "U.S. Army Corps of Engineers, Mobile District",
+        "bathymetry",
+        "coastal elevation",
+        "lidar",
+        "seafloor Topography",
+        "topography" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:46fc94d2-4b77-4164-9315-8f9cb4690ab9> bcube:hasType "theme" ;
+    bcube:hasValue "elevation" ;
+    dc:partOf "ISO 19115 Topic Category" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:4eb01a21-684a-4767-bd0a-7826c1841fd8> bcube:dateCreated "2014-07-31T10:03:25.787Z" ;
+    bcube:hasMetadataRecord <urn:uuid:f703ebed-7958-4977-a943-e0c6bdc6d9b3> ;
+    bcube:lastUpdated "2014-07-31T10:03:25.787Z" ;
+    dc:conformsTo <urn:uuid:2e517cce-59cc-4a80-a51b-c9430d9cf267>,
+        <urn:uuid:46fc94d2-4b77-4164-9315-8f9cb4690ab9>,
+        <urn:uuid:64900ca6-e711-43b8-ad8c-5e25a5fba06b>,
+        <urn:uuid:a38f5598-77e6-4b4f-9dd8-9c688c379023> ;
+    dc:description "These files contain topographic and bathymetric lidar data collected by the Compact Hydrographic Airborne Rapid Total Survey (CHARTS) system along the coastline of the island of Isle Royale, Michigan in Lake Superior. CHARTS integrates topographic and bathymetric lidar sensors, a digital camera and a hyperspectral scanner on a single remote sensing platform for use in coastal mapping and charting activities. Data coverage generally extends along the coastline from the waterline inland 500 meters (topography) and offshore 1,000 meters or to laser extinction (bathymetry). The topographic lidar sensor has a pulse repetition rate of 9 kHz at 1064 nm (near-infrared wavelength). The bathymetric lidar sensor has a pulse repetition rate of 1 kHz at 532 nm (green wavelength). Native lidar data is not generally in a format accessible to most Geographical Information Systems (GIS). Specialized in-house and commercial software packages are used to process the native lidar data into 3-dimensional positions that can be imported into GIS software for visualization and further analysis. Horizontal positions, provided in decimal degrees of latitude and longitude, are referenced to the North American Datum of 1983 (NAD83). Vertical positions were referenced to the NAD83 ellipsoid and provided in meters. The National Geodetic Survey's (NGS) GEOID03 model was used to transform the vertical positions from ellipsoid to orthometric heights referenced to the North American Vertical Datum of 1988 (NAVD88). The positions are relative to NAD83 in decimal degrees of longitude and latitude. The heights were converted from ellipsoid to orthometric heights (NAVD88) using the Geoid03 model with the results in meters. Once converted to geoid heights, the data were then converted to IGLD85 using the VDatum program from NOAA (National Oceanic and Atmospheric Administration). The NOAA Coastal Services center received the data and converted the hydro files from IGLD85 heights to NAVD88 heights using VDatum. The heights were then converted to ellipsoid heights using Geoid03. The topo files were converted from NAVD88 heights to ellipsoid heights using Geoid03. These files were converted for data storage and Digital Coast provisioning purposes." ;
+    dc:spatial "POLYGON ((-89.3269497 47.815609,-89.3269497 48.240609,-88.3551972 48.240609,-88.3551972 47.815609,-89.3269497 47.815609))" ;
+    dcterms:publisher <urn:uuid:ac75fea6-533d-4337-8f55-f9a17a84fcba> ;
+    dcterms:references <urn:uuid:520335c3-794a-43e4-8f48-e0219c94fc05>,
+        <urn:uuid:9042c79e-051b-4b78-a57e-a19196142d35>,
+        <urn:uuid:f8e6f646-3c0b-49f3-880d-1e9471aff55f> ;
+    dcterms:title "2009 US Army Corps of Engineers (USACE) Joint Airborne Lidar Bathymetry Technical Center of Expertise (JALBTCX) Topobathy Lidar: Isle Royale, Michigan" ;
+    esip:eastBound "-88.3551972"^^xsd:float ;
+    esip:endDate "2009-08-02"^^xsd:date ;
+    esip:northBound "48.240609"^^xsd:float ;
+    esip:southBound "47.815609"^^xsd:float ;
+    esip:startDate "2009-07-27"^^xsd:date ;
+    esip:westBound "-89.3269497"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:520335c3-794a-43e4-8f48-e0219c94fc05> dcterms:references <urn:uuid:caa281f1-3844-4900-988e-efb7ea8b86b8> ;
+    owl:a bibo:WebPage .
+
+<urn:uuid:5900cd8e-bb40-4a15-85f9-f379f918320a> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2014-07-31T10:03:25.787Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2014-07-31T10:03:25.787Z" ;
+    dc:identifier "urn:sha:e12b77df47c93267a686e26a8c83bea830f89ed50126f102aecbf458" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www.csc.noaa.gov/dataviewer/index.html?action=advsearch&qType=in&qFld=ID&qVal=1391" .
+
+<urn:uuid:64900ca6-e711-43b8-ad8c-5e25a5fba06b> bcube:hasType "place" ;
+    bcube:hasValue "Copper Harbor",
+        "Houghton",
+        "Keweenaw County",
+        "Lake Superior",
+        "Michigan",
+        "United States" ;
+    dc:partOf "Geographic Names Information System" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:8edea646-d9ed-445d-8eb6-4a1c66a15fb0> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2014-07-31T10:03:25.787Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2014-07-31T10:03:25.787Z" ;
+    dc:identifier "urn:sha:a68337eda47a28bbe1abf0a04f1d0eabf318ac755de3b98e80857beb" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "https://data.noaa.gov/harvest/object/5ec0557c-5e15-45fd-b47e-fab0fc7e761e/original" .
+
+<urn:uuid:9042c79e-051b-4b78-a57e-a19196142d35> dcterms:references <urn:uuid:5900cd8e-bb40-4a15-85f9-f379f918320a> ;
+    owl:a bibo:WebPage .
+
+<urn:uuid:a38f5598-77e6-4b4f-9dd8-9c688c379023> bcube:hasType "temporal" ;
+    bcube:hasValue "2009",
+        "August",
+        "July" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:ac75fea6-533d-4337-8f55-f9a17a84fcba> owl:a foaf:Organization ;
+    foaf:name "NOAA's Ocean Service, Coastal Services Center (CSC)" .
+
+<urn:uuid:caa281f1-3844-4900-988e-efb7ea8b86b8> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2014-07-31T10:03:25.787Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2014-07-31T10:03:25.787Z" ;
+    dc:identifier "urn:sha:f11902badb110cd126486d9bd8b18e38233e69eb263fa1e201457a77" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www.csc.noaa.gov/lidar" .
+
+<urn:uuid:cdfdc45e-20e2-4a13-b21a-eb90a45a338d> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2014-07-31T10:03:25.787Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2014-07-31T10:03:25.787Z" ;
+    dc:identifier "urn:sha:984bed46357e2ab75c4f43f0de26d7f84477a74488bfeecbb5f85a27" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www.csc.noaa.gov" .
+
+<urn:uuid:f703ebed-7958-4977-a943-e0c6bdc6d9b3> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2014-07-31T10:03:25.787Z" ;
+    bcube:lastUpdated "2014-07-31T10:03:25.787Z" ;
+    bcube:originatedFrom <urn:uuid:8edea646-d9ed-445d-8eb6-4a1c66a15fb0> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:4eb01a21-684a-4767-bd0a-7826c1841fd8> .
+
+<urn:uuid:f8e6f646-3c0b-49f3-880d-1e9471aff55f> dcterms:references <urn:uuid:cdfdc45e-20e2-4a13-b21a-eb90a45a338d> ;
+    owl:a bibo:WebPage .
+

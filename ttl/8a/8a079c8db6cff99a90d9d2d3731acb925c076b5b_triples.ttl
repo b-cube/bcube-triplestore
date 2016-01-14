@@ -1,0 +1,54 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:10bf5041-05f4-4f36-a91e-582e48102956> bcube:hasType "place" ;
+    bcube:hasValue "fUS54 = West Virginia",
+        "geologic maps",
+        "gravitational field (earth)",
+        "magnetic field (earth)" ;
+    dc:partOf "Augmented FIPS 10-4 and FIPS 6-4" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:7a98097f-893d-45a1-a62e-501b2b503237> bcube:hasValue "geoscientificInformation" ;
+    dc:partOf "IsoTopicCategories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:7bf5e6ea-4521-4f25-88ce-ff82081b5735> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2014-10-29T23:09:42.277Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2014-10-29T23:09:42.277Z" ;
+    dc:identifier "urn:sha:1e4b55e9e346fcedcac47dd8f48e4e4e57b33fabde92fe4793e18273" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www.usgs.gov/science/iso.php?cite=1437" .
+
+<urn:uuid:820c6fd7-666e-4857-9af8-ec2d05afd7e8> a "ISO 19115:2003/19139" ;
+    bcube:dateCreated "2014-10-29T23:09:42.277Z" ;
+    bcube:lastUpdated "2014-10-29T23:09:42.277Z" ;
+    bcube:originatedFrom <urn:uuid:7bf5e6ea-4521-4f25-88ce-ff82081b5735> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:8eb2cabf-ad86-4ad5-b450-4c95c7f7af22> .
+
+<urn:uuid:8eb2cabf-ad86-4ad5-b450-4c95c7f7af22> bcube:dateCreated "2014-10-29T23:09:42.277Z" ;
+    bcube:hasMetadataRecord <urn:uuid:820c6fd7-666e-4857-9af8-ec2d05afd7e8> ;
+    bcube:lastUpdated "2014-10-29T23:09:42.277Z" ;
+    dc:conformsTo <urn:uuid:10bf5041-05f4-4f36-a91e-582e48102956>,
+        <urn:uuid:7a98097f-893d-45a1-a62e-501b2b503237> ;
+    dc:description "Colored map in two parts and text in PDF files requiring Adobe Acrobat Reader 3.0 to view." ;
+    dcterms:title "Magnetic and gravity anomaly maps of West Virginia" ;
+    owl:a dcat:Dataset .
+

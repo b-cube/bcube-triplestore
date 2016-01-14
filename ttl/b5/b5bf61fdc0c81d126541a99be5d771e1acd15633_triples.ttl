@@ -1,0 +1,96 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:48e6f9d0-bb13-452c-8d9e-5ed0ea027e0f> bcube:hasType "place" ;
+    bcube:hasValue "01025",
+        "Clarke",
+        "County or Equivalent Entity",
+        "U.S.",
+        "United States" ;
+    dc:partOf "ANSI INCITS 38:2009 (Formerly FIPS 5-2), ANSI INCITS 31:2009 (Formerly FIPS 6-4),ANSI INCITS 454:2009 (Formerly FIPS 8-6), ANSI INCITS 455:2009(Formerly FIPS 9-1), ANSI INCITS 446:2008 (Geographic Names Information System (GNIS))" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:4d4b4693-712d-401f-a161-8129cb42f976> bcube:dateCreated "2015-10-18T06:56:39.663Z" ;
+    bcube:hasMetadataRecord <urn:uuid:a0b0aef6-62f9-4177-8cef-80683031f609> ;
+    bcube:lastUpdated "2015-10-18T06:56:39.663Z" ;
+    dc:conformsTo <urn:uuid:48e6f9d0-bb13-452c-8d9e-5ed0ea027e0f>,
+        <urn:uuid:531d86f7-e742-44ae-b10a-5f3ba27f8ebf>,
+        <urn:uuid:9cf1ef2b-6897-4217-ab04-d81565c83716>,
+        <urn:uuid:ee888a10-d5f8-416c-81ff-26c580e789ec> ;
+    dc:description "The TIGER/Line shapefiles and related database files (.dbf) are an extract of selected geographic and cartographic information from the U.S. Census Bureau's Master Address File / Topologically Integrated Geographic Encoding and Referencing (MAF/TIGER) Database (MTDB). The MTDB represents a seamless national file with no overlaps or gaps between parts, however, each TIGER/Line shapefile is designed to stand alone as an independent data set, or they can be combined to cover the entire nation. The Address Ranges Relationship File (ADDR.dbf) contains the attributes of each address range. Each address range applies to a single edge and has a unique address range identifier (ARID) value. The edge to which an address range applies can be determined by linking the address range to the All Lines Shapefile (EDGES.shp) using the permanent topological edge identifier (TLID) attribute. Multiple address ranges can apply to the same edge since an edge can have multiple address ranges. Note that the most inclusive address range associated with each side of a street edge already appears in the All Lines Shapefile (EDGES.shp). The TIGER/Line Shapefiles contain potential address ranges, not individual addresses. The term \"address range\" refers to the collection of all possible structure numbers from the first structure number to the last structure number and all numbers of a specified parity in between along an edge side relative to the direction in which the edge is coded. The address ranges in the TIGER/Line Shapefiles are potential ranges that include the full range of possible structure numbers even though the actual structures may not exist." ;
+    dc:spatial "POLYGON ((-88.180821 31.185486,-88.180821 31.991355,-87.50093 31.991355,-87.50093 31.185486,-88.180821 31.185486))" ;
+    dcterms:references <urn:uuid:af33c857-f94d-42fa-93eb-23d09c9dadd6> ;
+    dcterms:title "TIGER/Line Shapefile, 2013, county, Clarke County, AL, Current Address Ranges Relationship File" ;
+    esip:eastBound "-87.50093"^^xsd:float ;
+    esip:endDate "2013-05-02"^^xsd:date ;
+    esip:northBound "31.991355"^^xsd:float ;
+    esip:southBound "31.185486"^^xsd:float ;
+    esip:startDate "2012-06-02"^^xsd:date ;
+    esip:westBound "-88.180821"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:531d86f7-e742-44ae-b10a-5f3ba27f8ebf> bcube:hasType "theme" ;
+    bcube:hasValue "5-digit ZIP code",
+        "County ANSI Code",
+        "County FIPS Code",
+        "From House Number",
+        "Permanent edge ID",
+        "Side indicator flag",
+        "State ANSI Code",
+        "State FIPS Code",
+        "To House Number",
+        "ZIP +4 code" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:9cf1ef2b-6897-4217-ab04-d81565c83716> bcube:hasType "theme" ;
+    bcube:hasValue "Transportation" ;
+    dc:partOf "NGDA Portfolio Themes" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:a0b0aef6-62f9-4177-8cef-80683031f609> a "ISO 19115:2003/19139" ;
+    bcube:dateCreated "2015-10-18T06:56:39.663Z" ;
+    bcube:lastUpdated "2015-10-18T06:56:39.663Z" ;
+    bcube:originatedFrom <urn:uuid:ee8baeba-f7fe-4ce0-ac45-557e0710bff2> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:4d4b4693-712d-401f-a161-8129cb42f976> .
+
+<urn:uuid:af33c857-f94d-42fa-93eb-23d09c9dadd6> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-10-18T06:56:39.663Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-10-18T06:56:39.663Z" ;
+    dc:identifier "urn:sha:0c7b30a347873987348e8694081ec09a6de9dd0efbb7a05e95cd6bc1" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www2.census.gov/geo/tiger/TIGER2013/ADDR/tl_2013_01025_addr.zip" .
+
+<urn:uuid:ee888a10-d5f8-416c-81ff-26c580e789ec> bcube:hasValue "transportation" ;
+    dc:partOf "IsoTopicCategories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:ee8baeba-f7fe-4ce0-ac45-557e0710bff2> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-10-18T06:56:39.663Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-10-18T06:56:39.663Z" ;
+    dc:identifier "urn:sha:5f13e50a928bd81d6a574c92cb7469eb59ef89cb849db2ae25aaf039" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://meta.geo.census.gov/data/existing/decennial/GEO/GPMB/TIGERline/TIGER2013/addr/tl_2013_01025_addr.dbf.iso.xml" .
+

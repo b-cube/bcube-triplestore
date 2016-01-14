@@ -1,0 +1,67 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:06a762fe-7fd0-4caa-a1ac-1b0cfd647328> owl:a foaf:Organization ;
+    foaf:name "Montana State Library" .
+
+<urn:uuid:07321d6f-95e2-49cb-b57c-92c4d92d8c5a> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-08-11T06:18:10.623Z" ;
+    bcube:lastUpdated "2015-08-11T06:18:10.623Z" ;
+    bcube:originatedFrom <urn:uuid:49caa615-b43b-42cf-8b67-1407d2997a5e> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:0baad1b0-86da-4a1f-acdc-9b5ce35272b6> .
+
+<urn:uuid:0baad1b0-86da-4a1f-acdc-9b5ce35272b6> bcube:dateCreated "2015-08-11T06:18:10.623Z" ;
+    bcube:hasMetadataRecord <urn:uuid:07321d6f-95e2-49cb-b57c-92c4d92d8c5a> ;
+    bcube:lastUpdated "2015-08-11T06:18:10.623Z" ;
+    dc:conformsTo <urn:uuid:7e0d271b-0601-4b1a-b3b9-df8b54d2aea7>,
+        <urn:uuid:d25399d5-8dd1-4b4d-bc90-fdc403b65cf8>,
+        <urn:uuid:f5070a97-b83b-45fc-81ad-b66524ade77a> ;
+    dc:description "Areas irrigated with water from the Clark Fork River. Source for historic data was the State Engineer's Office Water Resource Surveys of Deer Lodge County (1955), Powell County (1959), Granite County (1959), and Missoula County (1960). Source for 1983 irrigation was EPA 1983 Aerial Photography. The data were mapped on paper by the CH2M Hill and converted to digital format by the EPA Environmental Monitoring Systems Laboratory-Las Vegas. These data were formerly available from the Montana State Library web site but were removed because they are potentially out of date. Please contact the Federal Superfund Bureau of the Montana Department of Environmental Quality if you want these data so they may tell you if newer or better data are available. If the data are not available from the Department of Environmental Quality, you may request a copy from the Montana State Library data archive." ;
+    dc:spatial "POLYGON ((-113.820396 46.1722984,-113.820396 46.8995018,-112.7369 46.8995018,-112.7369 46.1722984,-113.820396 46.1722984))" ;
+    dcterms:publisher <urn:uuid:06a762fe-7fd0-4caa-a1ac-1b0cfd647328> ;
+    dcterms:title "Clark Fork Historic Irrigation, 1950s and 1983" ;
+    esip:eastBound "-112.7369"^^xsd:float ;
+    esip:northBound "46.8995018"^^xsd:float ;
+    esip:southBound "46.1722984"^^xsd:float ;
+    esip:westBound "-113.820396"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:49caa615-b43b-42cf-8b67-1407d2997a5e> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-11T06:18:10.623Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-11T06:18:10.623Z" ;
+    dc:identifier "urn:sha:5b3686790937430ccc63ce9d533dfaa6792ad87cb82c6886b10e5b77" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://mslapps.mt.gov/Geographic_Information/Data/DataList/datalist_MetadataDetailRaw.aspx?did={EEB67143-D074-41FB-BDCF-4415E9CE9F40}" .
+
+<urn:uuid:7e0d271b-0601-4b1a-b3b9-df8b54d2aea7> bcube:hasType "place" ;
+    bcube:hasValue "MT",
+        "Montana" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:d25399d5-8dd1-4b4d-bc90-fdc403b65cf8> bcube:hasType "theme" ;
+    bcube:hasValue "irrigation",
+        "landuse" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:f5070a97-b83b-45fc-81ad-b66524ade77a> bcube:hasType "theme" ;
+    bcube:hasValue "farming" ;
+    dc:partOf "ISO 19115 Topic Category" ;
+    owl:a bcube:thesaurusSubset .
+

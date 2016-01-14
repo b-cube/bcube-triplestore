@@ -1,0 +1,96 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:2a6b5fa4-3b8d-4277-b7d9-3614730a6a47> bcube:hasType "theme" ;
+    bcube:hasValue "Area landmark identifier",
+        "County ANSI Code",
+        "County FIPS Code",
+        "Landmark",
+        "Permanent face ID",
+        "State ANSI Code",
+        "State FIPS Code",
+        "State or equivalent entity",
+        "Table",
+        "Topological Faces" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:71cfd337-79f8-4a4d-aa14-8e6b0a239a64> bcube:hasType "place" ;
+    bcube:hasValue "78",
+        "State or Equivalent Entity",
+        "U.S.",
+        "United States",
+        "United States Virgin Islands",
+        "VI" ;
+    dc:partOf "ANSI INCITS 38:2009 (Formerly FIPS 5-2), ANSI INCITS 31:2009 (Formerly FIPS 6-4),ANSI INCITS 454:2009 (Formerly FIPS 8-6), ANSI INCITS 455:2009(Formerly FIPS 9-1), ANSI INCITS 446:2008 (Geographic Names Information System (GNIS))" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:76361f1e-2679-4ac9-8b6b-d952161c7a93> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-07T09:51:55.38Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-07T09:51:55.38Z" ;
+    dc:identifier "urn:sha:2e46fe63593c525f6b8af89b63a32c4c0c071f0da04e73b39ac80c5e" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://meta.geo.census.gov/data/existing/decennial/GEO/GPMB/TIGERline/TL2012/FGDC/facesal/tl_2012_78_facesal.dbf.xml" .
+
+<urn:uuid:77b715f6-0614-410e-aba4-6f9e5a6f682b> bcube:dateCreated "2015-11-07T09:51:55.38Z" ;
+    bcube:hasMetadataRecord <urn:uuid:7b5c0ebe-bfdf-400f-9fc5-902a54c52336> ;
+    bcube:lastUpdated "2015-11-07T09:51:55.38Z" ;
+    dc:conformsTo <urn:uuid:2a6b5fa4-3b8d-4277-b7d9-3614730a6a47>,
+        <urn:uuid:71cfd337-79f8-4a4d-aa14-8e6b0a239a64>,
+        <urn:uuid:83ac3793-c12a-45e2-a6cf-5375cd3cdd24> ;
+    dc:description "The TIGER/Line shapefiles and related database files (.dbf) are an extract of selected geographic and cartographic information from the U.S. Census Bureau's Master Address File / Topologically Integrated Geographic Encoding and Referencing (MAF/TIGER) Database (MTDB). The MTDB represents a seamless national file with no overlaps or gaps between parts, however, each TIGER/Line shapefile is designed to stand alone as an independent data set, or they can be combined to cover the entire nation. The Topological Faces / Area Landmark Relationship File (FACESAL.dbf) contains a record for each face / area landmark relationship. Face refers to the areal (polygon) topological primitives that make up MTDB. A face is bounded by one or more edges; its boundary includes only the edges that separate it from other faces, not any interior edges contained within the area of the face. The face to which a record in the Topological Faces / Area Landmark Relationship File (FACESAL.dbf) applies can be determined by linking to the Topological Faces Shapefile (FACES.shp) on the permanent topological face identifier (TFID) attribute. The area landmark to which a record in the Topological Faces / Area Landmark Relationship File (FACESAL.dbf) applies can be determined by linking to the Area Landmark Shapefile (AREALM.shp) on the area landmark identifier (AREAID) attribute. A face may be part of multiple area landmarks. An area landmark may consist of multiple faces." ;
+    dc:spatial "POLYGON ((-65.154118 17.623468,-65.154118 18.464984,-64.512674 18.464984,-64.512674 17.623468,-65.154118 17.623468))" ;
+    dcterms:publisher <urn:uuid:8168d1ae-ca77-41dd-b025-c37248789cc3> ;
+    dcterms:references <urn:uuid:7f0564e3-d83b-45ec-abab-4b38bd715af0> ;
+    dcterms:title "TIGER/Line Shapefile, 2012, state, United States Virgin Islands, Current Topological Faces-Area Landmark Relationship File" ;
+    esip:eastBound "-64.512674"^^xsd:float ;
+    esip:endDate "2012-06-01"^^xsd:date ;
+    esip:northBound "18.464984"^^xsd:float ;
+    esip:southBound "17.623468"^^xsd:float ;
+    esip:startDate "2011-08-01"^^xsd:date ;
+    esip:westBound "-65.154118"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:7b5c0ebe-bfdf-400f-9fc5-902a54c52336> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-11-07T09:51:55.38Z" ;
+    bcube:lastUpdated "2015-11-07T09:51:55.38Z" ;
+    bcube:originatedFrom <urn:uuid:76361f1e-2679-4ac9-8b6b-d952161c7a93> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:77b715f6-0614-410e-aba4-6f9e5a6f682b> .
+
+<urn:uuid:7f0564e3-d83b-45ec-abab-4b38bd715af0> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-07T09:51:55.38Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-07T09:51:55.38Z" ;
+    dc:identifier "urn:sha:51535e5b27337f3e4006714c3a2d02fdd2c0f342b4fbeb16d7d7fa22" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www2.census.gov/geo/tiger/TIGER2012/FACESAL/tl_2012_78_facesal.zip" .
+
+<urn:uuid:8168d1ae-ca77-41dd-b025-c37248789cc3> owl:a foaf:Organization ;
+    foaf:name "" .
+
+<urn:uuid:83ac3793-c12a-45e2-a6cf-5375cd3cdd24> bcube:hasType "theme" ;
+    bcube:hasValue "Boundaries" ;
+    dc:partOf "ISO 19115 Topic Categories" ;
+    owl:a bcube:thesaurusSubset .
+

@@ -1,0 +1,90 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:3ab26253-481b-4699-9b1b-5f327a2716da> bcube:hasType "place" ;
+    bcube:hasValue "COMMUNITY Washoe County NV and Incorporated Areas",
+        "COUNTY WASHOE",
+        "COUNTY-FIPS 32031",
+        "FEMA-CID 32031C",
+        "REGION 09",
+        "STATE NV" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:3ce3987d-e488-4b4f-9e76-28f756b38b19> bcube:dateCreated "2015-07-31T15:17:43.368Z" ;
+    bcube:hasMetadataRecord <urn:uuid:5dba19a2-57f7-4e9c-9f16-9dbb8936851d> ;
+    bcube:lastUpdated "2015-07-31T15:17:43.368Z" ;
+    dc:conformsTo <urn:uuid:3ab26253-481b-4699-9b1b-5f327a2716da>,
+        <urn:uuid:7de19141-9665-4d5e-849c-44c121a0f540>,
+        <urn:uuid:dbfebb60-3488-43e7-8a85-2efbd8d1190b> ;
+    dc:description "Terrain data, as defined in FEMA Guidelines and Specifications, Appendix N: Data Capture Standards, describes the digital topographic data that was used to create the elevation data representing the terrain environment of a watershed and/or floodplain. Terrain data requirements allow for flexibility in the types of information provided as sources used to produce final terrain deliverables. Once this type of data is provided, FEMA will be able to account for the origins of the flood study elevation data. (Source: FEMA Guidelines and Specifications, Appendix N, Section N.1.2)." ;
+    dc:spatial "POLYGON ((-119.992498 39.455605,-119.992498 39.776291,-119.810035 39.776291,-119.810035 39.455605,-119.992498 39.455605))" ;
+    dcterms:references <urn:uuid:7d6d0396-9f8f-4853-b738-ab78821822ff> ;
+    dcterms:title "DCS Terrain submission for Washoe County NV PMR" ;
+    esip:eastBound "-119.810035"^^xsd:float ;
+    esip:northBound "39.776291"^^xsd:float ;
+    esip:southBound "39.455605"^^xsd:float ;
+    esip:westBound "-119.992498"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:5dba19a2-57f7-4e9c-9f16-9dbb8936851d> a "ISO 19115:2003/19139" ;
+    bcube:dateCreated "2015-07-31T15:17:43.368Z" ;
+    bcube:lastUpdated "2015-07-31T15:17:43.368Z" ;
+    bcube:originatedFrom <urn:uuid:6c828521-97fd-4c82-a371-03c7a9db77b0> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:3ce3987d-e488-4b4f-9e76-28f756b38b19> .
+
+<urn:uuid:6c828521-97fd-4c82-a371-03c7a9db77b0> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-07-31T15:17:43.368Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-07-31T15:17:43.368Z" ;
+    dc:identifier "urn:sha:b251d33077768f9ff4ec1feb2f434f5f35ee6bb9da4ef6f3d921a078" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "https://catalog.data.gov/harvest/object/9a8dde81-a706-4013-83cd-4c723ce1fb7b" .
+
+<urn:uuid:7d6d0396-9f8f-4853-b738-ab78821822ff> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-07-31T15:17:43.368Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-07-31T15:17:43.368Z" ;
+    dc:identifier "urn:sha:37c915397238031daced09ae0e2dd3bf54e84a6477f749c2cc9dcbdf" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://hazards.fema.gov" .
+
+<urn:uuid:7de19141-9665-4d5e-849c-44c121a0f540> bcube:hasType "theme" ;
+    bcube:hasValue "Breaklines",
+        "Contours",
+        "DEM",
+        "Digital Terrain Model",
+        "Elevation Data",
+        "Flow vectors",
+        "LIDAR",
+        "Land Surface",
+        "Relief",
+        "Slope",
+        "Topography" ;
+    dc:partOf "FEMA NFIP Topic Category" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:dbfebb60-3488-43e7-8a85-2efbd8d1190b> bcube:hasValue "elevation" ;
+    dc:partOf "IsoTopicCategories" ;
+    owl:a bcube:thesaurusSubset .
+

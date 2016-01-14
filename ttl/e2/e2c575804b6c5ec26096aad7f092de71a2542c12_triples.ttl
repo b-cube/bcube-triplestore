@@ -1,0 +1,75 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:0cd7367d-b93b-43d3-9fbe-e9c0f6c06c05> bcube:hasType "theme" ;
+    bcube:hasValue "LAS",
+        "LIDAR",
+        "elevation",
+        "swfwmd",
+        "topography" ;
+    dc:partOf "none" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:10ba1d45-6437-48a5-a039-a0b5c17d1dda> a "ISO 19115:2003/19139" ;
+    bcube:dateCreated "2015-08-05T15:48:54.86Z" ;
+    bcube:lastUpdated "2015-08-05T15:48:54.86Z" ;
+    bcube:originatedFrom <urn:uuid:999af895-c960-465b-92d9-7d0aa3d1c731> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:9f5ccd38-a745-4765-a634-2e0c53365579> .
+
+<urn:uuid:81df1dbc-bf12-4272-aca0-2c473948c3f8> bcube:hasValue "elevation" ;
+    dc:partOf "IsoTopicCategories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:999af895-c960-465b-92d9-7d0aa3d1c731> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-05T15:48:54.86Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-05T15:48:54.86Z" ;
+    dc:identifier "urn:sha:d35cec2eb81ad4bb159f021b8b294194abf1969bee78cfff14479429" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://coast.noaa.gov/data/Documents/Metadata/isoharvest/Lidar/fl2011_swfwmd_hillsborough_m4698_ISOmetadata.xml" .
+
+<urn:uuid:9f5ccd38-a745-4765-a634-2e0c53365579> bcube:dateCreated "2015-08-05T15:48:54.86Z" ;
+    bcube:hasMetadataRecord <urn:uuid:10ba1d45-6437-48a5-a039-a0b5c17d1dda> ;
+    bcube:lastUpdated "2015-08-05T15:48:54.86Z" ;
+    dc:conformsTo <urn:uuid:0cd7367d-b93b-43d3-9fbe-e9c0f6c06c05>,
+        <urn:uuid:81df1dbc-bf12-4272-aca0-2c473948c3f8>,
+        <urn:uuid:cf79f5d6-25e9-49b6-bf89-1ca839b9d1b4>,
+        <urn:uuid:e6f73805-b9c4-45a8-82d8-fbc775087a9f> ;
+    dc:description "SWFWMD regularly uses digital topographic information to support regulatory, land management and acquisition, planning, engineering and habitat restoration projects. LiDAR data will support hydrologic modeling activities associated with the FederalEmergency Management Agency (FEMA), and in the creation of Digital Flood Insurance Rate Maps(DFIRM). The LiDAR data will support the creation of Federal Emergency Management AgencyFlood Insurance Rate Maps (FEMA FIRM) and an integrated ground and surface water model for Hillsborough County. The data were classified into 7 classifications; (1) unclassified, (2) ground, (6) buildings, (9) water, (11) wetlands (reclassed by OCM to 16), (12) overlap points, (23) reserved for ASPRS definition (reclassed by OCM to 15), (30) reserved for ASPRS definition, and (31) reserved for ASPRS definition (reclassed by OCM to 10). Cooner & Associates performed the vertical accuracy and horizontal accuracy QA/QC analysis." ;
+    dc:spatial "POLYGON ((-82.670914654800001 27.896116660600001,-82.670914654800001 28.1711424563,-82.189476142900006 28.1711424563,-82.189476142900006 27.896116660600001,-82.670914654800001 27.896116660600001))" ;
+    dcterms:title "2011 SWFWMD Topographic Lidar: Hillsborough County (Florida)" ;
+    esip:eastBound "-82.1894761429"^^xsd:float ;
+    esip:northBound "28.1711424563"^^xsd:float ;
+    esip:southBound "27.8961166606"^^xsd:float ;
+    esip:westBound "-82.6709146548"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:cf79f5d6-25e9-49b6-bf89-1ca839b9d1b4> bcube:hasType "temporal" ;
+    bcube:hasValue "2011",
+        "February" ;
+    dc:partOf "none" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:e6f73805-b9c4-45a8-82d8-fbc775087a9f> bcube:hasType "place" ;
+    bcube:hasValue "Florida",
+        "Hillsborough County",
+        "Southwest Florida Water Management District" ;
+    dc:partOf "none" ;
+    owl:a bcube:thesaurusSubset .
+

@@ -1,0 +1,88 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:30bfbfc7-e506-49a6-804a-eb669b24142f> bcube:hasType "theme" ;
+    bcube:hasValue "transportation" ;
+    dc:partOf "ISO 19115 Topic Category" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:3f41a481-7da8-4c1c-9826-cf408ad6dd85> bcube:dateCreated "2015-07-16T12:37:29.472Z" ;
+    bcube:hasMetadataRecord <urn:uuid:62f3e6da-178f-414e-b626-7fb434cb4082> ;
+    bcube:lastUpdated "2015-07-16T12:37:29.472Z" ;
+    dc:conformsTo <urn:uuid:30bfbfc7-e506-49a6-804a-eb669b24142f> ;
+    dc:description "A collection of performance indicators and regional benchmarks for consistently comparing neighborhoods (census block groups) across the US in regards to their accessibility to jobs or workers via public transit service. Accessibility was modeled by calculating total travel time between block group centroids inclusive of walking to/from transit stops, wait times, and transfers. Block groups that can be accessed in 45 minutes or less from the origin block group are considered accessible. Indicators reflect public transit service in December 2012 and employment/worker counts in 2010. Coverage is limited to census block groups within metropolitan regions served by transit agencies who share their service data in a standardized format called GTFS." ;
+    dc:spatial "POLYGON ((-138.21454852 6.65223303,-138.21454852 61.7110157,-12.68151645 61.7110157,-12.68151645 6.65223303,-138.21454852 6.65223303))" ;
+    dcterms:publisher <urn:uuid:61c1d0ef-357c-40ca-9a5d-a89b73e2729e> ;
+    dcterms:references <urn:uuid:66d8e371-65cb-4fe2-9f16-3aa13a4e7b13>,
+        <urn:uuid:f3e93b2e-8622-45fb-ba99-a5c07c99d0cd> ;
+    dcterms:title "Access to Jobs and Workers via Transit - Service" ;
+    esip:eastBound "-12.68151645"^^xsd:float ;
+    esip:northBound "61.7110157"^^xsd:float ;
+    esip:southBound "6.65223303"^^xsd:float ;
+    esip:startDate "2010-01-01"^^xsd:date ;
+    esip:westBound "-138.21454852"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:61c1d0ef-357c-40ca-9a5d-a89b73e2729e> owl:a foaf:Organization ;
+    foaf:name "U.S. Environmental Protection Agency, Office of Sustainable Communities" .
+
+<urn:uuid:62f3e6da-178f-414e-b626-7fb434cb4082> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-07-16T12:37:29.472Z" ;
+    bcube:lastUpdated "2015-07-16T12:37:29.472Z" ;
+    bcube:originatedFrom <urn:uuid:b473df30-2cc2-4139-b4e3-74d3838df20b> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:3f41a481-7da8-4c1c-9826-cf408ad6dd85> .
+
+<urn:uuid:66d8e371-65cb-4fe2-9f16-3aa13a4e7b13> dcterms:references <urn:uuid:f52112ac-0f1c-4fd9-bc29-de5a63703145> ;
+    owl:a bibo:WebPage .
+
+<urn:uuid:a56e59df-e516-4156-a027-cf06d063de02> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-07-16T12:37:29.472Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-07-16T12:37:29.472Z" ;
+    dc:identifier "urn:sha:26f2b9139c5fc4d98e1a7544f80436ba8de649400493103981433336" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://geodata.epa.gov/ArcGIS/rest/services/OA/SLD_Trans45/MapServer" .
+
+<urn:uuid:b473df30-2cc2-4139-b4e3-74d3838df20b> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-07-16T12:37:29.472Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-07-16T12:37:29.472Z" ;
+    dc:identifier "urn:sha:d44741528661e8867524eb598940d099ff8ea5a51a1fa7046ab17e41" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "https://edg.epa.gov/metadata/rest/document?id=%7B09649C32-7B39-4690-BFFB-88B250F6DF1B%7D" .
+
+<urn:uuid:f3e93b2e-8622-45fb-ba99-a5c07c99d0cd> dcterms:references <urn:uuid:a56e59df-e516-4156-a027-cf06d063de02> ;
+    owl:a bibo:WebPage .
+
+<urn:uuid:f52112ac-0f1c-4fd9-bc29-de5a63703145> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-07-16T12:37:29.472Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-07-16T12:37:29.472Z" ;
+    dc:identifier "urn:sha:6e9e9b745c85183bf2a77c0e6a32e26d122b63fd44cc45a7e1d0d35d" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "https://edg.epa.gov/data/Public/OP/SLD/SLD_trans45.zip" .
+

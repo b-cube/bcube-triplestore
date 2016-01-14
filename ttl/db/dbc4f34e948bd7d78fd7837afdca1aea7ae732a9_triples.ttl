@@ -1,0 +1,91 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:12b9121a-2fa8-4856-bad5-83de5b3754df> bcube:hasType "theme" ;
+    bcube:hasValue "Bathymetry",
+        "Marine Geology",
+        "Marine Geophysics",
+        "Seafloor Topography",
+        "Water Depth" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:2974c94d-650f-4e4b-a182-8731b98a54d7> bcube:hasType "theme" ;
+    bcube:hasValue "geoscientificinformation",
+        "oceans" ;
+    dc:partOf "ISO 19115 Topic Category" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:36528dd0-edd5-41ba-83ff-ed1e907f3a47> bcube:dateCreated "2015-08-02T16:24:18.878Z" ;
+    bcube:hasMetadataRecord <urn:uuid:579ca073-c0e3-4280-9814-0d5b870500c8> ;
+    bcube:lastUpdated "2015-08-02T16:24:18.878Z" ;
+    dc:conformsTo <urn:uuid:12b9121a-2fa8-4856-bad5-83de5b3754df>,
+        <urn:uuid:2974c94d-650f-4e4b-a182-8731b98a54d7>,
+        <urn:uuid:edad65df-d8c2-4670-9ba4-509ed3d9cb71> ;
+    dc:description "Single-beam bathymetry data along with DGPS navigation data was collected as part of field activity L-13-81-NC in Northern California from 10/09/1981 to 10/23/1981, http://walrus.wr.usgs.gov/infobank/l/l1381nc/html/l-13-81-nc.meta.html These data are reformatted from space-delimited ASCII text files located in the Coastal and Marine Geology Program (CMGP) InfoBank field activity catalog at http://walrus.wr.usgs.gov/infobank/l/l1381nc/html/l-13-81-nc.bath.html into MGD77T format provided by the NOAA's National Geophysical Data Center(NGDC). The MGD77T format includes a header (documentation) file (.h77t) and a data file (.m77t). More information regarding this format can be found in the publication listed in the Cross_reference section of this metadata file." ;
+    dc:spatial "POLYGON ((-124.65687 37.51182,-124.65687 41.73982,-122.18821 41.73982,-122.18821 37.51182,-124.65687 37.51182))" ;
+    dcterms:publisher <urn:uuid:639b8dfe-acb0-46d3-889b-cba1c3d3c7f1> ;
+    dcterms:references <urn:uuid:a184560d-abb1-4856-b003-533af6eec285> ;
+    dcterms:title "l1381nc.m77t - MGD77 data file for Geophysical data from field activity L-13-81-NC in Northern California from 10/09/1981 to 10/23/1981" ;
+    esip:eastBound "-122.18821"^^xsd:float ;
+    esip:endDate "1981-10-23"^^xsd:date ;
+    esip:northBound "41.73982"^^xsd:float ;
+    esip:southBound "37.51182"^^xsd:float ;
+    esip:startDate "1981-10-09"^^xsd:date ;
+    esip:westBound "-124.65687"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:579ca073-c0e3-4280-9814-0d5b870500c8> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-08-02T16:24:18.878Z" ;
+    bcube:lastUpdated "2015-08-02T16:24:18.878Z" ;
+    bcube:originatedFrom <urn:uuid:c8458ce6-54a4-4aa3-b466-1e3dc0e4a761> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:36528dd0-edd5-41ba-83ff-ed1e907f3a47> .
+
+<urn:uuid:639b8dfe-acb0-46d3-889b-cba1c3d3c7f1> owl:a foaf:Organization ;
+    foaf:name "U.S. Geological Survey" .
+
+<urn:uuid:a184560d-abb1-4856-b003-533af6eec285> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-02T16:24:18.878Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-02T16:24:18.878Z" ;
+    dc:identifier "urn:sha:ec13010df78048f2927916669e3eee128db1a81710f3a760e09d11f2" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www.ngdc.noaa.gov/mgg/trk/trackline/samuel_p._lee/l1381nc/mgd77/" .
+
+<urn:uuid:c8458ce6-54a4-4aa3-b466-1e3dc0e4a761> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-02T16:24:18.878Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-02T16:24:18.878Z" ;
+    dc:identifier "urn:sha:825bf95d3a3d6e3762f392aa6d70adef9952264e31dde46260207f2d" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://catalog.data.gov/harvest/object/c912f584-8d09-43db-be83-21683263e18a/original" .
+
+<urn:uuid:edad65df-d8c2-4670-9ba4-509ed3d9cb71> bcube:hasType "place" ;
+    bcube:hasValue "CA",
+        "North Pacific Ocean",
+        "Northern California",
+        "Northern Pacific Ocean",
+        "USA" ;
+    dc:partOf "Geographic Names Information System (GNIS)" ;
+    owl:a bcube:thesaurusSubset .
+

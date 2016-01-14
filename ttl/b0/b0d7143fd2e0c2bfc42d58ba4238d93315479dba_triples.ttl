@@ -1,0 +1,61 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:abc75526-6c04-4e79-ae05-122677327cda> a "OGC:WCS" ;
+    bcube:contains <urn:uuid:35d3c860-8bed-489a-8501-8a95c2bd54e4> ;
+    bcube:dateCreated "2015-08-11T10:37:56.079Z" ;
+    bcube:lastUpdated "2015-08-11T10:37:56.079Z" ;
+    bcube:originatedFrom <urn:uuid:107a5735-21d8-4709-a45c-c06e466cc497> ;
+    dc:conformsTo <urn:uuid:4ca06716-e720-4c1a-b78c-ba561ffefed8> ;
+    owl:a bcube:service .
+
+<urn:uuid:023bd9f0-7d44-4668-a356-ec2fe032e902> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-11T10:37:56.079Z" ;
+    bcube:hasConfidence "Not Sure" ;
+    bcube:hasUrlSource "Generated" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-11T10:37:56.079Z" ;
+    dc:identifier "urn:sha:9e4633fdde7887174d8e97dc81ecd8d6723661aadac9060eeefa7c65" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://web2.nbmg.unr.edu/arcgis/services/NBMG_WCS/GravityDEMGradientEvidence/MapServer/WCSServer?width=500&version=1.1.2&coverage=1&service=WCS&crs=CRS%3A84&format=GTiff&request=GetCoverage&bbox=-122.916931087%2C34.5099783535%2C-110.441923371%2C44.0295335978&height=500" .
+
+<urn:uuid:107a5735-21d8-4709-a45c-c06e466cc497> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-11T10:37:56.079Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-11T10:37:56.079Z" ;
+    dc:identifier "urn:sha:a9c09249ab060e4d5edebf177c50646100f90c06a38a564160f7f482" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://web2.nbmg.unr.edu/arcgis/services/NBMG_WCS/GravityDEMGradientEvidence/MapServer/WCSServer?request=GetCapabilities&service=WCS" .
+
+<urn:uuid:35d3c860-8bed-489a-8501-8a95c2bd54e4> bcube:dateCreated "2015-08-11T10:37:56.079Z" ;
+    bcube:lastUpdated "2015-08-11T10:37:56.079Z" ;
+    dc:description "Combined Gravity/Topographic Map of the Great Basin, Nevada. Provided by the Nevada Nureau of Mines and Geology by Mark Coolbaugh and Gary Oppliger. This ESRI real number GRID represents a combined gravity and topographic gradient map. As a proxy for measuring the effective vertical displacement on late Tertiary and Quaternary faults in the Great Basin, a residual gravity map was combined with a topographic digital elevation model (DEM), and then the total surface slope (horizontal gradient) was calculated. The residual gravity map was further reduced by removing bedrock-only regional gravity trends to produce a basins-only gravity anomaly map. This gravity map was converted to an approximate equivalent amount of subsurface basement relief using 60 meters/mgal (equivalent to a density contrast of 0.4 g/cm3), and then added to the 1-km DEM. The combined bedrock surface slope was then calculated by computing the total horizontal gradient for each 1-km cell." ;
+    dc:spatial "POLYGON ((-122.91693108699999 34.509978353500003,-122.91693108699999 44.029533597799997,-110.441923371 44.029533597799997,-110.441923371 34.509978353500003,-122.91693108699999 34.509978353500003))" ;
+    dc:title "grav_grad_1" ;
+    dcterms:references <urn:uuid:023bd9f0-7d44-4668-a356-ec2fe032e902> ;
+    esip:eastBound "-110.441923371"^^xsd:float ;
+    esip:northBound "44.0295335978"^^xsd:float ;
+    esip:southBound "34.5099783535"^^xsd:float ;
+    esip:westBound "-122.916931087"^^xsd:float ;
+    owl:a bcube:Layer .
+
+<urn:uuid:4ca06716-e720-4c1a-b78c-ba561ffefed8> bcube:hasValue "WMS, WCS, Geophysics, Combigned Gravity DEM, Topographic, Digital Elevtation Model continent@North America, geographicarea@Nevada, dataprovider@Nevada Bureau of Mines and Geology, DS_DATE@2013-04-03, DS_TOPIC@Geophysics of Nevada, MD_LANG@eng " ;
+    owl:a bcube:thesaurusSubset .
+

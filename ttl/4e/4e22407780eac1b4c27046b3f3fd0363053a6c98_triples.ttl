@@ -1,0 +1,104 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:0b19dd08-851f-4ed7-90ec-9bb16ed614ff> owl:a foaf:Organization ;
+    foaf:name "U.S. Geological Survey" .
+
+<urn:uuid:12fdddcc-39db-4481-b209-ac7f7bcbda2d> bcube:hasType "theme" ;
+    bcube:hasValue "ALPS",
+        "Airborne Lidar Processing System",
+        "DEM",
+        "Digital Elevation Model",
+        "EAARL",
+        "Experimental Advanced Airborne Research Lidar",
+        "Pilatus PC-6",
+        "laser altimetry",
+        "lidar",
+        "remote sensing",
+        "topography" ;
+    dc:partOf "General" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:14889edf-43c8-4e56-946c-d6a96cd492ce> bcube:hasType "place" ;
+    bcube:hasValue "Central Wetlands",
+        "Louisiana",
+        "North America",
+        "United States" ;
+    dc:partOf "General" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:15a6a917-ee56-4d1a-8048-fecfb8e35cf6> bcube:hasType "temporal" ;
+    bcube:hasValue "2010" ;
+    dc:partOf "General" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:2144a07a-c98f-4242-af55-49386433f755> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-09-04T03:16:57.736Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-09-04T03:16:57.736Z" ;
+    dc:identifier "urn:sha:dd83b012dbc0f192b1351f7787cd2395d007989f972db18f6d9d2d50" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://pubs.usgs.gov/ds/673/data_files/ct/ct_e232_n3310_16/ct_e232_n3310_16.las.xml" .
+
+<urn:uuid:52bfd0f8-6a1c-405f-ae08-1fdbe6b331b0> bcube:dateCreated "2015-09-04T03:16:57.736Z" ;
+    bcube:hasMetadataRecord <urn:uuid:c0dc38c4-fbb4-4186-bae7-a73d40c6ba90> ;
+    bcube:lastUpdated "2015-09-04T03:16:57.736Z" ;
+    dc:conformsTo <urn:uuid:12fdddcc-39db-4481-b209-ac7f7bcbda2d>,
+        <urn:uuid:14889edf-43c8-4e56-946c-d6a96cd492ce>,
+        <urn:uuid:15a6a917-ee56-4d1a-8048-fecfb8e35cf6>,
+        <urn:uuid:b91bf17c-b944-44a5-be04-9a7d8aa73de1>,
+        <urn:uuid:f20337ce-2e2f-4aec-a83b-94ef01edb0fd> ;
+    dc:description "Binary point-cloud data were produced from remotely sensed, geographically referenced elevation measurements by the U.S. Geological Survey (USGS). Elevation measurements were collected over the area on March 4 and 5, 2010 using the Experimental Advanced Airborne Research Lidar (EAARL), a pulsed laser ranging system mounted onboard an aircraft to measure ground elevation, vegetation canopy, and coastal topography. The system uses high-frequency laser beams directed at the Earth's surface through an opening in the bottom of the aircraft's fuselage. The laser system records the time difference between emission of the laser beam and the reception of the reflected laser signal in the aircraft. The plane travels over the target area at approximately 50 meters per second at an elevation of approximately 300 meters, resulting in a laser swath of approximately 240 meters with an average point spacing of 2-3 meters. The EAARL, developed originally by the National Aeronautics and Space Administration (NASA) at Wallops Flight Facility in Virginia, measures ground elevation with a vertical resolution of 15 centimeters. A sampling rate of 3 kilohertz or higher results in an extremely dense spatial elevation dataset. Over 100 kilometers of coastline can be easily surveyed within a 3- to 4-hour mission. When resultant elevation maps for an area are analyzed, they provide a useful tool to make management decisions regarding land development. The Central Wetlands data provided represent the last return pulses and were processed and filtered for bare-earth topography. The difference in water levels between data collections on March 4 and 5 resulted in elevation variations in the merged data." ;
+    dc:spatial "POLYGON ((-89.775144124636796 29.873481658539099,-89.775144124636796 29.891943853475901,-89.753958277213798 29.891943853475901,-89.753958277213798 29.873481658539099,-89.775144124636796 29.873481658539099))" ;
+    dcterms:publisher <urn:uuid:0b19dd08-851f-4ed7-90ec-9bb16ed614ff> ;
+    dcterms:references <urn:uuid:92669e29-a685-4ca5-8ba4-70e714f86cd5> ;
+    dcterms:title "EAARL Coastal Topography--Central Wetlands, Louisiana, 2010" ;
+    esip:eastBound "-89.7539582772"^^xsd:float ;
+    esip:northBound "29.8919438535"^^xsd:float ;
+    esip:southBound "29.8734816585"^^xsd:float ;
+    esip:westBound "-89.7751441246"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:92669e29-a685-4ca5-8ba4-70e714f86cd5> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-09-04T03:16:57.736Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-09-04T03:16:57.736Z" ;
+    dc:identifier "urn:sha:d14a028c2a3a2bc9476102bb288234c415a2b01f828ea62ac5b3e42f" ;
+    owl:a bcube:Url .
+
+<urn:uuid:b91bf17c-b944-44a5-be04-9a7d8aa73de1> bcube:hasType "theme" ;
+    bcube:hasValue "elevation" ;
+    dc:partOf "ISO 19115 Topic Category" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:c0dc38c4-fbb4-4186-bae7-a73d40c6ba90> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-09-04T03:16:57.736Z" ;
+    bcube:lastUpdated "2015-09-04T03:16:57.736Z" ;
+    bcube:originatedFrom <urn:uuid:2144a07a-c98f-4242-af55-49386433f755> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:52bfd0f8-6a1c-405f-ae08-1fdbe6b331b0> .
+
+<urn:uuid:f20337ce-2e2f-4aec-a83b-94ef01edb0fd> bcube:hasType "stratum" ;
+    bcube:hasValue "Coastal Topography" ;
+    dc:partOf "General" ;
+    owl:a bcube:thesaurusSubset .
+

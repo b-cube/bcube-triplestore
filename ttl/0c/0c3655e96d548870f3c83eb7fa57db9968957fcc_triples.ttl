@@ -1,0 +1,55 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:4780309d-aa8c-4069-8e8c-f59e9d28de1b> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-06T13:03:04.72Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-06T13:03:04.72Z" ;
+    dc:identifier "urn:sha:16abf9fc5ba31e9eea36b42ef3e1eff90244fa21154615e71fc50d04" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://labs.geodata.gov.gr/en/api/publicamundi/dataset/export/orthophotos-greece" .
+
+<urn:uuid:7fd4eccd-f4ac-47f9-9ce2-0a2fac7922ea> a "ISO 19115:2003/19139" ;
+    bcube:dateCreated "2015-11-06T13:03:04.72Z" ;
+    bcube:lastUpdated "2015-11-06T13:03:04.72Z" ;
+    bcube:originatedFrom <urn:uuid:4780309d-aa8c-4069-8e8c-f59e9d28de1b> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:ad5e3979-21ba-4a37-bb2e-217eb2a19e4e> .
+
+<urn:uuid:902f45ac-53e6-409f-aa67-c87616e0d417> bcube:hasValue "orthoimagery" ;
+    dc:partOf "GEMET - INSPIRE themes" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:ad5e3979-21ba-4a37-bb2e-217eb2a19e4e> bcube:dateCreated "2015-11-06T13:03:04.72Z" ;
+    bcube:hasMetadataRecord <urn:uuid:7fd4eccd-f4ac-47f9-9ce2-0a2fac7922ea> ;
+    bcube:lastUpdated "2015-11-06T13:03:04.72Z" ;
+    dc:conformsTo <urn:uuid:902f45ac-53e6-409f-aa67-c87616e0d417>,
+        <urn:uuid:dd010b2b-eec8-4147-ae86-86196abce52d> ;
+    dc:description "The web service offers viewing services in orthophotos with GSD 50cm for the whole country and fully orthorectified orthophotos with GSD 20cm for urban/built-up areas of the country. Access is via WMS (Web Map Service) server (link: http://gis.ktimanet.gr/wms/wmsopen/wmsserver.aspx?)." ;
+    dc:spatial "POLYGON ((19.291992 34.669359,19.291992 41.967659,30.014648 41.967659,30.014648 34.669359,19.291992 34.669359))" ;
+    dcterms:title "Orthophotos for Greece" ;
+    esip:eastBound "30.014648"^^xsd:float ;
+    esip:northBound "41.967659"^^xsd:float ;
+    esip:southBound "34.669359"^^xsd:float ;
+    esip:westBound "19.291992"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:dd010b2b-eec8-4147-ae86-86196abce52d> bcube:hasValue "imageryBaseMapsEarthCover" ;
+    dc:partOf "IsoTopicCategories" ;
+    owl:a bcube:thesaurusSubset .
+

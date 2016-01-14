@@ -1,0 +1,80 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:1b68e793-d3f8-4742-8dcb-8cbcc4286b3f> bcube:dateCreated "2015-08-04T21:51:14.292Z" ;
+    bcube:hasMetadataRecord <urn:uuid:a64776ec-9dcb-400a-8b84-6f6f1ba7a365> ;
+    bcube:lastUpdated "2015-08-04T21:51:14.292Z" ;
+    dc:conformsTo <urn:uuid:4ca839da-134e-4a85-9571-29e3f867dd2a>,
+        <urn:uuid:cd4136c0-29a5-4cc4-a8d4-5a36d56aea65>,
+        <urn:uuid:fb858daf-848b-4b81-9ef1-0fdee7465693> ;
+    dc:description "The dataset contains satellite-derived sea-surface temperature measurements collected by means of the Geostationary Orbiting Environmental Satellite. The data is collected daily, and is available at 2-day, weekly and monthly intervals at a spatial resolution of 0.05 degrees. The geographic coverage extends for the Pacific region,and the temporal coverage ranges from 1999-present." ;
+    dc:spatial "POLYGON ((180 10,180 40,-145 40,-145 10,180 10))" ;
+    dcterms:identifier "gov.noaa.nmfs.inport:5697" ;
+    dcterms:publisher <urn:uuid:1e6778f3-84e5-4790-996e-2cbc2b9c7c73> ;
+    dcterms:title "OW NOAA GOES Sea-Surface Temperature" ;
+    esip:eastBound "-145.0"^^xsd:float ;
+    esip:northBound "40.0"^^xsd:float ;
+    esip:southBound "10.0"^^xsd:float ;
+    esip:startDate "1999-01-18"^^xsd:date ;
+    esip:westBound "180.0"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:1e6778f3-84e5-4790-996e-2cbc2b9c7c73> owl:a foaf:Organization ;
+    foaf:name "" .
+
+<urn:uuid:4ca839da-134e-4a85-9571-29e3f867dd2a> bcube:hasType "theme" ;
+    bcube:hasValue "GOES",
+        "NOAA",
+        "Pacific Basin",
+        "SST",
+        "ow",
+        "pifsc",
+        "remote sensing",
+        "satellite",
+        "sea surface temperature" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:a64776ec-9dcb-400a-8b84-6f6f1ba7a365> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-08-04T21:51:14.292Z" ;
+    bcube:lastUpdated "2015-08-04T21:51:14.292Z" ;
+    bcube:originatedFrom <urn:uuid:bdb7560c-396e-4a6f-88db-d7f219020636> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:1b68e793-d3f8-4742-8dcb-8cbcc4286b3f> .
+
+<urn:uuid:bdb7560c-396e-4a6f-88db-d7f219020636> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-04T21:51:14.292Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-04T21:51:14.292Z" ;
+    dc:identifier "urn:sha:384335b62f0e685779a6e6d82506630156d30c718feb02edff82c0ef" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "https://inport.nmfs.noaa.gov/inport/item/5697/fgdc" .
+
+<urn:uuid:cd4136c0-29a5-4cc4-a8d4-5a36d56aea65> bcube:hasType "place" ;
+    bcube:hasValue "Pacific Basin" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:fb858daf-848b-4b81-9ef1-0fdee7465693> bcube:hasType "temporal" ;
+    bcube:hasValue "2-day",
+        "Daily",
+        "Monthly",
+        "Weekly" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+

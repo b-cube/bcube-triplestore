@@ -1,0 +1,92 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:0fa75de3-619c-492a-a441-78acf9483d39> owl:a foaf:Organization ;
+    foaf:name "NOAA's Ocean Service, Office for Coastal Management (OCM)" .
+
+<urn:uuid:2b04e51b-972d-44b2-a24c-4f6e047c59fd> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-05T07:39:03.221Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-05T07:39:03.221Z" ;
+    dc:identifier "urn:sha:a57a08500a1c02c97e4fc76c89e9caca050ded6ff52c6c2136937445" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://coast.noaa.gov/digitalcoast/tools/opennspect" .
+
+<urn:uuid:2d566645-49a0-4732-b8cf-c16a10eb1ce2> bcube:hasType "theme" ;
+    bcube:hasValue "Environmental Monitoring",
+        "Erosion",
+        "R-Factor",
+        "RUSLE",
+        "RUSLE2",
+        "Rainfall-Runoff Erosivity",
+        "Revised Universal Soil Loss Equation" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:44ae3c57-9515-48cf-a8f7-a593427a9123> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-08-05T07:39:03.221Z" ;
+    bcube:lastUpdated "2015-08-05T07:39:03.221Z" ;
+    bcube:originatedFrom <urn:uuid:4afd05ce-a4f9-4c60-a72b-b63800b89dcf> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:940f6ddd-00bb-4d92-b323-c09b97022d61> .
+
+<urn:uuid:4afd05ce-a4f9-4c60-a72b-b63800b89dcf> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-05T07:39:03.221Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-05T07:39:03.221Z" ;
+    dc:identifier "urn:sha:d550183522f840fa53c4a9cf6553cc3bc53948a4dfa349e4bcf286cd" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://coast.noaa.gov/data/Documents/Metadata/harvest/OpenNSPECT/R-Factor_metadata_for_Alaska.xml" .
+
+<urn:uuid:5121bd8f-edfc-4a71-a116-d36401978cfd> bcube:hasType "place" ;
+    bcube:hasValue "Alaska",
+        "Coastal zone" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:940f6ddd-00bb-4d92-b323-c09b97022d61> bcube:dateCreated "2015-08-05T07:39:03.221Z" ;
+    bcube:hasMetadataRecord <urn:uuid:44ae3c57-9515-48cf-a8f7-a593427a9123> ;
+    bcube:lastUpdated "2015-08-05T07:39:03.221Z" ;
+    dc:conformsTo <urn:uuid:2d566645-49a0-4732-b8cf-c16a10eb1ce2>,
+        <urn:uuid:5121bd8f-edfc-4a71-a116-d36401978cfd>,
+        <urn:uuid:fb09c626-7352-477f-876a-fbf84534916c> ;
+    dc:description "The rainfall-runoff erosivity factor (R-Factor) quantifies the effects of raindrop impacts and reflects the amount and rate of runoff associated with the rain. The R-factor is one of the parameters used by the Revised Unified Soil Loss Equation (RUSLE) to estimate annual rates of erosion. This product is a raster representation of R-Factor derived from isoerodent maps published in the Runoff Estimates for Small Rural Watersheds and Development of a Sound Design method. Volume II. (Fletcher et al., 1977). Lines connecting points of equal rainfall erosivity are called isoerodents. The isoerodents plotted on a map of Alaska were digitized, then values between these lines were obtained by linear interpolation. The final R-Factor data are in raster GeoTiff format at 800 meter resolution in Albers Conic Equal Area,WGS84, WGS84." ;
+    dc:spatial "POLYGON ((167.930127 52.510506,167.930127 71.40623,-123.346463 71.40623,-123.346463 52.510506,167.930127 52.510506))" ;
+    dcterms:publisher <urn:uuid:0fa75de3-619c-492a-a441-78acf9483d39> ;
+    dcterms:references <urn:uuid:94544913-289f-44b3-99b0-fe4614333fad> ;
+    dcterms:title "R-Factor for Alaska" ;
+    esip:eastBound "-123.346463"^^xsd:float ;
+    esip:endDate "1975-01-01"^^xsd:date ;
+    esip:northBound "71.40623"^^xsd:float ;
+    esip:southBound "52.510506"^^xsd:float ;
+    esip:startDate "1965-01-01"^^xsd:date ;
+    esip:westBound "167.930127"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:94544913-289f-44b3-99b0-fe4614333fad> dcterms:references <urn:uuid:2b04e51b-972d-44b2-a24c-4f6e047c59fd> ;
+    owl:a bibo:WebPage .
+
+<urn:uuid:fb09c626-7352-477f-876a-fbf84534916c> bcube:hasType "theme" ;
+    bcube:hasValue "climatologyMeteorologyAtmosphere" ;
+    dc:partOf "ISO 19115 Topic Category" ;
+    owl:a bcube:thesaurusSubset .
+

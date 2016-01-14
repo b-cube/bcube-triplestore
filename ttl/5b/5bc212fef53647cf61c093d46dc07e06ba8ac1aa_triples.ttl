@@ -1,0 +1,80 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:2e21003e-8b03-4370-b9ff-133d76a633c4> owl:a foaf:Organization ;
+    foaf:name "Bureau of Transportation Statistics (BTS)" .
+
+<urn:uuid:4f83cfa7-8d19-481a-9456-e2462f4e1f40> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-10-18T19:22:15.094Z" ;
+    bcube:lastUpdated "2015-10-18T19:22:15.094Z" ;
+    bcube:originatedFrom <urn:uuid:d6804acb-245c-43e3-9a91-8e16a8f6f0f8> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:dab196ef-9d9c-4b1c-b4cc-05b584f6a0cb> .
+
+<urn:uuid:5611bdaf-0d2b-42ae-9360-ff53b2bfb4e2> bcube:hasType "theme" ;
+    bcube:hasValue "transportation" ;
+    dc:partOf "ISO 19115 Topic Category" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:7e23e122-6e25-4fa6-bb3e-c64821f4d377> bcube:hasType "place" ;
+    bcube:hasValue "Florida" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:b45101a7-f951-4f0b-9fab-0b0abf6ef096> bcube:hasType "temporal" ;
+    bcube:hasValue "2003" ;
+    dc:partOf "none" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:c8bc8ad1-3ec3-4271-89f3-7ef665a53644> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-10-18T19:22:15.094Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-10-18T19:22:15.094Z" ;
+    dc:identifier "urn:sha:9b5d02ebaa5874cac61c879e9e5888efc2cdce2079b072db92d94ffa" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www.bts.gov/gis/" .
+
+<urn:uuid:d6804acb-245c-43e3-9a91-8e16a8f6f0f8> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-10-18T19:22:15.094Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-10-18T19:22:15.094Z" ;
+    dc:identifier "urn:sha:1e80a2f3d07681cdb2764733bb5e60f51dd23eed8dad05796fa569f4" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www.fgdl.org/metadata/metadata_archive/fgdc_xml/airports.shp.xml" .
+
+<urn:uuid:dab196ef-9d9c-4b1c-b4cc-05b584f6a0cb> bcube:dateCreated "2015-10-18T19:22:15.094Z" ;
+    bcube:hasMetadataRecord <urn:uuid:4f83cfa7-8d19-481a-9456-e2462f4e1f40> ;
+    bcube:lastUpdated "2015-10-18T19:22:15.094Z" ;
+    dc:conformsTo <urn:uuid:5611bdaf-0d2b-42ae-9360-ff53b2bfb4e2>,
+        <urn:uuid:7e23e122-6e25-4fa6-bb3e-c64821f4d377>,
+        <urn:uuid:b45101a7-f951-4f0b-9fab-0b0abf6ef096> ;
+    dc:description "This dataset contains 2002 Airport Facility Information for the State of Florida. The Public Use Airports database is a geographic point database of aircraft landing facilities in the United States and U.S. Territories. Attribute data is provided on the physical and operational characteristics of the landing facility, current usage including enplanements and aircraft operations, congestion levels and usage categories." ;
+    dc:spatial "POLYGON ((-87.42904 24.492815,-87.42904 30.983191,-79.872251 30.983191,-79.872251 24.492815,-87.42904 24.492815))" ;
+    dcterms:publisher <urn:uuid:2e21003e-8b03-4370-b9ff-133d76a633c4> ;
+    dcterms:references <urn:uuid:c8bc8ad1-3ec3-4271-89f3-7ef665a53644> ;
+    dcterms:title "AIRPORTS" ;
+    esip:eastBound "-79.872251"^^xsd:float ;
+    esip:northBound "30.983191"^^xsd:float ;
+    esip:southBound "24.492815"^^xsd:float ;
+    esip:startDate "2003-01-23"^^xsd:date ;
+    esip:westBound "-87.42904"^^xsd:float ;
+    owl:a dcat:Dataset .
+

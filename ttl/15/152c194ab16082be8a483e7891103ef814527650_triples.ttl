@@ -1,0 +1,78 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:0feaf799-3cb8-4e9f-96c8-4f9dcb6e193b> owl:a foaf:Organization ;
+    foaf:name "U.S. Geological Survey" .
+
+<urn:uuid:2d1a0719-41e1-4804-8fc4-b4741270e70d> bcube:hasType "theme" ;
+    bcube:hasValue "aquatic biology",
+        "aquatic ecosystems",
+        "geospatial analysis",
+        "inland fishery resources",
+        "map interfaces",
+        "maps and atlases",
+        "river systems" ;
+    dc:partOf "USGS Thesaurus" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:44618d43-68a1-4ea9-b99a-471add214081> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2014-10-29T23:10:05.801Z" ;
+    bcube:lastUpdated "2014-10-29T23:10:05.801Z" ;
+    bcube:originatedFrom <urn:uuid:50f770ef-3f74-43ff-a0b1-236d9e4159ac> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:dd08a15b-15d8-4022-a7b0-e25058822c84> .
+
+<urn:uuid:50f770ef-3f74-43ff-a0b1-236d9e4159ac> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2014-10-29T23:10:05.801Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2014-10-29T23:10:05.801Z" ;
+    dc:identifier "urn:sha:1aee4b29520e27a3b78f63195e38c07b900f6031937a25c3808162d7" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www.usgs.gov/science/xml.php?cite=386" .
+
+<urn:uuid:7e95a59a-c831-49d4-91ce-760e016dba2e> dcterms:references <urn:uuid:b98d917c-f396-4877-ae6f-1adb168cb891> ;
+    owl:a bibo:WebPage .
+
+<urn:uuid:9e16407a-021b-4e6d-acac-3f45f8f889c9> bcube:hasType "place" ;
+    bcube:hasValue "h17 = Pacific Northwest" ;
+    dc:partOf "Augmented FIPS 10-4 and FIPS 6-4" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:b98d917c-f396-4877-ae6f-1adb168cb891> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2014-10-29T23:10:05.801Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2014-10-29T23:10:05.801Z" ;
+    dc:identifier "urn:sha:21b8a4d086673b600bc1796a742bc34215d43f994ae1b55fee29b44f" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://cruise.wr.usgs.gov/" .
+
+<urn:uuid:dd08a15b-15d8-4022-a7b0-e25058822c84> bcube:dateCreated "2014-10-29T23:10:05.801Z" ;
+    bcube:hasMetadataRecord <urn:uuid:44618d43-68a1-4ea9-b99a-471add214081> ;
+    bcube:lastUpdated "2014-10-29T23:10:05.801Z" ;
+    dc:conformsTo <urn:uuid:2d1a0719-41e1-4804-8fc4-b4741270e70d>,
+        <urn:uuid:9e16407a-021b-4e6d-acac-3f45f8f889c9> ;
+    dc:description "Web site for an Internet Map Service (IMS) serving base cartographic data, USGS data, science applications and real time modelling analyses for the Columbia River basin using geospatial analysis technology." ;
+    dcterms:publisher <urn:uuid:0feaf799-3cb8-4e9f-96c8-4f9dcb6e193b> ;
+    dcterms:references <urn:uuid:7e95a59a-c831-49d4-91ce-760e016dba2e> ;
+    dcterms:title "Columbia River USGS Interdisciplinary Science Explorer WebSite" ;
+    owl:a dcat:Dataset .
+

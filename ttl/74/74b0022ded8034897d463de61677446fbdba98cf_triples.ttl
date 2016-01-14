@@ -1,0 +1,66 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:1cd5f321-a699-49f9-b5cf-27b894076adf> bcube:hasType "theme" ;
+    bcube:hasValue "High Plains aquifer",
+        "aquifers",
+        "fUS08 = Colorado",
+        "fUS20 = Kansas",
+        "fUS31 = Nebraska",
+        "fUS40 = Oklahoma",
+        "fUS48 = Texas",
+        "fUS56 = Wyoming",
+        "groundwater level",
+        "hydrology",
+        "water use" ;
+    dc:partOf "Alexandria Digital Library Feature Type Thesaurus" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:28e6521d-41f4-4244-896d-0f27b4ff1c0f> bcube:hasValue "geoscientificInformation" ;
+    dc:partOf "IsoTopicCategories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:9f2e9662-4ca2-4907-9acb-9ae8e3f0c4b6> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2014-10-30T00:15:14.135Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2014-10-30T00:15:14.135Z" ;
+    dc:identifier "urn:sha:1e0bfd15e172cd06c2d026c28dc36ab09ad398675731505e7341985c" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www.usgs.gov/science/iso.php?cite=2159" .
+
+<urn:uuid:b85afe08-8c18-4a5c-9e37-4e490f9990fb> a "ISO 19115:2003/19139" ;
+    bcube:dateCreated "2014-10-30T00:15:14.135Z" ;
+    bcube:lastUpdated "2014-10-30T00:15:14.135Z" ;
+    bcube:originatedFrom <urn:uuid:9f2e9662-4ca2-4907-9acb-9ae8e3f0c4b6> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:f5a72f96-782b-4ed5-b4e9-5702ba6982c7> .
+
+<urn:uuid:f5a72f96-782b-4ed5-b4e9-5702ba6982c7> bcube:dateCreated "2014-10-30T00:15:14.135Z" ;
+    bcube:hasMetadataRecord <urn:uuid:b85afe08-8c18-4a5c-9e37-4e490f9990fb> ;
+    bcube:lastUpdated "2014-10-30T00:15:14.135Z" ;
+    dc:conformsTo <urn:uuid:1cd5f321-a699-49f9-b5cf-27b894076adf>,
+        <urn:uuid:28e6521d-41f4-4244-896d-0f27b4ff1c0f> ;
+    dc:description "Summarizes changes in water levels and drainable water in storage in the High Plains aquifer from predevelopment (before about 1950) to 2007." ;
+    dc:spatial "POLYGON ((-106.0 31.5,-106 44,-96 44,-96.0 31.5,-106.0 31.5))" ;
+    dcterms:title "Changes in Water Levels and Storage in the High Plains Aquifer, Predevelopment to 2007" ;
+    esip:eastBound "-96.0"^^xsd:float ;
+    esip:northBound "44.0"^^xsd:float ;
+    esip:southBound "31.5"^^xsd:float ;
+    esip:westBound "-106.0"^^xsd:float ;
+    owl:a dcat:Dataset .
+

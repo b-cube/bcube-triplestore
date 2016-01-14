@@ -1,0 +1,132 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:00ad3f82-4c9f-4296-9c87-7e24e455d4b8> bcube:hasType "theme" ;
+    bcube:hasValue "Earth Science",
+        "Ocean Temperature",
+        "Oceans",
+        "Sea Surface Temperature" ;
+    dc:partOf "GCMD" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:25b6192c-8280-4ed8-96d8-f87cffa3ce27> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-07-09T15:48:17.281Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-07-09T15:48:17.281Z" ;
+    dc:identifier "urn:sha:73c1bc70a2c353e6005097465a050f457a1bc3ffdca2f0b35582c73a" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "ftp://podaac.jpl.nasa.gov/pub/sea_surface_temperature/GHRSST" .
+
+<urn:uuid:5d876fa2-8126-491a-a459-cb0aded6b40c> bcube:dateCreated "2015-07-09T15:48:17.281Z" ;
+    bcube:hasMetadataRecord <urn:uuid:88542eb7-7416-47bd-b9bf-312c461502c4> ;
+    bcube:lastUpdated "2015-07-09T15:48:17.281Z" ;
+    dc:conformsTo <urn:uuid:00ad3f82-4c9f-4296-9c87-7e24e455d4b8>,
+        <urn:uuid:6f79c5e6-336a-4f75-87b3-71aa2b4c8ec8>,
+        <urn:uuid:b678eece-5b8c-450b-909a-947a0580b9da>,
+        <urn:uuid:c26d74e6-0037-48e1-a6e3-3bc2cd10a9cc> ;
+    dc:description "High quality Sea Surface Temperatures (SSTs) maps derived from the NOAA (National Oceanic and Atmospheric Administration)-Polar Orbiting Advanced Very High Resolution Radiometer (AVHRR) have been available since 1981. The multichannel sea surface temperature algorithm (MCSST) has been used to routinely calculate SSTs using a split window approach. Currently this algorithm is applied by the Naval Oceanographic Office (NAVOCEANO) to calculate SSTs at a near real-time rate. The multichannel sea surface temperature algorithm uses a set of linear coefficients to retrive sea surface temperature from the brightness radiances. Improved cloud retrieval algorithms applied by NAVOCEANO have significantly increased the number of SST pixels flagged as cloud free, as compared to previous MCSST data sets. The NAVOCEANO MCSST data sets provide a high quality near real time sea surface temperature data set with a high number of cloud free retrievals. Additionally the orbital temporal and 9km spatial resolutions allow this data to be used in a quasi real time mode for detection of mesoscale features such as eddies associated with major current systems. The history of SST computation from AVHRR radiances is discussed at length by [McClain et al., 1985]. Briefly, radiative transfer theory is used to correct for the effects of the atmosphere on the observations by utilizing 'windows' of the electromagnetic spectrum where little or no atmospheric absorption occurs. Channel radiances are transformed (through the use of the Planck function) to units of temperature, then compared to a-priori temperatures measured at the surface. This comparison yields coefficients which, when applied to the global AVHRR data, give estimates of surface temperature which have been nominally accurate to 0.7 degrees Celsius. Each AVHRR scan views Earth for 51.282 milliseconds, during which time each channel of the analog data output is digitized. Scans occur at the rate of 6 per second, and the sampling rate of the AVHRR sensors is 39,936 samples per second per channel. During a scan, the detectors view an internal target, cold space, and the external scene. The temperature of the internal target is monitored, and space is assumed to have a black- body temperature of 3K. In this way, a simple two-point linear calibration is done internally (Schwalb, 1978). The nonlinear modification to this calibration is achieved at the time of postprocessing, and takes into account sensor nonlinearities, measurement of internal target temperature, calculation of target radiance, internal reflections and emissions, etc. Sensor/Instrument Measurement Geometry:The AVHRR has a cross-track scanning system which use an elliptical beryllium mirror rotating at 360 RPM about an axis parallel to the Earth. The 110.8 degree cross-track scan equates to a swath width of about 2700 km. This swath width is greater than the 25.3 degree separation between successive orbital tracks, and provides overlapping coverage. Coverage is global, twice daily, at an instantaneous field of view (IFOV) of ~1.4 milliradians, giving a ground field of view of ~1.1 km at nadir for a nominal altitude of 833 km. Full resolution AVHRR data are continuously transmitted and recorded in High Resolution Picture Transmission (HRPT) format. The Global Area Coverage (GAC) data are subsampled to approximately 4 km IFOV, recorded internally, and downlinked daily. The MCSST coefficients are then applied to the infrared brightness radiances to convert to SST. A level 2 declouded product produced by the Naval Oceanographic Office (NAVOCEANO) is then downloaded to JPL for distribution. The level-2 product is available in orbital files with a spatial resolution of approximately 9 kilometers. There are approximately 28 files per day for the NOAA-14 and NOAA-16 data. The spatial coverage is not uniform because of cloud coverage, which prevents the AVHRR instrument from seeing the ocean. Data Organization: Granularity: (http://harp.gsfc.nasa.gov:1729/eosdis_documents/glossary.of.terms.html#GRANULE) The level 2 product is separated into orbital files with each file consisting of an ascending (daytime) and descending (nighttime) pass. Data are available from both the NOAA-14 and NOAA-16 satellites. Data Format: The data and information are stored in a packed binary format where each file begins with a 770 byte header record followed by 1406 byte data blocks. The number of data blocks in each file varies depending on the number of good retrievals in each orbit. Please refer to the following document: Appendix D. NAVOCEANO Products and File Format: Release 2 Version 2 (ftp://podaac.jpl.nasa.gov/pub/sea_surface_temperature/avhrr/navoceano_mcsst/doc/Appn-D-NAVO.pdf) L2P data products are then derived following the GHRSST-PP Data Processing Specification (GDS) version 1.5 avaialable from http://ghrsst-pp.metoffice.com/documents/GDS-v1.0-rev1.5.pdf. Single Sensor Error Statistics (SSES) are provided based on the GDS-v1.5 specification." ;
+    dc:spatial "POLYGON ((-100.0 -69.6,-100.0 79.07,45.0 79.07,45.0 -69.6,-100.0 -69.6))" ;
+    dcterms:publisher <urn:uuid:81cda9e4-96b0-4c56-b655-e96ab4a87693> ;
+    dcterms:references <urn:uuid:25b6192c-8280-4ed8-96d8-f87cffa3ce27>,
+        <urn:uuid:ba120b03-ccfd-4ef7-80b8-acdf632e6024>,
+        <urn:uuid:bd6d4db6-589e-443a-82cf-c0792a528640>,
+        <urn:uuid:c9b5acd9-4ad3-42f7-82ce-166915c3672d> ;
+    dcterms:title "MCSST Orbital GAC MCSST Level 2 (NAVOCEANO) orbital 9km for 100W - 45E and 90N - 70S, frrom NOAA-17 AVHRR/2 over the EU-RDAC area (Medspiration) for 2005-04-29 (NODC Accession 0005299)" ;
+    esip:eastBound "45.0"^^xsd:float ;
+    esip:northBound "79.07"^^xsd:float ;
+    esip:southBound "-69.6"^^xsd:float ;
+    esip:westBound "-100.0"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:6f79c5e6-336a-4f75-87b3-71aa2b4c8ec8> bcube:hasType "place" ;
+    bcube:hasValue "Medspiration Eu-rdac Area Including Atantic Ocean, Mediterranean, Baltic And Bla" ;
+    dc:partOf "none" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:81cda9e4-96b0-4c56-b655-e96ab4a87693> owl:a foaf:Organization ;
+    foaf:name "Medspiration, IFREMER/CERSAT" .
+
+<urn:uuid:88542eb7-7416-47bd-b9bf-312c461502c4> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-07-09T15:48:17.281Z" ;
+    bcube:lastUpdated "2015-07-09T15:48:17.281Z" ;
+    bcube:originatedFrom <urn:uuid:ed64fca8-0854-4d4f-8870-d27ef6be2826> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:5d876fa2-8126-491a-a459-cb0aded6b40c> .
+
+<urn:uuid:b678eece-5b8c-450b-909a-947a0580b9da> bcube:hasType "theme" ;
+    bcube:hasValue "AVHRR/2",
+        "Advanced Very High Resolution Radiometer version 3" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:ba120b03-ccfd-4ef7-80b8-acdf632e6024> dcterms:references <urn:uuid:ffdd940a-da46-4d11-9915-3fd25bfeaf75> ;
+    owl:a bibo:WebPage .
+
+<urn:uuid:bd6d4db6-589e-443a-82cf-c0792a528640> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-07-09T15:48:17.281Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-07-09T15:48:17.281Z" ;
+    dc:identifier "urn:sha:b6514e2c86f6da7c01aaa15e29d6018b24d20e490a8f70b52b1e8bcd" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www.nodc.noaa.gov/search/prod/" .
+
+<urn:uuid:c26d74e6-0037-48e1-a6e3-3bc2cd10a9cc> bcube:hasType "place" ;
+    bcube:hasValue "Atlantic Ocean" ;
+    dc:partOf "GCMD" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:c9b5acd9-4ad3-42f7-82ce-166915c3672d> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-07-09T15:48:17.281Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-07-09T15:48:17.281Z" ;
+    dc:identifier "urn:sha:8c2c3a69d80317a5c3fbe0dba3ce733559618f243bc43578e86040c6" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www.ifremer.fr/cersat/en/index.html" .
+
+<urn:uuid:ed64fca8-0854-4d4f-8870-d27ef6be2826> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-07-09T15:48:17.281Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-07-09T15:48:17.281Z" ;
+    dc:identifier "urn:sha:72f57dc1ba89fd669d343d7aac096cc376d35fe18ccebf7a76074a9e" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www.nodc.noaa.gov/archive/arc0003/0005299/1.1/data/0-data/FGDC-20050429-AVHRR17_G-EUR-L2P-v01.xml" .
+
+<urn:uuid:ffdd940a-da46-4d11-9915-3fd25bfeaf75> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-07-09T15:48:17.281Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-07-09T15:48:17.281Z" ;
+    dc:identifier "urn:sha:75bc2e2a47ac50eb73c10a9827ad3a0f52ed0ec96420e742d34badb8" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "ftp://ftp.ifremer.fr/ifremer/valmedspi" .
+

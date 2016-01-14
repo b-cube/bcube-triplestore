@@ -1,0 +1,84 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:14406244-73a8-4f67-aabe-505d183f1031> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-10T08:30:48.234Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-10T08:30:48.234Z" ;
+    dc:identifier "urn:sha:76bab9ae0daa047dabe33bed2ff75d4528f63ddf6c166be5c8fb3795" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://gisservice.mt.gov/ArcGIS/rest/services/BaseMapServiceCenter/Montana/GeocodeServer" .
+
+<urn:uuid:17408a55-c851-4912-8ecc-8e74316ef4eb> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-10T08:30:48.234Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-10T08:30:48.234Z" ;
+    dc:identifier "urn:sha:f07a7a8001164c0a70ed05a1327d3bfa63d583442efb1568fdfc14c4" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://mslapps.mt.gov/Geographic_Information/Data/DataList/datalist_MetadataDetailRaw.aspx?did={9bb98ac4-f9af-4a77-9c33-b81410d9623a}" .
+
+<urn:uuid:35b92d88-6ad6-4c31-bb71-769fb25a8ab7> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-08-10T08:30:48.234Z" ;
+    bcube:lastUpdated "2015-08-10T08:30:48.234Z" ;
+    bcube:originatedFrom <urn:uuid:17408a55-c851-4912-8ecc-8e74316ef4eb> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:b342b17f-c7bf-4c8e-9af1-9861e4e5a0ea> .
+
+<urn:uuid:693c589a-6536-4db9-a2e1-46ef5be65e6b> bcube:hasType "theme" ;
+    bcube:hasValue "address",
+        "geocode" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:b342b17f-c7bf-4c8e-9af1-9861e4e5a0ea> bcube:dateCreated "2015-08-10T08:30:48.234Z" ;
+    bcube:hasMetadataRecord <urn:uuid:35b92d88-6ad6-4c31-bb71-769fb25a8ab7> ;
+    bcube:lastUpdated "2015-08-10T08:30:48.234Z" ;
+    dc:conformsTo <urn:uuid:693c589a-6536-4db9-a2e1-46ef5be65e6b>,
+        <urn:uuid:e6a61fbb-ca53-4ee4-9fdd-2c0c76110cb4>,
+        <urn:uuid:fa3ffabd-076d-45d8-a1f7-3c811116fe9b> ;
+    dc:description "This is an Esri composite geocoding web service based on the Montana Structures/Addresses Framework, the Montana Transportation Framework, and Esri road center line data. An address entering the geocoder is first sent to the Structures Framework addresses locator. If a match is not found, the address is sent to the Transportation Framework address locator. Finally, if a match isn't found there, the address is sent to the Esri data. The geocoding service can be used in ArcGIS or via the REST endpoint. More information on the Structures Framework: http://gisportal.msl.mt.gov/geoportal/catalog/search/resource/details.page?uuid=%7B56554A37-1684-460C-8792-121D60A64213%7D More information on the Transportation Framework: http://gisportal.msl.mt.gov/geoportal/catalog/search/resource/details.page?uuid=%7B26E71BA8-914E-458B-B2EC-62F22AD06C30%7D" ;
+    dc:spatial "POLYGON ((-116.067907828130998 44.308632752809999,-116.067907828130998 49.066950678155997,-103.994358930703001 49.066950678155997,-103.994358930703001 44.308632752809999,-116.067907828130998 44.308632752809999))" ;
+    dcterms:publisher <urn:uuid:d413ccde-99ef-4345-ab0e-43a8a5cc70fd> ;
+    dcterms:references <urn:uuid:cd890a28-07a3-4179-b597-9fb37a2fb169> ;
+    dcterms:title "Montana Geocoder - Web Service" ;
+    esip:eastBound "-103.994358931"^^xsd:float ;
+    esip:northBound "49.0669506782"^^xsd:float ;
+    esip:southBound "44.3086327528"^^xsd:float ;
+    esip:startDate "2011-04-07"^^xsd:date ;
+    esip:westBound "-116.067907828"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:cd890a28-07a3-4179-b597-9fb37a2fb169> dcterms:references <urn:uuid:14406244-73a8-4f67-aabe-505d183f1031> ;
+    owl:a bibo:WebPage .
+
+<urn:uuid:d413ccde-99ef-4345-ab0e-43a8a5cc70fd> owl:a foaf:Organization ;
+    foaf:name "Montana State Library" .
+
+<urn:uuid:e6a61fbb-ca53-4ee4-9fdd-2c0c76110cb4> bcube:hasType "place" ;
+    bcube:hasValue "Montana" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:fa3ffabd-076d-45d8-a1f7-3c811116fe9b> bcube:hasType "theme" ;
+    bcube:hasValue "location" ;
+    dc:partOf "ISO 19115 Topic Category" ;
+    owl:a bcube:thesaurusSubset .
+

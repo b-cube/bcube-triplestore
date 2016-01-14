@@ -1,0 +1,96 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:0a374e8f-d09e-45d2-9402-e4db07eeabf7> a "ISO 19115:2003/19139" ;
+    bcube:dateCreated "2015-08-07T17:01:00.049Z" ;
+    bcube:lastUpdated "2015-08-07T17:01:00.049Z" ;
+    bcube:originatedFrom <urn:uuid:f35761b8-c4ef-4af0-9b0e-f7365896abea> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:67a4847e-2dc8-4441-b4da-b75143304db7> .
+
+<urn:uuid:549bd265-1816-4a1a-b553-6e0dfacc9cf0> bcube:hasType "theme" ;
+    bcube:hasValue "Base Flood Elevation",
+        "DFIRM",
+        "DFIRM Database",
+        "Digital Flood Insurance Rate Map",
+        "FEMA Flood Hazard Zone",
+        "FIRM",
+        "Flood Insurance Rate Map",
+        "Floodway",
+        "NFIP",
+        "Riverine flooding",
+        "SFHA",
+        "Special Flood Hazard Area" ;
+    dc:partOf "FEMA NFIP Topic Category" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:67a4847e-2dc8-4441-b4da-b75143304db7> bcube:dateCreated "2015-08-07T17:01:00.049Z" ;
+    bcube:hasMetadataRecord <urn:uuid:0a374e8f-d09e-45d2-9402-e4db07eeabf7> ;
+    bcube:lastUpdated "2015-08-07T17:01:00.049Z" ;
+    dc:conformsTo <urn:uuid:549bd265-1816-4a1a-b553-6e0dfacc9cf0>,
+        <urn:uuid:83e924f4-a452-4c8e-b26c-320ff0454cb6>,
+        <urn:uuid:b2fc2cdc-1cbc-4a03-b695-43de823633bf> ;
+    dc:description "The Digital Flood Insurance Rate Map (DFIRM) Database depicts flood risk information and supporting data used to develop the risk data. The primary risk classifications used are the 1-percent-annual-chance flood event, the 0.2-percent-annual-chance flood event, and areas of minimal flood risk. The DFIRM Database is derived from Flood Insurance Studies (FISs), previously published Flood Insurance Rate Maps (FIRMs), flood hazard analyses performed in support of the FISs and FIRMs, and new mapping data, where available. The FISs and FIRMs are published by the Federal Emergency Management Agency (FEMA). The file is georeferenced to earth's surface using the UTM projection and coordinate system. The specifications for the horizontal control of DFIRM data files are consistent with those required for mapping at a scale of 1:12,000." ;
+    dc:spatial "POLYGON ((-74.881 41.0508,-74.881 41.7524,-73.8664 41.7524,-73.8664 41.0508,-74.881 41.0508))" ;
+    dcterms:references <urn:uuid:bf652284-cfc1-4e70-9222-c4b120e14f21> ;
+    dcterms:title "DIGITAL FLOOD INSURANCE RATE MAP DATABASE, ORANGE COUNTY, NEW YORK" ;
+    esip:eastBound "-73.8664"^^xsd:float ;
+    esip:northBound "41.7524"^^xsd:float ;
+    esip:southBound "41.0508"^^xsd:float ;
+    esip:westBound "-74.881"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:83e924f4-a452-4c8e-b26c-320ff0454cb6> bcube:hasType "place" ;
+    bcube:hasValue "COMMUNITY Orange County (All Jurisdictions)",
+        "COUNTY ORANGE",
+        "COUNTY-FIPS 36071",
+        "FEMA-CID 36071C",
+        "REGION 2",
+        "STATE NY" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:b2fc2cdc-1cbc-4a03-b695-43de823633bf> bcube:hasValue "elevation",
+        "environment",
+        "hydrology",
+        "inlandwaters",
+        "structure",
+        "transportation" ;
+    dc:partOf "IsoTopicCategories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:bf652284-cfc1-4e70-9222-c4b120e14f21> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-07T17:01:00.049Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-07T17:01:00.049Z" ;
+    dc:identifier "urn:sha:37c915397238031daced09ae0e2dd3bf54e84a6477f749c2cc9dcbdf" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://hazards.fema.gov" .
+
+<urn:uuid:f35761b8-c4ef-4af0-9b0e-f7365896abea> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-07T17:01:00.049Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-07T17:01:00.049Z" ;
+    dc:identifier "urn:sha:7c3bf8894b86975efc92e598f63d738db242e8a113c23be6446b2551" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "https://catalog.data.gov/harvest/object/7ffb2483-0dac-4cf9-84b8-84b27a16ee5a" .
+

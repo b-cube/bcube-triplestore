@@ -1,0 +1,108 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:05a41a4f-88dc-41d7-b34a-96f40e1ebcf8> bcube:hasType "theme" ;
+    bcube:hasValue "Base Flood Elevation",
+        "CBRS",
+        "Coastal Barrier Resources System",
+        "Coastal Flooding",
+        "DFIRM",
+        "DFIRM Database",
+        "Digital Flood Insurance Rate Map",
+        "FEMA Flood Hazard Zone",
+        "FIRM",
+        "Flood Insurance Rate Map",
+        "Floodway",
+        "NFIP",
+        "Riverine Flooding",
+        "SFHA",
+        "Special Flood Hazard Area" ;
+    dc:partOf "FEMA NFIP Topic Category" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:389f7072-09df-4376-bd97-b004bfde06ab> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-10-17T20:16:20.101Z" ;
+    bcube:lastUpdated "2015-10-17T20:16:20.101Z" ;
+    bcube:originatedFrom <urn:uuid:f6a04a3b-7207-4f64-b683-96d112459967> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:af42dce8-3c36-4f6f-9f4f-841b631bc5e2> .
+
+<urn:uuid:57a571cd-96e9-4a19-943e-183c7a1208cd> owl:a foaf:Organization ;
+    foaf:name "Federal Emergency Management Agency" .
+
+<urn:uuid:66a602e7-0162-42ac-b030-2cbabe36d5f9> dcterms:references <urn:uuid:fdd7adaa-c6aa-4be8-b02b-89630a876cab> ;
+    owl:a bibo:WebPage .
+
+<urn:uuid:9adc91c1-2f69-4d7b-98cc-26588f060eaf> bcube:hasType "place" ;
+    bcube:hasValue "COMMUNITY Washington County",
+        "COUNTY Washington County",
+        "COUNTY-FIPS 16087",
+        "FEMA-CID 16087C",
+        "REGION 10",
+        "STATE ID" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:af42dce8-3c36-4f6f-9f4f-841b631bc5e2> bcube:dateCreated "2015-10-17T20:16:20.101Z" ;
+    bcube:hasMetadataRecord <urn:uuid:389f7072-09df-4376-bd97-b004bfde06ab> ;
+    bcube:lastUpdated "2015-10-17T20:16:20.101Z" ;
+    dc:conformsTo <urn:uuid:05a41a4f-88dc-41d7-b34a-96f40e1ebcf8>,
+        <urn:uuid:9adc91c1-2f69-4d7b-98cc-26588f060eaf>,
+        <urn:uuid:f3408970-7981-4e21-8603-44158a24f1c1> ;
+    dc:description "The Digital Flood Insurance Rate Map (DFIRM) Database depicts flood risk information and supporting data used to develop the risk data. The primary risk classifications used are the 1-percent-annual-chance flood event, the 0.2-percent-annual- chance flood event, and areas of minimal flood risk. The DFIRM Database is derived from Flood Insurance Studies (FISs), previously published Flood Insurance Rate Maps (FIRMs), flood hazard analyses performed in support of the FISs and FIRMs, and new mapping data, where available. The FISs and FIRMs are published by the Federal Emergency Management Agency (FEMA). The file is georeferenced to earth?s surface using the UTM projection and coordinate system. The specifications for the horizontal control of DFIRM data files are consistent with those required for mapping at a scale of 1:12,000." ;
+    dc:spatial "POLYGON ((-117.265762 44.136331,-117.265762 44.852351,-116.359424 44.852351,-116.359424 44.136331,-117.265762 44.136331))" ;
+    dcterms:publisher <urn:uuid:57a571cd-96e9-4a19-943e-183c7a1208cd> ;
+    dcterms:references <urn:uuid:66a602e7-0162-42ac-b030-2cbabe36d5f9> ;
+    dcterms:title "s_wtr_ln" ;
+    esip:eastBound "-116.359424"^^xsd:float ;
+    esip:northBound "44.852351"^^xsd:float ;
+    esip:southBound "44.136331"^^xsd:float ;
+    esip:startDate "2007-11-30"^^xsd:date ;
+    esip:westBound "-117.265762"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:f3408970-7981-4e21-8603-44158a24f1c1> bcube:hasType "theme" ;
+    bcube:hasValue "elevation",
+        "environment",
+        "hydrology",
+        "inlandWaters",
+        "structure",
+        "transportation" ;
+    dc:partOf "ISO 19115 Topic Category" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:f6a04a3b-7207-4f64-b683-96d112459967> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-10-17T20:16:20.101Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-10-17T20:16:20.101Z" ;
+    dc:identifier "urn:sha:0812b5cdec4e3896efe1b3f796fbbb5e8be8f997d62830988c988e60" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www.idwr.idaho.gov/ftp/gisdata/Spatial/FloodPlainManagement/DFIRM/Washington_Final/Database/s_wtr_ln.shp.xml" .
+
+<urn:uuid:fdd7adaa-c6aa-4be8-b02b-89630a876cab> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-10-17T20:16:20.101Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-10-17T20:16:20.101Z" ;
+    dc:identifier "urn:sha:37c915397238031daced09ae0e2dd3bf54e84a6477f749c2cc9dcbdf" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://hazards.fema.gov" .
+

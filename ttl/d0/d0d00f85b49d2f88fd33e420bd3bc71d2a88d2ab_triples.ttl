@@ -1,0 +1,103 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:01387592-9c77-4f41-81fe-0b87f0bef1d5> bcube:hasType "theme" ;
+    bcube:hasValue "Contour map",
+        "elevation change" ;
+    dc:partOf "NONE" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:35e5a493-4ea4-4dbf-8929-30122f119f95> bcube:hasType "stratum" ;
+    bcube:hasValue "Bare earth" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:6dcf51c0-aa2a-4e7a-95bf-69a3aa0b0a5d> owl:a foaf:Organization ;
+    foaf:name "USGS" .
+
+<urn:uuid:6e8f8cfb-3c6c-4655-91bc-f82d3bb65e7e> dcterms:references <urn:uuid:ee699e09-07a7-4998-b719-bb65dcb070b3> ;
+    owl:a bibo:WebPage .
+
+<urn:uuid:7bce518e-b4f2-4191-8380-df0cbceb4222> bcube:hasType "place" ;
+    bcube:hasValue "Assateague Island National Seashore",
+        "Maryland",
+        "United States East Coast",
+        "Virginia" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:9bf952a5-05d2-49db-9783-8e0f13d392e6> bcube:hasType "temporal" ;
+    bcube:hasValue "20040827" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:9fce106a-4caf-41d5-ad70-936e515d8f33> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-07-05T05:27:13.762Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-07-05T05:27:13.762Z" ;
+    dc:identifier "urn:sha:de815706e7908e06bd81a64685005f3930bae247565f1a1a5358a2f7" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://pubs.usgs.gov/of/2007/1176/Lidar/be_e488_n4240/contour_e488_n4240.shp.xml" .
+
+<urn:uuid:a7a9b9f3-58f6-486a-bbeb-bc704cdf0e04> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-07-05T05:27:13.762Z" ;
+    bcube:lastUpdated "2015-07-05T05:27:13.762Z" ;
+    bcube:originatedFrom <urn:uuid:9fce106a-4caf-41d5-ad70-936e515d8f33> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:b72f79f0-c0ef-4e77-8231-666338363b5f> .
+
+<urn:uuid:b72f79f0-c0ef-4e77-8231-666338363b5f> bcube:dateCreated "2015-07-05T05:27:13.762Z" ;
+    bcube:hasMetadataRecord <urn:uuid:a7a9b9f3-58f6-486a-bbeb-bc704cdf0e04> ;
+    bcube:lastUpdated "2015-07-05T05:27:13.762Z" ;
+    dc:conformsTo <urn:uuid:01387592-9c77-4f41-81fe-0b87f0bef1d5>,
+        <urn:uuid:35e5a493-4ea4-4dbf-8929-30122f119f95>,
+        <urn:uuid:7bce518e-b4f2-4191-8380-df0cbceb4222>,
+        <urn:uuid:9bf952a5-05d2-49db-9783-8e0f13d392e6> ;
+    dc:description "GIS contour lines of Assateague Island National Seahore derived from a LiDAR GeoTIFF file." ;
+    dc:spatial "POLYGON ((-75.121579 38.290005,-75.121579 38.308037,-75.114345 38.308037,-75.114345 38.290005,-75.121579 38.290005))" ;
+    dcterms:publisher <urn:uuid:6dcf51c0-aa2a-4e7a-95bf-69a3aa0b0a5d> ;
+    dcterms:references <urn:uuid:6e8f8cfb-3c6c-4655-91bc-f82d3bb65e7e>,
+        <urn:uuid:cb2126f0-dc14-401f-9106-1ce6b40d46f6> ;
+    dcterms:title "contour_e488_n4240" ;
+    esip:eastBound "-75.114345"^^xsd:float ;
+    esip:northBound "38.308037"^^xsd:float ;
+    esip:southBound "38.290005"^^xsd:float ;
+    esip:startDate "2004-08-27"^^xsd:date ;
+    esip:westBound "-75.121579"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:cb2126f0-dc14-401f-9106-1ce6b40d46f6> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-07-05T05:27:13.762Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-07-05T05:27:13.762Z" ;
+    dc:identifier "urn:sha:d14a028c2a3a2bc9476102bb288234c415a2b01f828ea62ac5b3e42f" ;
+    owl:a bcube:Url .
+
+<urn:uuid:ee699e09-07a7-4998-b719-bb65dcb070b3> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-07-05T05:27:13.762Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-07-05T05:27:13.762Z" ;
+    dc:identifier "urn:sha:f60147855f5543e73f9bb77747835af13c6382db652fa29071b64c3a" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "\\\\\\\\\\\\\\\\" .
+

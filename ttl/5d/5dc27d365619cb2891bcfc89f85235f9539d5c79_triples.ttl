@@ -1,0 +1,128 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:15b5f13e-3ab8-4af9-9baa-551178c09a53> dcterms:references <urn:uuid:d6bff993-54c8-485c-bcd9-09077436769d> ;
+    owl:a bibo:WebPage .
+
+<urn:uuid:3e013be6-29df-44e3-aa48-627de807694b> owl:a foaf:Organization ;
+    foaf:name "NOAA's Ocean Service, Office for Coastal Management (OCM)" .
+
+<urn:uuid:4c076f32-62d4-4281-aca9-aaa7cb7eedef> dcterms:references <urn:uuid:a27e4f1e-02dc-4e96-9c87-298cb74f7333> ;
+    owl:a bibo:WebPage .
+
+<urn:uuid:6f226d8e-cd09-4215-a5c6-a79ce6d7baa9> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-08-05T15:49:00.009Z" ;
+    bcube:lastUpdated "2015-08-05T15:49:00.009Z" ;
+    bcube:originatedFrom <urn:uuid:8c1a9f7b-80c9-438e-b970-b00fcc6bbfdb> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:9d75ecf8-ff6f-4dc9-9094-63f24f7ff659> .
+
+<urn:uuid:754adf4f-43b7-4296-82fe-51b9ecb0cbb5> bcube:hasType "theme" ;
+    bcube:hasValue "Acoustic Reflectivity",
+        "Aspect",
+        "Backscatter",
+        "Hillshade",
+        "River",
+        "Shallow Water",
+        "Slope",
+        "Swath Bathymetry" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:8c1a9f7b-80c9-438e-b970-b00fcc6bbfdb> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-05T15:49:00.009Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-05T15:49:00.009Z" ;
+    dc:identifier "urn:sha:2e8e2c8f558c1f3071e3b6630910d5742460d0f821dab26de4279790" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://coast.noaa.gov/data/Documents/Metadata/Benthic/harvest/ny_hr09_sss-points-meta.xml" .
+
+<urn:uuid:92a95302-7864-4ced-9417-2b6d8f295f50> bcube:hasType "theme" ;
+    bcube:hasValue "Environmental Monitoring" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:943fde48-cfb7-4e63-aaeb-49230051c3d9> bcube:hasType "place" ;
+    bcube:hasValue "Hudson River",
+        "New York",
+        "USA" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:9d75ecf8-ff6f-4dc9-9094-63f24f7ff659> bcube:dateCreated "2015-08-05T15:49:00.009Z" ;
+    bcube:hasMetadataRecord <urn:uuid:6f226d8e-cd09-4215-a5c6-a79ce6d7baa9> ;
+    bcube:lastUpdated "2015-08-05T15:49:00.009Z" ;
+    dc:conformsTo <urn:uuid:754adf4f-43b7-4296-82fe-51b9ecb0cbb5>,
+        <urn:uuid:92a95302-7864-4ced-9417-2b6d8f295f50>,
+        <urn:uuid:943fde48-cfb7-4e63-aaeb-49230051c3d9>,
+        <urn:uuid:fb01d96b-9958-43ef-a07f-7a84f8899c04> ;
+    dc:description "Side Scan Point Files. These points correspond to individual pings which produced hte side-scan-sonar backscatter imagery. Sonar data were collected November 6 to December 15, 2009, in the estuary north from Saugerties to Troy. Data Collection and Processing: The interferometric system used to measure acoustic reflectivity, provided a quantitative measure of reflectivity for every square meter of the survey area. Fugro's system measured and recorded acoustic reflectivity that has a high dynamic range such that the full range of reflectivity's encountered in the estuary environment can be recorded while maintaining a constant gain setting on the system receiver. Reflectivity data from the GeoSwath was used to produce a normalized as well as a classified image of the bottom. Additionally, Fugro provided slope, aspect and hillshade models as additional acoustic parameters. Backscatter data processing was completed with CARIS 7.0. Raw XTF files were created by converting Hypack format (*.HSX) into Triton format (*.XTF). Points were exported from the raw XTF files at an interval of 400 pings (approximately 100 meters)." ;
+    dc:spatial "POLYGON ((-73.933415 42.064507,-73.933415 42.752057,-73.685283 42.752057,-73.685283 42.064507,-73.933415 42.064507))" ;
+    dcterms:publisher <urn:uuid:3e013be6-29df-44e3-aa48-627de807694b> ;
+    dcterms:references <urn:uuid:15b5f13e-3ab8-4af9-9baa-551178c09a53>,
+        <urn:uuid:4c076f32-62d4-4281-aca9-aaa7cb7eedef>,
+        <urn:uuid:ce789b88-107b-4bfa-8685-27348df06eac> ;
+    dcterms:title "Side-Scan-Sonar Points for Hudson River, NY" ;
+    esip:eastBound "-73.685283"^^xsd:float ;
+    esip:endDate "2010-01-01"^^xsd:date ;
+    esip:northBound "42.752057"^^xsd:float ;
+    esip:southBound "42.064507"^^xsd:float ;
+    esip:startDate "2009-01-01"^^xsd:date ;
+    esip:westBound "-73.933415"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:a27e4f1e-02dc-4e96-9c87-298cb74f7333> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-05T15:49:00.009Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-05T15:49:00.009Z" ;
+    dc:identifier "urn:sha:5c11acb0f4f34912109afa1799792027fcf7aba7e72c80262c515b98" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www.coast.noaa.gov" .
+
+<urn:uuid:ce789b88-107b-4bfa-8685-27348df06eac> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-05T15:49:00.009Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-05T15:49:00.009Z" ;
+    dc:identifier "urn:sha:d14a028c2a3a2bc9476102bb288234c415a2b01f828ea62ac5b3e42f" ;
+    owl:a bcube:Url .
+
+<urn:uuid:d6bff993-54c8-485c-bcd9-09077436769d> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-05T15:49:00.009Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-05T15:49:00.009Z" ;
+    dc:identifier "urn:sha:254d8bcbe347945bf4b4a46309ba8fe339cf1f2293eb92022141bc2f" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "ftp://ftp.coast.noaa.gov/pub/benthic/Side_Scan_Sonar_Backscatter_Data/NY_HudsonRiver_sss-xtf.zip" .
+
+<urn:uuid:fb01d96b-9958-43ef-a07f-7a84f8899c04> bcube:hasType "theme" ;
+    bcube:hasValue "geoscientificInformation" ;
+    dc:partOf "ISO 19115 Topic Category" ;
+    owl:a bcube:thesaurusSubset .
+

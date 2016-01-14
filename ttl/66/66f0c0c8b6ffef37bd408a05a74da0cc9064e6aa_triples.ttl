@@ -1,0 +1,62 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:72fb4955-e5c6-4670-bc63-8e022773a811> a "OGC:WMS" ;
+    bcube:contains <urn:uuid:ec16d3a6-b1c5-46df-87ab-94ccb8db2f4c> ;
+    bcube:dateCreated "2015-08-09T20:40:57.568Z" ;
+    bcube:lastUpdated "2015-08-09T20:40:57.568Z" ;
+    bcube:originatedFrom <urn:uuid:9f9f5707-093b-4be5-a959-26a0acb09b2d> ;
+    dc:conformsTo <urn:uuid:98a1da45-58f2-4f22-8906-c2598eb39d64> ;
+    dc:description "This data shows spatial density of Wheat cultivation in Canada. Regions with higher calculated spatial densities represent agricultural regions of Canada in which Wheat is more expected. Results are provided as rasters with numerical values for each pixel indicating the spatial density calculated for that location. Higher spatial density values represent higher likelihood to have Wheat based on analysis of the 2009 to 2014 AAFC annual crop inventory data.For more information, visit: www.agr.gc.ca/atlas/metadata/fdf82539-5a74-440b-86ef-a16b7801c706" ;
+    owl:a bcube:service .
+
+<urn:uuid:23f0e0b1-81a6-4f13-a1ab-9c19c2bca3cb> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-09T20:40:57.568Z" ;
+    bcube:hasConfidence "Not Sure" ;
+    bcube:hasUrlSource "Generated" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-09T20:40:57.568Z" ;
+    dc:identifier "urn:sha:ba315812e5252b214ea7deb52658b093e01cdc51df04aad9b7c9ad00" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www.agr.gc.ca/atlas/services/mapservices/aafc_crop_spatial_density_wheat/MapServer/WMSServer?layers=0&width=500&version=1.3.0&bbox=-134.858957%2C34.751349%2C-45.164332%2C63.290106&service=WMS&format=image%2Fpng&styles=&crs=CRS%3A84&request=GetMap&height=500" .
+
+<urn:uuid:98a1da45-58f2-4f22-8906-c2598eb39d64> bcube:hasValue "Crops, Agricultural Statistics" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:9f9f5707-093b-4be5-a959-26a0acb09b2d> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-09T20:40:57.568Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-09T20:40:57.568Z" ;
+    dc:identifier "urn:sha:3c4a38c0a9635c1e09e3f215927c63865dfd679b30ca17355bde54bc" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www.agr.gc.ca/atlas/services/mapservices/aafc_crop_spatial_density_wheat/MapServer/WMSServer?request=GetCapabilities&service=WMS" .
+
+<urn:uuid:ec16d3a6-b1c5-46df-87ab-94ccb8db2f4c> bcube:dateCreated "2015-08-09T20:40:57.568Z" ;
+    bcube:lastUpdated "2015-08-09T20:40:57.568Z" ;
+    dc:description "Spatial Density of Wheat in Canada" ;
+    dc:spatial "POLYGON ((-134.858957 34.751349,-134.858957 63.290106,-45.164332 63.290106,-45.164332 34.751349,-134.858957 34.751349))" ;
+    dc:title "Spatial Density of Wheat in Canada" ;
+    dcterms:references <urn:uuid:23f0e0b1-81a6-4f13-a1ab-9c19c2bca3cb> ;
+    esip:eastBound "-45.164332"^^xsd:float ;
+    esip:northBound "63.290106"^^xsd:float ;
+    esip:southBound "34.751349"^^xsd:float ;
+    esip:westBound "-134.858957"^^xsd:float ;
+    owl:a bcube:Layer .
+

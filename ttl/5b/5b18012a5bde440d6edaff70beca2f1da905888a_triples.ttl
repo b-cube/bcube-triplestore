@@ -1,0 +1,86 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:2e3f3339-d158-4640-8739-bd5a356d046e> bcube:hasType "theme" ;
+    bcube:hasValue "Arterials",
+        "Magnitude",
+        "NRRC",
+        "segments",
+        "transportation",
+        "usginres:service" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:459f4602-1445-487f-b55b-e82e502c1d91> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-04T11:52:45.511Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-04T11:52:45.511Z" ;
+    dc:identifier "urn:sha:b81616def6246ffdf5149643fa2fadaacfc2cb4cf9ed31f2e5560e7c" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "https://geo.azmag.gov/gismag/rest/services/maps/MagnitudeArterials2010/MapServer" .
+
+<urn:uuid:67195f4b-f7f3-4390-9e5d-428511d21398> bcube:hasType "place" ;
+    bcube:hasValue "Arizona",
+        "Maricopa County" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:761ad94d-5fd4-4ae8-8718-d8ca80e0fd06> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-04T11:52:45.511Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-04T11:52:45.511Z" ;
+    dc:identifier "urn:sha:b9ad4424eca96c9370acd50c163ce13f6cd7d6f6bb27933c56fae75e" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://repository.stategeothermaldata.org/resources/metadata/TestNRRC/EF6184E601FE47E79B008CCF0CA80803.xml" .
+
+<urn:uuid:94ff0f4c-0547-400e-aac9-25d7ac6d6db5> bcube:hasType "temporal" ;
+    bcube:hasValue "2010" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:ce214dfa-a833-4a98-bb7f-9fd5d57407db> bcube:hasValue "geoscientificInformation" ;
+    dc:partOf "IsoTopicCategories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:edd9ec52-5fc3-40c8-b84b-5954fff50c44> a "ISO 19115:2003/19139" ;
+    bcube:dateCreated "2015-11-04T11:52:45.511Z" ;
+    bcube:lastUpdated "2015-11-04T11:52:45.511Z" ;
+    bcube:originatedFrom <urn:uuid:761ad94d-5fd4-4ae8-8718-d8ca80e0fd06> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:f6c167f0-373b-4dbb-b26f-6a8be9276a1e> .
+
+<urn:uuid:f6c167f0-373b-4dbb-b26f-6a8be9276a1e> bcube:dateCreated "2015-11-04T11:52:45.511Z" ;
+    bcube:hasMetadataRecord <urn:uuid:edd9ec52-5fc3-40c8-b84b-5954fff50c44> ;
+    bcube:lastUpdated "2015-11-04T11:52:45.511Z" ;
+    dc:conformsTo <urn:uuid:2e3f3339-d158-4640-8739-bd5a356d046e>,
+        <urn:uuid:67195f4b-f7f3-4390-9e5d-428511d21398>,
+        <urn:uuid:94ff0f4c-0547-400e-aac9-25d7ac6d6db5>,
+        <urn:uuid:ce214dfa-a833-4a98-bb7f-9fd5d57407db> ;
+    dc:description "Arterial segments with perfromances measurements for 2010. Used by transportation performance viewer (Magnitude)." ;
+    dc:spatial "POLYGON ((-111.71 34.81,-111.71 32.58,-113.42 32.58,-113.42 34.81,-111.71 34.81))" ;
+    dcterms:references <urn:uuid:459f4602-1445-487f-b55b-e82e502c1d91> ;
+    dcterms:title "Arterial Segments with Perfromances Measurements for 2010 - maps/MagnitudeArterials2010" ;
+    esip:eastBound "-113.42"^^xsd:float ;
+    esip:endDate "1900-01-01"^^xsd:date ;
+    esip:northBound "32.58"^^xsd:float ;
+    esip:southBound "34.81"^^xsd:float ;
+    esip:startDate "1900-01-01"^^xsd:date ;
+    esip:westBound "-111.71"^^xsd:float ;
+    owl:a dcat:Dataset .
+

@@ -1,0 +1,86 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:0b328da2-71bd-4ff2-89e7-52e2bd0c4b86> bcube:dateCreated "2015-08-05T01:19:16.376Z" ;
+    bcube:hasMetadataRecord <urn:uuid:fde15e53-825c-4815-82c1-3f0affab7255> ;
+    bcube:lastUpdated "2015-08-05T01:19:16.376Z" ;
+    dc:conformsTo <urn:uuid:1ca76588-1eaa-48c9-a1b6-f41b7b20105d>,
+        <urn:uuid:85e48ff4-fe59-434c-a912-250b26f9459a>,
+        <urn:uuid:c82cb54d-71c6-4ecb-8371-3a3e065e4b17> ;
+    dc:description "FEMA Framework Basemap datasets comprise six of the seven FGDC themes of geospatial data that are used by most GIS applications (Note: the seventh framework theme, orthographic imagery, is packaged in a separate NFIP Metadata Profile): cadastral, geodetic control, governmental unit, transportation, general structures, hydrography (water areas & lines. These data include an encoding of the geographic extent of the features and a minimal number of attributes needed to identify and describe the features. (Source: Circular A16, p. 13)" ;
+    dc:spatial "POLYGON ((-86.5898 42.5337,-86.5898 43.3938,-85.5785 43.3938,-85.5785 42.5337,-86.5898 42.5337))" ;
+    dcterms:publisher <urn:uuid:7310b983-120a-4ed0-88ca-e33bd1061ec8> ;
+    dcterms:references <urn:uuid:30edd64e-7036-4c05-9626-2b523fe953ef> ;
+    dcterms:title "BASEMAP, OTTAWA COUNTY, MI, USA" ;
+    esip:eastBound "-85.5785"^^xsd:float ;
+    esip:northBound "43.3938"^^xsd:float ;
+    esip:southBound "42.5337"^^xsd:float ;
+    esip:startDate "2011-02-04"^^xsd:date ;
+    esip:westBound "-86.5898"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:1ca76588-1eaa-48c9-a1b6-f41b7b20105d> bcube:hasType "place" ;
+    bcube:hasValue "COMMUNITY ALL JURISDICTIONS",
+        "COUNTY OTTAWA",
+        "COUNTY-FIPS 139",
+        "FEMA-CID 26139C",
+        "REGION V",
+        "STATE MI" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:30edd64e-7036-4c05-9626-2b523fe953ef> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-05T01:19:16.376Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-05T01:19:16.376Z" ;
+    dc:identifier "urn:sha:bb03e146afb24a47d6a4c979d56b90b41418a2be6965a760c3029496" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://msc.fema.gov" .
+
+<urn:uuid:7310b983-120a-4ed0-88ca-e33bd1061ec8> owl:a foaf:Organization ;
+    foaf:name "Federal Emergency Management Agency" .
+
+<urn:uuid:85e48ff4-fe59-434c-a912-250b26f9459a> bcube:hasType "theme" ;
+    bcube:hasValue "Basemap" ;
+    dc:partOf "FEMA NFIP Topic Category" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:a16d6117-3485-4e38-96a1-9c27db8837bc> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-05T01:19:16.376Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-05T01:19:16.376Z" ;
+    dc:identifier "urn:sha:5e156a98cb86a9bb6fda4ff6e5c067c8e076d0713933ce52a5f085d9" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://catalog.data.gov/harvest/object/0b38cccc-f0ba-477d-9dc0-5e2ff1fbcf14/original" .
+
+<urn:uuid:c82cb54d-71c6-4ecb-8371-3a3e065e4b17> bcube:hasType "theme" ;
+    bcube:hasValue "transportation" ;
+    dc:partOf "ISO 19115 Topic Category" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:fde15e53-825c-4815-82c1-3f0affab7255> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-08-05T01:19:16.376Z" ;
+    bcube:lastUpdated "2015-08-05T01:19:16.376Z" ;
+    bcube:originatedFrom <urn:uuid:a16d6117-3485-4e38-96a1-9c27db8837bc> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:0b328da2-71bd-4ff2-89e7-52e2bd0c4b86> .
+

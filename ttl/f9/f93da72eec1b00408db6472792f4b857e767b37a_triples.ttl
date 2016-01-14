@@ -1,0 +1,69 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:164ac1cd-6275-44b9-9503-2712b272dfb9> owl:a foaf:Organization ;
+    foaf:name "Montana State Library" .
+
+<urn:uuid:5a473293-784e-4834-bb90-a1884b883b33> bcube:hasType "theme" ;
+    bcube:hasValue "farming",
+        "imageryBaseMapsEarthCover" ;
+    dc:partOf "ISO 19115 Topic Category" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:7f7610d7-a0b3-496b-b741-6b9fa99bd3e5> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-08-11T19:34:47.297Z" ;
+    bcube:lastUpdated "2015-08-11T19:34:47.297Z" ;
+    bcube:originatedFrom <urn:uuid:cfaf5b5e-e9e7-4959-ad9c-5dbab77a164e> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:8058dea9-0715-4d4d-a7b4-0ac55af9fd51> .
+
+<urn:uuid:8058dea9-0715-4d4d-a7b4-0ac55af9fd51> bcube:dateCreated "2015-08-11T19:34:47.297Z" ;
+    bcube:hasMetadataRecord <urn:uuid:7f7610d7-a0b3-496b-b741-6b9fa99bd3e5> ;
+    bcube:lastUpdated "2015-08-11T19:34:47.297Z" ;
+    dc:conformsTo <urn:uuid:5a473293-784e-4834-bb90-a1884b883b33>,
+        <urn:uuid:b67c07f8-cd37-41a7-873c-6bb4e44bb68e>,
+        <urn:uuid:d72b7e0b-3890-4b7c-93bb-57e742935354> ;
+    dc:description "Vegetation types on Smelter Hill, Southeast of Anaconda, MT. These data were digitized from 1:6,000 scale blueline maps for the \"Smelter Hill Phytoxicity, Surface Water, and Groundwater Investigations Data Summary/Validation/Utilization Report.\" These data were formerly available from the Montana State Library web site but were removed because they are potentially out of date. Please contact the Federal Superfund Bureau of the Montana Department of Environmental Quality if you want these data so they may tell you if newer or better data are available. If the data are not available from the Department of Environmental Quality, you may request a copy from the Montana State Library data archive." ;
+    dc:spatial "POLYGON ((-112.933098 46.0797005,-112.933098 46.1297989,-112.8731 46.1297989,-112.8731 46.0797005,-112.933098 46.0797005))" ;
+    dcterms:publisher <urn:uuid:164ac1cd-6275-44b9-9503-2712b272dfb9> ;
+    dcterms:title "Anaconda Smelter Hill Vegetation Types, 1988" ;
+    esip:eastBound "-112.8731"^^xsd:float ;
+    esip:northBound "46.1297989"^^xsd:float ;
+    esip:southBound "46.0797005"^^xsd:float ;
+    esip:startDate "1988-10-29"^^xsd:date ;
+    esip:westBound "-112.933098"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:b67c07f8-cd37-41a7-873c-6bb4e44bb68e> bcube:hasType "theme" ;
+    bcube:hasValue "vegetation" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:cfaf5b5e-e9e7-4959-ad9c-5dbab77a164e> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-11T19:34:47.297Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-11T19:34:47.297Z" ;
+    dc:identifier "urn:sha:844d889c30b8999a8df285678228f83577258e853f7caa804f2c3bf1" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://mslapps.mt.gov/Geographic_Information/Data/DataList/datalist_MetadataDetailRaw.aspx?did={B5422244-EAA9-4FE3-81BD-42EDBB27E209}" .
+
+<urn:uuid:d72b7e0b-3890-4b7c-93bb-57e742935354> bcube:hasType "place" ;
+    bcube:hasValue "Anaconda",
+        "Montana",
+        "Smelter Hill" ;
+    owl:a bcube:thesaurusSubset .
+

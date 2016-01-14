@@ -1,0 +1,86 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:0c6c46d6-ed4a-4801-91b2-95ce5f453447> bcube:hasType "theme" ;
+    bcube:hasValue "1-Percent-Annual-Chance Flood",
+        "Channel",
+        "DFIRM",
+        "Digital Flood Insurance Rate Map",
+        "Flood Hazard data",
+        "Hydrology" ;
+    dc:partOf "FEMA NFIP Topic Category" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:14d756db-4482-4952-b484-6580a005ed93> bcube:hasValue "environment",
+        "inlandWaters" ;
+    dc:partOf "IsoTopicCategories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:1e48e6b1-b91f-41d7-baf1-7ed2845966b5> bcube:dateCreated "2015-11-01T02:11:55.986Z" ;
+    bcube:hasMetadataRecord <urn:uuid:693bc33f-cd48-4f22-8a64-3163ba2a0af3> ;
+    bcube:lastUpdated "2015-11-01T02:11:55.986Z" ;
+    dc:conformsTo <urn:uuid:0c6c46d6-ed4a-4801-91b2-95ce5f453447>,
+        <urn:uuid:14d756db-4482-4952-b484-6580a005ed93>,
+        <urn:uuid:df0eb610-e8cb-454c-87e0-434224aac7b0> ;
+    dc:description "Hydrology data include spatial datasets and data tables necessary for documenting the hydrologic procedures for estimating flood discharges for a flood insurance study, which includes the hydrologic data expected by FEMA for new riverline studies. (Source: FEMA Guidelines and Specifications, Appendix N)" ;
+    dc:spatial "POLYGON ((-113.8715 37.3426,-113.8715 38.7564,-111.6302 38.7564,-111.6302 37.3426,-113.8715 37.3426))" ;
+    dcterms:references <urn:uuid:fef5c8de-d4c1-4c85-aa60-8bb4f5710981> ;
+    dcterms:title "DCS Hydrology, Sevier County, Utah" ;
+    esip:eastBound "-111.6302"^^xsd:float ;
+    esip:northBound "38.7564"^^xsd:float ;
+    esip:southBound "37.3426"^^xsd:float ;
+    esip:westBound "-113.8715"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:693bc33f-cd48-4f22-8a64-3163ba2a0af3> a "ISO 19115:2003/19139" ;
+    bcube:dateCreated "2015-11-01T02:11:55.986Z" ;
+    bcube:lastUpdated "2015-11-01T02:11:55.986Z" ;
+    bcube:originatedFrom <urn:uuid:a55ad92a-a0b5-4aa9-9fe3-fa9d7523de56> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:1e48e6b1-b91f-41d7-baf1-7ed2845966b5> .
+
+<urn:uuid:a55ad92a-a0b5-4aa9-9fe3-fa9d7523de56> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-01T02:11:55.986Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-01T02:11:55.986Z" ;
+    dc:identifier "urn:sha:65822a811c54ace9f823ed3a95d2da4a3771ceac75cd05ed9b790f6d" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://catalog.data.gov/harvest/object/9509d9c3-bff1-464f-9506-d0d4fe8a8c9b" .
+
+<urn:uuid:df0eb610-e8cb-454c-87e0-434224aac7b0> bcube:hasType "place" ;
+    bcube:hasValue "COMMUNITY Countywide",
+        "COUNTY Sevier County",
+        "COUNTY-FIPS 041C",
+        "FEMA-CID 49041C",
+        "REGION 08",
+        "STATE UT" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:fef5c8de-d4c1-4c85-aa60-8bb4f5710981> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-01T02:11:55.986Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-01T02:11:55.986Z" ;
+    dc:identifier "urn:sha:37c915397238031daced09ae0e2dd3bf54e84a6477f749c2cc9dcbdf" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://hazards.fema.gov" .
+

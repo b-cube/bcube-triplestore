@@ -1,0 +1,95 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:05954381-01d6-4a33-ab4c-5c0e3ef2e0d2> owl:a foaf:Organization ;
+    foaf:name "U.S. Geological Survey" .
+
+<urn:uuid:401825ea-78c5-4354-bb2a-022b2a7a7e16> bcube:hasType "place" ;
+    bcube:hasValue "Fire Island",
+        "Long Island",
+        "Montauk Point",
+        "New Jersey",
+        "New York",
+        "Northeast Coastal Barrier Islands",
+        "Sandy Hook" ;
+    dc:partOf "http://nationalmap.gov" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:451c5dd0-6f3d-45e8-a2aa-4baf0fcbae4e> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-11-14T07:21:01.927Z" ;
+    bcube:lastUpdated "2015-11-14T07:21:01.927Z" ;
+    bcube:originatedFrom <urn:uuid:d5dadfb3-9d86-4be1-bf60-2856659d16ba> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:8425d92f-b908-49d2-a247-14322c0ac5a4> .
+
+<urn:uuid:452ab0a9-9c93-48e2-ad44-3df0500e990e> bcube:hasType "theme" ;
+    bcube:hasValue "ALPS",
+        "Airborne Lidar Processing System",
+        "DEM",
+        "Digital Elevation Model",
+        "EAARL",
+        "Experimental Advanced Airborne Research Lidar",
+        "Lidar",
+        "laser altimetry",
+        "remote sensing",
+        "topography" ;
+    dc:partOf "http://remotesensing.usgs.gov" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:5a932db5-603c-4463-a6b9-bf6a1ffdebee> bcube:hasType "stratum" ;
+    bcube:hasValue "Bare Earth" ;
+    dc:partOf "http://lidar.cr.usgs.gov/" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:8425d92f-b908-49d2-a247-14322c0ac5a4> bcube:dateCreated "2015-11-14T07:21:01.927Z" ;
+    bcube:hasMetadataRecord <urn:uuid:451c5dd0-6f3d-45e8-a2aa-4baf0fcbae4e> ;
+    bcube:lastUpdated "2015-11-14T07:21:01.927Z" ;
+    dc:conformsTo <urn:uuid:401825ea-78c5-4354-bb2a-022b2a7a7e16>,
+        <urn:uuid:452ab0a9-9c93-48e2-ad44-3df0500e990e>,
+        <urn:uuid:5a932db5-603c-4463-a6b9-bf6a1ffdebee>,
+        <urn:uuid:c04f9f07-6ae0-44a3-9ad2-281032587433> ;
+    dc:description "ASCII xyz point cloud data were produced from remotely sensed, geographically referenced elevation measurements cooperatively by the U.S. Geological Survey (USGS) and National Aeronautics and Space Administration (NASA). Elevation measurements were collected over the area using the NASA Experimental Advanced Airborne Research Lidar (EAARL), a pulsed laser ranging system mounted onboard an aircraft to measure ground elevation, vegetation canopy, and coastal topography. The system uses high-frequency laser beams directed at the Earth's surface through an opening in the bottom of the aircraft's fuselage. The laser system records the time difference between emission of the laser beam and the reception of the reflected laser signal in the aircraft. The plane travels over the target area at approximately 50 meters per second at an elevation of approximately 300 meters. The EAARL, developed by NASA at Wallops Flight Facility in Virginia, measures ground elevation with a vertical resolution of 15 centimeters. A sampling rate of 3 kilohertz or higher results in an extremely dense spatial elevation dataset. Over 100 kilometers of coastline can be easily surveyed within a 3- to 4-hour mission time period. When subsequent elevation maps for an area are analyzed, they provide a useful tool to make management decisions regarding land development." ;
+    dcterms:publisher <urn:uuid:05954381-01d6-4a33-ab4c-5c0e3ef2e0d2> ;
+    dcterms:references <urn:uuid:97e40836-a999-4c05-be21-f66c118bee76> ;
+    dcterms:title "EAARL Coastal Topography–Northeast Coastal Barrier Islands 2007" ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:97e40836-a999-4c05-be21-f66c118bee76> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-14T07:21:01.927Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-14T07:21:01.927Z" ;
+    dc:identifier "urn:sha:d14a028c2a3a2bc9476102bb288234c415a2b01f828ea62ac5b3e42f" ;
+    owl:a bcube:Url .
+
+<urn:uuid:c04f9f07-6ae0-44a3-9ad2-281032587433> bcube:hasType "temporal" ;
+    bcube:hasValue "2007" ;
+    dc:partOf "http://www.esri.com/news/arcuser/1104/temporal.html" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:d5dadfb3-9d86-4be1-bf60-2856659d16ba> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-14T07:21:01.927Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-14T07:21:01.927Z" ;
+    dc:identifier "urn:sha:57bc6155ef393c4547060813a3963751485e415107e4073033bf2fb2" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://pubs.usgs.gov/ds/398/data_files/be/40072g6a/40072g6a_be.las.xml" .
+

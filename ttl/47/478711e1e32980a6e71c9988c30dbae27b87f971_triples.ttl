@@ -1,0 +1,103 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:1e4a1094-9b7a-4ace-b7e1-cddfb42c24f1> bcube:hasType "theme" ;
+    bcube:hasValue "biota",
+        "boundaries",
+        "economy",
+        "environment",
+        "oceans" ;
+    dc:partOf "ISO 19115 Topic Categories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:37035916-899a-4345-a3a2-3fe94ac34698> bcube:hasType "place" ;
+    bcube:hasValue "North Atlantic Ocean",
+        "South Atlantic Ocean" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:510f07e5-8bef-4a9a-b9f2-aa2b64599150> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-11-02T07:17:39.883Z" ;
+    bcube:lastUpdated "2015-11-02T07:17:39.883Z" ;
+    bcube:originatedFrom <urn:uuid:a5c4bd6e-263b-42d8-8fec-b92bcb509fa6> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:71bb83c0-1af5-4c47-b106-be687d7a8be4> .
+
+<urn:uuid:71bb83c0-1af5-4c47-b106-be687d7a8be4> bcube:dateCreated "2015-11-02T07:17:39.883Z" ;
+    bcube:hasMetadataRecord <urn:uuid:510f07e5-8bef-4a9a-b9f2-aa2b64599150> ;
+    bcube:lastUpdated "2015-11-02T07:17:39.883Z" ;
+    dc:conformsTo <urn:uuid:1e4a1094-9b7a-4ace-b7e1-cddfb42c24f1>,
+        <urn:uuid:37035916-899a-4345-a3a2-3fe94ac34698>,
+        <urn:uuid:cdc7545b-37b2-4ce4-82e4-3fd630a5ae15> ;
+    dc:description "These data represent Seasonal Mangagement Area locations where regulations implement speed restrictions in shipping areas at certain times of the year along the coast of the U.S. Atlantic seaboard. The purpose of the regulations is to reduce the likelihood of deaths and serious injuries to endangered North Atlantic right whales that result from collisions with ships as designated by 73 FR 60173, October 10, 2008, Rules and Regulations. Sunset clause removed 78 FR 73726, December 9, 2013" ;
+    dc:spatial "POLYGON ((-81.460449 29.749994,-81.460449 42.5,-67.14 42.5,-67.14 29.749994,-81.460449 29.749994))" ;
+    dcterms:identifier "gov.noaa.nmfs.inport:23732" ;
+    dcterms:publisher <urn:uuid:920e5948-30bd-4e41-b6ed-821ca6c5c8a6> ;
+    dcterms:references <urn:uuid:addcebb2-eacd-4329-98e9-116858f13baf>,
+        <urn:uuid:ea16b9e5-0559-4793-b6a4-f04fb58ab2e7> ;
+    dcterms:title "Seasonal Management Areas for North Atlantic Right Whales GIS data" ;
+    esip:eastBound "-67.14"^^xsd:float ;
+    esip:northBound "42.5"^^xsd:float ;
+    esip:southBound "29.749994"^^xsd:float ;
+    esip:startDate "2008-12-09"^^xsd:date ;
+    esip:westBound "-81.460449"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:920e5948-30bd-4e41-b6ed-821ca6c5c8a6> owl:a foaf:Organization ;
+    foaf:name "" .
+
+<urn:uuid:a5362efd-e916-46fa-a003-6e19401f7d2b> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-02T07:17:39.883Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-02T07:17:39.883Z" ;
+    dc:identifier "urn:sha:75d13dd4414d7bb0d46b32d29c08ca7521650bf1068a603f7900a538" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://sero.nmfs.noaa.gov/maps_gis_data/index.html" .
+
+<urn:uuid:a5c4bd6e-263b-42d8-8fec-b92bcb509fa6> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-02T07:17:39.883Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-02T07:17:39.883Z" ;
+    dc:identifier "urn:sha:2be1d7142b2de19825e37594882b8d21734d7e5fdd4552b2a2715452" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "https://inport.nmfs.noaa.gov/inport/item/23732/fgdc" .
+
+<urn:uuid:addcebb2-eacd-4329-98e9-116858f13baf> dcterms:references <urn:uuid:a5362efd-e916-46fa-a003-6e19401f7d2b> ;
+    owl:a bibo:WebPage .
+
+<urn:uuid:cdc7545b-37b2-4ce4-82e4-3fd630a5ae15> bcube:hasType "theme" ;
+    bcube:hasValue "SMA speed restrictions right whale NOAA NMFS" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:ea16b9e5-0559-4793-b6a4-f04fb58ab2e7> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-02T07:17:39.883Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-02T07:17:39.883Z" ;
+    dc:identifier "urn:sha:fd50649162bb01a67d411b402d0f13f42442b1400547473b262b6601" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://sero.nmfs.noaa.gov/maps_gis_data/protected_resources/management_areas/index.html" .
+

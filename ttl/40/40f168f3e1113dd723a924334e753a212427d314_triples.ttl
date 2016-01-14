@@ -1,0 +1,71 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:170c3ca3-d505-42cb-8e99-4b2deac52e8d> owl:a foaf:Organization ;
+    foaf:name "" .
+
+<urn:uuid:4b7f2434-c4ee-4470-b409-e7ed526635b9> bcube:hasType "theme" ;
+    bcube:hasValue "Bare Earth",
+        "Breakline",
+        "Elevation data",
+        "First Return",
+        "Intensity Raster",
+        "LAS",
+        "LiDAR" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:59705ae3-2c5a-45ca-a630-f0a1bb0ec109> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-10-17T08:28:50.672Z" ;
+    bcube:lastUpdated "2015-10-17T08:28:50.672Z" ;
+    bcube:originatedFrom <urn:uuid:a926ddfa-155f-4bb3-a613-bb0a3f44201f> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:ceca78e7-c80e-499c-8e0b-cfa29ba4e89f> .
+
+<urn:uuid:6345b902-0095-41e3-b0b1-c28b9c644412> bcube:hasType "place" ;
+    bcube:hasValue "Illinois",
+        "Lincoln",
+        "Logan County" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:a926ddfa-155f-4bb3-a613-bb0a3f44201f> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-10-17T08:28:50.672Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-10-17T08:28:50.672Z" ;
+    dc:identifier "urn:sha:c8210ab52cf1fd4059c1b3fbe480e1f8b96d82dd91f0a3f634a7d44a" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www.isgs.uiuc.edu/clearinghouse/lidar/counties/logan/logan_2012_metadata.xml" .
+
+<urn:uuid:ceca78e7-c80e-499c-8e0b-cfa29ba4e89f> bcube:dateCreated "2015-10-17T08:28:50.672Z" ;
+    bcube:hasMetadataRecord <urn:uuid:59705ae3-2c5a-45ca-a630-f0a1bb0ec109> ;
+    bcube:lastUpdated "2015-10-17T08:28:50.672Z" ;
+    dc:conformsTo <urn:uuid:4b7f2434-c4ee-4470-b409-e7ed526635b9>,
+        <urn:uuid:6345b902-0095-41e3-b0b1-c28b9c644412> ;
+    dc:description "Task Order:G13PD00885 Contract ID: G10PC00025 This dataset is LiDAR point cloud data and derivative models of Logan County, Illinois. The area of acquisition is approximately 618 square miles (1600 square kilometers). This dataset consists of LiDAR LAS swath files and tiled LAS files. Tiled LAS files contain LiDAR point information which has been calibrated, controlled, and classified. Tiled LAS and derived data models are named according to a tiling scheme in accordance with the conventions of the U.S. National Grid, using the coordinates at the SW corner of the tile as the tile name. Quantum Spatial Project No: 1130905" ;
+    dc:spatial "POLYGON ((-89.606 39.916,-89.606 40.327,-89.141 40.327,-89.141 39.916,-89.606 39.916))" ;
+    dcterms:publisher <urn:uuid:170c3ca3-d505-42cb-8e99-4b2deac52e8d> ;
+    dcterms:title "Logan County Illinois, LiDAR Acquisition" ;
+    esip:eastBound "-89.141"^^xsd:float ;
+    esip:endDate "2013-11-30"^^xsd:date ;
+    esip:northBound "40.327"^^xsd:float ;
+    esip:southBound "39.916"^^xsd:float ;
+    esip:startDate "2013-11-23"^^xsd:date ;
+    esip:westBound "-89.606"^^xsd:float ;
+    owl:a dcat:Dataset .
+

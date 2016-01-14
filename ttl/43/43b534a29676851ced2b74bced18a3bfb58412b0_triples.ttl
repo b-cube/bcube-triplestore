@@ -1,0 +1,81 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:0ddda737-ce60-4747-a774-b6cba24392a8> bcube:hasType "place" ;
+    bcube:hasValue "Arizona",
+        "Maricopa County" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:20976c4e-5ced-4f18-ab7e-65eeaeda0a10> bcube:hasValue "geoscientificInformation" ;
+    dc:partOf "IsoTopicCategories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:23972df1-fb0e-477e-bc9f-3cb460af7d95> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-10-31T22:19:34.646Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-10-31T22:19:34.646Z" ;
+    dc:identifier "urn:sha:c02b093366fe58e84304c3d4f877a659d738ccb064bf4ed8b6d9b652" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://repository.stategeothermaldata.org/resources/metadata/TestNRRC/2C9BF8DFF0BA4E678F717683D1378836.xml" .
+
+<urn:uuid:6a86cb35-054d-42a3-8ec7-b44ee8c8cd90> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-10-31T22:19:34.646Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-10-31T22:19:34.646Z" ;
+    dc:identifier "urn:sha:ed71d58a05ac94fecc2457a7a76f187aa60f94f264f734d9f603be94" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "https://geo.azmag.gov/gismag/rest/services/maps/MagBaseMapOver_v2a/MapServer" .
+
+<urn:uuid:ec24e23a-9a78-4b28-b985-1d1da39b16a8> bcube:hasType "theme" ;
+    bcube:hasValue "NRRC",
+        "basemap",
+        "labels",
+        "linear futures",
+        "upper",
+        "usginres:service" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:f469b21a-d2e8-4ca6-b40a-79e2447f8aee> a "ISO 19115:2003/19139" ;
+    bcube:dateCreated "2015-10-31T22:19:34.646Z" ;
+    bcube:lastUpdated "2015-10-31T22:19:34.646Z" ;
+    bcube:originatedFrom <urn:uuid:23972df1-fb0e-477e-bc9f-3cb460af7d95> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:fe72d71a-1ee4-417a-b088-fe2c1c615ee6> .
+
+<urn:uuid:fe72d71a-1ee4-417a-b088-fe2c1c615ee6> bcube:dateCreated "2015-10-31T22:19:34.646Z" ;
+    bcube:hasMetadataRecord <urn:uuid:f469b21a-d2e8-4ca6-b40a-79e2447f8aee> ;
+    bcube:lastUpdated "2015-10-31T22:19:34.646Z" ;
+    dc:conformsTo <urn:uuid:0ddda737-ce60-4747-a774-b6cba24392a8>,
+        <urn:uuid:20976c4e-5ced-4f18-ab7e-65eeaeda0a10>,
+        <urn:uuid:ec24e23a-9a78-4b28-b985-1d1da39b16a8> ;
+    dc:description "Contains labels and linear futures. Intended to serve as an 'upper' basemap for maps with polygon content." ;
+    dc:spatial "POLYGON ((-111.71 34.81,-111.71 32.58,-113.42 32.58,-113.42 34.81,-111.71 34.81))" ;
+    dcterms:references <urn:uuid:6a86cb35-054d-42a3-8ec7-b44ee8c8cd90> ;
+    dcterms:title "Upper Level Basemap for Maps with Polygon Content v2a - magBaseMapOver_v4.mxd" ;
+    esip:eastBound "-113.42"^^xsd:float ;
+    esip:endDate "1900-01-01"^^xsd:date ;
+    esip:northBound "32.58"^^xsd:float ;
+    esip:southBound "34.81"^^xsd:float ;
+    esip:startDate "1900-01-01"^^xsd:date ;
+    esip:westBound "-111.71"^^xsd:float ;
+    owl:a dcat:Dataset .
+

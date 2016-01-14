@@ -1,0 +1,93 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:41990c78-ffa8-4267-9612-dfb50d641d9f> bcube:hasType "theme" ;
+    bcube:hasValue "climatologyMeteorologyAtmosphere",
+        "environment",
+        "geoscientificInformation" ;
+    dc:partOf "ISO 19115 Topic Categories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:47717a4f-da47-4233-9cea-5d18f2ef23e0> bcube:hasType "place" ;
+    bcube:hasValue "Montana" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:5e3549c0-795d-4380-ad55-0f4524a90232> owl:a foaf:Organization ;
+    foaf:name "State Climatologist" .
+
+<urn:uuid:5ebf48c0-b778-489b-882b-87c916d4a52a> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-10T08:26:51.97Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-10T08:26:51.97Z" ;
+    dc:identifier "urn:sha:aa277211cb0d3baf1d218283c376e7eff0fda41726bd3c3cd417fd6c" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://mslapps.mt.gov/Geographic_Information/Data/DataList/datalist_MetadataDetailRaw.aspx?did={9A0048D3-E96F-42E6-BC05-7322CD73C3A2}" .
+
+<urn:uuid:611d7a5c-b143-4f6e-b8cf-01a96e67f7e2> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-08-10T08:26:51.97Z" ;
+    bcube:lastUpdated "2015-08-10T08:26:51.97Z" ;
+    bcube:originatedFrom <urn:uuid:5ebf48c0-b778-489b-882b-87c916d4a52a> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:d847b1e6-c7cc-41f5-a9e0-5c8b7482fb84> .
+
+<urn:uuid:d847b1e6-c7cc-41f5-a9e0-5c8b7482fb84> bcube:dateCreated "2015-08-10T08:26:51.97Z" ;
+    bcube:hasMetadataRecord <urn:uuid:611d7a5c-b143-4f6e-b8cf-01a96e67f7e2> ;
+    bcube:lastUpdated "2015-08-10T08:26:51.97Z" ;
+    dc:conformsTo <urn:uuid:41990c78-ffa8-4267-9612-dfb50d641d9f>,
+        <urn:uuid:47717a4f-da47-4233-9cea-5d18f2ef23e0>,
+        <urn:uuid:dbca3be0-8749-4a09-8379-03207ab35377> ;
+    dc:description "This raster dataset shows MODIS Terra sixteen-day, monthly, yearly, sixteen-day normal, monthly normal, and yearly normal Enhanced Vegetation Index (EVI) for Montana with a nominal grid cell resolution of 250-meters for the sixteen-day products and 1000-meters for the monthly and yearly products for the years 2000 to present. The Enhanced Vegetation Index (EVI) is an 'optimized' index designed to enhance the vegetation signal with improved sensitivity in high biomass regions and improved vegetation monitoring through a de-coupling of the canopy background signal and a reduction in atmosphere influences. Starting 2000, and after the launch of the two MODIS sensors on Terra (satellite) and Aqua (satellite) by NASA, EVI was adopted as a standard product. The Terra satellite collection encompasses the years 2000 to present. The Aqua satellite collection encompasses the years 2002 to present. The Montana Climate Office tansforms the source MODIS datasets from their native sinusoidal projection to the Montana State Plane coordinate system for the area-of-interest for both the Aqua and Terra MODIS platforms.Technical details for MODIS can be found in the user guide posted at ftp://mco.cfc.umt.edu/resources/MCO/Papers/MODIS_VI_UsersGuide_01_2012.pdf" ;
+    dc:spatial "POLYGON ((-119.57459 41.666534,-119.57459 51.16971,-99.470885 51.16971,-99.470885 41.666534,-119.57459 41.666534))" ;
+    dcterms:publisher <urn:uuid:5e3549c0-795d-4380-ad55-0f4524a90232> ;
+    dcterms:references <urn:uuid:ef3e7d7f-462f-4451-bb4f-22e262284ced> ;
+    dcterms:title "EVI for Year 2000 to Present from TERRA" ;
+    esip:eastBound "-99.470885"^^xsd:float ;
+    esip:endDate "2014-12-31"^^xsd:date ;
+    esip:northBound "51.16971"^^xsd:float ;
+    esip:southBound "41.666534"^^xsd:float ;
+    esip:startDate "2000-02-18"^^xsd:date ;
+    esip:westBound "-119.57459"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:dbca3be0-8749-4a09-8379-03207ab35377> bcube:hasType "theme" ;
+    bcube:hasValue "EVI",
+        "Enhanced Vegetation Index",
+        "MODIS",
+        "MSDI",
+        "Montana",
+        "Montana Climate Office",
+        "Montana Spatial Data Infrastructure",
+        "climate",
+        "vegetation",
+        "vegetation index" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:ef3e7d7f-462f-4451-bb4f-22e262284ced> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-10T08:26:51.97Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-10T08:26:51.97Z" ;
+    dc:identifier "urn:sha:27d2147b1a758f5282723fc7bf460986e1857250308b8b7eb573d6dc" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "ftp://mco.cfc.umt.edu/evi/terra/Readme.html" .
+

@@ -1,0 +1,89 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:0255fa02-e677-4ab5-95b7-7254bb885b3a> bcube:hasType "place" ;
+    bcube:hasValue "Illinois" ;
+    dc:partOf "State location" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:468a93d4-f87a-4a95-97b7-d38f9e0b85d4> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-08-05T01:11:08.062Z" ;
+    bcube:lastUpdated "2015-08-05T01:11:08.062Z" ;
+    bcube:originatedFrom <urn:uuid:f70589c6-6a5d-4055-989d-527e5d9834e8> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:aa0ae3da-30a7-4896-b114-4e175d5fbb88> .
+
+<urn:uuid:8787feb8-95fb-4a4f-b010-e9fd18ec4e8c> bcube:hasType "place" ;
+    bcube:hasValue "US" ;
+    dc:partOf "U.S. Department of Commerce, 1995, Countries, Dependencies, Areas of Special Sovereignty, and Their Principal Administrative Divisions (Federal Information Processing Standard (FIPS) 10-4): Washington, D.C., National Institute of Standards and Technology" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:aa0ae3da-30a7-4896-b114-4e175d5fbb88> bcube:dateCreated "2015-08-05T01:11:08.062Z" ;
+    bcube:hasMetadataRecord <urn:uuid:468a93d4-f87a-4a95-97b7-d38f9e0b85d4> ;
+    bcube:lastUpdated "2015-08-05T01:11:08.062Z" ;
+    dc:conformsTo <urn:uuid:0255fa02-e677-4ab5-95b7-7254bb885b3a>,
+        <urn:uuid:8787feb8-95fb-4a4f-b010-e9fd18ec4e8c>,
+        <urn:uuid:af7253dd-bea3-4cc3-baf3-9002c10c53b3> ;
+    dc:description "LiDAR data is remotely sensed high-resolution elevation data collected by an airborne collection platform. Using a combination of laser rangefinding, GPS positioning and inertial measurement technologies; LiDAR instruments are able to make highly detailed Digital Elevation Models (DEMs) of the earth's terrain, man-made structures and vegetation." ;
+    dc:spatial "POLYGON ((-89.381944276 41.122571525,-89.381944276 41.251689625,-89.290165047 41.251689625,-89.290165047 41.122571525,-89.381944276 41.122571525))" ;
+    dcterms:publisher <urn:uuid:db9c324b-c161-486a-893d-898b37407592> ;
+    dcterms:references <urn:uuid:abc857fa-eef4-4ae3-94d7-de6ca77fd426> ;
+    dcterms:title "Illinois River, Peoria Pool 0.5m Contours" ;
+    esip:eastBound "-89.290165047"^^xsd:float ;
+    esip:endDate "2011-12-28"^^xsd:date ;
+    esip:northBound "41.251689625"^^xsd:float ;
+    esip:southBound "41.122571525"^^xsd:float ;
+    esip:startDate "2008-03-25"^^xsd:date ;
+    esip:westBound "-89.381944276"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:abc857fa-eef4-4ae3-94d7-de6ca77fd426> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-05T01:11:08.062Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-05T01:11:08.062Z" ;
+    dc:identifier "urn:sha:0c01cdab243d2f029cd5cea4363dc882eb09604230bed9eb2d88a4f8" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www.umesc.usgs.gov/data_library/gis_data/lidar.html" .
+
+<urn:uuid:af7253dd-bea3-4cc3-baf3-9002c10c53b3> bcube:hasType "theme" ;
+    bcube:hasValue "Contour",
+        "DEM",
+        "Surface Model",
+        "digital elevation model",
+        "elevation",
+        "laser",
+        "lidar",
+        "topography" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:db9c324b-c161-486a-893d-898b37407592> owl:a foaf:Organization ;
+    foaf:name "" .
+
+<urn:uuid:f70589c6-6a5d-4055-989d-527e5d9834e8> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-05T01:11:08.062Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-05T01:11:08.062Z" ;
+    dc:identifier "urn:sha:c7e1d5d839d334f4a1b0d17095a451bfd340f501ddd51bf2e6745ef2" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://data.usgs.gov/metadata/Upper_Midwest_Environmental_Sciences_Center_Data/54f4b45ae4b02419550d00a4.xml" .
+

@@ -1,0 +1,57 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:500b09d3-b42f-4e76-b1f6-34484be048b3> bcube:hasType "theme" ;
+    bcube:hasValue "Imagery, base maps and land cover",
+        "biota",
+        "distribution of forests",
+        "land use forecasts" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:714631ad-a93d-4824-98c4-f91a645b308b> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-11-01T22:45:30.209Z" ;
+    bcube:lastUpdated "2015-11-01T22:45:30.209Z" ;
+    bcube:originatedFrom <urn:uuid:c58c5656-ac4b-4e53-98ad-3dd928f2ca7f> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:c3bfd896-fd34-43f4-bf2f-09859e68e513> .
+
+<urn:uuid:a64abe8e-0f42-4d01-b667-ba818d3dad14> owl:a foaf:Organization ;
+    foaf:name "USDA Forest Service" .
+
+<urn:uuid:c3bfd896-fd34-43f4-bf2f-09859e68e513> bcube:dateCreated "2015-11-01T22:45:30.209Z" ;
+    bcube:hasMetadataRecord <urn:uuid:714631ad-a93d-4824-98c4-f91a645b308b> ;
+    bcube:lastUpdated "2015-11-01T22:45:30.209Z" ;
+    dc:conformsTo <urn:uuid:500b09d3-b42f-4e76-b1f6-34484be048b3> ;
+    dc:description "These land use forecasts were generated for the years 2020 and 2040 under two different scenarios. The data were generated using a model that forecasts land use change." ;
+    dc:spatial "POLYGON ((-97.104246 23.957495,-97.104246 39.961157,-74.773082 39.961157,-74.773082 23.957495,-97.104246 23.957495))" ;
+    dcterms:publisher <urn:uuid:a64abe8e-0f42-4d01-b667-ba818d3dad14> ;
+    dcterms:title "socio1f11.xls" ;
+    esip:eastBound "-74.773082"^^xsd:float ;
+    esip:northBound "39.961157"^^xsd:float ;
+    esip:southBound "23.957495"^^xsd:float ;
+    esip:westBound "-97.104246"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:c58c5656-ac4b-4e53-98ad-3dd928f2ca7f> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-01T22:45:30.209Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-01T22:45:30.209Z" ;
+    dc:identifier "urn:sha:d02d4d4c829616bb12c2d0f0f34197f1e7d65680d9116da28965c8c8" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www.srs.fs.usda.gov/sustain/data/socio1f11/socio1f11.xml" .
+

@@ -1,0 +1,57 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:5e7f82db-9afb-44fb-b58d-03df2cf881a8> a "OGC:WCS" ;
+    bcube:contains <urn:uuid:0449ee4b-cdcc-4306-a77b-18f8f14d311a> ;
+    bcube:dateCreated "2015-06-22T20:54:17.793Z" ;
+    bcube:lastUpdated "2015-06-22T20:54:17.793Z" ;
+    bcube:originatedFrom <urn:uuid:dcb1226e-99fc-4246-9fbe-6eac721cfdd1> ;
+    owl:a bcube:service .
+
+<urn:uuid:0449ee4b-cdcc-4306-a77b-18f8f14d311a> bcube:dateCreated "2015-06-22T20:54:17.793Z" ;
+    bcube:lastUpdated "2015-06-22T20:54:17.793Z" ;
+    dc:description "Five year mean for spring, as estimated from MODIS/Aqua satellite imagery, for euphotic depth in northern Gulf of Mexico. MODIS-Aqua satellite data from January 2005 - December 2009 was processed to calculate euphotic depth. This is based on first estimating the absorption and backscattering coefficients of the water from the satellite remote sensing reflectance values and then using those coefficients to estimate the euphotic depth. In situ data from the Southeast Area Monitoring and Assessment Program (SEAMAP) program were overlaid on the modeled data. Both the satellite data and the SEAMAP data were then reclassified into Coastal and Marine Ecological Classification Standard (CMECS) Water Column component categories. The CMECS is a catalog of terms that provides a means for classifying ecological units using a simple, standard format and common terminology. CMECS offers a way to organize and interpret data about the marine environment, and it provides a common platform for inter-relating data." ;
+    dc:spatial "POLYGON ((-99.001007500100002 19.284116384,-99.001007500100002 36.119455820900001,-79.09370239 36.119455820900001,-79.09370239 19.284116384,-99.001007500100002 19.284116384))" ;
+    dc:title "Spring_1" ;
+    dcterms:references <urn:uuid:db482262-f94d-4263-8d26-3e1a1d15b718> ;
+    esip:eastBound "-79.09370239"^^xsd:float ;
+    esip:northBound "36.1194558209"^^xsd:float ;
+    esip:southBound "19.284116384"^^xsd:float ;
+    esip:westBound "-99.0010075001"^^xsd:float ;
+    owl:a bcube:Layer .
+
+<urn:uuid:db482262-f94d-4263-8d26-3e1a1d15b718> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-06-22T20:54:17.793Z" ;
+    bcube:hasConfidence "Not Sure" ;
+    bcube:hasUrlSource "Generated" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-06-22T20:54:17.793Z" ;
+    dc:identifier "urn:sha:56ba1beb96109e7a7a9e589da5eaa799532833f2dc2137285a89c5d4" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www.ncddc.noaa.gov/arcgis/services/DataAtlas/CMECS_EuphoticDepth_Spring/MapServer/WCSServer?width=500&version=1.1.2&coverage=1&service=WCS&crs=CRS%3A84&format=GTiff&request=GetCoverage&bbox=-99.0010075001%2C19.284116384%2C-79.09370239%2C36.1194558209&height=500" .
+
+<urn:uuid:dcb1226e-99fc-4246-9fbe-6eac721cfdd1> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-06-22T20:54:17.793Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-06-22T20:54:17.793Z" ;
+    dc:identifier "urn:sha:76dd44acc9425eaeb801f07841dfa0fa6faf59238d92a8292a91d437" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www.ncddc.noaa.gov/arcgis/services/DataAtlas/CMECS_EuphoticDepth_Spring/MapServer/WCSServer?request=GetCapabilities&service=WCS" .
+

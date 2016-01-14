@@ -1,0 +1,70 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:126de79f-870f-4a6d-ab73-4a57fed6667f> bcube:hasType "theme" ;
+    bcube:hasValue "Elevation",
+        "Laser",
+        "Remote Sensing",
+        "Terrain",
+        "Topography",
+        "Topography/Bathymetry",
+        "lidar" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:3272af38-4ff9-4378-9ebc-69d096b60394> bcube:hasType "place" ;
+    bcube:hasValue "Alaska",
+        "USA",
+        "Valdez" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:33d8e834-ecf9-40b1-9612-1dde5e34c02a> bcube:hasValue "elevation" ;
+    dc:partOf "IsoTopicCategories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:52838da1-a449-4441-bf0d-dfcac538aa66> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2014-07-31T08:16:32.386Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2014-07-31T08:16:32.386Z" ;
+    dc:identifier "urn:sha:c9768df2bb8a7592d2c1309e3d6ff5a5e1571c1277c2bd7e7755776e" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "https://data.noaa.gov/harvest/object/37833453-4666-4df4-8313-23bcf3c231ce" .
+
+<urn:uuid:797103ed-621c-4c2c-9cd3-e7bfefc64e34> bcube:dateCreated "2014-07-31T08:16:32.386Z" ;
+    bcube:hasMetadataRecord <urn:uuid:b4e1d40f-3c93-471d-9d5f-7139c1ee5ce1> ;
+    bcube:lastUpdated "2014-07-31T08:16:32.386Z" ;
+    dc:conformsTo <urn:uuid:126de79f-870f-4a6d-ab73-4a57fed6667f>,
+        <urn:uuid:3272af38-4ff9-4378-9ebc-69d096b60394>,
+        <urn:uuid:33d8e834-ecf9-40b1-9612-1dde5e34c02a> ;
+    dc:description "This project was completed under USGS Contract No. 07CRCN0002, Task Order No. 070020009. This delivery contains point cloud data in LAS 1.1 format, classified in the following manner. Class 1: Unclassified, Class 2: Ground, Class 7: Low Point (Noise), Class 9: Water, Class 10: High Point (Noise), Class 12: Overlap, and Class 17: Port The following are the collection parameters and equipment used to create these data sets. Aircraft: Cessna 320 (N3443Q) and Piper Navajo (N6GR) Lidar System: Optech ALTM Gemini (03SEN145) Approximate Collection Altitude (Above Mean Terrain): 1800 meters Ground Speed: 145 kts Pulse Rate Frequency: 70 kHz Mirror Scan Frequency: 62.6 Hz Scan Angle (+/-): 5.3 degrees Beam Divergence: Narrow (0.25 mrad) Accuracy statements are based on areas of moderate terrain, with points classified as ground. Diminished accuracies are to be expected in areas of extreme terrain and dense vegetation. The accuracy of each point is expected to meet the vertical accuracy standard. Derived products may be less accurate in areas of extreme terrain and dense vegetation due to a lesser number of points defining the ground in these areas. Classified data sets such as this one may have varying posting due to some pulses not reaching the ground." ;
+    dc:spatial "POLYGON ((-146.641106 61.036345,-146.641106 61.15846,-145.913257 61.15846,-145.913257 61.036345,-146.641106 61.036345))" ;
+    dcterms:title "2007 Aero-Metric Inc. Topographic LiDAR: Valdez, Alaska" ;
+    esip:eastBound "-145.913257"^^xsd:float ;
+    esip:northBound "61.15846"^^xsd:float ;
+    esip:southBound "61.036345"^^xsd:float ;
+    esip:westBound "-146.641106"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:b4e1d40f-3c93-471d-9d5f-7139c1ee5ce1> a "ISO 19115:2003/19139" ;
+    bcube:dateCreated "2014-07-31T08:16:32.386Z" ;
+    bcube:lastUpdated "2014-07-31T08:16:32.386Z" ;
+    bcube:originatedFrom <urn:uuid:52838da1-a449-4441-bf0d-dfcac538aa66> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:797103ed-621c-4c2c-9cd3-e7bfefc64e34> .
+

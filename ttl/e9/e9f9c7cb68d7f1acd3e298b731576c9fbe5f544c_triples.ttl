@@ -1,0 +1,98 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:4943b96f-5924-4cc3-9cec-950d9cb054f2> dcterms:references <urn:uuid:826e9c41-7936-463e-9876-6635daf33489> ;
+    owl:a bibo:WebPage .
+
+<urn:uuid:826e9c41-7936-463e-9876-6635daf33489> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-06T16:31:32.958Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-06T16:31:32.958Z" ;
+    dc:identifier "urn:sha:30cf345e633e286b856e2d494158a7a0073272646fff2597a42435eb" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www.coast.noaa.gov/digitalcoast/data/SoVI/" .
+
+<urn:uuid:96644e1c-2fc9-4694-bd51-0a3d0ebab2c3> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-06T16:31:32.958Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-06T16:31:32.958Z" ;
+    dc:identifier "urn:sha:2e07d87e73904d8d01f112242f30eca08b2625d0814672c876f40719" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://coast.noaa.gov/data/Documents/Metadata/Demographic/harvest/SOVI_BlkGrp_2000_VA_shp.xml" .
+
+<urn:uuid:9b8a373d-1e1a-40df-8a47-ddf34bc7e819> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-08-06T16:31:32.958Z" ;
+    bcube:lastUpdated "2015-08-06T16:31:32.958Z" ;
+    bcube:originatedFrom <urn:uuid:96644e1c-2fc9-4694-bd51-0a3d0ebab2c3> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:c81f935b-171d-40fd-b91c-acd0290c24e8> .
+
+<urn:uuid:b92f520e-cf6d-4cdf-a509-ada498885602> bcube:hasType "theme" ;
+    bcube:hasValue "economy",
+        "environment",
+        "oceans",
+        "society",
+        "structure",
+        "transportation" ;
+    dc:partOf "ISO 19115 Topic Category" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:c81f935b-171d-40fd-b91c-acd0290c24e8> bcube:dateCreated "2015-08-06T16:31:32.958Z" ;
+    bcube:hasMetadataRecord <urn:uuid:9b8a373d-1e1a-40df-8a47-ddf34bc7e819> ;
+    bcube:lastUpdated "2015-08-06T16:31:32.958Z" ;
+    dc:conformsTo <urn:uuid:b92f520e-cf6d-4cdf-a509-ada498885602>,
+        <urn:uuid:d9abd613-7759-4fed-adff-1f0aac0482e6>,
+        <urn:uuid:fd75d745-70b1-4d23-8c8c-9a68f70db57a> ;
+    dc:description "This data depicts the social vulnerability of Virginia census block groups to environmental hazards. Data were culled primarily from the 2000 Decennial Census." ;
+    dc:spatial "POLYGON ((-178.217598 18.921786,-178.217598 71.406235,-66.969271 71.406235,-66.969271 18.921786,-178.217598 18.921786))" ;
+    dcterms:publisher <urn:uuid:ff0d4a47-cdd9-4d69-9813-0a39b9e163f5> ;
+    dcterms:references <urn:uuid:4943b96f-5924-4cc3-9cec-950d9cb054f2> ;
+    dcterms:title "Social Vulnerability Index (SoVI) for Virginia based on 2000 Census Block Groups" ;
+    esip:eastBound "-66.969271"^^xsd:float ;
+    esip:northBound "71.406235"^^xsd:float ;
+    esip:southBound "18.921786"^^xsd:float ;
+    esip:startDate "2000-01-01"^^xsd:date ;
+    esip:westBound "-178.217598"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:d9abd613-7759-4fed-adff-1f0aac0482e6> bcube:hasType "theme" ;
+    bcube:hasValue "Comparative Index",
+        "Demographics",
+        "Environmental Hazards",
+        "Indicators",
+        "Resilience",
+        "Social Vulnerability Index",
+        "Socioeconomics",
+        "Vulnerability" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:fd75d745-70b1-4d23-8c8c-9a68f70db57a> bcube:hasType "place" ;
+    bcube:hasValue "Census Block Groups",
+        "Coastal States",
+        "United States" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:ff0d4a47-cdd9-4d69-9813-0a39b9e163f5> owl:a foaf:Organization ;
+    foaf:name "Hazards and Vulnerability Research Institute (HVRI), University of South Carolina" .
+

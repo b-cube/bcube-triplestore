@@ -1,0 +1,89 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:30eb0009-3bf6-4d5a-a2b9-7efaf3d50af3> owl:a foaf:Organization ;
+    foaf:name "" .
+
+<urn:uuid:329bf17e-2e7b-4068-a289-ae4aebc4f243> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-11-01T18:46:00.037Z" ;
+    bcube:lastUpdated "2015-11-01T18:46:00.037Z" ;
+    bcube:originatedFrom <urn:uuid:f44c571e-6554-4d22-bd57-78b3a2f7d1ef> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:7cfcead9-e483-40b3-8cb0-95b8a18f049a> .
+
+<urn:uuid:6a6a43c8-bbd3-414f-8807-7e0d42a2cb12> bcube:hasType "place" ;
+    bcube:hasValue "02170",
+        "County or Equivalent Entity",
+        "Matanuska-Susitna",
+        "U.S.",
+        "United States" ;
+    dc:partOf "FIPS Publication 5-2, FIPS Publication 6-4, FIPS Publication 8-6, FIPS Publication 9-1,FIPS Publication55-4" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:7cfcead9-e483-40b3-8cb0-95b8a18f049a> bcube:dateCreated "2015-11-01T18:46:00.037Z" ;
+    bcube:hasMetadataRecord <urn:uuid:329bf17e-2e7b-4068-a289-ae4aebc4f243> ;
+    bcube:lastUpdated "2015-11-01T18:46:00.037Z" ;
+    dc:conformsTo <urn:uuid:6a6a43c8-bbd3-414f-8807-7e0d42a2cb12>,
+        <urn:uuid:90b190af-9187-4cff-b9f3-e0fe55317edf>,
+        <urn:uuid:ad7985df-de04-4b49-b452-28d5c201edd3> ;
+    dc:description "The TIGER/Line Shapefiles are an extract of selected geographic and cartographic information from the Census MAF/TIGER database. The Census MAF/TIGER database represents a seamless national file with no overlaps or gaps between parts. However, each TIGER/Line Shapefile is designed to stand alone as an independent data set or the shapefiles can be combined to cover the whole nation." ;
+    dc:spatial "POLYGON ((-153.0175 61.07796,-153.0175 63.482913,-146.42522 63.482913,-146.42522 61.07796,-153.0175 61.07796))" ;
+    dcterms:publisher <urn:uuid:30eb0009-3bf6-4d5a-a2b9-7efaf3d50af3> ;
+    dcterms:references <urn:uuid:e8bd70c9-1eea-4dfb-a881-7d4917020da3> ;
+    dcterms:title "TIGER/Line Shapefile, 2008, 2000 county, Matanuska-Susitna Borough, AK, Voting District (VTD)" ;
+    esip:eastBound "-146.42522"^^xsd:float ;
+    esip:endDate "2008-07-01"^^xsd:date ;
+    esip:northBound "63.482913"^^xsd:float ;
+    esip:southBound "61.07796"^^xsd:float ;
+    esip:startDate "2008-01-01"^^xsd:date ;
+    esip:westBound "-153.0175"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:90b190af-9187-4cff-b9f3-e0fe55317edf> bcube:hasType "theme" ;
+    bcube:hasValue "County or equivalent entity",
+        "Polygon",
+        "State Legislative District",
+        "Voting District" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:ad7985df-de04-4b49-b452-28d5c201edd3> bcube:hasType "theme" ;
+    bcube:hasValue "boundaries" ;
+    dc:partOf "ISO 19115 Topic Categories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:e8bd70c9-1eea-4dfb-a881-7d4917020da3> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-01T18:46:00.037Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-01T18:46:00.037Z" ;
+    dc:identifier "urn:sha:79bbf4850e29dbf809396fbab74dfc35d3e3163815c00f25f7c015ba" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www2.census.gov/geo/tiger/TIGER2008/02_ALASKA/02170_Matanuska-Susitna_Borough/tl_2008_02170_vtd00.zip" .
+
+<urn:uuid:f44c571e-6554-4d22-bd57-78b3a2f7d1ef> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-01T18:46:00.037Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-01T18:46:00.037Z" ;
+    dc:identifier "urn:sha:31fcff3095417399cbbc8ee05f8466b8d1b72736e1f6eeddda0b37f9" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://meta.geo.census.gov/data/existing/decennial/GEO/GPMB/TIGERline/fe_2008/vtd00/tl_2008_02170_vtd00_url.shp.xml" .
+

@@ -1,0 +1,61 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:4d6dbaae-a44a-4419-9fa6-39c7735292a2> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-10-30T15:02:10.421Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-10-30T15:02:10.421Z" ;
+    dc:identifier "urn:sha:44101809a126a64fd006f74159c7589823591b99049c39de504f149e" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://data.fs.usda.gov/geodata/edw/edw_resources/meta/S_USA.Survey_X.xml" .
+
+<urn:uuid:4e9c1456-037c-419e-8065-9671e65dd047> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-10-30T15:02:10.421Z" ;
+    bcube:lastUpdated "2015-10-30T15:02:10.421Z" ;
+    bcube:originatedFrom <urn:uuid:4d6dbaae-a44a-4419-9fa6-39c7735292a2> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:dd951d8e-6678-4b28-b7bd-c17a2b4f59d5> .
+
+<urn:uuid:8d54abf5-9325-449d-8416-f3b2f609935b> owl:a foaf:Organization ;
+    foaf:name "" .
+
+<urn:uuid:c34b10e1-7c31-4ce6-b85d-802ed79529f6> bcube:hasType "theme" ;
+    bcube:hasValue "Cadastral",
+        "Cartographic",
+        "FSTopo",
+        "Quadrangle",
+        "Survey",
+        "Topographic",
+        "imageryBaseMapsEarthCover" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:dd951d8e-6678-4b28-b7bd-c17a2b4f59d5> bcube:dateCreated "2015-10-30T15:02:10.421Z" ;
+    bcube:hasMetadataRecord <urn:uuid:4e9c1456-037c-419e-8065-9671e65dd047> ;
+    bcube:lastUpdated "2015-10-30T15:02:10.421Z" ;
+    dc:conformsTo <urn:uuid:c34b10e1-7c31-4ce6-b85d-802ed79529f6> ;
+    dc:description "Survey_X contains monuments, land grants, and non Public Land Survey System (PLSS) survey points. The point feature class was derived from the Cartographic Feature File (CFF).Within the FSTopo database, features are represented as lines, points, or polygons, with descriptive subtype attribute codes attached to describe the cartographic symbology characteristics of features. Annotation features are represented as stand-alone map text collected relative to the scale of the topographic quadrangle. The FSTopo database was originally populated with Cartographic Feature File (CFF) data which was digitized from either the Primary Base Series (PBS) quadrangles or U.S. Geological Survey (USGS) topographic map series quadrangles. Over time, the legacy CFF data is being replaced (at least partially) with data from nationally standardized sources. Data completeness reflects the content of the original source graphic, digital correction guide information, stereoscopic source, monoscopic source, supplemented with cadastral source information. Forests and Quadrangles may have undergone revision at varying dates. The update revision uses a variety of sources, including Digital Orthophoto Quad (DOQ) imagery, NAIP imagery, cadastral information, other vector data sources, and field-prepared correction guides in hardcopy or digital format." ;
+    dc:spatial "POLYGON ((-149.160439 28.99344,-149.160439 61.070503,-70.760374 61.070503,-70.760374 28.99344,-149.160439 28.99344))" ;
+    dcterms:publisher <urn:uuid:8d54abf5-9325-449d-8416-f3b2f609935b> ;
+    dcterms:title "S_USA.Survey_X" ;
+    esip:eastBound "-70.760374"^^xsd:float ;
+    esip:northBound "61.070503"^^xsd:float ;
+    esip:southBound "28.99344"^^xsd:float ;
+    esip:westBound "-149.160439"^^xsd:float ;
+    owl:a dcat:Dataset .
+

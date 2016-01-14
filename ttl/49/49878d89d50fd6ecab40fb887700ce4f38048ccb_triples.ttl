@@ -1,0 +1,62 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:04639334-f617-4058-be6b-cedd5cebb3cb> a "OGC:WMS" ;
+    bcube:contains <urn:uuid:e9df2154-4ba5-44d1-90bf-3dc70c3b81fc> ;
+    bcube:dateCreated "2015-07-01T21:31:10.534Z" ;
+    bcube:lastUpdated "2015-07-01T21:31:10.534Z" ;
+    bcube:originatedFrom <urn:uuid:b5259848-a8e4-4ce9-941c-e95ea58fc4a4> ;
+    dc:conformsTo <urn:uuid:dc71db52-2f4b-439e-98e1-972195383ec4> ;
+    dc:description "BoreholeTemperatures in the state of Illinois" ;
+    owl:a bcube:service .
+
+<urn:uuid:6110b25d-6d9c-44be-ab8f-0eab6cd1e86b> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-07-01T21:31:10.534Z" ;
+    bcube:hasConfidence "Not Sure" ;
+    bcube:hasUrlSource "Generated" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-07-01T21:31:10.534Z" ;
+    dc:identifier "urn:sha:856261e36bccdcf8af27b5060da19716e75c3083596974520f4df461" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://geothermal.isgs.illinois.edu/arcgis/services/aasggeothermal/ILBoreholeTemperatures/MapServer/WMSServer?layers=BoreholeTemperature&width=500&version=1.3.0&bbox=-91.045359%2C37.112057%2C-87.503187%2C42.505617&service=WMS&format=image%2Fpng&styles=&crs=CRS%3A84&request=GetMap&height=500" .
+
+<urn:uuid:b5259848-a8e4-4ce9-941c-e95ea58fc4a4> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-07-01T21:31:10.534Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-07-01T21:31:10.534Z" ;
+    dc:identifier "urn:sha:c0a0cbf6278e1d8eedd269aa266a3e94d0612a19e90cf86815528a90" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://geothermal.isgs.illinois.edu/arcgis/services/aasggeothermal/ILBoreholeTemperatures/MapServer/WMSServer?request=GetCapabilities&service=WMS" .
+
+<urn:uuid:dc71db52-2f4b-439e-98e1-972195383ec4> bcube:hasValue "borehole, temperatures, oil, geothermal, Illinois" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:e9df2154-4ba5-44d1-90bf-3dc70c3b81fc> bcube:dateCreated "2015-07-01T21:31:10.534Z" ;
+    bcube:lastUpdated "2015-07-01T21:31:10.534Z" ;
+    dc:description "This layer contains data describing borehole temperatures in the state of Illinois, obtained by the AASG for the Geothermal Data Project. The data table includes general information on the location of the borehole, temperature at some depth within the well, measurement procedure, location uncertainty and remarks. Citations are included in the dataset. The HeaderURI for a particular borehole is the cross-referencing link (foreign key) used to associate the borehole with web based information on the well construction, pictures or other information, specific to one feature. The data is displayed using a temperature gradient color scheme ramping from green (cool) to red (hot). Layer files containing the symbology for these data layers can be found in the USGIN repository at <a href:\"http://repository.usgin.org/uri_gin/usgin/dlio/206\">http://repository.usgin.org/uri_gin/usgin/dlio/206</a>. The original data and metadata can be viewed or downloaded from the USGIN Repository at <a href=\"http://repository.stategeothermaldata.org/repository/resource/cc54f15894222c91e71e4530dc042a26/\">State Geothermal Data Repository</a>." ;
+    dc:spatial "POLYGON ((-91.045359 37.112057,-91.045359 42.505617,-87.503187 42.505617,-87.503187 37.112057,-91.045359 37.112057))" ;
+    dc:title "BoreholeTemperature" ;
+    dcterms:references <urn:uuid:6110b25d-6d9c-44be-ab8f-0eab6cd1e86b> ;
+    esip:eastBound "-87.503187"^^xsd:float ;
+    esip:northBound "42.505617"^^xsd:float ;
+    esip:southBound "37.112057"^^xsd:float ;
+    esip:westBound "-91.045359"^^xsd:float ;
+    owl:a bcube:Layer .
+

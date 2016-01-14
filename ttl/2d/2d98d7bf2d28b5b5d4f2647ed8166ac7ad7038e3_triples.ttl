@@ -1,0 +1,70 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:0cc0e8bf-b4b1-4593-98b7-9e9209054da1> bcube:hasValue "elevation" ;
+    dc:partOf "IsoTopicCategories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:4f0b2cf1-67c2-421e-a526-50a79def7134> bcube:hasType "theme" ;
+    bcube:hasValue "Bathymetry/Topography",
+        "DEM",
+        "beach",
+        "digital elevation model",
+        "erosion",
+        "laser",
+        "lidar" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:66747fa1-44fc-4d3e-beba-e391750e14db> a "ISO 19115:2003/19139" ;
+    bcube:dateCreated "2015-08-04T15:02:54.33Z" ;
+    bcube:lastUpdated "2015-08-04T15:02:54.33Z" ;
+    bcube:originatedFrom <urn:uuid:f434c616-73a7-4c77-8a16-cf1229b3631f> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:c3418dd4-3c8e-45f6-ac9d-158304efe96e> .
+
+<urn:uuid:c3418dd4-3c8e-45f6-ac9d-158304efe96e> bcube:dateCreated "2015-08-04T15:02:54.33Z" ;
+    bcube:hasMetadataRecord <urn:uuid:66747fa1-44fc-4d3e-beba-e391750e14db> ;
+    bcube:lastUpdated "2015-08-04T15:02:54.33Z" ;
+    dc:conformsTo <urn:uuid:0cc0e8bf-b4b1-4593-98b7-9e9209054da1>,
+        <urn:uuid:4f0b2cf1-67c2-421e-a526-50a79def7134>,
+        <urn:uuid:e36c3ce4-78e3-417d-95a8-82f1a50f1d61> ;
+    dc:description "This data set includes data collected on April 3rd, 1998 in the the states of Maryland and Virgina along the DelMarVa peninsula. Laser beach mapping uses a pulsed laser ranging system mounted onboard an aircraft to measure ground elevation and coastal topography. The laser emits laser beams at high frequency and is directed downward at the earth's surface through a port opening in the bottom of the aircraft's fuselage. The laser system records the time difference between emission of the laser beam and the reception of the reflected laser signal in the aircraft. The aircraft travels over the beach at approximately 60 meters per second while surveying from the low water line to the landward base of the sand dunes." ;
+    dc:spatial "POLYGON ((-75.555099 37.759575,-75.555099 38.347026,-75.039028 38.347026,-75.039028 37.759575,-75.555099 37.759575))" ;
+    dcterms:title "1998 Spring East Coast NOAA/USGS/NASA Airborne LiDAR Assessment of Coastal Erosion (ALACE) Project for the US Coastline" ;
+    esip:eastBound "-75.039028"^^xsd:float ;
+    esip:northBound "38.347026"^^xsd:float ;
+    esip:southBound "37.759575"^^xsd:float ;
+    esip:westBound "-75.555099"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:e36c3ce4-78e3-417d-95a8-82f1a50f1d61> bcube:hasType "place" ;
+    bcube:hasValue "Maryland",
+        "U.S. Coastline",
+        "Virginia" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:f434c616-73a7-4c77-8a16-cf1229b3631f> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-04T15:02:54.33Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-04T15:02:54.33Z" ;
+    dc:identifier "urn:sha:fe76dcf9871177d8400e8208c70be930b97a3d2d7bc9d3fe9df5cfcd" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://catalog.data.gov/harvest/object/8a78a59f-e009-4dc6-8227-4910736d4cf0" .
+

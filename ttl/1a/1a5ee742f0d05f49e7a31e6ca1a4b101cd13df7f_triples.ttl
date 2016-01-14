@@ -1,0 +1,90 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:21cfd66e-0f4d-4806-a172-de86d235b562> owl:a foaf:Organization ;
+    foaf:name "" .
+
+<urn:uuid:50fbc57e-66b4-42dc-ba51-23e1801c5844> bcube:hasType "place" ;
+    bcube:hasValue "39",
+        "OH",
+        "Ohio",
+        "State or Equivalent Entity",
+        "U.S.",
+        "United States" ;
+    dc:partOf "FIPS Publication 5-2, FIPS Publication 6-4, FIPS Publication 8-6, FIPS Publication 9-1" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:70d7276e-b1c0-4656-8ff8-c48574657512> bcube:hasType "theme" ;
+    bcube:hasValue "boundaries" ;
+    dc:partOf "ISO 19115 Topic Categories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:84c39f7d-010f-40f8-a6b7-37635478fc5f> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-11-07T09:57:55.084Z" ;
+    bcube:lastUpdated "2015-11-07T09:57:55.084Z" ;
+    bcube:originatedFrom <urn:uuid:cb6007bf-d5a7-4d8d-89c8-05ee0faf9b25> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:8c03882a-60d8-44e5-8305-6f112a9f3ff9> .
+
+<urn:uuid:8c03882a-60d8-44e5-8305-6f112a9f3ff9> bcube:dateCreated "2015-11-07T09:57:55.084Z" ;
+    bcube:hasMetadataRecord <urn:uuid:84c39f7d-010f-40f8-a6b7-37635478fc5f> ;
+    bcube:lastUpdated "2015-11-07T09:57:55.084Z" ;
+    dc:conformsTo <urn:uuid:50fbc57e-66b4-42dc-ba51-23e1801c5844>,
+        <urn:uuid:70d7276e-b1c0-4656-8ff8-c48574657512>,
+        <urn:uuid:d8d31e99-6e0b-4257-93a9-286fb3e098b7> ;
+    dc:description "The TIGER/Line Shapefiles are an extract of selected geographic and cartographic information from the Census MAF/TIGER database. The Census MAF/TIGER database represents a seamless national file with no overlaps or gaps between parts. However, each TIGER/Line Shapefile is designed to stand alone as an independent data set or the shapefiles can be combined to cover the whole nation." ;
+    dc:spatial "POLYGON ((-84.820305 38.403423,-84.820305 42.327132,-80.5182 42.327132,-80.5182 38.403423,-84.820305 38.403423))" ;
+    dcterms:publisher <urn:uuid:21cfd66e-0f4d-4806-a172-de86d235b562> ;
+    dcterms:references <urn:uuid:a737430f-aff9-4000-a4d6-b97988b5bcfd> ;
+    dcterms:title "TIGER/Line Shapefile, 2007, state, Ohio, Unified School District" ;
+    esip:eastBound "-80.5182"^^xsd:float ;
+    esip:endDate "2007-07-01"^^xsd:date ;
+    esip:northBound "42.327132"^^xsd:float ;
+    esip:southBound "38.403423"^^xsd:float ;
+    esip:startDate "2007-01-01"^^xsd:date ;
+    esip:westBound "-84.820305"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:a737430f-aff9-4000-a4d6-b97988b5bcfd> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-07T09:57:55.084Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-07T09:57:55.084Z" ;
+    dc:identifier "urn:sha:36a01401f71f2ecc49dc6604f0b653b429d7905d079e1a592c963997" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www2.census.gov/geo/tiger/TIGER2007FE/39_OHIO/fe_2007_39_unsd.zip" .
+
+<urn:uuid:cb6007bf-d5a7-4d8d-89c8-05ee0faf9b25> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-07T09:57:55.084Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-07T09:57:55.084Z" ;
+    dc:identifier "urn:sha:d0a4ddde4aa60410b8d8d4e0769984fcdad23b5c106292a38ca7e66d" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://meta.geo.census.gov/data/existing/decennial/GEO/GPMB/TIGERline/fe_2007/unsd/fe_2007_39_unsd_url.shp.xml" .
+
+<urn:uuid:d8d31e99-6e0b-4257-93a9-286fb3e098b7> bcube:hasType "theme" ;
+    bcube:hasValue "Polygon",
+        "School District",
+        "State or equivalent entity",
+        "Unified School District" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+

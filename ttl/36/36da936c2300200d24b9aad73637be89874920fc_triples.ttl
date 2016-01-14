@@ -1,0 +1,85 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:42fb64d9-979d-47d6-b7dd-f2b4d3ecef37> owl:a foaf:Organization ;
+    foaf:name "" .
+
+<urn:uuid:9007d4b3-2b4c-4b09-a663-6f2bfbcd364b> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-03-04T06:40:34.861Z" ;
+    bcube:lastUpdated "2015-03-04T06:40:34.861Z" ;
+    bcube:originatedFrom <urn:uuid:a25f3267-6013-4928-ba4a-3808de885679> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:93dd9f80-edb6-4cf3-823c-f74f84fe2282> .
+
+<urn:uuid:93dd9f80-edb6-4cf3-823c-f74f84fe2282> bcube:dateCreated "2015-03-04T06:40:34.861Z" ;
+    bcube:hasMetadataRecord <urn:uuid:9007d4b3-2b4c-4b09-a663-6f2bfbcd364b> ;
+    bcube:lastUpdated "2015-03-04T06:40:34.861Z" ;
+    dc:conformsTo <urn:uuid:a05498df-0060-48a9-a016-030acc9c391f>,
+        <urn:uuid:b71887b9-62fb-4402-aa0c-4c9ad950f87e> ;
+    dc:description "LAS files of LiDAR data covering the Radford, VA area." ;
+    dc:spatial "POLYGON ((-80.603208 37.081352,-80.603208 37.15179,-80.498479 37.15179,-80.498479 37.081352,-80.603208 37.081352))" ;
+    dcterms:publisher <urn:uuid:42fb64d9-979d-47d6-b7dd-f2b4d3ecef37> ;
+    dcterms:references <urn:uuid:9efd39c2-556f-41c1-9680-4af24a78b1ec> ;
+    dcterms:title "Radford, VA" ;
+    esip:eastBound "-80.498479"^^xsd:float ;
+    esip:endDate "2011-11-25"^^xsd:date ;
+    esip:northBound "37.15179"^^xsd:float ;
+    esip:southBound "37.081352"^^xsd:float ;
+    esip:startDate "2011-11-25"^^xsd:date ;
+    esip:westBound "-80.603208"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:9efd39c2-556f-41c1-9680-4af24a78b1ec> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-03-04T06:40:34.861Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-03-04T06:40:34.861Z" ;
+    dc:identifier "urn:sha:d14a028c2a3a2bc9476102bb288234c415a2b01f828ea62ac5b3e42f" ;
+    owl:a bcube:Url .
+
+<urn:uuid:a05498df-0060-48a9-a016-030acc9c391f> bcube:hasType "theme" ;
+    bcube:hasValue "Digital elevation model",
+        "Digital terrain model",
+        "Drainage Area",
+        "Hydraulic",
+        "Hydrographic",
+        "Hydrologic Modeling",
+        "Hydrology",
+        "LiDAR",
+        "Surface Model" ;
+    dc:partOf "VA" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:a25f3267-6013-4928-ba4a-3808de885679> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-03-04T06:40:34.861Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-03-04T06:40:34.861Z" ;
+    dc:identifier "urn:sha:af0db7437c2e1f62437c671d3c4907c00a370e9ff2f0534a7acc94c4" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "https://cloud.sdsc.edu/v1/AUTH_opentopography/www/metadata/com_contributed/VGIN_Radford_metadata.xml" .
+
+<urn:uuid:b71887b9-62fb-4402-aa0c-4c9ad950f87e> bcube:hasType "place" ;
+    bcube:hasValue "Radford",
+        "USA",
+        "VA" ;
+    dc:partOf "VA" ;
+    owl:a bcube:thesaurusSubset .
+

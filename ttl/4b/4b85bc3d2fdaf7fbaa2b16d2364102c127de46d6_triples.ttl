@@ -1,0 +1,69 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:18c6fac4-a1fc-4365-9cb0-87a00f394e49> bcube:hasType "theme" ;
+    bcube:hasValue "Data Coverage",
+        "LiDAR",
+        "Surface",
+        "Terrain",
+        "Topography" ;
+    dc:partOf "Keywords" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:28e597fa-8acd-49ea-b3d5-ab079e5ec0e7> bcube:dateCreated "2015-11-01T18:48:19.725Z" ;
+    bcube:hasMetadataRecord <urn:uuid:6510c662-0916-4ffe-8fd1-a3328f4df54e> ;
+    bcube:lastUpdated "2015-11-01T18:48:19.725Z" ;
+    dc:conformsTo <urn:uuid:18c6fac4-a1fc-4365-9cb0-87a00f394e49>,
+        <urn:uuid:ac8287c5-07c5-4c68-862f-9c0159f1d47b> ;
+    dc:description "This data has been acquired and developed by the U.S. Corps of Engineers ST. Louis District to collect and deliver topographic elevation point data derived from multiple return light detection and ranging (LiDAR) measurements for the 116 sq. mile project area encompassing the entire coastal region of the State of Connecticut. Fugro EarthData, Inc. acquired 46 flight lines in 4 lifts from November 14, 2012 to December 16, 2012. LiDAR data collection was performed with a Cessna 310 twin engine aircraft, utilizing a Leica ALS60 MPiA sensor; collecting multiple return x, y, and z as well as intensity data. The classified LiDAR point cloud data are delivered in LAS 1.2 format: 1 unclassified, 2 ground, 7 low points, 8 model keypoints, 9 water, and 10 ignored points. Specialized in-house and commercial software processes the native LiDAR data into 3-dimensional positions that can be imported into GIS software for visualization and further analysis. The horizontal datum for the data is geographic Coordinates, NAD83(NA2011) in meters and the vertical datum is the North American Vertical Datum of 1988 (NAVD88) in meters using GEIOD12A." ;
+    dc:spatial "POLYGON ((-73.661202 40.951486,-73.661202 41.396254,-71.847828 41.396254,-71.847828 40.951486,-73.661202 40.951486))" ;
+    dcterms:publisher <urn:uuid:326a724e-b476-4a25-9300-f8209785d95b> ;
+    dcterms:title "Hurricane Sandy Response Over the Coastal Region of Connecticut Hillshade .TIFs" ;
+    esip:eastBound "-71.847828"^^xsd:float ;
+    esip:endDate "2012-11-16"^^xsd:date ;
+    esip:northBound "41.396254"^^xsd:float ;
+    esip:southBound "40.951486"^^xsd:float ;
+    esip:startDate "2012-11-14"^^xsd:date ;
+    esip:westBound "-73.661202"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:326a724e-b476-4a25-9300-f8209785d95b> owl:a foaf:Organization ;
+    foaf:name "Fugro EarthData, Inc." .
+
+<urn:uuid:6510c662-0916-4ffe-8fd1-a3328f4df54e> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-11-01T18:48:19.725Z" ;
+    bcube:lastUpdated "2015-11-01T18:48:19.725Z" ;
+    bcube:originatedFrom <urn:uuid:c5000742-5fb9-44d0-8743-b5c12c810782> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:28e597fa-8acd-49ea-b3d5-ab079e5ec0e7> .
+
+<urn:uuid:ac8287c5-07c5-4c68-862f-9c0159f1d47b> bcube:hasType "place" ;
+    bcube:hasValue "Coast",
+        "Connecticut",
+        "US" ;
+    dc:partOf "Geographic Names Information System" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:c5000742-5fb9-44d0-8743-b5c12c810782> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-01T18:48:19.725Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-01T18:48:19.725Z" ;
+    dc:identifier "urn:sha:713360a5c68d864694cc891d45350674cc9c33141411cc07ae66b7be" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www.cteco.uconn.edu/help/lidar_docs/Coast2012/CT_Coast_Sandy_Response_LiDAR_TopoDataCoverage_Metadata.xml" .
+

@@ -1,0 +1,85 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:06b1246c-1a12-4cff-b93c-4187d5489223> owl:a foaf:Organization ;
+    foaf:name "" .
+
+<urn:uuid:0c688475-1748-457d-92c6-f2095e64109c> bcube:hasType "theme" ;
+    bcube:hasValue "AIA",
+        "American Indian Area",
+        "Polygon",
+        "Tribal Census Tract" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:35ff68f2-f448-44f5-85e3-420704aaa722> bcube:hasType "theme" ;
+    bcube:hasValue "boundaries" ;
+    dc:partOf "ISO 19115 Topic Categories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:9ac1aeb2-dc96-485f-bfc7-862faf910599> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-11-04T22:09:05.816Z" ;
+    bcube:lastUpdated "2015-11-04T22:09:05.816Z" ;
+    bcube:originatedFrom <urn:uuid:ca6d4902-db29-415b-ac22-2a70d3903482> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:a187a6be-520d-4d88-94cd-72b33eb014ff> .
+
+<urn:uuid:a187a6be-520d-4d88-94cd-72b33eb014ff> bcube:dateCreated "2015-11-04T22:09:05.816Z" ;
+    bcube:hasMetadataRecord <urn:uuid:9ac1aeb2-dc96-485f-bfc7-862faf910599> ;
+    bcube:lastUpdated "2015-11-04T22:09:05.816Z" ;
+    dc:conformsTo <urn:uuid:0c688475-1748-457d-92c6-f2095e64109c>,
+        <urn:uuid:35ff68f2-f448-44f5-85e3-420704aaa722>,
+        <urn:uuid:b4e517e7-329f-473a-a5ea-c4c86a610b9d> ;
+    dc:description "The TIGER/Line Files are shapefiles and related database files (.dbf) that are an extract of selected geographic and cartographic information from the U.S. Census Bureau's Master Address File / Topologically Integrated Geographic Encoding and Referencing (MAF/TIGER) Database (MTDB). The MTDB represents a seamless national file with no overlaps or gaps between parts, however, each TIGER/Line File is designed to stand alone as an independent data set, or they can be combined to cover the entire nation. A tribal census tract is a relatively permanent statistical subdivision of a federally recognized American Indian reservation and/or off-reservation trust land, delineated by the American Indian tribal government and/or the Census Bureau for the purpose of presenting demographic data. For the 2010 Census, tribal census tracts groups are defined independently of the standard county-based block group delineation. For federally recognized American Indian Tribes with reservations and/or off-reservation trust lands with a population less than 2,400, a single tribal census tract is defined. Qualifying areas with a population greater than 2,400 could define additional tribal census tracts within their area. The tribal census tract codes for the 2010 Census are six characters long with a leading \"T\" alphabetic character followed by a five-digit numeric code, for example, T01000, which translates as tribal census tract 10. Tribal block groups nest within tribal census tract. Since individual tabulation blocks are defined within the standard State-county-census tract geographic hierarchy, a tribal census tract can contain seemingly duplicate block numbers, thus tribal census tracts cannot be used to uniquely identify census tabulation blocks for the 2010 Census. For the 2010 Census, tribal block groups and tribal census tracts were delineated through the Tribal Statistical Areas Program (TSAP)." ;
+    dc:spatial "POLYGON ((-92.860349 46.160958,-92.860349 46.911934,-91.684828 46.911934,-91.684828 46.160958,-92.860349 46.160958))" ;
+    dcterms:publisher <urn:uuid:06b1246c-1a12-4cff-b93c-4187d5489223> ;
+    dcterms:references <urn:uuid:fcc7e319-35e3-402f-8185-409d150e323f> ;
+    dcterms:title "TIGER/Line Shapefile, 2010, 2010 entity, Fond du Lac Reservation and Off-Reservation Trust Land and Off-Reservation Trust Land and Off-Reservation Trust Land, 2010 Census Tribal Census Tract AIA-based" ;
+    esip:eastBound "-91.684828"^^xsd:float ;
+    esip:endDate "2010-07-01"^^xsd:date ;
+    esip:northBound "46.911934"^^xsd:float ;
+    esip:southBound "46.160958"^^xsd:float ;
+    esip:startDate "2010-01-01"^^xsd:date ;
+    esip:westBound "-92.860349"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:b4e517e7-329f-473a-a5ea-c4c86a610b9d> bcube:hasType "place" ;
+    bcube:hasValue "American Indian Area" ;
+    dc:partOf "INCITS.38-200x (R2004),INCITS.31-200x (R2007),INCITS.454-200x,INCITS 455-200x,INCITS 446-2008" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:ca6d4902-db29-415b-ac22-2a70d3903482> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-04T22:09:05.816Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-04T22:09:05.816Z" ;
+    dc:identifier "urn:sha:ac7340015e619d03442ffd1d9d95b5fbf3f122429c253c08a319a8bf" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://meta.geo.census.gov/data/existing/decennial/GEO/GPMB/TIGERline/fe_2010/TTRACT/tl_2010_1125_ttract10_url.shp.xml" .
+
+<urn:uuid:fcc7e319-35e3-402f-8185-409d150e323f> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-04T22:09:05.816Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-04T22:09:05.816Z" ;
+    dc:identifier "urn:sha:c16d3a7561131cc3381a67044d395aee3073f4175305439613948f3b" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www2.census.gov/geo/tiger/TIGER2010/TTRACT/2010/tl_2010_1125_ttract10.zip" .
+

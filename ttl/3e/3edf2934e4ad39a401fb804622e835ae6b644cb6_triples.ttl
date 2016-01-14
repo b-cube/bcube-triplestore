@@ -1,0 +1,80 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:29bb698a-22ad-4dbc-810e-88c613d9d416> bcube:hasType "place" ;
+    bcube:hasValue "California - Central",
+        "San Francisco",
+        "Stinson Beach, Ca" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:4d90d56c-da99-4c82-9b33-20e1abcc4ca3> bcube:hasType "theme" ;
+    bcube:hasValue "oceans",
+        "wave direction",
+        "wave energy" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:6b1c8529-9c1a-424e-aeaa-b16a1d13d8dc> bcube:dateCreated "2015-10-18T14:07:32.539Z" ;
+    bcube:hasMetadataRecord <urn:uuid:b4af75bc-5d34-494a-aea8-3a1f61d503a2> ;
+    bcube:lastUpdated "2015-10-18T14:07:32.539Z" ;
+    dc:conformsTo <urn:uuid:29bb698a-22ad-4dbc-810e-88c613d9d416>,
+        <urn:uuid:4d90d56c-da99-4c82-9b33-20e1abcc4ca3> ;
+    dc:description "CDIP's station 021 data sets consist of coastal environment measurements taken in the vicinity of Stinson Beach, Ca. Wave measurements were made in water 9.14 meters deep. The station is operated by CDIP, and funded by USACE." ;
+    dc:spatial "POLYGON ((-122.648331 37.896667,-122.648331 37.896667,-122.648331 37.896667,-122.648331 37.896667,-122.648331 37.896667))" ;
+    dcterms:publisher <urn:uuid:d01dfee3-3973-4510-9cee-7d0809d47cbd> ;
+    dcterms:references <urn:uuid:b517705d-5f8c-483f-8f2d-b1d0f1eadbf2> ;
+    dcterms:title "CDIP Station 021, Set p1 - STINSON BEACH, CA ARRAY" ;
+    esip:eastBound "-122.648331"^^xsd:float ;
+    esip:endDate "1982-07-14"^^xsd:date ;
+    esip:northBound "37.896667"^^xsd:float ;
+    esip:southBound "37.896667"^^xsd:float ;
+    esip:startDate "1980-05-27"^^xsd:date ;
+    esip:westBound "-122.648331"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:b4af75bc-5d34-494a-aea8-3a1f61d503a2> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-10-18T14:07:32.539Z" ;
+    bcube:lastUpdated "2015-10-18T14:07:32.539Z" ;
+    bcube:originatedFrom <urn:uuid:f0b414a0-64f9-4b27-98c1-646ce360e520> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:6b1c8529-9c1a-424e-aeaa-b16a1d13d8dc> .
+
+<urn:uuid:b517705d-5f8c-483f-8f2d-b1d0f1eadbf2> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-10-18T14:07:32.539Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-10-18T14:07:32.539Z" ;
+    dc:identifier "urn:sha:4b8356bd3dae18ae402eadfa280e0535146bc18290d4c7c448a2e804" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://cdip.ucsd.edu/?sub=data&nav=historic&pub=public&stn=021&stream=p1" .
+
+<urn:uuid:d01dfee3-3973-4510-9cee-7d0809d47cbd> owl:a foaf:Organization ;
+    foaf:name "" .
+
+<urn:uuid:f0b414a0-64f9-4b27-98c1-646ce360e520> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-10-18T14:07:32.539Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-10-18T14:07:32.539Z" ;
+    dc:identifier "urn:sha:884e9db21517273f2cc449a5e34e0ea4954c88e8f8596745b0769d6e" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://cdip.ucsd.edu/data_access/metadata/021p1.xml" .
+

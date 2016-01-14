@@ -1,0 +1,61 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:65e00bf0-63c4-4fbc-81f4-2f88ed00ca31> bcube:hasType "theme" ;
+    bcube:hasValue "Boundary",
+        "Cadastral",
+        "Cartographic",
+        "FSTopo",
+        "Quadrangle",
+        "Topographic",
+        "imageryBaseMapsEarthCover" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:9087b208-e0b0-47d2-bca4-72cc49e482e2> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-10-31T22:17:14.333Z" ;
+    bcube:lastUpdated "2015-10-31T22:17:14.333Z" ;
+    bcube:originatedFrom <urn:uuid:f749ad02-8602-49c5-8d41-53380c50bcec> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:b135522c-f91c-43b5-87fe-f6f8d52cf83e> .
+
+<urn:uuid:9d0a23b3-99d8-4c5f-af8b-6e0101edfcc9> owl:a foaf:Organization ;
+    foaf:name "" .
+
+<urn:uuid:b135522c-f91c-43b5-87fe-f6f8d52cf83e> bcube:dateCreated "2015-10-31T22:17:14.333Z" ;
+    bcube:hasMetadataRecord <urn:uuid:9087b208-e0b0-47d2-bca4-72cc49e482e2> ;
+    bcube:lastUpdated "2015-10-31T22:17:14.333Z" ;
+    dc:conformsTo <urn:uuid:65e00bf0-63c4-4fbc-81f4-2f88ed00ca31> ;
+    dc:description "Boundary_P portrays boundaries. The source for updates is data from the Automated Lands Project (ALP). The boundary polygon feature class complements the boundary lines (Boundary_L) feature class; the two feature classes create a complete boundary coverage of the FSTopo area of interest.Within the FSTopo database, features are represented as lines, points, or polygons, with descriptive subtype attribute codes attached to describe the cartographic symbology characteristics of features. Annotation features are represented as stand-alone map text collected relative to the scale of the topographic quadrangle. The FSTopo database was originally populated with Cartographic Feature File (CFF) data which was digitized from either the Primary Base Series (PBS) quadrangles or U.S. Geological Survey (USGS) topographic map series quadrangles. Over time, the legacy CFF data is being replaced (at least partially) with data from nationally standardized sources. Data completeness reflects the content of the original source graphic, digital correction guide information, stereoscopic source, monoscopic source, supplemented with cadastral source information. Forests and Quadrangles may have undergone revision at varying dates. The update revision uses a variety of sources, including Digital Orthophoto Quad (DOQ) imagery, NAIP imagery, cadastral information, other vector data sources, and field-prepared correction guides in hardcopy or digital format." ;
+    dc:spatial "POLYGON ((-124.154684 18.231388,-124.154684 48.631483,-65.699783 48.631483,-65.699783 18.231388,-124.154684 18.231388))" ;
+    dcterms:publisher <urn:uuid:9d0a23b3-99d8-4c5f-af8b-6e0101edfcc9> ;
+    dcterms:title "S_USA.Boundary_P" ;
+    esip:eastBound "-65.699783"^^xsd:float ;
+    esip:northBound "48.631483"^^xsd:float ;
+    esip:southBound "18.231388"^^xsd:float ;
+    esip:westBound "-124.154684"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:f749ad02-8602-49c5-8d41-53380c50bcec> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-10-31T22:17:14.333Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-10-31T22:17:14.333Z" ;
+    dc:identifier "urn:sha:78c5624e48bcd7eac062a28dcdf042a3cfb601072b49e7871970c36f" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://data.fs.usda.gov/geodata/edw/edw_resources/meta/S_USA.Boundary_P.xml" .
+

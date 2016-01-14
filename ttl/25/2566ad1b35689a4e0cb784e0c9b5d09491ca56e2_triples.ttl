@@ -1,0 +1,89 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:285cc2a4-fc6d-41fc-a1b2-65dff9a44714> bcube:hasType "place" ;
+    bcube:hasValue "12005",
+        "Bay",
+        "County or Equivalent Entity",
+        "U.S.",
+        "United States" ;
+    dc:partOf "INCITS.38-200x (R2004),INCITS.31-200x (R2007),INCITS.454-200x,INCITS 455-200x,INCITS 446-2008" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:287437e0-2d42-4506-aa9c-4dfb2eaa2535> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-11-02T02:45:57.34Z" ;
+    bcube:lastUpdated "2015-11-02T02:45:57.34Z" ;
+    bcube:originatedFrom <urn:uuid:c370af5d-fe9c-4b4f-adf6-39bb5f422546> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:34422034-f818-4392-a917-a4392fa631a6> .
+
+<urn:uuid:2a4906c3-da61-4941-8829-c1100c780050> bcube:hasType "theme" ;
+    bcube:hasValue "County or equivalent entity",
+        "Polygon",
+        "TAZ",
+        "Traffic Analysis Zone" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:34422034-f818-4392-a917-a4392fa631a6> bcube:dateCreated "2015-11-02T02:45:57.34Z" ;
+    bcube:hasMetadataRecord <urn:uuid:287437e0-2d42-4506-aa9c-4dfb2eaa2535> ;
+    bcube:lastUpdated "2015-11-02T02:45:57.34Z" ;
+    dc:conformsTo <urn:uuid:285cc2a4-fc6d-41fc-a1b2-65dff9a44714>,
+        <urn:uuid:2a4906c3-da61-4941-8829-c1100c780050>,
+        <urn:uuid:e81399b5-3d71-4b52-a7fb-9110e28936a7> ;
+    dc:description "The TIGER/Line Shapefiles are an extract of selected geographic and cartographic information from the Census MAF/TIGER database. The Census MAF/TIGER database represents a seamless national file with no overlaps or gaps between parts. However, each TIGER/Line Shapefile is designed to stand alone as an independent data set or the shapefiles can be combined to cover the whole nation." ;
+    dc:spatial "POLYGON ((-85.999893 29.901033,-85.999893 30.567682,-85.383743 30.567682,-85.383743 29.901033,-85.999893 29.901033))" ;
+    dcterms:publisher <urn:uuid:d739ca0e-f682-4ce4-b8b2-cc46a3a79839> ;
+    dcterms:references <urn:uuid:438b0644-45a0-4c76-9d78-04c665d0f3a9> ;
+    dcterms:title "TIGER/Line Shapefile, 2009, 2000 county, Bay County, FL, Census 2000 Traffic Analysis Zone (TAZ)" ;
+    esip:eastBound "-85.383743"^^xsd:float ;
+    esip:endDate "2009-05-01"^^xsd:date ;
+    esip:northBound "30.567682"^^xsd:float ;
+    esip:southBound "29.901033"^^xsd:float ;
+    esip:startDate "2009-01-01"^^xsd:date ;
+    esip:westBound "-85.999893"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:438b0644-45a0-4c76-9d78-04c665d0f3a9> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-02T02:45:57.34Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-02T02:45:57.34Z" ;
+    dc:identifier "urn:sha:6394afdab134b28f9fab86d7e1d841eee64cec8289e449c3c0e8128e" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www2.census.gov/geo/tiger/TIGER2009/12_FLORIDA/12005_Bay_County/tl_2009_12005_taz00.zip" .
+
+<urn:uuid:c370af5d-fe9c-4b4f-adf6-39bb5f422546> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-02T02:45:57.34Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-02T02:45:57.34Z" ;
+    dc:identifier "urn:sha:7e5b02400780881c53563b0b6e3b43b25a8994e9628b38f5df926505" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://meta.geo.census.gov/data/existing/decennial/GEO/GPMB/TIGERline/fe_2009/taz00/tl_2009_12005_taz00_url.shp.xml" .
+
+<urn:uuid:d739ca0e-f682-4ce4-b8b2-cc46a3a79839> owl:a foaf:Organization ;
+    foaf:name "" .
+
+<urn:uuid:e81399b5-3d71-4b52-a7fb-9110e28936a7> bcube:hasType "theme" ;
+    bcube:hasValue "boundaries" ;
+    dc:partOf "ISO 19115 Topic Categories" ;
+    owl:a bcube:thesaurusSubset .
+

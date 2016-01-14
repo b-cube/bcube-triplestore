@@ -1,0 +1,93 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:42e17e86-849a-4730-b711-dc65e098cc90> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-09T12:53:14.684Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-09T12:53:14.684Z" ;
+    dc:identifier "urn:sha:1644f8bf017a3aceab504227b94cf9961316e9fc817a335fa0b4b461" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://catalog.data.gov/harvest/object/a59f2776-db8f-42e5-bf16-d4f59c9fbde5" .
+
+<urn:uuid:470c97b7-521c-4afc-87f5-ff5e4d49b4bc> a "ISO 19115:2003/19139" ;
+    bcube:dateCreated "2015-08-09T12:53:14.684Z" ;
+    bcube:lastUpdated "2015-08-09T12:53:14.684Z" ;
+    bcube:originatedFrom <urn:uuid:42e17e86-849a-4730-b711-dc65e098cc90> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:7e0d7ece-d589-49bb-bc0b-0999ef8a148b> .
+
+<urn:uuid:571814cb-e95a-4f6a-98b8-fd30aa120e4b> bcube:hasType "theme" ;
+    bcube:hasValue "DEM",
+        "altitude",
+        "bathymetry",
+        "depth",
+        "digital bathymetric model",
+        "digital elevation model",
+        "digital terrain model",
+        "elevation",
+        "estuarine bathymetry",
+        "estuary",
+        "height",
+        "hydrographic survey",
+        "marine navigation" ;
+    dc:partOf "none" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:5b8a233f-11a2-4990-ac1b-f93d24f98312> bcube:hasType "place" ;
+    bcube:hasValue "Florida",
+        "Sarasota Bay, FL",
+        "United States" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:7e0d7ece-d589-49bb-bc0b-0999ef8a148b> bcube:dateCreated "2015-08-09T12:53:14.684Z" ;
+    bcube:hasMetadataRecord <urn:uuid:470c97b7-521c-4afc-87f5-ff5e4d49b4bc> ;
+    bcube:lastUpdated "2015-08-09T12:53:14.684Z" ;
+    dc:conformsTo <urn:uuid:571814cb-e95a-4f6a-98b8-fd30aa120e4b>,
+        <urn:uuid:5b8a233f-11a2-4990-ac1b-f93d24f98312>,
+        <urn:uuid:e32596d8-c9eb-4d79-a9f1-71d37d809725> ;
+    dc:description "Bathymetry for Sarasota Bay was derived from six surveys containing52,299 soundings. No surveys were omitted. The average separationbetween soundings was 51 meters. The surveys dated from 1953 to 1955 withthe majority from 1954. The range of soundings for the six surveys was 3.7meters to -9.1 meters at mean low water. Mean high water values of 0.6 or0.7 meters were assigned to the shoreline. Six points were found thatwere not consistent with the surrounding points. These were removed prior totinning. DEM grid values outside the shoreline (on land) wereassigned null values (-32676).Sarasota Bay has eight 7.5 minute DEMs and a single one degree DEM.The 1 degree DEMs were generated from the higher resolution 7.5minute DEMs which covered the estuary. A Digital Elevation Model(DEM) contains a series of elevations ordered from south to northwith the order of the columns from west to east. The DEM isformatted as one ASCII header record (A- record), followed by aseries of profile records (B- records) each of which include a shortB-record header followed by a series of ASCII integer elevations(typically in units of 1 centimeter) per each profile. The lastphysical record of the DEM is an accuracy record (C-record).The 7.5-minute DEM (30- by 30-m data spacing) is cast on theUniversal Transverse Mercator (UTM) projection. It provides coveragein 7.5- by 7.5-minute blocks. Each product provides the samecoverage as a standard USGS 7.5-minute quadrangle but the DEMcontains over edge data. Coverage is available for many estuaries ofthe contiguous United States but is not complete." ;
+    dc:spatial "POLYGON ((-82.744089 27.099846,-82.744089 27.540506,-82.440809 27.540506,-82.440809 27.099846,-82.744089 27.099846))" ;
+    dcterms:references <urn:uuid:ce8640b8-92d5-4147-b0a8-c6dd3a71eba5> ;
+    dcterms:title "Sarasota Bay, FL (G060) Bathymetric Digital Elevation Model(30 meter resolution) Derived From Source Hydrographic SurveySoundings Collected by NOAA" ;
+    esip:eastBound "-82.440809"^^xsd:float ;
+    esip:endDate "1955-01-01"^^xsd:date ;
+    esip:northBound "27.540506"^^xsd:float ;
+    esip:southBound "27.099846"^^xsd:float ;
+    esip:startDate "1953-01-01"^^xsd:date ;
+    esip:westBound "-82.744089"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:ce8640b8-92d5-4147-b0a8-c6dd3a71eba5> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-09T12:53:14.684Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-09T12:53:14.684Z" ;
+    dc:identifier "urn:sha:1c008adbf18433a5a6db575f483d5c98917b23d5287782519276683b" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://estuarinebathymetry.noaa.gov/finddata.html" .
+
+<urn:uuid:e32596d8-c9eb-4d79-a9f1-71d37d809725> bcube:hasValue "ImageryBaseMapsEarthCover",
+        "elevation",
+        "oceans" ;
+    dc:partOf "IsoTopicCategories" ;
+    owl:a bcube:thesaurusSubset .
+

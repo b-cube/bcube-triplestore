@@ -1,0 +1,74 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:11eacdeb-950c-42e8-8230-5f15adc07ca9> bcube:hasType "place" ;
+    bcube:hasValue "Global" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:1fe6d328-e0b2-4617-b4da-8cac63785882> bcube:hasType "theme" ;
+    bcube:hasValue "Levitus",
+        "ow",
+        "pifsc",
+        "salinity",
+        "temperature" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:203f2767-4e18-4d0f-b9b6-0e92d3f527df> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-12T10:01:42.276Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-12T10:01:42.276Z" ;
+    dc:identifier "urn:sha:0d98823b2bc81cfe2b302a641abb2add11af128b8e4cec6c3cdf46ac" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "https://inport.nmfs.noaa.gov/inport/item/7923/fgdc" .
+
+<urn:uuid:2433eb27-f899-4414-baa2-c1d1cc606061> owl:a foaf:Organization ;
+    foaf:name "" .
+
+<urn:uuid:3716ed05-f8a7-4b46-81ec-aa1668ec5bfc> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-11-12T10:01:42.276Z" ;
+    bcube:lastUpdated "2015-11-12T10:01:42.276Z" ;
+    bcube:originatedFrom <urn:uuid:203f2767-4e18-4d0f-b9b6-0e92d3f527df> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:ee7fadce-6790-4184-97b4-20762415d9ed> .
+
+<urn:uuid:e7514dd2-2ae5-49b3-b790-f72eb0ca583d> bcube:hasType "temporal" ;
+    bcube:hasValue "Monthly" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:ee7fadce-6790-4184-97b4-20762415d9ed> bcube:dateCreated "2015-11-12T10:01:42.276Z" ;
+    bcube:hasMetadataRecord <urn:uuid:3716ed05-f8a7-4b46-81ec-aa1668ec5bfc> ;
+    bcube:lastUpdated "2015-11-12T10:01:42.276Z" ;
+    dc:conformsTo <urn:uuid:11eacdeb-950c-42e8-8230-5f15adc07ca9>,
+        <urn:uuid:1fe6d328-e0b2-4617-b4da-8cac63785882>,
+        <urn:uuid:e7514dd2-2ae5-49b3-b790-f72eb0ca583d> ;
+    dc:description "The dataset consists of global monthly temperature and salinity climatologies with a spatial resolution of 1x1 degree, and consists of 19 levels (surface - 5000m). It was created by Sydney Levitus (1982) and includes a synthesis of all temperature, salinity and oxygen data available from the National Oceanographic Data Center (NODC)." ;
+    dc:spatial "POLYGON ((-180 -90,-180 90,180 90,180 -90,-180 -90))" ;
+    dcterms:identifier "gov.noaa.nmfs.inport:7923" ;
+    dcterms:publisher <urn:uuid:2433eb27-f899-4414-baa2-c1d1cc606061> ;
+    dcterms:title "OW Levitus Climatology" ;
+    esip:eastBound "180.0"^^xsd:float ;
+    esip:endDate "1978-12-31"^^xsd:date ;
+    esip:northBound "90.0"^^xsd:float ;
+    esip:southBound "-90.0"^^xsd:float ;
+    esip:startDate "1900-01-01"^^xsd:date ;
+    esip:westBound "-180.0"^^xsd:float ;
+    owl:a dcat:Dataset .
+

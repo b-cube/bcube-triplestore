@@ -1,0 +1,74 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:4e5928c8-cfda-4561-8b9f-695c77963a34> a "ISO 19115:2003/19139" ;
+    bcube:dateCreated "2014-07-31T07:40:47.145Z" ;
+    bcube:lastUpdated "2014-07-31T07:40:47.145Z" ;
+    bcube:originatedFrom <urn:uuid:92ea34ba-e144-46a5-ae84-fe8e87bda081> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:d0442878-5ea1-443d-9635-257eaf8d8b4a> .
+
+<urn:uuid:5515f063-03d9-4528-be1b-94833a1b9c5f> bcube:hasType "place" ;
+    bcube:hasValue "Connecticut",
+        "Fairfield County",
+        "Litchfield County",
+        "USA" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:78f5b2f2-4f86-400f-bbc4-117544370902> bcube:hasType "theme" ;
+    bcube:hasValue "Bare earth",
+        "Breaklines",
+        "Elevation",
+        "LAS",
+        "Lidar",
+        "Light Detection and Ranging",
+        "Remote Sensing",
+        "Topography/Bathymetry" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:92ea34ba-e144-46a5-ae84-fe8e87bda081> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2014-07-31T07:40:47.145Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2014-07-31T07:40:47.145Z" ;
+    dc:identifier "urn:sha:03b51bc2f48653da08949ab0ce6099024e3a2f5b8eadfc7ac4e7b8f0" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "https://data.noaa.gov/harvest/object/43fe340d-8d9e-4d8c-93d1-1473f0929688" .
+
+<urn:uuid:d0442878-5ea1-443d-9635-257eaf8d8b4a> bcube:dateCreated "2014-07-31T07:40:47.145Z" ;
+    bcube:hasMetadataRecord <urn:uuid:4e5928c8-cfda-4561-8b9f-695c77963a34> ;
+    bcube:lastUpdated "2014-07-31T07:40:47.145Z" ;
+    dc:conformsTo <urn:uuid:5515f063-03d9-4528-be1b-94833a1b9c5f>,
+        <urn:uuid:78f5b2f2-4f86-400f-bbc4-117544370902>,
+        <urn:uuid:f88fe7af-609c-4a1d-9ed5-de5e64029916> ;
+    dc:description "Earth Eye collected LiDAR data for approximately 1,703 square kilometers that partially cover the Connecticut counties of Litchfield and Fairfield. The nominal pulse spacing for this project was no greater than 1 point every 0.7 meters. Dewberry used proprietary procedures to classify the LAS according to project specifications: 1-Unclassified, 2-Ground, 7-Noise, 9-Water, 12-Overlap. Dewberry produced 3D breaklines and combined these with the final LiDAR data to produce seamless hydro flattened DEMs for the 1,742 tiles (1000 m x 1000 m) that cover the project area." ;
+    dc:spatial "POLYGON ((-73.513386 41.588247,-73.513386 42.051671,-72.996434 42.051671,-72.996434 41.588247,-73.513386 41.588247))" ;
+    dcterms:title "2011 U.S. Department of Agriculture- Natural Resources Conservation Service (USDA-NRCS) Topographic Lidar: Northwest Connecticut" ;
+    esip:eastBound "-72.996434"^^xsd:float ;
+    esip:endDate "2011-12-19"^^xsd:date ;
+    esip:northBound "42.051671"^^xsd:float ;
+    esip:southBound "41.588247"^^xsd:float ;
+    esip:startDate "2011-12-13"^^xsd:date ;
+    esip:westBound "-73.513386"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:f88fe7af-609c-4a1d-9ed5-de5e64029916> bcube:hasValue "elevation" ;
+    dc:partOf "IsoTopicCategories" ;
+    owl:a bcube:thesaurusSubset .
+

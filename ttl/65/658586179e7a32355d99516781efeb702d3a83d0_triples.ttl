@@ -1,0 +1,64 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:1ba23f32-ffda-45de-9c41-ef69a9f2d414> bcube:hasType "theme" ;
+    bcube:hasValue "Cadastre" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:3a662d24-f0db-49f4-818f-85855bc118a1> a "ISO 19115:2003/19139" ;
+    bcube:dateCreated "2015-10-17T11:16:02.85Z" ;
+    bcube:lastUpdated "2015-10-17T11:16:02.85Z" ;
+    bcube:originatedFrom <urn:uuid:66a41ce7-f90d-41bc-85c8-eeb243d4b6bf> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:9de70543-7a34-4203-8bfa-802746c4776f> .
+
+<urn:uuid:514d4f77-8ead-4004-bb92-fcf498ec85e1> bcube:hasType "place" ;
+    bcube:hasValue "Arizona",
+        "California",
+        "Nevada" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:66a41ce7-f90d-41bc-85c8-eeb243d4b6bf> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-10-17T11:16:02.85Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-10-17T11:16:02.85Z" ;
+    dc:identifier "urn:sha:141b3cc167f02cd3f2cccd194b0b5dcc3ff5fc6a55bc96e8b75ba274" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://repository.stategeothermaldata.org/resources/metadata/TestNRRC/WRP/17c7884b-aefe-4b87-a6cd-01759ca2288a.xml" .
+
+<urn:uuid:69df74dc-ab4c-4daa-b09a-1e47ad4e94ce> bcube:hasValue "geoscientificInformation" ;
+    dc:partOf "IsoTopicCategories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:9de70543-7a34-4203-8bfa-802746c4776f> bcube:dateCreated "2015-10-17T11:16:02.85Z" ;
+    bcube:hasMetadataRecord <urn:uuid:3a662d24-f0db-49f4-818f-85855bc118a1> ;
+    bcube:lastUpdated "2015-10-17T11:16:02.85Z" ;
+    dc:conformsTo <urn:uuid:1ba23f32-ffda-45de-9c41-ef69a9f2d414>,
+        <urn:uuid:514d4f77-8ead-4004-bb92-fcf498ec85e1>,
+        <urn:uuid:69df74dc-ab4c-4daa-b09a-1e47ad4e94ce> ;
+    dc:description "US Geothermal Wells" ;
+    dc:spatial "POLYGON ((-124.5656 31.3325,-124.5656 42.0,-109.047 42.0,-109.047 31.3325,-124.5656 31.3325))" ;
+    dcterms:title "US Geothermal Wells" ;
+    esip:eastBound "-109.047"^^xsd:float ;
+    esip:endDate "1900-01-01"^^xsd:date ;
+    esip:northBound "42.0"^^xsd:float ;
+    esip:southBound "31.3325"^^xsd:float ;
+    esip:startDate "1900-01-01"^^xsd:date ;
+    esip:westBound "-124.5656"^^xsd:float ;
+    owl:a dcat:Dataset .
+

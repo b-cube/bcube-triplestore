@@ -1,0 +1,90 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:189bb085-1bd4-4b12-b876-a3a531ee55c4> bcube:hasType "place" ;
+    bcube:hasValue "01069",
+        "County or Equivalent Entity",
+        "Houston",
+        "U.S.",
+        "United States" ;
+    dc:partOf "ANSI INCITS 38:2009 (Formerly FIPS 5-2), ANSI INCITS 31:2009 (Formerly FIPS 6-4),ANSI INCITS 454:2009 (Formerly FIPS 8-6), ANSI INCITS 455:2009(Formerly FIPS 9-1), ANSI INCITS 446:2008 (Geographic Names Information System (GNIS))" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:4505126f-1981-4369-99cd-8e16d1bb9978> bcube:hasType "theme" ;
+    bcube:hasValue "5-digit ZIP code",
+        "County FIPS Code",
+        "County GNIS Code",
+        "From House Number",
+        "Permanent edge ID",
+        "Side indicator flag",
+        "State FIPS Code",
+        "State GNIS Code",
+        "To House Number",
+        "ZIP +4 code" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:5e5aa136-2f25-47d8-bdf5-0ed58d4f4c01> a "ISO 19115:2003/19139" ;
+    bcube:dateCreated "2015-10-30T03:13:07.826Z" ;
+    bcube:lastUpdated "2015-10-30T03:13:07.826Z" ;
+    bcube:originatedFrom <urn:uuid:9e4f0dc3-eb38-41af-8271-332f454d33bb> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:668abd36-5da7-4616-a426-3adaab485e4b> .
+
+<urn:uuid:668abd36-5da7-4616-a426-3adaab485e4b> bcube:dateCreated "2015-10-30T03:13:07.826Z" ;
+    bcube:hasMetadataRecord <urn:uuid:5e5aa136-2f25-47d8-bdf5-0ed58d4f4c01> ;
+    bcube:lastUpdated "2015-10-30T03:13:07.826Z" ;
+    dc:conformsTo <urn:uuid:189bb085-1bd4-4b12-b876-a3a531ee55c4>,
+        <urn:uuid:4505126f-1981-4369-99cd-8e16d1bb9978>,
+        <urn:uuid:d8d57d6c-7ec2-452f-83bf-bca683688bef> ;
+    dc:description "The TIGER/Line shapefiles and related database files (.dbf) are an extract of selected geographic and cartographic information from the U.S. Census Bureau's Master Address File / Topologically Integrated Geographic Encoding and Referencing (MAF/TIGER) Database (MTDB). The MTDB represents a seamless national file with no overlaps or gaps between parts, however, each TIGER/Line shapefile is designed to stand alone as an independent data set, or they can be combined to cover the entire nation. The Address Ranges Relationship File (ADDR.dbf) contains the attributes of each address range. Each address range applies to a single edge and has a unique address range identifier (ARID) value. The edge to which an address range applies can be determined by linking the address range to the All Lines Shapefile (EDGES.shp) using the permanent topological edge identifier (TLID) attribute. Multiple address ranges can apply to the same edge since an edge can have multiple address ranges. Note that the most inclusive address range associated with each side of a street edge already appears in the All Lines Shapefile (EDGES.shp). The TIGER/Line Files contain potential address ranges, not individual addresses. The term \"address range\" refers to the collection of all possible structure numbers from the first structure number to the last structure number and all numbers of a specified parity in between along an edge side relative to the direction in which the edge is coded. The address ranges in the TIGER/Line Files are potential ranges that include the full range of possible structure numbers even though the actual structures may not exist." ;
+    dc:spatial "POLYGON ((-85.712436 30.997064,-85.712436 31.314973,-84.999428 31.314973,-84.999428 30.997064,-85.712436 30.997064))" ;
+    dcterms:references <urn:uuid:bd4ae656-c4f2-4862-aad3-02ec82a47c3c> ;
+    dcterms:title "TIGER/Line Shapefile, 2014, county, Houston County, AL, Address Ranges County-based Relationship File" ;
+    esip:eastBound "-84.999428"^^xsd:float ;
+    esip:endDate "2014-05-06"^^xsd:date ;
+    esip:northBound "31.314973"^^xsd:float ;
+    esip:southBound "30.997064"^^xsd:float ;
+    esip:startDate "2013-06-06"^^xsd:date ;
+    esip:westBound "-85.712436"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:9e4f0dc3-eb38-41af-8271-332f454d33bb> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-10-30T03:13:07.826Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-10-30T03:13:07.826Z" ;
+    dc:identifier "urn:sha:ffe9c15dd05006bff25eae056258cc5691bfc3a0c3a86df20f0ccbb4" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://meta.geo.census.gov/data/existing/decennial/GEO/GPMB/TIGERline/TIGER2014/addr/tl_2014_01069_addr.dbf.iso.xml" .
+
+<urn:uuid:bd4ae656-c4f2-4862-aad3-02ec82a47c3c> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-10-30T03:13:07.826Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-10-30T03:13:07.826Z" ;
+    dc:identifier "urn:sha:fc2b6d5be839eb9a2dc1abe43263d7af7f4227fe2c369b60bc823191" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www2.census.gov/geo/tiger/TIGER2014/ADDR/tl_2014_01069_addr.zip" .
+
+<urn:uuid:d8d57d6c-7ec2-452f-83bf-bca683688bef> bcube:hasValue "transportation" ;
+    dc:partOf "IsoTopicCategories" ;
+    owl:a bcube:thesaurusSubset .
+

@@ -1,0 +1,87 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:056f81ff-5b94-4c90-9f8e-5bae0ab86c18> bcube:hasType "place" ;
+    bcube:hasValue "COMMUNITY Steuben County and Incorporated Areas",
+        "COUNTY Steuben",
+        "COUNTY-FIPS 18151",
+        "FEMA-CID 18151C",
+        "REGION 05",
+        "STATE IN" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:0ddf9cab-cd28-473b-aac5-c62c1e509de0> bcube:hasType "theme" ;
+    bcube:hasValue "1-Percent-Annual-Chance Flood",
+        "Channel",
+        "DFIRM",
+        "Digital Flood Insurance Rate Map",
+        "Flood Hazard data",
+        "Hydrology",
+        "Regression Equation" ;
+    dc:partOf "FEMA NFIP Topic Category" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:21560361-167d-4e4d-94e6-153404662108> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-09-08T23:16:46.406Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-09-08T23:16:46.406Z" ;
+    dc:identifier "urn:sha:399149afb583e229661ec38fa14d1712fe38590055523b928fcf4309" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "https://catalog.data.gov/harvest/object/17bcf6f8-00c6-4ea0-845c-3c2485b06bea" .
+
+<urn:uuid:451322b4-fb18-4041-8f19-77e2c2c7a35e> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-09-08T23:16:46.406Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-09-08T23:16:46.406Z" ;
+    dc:identifier "urn:sha:37c915397238031daced09ae0e2dd3bf54e84a6477f749c2cc9dcbdf" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://hazards.fema.gov" .
+
+<urn:uuid:d8a8b25c-88cf-49e6-8490-fbd8f606d131> a "ISO 19115:2003/19139" ;
+    bcube:dateCreated "2015-09-08T23:16:46.406Z" ;
+    bcube:lastUpdated "2015-09-08T23:16:46.406Z" ;
+    bcube:originatedFrom <urn:uuid:21560361-167d-4e4d-94e6-153404662108> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:f9d64761-f453-4869-9c14-391f4a3dba92> .
+
+<urn:uuid:f3b7e2ad-e360-4f7a-9896-d6a36f1a05f9> bcube:hasValue "environment",
+        "inlandWaters" ;
+    dc:partOf "IsoTopicCategories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:f9d64761-f453-4869-9c14-391f4a3dba92> bcube:dateCreated "2015-09-08T23:16:46.406Z" ;
+    bcube:hasMetadataRecord <urn:uuid:d8a8b25c-88cf-49e6-8490-fbd8f606d131> ;
+    bcube:lastUpdated "2015-09-08T23:16:46.406Z" ;
+    dc:conformsTo <urn:uuid:056f81ff-5b94-4c90-9f8e-5bae0ab86c18>,
+        <urn:uuid:0ddf9cab-cd28-473b-aac5-c62c1e509de0>,
+        <urn:uuid:f3b7e2ad-e360-4f7a-9896-d6a36f1a05f9> ;
+    dc:description "Hydrology data include spatial datasets and data tables necessary for documenting the hydrologic procedures for estimating flood discharges for a flood insurance study, which includes the hydrologic data expected by FEMA for new riverine studies. (Source: FEMA Guidelines and Specifications, Appendix N)" ;
+    dc:spatial "POLYGON ((-85.19839 41.524396,-85.19839 41.762187,-84.801675 41.762187,-84.801675 41.524396,-85.19839 41.524396))" ;
+    dcterms:references <urn:uuid:451322b4-fb18-4041-8f19-77e2c2c7a35e> ;
+    dcterms:title "HYDROLOGY, Steuben COUNTY, IN" ;
+    esip:eastBound "-84.801675"^^xsd:float ;
+    esip:northBound "41.762187"^^xsd:float ;
+    esip:southBound "41.524396"^^xsd:float ;
+    esip:westBound "-85.19839"^^xsd:float ;
+    owl:a dcat:Dataset .
+

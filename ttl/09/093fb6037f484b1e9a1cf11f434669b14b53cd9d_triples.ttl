@@ -1,0 +1,94 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:05899a57-210b-4857-9a11-05c8f271a9b3> bcube:hasType "theme" ;
+    bcube:hasValue "Block Numbering Areas",
+        "Census Tracts",
+        "Counties",
+        "Line Feature",
+        "Point Feature",
+        "Polygon Feature",
+        "Shapefile",
+        "TIGER/Line",
+        "Vector" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:11303ec5-798a-4854-9bf3-94202052117b> bcube:hasType "place" ;
+    bcube:hasValue "003",
+        "Allegany" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:515fef89-1d84-47d0-aee3-3bf5f0c1144c> bcube:hasType "theme" ;
+    bcube:hasValue "boundaries",
+        "society" ;
+    dc:partOf "ISO 19115 Topic Category" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:5417694b-1372-40c2-a8ef-c42f81c89f48> owl:a foaf:Organization ;
+    foaf:name "Bureau of the Census" .
+
+<urn:uuid:69d1d430-8aaa-4858-a8cf-8ef95cf7129e> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-11-01T14:37:08.424Z" ;
+    bcube:lastUpdated "2015-11-01T14:37:08.424Z" ;
+    bcube:originatedFrom <urn:uuid:f1d6eeb0-aa01-4c39-9ebb-34737ff3d762> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:99103852-b344-477c-81cc-72ebb9851544> .
+
+<urn:uuid:99103852-b344-477c-81cc-72ebb9851544> bcube:dateCreated "2015-11-01T14:37:08.424Z" ;
+    bcube:hasMetadataRecord <urn:uuid:69d1d430-8aaa-4858-a8cf-8ef95cf7129e> ;
+    bcube:lastUpdated "2015-11-01T14:37:08.424Z" ;
+    dc:conformsTo <urn:uuid:05899a57-210b-4857-9a11-05c8f271a9b3>,
+        <urn:uuid:11303ec5-798a-4854-9bf3-94202052117b>,
+        <urn:uuid:515fef89-1d84-47d0-aee3-3bf5f0c1144c> ;
+    dc:description "This shapefile is an extract of selected geographic and cartographic information from the 1995 TIGER/Line files detailing census tracks and block numbering areas." ;
+    dc:spatial "POLYGON ((-78.309 41.998,-78.309 42.522,-77.723 42.522,-77.723 41.998,-78.309 41.998))" ;
+    dcterms:publisher <urn:uuid:5417694b-1372-40c2-a8ef-c42f81c89f48> ;
+    dcterms:references <urn:uuid:c2d7d0ca-7c26-42e3-b5d8-cfab97f706cf> ;
+    dcterms:title "Census Tracts, Allegany County (Shapefile : 1998)" ;
+    esip:eastBound "-77.723"^^xsd:float ;
+    esip:northBound "42.522"^^xsd:float ;
+    esip:southBound "41.998"^^xsd:float ;
+    esip:startDate "1995-01-01"^^xsd:date ;
+    esip:westBound "-78.309"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:aca84a29-e62a-492b-8731-4dec030fb597> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-01T14:37:08.424Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-01T14:37:08.424Z" ;
+    dc:identifier "urn:sha:82a45bc6ed7f5b7a429c45fad6f8c1fb8fe03d60f7597c19591edd5c" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://cugir.mannlib.cornell.edu/bucketinfo.jsp?id=1037" .
+
+<urn:uuid:c2d7d0ca-7c26-42e3-b5d8-cfab97f706cf> dcterms:references <urn:uuid:aca84a29-e62a-492b-8731-4dec030fb597> ;
+    owl:a bibo:WebPage .
+
+<urn:uuid:f1d6eeb0-aa01-4c39-9ebb-34737ff3d762> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-01T14:37:08.424Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-01T14:37:08.424Z" ;
+    dc:identifier "urn:sha:ac0ca13e69ae1c6a7d51e055e46c986216c265994d268e2e8607177f" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://cugirmetadata.mannlib.cornell.edu/003cts.xml" .
+

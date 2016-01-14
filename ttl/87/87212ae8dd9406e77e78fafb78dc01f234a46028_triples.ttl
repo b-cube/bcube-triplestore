@@ -1,0 +1,88 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:01423653-d345-4ab3-be7b-45178732bfc3> bcube:hasType "temporal" ;
+    bcube:hasValue "201503" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:42ceed5a-7344-4b55-b1d7-a703c90c077c> bcube:hasType "place" ;
+    bcube:hasValue "Channel Islands National Marine Sanctuary",
+        "Southern California Bight" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:4797ab36-3e73-4f3e-9704-1d7cdee0951d> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-09T12:35:30.592Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-09T12:35:30.592Z" ;
+    dc:identifier "urn:sha:dd0e971d11ceb2e73aadf44e06e15b2366596441c41ca5b64422480d" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://catalog.data.gov/harvest/object/27a0ee57-e791-4e61-b6d5-c274a5d59616" .
+
+<urn:uuid:931b2a6d-0c59-4e7d-be33-e0e9b717583e> bcube:hasType "theme" ;
+    bcube:hasValue "Channel Islands National Marine Sanctuary",
+        "GIS",
+        "MBES",
+        "Multibeam",
+        "SH1503",
+        "Seafloor",
+        "Sonar",
+        "W00291" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:987d1330-2362-46b9-aa3b-2b6fb132ee93> bcube:hasType "theme" ;
+    bcube:hasValue "Bathymetry/Topography" ;
+    dc:partOf "Thesaurus: NOS Data Explorer Topic Category" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:c4733aa3-59d7-4eb2-82e6-94b967245408> bcube:hasType "stratum" ;
+    bcube:hasValue "seafloor" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:f05151f6-f985-4107-ab64-4db956eff6cc> bcube:hasValue "oceans" ;
+    dc:partOf "IsoTopicCategories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:f6b96d1e-c82f-4954-9999-afac51e506d0> a "ISO 19115:2003/19139" ;
+    bcube:dateCreated "2015-08-09T12:35:30.592Z" ;
+    bcube:lastUpdated "2015-08-09T12:35:30.592Z" ;
+    bcube:originatedFrom <urn:uuid:4797ab36-3e73-4f3e-9704-1d7cdee0951d> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:fb845bae-92ac-4c9c-8498-2da03b86ebf4> .
+
+<urn:uuid:fb845bae-92ac-4c9c-8498-2da03b86ebf4> bcube:dateCreated "2015-08-09T12:35:30.592Z" ;
+    bcube:hasMetadataRecord <urn:uuid:f6b96d1e-c82f-4954-9999-afac51e506d0> ;
+    bcube:lastUpdated "2015-08-09T12:35:30.592Z" ;
+    dc:conformsTo <urn:uuid:01423653-d345-4ab3-be7b-45178732bfc3>,
+        <urn:uuid:42ceed5a-7344-4b55-b1d7-a703c90c077c>,
+        <urn:uuid:931b2a6d-0c59-4e7d-be33-e0e9b717583e>,
+        <urn:uuid:987d1330-2362-46b9-aa3b-2b6fb132ee93>,
+        <urn:uuid:c4733aa3-59d7-4eb2-82e6-94b967245408>,
+        <urn:uuid:f05151f6-f985-4107-ab64-4db956eff6cc> ;
+    dc:description "This image represents an 8 meter resolution bathymetry of the seafloor south of Santa Rosa Island in Channel Islands National Marine Sanctuary. It was acquired using the ME70 multibeam sonar system onboard the NOAA ship Bell M. Shimada in March of 2015. Data is in UTM zone 10 north, datum WGS84. All users should individually evaluate the suitability of this data according to their own needs and standards." ;
+    dc:spatial "POLYGON ((-120.171 33.798,-120.171 33.916,-119.895 33.916,-119.895 33.798,-120.171 33.798))" ;
+    dcterms:title "Seafloor Bathymetry Image of South of Santa Rosa Island, Channel Islands National Marine Sanctuary (8m resolution tif)" ;
+    esip:eastBound "-119.895"^^xsd:float ;
+    esip:northBound "33.916"^^xsd:float ;
+    esip:southBound "33.798"^^xsd:float ;
+    esip:westBound "-120.171"^^xsd:float ;
+    owl:a dcat:Dataset .
+

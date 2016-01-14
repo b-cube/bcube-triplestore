@@ -1,0 +1,79 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:2565e1fa-ad01-473e-b7f2-062a297435bf> bcube:hasType "stratum" ;
+    bcube:hasValue "GROUND" ;
+    dc:partOf "GROUND" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:a71dff56-290c-40c8-ba5b-285c52477fa6> bcube:hasType "place" ;
+    bcube:hasValue "IDAHO" ;
+    dc:partOf "NORTHWEST USA" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:c1f9ff34-e2fb-49ea-a80e-ebcc6a7e99c7> a "ISO 19115:2003/19139" ;
+    bcube:dateCreated "2015-11-03T09:57:50.675Z" ;
+    bcube:lastUpdated "2015-11-03T09:57:50.675Z" ;
+    bcube:originatedFrom <urn:uuid:e9272e63-d201-4ce9-a0b3-850a8eded8eb> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:f1e4ac6c-26b3-4edc-a3fc-6a4c9af38e8c> .
+
+<urn:uuid:cab47f2f-d3e2-4708-ad36-0fd2e1747176> bcube:hasType "theme" ;
+    bcube:hasValue "AADT",
+        "AVERAGE ANNUAL DAILY TRAFFIC",
+        "TRAFFIC",
+        "Transportation" ;
+    dc:partOf "AVERAGE DAILY TRAFFIC" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:e5848ed4-023e-49f9-9828-d363b45deacc> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-03T09:57:50.675Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-03T09:57:50.675Z" ;
+    dc:identifier "urn:sha:8a56869cbf8ca1f96403d70566667b5eee7f7862f08f1e5b5561bc78" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www.itd.idaho.gov/planning/gis/maps/spatialdata/AADT2014.zip" .
+
+<urn:uuid:e9272e63-d201-4ce9-a0b3-850a8eded8eb> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-03T09:57:50.675Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-03T09:57:50.675Z" ;
+    dc:identifier "urn:sha:94c3b1c39d9c49409c36d90aa59724e697f5f4b226fb16d6a30b41b1" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "https://catalog.data.gov/harvest/object/15229a27-30d1-409b-b7dc-f740f8083bbd" .
+
+<urn:uuid:f1e4ac6c-26b3-4edc-a3fc-6a4c9af38e8c> bcube:dateCreated "2015-11-03T09:57:50.675Z" ;
+    bcube:hasMetadataRecord <urn:uuid:c1f9ff34-e2fb-49ea-a80e-ebcc6a7e99c7> ;
+    bcube:lastUpdated "2015-11-03T09:57:50.675Z" ;
+    dc:conformsTo <urn:uuid:2565e1fa-ad01-473e-b7f2-062a297435bf>,
+        <urn:uuid:a71dff56-290c-40c8-ba5b-285c52477fa6>,
+        <urn:uuid:cab47f2f-d3e2-4708-ad36-0fd2e1747176> ;
+    dc:description "Idaho Roads - 2014 Annual Average Daily Traffic (AADT)" ;
+    dc:spatial "POLYGON ((-117.505568 41.95071,-117.505568 49.032803,-110.666793 49.032803,-110.666793 41.95071,-117.505568 41.95071))" ;
+    dcterms:references <urn:uuid:e5848ed4-023e-49f9-9828-d363b45deacc> ;
+    dcterms:title "Idaho 2014 Average Annual Daily Traffic" ;
+    esip:eastBound "-110.666793"^^xsd:float ;
+    esip:northBound "49.032803"^^xsd:float ;
+    esip:southBound "41.95071"^^xsd:float ;
+    esip:westBound "-117.505568"^^xsd:float ;
+    owl:a dcat:Dataset .
+

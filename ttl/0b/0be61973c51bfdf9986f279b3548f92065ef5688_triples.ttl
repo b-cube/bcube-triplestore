@@ -1,0 +1,63 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:3b4fa2c4-a009-44d3-a00e-af814fdc7ffb> bcube:hasType "place" ;
+    bcube:hasValue "Idaho, Boise Valley, Treasure Valley" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:7d2eb661-06c5-4a45-b562-f9fa81a39d18> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-10-29T19:59:19.278Z" ;
+    bcube:lastUpdated "2015-10-29T19:59:19.278Z" ;
+    bcube:originatedFrom <urn:uuid:cadb8d20-66cd-42ad-bbbc-15570b2f4d36> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:a3eecc6f-789a-4510-a07a-b76eef487cb0> .
+
+<urn:uuid:92d1cbf3-8ddc-4d66-9049-92efceb1a915> owl:a foaf:Organization ;
+    foaf:name "Idaho Department of Water Resources" .
+
+<urn:uuid:a3eecc6f-789a-4510-a07a-b76eef487cb0> bcube:dateCreated "2015-10-29T19:59:19.278Z" ;
+    bcube:hasMetadataRecord <urn:uuid:7d2eb661-06c5-4a45-b562-f9fa81a39d18> ;
+    bcube:lastUpdated "2015-10-29T19:59:19.278Z" ;
+    dc:conformsTo <urn:uuid:3b4fa2c4-a009-44d3-a00e-af814fdc7ffb>,
+        <urn:uuid:fea0f2fa-06ab-46ab-8ec4-e7f0f5fba770> ;
+    dc:description "Land use data developed using image interpretation of scanned, geocorrected, and mosaicked 1938/1939 black & white airphotos." ;
+    dc:spatial "POLYGON ((-117.10564 43.268584,-117.10564 43.915034,-116.023937 43.915034,-116.023937 43.268584,-117.10564 43.268584))" ;
+    dcterms:publisher <urn:uuid:92d1cbf3-8ddc-4d66-9049-92efceb1a915> ;
+    dcterms:title "Land Use & Land Cover, 1939, Lower Boise River Basin, Idaho" ;
+    esip:eastBound "-116.023937"^^xsd:float ;
+    esip:endDate "1939-10-31"^^xsd:date ;
+    esip:northBound "43.915034"^^xsd:float ;
+    esip:southBound "43.268584"^^xsd:float ;
+    esip:startDate "1939-05-01"^^xsd:date ;
+    esip:westBound "-117.10564"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:cadb8d20-66cd-42ad-bbbc-15570b2f4d36> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-10-29T19:59:19.278Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-10-29T19:59:19.278Z" ;
+    dc:identifier "urn:sha:ca9e635e66a2be2b839e83438fb85075318a74cf06a52bba1ea5a002" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www.idwr.idaho.gov/ftp/gisdata/Spatial/LandCover_Vegetation/BoiseValley/bv_39landcov.xml" .
+
+<urn:uuid:fea0f2fa-06ab-46ab-8ec4-e7f0f5fba770> bcube:hasType "theme" ;
+    bcube:hasValue "Land Use and Land Cover" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+

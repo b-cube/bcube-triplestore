@@ -1,0 +1,89 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:37ff0c46-e90e-487c-831f-0e2e08748e42> owl:a foaf:Organization ;
+    foaf:name "" .
+
+<urn:uuid:435e9b5c-b68b-44f6-88de-efefc10243df> bcube:hasType "theme" ;
+    bcube:hasValue "County or equivalent entity",
+        "Polygon",
+        "TAZ",
+        "Traffic Analysis Zone" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:61a9f470-dda5-447e-879b-dadec7a046cc> bcube:hasType "theme" ;
+    bcube:hasValue "boundaries" ;
+    dc:partOf "ISO 19115 Topic Categories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:c161ed4d-0c19-4531-ae9a-dede4dcee3da> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-07T09:51:46.268Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-07T09:51:46.268Z" ;
+    dc:identifier "urn:sha:11edcc20345177868ddc66b0fa75df83f96b7795813cb35c1387951e" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://meta.geo.census.gov/data/existing/decennial/GEO/GPMB/TIGERline/fe_2007/taz00/fe_2007_11001_taz00_url.shp.xml" .
+
+<urn:uuid:c8fed39d-feb6-4e75-ab94-eb01ccc1ebe3> bcube:hasType "place" ;
+    bcube:hasValue "11001",
+        "County or Equivalent Entity",
+        "District of Columbia",
+        "U.S.",
+        "United States" ;
+    dc:partOf "FIPS Publication 5-2, FIPS Publication 6-4, FIPS Publication 8-6, FIPS Publication 9-1" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:f813abb4-e6bf-4f5e-9d00-94493f43adea> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-07T09:51:46.268Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-07T09:51:46.268Z" ;
+    dc:identifier "urn:sha:8c36ac27fd929ec4985e9fb7c8bd609f069b8716a4337f3be141e14a" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www2.census.gov/geo/tiger/TIGER2007FE/11_DISTRICT_OF_COLUMBIA/11001_District_of_Columbia/fe_2007_11001_taz00.zip" .
+
+<urn:uuid:f877a67c-a42f-465b-bde4-ce608f32849f> bcube:dateCreated "2015-11-07T09:51:46.268Z" ;
+    bcube:hasMetadataRecord <urn:uuid:fe0c92eb-05e8-4a0f-8e06-3f4761bd3ff9> ;
+    bcube:lastUpdated "2015-11-07T09:51:46.268Z" ;
+    dc:conformsTo <urn:uuid:435e9b5c-b68b-44f6-88de-efefc10243df>,
+        <urn:uuid:61a9f470-dda5-447e-879b-dadec7a046cc>,
+        <urn:uuid:c8fed39d-feb6-4e75-ab94-eb01ccc1ebe3> ;
+    dc:description "The TIGER/Line Shapefiles are an extract of selected geographic and cartographic information from the Census MAF/TIGER database. The Census MAF/TIGER database represents a seamless national file with no overlaps or gaps between parts. However, each TIGER/Line Shapefile is designed to stand alone as an independent data set or the shapefiles can be combined to cover the whole nation." ;
+    dc:spatial "POLYGON ((-77.119759 38.791645,-77.119759 38.995548,-76.909393 38.995548,-76.909393 38.791645,-77.119759 38.791645))" ;
+    dcterms:publisher <urn:uuid:37ff0c46-e90e-487c-831f-0e2e08748e42> ;
+    dcterms:references <urn:uuid:f813abb4-e6bf-4f5e-9d00-94493f43adea> ;
+    dcterms:title "TIGER/Line Shapefile, 2007, 2000 county, District of Columbia, Traffic Analysis Zone (TAZ)" ;
+    esip:eastBound "-76.909393"^^xsd:float ;
+    esip:endDate "2007-07-01"^^xsd:date ;
+    esip:northBound "38.995548"^^xsd:float ;
+    esip:southBound "38.791645"^^xsd:float ;
+    esip:startDate "2007-01-01"^^xsd:date ;
+    esip:westBound "-77.119759"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:fe0c92eb-05e8-4a0f-8e06-3f4761bd3ff9> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-11-07T09:51:46.268Z" ;
+    bcube:lastUpdated "2015-11-07T09:51:46.268Z" ;
+    bcube:originatedFrom <urn:uuid:c161ed4d-0c19-4531-ae9a-dede4dcee3da> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:f877a67c-a42f-465b-bde4-ce608f32849f> .
+

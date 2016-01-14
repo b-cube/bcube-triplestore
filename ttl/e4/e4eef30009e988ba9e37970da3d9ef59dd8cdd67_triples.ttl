@@ -1,0 +1,80 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:0048de4b-7db4-48c0-a0b6-b562e2b41a57> bcube:dateCreated "2015-08-10T08:30:37.201Z" ;
+    bcube:hasMetadataRecord <urn:uuid:90f34fc8-983d-4814-9ea8-966f71bf14f4> ;
+    bcube:lastUpdated "2015-08-10T08:30:37.201Z" ;
+    dc:conformsTo <urn:uuid:1a0f3135-0cb2-4090-87f7-4dbfa5d55b2f>,
+        <urn:uuid:31e4ff29-5ed7-4d58-812f-bbf0789b3990>,
+        <urn:uuid:b3cd6b5c-d3c2-4426-805a-95d7bfa21747> ;
+    dc:description "These data are estimates of average daily maximum temperature, in degrees Fahrenheit, for the climatological period 1971-2000. In other words, each value represents the average of every daily high temperature over the 30 year period. Parameter-elevation Regressions on Independent Slopes Model (PRISM) derived raster data are the underlying data set from which the data were created. PRISM is an analytical model that uses point data and a digital elevation model (DEM) to generate gridded estimates of annual, monthly and event-based climatic parameters. For further information, the online PRISM homepage can be found at http://www.ocs.orst.edu/prism/. The data are available as an ESRI GridASCII export file, in latitude/longitude coordinates with a horizontal resolution of 0.00833 degrees, for the entire United States from the Oregon Climate Service web site. The data for Montana is available in Montana State Plane Coordinates, resampled to a resolution of 600 meters, in either GeoTIFF format or as a shapefile with polygons representing 33 temperature ranges." ;
+    dc:spatial "POLYGON ((-116.178337 44.238013,-116.178337 49.180943,-103.61116 49.180943,-103.61116 44.238013,-116.178337 44.238013))" ;
+    dcterms:publisher <urn:uuid:3d8c7af6-f4f4-4f22-b141-53c1dca49a07> ;
+    dcterms:references <urn:uuid:920e6dee-8691-4626-9b05-a77f045fd81b> ;
+    dcterms:title "Montana Average Daily Maximum Temperature, 1971-2000" ;
+    esip:eastBound "-103.61116"^^xsd:float ;
+    esip:endDate "2000-01-01"^^xsd:date ;
+    esip:northBound "49.180943"^^xsd:float ;
+    esip:southBound "44.238013"^^xsd:float ;
+    esip:startDate "1971-01-01"^^xsd:date ;
+    esip:westBound "-116.178337"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:1a0f3135-0cb2-4090-87f7-4dbfa5d55b2f> bcube:hasType "place" ;
+    bcube:hasValue "Montana" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:31e4ff29-5ed7-4d58-812f-bbf0789b3990> bcube:hasType "theme" ;
+    bcube:hasValue "maximum temperature" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:3d8c7af6-f4f4-4f22-b141-53c1dca49a07> owl:a foaf:Organization ;
+    foaf:name "Montana State Library" .
+
+<urn:uuid:90f34fc8-983d-4814-9ea8-966f71bf14f4> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-08-10T08:30:37.201Z" ;
+    bcube:lastUpdated "2015-08-10T08:30:37.201Z" ;
+    bcube:originatedFrom <urn:uuid:c4818109-21ac-4745-9b40-310e5c457078> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:0048de4b-7db4-48c0-a0b6-b562e2b41a57> .
+
+<urn:uuid:920e6dee-8691-4626-9b05-a77f045fd81b> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-10T08:30:37.201Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-10T08:30:37.201Z" ;
+    dc:identifier "urn:sha:d37c84082189e3685a1f160a7ba68babe7a9ff07c137764623d40db2" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "ftp://ftp.geoinfo.msl.mt.gov/Data/Spatial/NonMSDI/Raster/TemperatureMax_2000.zip" .
+
+<urn:uuid:b3cd6b5c-d3c2-4426-805a-95d7bfa21747> bcube:hasType "theme" ;
+    bcube:hasValue "climatologyMeteorologyAtmosphere" ;
+    dc:partOf "ISO 19115 Topic Category" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:c4818109-21ac-4745-9b40-310e5c457078> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-10T08:30:37.201Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-10T08:30:37.201Z" ;
+    dc:identifier "urn:sha:19bc0f0628ded07826161bb166adf695ccbcc2d9fcaaa6bffb62dcfe" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://mslapps.mt.gov/Geographic_Information/Data/DataList/datalist_MetadataDetailRaw.aspx?did={D1F40FBF-2D31-4287-950F-E39B821D45CD}" .
+

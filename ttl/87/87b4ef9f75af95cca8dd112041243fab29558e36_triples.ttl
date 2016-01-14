@@ -1,0 +1,78 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:211c3a90-dbec-4f9f-8309-b94c88d8f110> bcube:hasType "place" ;
+    bcube:hasValue "Arizona",
+        "Maricopa County" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:2596e42b-9fad-469e-b0b1-8051f1f32068> a "ISO 19115:2003/19139" ;
+    bcube:dateCreated "2015-11-03T00:32:43.767Z" ;
+    bcube:lastUpdated "2015-11-03T00:32:43.767Z" ;
+    bcube:originatedFrom <urn:uuid:56bfec77-0409-434f-a12a-8684905daa6a> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:cbc6fc57-af35-4f04-b8a9-4b47a7458cae> .
+
+<urn:uuid:56bfec77-0409-434f-a12a-8684905daa6a> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-03T00:32:43.767Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-03T00:32:43.767Z" ;
+    dc:identifier "urn:sha:b2a897c15bd6deae1b87ca79a9b0b39241c457caea2a7d01ee38efa0" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://repository.stategeothermaldata.org/resources/metadata/TestNRRC/4C6B66C4FF884141812430CB01468048.xml" .
+
+<urn:uuid:6e9ff4a3-d755-434d-910f-a405f446fd2b> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-03T00:32:43.767Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-03T00:32:43.767Z" ;
+    dc:identifier "urn:sha:e895cb6e7670a8a007f5b88451ecd5782e0a95cbe2400cfb97370413" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "https://geo.azmag.gov/gismag/rest/services/maps/EmployerSummaries2012/MapServer" .
+
+<urn:uuid:7a70d6b8-2ad6-4c33-a92b-0d5358de5d23> bcube:hasValue "geoscientificInformation" ;
+    dc:partOf "IsoTopicCategories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:cbc6fc57-af35-4f04-b8a9-4b47a7458cae> bcube:dateCreated "2015-11-03T00:32:43.767Z" ;
+    bcube:hasMetadataRecord <urn:uuid:2596e42b-9fad-469e-b0b1-8051f1f32068> ;
+    bcube:lastUpdated "2015-11-03T00:32:43.767Z" ;
+    dc:conformsTo <urn:uuid:211c3a90-dbec-4f9f-8309-b94c88d8f110>,
+        <urn:uuid:7a70d6b8-2ad6-4c33-a92b-0d5358de5d23>,
+        <urn:uuid:e628db8d-284a-4e91-b15e-8200608a16f4> ;
+    dc:description "MAG 2012 employer database summarized by County, jurisdiction and block group for Maricopa County, AZ. Only inlcudes employers with 5 or more employees" ;
+    dc:spatial "POLYGON ((-111.71 34.81,-111.71 32.58,-113.42 32.58,-113.42 34.81,-111.71 34.81))" ;
+    dcterms:references <urn:uuid:6e9ff4a3-d755-434d-910f-a405f446fd2b> ;
+    dcterms:title "Maricopa Association of Governments 2012 Employer Database - maps/EmployerSummaries2012" ;
+    esip:eastBound "-113.42"^^xsd:float ;
+    esip:endDate "1900-01-01"^^xsd:date ;
+    esip:northBound "32.58"^^xsd:float ;
+    esip:southBound "34.81"^^xsd:float ;
+    esip:startDate "1900-01-01"^^xsd:date ;
+    esip:westBound "-111.71"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:e628db8d-284a-4e91-b15e-8200608a16f4> bcube:hasType "theme" ;
+    bcube:hasValue "MAG",
+        "NRRC",
+        "usginres:service" ;
+    owl:a bcube:thesaurusSubset .
+

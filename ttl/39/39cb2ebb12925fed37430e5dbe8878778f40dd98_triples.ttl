@@ -1,0 +1,87 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:19a0cc65-ff96-48c2-a9a3-dfcaac7591cb> bcube:hasType "place" ;
+    bcube:hasValue "fUS08 = Colorado",
+        "fUS20 = Kansas",
+        "fUS31 = Nebraska",
+        "fUS35 = New Mexico",
+        "fUS40 = Oklahoma",
+        "fUS46 = South Dakota",
+        "fUS48 = Texas",
+        "fUS56 = Wyoming" ;
+    dc:partOf "Augmented FIPS 10-4 and FIPS 6-4" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:32713bf0-4278-4bb4-a85d-f7043382db13> dcterms:references <urn:uuid:8cd1758a-e685-4f89-b049-cbd641acef38> ;
+    owl:a bibo:WebPage .
+
+<urn:uuid:57035d04-0ea6-4f9d-a14f-2478a36e0db7> owl:a foaf:Organization ;
+    foaf:name "U.S. Geological Survey" .
+
+<urn:uuid:81c39136-5cf9-42c4-be68-7cbce4381c56> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2014-10-30T00:05:23.976Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2014-10-30T00:05:23.976Z" ;
+    dc:identifier "urn:sha:c7aa04e207f3dacd3d43f666a1cf28b7a758ca442ac2daf6dbce513b" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www.usgs.gov/science/xml.php?cite=2380" .
+
+<urn:uuid:8cd1758a-e685-4f89-b049-cbd641acef38> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2014-10-30T00:05:23.976Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2014-10-30T00:05:23.976Z" ;
+    dc:identifier "urn:sha:dec42557ca28b70406fc50a314bdcc96ea65f6f006ba10137be81c0d" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://pubs.usgs.gov/fs/2010/3008/" .
+
+<urn:uuid:b76141aa-5e8a-495c-83bb-7fe250c8104c> bcube:dateCreated "2014-10-30T00:05:23.976Z" ;
+    bcube:hasMetadataRecord <urn:uuid:cd3d9858-0b73-47eb-961b-db48e1b0fcd3> ;
+    bcube:lastUpdated "2014-10-30T00:05:23.976Z" ;
+    dc:conformsTo <urn:uuid:19a0cc65-ff96-48c2-a9a3-dfcaac7591cb>,
+        <urn:uuid:ba81dbc9-18ab-46fa-9692-626b01fc3142> ;
+    dc:description "Explains concepts and methods used to determine the likely future supply of usable water in this major aquifer." ;
+    dc:spatial "POLYGON ((-109 31,-109 43,-97 43,-97 31,-109 31))" ;
+    dcterms:publisher <urn:uuid:57035d04-0ea6-4f9d-a14f-2478a36e0db7> ;
+    dcterms:references <urn:uuid:32713bf0-4278-4bb4-a85d-f7043382db13> ;
+    dcterms:title "Assessing Groundwater Availability in the High Plains Aquifer in Parts of Colorado, Kansas, Nebraska, New Mexico, Oklahoma, South Dakota, Texas, and Wyoming" ;
+    esip:eastBound "-97.0"^^xsd:float ;
+    esip:northBound "43.0"^^xsd:float ;
+    esip:southBound "31.0"^^xsd:float ;
+    esip:westBound "-109.0"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:ba81dbc9-18ab-46fa-9692-626b01fc3142> bcube:hasType "theme" ;
+    bcube:hasValue "groundwater",
+        "hydrology",
+        "water resource management",
+        "water supply and demand" ;
+    dc:partOf "USGS Thesaurus" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:cd3d9858-0b73-47eb-961b-db48e1b0fcd3> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2014-10-30T00:05:23.976Z" ;
+    bcube:lastUpdated "2014-10-30T00:05:23.976Z" ;
+    bcube:originatedFrom <urn:uuid:81c39136-5cf9-42c4-be68-7cbce4381c56> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:b76141aa-5e8a-495c-83bb-7fe250c8104c> .
+

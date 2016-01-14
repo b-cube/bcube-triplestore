@@ -1,0 +1,58 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:ebab3aae-be47-4547-92d0-4a0a60c04fab> a "OGC:WMS" ;
+    bcube:contains <urn:uuid:61938597-b9d1-4359-b5ae-401652793ec1> ;
+    bcube:dateCreated "2015-08-10T08:23:41.729Z" ;
+    bcube:lastUpdated "2015-08-10T08:23:41.729Z" ;
+    bcube:originatedFrom <urn:uuid:530d5419-e2ac-45c5-91cb-071dac977926> ;
+    dc:description "WMS" ;
+    owl:a bcube:service .
+
+<urn:uuid:530d5419-e2ac-45c5-91cb-071dac977926> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-10T08:23:41.729Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-10T08:23:41.729Z" ;
+    dc:identifier "urn:sha:ee9c79636cb5d296ea82af27db75b2f91675ca2fa1e17b9876b2105f" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://kars.ku.edu/arcgis/services/SingleLayers/KansasStreamsOrder1_2/MapServer/WMSServer?request=GetCapabilities&service=WMS" .
+
+<urn:uuid:61938597-b9d1-4359-b5ae-401652793ec1> bcube:dateCreated "2015-08-10T08:23:41.729Z" ;
+    bcube:lastUpdated "2015-08-10T08:23:41.729Z" ;
+    dc:description "Stream network data originated from USGS National Hydrologic Database (NHD). While the NHD is a very useful and spatially accurate dataset, it is missing one attribute that is commonly referenced as a method to classify and stratify streams, the Strahler Stream Order. Stream order information was available on the Surface Waters Information Management System (SWIMS), digitized from 1:100,000 scale maps. ArcGIS was used converted the SWIMS vectors to points, spaced at 100 meter intervals, and then to calculate the distance to nearest point (NHD stream to SWIMS points). For each arc segment, the attributes of the nearest point were then appended to the attribute table. While this process successfully added the stream order to the NHD arcs, there were some errors. There were instances of the nearest point to a segment actually belonging to a tributary, and being incorrectly assigned to the wrong stream segment. Also, since the NHD data is much more detailed in its inclusion of smaller streams, the origin for the calculation of 1st order and 2nd order streams is different. Efforts were made to address and correct both of these issues, but users should recognize that not all errors were corrected. The stream network was manually scanned for inconsistencies in stream order flow (jumping from a 3rd order to 1st order, and then back to a 3rd order) and corrected. Emphasis was placed on correcting the larger (3rd order and greater) steams first, and many (but not all) of the 1st and 2nd order. Instances of stream beginnings being mislabeled as an order greater than 1st order were corrected by searching for all dangling arcs (stream beginnings) and then recoding them to a order of 1. This process corrected 1,199 arcs that had been incorrectly coded. One last issue users should be aware of is that since the NHD includes streams not used in calculating the Strahler order in the SWIMS dataset, there are inconsistencies in the labeling of 1st and 2nd order streams. Some corrections were made where obvious lager gaps were in the SWIMS database, but for the most part the original SWIMS stream order was transferred directly. Where adjustments were made, they were only made to lower (less then 4th order) streams. Last updated: October 2013." ;
+    dc:spatial "POLYGON ((-102.051301 36.993297,-102.051301 40.003173,-94.607287 40.003173,-94.607287 36.993297,-102.051301 36.993297))" ;
+    dc:title "Kansas NHD Waterways Order 1-2" ;
+    dcterms:references <urn:uuid:68b5705b-be10-49b5-b40b-68ac9af8661e> ;
+    esip:eastBound "-94.607287"^^xsd:float ;
+    esip:northBound "40.003173"^^xsd:float ;
+    esip:southBound "36.993297"^^xsd:float ;
+    esip:westBound "-102.051301"^^xsd:float ;
+    owl:a bcube:Layer .
+
+<urn:uuid:68b5705b-be10-49b5-b40b-68ac9af8661e> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-10T08:23:41.729Z" ;
+    bcube:hasConfidence "Not Sure" ;
+    bcube:hasUrlSource "Generated" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-10T08:23:41.729Z" ;
+    dc:identifier "urn:sha:bad0cae39591257f3dd070d930508f2c3d3cb18dfb1cfa0053b437cf" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://kars.ku.edu/arcgis/services/SingleLayers/KansasStreamsOrder1_2/MapServer/WMSServer?layers=0&width=500&version=1.3.0&bbox=-102.051301%2C36.993297%2C-94.607287%2C40.003173&service=WMS&format=image%2Fpng&styles=&crs=CRS%3A84&request=GetMap&height=500" .
+

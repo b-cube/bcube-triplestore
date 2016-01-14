@@ -1,0 +1,124 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:0a4dc563-efa1-4d96-b00d-c0c548d6136b> bcube:hasType "stratum" ;
+    bcube:hasValue "Seafloor" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:0e578c0f-2eb4-44f6-acd9-a0ba1b99b6bd> bcube:hasValue "elevation",
+        "environment",
+        "geoscientificInformation",
+        "imageryBaseMapsEarthCover",
+        "oceans" ;
+    dc:partOf "IsoTopicCategories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:20bd6c1c-3578-405a-b2c2-0e6305b8d6fe> bcube:hasType "temporal" ;
+    bcube:hasValue "2004",
+        "2005" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:3ecf4c79-d4f0-44cb-9d2c-6babbadc872b> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-06-16T23:12:06.308Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-06-16T23:12:06.308Z" ;
+    dc:identifier "urn:sha:be5bd76420eeb8cb3dc14b888cb09daf57a1bc7159509313d93e1235" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "https://data.noaa.gov/harvest/object/957166e6-2ec1-41ff-8081-f9b47b30685a" .
+
+<urn:uuid:443ba830-9607-44a7-b8c8-5a58b1ff7df6> bcube:hasType "theme" ;
+    bcube:hasValue "Geographic Information > Habitats" ;
+    dc:partOf "CoRIS Discovery Thesaurus" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:5054f813-751d-49a3-9033-a256599d58c5> bcube:hasType "place" ;
+    bcube:hasValue "St. John",
+        "US Virgin Islands",
+        "USVI",
+        "VICR",
+        "VICRNM",
+        "VIIS",
+        "Virgin Islands Coral Reef National Monument" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:96d11b50-4271-4fc4-859f-1b6b2fa739bb> a "ISO 19115:2003/19139" ;
+    bcube:dateCreated "2015-06-16T23:12:06.308Z" ;
+    bcube:lastUpdated "2015-06-16T23:12:06.308Z" ;
+    bcube:originatedFrom <urn:uuid:3ecf4c79-d4f0-44cb-9d2c-6babbadc872b> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:9f426eb8-1ed3-44af-a48c-4baba6be8900> .
+
+<urn:uuid:9f426eb8-1ed3-44af-a48c-4baba6be8900> bcube:dateCreated "2015-06-16T23:12:06.308Z" ;
+    bcube:hasMetadataRecord <urn:uuid:96d11b50-4271-4fc4-859f-1b6b2fa739bb> ;
+    bcube:lastUpdated "2015-06-16T23:12:06.308Z" ;
+    dc:conformsTo <urn:uuid:0a4dc563-efa1-4d96-b00d-c0c548d6136b>,
+        <urn:uuid:0e578c0f-2eb4-44f6-acd9-a0ba1b99b6bd>,
+        <urn:uuid:20bd6c1c-3578-405a-b2c2-0e6305b8d6fe>,
+        <urn:uuid:443ba830-9607-44a7-b8c8-5a58b1ff7df6>,
+        <urn:uuid:5054f813-751d-49a3-9033-a256599d58c5>,
+        <urn:uuid:a4867c6b-ce73-4edc-b4c5-b95c4076a0aa>,
+        <urn:uuid:f1add653-a6c5-4e91-ad47-97b73c1095dc> ;
+    dc:description "Eight complexity surfaces (mean depth, standard deviation of depth, curvature, plan curvature, profile curvature, rugosity, slope, and slope of slope) were stacked and exported to create one image with several different bands (each band representing a specific metric). This image was transformed into its first three principal components using the \"Principal Components Analysis\" (PCA) function in ENVI 4.6. The transformation reduced the dimensionality of the dataset by removing information that was redundant among the different bands. The resulting 2x2 meter resolution, three band PCA image only contains information that uniquely described the complexity and structure of the seafloor. Coral reef habitat types were delineated and classified from this PCA image. Acoustic imagery was acquired for the VICRNM on two separate missions onboard the NOAA ship, Nancy Foster. The first mission took place from 2/18/04 to 3/5/04. The second mission took place from 2/1/05 to 2/12/05. On both missions, seafloor depths between 14 to 55 m were mapped using a RESON SeaBat 8101 ER (240 kHz) MBES sensor. This pole-mounted system measured water depths across a 150 degree swath consisting of 101 individual 1.5 degree x 1.5 degree beams. The beams to the port and starboard of nadir (i.e., directly underneath the ship) overlapped adjacent survey lines by approximately 10 m. The vessel survey speed was between 5 and 8 kn. In 2004, the ship's location was determined by a Trimble DSM 132 DGPS system, which provided a RTCM differential data stream from the U.S. Coast Guard Continually Operating Reference Station (CORS) at Port Isabel, Puerto Rico. Gyro, heave, pitch and roll correctors were acquired using an Ixsea Octans gyrocompass. In 2005, the ship's positioning and orientation were determined by the Applanix POS/MV 320 V4, which is a GPS aided Inertial Motion Unit (IMU) providing measurements of roll, pitch and heading. The POS/MV obtained its positions from two dual frequency Trimble Zephyr GPS antennae. An auxiliary Trimble DSM 132 DGPS system provided a RTCM differential data stream from the U.S. Coast Guard CORS at Port Isabel, Puerto Rico. For both years, CTD (conductivity, temperature and depth) measurements were taken approximately every 4 hours using a Seabird Electronics SBE-19 to correct for the changing sound velocities in the water column. In 2004, raw data were logged in .xtf (extended triton format) using Triton ISIS software 6.2. In 2005, raw data were logged in .gsf (generic sensor format) using SAIC ISS 2000 software. Data from 2004 were referenced to the WGS84 UTM 20 N horizontal coordinate system, and data from 2005 were referenced to the NAD83 UTM 20 N horizontal coordinate system. Data from both projects were referenced to the Mean Lower Low Water (MLLW) vertical tidal coordinate system. The 2004 and 2005 MBES bathymetric data were both corrected for sensor offsets, latency, roll, pitch, yaw, static draft, the changing speed of sound in the water column and the influence of tides in CARIS Hips & Sips 5.3 and 5.4, respectively. The 2004 data was then binned to create a 1 x 1 m raster surface, and the 2005 data was binned to a create 2 x 2 m raster surface. After these final surfaces were created, the datum for the 2004 bathymetric surfaces was transformed from WGS84 to NAD83 using the \"Project Raster\" function in ArcGIS 9.1. The 2004 surface was transformed so that it would have the same datum as the 2005 surface. The 2004 bathymetric surface was then down sampled from 1 x 1 to 2 x 2 m using the \"Resample\" function in ArcGIS 9.1. The 2004 surface was resampled so it would have the same spatial resolution as the 2005 surface. Having the same coordinate systems and spatial resolutions, the final 2004 and 2005 bathymetry rasters were then merged using the Raster Calculator function \"Merge\" in ArcGIS's Spatial Analyst Extension to create a seamless bathymetry surface for the entire VICRNM area south of St. John. For a complete description of the data acquisition and processing parameters, please see the data acquisition and processing reports (DAPRs) for projects: NF-04-06-VI and NF-05-05-VI (Monaco & Rooney, 2004; Battista & Lazar, 2005)." ;
+    dc:spatial "POLYGON ((-64.98711 18.158064,-64.98711 18.313215,-64.652198 18.313215,-64.652198 18.158064,-64.98711 18.158064))" ;
+    dcterms:title "Principal Components Analysis (PCA) Image used to characterize the complexity of the seafloor around St. John, USVI" ;
+    esip:eastBound "-64.652198"^^xsd:float ;
+    esip:endDate "2005-02-12"^^xsd:date ;
+    esip:northBound "18.313215"^^xsd:float ;
+    esip:southBound "18.158064"^^xsd:float ;
+    esip:startDate "2004-02-18"^^xsd:date ;
+    esip:westBound "-64.98711"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:a4867c6b-ce73-4edc-b4c5-b95c4076a0aa> bcube:hasType "theme" ;
+    bcube:hasValue "Bathymetry",
+        "Benthic",
+        "Biogeography",
+        "Coral",
+        "GIS",
+        "Habitat",
+        "IOCM",
+        "Integrated Ocean and Coastal Mapping",
+        "MBES",
+        "Multibeam",
+        "NF-04-06",
+        "NF-05-05",
+        "NOAA",
+        "NPS",
+        "Nancy Foster",
+        "PCA",
+        "Principal Components Analysis",
+        "Raster",
+        "Reef",
+        "Reson 8101 ER",
+        "SWMB",
+        "Seafloor",
+        "Sonar",
+        "St. John",
+        "US Virgin Islands",
+        "USVI" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:f1add653-a6c5-4e91-ad47-97b73c1095dc> bcube:hasType "theme" ;
+    bcube:hasValue "EARTH SCIENCE > Biosphere > Aquatic Habitat > Benthic Habitat" ;
+    dc:partOf "CoRIS Theme Thesaurus" ;
+    owl:a bcube:thesaurusSubset .
+

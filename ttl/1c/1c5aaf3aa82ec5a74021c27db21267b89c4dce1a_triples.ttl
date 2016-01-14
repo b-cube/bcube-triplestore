@@ -1,0 +1,98 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:01fe064f-994c-46d8-8bc5-e7d997b4daca> bcube:hasType "theme" ;
+    bcube:hasValue "environment",
+        "inlandWaters" ;
+    dc:partOf "ISO 19115 Topic Category" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:1bc85db1-f976-4ec2-b6e0-506e83557af9> bcube:hasType "theme" ;
+    bcube:hasValue "1-Percent-Annual-Chance Flood",
+        "Boundary Condition",
+        "Channel",
+        "Cross Section",
+        "DFIRM",
+        "Digital Flood Insurance Rate Map",
+        "Flood Hazard data",
+        "Hydraulics",
+        "Lake",
+        "Stream",
+        "Stream Centerlines",
+        "Water Body" ;
+    dc:partOf "FEMA NFIP Topic Category" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:26822b74-0af1-4a16-bc49-f26312b48db8> bcube:dateCreated "2015-07-19T03:14:37.51Z" ;
+    bcube:hasMetadataRecord <urn:uuid:2766c960-02d4-4ab4-9c7a-139bb0b3a7e6> ;
+    bcube:lastUpdated "2015-07-19T03:14:37.51Z" ;
+    dc:conformsTo <urn:uuid:01fe064f-994c-46d8-8bc5-e7d997b4daca>,
+        <urn:uuid:1bc85db1-f976-4ec2-b6e0-506e83557af9>,
+        <urn:uuid:b1515afb-6dc4-4e9e-8fd2-4d5bc09ad605> ;
+    dc:description "Recent developments in digital terrain and geospatial database management technology make it possible to protect this investment for existing and future projects to a much greater extent than was possible in the past. The minimum requirement for hydraulics data includes input and output files for all hydraulic models and spatial datasets that are needed to implement the models. (Source: FEMA Guidelines and Specs, Appendix N)" ;
+    dc:spatial "POLYGON ((-112.0008 40.75,-112.0008 41.3749,-111.1257 41.3749,-111.1257 40.75,-112.0008 40.75))" ;
+    dcterms:publisher <urn:uuid:ae901be6-7273-4db3-b82b-207bc9a496e2> ;
+    dcterms:references <urn:uuid:9b8b9fad-04b5-4ccf-956a-93f96a17df7e> ;
+    dcterms:title "DCS Hydraulics Submission for Morgan County, Utah" ;
+    esip:eastBound "-111.1257"^^xsd:float ;
+    esip:northBound "41.3749"^^xsd:float ;
+    esip:southBound "40.75"^^xsd:float ;
+    esip:startDate "2008-06-09"^^xsd:date ;
+    esip:westBound "-112.0008"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:2766c960-02d4-4ab4-9c7a-139bb0b3a7e6> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-07-19T03:14:37.51Z" ;
+    bcube:lastUpdated "2015-07-19T03:14:37.51Z" ;
+    bcube:originatedFrom <urn:uuid:91bf5a89-4eef-43f9-9e6b-92da84ad4010> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:26822b74-0af1-4a16-bc49-f26312b48db8> .
+
+<urn:uuid:91bf5a89-4eef-43f9-9e6b-92da84ad4010> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-07-19T03:14:37.51Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-07-19T03:14:37.51Z" ;
+    dc:identifier "urn:sha:892962897d0d5e71c770b72cd59652ba2a2354082ac268cbd23ac401" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "https://catalog.data.gov/harvest/object/78f2ab5b-0314-4067-bf25-d4aacd41b0d0/original" .
+
+<urn:uuid:9b8b9fad-04b5-4ccf-956a-93f96a17df7e> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-07-19T03:14:37.51Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-07-19T03:14:37.51Z" ;
+    dc:identifier "urn:sha:37c915397238031daced09ae0e2dd3bf54e84a6477f749c2cc9dcbdf" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://hazards.fema.gov" .
+
+<urn:uuid:ae901be6-7273-4db3-b82b-207bc9a496e2> owl:a foaf:Organization ;
+    foaf:name "Federal Emergency Management Agency" .
+
+<urn:uuid:b1515afb-6dc4-4e9e-8fd2-4d5bc09ad605> bcube:hasType "place" ;
+    bcube:hasValue "COMMUNITY MORGAN COUNTY",
+        "COUNTY MORGAN",
+        "COUNTY-FIPS 42029",
+        "FEMA-CID 49029C",
+        "REGION 8",
+        "STATE UT" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+

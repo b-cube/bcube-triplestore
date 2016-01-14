@@ -1,0 +1,87 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:0b5b598b-7377-4dc5-8b16-afb20e8ad954> bcube:hasType "theme" ;
+    bcube:hasValue "Digital Elevation Model (DEM)",
+        "Digital Terrain Model (DTM)",
+        "Elevation",
+        "LOLA Gridded Data Record (GDR)",
+        "Lunar Mapping and Modeling Project (LMMP)",
+        "Lunar Orbiter Laser Altimeter (LOLA)",
+        "Lunar Reconnaissance Orbiter (LRO)",
+        "Lunar Reconnaissance Orbiter Camera (LROC)",
+        "Topography" ;
+    dc:partOf "http://www.lmmp.nasa.gov/redmine/projects/lmmpwiki/wiki/Glossary" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:13e7902f-bcaa-43ae-9067-bed7de0dd45a> owl:a foaf:Organization ;
+    foaf:name "" .
+
+<urn:uuid:34a5174b-4849-4973-9173-1939141d62af> bcube:hasType "place" ;
+    bcube:hasValue "Earth",
+        "The Moon" ;
+    dc:partOf "http://www.lmmp.nasa.gov/redmine/projects/lmmpwiki/wiki/Glossary" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:38020d2b-7b60-4267-8ae1-0cbd24a7cc50> bcube:dateCreated "2015-08-05T04:36:11.903Z" ;
+    bcube:hasMetadataRecord <urn:uuid:8d60b93b-2512-4722-9986-0d087c48bf0f> ;
+    bcube:lastUpdated "2015-08-05T04:36:11.903Z" ;
+    dc:conformsTo <urn:uuid:0b5b598b-7377-4dc5-8b16-afb20e8ad954>,
+        <urn:uuid:34a5174b-4849-4973-9173-1939141d62af> ;
+    dc:description "This is a digital elevation model (DEM) extracted from the Lunar Reconnaissance Orbiter Camera (LROC) Narrow Angle Camera (NAC) stereo images from the Lunar Reconnaissance Orbiter mission. The original data product is a DEM from stereo images acquired at approximately 0.5 meters/pixel resolution, which allows an output DEM resolution of 1.5 to 2.0 meters/pixel using a softcopy photogrammetry system. However, in some cases, LROC DEMs were also generated at lower resolutions. The DEM was registered horizontally and vertically to LRO's Lunar Orbiter Laser Altimeter (LOLA) data. Elevation values are in meters and referred to a radius of 1737400m." ;
+    dc:spatial "POLYGON ((3.027194 26.454592,3.027194 26.764077,3.849665 26.764077,3.849665 26.454592,3.027194 26.454592))" ;
+    dcterms:publisher <urn:uuid:13e7902f-bcaa-43ae-9067-bed7de0dd45a> ;
+    dcterms:references <urn:uuid:51106ba5-4326-484e-9c83-11df5f9e2418> ;
+    dcterms:title "LRO LROC DEM, Apollo 15" ;
+    esip:eastBound "3.849665"^^xsd:float ;
+    esip:northBound "26.764077"^^xsd:float ;
+    esip:southBound "26.454592"^^xsd:float ;
+    esip:startDate "2011-01-01"^^xsd:date ;
+    esip:westBound "3.027194"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:3809654e-7449-4594-b7f1-b4f5b885cc76> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-05T04:36:11.903Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-05T04:36:11.903Z" ;
+    dc:identifier "urn:sha:3be1dbb81fb8991c9b5f4a987e8e735c33524f9b9f11555ebf21a6cc" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://astropedia.astrogeology.usgs.gov/download/Moon/LMMP/Apollo15/ancillary/Moon_LRO_NAC_DEM_26N004E_150cmp.xml" .
+
+<urn:uuid:51106ba5-4326-484e-9c83-11df5f9e2418> dcterms:references <urn:uuid:e66cda5b-255d-4b70-902b-276278b00f0f> ;
+    owl:a bibo:WebPage .
+
+<urn:uuid:8d60b93b-2512-4722-9986-0d087c48bf0f> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-08-05T04:36:11.903Z" ;
+    bcube:lastUpdated "2015-08-05T04:36:11.903Z" ;
+    bcube:originatedFrom <urn:uuid:3809654e-7449-4594-b7f1-b4f5b885cc76> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:38020d2b-7b60-4267-8ae1-0cbd24a7cc50> .
+
+<urn:uuid:e66cda5b-255d-4b70-902b-276278b00f0f> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-05T04:36:11.903Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-05T04:36:11.903Z" ;
+    dc:identifier "urn:sha:8bf49cca67c4ef868d593929f5538138555b69f3c9c40baf4d5974bc" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www.lmmp.nasa.gov" .
+

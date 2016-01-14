@@ -1,0 +1,89 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:37bb19ca-bb92-440a-b40b-d0c9d87a0a97> bcube:hasType "place" ;
+    bcube:hasValue "12073",
+        "County or Equivalent Entity",
+        "Leon",
+        "U.S.",
+        "United States" ;
+    dc:partOf "FIPS Publication 5-2, FIPS Publication 6-4, FIPS Publication 8-6, FIPS Publication 9-1" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:6b278ace-e65c-46ee-8202-17240ba19e92> bcube:hasType "theme" ;
+    bcube:hasValue "County or equivalent entity",
+        "Polygon",
+        "TAZ",
+        "Traffic Analysis Zone" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:7803059f-7a19-42a5-9f8e-07675323fe9b> bcube:dateCreated "2015-11-06T22:59:36.34Z" ;
+    bcube:hasMetadataRecord <urn:uuid:790416a9-0c7c-407a-a22e-0661430813f1> ;
+    bcube:lastUpdated "2015-11-06T22:59:36.34Z" ;
+    dc:conformsTo <urn:uuid:37bb19ca-bb92-440a-b40b-d0c9d87a0a97>,
+        <urn:uuid:6b278ace-e65c-46ee-8202-17240ba19e92>,
+        <urn:uuid:dd760493-7b97-4eca-a289-68826c94f390> ;
+    dc:description "The TIGER/Line Shapefiles are an extract of selected geographic and cartographic information from the Census MAF/TIGER database. The Census MAF/TIGER database represents a seamless national file with no overlaps or gaps between parts. However, each TIGER/Line Shapefile is designed to stand alone as an independent data set or the shapefiles can be combined to cover the whole nation." ;
+    dc:spatial "POLYGON ((-84.715356 30.273438,-84.715356 30.685334,-83.977165 30.685334,-83.977165 30.273438,-84.715356 30.273438))" ;
+    dcterms:publisher <urn:uuid:84b65e15-47f3-4119-a962-c1736578a236> ;
+    dcterms:references <urn:uuid:c09a1eef-3d16-4985-bf80-236b6d66a523> ;
+    dcterms:title "TIGER/Line Shapefile, 2007, 2000 county, Leon County, Traffic Analysis Zone (TAZ)" ;
+    esip:eastBound "-83.977165"^^xsd:float ;
+    esip:endDate "2007-07-01"^^xsd:date ;
+    esip:northBound "30.685334"^^xsd:float ;
+    esip:southBound "30.273438"^^xsd:float ;
+    esip:startDate "2007-01-01"^^xsd:date ;
+    esip:westBound "-84.715356"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:790416a9-0c7c-407a-a22e-0661430813f1> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-11-06T22:59:36.34Z" ;
+    bcube:lastUpdated "2015-11-06T22:59:36.34Z" ;
+    bcube:originatedFrom <urn:uuid:7e37d336-a3c1-4299-900f-ebc0160cbfa8> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:7803059f-7a19-42a5-9f8e-07675323fe9b> .
+
+<urn:uuid:7e37d336-a3c1-4299-900f-ebc0160cbfa8> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-06T22:59:36.34Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-06T22:59:36.34Z" ;
+    dc:identifier "urn:sha:17524cd2643d07ac59c5d73d623429cd108e4d4924cef857dca33293" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://meta.geo.census.gov/data/existing/decennial/GEO/GPMB/TIGERline/fe_2007/taz00/fe_2007_12073_taz00_url.shp.xml" .
+
+<urn:uuid:84b65e15-47f3-4119-a962-c1736578a236> owl:a foaf:Organization ;
+    foaf:name "" .
+
+<urn:uuid:c09a1eef-3d16-4985-bf80-236b6d66a523> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-06T22:59:36.34Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-06T22:59:36.34Z" ;
+    dc:identifier "urn:sha:462b1557e414e56d885a17749b2c89d52b8b4c98f2f90b98aa1f14d1" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www2.census.gov/geo/tiger/TIGER2007FE/12_FLORIDA/12073_Leon/fe_2007_12073_taz00.zip" .
+
+<urn:uuid:dd760493-7b97-4eca-a289-68826c94f390> bcube:hasType "theme" ;
+    bcube:hasValue "boundaries" ;
+    dc:partOf "ISO 19115 Topic Categories" ;
+    owl:a bcube:thesaurusSubset .
+

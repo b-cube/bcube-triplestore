@@ -1,0 +1,107 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:2bf40b19-13bf-40aa-b8cc-996a13ef52a7> bcube:hasType "place" ;
+    bcube:hasValue "Long Island",
+        "Mid-Atlantic",
+        "New York",
+        "New York Bight",
+        "New York Offshore Planing Area",
+        "Northwest Atlantic Ocean" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:4c0fb29c-dd9b-4ead-aacf-7ed496ae5df7> bcube:hasType "theme" ;
+    bcube:hasValue "New York",
+        "Seafloor",
+        "bathymetry/topography",
+        "environment",
+        "grain size",
+        "prediction",
+        "sediment",
+        "spatial planning",
+        "uncertainty" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:543e8749-d602-45c0-ad8b-471ae98aecd2> a "ISO 19115:2003/19139" ;
+    bcube:dateCreated "2015-08-10T08:49:56.859Z" ;
+    bcube:lastUpdated "2015-08-10T08:49:56.859Z" ;
+    bcube:originatedFrom <urn:uuid:c4f8e979-25a6-4a98-8df8-2393b6ead926> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:c501ae82-e8b0-48d5-940d-8d5adc91c17b> .
+
+<urn:uuid:5f7486bf-b3c6-46c6-a032-5c9dc12b7175> bcube:hasType "temporal" ;
+    bcube:hasValue "Long-term average determined by input data" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:61159a8a-ccad-4652-9cd7-9249841f0443> bcube:hasValue "environment",
+        "oceans" ;
+    dc:partOf "IsoTopicCategories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:a48fc023-ae23-485f-a97f-12e43eacae6c> bcube:hasType "theme" ;
+    bcube:hasValue "Bathymetry/Topography" ;
+    dc:partOf "NOS Data Explorer Topic Category" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:c4f8e979-25a6-4a98-8df8-2393b6ead926> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-10T08:49:56.859Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-10T08:49:56.859Z" ;
+    dc:identifier "urn:sha:e42c39c4fa5a2e40a01b6a523bdd5998b375f0e2e9c761a0d13dbfcd" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://catalog.data.gov/harvest/object/90ed724e-b8da-4c5d-a295-12af62393575" .
+
+<urn:uuid:c501ae82-e8b0-48d5-940d-8d5adc91c17b> bcube:dateCreated "2015-08-10T08:49:56.859Z" ;
+    bcube:hasMetadataRecord <urn:uuid:543e8749-d602-45c0-ad8b-471ae98aecd2> ;
+    bcube:lastUpdated "2015-08-10T08:49:56.859Z" ;
+    dc:conformsTo <urn:uuid:2bf40b19-13bf-40aa-b8cc-996a13ef52a7>,
+        <urn:uuid:4c0fb29c-dd9b-4ead-aacf-7ed496ae5df7>,
+        <urn:uuid:5f7486bf-b3c6-46c6-a032-5c9dc12b7175>,
+        <urn:uuid:61159a8a-ccad-4652-9cd7-9249841f0443>,
+        <urn:uuid:a48fc023-ae23-485f-a97f-12e43eacae6c>,
+        <urn:uuid:cfb84a4a-4ac3-4dea-9771-968f7b6e61cc> ;
+    dc:description "This dataset represents sediment size predictions from a sediment spatial model developed for the New York offshore spatial planning area. The model also includes spatially-explicit uncertainty estimates represented in another raster dataset. The predictive model of mean grain size was developed building upon the data compilation and analytical framework laid out by Goff et al. (2008)." ;
+    dc:spatial "POLYGON ((-75 37,-75 42,-69 42,-69 37,-75 37))" ;
+    dcterms:references <urn:uuid:f4bc7eb7-4919-45f9-b066-74f7fdb11800> ;
+    dcterms:title "NOAA ESRI Grid - sediment size predictions model in New York offshore planning area from Biogeography Branch" ;
+    esip:eastBound "-69.0"^^xsd:float ;
+    esip:northBound "42.0"^^xsd:float ;
+    esip:southBound "37.0"^^xsd:float ;
+    esip:westBound "-75.0"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:cfb84a4a-4ac3-4dea-9771-968f7b6e61cc> bcube:hasType "theme" ;
+    bcube:hasValue "OceanCommunity" ;
+    dc:partOf "Geospatial Platform" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:f4bc7eb7-4919-45f9-b066-74f7fdb11800> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-10T08:49:56.859Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-10T08:49:56.859Z" ;
+    dc:identifier "urn:sha:7bb45a1356c0557728e155796c0bf5060045aa5c0acf0dbcb0e5a0aa" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://coastalscience.noaa.gov/projects/download.aspx?fpath=D%3a%5cWebsites%5cNCCOS%5cprojects-attachments%5c80%5cNY_assessment_data_package.zip" .
+

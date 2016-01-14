@@ -1,0 +1,105 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:53aaa41a-58d1-4d8c-9c28-69f1d68bca85> bcube:hasType "theme" ;
+    bcube:hasValue "2010 Census",
+        "Cartographic Boundary",
+        "Census Tract",
+        "County",
+        "Generalized",
+        "Shapefile",
+        "State" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:66b68e29-cb6b-486d-b0ad-a791ecb7b05c> bcube:dateCreated "2015-11-05T16:49:25.226Z" ;
+    bcube:hasMetadataRecord <urn:uuid:85aa6ca3-c15d-4648-9063-60c100c3927b> ;
+    bcube:lastUpdated "2015-11-05T16:49:25.226Z" ;
+    dc:conformsTo <urn:uuid:53aaa41a-58d1-4d8c-9c28-69f1d68bca85>,
+        <urn:uuid:a6fe3c91-743d-4164-b6bc-0f2fb6cd803b>,
+        <urn:uuid:e4072d65-dddd-4d19-a0ec-4f26f81e9031> ;
+    dc:description "The 2010 cartographic boundary shapefiles are simplified representations of selected geographic areas from the Census Bureau's MAF/TIGER geographic database. These boundary files are specifically designed for small scale thematic mapping. When possible generalization is performed with intent to maintain the hierarchical relationships among geographies and to maintain the alignment of geographies within a file set for a given year. Geographic areas may not align with the same areas from another year. Some geographies are available as nation-based shapefiles while others are available only as state-based files." ;
+    dc:spatial "POLYGON ((-80.519851 39.719799,-80.519851 42.516072,-74.689502 42.516072,-74.689502 39.719799,-80.519851 39.719799))" ;
+    dcterms:publisher <urn:uuid:9baa5122-10e9-4ec8-9edc-a4bb29a27bba> ;
+    dcterms:references <urn:uuid:9894e6f8-3011-46ed-864e-284ae9a7604a>,
+        <urn:uuid:b03e04f6-78e2-4d4a-a9fc-6ce673a6f060> ;
+    dcterms:title "2010 Cartographic Boundary File, State-County-Census Tract for Pennsylvania, 1:500,000" ;
+    esip:eastBound "-74.689502"^^xsd:float ;
+    esip:endDate "2011-09-01"^^xsd:date ;
+    esip:northBound "42.516072"^^xsd:float ;
+    esip:southBound "39.719799"^^xsd:float ;
+    esip:startDate "2011-09-01"^^xsd:date ;
+    esip:westBound "-80.519851"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:85aa6ca3-c15d-4648-9063-60c100c3927b> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-11-05T16:49:25.226Z" ;
+    bcube:lastUpdated "2015-11-05T16:49:25.226Z" ;
+    bcube:originatedFrom <urn:uuid:aba90406-836a-4801-b54c-617b142e1143> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:66b68e29-cb6b-486d-b0ad-a791ecb7b05c> .
+
+<urn:uuid:9894e6f8-3011-46ed-864e-284ae9a7604a> dcterms:references <urn:uuid:e0a899a8-0fb9-4a9b-9f80-b89ea6ba22ed> ;
+    owl:a bibo:WebPage .
+
+<urn:uuid:9baa5122-10e9-4ec8-9edc-a4bb29a27bba> owl:a foaf:Organization ;
+    foaf:name "" .
+
+<urn:uuid:a6fe3c91-743d-4164-b6bc-0f2fb6cd803b> bcube:hasType "place" ;
+    bcube:hasValue "PA",
+        "Pennsylvania" ;
+    dc:partOf "INCITS 38:2009" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:aba90406-836a-4801-b54c-617b142e1143> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-05T16:49:25.226Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-05T16:49:25.226Z" ;
+    dc:identifier "urn:sha:bcc4b0c87be8fbb0d72a9160e21025c8a6367ca7c84fe32b2856946b" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://meta.geo.census.gov/data/existing/decennial/GEO/CPMB/boundary/2011gz/Type140/gz_2010_42_140_00_500k.xml" .
+
+<urn:uuid:b03e04f6-78e2-4d4a-a9fc-6ce673a6f060> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-05T16:49:25.226Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-05T16:49:25.226Z" ;
+    dc:identifier "urn:sha:87c2c1be0602ce1fdf28aee707379c2335de3e4da52b23bc07921d86" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www.census.gov/geo/www/cob/index.html" .
+
+<urn:uuid:e0a899a8-0fb9-4a9b-9f80-b89ea6ba22ed> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-05T16:49:25.226Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-05T16:49:25.226Z" ;
+    dc:identifier "urn:sha:2c1a9f1230b6384374eb0153383256166c66f384520d6d889a6fd728" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www2.census.gov/geo/tiger/GENZ2010/" .
+
+<urn:uuid:e4072d65-dddd-4d19-a0ec-4f26f81e9031> bcube:hasType "theme" ;
+    bcube:hasValue "Boundaries" ;
+    dc:partOf "ISO 19115 Topic Categories" ;
+    owl:a bcube:thesaurusSubset .
+

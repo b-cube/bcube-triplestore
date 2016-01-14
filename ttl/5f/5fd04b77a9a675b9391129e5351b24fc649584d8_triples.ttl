@@ -1,0 +1,100 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:02d54a83-8281-4757-ae93-f0b4962cf52d> owl:a foaf:Organization ;
+    foaf:name "U.S. Geological Survey, Coastal and Marine Geology Program" .
+
+<urn:uuid:2e3b8f44-6681-483d-a7c9-2e942c12fce8> bcube:hasType "place" ;
+    bcube:hasValue "Gulf of Mexico",
+        "Mississippi Fan",
+        "North America",
+        "United States" ;
+    dc:partOf "General" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:84399198-c636-4937-93d9-37d9111a4bc0> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-08-04T21:43:35.279Z" ;
+    bcube:lastUpdated "2015-08-04T21:43:35.279Z" ;
+    bcube:originatedFrom <urn:uuid:fcacab7c-d405-4af0-87e1-011c7f7f6c62> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:9aa15d7a-0ac5-464d-965c-94d3a31da69d> .
+
+<urn:uuid:9aa15d7a-0ac5-464d-965c-94d3a31da69d> bcube:dateCreated "2015-08-04T21:43:35.279Z" ;
+    bcube:hasMetadataRecord <urn:uuid:84399198-c636-4937-93d9-37d9111a4bc0> ;
+    bcube:lastUpdated "2015-08-04T21:43:35.279Z" ;
+    dc:conformsTo <urn:uuid:2e3b8f44-6681-483d-a7c9-2e942c12fce8>,
+        <urn:uuid:a18abc86-e4d2-4f22-8994-aab47fe4419c>,
+        <urn:uuid:dd10cec1-98ea-4938-bbac-ec8e1a574d93> ;
+    dc:description "Since 1982 the U.S. Geological Survey (USGS) has collected a large amount of surficial and shallow subsurface geologic information in the deep parts of the Gulf of Mexico. These data include digital sidescan sonar imagery, digital seismic-reflection data, and descriptions and analyses of piston and gravity cores. The data were collected during several different projects that addressed surficial and shallow subsurface geologic processes. Some of these data sets have already been published, but the growing interest in the occurrence and distribution of gas hydrates in the Gulf of Mexico warrants integrating these existing data and associated interpretations into a GIS to provide regional background information for ongoing and future gas hydrate research." ;
+    dc:spatial "POLYGON ((-86.509727 26.157803,-86.509727 26.790625,-85.146508 26.790625,-85.146508 26.157803,-86.509727 26.157803))" ;
+    dcterms:publisher <urn:uuid:02d54a83-8281-4757-ae93-f0b4962cf52d> ;
+    dcterms:references <urn:uuid:f0f08175-538b-48ca-b389-2c018f12d412> ;
+    dcterms:title "CHANNEL.SHP - Interpretation of channels on the SeaMARC 1A sidescan sonar image of the Mississippi Fan, USGS Gulf of Mexico Cruise 90001" ;
+    esip:eastBound "-85.146508"^^xsd:float ;
+    esip:endDate "1990-04-08"^^xsd:date ;
+    esip:northBound "26.790625"^^xsd:float ;
+    esip:southBound "26.157803"^^xsd:float ;
+    esip:startDate "1990-03-25"^^xsd:date ;
+    esip:westBound "-86.509727"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:a18abc86-e4d2-4f22-8994-aab47fe4419c> bcube:hasType "theme" ;
+    bcube:hasValue "ArcView",
+        "CMGP",
+        "Coastal and Marine Geology Program",
+        "EEZ",
+        "Gulf of Mexico GIS database",
+        "Information Archives Field Activity 90001",
+        "U.S. Exclusive Economic Zone",
+        "U.S. Geological Survey",
+        "USGS",
+        "WHSC",
+        "Woods Hole Science Center",
+        "channel",
+        "interpretation",
+        "polyline",
+        "shapefile" ;
+    dc:partOf "General" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:dd10cec1-98ea-4938-bbac-ec8e1a574d93> bcube:hasType "theme" ;
+    bcube:hasValue "geoscientificInformation",
+        "oceans and estuaries" ;
+    dc:partOf "ISO 19115 Topic Category" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:f0f08175-538b-48ca-b389-2c018f12d412> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-04T21:43:35.279Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-04T21:43:35.279Z" ;
+    dc:identifier "urn:sha:0eace0cfcfdc68c5edcde7204adcd2a2b107189e7d95dd4ca31cdc5b" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://pubs.usgs.gov/of/2005/1071/data/sidescan/interpretation/seamarc/channel.zip" .
+
+<urn:uuid:fcacab7c-d405-4af0-87e1-011c7f7f6c62> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-04T21:43:35.279Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-04T21:43:35.279Z" ;
+    dc:identifier "urn:sha:370d7b1c3dd43bb35767ef8e5e85eb5add5f602b148c78613ac42fb1" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://woodshole.er.usgs.gov/pubs/of2005-1071/data/sidescan/interpretation/seamarc/channel.shp.xml" .
+

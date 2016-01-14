@@ -1,0 +1,89 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:32527c4c-dec3-48a6-9bac-ab0beaba3f17> bcube:hasType "theme" ;
+    bcube:hasValue "boundaries" ;
+    dc:partOf "ISO 19115 Topic Categories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:32ce354f-9e0c-4928-8fd5-3afef8249bad> bcube:hasType "place" ;
+    bcube:hasValue "09",
+        "CT",
+        "Connecticut",
+        "State or Equivalent Entity",
+        "U.S.",
+        "United States" ;
+    dc:partOf "INCITS.38-200x (R2004),INCITS.31-200x (R2007),INCITS.454-200x,INCITS 455-200x,INCITS 446-2008" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:33efea37-047e-4005-ba0b-b5a5a488e563> bcube:dateCreated "2015-11-05T16:50:01.492Z" ;
+    bcube:hasMetadataRecord <urn:uuid:631f103b-230e-441c-9a7e-2cd1f261ebd6> ;
+    bcube:lastUpdated "2015-11-05T16:50:01.492Z" ;
+    dc:conformsTo <urn:uuid:32527c4c-dec3-48a6-9bac-ab0beaba3f17>,
+        <urn:uuid:32ce354f-9e0c-4928-8fd5-3afef8249bad>,
+        <urn:uuid:fc0f6c19-7cf1-413a-a3c2-eb98a721d598> ;
+    dc:description "The TIGER/Line Shapefiles are an extract of selected geographic and cartographic information from the Census MAF/TIGER database. The Census MAF/TIGER database represents a seamless national file with no overlaps or gaps between parts. However, each TIGER/Line Shapefile is designed to stand alone as an independent data set or the shapefiles can be combined to cover the whole nation." ;
+    dc:spatial "POLYGON ((-73.727775 40.950943,-73.727775 42.050587,-71.787239 42.050587,-71.787239 40.950943,-73.727775 40.950943))" ;
+    dcterms:publisher <urn:uuid:9788de76-29a3-4175-bbb0-9046505fd29d> ;
+    dcterms:references <urn:uuid:7ac4ece4-2a24-46ff-83f3-25ff40594b69> ;
+    dcterms:title "TIGER/Line Shapefile, 2009, 2000 state, Connecticut, Census 2000 Consolidated City" ;
+    esip:eastBound "-71.787239"^^xsd:float ;
+    esip:endDate "2009-05-01"^^xsd:date ;
+    esip:northBound "42.050587"^^xsd:float ;
+    esip:southBound "40.950943"^^xsd:float ;
+    esip:startDate "2009-01-01"^^xsd:date ;
+    esip:westBound "-73.727775"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:631f103b-230e-441c-9a7e-2cd1f261ebd6> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-11-05T16:50:01.492Z" ;
+    bcube:lastUpdated "2015-11-05T16:50:01.492Z" ;
+    bcube:originatedFrom <urn:uuid:f6291347-2c34-4b9a-868a-50fb3d7e7cb2> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:33efea37-047e-4005-ba0b-b5a5a488e563> .
+
+<urn:uuid:7ac4ece4-2a24-46ff-83f3-25ff40594b69> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-05T16:50:01.492Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-05T16:50:01.492Z" ;
+    dc:identifier "urn:sha:0ed065359302f4f0db2c3f4a45d7f8295b56404a235e6860382c6a5a" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www2.census.gov/geo/tiger/TIGER2009/09_CONNECTICUT/tl_2009_09_concity00.zip" .
+
+<urn:uuid:9788de76-29a3-4175-bbb0-9046505fd29d> owl:a foaf:Organization ;
+    foaf:name "" .
+
+<urn:uuid:f6291347-2c34-4b9a-868a-50fb3d7e7cb2> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-05T16:50:01.492Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-05T16:50:01.492Z" ;
+    dc:identifier "urn:sha:563219b6319da973ab3510585fe15c3bb421d8e071005084f9e17e7d" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://meta.geo.census.gov/data/existing/decennial/GEO/GPMB/TIGERline/fe_2009/concity00/tl_2009_09_concity00_url.shp.xml" .
+
+<urn:uuid:fc0f6c19-7cf1-413a-a3c2-eb98a721d598> bcube:hasType "theme" ;
+    bcube:hasValue "Consolidated City",
+        "Polygon",
+        "State or equivalent entity" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+

@@ -1,0 +1,62 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:5001f507-122c-44d6-88a4-9a6ec99922d4> a "OGC:WMS" ;
+    bcube:contains <urn:uuid:2784e9d1-cf18-4d11-836b-66ed3e990cdb> ;
+    bcube:dateCreated "2015-06-28T20:12:31.725Z" ;
+    bcube:lastUpdated "2015-06-28T20:12:31.725Z" ;
+    bcube:originatedFrom <urn:uuid:598dfbca-b50a-4f9e-9c88-9649953b5722> ;
+    dc:conformsTo <urn:uuid:871c0bba-3b0c-4d89-b709-c64345854b7f> ;
+    dc:description "PhysicalSamples in the state of New York" ;
+    owl:a bcube:service .
+
+<urn:uuid:2784e9d1-cf18-4d11-836b-66ed3e990cdb> bcube:dateCreated "2015-06-28T20:12:31.725Z" ;
+    bcube:lastUpdated "2015-06-28T20:12:31.725Z" ;
+    dc:description "This layer contains data describing physical samples collected/analyzed in the state of New York and obtained by the AASG for the Geothermal Data Project. The data table includes general information on the location of the sampling site, geologic setting, date collected, and latitude/longitude. Citations are included in the dataset. The SamplingFeatureURI is the cross-referencing link (foreign key) used to associate the sampling feature with additional data (observations, logs, reports) specific to the feature. The data is displayed using a yellow star with black outline. Layer files containing the symbology for these data layers can be found in the AASG repository at <a href=\"http://repository.stategeothermaldata.org/repository/resource/98ddf901b9782a25982e01af3b068fdc/\">http://repository.stategeothermaldata.org/repository/resource/98ddf901b9782a25982e01af3b068fdc/</a>. The original data and metadata can be viewed or downloaded from the AASG repository at <a href=\"http://repository.stategeothermaldata.org/repository/resource/6e84ef507102d99c8d5b44d3c22ebc35/\">http://repository.stategeothermaldata.org/repository/resource/6e84ef507102d99c8d5b44d3c22ebc35/</a>." ;
+    dc:spatial "POLYGON ((-79.99167 40.65408,-79.99167 44.771788,-73.375 44.771788,-73.375 40.65408,-79.99167 40.65408))" ;
+    dc:title "PhysicalSample" ;
+    dcterms:references <urn:uuid:6f0caaeb-2a23-4a4a-b267-c36dfff4e57e> ;
+    esip:eastBound "-73.375"^^xsd:float ;
+    esip:northBound "44.771788"^^xsd:float ;
+    esip:southBound "40.65408"^^xsd:float ;
+    esip:westBound "-79.99167"^^xsd:float ;
+    owl:a bcube:Layer .
+
+<urn:uuid:598dfbca-b50a-4f9e-9c88-9649953b5722> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-06-28T20:12:31.725Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-06-28T20:12:31.725Z" ;
+    dc:identifier "urn:sha:03c09e266bb44239f2c49e8e99c96a6c8005f7f6e3b2b9f45a2dec1f" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://geothermal.isgs.illinois.edu/arcgis/services/aasggeothermal/NYPhysicalSamples/MapServer/WMSServer?request=GetCapabilities&service=WMS" .
+
+<urn:uuid:6f0caaeb-2a23-4a4a-b267-c36dfff4e57e> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-06-28T20:12:31.725Z" ;
+    bcube:hasConfidence "Not Sure" ;
+    bcube:hasUrlSource "Generated" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-06-28T20:12:31.725Z" ;
+    dc:identifier "urn:sha:0599dfc51f899412c920edd0d30f5f5586846b6337d5300235f49ebf" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://geothermal.isgs.illinois.edu/arcgis/services/aasggeothermal/NYPhysicalSamples/MapServer/WMSServer?layers=PhysicalSample&width=500&version=1.3.0&bbox=-79.99167%2C40.65408%2C-73.375%2C44.771788&service=WMS&format=image%2Fpng&styles=&crs=CRS%3A84&request=GetMap&height=500" .
+
+<urn:uuid:871c0bba-3b0c-4d89-b709-c64345854b7f> bcube:hasValue "New York, NY, Geothermal, Physical Samples" ;
+    owl:a bcube:thesaurusSubset .
+

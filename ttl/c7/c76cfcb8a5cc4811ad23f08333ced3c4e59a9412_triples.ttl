@@ -1,0 +1,77 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:1a576ab0-2617-42d1-9a73-9338126e6429> owl:a foaf:Organization ;
+    foaf:name "U.S. Geological Survey" .
+
+<urn:uuid:211639de-11e0-4b96-91bd-9c825b0f8b37> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2014-07-31T11:37:43.47Z" ;
+    bcube:lastUpdated "2014-07-31T11:37:43.47Z" ;
+    bcube:originatedFrom <urn:uuid:57d93ec2-00f5-469c-912d-2407be7c56be> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:423d684d-8d1e-4dcc-b62d-940990f5d3d5> .
+
+<urn:uuid:3b11e0c0-0416-4fb5-aab6-e5f3cbbd7326> bcube:hasType "theme" ;
+    bcube:hasValue "business and economics",
+        "catalogs and indexes",
+        "datasets",
+        "economic geology",
+        "mineral resources",
+        "mining and quarrying" ;
+    dc:partOf "USGS Thesaurus" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:423d684d-8d1e-4dcc-b62d-940990f5d3d5> bcube:dateCreated "2014-07-31T11:37:43.47Z" ;
+    bcube:hasMetadataRecord <urn:uuid:211639de-11e0-4b96-91bd-9c825b0f8b37> ;
+    bcube:lastUpdated "2014-07-31T11:37:43.47Z" ;
+    dc:conformsTo <urn:uuid:3b11e0c0-0416-4fb5-aab6-e5f3cbbd7326>,
+        <urn:uuid:d119ab18-c843-45e5-942b-e3b9ffb79bc1> ;
+    dc:description "Statistics and information on worldwide supply, demand, and flow of minerals and materials essential to the U.S. economy, national security, and protection of the environment. Links to publications, recycling, and historical statistics." ;
+    dcterms:publisher <urn:uuid:1a576ab0-2617-42d1-9a73-9338126e6429> ;
+    dcterms:references <urn:uuid:514066fc-edac-4f4f-8e2c-3400fc7dcec4> ;
+    dcterms:title "Minerals information" ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:514066fc-edac-4f4f-8e2c-3400fc7dcec4> dcterms:references <urn:uuid:e9427c77-7fcf-42cf-ae15-5dc3a2abdc23> ;
+    owl:a bibo:WebPage .
+
+<urn:uuid:57d93ec2-00f5-469c-912d-2407be7c56be> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2014-07-31T11:37:43.47Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2014-07-31T11:37:43.47Z" ;
+    dc:identifier "urn:sha:32994a6a32ecb0272f93ddc86c66a2156dd7dc9518785df5ab332a6e" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www.usgs.gov/science/xml.php?cite=240" .
+
+<urn:uuid:d119ab18-c843-45e5-942b-e3b9ffb79bc1> bcube:hasType "place" ;
+    bcube:hasValue "fUS = United States" ;
+    dc:partOf "Augmented FIPS 10-4 and FIPS 6-4" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:e9427c77-7fcf-42cf-ae15-5dc3a2abdc23> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2014-07-31T11:37:43.47Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2014-07-31T11:37:43.47Z" ;
+    dc:identifier "urn:sha:5779def14c5e3a6cabe3cbcdd4749ad4d69e3c3547967ac20b8a0df3" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://minerals.usgs.gov/minerals/" .
+

@@ -1,0 +1,82 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:02b4c87f-7b06-40bf-b64a-4559be7d7d08> bcube:hasType "place" ;
+    bcube:hasValue "Montana" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:0f906ced-5a27-4c08-86d1-8f8470d8c129> bcube:hasType "theme" ;
+    bcube:hasValue "boundaries",
+        "society" ;
+    dc:partOf "ISO 19115 Topic Category" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:161316d4-256e-4cc2-b282-d40cf511f472> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-08-11T06:44:57.154Z" ;
+    bcube:lastUpdated "2015-08-11T06:44:57.154Z" ;
+    bcube:originatedFrom <urn:uuid:46974039-6b3e-4104-b62d-d44898a62a36> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:ad925bb8-a1b3-443d-b6de-1563f19ed090> .
+
+<urn:uuid:46974039-6b3e-4104-b62d-d44898a62a36> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-11T06:44:57.154Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-11T06:44:57.154Z" ;
+    dc:identifier "urn:sha:0e3a964a4715a9dc33ff437867363c4e6cd32767e14335fea6cc8a55" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://mslapps.mt.gov/Geographic_Information/Data/DataList/datalist_MetadataDetailRaw.aspx?did={02D88FBD-FECF-4EDC-9D6D-F944554B7826}" .
+
+<urn:uuid:5102759c-5cc2-48da-8c6e-19010c4a0d5e> owl:a foaf:Organization ;
+    foaf:name "Montana State Library" .
+
+<urn:uuid:5732f499-f35c-4eaa-9e6e-4dbeadbccf3f> bcube:hasType "theme" ;
+    bcube:hasValue "Census 2000",
+        "Minority",
+        "Population" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:859cca85-a18a-4c4c-9dcc-314d00e1fa5b> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-11T06:44:57.154Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-11T06:44:57.154Z" ;
+    dc:identifier "urn:sha:2c4a3f1804cabaa4a5ffc7150cf21e3ba503321e8949098e6448907d" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "ftp://ftp.geoinfo.msl.mt.gov/Data/Spatial/NonMSDI/Collections/Census/cblock2000.zip" .
+
+<urn:uuid:ad925bb8-a1b3-443d-b6de-1563f19ed090> bcube:dateCreated "2015-08-11T06:44:57.154Z" ;
+    bcube:hasMetadataRecord <urn:uuid:161316d4-256e-4cc2-b282-d40cf511f472> ;
+    bcube:lastUpdated "2015-08-11T06:44:57.154Z" ;
+    dc:conformsTo <urn:uuid:02b4c87f-7b06-40bf-b64a-4559be7d7d08>,
+        <urn:uuid:0f906ced-5a27-4c08-86d1-8f8470d8c129>,
+        <urn:uuid:5732f499-f35c-4eaa-9e6e-4dbeadbccf3f> ;
+    dc:description "Montana Census Blocks for the 2000 Census, with a subset of population data from the PL94-171 redistricting database. The Montana Census and Economic Information Center imported the TIGER/Line files to a series of ESRI shapefiles for each Montana County using TGR2SHP version 4.1 (GIS Tools, Knoxville, TN). The Montana State Library converted the data to Montana State Plane Coordinates and joined the census block files to PL 94-171 population counts using Arc/Info software from ESRI of Redlands, CA, and combined the county files as a single statewide dataset." ;
+    dc:spatial "POLYGON ((-116.178342 44.238014,-116.178342 49.180943,-103.611153 49.180943,-103.611153 44.238014,-116.178342 44.238014))" ;
+    dcterms:publisher <urn:uuid:5102759c-5cc2-48da-8c6e-19010c4a0d5e> ;
+    dcterms:references <urn:uuid:859cca85-a18a-4c4c-9dcc-314d00e1fa5b> ;
+    dcterms:title "Montana Census Blocks with Population Data, 2000" ;
+    esip:eastBound "-103.611153"^^xsd:float ;
+    esip:northBound "49.180943"^^xsd:float ;
+    esip:southBound "44.238014"^^xsd:float ;
+    esip:startDate "2000-04-01"^^xsd:date ;
+    esip:westBound "-116.178342"^^xsd:float ;
+    owl:a dcat:Dataset .
+

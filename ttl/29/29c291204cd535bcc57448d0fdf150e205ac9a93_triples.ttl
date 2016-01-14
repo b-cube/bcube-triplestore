@@ -1,0 +1,84 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:1ee6caa5-b3f9-453c-aa66-24c01d5968b4> bcube:hasType "theme" ;
+    bcube:hasValue "geoscientificInformation",
+        "inlandWaters" ;
+    dc:partOf "ISO 19115 Topic Category" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:399f26d3-6a9f-489a-ab0a-ad2492d33b0d> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-08-10T00:29:59.798Z" ;
+    bcube:lastUpdated "2015-08-10T00:29:59.798Z" ;
+    bcube:originatedFrom <urn:uuid:a24dc604-e9de-468c-b010-0355e85e8af3> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:57e37b31-d4e6-4203-be3f-183e89488892> .
+
+<urn:uuid:57e37b31-d4e6-4203-be3f-183e89488892> bcube:dateCreated "2015-08-10T00:29:59.798Z" ;
+    bcube:hasMetadataRecord <urn:uuid:399f26d3-6a9f-489a-ab0a-ad2492d33b0d> ;
+    bcube:lastUpdated "2015-08-10T00:29:59.798Z" ;
+    dc:conformsTo <urn:uuid:1ee6caa5-b3f9-453c-aa66-24c01d5968b4>,
+        <urn:uuid:b20a414c-7dec-4b9f-8c79-8e2c9f243095>,
+        <urn:uuid:d1e436bc-bc35-4537-a9df-b304ac58c337> ;
+    dc:description "This digital geospatial data set consists of contours of lines of equal depth to the top of the Raton Formation, the contact between the Raton and Poison Canyon Formations, in Las Animas County, Colorado. The U.S. Geological Survey developed this data set as part of a cooperative project with the Colorado Water Conservation Board." ;
+    dc:spatial "POLYGON ((-104.988547 36.995211,-104.988547 37.423476,-104.3841 37.423476,-104.3841 36.995211,-104.988547 36.995211))" ;
+    dcterms:publisher <urn:uuid:dfef6831-582a-4286-99d0-fcac88013ff5> ;
+    dcterms:references <urn:uuid:6af45ec4-330c-4acb-a6f0-46c00f3a2b78> ;
+    dcterms:title "sir-06-5129_depth_top_raton_con" ;
+    esip:eastBound "-104.3841"^^xsd:float ;
+    esip:northBound "37.423476"^^xsd:float ;
+    esip:southBound "36.995211"^^xsd:float ;
+    esip:startDate "2006-01-01"^^xsd:date ;
+    esip:westBound "-104.988547"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:6af45ec4-330c-4acb-a6f0-46c00f3a2b78> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-10T00:29:59.798Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-10T00:29:59.798Z" ;
+    dc:identifier "urn:sha:35cf3ea7c7ea0e94764dee2200ea63a4c32119bbcc86522f64f1fb94" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://water.usgs.gov/GIS/dsdl/SIR-06-5129_depth_top_raton_con.zip" .
+
+<urn:uuid:a24dc604-e9de-468c-b010-0355e85e8af3> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-10T00:29:59.798Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-10T00:29:59.798Z" ;
+    dc:identifier "urn:sha:4738fc0d671a32736ba72007503bacf0c3f1108299759bda7ae43051" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://water.usgs.gov/lookup/getspatial?sir-06-5129_depth_top_raton_con" .
+
+<urn:uuid:b20a414c-7dec-4b9f-8c79-8e2c9f243095> bcube:hasType "place" ;
+    bcube:hasValue "Colorado",
+        "Las Animas County" ;
+    dc:partOf "Geographic Names Information System (GNIS)" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:d1e436bc-bc35-4537-a9df-b304ac58c337> bcube:hasType "stratum" ;
+    bcube:hasValue "Poison Canyon Formation",
+        "Raton Formation" ;
+    dc:partOf "Geologic Names Lexicon (GEOLEX)" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:dfef6831-582a-4286-99d0-fcac88013ff5> owl:a foaf:Organization ;
+    foaf:name "U.S. Geological Survey" .
+

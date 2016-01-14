@@ -1,0 +1,82 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:2028d779-c629-4369-8ee1-cdb443ec83b7> bcube:hasType "theme" ;
+    bcube:hasValue "CTD",
+        "conductivity",
+        "depth",
+        "ocean exploration",
+        "water temperature" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:2d383d20-5d6c-4fc1-821a-47136609defb> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2014-07-31T06:44:43.554Z" ;
+    bcube:lastUpdated "2014-07-31T06:44:43.554Z" ;
+    bcube:originatedFrom <urn:uuid:b3174440-ae89-4465-994d-f6afcfe9d30c> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:bf504078-87b8-494e-b1c7-433ed0cf6e1d> .
+
+<urn:uuid:4502dc1c-c64d-4d80-8b8c-c26ab38404ca> bcube:hasType "theme" ;
+    bcube:hasValue "oceans" ;
+    dc:partOf "ISO 19115 Topic Category" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:61fbc458-149b-41a2-8103-68c3fd48d26e> dcterms:references <urn:uuid:f4264bb6-2f13-4ab1-a1f9-06051aea8e03> ;
+    owl:a bibo:WebPage .
+
+<urn:uuid:9bf3aff8-2acb-4b17-8a9c-c2c8baa7daf5> owl:a foaf:Organization ;
+    foaf:name "" .
+
+<urn:uuid:b3174440-ae89-4465-994d-f6afcfe9d30c> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2014-07-31T06:44:43.554Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2014-07-31T06:44:43.554Z" ;
+    dc:identifier "urn:sha:5cb384247698ccd5505b1b00dc4ea3bfaabd11c25bd42a5f5a4e41b6" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "https://data.noaa.gov/harvest/object/04eb9333-5b50-4484-864f-d0a216862933/original" .
+
+<urn:uuid:bf504078-87b8-494e-b1c7-433ed0cf6e1d> bcube:dateCreated "2014-07-31T06:44:43.554Z" ;
+    bcube:hasMetadataRecord <urn:uuid:2d383d20-5d6c-4fc1-821a-47136609defb> ;
+    bcube:lastUpdated "2014-07-31T06:44:43.554Z" ;
+    dc:conformsTo <urn:uuid:2028d779-c629-4369-8ee1-cdb443ec83b7>,
+        <urn:uuid:4502dc1c-c64d-4d80-8b8c-c26ab38404ca> ;
+    dc:description "CTD (Conductivity, Temperature, Depth) casts from the NOAA ship Okeanos Explorer during expeditions from 2009 to the present time. These cruises were sponsored by the National Oceanic and Atmospheric Administration (NOAA) Office of Ocean Exploration and Research." ;
+    dc:spatial "POLYGON ((-172.7983 0.597,-172.7983 42.755,126.6175 42.755,126.6175 0.597,-172.7983 0.597))" ;
+    dcterms:publisher <urn:uuid:9bf3aff8-2acb-4b17-8a9c-c2c8baa7daf5> ;
+    dcterms:references <urn:uuid:61fbc458-149b-41a2-8103-68c3fd48d26e> ;
+    dcterms:title "CTDs from missions of the NOAA ship Okeanos Explorer from 2009 to present." ;
+    esip:eastBound "126.6175"^^xsd:float ;
+    esip:northBound "42.755"^^xsd:float ;
+    esip:southBound "0.597"^^xsd:float ;
+    esip:startDate "2009-01-01"^^xsd:date ;
+    esip:westBound "-172.7983"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:f4264bb6-2f13-4ab1-a1f9-06051aea8e03> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2014-07-31T06:44:43.554Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2014-07-31T06:44:43.554Z" ;
+    dc:identifier "urn:sha:7791df9e8ba42ed194eab2f6243267251bdf931af4f321df123e7401" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www.ncddc.noaa.gov/arcgis/rest/services/OceanExploration/OE_OkeanosCTDs/MapServer" .
+

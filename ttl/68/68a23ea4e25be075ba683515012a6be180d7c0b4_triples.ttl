@@ -1,0 +1,88 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:0ec020d0-615c-4dba-b64d-5f71907783bf> bcube:dateCreated "2015-08-11T06:45:13.619Z" ;
+    bcube:hasMetadataRecord <urn:uuid:ebe5a849-9c1a-49cb-b6ad-49984e7168d1> ;
+    bcube:lastUpdated "2015-08-11T06:45:13.619Z" ;
+    dc:conformsTo <urn:uuid:30af4c13-b7e6-442e-a7e5-91e9201d378b>,
+        <urn:uuid:5840d35f-cad1-4d27-864e-62acd14c4f72>,
+        <urn:uuid:fbed7f9a-8bff-4060-9df3-3d3405530295> ;
+    dc:description "These layers cover an area around Yellowstone and Grand Teton National Parks in Montana, Wyoming, and Idaho. Data for the national parks themselves are not included. The data were digitized by the US Geological Survey and provided to the public as Digital Line Graph files. The dates of the source maps ranged from 1948 through 1998. The data were provided as separate files for each 7.5-minute quadrangle by the USGS. The State Library joined the individual themes into two groups of layers - one for Montana and another for Wyoming and Idaho. The USGS major and minor attribute codes have been replaced with the codes shown in this metadata record. A few of the DLG files had coordinates in the NAD83 datum, while most were in NAD27. Because of the diffrence between the position of the quadrangle boundaries between NAD83 and NAD27, there are gaps in the data, generally about 200 meters wide, between adjacent quadrangles that have different datums. These data have been removed from the State Library web site because they are obsolete and better recent data may be available. These data are still available on request from the State Library data archive." ;
+    dc:spatial "POLYGON ((-111.875 44.125,-111.875 46.375,-109.375 46.375,-109.375 44.125,-111.875 44.125))" ;
+    dcterms:publisher <urn:uuid:64f16f27-52b1-4a35-a759-1c2f4b2e1909> ;
+    dcterms:title "Greater Yellowstone Area Hydrography and Transportaion Data from 1:24,000 Scale USGS Quadrangles" ;
+    esip:eastBound "-109.375"^^xsd:float ;
+    esip:endDate "1998-01-01"^^xsd:date ;
+    esip:northBound "46.375"^^xsd:float ;
+    esip:southBound "44.125"^^xsd:float ;
+    esip:startDate "1948-01-01"^^xsd:date ;
+    esip:westBound "-111.875"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:30af4c13-b7e6-442e-a7e5-91e9201d378b> bcube:hasType "place" ;
+    bcube:hasValue "Montana" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:5840d35f-cad1-4d27-864e-62acd14c4f72> bcube:hasType "theme" ;
+    bcube:hasValue "inlandWaters",
+        "transportation",
+        "utilitiesCommunication" ;
+    dc:partOf "ISO 19115 Topic Category" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:64f16f27-52b1-4a35-a759-1c2f4b2e1909> owl:a foaf:Organization ;
+    foaf:name "Montana State Library" .
+
+<urn:uuid:e69fe5a0-fcb2-44b7-9c24-6c409a66c001> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-11T06:45:13.619Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-11T06:45:13.619Z" ;
+    dc:identifier "urn:sha:aae9efc03486f652e1799321eae535955dbb4da61170bbeb28b89279" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://mslapps.mt.gov/Geographic_Information/Data/DataList/datalist_MetadataDetailRaw.aspx?did={AF79C624-0C0A-4259-BF8C-14F2BD756068}" .
+
+<urn:uuid:ebe5a849-9c1a-49cb-b6ad-49984e7168d1> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-08-11T06:45:13.619Z" ;
+    bcube:lastUpdated "2015-08-11T06:45:13.619Z" ;
+    bcube:originatedFrom <urn:uuid:e69fe5a0-fcb2-44b7-9c24-6c409a66c001> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:0ec020d0-615c-4dba-b64d-5f71907783bf> .
+
+<urn:uuid:fbed7f9a-8bff-4060-9df3-3d3405530295> bcube:hasType "theme" ;
+    bcube:hasValue "Airports",
+        "Canals",
+        "Ditches",
+        "Highways",
+        "Hydrography",
+        "Lakes",
+        "Marshes",
+        "Pipelines",
+        "Power lines",
+        "Powerlines",
+        "Railroads",
+        "Rivers",
+        "Roads",
+        "Ski lifts",
+        "Streams",
+        "Streets",
+        "Swamps",
+        "Trails",
+        "Transmission lines",
+        "Wetlands" ;
+    owl:a bcube:thesaurusSubset .
+

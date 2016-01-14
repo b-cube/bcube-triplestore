@@ -1,0 +1,79 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:0d3eab12-d569-4b05-b6a2-b678444bc569> bcube:hasType "theme" ;
+    bcube:hasValue "boundaries" ;
+    dc:partOf "ISO 19115 Topic Category" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:1516c53f-b4b7-4b31-a65f-ada1d5f3b50e> bcube:hasType "place" ;
+    bcube:hasValue "Lincoln County",
+        "Montana" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:56189f9f-4fce-4c19-bdea-53532530227c> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-10T08:39:25.493Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-10T08:39:25.493Z" ;
+    dc:identifier "urn:sha:0ac978eee933ad1318c8e25c7cbab9fc97df1bf49eb33fbf4cd20de3" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://mslapps.mt.gov/Geographic_Information/Data/DataList/datalist_MetadataDetailRaw.aspx?did={ead2b8de-b6f3-4658-a305-1b4f3054622a}" .
+
+<urn:uuid:7a6846df-583c-446b-bfc0-bc4ae3867e46> dcterms:references <urn:uuid:7f4958c1-72dd-4707-8464-ad3a89930f59> ;
+    owl:a bibo:WebPage .
+
+<urn:uuid:7f4958c1-72dd-4707-8464-ad3a89930f59> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-10T08:39:25.493Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-10T08:39:25.493Z" ;
+    dc:identifier "urn:sha:ae28c2c1988572eb71bac77c9d3fc8b5eed25c749d797c76ce115058" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www.lincolncountymt.us/planning/ZIP%20Files/Libby_Commissioner_District_2010.zip" .
+
+<urn:uuid:a00a966c-bc55-4829-8100-af48c553446f> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-08-10T08:39:25.493Z" ;
+    bcube:lastUpdated "2015-08-10T08:39:25.493Z" ;
+    bcube:originatedFrom <urn:uuid:56189f9f-4fce-4c19-bdea-53532530227c> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:df76bcca-a182-464f-8406-49befae3756d> .
+
+<urn:uuid:a21b9ca3-51e8-452e-94e1-7b62f2ffb4e9> owl:a foaf:Organization ;
+    foaf:name "Lincoln County Planning Department" .
+
+<urn:uuid:df76bcca-a182-464f-8406-49befae3756d> bcube:dateCreated "2015-08-10T08:39:25.493Z" ;
+    bcube:hasMetadataRecord <urn:uuid:a00a966c-bc55-4829-8100-af48c553446f> ;
+    bcube:lastUpdated "2015-08-10T08:39:25.493Z" ;
+    dc:conformsTo <urn:uuid:0d3eab12-d569-4b05-b6a2-b678444bc569>,
+        <urn:uuid:1516c53f-b4b7-4b31-a65f-ada1d5f3b50e> ;
+    dc:description "The Libby Commissioner District in Lincoln County, Montana from 2010-2020. Developed by the Lincoln County Planning Department. This dataset was developed using Maptitude for Redistricting by Caliper using 2010 US Census block data. It depicts the Libby Commissioner District as it exists from 2010 until the next US Census is done in 2020 and the Redsistricting process is conducted again." ;
+    dc:spatial "POLYGON ((-116.091185 47.99931,-116.091185 48.70433,-115.139904 48.70433,-115.139904 47.99931,-116.091185 47.99931))" ;
+    dcterms:publisher <urn:uuid:a21b9ca3-51e8-452e-94e1-7b62f2ffb4e9> ;
+    dcterms:references <urn:uuid:7a6846df-583c-446b-bfc0-bc4ae3867e46> ;
+    dcterms:title "Lincoln County Montana Libby Commissioner District (2010-2020)" ;
+    esip:eastBound "-115.139904"^^xsd:float ;
+    esip:endDate "2020-01-01"^^xsd:date ;
+    esip:northBound "48.70433"^^xsd:float ;
+    esip:southBound "47.99931"^^xsd:float ;
+    esip:startDate "2010-01-01"^^xsd:date ;
+    esip:westBound "-116.091185"^^xsd:float ;
+    owl:a dcat:Dataset .
+

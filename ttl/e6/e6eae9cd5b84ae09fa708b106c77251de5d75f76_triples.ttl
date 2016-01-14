@@ -1,0 +1,79 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:6427ecd2-8e21-4685-bdcd-670c5f0f7b11> bcube:hasType "theme" ;
+    bcube:hasValue "Jurisdiction",
+        "NRRC",
+        "boundary",
+        "usginres:service" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:64c01084-58e8-4ada-9e0a-ca8d65c1471d> bcube:hasType "place" ;
+    bcube:hasValue "Arizona",
+        "Maricopa County" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:814d5e75-2256-4b3f-aab3-febcb210ebed> a "ISO 19115:2003/19139" ;
+    bcube:dateCreated "2015-10-29T23:34:47.656Z" ;
+    bcube:lastUpdated "2015-10-29T23:34:47.656Z" ;
+    bcube:originatedFrom <urn:uuid:fd48465a-dfb5-4c55-b446-de9faeb1caf1> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:b6c512c7-932e-47f2-967c-53158baf8e0d> .
+
+<urn:uuid:b6c512c7-932e-47f2-967c-53158baf8e0d> bcube:dateCreated "2015-10-29T23:34:47.656Z" ;
+    bcube:hasMetadataRecord <urn:uuid:814d5e75-2256-4b3f-aab3-febcb210ebed> ;
+    bcube:lastUpdated "2015-10-29T23:34:47.656Z" ;
+    dc:conformsTo <urn:uuid:6427ecd2-8e21-4685-bdcd-670c5f0f7b11>,
+        <urn:uuid:64c01084-58e8-4ada-9e0a-ca8d65c1471d>,
+        <urn:uuid:c340ce2a-6b6a-40c0-94ee-25b4e02ff693> ;
+    dc:description "Displays Maricopa County boundary and jurisdictions" ;
+    dc:spatial "POLYGON ((-111.71 34.81,-111.71 32.58,-113.42 32.58,-113.42 34.81,-111.71 34.81))" ;
+    dcterms:references <urn:uuid:e96eb70a-1a27-4987-8c1b-bbbe47081387> ;
+    dcterms:title "Boundary and Jurisdictions for Maricopa County, Arizona - maps/CountyOverview" ;
+    esip:eastBound "-113.42"^^xsd:float ;
+    esip:endDate "1900-01-01"^^xsd:date ;
+    esip:northBound "32.58"^^xsd:float ;
+    esip:southBound "34.81"^^xsd:float ;
+    esip:startDate "1900-01-01"^^xsd:date ;
+    esip:westBound "-111.71"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:c340ce2a-6b6a-40c0-94ee-25b4e02ff693> bcube:hasValue "geoscientificInformation" ;
+    dc:partOf "IsoTopicCategories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:e96eb70a-1a27-4987-8c1b-bbbe47081387> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-10-29T23:34:47.656Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-10-29T23:34:47.656Z" ;
+    dc:identifier "urn:sha:25b598554148cef7e27df4d0d89c072bf67ec38257ba1dd6815a187f" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "https://geo.azmag.gov/gismag/rest/services/maps/CountyOverview/MapServer" .
+
+<urn:uuid:fd48465a-dfb5-4c55-b446-de9faeb1caf1> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-10-29T23:34:47.656Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-10-29T23:34:47.656Z" ;
+    dc:identifier "urn:sha:5a4ff6bfcf95a9b695a1f70598297d20af4635efc7aa827125b97f71" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://repository.stategeothermaldata.org/resources/metadata/TestNRRC/2FC4D775837E4D1C9803588AE81979B6.xml" .
+

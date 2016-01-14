@@ -1,0 +1,95 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:04ff8905-5284-4bdf-a7e1-f5a58894fd37> owl:a foaf:Organization ;
+    foaf:name "" .
+
+<urn:uuid:1bca1286-abcc-4355-9fdd-4773c0d698da> bcube:dateCreated "2015-11-03T05:29:39.738Z" ;
+    bcube:hasMetadataRecord <urn:uuid:3c0bd771-aecd-42e5-8d76-3dccf2d85514> ;
+    bcube:lastUpdated "2015-11-03T05:29:39.738Z" ;
+    dc:conformsTo <urn:uuid:6a268652-6caf-425d-bf87-775dba0fc877>,
+        <urn:uuid:e78a18d6-d62b-442c-a398-87454aeae62c>,
+        <urn:uuid:f23dabe0-9096-4a51-a378-c37434cb8cdd> ;
+    dc:description "The TIGER/Line shapefiles and related database files (.dbf) are an extract of selected geographic and cartographic information from the U.S. Census Bureau's Master Address File / Topologically Integrated Geographic Encoding and Referencing (MAF/TIGER) Database (MTDB). The MTDB represents a seamless national file with no overlaps or gaps between parts, however, each TIGER/Line shapefile is designed to stand alone as an independent data set, or they can be combined to cover the entire nation. The Address Range / Feature Name Relationship File (ADDRFN.dbf) contains a record for each address range / linear feature name relationship. The purpose of this relationship file is to identify all street names associated with each address range. An edge can have several feature names; an address range located on an edge can be associated with one or any combination of the available feature names (an address range can be linked to multiple feature names). The address range is identified by the address range identifier (ARID) attribute that can be used to link to the Address Ranges Relationship File (ADDR.dbf). The linear feature name is identified by the linear feature identifier (LINEARID) attribute that can be used to link to the Feature Names Relationship File (FEATNAMES.dbf)." ;
+    dc:spatial "POLYGON ((-134.026978 54.632045,-134.026978 56.389703,-130.00426 56.389703,-130.00426 54.632045,-134.026978 54.632045))" ;
+    dcterms:publisher <urn:uuid:04ff8905-5284-4bdf-a7e1-f5a58894fd37> ;
+    dcterms:references <urn:uuid:ccfd2dee-96e4-438e-9026-f6a4889b9cd9> ;
+    dcterms:title "TIGER/Line Shapefile, 2012, county, Prince of Wales-Hyder Census Area, AK, Current Address Range-Feature Name Relationship File" ;
+    esip:eastBound "-130.00426"^^xsd:float ;
+    esip:endDate "2012-06-01"^^xsd:date ;
+    esip:northBound "56.389703"^^xsd:float ;
+    esip:southBound "54.632045"^^xsd:float ;
+    esip:startDate "2011-08-01"^^xsd:date ;
+    esip:westBound "-134.026978"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:3c0bd771-aecd-42e5-8d76-3dccf2d85514> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-11-03T05:29:39.738Z" ;
+    bcube:lastUpdated "2015-11-03T05:29:39.738Z" ;
+    bcube:originatedFrom <urn:uuid:fe0e0aa4-8a84-4b1e-90c3-ce40f533fdab> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:1bca1286-abcc-4355-9fdd-4773c0d698da> .
+
+<urn:uuid:6a268652-6caf-425d-bf87-775dba0fc877> bcube:hasType "theme" ;
+    bcube:hasValue "5-digit ZIP code",
+        "County ANSI Code",
+        "County FIPS Code",
+        "From House Number",
+        "Permanent edge ID",
+        "Side indicator flag",
+        "State ANSI Code",
+        "State FIPS Code",
+        "To House Number",
+        "ZIP +4 code" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:ccfd2dee-96e4-438e-9026-f6a4889b9cd9> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-03T05:29:39.738Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-03T05:29:39.738Z" ;
+    dc:identifier "urn:sha:df6ff917a01ebdf7cecc10b82891ba4bb036a16dc9b12ff01c56ca66" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www2.census.gov/geo/tiger/TIGER2012/ADDRFN/tl_2012_02198_addrfn.zip" .
+
+<urn:uuid:e78a18d6-d62b-442c-a398-87454aeae62c> bcube:hasType "place" ;
+    bcube:hasValue "02198",
+        "County or Equivalent Entity",
+        "Prince of Wales-Hyder",
+        "U.S.",
+        "United States" ;
+    dc:partOf "ANSI INCITS 38:2009 (Formerly FIPS 5-2), ANSI INCITS 31:2009 (Formerly FIPS 6-4),ANSI INCITS 454:2009 (Formerly FIPS 8-6), ANSI INCITS 455:2009(Formerly FIPS 9-1), ANSI INCITS 446:2008 (Geographic Names Information System (GNIS))" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:f23dabe0-9096-4a51-a378-c37434cb8cdd> bcube:hasType "theme" ;
+    bcube:hasValue "Transportation" ;
+    dc:partOf "ISO 19115 Topic Categories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:fe0e0aa4-8a84-4b1e-90c3-ce40f533fdab> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-03T05:29:39.738Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-03T05:29:39.738Z" ;
+    dc:identifier "urn:sha:041cfeec18df4330bb45b5278f87f2f0135fa565c3f5c532339ace73" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://meta.geo.census.gov/data/existing/decennial/GEO/GPMB/TIGERline/TL2012/FGDC/addrfn/tl_2012_02198_addrfn.dbf.xml" .
+

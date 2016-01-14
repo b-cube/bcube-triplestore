@@ -1,0 +1,78 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:03f36f6a-1a61-4eaf-aee4-6365bf9a0984> owl:a foaf:Organization ;
+    foaf:name "AeroMetric, Inc." .
+
+<urn:uuid:1402b8b2-59ea-40bf-8c5b-beffed3a5733> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-10-30T11:01:12.18Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-10-30T11:01:12.18Z" ;
+    dc:identifier "urn:sha:f816f92747dbb8bac8ab94663640f31ae59618b0c3bb0bd94a3f15e3" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www.isgs.illinois.edu/clearinghouse/lidar/counties/putnam/putnam_2012_metadata.xml" .
+
+<urn:uuid:1b0faddf-62b3-4959-816b-972719b51c10> bcube:hasType "place" ;
+    bcube:hasValue "IL",
+        "Illinois",
+        "Putnam",
+        "Putnam County",
+        "State",
+        "US" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:cbfdac5e-d3f3-4297-bee3-4b31d46cfe02> bcube:dateCreated "2015-10-30T11:01:12.18Z" ;
+    bcube:hasMetadataRecord <urn:uuid:db334ebe-79fd-497e-a734-e462fd5f223a> ;
+    bcube:lastUpdated "2015-10-30T11:01:12.18Z" ;
+    dc:conformsTo <urn:uuid:1b0faddf-62b3-4959-816b-972719b51c10>,
+        <urn:uuid:fbf7108a-a94c-48d6-bdc8-79602a910ab1> ;
+    dc:description "This task order is for planning, acquisition, processing, and derivative products of LiDAR data to be collected for areas of Illinois. LiDAR data, and derivative products produced in compliance with this task order are part of the data to be obtained under Job Number P-94-025-10. Specifications listed below are based on the U.S. Geological Survey National Geospatial Program Base LiDAR Specification, Version 13." ;
+    dc:spatial "POLYGON ((-89.466 41.103,-89.466 41.323,-89.159 41.323,-89.159 41.103,-89.466 41.103))" ;
+    dcterms:publisher <urn:uuid:03f36f6a-1a61-4eaf-aee4-6365bf9a0984> ;
+    dcterms:title "Illinois Department of Transportation, District 4, Putnam County LiDAR Acquisition" ;
+    esip:eastBound "-89.159"^^xsd:float ;
+    esip:endDate "2012-02-12"^^xsd:date ;
+    esip:northBound "41.323"^^xsd:float ;
+    esip:southBound "41.103"^^xsd:float ;
+    esip:startDate "2011-04-05"^^xsd:date ;
+    esip:westBound "-89.466"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:db334ebe-79fd-497e-a734-e462fd5f223a> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-10-30T11:01:12.18Z" ;
+    bcube:lastUpdated "2015-10-30T11:01:12.18Z" ;
+    bcube:originatedFrom <urn:uuid:1402b8b2-59ea-40bf-8c5b-beffed3a5733> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:cbfdac5e-d3f3-4297-bee3-4b31d46cfe02> .
+
+<urn:uuid:fbf7108a-a94c-48d6-bdc8-79602a910ab1> bcube:hasType "theme" ;
+    bcube:hasValue "Breaklines",
+        "DAT",
+        "LAS",
+        "LiDAR",
+        "Lift",
+        "Light Detection and Ranging",
+        "Project",
+        "Shapefiles",
+        "Survey Control",
+        "Swath",
+        "TIN" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+

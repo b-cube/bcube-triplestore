@@ -1,0 +1,64 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:29fa941a-32a4-400d-b91c-01f3ef4f6241> bcube:hasType "theme" ;
+    bcube:hasValue "Slackwater Darter" ;
+    dc:partOf "fish" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:5a09e0a1-df5b-42d7-9d2a-79f41593a030> bcube:hasType "theme" ;
+    bcube:hasValue "Critical Habitat" ;
+    dc:partOf "Endangered Species" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:60119f33-f446-45f4-a5e9-7558a6bfebfa> a "ISO 19115:2003/19139" ;
+    bcube:dateCreated "2015-08-06T20:35:04.897Z" ;
+    bcube:lastUpdated "2015-08-06T20:35:04.897Z" ;
+    bcube:originatedFrom <urn:uuid:9bb5b062-ac81-457d-a177-f49e9f1edfe6> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:ef0e4616-02cb-4f70-82d0-d76c7d08b2ea> .
+
+<urn:uuid:9bb5b062-ac81-457d-a177-f49e9f1edfe6> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-06T20:35:04.897Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-06T20:35:04.897Z" ;
+    dc:identifier "urn:sha:410154b0030df2918fc8134e07344fb962ba428176a66bc23fc32ffd" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "https://data.doi.gov/harvest/object/be9072a5-6d4b-42be-ae1c-13335e59d0fc" .
+
+<urn:uuid:ef0e4616-02cb-4f70-82d0-d76c7d08b2ea> bcube:dateCreated "2015-08-06T20:35:04.897Z" ;
+    bcube:hasMetadataRecord <urn:uuid:60119f33-f446-45f4-a5e9-7558a6bfebfa> ;
+    bcube:lastUpdated "2015-08-06T20:35:04.897Z" ;
+    dc:conformsTo <urn:uuid:29fa941a-32a4-400d-b91c-01f3ef4f6241>,
+        <urn:uuid:5a09e0a1-df5b-42d7-9d2a-79f41593a030>,
+        <urn:uuid:f3bef75e-29a9-4529-974e-1d30718f4670> ;
+    dc:description "This linear coverage represents critical habitat deliniation for the Slackwater Darter in the Buffalo River and Cypress Creek Watersheds, Tennessee. Linear segments were digitized over a drg base according to legal descriptions." ;
+    dc:spatial "POLYGON ((-87.837391 35.002666,-87.837391 35.459544,-87.284954 35.459544,-87.284954 35.002666,-87.837391 35.002666))" ;
+    dcterms:title "slackwater_darter_crithab_streams" ;
+    esip:eastBound "-87.284954"^^xsd:float ;
+    esip:northBound "35.459544"^^xsd:float ;
+    esip:southBound "35.002666"^^xsd:float ;
+    esip:westBound "-87.837391"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:f3bef75e-29a9-4529-974e-1d30718f4670> bcube:hasType "place" ;
+    bcube:hasValue "Buffalo River",
+        "Cypress Creek" ;
+    dc:partOf "Watershed" ;
+    owl:a bcube:thesaurusSubset .
+

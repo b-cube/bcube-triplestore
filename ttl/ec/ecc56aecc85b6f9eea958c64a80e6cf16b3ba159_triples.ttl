@@ -1,0 +1,78 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:0e306e10-51a3-41cc-84dd-8f7f41d857ce> bcube:hasType "place" ;
+    bcube:hasValue "Hawaii",
+        "North Central Pacific",
+        "Pacific Ocean",
+        "South Central Pacific",
+        "mesoscale oceanographic features",
+        "seamounts" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:5926b168-145f-4c20-a614-70cc46317aa1> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-08-04T14:48:14.446Z" ;
+    bcube:lastUpdated "2015-08-04T14:48:14.446Z" ;
+    bcube:originatedFrom <urn:uuid:d903ad7d-eb3b-4428-962f-853d1d97a98e> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:e50e86fa-0cd8-4beb-8f7b-9fb2fd7ccec4> .
+
+<urn:uuid:a97c7aff-8d59-4aad-a5f9-ef39e5d47713> bcube:hasType "theme" ;
+    bcube:hasValue "ADCP",
+        "current direction",
+        "current magnitude" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:b21429ad-6f3a-495a-893f-e5546dba56bd> bcube:hasType "temporal" ;
+    bcube:hasValue "1 per second",
+        "1 per two seconds",
+        "Discrete sampling periods" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:b23529d3-5e6e-40be-b738-e4a23119c47b> owl:a foaf:Organization ;
+    foaf:name "" .
+
+<urn:uuid:d903ad7d-eb3b-4428-962f-853d1d97a98e> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-04T14:48:14.446Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-04T14:48:14.446Z" ;
+    dc:identifier "urn:sha:f87725a5d48b6cb7dfb805ed4abf43ec5a3aa91295f2026e161857bb" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "https://inport.nmfs.noaa.gov/inport/item/5613/fgdc" .
+
+<urn:uuid:e50e86fa-0cd8-4beb-8f7b-9fb2fd7ccec4> bcube:dateCreated "2015-08-04T14:48:14.446Z" ;
+    bcube:hasMetadataRecord <urn:uuid:5926b168-145f-4c20-a614-70cc46317aa1> ;
+    bcube:lastUpdated "2015-08-04T14:48:14.446Z" ;
+    dc:conformsTo <urn:uuid:0e306e10-51a3-41cc-84dd-8f7f41d857ce>,
+        <urn:uuid:a97c7aff-8d59-4aad-a5f9-ef39e5d47713>,
+        <urn:uuid:b21429ad-6f3a-495a-893f-e5546dba56bd> ;
+    dc:description "These data contain shipboard current magnitudes and directions collected in the Pacific, both pelagic and near shore environments. Data is collected using an RD Instruments Acoustic Doppler Current Profiler (ADCP), operating at 75 kHz frequency. The ADCP transducer is installed on a \"blister\" at the bottom of the ship's hull, pointing vertically down in the watercolumn." ;
+    dc:spatial "POLYGON ((180 -15,180 20,-150 20,-150 -15,180 -15))" ;
+    dcterms:identifier "gov.noaa.nmfs.inport:5613" ;
+    dcterms:publisher <urn:uuid:b23529d3-5e6e-40be-b738-e4a23119c47b> ;
+    dcterms:title "EOD Current Magnitude and Direction" ;
+    esip:eastBound "-150.0"^^xsd:float ;
+    esip:northBound "20.0"^^xsd:float ;
+    esip:southBound "-15.0"^^xsd:float ;
+    esip:startDate "2005-04-01"^^xsd:date ;
+    esip:westBound "180.0"^^xsd:float ;
+    owl:a dcat:Dataset .
+

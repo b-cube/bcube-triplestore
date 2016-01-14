@@ -1,0 +1,92 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:1f0e88e6-be1a-46f9-900a-7aaaa61bf172> bcube:hasType "theme" ;
+    bcube:hasValue "0.2-Percent-Annual-Chance Flood",
+        "1-Percent-Annual-Chance Flood",
+        "10-Percent-Annual-Chance Flood",
+        "2-Percent-Annual-Chance Flood",
+        "Bridge",
+        "Cross Section",
+        "DFIRM",
+        "Digital Flood Insurance Rate Map",
+        "Flood Hazard data",
+        "Hydraulics",
+        "Proflie Baseline",
+        "Stream Centerlines" ;
+    dc:partOf "FEMA NFIP Topic Category" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:26788bc5-314a-41b7-b9ef-cb3199b52d2b> bcube:dateCreated "2015-08-09T09:10:32.431Z" ;
+    bcube:hasMetadataRecord <urn:uuid:50d65a48-a07e-4f0f-b4b1-d6a1b587f401> ;
+    bcube:lastUpdated "2015-08-09T09:10:32.431Z" ;
+    dc:conformsTo <urn:uuid:1f0e88e6-be1a-46f9-900a-7aaaa61bf172>,
+        <urn:uuid:3c32749b-a83a-4a69-9e8b-190ae0803bdc>,
+        <urn:uuid:b4fe4b5d-2371-4f8d-a392-c965845af55b> ;
+    dc:description "Recent developments in digital terrain and geospatial database management technology make it possible to protect this investment for existing and future projects to a much greater extent than was possible in the past. The minimum requirement for hydraulics data includes input and output files for all hydraulic models and spatial datasets that are needed to implement the models. (Source: FEMA Guidelines and Specs, Appendix M)" ;
+    dc:spatial "POLYGON ((-90.379 43.633,-90.379 43.674,-90.313 43.674,-90.313 43.633,-90.379 43.633))" ;
+    dcterms:references <urn:uuid:b1e343bb-63c2-4078-b78c-bd25ee714e6e> ;
+    dcterms:title "DCS Hydraulics Submission for Vernon County, Wisconsin" ;
+    esip:eastBound "-90.313"^^xsd:float ;
+    esip:northBound "43.674"^^xsd:float ;
+    esip:southBound "43.633"^^xsd:float ;
+    esip:westBound "-90.379"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:3c32749b-a83a-4a69-9e8b-190ae0803bdc> bcube:hasValue "environment",
+        "inlandWaters" ;
+    dc:partOf "IsoTopicCategories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:50d65a48-a07e-4f0f-b4b1-d6a1b587f401> a "ISO 19115:2003/19139" ;
+    bcube:dateCreated "2015-08-09T09:10:32.431Z" ;
+    bcube:lastUpdated "2015-08-09T09:10:32.431Z" ;
+    bcube:originatedFrom <urn:uuid:7f72a0b5-e0d3-411e-b0cb-ff3a908a6cef> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:26788bc5-314a-41b7-b9ef-cb3199b52d2b> .
+
+<urn:uuid:7f72a0b5-e0d3-411e-b0cb-ff3a908a6cef> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-09T09:10:32.431Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-09T09:10:32.431Z" ;
+    dc:identifier "urn:sha:b260ad612737a9f5937b8d65b17ff6c4b16cc57ee534acade6cd6dea" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "https://catalog.data.gov/harvest/object/cbfd1b38-7830-452c-a0b3-3ae54f9240fe" .
+
+<urn:uuid:b1e343bb-63c2-4078-b78c-bd25ee714e6e> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-09T09:10:32.431Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-09T09:10:32.431Z" ;
+    dc:identifier "urn:sha:37c915397238031daced09ae0e2dd3bf54e84a6477f749c2cc9dcbdf" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://hazards.fema.gov" .
+
+<urn:uuid:b4fe4b5d-2371-4f8d-a392-c965845af55b> bcube:hasType "place" ;
+    bcube:hasValue "COMMUNITY VERNON COUNTY",
+        "COUNTY VERNON",
+        "COUNTY-FIPS 111",
+        "FEMA-CID 55123C",
+        "REGION 05",
+        "STATE WI" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+

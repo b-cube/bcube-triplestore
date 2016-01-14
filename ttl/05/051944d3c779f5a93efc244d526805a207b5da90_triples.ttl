@@ -1,0 +1,106 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:794a02b9-0840-442a-b87c-c8cefcae339c> bcube:hasType "theme" ;
+    bcube:hasValue "0.2-Percent-Annual-Chance Flood",
+        "1-Percent-Annual-Chance Flood",
+        "10-Percent-Annual-Chance Flood",
+        "2-Percent-Annual-Chance Flood",
+        "DFIRM",
+        "Digital Flood Insurance Rate Map",
+        "Flood Hazard data",
+        "Hydrograph",
+        "Hydrology",
+        "Landuse",
+        "Link",
+        "Node",
+        "Sheet Runoff",
+        "Soil",
+        "Soil Type",
+        "Stage",
+        "Stream",
+        "Unit Hydrograph",
+        "Water Body",
+        "Watershed/Basin" ;
+    dc:partOf "FEMA NFIP Topic Category" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:aebf7f6d-9291-463f-8919-78e352277e9e> bcube:dateCreated "2015-11-01T14:38:08.959Z" ;
+    bcube:hasMetadataRecord <urn:uuid:c3720f8d-2126-4071-8a19-cdc7a89984ea> ;
+    bcube:lastUpdated "2015-11-01T14:38:08.959Z" ;
+    dc:conformsTo <urn:uuid:794a02b9-0840-442a-b87c-c8cefcae339c>,
+        <urn:uuid:ddaf07d4-6f50-4bc0-aee4-34dd67d447bc>,
+        <urn:uuid:fbdd821f-2e2c-49d9-8353-e29be57dd8be> ;
+    dc:description "Hydrology data include spatial datasets and data tables necessary for documenting the hydrologic procedures for estimating flood discharges for a flood insurance study, which includes the hydrologic data expected by FEMA for new riverine studies. (Source: FEMA Guidelines and Specifications, Appendix N)" ;
+    dc:spatial "POLYGON ((-89.604 42.495,-89.604 43.784,-88.183 43.784,-88.183 42.495,-89.604 42.495))" ;
+    dcterms:publisher <urn:uuid:f60dc0d6-aece-454f-ad58-96eddf77c566> ;
+    dcterms:references <urn:uuid:f6911681-7418-497e-ba9b-ccb1d23d722d> ;
+    dcterms:title "HYDROLOGY, DANE COUNTY, WI, USA" ;
+    esip:eastBound "-88.183"^^xsd:float ;
+    esip:northBound "43.784"^^xsd:float ;
+    esip:southBound "42.495"^^xsd:float ;
+    esip:startDate "2010-05-14"^^xsd:date ;
+    esip:westBound "-89.604"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:c3720f8d-2126-4071-8a19-cdc7a89984ea> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-11-01T14:38:08.959Z" ;
+    bcube:lastUpdated "2015-11-01T14:38:08.959Z" ;
+    bcube:originatedFrom <urn:uuid:f7c24ee0-7a41-4f8c-a033-0621a768d00f> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:aebf7f6d-9291-463f-8919-78e352277e9e> .
+
+<urn:uuid:ddaf07d4-6f50-4bc0-aee4-34dd67d447bc> bcube:hasType "place" ;
+    bcube:hasValue "COMMUNITY DANE COUNTY, WISCONSIN AND INCORPORATED AREAS",
+        "COUNTY DANE",
+        "COUNTY-FIPS 025",
+        "FEMA-CID 55025C",
+        "REGION 05",
+        "STATE WI" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:f60dc0d6-aece-454f-ad58-96eddf77c566> owl:a foaf:Organization ;
+    foaf:name "Federal Emergency Management Agency" .
+
+<urn:uuid:f6911681-7418-497e-ba9b-ccb1d23d722d> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-01T14:38:08.959Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-01T14:38:08.959Z" ;
+    dc:identifier "urn:sha:37c915397238031daced09ae0e2dd3bf54e84a6477f749c2cc9dcbdf" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://hazards.fema.gov" .
+
+<urn:uuid:f7c24ee0-7a41-4f8c-a033-0621a768d00f> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-01T14:38:08.959Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-01T14:38:08.959Z" ;
+    dc:identifier "urn:sha:98655298bf6008c906ef00e4b314de53d70cd815fe7618937a7817c2" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://catalog.data.gov/harvest/object/5e5d4995-e5e6-4ad3-b927-4158ec624fdf/original" .
+
+<urn:uuid:fbdd821f-2e2c-49d9-8353-e29be57dd8be> bcube:hasType "theme" ;
+    bcube:hasValue "environment",
+        "inlandWaters" ;
+    dc:partOf "ISO 19115 Topic Category" ;
+    owl:a bcube:thesaurusSubset .
+

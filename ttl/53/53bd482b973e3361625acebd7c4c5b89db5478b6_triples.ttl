@@ -1,0 +1,119 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:0cb75e35-6480-4f1b-bd9c-a1b96f233395> owl:a foaf:Organization ;
+    foaf:name "" .
+
+<urn:uuid:0ef42eb7-0309-410d-b695-9ea5dbcfa17b> bcube:hasType "place" ;
+    bcube:hasValue "Boise District",
+        "Bruneau Field Office",
+        "Burley Field Office",
+        "Challis Field Office",
+        "Coeur d'Alene District",
+        "Coeur d'Alene Field Office",
+        "Cottonwood Field Office",
+        "Four Rivers Field Office",
+        "Idaho",
+        "Idaho Falls District",
+        "Jarbidge Field Office",
+        "Owyhee Field Office",
+        "Pocatello Field Office",
+        "Salmon Field Office",
+        "Shoshone Field Office",
+        "Twin Falls District",
+        "Upper Snake River Field Office" ;
+    dc:partOf "BLM-Idaho-Theme" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:12ee5848-beca-4ded-a978-67f0dae275cd> bcube:hasType "temporal" ;
+    bcube:hasValue "2010" ;
+    dc:partOf "BLM-Idaho-Theme" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:3d3d941e-b3ca-4e86-90aa-205f26e5e8b9> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-08T17:12:42.838Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-08T17:12:42.838Z" ;
+    dc:identifier "urn:sha:c7cc3ee147c82b4094913bcbee35f6273e534e094f4b6d3f8057c1f0" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://rmgsc.cr.usgs.gov/outgoing/Geomac/2010_fire_data/Idaho/North%20Bliss/id_north_bliss_20100828_0000_dd83.shp.xml" .
+
+<urn:uuid:3ebd0d96-6366-4d0e-b711-18c598dc6ced> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-11-08T17:12:42.838Z" ;
+    bcube:lastUpdated "2015-11-08T17:12:42.838Z" ;
+    bcube:originatedFrom <urn:uuid:3d3d941e-b3ca-4e86-90aa-205f26e5e8b9> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:9c4f9120-25c5-45ad-80d5-4e844cf2342c> .
+
+<urn:uuid:721ccb22-fcbc-486f-bf41-9113321332ac> bcube:hasType "theme" ;
+    bcube:hasValue "Bureau of Land Management (BLM)",
+        "Department of the Interior (DOI)",
+        "Fire",
+        "Fire History",
+        "Fire Perimeters",
+        "Historic Fires",
+        "Wildfire",
+        "Wildland Fires" ;
+    dc:partOf "BLM-Idaho-Theme" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:9c4f9120-25c5-45ad-80d5-4e844cf2342c> bcube:dateCreated "2015-11-08T17:12:42.838Z" ;
+    bcube:hasMetadataRecord <urn:uuid:3ebd0d96-6366-4d0e-b711-18c598dc6ced> ;
+    bcube:lastUpdated "2015-11-08T17:12:42.838Z" ;
+    dc:conformsTo <urn:uuid:0ef42eb7-0309-410d-b695-9ea5dbcfa17b>,
+        <urn:uuid:12ee5848-beca-4ded-a978-67f0dae275cd>,
+        <urn:uuid:721ccb22-fcbc-486f-bf41-9113321332ac> ;
+    dc:description "Bureau of Land Management (BLM) wildfire perimeters, 2010, on or adjacent to Bureau of Land Management administered lands in Idaho. May be incomplete for some areas. Does not include prescribed fire." ;
+    dc:spatial "POLYGON ((-116.905732 41.974246,-116.905732 43.937616,-111.669837 43.937616,-111.669837 41.974246,-116.905732 41.974246))" ;
+    dcterms:publisher <urn:uuid:0cb75e35-6480-4f1b-bd9c-a1b96f233395> ;
+    dcterms:references <urn:uuid:d9d1b1af-e98e-4770-b053-afa085432d57>,
+        <urn:uuid:e0c485d3-3fcd-4dcc-816c-d1ccddf86f7e> ;
+    dcterms:title "BLM Idaho Fire Perimeters 2010" ;
+    esip:eastBound "-111.669837"^^xsd:float ;
+    esip:northBound "43.937616"^^xsd:float ;
+    esip:southBound "41.974246"^^xsd:float ;
+    esip:startDate "2010-01-01"^^xsd:date ;
+    esip:westBound "-116.905732"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:a092ee17-be2f-480a-9a13-3e5497c1c18f> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-08T17:12:42.838Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-08T17:12:42.838Z" ;
+    dc:identifier "urn:sha:e74873cbce441d8bee6b0f8c167ea5df7d6a39cb8a15a856d279008f" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "\\\\\\\\\\\\\\\\igskbtcngs125\\\\\\\\outgoing\\\\\\\\GeoMAC\\\\\\\\2010_fire_data\\\\\\\\Idaho\\\\\\\\North Bliss\\\\\\\\id_north_bliss_20100828_0000_dd83" .
+
+<urn:uuid:d9d1b1af-e98e-4770-b053-afa085432d57> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-08T17:12:42.838Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-08T17:12:42.838Z" ;
+    dc:identifier "urn:sha:d14a028c2a3a2bc9476102bb288234c415a2b01f828ea62ac5b3e42f" ;
+    owl:a bcube:Url .
+
+<urn:uuid:e0c485d3-3fcd-4dcc-816c-d1ccddf86f7e> dcterms:references <urn:uuid:a092ee17-be2f-480a-9a13-3e5497c1c18f> ;
+    owl:a bibo:WebPage .
+

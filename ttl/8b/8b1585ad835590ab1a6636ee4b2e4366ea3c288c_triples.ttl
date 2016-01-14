@@ -1,0 +1,102 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:1d1268e6-683c-49ec-9319-1bb837bf67dc> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-08-04T14:46:51.108Z" ;
+    bcube:lastUpdated "2015-08-04T14:46:51.108Z" ;
+    bcube:originatedFrom <urn:uuid:e6dc3f6d-f57c-4b3c-8e0a-ba7c30f13979> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:8f3651c0-df0e-4aaa-b39e-39b6177cfee8> .
+
+<urn:uuid:24bcc9f3-014e-4af3-9f0c-ed3865d3f4f0> bcube:hasType "theme" ;
+    bcube:hasValue "Agriculture > Soils > Soil Moisture/Water Content",
+        "Atmosphere > Precipitation > Precipitation Amount",
+        "Terrestrial Hydrosphere > Surface Water > Runoff" ;
+    dc:partOf "NASA GCMD Science Keywords" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:4197ac34-cfcb-4c64-854b-a3e6c2cdc643> bcube:hasType "place" ;
+    bcube:hasValue "Geographic Region > Global" ;
+    dc:partOf "NASA GCMD Location Keywords" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:59cd07d8-279c-4bd8-ae14-901d7eb4999e> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-04T14:46:51.108Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-04T14:46:51.108Z" ;
+    dc:identifier "urn:sha:4abc86688b57628095ee52188039038a47caf345b19a033faefb3630" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "ftp://ftp.cpc.ncep.noaa.gov/wd51yf/global_monthly" .
+
+<urn:uuid:8b09c9a1-2ece-4145-b953-b64e32d7ae26> owl:a foaf:Organization ;
+    foaf:name "Climate Prediction Center" .
+
+<urn:uuid:8b3f44f3-0562-489b-b69c-1094b5a933f8> bcube:hasType "stratum" ;
+    bcube:hasValue "Vertical Location > Boundary layer" ;
+    dc:partOf "NASA GCMD Location Keywords" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:8f3651c0-df0e-4aaa-b39e-39b6177cfee8> bcube:dateCreated "2015-08-04T14:46:51.108Z" ;
+    bcube:hasMetadataRecord <urn:uuid:1d1268e6-683c-49ec-9319-1bb837bf67dc> ;
+    bcube:lastUpdated "2015-08-04T14:46:51.108Z" ;
+    dc:conformsTo <urn:uuid:24bcc9f3-014e-4af3-9f0c-ed3865d3f4f0>,
+        <urn:uuid:4197ac34-cfcb-4c64-854b-a3e6c2cdc643>,
+        <urn:uuid:8b3f44f3-0562-489b-b69c-1094b5a933f8>,
+        <urn:uuid:c70a68f1-2628-47c6-afb2-ea18443afc21>,
+        <urn:uuid:c9ef2a57-21f7-487e-bece-3023c419944f> ;
+    dc:description "Monthly global soil moisture, runoff, and evaporation data sets produced by the Leaky Bucket model at 0.5° × 0.5° resolution for the period from 1948 to the present. The land model is a one?layer bucket water balance model, while the driving input fields are Climate Prediction Center monthly global precipitation over land, which uses over 17,000 gauges worldwide, and monthly global temperature from GHCN-CAMS (Fan and Van den Dool 2008). The output consists of global monthly soil moisture, evaporation, and runoff, starting from January 1948. A distinguishing feature of this data set is that all fields are updated monthly, which greatly enhances utility for near real time purposes. Data validation shows that the land model does well; both the simulated annual cycle and interannual variability of soil moisture are reasonably good against the limited observations in different regions. Refer to these papers: Fan, Y. and H. van den Dool (2004), Climate Prediction Center global monthly soil moisture data set at 0.5° resolution for 1948 to present, J. Geophys. Res., 109, D10102, doi:10.1029/2003JD004345. Fan, Y. and H. van den Dool (2008), A global monthly land surface air temperature analysis for 1948present, J. Geophys. Res., 113, D01103, doi:10.1029/2007JD008470." ;
+    dc:spatial "POLYGON ((-179.75 -89.75,-179.75 89.75,179.75 89.75,179.75 -89.75,-179.75 -89.75))" ;
+    dcterms:identifier "gov.noaa.cpc:SMOIST-MLY-GSMA-v2004" ;
+    dcterms:publisher <urn:uuid:8b09c9a1-2ece-4145-b953-b64e32d7ae26> ;
+    dcterms:references <urn:uuid:59cd07d8-279c-4bd8-ae14-901d7eb4999e> ;
+    dcterms:title "Climate Prediction Center (CPC) Global Monthly Leaky Bucket Soil Moisture Analysis" ;
+    esip:eastBound "179.75"^^xsd:float ;
+    esip:northBound "89.75"^^xsd:float ;
+    esip:southBound "-89.75"^^xsd:float ;
+    esip:startDate "1948-01-01"^^xsd:date ;
+    esip:westBound "-179.75"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:c70a68f1-2628-47c6-afb2-ea18443afc21> bcube:hasType "theme" ;
+    bcube:hasValue "climatologyMeteorologyAtmosphere" ;
+    dc:partOf "ISO 19115 Topic Category" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:c9ef2a57-21f7-487e-bece-3023c419944f> bcube:hasType "theme" ;
+    bcube:hasValue "Leaky Bucket model output",
+        "NOAA soil moisture data",
+        "drought and flood prediction",
+        "global soil moisture GIS data",
+        "global soil moisture data",
+        "global soil moisture gridded data",
+        "soil moisture flood monitoring data" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:e6dc3f6d-f57c-4b3c-8e0a-ba7c30f13979> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-04T14:46:51.108Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-04T14:46:51.108Z" ;
+    dc:identifier "urn:sha:1c34bf4cbb6f6614cb7ee795d7d43cc710ac3814ba78fa74c9a36dbb" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://catalog.data.gov/harvest/object/beac38d2-dc49-4bcd-a088-6e062d8776fe/original" .
+

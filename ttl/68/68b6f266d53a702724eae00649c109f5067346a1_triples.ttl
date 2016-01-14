@@ -1,0 +1,65 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:03c999ef-d5de-4af9-99b4-cc1195467892> bcube:hasType "theme" ;
+    bcube:hasValue "boundaries" ;
+    dc:partOf "ISO 19115 Topic Categories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:1abb2126-5a4a-475b-a4ac-0837a936d5be> owl:a foaf:Organization ;
+    foaf:name "" .
+
+<urn:uuid:4f001a56-0a70-4db0-92bf-245f5e80da67> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-10-30T11:02:39.541Z" ;
+    bcube:lastUpdated "2015-10-30T11:02:39.541Z" ;
+    bcube:originatedFrom <urn:uuid:87f952ea-6efa-490e-9447-a4f0f5cf583a> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:c0b4dc9e-0e38-4f3a-abf5-78ddb0315129> .
+
+<urn:uuid:84a377cd-e1d3-4084-82a0-9d9288ceb4af> bcube:hasType "theme" ;
+    bcube:hasValue "ALP Land Dataset",
+        "Land Status",
+        "NFS Lands",
+        "SMA Boundary",
+        "USDA Forest Service" ;
+    dc:partOf "Special Management Area Boundary" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:87f952ea-6efa-490e-9447-a4f0f5cf583a> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-10-30T11:02:39.541Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-10-30T11:02:39.541Z" ;
+    dc:identifier "urn:sha:d0af231d5becceb2367622b5cb3b2f38999ae95448e9cb7192feea6b" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://data.fs.usda.gov/geodata/edw/edw_resources/meta/S_USA.SMABoundary.xml" .
+
+<urn:uuid:c0b4dc9e-0e38-4f3a-abf5-78ddb0315129> bcube:dateCreated "2015-10-30T11:02:39.541Z" ;
+    bcube:hasMetadataRecord <urn:uuid:4f001a56-0a70-4db0-92bf-245f5e80da67> ;
+    bcube:lastUpdated "2015-10-30T11:02:39.541Z" ;
+    dc:conformsTo <urn:uuid:03c999ef-d5de-4af9-99b4-cc1195467892>,
+        <urn:uuid:84a377cd-e1d3-4084-82a0-9d9288ceb4af> ;
+    dc:description "Surface Management Agency (SMA) lines represent the surveyed boundary lines for which the Forest Service is responsible for marking and posting. These include the boundaries between NFS lands and non-NFS lands and the boundaries of congressionally designated areas such as National Wilderness." ;
+    dc:spatial "POLYGON ((-150.007671 30.515726,-150.007671 61.51899,-70.625725 61.51899,-70.625725 30.515726,-150.007671 30.515726))" ;
+    dcterms:publisher <urn:uuid:1abb2126-5a4a-475b-a4ac-0837a936d5be> ;
+    dcterms:title "S_USA.SMABoundary" ;
+    esip:eastBound "-70.625725"^^xsd:float ;
+    esip:northBound "61.51899"^^xsd:float ;
+    esip:southBound "30.515726"^^xsd:float ;
+    esip:westBound "-150.007671"^^xsd:float ;
+    owl:a dcat:Dataset .
+

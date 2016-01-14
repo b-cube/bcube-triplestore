@@ -1,0 +1,107 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:16d7bd56-4a4a-4add-88dd-7c7c2718b5f7> owl:a foaf:Organization ;
+    foaf:name "Federal Emergency Management Agency" .
+
+<urn:uuid:2a136c8c-5c37-4488-9af7-eb11b61df513> bcube:hasType "theme" ;
+    bcube:hasValue "0.2-Percent-Annual_Chance Flood",
+        "10-Percent-Annual_Chance Flood",
+        "1Percent-Annual_Chance Flood",
+        "2-Percent-Annual_Chance Flood",
+        "Bulletin 17B",
+        "Channel",
+        "DFIRM",
+        "Digital Flood Insurance Rate Map",
+        "Flood Hazard data",
+        "Floodflow-Frequency Curve",
+        "Flow Gage",
+        "Hydrograph",
+        "Hydrology",
+        "Landuse",
+        "Link",
+        "Node",
+        "Regression Equation",
+        "Stage",
+        "Stream",
+        "Water Body",
+        "Watershed/Basin" ;
+    dc:partOf "FEMA NFIP Topic Category" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:3094bc1f-66f8-4dec-9f40-a69cefa25a4a> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-09T05:35:02.332Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-09T05:35:02.332Z" ;
+    dc:identifier "urn:sha:37c915397238031daced09ae0e2dd3bf54e84a6477f749c2cc9dcbdf" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://hazards.fema.gov" .
+
+<urn:uuid:39dbdee1-b248-40db-a001-7fdb707b501a> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-08-09T05:35:02.332Z" ;
+    bcube:lastUpdated "2015-08-09T05:35:02.332Z" ;
+    bcube:originatedFrom <urn:uuid:a3419ec0-1ee3-405f-bcf4-289cbcb46b8e> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:5f65de94-156d-4718-a0d4-d98908277717> .
+
+<urn:uuid:59201a53-d9cb-4918-ab73-3a0c17b32ec1> bcube:hasType "theme" ;
+    bcube:hasValue "environment",
+        "inlandWaters" ;
+    dc:partOf "ISO 19115 Topic Category" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:5f65de94-156d-4718-a0d4-d98908277717> bcube:dateCreated "2015-08-09T05:35:02.332Z" ;
+    bcube:hasMetadataRecord <urn:uuid:39dbdee1-b248-40db-a001-7fdb707b501a> ;
+    bcube:lastUpdated "2015-08-09T05:35:02.332Z" ;
+    dc:conformsTo <urn:uuid:2a136c8c-5c37-4488-9af7-eb11b61df513>,
+        <urn:uuid:59201a53-d9cb-4918-ab73-3a0c17b32ec1>,
+        <urn:uuid:a0016b45-b70e-40f8-be97-48e4fd8e2ae1> ;
+    dc:description "Hydrology data include spatial datasets and data tables necessary for documenting the hydrologic processes for estimating flood discharges for a flood insurance study, which includes the hydrologic data expected by FEMA for new riverine studies. (Source: FEMA Guidelines and Specifications, Appendix M)" ;
+    dc:spatial "POLYGON ((-73.9797 41.3221,-73.9797 41.5271,-73.53 41.5271,-73.53 41.3221,-73.9797 41.3221))" ;
+    dcterms:publisher <urn:uuid:16d7bd56-4a4a-4add-88dd-7c7c2718b5f7> ;
+    dcterms:references <urn:uuid:3094bc1f-66f8-4dec-9f40-a69cefa25a4a> ;
+    dcterms:title "DCS Hydrology Submission for Putnam County NY" ;
+    esip:eastBound "-73.53"^^xsd:float ;
+    esip:northBound "41.5271"^^xsd:float ;
+    esip:southBound "41.3221"^^xsd:float ;
+    esip:startDate "2009-06-30"^^xsd:date ;
+    esip:westBound "-73.9797"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:a0016b45-b70e-40f8-be97-48e4fd8e2ae1> bcube:hasType "place" ;
+    bcube:hasValue "COMMUNITY PUTNAM COUNTY All Jurisdictions",
+        "COUNTY Putnam",
+        "COUNTY-FIPS 36079",
+        "FEMA-CID 36079C",
+        "REGION 2",
+        "STATE NY" ;
+    dc:partOf "Geographic Names Information System" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:a3419ec0-1ee3-405f-bcf4-289cbcb46b8e> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-09T05:35:02.332Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-09T05:35:02.332Z" ;
+    dc:identifier "urn:sha:f642e5e34f50e39716eb328f7f8c0f82fad3e10337a0ef7d7474eda0" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "https://catalog.data.gov/harvest/object/fd98747c-8f67-4984-b1ed-5830281e9ea5/original" .
+

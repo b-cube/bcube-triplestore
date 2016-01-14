@@ -1,0 +1,71 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:4867c98b-6063-4299-9e9b-ed0c2ae8baf5> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-07T12:00:12.45Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-07T12:00:12.45Z" ;
+    dc:identifier "urn:sha:5189bbc59bbd8d6ccf19ebb3a4d8d6f892d1b22fbdd090eaca12c5cc" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://catalog.data.gov/harvest/object/7f044ce3-238a-45f5-8a48-cc10a7a64511" .
+
+<urn:uuid:677152c1-802d-4432-a95d-107a96736fa1> bcube:hasType "theme" ;
+    bcube:hasValue "Commercial Fishing",
+        "Economic Center",
+        "Hazard Mitigation",
+        "Industrial",
+        "Levee Protection",
+        "Louisiana Speaks",
+        "Port",
+        "Recreation",
+        "Regional Plan",
+        "Special Economic Zone",
+        "Vision" ;
+    dc:partOf "none" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:9106db89-50a2-4b56-a9da-33ab6b60b92d> bcube:hasType "place" ;
+    bcube:hasValue "Gulf Coast",
+        "LA",
+        "Louisiana",
+        "Louisiana Coast",
+        "South Louisiana" ;
+    dc:partOf "none" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:f4c06404-88ad-44e1-ac2a-3fff2c058b37> a "ISO 19115:2003/19139" ;
+    bcube:dateCreated "2015-08-07T12:00:12.45Z" ;
+    bcube:lastUpdated "2015-08-07T12:00:12.45Z" ;
+    bcube:originatedFrom <urn:uuid:4867c98b-6063-4299-9e9b-ed0c2ae8baf5> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:f6ca662d-5d66-47f8-8a4f-46bd4920c01a> .
+
+<urn:uuid:f6ca662d-5d66-47f8-8a4f-46bd4920c01a> bcube:dateCreated "2015-08-07T12:00:12.45Z" ;
+    bcube:hasMetadataRecord <urn:uuid:f4c06404-88ad-44e1-ac2a-3fff2c058b37> ;
+    bcube:lastUpdated "2015-08-07T12:00:12.45Z" ;
+    dc:conformsTo <urn:uuid:677152c1-802d-4432-a95d-107a96736fa1>,
+        <urn:uuid:9106db89-50a2-4b56-a9da-33ab6b60b92d> ;
+    dc:description "This GIS shapefile data illustrates special economic zones included in the Louisiana Speaks Regional Plan Vision. Special economic zones include existing national, state, and regional industrial facility or recreational sites without levee protection, but with effective hazard planning and controls on commercial and residential development. The Louisiana Speaks Regional Plan process study area includes the 35 southernmost parishes of Louisiana." ;
+    dc:spatial "POLYGON ((-93.887675 29.078909,-93.887675 30.039534,-89.306553 30.039534,-89.306553 29.078909,-93.887675 29.078909))" ;
+    dcterms:title "Louisiana Speaks Regional Plan Vision Special Economic Zones, UTM Zone 15N NAD83, Louisiana Recovery Authority (2007), [louisiana_speaks_vision_special_economic_zones]" ;
+    esip:eastBound "-89.306553"^^xsd:float ;
+    esip:northBound "30.039534"^^xsd:float ;
+    esip:southBound "29.078909"^^xsd:float ;
+    esip:westBound "-93.887675"^^xsd:float ;
+    owl:a dcat:Dataset .
+

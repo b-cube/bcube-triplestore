@@ -1,0 +1,66 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:1d3fba5f-b45f-4a09-8ad2-0a6d5327a07b> bcube:hasType "theme" ;
+    bcube:hasValue "ALP Land Dataset",
+        "Land Status",
+        "NFS Lands",
+        "USDA Forest Service",
+        "Wild Scenic River Name" ;
+    dc:partOf "Wild Scenic River" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:2a2f446f-96b6-4bf8-8836-8bfd5b2dddaa> owl:a foaf:Organization ;
+    foaf:name "" .
+
+<urn:uuid:bb6293ad-d553-4408-bf0a-e5b97c04d021> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-09-12T07:38:37.19Z" ;
+    bcube:lastUpdated "2015-09-12T07:38:37.19Z" ;
+    bcube:originatedFrom <urn:uuid:cccd1fc5-d667-4beb-8af1-aa1d5b23b2a8> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:bc5b2ce4-08b4-4dca-b0bd-e2b257466c1a> .
+
+<urn:uuid:bc5b2ce4-08b4-4dca-b0bd-e2b257466c1a> bcube:dateCreated "2015-09-12T07:38:37.19Z" ;
+    bcube:hasMetadataRecord <urn:uuid:bb6293ad-d553-4408-bf0a-e5b97c04d021> ;
+    bcube:lastUpdated "2015-09-12T07:38:37.19Z" ;
+    dc:conformsTo <urn:uuid:1d3fba5f-b45f-4a09-8ad2-0a6d5327a07b>,
+        <urn:uuid:ead690f5-81a2-4749-8c1f-952d35426ea9> ;
+    dc:description "A depiction of areas designated as Wild and Scenic Rivers." ;
+    dc:spatial "POLYGON ((-124.405215 18.26142,-124.405215 49.001086,-65.744786 49.001086,-65.744786 18.26142,-124.405215 18.26142))" ;
+    dcterms:publisher <urn:uuid:2a2f446f-96b6-4bf8-8836-8bfd5b2dddaa> ;
+    dcterms:title "S_USA.WildScenicRiver" ;
+    esip:eastBound "-65.744786"^^xsd:float ;
+    esip:northBound "49.001086"^^xsd:float ;
+    esip:southBound "18.26142"^^xsd:float ;
+    esip:westBound "-124.405215"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:cccd1fc5-d667-4beb-8af1-aa1d5b23b2a8> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-09-12T07:38:37.19Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-09-12T07:38:37.19Z" ;
+    dc:identifier "urn:sha:8c7eaf1fd3b8103f1a4b2847e406d830858641415ab3d313d7c3df86" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://data.fs.usda.gov/geodata/edw/edw_resources/meta/S_USA.WildScenicRiver.xml" .
+
+<urn:uuid:ead690f5-81a2-4749-8c1f-952d35426ea9> bcube:hasType "theme" ;
+    bcube:hasValue "boundaries",
+        "inlandWaters" ;
+    dc:partOf "ISO 19115 Topic Categories" ;
+    owl:a bcube:thesaurusSubset .
+

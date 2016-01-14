@@ -1,0 +1,100 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:1ba14e8e-534c-4bb5-9770-2b0a9d527b42> bcube:hasType "dataCenter" ;
+    bcube:hasValue "Pacific Islands Ocean Observing System (PacIOOS)" ;
+    dc:partOf "GCMD Data Center Keywords" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:37467750-4867-4a57-bd2a-bacc3f8c1980> bcube:hasType "project" ;
+    bcube:hasValue "Pacific Islands Ocean Observing System (PacIOOS)" ;
+    dc:partOf "GCMD Project Keywords" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:444714a5-92df-4587-bd71-b2d0df82b7bb> bcube:hasType "theme" ;
+    bcube:hasValue "Earth Science > Oceans > Ocean Circulation > Ocean Currents",
+        "Earth Science > Oceans > Ocean Temperature > Potential Temperature",
+        "Earth Science > Oceans > Salinity/Density > Salinity",
+        "Earth Science > Oceans > Sea Surface Topography > Sea Surface Height",
+        "Earth Science Services > Models > Ocean General Circulation Models (OGCM)/Regional Ocean Models",
+        "Earth Science Services > Models > Weather Research/Forecast Models" ;
+    dc:partOf "GCMD Science Keywords" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:59a9eedb-dc98-4689-b998-9719ee521226> bcube:hasValue "climatologyMeteorologyAtmosphere" ;
+    dc:partOf "IsoTopicCategories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:5ca27599-c90c-4287-811a-59c49be284e4> a "ISO 19115:2003/19139" ;
+    bcube:dateCreated "2015-11-08T06:46:48.2Z" ;
+    bcube:lastUpdated "2015-11-08T06:46:48.2Z" ;
+    bcube:originatedFrom <urn:uuid:a12a63d1-7e31-44bc-b4e6-d4e6fac6b4ea> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:b50df50c-9e47-451b-a915-6ac3e41de36b> .
+
+<urn:uuid:85b739b8-26f0-4e33-bd57-7b60428d0627> bcube:hasType "theme" ;
+    bcube:hasValue "depth",
+        "eastward_sea_water_velocity",
+        "forecast_period",
+        "forecast_reference_time",
+        "latitude",
+        "longitude",
+        "northward_sea_water_velocity",
+        "sea_binary_mask",
+        "sea_surface_height",
+        "sea_water_potential_temperature",
+        "sea_water_salinity",
+        "time" ;
+    dc:partOf "CF-1.4" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:a12a63d1-7e31-44bc-b4e6-d4e6fac6b4ea> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-08T06:46:48.2Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-08T06:46:48.2Z" ;
+    dc:identifier "urn:sha:7b29640e7c65be20d4cadeeea0d4c116040ab4cf1de24adba7b4b1ab" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://oos.soest.hawaii.edu/pacioos/metadata/iso/roms_mari_forecast.xml" .
+
+<urn:uuid:b50df50c-9e47-451b-a915-6ac3e41de36b> bcube:dateCreated "2015-11-08T06:46:48.2Z" ;
+    bcube:hasMetadataRecord <urn:uuid:5ca27599-c90c-4287-811a-59c49be284e4> ;
+    bcube:lastUpdated "2015-11-08T06:46:48.2Z" ;
+    dc:conformsTo <urn:uuid:1ba14e8e-534c-4bb5-9770-2b0a9d527b42>,
+        <urn:uuid:37467750-4867-4a57-bd2a-bacc3f8c1980>,
+        <urn:uuid:444714a5-92df-4587-bd71-b2d0df82b7bb>,
+        <urn:uuid:59a9eedb-dc98-4689-b998-9719ee521226>,
+        <urn:uuid:85b739b8-26f0-4e33-bd57-7b60428d0627>,
+        <urn:uuid:c29e5d73-a5c3-469a-a72e-83ea4cc3c2c0> ;
+    dc:description "Regional Ocean Modeling System (ROMS) 7-day, 3-hourly forecast for the region surrounding the Commonwealth of the Northern Mariana Islands (CNMI) at approximately 4-km resolution. While considerable effort has been made to implement all model components in a thorough, correct, and accurate manner, numerous sources of error are possible. As such, please use these data with the caution appropriate for any ocean related activity." ;
+    dc:identifier "roms_mari_forecast" ;
+    dc:spatial "POLYGON ((116.104499817 10.7412500381,116.104499817 26.943899154699999,148.89590454099999 26.943899154699999,148.89590454099999 10.7412500381,116.104499817 10.7412500381))" ;
+    dcterms:title "Regional Ocean Modeling System (ROMS): CNMI" ;
+    esip:eastBound "148.895904541"^^xsd:float ;
+    esip:endDate "2015-11-10"^^xsd:date ;
+    esip:northBound "26.9438991547"^^xsd:float ;
+    esip:southBound "10.7412500381"^^xsd:float ;
+    esip:startDate "2015-04-15"^^xsd:date ;
+    esip:westBound "116.104499817"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:c29e5d73-a5c3-469a-a72e-83ea4cc3c2c0> bcube:hasType "place" ;
+    bcube:hasValue "Ocean > Pacific Ocean > Western Pacific Ocean > Micronesia > Guam",
+        "Ocean > Pacific Ocean > Western Pacific Ocean > Micronesia > Northern Mariana Islands > Commonwealth of the Northern Mariana Islands (CNMI)" ;
+    dc:partOf "GCMD Location Keywords" ;
+    owl:a bcube:thesaurusSubset .
+

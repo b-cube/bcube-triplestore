@@ -1,0 +1,95 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:4ee82080-e2b5-4372-9ce0-30f08e4bf6c6> bcube:hasType "theme" ;
+    bcube:hasValue "Bridges",
+        "Creeks",
+        "Cross Section Lines",
+        "Cross Sections",
+        "Culverts",
+        "DFIRM",
+        "Dams",
+        "Digital Flood Insurance Rate Map",
+        "Flood Hazard Data",
+        "Levees",
+        "Streams",
+        "Survey",
+        "Water Body" ;
+    dc:partOf "FEMA NFIP Topic Category" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:7e8380cb-ad89-4570-88e6-05fed9282757> bcube:hasType "place" ;
+    bcube:hasValue "COMMUNITY MONO COUNTY",
+        "COUNTY MONO",
+        "COUNTY-FIPS 051",
+        "FEMA-CID 06051C",
+        "REGION IX",
+        "STATE CA" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:bf6b6a29-69dd-4c64-b405-22e088338d65> bcube:hasValue "elevation",
+        "location",
+        "structure",
+        "transportation" ;
+    dc:partOf "IsoTopicCategories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:c7d43ecc-728c-4cdd-b123-e3a0da83ca2d> a "ISO 19115:2003/19139" ;
+    bcube:dateCreated "2015-09-03T13:05:11.89Z" ;
+    bcube:lastUpdated "2015-09-03T13:05:11.89Z" ;
+    bcube:originatedFrom <urn:uuid:fa5f13d2-48fd-434d-9929-78448e5e5de8> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:eda41d3f-b6c7-4e75-8582-0d3f4e158c2e> .
+
+<urn:uuid:eb3bc988-bb54-47b8-a129-8540f5d9bc7f> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-09-03T13:05:11.89Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-09-03T13:05:11.89Z" ;
+    dc:identifier "urn:sha:37c915397238031daced09ae0e2dd3bf54e84a6477f749c2cc9dcbdf" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://hazards.fema.gov" .
+
+<urn:uuid:eda41d3f-b6c7-4e75-8582-0d3f4e158c2e> bcube:dateCreated "2015-09-03T13:05:11.89Z" ;
+    bcube:hasMetadataRecord <urn:uuid:c7d43ecc-728c-4cdd-b123-e3a0da83ca2d> ;
+    bcube:lastUpdated "2015-09-03T13:05:11.89Z" ;
+    dc:conformsTo <urn:uuid:4ee82080-e2b5-4372-9ce0-30f08e4bf6c6>,
+        <urn:uuid:7e8380cb-ad89-4570-88e6-05fed9282757>,
+        <urn:uuid:bf6b6a29-69dd-4c64-b405-22e088338d65> ;
+    dc:description "Survey data includes spatial datasets and data tables necessary to digitally represent data collected in the survey phase of the study. (Source: FEMA Guidelines and Specs, Appendix N)" ;
+    dc:spatial "POLYGON ((-118.878211 37.45869,-118.878211 38.088295,-118.186089 38.088295,-118.186089 37.45869,-118.878211 37.45869))" ;
+    dcterms:references <urn:uuid:eb3bc988-bb54-47b8-a129-8540f5d9bc7f> ;
+    dcterms:title "SURVEY, MONO COUNTY, CALIFORNIA" ;
+    esip:eastBound "-118.186089"^^xsd:float ;
+    esip:northBound "38.088295"^^xsd:float ;
+    esip:southBound "37.45869"^^xsd:float ;
+    esip:westBound "-118.878211"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:fa5f13d2-48fd-434d-9929-78448e5e5de8> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-09-03T13:05:11.89Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-09-03T13:05:11.89Z" ;
+    dc:identifier "urn:sha:5d7e12c813a143112e04927d1aeb53a0d0f8a35373e682ac0aca7e72" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "https://catalog.data.gov/harvest/object/04b40950-b42c-45be-b9f5-2e6f1b23d834" .
+

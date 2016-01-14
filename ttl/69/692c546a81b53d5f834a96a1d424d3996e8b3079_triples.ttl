@@ -1,0 +1,72 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:4a903b9b-73a8-40b9-946e-0043df3ef4c9> bcube:dateCreated "2015-08-05T11:47:55.879Z" ;
+    bcube:hasMetadataRecord <urn:uuid:73a7cb1e-c68e-4fd9-bd4b-a2fd80682c6a> ;
+    bcube:lastUpdated "2015-08-05T11:47:55.879Z" ;
+    dc:conformsTo <urn:uuid:519b3e3f-d9fd-40d9-8010-2ddbdc0c4048>,
+        <urn:uuid:9a61a6f7-5cf2-43c8-a1ed-5984de0a554c> ;
+    dc:description "This part of SIM 3225 presents data for the slope map (see sheet 11, SIM 3225) of Hueneme Canyon, California. The raster data file is included in \"Slope_HuenemeCanyon.zip,\" which is accessible from http://pubs.usgs.gov/ds/781/HuenemeCanyon/data_catalog_HuenemeCanyon.html. This metadata describes a raster data set of smoothed slope used as an interpretation aid for mapping geomorphology of Hueneme Canyon. The slope raster, in conjunction with bathymetry data, amplitude data, and seismic reflection profiles, was used to interpret geology and geomorphology of Hueneme Canyon. The slope raster was generated in two steps. First, the source elevation data were combined into a single elevation raster and smoothed using a FocalMean algorithm in ArcGIS 9.3.1, as follows: focalmean([elevation_source], circle, 4, data) This operation smoothes the data by calculating the mean of all cells for which the cell center is within a 4-cell radius of the target cell - essentially calculating a rolling mean of elevation over the entire grid. Second, the slope, in degrees, of the smoothed source elevation data was calculated using the 3D-analyst slope function in ArcGIS 9.3.1. This function calculates the maximum rate of change in a plane fitted through a 3x3 neighborhood around the target cell. The rate of change is calculated using the average maximum technique of Burrough and McDonell (1998). Reference Cited: Burrough, P.A. and McDonell, R.A., 1998, Principles of Geographical Information Systems: New York, Oxford University Press, p. 190." ;
+    dc:spatial "POLYGON ((-119.256515 34.061607,-119.256515 34.144866,-119.207376 34.144866,-119.207376 34.061607,-119.256515 34.061607))" ;
+    dcterms:publisher <urn:uuid:8d0aee35-64ad-4124-aab4-e8cea4f5fce3> ;
+    dcterms:title "Slope--Hueneme Canyon, California" ;
+    esip:eastBound "-119.207376"^^xsd:float ;
+    esip:endDate "2007-01-01"^^xsd:date ;
+    esip:northBound "34.144866"^^xsd:float ;
+    esip:southBound "34.061607"^^xsd:float ;
+    esip:startDate "2006-01-01"^^xsd:date ;
+    esip:westBound "-119.256515"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:519b3e3f-d9fd-40d9-8010-2ddbdc0c4048> bcube:hasType "theme" ;
+    bcube:hasValue "environment",
+        "geoscientificinformation",
+        "oceans",
+        "structure" ;
+    dc:partOf "ISO 19115 Topic Category" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:73a7cb1e-c68e-4fd9-bd4b-a2fd80682c6a> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-08-05T11:47:55.879Z" ;
+    bcube:lastUpdated "2015-08-05T11:47:55.879Z" ;
+    bcube:originatedFrom <urn:uuid:ced8e111-1c17-4279-9fb4-bfa9acc8791d> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:4a903b9b-73a8-40b9-946e-0043df3ef4c9> .
+
+<urn:uuid:8d0aee35-64ad-4124-aab4-e8cea4f5fce3> owl:a foaf:Organization ;
+    foaf:name "" .
+
+<urn:uuid:9a61a6f7-5cf2-43c8-a1ed-5984de0a554c> bcube:hasType "place" ;
+    bcube:hasValue "California",
+        "Channel Islands Harbor",
+        "Hueneme Canyon",
+        "Pacific Ocean",
+        "Port of Hueneme",
+        "Santa Barbara Channel",
+        "Ventura County" ;
+    dc:partOf "Geographic Names Information System (GNIS)" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:ced8e111-1c17-4279-9fb4-bfa9acc8791d> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-05T11:47:55.879Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-05T11:47:55.879Z" ;
+    dc:identifier "urn:sha:ee71767e25353c1f4ed4860e21b3c388afe73e65046508658d4bb785" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://pubs.usgs.gov/ds/781/HuenemeCanyon/metadata/Slope_HuenemeCanyon_metadata.xml" .
+

@@ -1,0 +1,74 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:2052bec2-4600-406e-89f3-fbc2e1d95e60> owl:a foaf:Organization ;
+    foaf:name "U.S. Geological Survey" .
+
+<urn:uuid:20abd1c4-d47f-4411-ab76-a1a8069c7b95> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2014-07-31T09:10:13.015Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2014-07-31T09:10:13.015Z" ;
+    dc:identifier "urn:sha:a83af2e43fd0d2adc0185e09e845f24d05b063ae45c9cca9a64b771f" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www.usgs.gov/science/xml.php?cite=1370" .
+
+<urn:uuid:497e6571-2a90-4bc2-b9b9-427283030214> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2014-07-31T09:10:13.015Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2014-07-31T09:10:13.015Z" ;
+    dc:identifier "urn:sha:fc971a97817d25b1fef6dc006be5f52189743eaf4bc12409edd0dff9" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://water.usgs.gov/cgi-bin/dailyMainW?state=us&map_type=dryw&web_type=map" .
+
+<urn:uuid:942fa4ae-d638-4343-8678-7c11d107938e> bcube:hasType "theme" ;
+    bcube:hasValue "droughts",
+        "hydrology",
+        "stream-gage measurement" ;
+    dc:partOf "USGS Thesaurus" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:97f30d0b-3eef-4242-9511-30751eacf20d> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2014-07-31T09:10:13.015Z" ;
+    bcube:lastUpdated "2014-07-31T09:10:13.015Z" ;
+    bcube:originatedFrom <urn:uuid:20abd1c4-d47f-4411-ab76-a1a8069c7b95> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:fa6d7d53-fb56-449b-836b-c6e6d2559026> .
+
+<urn:uuid:b38f4ab0-16fa-4162-b052-f3b7f1f9370a> dcterms:references <urn:uuid:497e6571-2a90-4bc2-b9b9-427283030214> ;
+    owl:a bibo:WebPage .
+
+<urn:uuid:f46c7168-7f8b-4c04-a959-6576ab0ff035> bcube:hasType "place" ;
+    bcube:hasValue "fUS = United States" ;
+    dc:partOf "Augmented FIPS 10-4 and FIPS 6-4" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:fa6d7d53-fb56-449b-836b-c6e6d2559026> bcube:dateCreated "2014-07-31T09:10:13.015Z" ;
+    bcube:hasMetadataRecord <urn:uuid:97f30d0b-3eef-4242-9511-30751eacf20d> ;
+    bcube:lastUpdated "2014-07-31T09:10:13.015Z" ;
+    dc:conformsTo <urn:uuid:942fa4ae-d638-4343-8678-7c11d107938e>,
+        <urn:uuid:f46c7168-7f8b-4c04-a959-6576ab0ff035> ;
+    dc:description "Map display that highlights states where the streamflow index at USGS streamgages, averaged statewide, were below normal for the past seven days with links to comparison of recent streamflow values with historic values." ;
+    dcterms:publisher <urn:uuid:2052bec2-4600-406e-89f3-fbc2e1d95e60> ;
+    dcterms:references <urn:uuid:b38f4ab0-16fa-4162-b052-f3b7f1f9370a> ;
+    dcterms:title "Drought watch - USGS state information on drought" ;
+    owl:a dcat:Dataset .
+

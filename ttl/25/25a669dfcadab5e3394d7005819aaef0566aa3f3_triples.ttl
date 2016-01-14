@@ -1,0 +1,89 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:00edd347-e713-46df-8e83-342154d6d0d7> owl:a foaf:Organization ;
+    foaf:name "" .
+
+<urn:uuid:16e33ab7-038c-4a63-a42f-bb6884944dd6> bcube:hasType "place" ;
+    bcube:hasValue "01101",
+        "County or Equivalent Entity",
+        "Montgomery",
+        "U.S.",
+        "United States" ;
+    dc:partOf "FIPS Publication 5-2, FIPS Publication 6-4, FIPS Publication 8-6, FIPS Publication 9-1,FIPS Publication55-4" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:3167f86c-707d-4284-b7b5-bb18340da5ff> bcube:hasType "theme" ;
+    bcube:hasValue "County or equivalent entity",
+        "Polygon",
+        "TAZ",
+        "Traffic Analysis Zone" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:7e3d3b4c-20db-4a44-8bc0-349ddbd89075> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-11-02T19:47:41.476Z" ;
+    bcube:lastUpdated "2015-11-02T19:47:41.476Z" ;
+    bcube:originatedFrom <urn:uuid:d64dec38-7e88-4fd3-b014-d80acedc4c44> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:e4e62572-fe61-4607-b68a-1fe54a6ca4a5> .
+
+<urn:uuid:c5a63f22-89cb-4949-ad0c-3ccd285883ad> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-02T19:47:41.476Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-02T19:47:41.476Z" ;
+    dc:identifier "urn:sha:e4635896cf788b4044ee4f6a9582d7ec9b93fc2ad53659352fbd0317" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www2.census.gov/geo/tiger/TIGER2008/01_ALABAMA/01101_Montgomery_County/tl_2008_01101_taz00.zip" .
+
+<urn:uuid:d64dec38-7e88-4fd3-b014-d80acedc4c44> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-02T19:47:41.476Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-02T19:47:41.476Z" ;
+    dc:identifier "urn:sha:44c0ba61969709146d4e84bc680e6b94680d927f9b06868856759fe3" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://meta.geo.census.gov/data/existing/decennial/GEO/GPMB/TIGERline/fe_2008/taz00/tl_2008_01101_taz00_url.shp.xml" .
+
+<urn:uuid:e4e62572-fe61-4607-b68a-1fe54a6ca4a5> bcube:dateCreated "2015-11-02T19:47:41.476Z" ;
+    bcube:hasMetadataRecord <urn:uuid:7e3d3b4c-20db-4a44-8bc0-349ddbd89075> ;
+    bcube:lastUpdated "2015-11-02T19:47:41.476Z" ;
+    dc:conformsTo <urn:uuid:16e33ab7-038c-4a63-a42f-bb6884944dd6>,
+        <urn:uuid:3167f86c-707d-4284-b7b5-bb18340da5ff>,
+        <urn:uuid:f90507de-9d48-4702-8b1e-3f72252e660f> ;
+    dc:description "The TIGER/Line Shapefiles are an extract of selected geographic and cartographic information from the Census MAF/TIGER database. The Census MAF/TIGER database represents a seamless national file with no overlaps or gaps between parts. However, each TIGER/Line Shapefile is designed to stand alone as an independent data set or the shapefiles can be combined to cover the whole nation." ;
+    dc:spatial "POLYGON ((-86.498531 31.965065,-86.498531 32.50169,-85.918577 32.50169,-85.918577 31.965065,-86.498531 31.965065))" ;
+    dcterms:publisher <urn:uuid:00edd347-e713-46df-8e83-342154d6d0d7> ;
+    dcterms:references <urn:uuid:c5a63f22-89cb-4949-ad0c-3ccd285883ad> ;
+    dcterms:title "TIGER/Line Shapefile, 2008, 2000 county, Montgomery County, AL, Traffic Analysis Zone (TAZ)" ;
+    esip:eastBound "-85.918577"^^xsd:float ;
+    esip:endDate "2008-07-01"^^xsd:date ;
+    esip:northBound "32.50169"^^xsd:float ;
+    esip:southBound "31.965065"^^xsd:float ;
+    esip:startDate "2008-01-01"^^xsd:date ;
+    esip:westBound "-86.498531"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:f90507de-9d48-4702-8b1e-3f72252e660f> bcube:hasType "theme" ;
+    bcube:hasValue "boundaries" ;
+    dc:partOf "ISO 19115 Topic Categories" ;
+    owl:a bcube:thesaurusSubset .
+

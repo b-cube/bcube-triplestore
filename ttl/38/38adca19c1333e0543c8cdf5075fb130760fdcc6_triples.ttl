@@ -1,0 +1,73 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:1af65386-b686-485a-afd5-9d0b55b27d17> a "ISO 19115:2003/19139" ;
+    bcube:dateCreated "2015-08-01T14:42:19.371Z" ;
+    bcube:lastUpdated "2015-08-01T14:42:19.371Z" ;
+    bcube:originatedFrom <urn:uuid:a502b278-363c-43c9-8283-767ff2e931a1> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:40e35c23-8109-4af2-8113-a3fffcab66f6> .
+
+<urn:uuid:40e35c23-8109-4af2-8113-a3fffcab66f6> bcube:dateCreated "2015-08-01T14:42:19.371Z" ;
+    bcube:hasMetadataRecord <urn:uuid:1af65386-b686-485a-afd5-9d0b55b27d17> ;
+    bcube:lastUpdated "2015-08-01T14:42:19.371Z" ;
+    dc:conformsTo <urn:uuid:84ebe3dc-8cb0-4a7d-bdfe-af6a2d7653c1>,
+        <urn:uuid:a2f62ebb-c7c9-4a02-b05a-b7cdf63dc8a1>,
+        <urn:uuid:a984bd7a-a31a-462f-a89a-4b6bbc263570>,
+        <urn:uuid:ad450d0a-acb1-48ae-b042-9e41a1b0a235> ;
+    dc:description "The Magnetic Field Properties Calculator will computes the estimated values of Earth's magnetic field(declination, inclination, vertical component, northerly component, easterly component, horizontal intensity, or total intensity), for a specific location, elevation and date or range of dates based on the current International Geomagnetic Reference Field (IGRF). The calculated result is a grid that contains the calculated component and the annual change of the component over the geographical area specified. WDeclination is calculated using the current World Magnetic Model (WMM) or International Geomagnetic Reference Field (IGRF) model. While results are typically accurate to 30 minutes of arc, users should be aware that several environmental factors can cause disturbances in the magnetic field." ;
+    dc:spatial "POLYGON ((-180 -90,-180 90,180 90,180 -90,-180 -90))" ;
+    dcterms:title "Magnetic Field Grid Calculator" ;
+    esip:eastBound "180.0"^^xsd:float ;
+    esip:endDate "2014-12-31"^^xsd:date ;
+    esip:northBound "90.0"^^xsd:float ;
+    esip:southBound "-90.0"^^xsd:float ;
+    esip:startDate "1900-01-01"^^xsd:date ;
+    esip:westBound "-180.0"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:84ebe3dc-8cb0-4a7d-bdfe-af6a2d7653c1> bcube:hasType "place" ;
+    bcube:hasValue "Geographic Region > Global" ;
+    dc:partOf "NASA/GCMD Location Keywords" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:a2f62ebb-c7c9-4a02-b05a-b7cdf63dc8a1> bcube:hasValue "geoscientificInformation" ;
+    dc:partOf "IsoTopicCategories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:a502b278-363c-43c9-8283-767ff2e931a1> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-01T14:42:19.371Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-01T14:42:19.371Z" ;
+    dc:identifier "urn:sha:01e952ed21883396de93d8d5bf13f0f7f29b34a7cb22119842ca2ca7" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://catalog.data.gov/harvest/object/e82b68aa-8730-41f1-a9cc-7dcc4bc7f7c8" .
+
+<urn:uuid:a984bd7a-a31a-462f-a89a-4b6bbc263570> bcube:hasType "dataCenter" ;
+    bcube:hasValue "DOC/NOAA/NESDIS/NGDC > National Geophysical Data Center, NESDIS, NOAA, U.S. Department of Commerce" ;
+    dc:partOf "NASA/GCMD Data Center Keywords" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:ad450d0a-acb1-48ae-b042-9e41a1b0a235> bcube:hasType "theme" ;
+    bcube:hasValue "EARTH SCIENCE > Solid Earth > Geomagnetism > Magnetic Declination",
+        "EARTH SCIENCE > Solid Earth > Geomagnetism > Magnetic Field",
+        "EARTH SCIENCE > Solid Earth > Geomagnetism > Magnetic Inclination",
+        "EARTH SCIENCE > Solid Earth > Geomagnetism > Magnetic Intensity" ;
+    dc:partOf "NASA/GCMD Science Keywords" ;
+    owl:a bcube:thesaurusSubset .
+

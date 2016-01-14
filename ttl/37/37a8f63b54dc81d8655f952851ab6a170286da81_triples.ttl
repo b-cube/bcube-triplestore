@@ -1,0 +1,82 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:5405fc2f-2481-43af-a5b2-9dd5fb5743d6> bcube:hasType "theme" ;
+    bcube:hasValue "Elevation",
+        "Laser",
+        "Lidar",
+        "Remote Sensing",
+        "Topography",
+        "Topography/Bathymetry" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:6e73d9ef-bd1e-4a73-8c3f-63d601f285e3> bcube:dateCreated "2015-08-06T17:07:06.29Z" ;
+    bcube:hasMetadataRecord <urn:uuid:9680c0f3-154d-4890-997a-585fcc23afd1> ;
+    bcube:lastUpdated "2015-08-06T17:07:06.29Z" ;
+    dc:conformsTo <urn:uuid:5405fc2f-2481-43af-a5b2-9dd5fb5743d6>,
+        <urn:uuid:84fb9deb-127b-4988-a9da-b93f8802652a>,
+        <urn:uuid:c554f770-8992-4247-9578-3872f8c08443> ;
+    dc:description "This delivery contains point cloud data in LAS 1.2 format, classified in the following manner. Class 1: Unclassified and Class 2: Ground. Overlap points have been flagged as withheld. The timestamps are in absolute GPS time minus 1 billion, in accordance with the LAS 1.2 documentation. The following are the collection parameters and equipment used to create this data set. Aircraft: Piper Navajo (N6GR) Lidar System: Optech ALTM Gemini (03SEN145) Approximate Collection Altitude (Above Mean Terrain): 3800 meters Ground Speed: 160 kts Pulse Rate Frequency: 33 kHz Mirror Scan Frequency: 18 Hz Scan Angle (+/-): 16 degrees Beam Divergence: Narrow (0.25 mrad) Scan Cutoff: 0.02 degrees Accuracy statements are based on areas of moderate terrain, with points classified as ground. Diminished accuracies are to be expected in areas of extreme terrain and dense vegetation. The accuracy of each point is expected to meet the vertical accuracy standard, derived products may be less accurate in areas of extreme terrain and dense vegetation due to a lesser number of points defining the ground in these areas. Classified data sets such as this one may have varying posting due to some pulses not reaching the ground." ;
+    dc:spatial "POLYGON ((-146.740652 65.754782,-146.740652 66.592735,-145.033223 66.592735,-145.033223 65.754782,-146.740652 65.754782))" ;
+    dcterms:references <urn:uuid:ff23fbf4-a433-4f5d-bc62-295766d55a32> ;
+    dcterms:title "2009 Aero-Metric Inc. Topographic LiDAR: Yukon Flats, Alaska" ;
+    esip:eastBound "-145.033223"^^xsd:float ;
+    esip:northBound "66.592735"^^xsd:float ;
+    esip:southBound "65.754782"^^xsd:float ;
+    esip:westBound "-146.740652"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:7ce13995-3ebf-4528-8ea2-4d9510623ee8> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-06T17:07:06.29Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-06T17:07:06.29Z" ;
+    dc:identifier "urn:sha:7b364aca8319c3d5a5c0786ec86e744957c772b0e4be4f70f431a33e" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://coast.noaa.gov/data/Documents/Metadata/isotest/ak2009_aerometric_yukonflats_m1467_metadata_iso.xml" .
+
+<urn:uuid:84fb9deb-127b-4988-a9da-b93f8802652a> bcube:hasType "place" ;
+    bcube:hasValue "Alaska",
+        "Fort Yukon",
+        "USA" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:9680c0f3-154d-4890-997a-585fcc23afd1> a "ISO 19115:2003/19139" ;
+    bcube:dateCreated "2015-08-06T17:07:06.29Z" ;
+    bcube:lastUpdated "2015-08-06T17:07:06.29Z" ;
+    bcube:originatedFrom <urn:uuid:7ce13995-3ebf-4528-8ea2-4d9510623ee8> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:6e73d9ef-bd1e-4a73-8c3f-63d601f285e3> .
+
+<urn:uuid:c554f770-8992-4247-9578-3872f8c08443> bcube:hasValue "elevation" ;
+    dc:partOf "IsoTopicCategories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:ff23fbf4-a433-4f5d-bc62-295766d55a32> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-06T17:07:06.29Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-06T17:07:06.29Z" ;
+    dc:identifier "urn:sha:6464bafc7b4352390b9b470f7705dc957535e2241dd4ab03343a0c38" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://coast.noaa.gov/dataviewer/index.html?action=advsearchVal=1467" .
+

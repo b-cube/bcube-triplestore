@@ -1,0 +1,78 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:581c60d9-25d5-4d75-aaf4-249f3e966064> bcube:hasType "theme" ;
+    bcube:hasValue "Breaklines",
+        "DAT",
+        "LAS",
+        "LiDAR",
+        "Lift",
+        "Light Detection and Ranging",
+        "Project",
+        "Shapefiles",
+        "Survey Control",
+        "Swath",
+        "TIN" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:618f710f-a3b1-4e87-a286-8d56c0c0341e> bcube:hasType "place" ;
+    bcube:hasValue "Fulton",
+        "Fulton County",
+        "IL",
+        "Illinois",
+        "State",
+        "US" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:abc5045d-0559-47bb-adb8-34da0595c406> owl:a foaf:Organization ;
+    foaf:name "AeroMetric, Inc." .
+
+<urn:uuid:dbabb2ec-78e8-49ba-952f-0983773fa9cd> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-11-07T09:53:42.271Z" ;
+    bcube:lastUpdated "2015-11-07T09:53:42.271Z" ;
+    bcube:originatedFrom <urn:uuid:e3a09400-01a7-4e32-9464-b14a585895df> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:df943404-0323-4844-8034-f30dc9b46dde> .
+
+<urn:uuid:df943404-0323-4844-8034-f30dc9b46dde> bcube:dateCreated "2015-11-07T09:53:42.271Z" ;
+    bcube:hasMetadataRecord <urn:uuid:dbabb2ec-78e8-49ba-952f-0983773fa9cd> ;
+    bcube:lastUpdated "2015-11-07T09:53:42.271Z" ;
+    dc:conformsTo <urn:uuid:581c60d9-25d5-4d75-aaf4-249f3e966064>,
+        <urn:uuid:618f710f-a3b1-4e87-a286-8d56c0c0341e> ;
+    dc:description "This task order is for planning, acquisition, processing, and derivative products of LiDAR data to be collected for areas of Illinois. LiDAR data, and derivative products produced in compliance with this task order are part of the data to be obtained under Job Number P-94-025-10. Specifications listed below are based on the U.S. Geological Survey National Geospatial Program Base LiDAR Specification, Version 13." ;
+    dc:spatial "POLYGON ((-90.449 40.185,-90.449 40.712,-89.87 40.712,-89.87 40.185,-90.449 40.185))" ;
+    dcterms:publisher <urn:uuid:abc5045d-0559-47bb-adb8-34da0595c406> ;
+    dcterms:title "Illinois Department of Transportation, District 4, Fulton County LiDAR Acquisition" ;
+    esip:eastBound "-89.87"^^xsd:float ;
+    esip:endDate "2012-02-12"^^xsd:date ;
+    esip:northBound "40.712"^^xsd:float ;
+    esip:southBound "40.185"^^xsd:float ;
+    esip:startDate "2011-04-05"^^xsd:date ;
+    esip:westBound "-90.449"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:e3a09400-01a7-4e32-9464-b14a585895df> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-07T09:53:42.271Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-07T09:53:42.271Z" ;
+    dc:identifier "urn:sha:10d161793286fcd490103b45610befda501864795b3563ed846a6eb4" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www.isgs.illinois.edu/clearinghouse/lidar/counties/fulton/fulton_2011_metadata.xml" .
+

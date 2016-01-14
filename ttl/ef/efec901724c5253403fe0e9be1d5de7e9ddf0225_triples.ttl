@@ -1,0 +1,90 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:1b579712-5288-46c9-b47a-c268df91d13f> bcube:hasType "theme" ;
+    bcube:hasValue "5-digit ZIP code",
+        "County FIPS Code",
+        "County GNIS Code",
+        "From House Number",
+        "Permanent edge ID",
+        "Side indicator flag",
+        "State FIPS Code",
+        "State GNIS Code",
+        "To House Number",
+        "ZIP +4 code" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:36ec4205-c9b5-4d0d-b6d6-8081c28139ae> a "ISO 19115:2003/19139" ;
+    bcube:dateCreated "2015-11-01T18:47:11.72Z" ;
+    bcube:lastUpdated "2015-11-01T18:47:11.72Z" ;
+    bcube:originatedFrom <urn:uuid:43771bdf-e13c-48f4-831d-1007cc3563c8> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:43c62e6b-e0e7-498d-92e5-65d7c4c521ba> .
+
+<urn:uuid:43771bdf-e13c-48f4-831d-1007cc3563c8> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-01T18:47:11.72Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-01T18:47:11.72Z" ;
+    dc:identifier "urn:sha:87a650025cce5d56ad70a7c8d7d84a335f08872a7a668177b7621b46" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://meta.geo.census.gov/data/existing/decennial/GEO/GPMB/TIGERline/TIGER2014/addr/tl_2014_01047_addr.dbf.iso.xml" .
+
+<urn:uuid:43c62e6b-e0e7-498d-92e5-65d7c4c521ba> bcube:dateCreated "2015-11-01T18:47:11.72Z" ;
+    bcube:hasMetadataRecord <urn:uuid:36ec4205-c9b5-4d0d-b6d6-8081c28139ae> ;
+    bcube:lastUpdated "2015-11-01T18:47:11.72Z" ;
+    dc:conformsTo <urn:uuid:1b579712-5288-46c9-b47a-c268df91d13f>,
+        <urn:uuid:deb69f25-640a-48a3-aa94-9baf908263d7>,
+        <urn:uuid:e21d299a-94d3-4edf-bd0b-ca62f1601f53> ;
+    dc:description "The TIGER/Line shapefiles and related database files (.dbf) are an extract of selected geographic and cartographic information from the U.S. Census Bureau's Master Address File / Topologically Integrated Geographic Encoding and Referencing (MAF/TIGER) Database (MTDB). The MTDB represents a seamless national file with no overlaps or gaps between parts, however, each TIGER/Line shapefile is designed to stand alone as an independent data set, or they can be combined to cover the entire nation. The Address Ranges Relationship File (ADDR.dbf) contains the attributes of each address range. Each address range applies to a single edge and has a unique address range identifier (ARID) value. The edge to which an address range applies can be determined by linking the address range to the All Lines Shapefile (EDGES.shp) using the permanent topological edge identifier (TLID) attribute. Multiple address ranges can apply to the same edge since an edge can have multiple address ranges. Note that the most inclusive address range associated with each side of a street edge already appears in the All Lines Shapefile (EDGES.shp). The TIGER/Line Files contain potential address ranges, not individual addresses. The term \"address range\" refers to the collection of all possible structure numbers from the first structure number to the last structure number and all numbers of a specified parity in between along an edge side relative to the direction in which the edge is coded. The address ranges in the TIGER/Line Files are potential ranges that include the full range of possible structure numbers even though the actual structures may not exist." ;
+    dc:spatial "POLYGON ((-87.47308 32.047202,-87.47308 32.729532,-86.806867 32.729532,-86.806867 32.047202,-87.47308 32.047202))" ;
+    dcterms:references <urn:uuid:8bdbdf45-84d7-48be-b64a-2ddbb3fe2e32> ;
+    dcterms:title "TIGER/Line Shapefile, 2014, county, Dallas County, AL, Address Ranges County-based Relationship File" ;
+    esip:eastBound "-86.806867"^^xsd:float ;
+    esip:endDate "2014-05-06"^^xsd:date ;
+    esip:northBound "32.729532"^^xsd:float ;
+    esip:southBound "32.047202"^^xsd:float ;
+    esip:startDate "2013-06-06"^^xsd:date ;
+    esip:westBound "-87.47308"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:8bdbdf45-84d7-48be-b64a-2ddbb3fe2e32> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-01T18:47:11.72Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-01T18:47:11.72Z" ;
+    dc:identifier "urn:sha:53d000e915ad4c5baa38b1161162928f6464520f8117a9cb24a227f5" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www2.census.gov/geo/tiger/TIGER2014/ADDR/tl_2014_01047_addr.zip" .
+
+<urn:uuid:deb69f25-640a-48a3-aa94-9baf908263d7> bcube:hasValue "transportation" ;
+    dc:partOf "IsoTopicCategories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:e21d299a-94d3-4edf-bd0b-ca62f1601f53> bcube:hasType "place" ;
+    bcube:hasValue "01047",
+        "County or Equivalent Entity",
+        "Dallas",
+        "U.S.",
+        "United States" ;
+    dc:partOf "ANSI INCITS 38:2009 (Formerly FIPS 5-2), ANSI INCITS 31:2009 (Formerly FIPS 6-4),ANSI INCITS 454:2009 (Formerly FIPS 8-6), ANSI INCITS 455:2009(Formerly FIPS 9-1), ANSI INCITS 446:2008 (Geographic Names Information System (GNIS))" ;
+    owl:a bcube:thesaurusSubset .
+

@@ -1,0 +1,99 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:33f2c188-11bb-4297-87e7-42ffb077f22e> owl:a foaf:Organization ;
+    foaf:name "Federal Emergency Management Agency" .
+
+<urn:uuid:35110d0d-0bf8-41e0-9369-3d7795dd46d8> bcube:hasType "place" ;
+    bcube:hasValue "COMMUNITY CITY OF MANGUM",
+        "COMMUNITY GREER COUNTY UNINCORPORATED AREAS",
+        "COMMUNITY TOWN OF GRANITE",
+        "COMMUNITY TOWN OF WILLOW",
+        "COUNTY GREER",
+        "COUNTY-FIPS 055",
+        "FEMA-CID 400066",
+        "FEMA-CID 400067",
+        "FEMA-CID 400544",
+        "FEMA-CID 40055C",
+        "FEMA-CID 400607",
+        "REGION 06",
+        "STATE OKLAHOMA" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:5634a980-64b0-43b9-829f-37cbabfc6c93> bcube:hasType "theme" ;
+    bcube:hasValue "1.0-Percent-Annual-Chance Flood",
+        "Channel",
+        "DFIRM",
+        "Digital Flood Insurance Rate Map",
+        "Flood Hazard data",
+        "Hydraulics" ;
+    dc:partOf "FEMA NFIP Topic Category" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:81249aaa-9b2f-4124-a7ad-c3f5f57c9902> bcube:dateCreated "2015-11-01T06:12:30.357Z" ;
+    bcube:hasMetadataRecord <urn:uuid:aa773eca-78f0-465e-a42e-d7edeb9cda96> ;
+    bcube:lastUpdated "2015-11-01T06:12:30.357Z" ;
+    dc:conformsTo <urn:uuid:35110d0d-0bf8-41e0-9369-3d7795dd46d8>,
+        <urn:uuid:5634a980-64b0-43b9-829f-37cbabfc6c93>,
+        <urn:uuid:e3452f21-9224-45cf-8164-abf673dd4e01> ;
+    dc:description "Approximate hydraulic analysis was performed on streams in Greer County, Oklahoma. The approximate analysis was performed in accordance the FEMA G&S. Hydraulic model and all associated shapefiles were submitted." ;
+    dc:spatial "POLYGON ((-100.006027 34.616463,-100.006027 35.136096,-99.121664 35.136096,-99.121664 34.616463,-100.006027 34.616463))" ;
+    dcterms:publisher <urn:uuid:33f2c188-11bb-4297-87e7-42ffb077f22e> ;
+    dcterms:references <urn:uuid:ce0736c5-eaa5-463a-932f-2e5527938e61> ;
+    dcterms:title "HYDRAULICS, GREER COUNTY, OKLAHOMA" ;
+    esip:eastBound "-99.121664"^^xsd:float ;
+    esip:northBound "35.136096"^^xsd:float ;
+    esip:southBound "34.616463"^^xsd:float ;
+    esip:startDate "2010-08-31"^^xsd:date ;
+    esip:westBound "-100.006027"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:aa773eca-78f0-465e-a42e-d7edeb9cda96> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-11-01T06:12:30.357Z" ;
+    bcube:lastUpdated "2015-11-01T06:12:30.357Z" ;
+    bcube:originatedFrom <urn:uuid:df175dbe-a3b5-4c5a-adf2-d9a4cab012e9> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:81249aaa-9b2f-4124-a7ad-c3f5f57c9902> .
+
+<urn:uuid:ce0736c5-eaa5-463a-932f-2e5527938e61> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-01T06:12:30.357Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-01T06:12:30.357Z" ;
+    dc:identifier "urn:sha:37c915397238031daced09ae0e2dd3bf54e84a6477f749c2cc9dcbdf" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://hazards.fema.gov" .
+
+<urn:uuid:df175dbe-a3b5-4c5a-adf2-d9a4cab012e9> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-01T06:12:30.357Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-01T06:12:30.357Z" ;
+    dc:identifier "urn:sha:5b034aeaa4eae7ec4e6f76a113aa2e33c1de9005161c1dcf4e40a95e" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://catalog.data.gov/harvest/object/9eabd76a-eda6-4f29-b4de-9b7402530c8c/original" .
+
+<urn:uuid:e3452f21-9224-45cf-8164-abf673dd4e01> bcube:hasType "theme" ;
+    bcube:hasValue "environment",
+        "inlandWaters" ;
+    dc:partOf "ISO 19115 Topic Category" ;
+    owl:a bcube:thesaurusSubset .
+

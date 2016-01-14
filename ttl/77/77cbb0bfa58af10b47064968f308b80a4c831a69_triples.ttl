@@ -1,0 +1,90 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:33c553df-0a42-448d-a48d-aa87c3012764> bcube:dateCreated "2015-10-30T03:13:21.214Z" ;
+    bcube:hasMetadataRecord <urn:uuid:3508daec-fab3-401a-aac6-f7f8dfd62fd6> ;
+    bcube:lastUpdated "2015-10-30T03:13:21.214Z" ;
+    dc:conformsTo <urn:uuid:42b8fd74-2436-4f82-a890-145203b26110>,
+        <urn:uuid:85207996-8996-4328-b7be-c3865b0c2f5a>,
+        <urn:uuid:bc0640b6-63d1-46d1-b79c-bed9e7d74a57> ;
+    dc:description "The TIGER/Line shapefiles and related database files (.dbf) are an extract of selected geographic and cartographic information from the U.S. Census Bureau's Master Address File / Topologically Integrated Geographic Encoding and Referencing (MAF/TIGER) Database (MTDB). The MTDB represents a seamless national file with no overlaps or gaps between parts, however, each TIGER/Line shapefile is designed to stand alone as an independent data set, or they can be combined to cover the entire nation. The Address Ranges Relationship File (ADDR.dbf) contains the attributes of each address range. Each address range applies to a single edge and has a unique address range identifier (ARID) value. The edge to which an address range applies can be determined by linking the address range to the All Lines Shapefile (EDGES.shp) using the permanent topological edge identifier (TLID) attribute. Multiple address ranges can apply to the same edge since an edge can have multiple address ranges. Note that the most inclusive address range associated with each side of a street edge already appears in the All Lines Shapefile (EDGES.shp). The TIGER/Line Files contain potential address ranges, not individual addresses. The term \"address range\" refers to the collection of all possible structure numbers from the first structure number to the last structure number and all numbers of a specified parity in between along an edge side relative to the direction in which the edge is coded. The address ranges in the TIGER/Line Files are potential ranges that include the full range of possible structure numbers even though the actual structures may not exist." ;
+    dc:spatial "POLYGON ((-87.026846 33.018664,-87.026846 33.546156,-86.340937 33.546156,-86.340937 33.018664,-87.026846 33.018664))" ;
+    dcterms:references <urn:uuid:5786c22a-60ab-493b-ab41-d1937f68142b> ;
+    dcterms:title "TIGER/Line Shapefile, 2014, county, Shelby County, AL, Address Ranges County-based Relationship File" ;
+    esip:eastBound "-86.340937"^^xsd:float ;
+    esip:endDate "2014-05-04"^^xsd:date ;
+    esip:northBound "33.546156"^^xsd:float ;
+    esip:southBound "33.018664"^^xsd:float ;
+    esip:startDate "2013-06-04"^^xsd:date ;
+    esip:westBound "-87.026846"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:3508daec-fab3-401a-aac6-f7f8dfd62fd6> a "ISO 19115:2003/19139" ;
+    bcube:dateCreated "2015-10-30T03:13:21.214Z" ;
+    bcube:lastUpdated "2015-10-30T03:13:21.214Z" ;
+    bcube:originatedFrom <urn:uuid:d84a94e2-c800-4162-93a7-23f0afcdbad7> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:33c553df-0a42-448d-a48d-aa87c3012764> .
+
+<urn:uuid:42b8fd74-2436-4f82-a890-145203b26110> bcube:hasType "theme" ;
+    bcube:hasValue "5-digit ZIP code",
+        "County FIPS Code",
+        "County GNIS Code",
+        "From House Number",
+        "Permanent edge ID",
+        "Side indicator flag",
+        "State FIPS Code",
+        "State GNIS Code",
+        "To House Number",
+        "ZIP +4 code" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:5786c22a-60ab-493b-ab41-d1937f68142b> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-10-30T03:13:21.214Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-10-30T03:13:21.214Z" ;
+    dc:identifier "urn:sha:f983974944a8dce038d6407c3efc9c7433cd9ea31119b39318778f28" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www2.census.gov/geo/tiger/TIGER2014/ADDR/tl_2014_01117_addr.zip" .
+
+<urn:uuid:85207996-8996-4328-b7be-c3865b0c2f5a> bcube:hasValue "transportation" ;
+    dc:partOf "IsoTopicCategories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:bc0640b6-63d1-46d1-b79c-bed9e7d74a57> bcube:hasType "place" ;
+    bcube:hasValue "01117",
+        "County or Equivalent Entity",
+        "Shelby",
+        "U.S.",
+        "United States" ;
+    dc:partOf "ANSI INCITS 38:2009 (Formerly FIPS 5-2), ANSI INCITS 31:2009 (Formerly FIPS 6-4),ANSI INCITS 454:2009 (Formerly FIPS 8-6), ANSI INCITS 455:2009(Formerly FIPS 9-1), ANSI INCITS 446:2008 (Geographic Names Information System (GNIS))" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:d84a94e2-c800-4162-93a7-23f0afcdbad7> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-10-30T03:13:21.214Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-10-30T03:13:21.214Z" ;
+    dc:identifier "urn:sha:056400ecc64eef054b400373e26899dec7b04249a8308a56b0193068" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://meta.geo.census.gov/data/existing/decennial/GEO/GPMB/TIGERline/TIGER2014/addr/tl_2014_01117_addr.dbf.iso.xml" .
+

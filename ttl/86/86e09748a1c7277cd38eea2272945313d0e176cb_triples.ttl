@@ -1,0 +1,82 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:23040324-5f2d-4a02-af2e-881b9ad6d1e9> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-08-11T10:39:53.441Z" ;
+    bcube:lastUpdated "2015-08-11T10:39:53.441Z" ;
+    bcube:originatedFrom <urn:uuid:a140574e-7321-4fe1-a71c-ee0f4b725a1f> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:b56537db-2b77-47e2-9578-8838f0f5eedf> .
+
+<urn:uuid:33dda88d-3611-4555-b7e5-5ab318780722> owl:a foaf:Organization ;
+    foaf:name "U.S. Geological Survey" .
+
+<urn:uuid:6a722c2b-d1f4-4dd6-b229-fcd9d9fc2fb3> bcube:hasType "theme" ;
+    bcube:hasValue "Aeromagnetic data",
+        "Airborne magnetic data",
+        "Edwards aquifer",
+        "Igneous intrusives",
+        "Magnetic anomalies" ;
+    dc:partOf "American Geological Institute Glossary of Geology" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:79b49673-f35e-4579-a475-f970497d6806> bcube:hasType "place" ;
+    bcube:hasValue "Bexar County",
+        "Medina County",
+        "Texas",
+        "Uvalde County" ;
+    dc:partOf "Geographic Names Information System (GNIS)" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:a140574e-7321-4fe1-a71c-ee0f4b725a1f> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-11T10:39:53.441Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-11T10:39:53.441Z" ;
+    dc:identifier "urn:sha:b4adf04a7439224c026f7bfcc7eae10065947807ca5fb98f26bed4e9" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://pubs.usgs.gov/sir/2007/5191/downloads/igneousOutlines_meta.shp.xml" .
+
+<urn:uuid:a1a0a48e-223a-474a-b09f-a96b58bc794c> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-11T10:39:53.441Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-11T10:39:53.441Z" ;
+    dc:identifier "urn:sha:24d25e139fe9a7dfc8ee5f3046a2156b3911c13f54cf0136d522f171" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://pubs.er.usgs.gov/usgspubs/sir/sir2007xxxx" .
+
+<urn:uuid:b56537db-2b77-47e2-9578-8838f0f5eedf> bcube:dateCreated "2015-08-11T10:39:53.441Z" ;
+    bcube:hasMetadataRecord <urn:uuid:23040324-5f2d-4a02-af2e-881b9ad6d1e9> ;
+    bcube:lastUpdated "2015-08-11T10:39:53.441Z" ;
+    dc:conformsTo <urn:uuid:6a722c2b-d1f4-4dd6-b229-fcd9d9fc2fb3>,
+        <urn:uuid:79b49673-f35e-4579-a475-f970497d6806> ;
+    dc:description "The outlines of igneous rock occurance were produced from the 2001 aeromagnetic data by separating shallow equivalent sources using matched bandpass filtering with layer depth of 264 meters. The shallow source layer was processed to obtain a horizontal gradient grid, which was contoured using a threshold set by interpretive modeling of isolated, discrete anomalies. Closed contours corresponding to validated anomalies were included in the final transparancy layer." ;
+    dc:spatial "POLYGON ((-100.028693 29.20885,-100.028693 29.623855,-98.814996 29.623855,-98.814996 29.20885,-100.028693 29.20885))" ;
+    dcterms:publisher <urn:uuid:33dda88d-3611-4555-b7e5-5ab318780722> ;
+    dcterms:references <urn:uuid:a1a0a48e-223a-474a-b09f-a96b58bc794c> ;
+    dcterms:title "Boundaries of Interpreted Igneous Intrusives from Airborne Magnetic Data, Uvalde, Medina, and Bexar County, Texas" ;
+    esip:eastBound "-98.814996"^^xsd:float ;
+    esip:northBound "29.623855"^^xsd:float ;
+    esip:southBound "29.20885"^^xsd:float ;
+    esip:startDate "2007-01-01"^^xsd:date ;
+    esip:westBound "-100.028693"^^xsd:float ;
+    owl:a dcat:Dataset .
+

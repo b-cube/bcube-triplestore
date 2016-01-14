@@ -1,0 +1,90 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:0520270a-cd3b-488f-9ee1-ab066a45232f> bcube:hasType "theme" ;
+    bcube:hasValue "boundaries" ;
+    dc:partOf "ISO 19115 Topic Categories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:0792ba22-7999-4012-8584-f10b4be934af> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-10-30T11:04:22.136Z" ;
+    bcube:lastUpdated "2015-10-30T11:04:22.136Z" ;
+    bcube:originatedFrom <urn:uuid:c7a2bd18-5853-41fa-9735-7521f357f62c> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:0a0b1b8a-dff3-4674-a073-9a149b21ebda> .
+
+<urn:uuid:085e6658-3473-420b-9e13-d072eef535eb> bcube:hasType "theme" ;
+    bcube:hasValue "NECTA",
+        "New England City and Town Area",
+        "Polygon",
+        "State" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:0a0b1b8a-dff3-4674-a073-9a149b21ebda> bcube:dateCreated "2015-10-30T11:04:22.136Z" ;
+    bcube:hasMetadataRecord <urn:uuid:0792ba22-7999-4012-8584-f10b4be934af> ;
+    bcube:lastUpdated "2015-10-30T11:04:22.136Z" ;
+    dc:conformsTo <urn:uuid:0520270a-cd3b-488f-9ee1-ab066a45232f>,
+        <urn:uuid:085e6658-3473-420b-9e13-d072eef535eb>,
+        <urn:uuid:d64bc83b-f5aa-4e9c-86a2-35732f6f310f> ;
+    dc:description "The TIGER/Line Files are shapefiles and related database files (.dbf) that are an extract of selected geographic and cartographic information from the U.S. Census Bureau's Master Address File / Topologically Integrated Geographic Encoding and Referencing (MAF/TIGER) Database (MTDB). The MTDB represents a seamless national file with no overlaps or gaps between parts, however, each TIGER/Line File is designed to stand alone as an independent data set, or they can be combined to cover the entire nation. In New England (Connecticut, Maine, Massachusetts, New Hampshire, Rhode Island, and Vermont), the Office of Management and Budget (OMB) has defined an alternative county subdivision (generally cities and towns) based definition of Core Based Statistical Areas (CBSAs) known as New England City and Town Areas (NECTAs). NECTAs are defined using the same criteria as Metropolitan Statistical Areas and Micropolitan Statistical Areas and are identified as either metropolitan or micropolitan, based, respectively, on the presence of either an urban area of 50,000 or more population or an urban cluster of at least 10,000 and less than 50,000 population. A NECTA containing a single core urban area with a population of at least 2.5 million may be subdivided to form smaller groupings of cities and towns referred to as NECTA Divisions. The NECTAs for the 2010 Census are those defined by OMB and published in December 2009." ;
+    dc:spatial "POLYGON ((-73.508142 41.187053,-73.508142 42.88679,-69.858861 42.88679,-69.858861 41.187053,-73.508142 41.187053))" ;
+    dcterms:publisher <urn:uuid:26693818-3657-4bab-9c3a-907910ba2a02> ;
+    dcterms:references <urn:uuid:574b56a6-5cf9-4046-982f-7a2f51dba991> ;
+    dcterms:title "TIGER/Line Shapefile, 2010, state, Massachusetts, 2010 Census New England City and Town Area (NECTA) State-based Shapefile" ;
+    esip:eastBound "-69.858861"^^xsd:float ;
+    esip:endDate "2010-07-01"^^xsd:date ;
+    esip:northBound "42.88679"^^xsd:float ;
+    esip:southBound "41.187053"^^xsd:float ;
+    esip:startDate "2010-01-01"^^xsd:date ;
+    esip:westBound "-73.508142"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:26693818-3657-4bab-9c3a-907910ba2a02> owl:a foaf:Organization ;
+    foaf:name "" .
+
+<urn:uuid:574b56a6-5cf9-4046-982f-7a2f51dba991> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-10-30T11:04:22.136Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-10-30T11:04:22.136Z" ;
+    dc:identifier "urn:sha:de869b4c6d494c07e75fd8b9a5bc1dfaf4c133238270d5b5358e8d1d" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www2.census.gov/geo/tiger/TIGER2010/NECTA/2010/tl_2010_25_necta10.zip" .
+
+<urn:uuid:c7a2bd18-5853-41fa-9735-7521f357f62c> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-10-30T11:04:22.136Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-10-30T11:04:22.136Z" ;
+    dc:identifier "urn:sha:7b2a277fe9f787ae3b99d857846c52c61768727bf67a1723a8369cb2" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://meta.geo.census.gov/data/existing/decennial/GEO/GPMB/TIGERline/fe_2010/NECTA/tl_2010_25_necta10_url.shp.xml" .
+
+<urn:uuid:d64bc83b-f5aa-4e9c-86a2-35732f6f310f> bcube:hasType "place" ;
+    bcube:hasValue "25",
+        "MA",
+        "Massachusetts",
+        "State or Equivalent Entity",
+        "U.S.",
+        "United States" ;
+    dc:partOf "INCITS.38-200x (R2004),INCITS.31-200x (R2007),INCITS.454-200x,INCITS 455-200x,INCITS 446-2008" ;
+    owl:a bcube:thesaurusSubset .
+

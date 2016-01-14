@@ -1,0 +1,81 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:2ba25957-01c4-433d-9ed2-215ab4ed4296> bcube:dateCreated "2015-10-30T19:12:01.225Z" ;
+    bcube:hasMetadataRecord <urn:uuid:4beac437-6cf5-4857-a3c5-92187416f3dd> ;
+    bcube:lastUpdated "2015-10-30T19:12:01.225Z" ;
+    dc:conformsTo <urn:uuid:736c2ac0-e1c7-4f32-9b14-b1ad17135d95>,
+        <urn:uuid:b563d1d6-85e4-458d-8eef-79618c765d97>,
+        <urn:uuid:e18faae2-b5be-45fa-a716-9d648356dd01> ;
+    dc:description "The dataset contains satellite-derived sea-surface height measurements collected by means of the TOPEX/Poseidon/ERS, JASON-1/Envisat, and Jason-2/Envisat satellite sensors. The data is collected twice a week, and is available at weekly and monthly intervals at a spatial resolution of approximately 0.25 degrees. The geographic coverage is global, and the temporal coverage ranges from 1992-present. The data is combined with a Niiler Climatology (Niiler et al., 1994) and geostrophic currents (u and v components) are mathematically derived." ;
+    dc:spatial "POLYGON ((-180 -70,-180 70,180 70,180 -70,-180 -70))" ;
+    dcterms:identifier "gov.noaa.nmfs.inport:3719" ;
+    dcterms:publisher <urn:uuid:64b6f576-29f4-49b2-96f7-c3442c00c702> ;
+    dcterms:title "OW AVISO Sea-Surface Height & Niiler Climatology" ;
+    esip:eastBound "180.0"^^xsd:float ;
+    esip:northBound "70.0"^^xsd:float ;
+    esip:southBound "-70.0"^^xsd:float ;
+    esip:startDate "1992-10-08"^^xsd:date ;
+    esip:westBound "-180.0"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:4beac437-6cf5-4857-a3c5-92187416f3dd> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-10-30T19:12:01.225Z" ;
+    bcube:lastUpdated "2015-10-30T19:12:01.225Z" ;
+    bcube:originatedFrom <urn:uuid:51c60126-d045-4abd-a3f8-e47f70990145> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:2ba25957-01c4-433d-9ed2-215ab4ed4296> .
+
+<urn:uuid:51c60126-d045-4abd-a3f8-e47f70990145> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-10-30T19:12:01.225Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-10-30T19:12:01.225Z" ;
+    dc:identifier "urn:sha:781cf49bff69d89915dcb99f912074d8dd760dc5db089af6c905db32" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "https://inport.nmfs.noaa.gov/inport/item/3719/fgdc" .
+
+<urn:uuid:64b6f576-29f4-49b2-96f7-c3442c00c702> owl:a foaf:Organization ;
+    foaf:name "" .
+
+<urn:uuid:736c2ac0-e1c7-4f32-9b14-b1ad17135d95> bcube:hasType "theme" ;
+    bcube:hasValue "JASON",
+        "Niiler",
+        "Poseidon",
+        "SSH",
+        "TOPEX",
+        "geostrophic currents",
+        "global",
+        "ow",
+        "pifsc",
+        "remote sensing",
+        "satellite",
+        "sea surface height" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:b563d1d6-85e4-458d-8eef-79618c765d97> bcube:hasType "place" ;
+    bcube:hasValue "Global" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:e18faae2-b5be-45fa-a716-9d648356dd01> bcube:hasType "temporal" ;
+    bcube:hasValue "Weekly",
+        "monthly" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+

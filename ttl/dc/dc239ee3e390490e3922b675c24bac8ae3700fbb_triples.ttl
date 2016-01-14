@@ -1,0 +1,98 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:06dfcec3-f07e-4158-a51b-19a90320f6c6> bcube:dateCreated "2015-10-27T18:43:51.981Z" ;
+    bcube:hasMetadataRecord <urn:uuid:8649cfff-c6ed-4c32-b687-0470436ec238> ;
+    bcube:lastUpdated "2015-10-27T18:43:51.981Z" ;
+    dc:conformsTo <urn:uuid:520d8190-ab76-4d1b-8406-4c61ce324f42>,
+        <urn:uuid:c8af811d-d7cc-4318-bdaa-bf3318d08134> ;
+    dc:description "This spatial data contains Surface Management Agency (SMA, also sometimes called Land Status) information for Idaho. It shows categories for Federal and State agencies as well as Private lands in Idaho. For government land, this data displays the MANAGING AGENCY of the land, which may or may not be the same as the \"owning agency\" of the land. SMA is sometimes referred to as \"ownership\", although this term is inaccurate when describing public lands. The Bureau of Land Management (BLM) in Idaho creates and maintains this spatial data. This dataset is derived by dissolving based on the \"mgmt_agency\" field from the master SMA GIS dataset (which is edited often) kept by the BLM Idaho State Office. The Bureau of Land Management is given the authority and responsibility to maintain this surface management agency data for Federal lands by the Office of Management and Budget (OMB) Circular A-16 Coordination of Geographic Information, and Related Spatial Data Activities (revised and dated August 19, 2002), which \"provides direction for federal agencies that produce, maintain or use spatial data either directly or indirectly in the fulfillment of their mission.\" It further states in Appendix E: NSDI Data Themes, Definitions, and Lead Agencies that \"Federal Land Ownership Status\" geospatial data is the responsibility of the Bureau of Land Management, and that \"Federal land ownership status includes the establishment and maintenance of a system for the storage and dissemination of information describing all title, estate or interest of the federal government in a parcel of real and mineral property. The ownership status system is the portrayal of title for all such federal estates or interests in land.\" Originally, the primary source of the GEOMETRY of the features was the BLM Geographic Coordinate Database (GCDB). In areas where GCDB is unavailable, the spatial features are taken from a variety of sources including the BLM Idaho Resource Base Data collection, BLM Idaho Master Title Plat AutoCad files, US Geological Survey Digital Line Graphs (DLGs), and US Forest Service Cartographic Feature Files (CFFs), among others (see Process Steps). It should be stressed that the geometry of a feature may not be GCDB-based, and the GCDB-based features are not currently being edited to match improved GCDB, therefore this data should NOT be considered actual \"GCDB data\". For the latest GCDB spatial data, please download it from http://www.geocommunicator.gov The primary sources of the ATTRIBUTE information for the Federal and Private lands in the dataset are the BLM Master Title Plats (MTPs), the BLM case files, and the BLM LR2000 database. Please note that because these official sources are strictly used, other Federal agency lands may not be attributed correctly unless the proper paperwork has been filed with the BLM and the land actions have been noted on the MTPs and in LR2000. Attribute information for the State lands is received through cooperation with the Idaho Department of Lands. This information might not reflect all other State agency lands completely. Idaho State Office BLM is currently in the process of comparing this SMA dataset against the MTPs and gives its best effort to attribute the polygons properly. When errors are found, please contact the BLM Idaho State Office Geographic Sciences department at 208-373-3950. Please get a fresh copy of this data a couple times a year as the SMA data is continually changing. Official actions that affect the managing agency happen often, and changes to correct found errors are always being made. Nevada SMA data was acquired from the BLM Nevada web site and clipped to the area that is managed by Idaho BLM Boise District." ;
+    dc:spatial "POLYGON ((-156.18118 66.711707,-156.18118 71.08524,-152.472244 71.08524,-152.472244 66.711707,-156.18118 66.711707))" ;
+    dcterms:publisher <urn:uuid:d089a6ac-6104-42e9-bf16-ab211da44f5c> ;
+    dcterms:references <urn:uuid:7d8844c3-6b17-43dc-9aad-fc5bc809f2f9> ;
+    dcterms:title "Surface Management Status ( August 2009)" ;
+    esip:eastBound "-152.472244"^^xsd:float ;
+    esip:northBound "71.08524"^^xsd:float ;
+    esip:southBound "66.711707"^^xsd:float ;
+    esip:startDate "2009-08-20"^^xsd:date ;
+    esip:westBound "-156.18118"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:520d8190-ab76-4d1b-8406-4c61ce324f42> bcube:hasType "place" ;
+    bcube:hasValue "ID",
+        "Idaho" ;
+    dc:partOf "BLM-State" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:7d8844c3-6b17-43dc-9aad-fc5bc809f2f9> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-10-27T18:43:51.981Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-10-27T18:43:51.981Z" ;
+    dc:identifier "urn:sha:28377fedc65584d22e5d8720708a3a9c8528147b235dbad6b4fdb846" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://data.insideidaho.org/util/zip.ashx?fn=http://data.insideidaho.org/data/BLM/downdata/statewide/sma_id_blm.zip" .
+
+<urn:uuid:8649cfff-c6ed-4c32-b687-0470436ec238> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-10-27T18:43:51.981Z" ;
+    bcube:lastUpdated "2015-10-27T18:43:51.981Z" ;
+    bcube:originatedFrom <urn:uuid:da9ae239-9f94-4619-ae7d-52a63f08fc02> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:06dfcec3-f07e-4158-a51b-19a90320f6c6> .
+
+<urn:uuid:c8af811d-d7cc-4318-bdaa-bf3318d08134> bcube:hasType "theme" ;
+    bcube:hasValue "BLM",
+        "Bureau of Reclamation",
+        "Fish and Game",
+        "Forest Service",
+        "GCDB",
+        "GCDB Land Status",
+        "GCDB Ownership",
+        "Geographic Coordinate Data Base",
+        "Indian Reservation",
+        "Land Status",
+        "Military",
+        "National Park Service",
+        "National Wildlife Refuge",
+        "Other Federal",
+        "Own",
+        "Ownership",
+        "PLSS",
+        "Parks and Recreation",
+        "Private",
+        "Public Land Survey System",
+        "SMA",
+        "State",
+        "Surface Management Agency" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:d089a6ac-6104-42e9-bf16-ab211da44f5c> owl:a foaf:Organization ;
+    foaf:name "U.S. Bureau of Land Management (BLM)" .
+
+<urn:uuid:da9ae239-9f94-4619-ae7d-52a63f08fc02> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-10-27T18:43:51.981Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-10-27T18:43:51.981Z" ;
+    dc:identifier "urn:sha:faeba2be59007f5711b62a526b1887e16cfce46e037d2358e31e89f9" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www.idwr.idaho.gov/ftp/gisdata/Spatial/AdministrativeBoundaries/IdahoOwnership/idown.shp.xml" .
+

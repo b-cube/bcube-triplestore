@@ -1,0 +1,82 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:1295d692-26ec-42d7-8620-80f2d14e2771> a "ISO 19115:2003/19139" ;
+    bcube:dateCreated "2015-10-18T04:29:17.202Z" ;
+    bcube:lastUpdated "2015-10-18T04:29:17.202Z" ;
+    bcube:originatedFrom <urn:uuid:cae8be81-511c-4970-845b-72ee73f48297> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:6523ce0e-9308-41f7-a913-3e0b39abed30> .
+
+<urn:uuid:2c2de47b-58be-4c6a-9a90-11ac2d4e5d0b> bcube:hasValue "boundaries" ;
+    dc:partOf "IsoTopicCategories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:6523ce0e-9308-41f7-a913-3e0b39abed30> bcube:dateCreated "2015-10-18T04:29:17.202Z" ;
+    bcube:hasMetadataRecord <urn:uuid:1295d692-26ec-42d7-8620-80f2d14e2771> ;
+    bcube:lastUpdated "2015-10-18T04:29:17.202Z" ;
+    dc:conformsTo <urn:uuid:2c2de47b-58be-4c6a-9a90-11ac2d4e5d0b>,
+        <urn:uuid:6882a94d-ffbb-47c3-a282-847c85b08f6a>,
+        <urn:uuid:6b51344d-1ce5-47c6-a9be-410d6cb8448d> ;
+    dc:description "This is a map service that is geared towards the dissemination of large datasets, particularly LiDAR elevation data collects. Data can be downloaded by selections of tiles using individual, box graphic, polygon graphic, or by GIS polygon features. Currently contains LiDAR collects for the Red River Valley (2009), Maple River (2003), Sheyenne River (2002), and Bismarck/Mandan (2009)." ;
+    dc:spatial "POLYGON ((-104.5 45.5,-104.5 49.5,-96.5 49.5,-96.5 45.5,-104.5 45.5))" ;
+    dcterms:references <urn:uuid:89675074-71d4-45b7-8529-264741effd9e> ;
+    dcterms:title "North Dakota LiDAR Data Service" ;
+    esip:eastBound "-96.5"^^xsd:float ;
+    esip:northBound "49.5"^^xsd:float ;
+    esip:southBound "45.5"^^xsd:float ;
+    esip:westBound "-104.5"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:6882a94d-ffbb-47c3-a282-847c85b08f6a> bcube:hasType "place" ;
+    bcube:hasValue "Bismarck",
+        "Mandan",
+        "Maple River",
+        "North Dakota",
+        "Red River",
+        "Sheyenne River" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:6b51344d-1ce5-47c6-a9be-410d6cb8448d> bcube:hasType "theme" ;
+    bcube:hasValue "LiDAR",
+        "elevation",
+        "environment",
+        "geoscientificInformation",
+        "imageryBaseMapsEarthCover" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:89675074-71d4-45b7-8529-264741effd9e> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-10-18T04:29:17.202Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-10-18T04:29:17.202Z" ;
+    dc:identifier "urn:sha:65d1bc6b9f9738aed6d59a91144b47d113682f2f414289998bc5fcce" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://lidar.swc.nd.gov/" .
+
+<urn:uuid:cae8be81-511c-4970-845b-72ee73f48297> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-10-18T04:29:17.202Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-10-18T04:29:17.202Z" ;
+    dc:identifier "urn:sha:860270a443fc008c956d9aac09a4902f0acc69c6f7fe90f10178fb5c" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "https://catalog.data.gov/harvest/object/9cd64397-f8bd-404d-9127-eef25fc53dee" .
+

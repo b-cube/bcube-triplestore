@@ -1,0 +1,77 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:1c94e3c2-78e3-4108-a6ce-dd0c2147fb7d> bcube:hasType "theme" ;
+    bcube:hasValue "Acquisition Date",
+        "Digital",
+        "Mosaic",
+        "Ortho Imagery",
+        "United States Department of Agriculture (USDA)",
+        "farming" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:398d3217-d182-4cf4-82e6-398636204062> owl:a foaf:Organization ;
+    foaf:name "USDA-FSA Aerial Photography Field Office" .
+
+<urn:uuid:520ba810-c2e3-4b07-842b-abb5bb180fde> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-12T21:10:36.033Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-12T21:10:36.033Z" ;
+    dc:identifier "urn:sha:5c10eb94ef2001388a8656a5f22109a649c6c91c0f01705b3f3b5cd4" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "https://spatialdata.iu.edu/DOQQS/naip/county/y2014/in_naip_2014/in_ccm_2014/18105/ortho_1-1_1n_s_in105_2014_1.shp.xml" .
+
+<urn:uuid:84da9a2a-34e7-4f66-91f2-e8d26f252f71> bcube:dateCreated "2015-11-12T21:10:36.033Z" ;
+    bcube:hasMetadataRecord <urn:uuid:c663aef5-1d8d-4da3-b599-5853d3e50213> ;
+    bcube:lastUpdated "2015-11-12T21:10:36.033Z" ;
+    dc:conformsTo <urn:uuid:1c94e3c2-78e3-4108-a6ce-dd0c2147fb7d>,
+        <urn:uuid:ac1734fe-65ba-4d36-ae7c-4d39c6e7e8e1> ;
+    dc:description "This data set contains polygons delineating the seamline boundaries of imagery acquired as part of the National Agriculture Imagery Program (NAIP), and used in the creation of DOQQs and compressed county mosaics (CCM). These seam polygons can be used as a tool in determining the image source and date of each portion of the DOQQ or the CCM. The NAIP acquires 4 band digital ortho imagery from airborne and/or space based platforms during the agricultural growing seasons in the U.S.. A primary goal of the NAIP program is to enable availability of ortho imagery within sixty days of acquisition. The NAIP provides 1 meter or 1/2 meter GSD ortho imagery rectified within +/- 6 meters to true ground at a 95% confidence level. The tiling format of NAIP imagery is based on a 3.75' x 3.75' quarter quadrangle with a 300 (plus or minus 30) pixel buffer on all four sides. The NAIP quarter quads are formatted to the UTM coordinate system using the North American Datum of 1983 (NAD83)." ;
+    dc:spatial "POLYGON ((-86.787323694199998 37.885207485199999,-86.787323694199998 40.104262830300001,-86.237184798200005 40.104262830300001,-86.237184798200005 37.885207485199999,-86.787323694199998 37.885207485199999))" ;
+    dcterms:publisher <urn:uuid:398d3217-d182-4cf4-82e6-398636204062> ;
+    dcterms:title "Index of source acquisition dates." ;
+    esip:eastBound "-86.2371847982"^^xsd:float ;
+    esip:northBound "40.1042628303"^^xsd:float ;
+    esip:southBound "37.8852074852"^^xsd:float ;
+    esip:startDate "2014-12-04"^^xsd:date ;
+    esip:westBound "-86.7873236942"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:ac1734fe-65ba-4d36-ae7c-4d39c6e7e8e1> bcube:hasType "place" ;
+    bcube:hasValue "APFO",
+        "Aerial Photography Field Office",
+        "FIPS 18105",
+        "FSA",
+        "Field Service Center",
+        "IN",
+        "MONROE CO., IN",
+        "Monroe",
+        "USA",
+        "USDA",
+        "United States Department of Agriculture (USDA)" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:c663aef5-1d8d-4da3-b599-5853d3e50213> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-11-12T21:10:36.033Z" ;
+    bcube:lastUpdated "2015-11-12T21:10:36.033Z" ;
+    bcube:originatedFrom <urn:uuid:520ba810-c2e3-4b07-842b-abb5bb180fde> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:84da9a2a-34e7-4f66-91f2-e8d26f252f71> .
+

@@ -1,0 +1,85 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:6519a4f7-18ab-466c-9bcd-926371120500> owl:a foaf:Organization ;
+    foaf:name "" .
+
+<urn:uuid:65ada8d5-9cb3-42fb-aac0-59374a804a00> bcube:hasType "theme" ;
+    bcube:hasValue "boundaries" ;
+    dc:partOf "ISO 19115 Topic Categories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:6c35f930-64e1-4688-90ab-0fc2ee1657e0> bcube:hasType "theme" ;
+    bcube:hasValue "AIA",
+        "American Indian Area",
+        "Polygon",
+        "Tribal Block Group" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:7ff70522-1e4c-4e13-b3d1-9359b1db6ec7> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-11-03T00:34:29.263Z" ;
+    bcube:lastUpdated "2015-11-03T00:34:29.263Z" ;
+    bcube:originatedFrom <urn:uuid:fa329b71-6b5c-4743-8233-04f5cd8df639> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:8f6e3b24-0f5e-41a6-ba63-769830c2e0ae> .
+
+<urn:uuid:8f6e3b24-0f5e-41a6-ba63-769830c2e0ae> bcube:dateCreated "2015-11-03T00:34:29.263Z" ;
+    bcube:hasMetadataRecord <urn:uuid:7ff70522-1e4c-4e13-b3d1-9359b1db6ec7> ;
+    bcube:lastUpdated "2015-11-03T00:34:29.263Z" ;
+    dc:conformsTo <urn:uuid:65ada8d5-9cb3-42fb-aac0-59374a804a00>,
+        <urn:uuid:6c35f930-64e1-4688-90ab-0fc2ee1657e0>,
+        <urn:uuid:e3bdc32a-99e5-4bdd-8e05-4978ec948cc3> ;
+    dc:description "The TIGER/Line Files are shapefiles and related database files (.dbf) that are an extract of selected geographic and cartographic information from the U.S. Census Bureau's Master Address File / Topologically Integrated Geographic Encoding and Referencing (MAF/TIGER) Database (MTDB). The MTDB represents a seamless national file with no overlaps or gaps between parts, however, each TIGER/Line File is designed to stand alone as an independent data set, or they can be combined to cover the entire nation. A tribal block group is a cluster of census tabulation blocks within a single tribal census tract delineated by American Indian tribal participants or the Census Bureau for the purpose of presenting demographic data on their reservation and/or off-reservation trust land. The 2010 Census tribal block groups are defined independently of the standard county-based block group delineation. For federally recognized American Indian Tribes with reservations and/or off-reservation trust lands with a population less than 1,200, a single tribal block group is defined. Qualifying reservations and/or off-reservation trust lands with a population greater than 1,200 could define additional tribal block groups within their area without regard to the standard block group configuration. For the 2010 Census, tribal block groups do not necessarily contain tabulation blocks always beginning with the same number and could contain seemingly duplicate block numbers. For the 2010 Census, tabulation block numbers are still assigned only using by standard block group, not the tribal block groups. To better identify tribal block groups, the letter code range A through K (except I, which could be confused with a number 1) is used uniquely within each tribal census tract. For the 2010 Census, tribal block groups and tribal census tracts were delineated through the Tribal Statistical Areas Praogram (TSAP)." ;
+    dc:spatial "POLYGON ((-123.730739 45.051838,-123.730739 45.199396,-123.56125 45.199396,-123.56125 45.051838,-123.730739 45.051838))" ;
+    dcterms:publisher <urn:uuid:6519a4f7-18ab-466c-9bcd-926371120500> ;
+    dcterms:references <urn:uuid:b473f003-e6c7-4113-966a-7dbb2a67aba3> ;
+    dcterms:title "TIGER/Line Shapefile, 2010, 2010 entity, Grand Ronde Community and Off-Reservation Trust Land and Off-Reservation Trust Land, 2010 Census Tribal Block Group AIA-based" ;
+    esip:eastBound "-123.56125"^^xsd:float ;
+    esip:endDate "2010-07-01"^^xsd:date ;
+    esip:northBound "45.199396"^^xsd:float ;
+    esip:southBound "45.051838"^^xsd:float ;
+    esip:startDate "2010-01-01"^^xsd:date ;
+    esip:westBound "-123.730739"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:b473f003-e6c7-4113-966a-7dbb2a67aba3> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-03T00:34:29.263Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-03T00:34:29.263Z" ;
+    dc:identifier "urn:sha:b64e5d04aeee74a467a3327a82a1ba84f8aa7da36bc25b03755318ca" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www2.census.gov/geo/tiger/TIGER2010/TBG/2010/tl_2010_1365_tbg10.zip" .
+
+<urn:uuid:e3bdc32a-99e5-4bdd-8e05-4978ec948cc3> bcube:hasType "place" ;
+    bcube:hasValue "American Indian Area" ;
+    dc:partOf "INCITS.38-200x (R2004),INCITS.31-200x (R2007),INCITS.454-200x,INCITS 455-200x,INCITS 446-2008" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:fa329b71-6b5c-4743-8233-04f5cd8df639> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-03T00:34:29.263Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-03T00:34:29.263Z" ;
+    dc:identifier "urn:sha:a0d757d00e65d0c4c0d0ccc7d9c7f14e695d6eddce3500ddeb4d6606" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://meta.geo.census.gov/data/existing/decennial/GEO/GPMB/TIGERline/fe_2010/TBG/TBG10/tl_2010_1365_tbg10_url.shp.xml" .
+

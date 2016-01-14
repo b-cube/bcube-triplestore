@@ -1,0 +1,89 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:19e4b00b-1f49-48b3-92e1-81901ae88891> owl:a foaf:Organization ;
+    foaf:name "U.S. Geological Survey" .
+
+<urn:uuid:5dd1780b-c758-4454-b00e-2dbce69a9d51> bcube:dateCreated "2015-06-25T02:21:02.355Z" ;
+    bcube:hasMetadataRecord <urn:uuid:fef0f6ad-985d-4d4a-853a-2995e4e3e66a> ;
+    bcube:lastUpdated "2015-06-25T02:21:02.355Z" ;
+    dc:conformsTo <urn:uuid:9c48720b-9c5a-4268-a9f0-cdb483c078d4>,
+        <urn:uuid:b8c00fee-6e97-425c-8d02-c14c8810534e>,
+        <urn:uuid:c76782bd-9e1a-4720-b915-c7f9ebafd0e5> ;
+    dc:description "This is a 100-meter cell resolution raster dataset consisting of 1:750,000-scale surficial geology for California and 1:500,000-scale for Nevada, and parts of Utah, Colorado, New Mexico, and Arizona. This data set was aggregated from a compilation of geologic maps of the Southwest Regional GAP Analysis Project (ReGAP) along with California geology and the very southern portion of Oregon and Idaho geology." ;
+    dc:spatial "POLYGON ((-125.044938 29.27784,-125.044938 44.763995,-104.478499 44.763995,-104.478499 29.27784,-125.044938 29.27784))" ;
+    dcterms:publisher <urn:uuid:19e4b00b-1f49-48b3-92e1-81901ae88891> ;
+    dcterms:references <urn:uuid:7699a27b-a9da-4e61-9c16-56a29623665c> ;
+    dcterms:title "Surficial geology of the Southwest Principal Aquifers (SWPA) study" ;
+    esip:eastBound "-104.478499"^^xsd:float ;
+    esip:endDate "1997-01-01"^^xsd:date ;
+    esip:northBound "44.763995"^^xsd:float ;
+    esip:southBound "29.27784"^^xsd:float ;
+    esip:startDate "1992-01-01"^^xsd:date ;
+    esip:westBound "-125.044938"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:7699a27b-a9da-4e61-9c16-56a29623665c> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-06-25T02:21:02.355Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-06-25T02:21:02.355Z" ;
+    dc:identifier "urn:sha:759f03105518f5727cb1c38aac49ad8750d8a662ddb62c2ebf52f83c" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://water.usgs.gov/GIS/dsdl/SIR2008-5239_swpa_geo.zip" .
+
+<urn:uuid:9c48720b-9c5a-4268-a9f0-cdb483c078d4> bcube:hasType "theme" ;
+    bcube:hasValue "geology" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:9e329c61-3194-4617-b540-b0528e4f8e70> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-06-25T02:21:02.355Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-06-25T02:21:02.355Z" ;
+    dc:identifier "urn:sha:fedcec2c883a431d4d37e4da69afce910a7fb702239de5eec5839f35" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://water.usgs.gov/lookup/getspatial?sir2008-5239_swpa_geo" .
+
+<urn:uuid:b8c00fee-6e97-425c-8d02-c14c8810534e> bcube:hasType "theme" ;
+    bcube:hasValue "geoscientificInformation",
+        "inlandWaters" ;
+    dc:partOf "ISO 19115 Topic Category" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:c76782bd-9e1a-4720-b915-c7f9ebafd0e5> bcube:hasType "place" ;
+    bcube:hasValue "Arizona",
+        "California",
+        "Colorado",
+        "Nevada",
+        "New Mexico",
+        "Southwest",
+        "Utah" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:fef0f6ad-985d-4d4a-853a-2995e4e3e66a> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-06-25T02:21:02.355Z" ;
+    bcube:lastUpdated "2015-06-25T02:21:02.355Z" ;
+    bcube:originatedFrom <urn:uuid:9e329c61-3194-4617-b540-b0528e4f8e70> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:5dd1780b-c758-4454-b00e-2dbce69a9d51> .
+

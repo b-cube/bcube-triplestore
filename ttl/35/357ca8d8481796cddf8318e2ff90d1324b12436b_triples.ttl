@@ -1,0 +1,87 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:36c3b1e2-5d06-4d64-9191-e9f21ee7ab03> bcube:hasType "place" ;
+    bcube:hasValue "Florida",
+        "Florida Coastlines",
+        "Florida Coasts" ;
+    dc:partOf "NONE" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:399c9d1e-5cd9-4625-a80d-fb84c461c8f3> dcterms:references <urn:uuid:9ea0e43b-872d-4b4b-a30f-72a4d27b8bc5> ;
+    owl:a bibo:WebPage .
+
+<urn:uuid:39a2d5d4-3a4e-465f-992c-2e79169c6ae3> bcube:hasType "temporal" ;
+    bcube:hasValue "1990's" ;
+    dc:partOf "NONE" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:564cb7bc-3143-4b2f-a4e2-6c3e09832408> owl:a foaf:Organization ;
+    foaf:name "" .
+
+<urn:uuid:61dca707-36f0-4c55-8c5c-171c36cdd5b8> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-10-29T19:56:49.253Z" ;
+    bcube:lastUpdated "2015-10-29T19:56:49.253Z" ;
+    bcube:originatedFrom <urn:uuid:9449c5bf-d53f-40c1-9709-e8266d08f93f> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:a5a9c012-b867-4d45-9e56-ed192b0b3fda> .
+
+<urn:uuid:8f687659-9cd8-4ba5-8cab-c2e634482f5b> bcube:hasType "theme" ;
+    bcube:hasValue "0-foot contour lines",
+        "Florida Coastline",
+        "Research/Planning" ;
+    dc:partOf "NONE" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:9449c5bf-d53f-40c1-9709-e8266d08f93f> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-10-29T19:56:49.253Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-10-29T19:56:49.253Z" ;
+    dc:identifier "urn:sha:c1fe0db08c2104988bb88984b6f47840bee368c59b6dae6d89098354" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://fcelter.fiu.edu/data/GIS/metadata/coast.xml" .
+
+<urn:uuid:9ea0e43b-872d-4b4b-a30f-72a4d27b8bc5> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-10-29T19:56:49.253Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-10-29T19:56:49.253Z" ;
+    dc:identifier "urn:sha:c11fe1401a76ffbb4280f5d9f261c13efd3bd11c6a08a4ac606aa01a" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www.floridamarine.org/" .
+
+<urn:uuid:a5a9c012-b867-4d45-9e56-ed192b0b3fda> bcube:dateCreated "2015-10-29T19:56:49.253Z" ;
+    bcube:hasMetadataRecord <urn:uuid:61dca707-36f0-4c55-8c5c-171c36cdd5b8> ;
+    bcube:lastUpdated "2015-10-29T19:56:49.253Z" ;
+    dc:conformsTo <urn:uuid:36c3b1e2-5d06-4d64-9191-e9f21ee7ab03>,
+        <urn:uuid:39a2d5d4-3a4e-465f-992c-2e79169c6ae3>,
+        <urn:uuid:8f687659-9cd8-4ba5-8cab-c2e634482f5b> ;
+    dc:description "This coverage contains the 0-foot contour for the entire Florida coastline including estuaries and tidal rivers." ;
+    dc:spatial "POLYGON ((-87.42904 24.492815,-87.42904 30.983191,-79.872251 30.983191,-79.872251 24.492815,-87.42904 24.492815))" ;
+    dcterms:publisher <urn:uuid:564cb7bc-3143-4b2f-a4e2-6c3e09832408> ;
+    dcterms:references <urn:uuid:399c9d1e-5cd9-4625-a80d-fb84c461c8f3> ;
+    dcterms:title "FLORIDA COASTLINE" ;
+    esip:eastBound "-79.872251"^^xsd:float ;
+    esip:northBound "30.983191"^^xsd:float ;
+    esip:southBound "24.492815"^^xsd:float ;
+    esip:westBound "-87.42904"^^xsd:float ;
+    owl:a dcat:Dataset .
+

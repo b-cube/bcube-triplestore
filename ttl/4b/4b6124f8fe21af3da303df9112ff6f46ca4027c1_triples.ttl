@@ -1,0 +1,93 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:03f7692a-7af5-488a-9c72-97dd0fdb6daa> bcube:hasType "theme" ;
+    bcube:hasValue "biota",
+        "economy",
+        "environment",
+        "timberland" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:0de0c3db-8fee-47bb-bc9f-eaea522c6ecb> owl:a foaf:Organization ;
+    foaf:name "USDA Forest Service" .
+
+<urn:uuid:4d3c11c9-796a-41b2-8ccf-e0f9904968a5> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-10-18T14:37:14.177Z" ;
+    bcube:lastUpdated "2015-10-18T14:37:14.177Z" ;
+    bcube:originatedFrom <urn:uuid:c9282905-7613-44ff-98d3-2f1365cc7878> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:5aac609a-e229-436f-bf53-6263f3eeae86> .
+
+<urn:uuid:5aac609a-e229-436f-bf53-6263f3eeae86> bcube:dateCreated "2015-10-18T14:37:14.177Z" ;
+    bcube:hasMetadataRecord <urn:uuid:4d3c11c9-796a-41b2-8ccf-e0f9904968a5> ;
+    bcube:lastUpdated "2015-10-18T14:37:14.177Z" ;
+    dc:conformsTo <urn:uuid:03f7692a-7af5-488a-9c72-97dd0fdb6daa>,
+        <urn:uuid:e3c737e4-892a-43c0-84b0-be761187a4a0> ;
+    dc:description "These data are projections of the percent change in timberland area, 1995-2040, by projection scenario, by FIA Survey Unit, developed using the Subregional Timber Supply Model. This file repeats data from SOFRA dataset areachange.dbf but reorganized to better support online mapping." ;
+    dc:spatial "POLYGON ((-97.104246 23.957495,-97.104246 39.961157,-74.773082 39.961157,-74.773082 23.957495,-97.104246 23.957495))" ;
+    dcterms:publisher <urn:uuid:0de0c3db-8fee-47bb-bc9f-eaea522c6ecb> ;
+    dcterms:references <urn:uuid:6e3782e3-fe42-4901-b77a-7e0e6e381b9b>,
+        <urn:uuid:74bf559d-5bdb-4880-b705-bbfe8e33c8db> ;
+    dcterms:title "areachange2" ;
+    esip:eastBound "-74.773082"^^xsd:float ;
+    esip:endDate "2040-01-01"^^xsd:date ;
+    esip:northBound "39.961157"^^xsd:float ;
+    esip:southBound "23.957495"^^xsd:float ;
+    esip:startDate "1995-01-01"^^xsd:date ;
+    esip:westBound "-97.104246"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:6e3782e3-fe42-4901-b77a-7e0e6e381b9b> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-10-18T14:37:14.177Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-10-18T14:37:14.177Z" ;
+    dc:identifier "urn:sha:d14a028c2a3a2bc9476102bb288234c415a2b01f828ea62ac5b3e42f" ;
+    owl:a bcube:Url .
+
+<urn:uuid:74bf559d-5bdb-4880-b705-bbfe8e33c8db> dcterms:references <urn:uuid:dff0a658-700e-4082-a88e-d8b502980b74> ;
+    owl:a bibo:WebPage .
+
+<urn:uuid:c9282905-7613-44ff-98d3-2f1365cc7878> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-10-18T14:37:14.177Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-10-18T14:37:14.177Z" ;
+    dc:identifier "urn:sha:b624e6262cddc04e15f4b1fcc6b048225ce4dff5652be539342f7b4b" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www.srs.fs.usda.gov/sustain/data/areachange/areachange2.xml" .
+
+<urn:uuid:dff0a658-700e-4082-a88e-d8b502980b74> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-10-18T14:37:14.177Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-10-18T14:37:14.177Z" ;
+    dc:identifier "urn:sha:476835209159e66f84aa0b00f60164b2cb0925f3785269918cad3729" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "\\\\\\\\\\\\\\\\RTPSV1\\\\\\\\unit\\\\\\\\econ\\\\\\\\gis\\\\\\\\soatlas\\\\\\\\sfra\\\\\\\\areachange\\\\\\\\areachange2.dbf" .
+
+<urn:uuid:e3c737e4-892a-43c0-84b0-be761187a4a0> bcube:hasType "theme" ;
+    bcube:hasValue "timberland" ;
+    dc:partOf "projected percent timberland area change" ;
+    owl:a bcube:thesaurusSubset .
+

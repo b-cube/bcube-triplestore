@@ -1,0 +1,91 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:34917036-20ed-42f6-8257-49bb20e97d58> bcube:hasType "theme" ;
+    bcube:hasValue "geoscientificinformation",
+        "imageryBaseMapsEarthCover",
+        "oceans" ;
+    dc:partOf "ISO 19115 Topic Category" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:77c54375-b0d4-4ed7-b1c6-eebea9a03c9f> bcube:hasType "theme" ;
+    bcube:hasValue "Bathymetry",
+        "CMGP",
+        "Contours",
+        "Marine Geology",
+        "Multibeam",
+        "Ocean Floor Topography",
+        "Pacific Coastal and Marine Science Center",
+        "U.S. Geological Survey",
+        "USGS",
+        "Water Depth" ;
+    dc:partOf "General" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:a5b91a11-f1cf-4a1b-9215-8b14a4c29649> bcube:hasType "place" ;
+    bcube:hasValue "California",
+        "Carpinteria",
+        "Pacific Ocean",
+        "Santa Barbara Channel",
+        "Summerland" ;
+    dc:partOf "Geographic Names Information System (GNIS)" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:dfe7fb0c-53fc-4980-8331-3247351412df> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-08-08T13:24:37.609Z" ;
+    bcube:lastUpdated "2015-08-08T13:24:37.609Z" ;
+    bcube:originatedFrom <urn:uuid:f693ce16-2dd6-434e-82e6-75eb36c09fe5> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:e453978a-9674-4bd0-9658-79712a784563> .
+
+<urn:uuid:e10a2e6f-3ca4-4cf9-8099-6a4334961fb7> owl:a foaf:Organization ;
+    foaf:name "" .
+
+<urn:uuid:e453978a-9674-4bd0-9658-79712a784563> bcube:dateCreated "2015-08-08T13:24:37.609Z" ;
+    bcube:hasMetadataRecord <urn:uuid:dfe7fb0c-53fc-4980-8331-3247351412df> ;
+    bcube:lastUpdated "2015-08-08T13:24:37.609Z" ;
+    dc:conformsTo <urn:uuid:34917036-20ed-42f6-8257-49bb20e97d58>,
+        <urn:uuid:77c54375-b0d4-4ed7-b1c6-eebea9a03c9f>,
+        <urn:uuid:a5b91a11-f1cf-4a1b-9215-8b14a4c29649>,
+        <urn:uuid:ec4147b6-3864-4c32-9e87-a233cb51d505> ;
+    dc:description "This part of SIM 3261 presents data for the bathymetric contours for several seafloor maps (see sheets 1, 2, 3, 5 [in figs. 1, 2, 3], 7, 10, SIM 3261) of the Offshore of Carpinteria map area, California. The vector data file is included in \"Contours_OffshoreCarpinteria.zip,\" which is accessible from http://pubs.usgs.gov/ds/781/OffshoreCarpinteria/data_catalog_OffshoreCarpinteria.html. The bathymetry and shaded-relief maps of the Offshore of Carpinteria map area, California, were generated from bathymetry data collected by California State University, Monterey Bay, Seafloor Mapping Lab (CSUMB), by the U.S. Geological Survey (USGS), and by Fugro Pelagos for the U.S. Army Corps of Engineers (USACE) Joint Lidar Bathymetry Technical Center of Expertise. The southeastern nearshore and shelf areas, as well as the western midshelf area, were mapped by CSUMB in the summer of 2007, using a 244-kHz Reson 8101 multibeam echosounder. The western nearshore area, as well as the western outer shelf area, were mapped by the USGS in 2005 and 2006, using 117-kHz and 234.5-kHz SEA (AP) Ltd. SWATHplus-M phase-differencing sidescan sonars. The nearshore bathymetry and coastal topography were mapped for USACE by Fugro Pelagos in 2009, using the SHOALS-1000T bathymetric-lidar and Leica ALS60 topographic-lidar systems. All these mapping missions combined to collect bathymetry from the 0-m isobath to beyond the 3-nautical-mile limit of California's State Waters. A smooth arithmetic mean convolution function applying a weight of one-ninth to each cell in a 3-pixel by 3-pixel matrix was then applied iteratively to the grid ten times. Following smoothing, contour lines were generated at 10-m intervals, from -10 m to -100 m, and at 50-m intervals, from -100 m to -400 m, then the contours were clipped to the boundary of the map area." ;
+    dc:spatial "POLYGON ((-119.6256 34.292,-119.6256 34.4492,-119.4265 34.4492,-119.4265 34.292,-119.6256 34.292))" ;
+    dcterms:publisher <urn:uuid:e10a2e6f-3ca4-4cf9-8099-6a4334961fb7> ;
+    dcterms:title "Contours--Offshore of Carpinteria, California" ;
+    esip:eastBound "-119.4265"^^xsd:float ;
+    esip:endDate "2007-01-01"^^xsd:date ;
+    esip:northBound "34.4492"^^xsd:float ;
+    esip:southBound "34.292"^^xsd:float ;
+    esip:startDate "2005-01-01"^^xsd:date ;
+    esip:westBound "-119.6256"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:ec4147b6-3864-4c32-9e87-a233cb51d505> bcube:hasType "theme" ;
+    bcube:hasValue "Oceans > Bathymetry/SeafloorTopography > Bathymetry",
+        "Oceans > Bathymetry/SeafloorTopography > Seafloor Topography" ;
+    dc:partOf "Global Change Master Directory (GCMD)" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:f693ce16-2dd6-434e-82e6-75eb36c09fe5> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-08T13:24:37.609Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-08T13:24:37.609Z" ;
+    dc:identifier "urn:sha:23de68e4d65ef3784d9e2b9e95c6078d04929555823181f09afb1061" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://pubs.usgs.gov/ds/781/OffshoreCarpinteria/metadata/Contours_OffshoreCarpinteria_metadata.xml" .
+

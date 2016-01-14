@@ -1,0 +1,83 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:1035f42d-b94a-4792-bbc1-e6d44d5c4cdf> bcube:hasType "place" ;
+    bcube:hasValue "COMMUNITY LANDER COUNTY",
+        "COUNTY LANDER",
+        "COUNTY-FIPS 015",
+        "FEMA-CID 32015C",
+        "REGION 09",
+        "STATE NV" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:10d3b694-2ddd-4c65-a216-b567b947616b> bcube:hasType "theme" ;
+    bcube:hasValue "Basemap" ;
+    dc:partOf "FEMA NFIP Topic Category" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:200f670c-c08c-480d-aa73-f700809c9b32> bcube:dateCreated "2015-07-12T00:17:50.119Z" ;
+    bcube:hasMetadataRecord <urn:uuid:899cb2df-8534-4574-84a8-a55d6efd5dab> ;
+    bcube:lastUpdated "2015-07-12T00:17:50.119Z" ;
+    dc:conformsTo <urn:uuid:1035f42d-b94a-4792-bbc1-e6d44d5c4cdf>,
+        <urn:uuid:10d3b694-2ddd-4c65-a216-b567b947616b>,
+        <urn:uuid:c67fbee4-3548-4486-8824-eb934701b51e> ;
+    dc:description "Basemap datasets comprise six of the seven FGDC themes of geospatial data that are used by most GIS applications (Note: the seventh framework theme, orthographic imagery, is packaged in a separate NFIP Metadata Profile): cadastral, geodetic control, governmental unit, transportation, general structures, hydrography (water areas and lines). These data include an encoding of the geographic extent of the features and a minimal number of attributes needed to identify and describe the features. (Source: Circular A-16, p. 13)" ;
+    dc:spatial "POLYGON ((-118.102777 38.797645,-118.102777 41.326229,-116.284937 41.326229,-116.284937 38.797645,-118.102777 38.797645))" ;
+    dcterms:references <urn:uuid:85bd214e-0dbf-4330-8fa2-c37349fbcc39> ;
+    dcterms:title "BASEMAP, LANDER COUNTY, NV (AND INCORPORATED AREAS)" ;
+    esip:eastBound "-116.284937"^^xsd:float ;
+    esip:northBound "41.326229"^^xsd:float ;
+    esip:southBound "38.797645"^^xsd:float ;
+    esip:westBound "-118.102777"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:651b8ec3-508f-48bd-adc3-3ba51fc9f605> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-07-12T00:17:50.119Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-07-12T00:17:50.119Z" ;
+    dc:identifier "urn:sha:5c3865e8af85597c8e255911378b35445f8a4debd7cd9b3f09e2f416" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "https://catalog.data.gov/harvest/object/a8486e2e-082d-447d-9127-477f00b8339f" .
+
+<urn:uuid:85bd214e-0dbf-4330-8fa2-c37349fbcc39> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-07-12T00:17:50.119Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-07-12T00:17:50.119Z" ;
+    dc:identifier "urn:sha:37c915397238031daced09ae0e2dd3bf54e84a6477f749c2cc9dcbdf" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://hazards.fema.gov" .
+
+<urn:uuid:899cb2df-8534-4574-84a8-a55d6efd5dab> a "ISO 19115:2003/19139" ;
+    bcube:dateCreated "2015-07-12T00:17:50.119Z" ;
+    bcube:lastUpdated "2015-07-12T00:17:50.119Z" ;
+    bcube:originatedFrom <urn:uuid:651b8ec3-508f-48bd-adc3-3ba51fc9f605> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:200f670c-c08c-480d-aa73-f700809c9b32> .
+
+<urn:uuid:c67fbee4-3548-4486-8824-eb934701b51e> bcube:hasValue "boundaries",
+        "inlandWaters",
+        "planningCadastre",
+        "transportation" ;
+    dc:partOf "IsoTopicCategories" ;
+    owl:a bcube:thesaurusSubset .
+

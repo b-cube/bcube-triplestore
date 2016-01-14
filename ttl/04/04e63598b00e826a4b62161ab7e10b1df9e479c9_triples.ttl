@@ -1,0 +1,77 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:1545fe92-7a47-41b4-b2f5-f2cb0634c837> bcube:hasType "dataCenter" ;
+    bcube:hasValue "Pacific Islands Ocean Observing System (PacIOOS)" ;
+    dc:partOf "GCMD Data Center Keywords" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:21876be7-75c8-4317-883d-984513410340> bcube:hasType "project" ;
+    bcube:hasValue "Pacific Islands Ocean Observing System (PacIOOS) (http://pacioos.org)" ;
+    dc:partOf "GCMD Project Keywords" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:5eae4831-de8c-4900-9045-5c589245403f> a "ISO 19115:2003/19139" ;
+    bcube:dateCreated "2015-11-09T04:02:19.491Z" ;
+    bcube:lastUpdated "2015-11-09T04:02:19.491Z" ;
+    bcube:originatedFrom <urn:uuid:e454b09f-67e6-4e0d-ab3b-5feda3e3c245> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:9b815a86-ff2b-42a1-875c-b8316bd1aaf7> .
+
+<urn:uuid:9b815a86-ff2b-42a1-875c-b8316bd1aaf7> bcube:dateCreated "2015-11-09T04:02:19.491Z" ;
+    bcube:hasMetadataRecord <urn:uuid:5eae4831-de8c-4900-9045-5c589245403f> ;
+    bcube:lastUpdated "2015-11-09T04:02:19.491Z" ;
+    dc:conformsTo <urn:uuid:1545fe92-7a47-41b4-b2f5-f2cb0634c837>,
+        <urn:uuid:21876be7-75c8-4317-883d-984513410340>,
+        <urn:uuid:db598e72-02ed-477f-8073-ee5e43d42b2c>,
+        <urn:uuid:eae2984b-26e8-4cb6-9722-91107af31a0c>,
+        <urn:uuid:efab052e-7cb6-4b19-8600-9ac52b448178> ;
+    dc:description "Global ship traffic, identifying the number of times a vessel occupied each square kilometer during a one year period: August 2011 through mid-August 2012. The Automatic Identification System (AIS) is an internationally-recognized shipboard broadcast system that communicates information to shore-based stations and other AIS-equipped ships. The United States Coast Guard (USCG) has developed rules applicable to both U.S. and foreign vessels that require owners and operators of most commercial vessels to install and use AIS to increase security and safety of maritime transportation. Data were obtained jointly by PacIOOS (J. Potemra), SOEST/ORE of the University of Hawaii (E. Roth), and the Papahanaumokuakea Marine National Monument (PNMN) (D. Graham) through a one-time purchase from ORBCOMM LLC. Due to vendor constraints, release of the raw data is limited. We distribute map imagery only, via Web Map Service (WMS)." ;
+    dc:identifier "ais_global_20112012_grid" ;
+    dc:spatial "POLYGON ((-180 -90,-180 90,179.9 90.0,179.9 -90.0,-180 -90))" ;
+    dcterms:title "AIS Ship Traffic: Global: 2011-2012: Binned: 10km" ;
+    esip:eastBound "179.9"^^xsd:float ;
+    esip:endDate "2012-08-17"^^xsd:date ;
+    esip:northBound "90.0"^^xsd:float ;
+    esip:southBound "-90.0"^^xsd:float ;
+    esip:startDate "2011-08-01"^^xsd:date ;
+    esip:westBound "-180.0"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:db598e72-02ed-477f-8073-ee5e43d42b2c> bcube:hasType "place" ;
+    bcube:hasValue "Geographic Region &gt; Global Ocean" ;
+    dc:partOf "GCMD Location Keywords" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:e454b09f-67e6-4e0d-ab3b-5feda3e3c245> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-09T04:02:19.491Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-09T04:02:19.491Z" ;
+    dc:identifier "urn:sha:5dd14cd268fc5fd0e94f58f5298272c89be95cb590dd4c9cab6e083c" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://oos.soest.hawaii.edu/pacioos/metadata/iso/ais_global_20112012_grid.xml" .
+
+<urn:uuid:eae2984b-26e8-4cb6-9722-91107af31a0c> bcube:hasValue "climatologyMeteorologyAtmosphere" ;
+    dc:partOf "IsoTopicCategories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:efab052e-7cb6-4b19-8600-9ac52b448178> bcube:hasType "theme" ;
+    bcube:hasValue "Human Dimensions > Infrastructure > Transportation" ;
+    dc:partOf "GCMD Science Keywords" ;
+    owl:a bcube:thesaurusSubset .
+

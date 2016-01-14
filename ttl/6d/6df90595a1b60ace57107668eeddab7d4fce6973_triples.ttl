@@ -1,0 +1,90 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:2861e432-39ff-4c15-ada4-12958f211563> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-06T02:38:22.133Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-06T02:38:22.133Z" ;
+    dc:identifier "urn:sha:f5951dd37fb7b48ce08cc453f5b1e882df797bbf81f0cc2b8edf3272" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://meta.geo.census.gov/data/existing/decennial/GEO/GPMB/TIGERline/TL2012/FGDC/bg/tl_2012_06_bg.shp.xml" .
+
+<urn:uuid:52ec4a9f-bfdc-492e-8440-105e0e672936> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-11-06T02:38:22.133Z" ;
+    bcube:lastUpdated "2015-11-06T02:38:22.133Z" ;
+    bcube:originatedFrom <urn:uuid:2861e432-39ff-4c15-ada4-12958f211563> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:9f21cd70-171f-4d4c-a5e4-f6566ec4fc94> .
+
+<urn:uuid:53b6a824-3910-4694-8175-53d74e886d77> owl:a foaf:Organization ;
+    foaf:name "" .
+
+<urn:uuid:9f21cd70-171f-4d4c-a5e4-f6566ec4fc94> bcube:dateCreated "2015-11-06T02:38:22.133Z" ;
+    bcube:hasMetadataRecord <urn:uuid:52ec4a9f-bfdc-492e-8440-105e0e672936> ;
+    bcube:lastUpdated "2015-11-06T02:38:22.133Z" ;
+    dc:conformsTo <urn:uuid:a596e606-85e3-4385-b031-51b4ebaa620e>,
+        <urn:uuid:bd665b1f-0e8f-46c6-8b06-c2282ee3e9cb>,
+        <urn:uuid:df73b800-a878-4247-bd0c-6102fbe4a0b5> ;
+    dc:description "The TIGER/Line shapefiles and related database files (.dbf) are an extract of selected geographic and cartographic information from the U.S. Census Bureau's Master Address File / Topologically Integrated Geographic Encoding and Referencing (MAF/TIGER) Database (MTDB). The MTDB represents a seamless national file with no overlaps or gaps between parts, however, each TIGER/Line shapefile is designed to stand alone as an independent data set, or they can be combined to cover the entire nation. Block Groups (BGs) are defined before tabulation block delineation and numbering, but are clusters of blocks within the same census tract that have the same first digit of their 4-digit census block number from the same decennial census. For example, 2010 Census tabulation blocks 3001, 3002, 3003,.., 3999 within 2010 Census tract 1210.02 are also within BG 3 within that census tract. 2010 Census BGs generally contained between 600 and 3,000 people. Most BGs were delineated by local participants in the Census Bureau's Participant Statistical Areas Program (PSAP). The Census Bureau delineated BGs only where the PSAP participant declined to delineate BGs or where the Census Bureau could not identify any local PSAP participant. A BG usually covers a contiguous area. Each census tract contains at least one BG, and BGs are uniquely numbered within census tract. Within the standard census geographic hierarchy, BGs never cross county or census tract boundaries, but may cross the boundaries of other geographic entities like county subdivisions, places, urban areas, voting districts, congressional districts, and American Indian / Alaska Native / Native Hawaiian areas. BGs have a valid code range of 0 through 9. BGs coded 0 were intended to only include water area, no land area, and they are generally in territorial seas, coastal water, and Great Lakes water areas. For the 2010 Census, rather than extending a census tract boundary into the Great Lakes or out to the U.S. nautical three-mile limit, the Census Bureau delineated some census tract boundaries along the shoreline or just offshore. The Census Bureau assigned a default census tract number beginning with 99 and a BG number of 0 to these offshore, water-only areas not included in regularly numbered census tract areas." ;
+    dc:spatial "POLYGON ((-124.482003 32.528832,-124.482003 42.009517,-114.131211 42.009517,-114.131211 32.528832,-124.482003 32.528832))" ;
+    dcterms:publisher <urn:uuid:53b6a824-3910-4694-8175-53d74e886d77> ;
+    dcterms:references <urn:uuid:c9e05a99-1b6e-4a3a-996f-d8197c5623df> ;
+    dcterms:title "TIGER/Line Shapefile, 2012, state, California, Current Block Group State-based" ;
+    esip:eastBound "-114.131211"^^xsd:float ;
+    esip:endDate "2012-06-01"^^xsd:date ;
+    esip:northBound "42.009517"^^xsd:float ;
+    esip:southBound "32.528832"^^xsd:float ;
+    esip:startDate "2011-08-01"^^xsd:date ;
+    esip:westBound "-124.482003"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:a596e606-85e3-4385-b031-51b4ebaa620e> bcube:hasType "theme" ;
+    bcube:hasValue "BG",
+        "Block Group",
+        "Polygon",
+        "State or equivalent entity" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:bd665b1f-0e8f-46c6-8b06-c2282ee3e9cb> bcube:hasType "theme" ;
+    bcube:hasValue "Boundaries" ;
+    dc:partOf "ISO 19115 Topic Categories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:c9e05a99-1b6e-4a3a-996f-d8197c5623df> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-06T02:38:22.133Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-06T02:38:22.133Z" ;
+    dc:identifier "urn:sha:0394423f3cf1bd2da791bee6d0faefebb1bc44305dd6fe5b6d64a42e" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www2.census.gov/geo/tiger/TIGER2012/BG/tl_2012_06_bg.zip" .
+
+<urn:uuid:df73b800-a878-4247-bd0c-6102fbe4a0b5> bcube:hasType "place" ;
+    bcube:hasValue "06",
+        "CA",
+        "California",
+        "State or Equivalent Entity",
+        "U.S.",
+        "United States" ;
+    dc:partOf "ANSI INCITS 38:2009 (Formerly FIPS 5-2), ANSI INCITS 31:2009 (Formerly FIPS 6-4),ANSI INCITS 454:2009 (Formerly FIPS 8-6), ANSI INCITS 455:2009(Formerly FIPS 9-1), ANSI INCITS 446:2008 (Geographic Names Information System (GNIS))" ;
+    owl:a bcube:thesaurusSubset .
+

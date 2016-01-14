@@ -1,0 +1,89 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:4285f130-d0ca-43b3-9032-e5c7a25756fe> bcube:hasType "theme" ;
+    bcube:hasValue "County or equivalent entity",
+        "Polygon",
+        "TAZ",
+        "Traffic Analysis Zone" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:4a3f9a7f-3d1c-428e-bc62-c186f4e3990a> bcube:hasType "theme" ;
+    bcube:hasValue "boundaries" ;
+    dc:partOf "ISO 19115 Topic Categories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:50d2cc76-a994-4eee-98c6-41d82b72717b> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-11-06T23:01:48.337Z" ;
+    bcube:lastUpdated "2015-11-06T23:01:48.337Z" ;
+    bcube:originatedFrom <urn:uuid:8f486207-662f-4f5a-83fb-b102c09213b1> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:7b1302a1-5e22-4256-a26d-ea8a685b4587> .
+
+<urn:uuid:7b1302a1-5e22-4256-a26d-ea8a685b4587> bcube:dateCreated "2015-11-06T23:01:48.337Z" ;
+    bcube:hasMetadataRecord <urn:uuid:50d2cc76-a994-4eee-98c6-41d82b72717b> ;
+    bcube:lastUpdated "2015-11-06T23:01:48.337Z" ;
+    dc:conformsTo <urn:uuid:4285f130-d0ca-43b3-9032-e5c7a25756fe>,
+        <urn:uuid:4a3f9a7f-3d1c-428e-bc62-c186f4e3990a>,
+        <urn:uuid:fe5a0a10-3dd1-4fa5-be88-3762f2d5c204> ;
+    dc:description "The TIGER/Line Shapefiles are an extract of selected geographic and cartographic information from the Census MAF/TIGER database. The Census MAF/TIGER database represents a seamless national file with no overlaps or gaps between parts. However, each TIGER/Line Shapefile is designed to stand alone as an independent data set or the shapefiles can be combined to cover the whole nation." ;
+    dc:spatial "POLYGON ((-88.139988 34.56623,-88.139988 34.906694,-87.415888 34.906694,-87.415888 34.56623,-88.139988 34.56623))" ;
+    dcterms:publisher <urn:uuid:b6be7294-b0f7-48f9-a59f-a2932186288e> ;
+    dcterms:references <urn:uuid:bd1787e9-68e5-48b7-bf78-cabbdfe678d9> ;
+    dcterms:title "TIGER/Line Shapefile, 2007, 2000 county, Colbert County, Traffic Analysis Zone (TAZ)" ;
+    esip:eastBound "-87.415888"^^xsd:float ;
+    esip:endDate "2007-07-01"^^xsd:date ;
+    esip:northBound "34.906694"^^xsd:float ;
+    esip:southBound "34.56623"^^xsd:float ;
+    esip:startDate "2007-01-01"^^xsd:date ;
+    esip:westBound "-88.139988"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:8f486207-662f-4f5a-83fb-b102c09213b1> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-06T23:01:48.337Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-06T23:01:48.337Z" ;
+    dc:identifier "urn:sha:ef074c166908d56a00728540411eb51a147bd156afa31f299f32b655" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://meta.geo.census.gov/data/existing/decennial/GEO/GPMB/TIGERline/fe_2007/taz00/fe_2007_01033_taz00_url.shp.xml" .
+
+<urn:uuid:b6be7294-b0f7-48f9-a59f-a2932186288e> owl:a foaf:Organization ;
+    foaf:name "" .
+
+<urn:uuid:bd1787e9-68e5-48b7-bf78-cabbdfe678d9> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-06T23:01:48.337Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-06T23:01:48.337Z" ;
+    dc:identifier "urn:sha:da2cf9190ad8eb98a99f0925fc88f9a5cb0b3f8419739bd7fe3b0246" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www2.census.gov/geo/tiger/TIGER2007FE/01_ALABAMA/01033_Colbert/fe_2007_01033_taz00.zip" .
+
+<urn:uuid:fe5a0a10-3dd1-4fa5-be88-3762f2d5c204> bcube:hasType "place" ;
+    bcube:hasValue "01033",
+        "Colbert",
+        "County or Equivalent Entity",
+        "U.S.",
+        "United States" ;
+    dc:partOf "FIPS Publication 5-2, FIPS Publication 6-4, FIPS Publication 8-6, FIPS Publication 9-1" ;
+    owl:a bcube:thesaurusSubset .
+

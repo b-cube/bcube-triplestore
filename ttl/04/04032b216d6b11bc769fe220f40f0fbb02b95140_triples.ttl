@@ -1,0 +1,111 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:087d31e6-4c16-4870-89c6-f610d40fd57e> bcube:hasType "theme" ;
+    bcube:hasValue "2013",
+        "Boundaries",
+        "Cartographic Boundary",
+        "Census Tract",
+        "County",
+        "Generalized",
+        "Shapefile",
+        "State" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:11f72821-ed7c-4406-a7ae-2e672afb30e0> bcube:hasValue "boundaries" ;
+    dc:partOf "IsoTopicCategories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:27d0dce8-dc7b-449e-b22c-e49a7ea48e5c> a "ISO 19115:2003/19139" ;
+    bcube:dateCreated "2015-11-04T22:06:21.075Z" ;
+    bcube:lastUpdated "2015-11-04T22:06:21.075Z" ;
+    bcube:originatedFrom <urn:uuid:7f03a8e6-559a-48be-aab8-7171c7f67a78> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:bcb59419-aa2f-46f9-bbfb-58bdaa66c597> .
+
+<urn:uuid:7f03a8e6-559a-48be-aab8-7171c7f67a78> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-04T22:06:21.075Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-04T22:06:21.075Z" ;
+    dc:identifier "urn:sha:67fb5fe23afb9a935b6021a375a16ce9e23fbde5a60c1154285305c8" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://meta.geo.census.gov/data/existing/decennial/GEO/CPMB/boundary/2014gz/SeriesCollection/ISO_SeriesCollection_cb_2013_cd113_500k.xml" .
+
+<urn:uuid:94eaa46b-e73b-4949-bee2-cda5327ee4be> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-04T22:06:21.075Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-04T22:06:21.075Z" ;
+    dc:identifier "urn:sha:a552ec971b26ccbcf3dd5a42b4c521740e244b4d5ec9f9c56e51dabe" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www.census.gov/geo/maps-data/data/tiger.html" .
+
+<urn:uuid:b35209a6-7f33-4acc-8e1a-1d497f7f5ffe> bcube:hasType "place" ;
+    bcube:hasValue "US",
+        "United States" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:bcb59419-aa2f-46f9-bbfb-58bdaa66c597> bcube:dateCreated "2015-11-04T22:06:21.075Z" ;
+    bcube:hasMetadataRecord <urn:uuid:27d0dce8-dc7b-449e-b22c-e49a7ea48e5c> ;
+    bcube:lastUpdated "2015-11-04T22:06:21.075Z" ;
+    dc:conformsTo <urn:uuid:087d31e6-4c16-4870-89c6-f610d40fd57e>,
+        <urn:uuid:11f72821-ed7c-4406-a7ae-2e672afb30e0>,
+        <urn:uuid:b35209a6-7f33-4acc-8e1a-1d497f7f5ffe> ;
+    dc:description "The 2013 cartographic boundary shapefiles are simplified representations of selected geographic areas from the U.S. Census Bureau's Master Address File / Topologically Integrated Geographic Encoding and Referencing (MAF/TIGER) Database (MTDB). These boundary files are specifically designed for small-scale thematic mapping. When possible generalization is performed with the intent to maintain the hierarchical relationships among geographies and to maintain the alignment of geographies within a file set for a given year. Geographic areas may not align with the same areas from another year. Some geographies are available as nation-based shapefiles while others are available only as state-based files." ;
+    dc:spatial "POLYGON ((-179.231086 -14.601813,-179.231086 71.441059,179.859681 71.441059,179.859681 -14.601813,-179.231086 -14.601813))" ;
+    dcterms:references <urn:uuid:94eaa46b-e73b-4949-bee2-cda5327ee4be>,
+        <urn:uuid:c574b321-9375-4ad7-b6be-46af8768e54a>,
+        <urn:uuid:e14c678d-eead-4b5f-bfea-ac08631ebe83> ;
+    dcterms:title "Series Information for the 2013 Cartographic Boundary File, State-Congressional District (113th), 1:500,000" ;
+    esip:eastBound "179.859681"^^xsd:float ;
+    esip:endDate "2014-04-06"^^xsd:date ;
+    esip:northBound "71.441059"^^xsd:float ;
+    esip:southBound "-14.601813"^^xsd:float ;
+    esip:startDate "2014-04-06"^^xsd:date ;
+    esip:westBound "-179.231086"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:c574b321-9375-4ad7-b6be-46af8768e54a> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-04T22:06:21.075Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-04T22:06:21.075Z" ;
+    dc:identifier "urn:sha:5e153ed3e7b37a710e4456e559e8577cb045e6e303cac18785e68f0b" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www2.census.gov/geo/tiger/GENZ2013/cb_2013_us_cd113_500k.zip" .
+
+<urn:uuid:e14c678d-eead-4b5f-bfea-ac08631ebe83> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-04T22:06:21.075Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-04T22:06:21.075Z" ;
+    dc:identifier "urn:sha:ea80f12d00adc960872a2913b636bf59a622a2b33ad5ac406278c3ab" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://meta.geo.census.gov/data/existing/decennial/GEO/CPMB/boundary/2014gz/cd113_500k/2014_cd113_500k.ea.iso.xml" .
+

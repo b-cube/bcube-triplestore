@@ -1,0 +1,93 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:4f440680-2b1a-45ea-937a-f6619607dcc6> owl:a foaf:Organization ;
+    foaf:name "" .
+
+<urn:uuid:56d627f2-0313-4ea6-a116-b4b7de6a9894> bcube:hasType "theme" ;
+    bcube:hasValue "CDP",
+        "Census Designated Place",
+        "City",
+        "Polygon",
+        "State or equivalent entity",
+        "Town",
+        "Village" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:57cd78bb-c160-4dd4-8ec3-bedda153bf1b> bcube:hasType "theme" ;
+    bcube:hasValue "boundaries" ;
+    dc:partOf "ISO 19115 Topic Categories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:6663042e-bf6c-40b2-a43e-28089d0b9de1> bcube:hasType "place" ;
+    bcube:hasValue "23",
+        "ME",
+        "Maine",
+        "State or Equivalent Entity",
+        "U.S.",
+        "United States" ;
+    dc:partOf "INCITS.38-200x (R2004),INCITS.31-200x (R2007),INCITS.454-200x,INCITS 455-200x,INCITS 446-2008" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:9eb5aae0-cb1a-4e1e-a858-2550e45ca40d> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-02T11:26:11.729Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-02T11:26:11.729Z" ;
+    dc:identifier "urn:sha:98f8bafd56409f66e9a6fb88b02fc05fd5476b09b6c1f568c4109f68" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www2.census.gov/geo/tiger/TIGER2009/23_MAINE/tl_2009_23_placeec.zip" .
+
+<urn:uuid:a48a2408-dbea-494c-81a1-f0d525803914> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-02T11:26:11.729Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-02T11:26:11.729Z" ;
+    dc:identifier "urn:sha:99b972befb2e2900a0dc59c6779b196ba017a648312d0551538097fb" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://meta.geo.census.gov/data/existing/decennial/GEO/GPMB/TIGERline/fe_2009/placeec/tl_2009_23_placeec_url.shp.xml" .
+
+<urn:uuid:bf868aa5-a690-413d-a5b1-eb4e8b783a9c> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-11-02T11:26:11.729Z" ;
+    bcube:lastUpdated "2015-11-02T11:26:11.729Z" ;
+    bcube:originatedFrom <urn:uuid:a48a2408-dbea-494c-81a1-f0d525803914> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:e1aff83b-37a5-4764-9a08-7f5d274fd673> .
+
+<urn:uuid:e1aff83b-37a5-4764-9a08-7f5d274fd673> bcube:dateCreated "2015-11-02T11:26:11.729Z" ;
+    bcube:hasMetadataRecord <urn:uuid:bf868aa5-a690-413d-a5b1-eb4e8b783a9c> ;
+    bcube:lastUpdated "2015-11-02T11:26:11.729Z" ;
+    dc:conformsTo <urn:uuid:56d627f2-0313-4ea6-a116-b4b7de6a9894>,
+        <urn:uuid:57cd78bb-c160-4dd4-8ec3-bedda153bf1b>,
+        <urn:uuid:6663042e-bf6c-40b2-a43e-28089d0b9de1> ;
+    dc:description "The TIGER/Line Shapefiles are an extract of selected geographic and cartographic information from the Census MAF/TIGER database. The Census MAF/TIGER database represents a seamless national file with no overlaps or gaps between parts. However, each TIGER/Line Shapefile is designed to stand alone as an independent data set or the shapefiles can be combined to cover the whole nation." ;
+    dc:spatial "POLYGON ((-71.083924 42.917126,-71.083924 47.459686,-66.885075 47.459686,-66.885075 42.917126,-71.083924 42.917126))" ;
+    dcterms:publisher <urn:uuid:4f440680-2b1a-45ea-937a-f6619607dcc6> ;
+    dcterms:references <urn:uuid:9eb5aae0-cb1a-4e1e-a858-2550e45ca40d> ;
+    dcterms:title "TIGER/Line Shapefile, 2009, econ state, Maine, Economic Census Place Shapefile" ;
+    esip:eastBound "-66.885075"^^xsd:float ;
+    esip:endDate "2009-05-01"^^xsd:date ;
+    esip:northBound "47.459686"^^xsd:float ;
+    esip:southBound "42.917126"^^xsd:float ;
+    esip:startDate "2009-01-01"^^xsd:date ;
+    esip:westBound "-71.083924"^^xsd:float ;
+    owl:a dcat:Dataset .
+

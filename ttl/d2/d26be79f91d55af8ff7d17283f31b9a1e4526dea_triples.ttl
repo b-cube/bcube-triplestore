@@ -1,0 +1,72 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:32826f4e-ba44-490f-8afa-552b07afd55d> bcube:hasType "place" ;
+    bcube:hasValue "Colorado",
+        "Denver",
+        "Denver County",
+        "USA" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:4949f116-71b7-478d-b5ee-ed7de373b766> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-10-16T21:46:09.165Z" ;
+    bcube:lastUpdated "2015-10-16T21:46:09.165Z" ;
+    bcube:originatedFrom <urn:uuid:bfe0cb38-6d4b-4d3f-943f-52bdf017bc99> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:cc27e98b-e4a2-4592-8716-52aebff3d245> .
+
+<urn:uuid:6bc4687f-9aca-48b5-8681-90d95cf7c74b> bcube:hasType "theme" ;
+    bcube:hasValue "transportation" ;
+    dc:partOf "ISO 19115 Topic Categories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:bfe0cb38-6d4b-4d3f-943f-52bdf017bc99> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-10-16T21:46:09.165Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-10-16T21:46:09.165Z" ;
+    dc:identifier "urn:sha:9f972231dd733d354e7de2aeb222f08897de3244beb717441d42f420" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://data.denvergov.org/download/gis/traffic_signals/metadata/traffic_signals.xml" .
+
+<urn:uuid:c57014b9-39f2-4f83-a3ba-34eb57d40d35> owl:a foaf:Organization ;
+    foaf:name "" .
+
+<urn:uuid:cc27e98b-e4a2-4592-8716-52aebff3d245> bcube:dateCreated "2015-10-16T21:46:09.165Z" ;
+    bcube:hasMetadataRecord <urn:uuid:4949f116-71b7-478d-b5ee-ed7de373b766> ;
+    bcube:lastUpdated "2015-10-16T21:46:09.165Z" ;
+    dc:conformsTo <urn:uuid:32826f4e-ba44-490f-8afa-552b07afd55d>,
+        <urn:uuid:6bc4687f-9aca-48b5-8681-90d95cf7c74b>,
+        <urn:uuid:fed2932f-8296-462f-a68d-361bee933613> ;
+    dc:description "Traffic signals within and near the City and County of Denver" ;
+    dc:spatial "POLYGON ((-105.110011 39.61279,-105.110011 39.837764,-104.754844 39.837764,-104.754844 39.61279,-105.110011 39.61279))" ;
+    dcterms:publisher <urn:uuid:c57014b9-39f2-4f83-a3ba-34eb57d40d35> ;
+    dcterms:title "Traffic Signals" ;
+    esip:eastBound "-104.754844"^^xsd:float ;
+    esip:northBound "39.837764"^^xsd:float ;
+    esip:southBound "39.61279"^^xsd:float ;
+    esip:westBound "-105.110011"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:fed2932f-8296-462f-a68d-361bee933613> bcube:hasType "theme" ;
+    bcube:hasValue "Signals",
+        "Traffic",
+        "Transportation" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+

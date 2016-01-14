@@ -1,0 +1,79 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:2c10b4fa-9508-4b17-8167-fe9d1462b0d9> bcube:hasType "place" ;
+    bcube:hasValue "IL",
+        "US" ;
+    dc:partOf "U.S. Department of Commerce, 1977, Countries, dependencies,areas of special sovereignty, and their principal administrative divisions (Federal Information Processing Standard 10-3): Washington, D.C., National Institute of Standards and Technology." ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:2f6ea942-f7a3-4578-9200-01d8f60c0ca3> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-09-04T03:17:34.013Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-09-04T03:17:34.013Z" ;
+    dc:identifier "urn:sha:e3a423494d0d91a760286475ad399f749c4e44f34a097f7cf614fa10" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www.isgs.uiuc.edu/nsdihome/outmeta/IL_DOQ_NAPP3_MOSAIC_UTM16_RAS.xml" .
+
+<urn:uuid:4558290e-5da4-4584-9813-a941d877afef> bcube:hasType "theme" ;
+    bcube:hasValue "1-meter orthophoto",
+        "3.75- x 3.75-minute orthophoto",
+        "7.5- x 7.5-minute orthophoto",
+        "DOQ",
+        "DOQQ",
+        "MrSID",
+        "aerial photograph",
+        "digital image map",
+        "digital orthophoto",
+        "digital orthophotoquad",
+        "image compression",
+        "imageryBaseMapsEarthCover",
+        "orthophoto",
+        "quarter-quadrangle orthophoto",
+        "rectified image",
+        "rectified photograph" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:597919b5-c3f8-457e-b23e-f34c17b8ec90> owl:a foaf:Organization ;
+    foaf:name "Illinois State Geological Survey" .
+
+<urn:uuid:946c96ce-39d4-465f-a3f6-1c5bfe2b4b22> bcube:dateCreated "2015-09-04T03:17:34.013Z" ;
+    bcube:hasMetadataRecord <urn:uuid:c84541cb-4474-4ef5-aff3-78317836858f> ;
+    bcube:lastUpdated "2015-09-04T03:17:34.013Z" ;
+    dc:conformsTo <urn:uuid:2c10b4fa-9508-4b17-8167-fe9d1462b0d9>,
+        <urn:uuid:4558290e-5da4-4584-9813-a941d877afef> ;
+    dc:description "This data set is an SDE raster mosaic of NAPP III DOQs that occur within the UTM Zone 16 portion of Illinois. The data are stored in the \"as delivered\" spatial reference of UTM Zone 16, NAD83 with a 1-meter ground resolution. This raster mosaic can be used in conjunction with the raster mosaic named IL_DOQ_NAPP3_MOSAIC_UTM15_RAS to provide full DOQ coverage of Illinois. The two raster mosaics were constructed using MrSID compressed images and ArcCatalog 8.2. They are stored in the SDE database with JPEG compression. This means that the original TIFFs have been compressed twice with a lossy compression algorithm - first in the original conversion of TIFF to MrSID format and second in the conversion from MrSID to an SDE raster using JPEG compression. The images are also resampled in the mosaicking process. This procedure is not recommended. The raster data would have been much better preserved if the original TIFFs had been imported directly into SDE and stored with LZ77 (non-lossy) compression. The less optimal procedure was used, however, due to the very large amounts of data involved and the limited resources available to do the processing. The 2 JPEG-compressed data sets consume 50 gigabytes in the SDE database. If LZ77 compression were used the data would consume 250 gigabytes. The MrSID data were in-processed in less than a week in a fully automated process using on-line data. Using the original TIFF data would have entailed manual handling and loading of data from approximately 250 CD-ROMs and several additional weeks of effort. The metadata provided in the table named IL_DOQ_NAPP3_METADATA_TB contain a wide range of descriptive information such as format source information, production instrumentation and dates. There are a few NAPP II DOQs included south and east of the Illinois state boundary. They are external to Illinois but were included to complete a small buffer area around the outside of the state. They can be identified by referring to the NAPP field of the associated metadata table (GISDB.IL_DOQ_NAPP3_METADATA_TB). Orthophotos combine the image characteristics of a photograph with the geometric qualities of a map. The primary digital orthophotoquad (DOQ) is a 1-meter ground resolution, quarter-quadrangle (3.75-minutes of latitude by 3.75-minutes of longitude) image cast on the Universal Transverse Mercator Projection (UTM) on the North American Datum of 1983 (NAD83). The geographic extent of the DOQ is equivalent to a quarter-quad plus the overedge, which ranges a minimum of 50 meters to a maximum of 300 meters beyond the extremes of the primary (NAD83) and secondary (NAD27) corner points. The overedge is included to facilitate tonal matching for mosaicking and for the placement of primary and secondary datum corner ticks. The normal orientation of data is by lines (rows) and samples (columns). Each line contains a series of pixels ordered from west to east with the order of the lines from north to south. The standard USGS digital orthophoto is formatted as four ASCII header records, followed by a series of 8-bit binary image data records. The radiometric image brightness values are stored as 256 gray levels ranging from 0 to 255. The modified, compressed ISGS digital orthophotos from which this raster mosaic was derived are black-and-white images in MrSID format with an approximate compression ratio of 15:1." ;
+    dc:spatial "POLYGON ((-91.5336 36.8568,-91.5336 42.6108,-87.249 42.6108,-87.249 36.8568,-91.5336 36.8568))" ;
+    dcterms:publisher <urn:uuid:597919b5-c3f8-457e-b23e-f34c17b8ec90> ;
+    dcterms:title "Mosaic of Illinois NAPP3 Digital Orthophoto Quadrangles in UTM Zone 16, NAD83" ;
+    esip:eastBound "-87.249"^^xsd:float ;
+    esip:endDate "1999-01-01"^^xsd:date ;
+    esip:northBound "42.6108"^^xsd:float ;
+    esip:southBound "36.8568"^^xsd:float ;
+    esip:startDate "1998-01-01"^^xsd:date ;
+    esip:westBound "-91.5336"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:c84541cb-4474-4ef5-aff3-78317836858f> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-09-04T03:17:34.013Z" ;
+    bcube:lastUpdated "2015-09-04T03:17:34.013Z" ;
+    bcube:originatedFrom <urn:uuid:2f6ea942-f7a3-4578-9200-01d8f60c0ca3> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:946c96ce-39d4-465f-a3f6-1c5bfe2b4b22> .
+

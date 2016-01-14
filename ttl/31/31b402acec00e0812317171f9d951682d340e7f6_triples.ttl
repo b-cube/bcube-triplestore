@@ -1,0 +1,92 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:3bb98cdf-4a3f-484a-b41f-71ab5344e40b> owl:a foaf:Organization ;
+    foaf:name "U.S. Geological Survey" .
+
+<urn:uuid:54f1df60-46cd-44fd-9c68-0a36d483a624> bcube:hasType "theme" ;
+    bcube:hasValue "Bathymetry",
+        "Marine Geology",
+        "Marine Geophysics",
+        "Seafloor Topography",
+        "Water Depth" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:6648caab-e6f4-4990-bf3d-a3db1d36274c> bcube:dateCreated "2015-08-05T01:25:04.52Z" ;
+    bcube:hasMetadataRecord <urn:uuid:b1749486-220a-48dd-8df6-e400e34c2602> ;
+    bcube:lastUpdated "2015-08-05T01:25:04.52Z" ;
+    dc:conformsTo <urn:uuid:54f1df60-46cd-44fd-9c68-0a36d483a624>,
+        <urn:uuid:6b4f4a46-2378-4ac5-ad78-d41f300e6f2f>,
+        <urn:uuid:d4d1be94-5d48-41ba-89d5-32bcc490c2f7> ;
+    dc:description "Single-beam bathymetry data along with DGPS navigation data was collected as part of field activity L-10-81-AA in North Aleutians, Alaska from 08/16/1981 to 08/23/1981, The geophysical source was a Knudsen 12 kHz 320B/R echosounder. These data are reformatted from space-delimited ASCII text files located in the Coastal and Marine Geology Program (CMGP) InfoBank field activity catalog at http://walrus.wr.usgs.gov/infobank/l/l1081aa/html/l-10-81-aa.bath.html into MGD77T format provided by the NOAA's National Geophysical Data Center(NGDC). The MGD77T format includes a header (documentation) file (.h77t) and a data file (.m77t). More information regarding this format can be found in the publication listed in the Cross_reference section of this metadata file." ;
+    dc:spatial "POLYGON ((-166.52417 53.89505,-166.52417 56.89931,-160.73595 56.89931,-160.73595 53.89505,-166.52417 53.89505))" ;
+    dcterms:publisher <urn:uuid:3bb98cdf-4a3f-484a-b41f-71ab5344e40b> ;
+    dcterms:references <urn:uuid:830022ca-e565-4a92-bb82-d0c69014ca8a> ;
+    dcterms:title "l1081na.m77t - MGD77 data file for Geophysical data from field activity L-10-81-AA in North Aleutians, Alaska from 08/16/1981 to 08/23/1981" ;
+    esip:eastBound "-160.73595"^^xsd:float ;
+    esip:endDate "1981-08-23"^^xsd:date ;
+    esip:northBound "56.89931"^^xsd:float ;
+    esip:southBound "53.89505"^^xsd:float ;
+    esip:startDate "1981-08-16"^^xsd:date ;
+    esip:westBound "-166.52417"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:6b4f4a46-2378-4ac5-ad78-d41f300e6f2f> bcube:hasType "place" ;
+    bcube:hasValue "AK",
+        "Alaska",
+        "Aleutian Arc",
+        "Aleutians",
+        "North Aleutians, Alaska",
+        "USA" ;
+    dc:partOf "Geographic Names Information System (GNIS)" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:830022ca-e565-4a92-bb82-d0c69014ca8a> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-05T01:25:04.52Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-05T01:25:04.52Z" ;
+    dc:identifier "urn:sha:5697f3b21c94744e52b11cef902c4974879bcf070fb3ca2eccd1e392" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www.ngdc.noaa.gov/mgg/trk/trackline/samuel_p._lee/l1081na/mgd77/" .
+
+<urn:uuid:b1749486-220a-48dd-8df6-e400e34c2602> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-08-05T01:25:04.52Z" ;
+    bcube:lastUpdated "2015-08-05T01:25:04.52Z" ;
+    bcube:originatedFrom <urn:uuid:e1295cd6-0ded-4a83-9ebc-be27577f8dd7> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:6648caab-e6f4-4990-bf3d-a3db1d36274c> .
+
+<urn:uuid:d4d1be94-5d48-41ba-89d5-32bcc490c2f7> bcube:hasType "theme" ;
+    bcube:hasValue "geoscientificinformation",
+        "oceans" ;
+    dc:partOf "ISO 19115 Topic Category" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:e1295cd6-0ded-4a83-9ebc-be27577f8dd7> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-05T01:25:04.52Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-05T01:25:04.52Z" ;
+    dc:identifier "urn:sha:96f4ee03a39ce191896ef36a7776628c77bf57240b5e53e7531623ee" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://data.usgs.gov/metadata/Coastal_and_Marine_Geology_Program/5418b6cae4b03f26b3225f26.xml" .
+

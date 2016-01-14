@@ -1,0 +1,84 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:063930f9-b885-427b-90ad-4fef99d5324e> bcube:hasType "theme" ;
+    bcube:hasValue "geologic map",
+        "geology",
+        "usginres:document:image:StillImage:map" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:0ef3e655-b131-4e75-876b-49ba3594884d> bcube:hasValue "geoscientificInformation" ;
+    dc:partOf "IsoTopicCategories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:142d5cbf-1432-4c9c-9a3b-63e97f932238> bcube:hasType "temporal" ;
+    bcube:hasValue "1963" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:2168f131-bf75-47ac-becf-b14ad2867727> a "ISO 19115:2003/19139" ;
+    bcube:dateCreated "2015-10-29T16:11:49.382Z" ;
+    bcube:lastUpdated "2015-10-29T16:11:49.382Z" ;
+    bcube:originatedFrom <urn:uuid:cae5b871-d95a-468b-ba5c-ed11ea461959> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:2462e33c-9ef1-40ea-a4f1-2f2f84818cbd> .
+
+<urn:uuid:2462e33c-9ef1-40ea-a4f1-2f2f84818cbd> bcube:dateCreated "2015-10-29T16:11:49.382Z" ;
+    bcube:hasMetadataRecord <urn:uuid:2168f131-bf75-47ac-becf-b14ad2867727> ;
+    bcube:lastUpdated "2015-10-29T16:11:49.382Z" ;
+    dc:conformsTo <urn:uuid:063930f9-b885-427b-90ad-4fef99d5324e>,
+        <urn:uuid:0ef3e655-b131-4e75-876b-49ba3594884d>,
+        <urn:uuid:142d5cbf-1432-4c9c-9a3b-63e97f932238>,
+        <urn:uuid:7a0f0e52-fd32-4089-b456-5065ab6d8f49> ;
+    dc:description "Geologic Map Of The Soldier Summit Quadrangle Utah" ;
+    dc:spatial "POLYGON ((-114.0529979 36.9979031,-114.0529979 42.001618,-109.0410581 42.001618,-109.0410581 36.9979031,-114.0529979 36.9979031))" ;
+    dcterms:references <urn:uuid:afbca63a-5465-40ea-8623-47e98dd1c589> ;
+    dcterms:title "Geologic Map Of The Soldier Summit Quadrangle Map Utah" ;
+    esip:eastBound "-109.0410581"^^xsd:float ;
+    esip:endDate "1900-01-01"^^xsd:date ;
+    esip:northBound "42.001618"^^xsd:float ;
+    esip:southBound "36.9979031"^^xsd:float ;
+    esip:startDate "1900-01-01"^^xsd:date ;
+    esip:westBound "-114.0529979"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:7a0f0e52-fd32-4089-b456-5065ab6d8f49> bcube:hasType "place" ;
+    bcube:hasValue "Soldier Summit",
+        "USA",
+        "Utah" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:afbca63a-5465-40ea-8623-47e98dd1c589> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-10-29T16:11:49.382Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-10-29T16:11:49.382Z" ;
+    dc:identifier "urn:sha:076aeff7f8b215966a7b0fa7fba113946c1a23b9c5133ef4093c9273" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://ngds.egi.utah.edu/files/GL01521/GL01521_6.tif" .
+
+<urn:uuid:cae5b871-d95a-468b-ba5c-ed11ea461959> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-10-29T16:11:49.382Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-10-29T16:11:49.382Z" ;
+    dc:identifier "urn:sha:14ff8462ced44f3ec1113d0a052e46a6cfdb383fc4a5d42c493eb706" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://repository.stategeothermaldata.org/resources/metadata/EGI/EGI%20Task%202068/031711D66B7B4CB6809484F308E67622.xml" .
+

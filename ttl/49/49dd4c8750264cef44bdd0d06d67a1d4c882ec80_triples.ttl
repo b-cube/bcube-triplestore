@@ -1,0 +1,90 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:05eabf0d-2abb-492b-a74f-42991bce1b6c> bcube:hasType "place" ;
+    bcube:hasValue "01031",
+        "Coffee",
+        "County or Equivalent Entity",
+        "U.S.",
+        "United States" ;
+    dc:partOf "ANSI INCITS 38:2009 (Formerly FIPS 5-2), ANSI INCITS 31:2009 (Formerly FIPS 6-4),ANSI INCITS 454:2009 (Formerly FIPS 8-6), ANSI INCITS 455:2009(Formerly FIPS 9-1), ANSI INCITS 446:2008 (Geographic Names Information System (GNIS))" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:0868bc94-1c6e-4d0e-961c-f1fe89fa5149> a "ISO 19115:2003/19139" ;
+    bcube:dateCreated "2015-11-02T07:09:16.087Z" ;
+    bcube:lastUpdated "2015-11-02T07:09:16.087Z" ;
+    bcube:originatedFrom <urn:uuid:fe727243-3843-4628-8d66-87f6db518c20> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:73674423-6c29-448d-9be4-751ce11582c9> .
+
+<urn:uuid:0d0dcfe5-8c0f-4fec-975b-1919f9968206> bcube:hasType "theme" ;
+    bcube:hasValue "5-digit ZIP code",
+        "County FIPS Code",
+        "County GNIS Code",
+        "From House Number",
+        "Permanent edge ID",
+        "Side indicator flag",
+        "State FIPS Code",
+        "State GNIS Code",
+        "To House Number",
+        "ZIP +4 code" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:1380cc2b-28e3-4d67-b318-1d49ad634f59> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-02T07:09:16.087Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-02T07:09:16.087Z" ;
+    dc:identifier "urn:sha:0dd6f4b3a7da1e91a04c6d3419a83e4aa65541e0efad5003089983ad" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www2.census.gov/geo/tiger/TIGER2014/ADDRFN/tl_2014_01031_addrfn.zip" .
+
+<urn:uuid:73674423-6c29-448d-9be4-751ce11582c9> bcube:dateCreated "2015-11-02T07:09:16.087Z" ;
+    bcube:hasMetadataRecord <urn:uuid:0868bc94-1c6e-4d0e-961c-f1fe89fa5149> ;
+    bcube:lastUpdated "2015-11-02T07:09:16.087Z" ;
+    dc:conformsTo <urn:uuid:05eabf0d-2abb-492b-a74f-42991bce1b6c>,
+        <urn:uuid:0d0dcfe5-8c0f-4fec-975b-1919f9968206>,
+        <urn:uuid:f425b62f-1317-4df3-b98e-a1f60c78d279> ;
+    dc:description "The TIGER/Line shapefiles and related database files (.dbf) are an extract of selected geographic and cartographic information from the U.S. Census Bureau's Master Address File / Topologically Integrated Geographic Encoding and Referencing (MAF/TIGER) Database (MTDB). The MTDB represents a seamless national file with no overlaps or gaps between parts, however, each TIGER/Line shapefile is designed to stand alone as an independent data set, or they can be combined to cover the entire nation. The Address Range / Feature Name Relationship File (ADDRFN.dbf) contains a record for each address range / linear feature name relationship. The purpose of this relationship file is to identify all street names associated with each address range. An edge can have several feature names; an address range located on an edge can be associated with one or any combination of the available feature names (an address range can be linked to multiple feature names). The address range is identified by the address range identifier (ARID) attribute that can be used to link to the Address Ranges Relationship File (ADDR.dbf). The linear feature name is identified by the linear feature identifier (LINEARID) attribute that can be used to link to the Feature Names Relationship File (FEATNAMES.dbf)." ;
+    dc:spatial "POLYGON ((-86.196365 31.182023,-86.196365 31.619311,-85.789139 31.619311,-85.789139 31.182023,-86.196365 31.182023))" ;
+    dcterms:references <urn:uuid:1380cc2b-28e3-4d67-b318-1d49ad634f59> ;
+    dcterms:title "TIGER/Line Shapefile, 2014, county, Coffee County, AL, Address Range-Feature Name County-based Relationship File" ;
+    esip:eastBound "-85.789139"^^xsd:float ;
+    esip:endDate "2014-05-06"^^xsd:date ;
+    esip:northBound "31.619311"^^xsd:float ;
+    esip:southBound "31.182023"^^xsd:float ;
+    esip:startDate "2013-06-06"^^xsd:date ;
+    esip:westBound "-86.196365"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:f425b62f-1317-4df3-b98e-a1f60c78d279> bcube:hasValue "transportation" ;
+    dc:partOf "IsoTopicCategories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:fe727243-3843-4628-8d66-87f6db518c20> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-02T07:09:16.087Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-02T07:09:16.087Z" ;
+    dc:identifier "urn:sha:f05b88b4eb5763d175f77b061a9c7253524b524e4c0d57e16c16ec0c" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://meta.geo.census.gov/data/existing/decennial/GEO/GPMB/TIGERline/TIGER2014/addrfn/tl_2014_01031_addrfn.dbf.iso.xml" .
+

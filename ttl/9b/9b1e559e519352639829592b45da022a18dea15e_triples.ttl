@@ -1,0 +1,61 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:1ffdba03-0627-4c64-aaac-2069f41106b8> a "OGC:WMS" ;
+    bcube:contains <urn:uuid:406c6f84-0524-4202-ac5d-794fced554f4> ;
+    bcube:dateCreated "2015-06-24T07:43:27.526Z" ;
+    bcube:lastUpdated "2015-06-24T07:43:27.526Z" ;
+    bcube:originatedFrom <urn:uuid:993725e7-11ee-41ad-8339-1566a3d50434> ;
+    dc:conformsTo <urn:uuid:93c1aca9-ab4d-4677-a30b-41f5bb60b132> ;
+    dc:description "Map service to support the Coastal Flood Exposure Mapper" ;
+    owl:a bcube:service .
+
+<urn:uuid:406c6f84-0524-4202-ac5d-794fced554f4> bcube:dateCreated "2015-06-24T07:43:27.526Z" ;
+    bcube:lastUpdated "2015-06-24T07:43:27.526Z" ;
+    dc:spatial "POLYGON ((-98.059807 24.396313,-98.059807 46.395689,-66.885086 46.395689,-66.885086 24.396313,-98.059807 24.396313))" ;
+    dc:title "Footprint" ;
+    dcterms:references <urn:uuid:74fa5c14-1f7c-431e-bf87-eacb40cff367> ;
+    esip:eastBound "-66.885086"^^xsd:float ;
+    esip:northBound "46.395689"^^xsd:float ;
+    esip:southBound "24.396313"^^xsd:float ;
+    esip:westBound "-98.059807"^^xsd:float ;
+    owl:a bcube:Layer .
+
+<urn:uuid:74fa5c14-1f7c-431e-bf87-eacb40cff367> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-06-24T07:43:27.526Z" ;
+    bcube:hasConfidence "Not Sure" ;
+    bcube:hasUrlSource "Generated" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-06-24T07:43:27.526Z" ;
+    dc:identifier "urn:sha:601e5be316c6a75f7a8325ab28ce9bd77ac8961d4dbd812b8e56bbf8" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://coast.noaa.gov/arcgis/services/FloodExposureMapper/AtlanticGulfCoastalCounties/MapServer/WMSServer?layers=0&width=500&version=1.3.0&bbox=-98.059807%2C24.396313%2C-66.885086%2C46.395689&service=WMS&format=image%2Fpng&styles=&crs=CRS%3A84&request=GetMap&height=500" .
+
+<urn:uuid:93c1aca9-ab4d-4677-a30b-41f5bb60b132> bcube:hasValue "flooding, storm surge, sea level rise, exposure, coastal hazards" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:993725e7-11ee-41ad-8339-1566a3d50434> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-06-24T07:43:27.526Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-06-24T07:43:27.526Z" ;
+    dc:identifier "urn:sha:f93fea2e4e5ba4d43b7bd2eee6cb5f8f1968e9ed1c36fcf424c2f8d9" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://coast.noaa.gov/arcgis/services/FloodExposureMapper/AtlanticGulfCoastalCounties/MapServer/WMSServer?request=GetCapabilities&service=WMS" .
+

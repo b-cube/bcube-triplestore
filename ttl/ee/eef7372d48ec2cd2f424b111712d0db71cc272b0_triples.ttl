@@ -1,0 +1,175 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:0827ea1e-7617-4346-8485-6a27161a03e2> bcube:hasType "place" ;
+    bcube:hasValue "COUNTRY/TERRITORY > United States of America > U. S. Virgin Islands > St. John > St. John (18N064W0011)",
+        "OCEAN BASIN > Atlantic Ocean > Caribbean Sea > Virgin Islands > Virgin Islands > St. John (18N064W0011)" ;
+    dc:partOf "CoRIS Place Thesaurus" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:47215a47-8bc6-4924-9fbe-c8b2907bb35b> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2014-07-31T07:42:15.403Z" ;
+    bcube:lastUpdated "2014-07-31T07:42:15.403Z" ;
+    bcube:originatedFrom <urn:uuid:77f9011c-5198-4d1d-85d3-7f3c13199d32> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:6c93449f-8746-426b-b0f1-15c76655c8be> .
+
+<urn:uuid:6c933491-45e2-46e6-aa33-c4d4ae52d1a8> bcube:hasType "theme" ;
+    bcube:hasValue "EARTH SCIENCE > Biosphere > Aquatic Habitat > Reef Habitat > Description",
+        "EARTH SCIENCE > Oceans > Bathymetry/Seafloor Topography > Bathymetry",
+        "EARTH SCIENCE > Oceans > Bathymetry/Seafloor Topography > Slope" ;
+    dc:partOf "CoRIS Theme Thesaurus" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:6c93449f-8746-426b-b0f1-15c76655c8be> bcube:dateCreated "2014-07-31T07:42:15.403Z" ;
+    bcube:hasMetadataRecord <urn:uuid:47215a47-8bc6-4924-9fbe-c8b2907bb35b> ;
+    bcube:lastUpdated "2014-07-31T07:42:15.403Z" ;
+    dc:conformsTo <urn:uuid:0827ea1e-7617-4346-8485-6a27161a03e2>,
+        <urn:uuid:6c933491-45e2-46e6-aa33-c4d4ae52d1a8>,
+        <urn:uuid:7355cc44-c7b0-4f66-ae11-9dc618261c24>,
+        <urn:uuid:78d3c592-9ee8-497f-9f2e-5c0179d9d8f7>,
+        <urn:uuid:7905fcd1-fb0d-4f5b-8e9a-0389f4d377c8>,
+        <urn:uuid:9576e2c4-67b7-403e-836f-2746f1c5228d>,
+        <urn:uuid:9a25d572-46e8-4330-a1ba-78486753c6e0>,
+        <urn:uuid:be42bb2a-09cb-4989-b2af-62fd5099d7e3>,
+        <urn:uuid:e6d9b5e6-1d48-423f-b101-9c8fbe02c52c> ;
+    dc:description "This dataset contains an ESRI Grid representing the slope (in degrees) of the bathymetry of the south shore of St. John, including a portion of the NPS's Virgin Islands Coral Reef National Monument in the US Virgin Islands, based on a 1m bathymetric grid. Due to the large file size of the 1m St. John grid, it was divided into four component grids for improved manageability, named stj04_1_1rug, stj04_1_2rug, stj04_1_3rug, and stj04_1_4rug from west to east.NOAA's NOS/NCCOS/CCMA Biogeography Team and NOAA/NOS/OCS/HSD personnel, in collaboration with NOAA vessel Nancy Foster and territory, federal, and private sector partners, acquired multibeam bathymetry data in the US Virgin Islands from 2/18/04 to 3/5/04. Data was acquired with a pole-mounted Reson 8101 ER multibeam echosounder (240 kHz) and processed by a NOAA contractor using CARIS HIPS v5.4 software. Data has all correctors applied (attitude, sound velocity) and has been reduced to mean lower low water (MLLW) using final approved tides from NOAA COOPS. Data is in UTM zone 20 north, datum WGS84. The processed CARIS data was used to generate a CARIS BASE surface based on swath angle with footprint size 3*3. An ASCII XYZ file was exported from the BASE surface and opened in ESRI ArcMap 9 as an XY event. Then the ArcToolbox conversion tool 'Feature to Raster' was used to generate an ESRI Grid of bathymetry. Finally, the Slope calculator within ArcGIS Spatial Analyst/Surface Analysis was used to calculate slope in degrees, using that ESRI Grid of source bathymetry.While the project was conducted to meet IHO Order 2 accuracy standards, there is a roll artifact (averaging 0.5m high) in the dataset that the user should take into consideration when performing any analysis." ;
+    dc:spatial "POLYGON ((-64.866745 18.211209,-64.866745 18.26353,-64.810847 18.26353,-64.810847 18.211209,-64.866745 18.211209))" ;
+    dcterms:publisher <urn:uuid:8e6d47c2-f984-4184-a00d-275673d65adb> ;
+    dcterms:references <urn:uuid:7b05ee46-26a9-45ed-8a1a-b2996004f7de>,
+        <urn:uuid:b4b4be8d-dd59-4deb-83d5-223afc3a4947> ;
+    dcterms:title "NOAA ESRI Grid- 1m Bathymetric Slope of St. John (NPS's Virgin Islands Coral Reef National Monument- Area 1), US Virgin Islands, Project NF-04-06, 2004, UTM 20 WGS84" ;
+    esip:eastBound "-64.810847"^^xsd:float ;
+    esip:endDate "2004-03-05"^^xsd:date ;
+    esip:northBound "18.26353"^^xsd:float ;
+    esip:southBound "18.211209"^^xsd:float ;
+    esip:startDate "2004-02-18"^^xsd:date ;
+    esip:westBound "-64.866745"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:7355cc44-c7b0-4f66-ae11-9dc618261c24> bcube:hasType "theme" ;
+    bcube:hasValue "Bathymetry",
+        "Benthic",
+        "Biogeography",
+        "Coral",
+        "GIS",
+        "Grid",
+        "Habitat",
+        "IOCM",
+        "Integrated Ocean and Coastal Mapping",
+        "MBES",
+        "Multibeam",
+        "NF-04-06",
+        "NOAA",
+        "NPS",
+        "Nancy Foster",
+        "Raster",
+        "Reef",
+        "Reson 8101",
+        "SWMB",
+        "Seafloor",
+        "Slope",
+        "Sonar",
+        "US Virgin Islands",
+        "USVI" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:77f9011c-5198-4d1d-85d3-7f3c13199d32> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2014-07-31T07:42:15.403Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2014-07-31T07:42:15.403Z" ;
+    dc:identifier "urn:sha:bbc07f2079a5e7767e1bc4e1e1bbe82986a2c83ce9dc729a47db87a7" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "https://data.noaa.gov/harvest/object/c4a5ac38-6058-4319-8ad1-b07cb7565ead/original" .
+
+<urn:uuid:78d3c592-9ee8-497f-9f2e-5c0179d9d8f7> bcube:hasType "theme" ;
+    bcube:hasValue "Bathymetry/Topography" ;
+    dc:partOf "NOS Data Explorer Topic Category" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:7905fcd1-fb0d-4f5b-8e9a-0389f4d377c8> bcube:hasType "theme" ;
+    bcube:hasValue "Geographic Information > Habitats" ;
+    dc:partOf "CoRIS Discovery Thesaurus" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:7b05ee46-26a9-45ed-8a1a-b2996004f7de> dcterms:references <urn:uuid:b3f5dba5-2b72-4650-b61e-1e24e52b4bef> ;
+    owl:a bibo:WebPage .
+
+<urn:uuid:8e6d47c2-f984-4184-a00d-275673d65adb> owl:a foaf:Organization ;
+    foaf:name "NOAA's National Ocean Service (NOS), National Centers for Coastal Ocean Science (NCCOS)" .
+
+<urn:uuid:9576e2c4-67b7-403e-836f-2746f1c5228d> bcube:hasType "temporal" ;
+    bcube:hasValue "2004" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:9a25d572-46e8-4330-a1ba-78486753c6e0> bcube:hasType "theme" ;
+    bcube:hasValue "006",
+        "007",
+        "008",
+        "010",
+        "014",
+        "elevation",
+        "environment",
+        "geoscientificInformation",
+        "imageryBaseMapsEarthCover",
+        "oceans" ;
+    dc:partOf "ISO 19115 Topic Category" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:b3f5dba5-2b72-4650-b61e-1e24e52b4bef> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2014-07-31T07:42:15.403Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2014-07-31T07:42:15.403Z" ;
+    dc:identifier "urn:sha:c3ed29161a74733c27feeaac1e4b539417f460c976ad00980472230b" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://ccma.nos.noaa.gov/products/biogeography/usvi_nps/data/" .
+
+<urn:uuid:b4b4be8d-dd59-4deb-83d5-223afc3a4947> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2014-07-31T07:42:15.403Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2014-07-31T07:42:15.403Z" ;
+    dc:identifier "urn:sha:11d142f5734a9f49455d3b76b69f9d82e2bc7cc319b9985afac0b70b" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://coastalscience.noaa.gov/datasets/ccma/biogeo/usvi_nps/2004/Slope/stj_04_1msl_all.zip" .
+
+<urn:uuid:be42bb2a-09cb-4989-b2af-62fd5099d7e3> bcube:hasType "stratum" ;
+    bcube:hasValue "Seafloor" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:e6d9b5e6-1d48-423f-b101-9c8fbe02c52c> bcube:hasType "place" ;
+    bcube:hasValue "St. John",
+        "US Virgin Islands",
+        "USVI",
+        "VICR",
+        "VICRNM",
+        "VIIS",
+        "Virgin Islands Coral Reef National Monument" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+

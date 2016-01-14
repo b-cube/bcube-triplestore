@@ -1,0 +1,67 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:a70ff9c0-43f5-4316-899d-a19688910b8d> bcube:hasType "place" ;
+    bcube:hasValue "boron",
+        "chemical analysis",
+        "contamination and pollution",
+        "dissolved organic compounds",
+        "f06059 = Orange",
+        "f06065 = Riverside",
+        "f06073 = San Diego",
+        "groundwater",
+        "groundwater quality",
+        "oxygen content (water)",
+        "vanadium",
+        "water chemistry" ;
+    dc:partOf "Augmented FIPS 10-4 and FIPS 6-4" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:bb2fce57-05ef-422a-919e-14ac3df4c117> a "ISO 19115:2003/19139" ;
+    bcube:dateCreated "2014-07-30T02:23:20.838Z" ;
+    bcube:lastUpdated "2014-07-30T02:23:20.838Z" ;
+    bcube:originatedFrom <urn:uuid:ea243f9e-2baa-4d20-bd41-cc13366ca114> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:fae40449-7b1f-4a40-8139-3f4d03e7da4e> .
+
+<urn:uuid:c8d993c9-4da8-4ce5-8c22-78955535a0f3> bcube:hasValue "geoscientificInformation" ;
+    dc:partOf "IsoTopicCategories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:ea243f9e-2baa-4d20-bd41-cc13366ca114> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2014-07-30T02:23:20.838Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2014-07-30T02:23:20.838Z" ;
+    dc:identifier "urn:sha:ac3493726e0d6d7832c59720204947ede10e70512d4a875f403d21d5" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www.usgs.gov/science/iso.php?cite=2863" .
+
+<urn:uuid:fae40449-7b1f-4a40-8139-3f4d03e7da4e> bcube:dateCreated "2014-07-30T02:23:20.838Z" ;
+    bcube:hasMetadataRecord <urn:uuid:bb2fce57-05ef-422a-919e-14ac3df4c117> ;
+    bcube:lastUpdated "2014-07-30T02:23:20.838Z" ;
+    dc:conformsTo <urn:uuid:a70ff9c0-43f5-4316-899d-a19688910b8d>,
+        <urn:uuid:c8d993c9-4da8-4ce5-8c22-78955535a0f3> ;
+    dc:description "Vanadium and boron were detected at high and moderate concentrations in this area. High concentrations for these constituents were detected almost exclusively in samples collected in the Temecula Valley study area." ;
+    dc:spatial "POLYGON ((-118.0 32.5,-118 34,-116 34,-116.0 32.5,-118.0 32.5))" ;
+    dcterms:title "Groundwater quality in the San Diego Drainages Hydrogeologic Province, California" ;
+    esip:eastBound "-116.0"^^xsd:float ;
+    esip:northBound "34.0"^^xsd:float ;
+    esip:southBound "32.5"^^xsd:float ;
+    esip:westBound "-118.0"^^xsd:float ;
+    owl:a dcat:Dataset .
+

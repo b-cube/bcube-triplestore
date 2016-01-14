@@ -1,0 +1,96 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:024986c2-8b91-44e9-8ae7-8f1d7e3fe48f> owl:a foaf:Organization ;
+    foaf:name "Federal Emergency Management Agency" .
+
+<urn:uuid:1f7a9147-6e14-4a40-9139-d1a0a93fa9ab> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-08-09T16:58:49.308Z" ;
+    bcube:lastUpdated "2015-08-09T16:58:49.308Z" ;
+    bcube:originatedFrom <urn:uuid:c9c53d23-39c0-40fc-971e-3da7a10f616c> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:cb834a96-8bbf-4e5a-be75-c7b3ca99e212> .
+
+<urn:uuid:2c70fcbb-90ab-4822-88d6-793a49501e1d> bcube:hasType "place" ;
+    bcube:hasValue "COMMUNITY INYO COUNTY-WIDE",
+        "COUNTY INYO",
+        "COUNTY-FIPS 027C",
+        "FEMA-CID 06027C",
+        "REGION 09",
+        "STATE CA" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:3a7adee0-383c-4936-a11a-147cc6c6205f> bcube:hasType "theme" ;
+    bcube:hasValue "Breaklines",
+        "Contours",
+        "DEM",
+        "Digital Terrain Model",
+        "Elevation Data",
+        "Flow vectors",
+        "LIDAR",
+        "Land Surface",
+        "Relief",
+        "Slope",
+        "Topography" ;
+    dc:partOf "FEMA NFIP Topic Category" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:ba1b05d2-6419-47c7-a6fd-c3484b715231> bcube:hasType "theme" ;
+    bcube:hasValue "elevation" ;
+    dc:partOf "ISO 19115 Topic Category" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:c9c53d23-39c0-40fc-971e-3da7a10f616c> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-09T16:58:49.308Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-09T16:58:49.308Z" ;
+    dc:identifier "urn:sha:968c9c17a0ce852a5a46126538b703c22f92d910b89cfd69af8322a6" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://catalog.data.gov/harvest/object/4cc1c80e-6e67-4f14-8cce-081f540baa84/original" .
+
+<urn:uuid:cb834a96-8bbf-4e5a-be75-c7b3ca99e212> bcube:dateCreated "2015-08-09T16:58:49.308Z" ;
+    bcube:hasMetadataRecord <urn:uuid:1f7a9147-6e14-4a40-9139-d1a0a93fa9ab> ;
+    bcube:lastUpdated "2015-08-09T16:58:49.308Z" ;
+    dc:conformsTo <urn:uuid:2c70fcbb-90ab-4822-88d6-793a49501e1d>,
+        <urn:uuid:3a7adee0-383c-4936-a11a-147cc6c6205f>,
+        <urn:uuid:ba1b05d2-6419-47c7-a6fd-c3484b715231> ;
+    dc:description "Terrain data, as defined in FEMA Guidelines and Specifications, Appendix N: Data Capture Standards, describes the digital topographic data that was used to create the elevation data representing the terrain environment of a watershed and/or floodplain. Terrain data requirements allow for flexibility in the types of information provided as sources used to produce final terrain deliverables. Once this type of data is provided, FEMA will be able to account for the origins of the flood study elevation data. (Source: FEMA Guidelines and Specifications, Appendix N, Section N.1.2)." ;
+    dc:spatial "POLYGON ((-119.335746 34.963956,-119.335746 38.082997,-114.511203 38.082997,-114.511203 34.963956,-119.335746 34.963956))" ;
+    dcterms:publisher <urn:uuid:024986c2-8b91-44e9-8ae7-8f1d7e3fe48f> ;
+    dcterms:references <urn:uuid:d780e889-a7eb-4084-b6fb-839e28280e5c> ;
+    dcterms:title "DCS Terrain Submission for Inyo, CA" ;
+    esip:eastBound "-114.511203"^^xsd:float ;
+    esip:northBound "38.082997"^^xsd:float ;
+    esip:southBound "34.963956"^^xsd:float ;
+    esip:startDate "2009-12-07"^^xsd:date ;
+    esip:westBound "-119.335746"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:d780e889-a7eb-4084-b6fb-839e28280e5c> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-09T16:58:49.308Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-09T16:58:49.308Z" ;
+    dc:identifier "urn:sha:37c915397238031daced09ae0e2dd3bf54e84a6477f749c2cc9dcbdf" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://hazards.fema.gov" .
+

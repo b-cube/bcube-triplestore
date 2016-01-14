@@ -1,0 +1,66 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:10731d6d-e5f0-4f15-9a35-2239efc08c1f> bcube:hasValue "boundaries",
+        "oceans",
+        "planningCadastre" ;
+    dc:partOf "IsoTopicCategories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:12f88080-9ffd-4983-a6b0-856dd2a00229> a "ISO 19115:2003/19139" ;
+    bcube:dateCreated "2015-10-17T22:54:47.503Z" ;
+    bcube:lastUpdated "2015-10-17T22:54:47.503Z" ;
+    bcube:originatedFrom <urn:uuid:2c6f1f7a-fe01-445a-97e4-0a5d52dbd6bb> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:36ceed70-e772-45d8-b890-b73b9a6169ce> .
+
+<urn:uuid:2c6f1f7a-fe01-445a-97e4-0a5d52dbd6bb> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-10-17T22:54:47.503Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-10-17T22:54:47.503Z" ;
+    dc:identifier "urn:sha:6e2394d02ce427dad13830e41e2dc722f87a6c0be489dd38c91cd2a7" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "https://catalog.data.gov/harvest/object/e3086d1b-9291-4047-9c8f-59154d406e9d" .
+
+<urn:uuid:353eaa82-676c-46ec-a26f-245607dc0e25> bcube:hasType "place" ;
+    bcube:hasValue "California",
+        "Oregon",
+        "Washington" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:36ceed70-e772-45d8-b890-b73b9a6169ce> bcube:dateCreated "2015-10-17T22:54:47.503Z" ;
+    bcube:hasMetadataRecord <urn:uuid:12f88080-9ffd-4983-a6b0-856dd2a00229> ;
+    bcube:lastUpdated "2015-10-17T22:54:47.503Z" ;
+    dc:conformsTo <urn:uuid:10731d6d-e5f0-4f15-9a35-2239efc08c1f>,
+        <urn:uuid:353eaa82-676c-46ec-a26f-245607dc0e25>,
+        <urn:uuid:8046e661-652c-4550-8934-54d86392be65> ;
+    dc:description "The data was derived from US Coast Guard raw vessel point returns and preprocessed by ASA (Applied Science Associates), to one minute point interCAls. The data returns are in UTM zone 10 North and UTM zone 11 North. Each vessel type is analyzed seperately based on vessel type data (Cargo, Fishing, Passenger, Tanker, Tow, Tow over 200M, Tugs) included in the AIS dataset. A transit is counted for each unique vessel by MMSI traveling through each 1200 meter by 1200 meter aliquot each day. A running count is continued for each vessel type by aliquot by month, and then the months are summed to provide annual data. </SPAN></P><P><SPAN>Although traffic diminishes significantly after 20nm from shore, the returns from line of site AIS signals also fade beyond 40nm. Data points input into the density analysis beyond 40nm are considered to be less reliable than closer to shore. For the 2011 data, separate vessel types were also extracted separately and run in addition to the full dataset. These separate counts are included in the attribute table and include Cargo Vessels, Fishing Vessels, Tankers, Passenger Ships, Tugs, Towing Vessels less than 200 meters in length, and Towing Vessels more than 200 meters in length." ;
+    dc:spatial "POLYGON ((-126.066945 30.943491,-126.066945 49.012092,-117.096527 49.012092,-117.096527 30.943491,-126.066945 30.943491))" ;
+    dcterms:title "Ship Traffic 2011 West Coast Region - All Ship Types" ;
+    esip:eastBound "-117.096527"^^xsd:float ;
+    esip:northBound "49.012092"^^xsd:float ;
+    esip:southBound "30.943491"^^xsd:float ;
+    esip:westBound "-126.066945"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:8046e661-652c-4550-8934-54d86392be65> bcube:hasType "theme" ;
+    bcube:hasValue "Transportation" ;
+    dc:partOf "EPA GIS Keyword Thesaurus" ;
+    owl:a bcube:thesaurusSubset .
+

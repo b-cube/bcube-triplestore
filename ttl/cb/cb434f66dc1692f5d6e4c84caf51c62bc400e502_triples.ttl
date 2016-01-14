@@ -1,0 +1,94 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:0261ff63-9469-4d75-bce9-ad75f629ae41> bcube:hasType "theme" ;
+    bcube:hasValue "Barrio",
+        "CCD",
+        "Census County Division",
+        "County Subdivision",
+        "MCD",
+        "Minor Civil Division",
+        "Polygon",
+        "State or equivalent entity",
+        "Subdivision",
+        "Town",
+        "Township",
+        "UT",
+        "Unorganized Territory" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:276c5610-17a3-446d-84b2-27197ae09264> a "ISO 19115:2003/19139" ;
+    bcube:dateCreated "2015-10-29T19:50:48.675Z" ;
+    bcube:lastUpdated "2015-10-29T19:50:48.675Z" ;
+    bcube:originatedFrom <urn:uuid:e83adcba-69c1-40ce-a2f8-e6be90187e60> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:4e67ff69-5642-4399-a8b9-a54a74e8a1de> .
+
+<urn:uuid:27c67734-7a45-48da-9314-1741f6481e21> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-10-29T19:50:48.675Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-10-29T19:50:48.675Z" ;
+    dc:identifier "urn:sha:55014e54fffb6214c8b65889b9c467c8a91cfcc3fe8052a03d1f819c" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www2.census.gov/geo/tiger/TIGER2014/COUSUB/tl_2014_02_cousub.zip" .
+
+<urn:uuid:332ba263-a627-47cf-bce1-c5fefcf58d8a> bcube:hasValue "boundaries" ;
+    dc:partOf "IsoTopicCategories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:4e67ff69-5642-4399-a8b9-a54a74e8a1de> bcube:dateCreated "2015-10-29T19:50:48.675Z" ;
+    bcube:hasMetadataRecord <urn:uuid:276c5610-17a3-446d-84b2-27197ae09264> ;
+    bcube:lastUpdated "2015-10-29T19:50:48.675Z" ;
+    dc:conformsTo <urn:uuid:0261ff63-9469-4d75-bce9-ad75f629ae41>,
+        <urn:uuid:332ba263-a627-47cf-bce1-c5fefcf58d8a>,
+        <urn:uuid:a5d73329-5453-4743-a15b-fe929241114e> ;
+    dc:description "The TIGER/Line shapefiles and related database files (.dbf) are an extract of selected geographic and cartographic information from the U.S. Census Bureau's Master Address File / Topologically Integrated Geographic Encoding and Referencing (MAF/TIGER) Database (MTDB). The MTDB represents a seamless national file with no overlaps or gaps between parts, however, each TIGER/Line shapefile is designed to stand alone as an independent data set, or they can be combined to cover the entire nation. County subdivisions are the primary divisions of counties and their equivalent entities for the reporting of Census Bureau data. They include legally-recognized minor civil divisions (MCDs) and statistical census county divisions (CCDs), and unorganized territories. For the 2010 Census, the MCDs are the primary governmental and/or administrative divisions of counties in 29 States and Puerto Rico; Tennessee changed from having CCDs for Census 2000 to having MCDs for the 2010 Census. In MCD States where no MCD exists or is not defined, the Census Bureau creates statistical unorganized territories to complete coverage. The entire area of the United States, Puerto Rico, and the Island Areas are covered by county subdivisions. The boundaries of most legal MCDs are as of January 1, 2013, as reported through the Census Bureau's Boundary and Annexation Survey (BAS). The boundaries of all CCDs, delineated in 21 states, are those as reported as part of the Census Bureau's Participant Statistical Areas Program (PSAP) for the 2010 Census." ;
+    dc:spatial "POLYGON ((-179.231086 51.175092,-179.231086 71.441059,179.859681 71.441059,179.859681 51.175092,-179.231086 51.175092))" ;
+    dcterms:references <urn:uuid:27c67734-7a45-48da-9314-1741f6481e21> ;
+    dcterms:title "TIGER/Line Shapefile, 2014, state, Alaska, Current County Subdivision State-based Shapefile" ;
+    esip:eastBound "179.859681"^^xsd:float ;
+    esip:endDate "2014-05-30"^^xsd:date ;
+    esip:northBound "71.441059"^^xsd:float ;
+    esip:southBound "51.175092"^^xsd:float ;
+    esip:startDate "2013-06-30"^^xsd:date ;
+    esip:westBound "-179.231086"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:a5d73329-5453-4743-a15b-fe929241114e> bcube:hasType "place" ;
+    bcube:hasValue "02",
+        "AK",
+        "Alaska",
+        "State or Equivalent Entity",
+        "U.S.",
+        "United States" ;
+    dc:partOf "ANSI INCITS 38:2009 (Formerly FIPS 5-2), ANSI INCITS 31:2009 (Formerly FIPS 6-4),ANSI INCITS 454:2009 (Formerly FIPS 8-6), ANSI INCITS 455:2009(Formerly FIPS 9-1), ANSI INCITS 446:2008 (Geographic Names Information System (GNIS))" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:e83adcba-69c1-40ce-a2f8-e6be90187e60> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-10-29T19:50:48.675Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-10-29T19:50:48.675Z" ;
+    dc:identifier "urn:sha:f5966d868f98ce60b1cfa99738169c051f4f2c315601b1a1f6755d42" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://meta.geo.census.gov/data/existing/decennial/GEO/GPMB/TIGERline/TIGER2014/cousub/tl_2014_02_cousub.shp.iso.xml" .
+

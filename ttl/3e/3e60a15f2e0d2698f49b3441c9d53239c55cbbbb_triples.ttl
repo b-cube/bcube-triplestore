@@ -1,0 +1,93 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:5239cfbc-c1c2-4319-92a8-1e732d244d8e> owl:a foaf:Organization ;
+    foaf:name "" .
+
+<urn:uuid:7fe62150-552c-44dc-ab0c-2fa0143fc5bc> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-11-06T23:00:05.552Z" ;
+    bcube:lastUpdated "2015-11-06T23:00:05.552Z" ;
+    bcube:originatedFrom <urn:uuid:fa918c03-93f7-4af7-a6e2-761a392f8fe5> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:938e056d-476d-4892-b71d-0d62ec4fdab8> .
+
+<urn:uuid:90845759-8cae-4110-8757-8289d68a15cb> bcube:hasType "place" ;
+    bcube:hasValue "26",
+        "MI",
+        "Michigan",
+        "State or Equivalent Entity",
+        "U.S.",
+        "United States" ;
+    dc:partOf "FIPS Publication 5-2, FIPS Publication 6-4, FIPS Publication 8-6, FIPS Publication 9-1" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:938e056d-476d-4892-b71d-0d62ec4fdab8> bcube:dateCreated "2015-11-06T23:00:05.552Z" ;
+    bcube:hasMetadataRecord <urn:uuid:7fe62150-552c-44dc-ab0c-2fa0143fc5bc> ;
+    bcube:lastUpdated "2015-11-06T23:00:05.552Z" ;
+    dc:conformsTo <urn:uuid:90845759-8cae-4110-8757-8289d68a15cb>,
+        <urn:uuid:bb27a6bd-941f-485a-ba77-b8448ab81342>,
+        <urn:uuid:f3cae90b-819d-4117-9784-2aebc27b1be3> ;
+    dc:description "The TIGER/Line Shapefiles are an extract of selected geographic and cartographic information from the Census MAF/TIGER database. The Census MAF/TIGER database represents a seamless national file with no overlaps or gaps between parts. However, each TIGER/Line Shapefile is designed to stand alone as an independent data set or the shapefiles can be combined to cover the whole nation." ;
+    dc:spatial "POLYGON ((-90.418136 41.696118,-90.418136 48.306063,-82.122971 48.306063,-82.122971 41.696118,-90.418136 41.696118))" ;
+    dcterms:publisher <urn:uuid:5239cfbc-c1c2-4319-92a8-1e732d244d8e> ;
+    dcterms:references <urn:uuid:aee31c71-9d81-4167-b4b3-aec8047101b5> ;
+    dcterms:title "TIGER/Line Shapefile, 2007, 2000 state, Michigan, Place" ;
+    esip:eastBound "-82.122971"^^xsd:float ;
+    esip:endDate "2007-07-01"^^xsd:date ;
+    esip:northBound "48.306063"^^xsd:float ;
+    esip:southBound "41.696118"^^xsd:float ;
+    esip:startDate "2007-01-01"^^xsd:date ;
+    esip:westBound "-90.418136"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:aee31c71-9d81-4167-b4b3-aec8047101b5> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-06T23:00:05.552Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-06T23:00:05.552Z" ;
+    dc:identifier "urn:sha:6e23775bb7a7370ab34f4c4cf15980f2e2e57ef485ee5e11cc38d0ce" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www2.census.gov/geo/tiger/TIGER2007FE/26_MICHIGAN/fe_2007_26_place00.zip" .
+
+<urn:uuid:bb27a6bd-941f-485a-ba77-b8448ab81342> bcube:hasType "theme" ;
+    bcube:hasValue "boundaries" ;
+    dc:partOf "ISO 19115 Topic Categories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:f3cae90b-819d-4117-9784-2aebc27b1be3> bcube:hasType "theme" ;
+    bcube:hasValue "CDP",
+        "Census Designated Place",
+        "City",
+        "Polygon",
+        "State or equivalent entity",
+        "Town",
+        "Village" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:fa918c03-93f7-4af7-a6e2-761a392f8fe5> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-06T23:00:05.552Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-06T23:00:05.552Z" ;
+    dc:identifier "urn:sha:80b8953d9a6afadae5aa25cbd0104d6f90795c770e921128f7cb3b0e" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://meta.geo.census.gov/data/existing/decennial/GEO/GPMB/TIGERline/fe_2007/place00/fe_2007_26_place00_url.shp.xml" .
+

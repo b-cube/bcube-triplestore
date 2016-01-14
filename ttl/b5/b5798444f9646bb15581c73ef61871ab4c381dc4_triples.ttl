@@ -1,0 +1,73 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:2b0c3d11-bd16-4e9a-ab22-b5f6864c1e0f> bcube:hasValue "environment" ;
+    dc:partOf "IsoTopicCategories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:34a2c8cb-1b34-416d-b0ab-4308d3a05470> bcube:hasType "place" ;
+    bcube:hasValue "Delaware",
+        "Mid-Atlantic",
+        "New Jersey",
+        "New York",
+        "Pennsylvania",
+        "United States" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:3cc555ad-69b1-4930-80d4-4251a3063ec7> bcube:dateCreated "2014-07-31T07:55:19.921Z" ;
+    bcube:hasMetadataRecord <urn:uuid:719706a1-1e92-46f9-a433-73026be35d79> ;
+    bcube:lastUpdated "2014-07-31T07:55:19.921Z" ;
+    dc:conformsTo <urn:uuid:2b0c3d11-bd16-4e9a-ab22-b5f6864c1e0f>,
+        <urn:uuid:34a2c8cb-1b34-416d-b0ab-4308d3a05470>,
+        <urn:uuid:b331c40a-da8c-4993-affa-1fc2cdea6bd3> ;
+    dc:description "This is a map service for the Coastal Flood Hazard Composite dataset. This dataset was created by combining hazard zones from the following datasets: FEMA V zones, FEMA A zones, FEMA shaded X zones, NOAA CSC Flood Frequency zones, NOAA CSC potential sea level rise inundation of 3 ft above current Mean Higher High Water (MHHW), and SLOSH MOMs for category 3 hurricanes. This dataset was created to support the National Oceanic and Atmospheric Administration Coastal Services Center's pilot version of the Coastal Flood Exposure Mapper. The purpose of the online mapping tool is to provide coastal managers, planners, and stakeholders a preliminary look at exposures to coastal flooding hazards. The Mapper is a screening-level tool that uses nationally consistent data sets and analyses. Data and maps provided can be used at several scales to help communities initiate resilience planning efforts. Currently the extent of this dataset is limited to the footprint of the pilot version of the Coastal Flood Exposure Mapper, which includes 32 coastal counties in Delaware, New Jersey, Pennsylvania, and New York. The footprint of the tool will be expanded to cover U. S. coastal areas along the Gulf and Atlantic. This is a cached map service. Tiles have been cached down to Level ID 11 (1:18,055)." ;
+    dc:spatial "POLYGON ((-75.9 38.5,-75.9 41.3,-71.4 41.3,-71.4 38.5,-75.9 38.5))" ;
+    dcterms:title "Coastal Flood Hazard Composite Layer for the Mid-Atlantic U.S." ;
+    esip:eastBound "-71.4"^^xsd:float ;
+    esip:endDate "2013-01-01"^^xsd:date ;
+    esip:northBound "41.3"^^xsd:float ;
+    esip:southBound "38.5"^^xsd:float ;
+    esip:startDate "2008-01-01"^^xsd:date ;
+    esip:westBound "-75.9"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:60866acc-00f5-47df-a79b-5cf72d093bb2> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2014-07-31T07:55:19.921Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2014-07-31T07:55:19.921Z" ;
+    dc:identifier "urn:sha:0d1f3505f24332e48b236c194131a658fcba969482e059af461052c9" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "https://data.noaa.gov/harvest/object/184ade7a-2d76-4792-9feb-4fdd2ed43c4e" .
+
+<urn:uuid:719706a1-1e92-46f9-a433-73026be35d79> a "ISO 19115:2003/19139" ;
+    bcube:dateCreated "2014-07-31T07:55:19.921Z" ;
+    bcube:lastUpdated "2014-07-31T07:55:19.921Z" ;
+    bcube:originatedFrom <urn:uuid:60866acc-00f5-47df-a79b-5cf72d093bb2> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:3cc555ad-69b1-4930-80d4-4251a3063ec7> .
+
+<urn:uuid:b331c40a-da8c-4993-affa-1fc2cdea6bd3> bcube:hasType "theme" ;
+    bcube:hasValue "Hurricanes",
+        "Shoreline",
+        "flooding",
+        "inundation",
+        "sea level rise" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+

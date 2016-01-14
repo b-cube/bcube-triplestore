@@ -1,0 +1,91 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:09f738c8-9ac3-4561-b767-2dd98d812d4c> bcube:hasType "place" ;
+    bcube:hasValue "CT",
+        "Connecticut" ;
+    dc:partOf "U.S. Department of Commerce, 1987, Codes for the Identification of the States, the District of Columbia and the Outlying Areas of The United States, and Associated Areas (Federal Information Processing Standard 5-2): Washington, DC, National Institute of Standards and Technology." ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:0db1026e-284d-4696-9ed9-922faa7a23ae> bcube:hasType "theme" ;
+    bcube:hasValue "LiDAR",
+        "contours" ;
+    dc:partOf "none" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:236a2bc9-4619-4bf2-840d-4f108f73799a> bcube:hasType "place" ;
+    bcube:hasValue "USA",
+        "United States of America" ;
+    dc:partOf "U.S. Department of Commerce, 1995, Countries, Dependencies, Areas of Special Sovereignty, and Their Principal Administrative Divisions (Federal Information Processing Standard (FIPS) 10-4): Washington, D.C., National Institute of Standards and Technology." ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:313167ea-7d32-40e7-bc10-d24b3f1f7119> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-09-10T04:58:07.938Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-09-10T04:58:07.938Z" ;
+    dc:identifier "urn:sha:11e63ac02beae0e3ebd120a36731af19dddb10cceb50ee0b1ad319ad" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://cteco.uconn.edu/metadata/dep/document/contour_2000_100ft.xml" .
+
+<urn:uuid:433b373f-a612-4bb3-b197-683107559d39> bcube:dateCreated "2015-09-10T04:58:07.938Z" ;
+    bcube:hasMetadataRecord <urn:uuid:b2c2e86f-f4a1-4396-8209-39efd309a94e> ;
+    bcube:lastUpdated "2015-09-10T04:58:07.938Z" ;
+    dc:conformsTo <urn:uuid:09f738c8-9ac3-4561-b767-2dd98d812d4c>,
+        <urn:uuid:0db1026e-284d-4696-9ed9-922faa7a23ae>,
+        <urn:uuid:236a2bc9-4619-4bf2-840d-4f108f73799a>,
+        <urn:uuid:8f0f0eb9-339c-44bf-bf50-5af63cabbdfb> ;
+    dc:description "Connecticut 100 ft Contours (Revised) is line feature-based data representing ground elevation at 100 foot intervals for the state of Connecticut. This data replaces the 100 ft contour data previously available from CT DEP. It has fewer errors and data gaps than the previously available contours; however, some inaccuracies remain. These contour lines have been processed to appear smoother and less jagged than the previous data and have been optimized for faster drawing and performance. The source for these data is the Connecticut LiDAR 10-foot DEM (file name: ct_lidar) from the Center for Land Use Education and Research at the University of Connecticut, College of Agriculture and Natural Resources." ;
+    dc:spatial "POLYGON ((-73.742277 41.00717,-73.742277 42.05315,-71.781023 42.05315,-71.781023 41.00717,-73.742277 41.00717))" ;
+    dcterms:publisher <urn:uuid:4605ff84-b824-4b52-857c-38986d43a180> ;
+    dcterms:references <urn:uuid:ea12c5eb-8486-475d-ba38-9efffa727941> ;
+    dcterms:title "Connecticut 100 ft Contours (Revised)" ;
+    esip:eastBound "-71.781023"^^xsd:float ;
+    esip:northBound "42.05315"^^xsd:float ;
+    esip:southBound "41.00717"^^xsd:float ;
+    esip:startDate "2000-01-01"^^xsd:date ;
+    esip:westBound "-73.742277"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:4605ff84-b824-4b52-857c-38986d43a180> owl:a foaf:Organization ;
+    foaf:name "State of Connecticut, Department of Environmental Protection" .
+
+<urn:uuid:8f0f0eb9-339c-44bf-bf50-5af63cabbdfb> bcube:hasType "theme" ;
+    bcube:hasValue "elevation",
+        "environment" ;
+    dc:partOf "ISO 19115 Topic Cateogry" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:b2c2e86f-f4a1-4396-8209-39efd309a94e> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-09-10T04:58:07.938Z" ;
+    bcube:lastUpdated "2015-09-10T04:58:07.938Z" ;
+    bcube:originatedFrom <urn:uuid:313167ea-7d32-40e7-bc10-d24b3f1f7119> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:433b373f-a612-4bb3-b197-683107559d39> .
+
+<urn:uuid:ea12c5eb-8486-475d-ba38-9efffa727941> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-09-10T04:58:07.938Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-09-10T04:58:07.938Z" ;
+    dc:identifier "urn:sha:5da6bf4c42df751d83182a3c9d4acd0a16808c2f111b75ef20d2b231" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www.ct.gov/deep" .
+

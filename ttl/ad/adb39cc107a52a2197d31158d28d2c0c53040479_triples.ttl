@@ -1,0 +1,98 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:0cb196db-1192-46b9-b182-1d54936dc9e8> bcube:hasType "theme" ;
+    bcube:hasValue "Environmental Monitoring",
+        "Erosion",
+        "R-Factor",
+        "RUSLE",
+        "RUSLE2",
+        "Rainfall-Runoff Erosivity",
+        "Revised Universal Soil Loss Equation" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:5d01b9a6-218f-40d6-8697-ae05de463feb> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-05T07:35:01.413Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-05T07:35:01.413Z" ;
+    dc:identifier "urn:sha:119eb56ec6b5694d69e3325cee6dc28758a22125a21f7a4fe49eb80e" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://coast.noaa.gov/data/Documents/Metadata/harvest/OpenNSPECT/R-Factor_metadata_for_Island_of_Hawaii.xml" .
+
+<urn:uuid:84e304df-591b-4761-a269-98de662b81da> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-08-05T07:35:01.413Z" ;
+    bcube:lastUpdated "2015-08-05T07:35:01.413Z" ;
+    bcube:originatedFrom <urn:uuid:5d01b9a6-218f-40d6-8697-ae05de463feb> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:f64fea49-6e8f-4c7e-9e6a-2f8fe3f31c1a> .
+
+<urn:uuid:8bbf3c9e-3a96-4222-bb88-53eec12d12f2> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-05T07:35:01.413Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-05T07:35:01.413Z" ;
+    dc:identifier "urn:sha:a57a08500a1c02c97e4fc76c89e9caca050ded6ff52c6c2136937445" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://coast.noaa.gov/digitalcoast/tools/opennspect" .
+
+<urn:uuid:af7de5e8-bcaf-46ac-b1c5-c877adad04e3> bcube:hasType "place" ;
+    bcube:hasValue "Coastal Zone",
+        "Hawaii",
+        "Hawaii Volcanoes National Park",
+        "Hilo",
+        "Kilauea",
+        "Kona",
+        "Mauna Kea",
+        "Mauna Loa" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:dabadc04-2b20-4e49-848e-bb001af16fda> bcube:hasType "theme" ;
+    bcube:hasValue "climatologyMeteorologyAtmosphere" ;
+    dc:partOf "ISO 19115 Topic Category" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:dc37a78f-52d1-41da-a04a-e9726e14686e> dcterms:references <urn:uuid:8bbf3c9e-3a96-4222-bb88-53eec12d12f2> ;
+    owl:a bibo:WebPage .
+
+<urn:uuid:ec948a74-cf05-4876-b512-51cf92ccf9d4> owl:a foaf:Organization ;
+    foaf:name "NOAA's Ocean Service, Office for Coastal Management (OCM)" .
+
+<urn:uuid:f64fea49-6e8f-4c7e-9e6a-2f8fe3f31c1a> bcube:dateCreated "2015-08-05T07:35:01.413Z" ;
+    bcube:hasMetadataRecord <urn:uuid:84e304df-591b-4761-a269-98de662b81da> ;
+    bcube:lastUpdated "2015-08-05T07:35:01.413Z" ;
+    dc:conformsTo <urn:uuid:0cb196db-1192-46b9-b182-1d54936dc9e8>,
+        <urn:uuid:af7de5e8-bcaf-46ac-b1c5-c877adad04e3>,
+        <urn:uuid:dabadc04-2b20-4e49-848e-bb001af16fda> ;
+    dc:description "The rainfall-runoff erosivity factor (R-Factor) quantifies the effects of raindrop impacts and reflects the amount and rate of runoff associated with the rain. The R-factor is one of the parameters used by the Revised Unified Soil Loss Equation (RUSLE) to estimate annual rates of erosion. This product is a raster representation of R-Factor derived from isoerodent maps published in the Agriculture Handbook Number 703 (Renard et al.,1997). Lines connecting points of equal rainfall ersoivity are called isoerodents. The iserodents plotted on a map of the Island of Hawaii were digitized, then values between these lines were obtained by linear interpolation. The final R-Factor data are in raster GeoTiff format at 30 meter resolution in UTM, Zone 4, GRS80, NAD83." ;
+    dc:spatial "POLYGON ((-156.08044444399999 18.8612931111,-156.08044444399999 20.3039111111,-154.77669013900001 20.3039111111,-154.77669013900001 18.8612931111,-156.08044444399999 18.8612931111))" ;
+    dcterms:publisher <urn:uuid:ec948a74-cf05-4876-b512-51cf92ccf9d4> ;
+    dcterms:references <urn:uuid:dc37a78f-52d1-41da-a04a-e9726e14686e> ;
+    dcterms:title "R-Factor for the Island of Hawaii" ;
+    esip:eastBound "-154.776690139"^^xsd:float ;
+    esip:endDate "1997-01-01"^^xsd:date ;
+    esip:northBound "20.3039111111"^^xsd:float ;
+    esip:southBound "18.8612931111"^^xsd:float ;
+    esip:startDate "1975-01-01"^^xsd:date ;
+    esip:westBound "-156.080444444"^^xsd:float ;
+    owl:a dcat:Dataset .
+

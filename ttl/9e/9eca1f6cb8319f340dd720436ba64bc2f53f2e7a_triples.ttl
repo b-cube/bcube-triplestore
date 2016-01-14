@@ -1,0 +1,95 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:02102d7b-633a-4d4f-91f4-017e5c86da97> owl:a foaf:Organization ;
+    foaf:name "" .
+
+<urn:uuid:05a6f244-a347-48d1-98c3-30cd6c5eab84> bcube:hasType "theme" ;
+    bcube:hasValue "Address Range",
+        "County or equivalent entity",
+        "Feature",
+        "Hydrography",
+        "Linear",
+        "Road Feature",
+        "Roads",
+        "Street Centerline" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:773c984c-75d4-4f4f-aa80-31246bbcaa6a> bcube:dateCreated "2015-11-02T11:29:45.591Z" ;
+    bcube:hasMetadataRecord <urn:uuid:c78d93e9-a0d7-4ce4-8579-776ae2c3b766> ;
+    bcube:lastUpdated "2015-11-02T11:29:45.591Z" ;
+    dc:conformsTo <urn:uuid:05a6f244-a347-48d1-98c3-30cd6c5eab84>,
+        <urn:uuid:9586cbbf-2ac6-47ae-b893-defc99fd0d39>,
+        <urn:uuid:cf8e06d9-15ff-4420-89c3-33bb752e71cb> ;
+    dc:description "The TIGER/Line Shapefiles are an extract of selected geographic and cartographic information from the Census MAF/TIGER database. The Census MAF/TIGER database represents a seamless national file with no overlaps or gaps between parts. However, each TIGER/Line Shapefile is designed to stand alone as an independent data set or the shapefiles can be combined to cover the whole nation." ;
+    dc:spatial "POLYGON ((-87.427516 31.181133,-87.427516 31.753035,-86.662082 31.753035,-86.662082 31.181133,-87.427516 31.181133))" ;
+    dcterms:publisher <urn:uuid:02102d7b-633a-4d4f-91f4-017e5c86da97> ;
+    dcterms:references <urn:uuid:b074892e-ced6-4f5d-b134-4126327a19a0> ;
+    dcterms:title "TIGER/Line Shapefile, 2009, county, Conecuh County, AL, Current All Lines Shapefile" ;
+    esip:eastBound "-86.662082"^^xsd:float ;
+    esip:endDate "2009-05-01"^^xsd:date ;
+    esip:northBound "31.753035"^^xsd:float ;
+    esip:southBound "31.181133"^^xsd:float ;
+    esip:startDate "2009-01-01"^^xsd:date ;
+    esip:westBound "-87.427516"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:9586cbbf-2ac6-47ae-b893-defc99fd0d39> bcube:hasType "theme" ;
+    bcube:hasValue "boundaries",
+        "inlandWaters",
+        "transportation" ;
+    dc:partOf "ISO 19115 Topic Categories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:b074892e-ced6-4f5d-b134-4126327a19a0> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-02T11:29:45.591Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-02T11:29:45.591Z" ;
+    dc:identifier "urn:sha:ae2f8660dbabbca43df2a7d2d9153bfa0fc10b4c8ba86d725c988d63" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www2.census.gov/geo/tiger/TIGER2009/01_ALABAMA/01035_Conecuh_County/tl_2009_01035_edges.zip" .
+
+<urn:uuid:b88597ab-f955-4360-90f1-de88072e45e4> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-02T11:29:45.591Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-02T11:29:45.591Z" ;
+    dc:identifier "urn:sha:1db973cade6d574036ffcc12972207415a8147c3776757419e3d954c" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://meta.geo.census.gov/data/existing/decennial/GEO/GPMB/TIGERline/fe_2009/edges/tl_2009_01035_edges_url.shp.xml" .
+
+<urn:uuid:c78d93e9-a0d7-4ce4-8579-776ae2c3b766> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-11-02T11:29:45.591Z" ;
+    bcube:lastUpdated "2015-11-02T11:29:45.591Z" ;
+    bcube:originatedFrom <urn:uuid:b88597ab-f955-4360-90f1-de88072e45e4> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:773c984c-75d4-4f4f-aa80-31246bbcaa6a> .
+
+<urn:uuid:cf8e06d9-15ff-4420-89c3-33bb752e71cb> bcube:hasType "place" ;
+    bcube:hasValue "01035",
+        "Conecuh",
+        "County or Equivalent Entity",
+        "U.S.",
+        "United States" ;
+    dc:partOf "INCITS.38-200x (R2004),INCITS.31-200x (R2007),INCITS.454-200x,INCITS 455-200x,INCITS 446-2008" ;
+    owl:a bcube:thesaurusSubset .
+

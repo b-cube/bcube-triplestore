@@ -1,0 +1,91 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:098476f9-3587-4b40-b75a-c5d676554e35> owl:a foaf:Organization ;
+    foaf:name "" .
+
+<urn:uuid:0aea7a67-2e98-4689-ad9f-ff44e07e95e9> bcube:hasType "theme" ;
+    bcube:hasValue "imageryBaseMapsEarthCover" ;
+    dc:partOf "ISO 19115 Topic Category" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:32fc4937-8ecc-4fea-b175-a9f329052486> bcube:hasType "place" ;
+    bcube:hasValue "New England",
+        "Northeast",
+        "Providence Urban Area",
+        "Rhode Island",
+        "US" ;
+    dc:partOf "none" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:3da2ad66-fda5-49af-ae1c-41fd78b1b1dc> bcube:dateCreated "2015-09-06T14:52:39.442Z" ;
+    bcube:hasMetadataRecord <urn:uuid:a3f4f430-5155-4bd3-8971-01a0eb401f6f> ;
+    bcube:lastUpdated "2015-09-06T14:52:39.442Z" ;
+    dc:conformsTo <urn:uuid:0aea7a67-2e98-4689-ad9f-ff44e07e95e9>,
+        <urn:uuid:32fc4937-8ecc-4fea-b175-a9f329052486>,
+        <urn:uuid:88623f83-32df-46bd-8afe-9cd1bcc73f1d> ;
+    dc:description "An orthoimage consists of remotely sensed image data in which the displacement of features in the image caused by terrain relief and sensor orientation have been mathematically removed. Orthoimagery combines the image characteristics of a photograph with the geometric qualities of a map. For this dataset, the natural color orthoimages were produced at 0.3-meter pixel resolution (approximately 1-foot). The design accuracy is estimated not to exceed 3-meter diagonal RMSE (2.12m RMSE in X or Y). Each orthoimage provides imagery for a 1500- by 1500-meter block on the ground. The original projected coordinate system was UTM with a NAD83 datum. The imagery was projected into the Rhode Island State Plane Coordinate System in U.S. Survey feet by RIGIS. The resulting resolution in this coordinate system is approximately 1 foot. There is no image overlap been adjacent files. RIGIS combined the original USGS image tiles into four square tile mosaic images. The naming convention as designated by RIGIS consists of vertical columns from west to east from 1 through 12 and horizontal rows from a through p. Variations in this naming system were necessary for areas around the edges of the total image data set and where null images were present. The northwest portion of the overall data set contains a column 01 for rows a-g. Where image mosaics varied from the intended four tile components the mosiac image name contains an upper case H for horizontal or an upper case V for vertical followed by a single digit number designating the number of tiles included in the resulting image mosaic." ;
+    dc:spatial "POLYGON ((71.7 41.5,71.7 42.1,71.2 42.1,71.2 41.5,71.7 41.5))" ;
+    dcterms:publisher <urn:uuid:098476f9-3587-4b40-b75a-c5d676554e35> ;
+    dcterms:references <urn:uuid:f1271530-057d-43b8-81d3-7cb86111bf01> ;
+    dcterms:title "2002 USGS True Color Orthophotography" ;
+    esip:eastBound "71.2"^^xsd:float ;
+    esip:northBound "42.1"^^xsd:float ;
+    esip:southBound "41.5"^^xsd:float ;
+    esip:startDate "2002-04-26"^^xsd:date ;
+    esip:westBound "71.7"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:88623f83-32df-46bd-8afe-9cd1bcc73f1d> bcube:hasType "theme" ;
+    bcube:hasValue "1 foot orthoimage",
+        "image map",
+        "natural color orthophoto",
+        "orthoimage",
+        "orthophoto",
+        "rectified image",
+        "rectified photograph" ;
+    dc:partOf "none" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:9c4a3856-41aa-45e4-9f27-a27a5767b2e1> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-09-06T14:52:39.442Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-09-06T14:52:39.442Z" ;
+    dc:identifier "urn:sha:9d3b4970a4f38aa0f2e0308da0a19ea3be1ed8d7c05ac9a8b3f6dd7e" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www.edc.uri.edu/rigis/orthosf/2002USGS/2002USGS.xml" .
+
+<urn:uuid:a3f4f430-5155-4bd3-8971-01a0eb401f6f> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-09-06T14:52:39.442Z" ;
+    bcube:lastUpdated "2015-09-06T14:52:39.442Z" ;
+    bcube:originatedFrom <urn:uuid:9c4a3856-41aa-45e4-9f27-a27a5767b2e1> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:3da2ad66-fda5-49af-ae1c-41fd78b1b1dc> .
+
+<urn:uuid:f1271530-057d-43b8-81d3-7cb86111bf01> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-09-06T14:52:39.442Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-09-06T14:52:39.442Z" ;
+    dc:identifier "urn:sha:3e9757e04fa95c82527ee0fdc0a805cd4b250717c66a15c20c338035" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www.edc.uri.edu/rigis" .
+

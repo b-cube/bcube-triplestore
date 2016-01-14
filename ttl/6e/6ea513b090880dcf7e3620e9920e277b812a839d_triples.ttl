@@ -1,0 +1,84 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:4d9c84b8-0e34-4e51-ae0a-dfd3f7f73ab4> bcube:hasType "place" ;
+    bcube:hasValue "Nevada",
+        "SB GEO",
+        "Steamboat Springs",
+        "Washoe" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:56845d82-d2ca-4c56-949a-47d2de385acf> a "ISO 19115:2003/19139" ;
+    bcube:dateCreated "2015-10-17T11:16:28.06Z" ;
+    bcube:lastUpdated "2015-10-17T11:16:28.06Z" ;
+    bcube:originatedFrom <urn:uuid:c548cc87-db1b-4625-909f-0530f8dcacb1> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:6bdf5e6a-b59d-44b2-a534-0baad3c83bba> .
+
+<urn:uuid:6bdf5e6a-b59d-44b2-a534-0baad3c83bba> bcube:dateCreated "2015-10-17T11:16:28.06Z" ;
+    bcube:hasMetadataRecord <urn:uuid:56845d82-d2ca-4c56-949a-47d2de385acf> ;
+    bcube:lastUpdated "2015-10-17T11:16:28.06Z" ;
+    dc:conformsTo <urn:uuid:4d9c84b8-0e34-4e51-ae0a-dfd3f7f73ab4>,
+        <urn:uuid:8ac34afd-508b-48ed-a7ef-b37734e6326d>,
+        <urn:uuid:a5d075b6-a454-447c-a9f6-113673e8e43e> ;
+    dc:description "The objective of this report is to give a broad overview of the Steamboat Springs geothermal area" ;
+    dc:spatial "POLYGON ((-120.0 38.89,-120.0 39.5,-119.6 39.5,-119.6 38.89,-120.0 38.89))" ;
+    dcterms:references <urn:uuid:de7318db-0f9b-48eb-a43f-82bfc7ac02db> ;
+    dcterms:title "Summary of Steamboat Springs geothermal area, with attached road-log commentary - 1980" ;
+    esip:eastBound "-119.6"^^xsd:float ;
+    esip:endDate "1980-02-14"^^xsd:date ;
+    esip:northBound "39.5"^^xsd:float ;
+    esip:southBound "38.89"^^xsd:float ;
+    esip:startDate "1980-02-14"^^xsd:date ;
+    esip:westBound "-120.0"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:8ac34afd-508b-48ed-a7ef-b37734e6326d> bcube:hasValue "geoscientificInformation" ;
+    dc:partOf "IsoTopicCategories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:a5d075b6-a454-447c-a9f6-113673e8e43e> bcube:hasType "theme" ;
+    bcube:hasValue "bathing",
+        "geothermal",
+        "hydrothermal",
+        "ore depostis",
+        "road-log",
+        "thermal waters",
+        "well" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:c548cc87-db1b-4625-909f-0530f8dcacb1> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-10-17T11:16:28.06Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-10-17T11:16:28.06Z" ;
+    dc:identifier "urn:sha:87bcde3c5522a4e00fb1213568b5d91b1a35d728c1101d40e1c5d4a3" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://repository.stategeothermaldata.org/resources/metadata/test-CSV-XML-tool/53f56b89-3ccd-4a3e-a7d9-15ee8f916b3e.xml" .
+
+<urn:uuid:de7318db-0f9b-48eb-a43f-82bfc7ac02db> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-10-17T11:16:28.06Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-10-17T11:16:28.06Z" ;
+    dc:identifier "urn:sha:a2c66ebded6698e2fd60db49771d5a3f79873bd998c356c4b25b3404" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "ftp://ftp.nbmg.unr.edu/pub/Geothermal/11_Documents/White-1980-Steamboat.pdf" .
+

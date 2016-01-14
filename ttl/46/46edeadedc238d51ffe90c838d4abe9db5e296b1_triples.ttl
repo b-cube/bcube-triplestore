@@ -1,0 +1,93 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:09551071-bf77-49fa-bc4d-dddcafbade9a> bcube:hasType "theme" ;
+    bcube:hasValue "Amtrack",
+        "BTS",
+        "Bureau of Transportation Statistics",
+        "Railroad",
+        "Railroad Passenger Trains",
+        "Railroad Terminals",
+        "Southeast Amtrack Stations",
+        "Train" ;
+    dc:partOf "NONE" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:5561ddd0-0ae0-40b7-80ff-449fd1b4b905> bcube:hasType "temporal" ;
+    bcube:hasValue "1990",
+        "1990s" ;
+    dc:partOf "NONE" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:74c89f55-43e1-4851-96fd-8793f1629dd0> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-10-31T22:19:02.835Z" ;
+    bcube:lastUpdated "2015-10-31T22:19:02.835Z" ;
+    bcube:originatedFrom <urn:uuid:e4aba656-c338-4269-9588-88630e3df0f9> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:d62b937f-776e-498c-b040-a913e29d42ed> .
+
+<urn:uuid:7d582717-4adf-4e37-b092-f453c989f9df> owl:a foaf:Organization ;
+    foaf:name "" .
+
+<urn:uuid:90599c99-0c27-43a1-85f3-49eb7087a50e> bcube:hasType "place" ;
+    bcube:hasValue "Florida",
+        "Southeast U.S.",
+        "Southeast United States" ;
+    dc:partOf "NONE" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:d62b937f-776e-498c-b040-a913e29d42ed> bcube:dateCreated "2015-10-31T22:19:02.835Z" ;
+    bcube:hasMetadataRecord <urn:uuid:74c89f55-43e1-4851-96fd-8793f1629dd0> ;
+    bcube:lastUpdated "2015-10-31T22:19:02.835Z" ;
+    dc:conformsTo <urn:uuid:09551071-bf77-49fa-bc4d-dddcafbade9a>,
+        <urn:uuid:5561ddd0-0ae0-40b7-80ff-449fd1b4b905>,
+        <urn:uuid:90599c99-0c27-43a1-85f3-49eb7087a50e> ;
+    dc:description "The Amtrak Stations geographic data set contains Amtrak intercity railroad passenger terminals in Florida." ;
+    dc:spatial "POLYGON ((-87.42904 24.492815,-87.42904 30.983191,-79.872251 30.983191,-79.872251 24.492815,-87.42904 24.492815))" ;
+    dcterms:publisher <urn:uuid:7d582717-4adf-4e37-b092-f453c989f9df> ;
+    dcterms:references <urn:uuid:e5848ac6-7abf-40c7-8342-da3d12d8808a> ;
+    dcterms:title "AMTRAK STATIONS" ;
+    esip:eastBound "-79.872251"^^xsd:float ;
+    esip:northBound "30.983191"^^xsd:float ;
+    esip:southBound "24.492815"^^xsd:float ;
+    esip:westBound "-87.42904"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:e4aba656-c338-4269-9588-88630e3df0f9> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-10-31T22:19:02.835Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-10-31T22:19:02.835Z" ;
+    dc:identifier "urn:sha:f93dac13361542e53effb1cb583906fcb4dc831281d1d6c31626d239" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www.fgdl.org/metadata/metadata_archive/fgdc_xml/amsta.shp.xml" .
+
+<urn:uuid:e53ccd98-ae2e-4af0-bf4a-bd1611bf9084> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-10-31T22:19:02.835Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-10-31T22:19:02.835Z" ;
+    dc:identifier "urn:sha:e4612e1c68d24a9bc25548e7c4d7a665961d18ac3f8cc4dd624c2743" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www.bts.gov" .
+
+<urn:uuid:e5848ac6-7abf-40c7-8342-da3d12d8808a> dcterms:references <urn:uuid:e53ccd98-ae2e-4af0-bf4a-bd1611bf9084> ;
+    owl:a bibo:WebPage .
+

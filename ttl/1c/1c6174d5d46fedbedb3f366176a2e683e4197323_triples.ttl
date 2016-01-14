@@ -1,0 +1,105 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:02fbfa7f-dd39-4f2c-892f-03a68bdb51fb> bcube:hasType "place" ;
+    bcube:hasValue "Alaska",
+        "Southeast Alaska",
+        "Tongass National Forest",
+        "United States" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:31c48b98-49a3-40cb-9c9e-7333a0b552f1> owl:a foaf:Organization ;
+    foaf:name "" .
+
+<urn:uuid:6e63c635-bc6a-4df2-9182-9b8d284ea551> bcube:hasType "theme" ;
+    bcube:hasValue "classification",
+        "cover",
+        "lulc",
+        "survey",
+        "tim86",
+        "type" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:77e10350-0ffd-42ab-8f73-f6b6ff2b60d0> bcube:dateCreated "2015-08-12T15:11:30.637Z" ;
+    bcube:hasMetadataRecord <urn:uuid:781ae3ff-2351-4cba-a423-84485e3d868f> ;
+    bcube:lastUpdated "2015-08-12T15:11:30.637Z" ;
+    dc:conformsTo <urn:uuid:02fbfa7f-dd39-4f2c-892f-03a68bdb51fb>,
+        <urn:uuid:6e63c635-bc6a-4df2-9182-9b8d284ea551>,
+        <urn:uuid:9613c5fd-2342-463b-8649-d5f1e7cba889> ;
+    dc:description "This dataset contains polygons describing photo interpreted map classifications of the Tongass National Forest developed in 1978. The dataset's primary objective was to delineate major land types and their attributes. The land types were mapped at a polygon level - areas generally homogenous in character. Mapping was done to a 10 acre minimum except for non-commercial and non-forest types which were mapped to a 5 acre minimum. The classification identifies water as well as land. It segregates land into non-forest and forest. Polygons in forested areas were assigned a single, representative set of attributes; species composition, age, and volume class. Tim86 was updated in the 1980's (mostly in 1986) to reflect timber sale harvest units that occurred since the original map was created. Tim86 is archived and no longer updated." ;
+    dc:spatial "POLYGON ((-139.956651 54.544106,-139.956651 60.1257,-130.263842 60.1257,-130.263842 54.544106,-139.956651 54.544106))" ;
+    dcterms:publisher <urn:uuid:31c48b98-49a3-40cb-9c9e-7333a0b552f1> ;
+    dcterms:references <urn:uuid:8e289905-01f6-4ce6-82eb-7ee4abfa2a36>,
+        <urn:uuid:c3472aa2-db63-491d-9008-b9d0ec3a27e2> ;
+    dcterms:title "Timber Classification" ;
+    esip:eastBound "-130.263842"^^xsd:float ;
+    esip:endDate "2012-09-04"^^xsd:date ;
+    esip:northBound "60.1257"^^xsd:float ;
+    esip:southBound "54.544106"^^xsd:float ;
+    esip:startDate "2012-09-04"^^xsd:date ;
+    esip:westBound "-139.956651"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:781ae3ff-2351-4cba-a423-84485e3d868f> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-08-12T15:11:30.637Z" ;
+    bcube:lastUpdated "2015-08-12T15:11:30.637Z" ;
+    bcube:originatedFrom <urn:uuid:b73a9aad-b96d-431f-bb26-e38d2241471d> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:77e10350-0ffd-42ab-8f73-f6b6ff2b60d0> .
+
+<urn:uuid:8e289905-01f6-4ce6-82eb-7ee4abfa2a36> dcterms:references <urn:uuid:f4d273a4-a1d5-4d6e-b8e2-a404837b9db1> ;
+    owl:a bibo:WebPage .
+
+<urn:uuid:9613c5fd-2342-463b-8649-d5f1e7cba889> bcube:hasType "theme" ;
+    bcube:hasValue "biota" ;
+    dc:partOf "ISO 19115 Topic Categories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:b73a9aad-b96d-431f-bb26-e38d2241471d> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-12T15:11:30.637Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-12T15:11:30.637Z" ;
+    dc:identifier "urn:sha:97213f114d4d9e2d77ba964199d707cf875cc60acec79da5f0d7c76a" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://seakgis03.alaska.edu/geoportal/csw?getxml=%7BB3207C22-9D8E-413E-8756-485890571BE5%7D" .
+
+<urn:uuid:c3472aa2-db63-491d-9008-b9d0ec3a27e2> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-12T15:11:30.637Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-12T15:11:30.637Z" ;
+    dc:identifier "urn:sha:d14a028c2a3a2bc9476102bb288234c415a2b01f828ea62ac5b3e42f" ;
+    owl:a bcube:Url .
+
+<urn:uuid:f4d273a4-a1d5-4d6e-b8e2-a404837b9db1> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-12T15:11:30.637Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-12T15:11:30.637Z" ;
+    dc:identifier "urn:sha:eb9489ec837102a249722147895b9dc29a1504c74f297952f0d16761" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://seakgis.alaska.edu/data/Tim86.zip" .
+

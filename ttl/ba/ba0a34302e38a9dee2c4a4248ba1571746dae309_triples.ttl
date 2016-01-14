@@ -1,0 +1,90 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:5c717f3d-c90d-46b0-a469-2a999bf17df7> bcube:hasType "theme" ;
+    bcube:hasValue "5-digit ZIP code",
+        "County ANSI Code",
+        "County FIPS Code",
+        "From House Number",
+        "Permanent edge ID",
+        "Side indicator flag",
+        "State ANSI Code",
+        "State FIPS Code",
+        "To House Number",
+        "ZIP +4 code" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:6085db7d-eae6-4fdd-b0b9-9f051b539ed3> bcube:hasType "place" ;
+    bcube:hasValue "51115",
+        "County or Equivalent Entity",
+        "Mathews",
+        "U.S.",
+        "United States" ;
+    dc:partOf "ANSI INCITS 38:2009 (Formerly FIPS 5-2), ANSI INCITS 31:2009 (Formerly FIPS 6-4),ANSI INCITS 454:2009 (Formerly FIPS 8-6), ANSI INCITS 455:2009(Formerly FIPS 9-1), ANSI INCITS 446:2008 (Geographic Names Information System (GNIS))" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:b25909fa-2a23-4655-8285-987e377fbad2> bcube:hasValue "transportation" ;
+    dc:partOf "IsoTopicCategories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:decd5c55-1372-494f-8921-d07047c3d9ac> bcube:dateCreated "2015-08-12T09:04:20.491Z" ;
+    bcube:hasMetadataRecord <urn:uuid:eff4e4e4-945d-43ee-bea0-666a4fee0c9d> ;
+    bcube:lastUpdated "2015-08-12T09:04:20.491Z" ;
+    dc:conformsTo <urn:uuid:5c717f3d-c90d-46b0-a469-2a999bf17df7>,
+        <urn:uuid:6085db7d-eae6-4fdd-b0b9-9f051b539ed3>,
+        <urn:uuid:b25909fa-2a23-4655-8285-987e377fbad2> ;
+    dc:description "The TIGER/Line shapefiles and related database files (.dbf) are an extract of selected geographic and cartographic information from the U.S. Census Bureau's Master Address File / Topologically Integrated Geographic Encoding and Referencing (MAF/TIGER) Database (MTDB). The MTDB provides seamless national coverage with no overlaps or gaps between parts. Each TIGER/Line File is designed to stand alone as an independent data set, or it can be combined with shapefiles for other counties to cover a region or the entire nation. The Address Ranges Feature Shapefile (ADDRFEAT.dbf) contains the geospatial edge geometry and attributes of all unsuppressed address ranges for a county or county equivalent area. The term \"address range\" refers to the collection of all possible structure numbers from the first structure number to the last structure number and all numbers of a specified parity in between along an edge side relative to the direction in which the edge is coded. Single-address address ranges have been suppressed to maintain the confidentiality of the addresses they describe. Multiple coincident address range feature edge records are represented in the shapefile if more than one left or right address ranges are associated to the edge. The ADDRFEAT shapefile contains a record for each address range to street name combination. Address range associated to more than one street name are also represented by multiple coincident address range feature edge records. Note that the ADDRFEAT shapefile includes all unsuppressed address ranges compared to the All Lines Shapefile (EDGES.shp) which only includes the most inclusive address range associated with each side of a street edge. The TIGER/Line Shapefiles contain potential address ranges, not individual addresses. The address ranges in the TIGER/Line Shapefiles are potential ranges that include the full range of possible structure numbers even though the actual structures may not exist." ;
+    dc:spatial "POLYGON ((-76.451904 37.278361,-76.451904 37.54222,-76.136301 37.54222,-76.136301 37.278361,-76.451904 37.278361))" ;
+    dcterms:references <urn:uuid:e79537ba-c984-4a18-9c70-71a016f9c986> ;
+    dcterms:title "TIGER/Line Shapefile, 2013, county, Mathews County, VA, Address Range-Feature County-based" ;
+    esip:eastBound "-76.136301"^^xsd:float ;
+    esip:endDate "2013-05-03"^^xsd:date ;
+    esip:northBound "37.54222"^^xsd:float ;
+    esip:southBound "37.278361"^^xsd:float ;
+    esip:startDate "2012-06-03"^^xsd:date ;
+    esip:westBound "-76.451904"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:e2fb2423-d78e-43d5-8844-bdeb6ccda97a> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-12T09:04:20.491Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-12T09:04:20.491Z" ;
+    dc:identifier "urn:sha:74e8cf4c8dd89ffa888054e311b8ac16e9f1f0fe69ef209592213164" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://meta.geo.census.gov/data/existing/decennial/GEO/GPMB/TIGERline/TIGER2013/addrfeat/tl_2013_51115_addrfeat.shp.iso.xml" .
+
+<urn:uuid:e79537ba-c984-4a18-9c70-71a016f9c986> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-12T09:04:20.491Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-12T09:04:20.491Z" ;
+    dc:identifier "urn:sha:8d4a0e4f182136f8df9951fc18549c1e8e7ca2af717513054534a4ba" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www2.census.gov/geo/tiger/TIGER2013/ADDRFEAT/tl_2013_51115_addrfeat.zip" .
+
+<urn:uuid:eff4e4e4-945d-43ee-bea0-666a4fee0c9d> a "ISO 19115:2003/19139" ;
+    bcube:dateCreated "2015-08-12T09:04:20.491Z" ;
+    bcube:lastUpdated "2015-08-12T09:04:20.491Z" ;
+    bcube:originatedFrom <urn:uuid:e2fb2423-d78e-43d5-8844-bdeb6ccda97a> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:decd5c55-1372-494f-8921-d07047c3d9ac> .
+

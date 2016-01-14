@@ -1,0 +1,90 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:0c7bbea1-53b0-4910-86da-6a83f34c4a1f> bcube:hasType "place" ;
+    bcube:hasValue "22",
+        "LA",
+        "Louisiana",
+        "State or Equivalent Entity",
+        "U.S.",
+        "United States" ;
+    dc:partOf "FIPS Publication 5-2, FIPS Publication 6-4, FIPS Publication 8-6, FIPS Publication 9-1,FIPS Publication55-4" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:1db07918-1df3-438d-bbe4-4c33651a4daa> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-05T16:50:28.629Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-05T16:50:28.629Z" ;
+    dc:identifier "urn:sha:0670455bc32bd0ba7e47eb04610d60d91bfbedd238a273b312f10be7" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www2.census.gov/geo/tiger/TIGER2008/22_LOUISIANA/tl_2008_22_puma100.zip" .
+
+<urn:uuid:2e91da79-c5c7-409a-94ad-142a59b51554> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-05T16:50:28.629Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-05T16:50:28.629Z" ;
+    dc:identifier "urn:sha:7d5e1d8e2012f477829eaa851f3a36aa800a956a928a923d60509736" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://meta.geo.census.gov/data/existing/decennial/GEO/GPMB/TIGERline/fe_2008/puma100/tl_2008_22_puma100_url.shp.xml" .
+
+<urn:uuid:420ef152-4b98-4dc8-86a6-55b6a84d8353> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-11-05T16:50:28.629Z" ;
+    bcube:lastUpdated "2015-11-05T16:50:28.629Z" ;
+    bcube:originatedFrom <urn:uuid:2e91da79-c5c7-409a-94ad-142a59b51554> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:b2a67386-7b0a-4893-a3b0-eb28aedcb9c4> .
+
+<urn:uuid:4731dbfd-859a-4690-b2ac-d2200d082749> bcube:hasType "theme" ;
+    bcube:hasValue "boundaries" ;
+    dc:partOf "ISO 19115 Topic Categories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:b2a67386-7b0a-4893-a3b0-eb28aedcb9c4> bcube:dateCreated "2015-11-05T16:50:28.629Z" ;
+    bcube:hasMetadataRecord <urn:uuid:420ef152-4b98-4dc8-86a6-55b6a84d8353> ;
+    bcube:lastUpdated "2015-11-05T16:50:28.629Z" ;
+    dc:conformsTo <urn:uuid:0c7bbea1-53b0-4910-86da-6a83f34c4a1f>,
+        <urn:uuid:4731dbfd-859a-4690-b2ac-d2200d082749>,
+        <urn:uuid:dd9186c9-3e9d-48e7-9298-36de3e0c1366> ;
+    dc:description "The TIGER/Line Shapefiles are an extract of selected geographic and cartographic information from the Census MAF/TIGER database. The Census MAF/TIGER database represents a seamless national file with no overlaps or gaps between parts. However, each TIGER/Line Shapefile is designed to stand alone as an independent data set or the shapefiles can be combined to cover the whole nation." ;
+    dc:spatial "POLYGON ((-94.043352 28.855127,-94.043352 33.019543,-88.758388 33.019543,-88.758388 28.855127,-94.043352 28.855127))" ;
+    dcterms:publisher <urn:uuid:c6bbd9c7-bc76-4d30-978d-5c7b9e017cf9> ;
+    dcterms:references <urn:uuid:1db07918-1df3-438d-bbe4-4c33651a4daa> ;
+    dcterms:title "TIGER/Line Shapefile, 2008, 2000 state, Louisiana, 1-Percent Public Use Microdata Area (PUMA1)" ;
+    esip:eastBound "-88.758388"^^xsd:float ;
+    esip:endDate "2008-07-01"^^xsd:date ;
+    esip:northBound "33.019543"^^xsd:float ;
+    esip:southBound "28.855127"^^xsd:float ;
+    esip:startDate "2008-01-01"^^xsd:date ;
+    esip:westBound "-94.043352"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:c6bbd9c7-bc76-4d30-978d-5c7b9e017cf9> owl:a foaf:Organization ;
+    foaf:name "" .
+
+<urn:uuid:dd9186c9-3e9d-48e7-9298-36de3e0c1366> bcube:hasType "theme" ;
+    bcube:hasValue "PUMA",
+        "Polygon",
+        "Public Use Microdata Area",
+        "State or equivalent entity" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+

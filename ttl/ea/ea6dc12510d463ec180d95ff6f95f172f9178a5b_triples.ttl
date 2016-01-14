@@ -1,0 +1,62 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:cac9d0ff-42fe-4be3-a835-18f748cf8df8> a "OGC:WMS" ;
+    bcube:contains <urn:uuid:1685de8e-52d2-42b2-bb30-6107a1323386> ;
+    bcube:dateCreated "2015-07-22T05:17:47.6Z" ;
+    bcube:lastUpdated "2015-07-22T05:17:47.6Z" ;
+    bcube:originatedFrom <urn:uuid:34422166-fae4-40d0-a552-a2622101e505> ;
+    dc:conformsTo <urn:uuid:6ed5f265-ed66-4ece-8af9-0e02ce739dab> ;
+    dc:description "DirectUseSites in the state of Massachusetts" ;
+    owl:a bcube:service .
+
+<urn:uuid:1685de8e-52d2-42b2-bb30-6107a1323386> bcube:dateCreated "2015-07-22T05:17:47.6Z" ;
+    bcube:lastUpdated "2015-07-22T05:17:47.6Z" ;
+    dc:description "This layer contains data describing Direct Use Sites in Massachusetts, obtained by the AASG for the Geothermal Data Project. The data table includes general information on the location of the facility, location uncertainty and remarks. Citations are included in the dataset. The data is displayed using a temperature gradient color scheme ramping from green (cool) to red (hot). Layer files containing the symbology for these data layers can be found in the AASG repository at <a href=\"http://repository.stategeothermaldata.org/repository/resource/98ddf901b9782a25982e01af3b068fdc/\">http://repository.stategeothermaldata.org/repository/resource/98ddf901b9782a25982e01af3b068fdc/</a>. The original data and metadata can be viewed or downloaded from the AASG Repository at <a href=\"http://repository.stategeothermaldata.org/repository/resource/168566464e3d5f8f3cde3b9fc0076802/\">http://repository.stategeothermaldata.org/repository/resource/168566464e3d5f8f3cde3b9fc0076802/</a>." ;
+    dc:spatial "POLYGON ((-73.362056 41.275325,-73.362056 42.850054,-69.97282 42.850054,-69.97282 41.275325,-73.362056 41.275325))" ;
+    dc:title "DirectUseSite" ;
+    dcterms:references <urn:uuid:df98daa3-b030-4fcf-9b76-646b9852112c> ;
+    esip:eastBound "-69.97282"^^xsd:float ;
+    esip:northBound "42.850054"^^xsd:float ;
+    esip:southBound "41.275325"^^xsd:float ;
+    esip:westBound "-73.362056"^^xsd:float ;
+    owl:a bcube:Layer .
+
+<urn:uuid:34422166-fae4-40d0-a552-a2622101e505> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-07-22T05:17:47.6Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-07-22T05:17:47.6Z" ;
+    dc:identifier "urn:sha:30013d3fc29411fdef2d1109ff92fdfd429e14a348430c91740e652e" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://geothermal.isgs.illinois.edu/ArcGIS/services/aasggeothermal/MADirectUseSites/MapServer/WMSServer?request=GetCapabilities&service=WMS" .
+
+<urn:uuid:6ed5f265-ed66-4ece-8af9-0e02ce739dab> bcube:hasValue "direct use, geothermal, massachusetts, facility" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:df98daa3-b030-4fcf-9b76-646b9852112c> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-07-22T05:17:47.6Z" ;
+    bcube:hasConfidence "Not Sure" ;
+    bcube:hasUrlSource "Generated" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-07-22T05:17:47.6Z" ;
+    dc:identifier "urn:sha:f9bd985454857aa9d9b425c5f160a6dbfe1cb7d65e5eeef87c69f55c" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://geothermal.isgs.illinois.edu/ArcGIS/services/aasggeothermal/MADirectUseSites/MapServer/WMSServer?layers=DirectUseSite&width=500&version=1.3.0&bbox=-73.362056%2C41.275325%2C-69.97282%2C42.850054&service=WMS&format=image%2Fpng&styles=&crs=CRS%3A84&request=GetMap&height=500" .
+

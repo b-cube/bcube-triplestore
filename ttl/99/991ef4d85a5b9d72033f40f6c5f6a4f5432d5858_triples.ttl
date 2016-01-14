@@ -1,0 +1,78 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:09988770-073c-4ea5-a3b6-fab5a724d73e> owl:a foaf:Organization ;
+    foaf:name "U.S. Geological Survey" .
+
+<urn:uuid:249474fc-799c-4e4f-bed5-7763db58e754> bcube:hasType "theme" ;
+    bcube:hasValue "cartography",
+        "data services",
+        "image collections",
+        "libraries and archives",
+        "map interfaces",
+        "maps and atlases",
+        "topography" ;
+    dc:partOf "USGS Thesaurus" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:67e54dc2-bada-4bd5-9bf4-c05e7840ca2a> dcterms:references <urn:uuid:ab043f75-77e2-4b97-9fb3-a449954a3bcb> ;
+    owl:a bibo:WebPage .
+
+<urn:uuid:988bddb1-905c-47a0-afa5-127856d299c6> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2014-10-30T05:25:48.289Z" ;
+    bcube:lastUpdated "2014-10-30T05:25:48.289Z" ;
+    bcube:originatedFrom <urn:uuid:b807a541-f465-4a75-b06f-04820c7ee7ea> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:ff4b5514-07c3-4420-b948-d8bcf07eb5de> .
+
+<urn:uuid:ab043f75-77e2-4b97-9fb3-a449954a3bcb> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2014-10-30T05:25:48.289Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2014-10-30T05:25:48.289Z" ;
+    dc:identifier "urn:sha:efd6a475a445679efc1a1211cf8a134f069355e5fbb1fe121fd62d07" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://usarc.usgs.gov/" .
+
+<urn:uuid:b61f95f9-1abb-40a0-8c72-918e0fce480a> bcube:hasType "place" ;
+    bcube:hasValue "fAY = Antarctica" ;
+    dc:partOf "Augmented FIPS 10-4 and FIPS 6-4" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:b807a541-f465-4a75-b06f-04820c7ee7ea> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2014-10-30T05:25:48.289Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2014-10-30T05:25:48.289Z" ;
+    dc:identifier "urn:sha:78777ed7d83bee532699cc42feab9542cefef2b702d40167eae4f3c9" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www.usgs.gov/science/xml.php?cite=793" .
+
+<urn:uuid:ff4b5514-07c3-4420-b948-d8bcf07eb5de> bcube:dateCreated "2014-10-30T05:25:48.289Z" ;
+    bcube:hasMetadataRecord <urn:uuid:988bddb1-905c-47a0-afa5-127856d299c6> ;
+    bcube:lastUpdated "2014-10-30T05:25:48.289Z" ;
+    dc:conformsTo <urn:uuid:249474fc-799c-4e4f-bed5-7763db58e754>,
+        <urn:uuid:b61f95f9-1abb-40a0-8c72-918e0fce480a> ;
+    dc:description "Description of the Antarctic Resources Center and links to its workshops and archives of Antarctic maps, charts, satellite images, and photographs produced by the member nations of the Scientific Committee on Antarctic Research (SCAR)." ;
+    dcterms:publisher <urn:uuid:09988770-073c-4ea5-a3b6-fab5a724d73e> ;
+    dcterms:references <urn:uuid:67e54dc2-bada-4bd5-9bf4-c05e7840ca2a> ;
+    dcterms:title "United States Antarctic Resource Center" ;
+    owl:a dcat:Dataset .
+

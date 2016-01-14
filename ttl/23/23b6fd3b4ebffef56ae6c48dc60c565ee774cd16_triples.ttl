@@ -1,0 +1,81 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:20dc72b2-24ed-420d-b0f3-e82201b68138> owl:a foaf:Organization ;
+    foaf:name "" .
+
+<urn:uuid:260041a4-d597-4cff-83aa-21902e0dbd68> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-08T04:53:41.626Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-08T04:53:41.626Z" ;
+    dc:identifier "urn:sha:71d64703b4086be6a7081ca8462b260ffb295aa6f644e230219e0d15" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://sdms.cr.usgs.gov/data/metadata/bbendpt.xml" .
+
+<urn:uuid:3c17afd0-d65b-4b49-9d2f-ab5396f77ae8> bcube:hasType "place" ;
+    bcube:hasValue "Big Bend National Park",
+        "Chihuahuan Desert",
+        "Texas",
+        "Trans-Pecos",
+        "West Texas" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:9b1fafc4-b20d-469e-b112-44af7ba840a7> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-08-08T04:53:41.626Z" ;
+    bcube:lastUpdated "2015-08-08T04:53:41.626Z" ;
+    bcube:originatedFrom <urn:uuid:260041a4-d597-4cff-83aa-21902e0dbd68> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:be7c7ca7-80a9-41fc-911a-378baffb5d45> .
+
+<urn:uuid:be7c7ca7-80a9-41fc-911a-378baffb5d45> bcube:dateCreated "2015-08-08T04:53:41.626Z" ;
+    bcube:hasMetadataRecord <urn:uuid:9b1fafc4-b20d-469e-b112-44af7ba840a7> ;
+    bcube:lastUpdated "2015-08-08T04:53:41.626Z" ;
+    dc:conformsTo <urn:uuid:3c17afd0-d65b-4b49-9d2f-ab5396f77ae8>,
+        <urn:uuid:d6a36eaa-1ef7-4220-9ce7-f024780a5b54>,
+        <urn:uuid:e70420d0-2bc0-48de-876f-928b7d8dc325> ;
+    dc:description "This data set contains unlimited distance point count data that was collected from 70 sites in Big Bend National Park, Texas. Sites were located by using systematic sampling with a random start. Each site marked the center of a 2km radius sampling circle and all sites were at least 4km apart. In addition, all sites were at least 400m from paved or dirt roads. Sites were sampled every 9 days from mid-December through late February for three winter field seasons: 1999-2000, 2000-2001 and 2001-2002." ;
+    dc:spatial "POLYGON ((-105.1 28.52,-105.1 31.5,-102.16 31.5,-102.16 28.52,-105.1 28.52))" ;
+    dcterms:publisher <urn:uuid:20dc72b2-24ed-420d-b0f3-e82201b68138> ;
+    dcterms:title "Interactive effects of climate change and fire on bird communities - Point count data" ;
+    esip:eastBound "-102.16"^^xsd:float ;
+    esip:endDate "2002-02-01"^^xsd:date ;
+    esip:northBound "31.5"^^xsd:float ;
+    esip:southBound "28.52"^^xsd:float ;
+    esip:startDate "1999-12-01"^^xsd:date ;
+    esip:westBound "-105.1"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:d6a36eaa-1ef7-4220-9ce7-f024780a5b54> bcube:hasType "theme" ;
+    bcube:hasValue "bird",
+        "climate change",
+        "fire",
+        "landcover",
+        "landscape",
+        "percent cover",
+        "point count",
+        "unlimited distance",
+        "winter" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:e70420d0-2bc0-48de-876f-928b7d8dc325> bcube:hasType "temporal" ;
+    bcube:hasValue "winter" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+

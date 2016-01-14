@@ -1,0 +1,98 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:01e671e6-d987-40e6-a83e-d88134d28237> bcube:hasType "theme" ;
+    bcube:hasValue "Comparative Index",
+        "Demographics",
+        "Environmental Hazards",
+        "Indicators",
+        "Resilience",
+        "Social Vulnerability Index",
+        "Socioeconomics",
+        "Vulnerability" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:045ac50c-199b-47f0-a966-d335a916cd51> bcube:dateCreated "2015-08-06T16:53:31.91Z" ;
+    bcube:hasMetadataRecord <urn:uuid:08e8d1de-f0ac-4ba3-b98f-4606d9a740cb> ;
+    bcube:lastUpdated "2015-08-06T16:53:31.91Z" ;
+    dc:conformsTo <urn:uuid:01e671e6-d987-40e6-a83e-d88134d28237>,
+        <urn:uuid:2b708dcf-7045-4d26-b6c4-6dc404f52515>,
+        <urn:uuid:bce8a1f4-2a0e-4279-9b8e-53f920aa14c5> ;
+    dc:description "This data depicts the social vulnerability of Rhode Island census block groups to environmental hazards. Data were culled primarily from the 2000 Decennial Census." ;
+    dc:spatial "POLYGON ((-178.217598 18.921786,-178.217598 71.406235,-66.969271 71.406235,-66.969271 18.921786,-178.217598 18.921786))" ;
+    dcterms:publisher <urn:uuid:6d7e8cdc-fc71-4bd1-ab3a-3c7358adfd8f> ;
+    dcterms:references <urn:uuid:4da6535f-e879-4b6f-8e6b-bfd48cc815f8> ;
+    dcterms:title "Social Vulnerability Index (SoVI) for Rhode Island based on 2000 Census Block Groups" ;
+    esip:eastBound "-66.969271"^^xsd:float ;
+    esip:northBound "71.406235"^^xsd:float ;
+    esip:southBound "18.921786"^^xsd:float ;
+    esip:startDate "2000-01-01"^^xsd:date ;
+    esip:westBound "-178.217598"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:08e8d1de-f0ac-4ba3-b98f-4606d9a740cb> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-08-06T16:53:31.91Z" ;
+    bcube:lastUpdated "2015-08-06T16:53:31.91Z" ;
+    bcube:originatedFrom <urn:uuid:9c689413-803a-454d-84b9-41529cd55446> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:045ac50c-199b-47f0-a966-d335a916cd51> .
+
+<urn:uuid:2b708dcf-7045-4d26-b6c4-6dc404f52515> bcube:hasType "place" ;
+    bcube:hasValue "Census Block Groups",
+        "Coastal States",
+        "United States" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:4da6535f-e879-4b6f-8e6b-bfd48cc815f8> dcterms:references <urn:uuid:b62da463-5ddb-434c-8a2d-535b99abebaf> ;
+    owl:a bibo:WebPage .
+
+<urn:uuid:6d7e8cdc-fc71-4bd1-ab3a-3c7358adfd8f> owl:a foaf:Organization ;
+    foaf:name "Hazards and Vulnerability Research Institute (HVRI), University of South Carolina" .
+
+<urn:uuid:9c689413-803a-454d-84b9-41529cd55446> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-06T16:53:31.91Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-06T16:53:31.91Z" ;
+    dc:identifier "urn:sha:087b9f84cfc482ce25b02d352dcbb4e47013fdc06b63b37095bc412a" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://coast.noaa.gov/data/Documents/Metadata/Demographic/harvest/SOVI_BlkGrp_2000_RI_shp.xml" .
+
+<urn:uuid:b62da463-5ddb-434c-8a2d-535b99abebaf> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-06T16:53:31.91Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-06T16:53:31.91Z" ;
+    dc:identifier "urn:sha:30cf345e633e286b856e2d494158a7a0073272646fff2597a42435eb" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www.coast.noaa.gov/digitalcoast/data/SoVI/" .
+
+<urn:uuid:bce8a1f4-2a0e-4279-9b8e-53f920aa14c5> bcube:hasType "theme" ;
+    bcube:hasValue "economy",
+        "environment",
+        "oceans",
+        "society",
+        "structure",
+        "transportation" ;
+    dc:partOf "ISO 19115 Topic Category" ;
+    owl:a bcube:thesaurusSubset .
+

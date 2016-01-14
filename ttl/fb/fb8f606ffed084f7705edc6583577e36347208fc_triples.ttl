@@ -1,0 +1,101 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:0e287a73-67d6-47d5-9155-93a256aac88f> bcube:hasValue "geoscientificInformation" ;
+    dc:partOf "IsoTopicCategories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:5c8c3470-85e4-46f3-b73e-08e5f06853af> bcube:hasType "project" ;
+    bcube:hasValue "University of Hawaii" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:6ff11e10-0b9f-462d-937c-f4658a741b2c> a "ISO 19115:2003/19139" ;
+    bcube:dateCreated "2015-07-18T12:58:12.637Z" ;
+    bcube:lastUpdated "2015-07-18T12:58:12.637Z" ;
+    bcube:originatedFrom <urn:uuid:86564f08-7634-4f65-a4d1-8f0d22cd6304> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:80b3a695-bace-46e4-8240-5b45a8768372> .
+
+<urn:uuid:80b3a695-bace-46e4-8240-5b45a8768372> bcube:dateCreated "2015-07-18T12:58:12.637Z" ;
+    bcube:hasMetadataRecord <urn:uuid:6ff11e10-0b9f-462d-937c-f4658a741b2c> ;
+    bcube:lastUpdated "2015-07-18T12:58:12.637Z" ;
+    dc:conformsTo <urn:uuid:0e287a73-67d6-47d5-9155-93a256aac88f>,
+        <urn:uuid:5c8c3470-85e4-46f3-b73e-08e5f06853af>,
+        <urn:uuid:98146a53-91e5-4e0c-ae85-a813a23de33b>,
+        <urn:uuid:e68b7caf-963a-46eb-a318-30366dc94e5b> ;
+    dc:description "The University of Hawaii's ALOHA (\"A Long-term Oligotrophic Habitat Assessment\") Cabled Observatory (ACO) is located 100 km north of the island of Oahu, Hawaii (22 45'N, 158W) in the North Pacific Ocean. It provides real-time oceanographic observations from a depth of about 4,800 m via a submarine fiber optic cable that comes ashore at Makaha on Oahu. This data set provides measurements of ocean current velocity at the ACO from a 250 kHz SonTek acoustic doppler current profiler (ADCP) at 1.83 m above the ocean bottom. Velocities are flagged bad if the amplitude is excessively low or high. An amplitude is high if it exceeds the average of the ping before and the ping after by 20 counts. An amplitude is low if less than 6 counts. After this the velocities are flagged bad if the absolute deviation of the vertical velocity from its ensemble median exceeds 0.15 m/s or if its value is less than -0.25 m/s." ;
+    dc:identifier "aco_adcp_vel" ;
+    dc:spatial "POLYGON ((-158.0062 22.7387,-158.0062 22.7387,-158.0062 22.7387,-158.0062 22.7387,-158.0062 22.7387))" ;
+    dcterms:references <urn:uuid:84af372c-33a8-4d89-beb4-2a38e49deb00>,
+        <urn:uuid:ed65507d-4178-416f-8974-190260ed2f2b> ;
+    dcterms:title "ALOHA Cabled Observatory (ACO): Acoustic Doppler Current Profiler (ADCP): Velocity" ;
+    esip:eastBound "-158.0062"^^xsd:float ;
+    esip:endDate "2015-07-18"^^xsd:date ;
+    esip:northBound "22.7387"^^xsd:float ;
+    esip:southBound "22.7387"^^xsd:float ;
+    esip:startDate "2011-06-22"^^xsd:date ;
+    esip:westBound "-158.0062"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:84af372c-33a8-4d89-beb4-2a38e49deb00> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-07-18T12:58:12.637Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-07-18T12:58:12.637Z" ;
+    dc:identifier "urn:sha:d0eb641e7ada6faa41034810b27b56daaf7fff0e20c81363e7bedd2d" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://oos.soest.hawaii.edu/erddap/tabledap/aco_adcp_vel.html" .
+
+<urn:uuid:86564f08-7634-4f65-a4d1-8f0d22cd6304> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-07-18T12:58:12.637Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-07-18T12:58:12.637Z" ;
+    dc:identifier "urn:sha:00ca8a6c6ee90e10fca99171f3cccc07137f8c855bcb5d2809df866e" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://oos.soest.hawaii.edu/erddap/tabledap/aco_adcp_vel.iso19115" .
+
+<urn:uuid:98146a53-91e5-4e0c-ae85-a813a23de33b> bcube:hasType "theme" ;
+    bcube:hasValue "Earth science",
+        "oceans" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:e68b7caf-963a-46eb-a318-30366dc94e5b> bcube:hasType "theme" ;
+    bcube:hasValue "depth",
+        "eastward_sea_water_velocity",
+        "latitude",
+        "longitude",
+        "northward_sea_water_velocity",
+        "time" ;
+    dc:partOf "CF" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:ed65507d-4178-416f-8974-190260ed2f2b> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-07-18T12:58:12.637Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-07-18T12:58:12.637Z" ;
+    dc:identifier "urn:sha:34524a3a274b514536d810e3b7fca9903bdb03f4b5fb5a7ae95005af" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://oos.soest.hawaii.edu/erddap/tabledap/aco_adcp_vel.graph" .
+

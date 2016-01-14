@@ -1,0 +1,76 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:939b664c-ed02-46e9-9f36-52570f749158> bcube:hasType "place" ;
+    bcube:hasValue "Gulf of Mexico",
+        "Louisiana",
+        "Texas" ;
+    dc:partOf "none" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:9c5ce3a5-2a12-4aee-8d26-e939bc724f53> bcube:hasType "theme" ;
+    bcube:hasValue "Geophysical",
+        "drift buoy",
+        "ocean currents" ;
+    dc:partOf "none" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:a0e91378-1d42-4011-9ca7-ce17710956f9> bcube:dateCreated "2015-08-06T16:43:35.798Z" ;
+    bcube:hasMetadataRecord <urn:uuid:a9a17662-d35e-48c6-b821-07288c34c298> ;
+    bcube:lastUpdated "2015-08-06T16:43:35.798Z" ;
+    dc:conformsTo <urn:uuid:939b664c-ed02-46e9-9f36-52570f749158>,
+        <urn:uuid:9c5ce3a5-2a12-4aee-8d26-e939bc724f53> ;
+    dc:description "This is one data set of a data package consisting of thirteen point data sets that have as attributes the direction and velocity of ocean currents in the western Gulf of Mexico as determined by drift buoys from June 1993 to June 1994. The data are summarized by quarter degree cells and represent the time weighted average of drift direction and velocity for all drift buoys that entered the cell during the summary time period. Twelve of the data sets are one month averages, one data set is a one year average from all the months. These spatial extent, object count and range attribute metadata items apply in particular to the one-year average data set, however the general characteristics of the dataset (coordinate system, attributes and attribute definitions) apply to all thirteen." ;
+    dc:spatial "POLYGON ((-97.625 21.875,-97.625 29.375,-91.625 29.375,-91.625 21.875,-97.625 21.875))" ;
+    dcterms:references <urn:uuid:f7aa25f5-7073-4469-9f68-3a260560dfbd> ;
+    dcterms:title "Western Gulf of Mexico March 1994 Ocean Currents, Geographic NAD83, MMS (1999) [ocean_currents_wgom_Mar_MMS_1994]" ;
+    esip:eastBound "-91.625"^^xsd:float ;
+    esip:endDate "1994-06-19"^^xsd:date ;
+    esip:northBound "29.375"^^xsd:float ;
+    esip:southBound "21.875"^^xsd:float ;
+    esip:startDate "1993-06-14"^^xsd:date ;
+    esip:westBound "-97.625"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:a9a17662-d35e-48c6-b821-07288c34c298> a "ISO 19115:2003/19139" ;
+    bcube:dateCreated "2015-08-06T16:43:35.798Z" ;
+    bcube:lastUpdated "2015-08-06T16:43:35.798Z" ;
+    bcube:originatedFrom <urn:uuid:c77876af-b066-4e90-9c55-a169b215fced> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:a0e91378-1d42-4011-9ca7-ce17710956f9> .
+
+<urn:uuid:c77876af-b066-4e90-9c55-a169b215fced> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-06T16:43:35.798Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-06T16:43:35.798Z" ;
+    dc:identifier "urn:sha:2c830813cdba9df27821abf20987e9a966db2b5f9b1ebe2487b61084" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "https://catalog.data.gov/harvest/object/a078ea8c-bc9d-46d1-a983-7e09ad9a301e" .
+
+<urn:uuid:f7aa25f5-7073-4469-9f68-3a260560dfbd> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-06T16:43:35.798Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-06T16:43:35.798Z" ;
+    dc:identifier "urn:sha:f7033329d30267e5273036aa1c2bc23e70cb1f2df14db06cbc147672" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://lagic.lsu.edu/data/losco/ocean_currents_wgom_Mar_MMS_1994.zip" .
+

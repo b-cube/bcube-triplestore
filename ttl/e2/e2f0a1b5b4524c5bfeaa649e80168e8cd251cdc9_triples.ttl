@@ -1,0 +1,80 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:34d5cf05-e4b3-4869-9e00-d0f60f169daa> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-02T07:15:39.39Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-02T07:15:39.39Z" ;
+    dc:identifier "urn:sha:59008d6e32eb10bd4a276e1494ba28970775708f074bca9f9e37f382" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "https://inport.nmfs.noaa.gov/inport/item/17349/fgdc" .
+
+<urn:uuid:445e3926-3305-4b11-a2a8-708ea7587635> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-02T07:15:39.39Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-02T07:15:39.39Z" ;
+    dc:identifier "urn:sha:7072e55cf7f8f71e64ac454fd2cb87238e95231df8fad4c726549a51" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "https://webmap.afsc.noaa.gov/maps/rest/services/pep_public/akpvpolys/FeatureServer" .
+
+<urn:uuid:4770d61d-dbbe-4d00-9453-929d24953502> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-11-02T07:15:39.39Z" ;
+    bcube:lastUpdated "2015-11-02T07:15:39.39Z" ;
+    bcube:originatedFrom <urn:uuid:34d5cf05-e4b3-4869-9e00-d0f60f169daa> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:deadb721-16e2-4b9e-ab87-4ce5cd3184b9> .
+
+<urn:uuid:974a2f47-226c-4479-a668-3e10c05e5b02> bcube:hasType "place" ;
+    bcube:hasValue "Alaska",
+        "coastal",
+        "intertidal" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:d507d6ab-26a9-4ca6-bd06-9955c5e9012b> bcube:hasType "theme" ;
+    bcube:hasValue "abundance",
+        "aerial survey",
+        "harbor seal" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:d9eb23e1-19ae-43bb-9bf7-5e995d4a0508> owl:a foaf:Organization ;
+    foaf:name "" .
+
+<urn:uuid:deadb721-16e2-4b9e-ab87-4ce5cd3184b9> bcube:dateCreated "2015-11-02T07:15:39.39Z" ;
+    bcube:hasMetadataRecord <urn:uuid:4770d61d-dbbe-4d00-9453-929d24953502> ;
+    bcube:lastUpdated "2015-11-02T07:15:39.39Z" ;
+    dc:conformsTo <urn:uuid:974a2f47-226c-4479-a668-3e10c05e5b02>,
+        <urn:uuid:d507d6ab-26a9-4ca6-bd06-9955c5e9012b> ;
+    dc:description "Aerial surveys of coastal Alaska are the primary method for estimating abundance of harbor seals. A particular challenge associated with aerial surveys of harbor seals is maintaining consistent spatial representation of haulout locations. In some cases, seals aggregate into a single large grouping at a particular area. In other cases, seals aggregate into several smaller groups spread over a particular area. To establish geo-spatial consistency, the Alaska Fisheries Science Center developed coastal survey units (spatial polygons) throughout the distriubtion of harbor seals in Alaska. Each survey unit was designed to be approximately 10-15 kilometers in coastal length, to faciliate efficient aerial surveys, and to aggregate known harbor seal haulout locations. Each survey unit was assigned a unique alphanumeric identifier and the spatial data are provided in the geographic (epsg:4326) coordinate reference system. The survey units form the spatial foundation for estimation of harbor seal abundance and trend." ;
+    dc:spatial "POLYGON ((172 51,172.0 61.5,-130.0 61.5,-130 51,172 51))" ;
+    dcterms:identifier "gov.noaa.nmfs.inport:17349" ;
+    dcterms:publisher <urn:uuid:d9eb23e1-19ae-43bb-9bf7-5e995d4a0508> ;
+    dcterms:references <urn:uuid:445e3926-3305-4b11-a2a8-708ea7587635> ;
+    dcterms:title "Aerial Survey Units for Harbor Seals in Coastal Alaska" ;
+    esip:eastBound "-130.0"^^xsd:float ;
+    esip:northBound "61.5"^^xsd:float ;
+    esip:southBound "51.0"^^xsd:float ;
+    esip:startDate "2015-01-01"^^xsd:date ;
+    esip:westBound "172.0"^^xsd:float ;
+    owl:a dcat:Dataset .
+

@@ -1,0 +1,62 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:10463fba-8e5d-4638-bb98-1ebfd75a9b80> bcube:hasValue "Downscaling",
+        "Global Climate Model",
+        "Idaho EPSCoR",
+        "MACA",
+        "Precipitation",
+        "Treasure Valley" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:9d728eec-444f-448d-a93e-a8381c218b70> bcube:hasValue "climatologyMeteorologyAtmosphere",
+        "environment" ;
+    dc:partOf "IsoTopicCategories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:dab9b6ea-32b1-4884-9d0a-0386a465ff4e> bcube:dateCreated "2015-08-08T04:56:57.416Z" ;
+    bcube:hasMetadataRecord <urn:uuid:fa28ae38-aabd-40af-8c0f-59ef301fb82f> ;
+    bcube:lastUpdated "2015-08-08T04:56:57.416Z" ;
+    dc:conformsTo <urn:uuid:10463fba-8e5d-4638-bb98-1ebfd75a9b80>,
+        <urn:uuid:9d728eec-444f-448d-a93e-a8381c218b70> ;
+    dc:description "Multivariate Adaptive Constructed Analogs(MACA)Statistical Downscaling Method has been used to downscale the model output from 14 global climate models (GCMs) of the Coupled Intermodel Comparison Project 5 (CMIP5) to 4-km resolution for the historical GCM forcings (1950-2005) and the future Representative Concentration Pathways (rcp's) rcp 45/85 scenarios (2006-2100). This is the subset of the daily precipitation data for the Treasure Valley region from 2006-2015. The GCM model used is CNRM-CM5 (France). The spatial resolution is maintained to 4 km. The data format is NETCDF-4. The rcp is 45." ;
+    dc:spatial "POLYGON ((-117.0625 43.9375,-117.0625 43.1875,-115.8125 43.1875,-115.8125 43.9375,-117.0625 43.9375))" ;
+    dcterms:title "CMIP5 precipitation data statistically downscaled for the Treasure Valley" ;
+    esip:eastBound "-115.8125"^^xsd:float ;
+    esip:endDate "2015-12-31"^^xsd:date ;
+    esip:northBound "43.1875"^^xsd:float ;
+    esip:southBound "43.9375"^^xsd:float ;
+    esip:startDate "2006-01-01"^^xsd:date ;
+    esip:westBound "-117.0625"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:e8bcda9b-3fd8-464f-983e-22392b8f0d64> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-08T04:56:57.416Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-08T04:56:57.416Z" ;
+    dc:identifier "urn:sha:f0930006f3bebb312035ef46aec830652765025ed742bafa5abf4b21" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://data.boisestate.edu/opendap/data/MILES/CMIP5_TV.xml" .
+
+<urn:uuid:fa28ae38-aabd-40af-8c0f-59ef301fb82f> a "ISO 19115:2003/19139" ;
+    bcube:dateCreated "2015-08-08T04:56:57.416Z" ;
+    bcube:lastUpdated "2015-08-08T04:56:57.416Z" ;
+    bcube:originatedFrom <urn:uuid:e8bcda9b-3fd8-464f-983e-22392b8f0d64> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:dab9b6ea-32b1-4884-9d0a-0386a465ff4e> .
+

@@ -1,0 +1,89 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:31eca032-c9a6-4813-8241-aa82ea57603b> bcube:hasType "theme" ;
+    bcube:hasValue "InlandWaters" ;
+    dc:partOf "ISO 19115 Topic Categories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:365a3b8b-72ec-497a-84d0-9e9169092d93> bcube:hasType "theme" ;
+    bcube:hasValue "County or equivalent entity",
+        "Feature",
+        "Hydrography",
+        "Linear" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:4015fe22-2e18-419d-b808-62ac321fcb67> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-04T22:04:25.229Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-04T22:04:25.229Z" ;
+    dc:identifier "urn:sha:b24f90cac22b6f6ef98f5ecd71865c4bec19e9fdfaee4fca7b25c9c0" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://meta.geo.census.gov/data/existing/decennial/GEO/GPMB/TIGERline/TL2012/FGDC/linearwater/tl_2012_02130_linearwater.shp.xml" .
+
+<urn:uuid:9dedb028-6fb0-47a3-a092-30f2e184a390> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-11-04T22:04:25.229Z" ;
+    bcube:lastUpdated "2015-11-04T22:04:25.229Z" ;
+    bcube:originatedFrom <urn:uuid:4015fe22-2e18-419d-b808-62ac321fcb67> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:b8bf5ad1-b1aa-4b71-9cc5-deb124aae8eb> .
+
+<urn:uuid:b8bf5ad1-b1aa-4b71-9cc5-deb124aae8eb> bcube:dateCreated "2015-11-04T22:04:25.229Z" ;
+    bcube:hasMetadataRecord <urn:uuid:9dedb028-6fb0-47a3-a092-30f2e184a390> ;
+    bcube:lastUpdated "2015-11-04T22:04:25.229Z" ;
+    dc:conformsTo <urn:uuid:31eca032-c9a6-4813-8241-aa82ea57603b>,
+        <urn:uuid:365a3b8b-72ec-497a-84d0-9e9169092d93>,
+        <urn:uuid:be8447ad-2846-493c-907e-e54ba32c1c52> ;
+    dc:description "The TIGER/Line shapefiles and related database files (.dbf) are an extract of selected geographic and cartographic information from the U.S. Census Bureau's Master Address File / Topologically Integrated Geographic Encoding and Referencing (MAF/TIGER) Database (MTDB). The MTDB represents a seamless national file with no overlaps or gaps between parts, however, each TIGER/Line shapefile is designed to stand alone as an independent data set, or they can be combined to cover the entire nation. Linear Water Features includes single-line drainage water features and artificial path features that run through double-line drainage features such as rivers and streams, and serve as a linear representation of these features. The artificial path features may correspond to those in the USGS National Hydrographic Dataset (NHD). However, in many cases the features do not match NHD equivalent feature and will not carry the NHD metadata codes. These features have a MAF/TIGER Feature Classification Code (MTFCC) beginning with an \"H\" to indicate the super class of Hydrographic Features." ;
+    dc:spatial "POLYGON ((-132.268057 54.687043,-132.268057 56.407375,-129.979511 56.407375,-129.979511 54.687043,-132.268057 54.687043))" ;
+    dcterms:publisher <urn:uuid:eaeb16bf-c969-4d88-a632-b3ddd60a397b> ;
+    dcterms:references <urn:uuid:ce966a74-8643-4962-9c96-290d5931e0c6> ;
+    dcterms:title "TIGER/Line Shapefile, 2012, county, Ketchikan Gateway Borough, AK, Linear Hydrography County-based Shapefile" ;
+    esip:eastBound "-129.979511"^^xsd:float ;
+    esip:endDate "2012-06-01"^^xsd:date ;
+    esip:northBound "56.407375"^^xsd:float ;
+    esip:southBound "54.687043"^^xsd:float ;
+    esip:startDate "2011-08-01"^^xsd:date ;
+    esip:westBound "-132.268057"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:be8447ad-2846-493c-907e-e54ba32c1c52> bcube:hasType "place" ;
+    bcube:hasValue "02130",
+        "County or Equivalent Entity",
+        "Ketchikan Gateway",
+        "U.S.",
+        "United States" ;
+    dc:partOf "ANSI INCITS 38:2009 (Formerly FIPS 5-2), ANSI INCITS 31:2009 (Formerly FIPS 6-4),ANSI INCITS 454:2009 (Formerly FIPS 8-6), ANSI INCITS 455:2009(Formerly FIPS 9-1), ANSI INCITS 446:2008 (Geographic Names Information System (GNIS))" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:ce966a74-8643-4962-9c96-290d5931e0c6> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-04T22:04:25.229Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-04T22:04:25.229Z" ;
+    dc:identifier "urn:sha:6f367a5dceb11a2335c180d0434355ade94f4b4321d21aab39ab5e04" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www2.census.gov/geo/tiger/TIGER2012/LINEARWATER/tl_2012_02130_linearwater.zip" .
+
+<urn:uuid:eaeb16bf-c969-4d88-a632-b3ddd60a397b> owl:a foaf:Organization ;
+    foaf:name "" .
+

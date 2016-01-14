@@ -1,0 +1,113 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:236fafac-fb9e-4b94-a1fc-329503ebb984> owl:a foaf:Organization ;
+    foaf:name "U.S. Geological Survey" .
+
+<urn:uuid:2c8a0744-7f31-4efa-94e0-cbc586050393> bcube:dateCreated "2015-08-11T10:43:48.705Z" ;
+    bcube:hasMetadataRecord <urn:uuid:776ffb00-465f-4faf-9f28-83e83e7f506c> ;
+    bcube:lastUpdated "2015-08-11T10:43:48.705Z" ;
+    dc:conformsTo <urn:uuid:35e79855-f07f-48a5-a1c2-184c95948a23>,
+        <urn:uuid:719efd20-4be0-4411-856b-337076bccde3>,
+        <urn:uuid:e7d26cb8-9266-41dd-9e13-42bbec11f071> ;
+    dc:description "This data set represents the extent of the Arbuckle-Simpson aquifer in Oklahoma." ;
+    dc:spatial "POLYGON ((-97.385819 34.23906,-97.385819 34.729759,-96.483955 34.729759,-96.483955 34.23906,-97.385819 34.23906))" ;
+    dcterms:publisher <urn:uuid:236fafac-fb9e-4b94-a1fc-329503ebb984> ;
+    dcterms:references <urn:uuid:8a62a88d-cd9e-4603-a28a-454c45909c8e>,
+        <urn:uuid:aeb47e36-0733-457a-bd45-cd4aedabd31c>,
+        <urn:uuid:de18c367-08a9-4d73-94b1-3ac95cac33f2> ;
+    dcterms:title "Arbuckle-Simpson aquifer" ;
+    esip:eastBound "-96.483955"^^xsd:float ;
+    esip:northBound "34.729759"^^xsd:float ;
+    esip:southBound "34.23906"^^xsd:float ;
+    esip:startDate "1996-01-01"^^xsd:date ;
+    esip:westBound "-97.385819"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:35e79855-f07f-48a5-a1c2-184c95948a23> bcube:hasType "theme" ;
+    bcube:hasValue "aquifer",
+        "extent",
+        "groundwater",
+        "inland waters" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:719efd20-4be0-4411-856b-337076bccde3> bcube:hasType "place" ;
+    bcube:hasValue "Central",
+        "Oklahoma",
+        "United States" ;
+    dc:partOf "none" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:776ffb00-465f-4faf-9f28-83e83e7f506c> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-08-11T10:43:48.705Z" ;
+    bcube:lastUpdated "2015-08-11T10:43:48.705Z" ;
+    bcube:originatedFrom <urn:uuid:8e114dde-048d-46a2-aedc-ca383e2137ac> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:2c8a0744-7f31-4efa-94e0-cbc586050393> .
+
+<urn:uuid:8a62a88d-cd9e-4603-a28a-454c45909c8e> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-11T10:43:48.705Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-11T10:43:48.705Z" ;
+    dc:identifier "urn:sha:431e418f7cadb3821759caee6492e6ccf224228db1a26bac48fedef4" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://water.usgs.gov/GIS/dsdl/arbuckle-simpson_shp.zip" .
+
+<urn:uuid:8e114dde-048d-46a2-aedc-ca383e2137ac> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-11T10:43:48.705Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-11T10:43:48.705Z" ;
+    dc:identifier "urn:sha:bd5038b9d325b53d6b999e749d8294fcf349e3876b209555180aa0cb" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://water.usgs.gov/lookup/getspatial?arbuckle-simpson_aquifer" .
+
+<urn:uuid:aeb47e36-0733-457a-bd45-cd4aedabd31c> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-11T10:43:48.705Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-11T10:43:48.705Z" ;
+    dc:identifier "urn:sha:33c4fa13a33a8186c5a9d72b45115a2ae464679470a657c6b2ffca2b" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://water.usgs.gov/GIS/dsdl/arbsim_cov.zip" .
+
+<urn:uuid:de18c367-08a9-4d73-94b1-3ac95cac33f2> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-11T10:43:48.705Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-11T10:43:48.705Z" ;
+    dc:identifier "urn:sha:08bab173eff210ec1db96f87a28b222d5210ceb65742f112062a0614" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://water.usgs.gov/GIS/dsdl/arbuckle-simpson_gdb.zip" .
+
+<urn:uuid:e7d26cb8-9266-41dd-9e13-42bbec11f071> bcube:hasType "theme" ;
+    bcube:hasValue "geoscientificInformation",
+        "inland waters" ;
+    dc:partOf "ISO 19115 Topic Category" ;
+    owl:a bcube:thesaurusSubset .
+

@@ -1,0 +1,72 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:710a0525-6f5e-4d6c-823d-e3c34e5499f5> bcube:dateCreated "2015-10-16T21:43:15.422Z" ;
+    bcube:hasMetadataRecord <urn:uuid:cafe9a16-cdd4-4375-bceb-0671edaf31b3> ;
+    bcube:lastUpdated "2015-10-16T21:43:15.422Z" ;
+    dc:conformsTo <urn:uuid:9bcf6ce2-209d-4514-a955-c84d3f817e04>,
+        <urn:uuid:a51f63f0-88b7-403f-9f21-43dab7debb95>,
+        <urn:uuid:c98d3cd9-f22a-4c36-98b7-639f5c2c25f6> ;
+    dc:description "This dataset contains National Geodetic Survey (NGS) High-Accuracy Reference Network (HARN) points commonly used by the Public Works survey group." ;
+    dc:spatial "POLYGON ((-105.091578 39.568104,-105.091578 39.914285,-104.621007 39.914285,-104.621007 39.568104,-105.091578 39.568104))" ;
+    dcterms:publisher <urn:uuid:e83f0349-250d-4e24-9ac1-817c97423dd1> ;
+    dcterms:title "NGS HARN POINTS" ;
+    esip:eastBound "-104.621007"^^xsd:float ;
+    esip:northBound "39.914285"^^xsd:float ;
+    esip:southBound "39.568104"^^xsd:float ;
+    esip:westBound "-105.091578"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:9bcf6ce2-209d-4514-a955-c84d3f817e04> bcube:hasType "place" ;
+    bcube:hasValue "Colorado",
+        "Denver",
+        "Denver County",
+        "USA" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:a51f63f0-88b7-403f-9f21-43dab7debb95> bcube:hasType "theme" ;
+    bcube:hasValue "survey" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:c98d3cd9-f22a-4c36-98b7-639f5c2c25f6> bcube:hasType "theme" ;
+    bcube:hasValue "elevation",
+        "location",
+        "planningCadastre" ;
+    dc:partOf "ISO 19115 Topic Categories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:cafe9a16-cdd4-4375-bceb-0671edaf31b3> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-10-16T21:43:15.422Z" ;
+    bcube:lastUpdated "2015-10-16T21:43:15.422Z" ;
+    bcube:originatedFrom <urn:uuid:f3c7dc1b-82cb-4a65-9b46-8b0b7633a769> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:710a0525-6f5e-4d6c-823d-e3c34e5499f5> .
+
+<urn:uuid:e83f0349-250d-4e24-9ac1-817c97423dd1> owl:a foaf:Organization ;
+    foaf:name "" .
+
+<urn:uuid:f3c7dc1b-82cb-4a65-9b46-8b0b7633a769> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-10-16T21:43:15.422Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-10-16T21:43:15.422Z" ;
+    dc:identifier "urn:sha:0ff01146659e213fcdb0344c03b73ff8920a4f3718f9834efb7c22c7" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://data.denvergov.org/download/gis/ngs_harn_points/metadata/ngs_harn_points.xml" .
+

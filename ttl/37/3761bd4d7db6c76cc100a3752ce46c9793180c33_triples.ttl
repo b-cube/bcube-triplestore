@@ -1,0 +1,74 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:03751c41-dd4a-4964-979e-9665ab7240d3> bcube:hasType "theme" ;
+    bcube:hasValue "Flow",
+        "Hydrography",
+        "Hydrology",
+        "Map",
+        "RF1",
+        "Reach File",
+        "Reach File Version 1.0",
+        "Stream",
+        "Stream Names",
+        "Velocity",
+        "inlandWaters" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:1450534f-1830-4ee2-bb6d-b2bb697f7625> bcube:dateCreated "2015-03-06T04:56:05.69Z" ;
+    bcube:hasMetadataRecord <urn:uuid:d3cfc40b-6693-4abe-8a0d-316ded4b6303> ;
+    bcube:lastUpdated "2015-03-06T04:56:05.69Z" ;
+    dc:conformsTo <urn:uuid:03751c41-dd4a-4964-979e-9665ab7240d3> ;
+    dc:description "Reach File Version 1.0 (RF1) is a vector database of approximately 700,000 miles of streams and open waters in the conterminous United States. It is used extensively by EPA and States,and has been used by the U.S. Fish and Wildlife Service and the National Weather Service for many years. This configuration of RF1 for the geographic information systems community, extends the use of RF1 to ARC/INFO users in the U.S.Geological Survey, the U.S. Environmental Protection Agency and others. RF1 was prepared by the U.S. Environmental Protection Agency (EPA) in 1982 from stable base color separates of National Oceanographic and Aeronautical Administration (NOAA) aeronautical charts having a scale of 1:500,000. These charts provided the best nationwide hydrographic coverage available on a single scale at that time. They included all hydrography shown on USGS maps having a scale of 1:250,000 with extensive additions, corrections and improvements in detail made by NOAA from aerial photography and satellite imagery. All hydrographic features on those charts were optically scanned from the color separates using a scanner resolution finer than feature line width. The surface water features selected for inclusion in the RF1 database were converted from the scanned raster form to vector form with coordinates expressed as latitude and longitude. Surface water names in RF1 were derived from the source maps and supplemented by names from miscellaneous state maps and maps of the USGS. Many other RF1 attributes are described herein. In the 1980's, RF1 was used by EPA for performing water quality modeling on whole river basins for all of the hydrologic regions in the conterminous United States. In this role, it was used to provide national assessments and overviews of water quality and to provide the foundation for a nationwide stratified sampling frame for performing statistical summaries of modeled and measured water quality on all the surface waters of the 48 States. In the 1980's, environmental data integration was strengthened significantly by EPA using the Reach File. Whereas, STORET had, for many years, integrated the water quality monitoring data of EPA, States, the USGS, and other Federal agencies by agency codes, standard water quality parameter codes, date, time, depth, site coordinates, state, basin, and user-definable polygons, the Reach File provided STORET with the capability to search upstream and downstream to relate the environmental data of many agencies to each other along stream paths. This brought about the ability to integrate ambient water quality at sites sampled by the several hundred official monitoring agencies using STORET in a new and powerful manner. Thus, for example, any and all water quality measurements made by the USGS and stored in WATSTORE were easily accessed via STORET prior to the introduction of the Reach File, but with the Reach File, it became possible to integrate the data from USGS WATSTORE records with the much larger holdings of environmental data from EPA, States and other Federal agencies on a station-by-station basis along stream paths. Stream ordered data integration of this type was important in the development of effluent guidelines pursuant to the Clean Water Act during the 1980's, and is but one example of the new dimension in data integration made possible by the standard reach numbering scheme and the hydrologic networking provided in RF1. Linking multiple databases to RF1 and hence to each other, was accomplished by a process called reach indexing. The process takes advantage of the facts that each reach has been assigned a unique identifier and the stream path for each reach is described in terms of latitude/longitude coordinates. Using simple algebraic processing, each lat/lon point for every point of interest in a database is indexed to the closest point in the nearest RF1 reach. The unique reach number for that reach and its relative position, prorated against the full computed reach length, is placed in the database being reach indexed. From then on, access to all points that have been reach indexed in that indexed database, may be achieved in hydrological order by navigating upstream or downstream through RF1, picking up reach numbers in hydrological order from RF1 and retrieving the points of interest, if present, from the indexed database by reach numbers as the reaches are encountered in the navigation of RF1." ;
+    dc:spatial "POLYGON ((-123.7196 21.9543,-123.7196 46.559,-56.9772 46.559,-56.9772 21.9543,-123.7196 21.9543))" ;
+    dcterms:references <urn:uuid:610765c0-75a7-4550-a77b-62088741e036> ;
+    dcterms:title "U.S. EPA River Reach File Version 1.0" ;
+    esip:eastBound "-56.9772"^^xsd:float ;
+    esip:northBound "46.559"^^xsd:float ;
+    esip:southBound "21.9543"^^xsd:float ;
+    esip:westBound "-123.7196"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:610765c0-75a7-4550-a77b-62088741e036> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-03-06T04:56:05.69Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-03-06T04:56:05.69Z" ;
+    dc:identifier "urn:sha:c36b95020e42e8299f5cecfc70e189dfffe3e9557e4f9cce4e916374" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www.KansasGIS.org" .
+
+<urn:uuid:d3cfc40b-6693-4abe-8a0d-316ded4b6303> a "ISO 19115:2003/19139" ;
+    bcube:dateCreated "2015-03-06T04:56:05.69Z" ;
+    bcube:lastUpdated "2015-03-06T04:56:05.69Z" ;
+    bcube:originatedFrom <urn:uuid:ee341579-5cf3-44f6-a47b-974f808a6281> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:1450534f-1830-4ee2-bb6d-b2bb697f7625> .
+
+<urn:uuid:ee341579-5cf3-44f6-a47b-974f808a6281> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-03-06T04:56:05.69Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-03-06T04:56:05.69Z" ;
+    dc:identifier "urn:sha:8f58218ba5a46c377e667933451c4757602d823bc0a1cdaede984fbd" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://catalog.data.gov/harvest/object/d952aa24-145f-4f56-b10f-ace459ab0f3c" .
+

@@ -1,0 +1,89 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:0fb8eb46-1dfb-40a9-ba05-4f9a8db9ed4c> bcube:hasType "theme" ;
+    bcube:hasValue "continental margins" ;
+    dc:partOf "Alexandria Digital Library Feature Type Thesaurus" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:662d28b0-077f-47cf-a188-27079e785483> bcube:hasType "place" ;
+    bcube:hasValue "fOC10 = Arctic" ;
+    dc:partOf "Augmented FIPS 10-4 and FIPS 6-4" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:68c7cb12-0064-4bf9-84ef-cb7d3114dd2d> bcube:hasType "theme" ;
+    bcube:hasValue "animal behavior",
+        "mammalogy",
+        "mammals",
+        "marine ecosystems",
+        "sea ice concentration",
+        "telemetry",
+        "wildlife biology" ;
+    dc:partOf "USGS Thesaurus" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:923d34e5-df96-4ab7-be24-d50bb34a1834> dcterms:references <urn:uuid:e4b4b4df-355a-4419-9672-fa4b7dfcfd29> ;
+    owl:a bibo:WebPage .
+
+<urn:uuid:94be030a-2f11-43b0-a050-4af9b0678dad> owl:a foaf:Organization ;
+    foaf:name "U.S. Geological Survey" .
+
+<urn:uuid:b8dcf4f7-5f83-4e93-9b88-1ecfd38989a7> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2014-10-30T01:06:34.833Z" ;
+    bcube:lastUpdated "2014-10-30T01:06:34.833Z" ;
+    bcube:originatedFrom <urn:uuid:d710f0b5-7e3c-4e19-8604-7be3ff14231c> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:ecd4f4d1-dbdf-4b76-9d91-ce83d897042b> .
+
+<urn:uuid:d710f0b5-7e3c-4e19-8604-7be3ff14231c> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2014-10-30T01:06:34.833Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2014-10-30T01:06:34.833Z" ;
+    dc:identifier "urn:sha:3b5510c7898301808c04dd29a7f5bae49ce0b2832dbd60a7a63c7c0b" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www.usgs.gov/science/xml.php?cite=2277" .
+
+<urn:uuid:e4b4b4df-355a-4419-9672-fa4b7dfcfd29> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2014-10-30T01:06:34.833Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2014-10-30T01:06:34.833Z" ;
+    dc:identifier "urn:sha:b168a977a6ca58e0f6c0f3d30b0946bb61856d492c677c495c922205" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://pubs.usgs.gov/fs/2008/3041/" .
+
+<urn:uuid:ecd4f4d1-dbdf-4b76-9d91-ce83d897042b> bcube:dateCreated "2014-10-30T01:06:34.833Z" ;
+    bcube:hasMetadataRecord <urn:uuid:b8dcf4f7-5f83-4e93-9b88-1ecfd38989a7> ;
+    bcube:lastUpdated "2014-10-30T01:06:34.833Z" ;
+    dc:conformsTo <urn:uuid:0fb8eb46-1dfb-40a9-ba05-4f9a8db9ed4c>,
+        <urn:uuid:662d28b0-077f-47cf-a188-27079e785483>,
+        <urn:uuid:68c7cb12-0064-4bf9-84ef-cb7d3114dd2d> ;
+    dc:description "Radio-tracking indicates that walruses will exploit sparse ice to maintain access to preferred foraging areas over the continental shelf." ;
+    dc:spatial "POLYGON ((130 55,130 85,-120 85,-120 55,130 55))" ;
+    dcterms:publisher <urn:uuid:94be030a-2f11-43b0-a050-4af9b0678dad> ;
+    dcterms:references <urn:uuid:923d34e5-df96-4ab7-be24-d50bb34a1834> ;
+    dcterms:title "Pacific Walrus Response to Arctic Sea Ice Losses" ;
+    esip:eastBound "-120.0"^^xsd:float ;
+    esip:northBound "85.0"^^xsd:float ;
+    esip:southBound "55.0"^^xsd:float ;
+    esip:westBound "130.0"^^xsd:float ;
+    owl:a dcat:Dataset .
+

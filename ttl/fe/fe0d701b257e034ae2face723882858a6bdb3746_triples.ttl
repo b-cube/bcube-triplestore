@@ -1,0 +1,95 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:0a0ea9de-e6ed-4037-a2c2-e007da16cf06> owl:a foaf:Organization ;
+    foaf:name "" .
+
+<urn:uuid:21eae7e0-9f34-4d18-99d1-5fb9389b4d49> bcube:hasType "theme" ;
+    bcube:hasValue "5-digit ZIP code",
+        "County ANSI Code",
+        "County FIPS Code",
+        "From House Number",
+        "Permanent edge ID",
+        "Side indicator flag",
+        "State ANSI Code",
+        "State FIPS Code",
+        "To House Number",
+        "ZIP +4 code" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:2b550da7-f111-495f-b5f1-923f2f6f00ac> bcube:hasType "theme" ;
+    bcube:hasValue "transportation" ;
+    dc:partOf "ISO 19115 Topic Categories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:398258e7-8ab2-48a2-9b35-a6ab98e5f68f> bcube:hasType "place" ;
+    bcube:hasValue "01069",
+        "County or Equivalent Entity",
+        "Houston",
+        "U.S.",
+        "United States" ;
+    dc:partOf "FIPS Publication 5-2, FIPS Publication 6-4, FIPS Publication 8-6, FIPS Publication 9-1,FIPS Publication55-4" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:b14f3ed2-3135-4f3e-8b6b-55fc6f948320> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-11-01T22:48:17.121Z" ;
+    bcube:lastUpdated "2015-11-01T22:48:17.121Z" ;
+    bcube:originatedFrom <urn:uuid:b9b3ceb8-37c1-45bf-9ac9-875262572155> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:cb19b51f-9e41-4e9a-b697-a40633e6eb9c> .
+
+<urn:uuid:b9b3ceb8-37c1-45bf-9ac9-875262572155> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-01T22:48:17.121Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-01T22:48:17.121Z" ;
+    dc:identifier "urn:sha:b50db0231b7162deddbabba7cedcbfab27aeab9e51ad0fa3658c56b8" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://meta.geo.census.gov/data/existing/decennial/GEO/GPMB/TIGERline/fe_2008/addr/tl_2008_01069_addr_url.dbf.xml" .
+
+<urn:uuid:c9ff5a3e-c98b-4074-a166-f59046b7586b> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-01T22:48:17.121Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-01T22:48:17.121Z" ;
+    dc:identifier "urn:sha:0976fddddd97e670f0dd7eb3bc911e003d52396e584cb05da821c7ff" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www2.census.gov/geo/tiger/TIGER2008/01_ALABAMA/01069_Houston_County/tl_2008_01069_addr.zip" .
+
+<urn:uuid:cb19b51f-9e41-4e9a-b697-a40633e6eb9c> bcube:dateCreated "2015-11-01T22:48:17.121Z" ;
+    bcube:hasMetadataRecord <urn:uuid:b14f3ed2-3135-4f3e-8b6b-55fc6f948320> ;
+    bcube:lastUpdated "2015-11-01T22:48:17.121Z" ;
+    dc:conformsTo <urn:uuid:21eae7e0-9f34-4d18-99d1-5fb9389b4d49>,
+        <urn:uuid:2b550da7-f111-495f-b5f1-923f2f6f00ac>,
+        <urn:uuid:398258e7-8ab2-48a2-9b35-a6ab98e5f68f> ;
+    dc:description "The TIGER/Line relationship files are an extract of selected geographic information from the Census MAF/TIGER database. Each TIGER/Line relationship file is designed to stand alone as an independent data set or can be used jointly with the shapefiles." ;
+    dc:spatial "POLYGON ((-85.712436 30.997064,-85.712436 31.314973,-84.999428 31.314973,-84.999428 30.997064,-85.712436 30.997064))" ;
+    dcterms:publisher <urn:uuid:0a0ea9de-e6ed-4037-a2c2-e007da16cf06> ;
+    dcterms:references <urn:uuid:c9ff5a3e-c98b-4074-a166-f59046b7586b> ;
+    dcterms:title "TIGER/Line Shapefile, 2008, county, Houston County, AL, Address Ranges" ;
+    esip:eastBound "-84.999428"^^xsd:float ;
+    esip:endDate "2008-07-01"^^xsd:date ;
+    esip:northBound "31.314973"^^xsd:float ;
+    esip:southBound "30.997064"^^xsd:float ;
+    esip:startDate "2008-01-01"^^xsd:date ;
+    esip:westBound "-85.712436"^^xsd:float ;
+    owl:a dcat:Dataset .
+

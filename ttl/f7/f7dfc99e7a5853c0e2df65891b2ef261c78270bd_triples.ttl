@@ -1,0 +1,74 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:2253f648-32fb-4dd8-a03e-cd0ac18f8331> bcube:hasType "theme" ;
+    bcube:hasValue "aerial",
+        "coastal",
+        "digital orthophotography",
+        "mosaic",
+        "orthophoto",
+        "photograph",
+        "rectified image",
+        "shoreline" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:3557a751-3b3e-469e-b623-904ded5814a9> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2014-10-28T06:50:53.496Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2014-10-28T06:50:53.496Z" ;
+    dc:identifier "urn:sha:469cca12215e910f7d4eddcf0b6606c7c67c7e1e37f84ccb38c51646" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "https://data.noaa.gov/harvest/object/571ed313-03d8-4576-8650-4e0df39fc693" .
+
+<urn:uuid:41de97d9-beb9-4fed-ad14-826175d389c2> a "ISO 19115:2003/19139" ;
+    bcube:dateCreated "2014-10-28T06:50:53.496Z" ;
+    bcube:lastUpdated "2014-10-28T06:50:53.496Z" ;
+    bcube:originatedFrom <urn:uuid:3557a751-3b3e-469e-b623-904ded5814a9> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:b7b8bdcf-0b57-4ce8-9f90-60d9612c52ea> .
+
+<urn:uuid:b5b35f93-62af-473b-a201-c46390042f43> bcube:hasType "place" ;
+    bcube:hasValue "Block Island",
+        "Coastal Zone",
+        "Narragansett Bay",
+        "Rhode Island" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:b7b8bdcf-0b57-4ce8-9f90-60d9612c52ea> bcube:dateCreated "2014-10-28T06:50:53.496Z" ;
+    bcube:hasMetadataRecord <urn:uuid:41de97d9-beb9-4fed-ad14-826175d389c2> ;
+    bcube:lastUpdated "2014-10-28T06:50:53.496Z" ;
+    dc:conformsTo <urn:uuid:2253f648-32fb-4dd8-a03e-cd0ac18f8331>,
+        <urn:uuid:b5b35f93-62af-473b-a201-c46390042f43>,
+        <urn:uuid:db24c3a8-4f85-454c-be64-48e83f1357aa> ;
+    dc:description "Data set contains 5000 by 5000 feet digital orthophotography mosaics. The digital orthophotos in this series have a nominal ground resolution of 0.5 meters. The digital orthophoto mosaics are four band, 12-bit GeoTIFFs and are color balanced to be uniform while still maintaining as much of the original color and appearance as practical. The source imagery was flown on June 28 and 30, 2012 with a Z/I DMC camera. The primary project area includes the entire shoreline of Rhode Island including the coastal ponds or lagoons that are found on the south shore. The shoreline of Block Island is also included in this project. This area includes approximately 943 square kilometers of intertidal and sub tidal habitats." ;
+    dc:spatial "POLYGON ((-71.967032 41.083201,-71.967032 41.86549,-71.035851 41.86549,-71.035851 41.083201,-71.967032 41.083201))" ;
+    dcterms:title "2012 Coastal Rhode Island DMC Imagery" ;
+    esip:eastBound "-71.035851"^^xsd:float ;
+    esip:endDate "2012-06-30"^^xsd:date ;
+    esip:northBound "41.86549"^^xsd:float ;
+    esip:southBound "41.083201"^^xsd:float ;
+    esip:startDate "2012-06-28"^^xsd:date ;
+    esip:westBound "-71.967032"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:db24c3a8-4f85-454c-be64-48e83f1357aa> bcube:hasValue "imageryBaseMapsEarthCover" ;
+    dc:partOf "IsoTopicCategories" ;
+    owl:a bcube:thesaurusSubset .
+

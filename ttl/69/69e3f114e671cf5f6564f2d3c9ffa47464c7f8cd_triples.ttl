@@ -1,0 +1,92 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:0209c8c4-2925-4144-ac52-d5119ea8ce29> bcube:hasType "theme" ;
+    bcube:hasValue "ALPS",
+        "Airborne Lidar Processing System",
+        "DEM",
+        "Digital Elevation Model",
+        "EAARL",
+        "Experimental Advanced Airborne Research Lidar",
+        "Lidar",
+        "laser altimetry",
+        "remote sensing",
+        "topography" ;
+    dc:partOf "http://remotesensing.usgs.gov" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:092defee-0522-426b-ab79-b772f8ab9fd3> bcube:hasType "temporal" ;
+    bcube:hasValue "2008" ;
+    dc:partOf "http://www.esri.com/news/arcuser/1104/temporal.html" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:38f33e87-9fcf-4254-bd0a-697f2351c22f> bcube:dateCreated "2015-08-09T05:31:20.427Z" ;
+    bcube:hasMetadataRecord <urn:uuid:b2aeb874-e83e-4383-b98b-be0967947314> ;
+    bcube:lastUpdated "2015-08-09T05:31:20.427Z" ;
+    dc:conformsTo <urn:uuid:0209c8c4-2925-4144-ac52-d5119ea8ce29>,
+        <urn:uuid:092defee-0522-426b-ab79-b772f8ab9fd3>,
+        <urn:uuid:c6fecfda-591b-45d2-9145-6da6a4ab3b7f>,
+        <urn:uuid:e82aa9e9-e129-4219-954f-519fc6da1683> ;
+    dc:description "A bare earth elevation map (also known as a Digital Elevation Model or DEM) of the Pearl River Delta in Louisiana and Mississippi was produced from remotely sensed, geographically referenced elevation measurements cooperatively by the U.S. Geological Survey (USGS), the National Park Service (NPS), and the National Aeronautics and Space Administration (NASA). Elevation measurements were collected over the area using the NASA Experimental Advanced Airborne Research Lidar (EAARL), a pulsed laser ranging system mounted onboard an aircraft to measure ground elevation, vegetation canopy, and coastal topography. The system uses high frequency laser beams directed at the Earth's surface through an opening in the bottom of the aircraft's fuselage. The laser system records the time difference between emission of the laser beam and the reception of the reflected laser signal in the aircraft. The plane travels over the target area at approximately 50 meters per second at an elevation of approximately 300 meters. The EAARL, developed by NASA at Wallops Flight Facility in Virginia, measures ground elevation with a vertical resolution of 15 centimeters. A sampling rate of 3 kilohertz or higher results in an extremely dense spatial elevation dataset. Over 100 kilometers of coastline can be easily surveyed within a 3- to 4-hour mission time period. When subsequent elevation maps for an area are analyzed, they provide a useful tool to make management decisions regarding land development." ;
+    dcterms:publisher <urn:uuid:908c01cf-75bb-4892-9707-ae700d0d9c40> ;
+    dcterms:references <urn:uuid:6a152862-584f-4176-ac47-7e622e544e29> ;
+    dcterms:title "EAARL Coastal Topography Pearl River Delta" ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:5bd368d0-5a2a-4578-943e-a19ce207e0d9> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-09T05:31:20.427Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-09T05:31:20.427Z" ;
+    dc:identifier "urn:sha:d3afcb1620513259a485e9e153f0021794af34909821fc53674d0af5" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://pubs.usgs.gov/ds/416/data_files/be/be_e264_n3348_16/be_e264_n3348_16.las.xml" .
+
+<urn:uuid:6a152862-584f-4176-ac47-7e622e544e29> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-09T05:31:20.427Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-09T05:31:20.427Z" ;
+    dc:identifier "urn:sha:d14a028c2a3a2bc9476102bb288234c415a2b01f828ea62ac5b3e42f" ;
+    owl:a bcube:Url .
+
+<urn:uuid:908c01cf-75bb-4892-9707-ae700d0d9c40> owl:a foaf:Organization ;
+    foaf:name "U.S. Geological Survey" .
+
+<urn:uuid:b2aeb874-e83e-4383-b98b-be0967947314> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-08-09T05:31:20.427Z" ;
+    bcube:lastUpdated "2015-08-09T05:31:20.427Z" ;
+    bcube:originatedFrom <urn:uuid:5bd368d0-5a2a-4578-943e-a19ce207e0d9> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:38f33e87-9fcf-4254-bd0a-697f2351c22f> .
+
+<urn:uuid:c6fecfda-591b-45d2-9145-6da6a4ab3b7f> bcube:hasType "place" ;
+    bcube:hasValue "Louisiana",
+        "Mississippi",
+        "Northern Gulf of Mexico",
+        "Pearl River Delta" ;
+    dc:partOf "http://nationalmap.gov" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:e82aa9e9-e129-4219-954f-519fc6da1683> bcube:hasType "stratum" ;
+    bcube:hasValue "Bare Earth" ;
+    dc:partOf "http://lidar.cr.usgs.gov/" ;
+    owl:a bcube:thesaurusSubset .
+

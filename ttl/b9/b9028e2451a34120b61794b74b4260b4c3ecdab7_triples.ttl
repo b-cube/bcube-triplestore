@@ -1,0 +1,95 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:442f2dc2-072a-45e1-8cac-3ec7c63a7afd> owl:a foaf:Organization ;
+    foaf:name "" .
+
+<urn:uuid:4b0c90be-f504-4bf3-ba55-dab628450237> bcube:hasType "place" ;
+    bcube:hasValue "01067",
+        "County or Equivalent Entity",
+        "Henry",
+        "U.S.",
+        "United States" ;
+    dc:partOf "INCITS.38-200x (R2004),INCITS.31-200x (R2007),INCITS.454-200x,INCITS 455-200x,INCITS 446-2008" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:72c8acf6-eb18-4add-88fc-9285d72dad31> bcube:dateCreated "2015-11-06T12:57:34.684Z" ;
+    bcube:hasMetadataRecord <urn:uuid:ec69a3e6-a123-4bb4-ae9e-161fa14f6084> ;
+    bcube:lastUpdated "2015-11-06T12:57:34.684Z" ;
+    dc:conformsTo <urn:uuid:4b0c90be-f504-4bf3-ba55-dab628450237>,
+        <urn:uuid:ed104cca-2ef3-4bb3-ad9c-5567e6c38c44>,
+        <urn:uuid:f36bb521-7f6a-4a33-ac52-c1d9d0d056d3> ;
+    dc:description "The TIGER/Line relationship files are an extract of selected geographic information from the Census MAF/TIGER database. Each TIGER/Line relationship file is designed to stand alone as an independent data set or can be used jointly with the shapefiles." ;
+    dc:spatial "POLYGON ((-85.418035 31.307675,-85.418035 31.774364,-85.041305 31.774364,-85.041305 31.307675,-85.418035 31.307675))" ;
+    dcterms:publisher <urn:uuid:442f2dc2-072a-45e1-8cac-3ec7c63a7afd> ;
+    dcterms:references <urn:uuid:87edac89-5e88-4ece-a8bc-7a9112be02dd> ;
+    dcterms:title "TIGER/Line Shapefile, 2009, county, Henry County, AL, Current Address Range-Feature Name Relationship File" ;
+    esip:eastBound "-85.041305"^^xsd:float ;
+    esip:endDate "2009-05-01"^^xsd:date ;
+    esip:northBound "31.774364"^^xsd:float ;
+    esip:southBound "31.307675"^^xsd:float ;
+    esip:startDate "2009-01-01"^^xsd:date ;
+    esip:westBound "-85.418035"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:87edac89-5e88-4ece-a8bc-7a9112be02dd> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-06T12:57:34.684Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-06T12:57:34.684Z" ;
+    dc:identifier "urn:sha:a3036d16297bf6fa0e8bb844c8166e6247be6ee55514dc92d80b8742" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www2.census.gov/geo/tiger/TIGER2009/01_ALABAMA/01067_Henry_County/tl_2009_01067_addrfn.zip" .
+
+<urn:uuid:d090df0e-ce51-4559-a0a6-ced7f639c212> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-06T12:57:34.684Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-06T12:57:34.684Z" ;
+    dc:identifier "urn:sha:95307a1ce4ac9903e5e111b6173796fca898fd64c7fada80888e3068" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://meta.geo.census.gov/data/existing/decennial/GEO/GPMB/TIGERline/fe_2009/addrfn/tl_2009_01067_addrfn_url.dbf.xml" .
+
+<urn:uuid:ec69a3e6-a123-4bb4-ae9e-161fa14f6084> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-11-06T12:57:34.684Z" ;
+    bcube:lastUpdated "2015-11-06T12:57:34.684Z" ;
+    bcube:originatedFrom <urn:uuid:d090df0e-ce51-4559-a0a6-ced7f639c212> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:72c8acf6-eb18-4add-88fc-9285d72dad31> .
+
+<urn:uuid:ed104cca-2ef3-4bb3-ad9c-5567e6c38c44> bcube:hasType "theme" ;
+    bcube:hasValue "5-digit ZIP code",
+        "County ANSI Code",
+        "County FIPS Code",
+        "From House Number",
+        "Permanent edge ID",
+        "Side indicator flag",
+        "State ANSI Code",
+        "State FIPS Code",
+        "To House Number",
+        "ZIP +4 code" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:f36bb521-7f6a-4a33-ac52-c1d9d0d056d3> bcube:hasType "theme" ;
+    bcube:hasValue "transportation" ;
+    dc:partOf "ISO 19115 Topic Categories" ;
+    owl:a bcube:thesaurusSubset .
+

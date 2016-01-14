@@ -1,0 +1,74 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:080c113e-679d-4de5-b50e-80bb00df007a> bcube:hasType "theme" ;
+    bcube:hasValue "economy",
+        "environment",
+        "imageryBaseMapsEarthCover" ;
+    dc:partOf "ISO 19115 Topic Category" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:4873604a-e96b-480d-a854-4693be6a976d> bcube:hasType "place" ;
+    bcube:hasValue "Butte",
+        "MT",
+        "Montana",
+        "USA",
+        "United States" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:a31612d5-2a29-4f41-8af3-3c9f239a5fe1> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-08-11T10:37:45.207Z" ;
+    bcube:lastUpdated "2015-08-11T10:37:45.207Z" ;
+    bcube:originatedFrom <urn:uuid:a42358ba-d405-44d5-b5f5-ecb703d96f0e> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:f77cc379-f04b-41ab-a3fc-d6b9d6d94be7> .
+
+<urn:uuid:a42358ba-d405-44d5-b5f5-ecb703d96f0e> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-11T10:37:45.207Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-11T10:37:45.207Z" ;
+    dc:identifier "urn:sha:b2a58bd882cd206359f754788316ffa226e22ebfe58f28eb17147566" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://mslapps.mt.gov/Geographic_Information/Data/DataList/datalist_MetadataDetailRaw.aspx?did={10D1EC8C-EDD5-4641-A796-869BCC8AA468}" .
+
+<urn:uuid:d1a79d2d-5e9f-4dfa-88f9-60df64de169a> owl:a foaf:Organization ;
+    foaf:name "Montana State Library" .
+
+<urn:uuid:e863f2bb-3cf5-4baa-8a81-18dc37402b9b> bcube:hasType "theme" ;
+    bcube:hasValue "mine",
+        "mining",
+        "pit" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:f77cc379-f04b-41ab-a3fc-d6b9d6d94be7> bcube:dateCreated "2015-08-11T10:37:45.207Z" ;
+    bcube:hasMetadataRecord <urn:uuid:a31612d5-2a29-4f41-8af3-3c9f239a5fe1> ;
+    bcube:lastUpdated "2015-08-11T10:37:45.207Z" ;
+    dc:conformsTo <urn:uuid:080c113e-679d-4de5-b50e-80bb00df007a>,
+        <urn:uuid:4873604a-e96b-480d-a854-4693be6a976d>,
+        <urn:uuid:e863f2bb-3cf5-4baa-8a81-18dc37402b9b> ;
+    dc:description "These data were formerly available from the Montana State Library web site but were removed because they are potentially out of date. Please contact the Federal Superfund Bureau of the Montana Department of Environmental Quality if you want these data so they may tell you if newer or better data are available. If the data are not available from the Department of Environmental Quality, you may request a copy from the Montana State Library data archive. Open pit mines digitized from CDM blueline maps. Adjusted from Anaconda coordinates using the GRIDLINK coverage." ;
+    dc:spatial "POLYGON ((-112.545197 46.0065002,-112.545197 46.0407982,-112.468201 46.0407982,-112.468201 46.0065002,-112.545197 46.0065002))" ;
+    dcterms:publisher <urn:uuid:d1a79d2d-5e9f-4dfa-88f9-60df64de169a> ;
+    dcterms:title "Butte Open Pit Mines, 1980" ;
+    esip:eastBound "-112.468201"^^xsd:float ;
+    esip:northBound "46.0407982"^^xsd:float ;
+    esip:southBound "46.0065002"^^xsd:float ;
+    esip:startDate "1980-01-01"^^xsd:date ;
+    esip:westBound "-112.545197"^^xsd:float ;
+    owl:a dcat:Dataset .
+

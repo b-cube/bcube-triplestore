@@ -1,0 +1,75 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:1231c018-f195-4635-9c72-f433ab98a3eb> bcube:hasType "theme" ;
+    bcube:hasValue "Imagery Theme",
+        "NGDA",
+        "National Geospatial Data Asset" ;
+    dc:partOf "NGDA Portfolio Themes" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:244b1fa7-0574-4b74-8889-ceeffc6c79db> bcube:hasType "place" ;
+    bcube:hasValue "\"United States\"",
+        "North America",
+        "State",
+        "US" ;
+    dc:partOf "Geographic Names Information System" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:41ef8d4b-93ff-40d7-bd30-a2979afbde84> a "ISO 19115:2003/19139" ;
+    bcube:dateCreated "2015-07-29T19:01:37.483Z" ;
+    bcube:lastUpdated "2015-07-29T19:01:37.483Z" ;
+    bcube:originatedFrom <urn:uuid:d6f3e4bd-bfbb-4098-b0aa-9fc1fa6aaffb> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:ccc9e66f-89b8-4212-a8f3-578ab675af72> .
+
+<urn:uuid:92739f87-8534-43a8-b2b3-3f92aded851b> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-07-29T19:01:37.483Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-07-29T19:01:37.483Z" ;
+    dc:identifier "urn:sha:f3088c1441daefa6d50be193cc0ab6de3b74534dff2aa00a661f14d3" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://gis.apfo.usda.gov/arcgis/rest/services/NAIP" .
+
+<urn:uuid:ccc9e66f-89b8-4212-a8f3-578ab675af72> bcube:dateCreated "2015-07-29T19:01:37.483Z" ;
+    bcube:hasMetadataRecord <urn:uuid:41ef8d4b-93ff-40d7-bd30-a2979afbde84> ;
+    bcube:lastUpdated "2015-07-29T19:01:37.483Z" ;
+    dc:conformsTo <urn:uuid:1231c018-f195-4635-9c72-f433ab98a3eb>,
+        <urn:uuid:244b1fa7-0574-4b74-8889-ceeffc6c79db> ;
+    dc:description "Provides the ArcGIS Rest Services URLs for the public facing, most current year 1-meter 4-band NAIP web services for the lower 48 states, served by USDA-FSA Aerial Photography Field Office. It also provides the URL for the seamline services, which provides the image dates and other pertinent information about the NAIP acquisition. In addition, there are reference points to how to download NAIP CCMs and how to order uncompressed NAIP digital ortho quarter quad tiles (DOQQs), historical NAIP, and other historical imagery dating back to 1955." ;
+    dc:spatial "POLYGON ((-131.0 24.76,-131.0 52.13,-66.09 52.13,-66.09 24.76,-131.0 24.76))" ;
+    dcterms:references <urn:uuid:92739f87-8534-43a8-b2b3-3f92aded851b> ;
+    dcterms:title "National Geospatial Data Asset (NGDA) NAIP Imagery" ;
+    esip:eastBound "-66.09"^^xsd:float ;
+    esip:northBound "52.13"^^xsd:float ;
+    esip:southBound "24.76"^^xsd:float ;
+    esip:westBound "-131.0"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:d6f3e4bd-bfbb-4098-b0aa-9fc1fa6aaffb> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-07-29T19:01:37.483Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-07-29T19:01:37.483Z" ;
+    dc:identifier "urn:sha:e3752411c44b8a346e509ab96e6c1568ab27c3a17b531300e799be98" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "https://catalog.data.gov/harvest/object/c9ca797d-63f6-4910-a534-83b96c6132a3" .
+

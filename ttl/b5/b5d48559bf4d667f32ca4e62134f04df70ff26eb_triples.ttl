@@ -1,0 +1,58 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:0af871ad-fa0b-4b8b-b8b6-c7b9668b26dc> bcube:hasValue "geoscientificInformation" ;
+    dc:partOf "IsoTopicCategories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:2dc1afb7-7f0d-498a-b6cc-7481c82e4993> bcube:hasType "theme" ;
+    bcube:hasValue "catalogs and indexes",
+        "earth characteristics",
+        "earth sciences",
+        "information services",
+        "information technology methods",
+        "maps and atlases",
+        "metadata development",
+        "mineral resources" ;
+    dc:partOf "USGS Thesaurus" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:779dcc88-5fdb-4ec1-abb6-7094d1c88cae> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2014-10-30T00:06:20.916Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2014-10-30T00:06:20.916Z" ;
+    dc:identifier "urn:sha:985ec0341ca61945ff196587567011be40e9f8d6f39117a9d676250c" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www.usgs.gov/science/iso.php?cite=1" .
+
+<urn:uuid:79c7918a-b9e2-49f9-827a-210c2d62dcaf> a "ISO 19115:2003/19139" ;
+    bcube:dateCreated "2014-10-30T00:06:20.916Z" ;
+    bcube:lastUpdated "2014-10-30T00:06:20.916Z" ;
+    bcube:originatedFrom <urn:uuid:779dcc88-5fdb-4ec1-abb6-7094d1c88cae> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:f870ae28-a468-4034-92ef-9946c8d28dd4> .
+
+<urn:uuid:f870ae28-a468-4034-92ef-9946c8d28dd4> bcube:dateCreated "2014-10-30T00:06:20.916Z" ;
+    bcube:hasMetadataRecord <urn:uuid:79c7918a-b9e2-49f9-827a-210c2d62dcaf> ;
+    bcube:lastUpdated "2014-10-30T00:06:20.916Z" ;
+    dc:conformsTo <urn:uuid:0af871ad-fa0b-4b8b-b8b6-c7b9668b26dc>,
+        <urn:uuid:2dc1afb7-7f0d-498a-b6cc-7481c82e4993> ;
+    dc:description "A catalog of earth science data produced by the U.S. Geological Survey with documentation and links to the data files. Catalog is searchable by geographic location and publication series number. Includes links to information on metadata and its use." ;
+    dcterms:title "Geoscience Data Catalog" ;
+    owl:a dcat:Dataset .
+

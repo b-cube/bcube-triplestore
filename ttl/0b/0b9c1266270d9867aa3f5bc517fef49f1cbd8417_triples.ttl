@@ -1,0 +1,78 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:005a559b-c082-4620-b6c3-1c1c9078b74b> bcube:hasType "place" ;
+    bcube:hasValue "Bolinas",
+        "Bolinas Lagoon",
+        "Marin County",
+        "Pacific Ocean",
+        "State of California",
+        "Stinson Beach" ;
+    dc:partOf "Geographic Names Information System (GNIS)" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:081f0785-a772-4328-a649-52338d85ecfc> owl:a foaf:Organization ;
+    foaf:name "" .
+
+<urn:uuid:091f671f-219d-44bd-bdac-dbcaf9cc6ee7> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-07-04T01:05:25.177Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-07-04T01:05:25.177Z" ;
+    dc:identifier "urn:sha:670f579c99668c811c45f39a23b82521ee0a56131e6e823ecf40acba" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://pubs.usgs.gov/ds/781/OffshoreBolinas/metadata/BathymetryHS_OffshoreBolinas_metadata.xml" .
+
+<urn:uuid:0c1bc68b-26fd-4a65-a9ea-39cb5e5737f5> bcube:hasType "theme" ;
+    bcube:hasValue "environment",
+        "geoscientificInformation",
+        "imageryBaseMapsEarthCover",
+        "oceans" ;
+    dc:partOf "ISO 19115 Topic Category" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:73013171-960e-493b-bf99-21ad3f987afa> bcube:hasType "theme" ;
+    bcube:hasValue "Oceans > Bathymetry/SeafloorTopography > Bathymetry",
+        "Oceans > Bathymetry/SeafloorTopography > Seafloor Topography" ;
+    dc:partOf "Global Change Master Directory (GCMD)" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:93bcc955-8af6-4f29-90e2-4a494d209019> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-07-04T01:05:25.177Z" ;
+    bcube:lastUpdated "2015-07-04T01:05:25.177Z" ;
+    bcube:originatedFrom <urn:uuid:091f671f-219d-44bd-bdac-dbcaf9cc6ee7> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:b1e42bd6-1ed1-4d78-9967-bc671e05243b> .
+
+<urn:uuid:b1e42bd6-1ed1-4d78-9967-bc671e05243b> bcube:dateCreated "2015-07-04T01:05:25.177Z" ;
+    bcube:hasMetadataRecord <urn:uuid:93bcc955-8af6-4f29-90e2-4a494d209019> ;
+    bcube:lastUpdated "2015-07-04T01:05:25.177Z" ;
+    dc:conformsTo <urn:uuid:005a559b-c082-4620-b6c3-1c1c9078b74b>,
+        <urn:uuid:0c1bc68b-26fd-4a65-a9ea-39cb5e5737f5>,
+        <urn:uuid:73013171-960e-493b-bf99-21ad3f987afa> ;
+    dc:description "This part of DS 781 presents data for the bathymetry and shaded-relief maps of the Offshore of Bolinas, California (raster data file is included in \"BathymetryHS_OffshoreBolinas.zip,\" which is accessible from http://pubs.usgs.gov/ds/781/OffshoreBolinas/data_catalog_OffshoreBolinas.html. The bathymetry and shaded-relief maps of Offshore Bolinas, California, were generated from bathymetry data collected by California State University, Monterey Bay (CSUMB), by Fugro Pelagos, and by Moss Landing Marine Laboratory (MLML). Mapping was completed between 2004 and 2010, using a combination of 200-kHz and 400-kHz Reson 7125, and 244-kHz Reson 8101 multibeam echosounders, as well as 468-kHz SEA SWATHPlus and 250-kHz GeoSwath interferometric systems. Moss Landing Marine Laboratory mapped the nearshore region north of Bolinas in 2004 prior to the California Seafloor Mapping Program (CSMP). The nearshore region from south of Bolinas Lagoon to Stinson Beach was mapped by Fugro Pelagos in 2009 for a project outside of the CSMP and only bathymetry data were collected. These mapping missions combined to collect bathymetry from about the 10-m isobath to beyond the 3-nautical-mile limit of California s State Waters." ;
+    dc:spatial "POLYGON ((-122.78 37.81,-122.78 37.97,-122.58 37.97,-122.58 37.81,-122.78 37.81))" ;
+    dcterms:publisher <urn:uuid:081f0785-a772-4328-a649-52338d85ecfc> ;
+    dcterms:title "Bathymetry Hillshade--Offshore Bolinas, California" ;
+    esip:eastBound "-122.58"^^xsd:float ;
+    esip:endDate "2010-01-01"^^xsd:date ;
+    esip:northBound "37.97"^^xsd:float ;
+    esip:southBound "37.81"^^xsd:float ;
+    esip:startDate "2004-01-01"^^xsd:date ;
+    esip:westBound "-122.78"^^xsd:float ;
+    owl:a dcat:Dataset .
+

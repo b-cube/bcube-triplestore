@@ -1,0 +1,89 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:0ddfdfbb-58ae-4ccc-9045-27a23f31ceab> bcube:hasType "place" ;
+    bcube:hasValue "01111",
+        "County or Equivalent Entity",
+        "Randolph",
+        "U.S.",
+        "United States" ;
+    dc:partOf "FIPS Publication 5-2, FIPS Publication 6-4, FIPS Publication 8-6, FIPS Publication 9-1,FIPS Publication55-4" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:256cc74d-417a-49df-b5b7-d4105614c3ec> bcube:dateCreated "2015-11-05T16:50:44.677Z" ;
+    bcube:hasMetadataRecord <urn:uuid:337c998e-6f13-4780-9fa5-6dc53177db4b> ;
+    bcube:lastUpdated "2015-11-05T16:50:44.677Z" ;
+    dc:conformsTo <urn:uuid:0ddfdfbb-58ae-4ccc-9045-27a23f31ceab>,
+        <urn:uuid:ec1629c0-bf88-430e-80a7-6c5e11c51269>,
+        <urn:uuid:f3cb2ee3-7aa2-4f41-b1de-865b758eecde> ;
+    dc:description "The TIGER/Line Shapefiles are an extract of selected geographic and cartographic information from the Census MAF/TIGER database. The Census MAF/TIGER database represents a seamless national file with no overlaps or gaps between parts. However, each TIGER/Line Shapefile is designed to stand alone as an independent data set or the shapefiles can be combined to cover the whole nation." ;
+    dc:spatial "POLYGON ((-85.653949 33.106634,-85.653949 33.501378,-85.232378 33.501378,-85.232378 33.106634,-85.653949 33.106634))" ;
+    dcterms:publisher <urn:uuid:56b013c0-c56a-4ae5-af91-513c54de4aa3> ;
+    dcterms:references <urn:uuid:ab6627a0-a7e1-42db-a5ab-58c546d550cc> ;
+    dcterms:title "TIGER/Line Shapefile, 2008, 2000 county, Randolph County, AL, Block" ;
+    esip:eastBound "-85.232378"^^xsd:float ;
+    esip:endDate "2008-07-01"^^xsd:date ;
+    esip:northBound "33.501378"^^xsd:float ;
+    esip:southBound "33.106634"^^xsd:float ;
+    esip:startDate "2008-01-01"^^xsd:date ;
+    esip:westBound "-85.653949"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:337c998e-6f13-4780-9fa5-6dc53177db4b> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-11-05T16:50:44.677Z" ;
+    bcube:lastUpdated "2015-11-05T16:50:44.677Z" ;
+    bcube:originatedFrom <urn:uuid:a71bf79f-d250-454f-a855-e9706b5e1bf6> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:256cc74d-417a-49df-b5b7-d4105614c3ec> .
+
+<urn:uuid:56b013c0-c56a-4ae5-af91-513c54de4aa3> owl:a foaf:Organization ;
+    foaf:name "" .
+
+<urn:uuid:a71bf79f-d250-454f-a855-e9706b5e1bf6> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-05T16:50:44.677Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-05T16:50:44.677Z" ;
+    dc:identifier "urn:sha:b5841ed10a14dac142d7b703fd4fdf6d228265bab4dd1c123981e20a" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://meta.geo.census.gov/data/existing/decennial/GEO/GPMB/TIGERline/fe_2008/tabblock00/tl_2008_01111_tabblock00_url.shp.xml" .
+
+<urn:uuid:ab6627a0-a7e1-42db-a5ab-58c546d550cc> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-05T16:50:44.677Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-05T16:50:44.677Z" ;
+    dc:identifier "urn:sha:64c69e845852131b1955d4fb13815f43bc5d7972b701831bd2a8b925" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www2.census.gov/geo/tiger/TIGER2008/01_ALABAMA/01111_Randolph_County/tl_2008_01111_tabblock00.zip" .
+
+<urn:uuid:ec1629c0-bf88-430e-80a7-6c5e11c51269> bcube:hasType "theme" ;
+    bcube:hasValue "boundaries" ;
+    dc:partOf "ISO 19115 Topic Categories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:f3cb2ee3-7aa2-4f41-b1de-865b758eecde> bcube:hasType "theme" ;
+    bcube:hasValue "Block",
+        "Census Block",
+        "County or equivalent entity",
+        "Polygon" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+

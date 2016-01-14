@@ -1,0 +1,89 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:08bc1ade-5c63-4772-bcac-434ce040ed8c> bcube:hasType "theme" ;
+    bcube:hasValue "Bathymetry",
+        "CMGP",
+        "Contours",
+        "Marine Geology",
+        "Multibeam",
+        "Ocean Floor Topography",
+        "Pacific Coastal and Marine Science Center",
+        "U.S. Geological Survey",
+        "USGS",
+        "Water Depth" ;
+    dc:partOf "General" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:35a98153-99fd-4ecc-8235-2350de1b71e0> bcube:hasType "place" ;
+    bcube:hasValue "Half Moon Bay",
+        "San Gregorio",
+        "State of California" ;
+    dc:partOf "Geographic Names Information System (GNIS)" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:41a6a9c8-586c-43b9-8446-8c5f10c143f3> owl:a foaf:Organization ;
+    foaf:name "" .
+
+<urn:uuid:5376a98d-6bb0-4bab-b7ea-18045cfbbbd7> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-11-09T04:02:46.347Z" ;
+    bcube:lastUpdated "2015-11-09T04:02:46.347Z" ;
+    bcube:originatedFrom <urn:uuid:e277d43f-ab45-4528-bc9c-2135561cea43> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:9400a28c-3e33-481e-862e-12db31a9b057> .
+
+<urn:uuid:5a07dea0-0f7e-4d06-ab78-f8d2b04c18b8> bcube:hasType "theme" ;
+    bcube:hasValue "Oceans > Bathymetry/SeafloorTopography > Bathymetry",
+        "Oceans > Bathymetry/SeafloorTopography > Seafloor Topography" ;
+    dc:partOf "Global Change Master Directory (GCMD)" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:6c5c558f-428f-43d2-8f3a-6ea9bed31ed9> bcube:hasType "theme" ;
+    bcube:hasValue "geoscientIficinformation",
+        "imageryBaseMapsEarthCover",
+        "oceans" ;
+    dc:partOf "ISO 19115 Topic Category" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:9400a28c-3e33-481e-862e-12db31a9b057> bcube:dateCreated "2015-11-09T04:02:46.347Z" ;
+    bcube:hasMetadataRecord <urn:uuid:5376a98d-6bb0-4bab-b7ea-18045cfbbbd7> ;
+    bcube:lastUpdated "2015-11-09T04:02:46.347Z" ;
+    dc:conformsTo <urn:uuid:08bc1ade-5c63-4772-bcac-434ce040ed8c>,
+        <urn:uuid:35a98153-99fd-4ecc-8235-2350de1b71e0>,
+        <urn:uuid:5a07dea0-0f7e-4d06-ab78-f8d2b04c18b8>,
+        <urn:uuid:6c5c558f-428f-43d2-8f3a-6ea9bed31ed9> ;
+    dc:description "This part of SIM 3306 presents data for the bathymetric contours for several seafloor maps (see sheets 1, 2, 3, 7, 10, SIM 3306) of the Offshore of San Gregorio map area, California. The vector data file is included in \"Contours_OffshoreSanGregorio.zip,\" which is accessible from http://pubs.usgs.gov/ds/781/OffshoreSanGregorio/data_catalog_OffshoreSanGregorio.html. 10-m interval contours of the Offshore of San Gregorio map area, California, were generated from bathymetry data collected by Fugro Pelagos and by California State University, Monterey Bay, Seafloor Mapping Lab (CSUMB). Mapping was completed in 2006 and 2007, using a combination of 400-kHz Reson 7125 and 244-kHz Reson 8101 multibeam echosounders. These mapping missions combined to collect bathymetry from about the 10-m isobath to beyond the 3-nautical-mile limit of California's State Waters. Bathymetric contours at 10-m intervals were generated from the merged 2-m bathymetric surface. The most continuous contour segments were preserved while smaller segments and isolated island polygons were excluded from the final output. Contours were smoothed via a polynomial approximation with exponential kernel (PAEK) algorithm using a tolerance value of 60 m. The contours were then clipped to the boundary of the map area." ;
+    dc:spatial "POLYGON ((-122.54 37.23,-122.54 37.39,-122.34 37.39,-122.34 37.23,-122.54 37.23))" ;
+    dcterms:publisher <urn:uuid:41a6a9c8-586c-43b9-8446-8c5f10c143f3> ;
+    dcterms:title "Contours--Offshore of San Gregorio, California" ;
+    esip:eastBound "-122.34"^^xsd:float ;
+    esip:endDate "2007-01-01"^^xsd:date ;
+    esip:northBound "37.39"^^xsd:float ;
+    esip:southBound "37.23"^^xsd:float ;
+    esip:startDate "2006-01-01"^^xsd:date ;
+    esip:westBound "-122.54"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:e277d43f-ab45-4528-bc9c-2135561cea43> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-09T04:02:46.347Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-09T04:02:46.347Z" ;
+    dc:identifier "urn:sha:40736be2366bd499f3de485c289bf0880fbb71e0409da616169baadb" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://pubs.usgs.gov/ds/781/OffshoreSanGregorio/metadata/Contours_OffshoreSanGregorio_metadata.xml" .
+

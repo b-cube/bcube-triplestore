@@ -1,0 +1,100 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:0975507a-70b3-4d1c-97bf-d15b57d339a1> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-09T08:56:02.867Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-09T08:56:02.867Z" ;
+    dc:identifier "urn:sha:e3ea880684f16ce1bb69fb15e2b45eb3df517750c13a1d147160f708" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "https://catalog.data.gov/harvest/object/1fc50ad4-2e4a-4faa-b9ae-540bc0051f5f" .
+
+<urn:uuid:130f07a7-c1a5-4382-867b-43063e464f95> bcube:hasType "theme" ;
+    bcube:hasValue "DEM",
+        "Marine Navigation",
+        "altitude",
+        "bathy",
+        "bathymetry",
+        "depth",
+        "digital bathymetric model",
+        "digital elevation model",
+        "digital terrain model",
+        "elevation",
+        "height",
+        "oceans" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:315070d9-fd42-42aa-90f3-eaa087d5adc8> bcube:hasValue "elevation" ;
+    dc:partOf "IsoTopicCategories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:9ba2d095-523b-4f5d-a354-b4417d9ed4d0> a "ISO 19115:2003/19139" ;
+    bcube:dateCreated "2015-08-09T08:56:02.867Z" ;
+    bcube:lastUpdated "2015-08-09T08:56:02.867Z" ;
+    bcube:originatedFrom <urn:uuid:0975507a-70b3-4d1c-97bf-d15b57d339a1> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:9e02b7df-5c83-4a25-976d-2806c3fa8788> .
+
+<urn:uuid:9e02b7df-5c83-4a25-976d-2806c3fa8788> bcube:dateCreated "2015-08-09T08:56:02.867Z" ;
+    bcube:hasMetadataRecord <urn:uuid:9ba2d095-523b-4f5d-a354-b4417d9ed4d0> ;
+    bcube:lastUpdated "2015-08-09T08:56:02.867Z" ;
+    dc:conformsTo <urn:uuid:130f07a7-c1a5-4382-867b-43063e464f95>,
+        <urn:uuid:315070d9-fd42-42aa-90f3-eaa087d5adc8>,
+        <urn:uuid:ada706cb-b0ee-4bb9-a66f-d28824157f17>,
+        <urn:uuid:b75f115f-d422-44f4-b1cc-57042f725c78>,
+        <urn:uuid:b7d6b924-7691-43b0-bb0b-ccf520ee4c7c> ;
+    dc:description "These Bathymetric Digital Elevation Models (DEM) were generated from original point soundings collected during hydrographic surveys conducted by the National Ocean Service and its predecessors. Mean High Water shoreline was used as a constraining boundary and assigned its local elevation relative to the local datum (typically Mean Low Water). DEM grid values outside the shoreline (on land) were assigned null values (-32676). In the event of multiple surveys in a region, the most recent survey soundings were retained. Both 7.5 minute and 1 degree DEMs are available. The 1 degree DEMs were generated from the higher resolution 7.5 minute DEMs which covered the estuary. These DEMs are available as either Untiled (large grids) or sets of Tiled DEMs (at 7.5 degree minute size).A Digital Elevation Model (DEM) contains a series of elevations ordered from south to north with the order of the columns from west to east. The DEM is formatted as one ASCII header record (A- record), followed by a series of profile records (B- records) each of which include a short B-record header followed by a series of ASCII integer elevations (typically in units of 1 centimeter {0.01 meter]) per each profile. The last physical record of the DEM is an accuracy record (C-record).The 1 degree (60-minute) DEMs (3 arc second x 3 arc second data spacing) is cast on the geographic coordinate system (no projection). It provides coverage in 1 degree square blocks. Each product contains over edge data. Coverage is available for the many estuaries of the conterminous United States, but is not complete.The 7.5-minute DEM (30- by 30-m data spacing) is cast on the Universal Transverse Mercator (UTM) projection. It provides coverage in 7.5- by 7.5-minute blocks. Each product provides the same coverage as a standard USGS 7.5-minute quadrangle but the DEM contains over edge data. Coverage is available for many estuaries of the contiguous United States but is not complete." ;
+    dc:spatial "POLYGON ((-125 24,-125 50,-65 50,-65 24,-125 24))" ;
+    dcterms:references <urn:uuid:cc4a7457-beaa-49a2-9e5b-df59e7fd44af> ;
+    dcterms:title "Estuarine Bathymetric Digital Elevation Models (30 meter and 3 arc second resolution) Derived From Source Hydrographic Survey Soundings Collected by NOAA" ;
+    esip:eastBound "-65.0"^^xsd:float ;
+    esip:endDate "1989-01-01"^^xsd:date ;
+    esip:northBound "50.0"^^xsd:float ;
+    esip:southBound "24.0"^^xsd:float ;
+    esip:startDate "1839-01-01"^^xsd:date ;
+    esip:westBound "-125.0"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:ada706cb-b0ee-4bb9-a66f-d28824157f17> bcube:hasType "theme" ;
+    bcube:hasValue "Bathymetry/Topography" ;
+    dc:partOf "NOS Data Explorer Topic Category" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:b75f115f-d422-44f4-b1cc-57042f725c78> bcube:hasType "theme" ;
+    bcube:hasValue "OceanCommunity" ;
+    dc:partOf "Geospatial Platform" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:b7d6b924-7691-43b0-bb0b-ccf520ee4c7c> bcube:hasType "place" ;
+    bcube:hasValue "U.S. Exclusive Economic Zone" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:cc4a7457-beaa-49a2-9e5b-df59e7fd44af> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-09T08:56:02.867Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-09T08:56:02.867Z" ;
+    dc:identifier "urn:sha:1c008adbf18433a5a6db575f483d5c98917b23d5287782519276683b" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://estuarinebathymetry.noaa.gov/finddata.html" .
+

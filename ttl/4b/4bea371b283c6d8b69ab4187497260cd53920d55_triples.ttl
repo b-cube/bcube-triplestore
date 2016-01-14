@@ -1,0 +1,78 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:23f4e467-f48b-4123-b5fd-bb293da615aa> bcube:dateCreated "2015-08-02T16:32:01.411Z" ;
+    bcube:hasMetadataRecord <urn:uuid:411a52bd-ea0e-4ced-ab79-28a2cd27895f> ;
+    bcube:lastUpdated "2015-08-02T16:32:01.411Z" ;
+    dc:conformsTo <urn:uuid:99b0592c-9579-4097-a062-ade05b7c8d46>,
+        <urn:uuid:f9ace1fd-90b7-4a82-b0db-ace15a47c21b> ;
+    dc:description "Earth Eye collected LiDAR data for approximately 4,589 square kilometers that either fully or partially cover the Connecticut counties of Tolland, Windham, Hartford, Middlesex, and New London. The nominal pulse spacing for this project was no greater than 1 point every 0.7 meters. Dewberry used proprietary procedures to classify the LAS according to project specifications: 1-Unclassified, 2-Ground, 7-Noise, 9-Water. Dewberry produced 3D breaklines and combined these with the final LiDAR data to produce seamless hydro flattened DEMs for the 4,840 tiles (1000 m x 1000 m) that cover the project area. Separate LiDAR files were created for bare earth only points, model key points, first echo return only points, and last echo return only points." ;
+    dc:spatial "POLYGON ((-72.654199 41.313609,-72.654199 42.053551,-71.764992 42.053551,-71.764992 41.313609,-72.654199 41.313609))" ;
+    dcterms:publisher <urn:uuid:9d9a92c6-1619-427d-b706-e7ccc0cf179d> ;
+    dcterms:title "Hydro-Flattened Digital Elevation Models (DEMs)" ;
+    esip:eastBound "-71.764992"^^xsd:float ;
+    esip:endDate "2010-12-11"^^xsd:date ;
+    esip:northBound "42.053551"^^xsd:float ;
+    esip:southBound "41.313609"^^xsd:float ;
+    esip:startDate "2010-11-03"^^xsd:date ;
+    esip:westBound "-72.654199"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:411a52bd-ea0e-4ced-ab79-28a2cd27895f> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-08-02T16:32:01.411Z" ;
+    bcube:lastUpdated "2015-08-02T16:32:01.411Z" ;
+    bcube:originatedFrom <urn:uuid:ccd89bbe-07d8-4035-b5b1-e4edd817b458> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:23f4e467-f48b-4123-b5fd-bb293da615aa> .
+
+<urn:uuid:99b0592c-9579-4097-a062-ade05b7c8d46> bcube:hasType "place" ;
+    bcube:hasValue "Connecticut",
+        "Hartford County",
+        "Middlesex County",
+        "New London County",
+        "Tolland County",
+        "Windham County" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:9d9a92c6-1619-427d-b706-e7ccc0cf179d> owl:a foaf:Organization ;
+    foaf:name "" .
+
+<urn:uuid:ccd89bbe-07d8-4035-b5b1-e4edd817b458> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-02T16:32:01.411Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-02T16:32:01.411Z" ;
+    dc:identifier "urn:sha:18bed6152990916c29d7be29ae5fbc6936fdc2c2e1fd1922754ba184" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://cteco.uconn.edu/help/lidar_docs/NRCSE/FGDC_CONNECTICUT_DEM.xml" .
+
+<urn:uuid:f9ace1fd-90b7-4a82-b0db-ace15a47c21b> bcube:hasType "theme" ;
+    bcube:hasValue "Bare earth",
+        "Breaklines",
+        "DEM",
+        "DTM",
+        "Elevation",
+        "First Return",
+        "Hydro Flattened",
+        "LAS",
+        "Last Return",
+        "Lidar",
+        "Model Key Points" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+

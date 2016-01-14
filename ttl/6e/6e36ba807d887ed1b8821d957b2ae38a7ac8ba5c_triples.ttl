@@ -1,0 +1,64 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:02367c02-4ac2-4e83-b240-510d0b19d923> bcube:hasValue "geoscientificInformation" ;
+    dc:partOf "IsoTopicCategories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:0cebf028-7e69-4829-b544-d7e6afb363a0> bcube:hasType "theme" ;
+    bcube:hasValue "Blocks",
+        "Census",
+        "Demographics" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:3b1b82ef-fd77-4d89-b4c8-2be7eb31d7ac> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-03T05:38:13.925Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-03T05:38:13.925Z" ;
+    dc:identifier "urn:sha:5188d7ceec03810321b2ec9e58f1a658931af7b48b97191dd61d15ed" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://repository.stategeothermaldata.org/resources/metadata/TestNRRC/WRP/048ae3b7-1e4f-47dc-9d6b-959505f18386.xml" .
+
+<urn:uuid:3f754b32-cdef-4cf0-ae2e-af1e32d20c2c> a "ISO 19115:2003/19139" ;
+    bcube:dateCreated "2015-11-03T05:38:13.925Z" ;
+    bcube:lastUpdated "2015-11-03T05:38:13.925Z" ;
+    bcube:originatedFrom <urn:uuid:3b1b82ef-fd77-4d89-b4c8-2be7eb31d7ac> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:cb0d4d26-0c4d-4f5c-a813-cb94fc07d947> .
+
+<urn:uuid:c875d4a0-79b1-4d32-8589-b97dd025878a> bcube:hasType "place" ;
+    bcube:hasValue "United States" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:cb0d4d26-0c4d-4f5c-a813-cb94fc07d947> bcube:dateCreated "2015-11-03T05:38:13.925Z" ;
+    bcube:hasMetadataRecord <urn:uuid:3f754b32-cdef-4cf0-ae2e-af1e32d20c2c> ;
+    bcube:lastUpdated "2015-11-03T05:38:13.925Z" ;
+    dc:conformsTo <urn:uuid:02367c02-4ac2-4e83-b240-510d0b19d923>,
+        <urn:uuid:0cebf028-7e69-4829-b544-d7e6afb363a0>,
+        <urn:uuid:c875d4a0-79b1-4d32-8589-b97dd025878a> ;
+    dc:description "2000 Tribal Census Tracts" ;
+    dc:spatial "POLYGON ((-172.4378 18.9108,-172.4378 74.3889,-66.9497 74.3889,-66.9497 18.9108,-172.4378 18.9108))" ;
+    dcterms:title "US Tribal Census Tracts" ;
+    esip:eastBound "-66.9497"^^xsd:float ;
+    esip:endDate "1900-01-01"^^xsd:date ;
+    esip:northBound "74.3889"^^xsd:float ;
+    esip:southBound "18.9108"^^xsd:float ;
+    esip:startDate "1900-01-01"^^xsd:date ;
+    esip:westBound "-172.4378"^^xsd:float ;
+    owl:a dcat:Dataset .
+

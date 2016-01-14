@@ -1,0 +1,98 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:123d91ea-9f82-480d-8a7b-b08b1d082646> bcube:hasType "theme" ;
+    bcube:hasValue "economy",
+        "environment",
+        "oceans",
+        "society",
+        "structure",
+        "transportation" ;
+    dc:partOf "ISO 19115 Topic Category" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:46acb17e-63f7-4df1-9ad2-bb051159367a> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-08-05T07:42:06.845Z" ;
+    bcube:lastUpdated "2015-08-05T07:42:06.845Z" ;
+    bcube:originatedFrom <urn:uuid:9e557860-5473-4858-af7a-3e710115ea46> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:7607248e-5036-4480-ac6d-612f9cc9db33> .
+
+<urn:uuid:4d3bc242-0c6a-4bc5-888c-3348124fd158> owl:a foaf:Organization ;
+    foaf:name "Hazards and Vulnerability Research Institute (HVRI), University of South Carolina" .
+
+<urn:uuid:5679f0c9-3f85-4fc9-ba3d-b3adc00efd16> bcube:hasType "theme" ;
+    bcube:hasValue "Comparative Index",
+        "Demographics",
+        "Environmental Hazards",
+        "Indicators",
+        "Resilience",
+        "Social Vulnerability Index",
+        "Socioeconomics",
+        "Vulnerability" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:7607248e-5036-4480-ac6d-612f9cc9db33> bcube:dateCreated "2015-08-05T07:42:06.845Z" ;
+    bcube:hasMetadataRecord <urn:uuid:46acb17e-63f7-4df1-9ad2-bb051159367a> ;
+    bcube:lastUpdated "2015-08-05T07:42:06.845Z" ;
+    dc:conformsTo <urn:uuid:123d91ea-9f82-480d-8a7b-b08b1d082646>,
+        <urn:uuid:5679f0c9-3f85-4fc9-ba3d-b3adc00efd16>,
+        <urn:uuid:c119bd0d-df0c-4cee-9472-30455d0f7057> ;
+    dc:description "This data depicts the social vulnerability of Washington census block groups to environmental hazards. Data were culled primarily from the 2000 Decennial Census." ;
+    dc:spatial "POLYGON ((-178.217598 18.921786,-178.217598 71.406235,-66.969271 71.406235,-66.969271 18.921786,-178.217598 18.921786))" ;
+    dcterms:publisher <urn:uuid:4d3bc242-0c6a-4bc5-888c-3348124fd158> ;
+    dcterms:references <urn:uuid:ef9db928-5a9a-4c64-b43a-51508dd93f77> ;
+    dcterms:title "Social Vulnerability Index (SoVI) for Washington based on 2000 Census Block Groups" ;
+    esip:eastBound "-66.969271"^^xsd:float ;
+    esip:northBound "71.406235"^^xsd:float ;
+    esip:southBound "18.921786"^^xsd:float ;
+    esip:startDate "2000-01-01"^^xsd:date ;
+    esip:westBound "-178.217598"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:8f22e985-e729-46d2-8760-8fc8bf3e6136> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-05T07:42:06.845Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-05T07:42:06.845Z" ;
+    dc:identifier "urn:sha:30cf345e633e286b856e2d494158a7a0073272646fff2597a42435eb" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www.coast.noaa.gov/digitalcoast/data/SoVI/" .
+
+<urn:uuid:9e557860-5473-4858-af7a-3e710115ea46> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-05T07:42:06.845Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-05T07:42:06.845Z" ;
+    dc:identifier "urn:sha:4b8666605953e931f493f8f270c1ddbe1f74f147fb3822528e61ced5" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://coast.noaa.gov/data/Documents/Metadata/harvest/Demographic/SOVI_BlkGrp_2000_WA_shp.xml" .
+
+<urn:uuid:c119bd0d-df0c-4cee-9472-30455d0f7057> bcube:hasType "place" ;
+    bcube:hasValue "Census Block Groups",
+        "Coastal States",
+        "United States" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:ef9db928-5a9a-4c64-b43a-51508dd93f77> dcterms:references <urn:uuid:8f22e985-e729-46d2-8760-8fc8bf3e6136> ;
+    owl:a bibo:WebPage .
+

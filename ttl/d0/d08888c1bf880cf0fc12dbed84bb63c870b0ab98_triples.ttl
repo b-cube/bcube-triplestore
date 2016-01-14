@@ -1,0 +1,79 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:31e637c8-24a3-4b38-989e-1695e3fbe7aa> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-05T15:47:49.256Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-05T15:47:49.256Z" ;
+    dc:identifier "urn:sha:e4a9c1eae38555e0944ef779855038e9f65e3ebad7e0e1b86a766250" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://coast.noaa.gov/data/Documents/Metadata/isoharvest/Lidar/va2011_usgs_fema_middlecounties_m4710_ISOmetadata_cleaned.xml" .
+
+<urn:uuid:3654c00f-c71e-45a0-b37f-ced14466c157> bcube:hasValue "elevation" ;
+    dc:partOf "IsoTopicCategories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:40e748d0-6035-4aed-8c97-c8b537aa883d> bcube:hasType "theme" ;
+    bcube:hasValue "Breaklines",
+        "DEM",
+        "DTM",
+        "Elevation",
+        "LAS",
+        "Lidar" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:4e752d9a-3158-4e93-a91f-b00fc010f09e> a "ISO 19115:2003/19139" ;
+    bcube:dateCreated "2015-08-05T15:47:49.256Z" ;
+    bcube:lastUpdated "2015-08-05T15:47:49.256Z" ;
+    bcube:originatedFrom <urn:uuid:31e637c8-24a3-4b38-989e-1695e3fbe7aa> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:d393f167-4a0b-40d0-8f64-3fd475e862ab> .
+
+<urn:uuid:5383a796-b8a3-4345-9a77-16b923de8921> bcube:hasType "place" ;
+    bcube:hasValue "Charles City County",
+        "New Kent County",
+        "Prince George County",
+        "Virginia" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:d393f167-4a0b-40d0-8f64-3fd475e862ab> bcube:dateCreated "2015-08-05T15:47:49.256Z" ;
+    bcube:hasMetadataRecord <urn:uuid:4e752d9a-3158-4e93-a91f-b00fc010f09e> ;
+    bcube:lastUpdated "2015-08-05T15:47:49.256Z" ;
+    dc:conformsTo <urn:uuid:3654c00f-c71e-45a0-b37f-ced14466c157>,
+        <urn:uuid:40e748d0-6035-4aed-8c97-c8b537aa883d>,
+        <urn:uuid:5383a796-b8a3-4345-9a77-16b923de8921>,
+        <urn:uuid:f109dc0a-89f9-41ba-9d69-2ae599716a2c> ;
+    dc:description "Dewberry collected LiDAR for ~3,341 square miles in various Virginia Counties, a part of Worcester County, and Hoopers Island. The acquisition was performed by Terrapoint. This metadata covers the LiDAR produced for the Middle Counties project area. The nominal pulse spacing for this project is 1.6 ft (0.5 meters). This project was collected with a sensor which collects intensity values for each discrete pulse extracted from the waveform. GPS Week Time, Intensity, Flightline and echo number attributes were provided for each LiDAR point. Dewberry used proprietary procedures to classify the LAS according to contract specifications: 1-Unclassified, 2-Ground, 7-Noise, 9-Water, 10-Ignored Ground due to breakline proximity, and 11-Withheld. Dewberry produced 3D breaklines and combined these with the final LiDAR data to produce seamless hydro flattened DEMs for the 918 tiles (5000 ft x 5000 ft) that cover the project area." ;
+    dc:spatial "POLYGON ((-77.401043 37.36991635,-77.401043 37.62771,-76.754699 37.62771,-76.754699 37.36991635,-77.401043 37.36991635))" ;
+    dcterms:title "2011 FEMA Lidar: Middle Counties (VA)" ;
+    esip:eastBound "-76.754699"^^xsd:float ;
+    esip:endDate "2012-04-02"^^xsd:date ;
+    esip:northBound "37.62771"^^xsd:float ;
+    esip:southBound "37.36991635"^^xsd:float ;
+    esip:startDate "2011-05-06"^^xsd:date ;
+    esip:westBound "-77.401043"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:f109dc0a-89f9-41ba-9d69-2ae599716a2c> bcube:hasType "temporal" ;
+    bcube:hasValue "2011",
+        "May" ;
+    dc:partOf "none" ;
+    owl:a bcube:thesaurusSubset .
+

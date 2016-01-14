@@ -1,0 +1,88 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:4461388b-ca09-4668-bd14-2791befb6270> owl:a foaf:Organization ;
+    foaf:name "" .
+
+<urn:uuid:469b7031-8510-4b59-b1fd-9fcca30445a7> bcube:dateCreated "2015-11-07T20:22:07.331Z" ;
+    bcube:hasMetadataRecord <urn:uuid:5b916767-5e2c-40c0-a6fb-56ad147cc4c1> ;
+    bcube:lastUpdated "2015-11-07T20:22:07.331Z" ;
+    dc:conformsTo <urn:uuid:79b6d1a3-64f7-440d-b68b-a63962c6364b>,
+        <urn:uuid:c0a28dbc-e86b-4a24-9230-47801827d138>,
+        <urn:uuid:f83d877c-6934-4ee0-8a2b-a600fe6388fb> ;
+    dc:description "The TIGER/Line Shapefiles are an extract of selected geographic and cartographic information from the Census MAF/TIGER database. The Census MAF/TIGER database represents a seamless national file with no overlaps or gaps between parts. However, each TIGER/Line Shapefile is designed to stand alone as an independent data set or the shapefiles can be combined to cover the whole nation." ;
+    dc:spatial "POLYGON ((-83.675415 36.540759,-83.675415 39.466012,-75.166435 39.466012,-75.166435 36.540759,-83.675415 36.540759))" ;
+    dcterms:publisher <urn:uuid:4461388b-ca09-4668-bd14-2791befb6270> ;
+    dcterms:references <urn:uuid:7aec243f-11f6-463b-9da7-edf84cab2871> ;
+    dcterms:title "TIGER/Line Shapefile, 2007, state, Virginia, County and Equivalent" ;
+    esip:eastBound "-75.166435"^^xsd:float ;
+    esip:endDate "2007-07-01"^^xsd:date ;
+    esip:northBound "39.466012"^^xsd:float ;
+    esip:southBound "36.540759"^^xsd:float ;
+    esip:startDate "2007-01-01"^^xsd:date ;
+    esip:westBound "-83.675415"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:5b916767-5e2c-40c0-a6fb-56ad147cc4c1> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-11-07T20:22:07.331Z" ;
+    bcube:lastUpdated "2015-11-07T20:22:07.331Z" ;
+    bcube:originatedFrom <urn:uuid:f674f894-98f8-49a7-a90e-aed8717f3a38> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:469b7031-8510-4b59-b1fd-9fcca30445a7> .
+
+<urn:uuid:79b6d1a3-64f7-440d-b68b-a63962c6364b> bcube:hasType "place" ;
+    bcube:hasValue "51",
+        "State or Equivalent Entity",
+        "U.S.",
+        "United States",
+        "VA",
+        "Virginia" ;
+    dc:partOf "FIPS Publication 5-2, FIPS Publication 6-4, FIPS Publication 8-6, FIPS Publication 9-1" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:7aec243f-11f6-463b-9da7-edf84cab2871> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-07T20:22:07.331Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-07T20:22:07.331Z" ;
+    dc:identifier "urn:sha:f7c5a3f29bca0d04801f8eb7797262d7b9641c33109d146fea225048" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www2.census.gov/geo/tiger/TIGER2007FE/51_VIRGINIA/fe_2007_51_county.zip" .
+
+<urn:uuid:c0a28dbc-e86b-4a24-9230-47801827d138> bcube:hasType "theme" ;
+    bcube:hasValue "boundaries" ;
+    dc:partOf "ISO 19115 Topic Categories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:f674f894-98f8-49a7-a90e-aed8717f3a38> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-07T20:22:07.331Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-07T20:22:07.331Z" ;
+    dc:identifier "urn:sha:a457125ba175068e2c33f44e9e7d2e8938ce62f566eef882a5c014d2" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://meta.geo.census.gov/data/existing/decennial/GEO/GPMB/TIGERline/fe_2007/county/fe_2007_51_county_url.shp.xml" .
+
+<urn:uuid:f83d877c-6934-4ee0-8a2b-a600fe6388fb> bcube:hasType "theme" ;
+    bcube:hasValue "County or equivalent entity",
+        "Polygon" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+

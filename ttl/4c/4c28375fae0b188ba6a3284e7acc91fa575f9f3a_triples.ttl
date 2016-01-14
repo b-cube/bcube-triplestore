@@ -1,0 +1,101 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:02719184-b9a4-406e-a852-30ae548573c0> bcube:hasType "theme" ;
+    bcube:hasValue "Bridges",
+        "Creeks",
+        "Cross Section Lines",
+        "Cross Sections",
+        "Culverts",
+        "DFIRM",
+        "Dams",
+        "Digital Flood Insurance Rate Map",
+        "Flood Hazard Data",
+        "Levees",
+        "Streams",
+        "Survey",
+        "Water Body" ;
+    dc:partOf "FEMA NFIP Topic Category" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:23225516-dd39-4a4a-9a5e-97c42e1b76f5> bcube:hasType "place" ;
+    bcube:hasValue "COMMUNITY RENO",
+        "COUNTY WASHOE",
+        "COUNTY-FIPS 0019",
+        "FEMA-CID 32031C",
+        "REGION 09",
+        "STATE NV" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:34c41a19-bb81-4c09-8179-a90b5a65b6c8> bcube:hasType "theme" ;
+    bcube:hasValue "elevation",
+        "location",
+        "structure",
+        "transportation" ;
+    dc:partOf "ISO 19115 Topic Category" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:496532c8-a798-4f5d-a64c-67ea20e1ccc1> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-08-09T12:37:18.061Z" ;
+    bcube:lastUpdated "2015-08-09T12:37:18.061Z" ;
+    bcube:originatedFrom <urn:uuid:e65067d8-aaa1-4a91-8da4-1ce25135faa3> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:59508967-69a0-484b-b5d0-7e84ec0ebb36> .
+
+<urn:uuid:59508967-69a0-484b-b5d0-7e84ec0ebb36> bcube:dateCreated "2015-08-09T12:37:18.061Z" ;
+    bcube:hasMetadataRecord <urn:uuid:496532c8-a798-4f5d-a64c-67ea20e1ccc1> ;
+    bcube:lastUpdated "2015-08-09T12:37:18.061Z" ;
+    dc:conformsTo <urn:uuid:02719184-b9a4-406e-a852-30ae548573c0>,
+        <urn:uuid:23225516-dd39-4a4a-9a5e-97c42e1b76f5>,
+        <urn:uuid:34c41a19-bb81-4c09-8179-a90b5a65b6c8> ;
+    dc:description "Survey data includes spatial datasets and data tables necessary to digitally represent data collected in the survey phase of the study. (Source: FEMA Guidelines and Specs, Appendix N)" ;
+    dc:spatial "POLYGON ((-119.986527 39.462657,-119.986527 39.653949,-119.819513 39.653949,-119.819513 39.462657,-119.986527 39.462657))" ;
+    dcterms:publisher <urn:uuid:c377757e-58ec-405d-a943-c8bbde54ac45> ;
+    dcterms:references <urn:uuid:f581857e-89b3-46ea-a2ee-35e95d20095a> ;
+    dcterms:title "DCS Survey Submission for Washoe County NV" ;
+    esip:eastBound "-119.819513"^^xsd:float ;
+    esip:northBound "39.653949"^^xsd:float ;
+    esip:southBound "39.462657"^^xsd:float ;
+    esip:startDate "2010-08-31"^^xsd:date ;
+    esip:westBound "-119.986527"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:c377757e-58ec-405d-a943-c8bbde54ac45> owl:a foaf:Organization ;
+    foaf:name "Federal Emergency Management Agency" .
+
+<urn:uuid:e65067d8-aaa1-4a91-8da4-1ce25135faa3> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-09T12:37:18.061Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-09T12:37:18.061Z" ;
+    dc:identifier "urn:sha:9c7ea7c058afab96029fdf502cfc38deec3aacc2fee33aaf4c68c5e7" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://catalog.data.gov/harvest/object/8810ba2e-cd4a-4da0-a8dc-abb46270d576/original" .
+
+<urn:uuid:f581857e-89b3-46ea-a2ee-35e95d20095a> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-09T12:37:18.061Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-09T12:37:18.061Z" ;
+    dc:identifier "urn:sha:37c915397238031daced09ae0e2dd3bf54e84a6477f749c2cc9dcbdf" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://hazards.fema.gov" .
+

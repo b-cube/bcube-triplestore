@@ -1,0 +1,91 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:067ae0ff-55ba-4613-91eb-a3da1d83dae8> owl:a foaf:Organization ;
+    foaf:name "U.S. Geological Survey" .
+
+<urn:uuid:27caaf24-781a-4fcf-b40a-81ee2e6c9a7a> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-07-11T03:59:43.354Z" ;
+    bcube:lastUpdated "2015-07-11T03:59:43.354Z" ;
+    bcube:originatedFrom <urn:uuid:c7b6901e-20d0-4340-a34e-7ac6ad896f73> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:4895d6d3-c3de-4f5b-ba07-439c02a4542c> .
+
+<urn:uuid:42df8361-1377-4365-86cb-93ca88fa96b0> bcube:hasType "temporal" ;
+    bcube:hasValue "2001" ;
+    dc:partOf "http://www.esri.com/news/arcuser/1104/temporal.html" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:4895d6d3-c3de-4f5b-ba07-439c02a4542c> bcube:dateCreated "2015-07-11T03:59:43.354Z" ;
+    bcube:hasMetadataRecord <urn:uuid:27caaf24-781a-4fcf-b40a-81ee2e6c9a7a> ;
+    bcube:lastUpdated "2015-07-11T03:59:43.354Z" ;
+    dc:conformsTo <urn:uuid:42df8361-1377-4365-86cb-93ca88fa96b0>,
+        <urn:uuid:4957ec00-dbd8-4552-92ae-cc90bd0a520b>,
+        <urn:uuid:4c289ebe-42a7-4943-888e-9f2501b6dec2>,
+        <urn:uuid:90e851a0-10e3-4d26-b5f9-b924312fb292> ;
+    dc:description "ASCII xyz point cloud data were produced from remotely sensed, geographically referenced elevation measurements cooperatively by the U.S. Geological Survey (USGS) and National Aeronautics and Space Administration (NASA). Elevation measurements were collected over the area using the NASA Airborne Topographic Mapper (ATM), a scanning Lidar system that measures high-resolution topography of the land surface. The ATM system is deployed on a twin-otter or P3 aircraft and incorporates a green-wavelength laser operating at pulse rates of 2 to 10 kilohertz. Measurements from the laser ranging device are coupled with data acquired from inertial navigation system (INS) attitude sensors and differentially-corrected global positioning system (GPS) receivers to measure topography of the surface at accuracies of +/-15 centimeters." ;
+    dcterms:publisher <urn:uuid:067ae0ff-55ba-4613-91eb-a3da1d83dae8> ;
+    dcterms:references <urn:uuid:fc120036-66cb-4f93-b2dc-e21ad2538dd7> ;
+    dcterms:title "ATM Coastal Topography--Florida 2001: Western Panhandle" ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:4957ec00-dbd8-4552-92ae-cc90bd0a520b> bcube:hasType "theme" ;
+    bcube:hasValue "ALPS",
+        "ATM",
+        "Airborne Lidar Processing System",
+        "Airborne Topographic Mapper",
+        "DEM",
+        "Digital Elevation Model",
+        "Lidar",
+        "laser altimetry",
+        "remote sensing",
+        "topography" ;
+    dc:partOf "http://remotesensing.usgs.gov" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:4c289ebe-42a7-4943-888e-9f2501b6dec2> bcube:hasType "place" ;
+    bcube:hasValue "Florida",
+        "Northern Gulf of Mexico",
+        "Western Panhandle" ;
+    dc:partOf "http://nationalmap.gov" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:90e851a0-10e3-4d26-b5f9-b924312fb292> bcube:hasType "stratum" ;
+    bcube:hasValue "First Surface" ;
+    dc:partOf "http://lidar.cr.usgs.gov/" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:c7b6901e-20d0-4340-a34e-7ac6ad896f73> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-07-11T03:59:43.354Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-07-11T03:59:43.354Z" ;
+    dc:identifier "urn:sha:f2cf54ff153cb1d9e08007737da782e8ae5b3a28de4631c57802b4c2" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://pubs.usgs.gov/ds/430/data_files/fs/30086d5d/30086d5d_fs.xyz.xml" .
+
+<urn:uuid:fc120036-66cb-4f93-b2dc-e21ad2538dd7> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-07-11T03:59:43.354Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-07-11T03:59:43.354Z" ;
+    dc:identifier "urn:sha:d14a028c2a3a2bc9476102bb288234c415a2b01f828ea62ac5b3e42f" ;
+    owl:a bcube:Url .
+

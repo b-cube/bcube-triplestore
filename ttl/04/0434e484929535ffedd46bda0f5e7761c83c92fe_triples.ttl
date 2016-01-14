@@ -1,0 +1,71 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:3203d239-9ca9-461f-a3f8-802dce25a298> bcube:hasType "theme" ;
+    bcube:hasValue "license" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:334cd4fc-a8a3-47c2-af08-0b6a11b85108> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-10-17T10:58:08.392Z" ;
+    bcube:lastUpdated "2015-10-17T10:58:08.392Z" ;
+    bcube:originatedFrom <urn:uuid:c2dbdf77-9647-497f-987b-c604aba8f5cf> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:921aadbf-444e-42f8-b17b-8974527dc4c4> .
+
+<urn:uuid:535a6430-e2aa-4b3f-907b-38e698dfa4e9> bcube:hasType "place" ;
+    bcube:hasValue "Colorado",
+        "Denver",
+        "Denver County",
+        "USA" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:921aadbf-444e-42f8-b17b-8974527dc4c4> bcube:dateCreated "2015-10-17T10:58:08.392Z" ;
+    bcube:hasMetadataRecord <urn:uuid:334cd4fc-a8a3-47c2-af08-0b6a11b85108> ;
+    bcube:lastUpdated "2015-10-17T10:58:08.392Z" ;
+    dc:conformsTo <urn:uuid:3203d239-9ca9-461f-a3f8-802dce25a298>,
+        <urn:uuid:535a6430-e2aa-4b3f-907b-38e698dfa4e9>,
+        <urn:uuid:b75a7113-f1c9-4cdb-b523-1f77d30ecc03> ;
+    dc:description "This layer shows the location of Department of Motor Vehicles (DMV) offices within Denver. The data were collected by the Motor Vehicles Division of the City and County of Denver" ;
+    dc:spatial "POLYGON ((-105.049926 39.655588,-105.049926 39.78136,-104.848396 39.78136,-104.848396 39.655588,-105.049926 39.655588))" ;
+    dcterms:publisher <urn:uuid:c76d7c48-282b-4dcd-8fc3-cd36f594f94f> ;
+    dcterms:title "Department of Motor Vehicle Office Locations" ;
+    esip:eastBound "-104.848396"^^xsd:float ;
+    esip:northBound "39.78136"^^xsd:float ;
+    esip:southBound "39.655588"^^xsd:float ;
+    esip:westBound "-105.049926"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:b75a7113-f1c9-4cdb-b523-1f77d30ecc03> bcube:hasType "theme" ;
+    bcube:hasValue "location",
+        "transportation" ;
+    dc:partOf "ISO 19115 Topic Categories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:c2dbdf77-9647-497f-987b-c604aba8f5cf> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-10-17T10:58:08.392Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-10-17T10:58:08.392Z" ;
+    dc:identifier "urn:sha:98e534cf59effd144a46d10497e143dfd5f2372a8cc67cffb8ca9844" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://data.denvergov.org/download/gis/department_of_motor_vehicle_offices/metadata/department_of_motor_vehicle_offices.xml" .
+
+<urn:uuid:c76d7c48-282b-4dcd-8fc3-cd36f594f94f> owl:a foaf:Organization ;
+    foaf:name "" .
+

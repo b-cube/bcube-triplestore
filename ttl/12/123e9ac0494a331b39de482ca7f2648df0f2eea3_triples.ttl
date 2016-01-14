@@ -1,0 +1,92 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:2b66d716-0455-4867-97cb-719865b70fce> a "ISO 19115:2003/19139" ;
+    bcube:dateCreated "2015-08-09T05:20:05.278Z" ;
+    bcube:lastUpdated "2015-08-09T05:20:05.278Z" ;
+    bcube:originatedFrom <urn:uuid:fdce53b4-0727-4bda-95a1-84af24b92015> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:89928ba8-1e5a-4060-9ffc-8df688dd2a85> .
+
+<urn:uuid:89928ba8-1e5a-4060-9ffc-8df688dd2a85> bcube:dateCreated "2015-08-09T05:20:05.278Z" ;
+    bcube:hasMetadataRecord <urn:uuid:2b66d716-0455-4867-97cb-719865b70fce> ;
+    bcube:lastUpdated "2015-08-09T05:20:05.278Z" ;
+    dc:conformsTo <urn:uuid:8f59b1ca-19c5-4559-ac6d-c89002328775>,
+        <urn:uuid:abdcd4b4-9b3c-4210-b205-ac05cd65c2d5>,
+        <urn:uuid:b0e544f9-4188-4484-aff2-c2b8e5da5914> ;
+    dc:description "Bathymetry for Matagorda Bay wasderived from twenty-three surveys containing 250,396 soundings. Sixoverlapping, older, less accurate surveys were omitted, and the overlap from sixolder surveys was also omitted. The average distance between surveys was67 meters. The twenty-three surveys used dated from 1934 to 1992. Sevensurveys from 1934 and 1935 cover the northeast, northwest, and southernextremes of Matagorda Bay. Sixteen surveys from 1991 and 1992 cover thecentral and eastern portions of the bay. The range of soundings for the 23surveys used was 0.2 meters to -26.6 meters at mean low water. Mean highwater values between 0.1 and 0.3 meters were assigned to the shoreline.Twenty-nine points were found that were not consistent with the surroundingpoints; twenty-eight of these were from the same survey. All of these wereremoved prior to tinning. DEM grid values outside the shoreline (onland) were assigned null values (-32676).Matagorda Bay has twenty-one 7.5 minute DEMs and two one degree DEMs.The 1 degree DEMs were generated from the higher resolution 7.5minute DEMs which covered the estuary. A Digital Elevation Model(DEM) contains a series of elevations ordered from south to northwith the order of the columns from west to east. The DEM isformatted as one ASCII header record (A- record), followed by aseries of profile records (B- records) each of which include a shortB-record header followed by a series of ASCII integer elevations(typically in units of 1 centimeter) per each profile. The lastphysical record of the DEM is an accuracy record (C-record).The 7.5-minute DEM (30- by 30-m data spacing) is cast on theUniversal Transverse Mercator (UTM) projection. It provides coveragein 7.5- by 7.5-minute blocks. Each product provides the samecoverage as a standard USGS 7.5-minute quadrangle but the DEMcontains over edge data. Coverage is available for many estuaries ofthe contiguous United States but is not complete." ;
+    dc:spatial "POLYGON ((-96.664966 28.350849,-96.664966 28.848201,-95.655583 28.848201,-95.655583 28.350849,-96.664966 28.350849))" ;
+    dcterms:references <urn:uuid:f6bf57e1-95ba-479f-b87f-008823697606> ;
+    dcterms:title "Matagorda Bay, TX (G280) Bathymetric Digital Elevation Model(30 meter resolution) Derived From Source Hydrographic SurveySoundings Collected by NOAA" ;
+    esip:eastBound "-95.655583"^^xsd:float ;
+    esip:endDate "1992-01-01"^^xsd:date ;
+    esip:northBound "28.848201"^^xsd:float ;
+    esip:southBound "28.350849"^^xsd:float ;
+    esip:startDate "1934-01-01"^^xsd:date ;
+    esip:westBound "-96.664966"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:8f59b1ca-19c5-4559-ac6d-c89002328775> bcube:hasValue "ImageryBaseMapsEarthCover",
+        "elevation",
+        "oceans" ;
+    dc:partOf "IsoTopicCategories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:abdcd4b4-9b3c-4210-b205-ac05cd65c2d5> bcube:hasType "theme" ;
+    bcube:hasValue "DEM",
+        "altitude",
+        "bathymetry",
+        "depth",
+        "digital bathymetric model",
+        "digital elevation model",
+        "digital terrain model",
+        "elevation",
+        "estuarine bathymetry",
+        "estuary",
+        "height",
+        "hydrographic survey",
+        "marine navigation" ;
+    dc:partOf "none" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:b0e544f9-4188-4484-aff2-c2b8e5da5914> bcube:hasType "place" ;
+    bcube:hasValue "Matagorda Bay, TX",
+        "Texas" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:f6bf57e1-95ba-479f-b87f-008823697606> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-09T05:20:05.278Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-09T05:20:05.278Z" ;
+    dc:identifier "urn:sha:1c008adbf18433a5a6db575f483d5c98917b23d5287782519276683b" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://estuarinebathymetry.noaa.gov/finddata.html" .
+
+<urn:uuid:fdce53b4-0727-4bda-95a1-84af24b92015> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-09T05:20:05.278Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-09T05:20:05.278Z" ;
+    dc:identifier "urn:sha:160c70cc3f9cffb2cccabd20d7c553fc430b9c894da37f35b74a2160" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "https://catalog.data.gov/harvest/object/9b39175f-9976-4762-bb15-b19c28d9d107" .
+

@@ -1,0 +1,63 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:2bc9e7c5-4060-49d5-a7de-6ee35958a524> bcube:hasType "theme" ;
+    bcube:hasValue "economic geology",
+        "geospatial datasets",
+        "hydraulic fracturing",
+        "maps and atlases",
+        "mineral deposit areas",
+        "natural gas resources",
+        "natural resource assessment",
+        "petroleum" ;
+    dc:partOf "Alexandria Digital Library Feature Type Thesaurus" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:3bec0e9c-12b6-4854-8ed5-ec7beff8e6b9> a "ISO 19115:2003/19139" ;
+    bcube:dateCreated "2014-10-29T23:53:08.686Z" ;
+    bcube:lastUpdated "2014-10-29T23:53:08.686Z" ;
+    bcube:originatedFrom <urn:uuid:8878229b-64fb-42f5-ba6a-5427ce5ef872> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:e802e010-0f97-4f51-9e19-1be65aa94cc4> .
+
+<urn:uuid:8878229b-64fb-42f5-ba6a-5427ce5ef872> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2014-10-29T23:53:08.686Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2014-10-29T23:53:08.686Z" ;
+    dc:identifier "urn:sha:c9a8548420b5e6adea7c72880d4e936f63ed06ad0fd833bfa16f2f12" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www.usgs.gov/science/iso.php?cite=4503" .
+
+<urn:uuid:a87dfa01-2b9e-4998-aaed-79f6b8873b62> bcube:hasValue "geoscientificInformation" ;
+    dc:partOf "IsoTopicCategories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:e802e010-0f97-4f51-9e19-1be65aa94cc4> bcube:dateCreated "2014-10-29T23:53:08.686Z" ;
+    bcube:hasMetadataRecord <urn:uuid:3bec0e9c-12b6-4854-8ed5-ec7beff8e6b9> ;
+    bcube:lastUpdated "2014-10-29T23:53:08.686Z" ;
+    dc:conformsTo <urn:uuid:2bc9e7c5-4060-49d5-a7de-6ee35958a524>,
+        <urn:uuid:a87dfa01-2b9e-4998-aaed-79f6b8873b62> ;
+    dc:description "Shows where there are potential commercial sources of natural gas trapped in formations with very low permeability to gas (not necessarily shale units). Hydraulic fracturing might be needed in order to exploit these resources." ;
+    dc:spatial "POLYGON ((-66.95 16.916667,-66.95 71.833333,173.0 71.833333,173.0 16.916667,-66.95 16.916667))" ;
+    dcterms:title "Map of assessed tight-gas resources in the United States" ;
+    esip:eastBound "173.0"^^xsd:float ;
+    esip:northBound "71.833333"^^xsd:float ;
+    esip:southBound "16.916667"^^xsd:float ;
+    esip:westBound "-66.95"^^xsd:float ;
+    owl:a dcat:Dataset .
+

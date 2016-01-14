@@ -1,0 +1,91 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:17ee512e-9811-40be-aef5-468a18a73bb9> bcube:hasValue "boundaries" ;
+    dc:partOf "IsoTopicCategories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:60cd4faa-7528-4ec3-b051-c3c76c9407bd> bcube:hasType "theme" ;
+    bcube:hasValue "Area landmark identifier",
+        "County ANSI Code",
+        "County FIPS Code",
+        "Landmark",
+        "Permanent face ID",
+        "State ANSI Code",
+        "State FIPS Code",
+        "State or equivalent entity",
+        "Table",
+        "Topological Faces" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:67691358-1e30-48c3-8a64-2bfeaf37689b> a "ISO 19115:2003/19139" ;
+    bcube:dateCreated "2015-11-02T02:44:21.885Z" ;
+    bcube:lastUpdated "2015-11-02T02:44:21.885Z" ;
+    bcube:originatedFrom <urn:uuid:8ca44ae1-84c9-48c7-9586-052ce190c9d1> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:69794c91-17c2-4fc6-8f8f-8efd6469538c> .
+
+<urn:uuid:69794c91-17c2-4fc6-8f8f-8efd6469538c> bcube:dateCreated "2015-11-02T02:44:21.885Z" ;
+    bcube:hasMetadataRecord <urn:uuid:67691358-1e30-48c3-8a64-2bfeaf37689b> ;
+    bcube:lastUpdated "2015-11-02T02:44:21.885Z" ;
+    dc:conformsTo <urn:uuid:17ee512e-9811-40be-aef5-468a18a73bb9>,
+        <urn:uuid:60cd4faa-7528-4ec3-b051-c3c76c9407bd>,
+        <urn:uuid:c13a0c36-c236-4071-a9bb-fa5b5722c03e> ;
+    dc:description "The TIGER/Line shapefiles and related database files (.dbf) are an extract of selected geographic and cartographic information from the U.S. Census Bureau's Master Address File / Topologically Integrated Geographic Encoding and Referencing (MAF/TIGER) Database (MTDB). The MTDB represents a seamless national file with no overlaps or gaps between parts, however, each TIGER/Line shapefile is designed to stand alone as an independent data set, or they can be combined to cover the entire nation. The Topological Faces / Area Landmark Relationship File (FACESAL.dbf) contains a record for each face / area landmark relationship. Face refers to the areal (polygon) topological primitives that make up MTDB. A face is bounded by one or more edges; its boundary includes only the edges that separate it from other faces, not any interior edges contained within the area of the face. The face to which a record in the Topological Faces / Area Landmark Relationship File (FACESAL.dbf) applies can be determined by linking to the Topological Faces Shapefile (FACES.shp) on the permanent topological face identifier (TFID) attribute. The area landmark to which a record in the Topological Faces / Area Landmark Relationship File (FACESAL.dbf) applies can be determined by linking to the Area Landmark Shapefile (AREALM.shp) on the area landmark identifier (AREAID) attribute. A face may be part of multiple area landmarks. An area landmark may consist of multiple faces." ;
+    dc:spatial "POLYGON ((-73.508142 41.187053,-73.508142 42.88679,-69.858861 42.88679,-69.858861 41.187053,-73.508142 41.187053))" ;
+    dcterms:references <urn:uuid:e95be994-ce67-4666-86e7-489445722410> ;
+    dcterms:title "TIGER/Line Shapefile, 2013, state, Massachusetts, Current Topological Faces-Area Landmark Relationship File" ;
+    esip:eastBound "-69.858861"^^xsd:float ;
+    esip:endDate "2013-05-01"^^xsd:date ;
+    esip:northBound "42.88679"^^xsd:float ;
+    esip:southBound "41.187053"^^xsd:float ;
+    esip:startDate "2012-06-01"^^xsd:date ;
+    esip:westBound "-73.508142"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:8ca44ae1-84c9-48c7-9586-052ce190c9d1> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-02T02:44:21.885Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-02T02:44:21.885Z" ;
+    dc:identifier "urn:sha:5ed9c95f40a1ecc7ba0bdc9615b6341ebd0dd7e3a3a3b897f6a92f65" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://meta.geo.census.gov/data/existing/decennial/GEO/GPMB/TIGERline/TIGER2013/facesal/tl_2013_25_facesal.dbf.iso.xml" .
+
+<urn:uuid:c13a0c36-c236-4071-a9bb-fa5b5722c03e> bcube:hasType "place" ;
+    bcube:hasValue "25",
+        "MA",
+        "Massachusetts",
+        "State or Equivalent Entity",
+        "U.S.",
+        "United States" ;
+    dc:partOf "ANSI INCITS 38:2009 (Formerly FIPS 5-2), ANSI INCITS 31:2009 (Formerly FIPS 6-4),ANSI INCITS 454:2009 (Formerly FIPS 8-6), ANSI INCITS 455:2009(Formerly FIPS 9-1), ANSI INCITS 446:2008 (Geographic Names Information System (GNIS))" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:e95be994-ce67-4666-86e7-489445722410> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-02T02:44:21.885Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-02T02:44:21.885Z" ;
+    dc:identifier "urn:sha:236fb7b24ad2a113ea319495b6c255e52246a4f77f6df5d8e87e0aa8" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www2.census.gov/geo/tiger/TIGER2013/FACESAL/tl_2013_25_facesal.zip" .
+

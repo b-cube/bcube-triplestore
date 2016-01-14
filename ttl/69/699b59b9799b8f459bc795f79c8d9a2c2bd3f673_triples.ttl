@@ -1,0 +1,91 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:604c70c8-dd6f-4142-ba52-9c03e0caf77a> a "OGC:WMS" ;
+    bcube:contains <urn:uuid:67b0d5d3-6fb8-4798-bdb2-997a778e69d0>,
+        <urn:uuid:67cb96fe-56b8-467e-baec-b69f15b1cd00> ;
+    bcube:dateCreated "2015-08-13T08:14:25.168Z" ;
+    bcube:lastUpdated "2015-08-13T08:14:25.168Z" ;
+    bcube:originatedFrom <urn:uuid:3eb0015a-e121-4719-9142-f3802489569e> ;
+    dc:conformsTo <urn:uuid:3e3c2456-e8b2-4e54-acab-247e80342c08> ;
+    dc:description "Scientific Data" ;
+    owl:a bcube:service .
+
+<urn:uuid:3e3c2456-e8b2-4e54-acab-247e80342c08> bcube:hasValue "atmosphere",
+        "climate",
+        "earth science",
+        "meteorology",
+        "ocean" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:3eb0015a-e121-4719-9142-f3802489569e> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-13T08:14:25.168Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-13T08:14:25.168Z" ;
+    dc:identifier "urn:sha:92588d5d6e2e5c173534320c669c991ba023eb8908b1aa83361eaa59" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://ecco.jpl.nasa.gov/thredds/wms/ecco_Smoother/PREV/20140906/dr080_2014/n10day_01_09/OBPano_08_08.00001_02160_012.cdf?service=WMS&version=1.3.0&request=GetCapabilities" .
+
+<urn:uuid:67b0d5d3-6fb8-4798-bdb2-997a778e69d0> bcube:dateCreated "2015-08-13T08:14:25.168Z" ;
+    bcube:lastUpdated "2015-08-13T08:14:25.168Z" ;
+    dc:description "Reference Bottom Pressure" ;
+    dc:spatial "POLYGON ((-180.0 -79.5,-180.0 78.5,180.0 78.5,180.0 -79.5,-180.0 -79.5))" ;
+    dc:title "Reference Bottom Pressure" ;
+    dcterms:references <urn:uuid:812563ad-578e-4c45-b6c0-0003b9a483ed> ;
+    esip:eastBound "180.0"^^xsd:float ;
+    esip:northBound "78.5"^^xsd:float ;
+    esip:southBound "-79.5"^^xsd:float ;
+    esip:westBound "-180.0"^^xsd:float ;
+    owl:a bcube:Layer .
+
+<urn:uuid:67cb96fe-56b8-467e-baec-b69f15b1cd00> bcube:dateCreated "2015-08-13T08:14:25.168Z" ;
+    bcube:lastUpdated "2015-08-13T08:14:25.168Z" ;
+    dc:description "Bottom Pressure Anomaly (12h)" ;
+    dc:spatial "POLYGON ((-180.0 -79.5,-180.0 78.5,180.0 78.5,180.0 -79.5,-180.0 -79.5))" ;
+    dc:title "Bottom Pressure Anomaly (12h)" ;
+    dcterms:references <urn:uuid:cda3f8fa-cc14-45ce-a918-223f5f30de65> ;
+    esip:eastBound "180.0"^^xsd:float ;
+    esip:northBound "78.5"^^xsd:float ;
+    esip:southBound "-79.5"^^xsd:float ;
+    esip:westBound "-180.0"^^xsd:float ;
+    owl:a bcube:Layer .
+
+<urn:uuid:812563ad-578e-4c45-b6c0-0003b9a483ed> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-13T08:14:25.168Z" ;
+    bcube:hasConfidence "Not Sure" ;
+    bcube:hasUrlSource "Generated" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-13T08:14:25.168Z" ;
+    dc:identifier "urn:sha:c9f69087803e7016b7249895fbb0d5f4d7c852b2f244bc1301784f72" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://ecco.jpl.nasa.gov/thredds/wms/ecco_Smoother/PREV/20140906/dr080_2014/n10day_01_09/OBPano_08_08.00001_02160_012.cdf?layers=OBPref&width=500&version=1.3.0&bbox=-180.0%2C-79.5%2C180.0%2C78.5&service=WMS&format=image%2Fpng&styles=&crs=CRS%3A84&request=GetMap&height=500" .
+
+<urn:uuid:cda3f8fa-cc14-45ce-a918-223f5f30de65> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-13T08:14:25.168Z" ;
+    bcube:hasConfidence "Not Sure" ;
+    bcube:hasUrlSource "Generated" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-13T08:14:25.168Z" ;
+    dc:identifier "urn:sha:ef9fdc2b61c7216750b14d747f05878b877b68cfdf44bdc2364d7dc8" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://ecco.jpl.nasa.gov/thredds/wms/ecco_Smoother/PREV/20140906/dr080_2014/n10day_01_09/OBPano_08_08.00001_02160_012.cdf?layers=OBPano&width=500&version=1.3.0&bbox=-180.0%2C-79.5%2C180.0%2C78.5&service=WMS&format=image%2Fpng&styles=&crs=CRS%3A84&request=GetMap&height=500" .
+

@@ -1,0 +1,92 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:3bb0bc88-07bb-47f9-99cf-f461524f619a> bcube:hasType "theme" ;
+    bcube:hasValue "environment",
+        "inlandWaters" ;
+    dc:partOf "ISO 19115 Topic Category" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:6b22b0c1-37cb-4352-ae25-45e90f2a1f94> owl:a foaf:Organization ;
+    foaf:name "Federal Emergency Management Agency" .
+
+<urn:uuid:7581e627-bf70-43d2-8c55-39bd94476f35> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-07-31T04:08:00.222Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-07-31T04:08:00.222Z" ;
+    dc:identifier "urn:sha:109a3da9d000aa22b09fac8d7f3f787308187adaaada03d0655944b0" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "https://catalog.data.gov/harvest/object/51399374-0f42-4a4b-9410-90a271d768ac/original" .
+
+<urn:uuid:7716d58a-f0ab-4c65-8a10-3a3e89f5aa69> bcube:hasType "theme" ;
+    bcube:hasValue "0.2-Percent-Annual-Chance Flood",
+        "Channel",
+        "DFIRM",
+        "Digital Flood Insurance Rate Map",
+        "Flood Hazard data",
+        "Hydrology" ;
+    dc:partOf "FEMA NFIP Topic Category" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:7d070a0e-b563-4f89-8039-952192680a0f> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-07-31T04:08:00.222Z" ;
+    bcube:lastUpdated "2015-07-31T04:08:00.222Z" ;
+    bcube:originatedFrom <urn:uuid:7581e627-bf70-43d2-8c55-39bd94476f35> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:ae6202f9-dd3e-4cd9-a180-e80556960f45> .
+
+<urn:uuid:a664f907-9dd2-41a1-bb08-387d5b9a8a47> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-07-31T04:08:00.222Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-07-31T04:08:00.222Z" ;
+    dc:identifier "urn:sha:37c915397238031daced09ae0e2dd3bf54e84a6477f749c2cc9dcbdf" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://hazards.fema.gov" .
+
+<urn:uuid:ae6202f9-dd3e-4cd9-a180-e80556960f45> bcube:dateCreated "2015-07-31T04:08:00.222Z" ;
+    bcube:hasMetadataRecord <urn:uuid:7d070a0e-b563-4f89-8039-952192680a0f> ;
+    bcube:lastUpdated "2015-07-31T04:08:00.222Z" ;
+    dc:conformsTo <urn:uuid:3bb0bc88-07bb-47f9-99cf-f461524f619a>,
+        <urn:uuid:7716d58a-f0ab-4c65-8a10-3a3e89f5aa69>,
+        <urn:uuid:e33913b2-cc37-4f83-86ef-6115f781933a> ;
+    dc:description "Hydrology data include spatial datasets and data tables necessary for documenting the hydrologic procedures for estimating flood discharges for a flood insurance study, which includes the hydrologic data expected by FEMA for new riverline studies. (Source: FEMA Guidelines and Specifications, Appendix N)" ;
+    dc:spatial "POLYGON ((-96.211535 41.47896,-96.211535 41.895566,-95.476695 41.895566,-95.476695 41.47896,-96.211535 41.47896))" ;
+    dcterms:publisher <urn:uuid:6b22b0c1-37cb-4352-ae25-45e90f2a1f94> ;
+    dcterms:references <urn:uuid:a664f907-9dd2-41a1-bb08-387d5b9a8a47> ;
+    dcterms:title "HYDROLOGY, HARRISON COUNTY, IOWA, USA" ;
+    esip:eastBound "-95.476695"^^xsd:float ;
+    esip:northBound "41.895566"^^xsd:float ;
+    esip:southBound "41.47896"^^xsd:float ;
+    esip:startDate "2009-08-11"^^xsd:date ;
+    esip:westBound "-96.211535"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:e33913b2-cc37-4f83-86ef-6115f781933a> bcube:hasType "place" ;
+    bcube:hasValue "COMMUNITY COUNTYWIDE",
+        "COUNTY HARRISON",
+        "COUNTY-FIPS 19085",
+        "FEMA-CID 19085C",
+        "REGION 07",
+        "STATE IA" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+

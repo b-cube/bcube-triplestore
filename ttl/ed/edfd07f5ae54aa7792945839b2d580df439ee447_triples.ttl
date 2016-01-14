@@ -1,0 +1,83 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:67c1b42a-b6e4-4657-8b7b-614529417c29> bcube:hasType "theme" ;
+    bcube:hasValue "census",
+        "demographics" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:6bbac525-bfed-440c-91fa-3edbb6053805> bcube:hasType "place" ;
+    bcube:hasValue "Colorado",
+        "Denver",
+        "Denver County",
+        "USA" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:6d12e900-3c55-43b7-98aa-fc1905dc1294> bcube:dateCreated "2015-10-31T22:22:00.101Z" ;
+    bcube:hasMetadataRecord <urn:uuid:8a227676-431f-432c-89af-fd51d311f5ed> ;
+    bcube:lastUpdated "2015-10-31T22:22:00.101Z" ;
+    dc:conformsTo <urn:uuid:67c1b42a-b6e4-4657-8b7b-614529417c29>,
+        <urn:uuid:6bbac525-bfed-440c-91fa-3edbb6053805>,
+        <urn:uuid:7e17b1ff-f513-450d-ae2e-79398d69aaa5> ;
+    dc:description "The U.S. Census Bureau's year 2000 census block boundaries for the City and County of Denver. The original census block boundaries have been adjusted to various Denver GIS data layers to increase the spatial accuracy of this data. Although every effort was made to ensure the accurate rectification of the data, due to geographic problems inherent in the original 2000 census block data, errors may exist. This data-set includes the housing and population data from Summary File 1, and Summary File 3 of the 2000 census. The data-set does not contain data for any enclaves administered by other jurisdictions that are located within the City and County of Denver's boundary." ;
+    dc:spatial "POLYGON ((-105.109967 39.614313,-105.109967 39.914209,-104.599538 39.914209,-104.599538 39.614313,-105.109967 39.614313))" ;
+    dcterms:publisher <urn:uuid:ef3583bf-9a63-4807-a4ea-c051900fe5c2> ;
+    dcterms:references <urn:uuid:752a0fca-4ad9-461d-8aa6-92c1b8181480> ;
+    dcterms:title "Census Blocks (2000)" ;
+    esip:eastBound "-104.599538"^^xsd:float ;
+    esip:northBound "39.914209"^^xsd:float ;
+    esip:southBound "39.614313"^^xsd:float ;
+    esip:westBound "-105.109967"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:71ae87dc-e093-47aa-b62a-77d00dc8f03e> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-10-31T22:22:00.101Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-10-31T22:22:00.101Z" ;
+    dc:identifier "urn:sha:64624a4edf69a9a5e8cd946a38727468412a18e7bbd98c39c7dedce9" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://data.denvergov.org/download/gis/census_blocks_2000/metadata/census_blocks_2000.xml" .
+
+<urn:uuid:752a0fca-4ad9-461d-8aa6-92c1b8181480> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-10-31T22:22:00.101Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-10-31T22:22:00.101Z" ;
+    dc:identifier "urn:sha:d14a028c2a3a2bc9476102bb288234c415a2b01f828ea62ac5b3e42f" ;
+    owl:a bcube:Url .
+
+<urn:uuid:7e17b1ff-f513-450d-ae2e-79398d69aaa5> bcube:hasType "theme" ;
+    bcube:hasValue "society" ;
+    dc:partOf "ISO 19115 Topic Categories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:8a227676-431f-432c-89af-fd51d311f5ed> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-10-31T22:22:00.101Z" ;
+    bcube:lastUpdated "2015-10-31T22:22:00.101Z" ;
+    bcube:originatedFrom <urn:uuid:71ae87dc-e093-47aa-b62a-77d00dc8f03e> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:6d12e900-3c55-43b7-98aa-fc1905dc1294> .
+
+<urn:uuid:ef3583bf-9a63-4807-a4ea-c051900fe5c2> owl:a foaf:Organization ;
+    foaf:name "" .
+

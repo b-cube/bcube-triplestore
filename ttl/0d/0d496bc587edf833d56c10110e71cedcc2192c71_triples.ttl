@@ -1,0 +1,90 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:242dfc54-f287-4823-a415-0c9a499af27d> bcube:hasType "theme" ;
+    bcube:hasValue "Block",
+        "Census Block",
+        "Polygon",
+        "State or equivalent entity" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:42204b09-5387-40bd-bbc2-96b93112e25b> bcube:hasType "place" ;
+    bcube:hasValue "39",
+        "OH",
+        "Ohio",
+        "State or Equivalent Entity",
+        "U.S.",
+        "United States" ;
+    dc:partOf "ANSI INCITS 38:2009 (Formerly FIPS 5-2), ANSI INCITS 31:2009 (Formerly FIPS 6-4),ANSI INCITS 454:2009 (Formerly FIPS 8-6), ANSI INCITS 455:2009(Formerly FIPS 9-1), ANSI INCITS 446:2008 (Geographic Names Information System (GNIS))" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:79e3c4fe-50cc-46d9-b290-13d73daa5cb0> owl:a foaf:Organization ;
+    foaf:name "" .
+
+<urn:uuid:8cf277e4-4666-4cd3-b641-8fc2fc4f51ef> bcube:hasType "theme" ;
+    bcube:hasValue "Boundaries" ;
+    dc:partOf "ISO 19115 Topic Categories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:941fc1c2-fcec-4a61-9b95-8bd09c286440> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-11-01T06:12:35.273Z" ;
+    bcube:lastUpdated "2015-11-01T06:12:35.273Z" ;
+    bcube:originatedFrom <urn:uuid:f4125ce5-578d-483a-b3f3-d37f3a66e9b5> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:b8f18ca3-5d5e-46ee-874d-ca00db021aa5> .
+
+<urn:uuid:b8f18ca3-5d5e-46ee-874d-ca00db021aa5> bcube:dateCreated "2015-11-01T06:12:35.273Z" ;
+    bcube:hasMetadataRecord <urn:uuid:941fc1c2-fcec-4a61-9b95-8bd09c286440> ;
+    bcube:lastUpdated "2015-11-01T06:12:35.273Z" ;
+    dc:conformsTo <urn:uuid:242dfc54-f287-4823-a415-0c9a499af27d>,
+        <urn:uuid:42204b09-5387-40bd-bbc2-96b93112e25b>,
+        <urn:uuid:8cf277e4-4666-4cd3-b641-8fc2fc4f51ef> ;
+    dc:description "The TIGER/Line shapefiles and related database files (.dbf) are an extract of selected geographic and cartographic information from the U.S. Census Bureau's Master Address File / Topologically Integrated Geographic Encoding and Referencing (MAF/TIGER) Database (MTDB). The MTDB represents a seamless national file with no overlaps or gaps between parts, however, each TIGER/Line shapefile is designed to stand alone as an independent data set, or they can be combined to cover the entire nation. Census Blocks are statistical areas bounded on all sides by visible features, such as streets, roads, streams, and railroad tracks, and/or by nonvisible boundaries such as city, town, township, and county limits, and short line-of-sight extensions of streets and roads. Census blocks are relatively small in area; for example, a block in a city bounded by streets. However, census blocks in remote areas are often large and irregular and may even be many square miles in area. A common misunderstanding is that data users think census blocks are used geographically to build all other census geographic areas, rather all other census geographic areas are updated and then used as the primary constraints, along with roads and water features, to delineate the tabulation blocks. As a result, all 2010 Census blocks nest within every other 2010 Census geographic area, so that Census Bureau statistical data can be tabulated at the block level and aggregated up to the appropriate geographic areas. Census blocks cover all territory in the United States, Puerto Rico, and the Island Areas (American Samoa, Guam, the Commonwealth of the Northern Mariana Islands, and the U.S. Virgin Islands). Blocks are the smallest geographic areas for which the Census Bureau publishes data from the decennial census. A block may consist of one or more faces." ;
+    dc:spatial "POLYGON ((-84.820305 38.403423,-84.820305 42.327132,-80.518705 42.327132,-80.518705 38.403423,-84.820305 38.403423))" ;
+    dcterms:publisher <urn:uuid:79e3c4fe-50cc-46d9-b290-13d73daa5cb0> ;
+    dcterms:references <urn:uuid:e9296afc-963c-4d51-9c1a-827b21e8c915> ;
+    dcterms:title "TIGER/Line Shapefile, 2012, state, Ohio, Current Block State-based" ;
+    esip:eastBound "-80.518705"^^xsd:float ;
+    esip:endDate "2012-06-01"^^xsd:date ;
+    esip:northBound "42.327132"^^xsd:float ;
+    esip:southBound "38.403423"^^xsd:float ;
+    esip:startDate "2011-08-01"^^xsd:date ;
+    esip:westBound "-84.820305"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:e9296afc-963c-4d51-9c1a-827b21e8c915> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-01T06:12:35.273Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-01T06:12:35.273Z" ;
+    dc:identifier "urn:sha:0a79caf478aafded965558978af28fe72535dba789856a57b4b9332b" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www2.census.gov/geo/tiger/TIGER2012/TABBLOCK/tl_2012_39_tabblock.zip" .
+
+<urn:uuid:f4125ce5-578d-483a-b3f3-d37f3a66e9b5> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-01T06:12:35.273Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-01T06:12:35.273Z" ;
+    dc:identifier "urn:sha:21859df5cef273baf88e9b1d6228705925f97aae8faa780d86b7f9e4" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://meta.geo.census.gov/data/existing/decennial/GEO/GPMB/TIGERline/TL2012/FGDC/tabblock/tl_2012_39_tabblock.shp.xml" .
+

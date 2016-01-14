@@ -1,0 +1,79 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:44c2ea45-67e0-4803-a027-5cd0643f1fb4> bcube:hasType "place" ;
+    bcube:hasValue "Ann Arbor" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:4e4a6306-877a-464b-a648-7891842a6d35> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-10-29T23:33:37.124Z" ;
+    bcube:lastUpdated "2015-10-29T23:33:37.124Z" ;
+    bcube:originatedFrom <urn:uuid:d2e7da0a-70f1-482b-9ac6-c47990b48d50> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:614d5f26-2331-4b4b-a4f6-584bd37f9f7e> .
+
+<urn:uuid:614d5f26-2331-4b4b-a4f6-584bd37f9f7e> bcube:dateCreated "2015-10-29T23:33:37.124Z" ;
+    bcube:hasMetadataRecord <urn:uuid:4e4a6306-877a-464b-a648-7891842a6d35> ;
+    bcube:lastUpdated "2015-10-29T23:33:37.124Z" ;
+    dc:conformsTo <urn:uuid:44c2ea45-67e0-4803-a027-5cd0643f1fb4>,
+        <urn:uuid:ad5506eb-d769-4b91-ab8d-c37f70ec3790>,
+        <urn:uuid:fefc2c00-580d-47b2-8821-22ba148a602a> ;
+    dc:description "The Planning Department conducted a comprehensive land use inventory of all land within the City of Ann Arbor's ultimate corporate boundary. This inventory includes parcels currently in Ann Arbor, Pittsfield, and ScioTownships which will be annexed into the City consistent with utility service agreements signed by the townships. The resulting GIS data layer combines the descriptive land use and administrative ownership data providing a valuable tool to assist the City of Ann Arbor with future land use planning decisions." ;
+    dc:spatial "POLYGON ((-83.800073 42.222469,-83.800073 42.324149,-83.675706 42.324149,-83.675706 42.222469,-83.800073 42.222469))" ;
+    dcterms:publisher <urn:uuid:cdd4a1b6-4510-48fa-9142-1051cbc1b72f> ;
+    dcterms:references <urn:uuid:90a477b3-9d19-408c-8727-bb690a81d692> ;
+    dcterms:title "Current Land Use 2000 w/Codes" ;
+    esip:eastBound "-83.675706"^^xsd:float ;
+    esip:northBound "42.324149"^^xsd:float ;
+    esip:southBound "42.222469"^^xsd:float ;
+    esip:startDate "2000-01-01"^^xsd:date ;
+    esip:westBound "-83.800073"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:90a477b3-9d19-408c-8727-bb690a81d692> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-10-29T23:33:37.124Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-10-29T23:33:37.124Z" ;
+    dc:identifier "urn:sha:d14a028c2a3a2bc9476102bb288234c415a2b01f828ea62ac5b3e42f" ;
+    owl:a bcube:Url .
+
+<urn:uuid:ad5506eb-d769-4b91-ab8d-c37f70ec3790> bcube:hasType "temporal" ;
+    bcube:hasValue "2000" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:cdd4a1b6-4510-48fa-9142-1051cbc1b72f> owl:a foaf:Organization ;
+    foaf:name "" .
+
+<urn:uuid:d2e7da0a-70f1-482b-9ac6-c47990b48d50> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-10-29T23:33:37.124Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-10-29T23:33:37.124Z" ;
+    dc:identifier "urn:sha:589f99ac32e3480df66f58d67c7a2a839b61d0fd4d32b4bad80105dd" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://data.a2gov.org/feeds/GIS/AA%20LandUse/AA_LandUse.shp.xml" .
+
+<urn:uuid:fefc2c00-580d-47b2-8821-22ba148a602a> bcube:hasType "theme" ;
+    bcube:hasValue "Community Services",
+        "Land Use",
+        "Planning" ;
+    owl:a bcube:thesaurusSubset .
+

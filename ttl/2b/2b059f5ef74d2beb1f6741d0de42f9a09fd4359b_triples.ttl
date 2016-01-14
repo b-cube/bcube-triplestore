@@ -1,0 +1,127 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:2ad9e086-052f-4da4-bddf-165815dde450> bcube:hasType "theme" ;
+    bcube:hasValue "Land Surface > Land Temperature > Land Surface Temperature",
+        "OCEANS > OCEAN TEMPERATURE > SEA SURFACE TEMPERATURE",
+        "Oceans > Ocean Temperature > Sea Surface Temperature",
+        "averages",
+        "daily",
+        "flux",
+        "land",
+        "mean",
+        "ncep",
+        "ocean",
+        "oceans",
+        "reanalysis",
+        "sea",
+        "skin",
+        "sst",
+        "sst/land",
+        "surface",
+        "surface_temperature",
+        "temperature" ;
+    dc:partOf "GCMD Science Keywords" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:6ddefa57-cb14-4edd-9b31-c25b0f95a5dd> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-10-12T13:08:10.039Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-10-12T13:08:10.039Z" ;
+    dc:identifier "urn:sha:dc605789bd531b000976b28d75b7c4c34cc766041049fee56d316590" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "https://bluehub.jrc.ec.europa.eu/erddap/wms/axiomdatascience_908c_6215_85e6/request" .
+
+<urn:uuid:86e60617-23a1-44e1-b1eb-5cf4874ee6e4> dcterms:references <urn:uuid:6ddefa57-cb14-4edd-9b31-c25b0f95a5dd> ;
+    owl:a bibo:WebPage .
+
+<urn:uuid:a0dde2c7-90f5-46ca-a66b-52bd4797dfaa> bcube:hasType "theme" ;
+    bcube:hasValue "latitude",
+        "longitude",
+        "surface_temperature",
+        "time" ;
+    dc:partOf "CF Standard Names Vocabulary V27" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:a3cb5694-3706-4a64-b271-99732812ba31> bcube:dateCreated "2015-10-12T13:08:10.039Z" ;
+    bcube:hasMetadataRecord <urn:uuid:a610c472-9c6f-4c7c-9ebf-0b654cc291eb> ;
+    bcube:lastUpdated "2015-10-12T13:08:10.039Z" ;
+    dc:conformsTo <urn:uuid:2ad9e086-052f-4da4-bddf-165815dde450>,
+        <urn:uuid:a0dde2c7-90f5-46ca-a66b-52bd4797dfaa> ;
+    dc:description "NCEP Reanalysis Daily Averages Surface Flux: Skin Temperature. The NCEP/NCAR Reanalysis 1 project is using a state-of-the-art analysis/forecast system to perform data assimilation using past data from 1948 to the present. This model uses a subset of the NCEP Reanalysis data to display daily average surface level temperature values from January 1, 1948 to the present. Over land, NCEP surface skin temperatures represent the soil temperature at ground level. Over water, they represent the sea surface temperature. If sea ice cover is present, they represent the estimated temperature of the water surface below the ice (estimations which are often inaccurate). The spatial coverage of this dataset is 88.542N-88.542S, 0E-358.125E, covering the surface of the earth with a 192x94 T62 Gaussian grid. This model is updated daily." ;
+    dc:spatial "POLYGON ((-180.0 -88.542,-180.0 88.542,180.0 88.542,180.0 -88.542,-180.0 -88.542))" ;
+    dcterms:identifier "https://bluehub.jrc.ec.europa.eu:axiomdatascience_908c_6215_85e6" ;
+    dcterms:publisher <urn:uuid:fa079bf7-4f14-46f9-ae63-5fb2e6f8ec19> ;
+    dcterms:references <urn:uuid:86e60617-23a1-44e1-b1eb-5cf4874ee6e4>,
+        <urn:uuid:cc191ff0-72a7-4877-b030-1ad8e396486f>,
+        <urn:uuid:df466d22-3942-4ded-8391-ac0ba2285cce> ;
+    dcterms:title "NCEP Reanalysis Daily Averages Surface Flux: Skin Temperature" ;
+    esip:eastBound "180.0"^^xsd:float ;
+    esip:endDate "2015-10-05"^^xsd:date ;
+    esip:northBound "88.542"^^xsd:float ;
+    esip:southBound "-88.542"^^xsd:float ;
+    esip:startDate "1948-01-01"^^xsd:date ;
+    esip:westBound "-180.0"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:a610c472-9c6f-4c7c-9ebf-0b654cc291eb> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-10-12T13:08:10.039Z" ;
+    bcube:lastUpdated "2015-10-12T13:08:10.039Z" ;
+    bcube:originatedFrom <urn:uuid:f31ad6a3-283e-46f3-83bb-afb8730de05a> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:a3cb5694-3706-4a64-b271-99732812ba31> .
+
+<urn:uuid:cc191ff0-72a7-4877-b030-1ad8e396486f> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-10-12T13:08:10.039Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-10-12T13:08:10.039Z" ;
+    dc:identifier "urn:sha:032757dc8b588f8895889bb3f086def63107818d7cba158e5dd9bad4" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "https://bluehub.jrc.ec.europa.eu/erddap/griddap/axiomdatascience_908c_6215_85e6.html" .
+
+<urn:uuid:df466d22-3942-4ded-8391-ac0ba2285cce> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-10-12T13:08:10.039Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-10-12T13:08:10.039Z" ;
+    dc:identifier "urn:sha:d02f58def81161f25c4938d241a09a07ada1b41230b552eac91756b8" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "https://bluehub.jrc.ec.europa.eu/erddap/griddap/axiomdatascience_908c_6215_85e6.graph" .
+
+<urn:uuid:f31ad6a3-283e-46f3-83bb-afb8730de05a> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-10-12T13:08:10.039Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-10-12T13:08:10.039Z" ;
+    dc:identifier "urn:sha:b31e576d662991a17656a9a7bb30c00d4f2d6caea750cd502b2198df" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "https://bluehub.jrc.ec.europa.eu/erddap/metadata/fgdc/xml/axiomdatascience_908c_6215_85e6_fgdc.xml" .
+
+<urn:uuid:fa079bf7-4f14-46f9-ae63-5fb2e6f8ec19> owl:a foaf:Organization ;
+    foaf:name "ERDDAP, version 1.62, at Maritime Affairs Unit of the Joint Research Centre" .
+

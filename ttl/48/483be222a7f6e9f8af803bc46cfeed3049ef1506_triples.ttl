@@ -1,0 +1,95 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:04a145c2-98f1-4a97-ab08-e2f3f862e87b> bcube:hasType "theme" ;
+    bcube:hasValue "Transportation" ;
+    dc:partOf "ISO 19115 Topic Categories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:4492b368-d28e-4b01-99dc-f2f84225ee64> bcube:hasType "place" ;
+    bcube:hasValue "01061",
+        "County or Equivalent Entity",
+        "Geneva",
+        "U.S.",
+        "United States" ;
+    dc:partOf "ANSI INCITS 38:2009 (Formerly FIPS 5-2), ANSI INCITS 31:2009 (Formerly FIPS 6-4),ANSI INCITS 454:2009 (Formerly FIPS 8-6), ANSI INCITS 455:2009(Formerly FIPS 9-1), ANSI INCITS 446:2008 (Geographic Names Information System (GNIS))" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:81518552-1bb0-4f78-89e3-3a504fbee787> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-11-01T10:27:03.69Z" ;
+    bcube:lastUpdated "2015-11-01T10:27:03.69Z" ;
+    bcube:originatedFrom <urn:uuid:d68684f0-1253-405c-8e28-c7db082a2ff5> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:9c0c297d-c321-47e4-bcac-b9ea62aae721> .
+
+<urn:uuid:9c0c297d-c321-47e4-bcac-b9ea62aae721> bcube:dateCreated "2015-11-01T10:27:03.69Z" ;
+    bcube:hasMetadataRecord <urn:uuid:81518552-1bb0-4f78-89e3-3a504fbee787> ;
+    bcube:lastUpdated "2015-11-01T10:27:03.69Z" ;
+    dc:conformsTo <urn:uuid:04a145c2-98f1-4a97-ab08-e2f3f862e87b>,
+        <urn:uuid:4492b368-d28e-4b01-99dc-f2f84225ee64>,
+        <urn:uuid:a683b3e3-749b-4ac8-a77b-cd8f05d80fab> ;
+    dc:description "The TIGER/Line shapefiles and related database files (.dbf) are an extract of selected geographic and cartographic information from the U.S. Census Bureau's Master Address File / Topologically Integrated Geographic Encoding and Referencing (MAF/TIGER) Database (MTDB). The MTDB represents a seamless national file with no overlaps or gaps between parts, however, each TIGER/Line shapefile is designed to stand alone as an independent data set, or they can be combined to cover the entire nation. The Address Range / Feature Name Relationship File (ADDRFN.dbf) contains a record for each address range / linear feature name relationship. The purpose of this relationship file is to identify all street names associated with each address range. An edge can have several feature names; an address range located on an edge can be associated with one or any combination of the available feature names (an address range can be linked to multiple feature names). The address range is identified by the address range identifier (ARID) attribute that can be used to link to the Address Ranges Relationship File (ADDR.dbf). The linear feature name is identified by the linear feature identifier (LINEARID) attribute that can be used to link to the Feature Names Relationship File (FEATNAMES.dbf)." ;
+    dc:spatial "POLYGON ((-86.193476 30.992859,-86.193476 31.199886,-85.485288 31.199886,-85.485288 30.992859,-86.193476 30.992859))" ;
+    dcterms:publisher <urn:uuid:f03dd7a4-ef56-4da0-b8ba-ea4708a2451a> ;
+    dcterms:references <urn:uuid:eaa5ca83-9560-442e-bb08-7103484927ec> ;
+    dcterms:title "TIGER/Line Shapefile, 2012, county, Geneva County, AL, Current Address Range-Feature Name Relationship File" ;
+    esip:eastBound "-85.485288"^^xsd:float ;
+    esip:endDate "2012-06-01"^^xsd:date ;
+    esip:northBound "31.199886"^^xsd:float ;
+    esip:southBound "30.992859"^^xsd:float ;
+    esip:startDate "2011-08-01"^^xsd:date ;
+    esip:westBound "-86.193476"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:a683b3e3-749b-4ac8-a77b-cd8f05d80fab> bcube:hasType "theme" ;
+    bcube:hasValue "5-digit ZIP code",
+        "County ANSI Code",
+        "County FIPS Code",
+        "From House Number",
+        "Permanent edge ID",
+        "Side indicator flag",
+        "State ANSI Code",
+        "State FIPS Code",
+        "To House Number",
+        "ZIP +4 code" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:d68684f0-1253-405c-8e28-c7db082a2ff5> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-01T10:27:03.69Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-01T10:27:03.69Z" ;
+    dc:identifier "urn:sha:95ebc3dbe4a6762fcc8baa67b49d2388418aff75bdf427c20d6dd9e1" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://meta.geo.census.gov/data/existing/decennial/GEO/GPMB/TIGERline/TL2012/FGDC/addrfn/tl_2012_01061_addrfn.dbf.xml" .
+
+<urn:uuid:eaa5ca83-9560-442e-bb08-7103484927ec> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-01T10:27:03.69Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-01T10:27:03.69Z" ;
+    dc:identifier "urn:sha:b43780d1cdc2fbb377fb34c079366dff9d927782d94351a5a08aacc8" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www2.census.gov/geo/tiger/TIGER2012/ADDRFN/tl_2012_01061_addrfn.zip" .
+
+<urn:uuid:f03dd7a4-ef56-4da0-b8ba-ea4708a2451a> owl:a foaf:Organization ;
+    foaf:name "" .
+

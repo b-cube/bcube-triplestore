@@ -1,0 +1,83 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:0ebcd46c-9fe4-44ae-8f88-f50627d703a6> owl:a foaf:Organization ;
+    foaf:name "U.S. Geological Survey" .
+
+<urn:uuid:1184115c-3c7a-43a3-a61c-a7f2c74556b4> bcube:hasType "theme" ;
+    bcube:hasValue "economic geology",
+        "geospatial datasets",
+        "hydraulic fracturing",
+        "maps and atlases",
+        "natural gas resources",
+        "natural resource assessment",
+        "petroleum" ;
+    dc:partOf "USGS Thesaurus" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:193eb59a-ccf3-49a1-95ff-b83b185afc2d> dcterms:references <urn:uuid:f18aeff4-abe6-4c57-bf71-e164880e5aa7> ;
+    owl:a bibo:WebPage .
+
+<urn:uuid:2bb4a744-edb0-40d3-97d2-2ea35d3b6dcc> bcube:dateCreated "2014-10-29T23:51:07.663Z" ;
+    bcube:hasMetadataRecord <urn:uuid:2fad21b9-9bd5-4f97-a4b4-4aea01447990> ;
+    bcube:lastUpdated "2014-10-29T23:51:07.663Z" ;
+    dc:conformsTo <urn:uuid:1184115c-3c7a-43a3-a61c-a7f2c74556b4>,
+        <urn:uuid:f54f590c-034d-4542-9746-02617845c1a1> ;
+    dc:description "Shows where there are potential commercial sources of natural gas trapped in formations with very low permeability to gas (not necessarily shale units). Hydraulic fracturing might be needed in order to exploit these resources." ;
+    dc:spatial "POLYGON ((-66.95 16.916667,-66.95 71.833333,173.0 71.833333,173.0 16.916667,-66.95 16.916667))" ;
+    dcterms:publisher <urn:uuid:0ebcd46c-9fe4-44ae-8f88-f50627d703a6> ;
+    dcterms:references <urn:uuid:193eb59a-ccf3-49a1-95ff-b83b185afc2d> ;
+    dcterms:title "Map of assessed tight-gas resources in the United States" ;
+    esip:eastBound "173.0"^^xsd:float ;
+    esip:northBound "71.833333"^^xsd:float ;
+    esip:southBound "16.916667"^^xsd:float ;
+    esip:westBound "-66.95"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:2fad21b9-9bd5-4f97-a4b4-4aea01447990> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2014-10-29T23:51:07.663Z" ;
+    bcube:lastUpdated "2014-10-29T23:51:07.663Z" ;
+    bcube:originatedFrom <urn:uuid:7dcbcf2d-9f7e-4183-862d-a27600a1ceb4> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:2bb4a744-edb0-40d3-97d2-2ea35d3b6dcc> .
+
+<urn:uuid:7dcbcf2d-9f7e-4183-862d-a27600a1ceb4> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2014-10-29T23:51:07.663Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2014-10-29T23:51:07.663Z" ;
+    dc:identifier "urn:sha:a9fb95e27aaf522312bcc62bf4c5af6e9f04728d13197eb1cf0daa5a" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www.usgs.gov/science/xml.php?cite=4503" .
+
+<urn:uuid:f18aeff4-abe6-4c57-bf71-e164880e5aa7> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2014-10-29T23:51:07.663Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2014-10-29T23:51:07.663Z" ;
+    dc:identifier "urn:sha:05714c252d26cd2d7b3558ceef2f5efdd7fce5c4ea1f5ac6f628ee13" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://pubs.usgs.gov/dds/dds-069/dds-069-hh/" .
+
+<urn:uuid:f54f590c-034d-4542-9746-02617845c1a1> bcube:hasType "theme" ;
+    bcube:hasValue "mineral deposit areas" ;
+    dc:partOf "Alexandria Digital Library Feature Type Thesaurus" ;
+    owl:a bcube:thesaurusSubset .
+

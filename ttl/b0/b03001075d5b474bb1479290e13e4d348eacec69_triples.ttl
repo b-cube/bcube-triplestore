@@ -1,0 +1,83 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:1d0a7146-e80e-4d25-9a26-f88d9bb6390c> bcube:hasType "place" ;
+    bcube:hasValue "United States" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:744cfb78-9755-4ac8-b9f7-907092b8a1b7> dcterms:references <urn:uuid:863cfb72-269c-4791-af96-99826d342d58> ;
+    owl:a bibo:WebPage .
+
+<urn:uuid:863cfb72-269c-4791-af96-99826d342d58> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-07-03T13:52:50.729Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-07-03T13:52:50.729Z" ;
+    dc:identifier "urn:sha:500963b1d40357c462fbeeaf12e7be50e2a226c62bef40db48c7d2b6" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www.epa.gov/roe/" .
+
+<urn:uuid:8fa841cd-e9ca-4808-b483-d9d2a7cde8d7> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-07-03T13:52:50.729Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-07-03T13:52:50.729Z" ;
+    dc:identifier "urn:sha:8cc9bc8d8015d5c2d2e7cef19d6348d4bf54fdd88ec6d3fb7cd976b9" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "https://edg.epa.gov/WAFer/EDG_FGDC/get.jsp?folder=EDG_FGDC&id={EE0477A4-3CD3-4675-8429-9F82DCFE18F0}_Ecological+Hubs+and+Corridors+Web+Service.xml" .
+
+<urn:uuid:93be2119-6d92-45e6-b48c-cb53c024625f> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-07-03T13:52:50.729Z" ;
+    bcube:lastUpdated "2015-07-03T13:52:50.729Z" ;
+    bcube:originatedFrom <urn:uuid:8fa841cd-e9ca-4808-b483-d9d2a7cde8d7> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:ee8dab1f-967d-4040-8354-a4a7f3863a5b> .
+
+<urn:uuid:b6f7bd62-d6a0-4991-9f30-c09ef3fbd44b> owl:a foaf:Organization ;
+    foaf:name "U.S. Environmental Protection Agency, Region 4" .
+
+<urn:uuid:ee8dab1f-967d-4040-8354-a4a7f3863a5b> bcube:dateCreated "2015-07-03T13:52:50.729Z" ;
+    bcube:hasMetadataRecord <urn:uuid:93be2119-6d92-45e6-b48c-cb53c024625f> ;
+    bcube:lastUpdated "2015-07-03T13:52:50.729Z" ;
+    dc:conformsTo <urn:uuid:1d0a7146-e80e-4d25-9a26-f88d9bb6390c>,
+        <urn:uuid:f6172aa8-4393-41fe-8f02-bf863f3787da> ;
+    dc:description "NEF hubs were region grouped and then converted to polygons. Analysis was done with the region grouped grid data and then joined to the polygon." ;
+    dc:spatial "POLYGON ((-127.868637 23.084212,-127.868637 51.550479,-65.363544 51.550479,-65.363544 23.084212,-127.868637 23.084212))" ;
+    dcterms:publisher <urn:uuid:b6f7bd62-d6a0-4991-9f30-c09ef3fbd44b> ;
+    dcterms:references <urn:uuid:744cfb78-9755-4ac8-b9f7-907092b8a1b7> ;
+    dcterms:title "Ecological Hubs and Corridors Web Service" ;
+    esip:eastBound "-65.363544"^^xsd:float ;
+    esip:northBound "51.550479"^^xsd:float ;
+    esip:southBound "23.084212"^^xsd:float ;
+    esip:westBound "-127.868637"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:f6172aa8-4393-41fe-8f02-bf863f3787da> bcube:hasType "theme" ;
+    bcube:hasValue "Ecology",
+        "Ecosystem Services",
+        "Ecosystem connectivity",
+        "Environment",
+        "Land",
+        "Management",
+        "Natural Resources" ;
+    dc:partOf "EPA GIS Keyword Thesaurus" ;
+    owl:a bcube:thesaurusSubset .
+

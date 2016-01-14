@@ -1,0 +1,89 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:0897f352-a536-40f3-be2d-cbf6a61fe70b> bcube:hasType "theme" ;
+    bcube:hasValue "NASQAN",
+        "NAWQA",
+        "National Stream Quality Accounting Network",
+        "National Water Quality Assessment",
+        "WARP",
+        "Watershed Regressions for Pesticides model",
+        "basin boundary",
+        "catchment",
+        "drainage area",
+        "drainage basin",
+        "inlandWaters",
+        "regression model",
+        "river basin",
+        "watershed" ;
+    dc:partOf "none" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:3abd6632-3328-443d-82d6-c778a994dc77> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-04T15:04:14.225Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-04T15:04:14.225Z" ;
+    dc:identifier "urn:sha:85401df46d727866298aabc698ddfeb40a6b05b4662d16dcaee724c8" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://water.usgs.gov/GIS/dsdl/warpbas2010.zip" .
+
+<urn:uuid:55d30e77-3be8-4e74-bd35-78431a32b283> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-08-04T15:04:14.225Z" ;
+    bcube:lastUpdated "2015-08-04T15:04:14.225Z" ;
+    bcube:originatedFrom <urn:uuid:821f9099-0d13-4104-b6f8-192b27fcc4de> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:be1802d8-3b10-434a-ab6e-4348fb3010b8> .
+
+<urn:uuid:821f9099-0d13-4104-b6f8-192b27fcc4de> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-04T15:04:14.225Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-04T15:04:14.225Z" ;
+    dc:identifier "urn:sha:063eee899f8c0a97ac262af906f3374dff9f903ce0ca16b8cb7a4597" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://water.usgs.gov/lookup/getspatial?warpbas2010" .
+
+<urn:uuid:a99517b1-a680-4f1c-b064-a52b5e9a7a0a> owl:a foaf:Organization ;
+    foaf:name "U.S. Geological Survey" .
+
+<urn:uuid:be1802d8-3b10-434a-ab6e-4348fb3010b8> bcube:dateCreated "2015-08-04T15:04:14.225Z" ;
+    bcube:hasMetadataRecord <urn:uuid:55d30e77-3be8-4e74-bd35-78431a32b283> ;
+    bcube:lastUpdated "2015-08-04T15:04:14.225Z" ;
+    dc:conformsTo <urn:uuid:0897f352-a536-40f3-be2d-cbf6a61fe70b>,
+        <urn:uuid:d906278f-0057-4b58-abf7-d4f5dfdab8b3> ;
+    dc:description "This data set consists of 204 drainage basin boundaries for U.S. Geological Survey's (USGS) stream sites sampled in the National Water Quality Assessment (NAWQA) Program and the National Stream Quality Accounting Network (NASQAN). These drainage basin boundaries are used to generate watershed characteristics for the development of water-quality models. The basin boundaries were collected from USGS hydrologists and geographers from 1995 through 2008. Correspondingly, the scale or resolution of the boundaries varies, and common boundaries shared by adjacent and nested drainage basins are not entirely coincident. About 60% of the basin boundaries were developed from data sources at the scale of 1:24,000 or resolution of 30-meters or less. Overall, the basin boundaries at the lower resolution represent large, major drainage basins. The 204 drainage basins range in size from about 10 square kilometers to over 2,000,000 square kilometers. Collectively, the drainage basins cover approximately 60% of the conterminous United States, and include a number of nested basins." ;
+    dc:spatial "POLYGON ((-127.87 22.87,-127.87 48.24,-65.35 48.24,-65.35 22.87,-127.87 22.87))" ;
+    dcterms:publisher <urn:uuid:a99517b1-a680-4f1c-b064-a52b5e9a7a0a> ;
+    dcterms:references <urn:uuid:3abd6632-3328-443d-82d6-c778a994dc77> ;
+    dcterms:title "Drainage Basins used for Development of the Watershed Regressions for Pesticides (WARP) Model" ;
+    esip:eastBound "-65.35"^^xsd:float ;
+    esip:endDate "2008-01-01"^^xsd:date ;
+    esip:northBound "48.24"^^xsd:float ;
+    esip:southBound "22.87"^^xsd:float ;
+    esip:startDate "1995-01-01"^^xsd:date ;
+    esip:westBound "-127.87"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:d906278f-0057-4b58-abf7-d4f5dfdab8b3> bcube:hasType "place" ;
+    bcube:hasValue "Conterminous United States" ;
+    dc:partOf "none" ;
+    owl:a bcube:thesaurusSubset .
+

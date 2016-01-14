@@ -1,0 +1,101 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:2c7b3007-8821-440f-b3dc-655029023b2e> bcube:hasType "theme" ;
+    bcube:hasValue "coasts",
+        "elevation",
+        "environment",
+        "geoscientificInformation" ;
+    dc:partOf "ISO 19115 Topic Categories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:3dc6450b-0858-4539-bdb1-a700e9ba1795> owl:a foaf:Organization ;
+    foaf:name "U.S. Geological Survey" .
+
+<urn:uuid:514e5a93-9c03-42c7-af3d-8a22c5fb3eaa> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-11-07T20:26:10.772Z" ;
+    bcube:lastUpdated "2015-11-07T20:26:10.772Z" ;
+    bcube:originatedFrom <urn:uuid:59f9a6a0-bbd7-47c6-96f5-5f8c19ece141> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:9cf49d1d-b3dc-4ec6-99bb-5e3e455c2250> .
+
+<urn:uuid:59f9a6a0-bbd7-47c6-96f5-5f8c19ece141> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-07T20:26:10.772Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-07T20:26:10.772Z" ;
+    dc:identifier "urn:sha:9baf0a32f0c2e2f11f0280a3f0f276a7a0533f6cbf810625a544b066" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://pubs.usgs.gov/sir/2012/5290/Appendix1/Metadata/inundationlines.xml" .
+
+<urn:uuid:7b5fb9cb-db92-43a8-89cf-5c898f4cf80f> bcube:hasType "place" ;
+    bcube:hasValue "Acadia National Park",
+        "Hancock County",
+        "Knox County",
+        "Maine",
+        "Mount Desert Island",
+        "Penobscot Bay",
+        "Schoodic Peninsula",
+        "Swans Island" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:9ca7eaf6-07ca-4602-9af8-75ca8c2e3620> dcterms:references <urn:uuid:a349b06e-2122-4695-a9d2-9f4a5d0c37b6> ;
+    owl:a bibo:WebPage .
+
+<urn:uuid:9cf49d1d-b3dc-4ec6-99bb-5e3e455c2250> bcube:dateCreated "2015-11-07T20:26:10.772Z" ;
+    bcube:hasMetadataRecord <urn:uuid:514e5a93-9c03-42c7-af3d-8a22c5fb3eaa> ;
+    bcube:lastUpdated "2015-11-07T20:26:10.772Z" ;
+    dc:conformsTo <urn:uuid:2c7b3007-8821-440f-b3dc-655029023b2e>,
+        <urn:uuid:7b5fb9cb-db92-43a8-89cf-5c898f4cf80f> ;
+    dc:description "The U.S. Geological Survey (USGS) investigated salt marshes in and around Acadia National Park (ANP) from Penobscot Bay to the Schoodic Peninsula to map the potential for landward migration of marshes using a static inundation model of a sea-level rise (SLR) scenario of 60 centimeters (cm) (2 ft). This data layer contains a set of four elevation contours (inundation lines) for each marsh in the study area: (a) the current (2010) highest elevation of the marsh surface (HME) for each salt marsh in the study area, (b) inundation contours for an elevation 60 cm above the salt marsh surface, and (c) 95-percent confidence interval contours, 26 cm above and (d) below the 60-cm inundation contours. The elevation contours were derived from LiDAR data (2-meter horizontal resolution) collected in 2010. The 95-percent confidence intervals on the 60-cm inundation contours illustrate how the uncertainty in the LiDAR data translates into uncertainty in the land area that would be inundated. The inundation lines are not meant as predictions of marsh migration, only as indications of where migration may occur if conditions permit." ;
+    dc:spatial "POLYGON ((-68.813014 44.145271,-68.813014 44.586468,-68.001536 44.586468,-68.001536 44.145271,-68.813014 44.145271))" ;
+    dcterms:publisher <urn:uuid:3dc6450b-0858-4539-bdb1-a700e9ba1795> ;
+    dcterms:references <urn:uuid:9ca7eaf6-07ca-4602-9af8-75ca8c2e3620>,
+        <urn:uuid:b92ba45c-038a-4513-a9c7-2086eb473dbb> ;
+    dcterms:title "SIR2012_5290_ACAD_Inundationlines" ;
+    esip:eastBound "-68.001536"^^xsd:float ;
+    esip:northBound "44.586468"^^xsd:float ;
+    esip:southBound "44.145271"^^xsd:float ;
+    esip:startDate "2010-01-01"^^xsd:date ;
+    esip:westBound "-68.813014"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:a349b06e-2122-4695-a9d2-9f4a5d0c37b6> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-07T20:26:10.772Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-07T20:26:10.772Z" ;
+    dc:identifier "urn:sha:181bb274a88ce881cbe912b3579dfcf1ed8bc988be7193d33bfa3932" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://pubs.usgs.gov/sir/2012/5290/" .
+
+<urn:uuid:b92ba45c-038a-4513-a9c7-2086eb473dbb> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-07T20:26:10.772Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-07T20:26:10.772Z" ;
+    dc:identifier "urn:sha:a3b4ca2ddfb9d060ac24e126ad5edf53553631f16ee2a46b653e24fc" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://pubs.usgs.gov/sir/2012/5290/SIR2012_5290_ACAD_SaltmarshSLRLayers.gdb.zip" .
+

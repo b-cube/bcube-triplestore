@@ -1,0 +1,95 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:7ad95aac-ec6f-4cba-8ddd-df5556391e84> owl:a foaf:Organization ;
+    foaf:name "U.S. Geological Survey" .
+
+<urn:uuid:a97d4bf4-b263-4559-a713-608e3de34ff8> bcube:dateCreated "2015-08-05T04:36:33.89Z" ;
+    bcube:hasMetadataRecord <urn:uuid:bc2c7d32-cdd8-4975-84b1-65c601afbf1e> ;
+    bcube:lastUpdated "2015-08-05T04:36:33.89Z" ;
+    dc:conformsTo <urn:uuid:ab176b97-d2da-40c4-996e-968c5640dc5b>,
+        <urn:uuid:f9e63070-3ec8-4a56-a147-6befcc521550> ;
+    dc:description "MDNET is a point coverage that represents the locations and names of a network of observation wells for the State of Maryland. Additional information on water conditions at these sites can be found in the Ground-Water Site Inventory System (GWSI) database, which is maintained by the U.S. Geological Survey. Site information can be accessed on the internet at URL: <http://water.usgs.gov/nwis/>" ;
+    dc:spatial "POLYGON ((-79.40368872 37.99119635,-79.40368872 39.7417308,-75.12260266 39.7417308,-75.12260266 37.99119635,-79.40368872 37.99119635))" ;
+    dcterms:publisher <urn:uuid:7ad95aac-ec6f-4cba-8ddd-df5556391e84> ;
+    dcterms:references <urn:uuid:be49214f-e8fc-454e-99b6-64399e1af00f>,
+        <urn:uuid:cdff004d-3553-410e-a385-3b61265300f7> ;
+    dcterms:title "Maryland Ground-Water Observation Well Network, 2001" ;
+    esip:eastBound "-75.12260266"^^xsd:float ;
+    esip:northBound "39.7417308"^^xsd:float ;
+    esip:southBound "37.99119635"^^xsd:float ;
+    esip:startDate "2001-01-01"^^xsd:date ;
+    esip:westBound "-79.40368872"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:ab176b97-d2da-40c4-996e-968c5640dc5b> bcube:hasType "theme" ;
+    bcube:hasValue "Ground-water",
+        "Network",
+        "Observation well",
+        "Well",
+        "inlandWaters" ;
+    dc:partOf "none" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:bc2c7d32-cdd8-4975-84b1-65c601afbf1e> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-08-05T04:36:33.89Z" ;
+    bcube:lastUpdated "2015-08-05T04:36:33.89Z" ;
+    bcube:originatedFrom <urn:uuid:e75fc6b5-e3ec-450c-989a-392186244c48> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:a97d4bf4-b263-4559-a713-608e3de34ff8> .
+
+<urn:uuid:be49214f-e8fc-454e-99b6-64399e1af00f> dcterms:references <urn:uuid:e590c1fb-3cb5-4c7a-b10b-e16f554a714a> ;
+    owl:a bibo:WebPage .
+
+<urn:uuid:cdff004d-3553-410e-a385-3b61265300f7> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-05T04:36:33.89Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-05T04:36:33.89Z" ;
+    dc:identifier "urn:sha:fdf31bba11078ffd4d63a0aee68cd08b30256350a4539de10c4b8823" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://water.usgs.gov/GIS/dsdl/mdnet_01.e00.gz" .
+
+<urn:uuid:e590c1fb-3cb5-4c7a-b10b-e16f554a714a> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-05T04:36:33.89Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-05T04:36:33.89Z" ;
+    dc:identifier "urn:sha:173664e4fcdc70da07e1618867936ac464e814d430466ea631583411" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://water.usgs.gov/lookup/getspatial?mdnet_01" .
+
+<urn:uuid:e75fc6b5-e3ec-450c-989a-392186244c48> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-05T04:36:33.89Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-05T04:36:33.89Z" ;
+    dc:identifier "urn:sha:9b6754e266054d5fe712f947f9cbc25172fd9f92a2eed967fd3a0697" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://data.usgs.gov/metadata/Water_National_Spatial_Data_Infrastructure_Node/535ea2c6e4b08e65d60fa8d7.xml" .
+
+<urn:uuid:f9e63070-3ec8-4a56-a147-6befcc521550> bcube:hasType "place" ;
+    bcube:hasValue "Maryland" ;
+    dc:partOf "none" ;
+    owl:a bcube:thesaurusSubset .
+

@@ -1,0 +1,83 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:1739cb60-a3f2-4fa6-bdc8-200f03ee0270> bcube:hasType "theme" ;
+    bcube:hasValue "County or equivalent entity",
+        "Hydrography",
+        "LinearFeature" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:666fcb75-c1a7-4ea2-ad6c-6f3427572aab> bcube:hasValue "inlandWaters" ;
+    dc:partOf "IsoTopicCategories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:68c0b800-440a-4f00-a3a0-842fb501934a> bcube:hasType "place" ;
+    bcube:hasValue "02016",
+        "Aleutians West",
+        "County or Equivalent Entity",
+        "U.S.",
+        "United States" ;
+    dc:partOf "ANSI INCITS 38:2009 (Formerly FIPS 5-2), ANSI INCITS 31:2009 (Formerly FIPS 6-4),ANSI INCITS 454:2009 (Formerly FIPS 8-6), ANSI INCITS 455:2009(Formerly FIPS 9-1), ANSI INCITS 446:2008 (Geographic Names Information System (GNIS))" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:6b430e1a-9194-4364-bf87-3d9f8c9a877c> a "ISO 19115:2003/19139" ;
+    bcube:dateCreated "2015-11-04T22:09:37.991Z" ;
+    bcube:lastUpdated "2015-11-04T22:09:37.991Z" ;
+    bcube:originatedFrom <urn:uuid:f8bd3038-5161-4aaf-8320-b4edc85eda13> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:b3271aa2-b899-47ba-8931-10485f0130e6> .
+
+<urn:uuid:b3271aa2-b899-47ba-8931-10485f0130e6> bcube:dateCreated "2015-11-04T22:09:37.991Z" ;
+    bcube:hasMetadataRecord <urn:uuid:6b430e1a-9194-4364-bf87-3d9f8c9a877c> ;
+    bcube:lastUpdated "2015-11-04T22:09:37.991Z" ;
+    dc:conformsTo <urn:uuid:1739cb60-a3f2-4fa6-bdc8-200f03ee0270>,
+        <urn:uuid:666fcb75-c1a7-4ea2-ad6c-6f3427572aab>,
+        <urn:uuid:68c0b800-440a-4f00-a3a0-842fb501934a> ;
+    dc:description "The TIGER/Line shapefiles and related database files (.dbf) are an extract of selected geographic and cartographic information from the U.S. Census Bureau's Master Address File / Topologically Integrated Geographic Encoding and Referencing (MAF/TIGER) Database (MTDB). The MTDB represents a seamless national file with no overlaps or gaps between parts, however, each TIGER/Line shapefile is designed to stand alone as an independent data set, or they can be combined to cover the entire nation. Linear Water Features includes single-line drainage water features and artificial path features that run through double-line drainage features such as rivers and streams, and serve as a linear representation of these features. The artificial path features may correspond to those in the USGS National Hydrographic Dataset (NHD). However, in many cases the features do not match NHD equivalent feature and will not carry the NHD metadata codes. These features have a MAF/TIGER Feature Classification Code (MTFCC) beginning with an \"H\" to indicate the super class of Hydrographic Features." ;
+    dc:spatial "POLYGON ((-179.231086 51.175092,-179.231086 57.305269,179.859681 57.305269,179.859681 51.175092,-179.231086 51.175092))" ;
+    dcterms:references <urn:uuid:c0f4db5b-94c6-44c7-8f78-31c7339f784c> ;
+    dcterms:title "TIGER/Line Shapefile, 2014, county, Aleutians West Census Area, AK, Linear Hydrography County-based Shapefile" ;
+    esip:eastBound "179.859681"^^xsd:float ;
+    esip:endDate "2014-05-03"^^xsd:date ;
+    esip:northBound "57.305269"^^xsd:float ;
+    esip:southBound "51.175092"^^xsd:float ;
+    esip:startDate "2013-06-03"^^xsd:date ;
+    esip:westBound "-179.231086"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:c0f4db5b-94c6-44c7-8f78-31c7339f784c> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-04T22:09:37.991Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-04T22:09:37.991Z" ;
+    dc:identifier "urn:sha:1ae420a526b6364ccc1a8510c3ed4f6fe1dc8438d4643c73d08c15b4" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www2.census.gov/geo/tiger/TIGER2014/LINEARWATER/tl_2014_02016_linearwater.zip" .
+
+<urn:uuid:f8bd3038-5161-4aaf-8320-b4edc85eda13> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-04T22:09:37.991Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-04T22:09:37.991Z" ;
+    dc:identifier "urn:sha:f50cdc3eff57fd5fabe2886b38b4e1d220a92f3299e8aa6cfca9f5e0" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://meta.geo.census.gov/data/existing/decennial/GEO/GPMB/TIGERline/TIGER2014/linearwater/tl_2014_02016_linearwater.shp.iso.xml" .
+

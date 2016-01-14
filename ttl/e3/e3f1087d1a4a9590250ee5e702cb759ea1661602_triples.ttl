@@ -1,0 +1,70 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:1bfe5587-f5cd-4b93-8539-c958067d4d99> bcube:hasType "theme" ;
+    bcube:hasValue "Acres Protected",
+        "Essential Fish Habitat" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:2467db1f-4d08-46a0-b9e2-8f1031a21a61> bcube:hasType "place" ;
+    bcube:hasValue "Atlantic Ocean",
+        "Caribbean Sea",
+        "Gulf of Mexico",
+        "Pacific Ocean" ;
+    dc:partOf "CIESIN Indexing Vocabulary" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:3d0a3345-d558-44f4-a5d6-5d51f42c527e> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-04T17:49:36.324Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-04T17:49:36.324Z" ;
+    dc:identifier "urn:sha:962954e23814a7416fa2f5dbaa440be7bd30b939be89f04a48390309" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://catalog.data.gov/harvest/object/52e2e85a-2350-42dd-a01f-da5e541a1465" .
+
+<urn:uuid:d267a469-f6f3-4982-87c3-7a6e8db8567f> bcube:hasValue "boundaries",
+        "location",
+        "oceans" ;
+    dc:partOf "IsoTopicCategories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:e01d7bd7-47ea-4654-89af-fdcbc4eadd76> a "ISO 19115:2003/19139" ;
+    bcube:dateCreated "2015-08-04T17:49:36.324Z" ;
+    bcube:lastUpdated "2015-08-04T17:49:36.324Z" ;
+    bcube:originatedFrom <urn:uuid:3d0a3345-d558-44f4-a5d6-5d51f42c527e> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:eac6e7cd-7abf-4a68-a0a6-4f88edf8e3af> .
+
+<urn:uuid:eac6e7cd-7abf-4a68-a0a6-4f88edf8e3af> bcube:dateCreated "2015-08-04T17:49:36.324Z" ;
+    bcube:hasMetadataRecord <urn:uuid:e01d7bd7-47ea-4654-89af-fdcbc4eadd76> ;
+    bcube:lastUpdated "2015-08-04T17:49:36.324Z" ;
+    dc:conformsTo <urn:uuid:1bfe5587-f5cd-4b93-8539-c958067d4d99>,
+        <urn:uuid:2467db1f-4d08-46a0-b9e2-8f1031a21a61>,
+        <urn:uuid:d267a469-f6f3-4982-87c3-7a6e8db8567f> ;
+    dc:description "Designated Essential Fish Habitat (EFH) areas where fishing or the use of fishing gears has been restricted or modified in order to minimize the adverse effects of fishing on EFH, as required by Section 303(a)(7) of the Magnuson Stevens Act." ;
+    dc:spatial "POLYGON ((-179.999989 14.93,-179.999989 65.830103,179.999991 65.830103,179.999991 14.93,-179.999989 14.93))" ;
+    dcterms:title "Essential Fish Habitat (EFH) Areas Protected From Fishing" ;
+    esip:eastBound "179.999991"^^xsd:float ;
+    esip:endDate "2009-01-01"^^xsd:date ;
+    esip:northBound "65.830103"^^xsd:float ;
+    esip:southBound "14.93"^^xsd:float ;
+    esip:startDate "1999-01-01"^^xsd:date ;
+    esip:westBound "-179.999989"^^xsd:float ;
+    owl:a dcat:Dataset .
+

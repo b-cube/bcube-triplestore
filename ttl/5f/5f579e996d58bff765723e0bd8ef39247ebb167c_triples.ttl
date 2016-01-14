@@ -1,0 +1,104 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:1bca2733-aed6-45f9-a365-ba8485c8781c> bcube:hasType "project" ;
+    bcube:hasValue "Pacific Islands Ocean Observing System (PacIOOS)" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:4936d005-9299-4f74-a29a-756bea2065d4> bcube:dateCreated "2015-11-03T05:31:12.087Z" ;
+    bcube:hasMetadataRecord <urn:uuid:d4283bb8-b834-4ec6-9472-9dbb23a91e98> ;
+    bcube:lastUpdated "2015-11-03T05:31:12.087Z" ;
+    dc:conformsTo <urn:uuid:1bca2733-aed6-45f9-a365-ba8485c8781c>,
+        <urn:uuid:65859201-a16c-463e-872e-346e919d9a0b>,
+        <urn:uuid:67d32260-ad02-46af-a45a-5f5e24fd827b>,
+        <urn:uuid:db084030-f0d6-42b6-b21b-2719362911e4> ;
+    dc:description "Tide model for the Big Island of Hawaii. The model is based on climatological stratification, but 64 harmonics are used to model the full-depth baroclinic tides. The model has been run at 1km resolution, hourly, through the end of 2015. Due to computing limitations, the model grid is divided into two pieces, one for the Northwestern main Hawaiian Islands (Kauai, Oahu, Maui) and the other for the Big Island. While considerable effort has been made to implement all model components in a thorough, correct, and accurate manner, numerous sources of error are possible. As such, please use this output with the caution appropriate for any ocean related activity." ;
+    dc:identifier "tide_bi" ;
+    dc:spatial "POLYGON ((-156.73 18.13,-156.73 20.33,-154.01 20.33,-154.01 18.13,-156.73 18.13))" ;
+    dcterms:references <urn:uuid:bc0e7e94-0f67-4570-bbae-304de3cb052d>,
+        <urn:uuid:eb1b8cec-02d7-4ab1-822c-530bede11b66> ;
+    dcterms:title "Tide Model for the Big Island of Hawaii: Tidal Velocity" ;
+    esip:eastBound "-154.01"^^xsd:float ;
+    esip:endDate "2015-12-31"^^xsd:date ;
+    esip:northBound "20.33"^^xsd:float ;
+    esip:southBound "18.13"^^xsd:float ;
+    esip:startDate "2008-01-01"^^xsd:date ;
+    esip:westBound "-156.73"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:65859201-a16c-463e-872e-346e919d9a0b> bcube:hasValue "geoscientificInformation" ;
+    dc:partOf "IsoTopicCategories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:67d32260-ad02-46af-a45a-5f5e24fd827b> bcube:hasType "theme" ;
+    bcube:hasValue "eastward_sea_water_velocity",
+        "latitude",
+        "longitude",
+        "northward_sea_water_velocity",
+        "time" ;
+    dc:partOf "CF-1.4" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:bc0e7e94-0f67-4570-bbae-304de3cb052d> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-03T05:31:12.087Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-03T05:31:12.087Z" ;
+    dc:identifier "urn:sha:d7786bff8220f54cb80999e3fc87a1cef6fdfd6b9b019ff91f906d3a" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://oos.soest.hawaii.edu/erddap/griddap/tide_bi.html" .
+
+<urn:uuid:bd2e3d0b-13f1-4baa-81b5-b20e23128549> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-03T05:31:12.087Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-03T05:31:12.087Z" ;
+    dc:identifier "urn:sha:d05826c77d5f6c4eaf4643d0c60e5cfafb1db33ab7e4d9558d483da3" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://oos.soest.hawaii.edu/erddap/metadata/iso19115/xml/tide_bi_iso19115.xml" .
+
+<urn:uuid:d4283bb8-b834-4ec6-9472-9dbb23a91e98> a "ISO 19115:2003/19139" ;
+    bcube:dateCreated "2015-11-03T05:31:12.087Z" ;
+    bcube:lastUpdated "2015-11-03T05:31:12.087Z" ;
+    bcube:originatedFrom <urn:uuid:bd2e3d0b-13f1-4baa-81b5-b20e23128549> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:4936d005-9299-4f74-a29a-756bea2065d4> .
+
+<urn:uuid:db084030-f0d6-42b6-b21b-2719362911e4> bcube:hasType "theme" ;
+    bcube:hasValue "Earth Science > Oceans > Ocean Circulation > Ocean Currents",
+        "Earth Science > Oceans > Sea Surface Topography > Sea Surface Height",
+        "Earth Science > Oceans > Tides > Tidal Height",
+        "Earth Science Services > Models > Ocean General Circulation Models (OGCM)/Regional Ocean Models",
+        "Earth Science Services > Models > Weather Research/Forecast Models" ;
+    dc:partOf "GCMD Science Keywords" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:eb1b8cec-02d7-4ab1-822c-530bede11b66> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-03T05:31:12.087Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-03T05:31:12.087Z" ;
+    dc:identifier "urn:sha:5c27eced78085793a8b5ba59a4b593af616d0cf7c39021b2cefd0d26" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://oos.soest.hawaii.edu/erddap/griddap/tide_bi.graph" .
+

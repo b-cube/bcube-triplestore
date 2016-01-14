@@ -1,0 +1,80 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:1ec3247e-c41e-421e-9562-7e65e9b943d6> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-03-19T15:09:49.594Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-03-19T15:09:49.594Z" ;
+    dc:identifier "urn:sha:736e9e4f8b41c451f0f3e952f9e0b931bc506bbd3159645ac2ec221e" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "https://catalog.data.gov/harvest/object/537dec8d-b8a2-4b09-9570-501443bb6e98" .
+
+<urn:uuid:35ab9fad-5651-4799-8300-a510b4433053> bcube:hasValue "elevation" ;
+    dc:partOf "IsoTopicCategories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:4ad61439-b9cb-4c47-a51d-57baf4450f6a> bcube:hasType "theme" ;
+    bcube:hasValue "Bathymetry/Topography",
+        "DEM",
+        "LAS",
+        "LIDAR",
+        "bare earth",
+        "binary",
+        "canopy",
+        "classified",
+        "digital surface model",
+        "elevation" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:4da826b1-a441-44a4-aa27-400db6ce0605> a "ISO 19115:2003/19139" ;
+    bcube:dateCreated "2015-03-19T15:09:49.594Z" ;
+    bcube:lastUpdated "2015-03-19T15:09:49.594Z" ;
+    bcube:originatedFrom <urn:uuid:1ec3247e-c41e-421e-9562-7e65e9b943d6> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:f71a2dd8-1849-4b74-b136-6ea7801303d7> .
+
+<urn:uuid:66bc5094-67f3-420a-afb8-4f593fd3edfe> bcube:hasType "place" ;
+    bcube:hasValue "Calhoun County",
+        "Florida",
+        "Holmes County",
+        "Jackson County",
+        "Liberty County",
+        "Northwest Florida Water Management District",
+        "US",
+        "Washington County" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:f71a2dd8-1849-4b74-b136-6ea7801303d7> bcube:dateCreated "2015-03-19T15:09:49.594Z" ;
+    bcube:hasMetadataRecord <urn:uuid:4da826b1-a441-44a4-aa27-400db6ce0605> ;
+    bcube:lastUpdated "2015-03-19T15:09:49.594Z" ;
+    dc:conformsTo <urn:uuid:35ab9fad-5651-4799-8300-a510b4433053>,
+        <urn:uuid:4ad61439-b9cb-4c47-a51d-57baf4450f6a>,
+        <urn:uuid:66bc5094-67f3-420a-afb8-4f593fd3edfe> ;
+    dc:description "LIDAR-derived binary (.las) files containing points classified as bare-earth and canopy (first return) were produced for the 2007/2008 Northwest Florida Water Management District - 5 Counties (Calhoun, Washington, Jackson, Liberty, Holmes), Florida lidar mapping project. ESRI GRIDs of bare earth points are also provided. The files were provided in a scheme of FDEM-derived 5,000 x 5,000 foot (1500 x 1500 meter) tiles. Horizontal mapping units are in UTM meters, vertical mapping units are in U.S. survey feet. The total mapping area covers approximately 2102 square miles." ;
+    dc:spatial "POLYGON ((-85.894507 30.193492,-85.894507 31.006292,-84.828007 31.006292,-84.828007 30.193492,-85.894507 30.193492))" ;
+    dcterms:title "2007 Northwest Florida Water Manangement District (NWFWMD) Lidar: 5 Counties (Jackson, Calhoun, Washington, Liberty, Holmes)" ;
+    esip:eastBound "-84.828007"^^xsd:float ;
+    esip:endDate "2008-01-20"^^xsd:date ;
+    esip:northBound "31.006292"^^xsd:float ;
+    esip:southBound "30.193492"^^xsd:float ;
+    esip:startDate "2007-11-12"^^xsd:date ;
+    esip:westBound "-85.894507"^^xsd:float ;
+    owl:a dcat:Dataset .
+

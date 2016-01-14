@@ -1,0 +1,71 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:0418c0c3-cfb9-448b-8d0c-fea4fe9fa783> bcube:hasType "theme" ;
+    bcube:hasValue "boundaries" ;
+    dc:partOf "ISO 19115 Topic Categories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:190f53c9-b409-4d6f-8f42-b934da7ab60e> bcube:hasType "place" ;
+    bcube:hasValue "Colorado",
+        "Denver",
+        "Denver County",
+        "USA" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:7067016f-9669-4cc4-9acf-88edac608eb8> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-10-29T19:52:33.89Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-10-29T19:52:33.89Z" ;
+    dc:identifier "urn:sha:3430493546f7ea765999b42265f512a37002121ed34fc7b0c210c218" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://data.denvergov.org/download/gis/fire_districts/metadata/fire_districts.xml" .
+
+<urn:uuid:8522ea15-df3f-4f47-bf82-4496e6eaae38> bcube:dateCreated "2015-10-29T19:52:33.89Z" ;
+    bcube:hasMetadataRecord <urn:uuid:ae3307f1-66cb-4c33-962d-674c7df45037> ;
+    bcube:lastUpdated "2015-10-29T19:52:33.89Z" ;
+    dc:conformsTo <urn:uuid:0418c0c3-cfb9-448b-8d0c-fea4fe9fa783>,
+        <urn:uuid:190f53c9-b409-4d6f-8f42-b934da7ab60e>,
+        <urn:uuid:9f4d6ba3-4c18-4329-a6ba-adab08a2553d> ;
+    dc:description "This dataset should be used as a reference to locate the various Denver Fire Districts found within the boundaries of the City and County of Denver." ;
+    dc:spatial "POLYGON ((-105.109957 39.614306,-105.109957 39.914202,-104.599529 39.914202,-104.599529 39.614306,-105.109957 39.614306))" ;
+    dcterms:publisher <urn:uuid:a7ea285b-f4d6-410e-bbf7-ddf922eff8c7> ;
+    dcterms:title "Fire Districts" ;
+    esip:eastBound "-104.599529"^^xsd:float ;
+    esip:northBound "39.914202"^^xsd:float ;
+    esip:southBound "39.614306"^^xsd:float ;
+    esip:westBound "-105.109957"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:9f4d6ba3-4c18-4329-a6ba-adab08a2553d> bcube:hasType "theme" ;
+    bcube:hasValue "fire",
+        "public safety" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:a7ea285b-f4d6-410e-bbf7-ddf922eff8c7> owl:a foaf:Organization ;
+    foaf:name "" .
+
+<urn:uuid:ae3307f1-66cb-4c33-962d-674c7df45037> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-10-29T19:52:33.89Z" ;
+    bcube:lastUpdated "2015-10-29T19:52:33.89Z" ;
+    bcube:originatedFrom <urn:uuid:7067016f-9669-4cc4-9acf-88edac608eb8> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:8522ea15-df3f-4f47-bf82-4496e6eaae38> .
+

@@ -1,0 +1,72 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:239dd383-7393-4255-ae83-1c011aa18af0> bcube:hasType "place" ;
+    bcube:hasValue "Asheville",
+        "Buncombe",
+        "North Carolina" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:3ed965fa-2aad-41c9-9ae6-0c933b912b60> owl:a foaf:Organization ;
+    foaf:name "City of Asheville, NC" .
+
+<urn:uuid:4096790f-e76c-4059-ae09-a94e42c1ab8f> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-11-06T23:05:01.817Z" ;
+    bcube:lastUpdated "2015-11-06T23:05:01.817Z" ;
+    bcube:originatedFrom <urn:uuid:df48981a-bccd-41d2-8dfe-80d9f6122482> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:44d704eb-2c0d-43a1-8c10-46bd89d6d81a> .
+
+<urn:uuid:44d704eb-2c0d-43a1-8c10-46bd89d6d81a> bcube:dateCreated "2015-11-06T23:05:01.817Z" ;
+    bcube:hasMetadataRecord <urn:uuid:4096790f-e76c-4059-ae09-a94e42c1ab8f> ;
+    bcube:lastUpdated "2015-11-06T23:05:01.817Z" ;
+    dc:conformsTo <urn:uuid:239dd383-7393-4255-ae83-1c011aa18af0>,
+        <urn:uuid:58a603bc-c21f-4762-a1ed-6b3808150b90>,
+        <urn:uuid:c9fcda75-38ac-47d2-9e39-0749089fe33c> ;
+    dc:description "The Asheville Transit System (ATS) Bus Routes represent the locations of public transit service throughout the City of Asheville. Each route number is associated with the street centerlines over which the route travels." ;
+    dc:spatial "POLYGON ((-82.634035 35.428326,-82.634035 35.649904,-82.311677 35.649904,-82.311677 35.428326,-82.634035 35.428326))" ;
+    dcterms:publisher <urn:uuid:3ed965fa-2aad-41c9-9ae6-0c933b912b60> ;
+    dcterms:title "coagis.COAGIS.COA_TRANSIT_BUS_ROUTES" ;
+    esip:eastBound "-82.311677"^^xsd:float ;
+    esip:northBound "35.649904"^^xsd:float ;
+    esip:southBound "35.428326"^^xsd:float ;
+    esip:startDate "2010-06-17"^^xsd:date ;
+    esip:westBound "-82.634035"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:58a603bc-c21f-4762-a1ed-6b3808150b90> bcube:hasType "theme" ;
+    bcube:hasValue "bus",
+        "transit",
+        "transportation" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:c9fcda75-38ac-47d2-9e39-0749089fe33c> bcube:hasType "theme" ;
+    bcube:hasValue "transportation" ;
+    dc:partOf "ISO 19115 Topic Categories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:df48981a-bccd-41d2-8dfe-80d9f6122482> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-06T23:05:01.817Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-06T23:05:01.817Z" ;
+    dc:identifier "urn:sha:adc82e134e106f6d5649e8002877f6d83db5e30f33180bb1926389cf" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://opendatacatalog.ashevillenc.gov/gismetadata/coa_transit_routes.xml" .
+

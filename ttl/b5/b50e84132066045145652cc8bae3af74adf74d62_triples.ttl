@@ -1,0 +1,104 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:27443866-a929-414a-8c70-222fb9fdfe7b> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-11-05T07:25:07.488Z" ;
+    bcube:lastUpdated "2015-11-05T07:25:07.488Z" ;
+    bcube:originatedFrom <urn:uuid:a1ebdcd7-3311-40fb-9333-65ed9ac4f2fa> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:5386521f-a367-47de-b9f0-60a76bd3f58e> .
+
+<urn:uuid:5386521f-a367-47de-b9f0-60a76bd3f58e> bcube:dateCreated "2015-11-05T07:25:07.488Z" ;
+    bcube:hasMetadataRecord <urn:uuid:27443866-a929-414a-8c70-222fb9fdfe7b> ;
+    bcube:lastUpdated "2015-11-05T07:25:07.488Z" ;
+    dc:conformsTo <urn:uuid:9be92787-30df-482a-ad26-8397971f6def>,
+        <urn:uuid:a83745c0-a490-458c-8958-e3f122da5c2f>,
+        <urn:uuid:eef61a02-9fd0-4cca-8a7d-9e30b9a1331b> ;
+    dc:description "The data was derived from US Coast Guard raw vessel point returns and preprocessed by ASA (Applied Science Associates), to one minute point interCAls. The data returns are in UTM zone 10 North and UTM zone 11 North. Each vessel type is analyzed seperately based on vessel type data (Cargo, Fishing, Passenger, Tanker, Tow, Tow over 200M, Tugs) included in the AIS dataset. A transit is counted for each unique vessel by MMSI traveling through each 1200 meter by 1200 meter aliquot each day. A running count is continued for each vessel type by aliquot by month, and then the months are summed to provide annual data. </SPAN></P><P><SPAN>Although traffic diminishes significantly after 20nm from shore, the returns from line of site AIS signals also fade beyond 40nm. Data points input into the density analysis beyond 40nm are considered to be less reliable than closer to shore. For the 2011 data, separate vessel types were also extracted separately and run in addition to the full dataset. These separate counts are included in the attribute table and include Cargo Vessels, Fishing Vessels, Tankers, Passenger Ships, Tugs, Towing Vessels less than 200 meters in length, and Towing Vessels more than 200 meters in length." ;
+    dc:spatial "POLYGON ((-126.066945 30.943491,-126.066945 49.012092,-117.096527 49.012092,-117.096527 30.943491,-126.066945 30.943491))" ;
+    dcterms:publisher <urn:uuid:fbcd78ea-9010-4bd9-af27-337f35280fcd> ;
+    dcterms:references <urn:uuid:6f8b56ed-d73d-400d-aa18-82f3842f14a5>,
+        <urn:uuid:ea5a952c-a8c8-44c9-94a0-44ebf4005de4> ;
+    dcterms:title "Ship Traffic 2011 West Coast Region - All Ship Types" ;
+    esip:eastBound "-117.096527"^^xsd:float ;
+    esip:northBound "49.012092"^^xsd:float ;
+    esip:southBound "30.943491"^^xsd:float ;
+    esip:startDate "2015-03-27"^^xsd:date ;
+    esip:westBound "-126.066945"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:6015bae3-10ad-4572-812f-5d910386d035> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-05T07:25:07.488Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-05T07:25:07.488Z" ;
+    dc:identifier "urn:sha:127ffc5fb442183522b0f7c49c12fb27a088158b9a122dea8e499c86" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www.boem.gov/AIS-count-vessels-west-coast-2011-shapefile/" .
+
+<urn:uuid:6f8b56ed-d73d-400d-aa18-82f3842f14a5> dcterms:references <urn:uuid:dd7817e5-d1e9-490b-825d-4285e7fc9e03> ;
+    owl:a bibo:WebPage .
+
+<urn:uuid:9be92787-30df-482a-ad26-8397971f6def> bcube:hasType "place" ;
+    bcube:hasValue "California",
+        "Oregon",
+        "Washington" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:a1ebdcd7-3311-40fb-9333-65ed9ac4f2fa> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-05T07:25:07.488Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-05T07:25:07.488Z" ;
+    dc:identifier "urn:sha:29f2d197db5da52a0e439ed834f5b699706bb81b3afc915a89d43af9" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://metadata.boem.gov/geospatial/US_West_Coast_AIS_Density_All_Ships_2011_by_Type.xml" .
+
+<urn:uuid:a83745c0-a490-458c-8958-e3f122da5c2f> bcube:hasType "theme" ;
+    bcube:hasValue "boundaries",
+        "oceans",
+        "planningCadastre" ;
+    dc:partOf "ISO 19115 Topic Category" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:dd7817e5-d1e9-490b-825d-4285e7fc9e03> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-05T07:25:07.488Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-05T07:25:07.488Z" ;
+    dc:identifier "urn:sha:3249538f81c3a04edb4956754356f9143775234639fb96577bca3f05" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www.boem.gov/" .
+
+<urn:uuid:ea5a952c-a8c8-44c9-94a0-44ebf4005de4> dcterms:references <urn:uuid:6015bae3-10ad-4572-812f-5d910386d035> ;
+    owl:a bibo:WebPage .
+
+<urn:uuid:eef61a02-9fd0-4cca-8a7d-9e30b9a1331b> bcube:hasType "theme" ;
+    bcube:hasValue "Transportation" ;
+    dc:partOf "EPA GIS Keyword Thesaurus" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:fbcd78ea-9010-4bd9-af27-337f35280fcd> owl:a foaf:Organization ;
+    foaf:name "Bureau of Ocean Energy Management" .
+

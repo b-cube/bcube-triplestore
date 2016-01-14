@@ -1,0 +1,93 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:395c2dc7-b410-4428-b72c-b94aa7b84147> bcube:hasType "place" ;
+    bcube:hasValue "Connecticut",
+        "Delaware",
+        "Florida",
+        "Georgia",
+        "Maine",
+        "Maryland",
+        "Massachusetts",
+        "New Hampshire",
+        "New Jersey",
+        "New York",
+        "North Carolina",
+        "Rhode Island",
+        "United States",
+        "Virginia" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:3a1bba3f-ec84-4e28-9b08-04da2a2dc6a0> bcube:hasType "theme" ;
+    bcube:hasValue "Cadastre Theme",
+        "NGDA",
+        "National Geospatial Data Assets" ;
+    dc:partOf "NGDA Portfolio Themes" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:477f2b8e-404f-495d-80cd-83d775ab6aca> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-10-30T11:04:16.565Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-10-30T11:04:16.565Z" ;
+    dc:identifier "urn:sha:f10d7acbfa7d83e05e1693e7233346ebea1a241457d5c59a56e57d09" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://metadata.boem.gov/geospatial/BOEM_Block_Aliquots_atl.xml" .
+
+<urn:uuid:5bf783a9-46e8-4046-9889-7f2b6d76e49d> bcube:dateCreated "2015-10-30T11:04:16.565Z" ;
+    bcube:hasMetadataRecord <urn:uuid:7962be66-411f-4f1e-985b-a41cbb753427> ;
+    bcube:lastUpdated "2015-10-30T11:04:16.565Z" ;
+    dc:conformsTo <urn:uuid:395c2dc7-b410-4428-b72c-b94aa7b84147>,
+        <urn:uuid:3a1bba3f-ec84-4e28-9b08-04da2a2dc6a0> ;
+    dc:description "Atlantic OCS aliquots (sub-blocks) for BOEM renewable energy leasing in the Atlantic." ;
+    dc:spatial "POLYGON ((-82.999844 23.817923,-82.999844 44.769023,-66.910842 44.769023,-66.910842 23.817923,-82.999844 23.817923))" ;
+    dcterms:publisher <urn:uuid:b71d2471-06c0-4f84-b29e-db5195f34a88> ;
+    dcterms:references <urn:uuid:b8878662-d270-478b-89c9-9eb083a5813f> ;
+    dcterms:title "Outer Continetal Shelf Block Aliquots - Atlantic Region NAD83" ;
+    esip:eastBound "-66.910842"^^xsd:float ;
+    esip:northBound "44.769023"^^xsd:float ;
+    esip:southBound "23.817923"^^xsd:float ;
+    esip:startDate "2014-08-11"^^xsd:date ;
+    esip:westBound "-82.999844"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:7962be66-411f-4f1e-985b-a41cbb753427> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-10-30T11:04:16.565Z" ;
+    bcube:lastUpdated "2015-10-30T11:04:16.565Z" ;
+    bcube:originatedFrom <urn:uuid:477f2b8e-404f-495d-80cd-83d775ab6aca> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:5bf783a9-46e8-4046-9889-7f2b6d76e49d> .
+
+<urn:uuid:b71d2471-06c0-4f84-b29e-db5195f34a88> owl:a foaf:Organization ;
+    foaf:name "Bureau of Ocean Energy Mangement - Office of Renewable Energy Programs" .
+
+<urn:uuid:b8878662-d270-478b-89c9-9eb083a5813f> dcterms:references <urn:uuid:e96234b2-238a-434c-bcf7-49e49a7da9d5> ;
+    owl:a bibo:WebPage .
+
+<urn:uuid:e96234b2-238a-434c-bcf7-49e49a7da9d5> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-10-30T11:04:16.565Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-10-30T11:04:16.565Z" ;
+    dc:identifier "urn:sha:5597eaaaafbc47ac926ff569368944259dca6a64d5db4b4a40403b1d" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www.boem.gov/Oil-and-Gas-Energy-Program/Mapping-and-Data/ATL_ALIQUOTS.aspx" .
+

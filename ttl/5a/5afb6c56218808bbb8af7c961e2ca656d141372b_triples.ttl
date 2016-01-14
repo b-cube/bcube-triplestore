@@ -1,0 +1,73 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:2d57975d-b73d-4b7b-9bda-d3d1d5491c12> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-08T20:40:34.498Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-08T20:40:34.498Z" ;
+    dc:identifier "urn:sha:43ef92ae992cf4a5b8e287e87e198069598189696b08860a0fa31501" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "https://catalog.data.gov/harvest/object/a5ad25db-47f7-48aa-be4d-bc9b3ddf3cc7" .
+
+<urn:uuid:2fd3b72f-9131-4342-9131-f763005af8af> a "ISO 19115:2003/19139" ;
+    bcube:dateCreated "2015-08-08T20:40:34.498Z" ;
+    bcube:lastUpdated "2015-08-08T20:40:34.498Z" ;
+    bcube:originatedFrom <urn:uuid:2d57975d-b73d-4b7b-9bda-d3d1d5491c12> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:d08f6637-dea1-4456-ae17-9e6afec57c48> .
+
+<urn:uuid:8e5487fd-7bbe-4449-99d6-1aa799bfe772> bcube:hasType "theme" ;
+    bcube:hasValue "boundaries",
+        "demographics",
+        "elevation",
+        "recreation",
+        "services",
+        "society",
+        "society cultural" ;
+    dc:partOf "ISO Topic Categories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:96dbe345-c1b9-4183-88b7-952f1874b695> bcube:hasType "theme" ;
+    bcube:hasValue "population" ;
+    dc:partOf "ceres:themes" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:d06b817b-de18-4542-bf74-7bc7912c1530> bcube:hasType "theme" ;
+    bcube:hasValue "census areas",
+        "census districts",
+        "demographics",
+        "people",
+        "population" ;
+    dc:partOf "keyword" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:d08f6637-dea1-4456-ae17-9e6afec57c48> bcube:dateCreated "2015-08-08T20:40:34.498Z" ;
+    bcube:hasMetadataRecord <urn:uuid:2fd3b72f-9131-4342-9131-f763005af8af> ;
+    bcube:lastUpdated "2015-08-08T20:40:34.498Z" ;
+    dc:conformsTo <urn:uuid:8e5487fd-7bbe-4449-99d6-1aa799bfe772>,
+        <urn:uuid:96dbe345-c1b9-4183-88b7-952f1874b695>,
+        <urn:uuid:d06b817b-de18-4542-bf74-7bc7912c1530> ;
+    dc:description "Census 2000 Block Group Data provides a seamless statewide GIS layer of census block groups with associated attributes that provide various demographic data.." ;
+    dc:spatial "POLYGON ((-124.511535 32.423653,-124.511535 42.068501,-113.498987 42.068501,-113.498987 32.423653,-124.511535 32.423653))" ;
+    dcterms:title "Census 2000 Block Group Data (cen00bg03)" ;
+    esip:eastBound "-113.498987"^^xsd:float ;
+    esip:northBound "42.068501"^^xsd:float ;
+    esip:southBound "32.423653"^^xsd:float ;
+    esip:westBound "-124.511535"^^xsd:float ;
+    owl:a dcat:Dataset .
+

@@ -1,0 +1,66 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:065d60c5-5d6d-4297-acff-695633657c00> bcube:hasType "theme" ;
+    bcube:hasValue "FEMA",
+        "Q3 flood zone",
+        "fema",
+        "q3 flood zone" ;
+    dc:partOf "keyword" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:546fffe5-4148-4855-93e2-44ad8f8d8c6e> bcube:hasType "theme" ;
+    bcube:hasValue "inlandWaters" ;
+    dc:partOf "ISO TOPIC CATEGORIES" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:9b2062b5-8364-4f5b-9bd0-db83005ef2b7> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-10-17T08:24:37.259Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-10-17T08:24:37.259Z" ;
+    dc:identifier "urn:sha:42c24cb0f7a4367f63efc297ccc85acc53918c33e93306fd09768d3d" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "https://catalog.data.gov/harvest/object/1de5556a-bd1a-44e6-882f-c0f4226033bd" .
+
+<urn:uuid:c58a9027-794b-4dca-abf2-45faa1aec649> bcube:hasType "theme" ;
+    bcube:hasValue "Inland Waters" ;
+    dc:partOf "ceres:themes" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:d13120ef-c490-41f3-a38c-20c97328867d> a "ISO 19115:2003/19139" ;
+    bcube:dateCreated "2015-10-17T08:24:37.259Z" ;
+    bcube:lastUpdated "2015-10-17T08:24:37.259Z" ;
+    bcube:originatedFrom <urn:uuid:9b2062b5-8364-4f5b-9bd0-db83005ef2b7> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:d8533272-c3b7-43be-956d-2e509445d36e> .
+
+<urn:uuid:d8533272-c3b7-43be-956d-2e509445d36e> bcube:dateCreated "2015-10-17T08:24:37.259Z" ;
+    bcube:hasMetadataRecord <urn:uuid:d13120ef-c490-41f3-a38c-20c97328867d> ;
+    bcube:lastUpdated "2015-10-17T08:24:37.259Z" ;
+    dc:conformsTo <urn:uuid:065d60c5-5d6d-4297-acff-695633657c00>,
+        <urn:uuid:546fffe5-4148-4855-93e2-44ad8f8d8c6e>,
+        <urn:uuid:c58a9027-794b-4dca-abf2-45faa1aec649> ;
+    dc:description "The Q3 Flood Data product is a digital representation of certain features of FEMA's Flood Insurance Rate Map (FIRM) product, intended for use with desktop mapping and Geographic Information Systems technology. Digital Q3 Flood Data has been developed by scanning the existing FIRM hardcopy, vectorizing a thematic overlay of flood risks. The vector Q3 Flood Data files contain only certain features from the existing FIRM hardcopy." ;
+    dc:spatial "POLYGON ((-124.49867 32.435335,-124.49867 42.068804,-113.760349 42.068804,-113.760349 32.435335,-124.49867 32.435335))" ;
+    dcterms:title "FEMA 100 year Flood Data" ;
+    esip:eastBound "-113.760349"^^xsd:float ;
+    esip:northBound "42.068804"^^xsd:float ;
+    esip:southBound "32.435335"^^xsd:float ;
+    esip:westBound "-124.49867"^^xsd:float ;
+    owl:a dcat:Dataset .
+

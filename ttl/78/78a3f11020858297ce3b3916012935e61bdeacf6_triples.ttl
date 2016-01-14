@@ -1,0 +1,122 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:1da16dbe-d313-4282-8622-55f660dd4c17> bcube:hasType "theme" ;
+    bcube:hasValue "environment",
+        "inlandWaters" ;
+    dc:partOf "ISO 19115 Topic Category" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:25f546c0-3140-4f91-a2f0-8f1b60a70c23> bcube:hasType "place" ;
+    bcube:hasValue "Connecticut",
+        "Delaware",
+        "Maine",
+        "Maryland",
+        "Massachusetts",
+        "New Hampshire",
+        "New Jersey",
+        "New York",
+        "Pennsylvania",
+        "Rhode Island",
+        "United States",
+        "Vermont",
+        "Virginia",
+        "Washington DC",
+        "West Virginia" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:2fdf6c4d-609b-4114-a990-e1d38359a61f> bcube:hasType "theme" ;
+    bcube:hasValue "Lakes Ecosystem Services",
+        "National Lakes Assessment",
+        "point features",
+        "sampling frame",
+        "site selection",
+        "unbiased estimates" ;
+    dc:partOf "NLA" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:36442316-4b5a-4cc1-8ff0-bed0750c1a54> owl:a foaf:Organization ;
+    foaf:name "U.S. EPA Office of Research & Development (ORD) - National Health and Environmental Effects Research Laboratory (NHEERL)" .
+
+<urn:uuid:3934b806-2ed2-41d9-9d0c-8086e9c3612f> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-09-10T05:07:22.893Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-09-10T05:07:22.893Z" ;
+    dc:identifier "urn:sha:590b4c8df1397176a623de5cc5c71d6e46821db2aafbe1724d58fbb5" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://epa.gov/aed/lakesecoservices/docs/SparrowLoads.xml" .
+
+<urn:uuid:4422e89c-f694-4f60-9497-4a8a75472010> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-09-10T05:07:22.893Z" ;
+    bcube:lastUpdated "2015-09-10T05:07:22.893Z" ;
+    bcube:originatedFrom <urn:uuid:3934b806-2ed2-41d9-9d0c-8086e9c3612f> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:5b5571dc-7d00-4807-9de1-fa5b1f8c36d0> .
+
+<urn:uuid:4a709a3f-a703-4cc2-92e9-cfb09d481c6c> bcube:hasType "theme" ;
+    bcube:hasValue "Nitrogen load",
+        "Phosphorus load" ;
+    dc:partOf "General" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:5b5571dc-7d00-4807-9de1-fa5b1f8c36d0> bcube:dateCreated "2015-09-10T05:07:22.893Z" ;
+    bcube:hasMetadataRecord <urn:uuid:4422e89c-f694-4f60-9497-4a8a75472010> ;
+    bcube:lastUpdated "2015-09-10T05:07:22.893Z" ;
+    dc:conformsTo <urn:uuid:1da16dbe-d313-4282-8622-55f660dd4c17>,
+        <urn:uuid:25f546c0-3140-4f91-a2f0-8f1b60a70c23>,
+        <urn:uuid:2fdf6c4d-609b-4114-a990-e1d38359a61f>,
+        <urn:uuid:4a709a3f-a703-4cc2-92e9-cfb09d481c6c>,
+        <urn:uuid:62f825d5-3d5a-4118-9067-ad7c6c6459cc> ;
+    dc:description "The Sparrow Loads data report lake ID, latitude, longitude, EPA Region and an assigned state and county based on where the greater percentage of lake area falls. Sparrow Loads represent total average yearly nutrient loads to lakes in the Northeastern United States. These loads are from the USGS Major River Basin 1 Sparrow model. See Moore et. all 2011, DOI:10.1111/j.1752-1688.2011.00582.x for more information." ;
+    dc:spatial "POLYGON ((-80.20877 36.70827,-80.20877 47.41625,-67.0931 47.41625,-67.0931 36.70827,-80.20877 36.70827))" ;
+    dcterms:publisher <urn:uuid:36442316-4b5a-4cc1-8ff0-bed0750c1a54> ;
+    dcterms:references <urn:uuid:b8981d05-dc18-42b0-aac9-d32f012be429> ;
+    dcterms:title "National Lake Assessment Database Northeast Region 2007 Sparrow Loads" ;
+    esip:eastBound "-67.0931"^^xsd:float ;
+    esip:endDate "2007-10-31"^^xsd:date ;
+    esip:northBound "47.41625"^^xsd:float ;
+    esip:southBound "36.70827"^^xsd:float ;
+    esip:startDate "2007-05-08"^^xsd:date ;
+    esip:westBound "-80.20877"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:62f825d5-3d5a-4118-9067-ad7c6c6459cc> bcube:hasType "theme" ;
+    bcube:hasValue "Ecosystem",
+        "Environment",
+        "Monitoring",
+        "Quality",
+        "Surface Water" ;
+    dc:partOf "EPA GIS Keyword Thesaurus" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:b8981d05-dc18-42b0-aac9-d32f012be429> dcterms:references <urn:uuid:cd041abf-598a-49e3-8e80-96e2750414e0> ;
+    owl:a bibo:WebPage .
+
+<urn:uuid:cd041abf-598a-49e3-8e80-96e2750414e0> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-09-10T05:07:22.893Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-09-10T05:07:22.893Z" ;
+    dc:identifier "urn:sha:d7df9d20fdebb698af907e9a5f27cbd3e9408bb40831149b03538b3d" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www.epa.gov/aed/lakesecoservices" .
+

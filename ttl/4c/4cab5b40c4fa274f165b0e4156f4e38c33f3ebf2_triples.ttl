@@ -1,0 +1,79 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:44975566-f8ea-4778-b20a-da12525d2967> bcube:hasType "theme" ;
+    bcube:hasValue "american samoa eez",
+        "cetaceans",
+        "chlorophyll",
+        "ctd",
+        "depth",
+        "dissolved oxygen",
+        "fluorometer",
+        "salinity",
+        "ship survey",
+        "temperature",
+        "water samples" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:610f2026-7211-44ac-9908-6264bf3499e7> owl:a foaf:Organization ;
+    foaf:name "" .
+
+<urn:uuid:8f5010da-3c68-4ddf-9f07-19ca95d49cf1> bcube:hasType "place" ;
+    bcube:hasValue "central pacific ocean",
+        "hawaii eez",
+        "high seas",
+        "kingman reef",
+        "palmyra atoll",
+        "palmyra eez" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:c45fa09a-727b-44c0-a545-7f678e3e2117> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-08-05T04:36:58.79Z" ;
+    bcube:lastUpdated "2015-08-05T04:36:58.79Z" ;
+    bcube:originatedFrom <urn:uuid:e3f7d1cc-8f17-4dbe-85f0-3c5af5af03c3> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:f55a12a5-9bf9-46a8-9838-550955bfdcb1> .
+
+<urn:uuid:e3f7d1cc-8f17-4dbe-85f0-3c5af5af03c3> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-05T04:36:58.79Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-05T04:36:58.79Z" ;
+    dc:identifier "urn:sha:8e156f253949644890b9a49af35b2265178068f95415e1ca44492548" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "https://inport.nmfs.noaa.gov/inport/item/18149/fgdc" .
+
+<urn:uuid:f55a12a5-9bf9-46a8-9838-550955bfdcb1> bcube:dateCreated "2015-08-05T04:36:58.79Z" ;
+    bcube:hasMetadataRecord <urn:uuid:c45fa09a-727b-44c0-a545-7f678e3e2117> ;
+    bcube:lastUpdated "2015-08-05T04:36:58.79Z" ;
+    dc:conformsTo <urn:uuid:44975566-f8ea-4778-b20a-da12525d2967>,
+        <urn:uuid:8f5010da-3c68-4ddf-9f07-19ca95d49cf1> ;
+    dc:description "CTD casts were conducted twice daily (prior to sunrise and after sunset) along the survey trackline. The terminal depth of all casts was 1000 m." ;
+    dc:spatial "POLYGON ((-169.963333 -14.244666,-169.963333 19.269833,-157.221833 19.269833,-157.221833 -14.244666,-169.963333 -14.244666))" ;
+    dcterms:identifier "gov.noaa.nmfs.inport:18149" ;
+    dcterms:publisher <urn:uuid:610f2026-7211-44ac-9908-6264bf3499e7> ;
+    dcterms:title "SE 12-03 Oceanographic: CTD Casts" ;
+    esip:eastBound "-157.221833"^^xsd:float ;
+    esip:endDate "2012-05-15"^^xsd:date ;
+    esip:northBound "19.269833"^^xsd:float ;
+    esip:southBound "-14.244666"^^xsd:float ;
+    esip:startDate "2012-04-23"^^xsd:date ;
+    esip:westBound "-169.963333"^^xsd:float ;
+    owl:a dcat:Dataset .
+

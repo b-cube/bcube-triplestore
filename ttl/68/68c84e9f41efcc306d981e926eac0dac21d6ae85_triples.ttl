@@ -1,0 +1,77 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:0a3ab3bc-34bf-42d0-b46a-be123fea22d6> owl:a foaf:Organization ;
+    foaf:name "" .
+
+<urn:uuid:13d457f7-a8d1-4794-aea8-b8b1d4150fc2> bcube:hasType "theme" ;
+    bcube:hasValue "Basemap Arcs",
+        "Roads",
+        "Transportation" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:1c0f1870-3867-4f92-aa8e-9d092718739e> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-03T10:04:47.38Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-03T10:04:47.38Z" ;
+    dc:identifier "urn:sha:7bc02e2cd4e43502c0d0cca4a89f1df7e5574b23fe31428e53a2963f" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www.envirobase.usgs.gov/FlGisData/FDOT/metadata/basemap_arcs.shp.xml" .
+
+<urn:uuid:34ecaf43-1510-4382-a697-bd3596dab22d> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-11-03T10:04:47.38Z" ;
+    bcube:lastUpdated "2015-11-03T10:04:47.38Z" ;
+    bcube:originatedFrom <urn:uuid:1c0f1870-3867-4f92-aa8e-9d092718739e> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:eeb4881c-39b5-4ef7-895a-56dc264b5cb3> .
+
+<urn:uuid:48c36cb8-9112-4e96-b2d0-4a64eb62b89e> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-03T10:04:47.38Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-03T10:04:47.38Z" ;
+    dc:identifier "urn:sha:13f80debfa470d742bf7e57f3a8133b9731fa935b40b1f3b9b51ac12" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "ftp://ftp.dot.state.fl.us/fdot/co/planning/transtat/gis/shapefiles/basemap_arcs.zip" .
+
+<urn:uuid:6557d01f-e933-4c91-a34d-1b5ab589ed1a> bcube:hasType "place" ;
+    bcube:hasValue "Florida" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:eeb4881c-39b5-4ef7-895a-56dc264b5cb3> bcube:dateCreated "2015-11-03T10:04:47.38Z" ;
+    bcube:hasMetadataRecord <urn:uuid:34ecaf43-1510-4382-a697-bd3596dab22d> ;
+    bcube:lastUpdated "2015-11-03T10:04:47.38Z" ;
+    dc:conformsTo <urn:uuid:13d457f7-a8d1-4794-aea8-b8b1d4150fc2>,
+        <urn:uuid:6557d01f-e933-4c91-a34d-1b5ab589ed1a> ;
+    dc:description "The Basemap Arcs feature class covers the state of Florida at a scale of 1:24,000 with a projection system of Universal Transverse Mercator (UTM) 17 North zone and a horizontal datum of North American 1983 (NAD 1983). The map units are in meters." ;
+    dc:spatial "POLYGON ((-87.590903 24.420987,-87.590903 31.161512,-79.990957 31.161512,-79.990957 24.420987,-87.590903 24.420987))" ;
+    dcterms:publisher <urn:uuid:0a3ab3bc-34bf-42d0-b46a-be123fea22d6> ;
+    dcterms:references <urn:uuid:48c36cb8-9112-4e96-b2d0-4a64eb62b89e> ;
+    dcterms:title "Basemap Roadway - arcs" ;
+    esip:eastBound "-79.990957"^^xsd:float ;
+    esip:northBound "31.161512"^^xsd:float ;
+    esip:southBound "24.420987"^^xsd:float ;
+    esip:startDate "2008-06-02"^^xsd:date ;
+    esip:westBound "-87.590903"^^xsd:float ;
+    owl:a dcat:Dataset .
+

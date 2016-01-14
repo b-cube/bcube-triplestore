@@ -1,0 +1,89 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:21b6332f-dbbe-4cd0-9a1f-94cb8964de5c> bcube:hasType "theme" ;
+    bcube:hasValue "boundaries" ;
+    dc:partOf "ISO 19115 Topic Categories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:5b4202ac-4fbf-4e3a-9781-eea0551416ce> owl:a foaf:Organization ;
+    foaf:name "" .
+
+<urn:uuid:5dc4883e-9fd2-41b7-a559-d6e3450f2439> bcube:hasType "theme" ;
+    bcube:hasValue "County or equivalent entity",
+        "Polygon",
+        "TAZ",
+        "Traffic Analysis Zone" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:669c64f3-8826-442a-ad8e-e4ea3e8534f1> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-06T23:03:51.975Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-06T23:03:51.975Z" ;
+    dc:identifier "urn:sha:f3532d2aeb47901f65d6ad89916b0ed392ee595b8bab889359a1e880" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://meta.geo.census.gov/data/existing/decennial/GEO/GPMB/TIGERline/fe_2007/taz00/fe_2007_06079_taz00_url.shp.xml" .
+
+<urn:uuid:b7fa4371-e276-4858-911e-9ae763e6075a> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-06T23:03:51.975Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-06T23:03:51.975Z" ;
+    dc:identifier "urn:sha:e455661d1cc77fea1e0abb3850505212d60c8f74b4ae89554d4bd4db" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www2.census.gov/geo/tiger/TIGER2007FE/06_CALIFORNIA/06079_San_Luis_Obispo/fe_2007_06079_taz00.zip" .
+
+<urn:uuid:b8421121-cf19-42af-a922-577fe7ea41f5> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-11-06T23:03:51.975Z" ;
+    bcube:lastUpdated "2015-11-06T23:03:51.975Z" ;
+    bcube:originatedFrom <urn:uuid:669c64f3-8826-442a-ad8e-e4ea3e8534f1> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:ccad322c-50db-4e19-82d6-d4266acccd2b> .
+
+<urn:uuid:ccad322c-50db-4e19-82d6-d4266acccd2b> bcube:dateCreated "2015-11-06T23:03:51.975Z" ;
+    bcube:hasMetadataRecord <urn:uuid:b8421121-cf19-42af-a922-577fe7ea41f5> ;
+    bcube:lastUpdated "2015-11-06T23:03:51.975Z" ;
+    dc:conformsTo <urn:uuid:21b6332f-dbbe-4cd0-9a1f-94cb8964de5c>,
+        <urn:uuid:5dc4883e-9fd2-41b7-a559-d6e3450f2439>,
+        <urn:uuid:f178c578-a57c-4f16-b139-a06a9441746a> ;
+    dc:description "The TIGER/Line Shapefiles are an extract of selected geographic and cartographic information from the Census MAF/TIGER database. The Census MAF/TIGER database represents a seamless national file with no overlaps or gaps between parts. However, each TIGER/Line Shapefile is designed to stand alone as an independent data set or the shapefiles can be combined to cover the whole nation." ;
+    dc:spatial "POLYGON ((-121.438176 34.897475,-121.438176 35.796655,-119.472515 35.796655,-119.472515 34.897475,-121.438176 34.897475))" ;
+    dcterms:publisher <urn:uuid:5b4202ac-4fbf-4e3a-9781-eea0551416ce> ;
+    dcterms:references <urn:uuid:b7fa4371-e276-4858-911e-9ae763e6075a> ;
+    dcterms:title "TIGER/Line Shapefile, 2007, 2000 county, San Luis Obispo County, Traffic Analysis Zone (TAZ)" ;
+    esip:eastBound "-119.472515"^^xsd:float ;
+    esip:endDate "2007-07-01"^^xsd:date ;
+    esip:northBound "35.796655"^^xsd:float ;
+    esip:southBound "34.897475"^^xsd:float ;
+    esip:startDate "2007-01-01"^^xsd:date ;
+    esip:westBound "-121.438176"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:f178c578-a57c-4f16-b139-a06a9441746a> bcube:hasType "place" ;
+    bcube:hasValue "06079",
+        "County or Equivalent Entity",
+        "San Luis Obispo",
+        "U.S.",
+        "United States" ;
+    dc:partOf "FIPS Publication 5-2, FIPS Publication 6-4, FIPS Publication 8-6, FIPS Publication 9-1" ;
+    owl:a bcube:thesaurusSubset .
+

@@ -1,0 +1,70 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:0ea99955-33ce-45cb-8744-d481a027b5ad> bcube:hasType "theme" ;
+    bcube:hasValue "survey" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:1a791136-f6f6-4d83-b2d3-f3ba1e72fc9e> bcube:hasType "place" ;
+    bcube:hasValue "Colorado",
+        "Denver",
+        "Denver County",
+        "USA" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:41046aee-2c4e-4014-aea8-e509507fd6e3> bcube:dateCreated "2015-10-29T23:35:36.057Z" ;
+    bcube:hasMetadataRecord <urn:uuid:80221392-9b6b-455e-be22-c86c0146a64b> ;
+    bcube:lastUpdated "2015-10-29T23:35:36.057Z" ;
+    dc:conformsTo <urn:uuid:0ea99955-33ce-45cb-8744-d481a027b5ad>,
+        <urn:uuid:1a791136-f6f6-4d83-b2d3-f3ba1e72fc9e>,
+        <urn:uuid:a3c93eb1-6357-4e99-a6ba-1c1443c170f2> ;
+    dc:description "A polygonal representation of the City and County of Denver's jurisdictional boundary. This datasets also includes all enclaves administered by other jurisdications that are located within the City and County of Denver's boundary." ;
+    dc:spatial "POLYGON ((-105.109967 39.614311,-105.109967 39.914178,-104.599581 39.914178,-104.599581 39.614311,-105.109967 39.614311))" ;
+    dcterms:publisher <urn:uuid:53362e6b-7cbd-452d-b22a-83956940a8a2> ;
+    dcterms:title "County Boundary" ;
+    esip:eastBound "-104.599581"^^xsd:float ;
+    esip:northBound "39.914178"^^xsd:float ;
+    esip:southBound "39.614311"^^xsd:float ;
+    esip:westBound "-105.109967"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:4ad7891d-c44a-4fdb-8c29-a6f988edebd6> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-10-29T23:35:36.057Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-10-29T23:35:36.057Z" ;
+    dc:identifier "urn:sha:07e0df264b013feac2485d5802c743954e5fc3e6c995773d2e63af2a" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://data.denvergov.org/download/gis/county_boundary/metadata/county_boundary.xml" .
+
+<urn:uuid:53362e6b-7cbd-452d-b22a-83956940a8a2> owl:a foaf:Organization ;
+    foaf:name "" .
+
+<urn:uuid:80221392-9b6b-455e-be22-c86c0146a64b> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-10-29T23:35:36.057Z" ;
+    bcube:lastUpdated "2015-10-29T23:35:36.057Z" ;
+    bcube:originatedFrom <urn:uuid:4ad7891d-c44a-4fdb-8c29-a6f988edebd6> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:41046aee-2c4e-4014-aea8-e509507fd6e3> .
+
+<urn:uuid:a3c93eb1-6357-4e99-a6ba-1c1443c170f2> bcube:hasType "theme" ;
+    bcube:hasValue "boundaries" ;
+    dc:partOf "ISO 19115 Topic Categories" ;
+    owl:a bcube:thesaurusSubset .
+

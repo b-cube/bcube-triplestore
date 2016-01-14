@@ -1,0 +1,87 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:1de1c96c-1db9-4870-a254-3dbc03d114ae> owl:a foaf:Organization ;
+    foaf:name "Idaho Geological Survey" .
+
+<urn:uuid:2d295ccf-1d72-4a5f-84f9-6e39c1519d98> bcube:dateCreated "2015-10-17T23:07:36.74Z" ;
+    bcube:hasMetadataRecord <urn:uuid:f792ab1d-61f3-41eb-9b93-8acf483ea30e> ;
+    bcube:lastUpdated "2015-10-17T23:07:36.74Z" ;
+    dc:conformsTo <urn:uuid:37e71ffb-8361-45aa-9629-4e826a8cb27d>,
+        <urn:uuid:5f69c94a-da8a-4820-a46b-d88fc8c3e6bb> ;
+    dc:description "National Earthquake Hazard Reduction Program (NEHRP) seismic site classes for the metro Boise area. The intensity of ground shaking during an earthquake varies according to the nature of near-surface materials. NEHRP site classes quantify this effect and permit adjustment of expected ground motion. Site classes B, BC, C, and E are used. Classification of sites is largely based upon a geologic map (Othberg and Stanford, 1992, IGS GM-18, scale 1:100,000) and a compilation of standard penetration test N (blows/ft) data from geotechnical foundation reports in the project area. This work is a regional screening exercise based upon widely separated localities at a scale of 1:100,000. Site-specific geotechnical investigations are required to determine actual ground conditions for individual building sites." ;
+    dc:spatial "POLYGON ((-117.033495 43.493159,-117.033495 43.881349,-115.999582 43.881349,-115.999582 43.493159,-117.033495 43.493159))" ;
+    dcterms:publisher <urn:uuid:1de1c96c-1db9-4870-a254-3dbc03d114ae> ;
+    dcterms:references <urn:uuid:8f2196f4-5914-4faa-8170-d99552622277> ;
+    dcterms:title "Boise Metro Area NEHRP Site Class" ;
+    esip:eastBound "-115.999582"^^xsd:float ;
+    esip:northBound "43.881349"^^xsd:float ;
+    esip:southBound "43.493159"^^xsd:float ;
+    esip:startDate "2011-01-01"^^xsd:date ;
+    esip:westBound "-117.033495"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:37e71ffb-8361-45aa-9629-4e826a8cb27d> bcube:hasType "theme" ;
+    bcube:hasValue "Earthquake Hazards",
+        "NEHRP site class" ;
+    dc:partOf "none" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:5f69c94a-da8a-4820-a46b-d88fc8c3e6bb> bcube:hasType "place" ;
+    bcube:hasValue "Ada County",
+        "Boise",
+        "Caldwell",
+        "Canyon County",
+        "Eagle",
+        "Homedale",
+        "Idaho",
+        "Kuna",
+        "Meridian",
+        "Nampa",
+        "Owyhee County",
+        "Parma" ;
+    dc:partOf "none" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:8f2196f4-5914-4faa-8170-d99552622277> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-10-17T23:07:36.74Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-10-17T23:07:36.74Z" ;
+    dc:identifier "urn:sha:fbb4b735969c1f25c96bd17480dfa917363f414e50344b6ecdf40051" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www.idahogeology.org/Products/reverselook.asp?switch=title&value=NEHRP_Site_Class_and_Liquefaction_Susceptibility_Maps_for_the_Boise_Metro_Area,_Idaho" .
+
+<urn:uuid:a8c8b927-1c7d-4a3c-a5db-db763d1162eb> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-10-17T23:07:36.74Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-10-17T23:07:36.74Z" ;
+    dc:identifier "urn:sha:1f18a631b80deaba6e3bd1dee015141055988c57baf86d6a0d050722" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://insideidaho.org/appsOutput/metadataWAF/xml/BoiseMetroAreaNEHRPSiteClass.xml" .
+
+<urn:uuid:f792ab1d-61f3-41eb-9b93-8acf483ea30e> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-10-17T23:07:36.74Z" ;
+    bcube:lastUpdated "2015-10-17T23:07:36.74Z" ;
+    bcube:originatedFrom <urn:uuid:a8c8b927-1c7d-4a3c-a5db-db763d1162eb> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:2d295ccf-1d72-4a5f-84f9-6e39c1519d98> .
+

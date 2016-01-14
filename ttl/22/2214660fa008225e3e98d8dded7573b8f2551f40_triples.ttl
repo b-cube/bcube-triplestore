@@ -1,0 +1,96 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:2793d86e-f093-4c48-b919-d403ed88e1cc> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-10-30T11:06:41.61Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-10-30T11:06:41.61Z" ;
+    dc:identifier "urn:sha:919008799ffabb6c58324c458bb7dc49f413038ca4539a97815d0bf7" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://oos.soest.hawaii.edu/pacioos/metadata/swan_guam.xml" .
+
+<urn:uuid:2ae8948f-3d79-4ef1-b432-91ab43289a2f> bcube:hasType "theme" ;
+    bcube:hasValue "Earth Science > Oceans > Ocean Waves > Significant Wave Height",
+        "Earth Science > Oceans > Ocean Waves > Wave Period",
+        "Earth Science > Oceans > Ocean Waves > Wave Speed/Direction",
+        "Earth Science Services > Models > Ocean General Circulation Models (OGCM)/Regional Ocean Models",
+        "Earth Science Services > Models > Weather Research/Forecast Models" ;
+    dc:partOf "GCMD Science Keywords" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:58c3ae57-5734-4039-b5b5-8609f09b1d16> a "ISO 19115:2003/19139" ;
+    bcube:dateCreated "2015-10-30T11:06:41.61Z" ;
+    bcube:lastUpdated "2015-10-30T11:06:41.61Z" ;
+    bcube:originatedFrom <urn:uuid:2793d86e-f093-4c48-b919-d403ed88e1cc> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:a5032dc8-dab1-4dd0-8c6e-9e6827e5bdd6> .
+
+<urn:uuid:6a0fd672-45a3-41b2-83fd-7ec3d872d9c8> bcube:hasType "dataCenter" ;
+    bcube:hasValue "Pacific Islands Ocean Observing System (PacIOOS)" ;
+    dc:partOf "GCMD Data Center Keywords" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:802a8c9f-bc5a-473b-adf2-272606321d87> bcube:hasType "place" ;
+    bcube:hasValue "Ocean > Pacific Ocean > Western Pacific Ocean > Micronesia > Guam" ;
+    dc:partOf "GCMD Location Keywords" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:9714b628-9dc2-4974-96d4-a3164879e7d3> bcube:hasType "theme" ;
+    bcube:hasValue "depth",
+        "forecast_period",
+        "forecast_reference_time",
+        "latitude",
+        "longitude",
+        "sea_surface_wave_from_direction",
+        "sea_surface_wave_mean_period_from_variance_spectral_density_second_frequency_moment",
+        "sea_surface_wave_period_at_variance_spectral_density_maximum",
+        "sea_surface_wave_significant_height",
+        "time" ;
+    dc:partOf "CF-1.4" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:a5032dc8-dab1-4dd0-8c6e-9e6827e5bdd6> bcube:dateCreated "2015-10-30T11:06:41.61Z" ;
+    bcube:hasMetadataRecord <urn:uuid:58c3ae57-5734-4039-b5b5-8609f09b1d16> ;
+    bcube:lastUpdated "2015-10-30T11:06:41.61Z" ;
+    dc:conformsTo <urn:uuid:2ae8948f-3d79-4ef1-b432-91ab43289a2f>,
+        <urn:uuid:6a0fd672-45a3-41b2-83fd-7ec3d872d9c8>,
+        <urn:uuid:802a8c9f-bc5a-473b-adf2-272606321d87>,
+        <urn:uuid:9714b628-9dc2-4974-96d4-a3164879e7d3>,
+        <urn:uuid:caa60646-470a-4da0-a697-52b379aa6f87>,
+        <urn:uuid:cd2192fa-51ad-4510-8766-e662487d9a62> ;
+    dc:description "Simulating WAves Nearshore (SWAN) regional wave model 7-day output with a 5-day hourly forecast for the island of Guam at approximately 500-m resolution. This high-resolution model is utilized to capture shallow water effects and nearshore coastal dynamics such as refracting, shoaling, and smaller scale shadowing. It is run directly after the Mariana Islands regional WaveWatch III (WW3) wave model has completed. Please note that this nested model setup is in the testing and validation phase. While considerable effort has been made to implement all model components in a thorough, correct, and accurate manner, numerous sources of error are possible. As such, please use these data with the caution appropriate for any ocean related activity." ;
+    dc:identifier "swan_guam" ;
+    dc:spatial "POLYGON ((144.5 13.149999618500001,144.5 13.75,145.05000305199999 13.75,145.05000305199999 13.149999618500001,144.5 13.149999618500001))" ;
+    dcterms:title "Simulating WAves Nearshore (SWAN) Regional Wave Model: Guam" ;
+    esip:eastBound "145.050003052"^^xsd:float ;
+    esip:endDate "2015-11-03"^^xsd:date ;
+    esip:northBound "13.75"^^xsd:float ;
+    esip:southBound "13.1499996185"^^xsd:float ;
+    esip:startDate "2012-05-16"^^xsd:date ;
+    esip:westBound "144.5"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:caa60646-470a-4da0-a697-52b379aa6f87> bcube:hasValue "climatologyMeteorologyAtmosphere" ;
+    dc:partOf "IsoTopicCategories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:cd2192fa-51ad-4510-8766-e662487d9a62> bcube:hasType "project" ;
+    bcube:hasValue "Pacific Islands Ocean Observing System (PacIOOS)" ;
+    dc:partOf "GCMD Project Keywords" ;
+    owl:a bcube:thesaurusSubset .
+

@@ -1,0 +1,98 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:1664fa11-2854-4428-8b22-fb28f07e2b81> owl:a foaf:Organization ;
+    foaf:name "U.S. Geological Survey" .
+
+<urn:uuid:503c4ac8-43cb-45a6-863f-7357e84dfc07> bcube:hasType "theme" ;
+    bcube:hasValue "Artificial Path",
+        "Canal / Ditch",
+        "FWHYDROGRAPHY",
+        "Hydrography",
+        "Lake / Pond",
+        "Reach Code",
+        "Reservoir",
+        "Spring / Seep",
+        "Stream / River",
+        "Swamp / Marsh" ;
+    dc:partOf "U.S. Department of the Interior, U.S. Geological Survey, 1999, Standards for National Hydrography Dataset. (<http://mapping.usgs.gov/standards/>)" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:9288e3dd-87d1-4230-aa2f-e1cf99eb1a59> bcube:dateCreated "2015-08-05T01:10:33.704Z" ;
+    bcube:hasMetadataRecord <urn:uuid:be1e2ca1-fc4e-48c0-8a11-478a26e197e1> ;
+    bcube:lastUpdated "2015-08-05T01:10:33.704Z" ;
+    dc:conformsTo <urn:uuid:503c4ac8-43cb-45a6-863f-7357e84dfc07>,
+        <urn:uuid:fd67f308-db36-41af-be63-0a6dbf0ca0b8> ;
+    dc:description "The National Hydrography Dataset (NHD) is a feature-based database that interconnects and uniquely identifies the sream segments or reaches that comprise the nation's surface water drainage system. Medium resolution NHD is based on the content of the U.S. Geological Survey 1:100,000-scale Digital Line Graph (DLG) hydrography data, integrated with reach-related information from the U.S. Environmental Protection Agency Reach File Version 3.0 (RF3). More specifically, it contains reach codes for networked features and isolated lakes, flow direction, names, stream level, and centerline representations for areal water bodies. Reaches are also defined to represent water bodies and the approximate shorelines of the Great Lakes, the Atlantic and Pacific Oceans and the Gulf of Mexico. The NHD also incorporates the National Spatial Data Infrastructure framework criteria established by the Federal Geographic Data Committee." ;
+    dc:spatial "POLYGON ((-160.997248 18.497726,-160.997248 49.37657,-66.88508 49.37657,-66.88508 18.497726,-160.997248 18.497726))" ;
+    dcterms:publisher <urn:uuid:1664fa11-2854-4428-8b22-fb28f07e2b81> ;
+    dcterms:references <urn:uuid:a8804991-ea24-48d4-a725-09fd065667e6>,
+        <urn:uuid:e411514c-1a80-4426-96fd-75a054efc7a6> ;
+    dcterms:title "National Hydrography Dataset (NHD) - Medium-resolution" ;
+    esip:eastBound "-66.88508"^^xsd:float ;
+    esip:northBound "49.37657"^^xsd:float ;
+    esip:southBound "18.497726"^^xsd:float ;
+    esip:westBound "-160.997248"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:a8804991-ea24-48d4-a725-09fd065667e6> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-05T01:10:33.704Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-05T01:10:33.704Z" ;
+    dc:identifier "urn:sha:d14a028c2a3a2bc9476102bb288234c415a2b01f828ea62ac5b3e42f" ;
+    owl:a bcube:Url .
+
+<urn:uuid:be1e2ca1-fc4e-48c0-8a11-478a26e197e1> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-08-05T01:10:33.704Z" ;
+    bcube:lastUpdated "2015-08-05T01:10:33.704Z" ;
+    bcube:originatedFrom <urn:uuid:e5471e9c-83b8-4d2d-b9a5-d7be93d3bba7> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:9288e3dd-87d1-4230-aa2f-e1cf99eb1a59> .
+
+<urn:uuid:e411514c-1a80-4426-96fd-75a054efc7a6> dcterms:references <urn:uuid:f94b5078-0c7a-4a56-9939-00152da69c94> ;
+    owl:a bibo:WebPage .
+
+<urn:uuid:e5471e9c-83b8-4d2d-b9a5-d7be93d3bba7> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-05T01:10:33.704Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-05T01:10:33.704Z" ;
+    dc:identifier "urn:sha:e13e870aaea80e56ad7c3ef0aa5452864202015a9af28690cf5754ce" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www.idwr.idaho.gov/ftp/gisdata/Spatial/Projects/SpokaneRathdrum/Hydrography/1706_wb_shp.shp.xml" .
+
+<urn:uuid:f94b5078-0c7a-4a56-9939-00152da69c94> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-05T01:10:33.704Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-05T01:10:33.704Z" ;
+    dc:identifier "urn:sha:aff2b4271619b5fc25ad4a180799348220aaaefca291cf98ce3a868e" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://nhd.usgs.gov" .
+
+<urn:uuid:fd67f308-db36-41af-be63-0a6dbf0ca0b8> bcube:hasType "place" ;
+    bcube:hasValue "US" ;
+    dc:partOf "U.S. Department of Commerce, 1977, Countries, dependencies, areas of sovereignty, and their principal administative divisions (Federal Information Processing Standard 10-3): Washington, D.C., National Institute of Standards and Technology." ;
+    owl:a bcube:thesaurusSubset .
+

@@ -1,0 +1,114 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:14b9790a-da6d-40f8-9862-36feea237bf9> bcube:hasType "theme" ;
+    bcube:hasValue "air_temperature",
+        "eastward_wind",
+        "latitude",
+        "longitude",
+        "northward_wind",
+        "precipitation_flux",
+        "relative_humidity",
+        "sea_surface_temperature",
+        "surface_air_pressure",
+        "surface_downwelling_shortwave_flux",
+        "surface_net_downward_longwave_flux",
+        "time" ;
+    dc:partOf "CF-1.4" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:290f884e-1693-4e69-8fdd-b1b9fd7ff673> a "ISO 19115:2003/19139" ;
+    bcube:dateCreated "2015-07-17T06:13:26.115Z" ;
+    bcube:lastUpdated "2015-07-17T06:13:26.115Z" ;
+    bcube:originatedFrom <urn:uuid:ae16a5aa-0549-48c0-a856-98d30a987dde> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:298058e5-0a7a-4c0f-aeeb-188191edccc1> .
+
+<urn:uuid:298058e5-0a7a-4c0f-aeeb-188191edccc1> bcube:dateCreated "2015-07-17T06:13:26.115Z" ;
+    bcube:hasMetadataRecord <urn:uuid:290f884e-1693-4e69-8fdd-b1b9fd7ff673> ;
+    bcube:lastUpdated "2015-07-17T06:13:26.115Z" ;
+    dc:conformsTo <urn:uuid:14b9790a-da6d-40f8-9862-36feea237bf9>,
+        <urn:uuid:42b4f3ec-5978-4449-be22-5e06e8d1ada9>,
+        <urn:uuid:6ef23c80-2dc1-448c-bc7a-e6fa5c01f4a0>,
+        <urn:uuid:ea6b1458-022e-48c6-8227-788741489f27> ;
+    dc:description "Weather Research and Forecasting (WRF) mesoscale numerical weather prediction model 7-day hourly forecast for the region surrounding the Hawaiian islands of Oahu, Maui, Molokai, Lanai, and Kahoolawe at approximately 2-km resolution. Uses the Advanced Research WRF (ARW) dynamical solver developed and maintained by the Mesoscale and Microscale Meteorology Division of the National Center for Atmospheric Research (NCAR). Model runs produced at the University of Hawaii by Yi-Leng Chen." ;
+    dc:identifier "WRF_MO_Best" ;
+    dc:spatial "POLYGON ((-159.12 20.2,-159.12 21.892,-155.64 21.892,-155.64 20.2,-159.12 20.2))" ;
+    dcterms:references <urn:uuid:853e04e2-c9f1-429c-94ea-ff7efa9f3ce0>,
+        <urn:uuid:dd6d6f5a-20b1-4eef-8935-6a778f993409> ;
+    dcterms:title "Weather Research and Forecasting (WRF) Regional Atmospheric Model: Maui-Oahu" ;
+    esip:eastBound "-155.64"^^xsd:float ;
+    esip:endDate "2015-07-22"^^xsd:date ;
+    esip:northBound "21.892"^^xsd:float ;
+    esip:southBound "20.2"^^xsd:float ;
+    esip:startDate "2010-05-14"^^xsd:date ;
+    esip:westBound "-159.12"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:42b4f3ec-5978-4449-be22-5e06e8d1ada9> bcube:hasType "theme" ;
+    bcube:hasValue "Earth Science > Atmosphere > Atmospheric Pressure > Surface Pressure",
+        "Earth Science > Atmosphere > Atmospheric Radiation > Longwave Radiation",
+        "Earth Science > Atmosphere > Atmospheric Radiation > Shortwave Radiation",
+        "Earth Science > Atmosphere > Atmospheric Temperature > Surface Air Temperature",
+        "Earth Science > Atmosphere > Atmospheric Water Vapor > Humidity",
+        "Earth Science > Atmosphere > Atmospheric Winds > Surface Winds",
+        "Earth Science > Atmosphere > Precipitation > Rain",
+        "Earth Science Services > Models > Weather Research/Forecast Models" ;
+    dc:partOf "GCMD Science Keywords" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:6ef23c80-2dc1-448c-bc7a-e6fa5c01f4a0> bcube:hasType "project" ;
+    bcube:hasValue "Pacific Islands Ocean Observing System (PacIOOS)" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:853e04e2-c9f1-429c-94ea-ff7efa9f3ce0> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-07-17T06:13:26.115Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-07-17T06:13:26.115Z" ;
+    dc:identifier "urn:sha:647d9952f3ca9ac587e5200634b850562323ba1c5ce5be7f496fedf9" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://oos.soest.hawaii.edu/erddap/griddap/WRF_MO_Best.graph" .
+
+<urn:uuid:ae16a5aa-0549-48c0-a856-98d30a987dde> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-07-17T06:13:26.115Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-07-17T06:13:26.115Z" ;
+    dc:identifier "urn:sha:f5ca3bd52d10039b11dffddc7f4e51e36f29a58cff385bbe534e4df7" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://oos.soest.hawaii.edu/erddap/griddap/WRF_MO_Best.iso19115" .
+
+<urn:uuid:dd6d6f5a-20b1-4eef-8935-6a778f993409> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-07-17T06:13:26.115Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-07-17T06:13:26.115Z" ;
+    dc:identifier "urn:sha:46023566421934d8cba71931fc5313620ac159a44945a7264314858a" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://oos.soest.hawaii.edu/erddap/griddap/WRF_MO_Best.html" .
+
+<urn:uuid:ea6b1458-022e-48c6-8227-788741489f27> bcube:hasValue "geoscientificInformation" ;
+    dc:partOf "IsoTopicCategories" ;
+    owl:a bcube:thesaurusSubset .
+

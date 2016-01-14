@@ -1,0 +1,93 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:24c89235-28c1-4587-baa6-cfd4f7b31c38> owl:a foaf:Organization ;
+    foaf:name "State Climatologist" .
+
+<urn:uuid:2cf45b91-e922-4c21-a276-4de3821be7b4> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-08-10T08:23:49.805Z" ;
+    bcube:lastUpdated "2015-08-10T08:23:49.805Z" ;
+    bcube:originatedFrom <urn:uuid:83247c77-fcad-4220-b6e9-3bcab0c57153> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:62dc16b6-f6ff-46e5-a9d2-ba3d237c674b> .
+
+<urn:uuid:4e7cb34c-f1d3-4fac-bf45-d351773160e0> bcube:hasType "theme" ;
+    bcube:hasValue "climatologyMeteorologyAtmosphere",
+        "environment",
+        "geoscientificInformation" ;
+    dc:partOf "ISO 19115 Topic Categories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:58e2aa74-f111-49ec-b13f-8de0add516a7> bcube:hasType "theme" ;
+    bcube:hasValue "EVI",
+        "Enhanced Vegetation Index",
+        "MODIS",
+        "MSDI",
+        "Montana",
+        "Montana Climate Office",
+        "Montana Spatial Data Infrastructure",
+        "climate",
+        "vegetation",
+        "vegetation index" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:62dc16b6-f6ff-46e5-a9d2-ba3d237c674b> bcube:dateCreated "2015-08-10T08:23:49.805Z" ;
+    bcube:hasMetadataRecord <urn:uuid:2cf45b91-e922-4c21-a276-4de3821be7b4> ;
+    bcube:lastUpdated "2015-08-10T08:23:49.805Z" ;
+    dc:conformsTo <urn:uuid:4e7cb34c-f1d3-4fac-bf45-d351773160e0>,
+        <urn:uuid:58e2aa74-f111-49ec-b13f-8de0add516a7>,
+        <urn:uuid:c85462ce-684e-477c-bc0c-9770bf4d5f15> ;
+    dc:description "Normals represent the average condition over a given period of time. The mean and standard deviation of yearly Enhanced Vegetation Index (EVI) are derived and used to calculate the departure from normal as a z-score for year 2002 to present. EVI is an 'optimized' index designed to enhance the vegetation signal with improved sensitivity in high biomass regions and improved vegetation monitoring through a de-coupling of the canopy background signal and a reduction in atmosphere influences. Starting 2000, and after the launch of the two MODIS sensors on Terra (satellite) and Aqua (satellite) by NASA, EVI was adopted as a standard product. The Terra satellite collection encompasses the years 2000 to present. The Aqua satellite collection encompasses the years 2002 to present. The Montana Climate Office tansforms the source MODIS datasets from their native sinusoidal projection to the Montana State Plane coordinate system for the area-of-interest for both the Aqua and Terra MODIS platforms.Technical details for MODIS can be found in the user guide posted at ftp://mco.cfc.umt.edu/resources/MCO/Papers/MODIS_VI_UsersGuide_01_2012.pdf" ;
+    dc:spatial "POLYGON ((-119.57459 41.666534,-119.57459 51.16971,-99.470885 51.16971,-99.470885 41.666534,-119.57459 41.666534))" ;
+    dcterms:publisher <urn:uuid:24c89235-28c1-4587-baa6-cfd4f7b31c38> ;
+    dcterms:references <urn:uuid:f7cb88d6-5bf8-40ca-85ec-55bdefcfed56> ;
+    dcterms:title "Normal for Yearly EVI for Year 2002 to Present from AQUA" ;
+    esip:eastBound "-99.470885"^^xsd:float ;
+    esip:endDate "2013-01-01"^^xsd:date ;
+    esip:northBound "51.16971"^^xsd:float ;
+    esip:southBound "41.666534"^^xsd:float ;
+    esip:startDate "2003-01-01"^^xsd:date ;
+    esip:westBound "-119.57459"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:83247c77-fcad-4220-b6e9-3bcab0c57153> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-10T08:23:49.805Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-10T08:23:49.805Z" ;
+    dc:identifier "urn:sha:0d1bf2efaef61f14a26865949120c429e88a66075003aa61bd62e309" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://mslapps.mt.gov/Geographic_Information/Data/DataList/datalist_MetadataDetailRaw.aspx?did={32B67921-9871-463E-8DA7-FD185BEEB800}" .
+
+<urn:uuid:c85462ce-684e-477c-bc0c-9770bf4d5f15> bcube:hasType "place" ;
+    bcube:hasValue "Montana" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:f7cb88d6-5bf8-40ca-85ec-55bdefcfed56> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-10T08:23:49.805Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-10T08:23:49.805Z" ;
+    dc:identifier "urn:sha:704e8fe10edc35b782b9848b0f279df9be01d872109eb5d471cbc2a8" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "ftp://mco.cfc.umt.edu/evi/aqua/yearly_normals/Readme.html" .
+

@@ -1,0 +1,71 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:00641bb8-18fe-4a5c-b533-11d39bf196e3> bcube:hasType "theme" ;
+    bcube:hasValue "FMB",
+        "FRMD",
+        "WPacFIN",
+        "cannery",
+        "pelagic",
+        "pifsc",
+        "piro",
+        "unloading",
+        "weight" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:2f02f404-9d6b-4fc9-8706-a3c3a5638a81> owl:a foaf:Organization ;
+    foaf:name "" .
+
+<urn:uuid:4e03e52b-150b-445b-a0ac-3177b6cd98ea> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-05T07:35:40.453Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-05T07:35:40.453Z" ;
+    dc:identifier "urn:sha:b3524d5bdbf4e7ae168eb8e1d955022bc95c49a81dc4788540e169d2" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "https://inport.nmfs.noaa.gov/inport/item/5616/fgdc" .
+
+<urn:uuid:64632088-6443-488f-8dbe-3eefad348eed> bcube:hasType "place" ;
+    bcube:hasValue "american samoa" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:7bdc5107-f9be-4f98-8c62-59a2ff8e7759> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-08-05T07:35:40.453Z" ;
+    bcube:lastUpdated "2015-08-05T07:35:40.453Z" ;
+    bcube:originatedFrom <urn:uuid:4e03e52b-150b-445b-a0ac-3177b6cd98ea> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:f35867bb-26c4-409c-929e-e1c13025e82e> .
+
+<urn:uuid:f35867bb-26c4-409c-929e-e1c13025e82e> bcube:dateCreated "2015-08-05T07:35:40.453Z" ;
+    bcube:hasMetadataRecord <urn:uuid:7bdc5107-f9be-4f98-8c62-59a2ff8e7759> ;
+    bcube:lastUpdated "2015-08-05T07:35:40.453Z" ;
+    dc:conformsTo <urn:uuid:00641bb8-18fe-4a5c-b533-11d39bf196e3>,
+        <urn:uuid:64632088-6443-488f-8dbe-3eefad348eed> ;
+    dc:description "The source of this dataset is the reports provided by the 2 canneries in American Samoa to the local fisheries agency DMWR which does all the data processing for the dataset. It consists of the vessel names, dates of offloading, and weight of the major species of fish unloaded for the major longline fisheries at the canneries. Our database captures only the offloading data for U.S. flagged longline vessels from 1982 to present and continuing. The area where fish occurred is not part of the data set. These data are considered highly confidential." ;
+    dc:spatial "POLYGON ((-180 -20,-180 0,-150 0,-150 -20,-180 -20))" ;
+    dcterms:identifier "gov.noaa.nmfs.inport:5616" ;
+    dcterms:publisher <urn:uuid:2f02f404-9d6b-4fc9-8706-a3c3a5638a81> ;
+    dcterms:title "American Samoa Cannery Unloading" ;
+    esip:eastBound "-150.0"^^xsd:float ;
+    esip:northBound "0.0"^^xsd:float ;
+    esip:southBound "-20.0"^^xsd:float ;
+    esip:startDate "1995-01-01"^^xsd:date ;
+    esip:westBound "-180.0"^^xsd:float ;
+    owl:a dcat:Dataset .
+

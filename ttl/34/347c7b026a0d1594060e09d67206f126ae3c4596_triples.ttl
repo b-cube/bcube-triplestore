@@ -1,0 +1,66 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:e9e2eba3-cb03-4c6d-b60b-a946468fec6d> a "OGC:WMS" ;
+    bcube:contains <urn:uuid:58f67922-0904-45ec-9097-3f2cc59f4f2f> ;
+    bcube:dateCreated "2015-06-28T18:09:34.455Z" ;
+    bcube:lastUpdated "2015-06-28T18:09:34.455Z" ;
+    bcube:originatedFrom <urn:uuid:dc963859-24ed-4f5f-829d-b8f7b022bee5> ;
+    dc:conformsTo <urn:uuid:3c6406dd-af1d-4931-ba7d-11bab45e6a9c> ;
+    dc:description "Scientific Data" ;
+    owl:a bcube:service .
+
+<urn:uuid:3c6406dd-af1d-4931-ba7d-11bab45e6a9c> bcube:hasValue "atmosphere",
+        "climate",
+        "earth science",
+        "meteorology",
+        "ocean" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:58f67922-0904-45ec-9097-3f2cc59f4f2f> bcube:dateCreated "2015-06-28T18:09:34.455Z" ;
+    bcube:lastUpdated "2015-06-28T18:09:34.455Z" ;
+    dc:description "6-hourly Air Temperature Spread on Pressure Levels" ;
+    dc:spatial "POLYGON ((-180 -90,-180 90,180 90,180 -90,-180 -90))" ;
+    dc:title "air_temperature" ;
+    dcterms:references <urn:uuid:c5ebfbd9-2145-48be-956a-f230c243841d> ;
+    esip:eastBound "180.0"^^xsd:float ;
+    esip:northBound "90.0"^^xsd:float ;
+    esip:southBound "-90.0"^^xsd:float ;
+    esip:westBound "-180.0"^^xsd:float ;
+    owl:a bcube:Layer .
+
+<urn:uuid:c5ebfbd9-2145-48be-956a-f230c243841d> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-06-28T18:09:34.455Z" ;
+    bcube:hasConfidence "Not Sure" ;
+    bcube:hasUrlSource "Generated" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-06-28T18:09:34.455Z" ;
+    dc:identifier "urn:sha:892aec7d0568e8c937427edae71032606a491f726419de2587ffe7fe" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www.esrl.noaa.gov/psd/thredds/wms/Datasets/20thC_ReanV2/pressure_sprd/air.1919.nc?layers=air&width=500&version=1.3.0&bbox=-180.0%2C-90.0%2C180.0%2C90.0&service=WMS&format=image%2Fpng&styles=&crs=CRS%3A84&request=GetMap&height=500" .
+
+<urn:uuid:dc963859-24ed-4f5f-829d-b8f7b022bee5> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-06-28T18:09:34.455Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-06-28T18:09:34.455Z" ;
+    dc:identifier "urn:sha:e33fac6de1a324eda0c1c14033a064abb48caa5e6a6a956da825f990" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www.esrl.noaa.gov/psd/thredds/wms/Datasets/20thC_ReanV2/pressure_sprd/air.1919.nc?service=WMS&version=1.3.0&request=GetCapabilities" .
+

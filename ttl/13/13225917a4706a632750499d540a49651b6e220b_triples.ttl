@@ -1,0 +1,104 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:07357ef5-36a7-4ceb-80e9-05187872d3ac> owl:a foaf:Organization ;
+    foaf:name "NOAA's Ocean Service, Office for Coastal Management (OCM)" .
+
+<urn:uuid:13ba99dd-65a9-4562-b3c8-a83f1573414f> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-08-05T07:39:47.675Z" ;
+    bcube:lastUpdated "2015-08-05T07:39:47.675Z" ;
+    bcube:originatedFrom <urn:uuid:c3e5ce51-af2f-4c1d-9a10-11102b1bf1ca> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:bcd71c4a-2356-444a-bddf-40be1176a25b> .
+
+<urn:uuid:1c48c841-ca85-405b-977d-2216d13695ef> bcube:hasType "place" ;
+    bcube:hasValue "Asuncion Island",
+        "CNMI",
+        "Coastal Zone" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:24e5574b-b4fd-4603-9efd-161444a68416> bcube:hasType "theme" ;
+    bcube:hasValue "Land Cover",
+        "Land Cover Analysis",
+        "Remotely Sensed Imagery/Photos" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:4c7d864a-0c3e-4bc4-b209-af3042bd26fd> dcterms:references <urn:uuid:81d45b38-f1f5-43fe-aa8d-1964c3b04539> ;
+    owl:a bibo:WebPage .
+
+<urn:uuid:59188a0e-e48e-4cca-ab3a-fa738f7e0f9b> bcube:hasType "theme" ;
+    bcube:hasValue "imageryBaseMapsEarthCover" ;
+    dc:partOf "ISO 19115 Topic Category" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:81d45b38-f1f5-43fe-aa8d-1964c3b04539> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-05T07:39:47.675Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-05T07:39:47.675Z" ;
+    dc:identifier "urn:sha:4b2a2bfb49a5b8f02d9fc1ffc2d225c46aa500c7875892630f491c46" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://coast.noaa.gov/digitalcoast/data/ccaphighres" .
+
+<urn:uuid:bcd71c4a-2356-444a-bddf-40be1176a25b> bcube:dateCreated "2015-08-05T07:39:47.675Z" ;
+    bcube:hasMetadataRecord <urn:uuid:13ba99dd-65a9-4562-b3c8-a83f1573414f> ;
+    bcube:lastUpdated "2015-08-05T07:39:47.675Z" ;
+    dc:conformsTo <urn:uuid:1c48c841-ca85-405b-977d-2216d13695ef>,
+        <urn:uuid:24e5574b-b4fd-4603-9efd-161444a68416>,
+        <urn:uuid:59188a0e-e48e-4cca-ab3a-fa738f7e0f9b> ;
+    dc:description "This data set consists of land derived from high resolution imagery and was analyzed according to the Coastal Change Analysis Program (C-CAP) protocol to determine land cover. This data set utilized 1 full Quickbird multispectral scene which was processed to detect C-CAP land cover features on the island of Asuncion Island, CNMI." ;
+    dc:spatial "POLYGON ((145.382701 19.671619,145.382701 19.711944,145.423196 19.711944,145.423196 19.671619,145.382701 19.671619))" ;
+    dcterms:publisher <urn:uuid:07357ef5-36a7-4ceb-80e9-05187872d3ac> ;
+    dcterms:references <urn:uuid:4c7d864a-0c3e-4bc4-b209-af3042bd26fd>,
+        <urn:uuid:f9dc4444-0970-4e4c-8ff1-beb11d0cddce> ;
+    dcterms:title "C-CAP Land Cover, Commonwealth of the Northern Mariana Islands (CNMI), Asuncion Island, 2004" ;
+    esip:eastBound "145.423196"^^xsd:float ;
+    esip:northBound "19.711944"^^xsd:float ;
+    esip:southBound "19.671619"^^xsd:float ;
+    esip:startDate "2004-01-01"^^xsd:date ;
+    esip:westBound "145.382701"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:c3e5ce51-af2f-4c1d-9a10-11102b1bf1ca> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-05T07:39:47.675Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-05T07:39:47.675Z" ;
+    dc:identifier "urn:sha:fa4d5b74ae85b05aece52a860d902ce334748e957df538846585f6cc" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://coast.noaa.gov/data/Documents/Metadata/harvest/Imagery/2004_asuncion_landcover.xml" .
+
+<urn:uuid:d7195b31-8660-4060-a116-2c34d27aa219> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-05T07:39:47.675Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-05T07:39:47.675Z" ;
+    dc:identifier "urn:sha:6ebdc5e986c6c38f9178a073222baba66bea977e256e12d71727bbef" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://coast.noaa.gov/ccapftp/" .
+
+<urn:uuid:f9dc4444-0970-4e4c-8ff1-beb11d0cddce> dcterms:references <urn:uuid:d7195b31-8660-4060-a116-2c34d27aa219> ;
+    owl:a bibo:WebPage .
+

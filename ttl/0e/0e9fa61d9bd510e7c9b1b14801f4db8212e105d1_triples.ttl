@@ -1,0 +1,95 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:1e32f0fb-c71b-4c15-968f-fa06c64fd92d> owl:a foaf:Organization ;
+    foaf:name "" .
+
+<urn:uuid:2671e167-f796-432b-af6e-f4ea9016022d> bcube:hasType "theme" ;
+    bcube:hasValue "5-digit ZIP code",
+        "County ANSI Code",
+        "County FIPS Code",
+        "From House Number",
+        "Permanent edge ID",
+        "Side indicator flag",
+        "State ANSI Code",
+        "State FIPS Code",
+        "To House Number",
+        "ZIP +4 code" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:3d57d70e-6aaf-48ed-a37c-042195e063aa> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-07T20:26:56.186Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-07T20:26:56.186Z" ;
+    dc:identifier "urn:sha:06a172394911a4f5315d0377a815f92879b1411c380b74faab6fa150" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www2.census.gov/geo/tiger/TIGER2007FE/01_ALABAMA/01017_Chambers/fe_2007_01017_addr.zip" .
+
+<urn:uuid:4a757876-7f2d-488b-bcbf-63c07a57ed91> bcube:hasType "place" ;
+    bcube:hasValue "01017",
+        "Chambers",
+        "County or Equivalent Entity",
+        "U.S.",
+        "United States" ;
+    dc:partOf "FIPS Publication 5-2, FIPS Publication 6-4, FIPS Publication 8-6, FIPS Publication 9-1" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:aea98355-91e2-4097-9eb5-4bc582c607bd> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-11-07T20:26:56.186Z" ;
+    bcube:lastUpdated "2015-11-07T20:26:56.186Z" ;
+    bcube:originatedFrom <urn:uuid:bbf57bd5-5a4e-4b69-88e3-31e8da38d82a> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:d2dc96d4-5951-48cb-8c0d-d96f1627c5c7> .
+
+<urn:uuid:bbf57bd5-5a4e-4b69-88e3-31e8da38d82a> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-07T20:26:56.186Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-07T20:26:56.186Z" ;
+    dc:identifier "urn:sha:c873af16d77596af60a54bb455729cc13e67a721388878b7e4e83962" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://meta.geo.census.gov/data/existing/decennial/GEO/GPMB/TIGERline/fe_2007/addr/fe_2007_01017_addr_url.dbf.xml" .
+
+<urn:uuid:d2dc96d4-5951-48cb-8c0d-d96f1627c5c7> bcube:dateCreated "2015-11-07T20:26:56.186Z" ;
+    bcube:hasMetadataRecord <urn:uuid:aea98355-91e2-4097-9eb5-4bc582c607bd> ;
+    bcube:lastUpdated "2015-11-07T20:26:56.186Z" ;
+    dc:conformsTo <urn:uuid:2671e167-f796-432b-af6e-f4ea9016022d>,
+        <urn:uuid:4a757876-7f2d-488b-bcbf-63c07a57ed91>,
+        <urn:uuid:e0d97ab7-3771-469a-94b8-86ed24e6735f> ;
+    dc:description "The TIGER/Line relationship files are an extract of selected geographic information from the Census MAF/TIGER database. Each TIGER/Line relationship file is designed to stand alone as an independent data set or can be used jointly with the shapefiles." ;
+    dc:spatial "POLYGON ((-85.593653 32.72853,-85.593653 33.109038,-85.122189 33.109038,-85.122189 32.72853,-85.593653 32.72853))" ;
+    dcterms:publisher <urn:uuid:1e32f0fb-c71b-4c15-968f-fa06c64fd92d> ;
+    dcterms:references <urn:uuid:3d57d70e-6aaf-48ed-a37c-042195e063aa> ;
+    dcterms:title "TIGER/Line Shapefile, 2007, county, Chambers County, Address Ranges" ;
+    esip:eastBound "-85.122189"^^xsd:float ;
+    esip:endDate "2007-07-01"^^xsd:date ;
+    esip:northBound "33.109038"^^xsd:float ;
+    esip:southBound "32.72853"^^xsd:float ;
+    esip:startDate "2007-01-01"^^xsd:date ;
+    esip:westBound "-85.593653"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:e0d97ab7-3771-469a-94b8-86ed24e6735f> bcube:hasType "theme" ;
+    bcube:hasValue "transportation" ;
+    dc:partOf "ISO 19115 Topic Categories" ;
+    owl:a bcube:thesaurusSubset .
+

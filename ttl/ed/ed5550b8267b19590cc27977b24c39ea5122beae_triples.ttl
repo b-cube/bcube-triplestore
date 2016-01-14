@@ -1,0 +1,76 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:25291838-0ab4-4706-8dae-445c3fff0c08> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-09T03:59:52.101Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-09T03:59:52.101Z" ;
+    dc:identifier "urn:sha:68b224ee83e7a59b5cb62cfdf15f9a234c1c951d83c02f1b0fd41ac3" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www.idwr.idaho.gov/ftp/gisdata/Spatial/AdministrativeBoundaries/IDFGAdminRegions/idfg_region.shp.xml" .
+
+<urn:uuid:38997f8b-7469-4248-b0fa-8cd0eceb1b71> bcube:hasType "place" ;
+    bcube:hasValue "Idaho" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:49abbe73-18f6-42e8-a44b-a74e3063be37> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-11-09T03:59:52.101Z" ;
+    bcube:lastUpdated "2015-11-09T03:59:52.101Z" ;
+    bcube:originatedFrom <urn:uuid:25291838-0ab4-4706-8dae-445c3fff0c08> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:f15acde5-7809-44e9-94ef-fcd82b526f4b> .
+
+<urn:uuid:592d26b5-a3b6-4663-afe0-93921677ca6f> bcube:hasType "theme" ;
+    bcube:hasValue "Administrative Regions",
+        "Idaho Fish and Game" ;
+    dc:partOf "REQUIRED: Reference to a formally registered thesaurus or a similar authoritative source of theme keywords." ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:613ad889-90cf-4248-9d08-db097b1ca110> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-09T03:59:52.101Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-09T03:59:52.101Z" ;
+    dc:identifier "urn:sha:40083185440ce657b1961e5998b7e82df7ed1736fb4b367ee0ba1c8e" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://fishandgame.idaho.gov/ifwis/huntplanner/download/shp/AdministrativeRegions.zip" .
+
+<urn:uuid:8ef7e5e5-085e-4bbb-b4ec-1b55f7f5ee18> owl:a foaf:Organization ;
+    foaf:name "Idaho Department of Fish and Game" .
+
+<urn:uuid:f15acde5-7809-44e9-94ef-fcd82b526f4b> bcube:dateCreated "2015-11-09T03:59:52.101Z" ;
+    bcube:hasMetadataRecord <urn:uuid:49abbe73-18f6-42e8-a44b-a74e3063be37> ;
+    bcube:lastUpdated "2015-11-09T03:59:52.101Z" ;
+    dc:conformsTo <urn:uuid:38997f8b-7469-4248-b0fa-8cd0eceb1b71>,
+        <urn:uuid:592d26b5-a3b6-4663-afe0-93921677ca6f> ;
+    dc:description "Administrative Regions of Fish and Game. The following layers were used in this order to define regional boundaries: 1. State Outline, IDFG's state.shp, a modified version of the Inside Idaho coverage with streams_measured (100k) used for improved hydrography boundaries. NOTE: This boundary file used is NOT 24k but 100k in resolution, at time of publishing no official 24k state boundary was available. 2. County Boundaries from DRG's or where coincident with streams from streams, divides from IDWR Prelim Divides or digitized from DRGs 3. Roads a. ITD Roads, itd.shp b. National Forest Roads: Boise, Salmon/Challis, Clearwater, Nez Perce c. BLM Roads d. Ada County Roads e. USGS DLG Roads (using GDT and TIGER to determine road names) f. GDT Roads - new construction not represented in other files only g. Digitized from DOQ where not available in any layer (< 5 cases) 4. Hydrography based on National Hydrography Dataset or digitized from DRGs Note: In all cases where islands are included/excluded from a Unit the appropriate shoreline was used to represent the boundary rather than stream centerline. In case of CJ Strike, the body of water representing the Snake River was used, portion of reservoir attributed to the Bruneau River was excluded. 5. Divides from IDWR Preliminary New 24k HUC file or digitized from DRGs 6. Utility Lines and Fences digitized from DRGs/DOQs 7. Physical Features such as peaks, passes, rocks and the like from GNIS/DRGs 8. National Wildlife Refuge Boundaries from the IDFG Conservation Data Center (CDC)" ;
+    dc:spatial "POLYGON ((-117.531769 41.946096,-117.531769 49.039292,-110.65544 49.039292,-110.65544 41.946096,-117.531769 41.946096))" ;
+    dcterms:publisher <urn:uuid:8ef7e5e5-085e-4bbb-b4ec-1b55f7f5ee18> ;
+    dcterms:references <urn:uuid:613ad889-90cf-4248-9d08-db097b1ca110> ;
+    dcterms:title "Fish and Game Administrative Regions" ;
+    esip:eastBound "-110.65544"^^xsd:float ;
+    esip:endDate "2007-06-30"^^xsd:date ;
+    esip:northBound "49.039292"^^xsd:float ;
+    esip:southBound "41.946096"^^xsd:float ;
+    esip:startDate "1991-07-01"^^xsd:date ;
+    esip:westBound "-117.531769"^^xsd:float ;
+    owl:a dcat:Dataset .
+

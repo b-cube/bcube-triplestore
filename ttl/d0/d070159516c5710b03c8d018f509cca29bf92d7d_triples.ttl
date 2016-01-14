@@ -1,0 +1,109 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:19a75571-22b2-4d37-b20e-b440361451c0> bcube:hasType "theme" ;
+    bcube:hasValue "ALPS",
+        "Advanced Lidar Processing System",
+        "Digital Elevation Model",
+        "EAARL",
+        "Experimental Advanced Airborne Research Lidar",
+        "Hurricanes",
+        "Lidar",
+        "derived surface",
+        "elevation change",
+        "laser altimetry",
+        "resource management" ;
+    dc:partOf "http://remotesensing.usgs.gov/" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:1f9c4a7b-a2be-4b28-9570-6a88e4015e9c> bcube:dateCreated "2015-11-02T11:33:16.676Z" ;
+    bcube:hasMetadataRecord <urn:uuid:230e3b07-c3c2-49a4-a04d-1fe65213de7e> ;
+    bcube:lastUpdated "2015-11-02T11:33:16.676Z" ;
+    dc:conformsTo <urn:uuid:19a75571-22b2-4d37-b20e-b440361451c0>,
+        <urn:uuid:b73b7b14-e0e5-43d8-9a9b-33b827323cf3>,
+        <urn:uuid:bddcb8d7-e369-4457-8248-79e4c3485d31>,
+        <urn:uuid:fdde03d7-4796-4f20-b908-577f28eab339> ;
+    dc:description "A bare earth elevation map (also known as a Digital Elevation Model, or DEM) of the northern Gulf of Mexico barrier islands and Naval Live Oaks was produced from remotely sensed, geographically referenced elevation measurements cooperatively by the U.S. Geological Survey (USGS), the National Park Service (NPS), and the National Aeronautics and Space Administration (NASA). Elevation measurements were collected over the area using the NASA Experimental Advanced Airborne Research Lidar (EAARL), a pulsed-laser ranging system mounted onboard an aircraft to measure ground elevation, vegetation canopy, and coastal topography. The system uses high-frequency laser beams directed at the Earth's surface through an opening in the bottom of the aircraft's fuselage. The laser system records the time difference between emission of the laser beam and the reception of the reflected laser signal in the aircraft. The plane travels over the target area at approximately 50 meters per second at an elevation of approximately 300 meters. The EAARL, developed by NASA at Wallops Flight Facility in Virginia, measures ground elevation with a vertical resolution of 15 centimeters. A sampling rate of 3 kilohertz or higher results in an extremely dense spatial elevation dataset. Over 100 kilometers of coastline can be surveyed easily within a 3- to 4-hour mission. When subsequent elevation maps for an area are analyzed, they provide managers with a useful tool to make management decisions regarding land development." ;
+    dc:spatial "POLYGON ((409805.794458501972258 3339933.46275334013626,409805.794458501972258 3346910.885035600047559,403731.705428346002009 3346910.885035600047559,403731.705428346002009 3339933.46275334013626,409805.794458501972258 3339933.46275334013626))" ;
+    dcterms:publisher <urn:uuid:27d5a48e-9eb7-4f5b-aef1-ebf02d540026> ;
+    dcterms:references <urn:uuid:a3188023-7a99-45a8-81ec-258dad924822> ;
+    dcterms:title "EAARL Coastal Topography - Northern Gulf of Mexico, 2007: Bare Earth" ;
+    esip:eastBound "403731.705428"^^xsd:float ;
+    esip:endDate "2007-06-30"^^xsd:date ;
+    esip:northBound "3346910.88504"^^xsd:float ;
+    esip:southBound "3339933.46275"^^xsd:float ;
+    esip:startDate "2007-06-27"^^xsd:date ;
+    esip:westBound "409805.794459"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:230e3b07-c3c2-49a4-a04d-1fe65213de7e> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-11-02T11:33:16.676Z" ;
+    bcube:lastUpdated "2015-11-02T11:33:16.676Z" ;
+    bcube:originatedFrom <urn:uuid:68e43d80-59a8-4a71-b5ba-7ece8f14aa19> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:1f9c4a7b-a2be-4b28-9570-6a88e4015e9c> .
+
+<urn:uuid:27d5a48e-9eb7-4f5b-aef1-ebf02d540026> owl:a foaf:Organization ;
+    foaf:name "U.S. Geological Survey" .
+
+<urn:uuid:68e43d80-59a8-4a71-b5ba-7ece8f14aa19> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-02T11:33:16.676Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-02T11:33:16.676Z" ;
+    dc:identifier "urn:sha:f69c6df9de347d235f7545614059cdf2a93d652c53faa326a6093787" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://pubs.usgs.gov/ds/400/data_files/be/30087b8c/30087b8c.xyz.xml" .
+
+<urn:uuid:a3188023-7a99-45a8-81ec-258dad924822> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-02T11:33:16.676Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-02T11:33:16.676Z" ;
+    dc:identifier "urn:sha:d14a028c2a3a2bc9476102bb288234c415a2b01f828ea62ac5b3e42f" ;
+    owl:a bcube:Url .
+
+<urn:uuid:b73b7b14-e0e5-43d8-9a9b-33b827323cf3> bcube:hasType "place" ;
+    bcube:hasValue "Alabama",
+        "Cat Island",
+        "Chandeleur Islands",
+        "Dauphin Island",
+        "Florida",
+        "Gulf of Mexico",
+        "Horn Island",
+        "Mississippi",
+        "Naval Live Oaks",
+        "Perdido Key",
+        "Petit Bois Island",
+        "Santa Rosa Island",
+        "Ship Island" ;
+    dc:partOf "http://nationalmap.gov/" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:bddcb8d7-e369-4457-8248-79e4c3485d31> bcube:hasType "temporal" ;
+    bcube:hasValue "2007" ;
+    dc:partOf "http://www.esri.com/news/arcuser/1104/temporal.html" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:fdde03d7-4796-4f20-b908-577f28eab339> bcube:hasType "stratum" ;
+    bcube:hasValue "Bare earth" ;
+    dc:partOf "http://lidar.cr.usgs.gov/" ;
+    owl:a bcube:thesaurusSubset .
+

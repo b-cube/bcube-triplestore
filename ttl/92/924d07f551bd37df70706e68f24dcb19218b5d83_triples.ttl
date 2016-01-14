@@ -1,0 +1,92 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:042d560b-b0bd-4147-b99c-0ddaa7b17046> bcube:hasType "place" ;
+    bcube:hasValue "California",
+        "San Diego Bay, CA" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:507e30b0-a058-40ba-8f67-40cfdc95ac0e> bcube:hasType "theme" ;
+    bcube:hasValue "DEM",
+        "altitude",
+        "bathymetry",
+        "depth",
+        "digital bathymetric model",
+        "digital elevation model",
+        "digital terrain model",
+        "elevation",
+        "estuarine bathymetry",
+        "estuary",
+        "height",
+        "hydrographic survey",
+        "marine navigation" ;
+    dc:partOf "none" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:8078dd08-0180-4b23-ab09-2931be7b2d50> bcube:hasValue "ImageryBaseMapsEarthCover",
+        "elevation",
+        "oceans" ;
+    dc:partOf "IsoTopicCategories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:817be772-0ec6-4afc-91bf-f64197632b4d> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-07T03:17:47.265Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-07T03:17:47.265Z" ;
+    dc:identifier "urn:sha:1c008adbf18433a5a6db575f483d5c98917b23d5287782519276683b" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://estuarinebathymetry.noaa.gov/finddata.html" .
+
+<urn:uuid:92ee68ca-035f-479b-87b6-08b6e058d561> bcube:dateCreated "2015-08-07T03:17:47.265Z" ;
+    bcube:hasMetadataRecord <urn:uuid:c23b618e-a92e-413e-9ca8-95daaf1c8bbd> ;
+    bcube:lastUpdated "2015-08-07T03:17:47.265Z" ;
+    dc:conformsTo <urn:uuid:042d560b-b0bd-4147-b99c-0ddaa7b17046>,
+        <urn:uuid:507e30b0-a058-40ba-8f67-40cfdc95ac0e>,
+        <urn:uuid:8078dd08-0180-4b23-ab09-2931be7b2d50> ;
+    dc:description "Bathymetry for San Diego Bay was derived from one survey containing 8,500soundings. One older, overlapping, less accurate survey was deleted. Theaverage separation between soundings was 72 meters. The survey used datedfrom 1954. The total range of sounding data was 0.6 to -10.7 meters at meanlow water. Mean high water values between 1.1 and 1.3 meters wereassigned to the shoreline. No points were found to be inconsistent with thesurrounding data. DEM grid values outside the shoreline (on land)were assigned null values (-32676).San Diego Bay has four 7.5 minute DEMs and a single one degree DEM.The 1 degree DEMs were generated from the higher resolution 7.5minute DEMs which covered the estuary. A Digital Elevation Model(DEM) contains a series of elevations ordered from south to northwith the order of the columns from west to east. The DEM isformatted as one ASCII header record (A- record), followed by aseries of profile records (B- records) each of which include a shortB-record header followed by a series of ASCII integer elevations(typically in units of 1 centimeter) per each profile. The lastphysical record of the DEM is an accuracy record (C-record).The 7.5-minute DEM (30- by 30-m data spacing) is cast on theUniversal Transverse Mercator (UTM) projection. It provides coveragein 7.5- by 7.5-minute blocks. Each product provides the samecoverage as a standard USGS 7.5-minute quadrangle but the DEMcontains over edge data. Coverage is available for many estuaries ofthe contiguous United States but is not complete." ;
+    dc:spatial "POLYGON ((-117.25 32.5,-117.25 32.75,-117.0 32.75,-117.0 32.5,-117.25 32.5))" ;
+    dcterms:references <urn:uuid:817be772-0ec6-4afc-91bf-f64197632b4d> ;
+    dcterms:title "San Diego Bay, CA (P020) Bathymetric Digital Elevation Model(30 meter resolution) Derived From Source Hydrographic SurveySoundings Collected by NOAA" ;
+    esip:eastBound "-117.0"^^xsd:float ;
+    esip:endDate "1954-01-01"^^xsd:date ;
+    esip:northBound "32.75"^^xsd:float ;
+    esip:southBound "32.5"^^xsd:float ;
+    esip:startDate "1954-01-01"^^xsd:date ;
+    esip:westBound "-117.25"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:965796b0-306f-4f51-9c88-2bb6e0cf04e2> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-07T03:17:47.265Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-07T03:17:47.265Z" ;
+    dc:identifier "urn:sha:a62102114305e050d3305b42f15a53efd753f273f43bdc9fc98c7d54" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://catalog.data.gov/harvest/object/92c1968a-02cf-4a56-92db-9dc33c08e207" .
+
+<urn:uuid:c23b618e-a92e-413e-9ca8-95daaf1c8bbd> a "ISO 19115:2003/19139" ;
+    bcube:dateCreated "2015-08-07T03:17:47.265Z" ;
+    bcube:lastUpdated "2015-08-07T03:17:47.265Z" ;
+    bcube:originatedFrom <urn:uuid:965796b0-306f-4f51-9c88-2bb6e0cf04e2> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:92ee68ca-035f-479b-87b6-08b6e058d561> .
+

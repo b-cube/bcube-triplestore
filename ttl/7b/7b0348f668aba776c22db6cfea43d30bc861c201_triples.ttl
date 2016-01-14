@@ -1,0 +1,79 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:18c93dee-3d51-4794-9b48-1414c008940e> bcube:hasType "theme" ;
+    bcube:hasValue "Groundwater well network",
+        "High Plains Aquifer",
+        "inlandWaters" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:1e5d0d71-919f-4000-86bf-16f4a3e9f513> bcube:hasType "place" ;
+    bcube:hasValue "Eastern Colorado",
+        "USA",
+        "United States of America" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:30de584f-0c06-4dbb-a7c1-26b4ec632380> bcube:dateCreated "2015-08-08T16:37:47.823Z" ;
+    bcube:hasMetadataRecord <urn:uuid:7f94dfc6-f6e8-43de-b7ac-16be51c633c5> ;
+    bcube:lastUpdated "2015-08-08T16:37:47.823Z" ;
+    dc:conformsTo <urn:uuid:18c93dee-3d51-4794-9b48-1414c008940e>,
+        <urn:uuid:1e5d0d71-919f-4000-86bf-16f4a3e9f513> ;
+    dc:description "These data are in support of report DS 456 (Arnold and others, 2009). Data set contains point locations of 20 wells located in areas overlying the High Plains Aquifer in Colorado having a depth to water less than 180 feet, a saturated thickness greater than 50 feet, and underlying irrigated agricultural lands. Well completion data are included." ;
+    dc:spatial "POLYGON ((-102.68839 39.07264,-102.68839 40.61408,-102.05261 40.61408,-102.05261 39.07264,-102.68839 39.07264))" ;
+    dcterms:publisher <urn:uuid:e2c37535-b369-4e5f-9ae0-586d069e2cb0> ;
+    dcterms:references <urn:uuid:bb2121de-1645-4161-8da8-10249ef8cd67> ;
+    dcterms:title "Well network for long-term monitoring of agricultural chemicals in the High Plains Aquifer, Colorado" ;
+    esip:eastBound "-102.05261"^^xsd:float ;
+    esip:northBound "40.61408"^^xsd:float ;
+    esip:southBound "39.07264"^^xsd:float ;
+    esip:startDate "2000-01-01"^^xsd:date ;
+    esip:westBound "-102.68839"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:6abd0559-00d5-467a-8251-66869790dfeb> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-08T16:37:47.823Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-08T16:37:47.823Z" ;
+    dc:identifier "urn:sha:69237fe789babfb13553553c6608fff9f1a281c80ed2ebd2d8cecabf" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://water.usgs.gov/lookup/getspatial?ds472_welldata" .
+
+<urn:uuid:7f94dfc6-f6e8-43de-b7ac-16be51c633c5> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-08-08T16:37:47.823Z" ;
+    bcube:lastUpdated "2015-08-08T16:37:47.823Z" ;
+    bcube:originatedFrom <urn:uuid:6abd0559-00d5-467a-8251-66869790dfeb> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:30de584f-0c06-4dbb-a7c1-26b4ec632380> .
+
+<urn:uuid:bb2121de-1645-4161-8da8-10249ef8cd67> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-08T16:37:47.823Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-08T16:37:47.823Z" ;
+    dc:identifier "urn:sha:bbafdb8e14990ca7a955a5a6a2a8d5370b8229aa59946be356bed4ad" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://water.usgs.gov/GIS/dsdl/ds472_welldata.zip" .
+
+<urn:uuid:e2c37535-b369-4e5f-9ae0-586d069e2cb0> owl:a foaf:Organization ;
+    foaf:name "U.S. Geological Survey" .
+

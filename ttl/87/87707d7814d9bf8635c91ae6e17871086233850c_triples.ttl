@@ -1,0 +1,97 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:0bf204ef-b539-4754-8afa-41eb10804ffc> owl:a foaf:Organization ;
+    foaf:name "" .
+
+<urn:uuid:679d1101-b0fb-4ca9-a090-935839c9b81b> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-11-01T02:08:29.914Z" ;
+    bcube:lastUpdated "2015-11-01T02:08:29.914Z" ;
+    bcube:originatedFrom <urn:uuid:d88c7d71-c77c-46b6-bdba-865dcf998261> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:7adfd0e8-f4b3-489b-9e28-32fd8dfa7bdc> .
+
+<urn:uuid:6b14b007-a924-4c87-89c3-ed532e467115> bcube:hasType "theme" ;
+    bcube:hasValue "boundaries",
+        "inlandWaters",
+        "planningCadastre" ;
+    dc:partOf "ISO TOPIC CATEGORIES" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:7adfd0e8-f4b3-489b-9e28-32fd8dfa7bdc> bcube:dateCreated "2015-11-01T02:08:29.914Z" ;
+    bcube:hasMetadataRecord <urn:uuid:679d1101-b0fb-4ca9-a090-935839c9b81b> ;
+    bcube:lastUpdated "2015-11-01T02:08:29.914Z" ;
+    dc:conformsTo <urn:uuid:6b14b007-a924-4c87-89c3-ed532e467115>,
+        <urn:uuid:82a44bce-3a15-486e-98c2-aa869b7988ea>,
+        <urn:uuid:88a3e74f-881a-4430-bb64-b9b79d43d4c2> ;
+    dc:description "CALWATER provides a standard nested watershed delineation scheme using the State Water Resources Control Board numbering scheme. The hierarchy of watershed designations consists of six levels of increasing specificity: Hydrologic Region (HR), Hydrologic Unit (HU), Hydrologic Area (HA), Hydrologic Sub-Area (HSA), Super Planning Watershed (SPWS), and Planning Watershed (PWS). The primary purpose of Calwater is the assignment of a single, unique code to a specific watershed polygon." ;
+    dc:spatial "POLYGON ((-124.506151 32.423713,-124.506151 42.068687,-113.497815 42.068687,-113.497815 32.423713,-124.506151 32.423713))" ;
+    dcterms:publisher <urn:uuid:0bf204ef-b539-4754-8afa-41eb10804ffc> ;
+    dcterms:references <urn:uuid:a7ea6e4c-9dda-4b49-a5b8-10037fdbae85> ;
+    dcterms:title "CalWater 2.2" ;
+    esip:eastBound "-113.497815"^^xsd:float ;
+    esip:northBound "42.068687"^^xsd:float ;
+    esip:southBound "32.423713"^^xsd:float ;
+    esip:westBound "-124.506151"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:82a44bce-3a15-486e-98c2-aa869b7988ea> bcube:hasType "theme" ;
+    bcube:hasValue "Administrative boundaries",
+        "Boundaries",
+        "Calwater",
+        "Environmental hazards",
+        "Environmental impact",
+        "Environmental protection",
+        "Environmental risk",
+        "Inland Waters",
+        "Parcel boundaries",
+        "Political boundaries",
+        "environment" ;
+    dc:partOf "ceres:themes" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:88a3e74f-881a-4430-bb64-b9b79d43d4c2> bcube:hasType "theme" ;
+    bcube:hasValue "Forest resources",
+        "Water resources",
+        "Watersheds" ;
+    dc:partOf "keyword" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:a7ea6e4c-9dda-4b49-a5b8-10037fdbae85> dcterms:references <urn:uuid:bf670c52-88ff-4694-8093-32d12228db28> ;
+    owl:a bibo:WebPage .
+
+<urn:uuid:bf670c52-88ff-4694-8093-32d12228db28> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-01T02:08:29.914Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-01T02:08:29.914Z" ;
+    dc:identifier "urn:sha:a9576f084fe77b438d5396e3efa648c12f98a09c6cef4239f14a5e43" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://projects.atlas.ca.gov/frs/download.php/482/Dissolve_calw22a_huname.zip" .
+
+<urn:uuid:d88c7d71-c77c-46b6-bdba-865dcf998261> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-01T02:08:29.914Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-01T02:08:29.914Z" ;
+    dc:identifier "urn:sha:b31355c41811b817c9c635eef984db5707cc25acb05547aba8c88b84" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "https://catalog.data.gov/harvest/object/e3febd29-6fee-4659-9572-48c1c096a0cc/original" .
+

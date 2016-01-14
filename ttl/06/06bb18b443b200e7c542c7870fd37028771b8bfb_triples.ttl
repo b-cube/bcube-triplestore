@@ -1,0 +1,103 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:19b1bd81-ead3-43cf-8318-642265b6d8a2> owl:a foaf:Organization ;
+    foaf:name "Federal Emergency Management Agency" .
+
+<urn:uuid:22850b6a-4d6e-4937-bf7a-8173809d3869> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-07-30T17:04:35.599Z" ;
+    bcube:lastUpdated "2015-07-30T17:04:35.599Z" ;
+    bcube:originatedFrom <urn:uuid:f1527ea6-66d8-4946-a0de-75c7933a12d9> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:39e336b5-9cc6-48df-8f45-c487777b24cc> .
+
+<urn:uuid:39e336b5-9cc6-48df-8f45-c487777b24cc> bcube:dateCreated "2015-07-30T17:04:35.599Z" ;
+    bcube:hasMetadataRecord <urn:uuid:22850b6a-4d6e-4937-bf7a-8173809d3869> ;
+    bcube:lastUpdated "2015-07-30T17:04:35.599Z" ;
+    dc:conformsTo <urn:uuid:5f7d3317-5c92-40da-bd4b-69e393ede52b>,
+        <urn:uuid:72b378b0-c28d-495c-8a2e-f61ddb909e1a>,
+        <urn:uuid:7fa42639-d105-460f-9050-01a70ce28ae7> ;
+    dc:description "The Floodplain Mapping deliverables depict and quantify the flood risks for the study area. The primary risk classifications used are the 1-percent-annual-chance flood event, the 0.2-percent-annual- chance flood event, and areas of minimal flood risk. The Floodplain Mapping flood risk boundaries are derived from the engineering information Flood Insurance Studies (FISs), previously published Flood Insurance Rate Maps (FIRMs), flood hazard analyses performed in support of the FISs and FIRMs, and new mapping data, where available. The FISs and FIRMs are published by the Federal Emergency Management Agency (FEMA)." ;
+    dc:spatial "POLYGON ((-86.2878 42.761,-86.2878 43.2075,-85.7789 43.2075,-85.7789 42.761,-86.2878 42.761))" ;
+    dcterms:publisher <urn:uuid:19b1bd81-ead3-43cf-8318-642265b6d8a2> ;
+    dcterms:references <urn:uuid:5a5edcb7-31e5-4af5-a9c2-e0e17e1ef860> ;
+    dcterms:title "FLOODPLAIN, Ottawa COUNTY, MICHIGAN" ;
+    esip:eastBound "-85.7789"^^xsd:float ;
+    esip:northBound "43.2075"^^xsd:float ;
+    esip:southBound "42.761"^^xsd:float ;
+    esip:startDate "8888-08-08"^^xsd:date ;
+    esip:westBound "-86.2878"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:5a5edcb7-31e5-4af5-a9c2-e0e17e1ef860> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-07-30T17:04:35.599Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-07-30T17:04:35.599Z" ;
+    dc:identifier "urn:sha:37c915397238031daced09ae0e2dd3bf54e84a6477f749c2cc9dcbdf" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://hazards.fema.gov" .
+
+<urn:uuid:5f7d3317-5c92-40da-bd4b-69e393ede52b> bcube:hasType "theme" ;
+    bcube:hasValue "Base Flood Elevation",
+        "CBRS",
+        "Coastal Barrier Resources System",
+        "Coastal Flooding",
+        "DFIRM",
+        "DFIRM Database",
+        "Digital Flood Insurance Rate Map",
+        "FEMA Flood Hazard Zone",
+        "FIRM",
+        "Flood Insurance Rate Map",
+        "Floodplain Mapping",
+        "Floodway",
+        "NFIP",
+        "Riverine Flooding",
+        "SFHA",
+        "Special Flood Hazard Area" ;
+    dc:partOf "FEMA NFIP Topic Category" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:72b378b0-c28d-495c-8a2e-f61ddb909e1a> bcube:hasType "theme" ;
+    bcube:hasValue "environment",
+        "hydrology",
+        "inlandWaters" ;
+    dc:partOf "ISO 19115 Topic Category" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:7fa42639-d105-460f-9050-01a70ce28ae7> bcube:hasType "place" ;
+    bcube:hasValue "COMMUNITY Ottawa COUNTY",
+        "COUNTY Ottawa",
+        "COUNTY-FIPS 139",
+        "FEMA-CID 26139C",
+        "REGION V",
+        "STATE MI" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:f1527ea6-66d8-4946-a0de-75c7933a12d9> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-07-30T17:04:35.599Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-07-30T17:04:35.599Z" ;
+    dc:identifier "urn:sha:281795f2f3f7edee27fad84af50aaed3d9482f1e361edaf0ab008476" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "https://catalog.data.gov/harvest/object/c453e262-ed73-4d82-831f-b3b1d8298e42/original" .
+

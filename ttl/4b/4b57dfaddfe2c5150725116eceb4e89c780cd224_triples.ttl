@@ -1,0 +1,95 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:20c3f429-4367-400d-b14e-9a5ae4a01fe3> owl:a foaf:Organization ;
+    foaf:name "Merrick & Co" .
+
+<urn:uuid:29c79f9d-622f-467c-8037-8cb10572b167> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-11-01T18:52:05.772Z" ;
+    bcube:lastUpdated "2015-11-01T18:52:05.772Z" ;
+    bcube:originatedFrom <urn:uuid:ab030f6b-b1c6-4796-9db2-96cd10ccb33e> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:6138551c-2780-448c-a03e-d07de0675242> .
+
+<urn:uuid:30333b12-8de0-446b-903d-006f09295329> bcube:hasType "temporal" ;
+    bcube:hasValue "2011" ;
+    dc:partOf "none" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:50c493bc-9891-4435-9f60-500b45fa6ee5> bcube:hasType "place" ;
+    bcube:hasValue "Clay County",
+        "Dilworth",
+        "Fargo",
+        "Minnesota",
+        "Moorhead",
+        "North Dakota",
+        "Oxbow",
+        "USA",
+        "West Fargo" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:6138551c-2780-448c-a03e-d07de0675242> bcube:dateCreated "2015-11-01T18:52:05.772Z" ;
+    bcube:hasMetadataRecord <urn:uuid:29c79f9d-622f-467c-8037-8cb10572b167> ;
+    bcube:lastUpdated "2015-11-01T18:52:05.772Z" ;
+    dc:conformsTo <urn:uuid:30333b12-8de0-446b-903d-006f09295329>,
+        <urn:uuid:50c493bc-9891-4435-9f60-500b45fa6ee5>,
+        <urn:uuid:6eea9c57-aa20-40aa-80dd-d5ec765748e0> ;
+    dc:description "The Contour_1ft feature class was created using MARS software. A three foot/three pass gridded surface was used to generate tile based ESRI shape files. The shape files are merged together and topology validation was performed. The ground classified lidar points along with the breaklines lines was used to create the TIN which the contours were generated from." ;
+    dc:spatial "POLYGON ((-97.013316 46.648266,-97.013316 47.098261,-96.623364 47.098261,-96.623364 46.648266,-97.013316 46.648266))" ;
+    dcterms:publisher <urn:uuid:20c3f429-4367-400d-b14e-9a5ae4a01fe3> ;
+    dcterms:references <urn:uuid:99d9d275-0660-44d9-8c11-cfe58fda4ce8> ;
+    dcterms:title "Contours_1ft" ;
+    esip:eastBound "-96.623364"^^xsd:float ;
+    esip:endDate "2011-05-25"^^xsd:date ;
+    esip:northBound "47.098261"^^xsd:float ;
+    esip:southBound "46.648266"^^xsd:float ;
+    esip:startDate "2011-05-16"^^xsd:date ;
+    esip:westBound "-97.013316"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:6eea9c57-aa20-40aa-80dd-d5ec765748e0> bcube:hasType "theme" ;
+    bcube:hasValue "buildings",
+        "planimetric",
+        "roads" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:81297dde-4d1a-49aa-93c1-5419a5191e89> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-01T18:52:05.772Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-01T18:52:05.772Z" ;
+    dc:identifier "urn:sha:36b5e816c0735e459c5055cc159ca0d501fa2b1394dc37474ffa2a8d" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "\\\\\\\\\\\\\\\\ARC11\\\\\\\\D$\\\\\\\\fargo\\\\\\\\gdb\\\\\\\\Fargo_2011_DTM_NDSP.gdb" .
+
+<urn:uuid:99d9d275-0660-44d9-8c11-cfe58fda4ce8> dcterms:references <urn:uuid:81297dde-4d1a-49aa-93c1-5419a5191e89> ;
+    owl:a bibo:WebPage .
+
+<urn:uuid:ab030f6b-b1c6-4796-9db2-96cd10ccb33e> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-01T18:52:05.772Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-01T18:52:05.772Z" ;
+    dc:identifier "urn:sha:b02e4796f53098ce478dd1e70f5815d9f81ef6a2c5303521360f0111" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://gisdata.nd.gov/Cities/Fargo/Elevation/2011/Contours_1ft_NDSP.xml" .
+

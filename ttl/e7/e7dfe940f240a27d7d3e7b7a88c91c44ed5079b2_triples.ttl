@@ -1,0 +1,106 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:261d8ec9-c757-40d3-a96a-50e93dfe6c2f> bcube:dateCreated "2015-09-08T23:13:26.845Z" ;
+    bcube:hasMetadataRecord <urn:uuid:5a4a68fa-cbd2-418d-b1bb-2fe541b2d0e4> ;
+    bcube:lastUpdated "2015-09-08T23:13:26.845Z" ;
+    dc:conformsTo <urn:uuid:701ed148-80cd-4a63-a4c7-7fbad9b650fa>,
+        <urn:uuid:97d3057d-777c-4dd8-a10a-08bc215bcfad>,
+        <urn:uuid:c897fa2b-605e-4e67-bcbf-bc101c711724> ;
+    dc:description "The Maxent modeling algorithm was used to build the species distribution model at 270 m spatial resolution using species occurrence points and environmental layers as predictors (Phillips et al. 2006). Species occurrence points were primarily obtained from CNDDB (California Natural Diversity Database) and other CDFW sources, GBIF (Global Biodiversity Information Facility), PRBO (Point Blue Conservation Science) and Arctos museum databases. Vegetation, distance to water, elevation, and bioclimatic variables (Franklin et al. 2013) were used as predictor variables (Table 1). Table 1. List of predictor variables used in this projectCodeVariable NameDescription and Biological Interpretationbio01Annual Mean TemperatureThe annual mean temperature approximates the total energy inputs for an ecosystembio04Temperature Seasonality The amount of temperature variation over a given year based on standard deviation of monthly temperature averages. It is a measure of temperature change over the course of the year. The larger the standard deviation the greater variability of temperaturebio12Annual PrecipitationThis is the sum of all total monthly precipitation. It helps to ascertain the importance of water availability (total water inputs) to species distributionsbio15Precipitation Seasonality (CV)This is the measure of the variation in monthly precipitation totals over the course of the year. It is calculated as the ratio of the standard deviation of the monthly total precipitation to the mean monthly total precipitation and expressed as a percentage. Can be useful if the species distribution is affected by precipitation variability.distTowaterDistance to waterMeasures distance to the nearest water feature (streams, rivers, lakes, wetland or riparian area)ElevElevationElevation is the highest point of a location relative to sea levelpctconiferPercent coniferPercent of conifer species found in each pixel with values ranging from 0 to 1pctgrassPercent grassPercent of grass species found in each pixel with values ranging from 0 to 1pcthrdwdPercent hardwoodPercent of hardwood species found in each pixel with values ranging from 0 to 1pctshrubPercent shrubPercent of shrub species found in each pixel with values ranging from 0 to 1pctwetlandPercent wetlandProportion of wetland in each 270 m pixel with values ranging from 0 to 1Vege13Vegetation typesVegetation with 13 CWHR categoriesVege65Vegetation typesVegetation with 65 CWHR categoriesVege15Vegetation typesVegetation type of 15 classesThe models were run at 270 m spatial resolution with five replications using cross-validation as a method of sample evaluation. Cross-validation involved the partitioning of the sample data into n subsets, fitting the models to n-1subsets, and testing the model on the one subset not used in fitting the model. Initial model runs showed that our models converged around 2,000 iterations and for this reason we ran all models with 2,500 maximum iterations. Maxent was implemented in R using the dismo package (Hijmans et al. 2011). Model evaluation was carried out using the PresenceAbsence package in R (Freeman & Moisen 2008). We used AUC as a metric to evaluate model performance. The package also computes threshold values using several accuracy metrics to translate predicted probability maps into binary suitable and unsuitable habitats. We selected the MeanProb, a threshold set based on the mean predicted probability of species occurrences. The output from Maxent are grid datasets in a multiband tif format with one band for each replication. We averaged the five replicated maps and created a mean grid for each species. The grid was then symbolized to represent low (threshold-50), medium (50-75) and high (75-100) habitat suitability, with pixel values that are below the threshold excluded. Models were reviewed by CDFW species experts; please review the use limitations.For more information see the project report at [https://nrm.dfg.ca.gov/FileHandler.ashx?DocumentID=85358]." ;
+    dc:spatial "POLYGON ((-122.596817 36.781231,-122.596817 40.993156,-119.537973 40.993156,-119.537973 36.781231,-122.596817 36.781231))" ;
+    dcterms:publisher <urn:uuid:c13b2065-0485-46a5-bde5-78e22aba2717> ;
+    dcterms:references <urn:uuid:c7e9cfbb-1b2c-4cef-9161-bbb73d958838>,
+        <urn:uuid:d86bc15b-114c-4ded-ad74-d7ff3ea241e6> ;
+    dcterms:title "Western Pond Turtle Habitat Model for NSNF Connectivity - CDFW [ds1055]" ;
+    esip:eastBound "-119.537973"^^xsd:float ;
+    esip:northBound "40.993156"^^xsd:float ;
+    esip:southBound "36.781231"^^xsd:float ;
+    esip:westBound "-122.596817"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:4992e783-4437-49ae-8fb2-02d1362df3a8> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-09-08T23:13:26.845Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-09-08T23:13:26.845Z" ;
+    dc:identifier "urn:sha:7f1408d950a189feb216a5956fdd94bc768e026ef62e4ec22e816411" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "ftp://ftp.dfg.ca.gov/BDB/GIS/BIOS/Public_Datasets/1000_1099/ds1055.zip" .
+
+<urn:uuid:5a4a68fa-cbd2-418d-b1bb-2fe541b2d0e4> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-09-08T23:13:26.845Z" ;
+    bcube:lastUpdated "2015-09-08T23:13:26.845Z" ;
+    bcube:originatedFrom <urn:uuid:744a9514-f4bc-4e12-8ffa-75ec4ec2c2c8> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:261d8ec9-c757-40d3-a96a-50e93dfe6c2f> .
+
+<urn:uuid:701ed148-80cd-4a63-a4c7-7fbad9b650fa> bcube:hasType "theme" ;
+    bcube:hasValue "Actinemys marmorata",
+        "Western Pond Turtle",
+        "connectivity modeling",
+        "habitat modeling" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:744a9514-f4bc-4e12-8ffa-75ec4ec2c2c8> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-09-08T23:13:26.845Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-09-08T23:13:26.845Z" ;
+    dc:identifier "urn:sha:d9661d5066cdfd536d4809896f4512c4fce05970771cbdbc00cd9dba" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "https://catalog.data.gov/harvest/object/8b94a97a-b9f0-4bae-ae77-ff9fa92cc91d/original" .
+
+<urn:uuid:903b9b89-3415-42c0-9611-d461e0391877> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-09-08T23:13:26.845Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-09-08T23:13:26.845Z" ;
+    dc:identifier "urn:sha:e902104719f795f658e19358c82452518bc31cc89ca65ae6f33085ce" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://bios.dfg.ca.gov" .
+
+<urn:uuid:97d3057d-777c-4dd8-a10a-08bc215bcfad> bcube:hasType "theme" ;
+    bcube:hasValue "biota",
+        "environment",
+        "geoscientificInformation",
+        "location" ;
+    dc:partOf "ISO 19115 Topic Categories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:c13b2065-0485-46a5-bde5-78e22aba2717> owl:a foaf:Organization ;
+    foaf:name "" .
+
+<urn:uuid:c7e9cfbb-1b2c-4cef-9161-bbb73d958838> dcterms:references <urn:uuid:903b9b89-3415-42c0-9611-d461e0391877> ;
+    owl:a bibo:WebPage .
+
+<urn:uuid:c897fa2b-605e-4e67-bcbf-bc101c711724> bcube:hasType "place" ;
+    bcube:hasValue "California",
+        "northern Sierra Nevada foothills" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:d86bc15b-114c-4ded-ad74-d7ff3ea241e6> dcterms:references <urn:uuid:4992e783-4437-49ae-8fb2-02d1362df3a8> ;
+    owl:a bibo:WebPage .
+

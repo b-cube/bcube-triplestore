@@ -1,0 +1,108 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:31714c1a-9518-4d7f-8abd-20d6cac84967> owl:a foaf:Organization ;
+    foaf:name "U.S. Geological Survey" .
+
+<urn:uuid:57be2bc5-5eb5-463a-91e9-393d44182b62> bcube:hasType "theme" ;
+    bcube:hasValue "elevation" ;
+    dc:partOf "ISO 19115 Topic Category" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:61cbb9e0-bf01-45df-b8a3-73921abeb22e> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-08-04T21:35:42.207Z" ;
+    bcube:lastUpdated "2015-08-04T21:35:42.207Z" ;
+    bcube:originatedFrom <urn:uuid:91f85f1f-0f86-4e05-af19-33fae0381683> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:68d079b3-15f5-45e7-81d3-5189da6c2dae> .
+
+<urn:uuid:68d079b3-15f5-45e7-81d3-5189da6c2dae> bcube:dateCreated "2015-08-04T21:35:42.207Z" ;
+    bcube:hasMetadataRecord <urn:uuid:61cbb9e0-bf01-45df-b8a3-73921abeb22e> ;
+    bcube:lastUpdated "2015-08-04T21:35:42.207Z" ;
+    dc:conformsTo <urn:uuid:57be2bc5-5eb5-463a-91e9-393d44182b62>,
+        <urn:uuid:8244117e-37f8-4329-93ca-0b2f54c4cd51>,
+        <urn:uuid:853a4d4d-0748-41f2-995b-48523335da08>,
+        <urn:uuid:941e709c-59f3-420e-9812-0085798b35e7>,
+        <urn:uuid:95e00943-fa5e-4c95-a652-6fe996715f13> ;
+    dc:description "Binary point-cloud data were produced from remotely sensed, geographically referenced elevation measurements by the U.S. Geological Survey (USGS). Elevation measurements were collected over the area on February 27, 2010 using the Experimental Advanced Airborne Research Lidar (EAARL), a pulsed laser ranging system mounted onboard an aircraft to measure ground elevation, vegetation canopy, and coastal topography. The system uses high-frequency laser beams directed at the Earth's surface through an opening in the bottom of the aircraft's fuselage. The laser system records the time difference between emission of the laser beam and the reception of the reflected laser signal in the aircraft. The plane travels over the target area at approximately 50 meters per second at an elevation of approximately 300 meters, resulting in a laser swath of approximately 240 meters with an average point spacing of 2-3 meters. The EAARL, developed originally by the National Aeronautics and Space Administration (NASA) at Wallops Flight Facility in Virginia, measures ground elevation with a vertical resolution of 15 centimeters. A sampling rate of 3 kilohertz or higher results in an extremely dense spatial elevation dataset. Over 100 kilometers of coastline can be easily surveyed within a 3- to 4-hour mission. When resultant elevation maps for an area are analyzed, they provide a useful tool to make management decisions regarding land development." ;
+    dc:spatial "POLYGON ((-84.237659043748707 33.029484803894299,-84.237659043748707 33.047980154992501,-84.215700175167697 33.047980154992501,-84.215700175167697 33.029484803894299,-84.237659043748707 33.029484803894299))" ;
+    dcterms:publisher <urn:uuid:31714c1a-9518-4d7f-8abd-20d6cac84967> ;
+    dcterms:references <urn:uuid:983a37db-b70d-4bde-b6fb-8659bac17980> ;
+    dcterms:title "EAARL Topography--Potato Creek Watershed, Georgia, 2010" ;
+    esip:eastBound "-84.2157001752"^^xsd:float ;
+    esip:northBound "33.047980155"^^xsd:float ;
+    esip:southBound "33.0294848039"^^xsd:float ;
+    esip:startDate "2010-02-27"^^xsd:date ;
+    esip:westBound "-84.2376590437"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:8244117e-37f8-4329-93ca-0b2f54c4cd51> bcube:hasType "theme" ;
+    bcube:hasValue "ALPS",
+        "Airborne Lidar Processing System",
+        "DEM",
+        "Digital Elevation Model",
+        "EAARL",
+        "Experimental Advanced Airborne Research Lidar",
+        "Pilatus PC-6",
+        "laser altimetry",
+        "lidar",
+        "remote sensing",
+        "topography" ;
+    dc:partOf "General" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:853a4d4d-0748-41f2-995b-48523335da08> bcube:hasType "temporal" ;
+    bcube:hasValue "2010" ;
+    dc:partOf "General" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:91f85f1f-0f86-4e05-af19-33fae0381683> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-04T21:35:42.207Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-04T21:35:42.207Z" ;
+    dc:identifier "urn:sha:3a26d42fb0c8ecaff6d6f0d0a8604dfc080d1966f96a8654cff2560e" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://pubs.usgs.gov/ds/617/data_files/fs/fs_e758_n3660_16/fs_e758_n3660_16.las.xml" .
+
+<urn:uuid:941e709c-59f3-420e-9812-0085798b35e7> bcube:hasType "place" ;
+    bcube:hasValue "Apalachicola River basin",
+        "Chattahoochee River basin",
+        "Flint River basin",
+        "Georgia",
+        "North America",
+        "Potato Creek",
+        "United States" ;
+    dc:partOf "General" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:95e00943-fa5e-4c95-a652-6fe996715f13> bcube:hasType "stratum" ;
+    bcube:hasValue "First Surface" ;
+    dc:partOf "General" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:983a37db-b70d-4bde-b6fb-8659bac17980> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-04T21:35:42.207Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-04T21:35:42.207Z" ;
+    dc:identifier "urn:sha:d14a028c2a3a2bc9476102bb288234c415a2b01f828ea62ac5b3e42f" ;
+    owl:a bcube:Url .
+

@@ -1,0 +1,82 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:6f51fac3-93b1-4ad5-9d79-004159f82a0e> bcube:hasValue "geoscientificInformation" ;
+    dc:partOf "IsoTopicCategories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:858955b0-29f8-4c6f-9eb6-33f586c8f0d4> a "ISO 19115:2003/19139" ;
+    bcube:dateCreated "2015-11-02T11:29:10.191Z" ;
+    bcube:lastUpdated "2015-11-02T11:29:10.191Z" ;
+    bcube:originatedFrom <urn:uuid:f205bf37-9d5d-4f0e-ba42-a72b928bbf99> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:9763c25a-0c20-487c-bdc1-7a40f411e1ff> .
+
+<urn:uuid:9763c25a-0c20-487c-bdc1-7a40f411e1ff> bcube:dateCreated "2015-11-02T11:29:10.191Z" ;
+    bcube:hasMetadataRecord <urn:uuid:858955b0-29f8-4c6f-9eb6-33f586c8f0d4> ;
+    bcube:lastUpdated "2015-11-02T11:29:10.191Z" ;
+    dc:conformsTo <urn:uuid:6f51fac3-93b1-4ad5-9d79-004159f82a0e>,
+        <urn:uuid:a5e83331-ebff-442f-a69f-0faf52326f72>,
+        <urn:uuid:c329a99f-b12c-4194-b7e6-b8ee6a6d87fc> ;
+    dc:description "This dataset is a point feature database representing locations of retail establishments providing bicycling services such as sales, maintenance, and rentals." ;
+    dc:spatial "POLYGON ((-111.71 34.81,-111.71 32.58,-113.42 32.58,-113.42 34.81,-111.71 34.81))" ;
+    dcterms:references <urn:uuid:ada3867c-9eb9-49ec-b62e-95fa7f3857f3> ;
+    dcterms:title "Location of Bike Shops for Maricopa County, Arizona - Bike Pics" ;
+    esip:eastBound "-113.42"^^xsd:float ;
+    esip:endDate "1900-01-01"^^xsd:date ;
+    esip:northBound "32.58"^^xsd:float ;
+    esip:southBound "34.81"^^xsd:float ;
+    esip:startDate "1900-01-01"^^xsd:date ;
+    esip:westBound "-111.71"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:a5e83331-ebff-442f-a69f-0faf52326f72> bcube:hasType "theme" ;
+    bcube:hasValue "MAG",
+        "NRRC",
+        "bike map",
+        "gis",
+        "locations",
+        "transportation",
+        "usginres:service" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:ada3867c-9eb9-49ec-b62e-95fa7f3857f3> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-02T11:29:10.191Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-02T11:29:10.191Z" ;
+    dc:identifier "urn:sha:1be1ed85c89971ad3d7e89ae61b5997dd3ba65a69daf25b16f4eea3b" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "https://geo.azmag.gov/gismag/rest/services/maps/BikePics/MapServer" .
+
+<urn:uuid:c329a99f-b12c-4194-b7e6-b8ee6a6d87fc> bcube:hasType "place" ;
+    bcube:hasValue "Arizona",
+        "Maricopa County" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:f205bf37-9d5d-4f0e-ba42-a72b928bbf99> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-02T11:29:10.191Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-02T11:29:10.191Z" ;
+    dc:identifier "urn:sha:90f8621d8e871977605126ba163f78949206313cda54899072a2ee26" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://repository.stategeothermaldata.org/resources/metadata/TestNRRC/FE9551E577864CF88AD3F30AA0B20F44.xml" .
+

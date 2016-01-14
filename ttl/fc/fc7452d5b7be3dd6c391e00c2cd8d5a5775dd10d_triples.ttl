@@ -1,0 +1,75 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:13a6938f-b3e7-462d-8f62-2548f087cdab> bcube:hasValue "inlandWaters" ;
+    dc:partOf "IsoTopicCategories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:247b214a-54e4-40cc-a29e-dbaa40663a6e> bcube:hasType "place" ;
+    bcube:hasValue "Great Lakes",
+        "Illinois",
+        "Indiana",
+        "Lake",
+        "Michigan",
+        "Wisconsin",
+        "basin" ;
+    dc:partOf "Uncontrolled Keywords" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:5291c489-9b32-4d7f-ac76-b4cf63392a7b> a "ISO 19115:2003/19139" ;
+    bcube:dateCreated "2015-08-07T07:39:57.873Z" ;
+    bcube:lastUpdated "2015-08-07T07:39:57.873Z" ;
+    bcube:originatedFrom <urn:uuid:80065fed-2fa1-4d0f-8d23-2a47be4e64ab> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:950a28ec-462b-4d5c-a056-e4bb0fe3c664> .
+
+<urn:uuid:6c3e1836-6664-4b68-9630-22a3f971035f> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-07T07:39:57.873Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-07T07:39:57.873Z" ;
+    dc:identifier "urn:sha:c747f81a57474f34ff1f16bffebbbb31a77f9fe21b23a85fd4e7fa73" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://gis.glin.net/geoserver/wfs?request=getfeature&service=wfs&version=1.0.0&typename=glin:lmb_water_gnis&outputformat=shape-zip" .
+
+<urn:uuid:80065fed-2fa1-4d0f-8d23-2a47be4e64ab> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-07T07:39:57.873Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-07T07:39:57.873Z" ;
+    dc:identifier "urn:sha:13bf9407f3524c189c8766f05709a989b94105db00a9a64b883cef49" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://catalog.data.gov/harvest/object/1151783d-dc88-4489-aec9-ffc7ed493547" .
+
+<urn:uuid:950a28ec-462b-4d5c-a056-e4bb0fe3c664> bcube:dateCreated "2015-08-07T07:39:57.873Z" ;
+    bcube:hasMetadataRecord <urn:uuid:5291c489-9b32-4d7f-ac76-b4cf63392a7b> ;
+    bcube:lastUpdated "2015-08-07T07:39:57.873Z" ;
+    dc:conformsTo <urn:uuid:13a6938f-b3e7-462d-8f62-2548f087cdab>,
+        <urn:uuid:247b214a-54e4-40cc-a29e-dbaa40663a6e> ;
+    dc:description "The Geographic Names Information System (GNIS), developed by the U.S. Geological Survey in cooperation with the U.S. Board on Geographic Names (BGN), contains information about physical and cultural geographic features in the United States and associated areas, both current and historical, but not including roads and highways. The database also contains geographic names in Antarctica. The database holds the Federally recognized name of each feature and defines the location of the feature by state, county, USGS topographic map, and geographic coordinates. Other feature attributes include names or spellings other than the official name, feature designations, feature class, historical and descriptive information, and for some categories of features the geometric boundaries. The database assigns a unique feature identifier, a random number, that is a key for accessing, integrating, or reconciling GNIS data with other data sets. The GNIS is our Nation's official repository of domestic geographic feature names information. This database has been subsetted to include water features only." ;
+    dc:spatial "POLYGON ((-89.66083 41.2975,-89.66083 46.71889,-83.95194 46.71889,-83.95194 41.2975,-89.66083 41.2975))" ;
+    dcterms:references <urn:uuid:6c3e1836-6664-4b68-9630-22a3f971035f> ;
+    dcterms:title "Lake Michigan basin water gnis" ;
+    esip:eastBound "-83.95194"^^xsd:float ;
+    esip:northBound "46.71889"^^xsd:float ;
+    esip:southBound "41.2975"^^xsd:float ;
+    esip:westBound "-89.66083"^^xsd:float ;
+    owl:a dcat:Dataset .
+

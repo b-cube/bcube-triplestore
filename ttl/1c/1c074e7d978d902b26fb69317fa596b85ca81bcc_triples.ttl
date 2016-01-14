@@ -1,0 +1,67 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:12eff16e-bea1-4d23-a4a6-338fd06678f7> owl:a foaf:Organization ;
+    foaf:name "" .
+
+<urn:uuid:179caee6-9ec9-4f33-a8a7-8b240c71fd71> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-10-29T16:13:15.041Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-10-29T16:13:15.041Z" ;
+    dc:identifier "urn:sha:3af8d34c5f2ce038140d661a2597325c243ad738b5bd7c48178697dc" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://data.fs.usda.gov/geodata/edw/edw_resources/meta/S_USA.RoadlessArea_2001_ID_CO.xml" .
+
+<urn:uuid:806d8c57-fdf4-4b26-989d-f2cd6491f4ca> bcube:hasType "theme" ;
+    bcube:hasValue "environment" ;
+    dc:partOf "ISO 19115 Topic Categories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:982ae419-542e-4547-8833-53c35a0cfdef> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-10-29T16:13:15.041Z" ;
+    bcube:lastUpdated "2015-10-29T16:13:15.041Z" ;
+    bcube:originatedFrom <urn:uuid:179caee6-9ec9-4f33-a8a7-8b240c71fd71> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:e2194a7f-c9b0-4120-82aa-ce2193e3e7ec> .
+
+<urn:uuid:e0e0b177-63c0-478a-b195-876e60787747> bcube:hasType "theme" ;
+    bcube:hasValue "Colorado Roadless Rule",
+        "Idaho",
+        "Inventoried Roadless Area",
+        "Roadless",
+        "Roadless Area",
+        "Roadless Area Conservation Rule",
+        "Roadless Rule" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:e2194a7f-c9b0-4120-82aa-ce2193e3e7ec> bcube:dateCreated "2015-10-29T16:13:15.041Z" ;
+    bcube:hasMetadataRecord <urn:uuid:982ae419-542e-4547-8833-53c35a0cfdef> ;
+    bcube:lastUpdated "2015-10-29T16:13:15.041Z" ;
+    dc:conformsTo <urn:uuid:806d8c57-fdf4-4b26-989d-f2cd6491f4ca>,
+        <urn:uuid:e0e0b177-63c0-478a-b195-876e60787747> ;
+    dc:description "The RoadlessArea_2001_ID_CO feature class describes the boundaries of all Roadless Areasmanaged by the US Forest Service. These roadless areas were designated administrative rulemaking to provide management direction for their conservation and managment. The RoadlessArea Conservation Rule of 2001 designated roadless areas nationwide. Subsequent rules, the IdahoRoadless Rule of 2008,and the Colorado Roadless Rule of2012 replaced that direction anddesignation in the states of Idaho and Colorado." ;
+    dc:spatial "POLYGON ((-150.007671 18.245724,-150.007671 61.518992,-65.707153 61.518992,-65.707153 18.245724,-150.007671 18.245724))" ;
+    dcterms:publisher <urn:uuid:12eff16e-bea1-4d23-a4a6-338fd06678f7> ;
+    dcterms:title "S_USA.RoadlessArea_2001_ID_CO" ;
+    esip:eastBound "-65.707153"^^xsd:float ;
+    esip:northBound "61.518992"^^xsd:float ;
+    esip:southBound "18.245724"^^xsd:float ;
+    esip:westBound "-150.007671"^^xsd:float ;
+    owl:a dcat:Dataset .
+

@@ -1,0 +1,91 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:3498c153-9857-44c1-9a13-b0f9d2814a2c> bcube:hasType "theme" ;
+    bcube:hasValue "floe size",
+        "form of ice",
+        "ice age",
+        "ice concentration",
+        "ice type",
+        "sea ice" ;
+    dc:partOf "none at the present time" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:43a4c410-7565-4903-b9aa-497380650a1c> owl:a foaf:Organization ;
+    foaf:name "" .
+
+<urn:uuid:485b2d35-65b8-4ef9-8f48-41ac17cac1aa> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-10-12T19:28:40.25Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-10-12T19:28:40.25Z" ;
+    dc:identifier "urn:sha:82e73ea2aa7c3ccc4097ba337202fac962ef2c6ffc2c6e6c811a27f1" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://ec.gc.ca/data_donnees/data/ice/conditions/charts/Daily_Charts/2014/02/09/cis_SGRDAEA_20140209_pl_a.xml" .
+
+<urn:uuid:7de62a57-402f-454e-a580-810e4c9b8c4a> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-10-12T19:28:40.25Z" ;
+    bcube:lastUpdated "2015-10-12T19:28:40.25Z" ;
+    bcube:originatedFrom <urn:uuid:485b2d35-65b8-4ef9-8f48-41ac17cac1aa> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:8dec8419-60ba-4485-8fee-7d8ff91569e5> .
+
+<urn:uuid:8dec8419-60ba-4485-8fee-7d8ff91569e5> bcube:dateCreated "2015-10-12T19:28:40.25Z" ;
+    bcube:hasMetadataRecord <urn:uuid:7de62a57-402f-454e-a580-810e4c9b8c4a> ;
+    bcube:lastUpdated "2015-10-12T19:28:40.25Z" ;
+    dc:conformsTo <urn:uuid:3498c153-9857-44c1-9a13-b0f9d2814a2c>,
+        <urn:uuid:8e24ea84-7a4d-4ed6-b625-1ea1ee1698df> ;
+    dc:description "The SIGRID-3 vector archive format is one of the World Meteorological Organization (WMO) standards for archiving digital ice charts in the Global Digital Sea Ice Data Bank (GDSIDB). The WMO ice chart archiving formats are the Sea Ice Grid (SIGRID) format developed in 1981 and formalized in 1989 and its successor SIGRID-2. The Canadian Ice Service digital Ice Analysis charts (Regional, Daily and Image) are encoded in SIGRID-3 and have two main components: the shapefile containing the Ice Analysis ice information (ice polygons and related attributes) and the metadata describing the Ice Analysis data under the SIGRID-3 format. The Regional, Daily and Image Analyses are all available in SIGRID-3 format. The Daily Ice Analyses have been produced since 1959; they show the estimated ice conditions at publication date (which corresponds to the valid date) for various regions across Canada. They are based on an analysis and integration of all available data on ice conditions, including weather and oceanographic information, visual observations from shore, ship and aircraft, airborne radar, satellite imagery and climatological information. The Daily Ice Analyses describe areas of differing ice conditions using the WMO ice observing standards, and indicate where significant changes in the amount, stage of development and form of the predominant ice types have occurred. The Daily Ice Analyses for Canadian Waters are produced on a daily basis during the summer (Western Arctic, High Arctic, Eastern Arctic, Western Waterways, Foxe Basin and Newfoundland Waters) and winter (Newfoundland Waters, Gulf of St-Lawrence and Great Lakes) ice seasons. Daily Ice Analyses are also available in arc info coverages, data extraction grid point format, various chart formats and SIGRID-3 shapefile format." ;
+    dc:spatial "POLYGON ((-103.694170382500005 58.664893762330003,-103.694170382500005 80.804279183739993,-43.588391735809999 80.804279183739993,-43.588391735809999 58.664893762330003,-103.694170382500005 58.664893762330003))" ;
+    dcterms:publisher <urn:uuid:43a4c410-7565-4903-b9aa-497380650a1c> ;
+    esip:eastBound "-43.5883917358"^^xsd:float ;
+    esip:northBound "80.8042791837"^^xsd:float ;
+    esip:southBound "58.6648937623"^^xsd:float ;
+    esip:startDate "2014-02-09"^^xsd:date ;
+    esip:westBound "-103.694170383"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:8e24ea84-7a4d-4ed6-b625-1ea1ee1698df> bcube:hasType "place" ;
+    bcube:hasValue "Amundsen Gulf",
+        "Baffin Bay",
+        "Beaufort Sea",
+        "Bering Strait",
+        "Byam Martin Channel",
+        "Cabot Strait",
+        "Canada",
+        "Davis Strait",
+        "East Arctic",
+        "East Coast",
+        "Eureka",
+        "Foxe Basin",
+        "Great Lakes",
+        "Gulf of St.-Lawrence",
+        "High Arctic",
+        "Hudson Bay",
+        "Hudson Strait",
+        "Labrador Sea",
+        "MClure Strait",
+        "Newfoundland Waters",
+        "North West Passage",
+        "Parry Channel",
+        "Queen Maud Gulf",
+        "Resolute",
+        "Waterways",
+        "West Arctic" ;
+    dc:partOf "none at the present time" ;
+    owl:a bcube:thesaurusSubset .
+

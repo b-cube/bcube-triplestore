@@ -1,0 +1,91 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:2ea58241-3c65-4b5b-9e98-b479e7893cb4> bcube:hasType "temporal" ;
+    bcube:hasValue "Spring",
+        "Summer" ;
+    dc:partOf "Seasons" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:32088f17-bde6-462c-b783-319e88f544d4> bcube:hasType "place" ;
+    bcube:hasValue "Alaska",
+        "Bristol Bay",
+        "St. Lawrence Island",
+        "arctic",
+        "eastern Bering Sea shelf" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:7e9c4fb6-13f5-46b3-b181-db9c7126d205> bcube:hasType "theme" ;
+    bcube:hasValue "chlorophyll",
+        "phaeopigments",
+        "phytoplankton" ;
+    dc:partOf "biota" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:8db48274-fdd4-4b63-93f7-4ed50dc1dd72> owl:a foaf:Organization ;
+    foaf:name "" .
+
+<urn:uuid:92818a14-f1e0-4f06-a7a0-eede2d613f99> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-08-05T01:26:01.756Z" ;
+    bcube:lastUpdated "2015-08-05T01:26:01.756Z" ;
+    bcube:originatedFrom <urn:uuid:d48b9f9b-6a8f-4dc0-b3a7-4c813e8aae53> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:cb5ce077-15b2-49a5-a052-71446ca668ea> .
+
+<urn:uuid:a9966ce3-6b69-43c2-a57c-7d72c2cb5435> bcube:hasType "stratum" ;
+    bcube:hasValue "upper water column" ;
+    dc:partOf "Depths" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:cb5ce077-15b2-49a5-a052-71446ca668ea> bcube:dateCreated "2015-08-05T01:26:01.756Z" ;
+    bcube:hasMetadataRecord <urn:uuid:92818a14-f1e0-4f06-a7a0-eede2d613f99> ;
+    bcube:lastUpdated "2015-08-05T01:26:01.756Z" ;
+    dc:conformsTo <urn:uuid:2ea58241-3c65-4b5b-9e98-b479e7893cb4>,
+        <urn:uuid:32088f17-bde6-462c-b783-319e88f544d4>,
+        <urn:uuid:7e9c4fb6-13f5-46b3-b181-db9c7126d205>,
+        <urn:uuid:a9966ce3-6b69-43c2-a57c-7d72c2cb5435>,
+        <urn:uuid:eec08473-68c7-489b-baa9-b3c768a49301> ;
+    dc:description "These data are part of an ocean observation study by Stabeno, Napp, and Whitledge sponsored, in part, by the North Pacific Research Board (Project 701; http://doc.nprb.org). The grant was titled \"Sentinels for ecosystem change: long term biophysical moorings on the Bering Sea shelf (2007 b?? 2008).\" Moorings have been maintained on the southeastern Bering Sea shelf at four sites: M2 (56.9B0N, 164.1B0W) since 1995, M4 (57.9B0N, 168.9B0W) since 1996; M5 (59.9B0N, 171.7B0W) and; M8 (62.2B0N 174.7B0W) since 2004. Shipboard measurements of temperature, salinity, nutrients, chlorophyll, fluorescence and zooplankton were collected around the moorings and along the 70-m isobath on 4 cruises (3MF07, 18 April b?? 6 May; 1HE07, 10 April b?? 12 May; 7MF07, 17 b?? 30 September; 1TT07, 24 September b?? 11 October) to groundtruth the in situ sensors on the moorings and to learn the factors that distinguish the upper water column of the central and southeastern middle shelf." ;
+    dc:spatial "POLYGON ((-175 55,-175 65,-160 65,-160 55,-175 55))" ;
+    dcterms:identifier "gov.noaa.nmfs.inport:17103" ;
+    dcterms:publisher <urn:uuid:8db48274-fdd4-4b63-93f7-4ed50dc1dd72> ;
+    dcterms:title "Chlorophyll" ;
+    esip:eastBound "-160.0"^^xsd:float ;
+    esip:endDate "2007-10-09"^^xsd:date ;
+    esip:northBound "65.0"^^xsd:float ;
+    esip:southBound "55.0"^^xsd:float ;
+    esip:startDate "2007-04-12"^^xsd:date ;
+    esip:westBound "-175.0"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:d48b9f9b-6a8f-4dc0-b3a7-4c813e8aae53> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-05T01:26:01.756Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-05T01:26:01.756Z" ;
+    dc:identifier "urn:sha:ff830184ad34674d4dd61c40c7fb9f3da635e519d6ee752d27b1a483" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "https://inport.nmfs.noaa.gov/inport/item/17103/fgdc" .
+
+<urn:uuid:eec08473-68c7-489b-baa9-b3c768a49301> bcube:hasType "theme" ;
+    bcube:hasValue "chlorophyll",
+        "phaeopigments",
+        "phytoplankton" ;
+    dc:partOf "oceans" ;
+    owl:a bcube:thesaurusSubset .
+

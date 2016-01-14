@@ -1,0 +1,102 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:3c561e49-fecc-4c6d-8188-ed502a69bcbc> bcube:hasValue "boundaries" ;
+    dc:partOf "IsoTopicCategories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:550e944d-0b95-4fd7-82e7-40472f0165ba> bcube:hasType "theme" ;
+    bcube:hasValue "Area landmark identifier",
+        "Landmark",
+        "Permanent face ID",
+        "State FIPS Code",
+        "State GNIS Code",
+        "State or equivalent entity",
+        "Table",
+        "Topological Faces" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:5c34acd9-acba-401b-9cc2-7d6a38491946> a "ISO 19115:2003/19139" ;
+    bcube:dateCreated "2015-11-07T09:55:05.467Z" ;
+    bcube:lastUpdated "2015-11-07T09:55:05.467Z" ;
+    bcube:originatedFrom <urn:uuid:7758dafd-a090-4af1-b407-d598f91d798c> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:5cf878bc-b708-4893-bc7a-839fc7afc0e0> .
+
+<urn:uuid:5cf878bc-b708-4893-bc7a-839fc7afc0e0> bcube:dateCreated "2015-11-07T09:55:05.467Z" ;
+    bcube:hasMetadataRecord <urn:uuid:5c34acd9-acba-401b-9cc2-7d6a38491946> ;
+    bcube:lastUpdated "2015-11-07T09:55:05.467Z" ;
+    dc:conformsTo <urn:uuid:3c561e49-fecc-4c6d-8188-ed502a69bcbc>,
+        <urn:uuid:550e944d-0b95-4fd7-82e7-40472f0165ba>,
+        <urn:uuid:ec0e81e6-de89-4bfb-933e-8c140f2e5a03> ;
+    dc:description "The TIGER/Line shapefiles and related database files (.dbf) are an extract of selected geographic and cartographic information from the U.S. Census Bureau's Master Address File / Topologically Integrated Geographic Encoding and Referencing (MAF/TIGER) Database (MTDB). The MTDB represents a seamless national file with no overlaps or gaps between parts, however, each TIGER/Line shapefile is designed to stand alone as an independent data set, or they can be combined to cover the entire nation. The Topological Faces / Area Landmark Relationship File (FACESAL.dbf) contains a record for each face / area landmark relationship. Face refers to the areal (polygon) topological primitives that make up MTDB. A face is bounded by one or more edges; its boundary includes only the edges that separate it from other faces, not any interior edges contained within the area of the face. The face to which a record in the Topological Faces / Area Landmark Relationship File (FACESAL.dbf) applies can be determined by linking to the Topological Faces Shapefile (FACES.shp) on the permanent topological face identifier (TFID) attribute. The area landmark to which a record in the Topological Faces / Area Landmark Relationship File (FACESAL.dbf) applies can be determined by linking to the Area Landmark Shapefile (AREALM.shp) on the area landmark identifier (AREAID) attribute. A face may be part of multiple area landmarks. An area landmark may consist of multiple faces." ;
+    dc:spatial "POLYGON ((-90.310298 34.982924,-90.310298 36.678255,-81.6469 36.678255,-81.6469 34.982924,-90.310298 34.982924))" ;
+    dcterms:references <urn:uuid:798a567b-29a6-4108-b14c-158d0435f4bf>,
+        <urn:uuid:c3544535-768f-474e-a899-f9bb410a57d4> ;
+    dcterms:title "TIGER/Line Shapefile, 2015, state, Tennessee, Topological Faces-Area Landmark State-based Relationship File" ;
+    esip:eastBound "-81.6469"^^xsd:float ;
+    esip:endDate "2015-05-30"^^xsd:date ;
+    esip:northBound "36.678255"^^xsd:float ;
+    esip:southBound "34.982924"^^xsd:float ;
+    esip:startDate "2014-06-30"^^xsd:date ;
+    esip:westBound "-90.310298"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:7758dafd-a090-4af1-b407-d598f91d798c> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-07T09:55:05.467Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-07T09:55:05.467Z" ;
+    dc:identifier "urn:sha:629b4a9844c1a36e0a253a6cf6cc2c4dcb5eee28097344a687eedd58" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://meta.geo.census.gov/data/existing/decennial/GEO/GPMB/TIGERline/TIGER2015/facesal/tl_2015_47_facesal.dbf.iso.xml" .
+
+<urn:uuid:798a567b-29a6-4108-b14c-158d0435f4bf> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-07T09:55:05.467Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-07T09:55:05.467Z" ;
+    dc:identifier "urn:sha:01e3f1d55bd7125cf2eb8bd68431fd00a1f078cd325b2a0a30fd7381" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www.census.gov/geo/maps-data/data/tiger-line.html" .
+
+<urn:uuid:c3544535-768f-474e-a899-f9bb410a57d4> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-07T09:55:05.467Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-07T09:55:05.467Z" ;
+    dc:identifier "urn:sha:c72554cb6b693b15d7294041b5ed75d83713708da5ef207f4546704b" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www2.census.gov/geo/tiger/TIGER2015/FACESAL/tl_2015_47_facesal.zip" .
+
+<urn:uuid:ec0e81e6-de89-4bfb-933e-8c140f2e5a03> bcube:hasType "place" ;
+    bcube:hasValue "47",
+        "State or Equivalent Entity",
+        "TN",
+        "Tennessee",
+        "U.S.",
+        "United States" ;
+    dc:partOf "ANSI INCITS 38:2009 (Formerly FIPS 5-2), ANSI INCITS 31:2009 (Formerly FIPS 6-4),ANSI INCITS 454:2009 (Formerly FIPS 8-6), ANSI INCITS 455:2009(Formerly FIPS 9-1), ANSI INCITS 446:2008 (Geographic Names Information System (GNIS))" ;
+    owl:a bcube:thesaurusSubset .
+

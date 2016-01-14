@@ -1,0 +1,110 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:016d5251-fd0e-4167-a9ab-d90eec7c75a8> owl:a foaf:Organization ;
+    foaf:name "" .
+
+<urn:uuid:04221894-d5a6-49ba-a3ee-a3685bc632fc> bcube:hasType "theme" ;
+    bcube:hasValue "Advanced National Seismic Systems (ANSS)",
+        "ShakeMap",
+        "US Geological Survey",
+        "earthquake damage",
+        "instrumental intensity",
+        "peak ground motions",
+        "shaking intensity" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:43813767-01c9-4708-ba77-56c6dbbb30d4> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-09-08T23:10:02.123Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-09-08T23:10:02.123Z" ;
+    dc:identifier "urn:sha:4b5e9f594e2a31514863e4810a0388675be6d4933a858c579f7587cd" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://earthquake.usgs.gov/earthquakes/shakemap/atlas/shake/199411150625/download/metadata.xml" .
+
+<urn:uuid:72d88697-62e2-42b2-86c3-ed281b0af619> bcube:hasType "place" ;
+    bcube:hasValue "Global" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:75040d6b-e82d-4426-9e3b-8e57ebe8fb6b> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-09-08T23:10:02.123Z" ;
+    bcube:lastUpdated "2015-09-08T23:10:02.123Z" ;
+    bcube:originatedFrom <urn:uuid:43813767-01c9-4708-ba77-56c6dbbb30d4> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:7c707de7-4367-4c55-b32c-2a8986eb19fc> .
+
+<urn:uuid:7c707de7-4367-4c55-b32c-2a8986eb19fc> bcube:dateCreated "2015-09-08T23:10:02.123Z" ;
+    bcube:hasMetadataRecord <urn:uuid:75040d6b-e82d-4426-9e3b-8e57ebe8fb6b> ;
+    bcube:lastUpdated "2015-09-08T23:10:02.123Z" ;
+    dc:conformsTo <urn:uuid:04221894-d5a6-49ba-a3ee-a3685bc632fc>,
+        <urn:uuid:72d88697-62e2-42b2-86c3-ed281b0af619> ;
+    dc:description "ShakeMap is designed as a rapid response tool to portray the extent and variation of ground shaking throughout the affected region immediately following significant earthquakes. Ground motion and intensity maps are derived from peak ground motion amplitudes recorded on seismic sensors (accelerometers), with interpolation based on both estimated amplitudes where data are lacking, and site amplification corrections. Color-coded instrumental intensity maps are derived from empirical relations between peak ground motions and Modified Mercalli intensity. This ShakeMap describes the event: 199411150625, MINDORO, PHILIPPINES" ;
+    dc:spatial "POLYGON ((119.307 11.3,119.307 15.2,123.257 15.2,123.257 11.3,119.307 11.3))" ;
+    dcterms:publisher <urn:uuid:016d5251-fd0e-4167-a9ab-d90eec7c75a8> ;
+    dcterms:references <urn:uuid:869cebee-f4d5-405b-ac26-ab95a3704c1c>,
+        <urn:uuid:8ac1606a-a2ce-43c5-8380-72f897128c3a>,
+        <urn:uuid:b6bd9957-a541-4c15-b0f9-36788800d71c> ;
+    dcterms:title "Advanced National Seismic System (ANSS), ShakeMap, Global Region, Maps of ground shaking and intensity for event 199411150625, MINDORO, PHILIPPINES" ;
+    esip:eastBound "123.257"^^xsd:float ;
+    esip:northBound "15.2"^^xsd:float ;
+    esip:southBound "11.3"^^xsd:float ;
+    esip:startDate "1994-11-15"^^xsd:date ;
+    esip:westBound "119.307"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:869cebee-f4d5-405b-ac26-ab95a3704c1c> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-09-08T23:10:02.123Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-09-08T23:10:02.123Z" ;
+    dc:identifier "urn:sha:8e6f69d5a9d933849de04829b0e2e95057c39518ce20e78b69b0a286" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://earthquake.usgs.gov/shakemap/global/shake/199411150625/download/shape.zip" .
+
+<urn:uuid:8ac1606a-a2ce-43c5-8380-72f897128c3a> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-09-08T23:10:02.123Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-09-08T23:10:02.123Z" ;
+    dc:identifier "urn:sha:6d2753381d37127bb2a53fb1325a7c13cb792eea177136a8b53256aa" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://earthquake.usgs.gov/shakemap/global/shake/199411150625/download/grid.xyz.zip" .
+
+<urn:uuid:b6bd9957-a541-4c15-b0f9-36788800d71c> dcterms:references <urn:uuid:fdf85ea8-b580-4d00-93e8-b609875f261d> ;
+    owl:a bibo:WebPage .
+
+<urn:uuid:fdf85ea8-b580-4d00-93e8-b609875f261d> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-09-08T23:10:02.123Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-09-08T23:10:02.123Z" ;
+    dc:identifier "urn:sha:dce4b4e6487a29d3f53282273d41bf5166c839b3aee973933ca74c2c" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://earthquake.usgs.gov/eqcenter/shakemap" .
+

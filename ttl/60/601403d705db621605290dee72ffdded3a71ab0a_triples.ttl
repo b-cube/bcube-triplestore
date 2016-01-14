@@ -1,0 +1,78 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:16da7c29-467b-420d-9ccd-4666728dab3d> bcube:hasType "place" ;
+    bcube:hasValue "IL",
+        "Illinois",
+        "Marshall",
+        "Marshall County",
+        "State",
+        "US" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:1eff9111-8aaf-4bcc-a2e2-fa1ad59963b8> bcube:hasType "theme" ;
+    bcube:hasValue "Breaklines",
+        "DAT",
+        "LAS",
+        "LiDAR",
+        "Lift",
+        "Light Detection and Ranging",
+        "Project",
+        "Shapefiles",
+        "Survey Control",
+        "Swath",
+        "TIN" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:2e73f1dd-ff20-4f0f-9fff-5bc651fc4c1b> owl:a foaf:Organization ;
+    foaf:name "AeroMetric, Inc." .
+
+<urn:uuid:774b6886-f6fa-4242-abdb-92c545b51972> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-10-16T21:48:24.678Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-10-16T21:48:24.678Z" ;
+    dc:identifier "urn:sha:00a9f602350a87da3e21c5f87d0fc1f31abd8823f522cb37b6ca70a5" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www.isgs.uiuc.edu/clearinghouse/lidar/counties/marshall/marshall_2012_metadata.xml" .
+
+<urn:uuid:79a62bac-7a3e-44ac-9951-6845b9ba4853> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-10-16T21:48:24.678Z" ;
+    bcube:lastUpdated "2015-10-16T21:48:24.678Z" ;
+    bcube:originatedFrom <urn:uuid:774b6886-f6fa-4242-abdb-92c545b51972> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:ce511811-aaef-400f-9029-e2233747cbe7> .
+
+<urn:uuid:ce511811-aaef-400f-9029-e2233747cbe7> bcube:dateCreated "2015-10-16T21:48:24.678Z" ;
+    bcube:hasMetadataRecord <urn:uuid:79a62bac-7a3e-44ac-9951-6845b9ba4853> ;
+    bcube:lastUpdated "2015-10-16T21:48:24.678Z" ;
+    dc:conformsTo <urn:uuid:16da7c29-467b-420d-9ccd-4666728dab3d>,
+        <urn:uuid:1eff9111-8aaf-4bcc-a2e2-fa1ad59963b8> ;
+    dc:description "This task order is for planning, acquisition, processing, and derivative products of LiDAR data to be collected for areas of Illinois. LiDAR data, and derivative products produced in compliance with this task order are part of the data to be obtained under Job Number P-94-025-10. Specifications listed below are based on the U.S. Geological Survey National Geospatial Program Base LiDAR Specification, Version 13." ;
+    dc:spatial "POLYGON ((-89.64 40.923,-89.64 41.151,-89.046 41.151,-89.046 40.923,-89.64 40.923))" ;
+    dcterms:publisher <urn:uuid:2e73f1dd-ff20-4f0f-9fff-5bc651fc4c1b> ;
+    dcterms:title "Illinois Department of Transportation, District 4, Marshall County LiDAR Acquisition" ;
+    esip:eastBound "-89.046"^^xsd:float ;
+    esip:endDate "2012-02-12"^^xsd:date ;
+    esip:northBound "41.151"^^xsd:float ;
+    esip:southBound "40.923"^^xsd:float ;
+    esip:startDate "2011-04-05"^^xsd:date ;
+    esip:westBound "-89.64"^^xsd:float ;
+    owl:a dcat:Dataset .
+

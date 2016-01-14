@@ -1,0 +1,79 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:208037cb-7e5c-422a-867a-c228fd980a7c> bcube:hasType "temporal" ;
+    bcube:hasValue "2010",
+        "2011",
+        "2012",
+        "2013",
+        "2014",
+        "2015" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:4bf9eb0c-db65-4fb9-84a2-6820db98e31f> a "ISO 19115:2003/19139" ;
+    bcube:dateCreated "2015-08-05T16:08:38.251Z" ;
+    bcube:lastUpdated "2015-08-05T16:08:38.251Z" ;
+    bcube:originatedFrom <urn:uuid:d085019e-238d-4f78-a503-ec68463c8024> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:de311246-c02b-4bd1-926b-a77c67949963> .
+
+<urn:uuid:5ac071d3-b9e3-4b21-ae35-29fa27e0934c> bcube:hasType "theme" ;
+    bcube:hasValue "location",
+        "transportation" ;
+    dc:partOf "none" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:a8103305-8d75-4de4-8188-7ea5063ba3c4> bcube:hasType "theme" ;
+    bcube:hasValue "Border Crossing",
+        "Port" ;
+    dc:partOf "Border Entry, Port of Entry (POE)" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:d085019e-238d-4f78-a503-ec68463c8024> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-05T16:08:38.251Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-05T16:08:38.251Z" ;
+    dc:identifier "urn:sha:7d585e9cbb858e698b347c3fa418bb1611fdeb8a1911d4e5eb7f446f" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://catalog.data.gov/harvest/object/9e8fc255-3f66-4945-9633-473ff623f5b8" .
+
+<urn:uuid:ddf1c98b-2d3c-483e-8aa2-c1377879c7c4> bcube:hasType "place" ;
+    bcube:hasValue "Canada",
+        "Mexico",
+        "North America",
+        "USA" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:de311246-c02b-4bd1-926b-a77c67949963> bcube:dateCreated "2015-08-05T16:08:38.251Z" ;
+    bcube:hasMetadataRecord <urn:uuid:4bf9eb0c-db65-4fb9-84a2-6820db98e31f> ;
+    bcube:lastUpdated "2015-08-05T16:08:38.251Z" ;
+    dc:conformsTo <urn:uuid:208037cb-7e5c-422a-867a-c228fd980a7c>,
+        <urn:uuid:5ac071d3-b9e3-4b21-ae35-29fa27e0934c>,
+        <urn:uuid:a8103305-8d75-4de4-8188-7ea5063ba3c4>,
+        <urn:uuid:ddf1c98b-2d3c-483e-8aa2-c1377879c7c4> ;
+    dc:description "Border Crossing Ports (NTAD 2015) are points of entry for land modes along the U.S. - Canadian and U.S.- Mexcian borders. The ports of entry are located in 15 states along the U.S. borders. The nominal scale of the data set is 1:1000,000 with a maximal positional error of +- 10 meters." ;
+    dc:spatial "POLYGON ((-141.001444 25.883416,-141.001444 64.085516,-66.980076 64.085516,-66.980076 25.883416,-141.001444 25.883416))" ;
+    dcterms:title "Border Crossings (National)" ;
+    esip:eastBound "-66.980076"^^xsd:float ;
+    esip:northBound "64.085516"^^xsd:float ;
+    esip:southBound "25.883416"^^xsd:float ;
+    esip:westBound "-141.001444"^^xsd:float ;
+    owl:a dcat:Dataset .
+

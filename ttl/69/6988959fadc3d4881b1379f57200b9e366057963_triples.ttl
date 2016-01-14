@@ -1,0 +1,62 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:02202889-dc62-44e5-aeac-079266dd9617> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-11-01T18:46:37.315Z" ;
+    bcube:lastUpdated "2015-11-01T18:46:37.315Z" ;
+    bcube:originatedFrom <urn:uuid:f76a1b2a-19b3-48f1-93f0-f5ee890e5d90> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:b618a6fc-8a67-46c8-aed1-477d70eded75> .
+
+<urn:uuid:160c85c9-9b13-4696-bbf5-c1c22a36a91c> owl:a foaf:Organization ;
+    foaf:name "" .
+
+<urn:uuid:87d982dd-7220-4026-9519-3c5e770dd24a> bcube:hasType "place" ;
+    bcube:hasValue "Alaska" ;
+    dc:partOf "BLM-STATE" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:b618a6fc-8a67-46c8-aed1-477d70eded75> bcube:dateCreated "2015-11-01T18:46:37.315Z" ;
+    bcube:hasMetadataRecord <urn:uuid:02202889-dc62-44e5-aeac-079266dd9617> ;
+    bcube:lastUpdated "2015-11-01T18:46:37.315Z" ;
+    dc:conformsTo <urn:uuid:87d982dd-7220-4026-9519-3c5e770dd24a>,
+        <urn:uuid:d6e9bbae-4f03-405f-8433-b2be44a0c7b4> ;
+    dc:description "Section boundaries were generated from geodetic latitude and longitude coordinate pairs as recorded on BLM's official protraction diagrams of the state of Alaska. The Informix Section table is a spatially-enabled table that contains all of the protraction information for each of the 655,483 sections. Section shapes are stored as NAD27 geographic multipolygons. Each section was individually constructed from NAD27 geographic pro_pt (Protracted Point) table and is fully densified by including all township/section offset corners from adjacent township/sections. The geometry for a single section (i.e. SEC 1, T69S, R100E, CM) may include as many as 11 coordinate pairs on the exterior ring. The section table identifies 655,483 sections as 655,485 multi-polygons (two sections require two polygons each), as depicted on the official BLM protraction diagrams. MTRS Number of Geometries ----------------------------------------------------------- C033S066E27 2 C066S098E34 2" ;
+    dc:spatial "POLYGON ((-179.227825 51.202992,-179.227825 71.468681,179.896724 71.468681,179.896724 51.202992,-179.227825 51.202992))" ;
+    dcterms:publisher <urn:uuid:160c85c9-9b13-4696-bbf5-c1c22a36a91c> ;
+    dcterms:title "Protracted Section Grid for Alaska (NAD27)" ;
+    esip:eastBound "179.896724"^^xsd:float ;
+    esip:northBound "71.468681"^^xsd:float ;
+    esip:southBound "51.202992"^^xsd:float ;
+    esip:startDate "2008-02-04"^^xsd:date ;
+    esip:westBound "-179.227825"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:d6e9bbae-4f03-405f-8433-b2be44a0c7b4> bcube:hasType "theme" ;
+    bcube:hasValue "Framework" ;
+    dc:partOf "BLM-THEME" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:f76a1b2a-19b3-48f1-93f0-f5ee890e5d90> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-01T18:46:37.315Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-01T18:46:37.315Z" ;
+    dc:identifier "urn:sha:d4ad2c7c558be49ac8bd8ca40282d93bdec43a6fa84e012c389eaf0f" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://sdms.ak.blm.gov/download/protracted_grid_gis/metadata/section27.xml" .
+

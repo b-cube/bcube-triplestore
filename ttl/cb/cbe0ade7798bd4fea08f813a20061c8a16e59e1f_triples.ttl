@@ -1,0 +1,102 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:26963bdd-4e98-4e01-9260-1f90726a9e9f> owl:a foaf:Organization ;
+    foaf:name "" .
+
+<urn:uuid:31e70623-d043-4a26-bfd1-5ab933771318> bcube:hasType "theme" ;
+    bcube:hasValue "transportation" ;
+    dc:partOf "ISO 19115 Topic Categories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:5b422d39-819f-4549-b5ed-aa0b27cb25e9> bcube:hasType "theme" ;
+    bcube:hasValue "County ANSI Code",
+        "County FIPS Code",
+        "County or equivalent entity",
+        "Feature Names",
+        "MAFTIGER feature class code",
+        "Name",
+        "Permanent edge ID",
+        "Prefix Qualifier code",
+        "Prefix direction code",
+        "Prefix type code description",
+        "PrimaryAlternate code",
+        "State ANSI Code",
+        "State FIPS Code",
+        "Suffix Qualifier code",
+        "Suffix direction code",
+        "Suffix type code",
+        "Table" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:5e0fe758-2ea5-452f-9bd9-1d4a9fea0035> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-08T17:07:49.869Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-08T17:07:49.869Z" ;
+    dc:identifier "urn:sha:4761ff7bd876f05e205604d041eed09ac4b587c17e251a8929276a08" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://meta.geo.census.gov/data/existing/decennial/GEO/GPMB/TIGERline/fe_2008/featnames/tl_2008_02130_featnames_url.dbf.xml" .
+
+<urn:uuid:782e60bc-38c4-445b-b133-8d5a40b72c8e> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-11-08T17:07:49.869Z" ;
+    bcube:lastUpdated "2015-11-08T17:07:49.869Z" ;
+    bcube:originatedFrom <urn:uuid:5e0fe758-2ea5-452f-9bd9-1d4a9fea0035> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:91b4d916-577e-4554-87bc-03d3775107ad> .
+
+<urn:uuid:7dd159a7-3517-43e4-bd7a-6249d2f15cbc> bcube:hasType "place" ;
+    bcube:hasValue "02130",
+        "County or Equivalent Entity",
+        "Ketchikan Gateway",
+        "U.S.",
+        "United States" ;
+    dc:partOf "FIPS Publication 5-2, FIPS Publication 6-4, FIPS Publication 8-6, FIPS Publication 9-1,FIPS Publication55-4" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:91b4d916-577e-4554-87bc-03d3775107ad> bcube:dateCreated "2015-11-08T17:07:49.869Z" ;
+    bcube:hasMetadataRecord <urn:uuid:782e60bc-38c4-445b-b133-8d5a40b72c8e> ;
+    bcube:lastUpdated "2015-11-08T17:07:49.869Z" ;
+    dc:conformsTo <urn:uuid:31e70623-d043-4a26-bfd1-5ab933771318>,
+        <urn:uuid:5b422d39-819f-4549-b5ed-aa0b27cb25e9>,
+        <urn:uuid:7dd159a7-3517-43e4-bd7a-6249d2f15cbc> ;
+    dc:description "The TIGER/Line relationship files are an extract of selected geographic information from the Census MAF/TIGER database. Each TIGER/Line relationship file is designed to stand alone as an independent data set or can be used jointly with the shapefiles." ;
+    dc:spatial "POLYGON ((-131.962898 55.089824,-131.962898 55.98625,-130.902466 55.98625,-130.902466 55.089824,-131.962898 55.089824))" ;
+    dcterms:publisher <urn:uuid:26963bdd-4e98-4e01-9260-1f90726a9e9f> ;
+    dcterms:references <urn:uuid:9668486b-8e36-4944-95b9-fc895f7d461a> ;
+    dcterms:title "TIGER/Line Shapefile, 2008, county, Ketchikan Gateway Borough, AK, Feature Names" ;
+    esip:eastBound "-130.902466"^^xsd:float ;
+    esip:endDate "2008-07-01"^^xsd:date ;
+    esip:northBound "55.98625"^^xsd:float ;
+    esip:southBound "55.089824"^^xsd:float ;
+    esip:startDate "2008-01-01"^^xsd:date ;
+    esip:westBound "-131.962898"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:9668486b-8e36-4944-95b9-fc895f7d461a> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-08T17:07:49.869Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-08T17:07:49.869Z" ;
+    dc:identifier "urn:sha:84502bb03ecbb087cfdedb2541d405e9ba72de671029356d01975ba4" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www2.census.gov/geo/tiger/TIGER2008/02_ALASKA/02130_Ketchikan_Gateway_Borough/tl_2008_02130_featnames.zip" .
+

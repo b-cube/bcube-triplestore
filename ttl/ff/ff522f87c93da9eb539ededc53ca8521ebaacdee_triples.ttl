@@ -1,0 +1,71 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:004a029b-8cfc-4390-8925-d4195c5f6437> owl:a foaf:Organization ;
+    foaf:name "" .
+
+<urn:uuid:0e5bc855-0c1c-42e2-919c-4c49ca6c9145> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-10-17T08:56:26.499Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-10-17T08:56:26.499Z" ;
+    dc:identifier "urn:sha:2488bbb3a7016353e24add9e04aa7b77549bd60412747291f5fc4213" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://data.denvergov.org/download/gis/street_routes/metadata/street_routes.xml" .
+
+<urn:uuid:26dd0e80-c9f4-4448-892b-558f46986a81> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-10-17T08:56:26.499Z" ;
+    bcube:lastUpdated "2015-10-17T08:56:26.499Z" ;
+    bcube:originatedFrom <urn:uuid:0e5bc855-0c1c-42e2-919c-4c49ca6c9145> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:b2bd9db2-a705-4d96-9221-4131e9e3ec3d> .
+
+<urn:uuid:76ed367f-425e-469a-824d-a1fe31bda6ee> bcube:hasType "theme" ;
+    bcube:hasValue "transportation" ;
+    dc:partOf "ISO 19115 Topic Categories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:957ae471-253b-4f57-b9e0-ac06b01c7d08> bcube:hasType "place" ;
+    bcube:hasValue "Colorado",
+        "Denver",
+        "Denver-County",
+        "USA" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:b2bd9db2-a705-4d96-9221-4131e9e3ec3d> bcube:dateCreated "2015-10-17T08:56:26.499Z" ;
+    bcube:hasMetadataRecord <urn:uuid:26dd0e80-c9f4-4448-892b-558f46986a81> ;
+    bcube:lastUpdated "2015-10-17T08:56:26.499Z" ;
+    dc:conformsTo <urn:uuid:76ed367f-425e-469a-824d-a1fe31bda6ee>,
+        <urn:uuid:957ae471-253b-4f57-b9e0-ac06b01c7d08>,
+        <urn:uuid:da93c9be-4a79-4858-a0aa-c794e6a0ec00> ;
+    dc:description "The City and County of Denver's Street Route features constructed from the City's Street Centerline layer. Route geometry is the continuous street length until it stops at a \"T\" intersection or a street end. The route name contains \"W\" or a \"S\" for streets containing a West or South directional (respectively) within the street name. The routes are numbered and increase from Broadway - to the East and again to the West. Route numbering also begins at Elsworth - increasing to the North and again to the South" ;
+    dc:spatial "POLYGON ((-105.109946 39.614371,-105.109946 39.943399,-104.578886 39.943399,-104.578886 39.614371,-105.109946 39.614371))" ;
+    dcterms:publisher <urn:uuid:004a029b-8cfc-4390-8925-d4195c5f6437> ;
+    dcterms:title "Street Routes" ;
+    esip:eastBound "-104.578886"^^xsd:float ;
+    esip:northBound "39.943399"^^xsd:float ;
+    esip:southBound "39.614371"^^xsd:float ;
+    esip:westBound "-105.109946"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:da93c9be-4a79-4858-a0aa-c794e6a0ec00> bcube:hasType "theme" ;
+    bcube:hasValue "road",
+        "roadway" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+

@@ -1,0 +1,82 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:15836c31-0ea4-4b7b-a1a0-25b122de26d8> bcube:hasType "theme" ;
+    bcube:hasValue "EARTH SCIENCE > Biosphere > Aquatic Habitat > Coastal Habitat",
+        "EARTH SCIENCE > Biosphere > Zoology > Corals > Reef Monitoring and Assessment > Mapping",
+        "EARTH SCIENCE > Biosphere > Zoology > Corals > Reef Monitoring and Assessment > Mapping > Geomorphology Mapping",
+        "EARTH SCIENCE > Biosphere > Zoology > Corals > Reef Monitoring and Assessment > Remote Sensing",
+        "EARTH SCIENCE > Solid Earth > Geomorphology > Coastal Landforms/Processes" ;
+    dc:partOf "CoRIS Theme Thesaurus" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:42f960b7-189e-4c74-b9d9-3b77f6f08582> bcube:hasType "theme" ;
+    bcube:hasValue "Geographic Information > Habitats" ;
+    dc:partOf "CoRIS Discovery Thesaurus" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:b21044bb-13e6-4c7e-957d-966e224e4304> bcube:hasValue "imageryBaseMapsEarthCover" ;
+    dc:partOf "IsoTopicCategories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:c141a5d1-ed4c-48e9-9bd3-eb9e058c436e> bcube:hasType "place" ;
+    bcube:hasValue "Anatahan",
+        "CNMI",
+        "Coastal Zone" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:d7fd32ce-0413-4055-8ad9-10c280957382> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2014-07-31T03:27:12.821Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2014-07-31T03:27:12.821Z" ;
+    dc:identifier "urn:sha:a46a4ff39963449f3b27c73fbbe665eef9dd3c8dcbe8d32bd560422b" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "https://data.noaa.gov/harvest/object/975f2695-a4fc-4308-bbae-2aa29d3750fb" .
+
+<urn:uuid:ee51ce75-950b-4192-91d0-81a40e1deba0> bcube:hasType "theme" ;
+    bcube:hasValue "Land Cover",
+        "Land Cover Analysis",
+        "Remotely Sensed Imagery/Photos" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:f8bd67ca-69d6-47e9-9c94-d9c6f6a6cbfe> a "ISO 19115:2003/19139" ;
+    bcube:dateCreated "2014-07-31T03:27:12.821Z" ;
+    bcube:lastUpdated "2014-07-31T03:27:12.821Z" ;
+    bcube:originatedFrom <urn:uuid:d7fd32ce-0413-4055-8ad9-10c280957382> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:ff1d8a7c-2692-40df-b2a7-f80aaa63819c> .
+
+<urn:uuid:ff1d8a7c-2692-40df-b2a7-f80aaa63819c> bcube:dateCreated "2014-07-31T03:27:12.821Z" ;
+    bcube:hasMetadataRecord <urn:uuid:f8bd67ca-69d6-47e9-9c94-d9c6f6a6cbfe> ;
+    bcube:lastUpdated "2014-07-31T03:27:12.821Z" ;
+    dc:conformsTo <urn:uuid:15836c31-0ea4-4b7b-a1a0-25b122de26d8>,
+        <urn:uuid:42f960b7-189e-4c74-b9d9-3b77f6f08582>,
+        <urn:uuid:b21044bb-13e6-4c7e-957d-966e224e4304>,
+        <urn:uuid:c141a5d1-ed4c-48e9-9bd3-eb9e058c436e>,
+        <urn:uuid:ee51ce75-950b-4192-91d0-81a40e1deba0> ;
+    dc:description "This data set consists of land derived from high resolution imagery and was analyzed according to the Coastal Change Analysis Program (C-CAP) protocol to determine land cover. This data set utilized 1 full Quickbird multispectral scene 1 additional scene was used to replace cloud obscured areas within the base imagery both scenes were processed to detect C-CAP land cover features on Anatahan, CNMI." ;
+    dc:spatial "POLYGON ((145.626121 16.325701,145.626121 16.377571,145.730632 16.377571,145.730632 16.325701,145.626121 16.325701))" ;
+    dcterms:title "C-CAP Land Cover, Commonwealth of the Northern Mariana Islands (CNMI), Anatahan, 2005" ;
+    esip:eastBound "145.730632"^^xsd:float ;
+    esip:northBound "16.377571"^^xsd:float ;
+    esip:southBound "16.325701"^^xsd:float ;
+    esip:westBound "145.626121"^^xsd:float ;
+    owl:a dcat:Dataset .
+

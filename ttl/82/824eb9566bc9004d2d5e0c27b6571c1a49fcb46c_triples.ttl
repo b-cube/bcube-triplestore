@@ -1,0 +1,93 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:1c28601d-3de4-4e4b-986a-9db61e59d41a> bcube:hasType "theme" ;
+    bcube:hasValue "boundaries" ;
+    dc:partOf "ISO 19115 Topic Categories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:1f05e6b9-b4a0-464d-a7ea-04f6f5b04d15> bcube:hasType "theme" ;
+    bcube:hasValue "CDP",
+        "Census Designated Place",
+        "City",
+        "Polygon",
+        "State or equivalent entity",
+        "Town",
+        "Village" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:55d78cba-724e-43bc-879a-f6ff6055ce55> owl:a foaf:Organization ;
+    foaf:name "" .
+
+<urn:uuid:71a82c46-dca5-4334-98ac-7685b2107771> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-05T07:25:47.632Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-05T07:25:47.632Z" ;
+    dc:identifier "urn:sha:32772e10614503482cddfeaf8a9aada4b193f777fc67e08518727460" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://meta.geo.census.gov/data/existing/decennial/GEO/GPMB/TIGERline/fe_2008/placeec/tl_2008_53_placeec_url.shp.xml" .
+
+<urn:uuid:888fac6c-b376-4254-b346-c84a627a740c> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-11-05T07:25:47.632Z" ;
+    bcube:lastUpdated "2015-11-05T07:25:47.632Z" ;
+    bcube:originatedFrom <urn:uuid:71a82c46-dca5-4334-98ac-7685b2107771> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:a7ad0059-0b33-4346-b9ee-677e8eb8c482> .
+
+<urn:uuid:a7ad0059-0b33-4346-b9ee-677e8eb8c482> bcube:dateCreated "2015-11-05T07:25:47.632Z" ;
+    bcube:hasMetadataRecord <urn:uuid:888fac6c-b376-4254-b346-c84a627a740c> ;
+    bcube:lastUpdated "2015-11-05T07:25:47.632Z" ;
+    dc:conformsTo <urn:uuid:1c28601d-3de4-4e4b-986a-9db61e59d41a>,
+        <urn:uuid:1f05e6b9-b4a0-464d-a7ea-04f6f5b04d15>,
+        <urn:uuid:f3acf61b-dc17-4da9-9f1f-4eeabd6e5bef> ;
+    dc:description "The TIGER/Line Shapefiles are an extract of selected geographic and cartographic information from the Census MAF/TIGER database. The Census MAF/TIGER database represents a seamless national file with no overlaps or gaps between parts. However, each TIGER/Line Shapefile is designed to stand alone as an independent data set or the shapefiles can be combined to cover the whole nation." ;
+    dc:spatial "POLYGON ((-124.848974 45.543541,-124.848974 49.002494,-116.91558 49.002494,-116.91558 45.543541,-124.848974 45.543541))" ;
+    dcterms:publisher <urn:uuid:55d78cba-724e-43bc-879a-f6ff6055ce55> ;
+    dcterms:references <urn:uuid:f79b93d7-b8df-4f8f-b9ee-300678148580> ;
+    dcterms:title "TIGER/Line Shapefile, 2008, econ state, Washington, Economic Census Place" ;
+    esip:eastBound "-116.91558"^^xsd:float ;
+    esip:endDate "2008-07-01"^^xsd:date ;
+    esip:northBound "49.002494"^^xsd:float ;
+    esip:southBound "45.543541"^^xsd:float ;
+    esip:startDate "2008-01-01"^^xsd:date ;
+    esip:westBound "-124.848974"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:f3acf61b-dc17-4da9-9f1f-4eeabd6e5bef> bcube:hasType "place" ;
+    bcube:hasValue "53",
+        "State or Equivalent Entity",
+        "U.S.",
+        "United States",
+        "WA",
+        "Washington" ;
+    dc:partOf "FIPS Publication 5-2, FIPS Publication 6-4, FIPS Publication 8-6, FIPS Publication 9-1,FIPS Publication55-4" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:f79b93d7-b8df-4f8f-b9ee-300678148580> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-05T07:25:47.632Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-05T07:25:47.632Z" ;
+    dc:identifier "urn:sha:46e8b3d1d815e51139fe59d9fba1b0fa76e3ffc7a19e2846ba176875" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www2.census.gov/geo/tiger/TIGER2008/53_WASHINGTON/tl_2008_53_placeec.zip" .
+

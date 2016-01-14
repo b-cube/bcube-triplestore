@@ -1,0 +1,130 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:1cc36993-2dfc-4fbb-9296-cd394ec88fb9> bcube:hasType "theme" ;
+    bcube:hasValue "latitude",
+        "longitude",
+        "relative_humidity",
+        "time" ;
+    dc:partOf "CF Standard Name Table v29" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:1f30e816-e2eb-4c2a-b5a2-28ba90bfb2b4> bcube:dateCreated "2015-10-30T14:55:50.003Z" ;
+    bcube:hasMetadataRecord <urn:uuid:3fdce612-1758-4124-9c34-0b3ca83d9f51> ;
+    bcube:lastUpdated "2015-10-30T14:55:50.003Z" ;
+    dc:conformsTo <urn:uuid:1cc36993-2dfc-4fbb-9296-cd394ec88fb9>,
+        <urn:uuid:b09a964d-5bd5-4bb2-bdda-4c5cb3adb75a>,
+        <urn:uuid:b9e059a8-eb85-4f55-8850-c42143f26b1e>,
+        <urn:uuid:c6ed1a48-7a2e-49d2-b1a1-54e5630e87a2>,
+        <urn:uuid:eb064801-336c-4a27-81c8-f14c3a6c3f0e> ;
+    dc:description "This dataset has Relative Humidity data from NOAA NOS Center for Operational Oceanographic Products and Services (CO-OPS). WARNING: These preliminary data have not been subjected to the National Ocean Services (NOS) Quality Control procedures, and do not necessarily meet the criteria and standards of official NOS data. They are released for limited public use with appropriate caution. WARNING: * Queries for data MUST include stationID= and time>=. * Queries USUALLY include time<= (the default end time corresponds to 'now'). * Queries MUST be for less than 30 days worth of data. * The data source isn't completely reliable. If your request returns no data when you think it should: * Try revising the request (e.g., a different time range). * The list of stations offering this data may be incorrect. * Sometimes a station or the entire data service is unavailable. Wait a while and try again." ;
+    dc:identifier "nosCoopsMRH" ;
+    dc:spatial "POLYGON ((-122.3971 18.3353,-122.3971 47.7478,-65.6311 47.7478,-65.6311 18.3353,-122.3971 18.3353))" ;
+    dcterms:references <urn:uuid:57ba719a-8c72-46e6-8e5e-a12a20365e2f>,
+        <urn:uuid:fde60569-fa46-404e-bbda-2ba6c957eebc> ;
+    dcterms:title "NOS CO-OPS Meteorological Data, Relative Humidity, 6-Minute" ;
+    esip:eastBound "-65.6311"^^xsd:float ;
+    esip:northBound "47.7478"^^xsd:float ;
+    esip:southBound "18.3353"^^xsd:float ;
+    esip:westBound "-122.3971"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:3fdce612-1758-4124-9c34-0b3ca83d9f51> a "ISO 19115:2003/19139" ;
+    bcube:dateCreated "2015-10-30T14:55:50.003Z" ;
+    bcube:lastUpdated "2015-10-30T14:55:50.003Z" ;
+    bcube:originatedFrom <urn:uuid:8a4e95cf-058d-4e68-89cb-cf99481421ca> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:1f30e816-e2eb-4c2a-b5a2-28ba90bfb2b4> .
+
+<urn:uuid:57ba719a-8c72-46e6-8e5e-a12a20365e2f> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-10-30T14:55:50.003Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-10-30T14:55:50.003Z" ;
+    dc:identifier "urn:sha:11c674041493d550d6090397190016721375f5978a8399cc0851bc62" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "https://bluehub.jrc.ec.europa.eu/erddap/tabledap/nosCoopsMRH.graph" .
+
+<urn:uuid:8a4e95cf-058d-4e68-89cb-cf99481421ca> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-10-30T14:55:50.003Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-10-30T14:55:50.003Z" ;
+    dc:identifier "urn:sha:0b32fd929224e3810fe340d53ff3618ac162b74e6cff1a62f6f094fe" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "https://bluehub.jrc.ec.europa.eu/erddap/metadata/iso19115/xml/nosCoopsMRH_iso19115.xml" .
+
+<urn:uuid:b09a964d-5bd5-4bb2-bdda-4c5cb3adb75a> bcube:hasType "theme" ;
+    bcube:hasValue "Atmosphere > Atmospheric Water Vapor > Humidity" ;
+    dc:partOf "GCMD Science Keywords" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:b9e059a8-eb85-4f55-8850-c42143f26b1e> bcube:hasType "theme" ;
+    bcube:hasValue "6-minute",
+        "atmosphere",
+        "atmospheric",
+        "co-ops",
+        "collection",
+        "data",
+        "date",
+        "deployment",
+        "designation",
+        "established",
+        "flag",
+        "humidity",
+        "identifier",
+        "limit",
+        "meteorological",
+        "meteorology",
+        "minute",
+        "name",
+        "noaa",
+        "nos",
+        "ops",
+        "platform",
+        "relative",
+        "sensor",
+        "shefID",
+        "state",
+        "station",
+        "vapor",
+        "water" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:c6ed1a48-7a2e-49d2-b1a1-54e5630e87a2> bcube:hasType "project" ;
+    bcube:hasValue "NOAA NOS CO-OPS" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:eb064801-336c-4a27-81c8-f14c3a6c3f0e> bcube:hasValue "geoscientificInformation" ;
+    dc:partOf "IsoTopicCategories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:fde60569-fa46-404e-bbda-2ba6c957eebc> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-10-30T14:55:50.003Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-10-30T14:55:50.003Z" ;
+    dc:identifier "urn:sha:ce3576b9a9f49a676515bf3cfedf9cc7909db6adb01a1badb7df10d1" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "https://bluehub.jrc.ec.europa.eu/erddap/tabledap/nosCoopsMRH.html" .
+

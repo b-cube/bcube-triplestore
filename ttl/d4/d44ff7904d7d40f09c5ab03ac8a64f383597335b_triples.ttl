@@ -1,0 +1,90 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:09b100a5-2b87-4ccf-9913-214b3f32b9c6> owl:a foaf:Organization ;
+    foaf:name "" .
+
+<urn:uuid:2a225ef4-5194-4eab-89f6-21ea3d0eb121> bcube:hasType "place" ;
+    bcube:hasValue "34",
+        "NJ",
+        "New Jersey",
+        "State or Equivalent Entity",
+        "U.S.",
+        "United States" ;
+    dc:partOf "FIPS Publication 5-2, FIPS Publication 6-4, FIPS Publication 8-6, FIPS Publication 9-1,FIPS Publication55-4" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:3574456f-64db-4a08-8342-e6ca0b29ef8c> bcube:hasType "theme" ;
+    bcube:hasValue "boundaries" ;
+    dc:partOf "ISO 19115 Topic Categories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:35fb3015-bc14-488f-9af5-f380ca5f7bc0> bcube:hasType "theme" ;
+    bcube:hasValue "Elementary School District",
+        "Polygon",
+        "School District",
+        "State or equivalent entity" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:3eba490d-fd26-4b89-b15d-33f89748358d> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-11-02T11:27:18.917Z" ;
+    bcube:lastUpdated "2015-11-02T11:27:18.917Z" ;
+    bcube:originatedFrom <urn:uuid:ea85cf91-b94d-4e7f-a762-d73fb2aafec9> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:b210692a-9a21-4d78-958a-87a787293c1c> .
+
+<urn:uuid:44e52646-b770-4578-9b1e-f61470564cfc> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-02T11:27:18.917Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-02T11:27:18.917Z" ;
+    dc:identifier "urn:sha:8547a2a2855d1c40210fe54d6047f807be8ca189e60f7e335ec9013f" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www2.census.gov/geo/tiger/TIGER2008/34_NEW_JERSEY/tl_2008_34_elsd.zip" .
+
+<urn:uuid:b210692a-9a21-4d78-958a-87a787293c1c> bcube:dateCreated "2015-11-02T11:27:18.917Z" ;
+    bcube:hasMetadataRecord <urn:uuid:3eba490d-fd26-4b89-b15d-33f89748358d> ;
+    bcube:lastUpdated "2015-11-02T11:27:18.917Z" ;
+    dc:conformsTo <urn:uuid:2a225ef4-5194-4eab-89f6-21ea3d0eb121>,
+        <urn:uuid:3574456f-64db-4a08-8342-e6ca0b29ef8c>,
+        <urn:uuid:35fb3015-bc14-488f-9af5-f380ca5f7bc0> ;
+    dc:description "The TIGER/Line Shapefiles are an extract of selected geographic and cartographic information from the Census MAF/TIGER database. The Census MAF/TIGER database represents a seamless national file with no overlaps or gaps between parts. However, each TIGER/Line Shapefile is designed to stand alone as an independent data set or the shapefiles can be combined to cover the whole nation." ;
+    dc:spatial "POLYGON ((-75.563586 38.788657,-75.563586 41.357423,-73.88506 41.357423,-73.88506 38.788657,-75.563586 38.788657))" ;
+    dcterms:publisher <urn:uuid:09b100a5-2b87-4ccf-9913-214b3f32b9c6> ;
+    dcterms:references <urn:uuid:44e52646-b770-4578-9b1e-f61470564cfc> ;
+    dcterms:title "TIGER/Line Shapefile, 2008, state, New Jersey, Elementary School District" ;
+    esip:eastBound "-73.88506"^^xsd:float ;
+    esip:endDate "2008-07-01"^^xsd:date ;
+    esip:northBound "41.357423"^^xsd:float ;
+    esip:southBound "38.788657"^^xsd:float ;
+    esip:startDate "2008-01-01"^^xsd:date ;
+    esip:westBound "-75.563586"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:ea85cf91-b94d-4e7f-a762-d73fb2aafec9> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-02T11:27:18.917Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-02T11:27:18.917Z" ;
+    dc:identifier "urn:sha:152e6041e8c5e351f3b20267ba9e340fce488115b506e0f57c4b75b1" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://meta.geo.census.gov/data/existing/decennial/GEO/GPMB/TIGERline/fe_2008/elsd/tl_2008_34_elsd_url.shp.xml" .
+

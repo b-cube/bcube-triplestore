@@ -1,0 +1,66 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:3496d05d-0fef-43d6-9f55-d453cde3d027> bcube:hasType "theme" ;
+    bcube:hasValue "SSURGO",
+        "Soil",
+        "Soil Survey Geographic",
+        "soil survey",
+        "soils" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:6a3695da-c095-48d0-be8e-9714acdd4f67> bcube:hasValue "geoscientificInformation" ;
+    dc:partOf "IsoTopicCategories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:bb238ee9-6365-4b3a-9493-01c0be8bee38> a "ISO 19115:2003/19139" ;
+    bcube:dateCreated "2015-11-03T00:33:18.999Z" ;
+    bcube:lastUpdated "2015-11-03T00:33:18.999Z" ;
+    bcube:originatedFrom <urn:uuid:e2554ee2-8eab-4ac1-95c5-832ce08a948d> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:fbc1c8ac-4cca-486a-ab2b-ea925d1061c6> .
+
+<urn:uuid:d96f26dd-df72-49ed-aef8-80e62f857b0f> bcube:hasType "place" ;
+    bcube:hasValue "California" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:e2554ee2-8eab-4ac1-95c5-832ce08a948d> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-03T00:33:18.999Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-03T00:33:18.999Z" ;
+    dc:identifier "urn:sha:cac6e9885b471a9993a20757143ed22129db582ebef9ba240318ad04" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://repository.stategeothermaldata.org/resources/metadata/TestNRRC/WRP/1d3c35a3-26a3-4f00-9ae0-f8467db2e356.xml" .
+
+<urn:uuid:fbc1c8ac-4cca-486a-ab2b-ea925d1061c6> bcube:dateCreated "2015-11-03T00:33:18.999Z" ;
+    bcube:hasMetadataRecord <urn:uuid:bb238ee9-6365-4b3a-9493-01c0be8bee38> ;
+    bcube:lastUpdated "2015-11-03T00:33:18.999Z" ;
+    dc:conformsTo <urn:uuid:3496d05d-0fef-43d6-9f55-d453cde3d027>,
+        <urn:uuid:6a3695da-c095-48d0-be8e-9714acdd4f67>,
+        <urn:uuid:d96f26dd-df72-49ed-aef8-80e62f857b0f> ;
+    dc:description "This data set has certified soil survey attributes corresponding to the National Soil Information System (NASIS) database that represents a portion of soil survey geospatial data for progressive archiving and distribution. This data set is a digital soil survey and generally is the most detailed level of soil geographic data developed by the National Cooperative Soil Survey. The information was prepared by digitizing maps, by compiling information onto a plan metric correct base and digitizing, or by revising digitized maps using remotely sensed and other information. This data set consists of georeferenced digital map data and computerized attribute data. The map data are in a soil survey area extent format and include a detailed, field verified inventory of soils and miscellaneous areas that normally occur in a repeatable pattern on the landscape and that can be cartographically shown at the scale mapped. A special soil features layer (point and line features) is optional. This layer displays the location of features too small to delineate at the mapping scale, but they are large enough and contrasting enough to significantly influence use and management. The soil map units are linked to attributes in the National Soil Information System relational database, which gives the proportionate extent of the component soils and their properties." ;
+    dc:spatial "POLYGON ((-124.5656 32.5343,-124.5656 42.0,-114.1312 42.0,-114.1312 32.5343,-124.5656 32.5343))" ;
+    dcterms:title "Soil - Mojave Desert Area CA 698" ;
+    esip:eastBound "-114.1312"^^xsd:float ;
+    esip:endDate "1900-01-01"^^xsd:date ;
+    esip:northBound "42.0"^^xsd:float ;
+    esip:southBound "32.5343"^^xsd:float ;
+    esip:startDate "1900-01-01"^^xsd:date ;
+    esip:westBound "-124.5656"^^xsd:float ;
+    owl:a dcat:Dataset .
+

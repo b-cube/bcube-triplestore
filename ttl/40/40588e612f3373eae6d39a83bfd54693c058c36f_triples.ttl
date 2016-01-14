@@ -1,0 +1,93 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:3dc05315-733c-40f1-b6f9-b56dc8c5000a> bcube:hasType "theme" ;
+    bcube:hasValue "CDP",
+        "Census Designated Place",
+        "City",
+        "Polygon",
+        "State or equivalent entity",
+        "Town",
+        "Village" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:479d8e36-892e-476b-ad87-fc5a840c33e5> bcube:dateCreated "2015-11-07T09:52:21.596Z" ;
+    bcube:hasMetadataRecord <urn:uuid:ea78b38b-b6be-4580-b5d0-a3393934f663> ;
+    bcube:lastUpdated "2015-11-07T09:52:21.596Z" ;
+    dc:conformsTo <urn:uuid:3dc05315-733c-40f1-b6f9-b56dc8c5000a>,
+        <urn:uuid:9b41d48c-456e-4aed-b01f-b2ed7f6e6235>,
+        <urn:uuid:fa54b52b-5bb5-4f2d-a829-b958762578a2> ;
+    dc:description "The TIGER/Line Shapefiles are an extract of selected geographic and cartographic information from the Census MAF/TIGER database. The Census MAF/TIGER database represents a seamless national file with no overlaps or gaps between parts. However, each TIGER/Line Shapefile is designed to stand alone as an independent data set or the shapefiles can be combined to cover the whole nation." ;
+    dc:spatial "POLYGON ((-80.519895 39.719799,-80.519895 42.516072,-74.689502 42.516072,-74.689502 39.719799,-80.519895 39.719799))" ;
+    dcterms:publisher <urn:uuid:95b36755-4f92-4466-bb33-37ea3c93cf2f> ;
+    dcterms:references <urn:uuid:79823990-651b-4648-a0af-3c52f3c18843> ;
+    dcterms:title "TIGER/Line Shapefile, 2007, 2000 state, Pennsylvania, Place" ;
+    esip:eastBound "-74.689502"^^xsd:float ;
+    esip:endDate "2007-07-01"^^xsd:date ;
+    esip:northBound "42.516072"^^xsd:float ;
+    esip:southBound "39.719799"^^xsd:float ;
+    esip:startDate "2007-01-01"^^xsd:date ;
+    esip:westBound "-80.519895"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:79823990-651b-4648-a0af-3c52f3c18843> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-07T09:52:21.596Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-07T09:52:21.596Z" ;
+    dc:identifier "urn:sha:1bcc4b46f38593d5800b49590b49209f70d23f114db06dacbc3d643b" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www2.census.gov/geo/tiger/TIGER2007FE/42_PENNSYLVANIA/fe_2007_42_place00.zip" .
+
+<urn:uuid:95b36755-4f92-4466-bb33-37ea3c93cf2f> owl:a foaf:Organization ;
+    foaf:name "" .
+
+<urn:uuid:9b41d48c-456e-4aed-b01f-b2ed7f6e6235> bcube:hasType "place" ;
+    bcube:hasValue "42",
+        "PA",
+        "Pennsylvania",
+        "State or Equivalent Entity",
+        "U.S.",
+        "United States" ;
+    dc:partOf "FIPS Publication 5-2, FIPS Publication 6-4, FIPS Publication 8-6, FIPS Publication 9-1" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:bd9eb3d2-f163-4257-8553-935ec0623068> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-07T09:52:21.596Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-07T09:52:21.596Z" ;
+    dc:identifier "urn:sha:770bcf8142580fbba2e773c59d6a2f27e880ab76a28850cdb7110e04" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://meta.geo.census.gov/data/existing/decennial/GEO/GPMB/TIGERline/fe_2007/place00/fe_2007_42_place00_url.shp.xml" .
+
+<urn:uuid:ea78b38b-b6be-4580-b5d0-a3393934f663> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-11-07T09:52:21.596Z" ;
+    bcube:lastUpdated "2015-11-07T09:52:21.596Z" ;
+    bcube:originatedFrom <urn:uuid:bd9eb3d2-f163-4257-8553-935ec0623068> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:479d8e36-892e-476b-ad87-fc5a840c33e5> .
+
+<urn:uuid:fa54b52b-5bb5-4f2d-a829-b958762578a2> bcube:hasType "theme" ;
+    bcube:hasValue "boundaries" ;
+    dc:partOf "ISO 19115 Topic Categories" ;
+    owl:a bcube:thesaurusSubset .
+

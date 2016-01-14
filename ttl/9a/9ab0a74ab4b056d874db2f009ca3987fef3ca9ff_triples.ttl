@@ -1,0 +1,89 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:08510cf0-ff24-449a-aafa-9f0f202bc5e0> owl:a foaf:Organization ;
+    foaf:name "" .
+
+<urn:uuid:1413e596-2ecf-4861-b356-69dfa8dbc855> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-10-29T23:32:25.667Z" ;
+    bcube:lastUpdated "2015-10-29T23:32:25.667Z" ;
+    bcube:originatedFrom <urn:uuid:99edb060-0b9b-4ad1-a403-059ee52475c6> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:33414061-ba28-4fd6-bf85-35a42b3ba327> .
+
+<urn:uuid:33414061-ba28-4fd6-bf85-35a42b3ba327> bcube:dateCreated "2015-10-29T23:32:25.667Z" ;
+    bcube:hasMetadataRecord <urn:uuid:1413e596-2ecf-4861-b356-69dfa8dbc855> ;
+    bcube:lastUpdated "2015-10-29T23:32:25.667Z" ;
+    dc:conformsTo <urn:uuid:4dadf27a-7a97-4012-96f5-577850df5845>,
+        <urn:uuid:ad8df86c-4714-48a2-8440-acfe128a5bdd>,
+        <urn:uuid:dbd38c32-dbb5-4447-8556-f0b10665fa1e> ;
+    dc:description "The TIGER/Line Files are shapefiles and related database files (.dbf) that are an extract of selected geographic and cartographic information from the U.S. Census Bureau's Master Address File / Topologically Integrated Geographic Encoding and Referencing (MAF/TIGER) Database (MTDB). The MTDB represents a seamless national file with no overlaps or gaps between parts, however, each TIGER/Line File is designed to stand alone as an independent data set, or they can be combined to cover the entire nation. Metropolitan Divisions subdivide a Metropolitan Statistical Area containing a single core urban area that has a population of at least 2.5 million to form smaller groupings of counties or equivalent entities. Not all Metropolitan Statistical Areas with urban areas of this size will contain Metropolitan Divisions. Metropolitan Division are defined by the Office of Management and Budget (OMB) and consist of one or more main counties or equivalent entities that represent an employment center or centers, plus adjacent counties associated with the main county or counties through commuting ties. Because Metropolitan Divisions represent subdivisions of larger Metropolitan Statistical Areas, it is not appropriate to rank or compare Metropolitan Divisions with Metropolitan and Micropolitan Statistical Areas. The Metropolitan Divisions for the 2010 Census are those defined by OMB and published in December 2009." ;
+    dc:spatial "POLYGON ((-72.557185 42.696985,-72.557185 45.305476,-70.575094 45.305476,-70.575094 42.696985,-72.557185 42.696985))" ;
+    dcterms:publisher <urn:uuid:08510cf0-ff24-449a-aafa-9f0f202bc5e0> ;
+    dcterms:references <urn:uuid:f82a49cc-2ad3-41cc-a1db-1763cb1021a8> ;
+    dcterms:title "TIGER/Line Shapefile, 2010, state, New Hampshire, 2010 Census Metropolitan Division State-based" ;
+    esip:eastBound "-70.575094"^^xsd:float ;
+    esip:endDate "2010-07-01"^^xsd:date ;
+    esip:northBound "45.305476"^^xsd:float ;
+    esip:southBound "42.696985"^^xsd:float ;
+    esip:startDate "2010-01-01"^^xsd:date ;
+    esip:westBound "-72.557185"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:4dadf27a-7a97-4012-96f5-577850df5845> bcube:hasType "theme" ;
+    bcube:hasValue "boundaries" ;
+    dc:partOf "ISO 19115 Topic Categories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:99edb060-0b9b-4ad1-a403-059ee52475c6> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-10-29T23:32:25.667Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-10-29T23:32:25.667Z" ;
+    dc:identifier "urn:sha:72d21fc686e9be59d5a824d9b285a6b4c8e62bb5ce8768f97ee90a7c" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://meta.geo.census.gov/data/existing/decennial/GEO/GPMB/TIGERline/fe_2010/METDIV/tl_2010_33_metdiv10_url.shp.xml" .
+
+<urn:uuid:ad8df86c-4714-48a2-8440-acfe128a5bdd> bcube:hasType "theme" ;
+    bcube:hasValue "Metropolitan Division",
+        "Polygon",
+        "State or equivalent entity" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:dbd38c32-dbb5-4447-8556-f0b10665fa1e> bcube:hasType "place" ;
+    bcube:hasValue "33",
+        "NH",
+        "New Hampshire",
+        "State or Equivalent Entity",
+        "U.S.",
+        "United States" ;
+    dc:partOf "INCITS.38-200x (R2004),INCITS.31-200x (R2007),INCITS.454-200x,INCITS 455-200x,INCITS 446-2008" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:f82a49cc-2ad3-41cc-a1db-1763cb1021a8> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-10-29T23:32:25.667Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-10-29T23:32:25.667Z" ;
+    dc:identifier "urn:sha:ef23c356131cf86431a08662e81db8c9b7d615dd54dbdb6c009442d9" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www2.census.gov/geo/tiger/TIGER2010/METDIV/2010/tl_2010_33_metdiv10.zip" .
+

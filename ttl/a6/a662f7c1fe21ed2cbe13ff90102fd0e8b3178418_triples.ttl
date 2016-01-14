@@ -1,0 +1,69 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:28bec284-051b-4e27-bada-be0e433d082a> bcube:hasType "temporal" ;
+    bcube:hasValue "2012",
+        "2013",
+        "2014",
+        "2015" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:307a822b-30f1-4afa-9c83-f033ebeb4d33> a "ISO 19115:2003/19139" ;
+    bcube:dateCreated "2015-10-30T11:08:46.959Z" ;
+    bcube:lastUpdated "2015-10-30T11:08:46.959Z" ;
+    bcube:originatedFrom <urn:uuid:b366f9d5-c6a8-410b-9078-3e6db5da97a2> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:6d0739a4-8c4f-4c24-9029-11adff4291f5> .
+
+<urn:uuid:6d0739a4-8c4f-4c24-9029-11adff4291f5> bcube:dateCreated "2015-10-30T11:08:46.959Z" ;
+    bcube:hasMetadataRecord <urn:uuid:307a822b-30f1-4afa-9c83-f033ebeb4d33> ;
+    bcube:lastUpdated "2015-10-30T11:08:46.959Z" ;
+    dc:conformsTo <urn:uuid:28bec284-051b-4e27-bada-be0e433d082a>,
+        <urn:uuid:6dcae08a-f7a9-493c-a0df-c07111d9a423>,
+        <urn:uuid:d2d855ef-8c52-4b88-a931-78bd1fbccb92> ;
+    dc:description "The data included in the GIS Traffic Stations Version database have been collected by the FHWA from the State DOTs (NTAD 2015). Location referencing information was derived from State Offices of Transportation. The attributes on the point elements of the database are used by FHWA for its Travel Monitoring and Analysis System and by State DOTs. The attributes for these databases have been intentionally limited to location referencing attributes since the core station description attribute data are contained within the Station Description Tables (SDT). There is a separate Station Description Table (SDT) for each of the station types. The attributes in the Station Description Table correspond with the Station Description Record found in Chapter 6 of the 2001 Traffic Monitoring Guide. The SDT contains the most recent stations available for each state and station type. This table was derived from files provided UTCTR by FHWA. The Station Description Table can be linked to the station shapefile via the STNNKEY field." ;
+    dc:spatial "POLYGON ((-161.770413 19.42348,-161.770413 64.960134,-67.39025 64.960134,-67.39025 19.42348,-161.770413 19.42348))" ;
+    dcterms:title "Travel Monitoring Analysis System (TMAS) (National)" ;
+    esip:eastBound "-67.39025"^^xsd:float ;
+    esip:northBound "64.960134"^^xsd:float ;
+    esip:southBound "19.42348"^^xsd:float ;
+    esip:westBound "-161.770413"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:6dcae08a-f7a9-493c-a0df-c07111d9a423> bcube:hasType "theme" ;
+    bcube:hasValue "transportation" ;
+    dc:partOf "none" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:b366f9d5-c6a8-410b-9078-3e6db5da97a2> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-10-30T11:08:46.959Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-10-30T11:08:46.959Z" ;
+    dc:identifier "urn:sha:3d7697f70c663ec896a6818fd8c7ee8242bd15dcda9abc45779d5807" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://catalog.data.gov/harvest/object/438133bc-8f68-49af-b73e-2c93116c4317" .
+
+<urn:uuid:d2d855ef-8c52-4b88-a931-78bd1fbccb92> bcube:hasType "theme" ;
+    bcube:hasValue "National",
+        "Stations",
+        "TMAS",
+        "Vehicle Monitoring" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+

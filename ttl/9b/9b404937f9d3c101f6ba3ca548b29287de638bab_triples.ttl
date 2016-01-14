@@ -1,0 +1,79 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:0a3efaee-2a54-489d-9a02-2afca074faa0> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-08-05T11:35:55.022Z" ;
+    bcube:lastUpdated "2015-08-05T11:35:55.022Z" ;
+    bcube:originatedFrom <urn:uuid:7890b195-c15d-48d5-9e83-db1b409640b1> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:701a5ab9-9210-490e-837b-cce59dbe95b3> .
+
+<urn:uuid:59497328-1b83-4a3e-bf93-6f15af8d415c> bcube:hasType "place" ;
+    bcube:hasValue "Coeur d' Alene quadrangle",
+        "Idaho",
+        "Montana",
+        "USA" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:701a5ab9-9210-490e-837b-cce59dbe95b3> bcube:dateCreated "2015-08-05T11:35:55.022Z" ;
+    bcube:hasMetadataRecord <urn:uuid:0a3efaee-2a54-489d-9a02-2afca074faa0> ;
+    bcube:lastUpdated "2015-08-05T11:35:55.022Z" ;
+    dc:conformsTo <urn:uuid:59497328-1b83-4a3e-bf93-6f15af8d415c>,
+        <urn:uuid:fd863a0a-2920-4d32-a038-892d4bf08b0b> ;
+    dc:description "This rectified map image was created for the purpose of directly comparing an image of the original geologic map with other geospatial information. The rectified image includes the map and coordinate labels; titles, text, explanations, cross sections, and collar information were cropped." ;
+    dc:spatial "POLYGON ((-117.034173 47.489396,-117.034173 48.012857,-115.960822 48.012857,-115.960822 47.489396,-117.034173 47.489396))" ;
+    dcterms:publisher <urn:uuid:c07abb92-672d-42b8-9dd0-f7590ca72e24> ;
+    dcterms:references <urn:uuid:ae4c9607-435c-4017-b509-0fa3297aef79> ;
+    dcterms:title "Rectified images of selected geologic maps of the northern Rockies area, Idaho, Montana, Washington, and Wyoming" ;
+    esip:eastBound "-115.960822"^^xsd:float ;
+    esip:northBound "48.012857"^^xsd:float ;
+    esip:southBound "47.489396"^^xsd:float ;
+    esip:startDate "2000-01-01"^^xsd:date ;
+    esip:westBound "-117.034173"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:7890b195-c15d-48d5-9e83-db1b409640b1> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-05T11:35:55.022Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-05T11:35:55.022Z" ;
+    dc:identifier "urn:sha:27c77e6ea470101bc7ec7c9dbaa4c9b831ccf30ec71272f8132ac83e" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://pubs.usgs.gov/ds/106/GEOREFERENCED/CDAlene_rect.sid.xml" .
+
+<urn:uuid:ae4c9607-435c-4017-b509-0fa3297aef79> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-05T11:35:55.022Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-05T11:35:55.022Z" ;
+    dc:identifier "urn:sha:d14a028c2a3a2bc9476102bb288234c415a2b01f828ea62ac5b3e42f" ;
+    owl:a bcube:Url .
+
+<urn:uuid:c07abb92-672d-42b8-9dd0-f7590ca72e24> owl:a foaf:Organization ;
+    foaf:name "U.S. Geological Survey" .
+
+<urn:uuid:fd863a0a-2920-4d32-a038-892d4bf08b0b> bcube:hasType "theme" ;
+    bcube:hasValue "digital image",
+        "geologic map",
+        "georeferenced image",
+        "rectified raster image" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+

@@ -1,0 +1,95 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:059998d4-a65a-49f8-944c-7e0a5074a2ca> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-10-29T16:12:55Z" ;
+    bcube:lastUpdated "2015-10-29T16:12:55Z" ;
+    bcube:originatedFrom <urn:uuid:cf587701-0f58-4fa0-babb-48227d7d1e40> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:c09657cc-0cfe-46f7-89aa-e193a3c3b8a7> .
+
+<urn:uuid:59295e26-3f88-48ba-b5c0-194695463aa6> bcube:hasType "theme" ;
+    bcube:hasValue "Backscatter",
+        "Bathymetry",
+        "CMGP",
+        "Ecosystem",
+        "Fisheries",
+        "Geology",
+        "Intensity",
+        "Multibeam",
+        "Ocean Floor Topography",
+        "Pacific Coastal and Marine Science Center",
+        "Seafloor Character",
+        "U.S. Geological Survey",
+        "USGS" ;
+    dc:partOf "General" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:7bb89358-f56f-411a-83e5-4d9b3234eebc> bcube:hasType "theme" ;
+    bcube:hasValue "Oceans > Bathymetry/SeafloorTopography > Bathymetry",
+        "Oceans > Bathymetry/SeafloorTopography > Seafloor Topography" ;
+    dc:partOf "Global Change Master Directory (GCMD)" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:b6d84ba9-e0b1-4108-b77f-aebf3024ff2b> bcube:hasType "place" ;
+    bcube:hasValue "Pacific Ocean",
+        "Pacifica",
+        "Rockaway Beach",
+        "San Mateo County",
+        "State of California" ;
+    dc:partOf "Geographic Names Information System (GNIS)" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:c09657cc-0cfe-46f7-89aa-e193a3c3b8a7> bcube:dateCreated "2015-10-29T16:12:55Z" ;
+    bcube:hasMetadataRecord <urn:uuid:059998d4-a65a-49f8-944c-7e0a5074a2ca> ;
+    bcube:lastUpdated "2015-10-29T16:12:55Z" ;
+    dc:conformsTo <urn:uuid:59295e26-3f88-48ba-b5c0-194695463aa6>,
+        <urn:uuid:7bb89358-f56f-411a-83e5-4d9b3234eebc>,
+        <urn:uuid:b6d84ba9-e0b1-4108-b77f-aebf3024ff2b>,
+        <urn:uuid:d666b435-c1a6-4b8e-a141-4fe14fbecf9e> ;
+    dc:description "This part of DS 781 presents data for the bathymetric contours for several seafloor maps of the Offshore of Pacifica map area, California. The vector data file is included in \"Contours_OffshorePacifica.zip,\" which is accessible from http://pubs.usgs.gov/ds/781/OffshorePacifica/data_catalog_OffshorePacifica.html. 10-m interval contours of the Offshore of Pacifica map area, California, were generated from bathymetry data collected by Fugro Pelagos and by California State University, Monterey Bay, Seafloor Mapping Lab (CSUMB). Mapping was completed between 2005 and 2007, using a combination of 400-kHz Reson 7125 and 244-kHz Reson 8101 multibeam echosounders. These mapping missions combined to collect bathymetry from about the 10-m isobath to beyond the 3-nautical-mile limit of California's State Waters. Bathymetric contours at 10-m intervals were generated from the merged 2-m bathymetric surface. The most continuous contour segments were preserved while smaller segments and isolated island polygons were excluded from the final output. Contours were smoothed via a polynomial approximation with exponential kernel (PAEK) algorithm using a tolerance value of 60 m. The contours were then clipped to the boundary of the map area. These data are not intended for navigational purposes." ;
+    dc:spatial "POLYGON ((-122.65 37.54,-122.65 37.7,-122.4 37.7,-122.4 37.54,-122.65 37.54))" ;
+    dcterms:publisher <urn:uuid:c5292b5d-d75a-4c5d-ad3b-cdb6ad3f0079> ;
+    dcterms:title "Contours--Offshore of Pacifica, California" ;
+    esip:eastBound "-122.4"^^xsd:float ;
+    esip:endDate "2007-01-01"^^xsd:date ;
+    esip:northBound "37.7"^^xsd:float ;
+    esip:southBound "37.54"^^xsd:float ;
+    esip:startDate "2005-01-01"^^xsd:date ;
+    esip:westBound "-122.65"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:c5292b5d-d75a-4c5d-ad3b-cdb6ad3f0079> owl:a foaf:Organization ;
+    foaf:name "" .
+
+<urn:uuid:cf587701-0f58-4fa0-babb-48227d7d1e40> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-10-29T16:12:55Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-10-29T16:12:55Z" ;
+    dc:identifier "urn:sha:5fade69ff9b0e6e1e2f0fe0a5711ec691d241be931cf0b084d8d755f" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://pubs.usgs.gov/ds/781/OffshorePacifica/metadata/Contours_OffshorePacifica_metadata.xml" .
+
+<urn:uuid:d666b435-c1a6-4b8e-a141-4fe14fbecf9e> bcube:hasType "theme" ;
+    bcube:hasValue "environment",
+        "geoscientificInformation",
+        "imageryBaseMapsEarthCover",
+        "oceans" ;
+    dc:partOf "ISO 19115 Topic Category" ;
+    owl:a bcube:thesaurusSubset .
+

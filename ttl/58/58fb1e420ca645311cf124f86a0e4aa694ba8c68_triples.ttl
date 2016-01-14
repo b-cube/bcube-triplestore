@@ -1,0 +1,104 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:01acd78a-8fc2-49c8-a9b0-7210a8630f43> owl:a foaf:Organization ;
+    foaf:name "Federal Emergency Management Agency" .
+
+<urn:uuid:11115fb9-6bbc-4b9e-97c2-8cfda196258c> bcube:hasType "theme" ;
+    bcube:hasValue "elevation",
+        "location",
+        "structure",
+        "transportation" ;
+    dc:partOf "ISO 19115 Topic Category" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:11e4f752-1814-4464-9241-a3465a3b2f0e> bcube:hasType "place" ;
+    bcube:hasValue "COMMUNITY City of Woodland",
+        "COMMUNITY Cowlitz County, Unincorporated and Incorporated Areas",
+        "COUNTY COWLITZ",
+        "COUNTY-FIPS 015C",
+        "FEMA-CID 530035",
+        "FEMA-CID 53015C",
+        "HYDROLOGIC UNIT 17080002",
+        "REGION 10",
+        "STATE WA" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:1b9a2132-8493-46ed-a047-690c66fd37ad> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-07-31T15:13:44.283Z" ;
+    bcube:lastUpdated "2015-07-31T15:13:44.283Z" ;
+    bcube:originatedFrom <urn:uuid:c5bd23ca-e983-41f3-a089-2cb4c4b19eda> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:9f844e5a-c3c2-46ff-82dd-914ca7d849d2> .
+
+<urn:uuid:3cb1b6cd-493e-403b-8dc1-f26c0f995d3e> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-07-31T15:13:44.283Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-07-31T15:13:44.283Z" ;
+    dc:identifier "urn:sha:37c915397238031daced09ae0e2dd3bf54e84a6477f749c2cc9dcbdf" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://hazards.fema.gov" .
+
+<urn:uuid:9590af49-4c82-45f4-b9b6-a61237eeb3a8> bcube:hasType "theme" ;
+    bcube:hasValue "Bridges",
+        "Creeks",
+        "Cross Section Lines",
+        "Cross Sections",
+        "Culverts",
+        "DFIRM",
+        "Dams",
+        "Digital Flood Insurance Rate Map",
+        "Flood Hazard Data",
+        "Levees",
+        "Streams",
+        "Survey",
+        "Water Body" ;
+    dc:partOf "FEMA NFIP Topic Category" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:9f844e5a-c3c2-46ff-82dd-914ca7d849d2> bcube:dateCreated "2015-07-31T15:13:44.283Z" ;
+    bcube:hasMetadataRecord <urn:uuid:1b9a2132-8493-46ed-a047-690c66fd37ad> ;
+    bcube:lastUpdated "2015-07-31T15:13:44.283Z" ;
+    dc:conformsTo <urn:uuid:11115fb9-6bbc-4b9e-97c2-8cfda196258c>,
+        <urn:uuid:11e4f752-1814-4464-9241-a3465a3b2f0e>,
+        <urn:uuid:9590af49-4c82-45f4-b9b6-a61237eeb3a8> ;
+    dc:description "Survey data includes spatial datasets and data tables necessary to digitally represent data collected in the survey phase of the study. (Source: FEMA Guidelines and Specs, Appendix M)" ;
+    dc:spatial "POLYGON ((-123.033995 45.850177,-123.033995 46.242691,-122.716474 46.242691,-122.716474 45.850177,-123.033995 45.850177))" ;
+    dcterms:publisher <urn:uuid:01acd78a-8fc2-49c8-a9b0-7210a8630f43> ;
+    dcterms:references <urn:uuid:3cb1b6cd-493e-403b-8dc1-f26c0f995d3e> ;
+    dcterms:title "DCS Survey Submission for City of Woodland PAL, Cowlitz County, WA" ;
+    esip:eastBound "-122.716474"^^xsd:float ;
+    esip:northBound "46.242691"^^xsd:float ;
+    esip:southBound "45.850177"^^xsd:float ;
+    esip:startDate "2011-05-23"^^xsd:date ;
+    esip:westBound "-123.033995"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:c5bd23ca-e983-41f3-a089-2cb4c4b19eda> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-07-31T15:13:44.283Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-07-31T15:13:44.283Z" ;
+    dc:identifier "urn:sha:86aa43356bacc8d0292be4874ea6dfa4e7f199572f55ac520b09a99a" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "https://catalog.data.gov/harvest/object/c0227025-9490-4099-ab54-19d626fe7fd0/original" .
+

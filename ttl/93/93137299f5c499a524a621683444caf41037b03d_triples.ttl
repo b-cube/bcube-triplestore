@@ -1,0 +1,93 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:15db9335-e25f-4e8c-89dd-58e97baf9a17> bcube:hasType "place" ;
+    bcube:hasValue "Massachusetts",
+        "Massachusetts Bay, MA",
+        "United States" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:15e5fb19-1ad5-410b-b0df-01aa8aeb1d32> bcube:hasType "theme" ;
+    bcube:hasValue "DEM",
+        "altitude",
+        "bathymetry",
+        "depth",
+        "digital bathymetric model",
+        "digital elevation model",
+        "digital terrain model",
+        "elevation",
+        "estuarine bathymetry",
+        "estuary",
+        "height",
+        "hydrographic survey",
+        "marine navigation" ;
+    dc:partOf "none" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:2ceeb42c-4098-4b1b-87a9-7dc622d18b3b> a "ISO 19115:2003/19139" ;
+    bcube:dateCreated "2015-08-07T03:09:52.776Z" ;
+    bcube:lastUpdated "2015-08-07T03:09:52.776Z" ;
+    bcube:originatedFrom <urn:uuid:4d7aad08-9c7a-445c-8f9b-71ad35d44631> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:dcc1be8c-7f6b-4b39-803f-0b4ae28f97ef> .
+
+<urn:uuid:4d7aad08-9c7a-445c-8f9b-71ad35d44631> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-07T03:09:52.776Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-07T03:09:52.776Z" ;
+    dc:identifier "urn:sha:3f26943dda2c2593e8f7f16d6a416d2d837afb22a64578d8bff30dec" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://catalog.data.gov/harvest/object/27fce48c-9f86-4fe3-a6a8-960fa217f60b" .
+
+<urn:uuid:50148411-a4a2-49c5-a28b-8544320a84f5> bcube:hasValue "ImageryBaseMapsEarthCover",
+        "elevation",
+        "oceans" ;
+    dc:partOf "IsoTopicCategories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:9fa62c09-54e4-48cb-ba64-549419ed69fc> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-07T03:09:52.776Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-07T03:09:52.776Z" ;
+    dc:identifier "urn:sha:1c008adbf18433a5a6db575f483d5c98917b23d5287782519276683b" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://estuarinebathymetry.noaa.gov/finddata.html" .
+
+<urn:uuid:dcc1be8c-7f6b-4b39-803f-0b4ae28f97ef> bcube:dateCreated "2015-08-07T03:09:52.776Z" ;
+    bcube:hasMetadataRecord <urn:uuid:2ceeb42c-4098-4b1b-87a9-7dc622d18b3b> ;
+    bcube:lastUpdated "2015-08-07T03:09:52.776Z" ;
+    dc:conformsTo <urn:uuid:15db9335-e25f-4e8c-89dd-58e97baf9a17>,
+        <urn:uuid:15e5fb19-1ad5-410b-b0df-01aa8aeb1d32>,
+        <urn:uuid:50148411-a4a2-49c5-a28b-8544320a84f5> ;
+    dc:description "Bathymetry for Massachusetts Bay was derived from thirty-eight surveyscontaining 297,628 soundings. Two older, less accurate, overlapping surveyswere omitted before tinning. The average separation between soundings was 57meters. The thirty-eight surveys used dated from 1940 to 1970. The total rangeof soundings was 3.0 meters to -71.0 meters at mean low water. Mean highwater values between 2.7 and 2.9 meters were assigned to the shoreline.Fifty-six points, predominantly from two surveys, were found that were notconsistent with the surrounding data. These were removed prior to tinning.DEM grid values outside the shoreline (on land) were assigned nullvalues (-32676).Massachusetts Bay has fifteen 7.5 minute DEMs and two one degreeDEMs. The 1 degree DEMs were generated from the higher resolution 7.5minute DEMs which covered the estuary. A Digital Elevation Model(DEM) contains a series of elevations ordered from south to northwith the order of the columns from west to east. The DEM isformatted as one ASCII header record (A- record), followed by aseries of profile records (B- records) each of which include a shortB-record header followed by a series of ASCII integer elevations(typically in units of 1 centimeter) per each profile. The lastphysical record of the DEM is an accuracy record (C-record).The 7.5-minute DEM (30- by 30-m data spacing) is cast on theUniversal Transverse Mercator (UTM) projection. It provides coveragein 7.5- by 7.5-minute blocks. Each product provides the samecoverage as a standard USGS 7.5-minute quadrangle but the DEMcontains over edge data. Coverage is available for many estuaries ofthe contiguous United States but is not complete." ;
+    dc:spatial "POLYGON ((-70.07562 42.091174,-70.07562 42.616293,-70.643459 42.616293,-70.643459 42.091174,-70.07562 42.091174))" ;
+    dcterms:references <urn:uuid:9fa62c09-54e4-48cb-ba64-549419ed69fc> ;
+    dcterms:title "Massachusetts Bay, MA (N170) Bathymetric Digital ElevationModel (30 meter resolution) Derived From Source Hydrographic SurveySoundings Collected by NOAA" ;
+    esip:eastBound "-70.643459"^^xsd:float ;
+    esip:endDate "1970-01-01"^^xsd:date ;
+    esip:northBound "42.616293"^^xsd:float ;
+    esip:southBound "42.091174"^^xsd:float ;
+    esip:startDate "1940-01-01"^^xsd:date ;
+    esip:westBound "-70.07562"^^xsd:float ;
+    owl:a dcat:Dataset .
+

@@ -1,0 +1,71 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:08c3a96b-b60f-4e47-9493-805a0fbbdd12> a "ISO 19115:2003/19139" ;
+    bcube:dateCreated "2015-09-07T15:55:35.166Z" ;
+    bcube:lastUpdated "2015-09-07T15:55:35.166Z" ;
+    bcube:originatedFrom <urn:uuid:545dd444-bb08-46e7-afa9-f4dade31e9a5> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:d949e2d1-b2d6-46ef-8669-faca1fa336fe> .
+
+<urn:uuid:1a9374cc-33a4-4e1c-b47b-d60c98feabc4> bcube:hasType "place" ;
+    bcube:hasValue "Coastal counties",
+        "United States" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:2edc4dcd-017d-4e35-92aa-9f682d573ef9> bcube:hasValue "oceans",
+        "society" ;
+    dc:partOf "IsoTopicCategories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:545dd444-bb08-46e7-afa9-f4dade31e9a5> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-09-07T15:55:35.166Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-09-07T15:55:35.166Z" ;
+    dc:identifier "urn:sha:b049b9471d347ded78a3e4ea8c8301cd3b534b9f9b3bf46e78f48912" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "https://catalog.data.gov/harvest/object/fadf7d1f-24b7-4523-85cf-0511a9de762d" .
+
+<urn:uuid:cb84be38-e715-4616-b541-2b928fcb794f> bcube:hasType "theme" ;
+    bcube:hasValue "age",
+        "block group",
+        "demographic",
+        "economic",
+        "income distribution",
+        "population",
+        "racial and ethnic compositions",
+        "time series demographic" ;
+    dc:partOf "socioeconomic" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:d949e2d1-b2d6-46ef-8669-faca1fa336fe> bcube:dateCreated "2015-09-07T15:55:35.166Z" ;
+    bcube:hasMetadataRecord <urn:uuid:08c3a96b-b60f-4e47-9493-805a0fbbdd12> ;
+    bcube:lastUpdated "2015-09-07T15:55:35.166Z" ;
+    dc:conformsTo <urn:uuid:1a9374cc-33a4-4e1c-b47b-d60c98feabc4>,
+        <urn:uuid:2edc4dcd-017d-4e35-92aa-9f682d573ef9>,
+        <urn:uuid:cb84be38-e715-4616-b541-2b928fcb794f> ;
+    dc:description "The critical facilities data came from FEMA's HAZUS database and represent available information circa 2011. A critical facility is defined as a structure that, if flooded, would present an immediate threat to life, public health, and safety. The data may not be exhaustive, more thorough data exist both nationally and at the local level. HAZUS breaks critical facilities into two (2) groups: essential facilities and high potential loss (HPL) facilities. Essential facilities include hospitals, medical clinics, schools, fire stations, police stations and emergency operations facilities. High potential loss facilities include dams, levees, military installations, nuclear power plants and hazardous material sites. Within HAZUS, the lifeline inventory is divided between transportation and utility lifeline systems. There are seven (7) transportation systems that include highways, railways, light rail, bus, ports, ferry and airports. There are six (6) utility systems that include potable water, wastewater, natural gas, crude refined oil, electric power and communications. For a full listing of the geographies available, see: http://coast.noaa.gov/htdata/SocioEconomic/CriticalFacilities/CriticalFacilities_DataDescription.pdf." ;
+    dc:spatial "POLYGON ((-178.217598 18.921786,-178.217598 71.406235,-66.969271 71.406235,-66.969271 18.921786,-178.217598 18.921786))" ;
+    dcterms:title "FEMA HAZUS Critical Facilities for Coastal Geographies" ;
+    esip:eastBound "-66.969271"^^xsd:float ;
+    esip:northBound "71.406235"^^xsd:float ;
+    esip:southBound "18.921786"^^xsd:float ;
+    esip:westBound "-178.217598"^^xsd:float ;
+    owl:a dcat:Dataset .
+

@@ -1,0 +1,86 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:11904668-4d43-4f0d-b557-07c29aa9e684> bcube:hasType "place" ;
+    bcube:hasValue "Delaware",
+        "Florida",
+        "Georgia",
+        "Maryland",
+        "Massachusetts",
+        "Rhode Island",
+        "Virginia" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:18509d4f-3abd-42ea-b2e2-b965b628c954> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-10-18T04:08:37.129Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-10-18T04:08:37.129Z" ;
+    dc:identifier "urn:sha:a7a3e41dbca7543b9711eecf1880af74af2081ace71662514873b2bf" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://metadata.boem.gov/geospatial/boem_renewable_lease_areas.xml" .
+
+<urn:uuid:27070857-dab4-437e-91e0-870568feceb2> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-10-18T04:08:37.129Z" ;
+    bcube:lastUpdated "2015-10-18T04:08:37.129Z" ;
+    bcube:originatedFrom <urn:uuid:18509d4f-3abd-42ea-b2e2-b965b628c954> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:fe50db89-de6f-4235-af3b-87f9d82719d4> .
+
+<urn:uuid:a13457a2-db20-4075-ae5f-2ac742447e27> bcube:hasType "theme" ;
+    bcube:hasValue "Cadastre Theme",
+        "NGDA",
+        "National Geospatial Data Assets" ;
+    dc:partOf "NGDA Portfolio Themes" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:d2b61625-25fe-4e54-903c-b7040d6b73d4> dcterms:references <urn:uuid:d395abef-a71d-4fca-9574-8003becf8b3c> ;
+    owl:a bibo:WebPage .
+
+<urn:uuid:d395abef-a71d-4fca-9574-8003becf8b3c> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-10-18T04:08:37.129Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-10-18T04:08:37.129Z" ;
+    dc:identifier "urn:sha:33e1c3aa69f0c6f10135167475446da7826fb5181afe13a4f301f023" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www.boem.gov/uploadedFiles/BOEM/Renewable_Energy_Program/Mapping_and_Data/boem_leasing_areas_shapefile.zip" .
+
+<urn:uuid:e1101d8f-b5f1-4001-bbfb-b5892c715470> owl:a foaf:Organization ;
+    foaf:name "Bureau of Ocean Energy Mangement, Office of Renewable Energy" .
+
+<urn:uuid:fe50db89-de6f-4235-af3b-87f9d82719d4> bcube:dateCreated "2015-10-18T04:08:37.129Z" ;
+    bcube:hasMetadataRecord <urn:uuid:27070857-dab4-437e-91e0-870568feceb2> ;
+    bcube:lastUpdated "2015-10-18T04:08:37.129Z" ;
+    dc:conformsTo <urn:uuid:11904668-4d43-4f0d-b557-07c29aa9e684>,
+        <urn:uuid:a13457a2-db20-4075-ae5f-2ac742447e27> ;
+    dc:description "Active renewable energy leasing areas on the Atlantic OCS - currently Cape Wind offshore Cape Cod Massachusetts, Rhode Island / Massachusetts (RIMA), Delaware, Maryland, Virginia and IP leases offshore New Jersey and Florida" ;
+    dc:spatial "POLYGON ((-79.908466 26.04522,-79.908466 41.551403,-70.221044 41.551403,-70.221044 26.04522,-79.908466 26.04522))" ;
+    dcterms:publisher <urn:uuid:e1101d8f-b5f1-4001-bbfb-b5892c715470> ;
+    dcterms:references <urn:uuid:d2b61625-25fe-4e54-903c-b7040d6b73d4> ;
+    dcterms:title "Outer Continental Shelf Active Renewable Energy Leases" ;
+    esip:eastBound "-70.221044"^^xsd:float ;
+    esip:northBound "41.551403"^^xsd:float ;
+    esip:southBound "26.04522"^^xsd:float ;
+    esip:startDate "2015-05-27"^^xsd:date ;
+    esip:westBound "-79.908466"^^xsd:float ;
+    owl:a dcat:Dataset .
+

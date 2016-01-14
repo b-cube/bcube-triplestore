@@ -1,0 +1,102 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:3a9af540-bf1b-41b4-bd3a-4477411128c9> a "ISO 19115:2003/19139" ;
+    bcube:dateCreated "2015-09-07T15:54:11.626Z" ;
+    bcube:lastUpdated "2015-09-07T15:54:11.626Z" ;
+    bcube:originatedFrom <urn:uuid:f51cbde5-d8fc-4960-8b54-3c82af572996> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:8ec10800-1f42-4277-8c04-c40e2c716d46> .
+
+<urn:uuid:4c41c1f6-ccea-4dad-acd8-66a89f90cdf7> bcube:hasType "theme" ;
+    bcube:hasValue "Bureau of Ocean Energy Management, BOEM",
+        "Cadastre",
+        "Federal State Boundary",
+        "Lease blocks",
+        "Limit of \"8(g) Zone\"",
+        "OCS blocks",
+        "Official Protraction Diagram, OPD",
+        "Offshore",
+        "Oil and gas",
+        "Outer Continental Shelf, OCS",
+        "Revenue Sharing",
+        "State Seaward Boundary, SSB",
+        "Submerged Lands Act (SLA) Boundary",
+        "Supplemental Official OCS Block Diagram, SOBD" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:8b7eebf0-1bda-4973-bac9-8bec9dfc1eda> bcube:hasType "place" ;
+    bcube:hasValue "Alaska, AK",
+        "Arctic Ocean",
+        "Beaufort Sea",
+        "Bering Sea",
+        "Bering Strait",
+        "Bristol Bay",
+        "Chukchi Sea",
+        "Gulf of Alaska",
+        "Pacific Ocean",
+        "USA" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:8ec10800-1f42-4277-8c04-c40e2c716d46> bcube:dateCreated "2015-09-07T15:54:11.626Z" ;
+    bcube:hasMetadataRecord <urn:uuid:3a9af540-bf1b-41b4-bd3a-4477411128c9> ;
+    bcube:lastUpdated "2015-09-07T15:54:11.626Z" ;
+    dc:conformsTo <urn:uuid:4c41c1f6-ccea-4dad-acd8-66a89f90cdf7>,
+        <urn:uuid:8b7eebf0-1bda-4973-bac9-8bec9dfc1eda>,
+        <urn:uuid:b20736ff-9e88-492d-898c-66ba0f65193c> ;
+    dc:description "This data set contains Official Protraction Diagram (OPD) outlines in ESRI shapefile format. At lower latitudes (0-48 degrees) OPDs are 1 degree in latitude by 2 degrees in longitude. At higher latitudes (48-75 degrees) OPDs are 3 degrees wide. OPDs are further subdivided into blocks that are 4800 x 4800 meters on a UTM grid but this file does not include those blocks - only the OPD outline). Where the OPD hits the UTM zone boundary, that zone boundary will be a geodesic line - which will appear slightly curved on the UTM grid. OPDs are numbered using the United Nations International Map of the World Numbering System, and are generally named for land or hydrographic features contained within the limits of the diagram. These OPD outlines were clipped along the Submerged Lands Act (SLA) boundary (3 nautical mile line) and Continental Shelf Boundary (maritime boundaries and limits), Further information on the historic development of OPD's can be found in OCS Report MMS 99-0006: Boundary Development on the Outer Continental Shelf: http://www.boem.gov/BOEM-Newsroom/Library/Publications/1999/99-0006-pdf.aspx Because GIS projection and topology functions can change or generalize coordinates, these GIS files are considered to be approximate and are NOT an OFFICIAL record for the exact OPD coordinates or areas. The Official Protraction Diagrams (OPDs) and Supplemental Official OCS Block Diagrams (SOBDs), available on the web in pdf format, serve as the legal definition for BOEM offshore boundary coordinates and area descriptions." ;
+    dc:spatial "POLYGON ((-180.0 46.943007,-180.0 74.996354,180.0 74.996354,180.0 46.943007,-180.0 46.943007))" ;
+    dcterms:references <urn:uuid:cf36f76e-0833-43c8-a811-84295b6d0b73> ;
+    dcterms:title "Outer Continental Shelf Official Protraction Diagrams - Alaska Region NAD 83" ;
+    esip:eastBound "180.0"^^xsd:float ;
+    esip:endDate "2006-01-01"^^xsd:date ;
+    esip:northBound "74.996354"^^xsd:float ;
+    esip:southBound "46.943007"^^xsd:float ;
+    esip:startDate "1994-01-01"^^xsd:date ;
+    esip:westBound "-180.0"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:b20736ff-9e88-492d-898c-66ba0f65193c> bcube:hasType "theme" ;
+    bcube:hasValue "Cadastre Theme",
+        "NGDA",
+        "National Geospatial Data Asset" ;
+    dc:partOf "NGDA Portfolio Themes" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:cf36f76e-0833-43c8-a811-84295b6d0b73> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-09-07T15:54:11.626Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-09-07T15:54:11.626Z" ;
+    dc:identifier "urn:sha:c75c7ee0c266fad3f947acd43c28585b4398c26bf7f3d4a054d84171" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www.boem.gov/Oil-and-Gas-Energy-Program/Mapping-and-Data/Alaska.aspx" .
+
+<urn:uuid:f51cbde5-d8fc-4960-8b54-3c82af572996> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-09-07T15:54:11.626Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-09-07T15:54:11.626Z" ;
+    dc:identifier "urn:sha:6c0f47a6116bcd5bf06470efb1eda79489b5fd08673784041dd51739" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "https://catalog.data.gov/harvest/object/1a7ab368-c98c-458b-8af4-976563b8767c" .
+

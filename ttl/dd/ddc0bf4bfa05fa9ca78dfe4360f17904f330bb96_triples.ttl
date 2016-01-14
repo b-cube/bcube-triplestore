@@ -1,0 +1,80 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:082d9d20-a9af-4814-8e33-0beb3fc04a0a> owl:a foaf:Organization ;
+    foaf:name "" .
+
+<urn:uuid:0883eb2b-3c06-4166-9bea-94931aa3ff36> bcube:hasType "theme" ;
+    bcube:hasValue "Digital Flood Insurance Rate Maps",
+        "FEMA Flood Hazard Zones",
+        "Land use cover",
+        "Q3 Coverage",
+        "Q3 Flood Data",
+        "Special Flood Hazard Areas" ;
+    dc:partOf "none" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:14f08e95-7b3b-4183-9ee5-e9748d6b5ab3> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-03-06T05:34:59.84Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-03-06T05:34:59.84Z" ;
+    dc:identifier "urn:sha:ec68d0fd1847b1ef6c16b5e3a44a0ebbb7082d79081c2717168206b1" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://lagic.lsu.edu/data/losco/floodzones_cameron_FEMA_1999.zip" .
+
+<urn:uuid:1a24bd15-be2b-48e6-a526-b4c45097a677> bcube:hasType "place" ;
+    bcube:hasValue "Louisiana" ;
+    dc:partOf "none" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:365f89d8-733c-43c1-9334-b71b390da352> bcube:dateCreated "2015-03-06T05:34:59.84Z" ;
+    bcube:hasMetadataRecord <urn:uuid:5a94a3ed-62da-498d-aed2-0a9a9e9f68a4> ;
+    bcube:lastUpdated "2015-03-06T05:34:59.84Z" ;
+    dc:conformsTo <urn:uuid:0883eb2b-3c06-4166-9bea-94931aa3ff36>,
+        <urn:uuid:1a24bd15-be2b-48e6-a526-b4c45097a677> ;
+    dc:description "The Q3 Flood Data are derived from the Flood Insurance Rate Maps (FIRMS)published by the Federal Emergency Management Agency (FEMA). The file isgeoreferenced to earth's surface using geographic projection and decimaldegree coordinate system. The specifications for the horizontal controlof Q3 Flood Data files are consistent with those required for mapping ata scale of 1:24000.The user is encouraged to refer to the 'Q3 FLOOD DATA SPECIFICATIONS'manual <URL:fema-spec.doc> and the 'Q3 FLOOD DATA USERS GUIDE'<URL:fema-userg.doc> for complete information on the technicaldetails of the Q3 data, its attributes, its uses, and limitations." ;
+    dc:spatial "POLYGON ((-93.929665 29.575413,-93.929665 30.052691,-92.614677 30.052691,-92.614677 29.575413,-93.929665 29.575413))" ;
+    dcterms:publisher <urn:uuid:082d9d20-a9af-4814-8e33-0beb3fc04a0a> ;
+    dcterms:references <urn:uuid:14f08e95-7b3b-4183-9ee5-e9748d6b5ab3> ;
+    dcterms:title "floodzones_cameron_FEMA_1999" ;
+    esip:eastBound "-92.614677"^^xsd:float ;
+    esip:northBound "30.052691"^^xsd:float ;
+    esip:southBound "29.575413"^^xsd:float ;
+    esip:startDate "1999-01-01"^^xsd:date ;
+    esip:westBound "-93.929665"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:5a94a3ed-62da-498d-aed2-0a9a9e9f68a4> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-03-06T05:34:59.84Z" ;
+    bcube:lastUpdated "2015-03-06T05:34:59.84Z" ;
+    bcube:originatedFrom <urn:uuid:e3852300-dcb9-4d44-80be-708f78d6d837> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:365f89d8-733c-43c1-9334-b71b390da352> .
+
+<urn:uuid:e3852300-dcb9-4d44-80be-708f78d6d837> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-03-06T05:34:59.84Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-03-06T05:34:59.84Z" ;
+    dc:identifier "urn:sha:a112559b36d130b85b50b8ff4234bbb788854ee8bcd4b7c53789b6d6" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://catalog.data.gov/harvest/object/db248ca1-bffa-4aec-a9c5-86f6c83267f8/original" .
+

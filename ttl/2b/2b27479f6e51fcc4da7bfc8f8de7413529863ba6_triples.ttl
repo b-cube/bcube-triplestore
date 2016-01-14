@@ -1,0 +1,94 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:0400345c-7aae-4ec0-91d0-7d914366de1f> bcube:hasType "theme" ;
+    bcube:hasValue "air temperature",
+        "barometric pressure",
+        "bottom depths",
+        "chlorophyll",
+        "fluorometer",
+        "irradiance",
+        "meteorology",
+        "relative humidity",
+        "salinity",
+        "sea surface temperature",
+        "soundings",
+        "water temperature",
+        "wind direction",
+        "wind speed" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:5c16d7fe-43ce-472b-9784-98bc1ea1e069> bcube:hasType "place" ;
+    bcube:hasValue "Atlantic Ocean",
+        "Northwest Providence Channel",
+        "South Atlantic Bight",
+        "The Bahamas" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:5fb43d25-df0e-43ed-8c65-1b897481b1ed> a "ISO 19115:2003/19139" ;
+    bcube:dateCreated "2015-08-08T09:19:55.753Z" ;
+    bcube:lastUpdated "2015-08-08T09:19:55.753Z" ;
+    bcube:originatedFrom <urn:uuid:9bf41ad3-c2ee-4baf-b18f-ed4ea0457474> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:c00dc250-8456-4452-9aa6-84a189068e84> .
+
+<urn:uuid:9bf41ad3-c2ee-4baf-b18f-ed4ea0457474> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-08T09:19:55.753Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-08T09:19:55.753Z" ;
+    dc:identifier "urn:sha:ca33700054f009047eb38662904910d524dd52e0df40ecb68ab02690" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://catalog.data.gov/harvest/object/e39e192f-2a51-4580-8bb8-219d7f100153" .
+
+<urn:uuid:a0a1101d-0b00-401a-962c-bf08172060b5> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-08T09:19:55.753Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-08T09:19:55.753Z" ;
+    dc:identifier "urn:sha:8b1753c0cdaed152f0f4684a87f6edc0ab50624899a77aff3961ac05" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www.ncddc.noaa.gov/arcgis/rest/services/OceanExploration/OECruiseData/MapServer" .
+
+<urn:uuid:c00dc250-8456-4452-9aa6-84a189068e84> bcube:dateCreated "2015-08-08T09:19:55.753Z" ;
+    bcube:hasMetadataRecord <urn:uuid:5fb43d25-df0e-43ed-8c65-1b897481b1ed> ;
+    bcube:lastUpdated "2015-08-08T09:19:55.753Z" ;
+    dc:conformsTo <urn:uuid:0400345c-7aae-4ec0-91d0-7d914366de1f>,
+        <urn:uuid:5c16d7fe-43ce-472b-9784-98bc1ea1e069>,
+        <urn:uuid:c4424679-52d5-4555-9096-0bed9b02e509> ;
+    dc:description "Hourly measurements made by selected ship sensors on the R/V Seward Johnson during the \"Bioluminescence 2009\" expedition sponsored by the National Oceanic and Atmospheric Administration (NOAA) Office of Ocean Exploration and Research, July 20 through 31, 2009. Measurements include ship's position and heading, wind speed and direction." ;
+    dc:spatial "POLYGON ((-80.3538 26.129967,-80.3538 27.535,-77.583117 27.535,-77.583117 26.129967,-80.3538 26.129967))" ;
+    dcterms:references <urn:uuid:a0a1101d-0b00-401a-962c-bf08172060b5> ;
+    dcterms:title "Ship Sensor Observations for Bioluminescence 2009 - Office of Ocean Exploration and Research" ;
+    esip:eastBound "-77.583117"^^xsd:float ;
+    esip:endDate "2009-07-31"^^xsd:date ;
+    esip:northBound "27.535"^^xsd:float ;
+    esip:southBound "26.129967"^^xsd:float ;
+    esip:startDate "2009-07-20"^^xsd:date ;
+    esip:westBound "-80.3538"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:c4424679-52d5-4555-9096-0bed9b02e509> bcube:hasValue "climatologyMeteorologyAtmosphere",
+        "oceans" ;
+    dc:partOf "IsoTopicCategories" ;
+    owl:a bcube:thesaurusSubset .
+

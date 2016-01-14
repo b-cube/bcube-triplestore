@@ -1,0 +1,89 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:12563382-0622-428b-a315-b08e6eea4b46> bcube:hasType "theme" ;
+    bcube:hasValue "County or equivalent entity",
+        "Polygon",
+        "State Legislative District",
+        "Voting District" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:2a089ba1-e277-4915-a40c-d4f0ac1832d4> owl:a foaf:Organization ;
+    foaf:name "" .
+
+<urn:uuid:7f89619b-515d-4757-98a1-e5dd9c6899b0> bcube:hasType "theme" ;
+    bcube:hasValue "boundaries" ;
+    dc:partOf "ISO 19115 Topic Categories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:876aa2ca-e3fc-4601-86e2-1f61ad4dcf20> bcube:hasType "place" ;
+    bcube:hasValue "01015",
+        "Calhoun",
+        "County or Equivalent Entity",
+        "U.S.",
+        "United States" ;
+    dc:partOf "FIPS Publication 5-2, FIPS Publication 6-4, FIPS Publication 8-6, FIPS Publication 9-1" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:b02bdf7f-e7b0-446b-82ec-c182815a5e98> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-11-06T23:07:59.605Z" ;
+    bcube:lastUpdated "2015-11-06T23:07:59.605Z" ;
+    bcube:originatedFrom <urn:uuid:e933adeb-64af-4af8-82db-9fa13628db6e> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:bc5c1a16-0a35-406e-93b6-981bb377ed24> .
+
+<urn:uuid:bc5c1a16-0a35-406e-93b6-981bb377ed24> bcube:dateCreated "2015-11-06T23:07:59.605Z" ;
+    bcube:hasMetadataRecord <urn:uuid:b02bdf7f-e7b0-446b-82ec-c182815a5e98> ;
+    bcube:lastUpdated "2015-11-06T23:07:59.605Z" ;
+    dc:conformsTo <urn:uuid:12563382-0622-428b-a315-b08e6eea4b46>,
+        <urn:uuid:7f89619b-515d-4757-98a1-e5dd9c6899b0>,
+        <urn:uuid:876aa2ca-e3fc-4601-86e2-1f61ad4dcf20> ;
+    dc:description "The TIGER/Line Shapefiles are an extract of selected geographic and cartographic information from the Census MAF/TIGER database. The Census MAF/TIGER database represents a seamless national file with no overlaps or gaps between parts. However, each TIGER/Line Shapefile is designed to stand alone as an independent data set or the shapefiles can be combined to cover the whole nation." ;
+    dc:spatial "POLYGON ((-86.146225 33.55593,-86.146225 33.96846,-85.529432 33.96846,-85.529432 33.55593,-86.146225 33.55593))" ;
+    dcterms:publisher <urn:uuid:2a089ba1-e277-4915-a40c-d4f0ac1832d4> ;
+    dcterms:references <urn:uuid:d02283dd-45b6-4812-95b1-5ff4f776c5fa> ;
+    dcterms:title "TIGER/Line Shapefile, 2007, 2000 county, Calhoun County, Voting District (VTD)" ;
+    esip:eastBound "-85.529432"^^xsd:float ;
+    esip:endDate "2007-07-01"^^xsd:date ;
+    esip:northBound "33.96846"^^xsd:float ;
+    esip:southBound "33.55593"^^xsd:float ;
+    esip:startDate "2007-01-01"^^xsd:date ;
+    esip:westBound "-86.146225"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:d02283dd-45b6-4812-95b1-5ff4f776c5fa> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-06T23:07:59.605Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-06T23:07:59.605Z" ;
+    dc:identifier "urn:sha:aec1c5e3959861c8c3f5637ed3f5956bd9d03a7036ba85fb056fd8fe" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www2.census.gov/geo/tiger/TIGER2007FE/01_ALABAMA/01015_Calhoun/fe_2007_01015_vtd00.zip" .
+
+<urn:uuid:e933adeb-64af-4af8-82db-9fa13628db6e> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-06T23:07:59.605Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-06T23:07:59.605Z" ;
+    dc:identifier "urn:sha:042036fd1c4a23bf777101cc7363c232699824b0cbeb56fa3718f7e0" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://meta.geo.census.gov/data/existing/decennial/GEO/GPMB/TIGERline/fe_2007/vtd00/fe_2007_01015_vtd00_url.shp.xml" .
+

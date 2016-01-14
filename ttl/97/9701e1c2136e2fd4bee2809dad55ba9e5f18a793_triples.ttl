@@ -1,0 +1,85 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:000978af-e136-4d56-afa3-edcb0428cf5d> bcube:hasType "theme" ;
+    bcube:hasValue "forecasts",
+        "precipitation",
+        "weather" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:3df2c00f-3c56-479b-878f-55d16565b3d5> bcube:hasType "place" ;
+    bcube:hasValue "United States" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:7f1f1568-9ce8-47e5-93d5-c88cad4f6821> bcube:hasType "theme" ;
+    bcube:hasValue "climatologyMeteorologyAtmosphere" ;
+    dc:partOf "ISO 19115 Topic Categories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:a6d4db15-4e9c-43b5-8164-837eebf2b971> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2014-07-31T12:35:05.681Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2014-07-31T12:35:05.681Z" ;
+    dc:identifier "urn:sha:459ff8372d32c5b1b197166b800be34e55737be4025e1ffaff19735e" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www.ncddc.noaa.gov/" .
+
+<urn:uuid:ca731966-108d-41c0-81b3-b0189548642b> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2014-07-31T12:35:05.681Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2014-07-31T12:35:05.681Z" ;
+    dc:identifier "urn:sha:4599babc9df71e0aa24e4fad6c3293701d9d22193b53c5dd349f87b1" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "https://data.noaa.gov/harvest/object/8494a4bb-70aa-4cb5-a779-0650d67833f3/original" .
+
+<urn:uuid:d0dbaeea-c857-401d-ae1e-774e2c11efdb> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2014-07-31T12:35:05.681Z" ;
+    bcube:lastUpdated "2014-07-31T12:35:05.681Z" ;
+    bcube:originatedFrom <urn:uuid:ca731966-108d-41c0-81b3-b0189548642b> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:dcdc60d9-d185-4d54-bf35-a10a04943485> .
+
+<urn:uuid:dcdc60d9-d185-4d54-bf35-a10a04943485> bcube:dateCreated "2014-07-31T12:35:05.681Z" ;
+    bcube:hasMetadataRecord <urn:uuid:d0dbaeea-c857-401d-ae1e-774e2c11efdb> ;
+    bcube:lastUpdated "2014-07-31T12:35:05.681Z" ;
+    dc:conformsTo <urn:uuid:000978af-e136-4d56-afa3-edcb0428cf5d>,
+        <urn:uuid:3df2c00f-3c56-479b-878f-55d16565b3d5>,
+        <urn:uuid:7f1f1568-9ce8-47e5-93d5-c88cad4f6821> ;
+    dc:description "The National Digital Forecast Database (NDFD) contains a seamless mosaic of the National Weather Service's (NWS) digital forecasts of precipitation amounts. In collaboration with NWS National Centers for Environmental Prediction (NCEP) and NWS Weather Forecast Offices (WFO), the central NDFD server ingests 5-km, 2-dimensional grids of precipitation amounts, and creates experimental forecast data mosaics for the coterminous United States (CONUS), Alaska, Hawaii, and Guam." ;
+    dc:spatial "POLYGON ((-130.142456 20.165239,-130.142456 52.827621,-60.84663 52.827621,-60.84663 20.165239,-130.142456 20.165239))" ;
+    dcterms:publisher <urn:uuid:e6d1d223-6969-47e9-a68d-eaba5cb8615c> ;
+    dcterms:references <urn:uuid:fb06bd32-21aa-47a1-9aa5-2f0d0a39545f> ;
+    dcterms:title "48-Hour Forecast of Precipitation Amounts from the National Weather Service's National Digital Forecast Database (NDFD)" ;
+    esip:eastBound "-60.84663"^^xsd:float ;
+    esip:northBound "52.827621"^^xsd:float ;
+    esip:southBound "20.165239"^^xsd:float ;
+    esip:westBound "-130.142456"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:e6d1d223-6969-47e9-a68d-eaba5cb8615c> owl:a foaf:Organization ;
+    foaf:name "" .
+
+<urn:uuid:fb06bd32-21aa-47a1-9aa5-2f0d0a39545f> dcterms:references <urn:uuid:a6d4db15-4e9c-43b5-8164-837eebf2b971> ;
+    owl:a bibo:WebPage .
+

@@ -1,0 +1,128 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:038a83c5-4fdb-48f4-8236-f221e72c575b> bcube:hasType "place" ;
+    bcube:hasValue "Long Island",
+        "Mid-Atlantic",
+        "New York",
+        "New York Bight",
+        "New York Offshore Planing Area",
+        "Northwest Atlantic Ocean" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:1c9dde14-53ef-47f2-9335-9950ae6679f2> bcube:hasType "temporal" ;
+    bcube:hasValue "Long-term average determined by input data" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:5eab5770-e7b3-4b1f-b298-aee330050727> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-08-04T15:06:46.847Z" ;
+    bcube:lastUpdated "2015-08-04T15:06:46.847Z" ;
+    bcube:originatedFrom <urn:uuid:7c6b424b-42be-49f4-843a-46349c1c78de> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:7e6d2918-8a63-4550-9328-6b2ca93675fc> .
+
+<urn:uuid:785d4fba-ce60-406b-8f97-dc79b52fcf91> dcterms:references <urn:uuid:fab1c956-8065-49dc-8976-a81bda136887> ;
+    owl:a bibo:WebPage .
+
+<urn:uuid:7c6b424b-42be-49f4-843a-46349c1c78de> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-04T15:06:46.847Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-04T15:06:46.847Z" ;
+    dc:identifier "urn:sha:074869f1df1a1012beed0cf5a737232170f4122e3e1dcd956015c78d" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://catalog.data.gov/harvest/object/ee79182b-fa45-49f9-a3a8-a0372fb861dd/original" .
+
+<urn:uuid:7e6d2918-8a63-4550-9328-6b2ca93675fc> bcube:dateCreated "2015-08-04T15:06:46.847Z" ;
+    bcube:hasMetadataRecord <urn:uuid:5eab5770-e7b3-4b1f-b298-aee330050727> ;
+    bcube:lastUpdated "2015-08-04T15:06:46.847Z" ;
+    dc:conformsTo <urn:uuid:038a83c5-4fdb-48f4-8236-f221e72c575b>,
+        <urn:uuid:1c9dde14-53ef-47f2-9335-9950ae6679f2>,
+        <urn:uuid:987250eb-a110-404d-b7e0-069ffa49cde2>,
+        <urn:uuid:cfc714ed-aa1b-4a58-88e3-627e7499436a>,
+        <urn:uuid:d590b0c4-8590-477a-96f0-59497391dd80>,
+        <urn:uuid:efa30928-be4e-44b4-bbb8-76703fceb515> ;
+    dc:description "This dataset represents depth uncertainty predictions from a bathymetric model developed for the New York offshore spatial planning area. The model also includes spatially-explicit depth estimates represented in another raster dataset. Uncertainty is defined as the standard error of depth estimates from model output. The model used to derive depth estimates and corresponding uncertainty builds on previous predictive bathymetric modeling approaches in the region (e.g. Calder, 2006), provides a continuous gridded bathymetric surface, and allows users to view and explore spatial variation in the vertical accuracy of depth predictions. The spatial resolution of the model is identical to the National Oceanic and Atmospheric Administration's (NOAA) Coastal Relief Model (CRM; horizontal resolution approximately 83.8 m) in the study area and was built from the same database of hydrographic survey points." ;
+    dc:spatial "POLYGON ((-75 37,-75 42,-69 42,-69 37,-75 37))" ;
+    dcterms:publisher <urn:uuid:98e0d67b-c892-4c80-a3b0-5e06a5ecfcd2> ;
+    dcterms:references <urn:uuid:785d4fba-ce60-406b-8f97-dc79b52fcf91>,
+        <urn:uuid:b0d797a8-2e8b-47f0-b586-dcb7b684f1e5> ;
+    dcterms:title "NOAA ESRI Grid - depth uncertainty predictions in New York offshore planning area from Biogeography Branch bathymetry model" ;
+    esip:eastBound "-69.0"^^xsd:float ;
+    esip:northBound "42.0"^^xsd:float ;
+    esip:southBound "37.0"^^xsd:float ;
+    esip:startDate "2012-05-01"^^xsd:date ;
+    esip:westBound "-75.0"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:987250eb-a110-404d-b7e0-069ffa49cde2> bcube:hasType "theme" ;
+    bcube:hasValue "Bathymetry/Topography" ;
+    dc:partOf "NOS Data Explorer Topic Category" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:98e0d67b-c892-4c80-a3b0-5e06a5ecfcd2> owl:a foaf:Organization ;
+    foaf:name "NOAA's National Ocean Service (NOS), National Centers for Coastal Ocean Science (NCCOS)" .
+
+<urn:uuid:b0d797a8-2e8b-47f0-b586-dcb7b684f1e5> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-04T15:06:46.847Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-04T15:06:46.847Z" ;
+    dc:identifier "urn:sha:7bb45a1356c0557728e155796c0bf5060045aa5c0acf0dbcb0e5a0aa" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://coastalscience.noaa.gov/projects/download.aspx?fpath=D%3a%5cWebsites%5cNCCOS%5cprojects-attachments%5c80%5cNY_assessment_data_package.zip" .
+
+<urn:uuid:cfc714ed-aa1b-4a58-88e3-627e7499436a> bcube:hasType "theme" ;
+    bcube:hasValue "OceanCommunity" ;
+    dc:partOf "Geospatial Platform" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:d590b0c4-8590-477a-96f0-59497391dd80> bcube:hasType "theme" ;
+    bcube:hasValue "New York",
+        "Seafloor",
+        "bathymetry/topography",
+        "depth",
+        "environment",
+        "prediction",
+        "spatial planning",
+        "uncertainty" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:efa30928-be4e-44b4-bbb8-76703fceb515> bcube:hasType "theme" ;
+    bcube:hasValue "environment",
+        "oceans" ;
+    dc:partOf "ISO 19115 Topic Category" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:fab1c956-8065-49dc-8976-a81bda136887> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-04T15:06:46.847Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-04T15:06:46.847Z" ;
+    dc:identifier "urn:sha:4ea5397e836f689f6334fc208c7da8a5ebcd5d7c3734d745fb9a011a" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://coastalscience.noaa.gov/projects/detail?key=80" .
+

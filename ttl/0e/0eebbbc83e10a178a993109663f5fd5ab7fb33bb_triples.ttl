@@ -1,0 +1,89 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:05b5a11c-3df1-41c5-891b-5ab4bf6b7ae2> bcube:hasType "theme" ;
+    bcube:hasValue "boundaries" ;
+    dc:partOf "ISO 19115 Topic Categories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:15cbbe9e-d801-4b1a-9122-5cbc82c414b2> bcube:hasType "theme" ;
+    bcube:hasValue "BG",
+        "Block Group",
+        "County or equivalent entity",
+        "Polygon" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:1e4ecac7-c335-436a-9063-bbcac6e71375> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-11-04T22:09:05.915Z" ;
+    bcube:lastUpdated "2015-11-04T22:09:05.915Z" ;
+    bcube:originatedFrom <urn:uuid:d19ecc77-21d7-424d-b639-6d2249667d7e> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:47090a49-5d13-4cc3-8132-f83691fd3ac2> .
+
+<urn:uuid:47090a49-5d13-4cc3-8132-f83691fd3ac2> bcube:dateCreated "2015-11-04T22:09:05.915Z" ;
+    bcube:hasMetadataRecord <urn:uuid:1e4ecac7-c335-436a-9063-bbcac6e71375> ;
+    bcube:lastUpdated "2015-11-04T22:09:05.915Z" ;
+    dc:conformsTo <urn:uuid:05b5a11c-3df1-41c5-891b-5ab4bf6b7ae2>,
+        <urn:uuid:15cbbe9e-d801-4b1a-9122-5cbc82c414b2>,
+        <urn:uuid:ec1e730a-cab3-41cf-bcf4-9023178795ff> ;
+    dc:description "The TIGER/Line Shapefiles are an extract of selected geographic and cartographic information from the Census MAF/TIGER database. The Census MAF/TIGER database represents a seamless national file with no overlaps or gaps between parts. However, each TIGER/Line Shapefile is designed to stand alone as an independent data set or the shapefiles can be combined to cover the whole nation." ;
+    dc:spatial "POLYGON ((-153.001339 62.722004,-153.001339 64.365138,-146.907227 64.365138,-146.907227 62.722004,-153.001339 62.722004))" ;
+    dcterms:publisher <urn:uuid:ccea8da1-45a7-4dfd-ad0b-59f506a7459d> ;
+    dcterms:references <urn:uuid:c66baef5-b6a3-4982-b85a-5b7b7a53490b> ;
+    dcterms:title "TIGER/Line Shapefile, 2009, 2000 county, Denali Borough, AK, Census 2000 Block Group County-based" ;
+    esip:eastBound "-146.907227"^^xsd:float ;
+    esip:endDate "2009-05-01"^^xsd:date ;
+    esip:northBound "64.365138"^^xsd:float ;
+    esip:southBound "62.722004"^^xsd:float ;
+    esip:startDate "2009-01-01"^^xsd:date ;
+    esip:westBound "-153.001339"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:c66baef5-b6a3-4982-b85a-5b7b7a53490b> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-04T22:09:05.915Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-04T22:09:05.915Z" ;
+    dc:identifier "urn:sha:e6dc2dbeed6a92879cac769f0f9853f40d4b0dd121b945c84fbd690a" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www2.census.gov/geo/tiger/TIGER2009/02_ALASKA/02068_Denali_Borough/tl_2009_02068_bg00.zip" .
+
+<urn:uuid:ccea8da1-45a7-4dfd-ad0b-59f506a7459d> owl:a foaf:Organization ;
+    foaf:name "" .
+
+<urn:uuid:d19ecc77-21d7-424d-b639-6d2249667d7e> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-04T22:09:05.915Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-04T22:09:05.915Z" ;
+    dc:identifier "urn:sha:6bf73cdd2ba1998829394f15c9e09d9a04123b4d75401081bc637c49" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://meta.geo.census.gov/data/existing/decennial/GEO/GPMB/TIGERline/fe_2009/bg00/tl_2009_02068_bg00_url.shp.xml" .
+
+<urn:uuid:ec1e730a-cab3-41cf-bcf4-9023178795ff> bcube:hasType "place" ;
+    bcube:hasValue "02068",
+        "County or Equivalent Entity",
+        "Denali",
+        "U.S.",
+        "United States" ;
+    dc:partOf "INCITS.38-200x (R2004),INCITS.31-200x (R2007),INCITS.454-200x,INCITS 455-200x,INCITS 446-2008" ;
+    owl:a bcube:thesaurusSubset .
+

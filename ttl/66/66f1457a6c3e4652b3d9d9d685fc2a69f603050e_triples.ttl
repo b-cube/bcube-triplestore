@@ -1,0 +1,75 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:42dbc08a-cc24-47ac-8f05-ae976399732c> bcube:hasType "place" ;
+    bcube:hasValue "Great Lakes",
+        "Illinois",
+        "Indiana",
+        "Lake",
+        "Michigan",
+        "Wisconsin",
+        "basin" ;
+    dc:partOf "Uncontrolled Keywords" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:44d28848-1f30-4971-9280-db1c894787b2> bcube:dateCreated "2015-08-07T11:43:42.625Z" ;
+    bcube:hasMetadataRecord <urn:uuid:68a9d33a-dbb5-417b-94ba-8cd41c28290b> ;
+    bcube:lastUpdated "2015-08-07T11:43:42.625Z" ;
+    dc:conformsTo <urn:uuid:42dbc08a-cc24-47ac-8f05-ae976399732c>,
+        <urn:uuid:fd97f256-1c7a-4d2a-915d-823826b8838e> ;
+    dc:description "Historical cooperative station index. Cooperative stations are U.S. stations operated by local observers which generally report max/min temperatures and precipitation. National Weather Service (NWS) data are also included in this dataset. The data receive extensive automated + manual quality control. The index includes a county location cross-reference. Over 8000 stations are currently active across the country." ;
+    dc:spatial "POLYGON ((-89.56194 41.38333,-89.56194 46.55,-84.15 46.55,-84.15 41.38333,-89.56194 41.38333))" ;
+    dcterms:references <urn:uuid:f97948db-46c6-4f86-ab41-d81b70577473> ;
+    dcterms:title "Lake Michigan basin coop stations ncdc" ;
+    esip:eastBound "-84.15"^^xsd:float ;
+    esip:northBound "46.55"^^xsd:float ;
+    esip:southBound "41.38333"^^xsd:float ;
+    esip:westBound "-89.56194"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:68a9d33a-dbb5-417b-94ba-8cd41c28290b> a "ISO 19115:2003/19139" ;
+    bcube:dateCreated "2015-08-07T11:43:42.625Z" ;
+    bcube:lastUpdated "2015-08-07T11:43:42.625Z" ;
+    bcube:originatedFrom <urn:uuid:969f5c68-67db-41fd-aec7-5f174a4c0777> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:44d28848-1f30-4971-9280-db1c894787b2> .
+
+<urn:uuid:969f5c68-67db-41fd-aec7-5f174a4c0777> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-07T11:43:42.625Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-07T11:43:42.625Z" ;
+    dc:identifier "urn:sha:a3b3f25c569813a9fda12187839982dd2accc5f1b74b5c53d408a557" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://catalog.data.gov/harvest/object/1f790554-f14f-47f9-8dd3-0a21668e8479" .
+
+<urn:uuid:f97948db-46c6-4f86-ab41-d81b70577473> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-07T11:43:42.625Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-07T11:43:42.625Z" ;
+    dc:identifier "urn:sha:4d7bdc279f885f0ed0e67c4f6c2e744c37f94278753738f992eca571" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://gis.glin.net/geoserver/wfs?request=getfeature&service=wfs&version=1.0.0&typename=glin:lmb_coop_stations_ncdc&outputformat=shape-zip" .
+
+<urn:uuid:fd97f256-1c7a-4d2a-915d-823826b8838e> bcube:hasValue "climatologyMeteorologyAtmosphere" ;
+    dc:partOf "IsoTopicCategories" ;
+    owl:a bcube:thesaurusSubset .
+

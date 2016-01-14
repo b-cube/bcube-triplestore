@@ -1,0 +1,69 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:10e7bc6d-62c9-432d-a80a-7c37b0aa7c25> bcube:hasType "place" ;
+    bcube:hasValue "Montana",
+        "Silver Bow" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:3910691b-35d0-4066-8bb4-8338ab998c22> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-12T00:16:52.535Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-12T00:16:52.535Z" ;
+    dc:identifier "urn:sha:487101f0e7175245798a9cf94bb45cfa5a8c2ece057bc392b087eea4" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://mslapps.mt.gov/Geographic_Information/Data/DataList/datalist_MetadataDetailRaw.aspx?did={4bf572a1-df82-42d8-8dab-8bce44f0a574}" .
+
+<urn:uuid:44d415c5-6a72-4bcd-83cf-3134bb9a75d9> bcube:hasType "theme" ;
+    bcube:hasValue "planningCadastre" ;
+    dc:partOf "ISO 19115 Topic Category" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:6d2994d4-13b2-4b06-b6a4-ae009c906532> bcube:dateCreated "2015-08-12T00:16:52.535Z" ;
+    bcube:hasMetadataRecord <urn:uuid:fc1b08d7-f212-492e-9fec-15fa3fe1c5d6> ;
+    bcube:lastUpdated "2015-08-12T00:16:52.535Z" ;
+    dc:conformsTo <urn:uuid:10e7bc6d-62c9-432d-a80a-7c37b0aa7c25>,
+        <urn:uuid:44d415c5-6a72-4bcd-83cf-3134bb9a75d9>,
+        <urn:uuid:6e07b737-2462-42d0-960f-81de99c971eb> ;
+    dc:description "This layer contains land ownership parcels within about 1000 feet of Silver Bow Creek, Montana. Some large parcels are arbitrarily truncated if they extend more than 1000 feet away from the creek. About half of the parcels have an owner name associated with them. The parcels were digitized by Canonie Environmental for ARCO. The original data from Canonie DXF files is provided, in Esri coverage format, with the data in a folder called DXF_Data, along with a macro file, dxf.aml, that shows how data was transformed from the Canonie coordinate system to real world coordinates. This data was extensively modified at the State Library based on discussions with Canonie and Titan Environmental. These data were formerly available from the Montana State Library web site but were removed because they are potentially out of date. Please contact the Federal Superfund Bureau of the Montana Department of Environmental Quality if you want these data so they may tell you if newer or better data are available. If the data are not available from the Department of Environmental Quality, you may request a copy from the Montana State Library data archive." ;
+    dc:spatial "POLYGON ((-112.807098 45.989399,-112.807098 46.1333008,-112.570602 46.1333008,-112.570602 45.989399,-112.807098 45.989399))" ;
+    dcterms:publisher <urn:uuid:a93c6b09-2afe-49c5-bba4-00ed54b6ab27> ;
+    dcterms:title "Silver Bow Creek Ownership Parcels, 1993" ;
+    esip:eastBound "-112.570602"^^xsd:float ;
+    esip:northBound "46.1333008"^^xsd:float ;
+    esip:southBound "45.989399"^^xsd:float ;
+    esip:startDate "1993-01-01"^^xsd:date ;
+    esip:westBound "-112.807098"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:6e07b737-2462-42d0-960f-81de99c971eb> bcube:hasType "theme" ;
+    bcube:hasValue "ownership",
+        "parcel",
+        "parcels" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:a93c6b09-2afe-49c5-bba4-00ed54b6ab27> owl:a foaf:Organization ;
+    foaf:name "Montana State Library" .
+
+<urn:uuid:fc1b08d7-f212-492e-9fec-15fa3fe1c5d6> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-08-12T00:16:52.535Z" ;
+    bcube:lastUpdated "2015-08-12T00:16:52.535Z" ;
+    bcube:originatedFrom <urn:uuid:3910691b-35d0-4066-8bb4-8338ab998c22> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:6d2994d4-13b2-4b06-b6a4-ae009c906532> .
+

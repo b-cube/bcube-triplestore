@@ -1,0 +1,71 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:00308d9a-d054-4c46-9bad-137d5e0a9fe5> bcube:hasType "theme" ;
+    bcube:hasValue "boundaries",
+        "economy" ;
+    dc:partOf "ISO 19115 Topic Categories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:08c30ad9-f93d-4008-9525-e5cc05de55aa> bcube:hasType "place" ;
+    bcube:hasValue "Colorado",
+        "Denver",
+        "Denver County",
+        "USA" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:09484767-e2ea-4cfa-b65e-a9291473461c> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-10-30T07:10:13.934Z" ;
+    bcube:lastUpdated "2015-10-30T07:10:13.934Z" ;
+    bcube:originatedFrom <urn:uuid:ac675f69-096d-445b-99ae-48aacbbf0889> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:f221909f-cfd3-4bfa-a066-22dd3cbca82c> .
+
+<urn:uuid:0c34a3f2-6ccc-48a7-bd61-7f9143f1a20b> owl:a foaf:Organization ;
+    foaf:name "" .
+
+<urn:uuid:1e3c626a-9213-434a-af67-764aaad65dc2> bcube:hasType "theme" ;
+    bcube:hasValue "economic development" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:ac675f69-096d-445b-99ae-48aacbbf0889> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-10-30T07:10:13.934Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-10-30T07:10:13.934Z" ;
+    dc:identifier "urn:sha:56aa8ac641207a989b26e5899ef2068a470f056c3666cfc9fd112362" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://data.denvergov.org/download/gis/revolving_loan_fund_target_area/metadata/revolving_loan_fund_target_area.xml" .
+
+<urn:uuid:f221909f-cfd3-4bfa-a066-22dd3cbca82c> bcube:dateCreated "2015-10-30T07:10:13.934Z" ;
+    bcube:hasMetadataRecord <urn:uuid:09484767-e2ea-4cfa-b65e-a9291473461c> ;
+    bcube:lastUpdated "2015-10-30T07:10:13.934Z" ;
+    dc:conformsTo <urn:uuid:00308d9a-d054-4c46-9bad-137d5e0a9fe5>,
+        <urn:uuid:08c30ad9-f93d-4008-9525-e5cc05de55aa>,
+        <urn:uuid:1e3c626a-9213-434a-af67-764aaad65dc2> ;
+    dc:description "Denver Office of Economic Development Revolving Loan Fund (RLF) Target Area (select \"Yes\" attribute in RLF_YN column to see target area). The RLF gap financing program works by lending up to 25% of project costs, thereby inducing banks to provide the bulk of the financing for small businesses." ;
+    dc:spatial "POLYGON ((-105.109967 39.614311,-105.109967 39.914209,-104.599538 39.914209,-104.599538 39.614311,-105.109967 39.614311))" ;
+    dcterms:publisher <urn:uuid:0c34a3f2-6ccc-48a7-bd61-7f9143f1a20b> ;
+    dcterms:title "Revolving Loan Fund Target Area" ;
+    esip:eastBound "-104.599538"^^xsd:float ;
+    esip:northBound "39.914209"^^xsd:float ;
+    esip:southBound "39.614311"^^xsd:float ;
+    esip:westBound "-105.109967"^^xsd:float ;
+    owl:a dcat:Dataset .
+

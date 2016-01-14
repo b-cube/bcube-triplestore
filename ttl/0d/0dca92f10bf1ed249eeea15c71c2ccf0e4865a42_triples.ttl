@@ -1,0 +1,70 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:2a0b88a5-c713-4bda-a373-946167ac96b7> bcube:hasType "theme" ;
+    bcube:hasValue "Remotely Sensed Imagery/Photos",
+        "aerial",
+        "coastal",
+        "historical",
+        "mosaic",
+        "photograph",
+        "rectified image",
+        "scanned imagery" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:521932fe-4a83-43a4-b115-d65364de50bb> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-10T00:32:48.074Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-10T00:32:48.074Z" ;
+    dc:identifier "urn:sha:af303da164a46d11ce82d13b0fcdc9f588d9e2f94c9ac74e0abf4d20" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://coast.noaa.gov/data/Documents/Metadata/isoharvest/Imagery/1965_hawaii_ISO.xml" .
+
+<urn:uuid:6a3b98f7-bb40-460c-93a3-924fd5db2b59> bcube:hasValue "imageryBaseMapsEarthCover" ;
+    dc:partOf "IsoTopicCategories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:837aa436-d3a6-4d16-89ac-88be4c268c90> bcube:hasType "place" ;
+    bcube:hasValue "Hawaii",
+        "Hawaiian Islands" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:d3c41938-3595-499b-90cc-17d86c4b4f0f> a "ISO 19115:2003/19139" ;
+    bcube:dateCreated "2015-08-10T00:32:48.074Z" ;
+    bcube:lastUpdated "2015-08-10T00:32:48.074Z" ;
+    bcube:originatedFrom <urn:uuid:521932fe-4a83-43a4-b115-d65364de50bb> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:f410c326-48d6-4965-b0fd-29cac3abe58f> .
+
+<urn:uuid:f410c326-48d6-4965-b0fd-29cac3abe58f> bcube:dateCreated "2015-08-10T00:32:48.074Z" ;
+    bcube:hasMetadataRecord <urn:uuid:d3c41938-3595-499b-90cc-17d86c4b4f0f> ;
+    bcube:lastUpdated "2015-08-10T00:32:48.074Z" ;
+    dc:conformsTo <urn:uuid:2a0b88a5-c713-4bda-a373-946167ac96b7>,
+        <urn:uuid:6a3b98f7-bb40-460c-93a3-924fd5db2b59>,
+        <urn:uuid:837aa436-d3a6-4d16-89ac-88be4c268c90> ;
+    dc:description "These images are part of a project funded by NOAA Office for Coastal Management to develop a high quality, user-friendly, attributed, centralized, multi-territorial digital database of georeferenced historic aerial imagery in the Pacific Islands region, including Hawaii, American Samoa, Guam, and the Commonwealth of the Northern Mariana Islands. The objective of this project is to make previously unavailable historic aerial imagery of the Pacific Islands available for public consumption through NOAA's Digital Coast website. These images were scanned on a flatbed scanner and georeferenced to existing basemap data." ;
+    dc:spatial "POLYGON ((-160.3083 18.8675,-160.3083 21.7922,-154.7525 21.7922,-154.7525 18.8675,-160.3083 18.8675))" ;
+    dcterms:title "1965 Hawaiian Islands Historical Scanned Imagery" ;
+    esip:eastBound "-154.7525"^^xsd:float ;
+    esip:northBound "21.7922"^^xsd:float ;
+    esip:southBound "18.8675"^^xsd:float ;
+    esip:westBound "-160.3083"^^xsd:float ;
+    owl:a dcat:Dataset .
+

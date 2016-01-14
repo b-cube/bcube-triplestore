@@ -1,0 +1,91 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:4bdd9afb-36f4-486c-b952-dd30949a169d> owl:a foaf:Organization ;
+    foaf:name "Federal Emergency Management Agency" .
+
+<urn:uuid:4d5e4472-846a-4bdf-acb0-1987fe5563f2> bcube:hasType "place" ;
+    bcube:hasValue "COMMUNITY Vernon County and Incorporated Areas (within the Baraboo River Project area)",
+        "COUNTY Vernon",
+        "COUNTY-FIPS 123",
+        "FEMA-CID 55123C",
+        "REGION 05",
+        "STATE WI" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:5e4c50f2-58f2-4a7d-aabc-83b108bc36c2> bcube:hasType "theme" ;
+    bcube:hasValue "Basemap",
+        "Image Map",
+        "Orthophoto",
+        "Rectified Image" ;
+    dc:partOf "FEMA NFIP Topic Category" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:736603d2-9144-4199-8b96-522417c4b85a> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-07-13T01:30:10.557Z" ;
+    bcube:lastUpdated "2015-07-13T01:30:10.557Z" ;
+    bcube:originatedFrom <urn:uuid:77257fbf-d7f2-4825-8a4b-dcf3e624484e> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:f15d2ef0-72c4-4b1b-8e8a-e90458f2faf3> .
+
+<urn:uuid:77257fbf-d7f2-4825-8a4b-dcf3e624484e> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-07-13T01:30:10.557Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-07-13T01:30:10.557Z" ;
+    dc:identifier "urn:sha:82b8370999a891f2fbab37ccbaa56a7e7ecec3c270cdeb5b9fe6f058" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "https://catalog.data.gov/harvest/object/38018f34-0257-4479-ad90-3e11c40a01f7/original" .
+
+<urn:uuid:b2384188-9a55-492e-89e9-a6889bdd874c> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-07-13T01:30:10.557Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-07-13T01:30:10.557Z" ;
+    dc:identifier "urn:sha:37c915397238031daced09ae0e2dd3bf54e84a6477f749c2cc9dcbdf" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://hazards.fema.gov" .
+
+<urn:uuid:bd64097e-d562-4108-9b18-e770702f5d4b> bcube:hasType "theme" ;
+    bcube:hasValue "Base Map",
+        "Earth Cover",
+        "Imagery" ;
+    dc:partOf "ISO 19115 Topic Category" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:f15d2ef0-72c4-4b1b-8e8a-e90458f2faf3> bcube:dateCreated "2015-07-13T01:30:10.557Z" ;
+    bcube:hasMetadataRecord <urn:uuid:736603d2-9144-4199-8b96-522417c4b85a> ;
+    bcube:lastUpdated "2015-07-13T01:30:10.557Z" ;
+    dc:conformsTo <urn:uuid:4d5e4472-846a-4bdf-acb0-1987fe5563f2>,
+        <urn:uuid:5e4c50f2-58f2-4a7d-aabc-83b108bc36c2>,
+        <urn:uuid:bd64097e-d562-4108-9b18-e770702f5d4b> ;
+    dc:description "Digital orthographic imagery datasets contain georeferenced images of the Earth's surface, collected by a sensor in which object displacement has been removed for sensor distortions and orientation, and terrain relief. Digital orthoimages have the geometric characterstics of a map and image qualities of a photograph. (Source: Circular A-16, p.16)" ;
+    dc:spatial "POLYGON ((-91.282 43.417,-91.282 43.74,-90.303 43.74,-90.303 43.417,-91.282 43.417))" ;
+    dcterms:publisher <urn:uuid:4bdd9afb-36f4-486c-b952-dd30949a169d> ;
+    dcterms:references <urn:uuid:b2384188-9a55-492e-89e9-a6889bdd874c> ;
+    dcterms:title "OrthoImagery Submission for Vernon County, Wisconsin, USA (Baraboo River Project)" ;
+    esip:eastBound "-90.303"^^xsd:float ;
+    esip:northBound "43.74"^^xsd:float ;
+    esip:southBound "43.417"^^xsd:float ;
+    esip:startDate "2011-03-21"^^xsd:date ;
+    esip:westBound "-91.282"^^xsd:float ;
+    owl:a dcat:Dataset .
+

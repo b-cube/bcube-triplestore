@@ -1,0 +1,80 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:2980e2e3-4dd9-4dba-943e-17e0c168dec6> a "ISO 19115:2003/19139" ;
+    bcube:dateCreated "2015-08-05T15:48:59.952Z" ;
+    bcube:lastUpdated "2015-08-05T15:48:59.952Z" ;
+    bcube:originatedFrom <urn:uuid:6a919e4a-dfb2-4e61-84c1-198725b07242> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:a1bbb0a3-0347-4eaa-9cfb-902db5131590> .
+
+<urn:uuid:6a919e4a-dfb2-4e61-84c1-198725b07242> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-05T15:48:59.952Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-05T15:48:59.952Z" ;
+    dc:identifier "urn:sha:a906c738e02c65bced962ac2c34059291838c4fbd68529e52c1e69e8" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://coast.noaa.gov/data/Documents/Metadata/isoharvest/Lidar/va2013_usgs_norfolk_m4699_ISOmetadata_cleaned.xml" .
+
+<urn:uuid:7614651f-0274-44ba-a604-f44a70565b38> bcube:hasType "theme" ;
+    bcube:hasValue "Bare earth",
+        "Breaklines",
+        "DEM",
+        "DTM",
+        "Elevation",
+        "Hydro Flattened",
+        "LAS",
+        "Lidar" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:a1bbb0a3-0347-4eaa-9cfb-902db5131590> bcube:dateCreated "2015-08-05T15:48:59.952Z" ;
+    bcube:hasMetadataRecord <urn:uuid:2980e2e3-4dd9-4dba-943e-17e0c168dec6> ;
+    bcube:lastUpdated "2015-08-05T15:48:59.952Z" ;
+    dc:conformsTo <urn:uuid:7614651f-0274-44ba-a604-f44a70565b38>,
+        <urn:uuid:de528b0d-7182-4506-bca2-80e97d2d2e52> ;
+    dc:description "Laser Mapping Specialist, Inc (LMSI) and The Atlantic Group (Atlantic) provided high accuracy, calibrated multiple return LiDAR for roughly 1,130 square miles around Norfolk, Virgina that either fully or partially cover the Virginia counties of Chesapeake, Hampton, James City, Newport News, Norfolk, Poquoson City, Portsmouth, Suffolk, Virginia Beach, Williamsburg, and York as well as the North Carolina counties of Camden and Currituck. The nominal point spacing for this project was no greater than 1 point every 0.7 meters. Dewberry used proprietary procedures to classify the LAS according to project specifications: 1-Unclassified, 2-Ground, 7-Noise, 9-Water, 10-Ignored Ground, 11-Withheld Points. OCM reclassified class 11 points to Class 15 - (as needed: Witheld Points). Dewberry produced 3D breaklines and combined these with the final LiDAR data to produce seamless hydro flattened DEMs for the 1,458 (1500 m x 1500 m) UTM tiles and the 1,400 (5000 ft x 5000ft) State Plane tiles that cover the project area." ;
+    dc:spatial "POLYGON ((-76.759887 36.522422,-76.759887 37.382867,-75.860149 37.382867,-75.860149 36.522422,-76.759887 36.522422))" ;
+    dcterms:title "2013 USGS Lidar: Norfolk (VA)" ;
+    esip:eastBound "-75.860149"^^xsd:float ;
+    esip:endDate "2013-04-05"^^xsd:date ;
+    esip:northBound "37.382867"^^xsd:float ;
+    esip:southBound "36.522422"^^xsd:float ;
+    esip:startDate "2013-03-21"^^xsd:date ;
+    esip:westBound "-76.759887"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:de528b0d-7182-4506-bca2-80e97d2d2e52> bcube:hasType "place" ;
+    bcube:hasValue "Camden County",
+        "Chesapeakes County",
+        "Currituck County",
+        "Hampton County",
+        "James City County",
+        "Newport News County",
+        "Norfolk County",
+        "North Carolina",
+        "Poquoson City County",
+        "Portsmouth County",
+        "Suffolk County",
+        "Virginia",
+        "Virginia Beach County",
+        "Williamsburg County",
+        "York County" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+

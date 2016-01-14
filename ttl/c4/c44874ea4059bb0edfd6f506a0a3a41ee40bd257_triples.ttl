@@ -1,0 +1,90 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:40b1f6cd-3595-47d7-9405-65f8eeace4f6> bcube:hasType "theme" ;
+    bcube:hasValue "Breaklines",
+        "Contours",
+        "DEM",
+        "Digital Terrain Model",
+        "Elevation Data",
+        "Flow vectors",
+        "LIDAR",
+        "Land Surface",
+        "Relief",
+        "Slope",
+        "Topography" ;
+    dc:partOf "FEMA NFIP Topic Category" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:4706bf1a-c1cf-4305-82c7-d71651168290> bcube:hasValue "elevation" ;
+    dc:partOf "IsoTopicCategories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:4c9eb4e7-fc84-4815-a072-e7b1de5b0ed3> bcube:hasType "place" ;
+    bcube:hasValue "COMMUNITY Miami County and Incorporated Areas",
+        "COUNTY Miami",
+        "COUNTY-FIPS 20121",
+        "FEMA-CID 20121C",
+        "REGION 7",
+        "STATE KS" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:5b246e44-4f06-4161-b55e-d1f2b6c8aab6> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-07-12T19:10:38.947Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-07-12T19:10:38.947Z" ;
+    dc:identifier "urn:sha:37c915397238031daced09ae0e2dd3bf54e84a6477f749c2cc9dcbdf" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://hazards.fema.gov" .
+
+<urn:uuid:6cfaddd9-81f7-4a25-a201-ce88d5b1e18e> a "ISO 19115:2003/19139" ;
+    bcube:dateCreated "2015-07-12T19:10:38.947Z" ;
+    bcube:lastUpdated "2015-07-12T19:10:38.947Z" ;
+    bcube:originatedFrom <urn:uuid:fd7e2fd9-596f-4001-95fc-a77a966e0613> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:ab6c2795-1bfe-4a79-993b-60e6a1a00d22> .
+
+<urn:uuid:ab6c2795-1bfe-4a79-993b-60e6a1a00d22> bcube:dateCreated "2015-07-12T19:10:38.947Z" ;
+    bcube:hasMetadataRecord <urn:uuid:6cfaddd9-81f7-4a25-a201-ce88d5b1e18e> ;
+    bcube:lastUpdated "2015-07-12T19:10:38.947Z" ;
+    dc:conformsTo <urn:uuid:40b1f6cd-3595-47d7-9405-65f8eeace4f6>,
+        <urn:uuid:4706bf1a-c1cf-4305-82c7-d71651168290>,
+        <urn:uuid:4c9eb4e7-fc84-4815-a072-e7b1de5b0ed3> ;
+    dc:description "Terrain data, as defined in FEMA Guidelines and Specifications, Appendix N: Data Capture Standards, describes the digital topographic data that was used to create the elevation data representing the terrain environment of a watershed and/or floodplain. Terrain data requirements allow for flexibility in the types of information provided as sources used to produce final terrain deliverables. Once this type of data is provided, FEMA will be able to account for the origins of the flood study elevation data. (Source: FEMA Guidelines and Specifications, Appendix N, Section N.1.2)." ;
+    dc:spatial "POLYGON ((-95.8566 38.379084,-95.8566 38.748377,-94.545769 38.748377,-94.545769 38.379084,-95.8566 38.379084))" ;
+    dcterms:references <urn:uuid:5b246e44-4f06-4161-b55e-d1f2b6c8aab6> ;
+    dcterms:title "Topographic Data Development for Miami County 1m LiDAR" ;
+    esip:eastBound "-94.545769"^^xsd:float ;
+    esip:northBound "38.748377"^^xsd:float ;
+    esip:southBound "38.379084"^^xsd:float ;
+    esip:westBound "-95.8566"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:fd7e2fd9-596f-4001-95fc-a77a966e0613> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-07-12T19:10:38.947Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-07-12T19:10:38.947Z" ;
+    dc:identifier "urn:sha:be7c800869c3a41869c58a9759cb62f940d12198ffc703ee22f6adde" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "https://catalog.data.gov/harvest/object/203f77e1-2518-4846-a068-c79f45572b27" .
+

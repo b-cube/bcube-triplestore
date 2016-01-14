@@ -1,0 +1,78 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:004e10cc-0fb5-4bd6-9dab-81dc88f3192b> bcube:hasType "theme" ;
+    bcube:hasValue "Elevation",
+        "NOAA",
+        "bathymetric lines",
+        "navigation charts",
+        "wave modeling" ;
+    dc:partOf "none" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:326539bc-e0e7-4edc-a15f-de188346a5aa> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-03-06T01:28:17.652Z" ;
+    bcube:lastUpdated "2015-03-06T01:28:17.652Z" ;
+    bcube:originatedFrom <urn:uuid:9980608f-f830-4544-acbb-10fa923fa79e> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:6542a163-73cd-4c74-bb93-7f82963237cb> .
+
+<urn:uuid:6542a163-73cd-4c74-bb93-7f82963237cb> bcube:dateCreated "2015-03-06T01:28:17.652Z" ;
+    bcube:hasMetadataRecord <urn:uuid:326539bc-e0e7-4edc-a15f-de188346a5aa> ;
+    bcube:lastUpdated "2015-03-06T01:28:17.652Z" ;
+    dc:conformsTo <urn:uuid:004e10cc-0fb5-4bd6-9dab-81dc88f3192b>,
+        <urn:uuid:b248a837-4543-4c28-a343-93a0688bad49> ;
+    dc:description "This is a line data depicting the offshore bathymetry_NOAA_1994 for Louisiana. The contourinterval is 2 meters. These data were derived from point depths depicted onNOAA Navigation charts. The depths on the NOAA charts are typically relativeto 'mean low Gulf' levels, so these depths are conservative." ;
+    dc:spatial "POLYGON ((-93.95163 28.541408,-93.95163 30.369144,-88.821663 30.369144,-88.821663 28.541408,-93.95163 28.541408))" ;
+    dcterms:publisher <urn:uuid:a0748e9e-ae11-405c-8a34-9663a0724d69> ;
+    dcterms:references <urn:uuid:b0aaafe5-23b5-4090-9b23-429623e4268c> ;
+    dcterms:title "Bathymetry for Louisiana, Geographic NAD83, LOSCO (1994) [bathymetry_NOAA_1994]" ;
+    esip:eastBound "-88.821663"^^xsd:float ;
+    esip:northBound "30.369144"^^xsd:float ;
+    esip:southBound "28.541408"^^xsd:float ;
+    esip:westBound "-93.95163"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:9980608f-f830-4544-acbb-10fa923fa79e> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-03-06T01:28:17.652Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-03-06T01:28:17.652Z" ;
+    dc:identifier "urn:sha:4ff4cdf8875118c7e762710535b37f5a065a559d13842525092dc773" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://catalog.data.gov/harvest/object/cae80ae2-4381-4f81-abda-a821e34e1078/original" .
+
+<urn:uuid:a0748e9e-ae11-405c-8a34-9663a0724d69> owl:a foaf:Organization ;
+    foaf:name "" .
+
+<urn:uuid:b0aaafe5-23b5-4090-9b23-429623e4268c> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-03-06T01:28:17.652Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-03-06T01:28:17.652Z" ;
+    dc:identifier "urn:sha:a04025834f1fbd909c6ac6c95b83f9251fdc8217d8de661bde97463c" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://lagic.lsu.edu/data/losco/bathymetry_NOAA_1994.zip" .
+
+<urn:uuid:b248a837-4543-4c28-a343-93a0688bad49> bcube:hasType "place" ;
+    bcube:hasValue "Louisiana" ;
+    dc:partOf "none" ;
+    owl:a bcube:thesaurusSubset .
+

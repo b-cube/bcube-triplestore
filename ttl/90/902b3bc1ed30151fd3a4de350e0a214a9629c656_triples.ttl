@@ -1,0 +1,62 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:0cf3ba29-7dd3-4ded-9ac7-f36addc57f7d> a "OGC:WMS" ;
+    bcube:contains <urn:uuid:28398c9c-946f-42f2-93b0-6b91e17b4107> ;
+    bcube:dateCreated "2015-08-12T05:01:26.094Z" ;
+    bcube:lastUpdated "2015-08-12T05:01:26.094Z" ;
+    bcube:originatedFrom <urn:uuid:b5b4e2a9-ec9e-4f56-8782-af299f071fc5> ;
+    dc:conformsTo <urn:uuid:442efa4c-3612-4b44-931b-db9ce5806cc7> ;
+    dc:description "The Kansas Aquatic Resource Planner was designed to depict aquatic resources and is intended to provide general information and guidance regarding the location, condition, and value of those resources. The data here is an accumulation of data acquired from different organizations across the state as well as custom data layers and is presented here as an organized, assessable, and unbiased resource for people. The information presented is not intended to be prejudiced in favor of, or against, any specific form of conservation or development. This map, and the data contained therein, is for general planning purposes only. Any final decisions should be based on actual field investigation as well as consultation with appropriate agencies and organizations (ie Kansas Department of Wildlife and Parks, U.S. Fish and Wildlife Service, Kansas Biological Survey) as a more thorough review and investigation of variables could impact a decision or proposed project." ;
+    owl:a bcube:service .
+
+<urn:uuid:28398c9c-946f-42f2-93b0-6b91e17b4107> bcube:dateCreated "2015-08-12T05:01:26.094Z" ;
+    bcube:lastUpdated "2015-08-12T05:01:26.094Z" ;
+    dc:description "As part of the Kansas Aquatic Gap project, researchers at Kansas State University coordinated with Kansas Department of Wildlife and Parks Stream Biologists and utilized years of data from KDWP s annual stream monitoring program, and historical records from KU and Sternberg natural history museum records, the Sam Nobel Museum of Natural History, Vaughn Weaver, and some KSU related projects to map occurrences of 119 fish species. These current and historical occurrence records were then analyzed against a suite of stream bio-geo physical variables and processed with Maximum Entropy (Maxent) models to generate a predictive model of potential habitat suitability for each species. Maxent is a general-purpose machine learning method with a simple and precise mathematical formulation, and it has a number of aspects that make it well-suited for species distribution modeling (Phillips et al. 2006). Because Maxent only relies on presence only data, we used our entire database on fish species distributions (approximately 3,400 community collections). Mean variable importance across fish species was greatest for geographic coordinates and stream order, reflecting regional differences in fish species distributions and variation with stream size. The relative importance of stream habitat variables in these models is assessed by evaluating the performance of the model when the variable of interest is left out. Caution is suggested in interpreting these variable weightings because this method does not account for potential interactions among variables. Model results were initially mapped to a stream network with fewer stream segments than the NHD datset, so processing was conducted to relate the model results from the original stream segments to the corresponding NHS stream segments. Due to the higher level of detail in the NHD dataset (included 361, 406 segments) Maxent predictive results were only transferred to stream segments identified as being Strahler order 2 or greater (82,997 segments)." ;
+    dc:spatial "POLYGON ((-102.048706 36.997936,-102.048706 40.002586,-94.588047 40.002586,-94.588047 36.997936,-102.048706 36.997936))" ;
+    dc:title "Complete fish list" ;
+    dcterms:references <urn:uuid:3beb4de8-400b-4368-90ca-eb24ea7b3625> ;
+    esip:eastBound "-94.588047"^^xsd:float ;
+    esip:northBound "40.002586"^^xsd:float ;
+    esip:southBound "36.997936"^^xsd:float ;
+    esip:westBound "-102.048706"^^xsd:float ;
+    owl:a bcube:Layer .
+
+<urn:uuid:3beb4de8-400b-4368-90ca-eb24ea7b3625> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-12T05:01:26.094Z" ;
+    bcube:hasConfidence "Not Sure" ;
+    bcube:hasUrlSource "Generated" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-12T05:01:26.094Z" ;
+    dc:identifier "urn:sha:0a3895ebbe2fa36d99b30dfca492b657911ce4286e70c13bcc164485" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://kars.ku.edu/arcgis/services/SingleLayers/KansasStreamsWithMaxtent/MapServer/WMSServer?layers=0&width=500&version=1.3.0&bbox=-102.048706%2C36.997936%2C-94.588047%2C40.002586&service=WMS&format=image%2Fpng&styles=&crs=CRS%3A84&request=GetMap&height=500" .
+
+<urn:uuid:442efa4c-3612-4b44-931b-db9ce5806cc7> bcube:hasValue "aquatic resources, fish, habitat, lakes, streams, water, Kansas" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:b5b4e2a9-ec9e-4f56-8782-af299f071fc5> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-12T05:01:26.094Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-12T05:01:26.094Z" ;
+    dc:identifier "urn:sha:19ffe3323f757e5aa6d8a4d330642654a551dc36dd84992a6d31f0d0" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://kars.ku.edu/arcgis/services/SingleLayers/KansasStreamsWithMaxtent/MapServer/WMSServer?request=GetCapabilities&service=WMS" .
+

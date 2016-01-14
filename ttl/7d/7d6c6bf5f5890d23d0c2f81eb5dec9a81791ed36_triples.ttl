@@ -1,0 +1,70 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:44157992-f80d-479b-8260-6fa5a64d4b69> owl:a foaf:Organization ;
+    foaf:name "" .
+
+<urn:uuid:8b555dba-510a-4fe4-879b-0d0be45aa877> bcube:hasType "theme" ;
+    bcube:hasValue "health" ;
+    dc:partOf "ISO 19115 Topic Categories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:c3d64b03-d1e5-4414-927e-896931da2e69> bcube:hasType "theme" ;
+    bcube:hasValue "CFIP",
+        "Cal MAPPER",
+        "Fire",
+        "Fire Hazard",
+        "Fire Plan",
+        "Forest Health",
+        "Forest Stewardship",
+        "Fuels",
+        "Fuels Reduction",
+        "VMP" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:d855e56a-88dd-4b99-94aa-be3d96f86c8c> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-10-30T03:22:42.799Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-10-30T03:22:42.799Z" ;
+    dc:identifier "urn:sha:f9a49c0209e8362c9a89d3d3a538b1d8bf1bedaaee589b867be95a7f" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://frap.fire.ca.gov/data/statewide/FGDC_metadata/CalFireHazReductProjects2013v1_7.xml" .
+
+<urn:uuid:e26f095f-818e-44a8-9c5a-c02b3be1c4da> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-10-30T03:22:42.799Z" ;
+    bcube:lastUpdated "2015-10-30T03:22:42.799Z" ;
+    bcube:originatedFrom <urn:uuid:d855e56a-88dd-4b99-94aa-be3d96f86c8c> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:fd82f44d-0535-42fa-ab58-3387be8a17b9> .
+
+<urn:uuid:fd82f44d-0535-42fa-ab58-3387be8a17b9> bcube:dateCreated "2015-10-30T03:22:42.799Z" ;
+    bcube:hasMetadataRecord <urn:uuid:e26f095f-818e-44a8-9c5a-c02b3be1c4da> ;
+    bcube:lastUpdated "2015-10-30T03:22:42.799Z" ;
+    dc:conformsTo <urn:uuid:8b555dba-510a-4fe4-879b-0d0be45aa877>,
+        <urn:uuid:c3d64b03-d1e5-4414-927e-896931da2e69> ;
+    dc:description "This dataset represents completed fire hazard reduction projects (often related to the removal of vegetative fuels) by CAL FIRE. All Fire Hazard reduction projects completed since 2009 are publicly available. Completed projects prior to 2008 have also been added, but are not comprehensive. As staff time and budgets permit, additional historical information will likely be added. Any additional projects not yet represented in this database are being transferred from field records into the CalMAPPER core database. \"Project Polygons\" are the top level reporting unit for treatment activities tracked within this geodatabase. Project polygons are areas that encompass all treatments for a project. This can be the sum of all treatment areas, or could be a property boundary, or a buffer area around the treatments polygons. A Composite relationship is defined between project polygons and treatment polygons. If you delete a project polygon, all treatments Related to that polygon will also be deleted. Treatment Polygons are the areas within a Project Polygon where work on the ground is accomplished. A Project Polygon may include multiple discrete Treatment Polygons. Treatment polygons are related to project polygons (as a destination row) and Activity records (as an origin row). Deleting a Treatment polygon deletes all Related activity records in the destination table. Activities are a description of the actual work done on a Treatment area over time (pruning, chipping, etc.). This information is contained in a table, which is related to the treatment polygons in which the activities took place." ;
+    dc:spatial "POLYGON ((-124.223726 32.609418,-124.223726 41.961281,-115.994578 41.961281,-115.994578 32.609418,-124.223726 32.609418))" ;
+    dcterms:publisher <urn:uuid:44157992-f80d-479b-8260-6fa5a64d4b69> ;
+    dcterms:title "CAL FIRE - Fire Hazard Reduction Projects" ;
+    esip:eastBound "-115.994578"^^xsd:float ;
+    esip:northBound "41.961281"^^xsd:float ;
+    esip:southBound "32.609418"^^xsd:float ;
+    esip:westBound "-124.223726"^^xsd:float ;
+    owl:a dcat:Dataset .
+

@@ -1,0 +1,95 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:21c72bdf-b6f8-431c-80be-4a952f53fc7d> owl:a foaf:Organization ;
+    foaf:name "" .
+
+<urn:uuid:2d89a215-fa70-4c95-b1bc-b623ef46c214> bcube:dateCreated "2015-11-02T07:09:16.075Z" ;
+    bcube:hasMetadataRecord <urn:uuid:a684e403-4493-469b-9019-6b4b0ba59322> ;
+    bcube:lastUpdated "2015-11-02T07:09:16.075Z" ;
+    dc:conformsTo <urn:uuid:3a0281ff-b80f-4a70-aa27-8280c57713df>,
+        <urn:uuid:8994010d-c8a9-47d9-99e8-79a0ce2328cf>,
+        <urn:uuid:fca5b96d-dd83-4e0b-8853-1f6d1945359b> ;
+    dc:description "The TIGER/Line relationship files are an extract of selected geographic information from the Census MAF/TIGER database. Each TIGER/Line relationship file is designed to stand alone as an independent data set or can be used jointly with the shapefiles." ;
+    dc:spatial "POLYGON ((-87.525682 32.307279,-87.525682 32.875129,-87.017653 32.875129,-87.017653 32.307279,-87.525682 32.307279))" ;
+    dcterms:publisher <urn:uuid:21c72bdf-b6f8-431c-80be-4a952f53fc7d> ;
+    dcterms:references <urn:uuid:76b320de-7608-4fe2-a6fc-9ec9af383117> ;
+    dcterms:title "TIGER/Line Shapefile, 2008, county, Perry County, AL, Address Range-Feature Name" ;
+    esip:eastBound "-87.017653"^^xsd:float ;
+    esip:endDate "2008-07-01"^^xsd:date ;
+    esip:northBound "32.875129"^^xsd:float ;
+    esip:southBound "32.307279"^^xsd:float ;
+    esip:startDate "2008-01-01"^^xsd:date ;
+    esip:westBound "-87.525682"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:3a0281ff-b80f-4a70-aa27-8280c57713df> bcube:hasType "theme" ;
+    bcube:hasValue "5-digit ZIP code",
+        "County ANSI Code",
+        "County FIPS Code",
+        "From House Number",
+        "Permanent edge ID",
+        "Side indicator flag",
+        "State ANSI Code",
+        "State FIPS Code",
+        "To House Number",
+        "ZIP +4 code" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:76b320de-7608-4fe2-a6fc-9ec9af383117> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-02T07:09:16.075Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-02T07:09:16.075Z" ;
+    dc:identifier "urn:sha:54326480c39e6c1ef8129f6ade418c4ae79bc88805aedd6581df58b6" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www2.census.gov/geo/tiger/TIGER2008/01_ALABAMA/01105_Perry_County/tl_2008_01105_addrfn.zip" .
+
+<urn:uuid:8994010d-c8a9-47d9-99e8-79a0ce2328cf> bcube:hasType "theme" ;
+    bcube:hasValue "transportation" ;
+    dc:partOf "ISO 19115 Topic Categories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:a684e403-4493-469b-9019-6b4b0ba59322> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-11-02T07:09:16.075Z" ;
+    bcube:lastUpdated "2015-11-02T07:09:16.075Z" ;
+    bcube:originatedFrom <urn:uuid:c4054738-35f8-4d40-ab5f-afe90b2b9ce4> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:2d89a215-fa70-4c95-b1bc-b623ef46c214> .
+
+<urn:uuid:c4054738-35f8-4d40-ab5f-afe90b2b9ce4> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-02T07:09:16.075Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-02T07:09:16.075Z" ;
+    dc:identifier "urn:sha:b6759eb383a39f6308192dc297b3522f999c51333191c682f0c2bd41" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://meta.geo.census.gov/data/existing/decennial/GEO/GPMB/TIGERline/fe_2008/addrfn/tl_2008_01105_addrfn_url.dbf.xml" .
+
+<urn:uuid:fca5b96d-dd83-4e0b-8853-1f6d1945359b> bcube:hasType "place" ;
+    bcube:hasValue "01105",
+        "County or Equivalent Entity",
+        "Perry",
+        "U.S.",
+        "United States" ;
+    dc:partOf "FIPS Publication 5-2, FIPS Publication 6-4, FIPS Publication 8-6, FIPS Publication 9-1,FIPS Publication55-4" ;
+    owl:a bcube:thesaurusSubset .
+

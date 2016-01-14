@@ -1,0 +1,77 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:08670acc-5ea2-480a-ac34-b68c12a24cd8> owl:a foaf:Organization ;
+    foaf:name "Montana State Library" .
+
+<urn:uuid:32248fd9-60b9-4ffa-814e-915b27551e4f> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-08-10T09:00:55.236Z" ;
+    bcube:lastUpdated "2015-08-10T09:00:55.236Z" ;
+    bcube:originatedFrom <urn:uuid:712f78e8-b8da-408d-b8f8-1a27ff4432f2> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:411fe6b5-006f-44d9-8354-ece6e6d3d935> .
+
+<urn:uuid:411fe6b5-006f-44d9-8354-ece6e6d3d935> bcube:dateCreated "2015-08-10T09:00:55.236Z" ;
+    bcube:hasMetadataRecord <urn:uuid:32248fd9-60b9-4ffa-814e-915b27551e4f> ;
+    bcube:lastUpdated "2015-08-10T09:00:55.236Z" ;
+    dc:conformsTo <urn:uuid:8347ce62-654d-4702-8d5f-6d69c1cd9f76>,
+        <urn:uuid:c7dfc73b-9fc7-4714-9361-cb306ea7edb0>,
+        <urn:uuid:fb837390-bdd0-4d28-928f-3fb9865d9605> ;
+    dc:description "These datasets show lakes and streams that were listed in Montana's 305(b) report of water quality assessment determinations for the years 2000, 2002, 2004, 2006, 2008, 2010, and 2012. The 305(b) reports list water bodies which have been assessed as fully supporting all applicable beneficial uses, waters determined to be water quality impaired for one or more beneficial uses, and waters where the information collected to date is not sufficient to complete beneficial use support determinations. The data may be queried to select streams on the 303(d) List of Impaired and Threatened Waters. The 303(d) List, required by the federal Clean Water Act, focuses on waters in the state which have been assessed as having one or more of their beneficial uses impaired by human-caused pollution. These waters are required to have a Total Maximum Daily Load (TMDL) determined. The archive also includes the boundaries of the TMDL Planning Areas for 2000 and 2008 that the DEQ uses to group its TMDL work into manageable projects. The data source for the depiction of the water bodies in 2000 through 2004 was the U.S. Geological Survey 1:100,000 scale Digital Line Graph data. The 2006 and 2008 layers contain features from the low-resolution National Hydrography Dataset. The 2010 and 2012 features are from the 1:24,000 scale National Hydrography Dataset. These layers were formerly hosted on the Montana State Library, Natural Resource Information System, web site for the Montana Department of Environmental Quality (DEQ). Each year the information from the waterbody assessments that was attached to the map data was different, and the layers for different years are not always comparable to each other. Please see the Clean Water Act Information Center (CWAIC) web site at http://cwaic.mt.gov for current data and for access to 305(b) report data that may be linked to the features. The State Library archive of the GIS data formerly on its web site does not contain complete documentation on the meaning of all the fields included in these data sets." ;
+    dc:spatial "POLYGON ((-116.116594 44.388476,-116.116594 49.167411,-103.656727 49.167411,-103.656727 44.388476,-116.116594 44.388476))" ;
+    dcterms:publisher <urn:uuid:08670acc-5ea2-480a-ac34-b68c12a24cd8> ;
+    dcterms:title "Montana Waters With Surface Water Quality Assessments, 2000-2012" ;
+    esip:eastBound "-103.656727"^^xsd:float ;
+    esip:endDate "2012-01-01"^^xsd:date ;
+    esip:northBound "49.167411"^^xsd:float ;
+    esip:southBound "44.388476"^^xsd:float ;
+    esip:startDate "2000-01-01"^^xsd:date ;
+    esip:westBound "-116.116594"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:712f78e8-b8da-408d-b8f8-1a27ff4432f2> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-10T09:00:55.236Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-10T09:00:55.236Z" ;
+    dc:identifier "urn:sha:e15657d201015f9d77a5e235e9dba094ba306ade1351cc2985058ab4" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://mslapps.mt.gov/Geographic_Information/Data/DataList/datalist_MetadataDetailRaw.aspx?did={6a893e90-2b82-4bd4-a070-e7423dcc25a4}" .
+
+<urn:uuid:8347ce62-654d-4702-8d5f-6d69c1cd9f76> bcube:hasType "place" ;
+    bcube:hasValue "MT",
+        "Montana" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:c7dfc73b-9fc7-4714-9361-cb306ea7edb0> bcube:hasType "theme" ;
+    bcube:hasValue "environment",
+        "inlandWaters" ;
+    dc:partOf "ISO 19115 Topic Category" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:fb837390-bdd0-4d28-928f-3fb9865d9605> bcube:hasType "theme" ;
+    bcube:hasValue "303(d) list",
+        "305(b) list",
+        "Beneficial Uses",
+        "CWAIC",
+        "Clean Water Act",
+        "Impaired and Threatened",
+        "TMDL",
+        "Water Quality",
+        "cwaic" ;
+    owl:a bcube:thesaurusSubset .
+

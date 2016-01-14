@@ -1,0 +1,73 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:0e66261e-e68b-484e-93d1-4f2318229496> bcube:hasType "theme" ;
+    bcube:hasValue "Biogeography",
+        "Ecoregion",
+        "Marine",
+        "Realm" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:35c7215c-102f-4cd3-89da-b7d3ca49884a> owl:a foaf:Organization ;
+    foaf:name "" .
+
+<urn:uuid:81398ff0-c3d7-4066-baa5-7d4ebc108c86> bcube:dateCreated "2015-11-05T07:31:31.207Z" ;
+    bcube:hasMetadataRecord <urn:uuid:c5071db1-efb1-4d11-aa85-c3007f55f182> ;
+    bcube:lastUpdated "2015-11-05T07:31:31.207Z" ;
+    dc:conformsTo <urn:uuid:0e66261e-e68b-484e-93d1-4f2318229496>,
+        <urn:uuid:9b8af308-497a-4c4f-a8c9-1593ead13305>,
+        <urn:uuid:cf6fcde0-9b3a-43a5-976d-d765b919df40> ;
+    dc:description "A biogeographic classification of the world's coastal and continental shelf waters following a nested hierarchy of realms, provinces and ecoregions. USERS PLEASE NOTE - shapefile does NOT accurately represent outer MEOW boundaries: As specified in the original publications, the boundaries in this shapefile have been extended out some 200 nautical miles from land (and this buffer is extended to include any additional marine areas less than 200metres in depth which lie beyond this distance). This outer boundary buffer is primarily drawn here to ease visibility of ecoregions in global and regional scale maps. Similarly the inland boundaries of the ecoregions extend far inland - a convention to ensure inclusion of any coastline and estuarine/lagoonal systems which may be derived from different map sources. As specified, the ecoregional classification relates primarily to coast and shelf biotas for which a 200m depth contour is a more accurate indicative boundary. It is therefore not an appropriate use of the data to calculate total ecoregion areas or generate other area or volumetric dependent statistics using these boundaries alone. A version of the shapefile cut to shelf areas will be released on this site by December 2007. TNC users please note: TNC has adopted the Marine Ecoregions of the World as our marine ecoregional boundaries, but in some cases around North America we are using older and slightly different boundaries for ecoregional planning. These other boundaries can be found in the marine ecoregional assessment layer directly below on this page. Download this data at: http://maps.tnc.org/" ;
+    dc:spatial "POLYGON ((-180.0 -89.9,-180.0 86.919396,180.0 86.919396,180.0 -89.9,-180.0 -89.9))" ;
+    dcterms:publisher <urn:uuid:35c7215c-102f-4cd3-89da-b7d3ca49884a> ;
+    dcterms:title "Marine Ecoregions Of the World (MEOW)" ;
+    esip:eastBound "180.0"^^xsd:float ;
+    esip:northBound "86.919396"^^xsd:float ;
+    esip:southBound "-89.9"^^xsd:float ;
+    esip:westBound "-180.0"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:9b8af308-497a-4c4f-a8c9-1593ead13305> bcube:hasType "stratum" ;
+    bcube:hasValue "Ecoregion",
+        "Shelf" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:aa47e6e0-f83d-4e32-a9a1-b9478e63d8ce> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-05T07:31:31.207Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-05T07:31:31.207Z" ;
+    dc:identifier "urn:sha:8c9ad61bac0b41d0da7d9bc4548e327cf85110ed2fa13ca5b9f344be" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://maps.tnc.org/files/metadata/MEOW.xml" .
+
+<urn:uuid:c5071db1-efb1-4d11-aa85-c3007f55f182> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-11-05T07:31:31.207Z" ;
+    bcube:lastUpdated "2015-11-05T07:31:31.207Z" ;
+    bcube:originatedFrom <urn:uuid:aa47e6e0-f83d-4e32-a9a1-b9478e63d8ce> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:81398ff0-c3d7-4066-baa5-7d4ebc108c86> .
+
+<urn:uuid:cf6fcde0-9b3a-43a5-976d-d765b919df40> bcube:hasType "place" ;
+    bcube:hasValue "Global",
+        "Oceans",
+        "World" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+

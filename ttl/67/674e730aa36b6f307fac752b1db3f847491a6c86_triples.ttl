@@ -1,0 +1,95 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:34053179-2aed-4773-a09b-0645fd97c7c9> bcube:hasType "theme" ;
+    bcube:hasValue "5-digit ZIP code",
+        "County ANSI Code",
+        "County FIPS Code",
+        "From House Number",
+        "Permanent edge ID",
+        "Side indicator flag",
+        "State ANSI Code",
+        "State FIPS Code",
+        "To House Number",
+        "ZIP +4 code" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:361bceff-45ba-423b-bf73-6b8a65fba3d7> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-11-03T00:36:01.389Z" ;
+    bcube:lastUpdated "2015-11-03T00:36:01.389Z" ;
+    bcube:originatedFrom <urn:uuid:8ae29cae-5a59-4fe2-9747-fa22bc8bff97> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:652c53ee-18a2-4943-8d15-3f47614c09e7> .
+
+<urn:uuid:534ebafc-c9a2-47b3-9f69-91b9d8afb9b3> bcube:hasType "theme" ;
+    bcube:hasValue "transportation" ;
+    dc:partOf "ISO 19115 Topic Categories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:652c53ee-18a2-4943-8d15-3f47614c09e7> bcube:dateCreated "2015-11-03T00:36:01.389Z" ;
+    bcube:hasMetadataRecord <urn:uuid:361bceff-45ba-423b-bf73-6b8a65fba3d7> ;
+    bcube:lastUpdated "2015-11-03T00:36:01.389Z" ;
+    dc:conformsTo <urn:uuid:34053179-2aed-4773-a09b-0645fd97c7c9>,
+        <urn:uuid:534ebafc-c9a2-47b3-9f69-91b9d8afb9b3>,
+        <urn:uuid:add61398-d445-467d-b9f1-2caa61855c8d> ;
+    dc:description "The TIGER/Line relationship files are an extract of selected geographic information from the Census MAF/TIGER database. Each TIGER/Line relationship file is designed to stand alone as an independent data set or can be used jointly with the shapefiles." ;
+    dc:spatial "POLYGON ((-86.921237 32.307574,-86.921237 32.708213,-86.411172 32.708213,-86.411172 32.307574,-86.921237 32.307574))" ;
+    dcterms:publisher <urn:uuid:a85a041d-ac9d-4355-984d-5fdc705b9675> ;
+    dcterms:references <urn:uuid:67949643-bb43-48c0-bf88-7570b2fc0ab7> ;
+    dcterms:title "TIGER/Line Shapefile, 2009, county, Autauga County, AL, Current Address Range-Feature Name Relationship File" ;
+    esip:eastBound "-86.411172"^^xsd:float ;
+    esip:endDate "2009-05-01"^^xsd:date ;
+    esip:northBound "32.708213"^^xsd:float ;
+    esip:southBound "32.307574"^^xsd:float ;
+    esip:startDate "2009-01-01"^^xsd:date ;
+    esip:westBound "-86.921237"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:67949643-bb43-48c0-bf88-7570b2fc0ab7> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-03T00:36:01.389Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-03T00:36:01.389Z" ;
+    dc:identifier "urn:sha:1a25c92407c2ad3fcea6acb14d49f8006755e025395da023e9d08dc2" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www2.census.gov/geo/tiger/TIGER2009/01_ALABAMA/01001_Autauga_County/tl_2009_01001_addrfn.zip" .
+
+<urn:uuid:8ae29cae-5a59-4fe2-9747-fa22bc8bff97> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-03T00:36:01.389Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-03T00:36:01.389Z" ;
+    dc:identifier "urn:sha:1824def48944f04f1929dead8b649fd603986abc0996c855ece5efd1" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://meta.geo.census.gov/data/existing/decennial/GEO/GPMB/TIGERline/fe_2009/addrfn/tl_2009_01001_addrfn_url.dbf.xml" .
+
+<urn:uuid:a85a041d-ac9d-4355-984d-5fdc705b9675> owl:a foaf:Organization ;
+    foaf:name "" .
+
+<urn:uuid:add61398-d445-467d-b9f1-2caa61855c8d> bcube:hasType "place" ;
+    bcube:hasValue "01001",
+        "Autauga",
+        "County or Equivalent Entity",
+        "U.S.",
+        "United States" ;
+    dc:partOf "INCITS.38-200x (R2004),INCITS.31-200x (R2007),INCITS.454-200x,INCITS 455-200x,INCITS 446-2008" ;
+    owl:a bcube:thesaurusSubset .
+

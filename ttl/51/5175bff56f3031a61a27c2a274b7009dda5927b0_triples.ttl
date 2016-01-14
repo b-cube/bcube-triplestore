@@ -1,0 +1,98 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:7ddfe216-faa8-44b2-9001-da108918d365> bcube:hasType "theme" ;
+    bcube:hasValue "5-digit ZIP code",
+        "County FIPS Code",
+        "County GNIS Code",
+        "From House Number",
+        "Permanent edge ID",
+        "Side indicator flag",
+        "State FIPS Code",
+        "State GNIS Code",
+        "To House Number",
+        "ZIP +4 code" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:82201308-b5e4-4490-a4a9-f7ba6aa719ac> bcube:dateCreated "2015-10-30T03:13:11.968Z" ;
+    bcube:hasMetadataRecord <urn:uuid:b255daeb-bc5c-40e1-a716-73332750ae1b> ;
+    bcube:lastUpdated "2015-10-30T03:13:11.968Z" ;
+    dc:conformsTo <urn:uuid:7ddfe216-faa8-44b2-9001-da108918d365>,
+        <urn:uuid:cdad5542-e252-440e-b51a-fa482185047e>,
+        <urn:uuid:fc5e4984-8c75-443d-a7ba-dcd25fdb6abe> ;
+    dc:description "The Address Range / Feature Name Relationship File (ADDRFN.dbf) contains a record for each address range / linear feature name relationship. The purpose of this relationship file is to identify all street names associated with each address range. An edge can have several feature names; an address range located on an edge can be associated with one or any combination of the available feature names (an address range can be linked to multiple feature names). The address range is identified by the address range identifier (ARID) attribute that can be used to link to the Address Ranges Relationship File (ADDR.dbf). The linear feature name is identified by the linear feature identifier (LINEARID) attribute that can be used to link to the Feature Names Relationship File (FEATNAMES.dbf). The TIGER/Line shapefiles and related database files (.dbf) are an extract of selected geographic and cartographic information from the U.S. Census Bureau's Master Address File / Topologically Integrated Geographic Encoding and Referencing (MAF/TIGER) Database (MTDB). The MTDB represents a seamless national file with no overlaps or gaps between parts, however, each TIGER/Line shapefile is designed to stand alone as an independent data set, or they can be combined to cover the entire nation." ;
+    dc:spatial "POLYGON ((-179.231086 -14.601813,-179.231086 71.441059,179.859681 71.441059,179.859681 -14.601813,-179.231086 -14.601813))" ;
+    dcterms:references <urn:uuid:ac469c29-214d-467d-9e0c-a29e3fd86e02>,
+        <urn:uuid:df7c13e7-f275-4947-af1c-2b2db1f87f40> ;
+    dcterms:title "TIGER/Line Shapefile, 2015, Series Information for the Address Range-Feature Name County-based Relationship File" ;
+    esip:eastBound "179.859681"^^xsd:float ;
+    esip:northBound "71.441059"^^xsd:float ;
+    esip:southBound "-14.601813"^^xsd:float ;
+    esip:westBound "-179.231086"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:ac469c29-214d-467d-9e0c-a29e3fd86e02> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-10-30T03:13:11.968Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-10-30T03:13:11.968Z" ;
+    dc:identifier "urn:sha:eb5136bbd9ceaf63ee9908b95c1845391647659ff20c906a5ef7363f" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www2.census.gov/geo/pdfs/maps-data/data/tiger/tgrshp2015/TGRSHP2015_TechDoc.pdf" .
+
+<urn:uuid:b255daeb-bc5c-40e1-a716-73332750ae1b> a "ISO 19115:2003/19139" ;
+    bcube:dateCreated "2015-10-30T03:13:11.968Z" ;
+    bcube:lastUpdated "2015-10-30T03:13:11.968Z" ;
+    bcube:originatedFrom <urn:uuid:d8658f6e-7c97-4a39-a307-f22d5bfc58a3> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:82201308-b5e4-4490-a4a9-f7ba6aa719ac> .
+
+<urn:uuid:cdad5542-e252-440e-b51a-fa482185047e> bcube:hasType "place" ;
+    bcube:hasValue "U.S.",
+        "United States" ;
+    dc:partOf "ANSI INCITS 38:2009 (Formerly FIPS 5-2), ANSI INCITS 31:2009 (Formerly FIPS 6-4),ANSI INCITS 454:2009 (Formerly FIPS 8-6), ANSI INCITS 455:2009(Formerly FIPS 9-1), ANSI INCITS 446:2008 (Geographic Names Information System (GNIS))" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:d8658f6e-7c97-4a39-a307-f22d5bfc58a3> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-10-30T03:13:11.968Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-10-30T03:13:11.968Z" ;
+    dc:identifier "urn:sha:7ee8819ccd02de81f0fe4a145ad1b249c2e121bf3b6933bd044d269b" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://meta.geo.census.gov/data/existing/decennial/GEO/GPMB/TIGERline/TIGER2015/SeriesInfoFiles/SeriesCollection_tl_2015_addrfn.dbf.iso.xml" .
+
+<urn:uuid:df7c13e7-f275-4947-af1c-2b2db1f87f40> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-10-30T03:13:11.968Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-10-30T03:13:11.968Z" ;
+    dc:identifier "urn:sha:40a114cc673c935e3ca5fde2a700638f16335cc0db64b54bed2dfac0" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www2.census.gov/geo/tiger/TIGER2015/ADDRFN/" .
+
+<urn:uuid:fc5e4984-8c75-443d-a7ba-dcd25fdb6abe> bcube:hasValue "transportation" ;
+    dc:partOf "IsoTopicCategories" ;
+    owl:a bcube:thesaurusSubset .
+

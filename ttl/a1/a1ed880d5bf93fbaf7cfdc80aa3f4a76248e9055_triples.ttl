@@ -1,0 +1,66 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:4fabaea4-d3ab-4efb-b8fb-db843dba07d4> bcube:hasValue "geoscientificInformation" ;
+    dc:partOf "IsoTopicCategories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:5a91b064-515c-4906-8fba-24e6dc2d8efd> bcube:hasType "place" ;
+    bcube:hasValue "California" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:87517387-166d-479e-a1cf-a055907a5d7a> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-04T22:08:17.446Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-04T22:08:17.446Z" ;
+    dc:identifier "urn:sha:bc04c94a646bea301a97c612faa450e5e7fed193d99d4678d6152b90" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://repository.stategeothermaldata.org/resources/metadata/TestNRRC/WRP/0478c54c-90a8-4001-86c9-e4e04afb02f2.xml" .
+
+<urn:uuid:87f310df-5095-4a0e-890b-870986cdc231> a "ISO 19115:2003/19139" ;
+    bcube:dateCreated "2015-11-04T22:08:17.446Z" ;
+    bcube:lastUpdated "2015-11-04T22:08:17.446Z" ;
+    bcube:originatedFrom <urn:uuid:87517387-166d-479e-a1cf-a055907a5d7a> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:f7e0b763-c9a2-4478-bb1b-fbdb60916dbe> .
+
+<urn:uuid:92cb4640-766b-41e7-b780-79d41343d681> bcube:hasType "theme" ;
+    bcube:hasValue "Flora",
+        "NECO Plan",
+        "distribution",
+        "modeling",
+        "rare plants" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:f7e0b763-c9a2-4478-bb1b-fbdb60916dbe> bcube:dateCreated "2015-11-04T22:08:17.446Z" ;
+    bcube:hasMetadataRecord <urn:uuid:87f310df-5095-4a0e-890b-870986cdc231> ;
+    bcube:lastUpdated "2015-11-04T22:08:17.446Z" ;
+    dc:conformsTo <urn:uuid:4fabaea4-d3ab-4efb-b8fb-db843dba07d4>,
+        <urn:uuid:5a91b064-515c-4906-8fba-24e6dc2d8efd>,
+        <urn:uuid:92cb4640-766b-41e7-b780-79d41343d681> ;
+    dc:description "Predicted distribution of Proboscidea althaeifolia, a rare plant, from NDDB data, \"new\" NDDB data, and other non-NDDB sources, NECO Plan (polygons) (n=1)" ;
+    dc:spatial "POLYGON ((-124.5656 32.5343,-124.5656 42.0,-114.1312 42.0,-114.1312 32.5343,-124.5656 32.5343))" ;
+    dcterms:title "NECO Ca Proboscidea Althaeifolia Distribution" ;
+    esip:eastBound "-114.1312"^^xsd:float ;
+    esip:endDate "1900-01-01"^^xsd:date ;
+    esip:northBound "42.0"^^xsd:float ;
+    esip:southBound "32.5343"^^xsd:float ;
+    esip:startDate "1900-01-01"^^xsd:date ;
+    esip:westBound "-124.5656"^^xsd:float ;
+    owl:a dcat:Dataset .
+

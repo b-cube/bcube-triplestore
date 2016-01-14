@@ -1,0 +1,91 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:2893a282-fb80-408a-b3c4-ec47771f0612> owl:a foaf:Organization ;
+    foaf:name "" .
+
+<urn:uuid:2b0f9c6a-815a-4362-86bd-d92b9b036e3d> bcube:hasType "theme" ;
+    bcube:hasValue "Oceans > Bathymetry/SeafloorTopography > Bathymetry",
+        "Oceans > Bathymetry/SeafloorTopography > Seafloor Topography" ;
+    dc:partOf "Global Change Master Directory (GCMD)" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:51bb3020-c70d-4e00-8b56-fa4443838451> bcube:hasType "theme" ;
+    bcube:hasValue "geoscientificinformation",
+        "imageryBaseMapsEarthCover",
+        "oceans" ;
+    dc:partOf "ISO 19115 Topic Category" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:9524cc15-2f7d-4062-917d-3fcc08ef72ac> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-09-02T19:45:42.783Z" ;
+    bcube:lastUpdated "2015-09-02T19:45:42.783Z" ;
+    bcube:originatedFrom <urn:uuid:a5a6c459-be03-4e7d-a4e5-58de232d14de> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:da6beeda-c7fe-4802-ace4-73ee134c4c8c> .
+
+<urn:uuid:a5a6c459-be03-4e7d-a4e5-58de232d14de> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-09-02T19:45:42.783Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-09-02T19:45:42.783Z" ;
+    dc:identifier "urn:sha:5e68a44faf9697f970895b00d7acf3db79994903598f3af9e8be5fb8" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://pubs.usgs.gov/ds/781/HuenemeCanyon/metadata/Contours_HuenemeCanyon_metadata.xml" .
+
+<urn:uuid:da6beeda-c7fe-4802-ace4-73ee134c4c8c> bcube:dateCreated "2015-09-02T19:45:42.783Z" ;
+    bcube:hasMetadataRecord <urn:uuid:9524cc15-2f7d-4062-917d-3fcc08ef72ac> ;
+    bcube:lastUpdated "2015-09-02T19:45:42.783Z" ;
+    dc:conformsTo <urn:uuid:2b0f9c6a-815a-4362-86bd-d92b9b036e3d>,
+        <urn:uuid:51bb3020-c70d-4e00-8b56-fa4443838451>,
+        <urn:uuid:f176ebe3-c954-49d9-81be-82a67a6838cb>,
+        <urn:uuid:f605f053-5893-4436-9e2c-50d65ac70a7e> ;
+    dc:description "This part of SIM 3225 presents data for the bathymetric contours for several seafloor maps (see sheets 1, 2, 3, 7, 10, SIM 3225) of the Hueneme Canyon and Vicinity map area, California. The vector data file is included in \"Contours_HuenemeCanyon.zip,\" which is accessible from http://pubs.usgs.gov/ds/781/HuenemeCanyon/data_catalog_HuenemeCanyon.html. The bathymetry map of Hueneme Canyon and vicinity in southern California was generated from bathymetry data collected by California State University, Monterey Bay (CSUMB), by the U.S. Geological Survey (USGS), and by Fugro Pelagos for the U.S. Army Corps of Engineers (USACE) Joint Lidar Bathymetry Technical Center of Expertise. Most of the offshore area was mapped by CSUMB in the summers of 2006 and 2007, using a 244-kHz Reson 8101 multibeam echosounder. The far-northern part of the offshore area was mapped by the USGS in 2006, using a 117-kHz SEA (AP) Ltd. SWATHplus-M phase-differencing sidescan sonar. The nearshore bathymetry and coastal topography were mapped for USACE by Fugro Pelagos in 2009, using the SHOALS-1000T bathymetric-lidar and Leica ALS60 topographic-lidar systems. All these mapping missions combined to collect bathymetry from the 0-m isobath to beyond the 3-nautical-mile limit of California's State Waters. To generate contours, a smooth arithmetic mean convolution function was applied to the bathymetry. Following smoothing, contour lines were generated at 10-meter intervals from -10 m to -100 m and at 50-meter intervals from -100 m to -400 m." ;
+    dc:spatial "POLYGON ((-119.320048 34.222955,-119.320048 34.058606,-119.13989 34.058606,-119.13989 34.222955,-119.320048 34.222955))" ;
+    dcterms:publisher <urn:uuid:2893a282-fb80-408a-b3c4-ec47771f0612> ;
+    dcterms:title "Contours--Hueneme Canyon and Vicinity, California" ;
+    esip:eastBound "-119.13989"^^xsd:float ;
+    esip:endDate "2009-01-01"^^xsd:date ;
+    esip:northBound "34.058606"^^xsd:float ;
+    esip:southBound "34.222955"^^xsd:float ;
+    esip:startDate "2006-01-01"^^xsd:date ;
+    esip:westBound "-119.320048"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:f176ebe3-c954-49d9-81be-82a67a6838cb> bcube:hasType "place" ;
+    bcube:hasValue "California",
+        "Carpinteria",
+        "Hueneme Canyon",
+        "Santa Barbara",
+        "Ventura" ;
+    dc:partOf "Geographic Names Information System (GNIS)" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:f605f053-5893-4436-9e2c-50d65ac70a7e> bcube:hasType "theme" ;
+    bcube:hasValue "Bathymetry",
+        "CMGP",
+        "Contours",
+        "Marine Geology",
+        "Multibeam",
+        "Ocean Floor Topography",
+        "Pacific Coastal and Marine Science Center",
+        "U.S. Geological Survey",
+        "USGS",
+        "Water Depth" ;
+    dc:partOf "General" ;
+    owl:a bcube:thesaurusSubset .
+

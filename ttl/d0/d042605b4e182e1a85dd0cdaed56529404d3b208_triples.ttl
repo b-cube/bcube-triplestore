@@ -1,0 +1,70 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:21912e7c-7b39-4c6b-a73e-50a3b15dee88> bcube:dateCreated "2015-08-10T04:04:09.789Z" ;
+    bcube:hasMetadataRecord <urn:uuid:a54a17f7-cbdf-4a77-a671-6786bb14518d> ;
+    bcube:lastUpdated "2015-08-10T04:04:09.789Z" ;
+    dc:conformsTo <urn:uuid:23543ca0-1b12-4240-b7d0-93c86b6db49f>,
+        <urn:uuid:c8320d66-2a89-4a36-812d-7c62436165d2>,
+        <urn:uuid:e63cedb6-7b90-49db-a6a4-0e3ed6328f68> ;
+    dc:description "This digital ortho-imagery dataset is a survey of coastal California. The project area consists of approximately 3774 square miles. The project design of the digital ortho-imagery data acquisition was developed to achieve a 30 cm pixel resolution. Fugro EarthData, Inc. acquired 289 flight lines in 36 lifts from August 26, 2010 through November 29, 2010. Digital ortho-imagery data collection was performed with Conquest and King Air aircrafts, utilizing a Leica ADS40-SH52 sensor. During the time of image acquisition at least two dual frequency GPS receivers are utilized. One receiver, acting as the remote, was operated on board the aircraft with the antenna located over the camera. For differential GPS processing, a second receiver was used on land as the base station. These receivers were in constant operation during the imagery collection and GPS phase data was collected at an epoch rate of at least 1 second. After processing the differential GPS solution by using the remote and master station a final estimated trajectory is generated. The smoothed best estimate trajectory, or sbet, is then in combination with ground surveyed points to strengthen the geospatial accuracy of the imagery. The digital ortho-imagery was cut to tiles measuring 1500 meters by 1500 meters." ;
+    dc:spatial "POLYGON ((-124.455747 32.489401,-124.455747 42.042545,-117.005324 42.042545,-117.005324 32.489401,-124.455747 32.489401))" ;
+    dcterms:title "Coastal California Digital Imagery" ;
+    esip:eastBound "-117.005324"^^xsd:float ;
+    esip:northBound "42.042545"^^xsd:float ;
+    esip:southBound "32.489401"^^xsd:float ;
+    esip:westBound "-124.455747"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:23543ca0-1b12-4240-b7d0-93c86b6db49f> bcube:hasValue "imageryBaseMapsEarthCover" ;
+    dc:partOf "IsoTopicCategories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:a54a17f7-cbdf-4a77-a671-6786bb14518d> a "ISO 19115:2003/19139" ;
+    bcube:dateCreated "2015-08-10T04:04:09.789Z" ;
+    bcube:lastUpdated "2015-08-10T04:04:09.789Z" ;
+    bcube:originatedFrom <urn:uuid:dcf7ec3b-89a2-488d-8600-bcd5bd5766ca> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:21912e7c-7b39-4c6b-a73e-50a3b15dee88> .
+
+<urn:uuid:c8320d66-2a89-4a36-812d-7c62436165d2> bcube:hasType "theme" ;
+    bcube:hasValue "ADS40-SH52",
+        "Aerotriangulation (AT)",
+        "Digital Ortho-imagery",
+        "Digital Surface Model (DSM)",
+        "Ortho",
+        "Orthoimage",
+        "Orthophoto",
+        "Orthophotography" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:dcf7ec3b-89a2-488d-8600-bcd5bd5766ca> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-10T04:04:09.789Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-10T04:04:09.789Z" ;
+    dc:identifier "urn:sha:18b73d8beafb43e658ae631a4352169433ad8a86a9e5d5df21c46bea" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://coast.noaa.gov/data/Documents/Metadata/isoharvest/Imagery/Coastal_CA_Digital_Imagery_ISO.xml" .
+
+<urn:uuid:e63cedb6-7b90-49db-a6a4-0e3ed6328f68> bcube:hasType "place" ;
+    bcube:hasValue "Coastal California",
+        "US" ;
+    dc:partOf "Geographic Names Information System" ;
+    owl:a bcube:thesaurusSubset .
+

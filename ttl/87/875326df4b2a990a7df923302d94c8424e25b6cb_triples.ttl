@@ -1,0 +1,79 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:0e0361c4-a425-4257-a927-b7327626403a> bcube:hasType "theme" ;
+    bcube:hasValue "floods",
+        "hydrographic datasets",
+        "hydrology",
+        "precipitation (atmospheric)",
+        "real-time monitoring and reporting",
+        "stream-gage measurement",
+        "streamflow",
+        "water resources" ;
+    dc:partOf "USGS Thesaurus" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:0feb1c57-50ff-49e2-a5b8-9d0aab467061> owl:a foaf:Organization ;
+    foaf:name "U.S. Geological Survey" .
+
+<urn:uuid:13ad01e0-e6e3-43fe-bf87-5a29c2dff3c7> bcube:hasType "place" ;
+    bcube:hasValue "fUS = United States" ;
+    dc:partOf "Augmented FIPS 10-4 and FIPS 6-4" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:377508cc-384e-4fec-847d-b6296558464c> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2014-07-31T11:40:21.952Z" ;
+    bcube:lastUpdated "2014-07-31T11:40:21.952Z" ;
+    bcube:originatedFrom <urn:uuid:b8a08c7e-1f00-411e-87f4-600c3ab891b4> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:dc13c365-db94-488e-8a33-995d9b588367> .
+
+<urn:uuid:83914bb3-0c37-4fc3-b8c1-0c1f534ef14b> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2014-07-31T11:40:21.952Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2014-07-31T11:40:21.952Z" ;
+    dc:identifier "urn:sha:f78e9cf077310eb5ed1b283f58e59c50045ea39fe054f5d64fb4dbb4" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://water.usgs.gov/waterwatch/" .
+
+<urn:uuid:b8a08c7e-1f00-411e-87f4-600c3ab891b4> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2014-07-31T11:40:21.952Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2014-07-31T11:40:21.952Z" ;
+    dc:identifier "urn:sha:c0d49ac7b337c2a99a75dbc53740bc7c64d66f394e322c87e9784a34" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www.usgs.gov/science/xml.php?cite=55" .
+
+<urn:uuid:dc13c365-db94-488e-8a33-995d9b588367> bcube:dateCreated "2014-07-31T11:40:21.952Z" ;
+    bcube:hasMetadataRecord <urn:uuid:377508cc-384e-4fec-847d-b6296558464c> ;
+    bcube:lastUpdated "2014-07-31T11:40:21.952Z" ;
+    dc:conformsTo <urn:uuid:0e0361c4-a425-4257-a927-b7327626403a>,
+        <urn:uuid:13ad01e0-e6e3-43fe-bf87-5a29c2dff3c7> ;
+    dc:description "U.S. map of real-time streamflow compared to historical values with links to U.S. maps and data of surface water, ground water, precipitation, river conditions and floods and other information on current and past water resources conditions." ;
+    dcterms:publisher <urn:uuid:0feb1c57-50ff-49e2-a5b8-9d0aab467061> ;
+    dcterms:references <urn:uuid:dcf98ed3-95b4-487f-addd-77c582104475> ;
+    dcterms:title "Water Watch: current water resources conditions" ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:dcf98ed3-95b4-487f-addd-77c582104475> dcterms:references <urn:uuid:83914bb3-0c37-4fc3-b8c1-0c1f534ef14b> ;
+    owl:a bibo:WebPage .
+

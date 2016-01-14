@@ -1,0 +1,84 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:0135af2d-6974-4f90-be56-bd5dbdfd5a07> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-10-29T19:58:18.727Z" ;
+    bcube:lastUpdated "2015-10-29T19:58:18.727Z" ;
+    bcube:originatedFrom <urn:uuid:f0c397f1-60a5-4768-bad7-c769d883b4c0> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:545f9307-7f81-48d8-b216-3a9c932a87d6> .
+
+<urn:uuid:47e383f8-b90c-41b4-8ea6-428edc5e0c7c> bcube:hasType "place" ;
+    bcube:hasValue "North East Philadelphia",
+        "center city",
+        "germantown",
+        "manayunk",
+        "north philadelphia",
+        "philadelphia",
+        "south philadelphia",
+        "west philadelphia" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:545f9307-7f81-48d8-b216-3a9c932a87d6> bcube:dateCreated "2015-10-29T19:58:18.727Z" ;
+    bcube:hasMetadataRecord <urn:uuid:0135af2d-6974-4f90-be56-bd5dbdfd5a07> ;
+    bcube:lastUpdated "2015-10-29T19:58:18.727Z" ;
+    dc:conformsTo <urn:uuid:47e383f8-b90c-41b4-8ea6-428edc5e0c7c>,
+        <urn:uuid:b592f50d-a499-4804-a294-a5b71c0d28ac> ;
+    dc:description "This dataset is composed of the entire City of Philadelphia's parcels based on their legal descriptions." ;
+    dc:spatial "POLYGON ((-75.281524 39.865094,-75.281524 40.143679,-74.954102 40.143679,-74.954102 39.865094,-75.281524 39.865094))" ;
+    dcterms:publisher <urn:uuid:8002cd80-7a20-4b32-9659-a0782fbfc7c9> ;
+    dcterms:references <urn:uuid:79a7f029-5b8a-41ea-ab12-10f627176ed7> ;
+    dcterms:title "Philadelphia Parcels" ;
+    esip:eastBound "-74.954102"^^xsd:float ;
+    esip:northBound "40.143679"^^xsd:float ;
+    esip:southBound "39.865094"^^xsd:float ;
+    esip:startDate "2012-01-01"^^xsd:date ;
+    esip:westBound "-75.281524"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:6abd0959-4451-4ebd-ac12-7e9909c8d693> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-10-29T19:58:18.727Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-10-29T19:58:18.727Z" ;
+    dc:identifier "urn:sha:3ecf224faabfef79b5bfcee322bdb4371ff0d08b81b3642ee2038a83" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www.pasda.psu.edu" .
+
+<urn:uuid:79a7f029-5b8a-41ea-ab12-10f627176ed7> dcterms:references <urn:uuid:6abd0959-4451-4ebd-ac12-7e9909c8d693> ;
+    owl:a bibo:WebPage .
+
+<urn:uuid:8002cd80-7a20-4b32-9659-a0782fbfc7c9> owl:a foaf:Organization ;
+    foaf:name "" .
+
+<urn:uuid:b592f50d-a499-4804-a294-a5b71c0d28ac> bcube:hasType "theme" ;
+    bcube:hasValue "planningCadastre" ;
+    dc:partOf "ISO 19115 Topic Categories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:f0c397f1-60a5-4768-bad7-c769d883b4c0> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-10-29T19:58:18.727Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-10-29T19:58:18.727Z" ;
+    dc:identifier "urn:sha:a593dd619f889b889bc9de6000300c38be3f7d0c272413619052f617" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www.pasda.psu.edu/pasda/UCI_Metadata/PhiladelphiaParcels201201.xml" .
+

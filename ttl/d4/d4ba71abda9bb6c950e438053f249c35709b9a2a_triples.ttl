@@ -1,0 +1,90 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:2c07379a-7514-4038-8e96-681d61d3365b> owl:a foaf:Organization ;
+    foaf:name "U.S. Geological Survey" .
+
+<urn:uuid:417acac9-ffb3-4277-9b9b-49f0e4bc0d16> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-07T20:16:28.802Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-07T20:16:28.802Z" ;
+    dc:identifier "urn:sha:9bbfd5d21b38e66eca8752f32adf7719457a379135cb10b1c78bb68d" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://pubs.usgs.gov/ds/418/data_files/fs/30088b3b/30088b3b_fs.xyz.xml" .
+
+<urn:uuid:5e8a651f-1097-4b5d-975d-e77bbcb177a6> bcube:hasType "theme" ;
+    bcube:hasValue "ALPS",
+        "ATM",
+        "Airborne Lidar Processing System",
+        "Airborne Topographic Mapper",
+        "DEM",
+        "Digital Elevation Model",
+        "Lidar",
+        "laser altimetry",
+        "remote sensing",
+        "topography" ;
+    dc:partOf "http://remotesensing.usgs.gov" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:8a1d9054-a127-49b9-b522-e29fc535b77f> bcube:hasType "place" ;
+    bcube:hasValue "Alabama",
+        "Northern Gulf of Mexico" ;
+    dc:partOf "http://nationalmap.gov" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:c1bcb8e9-1a70-4acc-9682-034cdb60b12a> bcube:dateCreated "2015-11-07T20:16:28.802Z" ;
+    bcube:hasMetadataRecord <urn:uuid:c82a695f-b704-4e26-b6c5-fad8079626be> ;
+    bcube:lastUpdated "2015-11-07T20:16:28.802Z" ;
+    dc:conformsTo <urn:uuid:5e8a651f-1097-4b5d-975d-e77bbcb177a6>,
+        <urn:uuid:8a1d9054-a127-49b9-b522-e29fc535b77f>,
+        <urn:uuid:c71aff08-6391-45eb-a7ff-6d20b39c3d1a>,
+        <urn:uuid:de49889d-f8b5-4334-b519-4a4c7af4ff79> ;
+    dc:description "ASCII xyz point cloud data were produced from remotely sensed, geographically referenced elevation measurements cooperatively by the U.S. Geological Survey (USGS) and National Aeronautics and Space Administration (NASA). Elevation measurements were collected over the area using the NASA Airborne Topographic Mapper (ATM), a scanning Lidar system that measures high-resolution topography of the land surface. The ATM system is deployed on a twin-otter or P3 aircraft and incorporates a green-wavelength laser operating at pulse rates of 2- to 10-kilohertz. Measurements from the laser ranging device are coupled with data acquired from internal navigation system (INS) attitude sensors and differentially-corrected global positioning system (GPS) receivers to measure topography of the surface at accuracies of 10- to 20-centimeters." ;
+    dcterms:publisher <urn:uuid:2c07379a-7514-4038-8e96-681d61d3365b> ;
+    dcterms:references <urn:uuid:f583e8e0-9518-46b1-b0f6-dd28f8da0ffb> ;
+    dcterms:title "ATM Coastal Topography--Alabama 2001" ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:c71aff08-6391-45eb-a7ff-6d20b39c3d1a> bcube:hasType "temporal" ;
+    bcube:hasValue "2001" ;
+    dc:partOf "http://www.esri.com/news/arcuser/1104/temporal.html" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:c82a695f-b704-4e26-b6c5-fad8079626be> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-11-07T20:16:28.802Z" ;
+    bcube:lastUpdated "2015-11-07T20:16:28.802Z" ;
+    bcube:originatedFrom <urn:uuid:417acac9-ffb3-4277-9b9b-49f0e4bc0d16> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:c1bcb8e9-1a70-4acc-9682-034cdb60b12a> .
+
+<urn:uuid:de49889d-f8b5-4334-b519-4a4c7af4ff79> bcube:hasType "stratum" ;
+    bcube:hasValue "First Surface" ;
+    dc:partOf "http://lidar.cr.usgs.gov/" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:f583e8e0-9518-46b1-b0f6-dd28f8da0ffb> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-07T20:16:28.802Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-07T20:16:28.802Z" ;
+    dc:identifier "urn:sha:d14a028c2a3a2bc9476102bb288234c415a2b01f828ea62ac5b3e42f" ;
+    owl:a bcube:Url .
+

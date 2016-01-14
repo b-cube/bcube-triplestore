@@ -1,0 +1,99 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:09044ea7-73eb-4946-8b5f-2f486d17eef0> bcube:hasType "theme" ;
+    bcube:hasValue "Bike",
+        "Keyhole",
+        "Slot" ;
+    dc:partOf "NONE" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:0d853cd9-bb34-4759-81f8-050eb36c1d28> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-09-19T18:46:35.515Z" ;
+    bcube:lastUpdated "2015-09-19T18:46:35.515Z" ;
+    bcube:originatedFrom <urn:uuid:bd22981f-f4a5-41fa-8e07-94bd987f5c1c> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:c3e4fcad-ae1b-4941-8c6f-dc7edfb51239> .
+
+<urn:uuid:21d7a021-ad7c-4d70-bf0e-c36fd5a09e7b> bcube:hasType "place" ;
+    bcube:hasValue "Florida" ;
+    dc:partOf "GNIS" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:79cac75c-43f3-4b8d-904a-2e7b09a11133> dcterms:references <urn:uuid:cfe85cac-c556-4048-8491-5154a0bbd02b> ;
+    owl:a bibo:WebPage .
+
+<urn:uuid:9246a20b-8e74-401b-b70c-e49e1f20ad13> owl:a foaf:Organization ;
+    foaf:name "Florida Department of Transportation" .
+
+<urn:uuid:9a9f6a66-db13-4781-97c6-5cac547417d8> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-09-19T18:46:35.515Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-09-19T18:46:35.515Z" ;
+    dc:identifier "urn:sha:b11c45968d4a9d7c0a2bbed93080bf78c05cb51810b9b9a9a1eaf55f" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "ftp://ftp.dot.state.fl.us/fdot/co/planning/transtat/gis/shapefiles/bike_slot.zip" .
+
+<urn:uuid:bd22981f-f4a5-41fa-8e07-94bd987f5c1c> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-09-19T18:46:35.515Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-09-19T18:46:35.515Z" ;
+    dc:identifier "urn:sha:823b58e7fc8c362f44a156d6402fd2f2b1ccd46b8e972d0f49e01916" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www.fgdl.org/metadata/fgdc_xml/bike_slot_jul15.shp.xml" .
+
+<urn:uuid:c3e4fcad-ae1b-4941-8c6f-dc7edfb51239> bcube:dateCreated "2015-09-19T18:46:35.515Z" ;
+    bcube:hasMetadataRecord <urn:uuid:0d853cd9-bb34-4759-81f8-050eb36c1d28> ;
+    bcube:lastUpdated "2015-09-19T18:46:35.515Z" ;
+    dc:conformsTo <urn:uuid:09044ea7-73eb-4946-8b5f-2f486d17eef0>,
+        <urn:uuid:21d7a021-ad7c-4d70-bf0e-c36fd5a09e7b>,
+        <urn:uuid:cabb620c-95ef-4658-93a1-4e0c1582b3bc> ;
+    dc:description "This dataset contains Bike Slot features from the July 2015 version of the Florida Department of Transportation Roads Characteristics inventory (RCI) dataset. A bike slot is an intersection treatment to reduce conflicts between bicyclists and vehicles at intersections." ;
+    dc:spatial "POLYGON ((-87.42904 24.492815,-87.42904 30.983191,-79.872251 30.983191,-79.872251 24.492815,-87.42904 24.492815))" ;
+    dcterms:publisher <urn:uuid:9246a20b-8e74-401b-b70c-e49e1f20ad13> ;
+    dcterms:references <urn:uuid:79cac75c-43f3-4b8d-904a-2e7b09a11133>,
+        <urn:uuid:9a9f6a66-db13-4781-97c6-5cac547417d8> ;
+    dcterms:title "FLORIDA DEPARTMENT OF TRANSPORTATION - RCI BIKE SLOT (KEYHOLE) - JULY 2015" ;
+    esip:eastBound "-79.872251"^^xsd:float ;
+    esip:northBound "30.983191"^^xsd:float ;
+    esip:southBound "24.492815"^^xsd:float ;
+    esip:startDate "2015-07-04"^^xsd:date ;
+    esip:westBound "-87.42904"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:cabb620c-95ef-4658-93a1-4e0c1582b3bc> bcube:hasType "theme" ;
+    bcube:hasValue "Transportation" ;
+    dc:partOf "ISO 19115 Topic Category" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:cfe85cac-c556-4048-8491-5154a0bbd02b> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-09-19T18:46:35.515Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-09-19T18:46:35.515Z" ;
+    dc:identifier "urn:sha:2c2cb1e8c89584165902d3d52f9395b84f770e6d2639601191907b24" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "ftp://ftp.dot.state.fl.us/fdot/co/planning/transtat/gis/shapefiles/" .
+

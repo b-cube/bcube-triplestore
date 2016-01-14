@@ -1,0 +1,90 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:1c28d789-3b80-48c5-8794-8629c8c5c86d> owl:a foaf:Organization ;
+    foaf:name "" .
+
+<urn:uuid:278146f1-61f5-42b0-a94a-ca737b500da7> bcube:hasType "theme" ;
+    bcube:hasValue "CSA",
+        "Combined Statistical Area",
+        "Polygon",
+        "State or equivalent entity" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:6932ec8b-413d-4ca7-8c64-542f4f9eef06> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-11-02T02:43:56.886Z" ;
+    bcube:lastUpdated "2015-11-02T02:43:56.886Z" ;
+    bcube:originatedFrom <urn:uuid:a7857bdc-98c7-49f3-84d7-37aecbf49f1a> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:82e0912c-d282-4b82-a75c-08d2d420dd1f> .
+
+<urn:uuid:6e6d60fb-a781-4680-b57d-d33fb1791374> bcube:hasType "theme" ;
+    bcube:hasValue "boundaries" ;
+    dc:partOf "ISO 19115 Topic Categories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:82e0912c-d282-4b82-a75c-08d2d420dd1f> bcube:dateCreated "2015-11-02T02:43:56.886Z" ;
+    bcube:hasMetadataRecord <urn:uuid:6932ec8b-413d-4ca7-8c64-542f4f9eef06> ;
+    bcube:lastUpdated "2015-11-02T02:43:56.886Z" ;
+    dc:conformsTo <urn:uuid:278146f1-61f5-42b0-a94a-ca737b500da7>,
+        <urn:uuid:6e6d60fb-a781-4680-b57d-d33fb1791374>,
+        <urn:uuid:cb6cb92c-5191-4095-ae89-b58ad7742237> ;
+    dc:description "The TIGER/Line Shapefiles are an extract of selected geographic and cartographic information from the Census MAF/TIGER database. The Census MAF/TIGER database represents a seamless national file with no overlaps or gaps between parts. However, each TIGER/Line Shapefile is designed to stand alone as an independent data set or the shapefiles can be combined to cover the whole nation." ;
+    dc:spatial "POLYGON ((-106.645646 25.837164,-106.645646 36.500704,-93.508039 36.500704,-93.508039 25.837164,-106.645646 25.837164))" ;
+    dcterms:publisher <urn:uuid:1c28d789-3b80-48c5-8794-8629c8c5c86d> ;
+    dcterms:references <urn:uuid:cb6430a1-9395-4410-a13e-a607896c22ca> ;
+    dcterms:title "TIGER/Line Shapefile, 2009, state, Texas, Current Combined Statistical Area (CSA) State-based" ;
+    esip:eastBound "-93.508039"^^xsd:float ;
+    esip:endDate "2009-05-01"^^xsd:date ;
+    esip:northBound "36.500704"^^xsd:float ;
+    esip:southBound "25.837164"^^xsd:float ;
+    esip:startDate "2009-01-01"^^xsd:date ;
+    esip:westBound "-106.645646"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:a7857bdc-98c7-49f3-84d7-37aecbf49f1a> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-02T02:43:56.886Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-02T02:43:56.886Z" ;
+    dc:identifier "urn:sha:b0b2ee53034318de9eba9d503b7a118f584fed08f47c7698d536500c" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://meta.geo.census.gov/data/existing/decennial/GEO/GPMB/TIGERline/fe_2009/csa/tl_2009_48_csa_url.shp.xml" .
+
+<urn:uuid:cb6430a1-9395-4410-a13e-a607896c22ca> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-02T02:43:56.886Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-02T02:43:56.886Z" ;
+    dc:identifier "urn:sha:662a069c273c028ee049929fc13733d0f774f11e8707fcaf07f59510" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www2.census.gov/geo/tiger/TIGER2009/48_TEXAS/tl_2009_48_csa.zip" .
+
+<urn:uuid:cb6cb92c-5191-4095-ae89-b58ad7742237> bcube:hasType "place" ;
+    bcube:hasValue "48",
+        "State or Equivalent Entity",
+        "TX",
+        "Texas",
+        "U.S.",
+        "United States" ;
+    dc:partOf "INCITS.38-200x (R2004),INCITS.31-200x (R2007),INCITS.454-200x,INCITS 455-200x,INCITS 446-2008" ;
+    owl:a bcube:thesaurusSubset .
+

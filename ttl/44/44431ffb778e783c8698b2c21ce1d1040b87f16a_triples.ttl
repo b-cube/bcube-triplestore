@@ -1,0 +1,80 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:12dfa038-2068-49b5-9449-12ba0d2a5a8d> owl:a foaf:Organization ;
+    foaf:name "" .
+
+<urn:uuid:32e7d9b6-37f2-448b-b854-2d4ffbc37eaf> bcube:hasType "place" ;
+    bcube:hasValue "California - Central",
+        "Montara, Ca",
+        "San Francisco" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:54b9c3d4-07f0-4723-9a5b-7151de74d6d2> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-10-12T13:13:40.08Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-10-12T13:13:40.08Z" ;
+    dc:identifier "urn:sha:fceb901db9823c8e13b7e5e0afed7581ac33f22e2d38b1d26116cff3" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://cdip.ucsd.edu/data_access/metadata/062p4.xml" .
+
+<urn:uuid:6a2e6c01-9334-4e6f-b7de-d72ee68f10c5> bcube:hasType "theme" ;
+    bcube:hasValue "oceans",
+        "surge",
+        "wave energy" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:8352012b-c1e1-4a3a-b877-a50a389c759c> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-10-12T13:13:40.08Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-10-12T13:13:40.08Z" ;
+    dc:identifier "urn:sha:8519fd2910a112a7d478e3679edd435594af0f158d8ebeb255a35a0f" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://cdip.ucsd.edu/?sub=data&nav=historic&pub=public&stn=062&stream=p4" .
+
+<urn:uuid:9b5bba4d-a85a-4dcf-b6d3-4318b900d7db> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-10-12T13:13:40.08Z" ;
+    bcube:lastUpdated "2015-10-12T13:13:40.08Z" ;
+    bcube:originatedFrom <urn:uuid:54b9c3d4-07f0-4723-9a5b-7151de74d6d2> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:c10bc7af-1e8e-4b87-bd85-3f234af3e60f> .
+
+<urn:uuid:c10bc7af-1e8e-4b87-bd85-3f234af3e60f> bcube:dateCreated "2015-10-12T13:13:40.08Z" ;
+    bcube:hasMetadataRecord <urn:uuid:9b5bba4d-a85a-4dcf-b6d3-4318b900d7db> ;
+    bcube:lastUpdated "2015-10-12T13:13:40.08Z" ;
+    dc:conformsTo <urn:uuid:32e7d9b6-37f2-448b-b854-2d4ffbc37eaf>,
+        <urn:uuid:6a2e6c01-9334-4e6f-b7de-d72ee68f10c5> ;
+    dc:description "CDIP's station 062 data sets consist of coastal environment measurements taken in the vicinity of Montara, Ca. Wave measurements were made in water 15.48 meters deep. The wave measurements focus on longer-period surge energy. The station is operated by CDIP, and funded by USACE." ;
+    dc:spatial "POLYGON ((-122.518333 37.546665,-122.518333 37.546665,-122.518333 37.546665,-122.518333 37.546665,-122.518333 37.546665))" ;
+    dcterms:publisher <urn:uuid:12dfa038-2068-49b5-9449-12ba0d2a5a8d> ;
+    dcterms:references <urn:uuid:8352012b-c1e1-4a3a-b877-a50a389c759c> ;
+    dcterms:title "CDIP Station 062, Set p4 - MONTARA, CA SURGE" ;
+    esip:eastBound "-122.518333"^^xsd:float ;
+    esip:endDate "1991-01-29"^^xsd:date ;
+    esip:northBound "37.546665"^^xsd:float ;
+    esip:southBound "37.546665"^^xsd:float ;
+    esip:startDate "1987-03-22"^^xsd:date ;
+    esip:westBound "-122.518333"^^xsd:float ;
+    owl:a dcat:Dataset .
+

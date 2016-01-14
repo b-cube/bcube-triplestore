@@ -1,0 +1,80 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:56d2ba0e-0f55-491b-bdde-e8d85e9f5a7f> owl:a foaf:Organization ;
+    foaf:name "U.S. Geological Survey" .
+
+<urn:uuid:7c80da1e-cbf8-4f4d-bb09-896f0346f7a9> bcube:hasType "place" ;
+    bcube:hasValue "Kansas" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:954d742b-38cf-4d18-9f46-8174bb2364c0> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-03-06T01:14:26.505Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-03-06T01:14:26.505Z" ;
+    dc:identifier "urn:sha:c36b95020e42e8299f5cecfc70e189dfffe3e9557e4f9cce4e916374" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www.KansasGIS.org" .
+
+<urn:uuid:a1ddfea0-7499-498d-82c9-835efd5ad599> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-03-06T01:14:26.505Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-03-06T01:14:26.505Z" ;
+    dc:identifier "urn:sha:4ef99fbb80449032f341fd6ef35ffc27bb14272934b970f0f6a599ee" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://catalog.data.gov/harvest/object/77367e60-c8a4-4a14-9be9-2037f7eab8ce/original" .
+
+<urn:uuid:cbcccc38-127a-42c8-a9ce-a1bef3904fd8> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-03-06T01:14:26.505Z" ;
+    bcube:lastUpdated "2015-03-06T01:14:26.505Z" ;
+    bcube:originatedFrom <urn:uuid:a1ddfea0-7499-498d-82c9-835efd5ad599> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:eb142251-1afa-4deb-9ccc-66b950a2d311> .
+
+<urn:uuid:e4ab7861-a788-4b2d-b39b-386a71a05928> bcube:hasType "theme" ;
+    bcube:hasValue "Infiltration-excess overland flow",
+        "Runoff-contributing area",
+        "Saturation-excess overland flow",
+        "Soil permeability",
+        "Topographic wetness index",
+        "geoscientiicInformation" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:eb142251-1afa-4deb-9ccc-66b950a2d311> bcube:dateCreated "2015-03-06T01:14:26.505Z" ;
+    bcube:hasMetadataRecord <urn:uuid:cbcccc38-127a-42c8-a9ce-a1bef3904fd8> ;
+    bcube:lastUpdated "2015-03-06T01:14:26.505Z" ;
+    dc:conformsTo <urn:uuid:7c80da1e-cbf8-4f4d-bb09-896f0346f7a9>,
+        <urn:uuid:e4ab7861-a788-4b2d-b39b-386a71a05928> ;
+    dc:description "This digital spatial data set provides information on the spatial distribution of potential runoff-contributing areas in Kansas. Potential runoff-contributing areas were estimated collectively for the processes of infiltration-excess overland flow and saturation-excess overland flow. For infiltration-excess overland flow, various rainfall-intensity and soil-permeability values were used. For saturation-excess overland flow, antecedent soil-moisture conditions and a topographic wetness index were used. The digital data sets used in the analysis included 1:24,000-scale soils data (U.S. Department of Agriculture, Natural Resources Conservation Service, 1996) and the U.S. Geological Survey (USGS) 100-meter-resolution digital elevation model (DEM) (U.S. Geological Survey, 1993). The data set of potential runoff-contributing areas is in grid (raster) format with a grid-cell size of 10,000 square meters." ;
+    dc:spatial "POLYGON ((-102.29489521 36.84833563,-102.29489521 40.14063431,-94.55736654 40.14063431,-94.55736654 36.84833563,-102.29489521 36.84833563))" ;
+    dcterms:publisher <urn:uuid:56d2ba0e-0f55-491b-bdde-e8d85e9f5a7f> ;
+    dcterms:references <urn:uuid:954d742b-38cf-4d18-9f46-8174bb2364c0> ;
+    dcterms:title "Soils - Potential Runoff" ;
+    esip:eastBound "-94.55736654"^^xsd:float ;
+    esip:northBound "40.14063431"^^xsd:float ;
+    esip:southBound "36.84833563"^^xsd:float ;
+    esip:startDate "2000-01-01"^^xsd:date ;
+    esip:westBound "-102.29489521"^^xsd:float ;
+    owl:a dcat:Dataset .
+

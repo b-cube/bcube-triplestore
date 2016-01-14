@@ -1,0 +1,66 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:5caefc07-fed5-4f69-a52e-b91e36aa3204> bcube:hasType "theme" ;
+    bcube:hasValue "ALP Land Dataset",
+        "Land Status",
+        "NFS Lands",
+        "USDA Forest Service",
+        "Withdrawal Use Restriction Type" ;
+    dc:partOf "Withdrawal" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:5e9664e9-685e-4b59-b8d9-e72d5920476a> bcube:dateCreated "2015-10-12T13:05:47.869Z" ;
+    bcube:hasMetadataRecord <urn:uuid:dc2bc2ee-97c6-4399-a6a9-1a6dfb5310f8> ;
+    bcube:lastUpdated "2015-10-12T13:05:47.869Z" ;
+    dc:conformsTo <urn:uuid:5caefc07-fed5-4f69-a52e-b91e36aa3204>,
+        <urn:uuid:a80ccce7-048c-4f99-9944-a6d2a06d0190> ;
+    dc:description "Federal land parcels that are withdrawn from settlement, sale, location, or entry under some or all of the general land and mineral laws in order to maintain other public values or purposes. A withdrawal area has one or more associated segregations. A segregation is a specific activity from which the area has been withdrawn such as settlement, sale, location, or entry." ;
+    dc:spatial "POLYGON ((-150.00312 31.332347,-150.00312 61.064576,-79.108183 61.064576,-79.108183 31.332347,-150.00312 31.332347))" ;
+    dcterms:publisher <urn:uuid:a261a3b4-e6c0-421b-aa0a-6fbd7ad87e12> ;
+    dcterms:title "S_USA.Withdrawal" ;
+    esip:eastBound "-79.108183"^^xsd:float ;
+    esip:northBound "61.064576"^^xsd:float ;
+    esip:southBound "31.332347"^^xsd:float ;
+    esip:westBound "-150.00312"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:a261a3b4-e6c0-421b-aa0a-6fbd7ad87e12> owl:a foaf:Organization ;
+    foaf:name "" .
+
+<urn:uuid:a80ccce7-048c-4f99-9944-a6d2a06d0190> bcube:hasType "theme" ;
+    bcube:hasValue "boundaries",
+        "planningCadastre" ;
+    dc:partOf "ISO 19115 Topic Categories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:cc95ab84-675c-4861-928b-d1b979ae4f16> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-10-12T13:05:47.869Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-10-12T13:05:47.869Z" ;
+    dc:identifier "urn:sha:c2ec2c84538c680e18ffdea1ec1d745a283cf96ee7b4f5a04a503939" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://data.fs.usda.gov/geodata/edw/edw_resources/meta/S_USA.Withdrawal.xml" .
+
+<urn:uuid:dc2bc2ee-97c6-4399-a6a9-1a6dfb5310f8> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-10-12T13:05:47.869Z" ;
+    bcube:lastUpdated "2015-10-12T13:05:47.869Z" ;
+    bcube:originatedFrom <urn:uuid:cc95ab84-675c-4861-928b-d1b979ae4f16> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:5e9664e9-685e-4b59-b8d9-e72d5920476a> .
+

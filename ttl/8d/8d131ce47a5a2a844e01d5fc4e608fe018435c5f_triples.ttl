@@ -1,0 +1,90 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:0d44a1d1-1a51-4d8c-a65a-68b9326de420> bcube:hasType "theme" ;
+    bcube:hasValue "Block",
+        "Census Block",
+        "Polygon",
+        "State or equivalent entity" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:1448935a-830f-466e-9a81-0039c37bef6f> bcube:hasType "place" ;
+    bcube:hasValue "01",
+        "AL",
+        "Alabama",
+        "State or Equivalent Entity",
+        "U.S.",
+        "United States" ;
+    dc:partOf "FIPS Publication 5-2, FIPS Publication 6-4, FIPS Publication 8-6, FIPS Publication 9-1,FIPS Publication55-4" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:25187442-916e-497a-b456-238743ce1a0f> bcube:dateCreated "2015-11-06T13:01:23.663Z" ;
+    bcube:hasMetadataRecord <urn:uuid:bbbf024c-4566-417a-8b58-2b79995e5114> ;
+    bcube:lastUpdated "2015-11-06T13:01:23.663Z" ;
+    dc:conformsTo <urn:uuid:0d44a1d1-1a51-4d8c-a65a-68b9326de420>,
+        <urn:uuid:1448935a-830f-466e-9a81-0039c37bef6f>,
+        <urn:uuid:b4ec7b46-16ab-4e51-9771-f21ea781e7b2> ;
+    dc:description "The TIGER/Line Shapefiles are an extract of selected geographic and cartographic information from the Census MAF/TIGER database. The Census MAF/TIGER database represents a seamless national file with no overlaps or gaps between parts. However, each TIGER/Line Shapefile is designed to stand alone as an independent data set or the shapefiles can be combined to cover the whole nation." ;
+    dc:spatial "POLYGON ((-88.473227 30.144425,-88.473227 35.008028,-84.888246 35.008028,-84.888246 30.144425,-88.473227 30.144425))" ;
+    dcterms:publisher <urn:uuid:298831c7-68df-4342-aad5-ec6d086208be> ;
+    dcterms:references <urn:uuid:5c595538-bc36-4ea4-83ad-d0a60bb26866> ;
+    dcterms:title "TIGER/Line Shapefile, 2008, state, Alabama, Block" ;
+    esip:eastBound "-84.888246"^^xsd:float ;
+    esip:endDate "2008-07-01"^^xsd:date ;
+    esip:northBound "35.008028"^^xsd:float ;
+    esip:southBound "30.144425"^^xsd:float ;
+    esip:startDate "2008-01-01"^^xsd:date ;
+    esip:westBound "-88.473227"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:298831c7-68df-4342-aad5-ec6d086208be> owl:a foaf:Organization ;
+    foaf:name "" .
+
+<urn:uuid:5c595538-bc36-4ea4-83ad-d0a60bb26866> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-06T13:01:23.663Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-06T13:01:23.663Z" ;
+    dc:identifier "urn:sha:d4620e9b794fcd0953479db35c5a0798a6f76ae7e0cd1726d4811b1d" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www2.census.gov/geo/tiger/TIGER2008/01_ALABAMA/tl_2008_01_tabblock.zip" .
+
+<urn:uuid:b4ec7b46-16ab-4e51-9771-f21ea781e7b2> bcube:hasType "theme" ;
+    bcube:hasValue "boundaries" ;
+    dc:partOf "ISO 19115 Topic Categories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:bbbf024c-4566-417a-8b58-2b79995e5114> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-11-06T13:01:23.663Z" ;
+    bcube:lastUpdated "2015-11-06T13:01:23.663Z" ;
+    bcube:originatedFrom <urn:uuid:c7d43e1c-8997-4346-821d-396120f653f3> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:25187442-916e-497a-b456-238743ce1a0f> .
+
+<urn:uuid:c7d43e1c-8997-4346-821d-396120f653f3> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-06T13:01:23.663Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-06T13:01:23.663Z" ;
+    dc:identifier "urn:sha:a3b5837b55701129517f73b7e5af22ec2cbccee1b64bdec580b32958" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://meta.geo.census.gov/data/existing/decennial/GEO/GPMB/TIGERline/fe_2008/tabblock/tl_2008_01_tabblock_url.shp.xml" .
+

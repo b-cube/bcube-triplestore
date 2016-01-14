@@ -1,0 +1,95 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:1778ef51-0a2a-4afa-8ec6-3d4948344bcd> bcube:hasType "theme" ;
+    bcube:hasValue "5-digit ZIP code",
+        "County ANSI Code",
+        "County FIPS Code",
+        "From House Number",
+        "Permanent edge ID",
+        "Side indicator flag",
+        "State ANSI Code",
+        "State FIPS Code",
+        "To House Number",
+        "ZIP +4 code" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:1b778bf6-309a-4baf-9251-78194d3f8f43> bcube:hasType "place" ;
+    bcube:hasValue "01029",
+        "Cleburne",
+        "County or Equivalent Entity",
+        "U.S.",
+        "United States" ;
+    dc:partOf "ANSI INCITS 38:2009 (Formerly FIPS 5-2), ANSI INCITS 31:2009 (Formerly FIPS 6-4),ANSI INCITS 454:2009 (Formerly FIPS 8-6), ANSI INCITS 455:2009(Formerly FIPS 9-1), ANSI INCITS 446:2008 (Geographic Names Information System (GNIS))" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:25d4ad6a-edd9-406a-b584-df2e256e4402> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-01T10:22:41.403Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-01T10:22:41.403Z" ;
+    dc:identifier "urn:sha:d068edcf19e4862967bd8d7c5e52da9b427a8b9f8e902c6e1269715b" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www2.census.gov/geo/tiger/TIGER2012/ADDR/tl_2012_01029_addr.zip" .
+
+<urn:uuid:a4cdec7a-6142-48f5-a306-0328e5df4ac4> owl:a foaf:Organization ;
+    foaf:name "" .
+
+<urn:uuid:a7edb79d-55e3-45d2-9118-3a4b2183b8e0> bcube:dateCreated "2015-11-01T10:22:41.403Z" ;
+    bcube:hasMetadataRecord <urn:uuid:b1be8f48-2b8e-48a3-b968-c41953064d8f> ;
+    bcube:lastUpdated "2015-11-01T10:22:41.403Z" ;
+    dc:conformsTo <urn:uuid:1778ef51-0a2a-4afa-8ec6-3d4948344bcd>,
+        <urn:uuid:1b778bf6-309a-4baf-9251-78194d3f8f43>,
+        <urn:uuid:baef6d21-e4e2-4894-b53d-3c5db9342521> ;
+    dc:description "The TIGER/Line shapefiles and related database files (.dbf) are an extract of selected geographic and cartographic information from the U.S. Census Bureau's Master Address File / Topologically Integrated Geographic Encoding and Referencing (MAF/TIGER) Database (MTDB). The MTDB represents a seamless national file with no overlaps or gaps between parts, however, each TIGER/Line shapefile is designed to stand alone as an independent data set, or they can be combined to cover the entire nation. The Address Ranges Relationship File (ADDR.dbf) contains the attributes of each address range. Each address range applies to a single edge and has a unique address range identifier (ARID) value. The edge to which an address range applies can be determined by linking the address range to the All Lines Shapefile (EDGES.shp) using the permanent topological edge identifier (TLID) attribute. Multiple address ranges can apply to the same edge since an edge can have multiple address ranges. Note that the most inclusive address range associated with each side of a street edge already appears in the All Lines Shapefile (EDGES.shp). The TIGER/Line Files contain potential address ranges, not individual addresses. The term \"address range\" refers to the collection of all possible structure numbers from the first structure number to the last structure number and all numbers of a specified parity in between along an edge side relative to the direction in which the edge is coded. The address ranges in the TIGER/Line Files are potential ranges that include the full range of possible structure numbers even though the actual structures may not exist." ;
+    dc:spatial "POLYGON ((-85.887782 33.469226,-85.887782 33.964204,-85.304439 33.964204,-85.304439 33.469226,-85.887782 33.469226))" ;
+    dcterms:publisher <urn:uuid:a4cdec7a-6142-48f5-a306-0328e5df4ac4> ;
+    dcterms:references <urn:uuid:25d4ad6a-edd9-406a-b584-df2e256e4402> ;
+    dcterms:title "TIGER/Line Shapefile, 2012, county, Cleburne County, AL, Current Address Ranges Relationship File" ;
+    esip:eastBound "-85.304439"^^xsd:float ;
+    esip:endDate "2012-06-01"^^xsd:date ;
+    esip:northBound "33.964204"^^xsd:float ;
+    esip:southBound "33.469226"^^xsd:float ;
+    esip:startDate "2011-08-01"^^xsd:date ;
+    esip:westBound "-85.887782"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:b1be8f48-2b8e-48a3-b968-c41953064d8f> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-11-01T10:22:41.403Z" ;
+    bcube:lastUpdated "2015-11-01T10:22:41.403Z" ;
+    bcube:originatedFrom <urn:uuid:bb2b4f7f-6f1d-463b-8420-76e1d64da965> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:a7edb79d-55e3-45d2-9118-3a4b2183b8e0> .
+
+<urn:uuid:baef6d21-e4e2-4894-b53d-3c5db9342521> bcube:hasType "theme" ;
+    bcube:hasValue "Transportation" ;
+    dc:partOf "ISO 19115 Topic Categories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:bb2b4f7f-6f1d-463b-8420-76e1d64da965> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-01T10:22:41.403Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-01T10:22:41.403Z" ;
+    dc:identifier "urn:sha:8ab0a9c586feb3fe216a16f7b012ae50a5b1f7c7e5da141935daf3ec" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://meta.geo.census.gov/data/existing/decennial/GEO/GPMB/TIGERline/TL2012/FGDC/addr/tl_2012_01029_addr.dbf.xml" .
+

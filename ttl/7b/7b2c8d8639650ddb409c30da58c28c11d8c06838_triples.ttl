@@ -1,0 +1,105 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:200116b2-826f-4d98-80d1-a01270d72ae6> bcube:hasType "theme" ;
+    bcube:hasValue "Governmental Units and Administrative and Statistical Boundaries Theme",
+        "NGDA",
+        "National Geospatial Data Asset" ;
+    dc:partOf "NGDA Portfolio Themes" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:40fa9c56-aa27-494a-bfa0-d0aca99758f8> bcube:hasType "place" ;
+    bcube:hasValue "22",
+        "LA",
+        "Louisiana",
+        "State or Equivalent Entity",
+        "U.S.",
+        "United States" ;
+    dc:partOf "ANSI INCITS 38:2009 (Formerly FIPS 5-2), ANSI INCITS 31:2009 (Formerly FIPS 6-4),ANSI INCITS 454:2009 (Formerly FIPS 8-6), ANSI INCITS 455:2009(Formerly FIPS 9-1), ANSI INCITS 446:2008 (Geographic Names Information System (GNIS))" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:5259dcfc-1216-4568-a57d-d01ad1aed5d0> bcube:hasType "theme" ;
+    bcube:hasValue "Legislative District",
+        "Polygon",
+        "State or equivalent entity" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:5a63cdf1-75ea-4fe3-b1ad-a8518c07693b> a "ISO 19115:2003/19139" ;
+    bcube:dateCreated "2015-10-29T19:50:50.958Z" ;
+    bcube:lastUpdated "2015-10-29T19:50:50.958Z" ;
+    bcube:originatedFrom <urn:uuid:9ace7f92-a505-467b-b115-252cbb4004e7> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:63dd2b0f-9fb5-4718-9f8c-6392522d6c3c> .
+
+<urn:uuid:63dd2b0f-9fb5-4718-9f8c-6392522d6c3c> bcube:dateCreated "2015-10-29T19:50:50.958Z" ;
+    bcube:hasMetadataRecord <urn:uuid:5a63cdf1-75ea-4fe3-b1ad-a8518c07693b> ;
+    bcube:lastUpdated "2015-10-29T19:50:50.958Z" ;
+    dc:conformsTo <urn:uuid:200116b2-826f-4d98-80d1-a01270d72ae6>,
+        <urn:uuid:40fa9c56-aa27-494a-bfa0-d0aca99758f8>,
+        <urn:uuid:5259dcfc-1216-4568-a57d-d01ad1aed5d0>,
+        <urn:uuid:6d725773-6833-4a3a-92e2-285eee7d9e2c> ;
+    dc:description "The TIGER/Line shapefiles and related database files (.dbf) are an extract of selected geographic and cartographic information from the U.S. Census Bureau's Master Address File / Topologically Integrated Geographic Encoding and Referencing (MAF/TIGER) Database (MTDB). The MTDB represents a seamless national file with no overlaps or gaps between parts, however, each TIGER/Line shapefile is designed to stand alone as an independent data set, or they can be combined to cover the entire nation. State Legislative Districts (SLDs) are the areas from which members are elected to State legislatures. The SLDs embody the upper (senate) and lower (house) chambers of the state legislature. Nebraska has a unicameral legislature and the District of Columbia has a single council, both of which the Census Bureau treats as upper-chamber legislative areas for the purpose of data presentation; there are no data by SLDL for either Nebraska or the District of Columbia. A unique three-character census code, identified by State participants, is assigned to each SLD within a state. In Connecticut, Illinois, Louisiana, Maine, Maryland, Massachusetts, Michigan, Ohio, and Puerto Rico, the Redistricting Data Program (RDP) participant did not define the SLDs to cover all of the state or state equivalent area. In these areas with no SLDs defined, the code \"ZZZ\" has been assigned, which is treated as a single SLD for purposes of data presentation. The boundaries of the 2014 State legislative districts were provided by state-level participants through the RDP and reflect the districts used to elect members in or prior to the November 2014 election." ;
+    dc:spatial "POLYGON ((-94.043352 28.855127,-94.043352 33.019543,-88.758388 33.019543,-88.758388 28.855127,-94.043352 28.855127))" ;
+    dcterms:references <urn:uuid:b20e1a6f-4557-40c8-9c66-f39c53ac4d34>,
+        <urn:uuid:dca518d2-d711-49cf-bcb5-60f16b1bdc44> ;
+    dcterms:title "TIGER/Line Shapefile, 2015, state, Louisiana, Current State Legislative District (SLD) Lower Chamber State-based Shapefile" ;
+    esip:eastBound "-88.758388"^^xsd:float ;
+    esip:endDate "2015-05-29"^^xsd:date ;
+    esip:northBound "33.019543"^^xsd:float ;
+    esip:southBound "28.855127"^^xsd:float ;
+    esip:startDate "2014-06-29"^^xsd:date ;
+    esip:westBound "-94.043352"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:6d725773-6833-4a3a-92e2-285eee7d9e2c> bcube:hasValue "boundaries" ;
+    dc:partOf "IsoTopicCategories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:9ace7f92-a505-467b-b115-252cbb4004e7> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-10-29T19:50:50.958Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-10-29T19:50:50.958Z" ;
+    dc:identifier "urn:sha:9ebcab0015389051e6132a1e213d011c812f894b45c727dbfe7b3a48" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://meta.geo.census.gov/data/existing/decennial/GEO/GPMB/TIGERline/TIGER2015/sldl/tl_2015_22_sldl.shp.iso.xml" .
+
+<urn:uuid:b20e1a6f-4557-40c8-9c66-f39c53ac4d34> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-10-29T19:50:50.958Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-10-29T19:50:50.958Z" ;
+    dc:identifier "urn:sha:01e3f1d55bd7125cf2eb8bd68431fd00a1f078cd325b2a0a30fd7381" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www.census.gov/geo/maps-data/data/tiger-line.html" .
+
+<urn:uuid:dca518d2-d711-49cf-bcb5-60f16b1bdc44> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-10-29T19:50:50.958Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-10-29T19:50:50.958Z" ;
+    dc:identifier "urn:sha:f51b9d71f2e357c41ea54426d08298112b9dc32aa804df9518a03dd7" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www2.census.gov/geo/tiger/TIGER2015/SLDL/tl_2015_22_sldl.zip" .
+

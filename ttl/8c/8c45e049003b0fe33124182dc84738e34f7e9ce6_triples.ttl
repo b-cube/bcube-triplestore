@@ -1,0 +1,97 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:28766f63-0ffe-419a-a902-805b2eedee8d> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-07-14T01:03:43.281Z" ;
+    bcube:lastUpdated "2015-07-14T01:03:43.281Z" ;
+    bcube:originatedFrom <urn:uuid:49094ed9-16ce-4bb3-b6e5-59dfb2f4da1f> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:bd6762ba-46b7-440e-8c8b-6540bff7456c> .
+
+<urn:uuid:46c96a70-4bb2-4450-9553-54d7a9e9ac91> bcube:hasType "place" ;
+    bcube:hasValue "Illinois" ;
+    dc:partOf "none" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:49094ed9-16ce-4bb3-b6e5-59dfb2f4da1f> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-07-14T01:03:43.281Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-07-14T01:03:43.281Z" ;
+    dc:identifier "urn:sha:e35fb1a43bdee181af5b7ab8e689e187dcceb156f7b824b2e66a800d" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www.isgs.uiuc.edu/nsdihome/outmeta/IL_QUAD_Usgs_Quadrangle_Index_Nad83.xml" .
+
+<urn:uuid:4b816571-e5de-49c5-9d69-6e5efaafcf7e> dcterms:references <urn:uuid:e667cdc9-b64b-4ea8-be04-621e3c15de6b> ;
+    owl:a bibo:WebPage .
+
+<urn:uuid:4ee1f024-72e1-4a37-90e0-84c116ea6773> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-07-14T01:03:43.281Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-07-14T01:03:43.281Z" ;
+    dc:identifier "urn:sha:18518ff4ba422cbc493fa73b291877822fd0d15c35eb6387f86cdad8" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://illinois.edu" .
+
+<urn:uuid:970c1757-74bf-4bce-bea9-d33fac95d9d9> bcube:hasType "theme" ;
+    bcube:hasValue "boundary",
+        "corner point",
+        "index",
+        "quadrangle" ;
+    dc:partOf "none" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:bd6762ba-46b7-440e-8c8b-6540bff7456c> bcube:dateCreated "2015-07-14T01:03:43.281Z" ;
+    bcube:hasMetadataRecord <urn:uuid:28766f63-0ffe-419a-a902-805b2eedee8d> ;
+    bcube:lastUpdated "2015-07-14T01:03:43.281Z" ;
+    dc:conformsTo <urn:uuid:46c96a70-4bb2-4450-9553-54d7a9e9ac91>,
+        <urn:uuid:970c1757-74bf-4bce-bea9-d33fac95d9d9> ;
+    dc:description "This feature dataset contains point, line and polygon data that describe ideal USGS quadrangle boundaries and corner points for quadrangles that intersect the state of Illinois. The attribute data include quadrangle name and index number, longitude and latitude values for quadrangle boundaries, X and Y coordinate values in decimal degrees for quadrangle corners, and boolean indicators of which lines to use to construct index maps for common map series (by scale or extent). This feature dataset includes line and polygon feature classes for each of the following scales/extents: 3.75-minute x 3.75-minute, commonly called quarter-quadrangles, typically used for a 1:12,000-scale index, 7.5-minute x 7.5-minute, the common USGS topographic sheet extent, typically 1:24,000-scale in Illinois, 15-minute x 15-minute, typically used for 1:62,500-scale index, 30-minute x 1 degree, typically used for 1:100,000-scale index, 1-degree x 2-degree, typically used for 1:250,000-scale index. Also included are master line, polygon, and corner point (tic) templates from which the above were generated. These are entitled Base_Template_Ln, Base_Template_Py and Corner_Tic_Pt respectively, and include of all the 3.75-minute x 3.75-minute quarter-quadrangles and corners from 36 to 43 degrees north latitude and 86 to 92 west longitude, with an indication of which are within Illinois. Each boundary line is composed of segments that are 18 arc-seconds in length. To provide some reference, there are 25 such segments in a line 7.5 minutes long. These vertices are included so that on reprojection of the data into a different coordinate system the quadrangle boundaries will \"curve\" to maintain a realistic representation of quadrangle shape in relation to real world coordinates. The data were generated as a mathematical construct, independent of ground condition. That is, they were generated from a digital file of decimal degree-minute-second locations for each quadrangle corner, using the ArcInfo Workstation GENERATE command. Tics were generated in this manner as well, one at each quarter-quad corner. Thus quadrangle corners are exact within ideal geographic decimal degree NAD83 coordinate space. Some non-ideal quadrangle boundaries have been added to the dataset to account for quadrangle maps with irregular boundaries, for example 15-minute quadrangles in the Chicago area. The nominal scale is as stated above for each feature class. However, these data are in fact scale-less because they are a mathematical construct independent of ground condition. The spatial reference is the Geographic Coordinate System, decimal degrees, NAD83." ;
+    dc:spatial "POLYGON ((-92 36,-92 43,-86 43,-86 36,-92 36))" ;
+    dcterms:publisher <urn:uuid:e7d61fb5-caed-460b-997a-aa8d3c572031> ;
+    dcterms:references <urn:uuid:4b816571-e5de-49c5-9d69-6e5efaafcf7e>,
+        <urn:uuid:cad0ea76-3e0f-47be-9143-b05ec75ef27b> ;
+    dcterms:title "USGS Quadrangle Boundaries and Corner Points in Illinois in NAD83" ;
+    esip:eastBound "-86.0"^^xsd:float ;
+    esip:northBound "43.0"^^xsd:float ;
+    esip:southBound "36.0"^^xsd:float ;
+    esip:startDate "2003-07-08"^^xsd:date ;
+    esip:westBound "-92.0"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:cad0ea76-3e0f-47be-9143-b05ec75ef27b> dcterms:references <urn:uuid:4ee1f024-72e1-4a37-90e0-84c116ea6773> ;
+    owl:a bibo:WebPage .
+
+<urn:uuid:e667cdc9-b64b-4ea8-be04-621e3c15de6b> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-07-14T01:03:43.281Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-07-14T01:03:43.281Z" ;
+    dc:identifier "urn:sha:7f5bafd6d7cfce26bb2eac4e5d384ed8e072dc9d12fb1a7303f5805f" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www.isgs.illinois.edu/" .
+
+<urn:uuid:e7d61fb5-caed-460b-997a-aa8d3c572031> owl:a foaf:Organization ;
+    foaf:name "Illinois State Geological Survey" .
+

@@ -1,0 +1,103 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:4960e9b1-9993-4f0b-a5e1-0dd9e127b367> bcube:hasType "theme" ;
+    bcube:hasValue "AMS-120",
+        "CMGP",
+        "Coastal and Marine Geology Program",
+        "Sidescan-sonar",
+        "U.S. Geological Survey",
+        "USGS",
+        "Woods Hole Science Center",
+        "backscatter",
+        "field activity identifier F9-89-NC",
+        "field activity serial number 89020",
+        "imagery",
+        "seafloor mapping",
+        "sonar" ;
+    dc:partOf "General" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:56eb9d0b-021e-46ab-9e7d-cc9fbf33a356> owl:a foaf:Organization ;
+    foaf:name "U.S. Geological Survey" .
+
+<urn:uuid:7cd97964-947f-420b-a3fa-ea83c2971c64> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-08-09T09:20:20.058Z" ;
+    bcube:lastUpdated "2015-08-09T09:20:20.058Z" ;
+    bcube:originatedFrom <urn:uuid:f58fb842-fdbb-4164-a9f3-ff38a35a9db3> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:e7dcbc6e-f4b0-40da-8602-7b09c39da857> .
+
+<urn:uuid:a84af9cd-41fd-454c-860b-15559c8fcb0a> dcterms:references <urn:uuid:fe2707ac-e6bf-45a1-94f8-abb46ed5eded> ;
+    owl:a bibo:WebPage .
+
+<urn:uuid:bdda3341-cf68-4299-88e5-59deff9c5478> bcube:hasType "place" ;
+    bcube:hasValue "Bodega Bay",
+        "California",
+        "Farallon Islands",
+        "Farallones",
+        "Gulf of the Farallones",
+        "Half Moon Bay",
+        "North America",
+        "Pacific Ocean",
+        "Point Reyes",
+        "San Francisco",
+        "U.S. Pacific Coast",
+        "U.S. West Coast",
+        "United States" ;
+    dc:partOf "General" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:e7dcbc6e-f4b0-40da-8602-7b09c39da857> bcube:dateCreated "2015-08-09T09:20:20.058Z" ;
+    bcube:hasMetadataRecord <urn:uuid:7cd97964-947f-420b-a3fa-ea83c2971c64> ;
+    bcube:lastUpdated "2015-08-09T09:20:20.058Z" ;
+    dc:conformsTo <urn:uuid:4960e9b1-9993-4f0b-a5e1-0dd9e127b367>,
+        <urn:uuid:bdda3341-cf68-4299-88e5-59deff9c5478> ;
+    dc:description "In 1989, the U.S. Geological Survey (USGS) began a major geologic and oceanographic investigation of the Gulf of the Farallones continental shelf system, designed to evaluate and monitor human impacts on the marine environment (Karl and others, 2002). The study region is located off the central California coast, adjacent to San Francisco Bay and encompasses the Gulf of the Farallones National Marine Sanctuary. Geologic mapping of this area included the use of various remote sensing and sampling techniques such as sub-bottom profiling, sidescan-sonar and bathymetric mapping, gravity core and grab sampling, and photography. These data were used to define the surficial sediment distribution, underlying structure and sea floor morphology of the study area. The primary focus of this report is to present a georeferenced, digital sidescan-sonar mosaic of the study region. The sidescan-sonar data were acquired with the AMS-120 (120kHz) sidescan-sonar system during USGS cruise F9-89-NC. The dataset covers approximately 1000 km of the continental shelf between Point Reyes, California and Half Moon Bay, California, extending west to the continental shelf break near the Farallon Islands. The sidescan-sonar mosaic displays a heterogenous sea-floor environment, containing outcropping rock, ripples, dunes, lineations and depressions, as well as flat, featureless sea floor (Karl and others, 2002). These data, along with sub-bottom interpretation and ground truth data define the geologic framework of the region. The sidescan-sonar mosaic can be used with supplemental remote sensing and sampling data as a base for future research, helping to define the local current regime and predominant sediment transport directions and forcing conditions within the Gulf of Farallones." ;
+    dc:spatial "POLYGON ((-123.39863 37.55034,-123.39863 37.998062,-122.674261 37.998062,-122.674261 37.55034,-123.39863 37.55034))" ;
+    dcterms:publisher <urn:uuid:56eb9d0b-021e-46ab-9e7d-cc9fbf33a356> ;
+    dcterms:references <urn:uuid:a84af9cd-41fd-454c-860b-15559c8fcb0a> ;
+    dcterms:title "Digital Sidescan-Sonar Mosaic collected within the Gulf of Farallones" ;
+    esip:eastBound "-122.674261"^^xsd:float ;
+    esip:endDate "1989-08-15"^^xsd:date ;
+    esip:northBound "37.998062"^^xsd:float ;
+    esip:southBound "37.55034"^^xsd:float ;
+    esip:startDate "1989-08-02"^^xsd:date ;
+    esip:westBound "-123.39863"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:f58fb842-fdbb-4164-a9f3-ff38a35a9db3> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-09T09:20:20.058Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-09T09:20:20.058Z" ;
+    dc:identifier "urn:sha:17020048bb06327623d1de6ab36d1d1952aff751772ac8a7f704c66f" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://pubs.usgs.gov/of/2004/1082/arcgis/mosaic/farallones.tif.xml" .
+
+<urn:uuid:fe2707ac-e6bf-45a1-94f8-abb46ed5eded> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-09T09:20:20.058Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-09T09:20:20.058Z" ;
+    dc:identifier "urn:sha:860fcec6cb38be06a23d02e17ff72d2d39c1f59862c50e3a7a3385e8" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://pubs.usgs.gov/of/2004/1082/arcgis/mosaic/farallones_tiff.zip" .
+

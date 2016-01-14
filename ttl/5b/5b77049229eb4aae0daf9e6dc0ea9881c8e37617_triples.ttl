@@ -1,0 +1,98 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:0c88d909-c2ef-4974-8c57-4511705a2a99> owl:a foaf:Organization ;
+    foaf:name "" .
+
+<urn:uuid:2e7f2cef-50ca-4da2-9716-743a0937c669> bcube:hasType "theme" ;
+    bcube:hasValue "boundaries" ;
+    dc:partOf "ISO 19115 Topic Categories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:4a6bed8c-27b9-468e-9ec2-8dcc5a19eda2> bcube:hasType "theme" ;
+    bcube:hasValue "Barrio",
+        "CCD",
+        "Census County Division",
+        "County Subdivision",
+        "County or equivalent entity",
+        "MCD",
+        "Minor Civil Division",
+        "Polygon",
+        "Subdivision",
+        "Town",
+        "Township",
+        "UT",
+        "Unorganized Territory" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:55c716e7-79d8-4fe0-88e3-a0807ce71cef> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-11-07T09:51:37.066Z" ;
+    bcube:lastUpdated "2015-11-07T09:51:37.066Z" ;
+    bcube:originatedFrom <urn:uuid:ddfabf8d-fb6a-4dcf-84b7-e335e5f04771> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:94d25523-54f2-4e9c-9b1d-d14c76625154> .
+
+<urn:uuid:584268b8-5cdc-47c3-9194-4c9183746536> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-07T09:51:37.066Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-07T09:51:37.066Z" ;
+    dc:identifier "urn:sha:4fdf1b5bfaf708d6149ca9107a0a5aa9d2929ed8a17c9833112e317e" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www2.census.gov/geo/tiger/TIGER2007FE/01_ALABAMA/01053_Escambia/fe_2007_01053_cousub00.zip" .
+
+<urn:uuid:94d25523-54f2-4e9c-9b1d-d14c76625154> bcube:dateCreated "2015-11-07T09:51:37.066Z" ;
+    bcube:hasMetadataRecord <urn:uuid:55c716e7-79d8-4fe0-88e3-a0807ce71cef> ;
+    bcube:lastUpdated "2015-11-07T09:51:37.066Z" ;
+    dc:conformsTo <urn:uuid:2e7f2cef-50ca-4da2-9716-743a0937c669>,
+        <urn:uuid:4a6bed8c-27b9-468e-9ec2-8dcc5a19eda2>,
+        <urn:uuid:9de44b39-04ea-4e7e-ab76-6e2278d6fce3> ;
+    dc:description "The TIGER/Line Shapefiles are an extract of selected geographic and cartographic information from the Census MAF/TIGER database. The Census MAF/TIGER database represents a seamless national file with no overlaps or gaps between parts. However, each TIGER/Line Shapefile is designed to stand alone as an independent data set or the shapefiles can be combined to cover the whole nation." ;
+    dc:spatial "POLYGON ((-87.616074 30.994487,-87.616074 31.261997,-86.688063 31.261997,-86.688063 30.994487,-87.616074 30.994487))" ;
+    dcterms:publisher <urn:uuid:0c88d909-c2ef-4974-8c57-4511705a2a99> ;
+    dcterms:references <urn:uuid:584268b8-5cdc-47c3-9194-4c9183746536> ;
+    dcterms:title "TIGER/Line Shapefile, 2007, 2000 county, Escambia County, County Subdivision" ;
+    esip:eastBound "-86.688063"^^xsd:float ;
+    esip:endDate "2007-07-01"^^xsd:date ;
+    esip:northBound "31.261997"^^xsd:float ;
+    esip:southBound "30.994487"^^xsd:float ;
+    esip:startDate "2007-01-01"^^xsd:date ;
+    esip:westBound "-87.616074"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:9de44b39-04ea-4e7e-ab76-6e2278d6fce3> bcube:hasType "place" ;
+    bcube:hasValue "01053",
+        "County or Equivalent Entity",
+        "Escambia",
+        "U.S.",
+        "United States" ;
+    dc:partOf "FIPS Publication 5-2, FIPS Publication 6-4, FIPS Publication 8-6, FIPS Publication 9-1" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:ddfabf8d-fb6a-4dcf-84b7-e335e5f04771> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-07T09:51:37.066Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-07T09:51:37.066Z" ;
+    dc:identifier "urn:sha:622bb1abcfeee210d282d5a61ef26cfa51444f64d7c1fc9c9504000d" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://meta.geo.census.gov/data/existing/decennial/GEO/GPMB/TIGERline/fe_2007/cousub00/fe_2007_01053_cousub00_url.shp.xml" .
+

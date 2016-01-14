@@ -1,0 +1,75 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:06f9b377-01ee-43db-98bc-88b66c34b6d1> bcube:hasType "place" ;
+    bcube:hasValue "Geographic Region &gt; Global Ocean" ;
+    dc:partOf "GCMD Location Keywords" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:3235d58a-9d22-41b1-8e2b-1d02acd7c045> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-11-06T02:38:44.342Z" ;
+    bcube:lastUpdated "2015-11-06T02:38:44.342Z" ;
+    bcube:originatedFrom <urn:uuid:f93530f8-649c-4282-a094-b2d2f3b541cd> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:6218ad71-0be9-4b10-9e00-23f6f13deebc> .
+
+<urn:uuid:4423b2a8-7103-48b8-9368-3551ef381f35> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-06T02:38:44.342Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-06T02:38:44.342Z" ;
+    dc:identifier "urn:sha:a211bed5e89603a49b04c10367e71f3aa329cb5ff07f16bf5262ac76" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://oos.soest.hawaii.edu/thredds/wms/ais/ais_global_20112012_grid?service=WMS&version=1.3.0&request=GetCapabilities" .
+
+<urn:uuid:6218ad71-0be9-4b10-9e00-23f6f13deebc> bcube:dateCreated "2015-11-06T02:38:44.342Z" ;
+    bcube:hasMetadataRecord <urn:uuid:3235d58a-9d22-41b1-8e2b-1d02acd7c045> ;
+    bcube:lastUpdated "2015-11-06T02:38:44.342Z" ;
+    dc:conformsTo <urn:uuid:06f9b377-01ee-43db-98bc-88b66c34b6d1>,
+        <urn:uuid:96e41c27-e48a-4e17-94c3-6fc6cb588d34> ;
+    dc:description "Global ship traffic, identifying the number of times a vessel occupied each square kilometer during a one year period: August 2011 through mid-August 2012. The Automatic Identification System (AIS) is an internationally-recognized shipboard broadcast system that communicates information to shore-based stations and other AIS-equipped ships. The United States Coast Guard (USCG) has developed rules applicable to both U.S. and foreign vessels that require owners and operators of most commercial vessels to install and use AIS to increase security and safety of maritime transportation. Data were obtained jointly by PacIOOS (J. Potemra), SOEST/ORE of the University of Hawaii (E. Roth), and the Papahanaumokuakea Marine National Monument (PNMN) (D. Graham) through a one-time purchase from ORBCOMM LLC. Due to vendor constraints, release of the raw data is limited. We distribute map imagery only, via Web Map Service (WMS)." ;
+    dc:spatial "POLYGON ((-180 -90,-180.0 90.0,179.9 90.0,179.9 -90.0,-180 -90))" ;
+    dcterms:identifier "ais_global_20112012_grid" ;
+    dcterms:publisher <urn:uuid:a1976937-aa18-4756-a641-e520c1bb276a> ;
+    dcterms:references <urn:uuid:4423b2a8-7103-48b8-9368-3551ef381f35> ;
+    dcterms:title "AIS Ship Traffic: Global: 2011-2012: Binned: 10km" ;
+    esip:eastBound "179.9"^^xsd:float ;
+    esip:northBound "90.0"^^xsd:float ;
+    esip:southBound "-90.0"^^xsd:float ;
+    esip:westBound "-180.0"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:96e41c27-e48a-4e17-94c3-6fc6cb588d34> bcube:hasType "theme" ;
+    bcube:hasValue "Human Dimensions > Infrastructure > Transportation" ;
+    dc:partOf "GCMD Science Keywords" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:a1976937-aa18-4756-a641-e520c1bb276a> owl:a foaf:Organization ;
+    foaf:name "" .
+
+<urn:uuid:f93530f8-649c-4282-a094-b2d2f3b541cd> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-06T02:38:44.342Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-06T02:38:44.342Z" ;
+    dc:identifier "urn:sha:f7bae0950bf97cc82ce5b3228180bbeb2db9b530c102a5b3e26dfdaf" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://oos.soest.hawaii.edu/pacioos/metadata/fgdc/ais_global_20112012_grid.xml" .
+

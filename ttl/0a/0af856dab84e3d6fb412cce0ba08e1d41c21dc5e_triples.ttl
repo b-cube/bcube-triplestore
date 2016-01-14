@@ -1,0 +1,80 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:110fdc77-6053-4170-b6b2-003c3ede7521> bcube:hasType "theme" ;
+    bcube:hasValue "Basemap" ;
+    dc:partOf "FEMA NFIP Topic Category" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:49d41363-8c10-4556-8607-3da224cf1188> bcube:hasValue "transportation" ;
+    dc:partOf "IsoTopicCategories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:6bd34442-645f-4fde-9ee2-18a359edc94f> bcube:dateCreated "2015-07-31T15:15:01.359Z" ;
+    bcube:hasMetadataRecord <urn:uuid:a3c1ea2a-8c22-498f-ba62-563fab78fd76> ;
+    bcube:lastUpdated "2015-07-31T15:15:01.359Z" ;
+    dc:conformsTo <urn:uuid:110fdc77-6053-4170-b6b2-003c3ede7521>,
+        <urn:uuid:49d41363-8c10-4556-8607-3da224cf1188>,
+        <urn:uuid:9f8f3b35-2ca1-4c21-a878-6cbf0b4feb1b> ;
+    dc:description "FEMA Framework Basemap datasets comprise six of the seven FGDC themes of geospatial data that are used by most GIS applications (Note: the seventh framework theme, orthographic imagery, is packaged in a separate NFIP Metadata Profile): cadastral, geodetic control, governmental unit, transportation, general structures, hydrography (water areas & lines. These data include an encoding of the geographic extent of the features and a minimal number of attributes needed to identify and describe the features. (Source: Circular A16, p. 13)" ;
+    dc:spatial "POLYGON ((-87.533734 34.297953,-87.533734 34.798076,-87.104432 34.798076,-87.104432 34.297953,-87.533734 34.297953))" ;
+    dcterms:references <urn:uuid:a554aad0-411d-4d32-9f69-9e0a374a7ceb> ;
+    dcterms:title "BASEMAP, LAWRENCE COUNTY, ALABAMA USA" ;
+    esip:eastBound "-87.104432"^^xsd:float ;
+    esip:northBound "34.798076"^^xsd:float ;
+    esip:southBound "34.297953"^^xsd:float ;
+    esip:westBound "-87.533734"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:9f8f3b35-2ca1-4c21-a878-6cbf0b4feb1b> bcube:hasType "place" ;
+    bcube:hasValue "COMMUNITY name",
+        "COUNTY Lawrence",
+        "COUNTY-FIPS 01079",
+        "FEMA-CID 01079C",
+        "REGION 04",
+        "STATE AL" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:a3c1ea2a-8c22-498f-ba62-563fab78fd76> a "ISO 19115:2003/19139" ;
+    bcube:dateCreated "2015-07-31T15:15:01.359Z" ;
+    bcube:lastUpdated "2015-07-31T15:15:01.359Z" ;
+    bcube:originatedFrom <urn:uuid:c396d00a-36bc-4e8b-9e76-d104a9b36591> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:6bd34442-645f-4fde-9ee2-18a359edc94f> .
+
+<urn:uuid:a554aad0-411d-4d32-9f69-9e0a374a7ceb> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-07-31T15:15:01.359Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-07-31T15:15:01.359Z" ;
+    dc:identifier "urn:sha:37c915397238031daced09ae0e2dd3bf54e84a6477f749c2cc9dcbdf" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://hazards.fema.gov" .
+
+<urn:uuid:c396d00a-36bc-4e8b-9e76-d104a9b36591> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-07-31T15:15:01.359Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-07-31T15:15:01.359Z" ;
+    dc:identifier "urn:sha:ad187edd98c33d8997cf329bd18ea755e975f1e3198ada7431ad78c2" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "https://catalog.data.gov/harvest/object/7e80bf66-0f9c-4e8b-9169-a005d98b4e41" .
+

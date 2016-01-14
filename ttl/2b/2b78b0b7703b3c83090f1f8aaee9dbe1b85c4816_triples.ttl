@@ -1,0 +1,66 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:31a0c190-b17c-4a11-ab7d-b55c999f9a2c> bcube:hasType "theme" ;
+    bcube:hasValue "Design",
+        "Development Projects",
+        "Public Works" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:3494ff80-7f14-4734-a19e-43b42f3905c9> bcube:hasType "place" ;
+    bcube:hasValue "Colorado",
+        "Denver",
+        "Denver County",
+        "USA" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:3b87ef35-2b0e-425f-ac04-481274d501ed> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-10-28T02:50:46.673Z" ;
+    bcube:lastUpdated "2015-10-28T02:50:46.673Z" ;
+    bcube:originatedFrom <urn:uuid:7fbdcc02-6a04-4d49-8740-e99f1a16bb26> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:af230ffe-34ab-4655-8eaf-296b6ad2667a> .
+
+<urn:uuid:7fbdcc02-6a04-4d49-8740-e99f1a16bb26> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-10-28T02:50:46.673Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-10-28T02:50:46.673Z" ;
+    dc:identifier "urn:sha:2a4601c059d283b60bd7722963726467ef51a3e0acb6f4aa211807c9" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://data.denvergov.org/download/gis/public_works_development_services_projects/metadata/public_works_development_services_projects.xml" .
+
+<urn:uuid:9cb2cee3-31d0-4c14-8a9f-121f105ee50e> owl:a foaf:Organization ;
+    foaf:name "" .
+
+<urn:uuid:af230ffe-34ab-4655-8eaf-296b6ad2667a> bcube:dateCreated "2015-10-28T02:50:46.673Z" ;
+    bcube:hasMetadataRecord <urn:uuid:3b87ef35-2b0e-425f-ac04-481274d501ed> ;
+    bcube:lastUpdated "2015-10-28T02:50:46.673Z" ;
+    dc:conformsTo <urn:uuid:31a0c190-b17c-4a11-ab7d-b55c999f9a2c>,
+        <urn:uuid:3494ff80-7f14-4734-a19e-43b42f3905c9> ;
+    dc:description "Mapping of the current PWDES projects (from CityView database) to overlay with other project datasets such as Capital Improvement Projects (CIP) and Transportation Collaboration Group (TCG)." ;
+    dc:spatial "POLYGON ((-105.092749 39.616135,-105.092749 39.85376,-104.671986 39.85376,-104.671986 39.616135,-105.092749 39.616135))" ;
+    dcterms:publisher <urn:uuid:9cb2cee3-31d0-4c14-8a9f-121f105ee50e> ;
+    dcterms:title "Public Works Development Services Projects" ;
+    esip:eastBound "-104.671986"^^xsd:float ;
+    esip:northBound "39.85376"^^xsd:float ;
+    esip:southBound "39.616135"^^xsd:float ;
+    esip:westBound "-105.092749"^^xsd:float ;
+    owl:a dcat:Dataset .
+

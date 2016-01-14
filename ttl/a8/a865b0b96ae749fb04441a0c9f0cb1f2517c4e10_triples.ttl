@@ -1,0 +1,89 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:2e42a248-3821-4ab5-92d2-63acdf9c0b9e> owl:a foaf:Organization ;
+    foaf:name "" .
+
+<urn:uuid:30a9d20e-e8da-4758-9969-da2b67ea4af7> bcube:dateCreated "2015-11-04T11:56:11.668Z" ;
+    bcube:hasMetadataRecord <urn:uuid:f0b79c66-b2fc-42b1-bb2a-1bece42bc3d4> ;
+    bcube:lastUpdated "2015-11-04T11:56:11.668Z" ;
+    dc:conformsTo <urn:uuid:53d9d1a6-7162-47ca-82fa-99ac8f5d5c7e>,
+        <urn:uuid:7b7f888b-7e2c-418a-acb7-ed7893fb78fe>,
+        <urn:uuid:ffdd11a0-7fa0-4d20-b365-904493e53897> ;
+    dc:description "The TIGER/Line Shapefiles are an extract of selected geographic and cartographic information from the Census MAF/TIGER database. The Census MAF/TIGER database represents a seamless national file with no overlaps or gaps between parts. However, each TIGER/Line Shapefile is designed to stand alone as an independent data set or the shapefiles can be combined to cover the whole nation." ;
+    dc:spatial "POLYGON ((-86.359034 34.464473,-86.359034 34.991098,-85.583145 34.991098,-85.583145 34.464473,-86.359034 34.464473))" ;
+    dcterms:publisher <urn:uuid:2e42a248-3821-4ab5-92d2-63acdf9c0b9e> ;
+    dcterms:references <urn:uuid:93d2501f-7005-4dc8-a5f1-c32f7db36e5b> ;
+    dcterms:title "TIGER/Line Shapefile, 2008, 2000 county, Jackson County, AL, Census Tract" ;
+    esip:eastBound "-85.583145"^^xsd:float ;
+    esip:endDate "2008-07-01"^^xsd:date ;
+    esip:northBound "34.991098"^^xsd:float ;
+    esip:southBound "34.464473"^^xsd:float ;
+    esip:startDate "2008-01-01"^^xsd:date ;
+    esip:westBound "-86.359034"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:53d9d1a6-7162-47ca-82fa-99ac8f5d5c7e> bcube:hasType "theme" ;
+    bcube:hasValue "boundaries" ;
+    dc:partOf "ISO 19115 Topic Categories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:7b7f888b-7e2c-418a-acb7-ed7893fb78fe> bcube:hasType "place" ;
+    bcube:hasValue "01071",
+        "County or Equivalent Entity",
+        "Jackson",
+        "U.S.",
+        "United States" ;
+    dc:partOf "FIPS Publication 5-2, FIPS Publication 6-4, FIPS Publication 8-6, FIPS Publication 9-1,FIPS Publication55-4" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:93d2501f-7005-4dc8-a5f1-c32f7db36e5b> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-04T11:56:11.668Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-04T11:56:11.668Z" ;
+    dc:identifier "urn:sha:1becad9b93401eef52fb277ee1f2b192cd017c1b8f789777868b2896" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www2.census.gov/geo/tiger/TIGER2008/01_ALABAMA/01071_Jackson_County/tl_2008_01071_tract00.zip" .
+
+<urn:uuid:b179ad76-261c-437d-9c9b-9e4252f7934b> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-04T11:56:11.668Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-04T11:56:11.668Z" ;
+    dc:identifier "urn:sha:3e718f211f67d56ae18ee70ab78c2a4165ca05bb755cace3b193999d" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://meta.geo.census.gov/data/existing/decennial/GEO/GPMB/TIGERline/fe_2008/tract00/tl_2008_01071_tract00_url.shp.xml" .
+
+<urn:uuid:f0b79c66-b2fc-42b1-bb2a-1bece42bc3d4> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-11-04T11:56:11.668Z" ;
+    bcube:lastUpdated "2015-11-04T11:56:11.668Z" ;
+    bcube:originatedFrom <urn:uuid:b179ad76-261c-437d-9c9b-9e4252f7934b> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:30a9d20e-e8da-4758-9969-da2b67ea4af7> .
+
+<urn:uuid:ffdd11a0-7fa0-4d20-b365-904493e53897> bcube:hasType "theme" ;
+    bcube:hasValue "Census Tract",
+        "County or equivalent entity",
+        "Polygon",
+        "Tract" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+

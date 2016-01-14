@@ -1,0 +1,88 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:035af28d-f8b0-472a-b0d4-d51d50b701c3> bcube:hasType "place" ;
+    bcube:hasValue "01031",
+        "Coffee",
+        "County or Equivalent Entity",
+        "U.S.",
+        "United States" ;
+    dc:partOf "FIPS Publication 5-2, FIPS Publication 6-4, FIPS Publication 8-6, FIPS Publication 9-1" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:17505c30-32a5-4574-8848-fe53e29c02c0> bcube:hasType "theme" ;
+    bcube:hasValue "County or equivalent entity",
+        "Hydrography",
+        "Polygon" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:2e1c85f5-f58c-45b5-8d44-0991a99832a2> bcube:hasType "theme" ;
+    bcube:hasValue "inlandWaters" ;
+    dc:partOf "ISO 19115 Topic Categories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:7c8848da-678f-4c2c-a825-9ea7473d130e> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-11-06T22:59:21.15Z" ;
+    bcube:lastUpdated "2015-11-06T22:59:21.15Z" ;
+    bcube:originatedFrom <urn:uuid:bd930eb6-414b-44eb-937a-d1f62fc90465> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:88790cee-8a83-46d6-ae6a-8389340f72f6> .
+
+<urn:uuid:88790cee-8a83-46d6-ae6a-8389340f72f6> bcube:dateCreated "2015-11-06T22:59:21.15Z" ;
+    bcube:hasMetadataRecord <urn:uuid:7c8848da-678f-4c2c-a825-9ea7473d130e> ;
+    bcube:lastUpdated "2015-11-06T22:59:21.15Z" ;
+    dc:conformsTo <urn:uuid:035af28d-f8b0-472a-b0d4-d51d50b701c3>,
+        <urn:uuid:17505c30-32a5-4574-8848-fe53e29c02c0>,
+        <urn:uuid:2e1c85f5-f58c-45b5-8d44-0991a99832a2> ;
+    dc:description "The TIGER/Line Shapefiles are an extract of selected geographic and cartographic information from the Census MAF/TIGER database. The Census MAF/TIGER database represents a seamless national file with no overlaps or gaps between parts. However, each TIGER/Line Shapefile is designed to stand alone as an independent data set or the shapefiles can be combined to cover the whole nation." ;
+    dc:spatial "POLYGON ((-86.196365 31.182023,-86.196365 31.619311,-85.789139 31.619311,-85.789139 31.182023,-86.196365 31.182023))" ;
+    dcterms:publisher <urn:uuid:f71463c8-57a0-4b5c-8cc5-b2049aff297b> ;
+    dcterms:references <urn:uuid:8cac955e-7f19-4427-9185-96eee8dcaaf6> ;
+    dcterms:title "TIGER/Line Shapefile, 2007, county, Coffee County, Area Hydrography" ;
+    esip:eastBound "-85.789139"^^xsd:float ;
+    esip:endDate "2007-07-01"^^xsd:date ;
+    esip:northBound "31.619311"^^xsd:float ;
+    esip:southBound "31.182023"^^xsd:float ;
+    esip:startDate "2007-01-01"^^xsd:date ;
+    esip:westBound "-86.196365"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:8cac955e-7f19-4427-9185-96eee8dcaaf6> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-06T22:59:21.15Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-06T22:59:21.15Z" ;
+    dc:identifier "urn:sha:e21098ec677a212a2c90b414620adfac7bbb9e27ed91f4d12c01f5c9" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www2.census.gov/geo/tiger/TIGER2007FE/01_ALABAMA/01031_Coffee/fe_2007_01031_areawater.zip" .
+
+<urn:uuid:bd930eb6-414b-44eb-937a-d1f62fc90465> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-06T22:59:21.15Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-06T22:59:21.15Z" ;
+    dc:identifier "urn:sha:edb6e87e6062677e6a627d8f81d7929406f8d8f4f96ba0bcd7bf3f11" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://meta.geo.census.gov/data/existing/decennial/GEO/GPMB/TIGERline/fe_2007/areawater/fe_2007_01031_areawater_url.shp.xml" .
+
+<urn:uuid:f71463c8-57a0-4b5c-8cc5-b2049aff297b> owl:a foaf:Organization ;
+    foaf:name "" .
+

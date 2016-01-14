@@ -1,0 +1,92 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:67758df3-c461-4e5d-9db4-fac352e38255> bcube:hasType "theme" ;
+    bcube:hasValue "Breaklines",
+        "Contours",
+        "DEM",
+        "Digital Terrain Model",
+        "Elevation Data",
+        "LIDAR",
+        "Land Surface",
+        "Relief",
+        "Topography" ;
+    dc:partOf "FEMA NFIP Topic Category" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:af0aedc1-b83c-4d68-ab04-9a85737ad222> bcube:hasValue "elevation" ;
+    dc:partOf "IsoTopicCategories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:b594095e-b409-454c-b78e-f4d6cc7fccc6> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-07-10T04:42:43.142Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-07-10T04:42:43.142Z" ;
+    dc:identifier "urn:sha:5a16a988692f2add32b7378e4addb62e182fcfe133dc18b642d5346e" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://lidar.cr.usgs.gov/" .
+
+<urn:uuid:c000477c-a821-4b87-a815-15aef84f4f67> a "ISO 19115:2003/19139" ;
+    bcube:dateCreated "2015-07-10T04:42:43.142Z" ;
+    bcube:lastUpdated "2015-07-10T04:42:43.142Z" ;
+    bcube:originatedFrom <urn:uuid:dc6d45ec-bf05-45d6-9234-03b857257f5c> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:c92f24fc-bc62-4b03-9c37-f7af4c66d1c9> .
+
+<urn:uuid:c92f24fc-bc62-4b03-9c37-f7af4c66d1c9> bcube:dateCreated "2015-07-10T04:42:43.142Z" ;
+    bcube:hasMetadataRecord <urn:uuid:c000477c-a821-4b87-a815-15aef84f4f67> ;
+    bcube:lastUpdated "2015-07-10T04:42:43.142Z" ;
+    dc:conformsTo <urn:uuid:67758df3-c461-4e5d-9db4-fac352e38255>,
+        <urn:uuid:af0aedc1-b83c-4d68-ab04-9a85737ad222>,
+        <urn:uuid:d5c3a5cd-ed14-4b16-bb5b-5aa8d7024e5b> ;
+    dc:description "Terrain data, as defined in FEMA Guidelines and Specifications, Appendix M: Data Capture Standards, describes the digital topographic data that was used to create the elevation data representing the terrain environment of a watershed and/or floodplain. Terrain data requirements allow for flexibility in the types of information provided as sources used to produce final terrain deliverables. Once this type of data is provided, FEMA will be able to account for the origins of the flood study elevation data. (Source: FEMA Guidelines and Specifications, Appendix M, Section M.1.2)." ;
+    dc:spatial "POLYGON ((-124.1219 44.8207,-124.1219 49.0009,-114.0123 49.0009,-114.0123 44.8207,-124.1219 44.8207))" ;
+    dcterms:references <urn:uuid:b594095e-b409-454c-b78e-f4d6cc7fccc6> ;
+    dcterms:title "DCS Terrain Submission for City of Woodland PAL, Cowlitz County WA" ;
+    esip:eastBound "-114.0123"^^xsd:float ;
+    esip:northBound "49.0009"^^xsd:float ;
+    esip:southBound "44.8207"^^xsd:float ;
+    esip:westBound "-124.1219"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:d5c3a5cd-ed14-4b16-bb5b-5aa8d7024e5b> bcube:hasType "place" ;
+    bcube:hasValue "COMMUNITY City of Woodland",
+        "COMMUNITY Cowlitz County, Unincorporated Areas",
+        "COMMUNITY Cowlitz County, Unincorporated and Incorporated Areas",
+        "COUNTY COWLITZ",
+        "COUNTY-FIPS 015C",
+        "FEMA-CID 530032",
+        "FEMA-CID 530035",
+        "FEMA-CID 53015C",
+        "REGION 10",
+        "STATE WA" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:dc6d45ec-bf05-45d6-9234-03b857257f5c> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-07-10T04:42:43.142Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-07-10T04:42:43.142Z" ;
+    dc:identifier "urn:sha:eab56e16c5fb07fec751d6c9f93b38fdea281bdbea77cd4ae104965f" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "https://catalog.data.gov/harvest/object/77332b79-9a19-4e47-9862-8c0ad4644733" .
+

@@ -1,0 +1,88 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:1614d58a-5eaf-466e-a798-d43a441ef0a8> owl:a foaf:Organization ;
+    foaf:name "" .
+
+<urn:uuid:2c54f3ca-3782-4bd3-addc-b2c8ab5620c4> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-10-30T07:10:09.883Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-10-30T07:10:09.883Z" ;
+    dc:identifier "urn:sha:bf4f73bab7b86254f38496326bb0de97add4ddeb68c23545ef7fe10d" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://meta.geo.census.gov/data/existing/decennial/GEO/GPMB/TIGERline/fe_2010/MIL/tl_2010_31_mil_url.shp.xml" .
+
+<urn:uuid:7e375c94-7ac6-473f-a73c-13777d08b1b5> bcube:dateCreated "2015-10-30T07:10:09.883Z" ;
+    bcube:hasMetadataRecord <urn:uuid:87766128-e51c-4881-8fad-e906c3256b62> ;
+    bcube:lastUpdated "2015-10-30T07:10:09.883Z" ;
+    dc:conformsTo <urn:uuid:90815adf-4ef3-49bf-bf48-3b607bd780e0>,
+        <urn:uuid:b61c96bb-24fd-47f6-9648-4e15b3abe990>,
+        <urn:uuid:c4110ebb-ce1e-4cc3-be79-5dc530e44134> ;
+    dc:description "The TIGER/Line Files are shapefiles and related database files (.dbf) that are an extract of selected geographic and cartographic information from the U.S. Census Bureau's Master Address File / Topologically Integrated Geographic Encoding and Referencing (MAF/TIGER) Database (MTDB). The MTDB represents a seamless national file with no overlaps or gaps between parts, however, each TIGER/Line File is designed to stand alone as an independent data set, or they can be combined to cover the entire nation. The Census Bureau includes landmarks such as military installations in the MTDB for locating special features and to help enumerators during field operations. In 2008, the Census Bureau obtained the inventory and boundaries of most military installations from the U.S. Department of Defense (DOD) for Air Force, Army, Marine, and Navy installations and from the U.S. Department of Homeland Security (DHS) for Coast Guard installations. In a few cases, the files supplied to the Census Bureau contained older, unverified information than that obtained from the DOD for Census 2000; in those cases the military installations in MTDB were reviewed, but not updated to match the files obtained in 2008." ;
+    dc:spatial "POLYGON ((-104.053514 39.999932,-104.053514 43.001707,-95.30829 43.001707,-95.30829 39.999932,-104.053514 39.999932))" ;
+    dcterms:publisher <urn:uuid:1614d58a-5eaf-466e-a798-d43a441ef0a8> ;
+    dcterms:references <urn:uuid:d314005b-8eca-4bba-8955-a5634ca22a70> ;
+    dcterms:title "TIGER/Line Shapefile, 2010, state, Nebraska, Military Installation State-based Shapefile" ;
+    esip:eastBound "-95.30829"^^xsd:float ;
+    esip:endDate "2010-07-01"^^xsd:date ;
+    esip:northBound "43.001707"^^xsd:float ;
+    esip:southBound "39.999932"^^xsd:float ;
+    esip:startDate "2010-01-01"^^xsd:date ;
+    esip:westBound "-104.053514"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:87766128-e51c-4881-8fad-e906c3256b62> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-10-30T07:10:09.883Z" ;
+    bcube:lastUpdated "2015-10-30T07:10:09.883Z" ;
+    bcube:originatedFrom <urn:uuid:2c54f3ca-3782-4bd3-addc-b2c8ab5620c4> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:7e375c94-7ac6-473f-a73c-13777d08b1b5> .
+
+<urn:uuid:90815adf-4ef3-49bf-bf48-3b607bd780e0> bcube:hasType "theme" ;
+    bcube:hasValue "Nation",
+        "Polygon" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:b61c96bb-24fd-47f6-9648-4e15b3abe990> bcube:hasType "theme" ;
+    bcube:hasValue "boundaries" ;
+    dc:partOf "ISO 19115 Topic Categories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:c4110ebb-ce1e-4cc3-be79-5dc530e44134> bcube:hasType "place" ;
+    bcube:hasValue "31",
+        "NE",
+        "Nebraska",
+        "State or Equivalent Entity",
+        "U.S.",
+        "United States" ;
+    dc:partOf "INCITS.38-200x (R2004),INCITS.31-200x (R2007),INCITS.454-200x,INCITS 455-200x,INCITS 446-2008" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:d314005b-8eca-4bba-8955-a5634ca22a70> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-10-30T07:10:09.883Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-10-30T07:10:09.883Z" ;
+    dc:identifier "urn:sha:de36f64411488cfb0e6733335b1681025da192941f43f5bd4f9dad08" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www2.census.gov/geo/tiger/TIGER2010/MIL/tl_2010_31_mil.zip" .
+

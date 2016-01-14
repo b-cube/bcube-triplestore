@@ -1,0 +1,139 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:18bd94e4-01e0-4722-910c-3b97656a813a> bcube:hasType "theme" ;
+    bcube:hasValue "latitude",
+        "longitude",
+        "sea_water_electrical_conductivity",
+        "time" ;
+    dc:partOf "CF Standard Name Table v27" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:34ea55ea-5cb6-4b37-885d-b5c97729c810> owl:a foaf:Organization ;
+    foaf:name "ERDDAP, version 1.62, at NOAA NMFS SWFSC Environmental Research Division" .
+
+<urn:uuid:367b3372-b658-4804-a8c8-722fa970e845> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-08-05T16:05:39.519Z" ;
+    bcube:lastUpdated "2015-08-05T16:05:39.519Z" ;
+    bcube:originatedFrom <urn:uuid:37818e56-8da1-4739-9631-90572d15fe4c> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:8fd4b466-1e57-41b6-ae4e-ca07de77655b> .
+
+<urn:uuid:37818e56-8da1-4739-9631-90572d15fe4c> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-05T16:05:39.519Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-05T16:05:39.519Z" ;
+    dc:identifier "urn:sha:2911dd8abda4b9da5377f6442edfa187925403c533989e225eb703bf" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://coastwatch.pfeg.noaa.gov/erddap/metadata/fgdc/xml/nosCoopsMC_fgdc.xml" .
+
+<urn:uuid:7f0f696e-134d-4611-a9ec-98ea61a808a5> bcube:hasType "theme" ;
+    bcube:hasValue "6-minute",
+        "Oceans > Salinity/Density > Conductivity",
+        "co-ops",
+        "collection",
+        "conductivity",
+        "data",
+        "date",
+        "density",
+        "deployment",
+        "designation",
+        "electrical",
+        "established",
+        "flag",
+        "identifier",
+        "limit",
+        "meteorological",
+        "minute",
+        "name",
+        "noaa",
+        "nos",
+        "oceans",
+        "ops",
+        "platform",
+        "salinity",
+        "sea",
+        "sea_water_electrical_conductivity",
+        "seawater",
+        "sensor",
+        "shefID",
+        "shef_id",
+        "state",
+        "station",
+        "time",
+        "water" ;
+    dc:partOf "GCMD Science Keywords" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:8fd4b466-1e57-41b6-ae4e-ca07de77655b> bcube:dateCreated "2015-08-05T16:05:39.519Z" ;
+    bcube:hasMetadataRecord <urn:uuid:367b3372-b658-4804-a8c8-722fa970e845> ;
+    bcube:lastUpdated "2015-08-05T16:05:39.519Z" ;
+    dc:conformsTo <urn:uuid:18bd94e4-01e0-4722-910c-3b97656a813a>,
+        <urn:uuid:7f0f696e-134d-4611-a9ec-98ea61a808a5> ;
+    dc:description "This dataset has Conductivity data from NOAA NOS Center for Operational Oceanographic Products and Services (CO-OPS). WARNING: These preliminary data have not been subjected to the National Ocean Services (NOS) Quality Control procedures, and do not necessarily meet the criteria and standards of official NOS data. They are released for limited public use with appropriate caution. WARNING: * Queries for data MUST include stationID= and time>=. * Queries USUALLY include time<= (the default end time corresponds to 'now'). * Queries MUST be for less than 30 days worth of data. * The data source isn't completely reliable. If your request returns no data when you think it should: * Try revising the request (e.g., a different time range). * The list of stations offering this data may be incorrect. * Sometimes a station or the entire data service is unavailable. Wait a while and try again." ;
+    dc:spatial "POLYGON ((-145.7553 29.4814,-145.7553 60.5575,-71.1642 60.5575,-71.1642 29.4814,-145.7553 29.4814))" ;
+    dcterms:publisher <urn:uuid:34ea55ea-5cb6-4b37-885d-b5c97729c810> ;
+    dcterms:references <urn:uuid:95e4d9c6-5d2f-406d-9f63-b88f77cbaba3>,
+        <urn:uuid:aaa269f4-ca4c-4794-9f7b-ea55d831ca05>,
+        <urn:uuid:b52a4875-ec81-480c-b578-bebeb222628a> ;
+    dcterms:title "NOS CO-OPS Meteorological Data, Conductivity, 6-Minute" ;
+    esip:eastBound "-71.1642"^^xsd:float ;
+    esip:northBound "60.5575"^^xsd:float ;
+    esip:southBound "29.4814"^^xsd:float ;
+    esip:westBound "-145.7553"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:95e4d9c6-5d2f-406d-9f63-b88f77cbaba3> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-05T16:05:39.519Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-05T16:05:39.519Z" ;
+    dc:identifier "urn:sha:982fe964ce395f26d9fa8808c826dc99b93446f37a9e109aaa9e0f6d" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://coastwatch.pfeg.noaa.gov/erddap/tabledap/nosCoopsMC.html" .
+
+<urn:uuid:aaa269f4-ca4c-4794-9f7b-ea55d831ca05> dcterms:references <urn:uuid:bcbbb9bf-b517-419e-82a4-218c9c4b6358> ;
+    owl:a bibo:WebPage .
+
+<urn:uuid:b52a4875-ec81-480c-b578-bebeb222628a> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-05T16:05:39.519Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-05T16:05:39.519Z" ;
+    dc:identifier "urn:sha:ae8f0542e6429620f6aa8566330f851741608b2b9043cdaf754d31e9" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://coastwatch.pfeg.noaa.gov/erddap/tabledap/nosCoopsMC.graph" .
+
+<urn:uuid:bcbbb9bf-b517-419e-82a4-218c9c4b6358> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-05T16:05:39.519Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-05T16:05:39.519Z" ;
+    dc:identifier "urn:sha:fc345478145a6e82a2eb97b31fb5cd164eda18f2c6d6989652cf8e5a" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://coastwatch.pfeg.noaa.gov/erddap/tabledap/nosCoopsMC.subset" .
+

@@ -1,0 +1,89 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:25d54f0b-2c6c-4545-b623-07fbb3e91556> a "ISO 19115:2003/19139" ;
+    bcube:dateCreated "2015-11-06T13:00:15.355Z" ;
+    bcube:lastUpdated "2015-11-06T13:00:15.355Z" ;
+    bcube:originatedFrom <urn:uuid:496eae65-a2ca-4964-bf81-0fb5ea535703> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:60a0173b-cf96-4eb2-bb8d-3aa404232160> .
+
+<urn:uuid:496eae65-a2ca-4964-bf81-0fb5ea535703> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-06T13:00:15.355Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-06T13:00:15.355Z" ;
+    dc:identifier "urn:sha:5498416b8b2ff2ac09c6a5a184622b44197dde80a3eea8e1f0e9f4b6" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://meta.geo.census.gov/data/existing/decennial/GEO/GPMB/TIGERline/TIGER2014/facesal/tl_2014_20_facesal.dbf.iso.xml" .
+
+<urn:uuid:60a0173b-cf96-4eb2-bb8d-3aa404232160> bcube:dateCreated "2015-11-06T13:00:15.355Z" ;
+    bcube:hasMetadataRecord <urn:uuid:25d54f0b-2c6c-4545-b623-07fbb3e91556> ;
+    bcube:lastUpdated "2015-11-06T13:00:15.355Z" ;
+    dc:conformsTo <urn:uuid:98a60cc9-8e31-486a-b260-2c7ba6b5bec3>,
+        <urn:uuid:a0677d09-a1e9-4a91-a27b-cac9b326537e>,
+        <urn:uuid:ce3e708c-a419-4108-a875-b38fe3f5e30d> ;
+    dc:description "The TIGER/Line shapefiles and related database files (.dbf) are an extract of selected geographic and cartographic information from the U.S. Census Bureau's Master Address File / Topologically Integrated Geographic Encoding and Referencing (MAF/TIGER) Database (MTDB). The MTDB represents a seamless national file with no overlaps or gaps between parts, however, each TIGER/Line shapefile is designed to stand alone as an independent data set, or they can be combined to cover the entire nation. The Topological Faces / Area Landmark Relationship File (FACESAL.dbf) contains a record for each face / area landmark relationship. Face refers to the areal (polygon) topological primitives that make up MTDB. A face is bounded by one or more edges; its boundary includes only the edges that separate it from other faces, not any interior edges contained within the area of the face. The face to which a record in the Topological Faces / Area Landmark Relationship File (FACESAL.dbf) applies can be determined by linking to the Topological Faces Shapefile (FACES.shp) on the permanent topological face identifier (TFID) attribute. The area landmark to which a record in the Topological Faces / Area Landmark Relationship File (FACESAL.dbf) applies can be determined by linking to the Area Landmark Shapefile (AREALM.shp) on the area landmark identifier (AREAID) attribute. A face may be part of multiple area landmarks. An area landmark may consist of multiple faces." ;
+    dc:spatial "POLYGON ((-102.051769 36.993016,-102.051769 40.003166,-94.588387 40.003166,-94.588387 36.993016,-102.051769 36.993016))" ;
+    dcterms:references <urn:uuid:d227a777-f949-461f-8a04-09865be64ff8> ;
+    dcterms:title "TIGER/Line Shapefile, 2014, state, Kansas, Topological Faces-Area Landmark State-based Relationship File" ;
+    esip:eastBound "-94.588387"^^xsd:float ;
+    esip:endDate "2014-05-01"^^xsd:date ;
+    esip:northBound "40.003166"^^xsd:float ;
+    esip:southBound "36.993016"^^xsd:float ;
+    esip:startDate "2013-06-01"^^xsd:date ;
+    esip:westBound "-102.051769"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:98a60cc9-8e31-486a-b260-2c7ba6b5bec3> bcube:hasType "theme" ;
+    bcube:hasValue "Area landmark identifier",
+        "Landmark",
+        "Permanent face ID",
+        "State FIPS Code",
+        "State GNIS Code",
+        "State or equivalent entity",
+        "Table",
+        "Topological Faces" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:a0677d09-a1e9-4a91-a27b-cac9b326537e> bcube:hasValue "boundaries" ;
+    dc:partOf "IsoTopicCategories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:ce3e708c-a419-4108-a875-b38fe3f5e30d> bcube:hasType "place" ;
+    bcube:hasValue "20",
+        "KS",
+        "Kansas",
+        "State or Equivalent Entity",
+        "U.S.",
+        "United States" ;
+    dc:partOf "ANSI INCITS 38:2009 (Formerly FIPS 5-2), ANSI INCITS 31:2009 (Formerly FIPS 6-4),ANSI INCITS 454:2009 (Formerly FIPS 8-6), ANSI INCITS 455:2009(Formerly FIPS 9-1), ANSI INCITS 446:2008 (Geographic Names Information System (GNIS))" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:d227a777-f949-461f-8a04-09865be64ff8> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-06T13:00:15.355Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-06T13:00:15.355Z" ;
+    dc:identifier "urn:sha:feca05ad7a576d5c6e361375ddd4ae4e2861294cb4fc3ce3d3701244" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www2.census.gov/geo/tiger/TIGER2014/FACESAL/tl_2014_20_facesal.zip" .
+

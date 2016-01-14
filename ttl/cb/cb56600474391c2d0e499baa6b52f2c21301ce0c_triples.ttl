@@ -1,0 +1,96 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:0bb1546a-092f-454b-a47f-84d2d7e1e515> bcube:hasValue "transportation" ;
+    dc:partOf "IsoTopicCategories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:170cd28a-7d56-46ba-9ce6-764cc7d8c53b> a "ISO 19115:2003/19139" ;
+    bcube:dateCreated "2015-08-05T15:53:37.927Z" ;
+    bcube:lastUpdated "2015-08-05T15:53:37.927Z" ;
+    bcube:originatedFrom <urn:uuid:78ee7628-d417-4a22-aa13-98373bda12e6> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:201d3657-e3c4-40e0-8c77-f21db0afb322> .
+
+<urn:uuid:1ce5b41d-cc3c-407e-bfcb-4613a22232ce> bcube:hasType "theme" ;
+    bcube:hasValue "5-digit ZIP code",
+        "County ANSI Code",
+        "County FIPS Code",
+        "From House Number",
+        "Permanent edge ID",
+        "Side indicator flag",
+        "State ANSI Code",
+        "State FIPS Code",
+        "To House Number",
+        "ZIP +4 code" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:1e75b5b8-766b-4573-bac9-6cb93576b07a> bcube:hasType "theme" ;
+    bcube:hasValue "Transportation" ;
+    dc:partOf "NGDA Portfolio Themes" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:201d3657-e3c4-40e0-8c77-f21db0afb322> bcube:dateCreated "2015-08-05T15:53:37.927Z" ;
+    bcube:hasMetadataRecord <urn:uuid:170cd28a-7d56-46ba-9ce6-764cc7d8c53b> ;
+    bcube:lastUpdated "2015-08-05T15:53:37.927Z" ;
+    dc:conformsTo <urn:uuid:0bb1546a-092f-454b-a47f-84d2d7e1e515>,
+        <urn:uuid:1ce5b41d-cc3c-407e-bfcb-4613a22232ce>,
+        <urn:uuid:1e75b5b8-766b-4573-bac9-6cb93576b07a>,
+        <urn:uuid:a933a086-983f-4b06-81a2-c9a55f883972> ;
+    dc:description "The TIGER/Line shapefiles and related database files (.dbf) are an extract of selected geographic and cartographic information from the U.S. Census Bureau's Master Address File / Topologically Integrated Geographic Encoding and Referencing (MAF/TIGER) Database (MTDB). The MTDB represents a seamless national file with no overlaps or gaps between parts, however, each TIGER/Line shapefile is designed to stand alone as an independent data set, or they can be combined to cover the entire nation. The Address Ranges Relationship File (ADDR.dbf) contains the attributes of each address range. Each address range applies to a single edge and has a unique address range identifier (ARID) value. The edge to which an address range applies can be determined by linking the address range to the All Lines Shapefile (EDGES.shp) using the permanent topological edge identifier (TLID) attribute. Multiple address ranges can apply to the same edge since an edge can have multiple address ranges. Note that the most inclusive address range associated with each side of a street edge already appears in the All Lines Shapefile (EDGES.shp). The TIGER/Line Shapefiles contain potential address ranges, not individual addresses. The term \"address range\" refers to the collection of all possible structure numbers from the first structure number to the last structure number and all numbers of a specified parity in between along an edge side relative to the direction in which the edge is coded. The address ranges in the TIGER/Line Shapefiles are potential ranges that include the full range of possible structure numbers even though the actual structures may not exist." ;
+    dc:spatial "POLYGON ((-98.726835 40.002205,-98.726835 40.350558,-98.273293 40.350558,-98.273293 40.002205,-98.726835 40.002205))" ;
+    dcterms:references <urn:uuid:eb4e82f8-d5fd-4b40-b176-e8f85cc3c8eb> ;
+    dcterms:title "TIGER/Line Shapefile, 2013, county, Webster County, NE, Current Address Ranges Relationship File" ;
+    esip:eastBound "-98.273293"^^xsd:float ;
+    esip:endDate "2013-05-29"^^xsd:date ;
+    esip:northBound "40.350558"^^xsd:float ;
+    esip:southBound "40.002205"^^xsd:float ;
+    esip:startDate "2012-06-29"^^xsd:date ;
+    esip:westBound "-98.726835"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:78ee7628-d417-4a22-aa13-98373bda12e6> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-05T15:53:37.927Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-05T15:53:37.927Z" ;
+    dc:identifier "urn:sha:9e295396627894e2ed700b77b0bb793ad22a365a807dc226dbee490a" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://catalog.data.gov/harvest/object/404ad997-118d-4495-ad47-e5f5b1d70f8f" .
+
+<urn:uuid:a933a086-983f-4b06-81a2-c9a55f883972> bcube:hasType "place" ;
+    bcube:hasValue "31181",
+        "County or Equivalent Entity",
+        "U.S.",
+        "United States",
+        "Webster" ;
+    dc:partOf "ANSI INCITS 38:2009 (Formerly FIPS 5-2), ANSI INCITS 31:2009 (Formerly FIPS 6-4),ANSI INCITS 454:2009 (Formerly FIPS 8-6), ANSI INCITS 455:2009(Formerly FIPS 9-1), ANSI INCITS 446:2008 (Geographic Names Information System (GNIS))" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:eb4e82f8-d5fd-4b40-b176-e8f85cc3c8eb> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-05T15:53:37.927Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-05T15:53:37.927Z" ;
+    dc:identifier "urn:sha:2d9de5a00fc6a05d4b0b5e7191daaa51e8a617ffee5efd854551e8b4" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www2.census.gov/geo/tiger/TIGER2013/ADDR/tl_2013_31181_addr.zip" .
+

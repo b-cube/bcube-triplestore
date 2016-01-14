@@ -1,0 +1,86 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:079a2982-863c-45af-8a65-aa87c23e36ac> bcube:hasType "theme" ;
+    bcube:hasValue "agricultural pesticide use",
+        "atrazine",
+        "corn herbicides",
+        "crop management",
+        "herbicides",
+        "inlandWaters" ;
+    dc:partOf "none" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:70347f64-2c5d-42ad-b01b-0b656fe50aab> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-07-11T03:41:26.674Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-07-11T03:41:26.674Z" ;
+    dc:identifier "urn:sha:d99ee0797c81ac109e40aa8dd61b9400ee7789854e0b65de1066e8c0" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://water.usgs.gov/GIS/dsdl/atrazine_1992_2007.zip" .
+
+<urn:uuid:74ac5a3d-ce43-4a35-afc0-50dfc1d73629> bcube:dateCreated "2015-07-11T03:41:26.674Z" ;
+    bcube:hasMetadataRecord <urn:uuid:d687f47f-bc87-41bd-9241-7e4e00378195> ;
+    bcube:lastUpdated "2015-07-11T03:41:26.674Z" ;
+    dc:conformsTo <urn:uuid:079a2982-863c-45af-8a65-aa87c23e36ac>,
+        <urn:uuid:acd9dfa3-02c5-45d1-9a64-9b1e8bd1f014>,
+        <urn:uuid:f175e7d1-adc1-4087-be8d-51da683735d4> ;
+    dc:description "This data set contains annual county-level estimates of total atrazine use on 16 agricultural crops and four agricultural land uses between 1992 and 2007. For each year, atrazine use was estimated for all counties in the conterminous U.S. (except California) by combining (1) proprietary data from the DMRKynetec (DMRK) AgroTrak database on the mass of atrazine applied annually to agricultural crops, (2) county harvested crop acreage, from the 1992, 1997, 2002, and 2007 U.S. Department of Agriculture (USDA) Censuses of Agriculture, and (3) annual harvested crop acreage from the National Agriculture Statistics Service (NASS) for non-Census years between 1992 and 2007. Annual DMRK estimates of pesticide use on individual crops were derived from surveys of major field crops and selected specialty crops in multicounty areas referred to as Crop Reporting Districts (CRD). The CRD-level atrazine-use estimates were disaggregated to obtain county-level application rates by dividing the mass (pounds) of pesticides applied to a crop by the acreage of that crop in the CRD, to yield a rate per harvested acre. When atrazine-use estimates were not available for a CRD, crop, or year, an estimated CRD-level rate was developed following a hierarchy of decision rules that checked first for the availability of a crop application rate from surveyed atrazine application rate(s) for adjacent CRDs for a specific year, and second, the rates from surveyed CRDs within for USDA Farm Production Regions for a specific year or multiple years. The estimation method applied linear interpolation to estimate crop acreage for years when harvested acres for a crop and county were not reported in either the Census of Agriculture or the NASS database, but were reported by these data sources for other years for that crop and county. Data on atrazine use for the counties in California were obtained from farmers' reports of pesticide use collected and published by the California Department of Pesticide Regulation-Pesticide Use Reporting (DPR-PUR) because these data are more complete than DMRK survey data. National and state annual atrazine-use totals derived by this method were compared with other published pesticide-use estimates and were highly correlated. The method developed is designed to be applicable to other pesticides for which there are similar data; however, for some pesticides that are applied to specialty crops, fewer surveys are usually available to estimate application rates and there are a greater number of years with unreported crop acreage, potentially resulting in greater uncertainty in use estimates." ;
+    dc:spatial "POLYGON ((-127.977 23.0933,-127.977 48.283,-65.118 48.283,-65.118 23.0933,-127.977 23.0933))" ;
+    dcterms:publisher <urn:uuid:8010e739-b77d-4bb7-b0de-1bdb68827cd1> ;
+    dcterms:references <urn:uuid:70347f64-2c5d-42ad-b01b-0b656fe50aab> ;
+    dcterms:title "Annual county atrazine use estimates for agriculture, 1992-2007" ;
+    esip:eastBound "-65.118"^^xsd:float ;
+    esip:northBound "48.283"^^xsd:float ;
+    esip:southBound "23.0933"^^xsd:float ;
+    esip:westBound "-127.977"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:8010e739-b77d-4bb7-b0de-1bdb68827cd1> owl:a foaf:Organization ;
+    foaf:name "U.S. Geological Survey" .
+
+<urn:uuid:acd9dfa3-02c5-45d1-9a64-9b1e8bd1f014> bcube:hasType "temporal" ;
+    bcube:hasValue "1992-2007" ;
+    dc:partOf "none" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:d687f47f-bc87-41bd-9241-7e4e00378195> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-07-11T03:41:26.674Z" ;
+    bcube:lastUpdated "2015-07-11T03:41:26.674Z" ;
+    bcube:originatedFrom <urn:uuid:fad687f6-db12-4b1e-82a1-0ccc915cd6ee> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:74ac5a3d-ce43-4a35-afc0-50dfc1d73629> .
+
+<urn:uuid:f175e7d1-adc1-4087-be8d-51da683735d4> bcube:hasType "place" ;
+    bcube:hasValue "Conterminous U.S.",
+        "counties of the conterminous U.S." ;
+    dc:partOf "none" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:fad687f6-db12-4b1e-82a1-0ccc915cd6ee> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-07-11T03:41:26.674Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-07-11T03:41:26.674Z" ;
+    dc:identifier "urn:sha:14036cda8c4058d06fb273872cafa643b19f08ae2ea1c159753f8eab" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://water.usgs.gov/lookup/getspatial?sir2010-5034" .
+

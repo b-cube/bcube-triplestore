@@ -1,0 +1,92 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:121c04ae-f213-4b70-a87a-b9f65ade8d51> owl:a foaf:Organization ;
+    foaf:name "Federal Emergency Management Agency" .
+
+<urn:uuid:6b821742-a54e-4fb7-a170-f212cf5afcdd> bcube:hasType "theme" ;
+    bcube:hasValue "0.2-Percent-Annual-Chance Flood",
+        "Channel",
+        "DFIRM",
+        "Digital Flood Insurance Rate Map",
+        "Flood Hazard data",
+        "Hydrology" ;
+    dc:partOf "FEMA NFIP Topic Category" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:85407a91-8d2f-4756-89eb-5706090cb0c1> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-01T18:50:41.12Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-01T18:50:41.12Z" ;
+    dc:identifier "urn:sha:37c915397238031daced09ae0e2dd3bf54e84a6477f749c2cc9dcbdf" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://hazards.fema.gov" .
+
+<urn:uuid:97ebb8c6-7ca2-418b-b6b4-24f39d1af37d> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-01T18:50:41.12Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-01T18:50:41.12Z" ;
+    dc:identifier "urn:sha:48dd6892a551e75441eb5d9da8ace2268c35cbfae67a14e19ad11a49" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://catalog.data.gov/harvest/object/cc67b31a-1a2a-47b7-b237-0f33be0d9663/original" .
+
+<urn:uuid:a87b6e48-4639-46b6-a891-e02f2fbdab52> bcube:dateCreated "2015-11-01T18:50:41.12Z" ;
+    bcube:hasMetadataRecord <urn:uuid:c53857e9-a45e-4c4b-8f70-a3c8cec28ab0> ;
+    bcube:lastUpdated "2015-11-01T18:50:41.12Z" ;
+    dc:conformsTo <urn:uuid:6b821742-a54e-4fb7-a170-f212cf5afcdd>,
+        <urn:uuid:c00c1643-29ba-4d6a-ada5-02f5668c482b>,
+        <urn:uuid:c28585f1-4dac-4667-a70b-81e3019a3cbc> ;
+    dc:description "Hydrology data include spatial datasets and data tables necessary for documenting the hydrologic procedures for estimating flood discharges for a flood insurance study, which includes the hydrologic data expected by FEMA for new riverline studies. (Source: FEMA Guidelines and Specifications, Appendix N)" ;
+    dc:spatial "POLYGON ((-111.948 45.98,-111.948 46.467,-111.042 46.467,-111.042 45.98,-111.948 45.98))" ;
+    dcterms:publisher <urn:uuid:121c04ae-f213-4b70-a87a-b9f65ade8d51> ;
+    dcterms:references <urn:uuid:85407a91-8d2f-4756-89eb-5706090cb0c1> ;
+    dcterms:title "HYDROLOGY, BROADWATER COUNTY, MONTANA" ;
+    esip:eastBound "-111.042"^^xsd:float ;
+    esip:northBound "46.467"^^xsd:float ;
+    esip:southBound "45.98"^^xsd:float ;
+    esip:startDate "2010-12-29"^^xsd:date ;
+    esip:westBound "-111.948"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:c00c1643-29ba-4d6a-ada5-02f5668c482b> bcube:hasType "theme" ;
+    bcube:hasValue "environment",
+        "inlandWaters" ;
+    dc:partOf "ISO 19115 Topic Category" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:c28585f1-4dac-4667-a70b-81e3019a3cbc> bcube:hasType "place" ;
+    bcube:hasValue "COMMUNITY Countywide",
+        "COUNTY Broadwater County",
+        "COUNTY-FIPS 007C",
+        "FEMA-CID 30007C",
+        "REGION 08",
+        "STATE MT" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:c53857e9-a45e-4c4b-8f70-a3c8cec28ab0> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-11-01T18:50:41.12Z" ;
+    bcube:lastUpdated "2015-11-01T18:50:41.12Z" ;
+    bcube:originatedFrom <urn:uuid:97ebb8c6-7ca2-418b-b6b4-24f39d1af37d> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:a87b6e48-4639-46b6-a891-e02f2fbdab52> .
+

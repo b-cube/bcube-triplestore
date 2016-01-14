@@ -1,0 +1,104 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:04b08f7a-94e3-4f02-a2e4-ada18771612c> bcube:hasType "place" ;
+    bcube:hasValue "01085",
+        "County or Equivalent Entity",
+        "Lowndes",
+        "U.S.",
+        "United States" ;
+    dc:partOf "ANSI INCITS 38:2009 (Formerly FIPS 5-2), ANSI INCITS 31:2009 (Formerly FIPS 6-4),ANSI INCITS 454:2009 (Formerly FIPS 8-6), ANSI INCITS 455:2009(Formerly FIPS 9-1), ANSI INCITS 446:2008 (Geographic Names Information System (GNIS))" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:1230f043-ea9d-4615-bdb0-1b412a411262> a "ISO 19115:2003/19139" ;
+    bcube:dateCreated "2015-11-08T17:16:29.874Z" ;
+    bcube:lastUpdated "2015-11-08T17:16:29.874Z" ;
+    bcube:originatedFrom <urn:uuid:b9b3fcab-f467-4bb7-a6ad-25ab7a9bb371> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:a603cd9d-c31c-429d-91aa-6de293bc6796> .
+
+<urn:uuid:4dd1968f-69e6-4b62-be5e-f5109a610a06> bcube:hasValue "boundaries",
+        "inlandWaters",
+        "transportation" ;
+    dc:partOf "IsoTopicCategories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:5dc04110-8812-4bfc-9559-d06c2a3f1678> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-08T17:16:29.874Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-08T17:16:29.874Z" ;
+    dc:identifier "urn:sha:01e3f1d55bd7125cf2eb8bd68431fd00a1f078cd325b2a0a30fd7381" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www.census.gov/geo/maps-data/data/tiger-line.html" .
+
+<urn:uuid:9f9b7a99-fe26-4d3e-95d8-b345ad3a3385> bcube:hasType "theme" ;
+    bcube:hasValue "Address Range",
+        "County or equivalent entity",
+        "Feature",
+        "Hydrography",
+        "Linear",
+        "Railways",
+        "Road Feature",
+        "Roads",
+        "Street Centerline" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:a603cd9d-c31c-429d-91aa-6de293bc6796> bcube:dateCreated "2015-11-08T17:16:29.874Z" ;
+    bcube:hasMetadataRecord <urn:uuid:1230f043-ea9d-4615-bdb0-1b412a411262> ;
+    bcube:lastUpdated "2015-11-08T17:16:29.874Z" ;
+    dc:conformsTo <urn:uuid:04b08f7a-94e3-4f02-a2e4-ada18771612c>,
+        <urn:uuid:4dd1968f-69e6-4b62-be5e-f5109a610a06>,
+        <urn:uuid:9f9b7a99-fe26-4d3e-95d8-b345ad3a3385> ;
+    dc:description "The TIGER/Line shapefiles and related database files (.dbf) are an extract of selected geographic and cartographic information from the U.S. Census Bureau's Master Address File / Topologically Integrated Geographic Encoding and Referencing (MAF/TIGER) Database (MTDB). The MTDB represents a seamless national file with no overlaps or gaps between parts, however, each TIGER/Line shapefile is designed to stand alone as an independent data set, or they can be combined to cover the entire nation. Edge refers to the linear topological primitives that make up MTDB. The All Lines Shapefile contains linear features such as roads, railroads, and hydrography. Additional attribute data associated with the linear features found in the All Lines Shapefile are available in relationship (.dbf) files that users must download separately. The All Lines Shapefile contains the geometry and attributes of each topological primitive edge. Each edge has a unique TIGER/Line identifier (TLID) value." ;
+    dc:spatial "POLYGON ((-86.908597 31.961601,-86.908597 32.406682,-86.396357 32.406682,-86.396357 31.961601,-86.908597 31.961601))" ;
+    dcterms:references <urn:uuid:5dc04110-8812-4bfc-9559-d06c2a3f1678>,
+        <urn:uuid:dc2393fc-9f8a-4f5d-a928-6c10c2b52950> ;
+    dcterms:title "TIGER/Line Shapefile, 2015, county, Lowndes County, AL, All Lines County-based Shapefile" ;
+    esip:eastBound "-86.396357"^^xsd:float ;
+    esip:endDate "2015-05-30"^^xsd:date ;
+    esip:northBound "32.406682"^^xsd:float ;
+    esip:southBound "31.961601"^^xsd:float ;
+    esip:startDate "2014-06-30"^^xsd:date ;
+    esip:westBound "-86.908597"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:b9b3fcab-f467-4bb7-a6ad-25ab7a9bb371> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-08T17:16:29.874Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-08T17:16:29.874Z" ;
+    dc:identifier "urn:sha:f3156731d6f39a25353e9f3a2d032121076be22d88b89687684f58fe" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://meta.geo.census.gov/data/existing/decennial/GEO/GPMB/TIGERline/TIGER2015/edges/tl_2015_01085_edges.shp.iso.xml" .
+
+<urn:uuid:dc2393fc-9f8a-4f5d-a928-6c10c2b52950> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-08T17:16:29.874Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-08T17:16:29.874Z" ;
+    dc:identifier "urn:sha:2c039e7d5e7dfad2bb29f5a09ca2a84abfdc4c960a9fc0cd31e8e953" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www2.census.gov/geo/tiger/TIGER2015/EDGES/tl_2015_01085_edges.zip" .
+

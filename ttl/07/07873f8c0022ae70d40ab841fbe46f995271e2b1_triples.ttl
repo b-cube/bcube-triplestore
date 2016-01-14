@@ -1,0 +1,71 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:3c877622-88c9-47cb-a9d8-b30417d5c7cc> owl:a foaf:Organization ;
+    foaf:name "" .
+
+<urn:uuid:3e4a3f9f-4d2f-419c-a508-8ca117aea042> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-10-16T21:58:41.044Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-10-16T21:58:41.044Z" ;
+    dc:identifier "urn:sha:d544bff90e66dc287d40c3b4e8ea76ea0f5fb14fbdb70f2626ae7958" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://data.denvergov.org/download/gis/parking_meters/metadata/parking_meters.xml" .
+
+<urn:uuid:7f9ca582-0e99-491d-807e-baaeef0a41fc> bcube:dateCreated "2015-10-16T21:58:41.044Z" ;
+    bcube:hasMetadataRecord <urn:uuid:dfa7dd2f-cf9d-40e5-8e1e-665768beabb4> ;
+    bcube:lastUpdated "2015-10-16T21:58:41.044Z" ;
+    dc:conformsTo <urn:uuid:84ce1846-b4c4-42f1-91cf-fbab7c094c7d>,
+        <urn:uuid:cd68cc84-ff5f-47e8-b5a6-4330d7e22b0e>,
+        <urn:uuid:cfeaf9c6-505a-4f07-a5bf-8c2c9a0ae59b> ;
+    dc:description "A point representation of parking meters in the City and County of Denver. This dataset was created from Global Positioning System (GPS) source data." ;
+    dc:spatial "POLYGON ((-105.015254 39.678545,-105.015254 39.759319,-104.93287 39.759319,-104.93287 39.678545,-105.015254 39.678545))" ;
+    dcterms:publisher <urn:uuid:3c877622-88c9-47cb-a9d8-b30417d5c7cc> ;
+    dcterms:title "Parking Meters" ;
+    esip:eastBound "-104.93287"^^xsd:float ;
+    esip:northBound "39.759319"^^xsd:float ;
+    esip:southBound "39.678545"^^xsd:float ;
+    esip:westBound "-105.015254"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:84ce1846-b4c4-42f1-91cf-fbab7c094c7d> bcube:hasType "place" ;
+    bcube:hasValue "Colorado",
+        "Denver",
+        "Denver County",
+        "USA" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:cd68cc84-ff5f-47e8-b5a6-4330d7e22b0e> bcube:hasType "theme" ;
+    bcube:hasValue "parking" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:cfeaf9c6-505a-4f07-a5bf-8c2c9a0ae59b> bcube:hasType "theme" ;
+    bcube:hasValue "location",
+        "transportation" ;
+    dc:partOf "ISO 19115 Topic Categories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:dfa7dd2f-cf9d-40e5-8e1e-665768beabb4> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-10-16T21:58:41.044Z" ;
+    bcube:lastUpdated "2015-10-16T21:58:41.044Z" ;
+    bcube:originatedFrom <urn:uuid:3e4a3f9f-4d2f-419c-a508-8ca117aea042> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:7f9ca582-0e99-491d-807e-baaeef0a41fc> .
+

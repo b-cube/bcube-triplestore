@@ -1,0 +1,90 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:08aa4376-2f6c-4e02-91de-61c4c5ff9e09> owl:a foaf:Organization ;
+    foaf:name "" .
+
+<urn:uuid:3148da83-2305-42de-98c3-68ad3fe56f80> bcube:hasType "place" ;
+    bcube:hasValue "44",
+        "RI",
+        "Rhode Island",
+        "State or Equivalent Entity",
+        "U.S.",
+        "United States" ;
+    dc:partOf "FIPS Publication 5-2, FIPS Publication 6-4, FIPS Publication 8-6, FIPS Publication 9-1,FIPS Publication55-4" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:4f8c9e29-7707-4f99-8d78-e0d289ce4b9b> bcube:hasType "theme" ;
+    bcube:hasValue "boundaries" ;
+    dc:partOf "ISO 19115 Topic Categories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:98d9dc16-3246-4af4-b4ee-3db61c9bd8d9> bcube:dateCreated "2015-11-01T18:47:34.708Z" ;
+    bcube:hasMetadataRecord <urn:uuid:a1c9a62a-5a7f-4461-a997-214299503176> ;
+    bcube:lastUpdated "2015-11-01T18:47:34.708Z" ;
+    dc:conformsTo <urn:uuid:3148da83-2305-42de-98c3-68ad3fe56f80>,
+        <urn:uuid:4f8c9e29-7707-4f99-8d78-e0d289ce4b9b>,
+        <urn:uuid:fc08cdf2-d3a2-4efa-ad81-9e453e53f7ad> ;
+    dc:description "The TIGER/Line Shapefiles are an extract of selected geographic and cartographic information from the Census MAF/TIGER database. The Census MAF/TIGER database represents a seamless national file with no overlaps or gaps between parts. However, each TIGER/Line Shapefile is designed to stand alone as an independent data set or the shapefiles can be combined to cover the whole nation." ;
+    dc:spatial "POLYGON ((-71.907258 41.095834,-71.907258 42.0188,-71.088571 42.0188,-71.088571 41.095834,-71.907258 41.095834))" ;
+    dcterms:publisher <urn:uuid:08aa4376-2f6c-4e02-91de-61c4c5ff9e09> ;
+    dcterms:references <urn:uuid:ef6c9bb0-8a05-4e93-96b2-2fcb19b2a462> ;
+    dcterms:title "TIGER/Line Shapefile, 2008, 2000 state, Rhode Island, Secondary School District" ;
+    esip:eastBound "-71.088571"^^xsd:float ;
+    esip:endDate "2008-07-01"^^xsd:date ;
+    esip:northBound "42.0188"^^xsd:float ;
+    esip:southBound "41.095834"^^xsd:float ;
+    esip:startDate "2008-01-01"^^xsd:date ;
+    esip:westBound "-71.907258"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:a1c9a62a-5a7f-4461-a997-214299503176> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-11-01T18:47:34.708Z" ;
+    bcube:lastUpdated "2015-11-01T18:47:34.708Z" ;
+    bcube:originatedFrom <urn:uuid:b29bbfbf-1f04-4e73-b429-8fd7a4715931> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:98d9dc16-3246-4af4-b4ee-3db61c9bd8d9> .
+
+<urn:uuid:b29bbfbf-1f04-4e73-b429-8fd7a4715931> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-01T18:47:34.708Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-01T18:47:34.708Z" ;
+    dc:identifier "urn:sha:ea29a11800d8b40dca6275fe97512ae896f420fe0deffa969385badd" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://meta.geo.census.gov/data/existing/decennial/GEO/GPMB/TIGERline/fe_2008/scsd00/tl_2008_44_scsd00_url.shp.xml" .
+
+<urn:uuid:ef6c9bb0-8a05-4e93-96b2-2fcb19b2a462> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-01T18:47:34.708Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-01T18:47:34.708Z" ;
+    dc:identifier "urn:sha:bfe6dbf9123b119b92d0bdea652e94e167669a01b7bf83337be5d456" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www2.census.gov/geo/tiger/TIGER2008/44_RHODE_ISLAND/tl_2008_44_scsd00.zip" .
+
+<urn:uuid:fc08cdf2-d3a2-4efa-ad81-9e453e53f7ad> bcube:hasType "theme" ;
+    bcube:hasValue "Polygon",
+        "School District",
+        "Secondary School District",
+        "State or equivalent entity" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+

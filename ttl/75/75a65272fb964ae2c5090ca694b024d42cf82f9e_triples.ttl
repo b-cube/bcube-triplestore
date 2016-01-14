@@ -1,0 +1,83 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:4edd3def-b60d-4ed3-bfce-d647bb1078af> bcube:hasType "temporal" ;
+    bcube:hasValue "2006-present" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:56d9b457-e109-4fd3-967c-b774c5ec8d74> owl:a foaf:Organization ;
+    foaf:name "" .
+
+<urn:uuid:5b44b6ea-991f-4556-bc05-eb76b5b55e08> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-07-12T00:30:45.941Z" ;
+    bcube:lastUpdated "2015-07-12T00:30:45.941Z" ;
+    bcube:originatedFrom <urn:uuid:8b52da89-28fb-426b-8cd0-8d0d61e81913> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:eb421261-f08f-41f6-8a14-43a539d8b3a2> .
+
+<urn:uuid:860aca8b-9566-48c8-a2ce-b053ddae38a6> bcube:hasType "place" ;
+    bcube:hasValue "Atlantic Ocean",
+        "Florida",
+        "Gulf Of Mexico",
+        "everglades" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:8b52da89-28fb-426b-8cd0-8d0d61e81913> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-07-12T00:30:45.941Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-07-12T00:30:45.941Z" ;
+    dc:identifier "urn:sha:90a3d426ea57edf2cc9c80df6ef5b54283245a4aadf004479321bb29" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "https://inport.nmfs.noaa.gov/inport/item/10678/fgdc" .
+
+<urn:uuid:90c433a5-9d09-418c-a67d-b7575e3467dd> bcube:hasType "stratum" ;
+    bcube:hasValue "species" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:c86fb5ba-ed8f-4e02-9187-df723c67325f> bcube:hasType "theme" ;
+    bcube:hasValue "FINSS",
+        "Mangrove",
+        "abundance",
+        "distribution",
+        "grouper",
+        "habitat" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:eb421261-f08f-41f6-8a14-43a539d8b3a2> bcube:dateCreated "2015-07-12T00:30:45.941Z" ;
+    bcube:hasMetadataRecord <urn:uuid:5b44b6ea-991f-4556-bc05-eb76b5b55e08> ;
+    bcube:lastUpdated "2015-07-12T00:30:45.941Z" ;
+    dc:conformsTo <urn:uuid:4edd3def-b60d-4ed3-bfce-d647bb1078af>,
+        <urn:uuid:860aca8b-9566-48c8-a2ce-b053ddae38a6>,
+        <urn:uuid:90c433a5-9d09-418c-a67d-b7575e3467dd>,
+        <urn:uuid:c86fb5ba-ed8f-4e02-9187-df723c67325f> ;
+    dc:description "Southern Biscayne Bay's shoreline fish community been monitored visually twice a year since 1998 to compare fish use of mangrove prop root habitats along the mainland with that along the leeward side of the northernmost Florida Keys. This has been pursued by examining seasonal and spatial variation in fish taxonomic composition and diversity as well as variation in the frequency of occurrence, density and size structure of dominant fish taxa that occupy these mangrove?lined shorelines. The purpose of this MAP activity is to ensure the continuation and spatial expansion of this 14-year baseline? time-series with an emphasis on evaluating relationships between the shoreline fish community and variation in salinity/freshwater flow" ;
+    dc:spatial "POLYGON ((-80.12 25.13,-80.12 25.7,-80.08 25.7,-80.08 25.13,-80.12 25.13))" ;
+    dcterms:identifier "gov.noaa.nmfs.inport:10678" ;
+    dcterms:publisher <urn:uuid:56d9b457-e109-4fd3-967c-b774c5ec8d74> ;
+    dcterms:title "Mangrove Study Data" ;
+    esip:eastBound "-80.08"^^xsd:float ;
+    esip:northBound "25.7"^^xsd:float ;
+    esip:southBound "25.13"^^xsd:float ;
+    esip:startDate "2006-01-01"^^xsd:date ;
+    esip:westBound "-80.12"^^xsd:float ;
+    owl:a dcat:Dataset .
+

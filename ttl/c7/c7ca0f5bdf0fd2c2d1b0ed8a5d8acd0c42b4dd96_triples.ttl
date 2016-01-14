@@ -1,0 +1,95 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:1b2145a8-5d51-430d-83b7-00a654c0782e> owl:a foaf:Organization ;
+    foaf:name "" .
+
+<urn:uuid:62af0c0c-17b1-415a-a311-6d31ab214d2f> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-11-05T07:30:08.848Z" ;
+    bcube:lastUpdated "2015-11-05T07:30:08.848Z" ;
+    bcube:originatedFrom <urn:uuid:df050969-bf67-49ba-b645-1e54e9f5a167> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:cafd27c0-69fb-4d0d-a147-1f550be508e5> .
+
+<urn:uuid:8f9f6b4d-cc20-446d-99a5-2e3978c0b98f> bcube:hasType "theme" ;
+    bcube:hasValue "boundaries" ;
+    dc:partOf "ISO 19115 Topic Categories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:a66b6393-ef29-44b3-b1a1-dbc34a30979b> bcube:hasType "place" ;
+    bcube:hasValue "01067",
+        "County or Equivalent Entity",
+        "Henry",
+        "U.S.",
+        "United States" ;
+    dc:partOf "INCITS.38-200x (R2004),INCITS.31-200x (R2007),INCITS.454-200x,INCITS 455-200x,INCITS 446-2008" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:cafd27c0-69fb-4d0d-a147-1f550be508e5> bcube:dateCreated "2015-11-05T07:30:08.848Z" ;
+    bcube:hasMetadataRecord <urn:uuid:62af0c0c-17b1-415a-a311-6d31ab214d2f> ;
+    bcube:lastUpdated "2015-11-05T07:30:08.848Z" ;
+    dc:conformsTo <urn:uuid:8f9f6b4d-cc20-446d-99a5-2e3978c0b98f>,
+        <urn:uuid:a66b6393-ef29-44b3-b1a1-dbc34a30979b>,
+        <urn:uuid:e8bd850a-97ad-4524-a4e3-6d2510c3abef> ;
+    dc:description "The TIGER/Line relationship files are an extract of selected geographic information from the Census MAF/TIGER database. Each TIGER/Line relationship file is designed to stand alone as an independent data set or can be used jointly with the shapefiles." ;
+    dc:spatial "POLYGON ((-85.418035 31.307675,-85.418035 31.774364,-85.041305 31.774364,-85.041305 31.307675,-85.418035 31.307675))" ;
+    dcterms:publisher <urn:uuid:1b2145a8-5d51-430d-83b7-00a654c0782e> ;
+    dcterms:references <urn:uuid:f0bdb2df-8d64-4e75-9a0d-54424c27900b> ;
+    dcterms:title "TIGER/Line Shapefile, 2009, county, Henry County, AL, Current Topological Faces-Area Landmark Relationship File" ;
+    esip:eastBound "-85.041305"^^xsd:float ;
+    esip:endDate "2009-05-01"^^xsd:date ;
+    esip:northBound "31.774364"^^xsd:float ;
+    esip:southBound "31.307675"^^xsd:float ;
+    esip:startDate "2009-01-01"^^xsd:date ;
+    esip:westBound "-85.418035"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:df050969-bf67-49ba-b645-1e54e9f5a167> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-05T07:30:08.848Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-05T07:30:08.848Z" ;
+    dc:identifier "urn:sha:b9b5965eee65c1d23305d17b6a7f8c51351ef0011e57cbaee09d32ae" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://meta.geo.census.gov/data/existing/decennial/GEO/GPMB/TIGERline/fe_2009/facesal/tl_2009_01067_facesal_url.dbf.xml" .
+
+<urn:uuid:e8bd850a-97ad-4524-a4e3-6d2510c3abef> bcube:hasType "theme" ;
+    bcube:hasValue "Area landmark identifier",
+        "County ANSI Code",
+        "County FIPS Code",
+        "County or equivalent entity",
+        "Landmark",
+        "Permanent face ID",
+        "State ANSI Code",
+        "State FIPS Code",
+        "Table",
+        "Topological Faces" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:f0bdb2df-8d64-4e75-9a0d-54424c27900b> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-05T07:30:08.848Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-05T07:30:08.848Z" ;
+    dc:identifier "urn:sha:eeae9d43ac133e9ab50151a08f3269c15f7d48cbc0395dcc6c32da62" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www2.census.gov/geo/tiger/TIGER2009/01_ALABAMA/01067_Henry_County/tl_2009_01067_facesal.zip" .
+

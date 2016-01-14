@@ -1,0 +1,81 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:119ee304-439f-48b9-b2e7-e6618a28cafc> bcube:hasType "theme" ;
+    bcube:hasValue "Census",
+        "County",
+        "Labels",
+        "NRRC",
+        "Tracts",
+        "usginres:service" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:33c0b9b6-3f92-41e1-b4d9-47515e157d40> bcube:hasValue "geoscientificInformation" ;
+    dc:partOf "IsoTopicCategories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:4d27b827-b3b8-4028-963b-d56cc9ab58de> bcube:hasType "place" ;
+    bcube:hasValue "Arizona",
+        "Maricopa County" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:6731f57a-3113-4eec-80ee-880f98cbe97c> bcube:dateCreated "2015-10-18T17:04:47.427Z" ;
+    bcube:hasMetadataRecord <urn:uuid:c118fa4a-5631-48d1-b8e6-b49c2b7c10fe> ;
+    bcube:lastUpdated "2015-10-18T17:04:47.427Z" ;
+    dc:conformsTo <urn:uuid:119ee304-439f-48b9-b2e7-e6618a28cafc>,
+        <urn:uuid:33c0b9b6-3f92-41e1-b4d9-47515e157d40>,
+        <urn:uuid:4d27b827-b3b8-4028-963b-d56cc9ab58de> ;
+    dc:description "Census tract boundaries and labels for Maricopa and Pinal County. Used by the two county demographic viewer." ;
+    dc:spatial "POLYGON ((-111.71 34.81,-111.71 32.58,-113.42 32.58,-113.42 34.81,-111.71 34.81))" ;
+    dcterms:references <urn:uuid:c2067def-3eff-40b3-bf50-2e4a72b60226> ;
+    dcterms:title "Census Tract Boundaries and Labels for Maricopa and Pinal County, Arizona - maps/TwoCountyCensusTractsWithLabels" ;
+    esip:eastBound "-113.42"^^xsd:float ;
+    esip:endDate "1900-01-01"^^xsd:date ;
+    esip:northBound "32.58"^^xsd:float ;
+    esip:southBound "34.81"^^xsd:float ;
+    esip:startDate "1900-01-01"^^xsd:date ;
+    esip:westBound "-111.71"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:c118fa4a-5631-48d1-b8e6-b49c2b7c10fe> a "ISO 19115:2003/19139" ;
+    bcube:dateCreated "2015-10-18T17:04:47.427Z" ;
+    bcube:lastUpdated "2015-10-18T17:04:47.427Z" ;
+    bcube:originatedFrom <urn:uuid:f4232c6f-32f7-4d53-b62c-8214bd806527> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:6731f57a-3113-4eec-80ee-880f98cbe97c> .
+
+<urn:uuid:c2067def-3eff-40b3-bf50-2e4a72b60226> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-10-18T17:04:47.427Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-10-18T17:04:47.427Z" ;
+    dc:identifier "urn:sha:e2eae5546787d317bd834d2214fbf0d4b227fb5b6e00e3f86ce9b1b7" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "https://geo.azmag.gov/gismag/rest/services/maps/TwoCountyCensusTractsWithLabels/MapServer" .
+
+<urn:uuid:f4232c6f-32f7-4d53-b62c-8214bd806527> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-10-18T17:04:47.427Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-10-18T17:04:47.427Z" ;
+    dc:identifier "urn:sha:0a8831fdc8816ab5a7e0ded109c6ebca24fa4f63ea34334fbafb57e3" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://repository.stategeothermaldata.org/resources/metadata/TestNRRC/1DFD3AD108D34EF3B5E8B0CE848EEBE4.xml" .
+

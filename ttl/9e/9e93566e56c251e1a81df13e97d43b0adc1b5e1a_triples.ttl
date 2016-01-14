@@ -1,0 +1,88 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:454c237d-031a-4447-af71-5f9e5e9778a0> bcube:hasType "place" ;
+    bcube:hasValue "04009",
+        "County or Equivalent Entity",
+        "Graham",
+        "U.S.",
+        "United States" ;
+    dc:partOf "FIPS Publication 5-2, FIPS Publication 6-4, FIPS Publication 8-6, FIPS Publication 9-1" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:48173ec6-3b2c-4e76-b652-c8ec6a338ea6> bcube:dateCreated "2015-11-07T09:53:02.794Z" ;
+    bcube:hasMetadataRecord <urn:uuid:ee2d1e70-7dd8-40ed-b373-8ffc2e544355> ;
+    bcube:lastUpdated "2015-11-07T09:53:02.794Z" ;
+    dc:conformsTo <urn:uuid:454c237d-031a-4447-af71-5f9e5e9778a0>,
+        <urn:uuid:838cc541-7bca-4660-b95a-a72e0f5e477d>,
+        <urn:uuid:f59bd9c8-9375-4af0-9f48-2b1c52c6dedf> ;
+    dc:description "The TIGER/Line Shapefiles are an extract of selected geographic and cartographic information from the Census MAF/TIGER database. The Census MAF/TIGER database represents a seamless national file with no overlaps or gaps between parts. However, each TIGER/Line Shapefile is designed to stand alone as an independent data set or the shapefiles can be combined to cover the whole nation." ;
+    dc:spatial "POLYGON ((-110.458136 32.424475,-110.458136 33.652751,-109.113987 33.652751,-109.113987 32.424475,-110.458136 32.424475))" ;
+    dcterms:publisher <urn:uuid:4beed973-5818-446d-918d-c4effc749f3f> ;
+    dcterms:references <urn:uuid:dc5d546b-5581-47a6-9764-e2acdf2de8e6> ;
+    dcterms:title "TIGER/Line Shapefile, 2007, county, Graham County, Area Landmark" ;
+    esip:eastBound "-109.113987"^^xsd:float ;
+    esip:endDate "2007-07-01"^^xsd:date ;
+    esip:northBound "33.652751"^^xsd:float ;
+    esip:southBound "32.424475"^^xsd:float ;
+    esip:startDate "2007-01-01"^^xsd:date ;
+    esip:westBound "-110.458136"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:4beed973-5818-446d-918d-c4effc749f3f> owl:a foaf:Organization ;
+    foaf:name "" .
+
+<urn:uuid:838cc541-7bca-4660-b95a-a72e0f5e477d> bcube:hasType "theme" ;
+    bcube:hasValue "Area Landmark",
+        "County or equivalent entity",
+        "Polygon" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:873a59b2-3128-4b8c-97fb-892334dfd315> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-07T09:53:02.794Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-07T09:53:02.794Z" ;
+    dc:identifier "urn:sha:a7a2f33635d959e0994bd2245849486a96e764f77d0c24554922c2d5" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://meta.geo.census.gov/data/existing/decennial/GEO/GPMB/TIGERline/fe_2007/arealm/fe_2007_04009_arealm_url.shp.xml" .
+
+<urn:uuid:dc5d546b-5581-47a6-9764-e2acdf2de8e6> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-07T09:53:02.794Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-07T09:53:02.794Z" ;
+    dc:identifier "urn:sha:a72bd0e6ee12c065461ae73372f0db2b1bd1b16bd84073ef8c5cd83e" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www2.census.gov/geo/tiger/TIGER2007FE/04_ARIZONA/04009_Graham/fe_2007_04009_arealm.zip" .
+
+<urn:uuid:ee2d1e70-7dd8-40ed-b373-8ffc2e544355> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-11-07T09:53:02.794Z" ;
+    bcube:lastUpdated "2015-11-07T09:53:02.794Z" ;
+    bcube:originatedFrom <urn:uuid:873a59b2-3128-4b8c-97fb-892334dfd315> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:48173ec6-3b2c-4e76-b652-c8ec6a338ea6> .
+
+<urn:uuid:f59bd9c8-9375-4af0-9f48-2b1c52c6dedf> bcube:hasType "theme" ;
+    bcube:hasValue "boundaries" ;
+    dc:partOf "ISO 19115 Topic Categories" ;
+    owl:a bcube:thesaurusSubset .
+

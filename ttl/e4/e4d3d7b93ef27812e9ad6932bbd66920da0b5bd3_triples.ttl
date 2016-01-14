@@ -1,0 +1,83 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:3cd7d198-c5c5-4732-b1be-407de73ab6cf> owl:a foaf:Organization ;
+    foaf:name "U.S. Geological Survey" .
+
+<urn:uuid:5819e942-0948-453b-a5bc-47b415dac54c> bcube:hasType "theme" ;
+    bcube:hasValue "medical facilities" ;
+    dc:partOf "Alexandria Digital Library Feature Type Thesaurus" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:83555063-cb87-44b2-921e-4bd5bf2a596d> bcube:hasType "theme" ;
+    bcube:hasValue "earthquake preparedness",
+        "earthquakes",
+        "engineering geology",
+        "instrument design and development",
+        "seismic methods",
+        "seismology" ;
+    dc:partOf "USGS Thesaurus" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:83b5c2ac-9b92-4cea-b233-ad17ec9908f1> dcterms:references <urn:uuid:ab6e1c47-f248-413d-b5f4-0c8cddc660e0> ;
+    owl:a bibo:WebPage .
+
+<urn:uuid:9526c9f2-4e93-4d18-b358-7a216ae1791c> bcube:hasType "place" ;
+    bcube:hasValue "f47157 = Shelby" ;
+    dc:partOf "Augmented FIPS 10-4 and FIPS 6-4" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:95e10e68-08af-438a-bfcd-e3a4dc977d20> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2014-07-30T00:01:01.91Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2014-07-30T00:01:01.91Z" ;
+    dc:identifier "urn:sha:b95f28469a04450bcf962f03fbddf4d97cbf49e518a4ca7f3a31c8e1" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www.usgs.gov/science/xml.php?cite=2923" .
+
+<urn:uuid:ab6e1c47-f248-413d-b5f4-0c8cddc660e0> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2014-07-30T00:01:01.91Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2014-07-30T00:01:01.91Z" ;
+    dc:identifier "urn:sha:313ae7264def62fceae9d59cfebecd5a332389088a57409880a49ea8" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://pubs.usgs.gov/fs/2012/3028/" .
+
+<urn:uuid:ddcfc335-9390-4748-951a-77bd37a259a4> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2014-07-30T00:01:01.91Z" ;
+    bcube:lastUpdated "2014-07-30T00:01:01.91Z" ;
+    bcube:originatedFrom <urn:uuid:95e10e68-08af-438a-bfcd-e3a4dc977d20> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:ecc0f190-ebea-4518-8561-e4e5a1502dd8> .
+
+<urn:uuid:ecc0f190-ebea-4518-8561-e4e5a1502dd8> bcube:dateCreated "2014-07-30T00:01:01.91Z" ;
+    bcube:hasMetadataRecord <urn:uuid:ddcfc335-9390-4748-951a-77bd37a259a4> ;
+    bcube:lastUpdated "2014-07-30T00:01:01.91Z" ;
+    dc:conformsTo <urn:uuid:5819e942-0948-453b-a5bc-47b415dac54c>,
+        <urn:uuid:83555063-cb87-44b2-921e-4bd5bf2a596d>,
+        <urn:uuid:9526c9f2-4e93-4d18-b358-7a216ae1791c> ;
+    dc:description "Specialized monitoring systems installed in a VA hospital in Memphis, TN will help us to design safer hospitals and other buildings and to prevent loss of life in this and similar earthquake-prone areas." ;
+    dcterms:publisher <urn:uuid:3cd7d198-c5c5-4732-b1be-407de73ab6cf> ;
+    dcterms:references <urn:uuid:83b5c2ac-9b92-4cea-b233-ad17ec9908f1> ;
+    dcterms:title "Real-time seismic monitoring of instrumented hospital buildings" ;
+    owl:a dcat:Dataset .
+

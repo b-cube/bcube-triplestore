@@ -1,0 +1,101 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:1e93278c-e635-4d83-b405-43b6a3f9c0f3> bcube:hasType "theme" ;
+    bcube:hasValue "coastal and marine spatial planning",
+        "hydrography",
+        "marine navigation",
+        "ocean coastal mapping",
+        "transportation" ;
+    dc:partOf "Tri - Service Spatial Data Standard" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:1ed9c312-b555-4cbd-a5c5-6709ed3557e1> owl:a foaf:Organization ;
+    foaf:name "NOAA's Ocean Service, Office of Coast Survey (OCS)" .
+
+<urn:uuid:2bfd725d-6b64-40a4-9916-13680ca1338a> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-09T05:24:13.865Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-09T05:24:13.865Z" ;
+    dc:identifier "urn:sha:fbc1c1ba8969b18931dee277551e8cbab9248fb22179b395c6be5bb3" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "https://data.noaa.gov/harvest/object/a7a83209-fd0c-4d60-80d9-32d79af8d091/original" .
+
+<urn:uuid:30f81d0d-3a04-4f78-89cd-3c4d465365da> bcube:hasType "theme" ;
+    bcube:hasValue "OceanCommunity" ;
+    dc:partOf "Geospatial Platform" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:381e4c41-d10e-424a-ba1d-cdd80db07af9> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-08-09T05:24:13.865Z" ;
+    bcube:lastUpdated "2015-08-09T05:24:13.865Z" ;
+    bcube:originatedFrom <urn:uuid:2bfd725d-6b64-40a4-9916-13680ca1338a> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:9b76d1f6-1fde-4341-bb14-886714e9ef34> .
+
+<urn:uuid:413fc8fd-b51f-4dbb-ab2e-ec2c49ed0263> bcube:hasType "theme" ;
+    bcube:hasValue "oceans",
+        "transportation" ;
+    dc:partOf "ISO 19115 Topic Category" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:7425c1bd-121b-4976-98da-83c309e4e835> bcube:hasType "theme" ;
+    bcube:hasValue "Anchorage Area",
+        "Regulated Area" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:9b76d1f6-1fde-4341-bb14-886714e9ef34> bcube:dateCreated "2015-08-09T05:24:13.865Z" ;
+    bcube:hasMetadataRecord <urn:uuid:381e4c41-d10e-424a-ba1d-cdd80db07af9> ;
+    bcube:lastUpdated "2015-08-09T05:24:13.865Z" ;
+    dc:conformsTo <urn:uuid:1e93278c-e635-4d83-b405-43b6a3f9c0f3>,
+        <urn:uuid:30f81d0d-3a04-4f78-89cd-3c4d465365da>,
+        <urn:uuid:413fc8fd-b51f-4dbb-ab2e-ec2c49ed0263>,
+        <urn:uuid:7425c1bd-121b-4976-98da-83c309e4e835>,
+        <urn:uuid:b6bb617f-ee6d-44dc-8c1a-d2d1268428ec> ;
+    dc:description "The GIS REST service for \"Shipping Lanes in U.S. waters\" provides raster maps of the Shipping Lanes is a term used to indicate the general flow of merchant shipping between two departure/terminal areas. These areas are derived from NOAA's Electronic Navigation Charts. This serivce is a cartographic representation of marine source data based on S-57 data format and content specification" ;
+    dc:spatial "POLYGON ((-179.43 17.57,-179.43 65.67,174.61 65.67,174.61 17.57,-179.43 17.57))" ;
+    dcterms:publisher <urn:uuid:1ed9c312-b555-4cbd-a5c5-6709ed3557e1> ;
+    dcterms:references <urn:uuid:e8e8b736-6670-40d9-b1d6-e0860638555f> ;
+    dcterms:title "Shipping Lanes in U.S. Waters" ;
+    esip:eastBound "174.61"^^xsd:float ;
+    esip:northBound "65.67"^^xsd:float ;
+    esip:southBound "17.57"^^xsd:float ;
+    esip:startDate "2001-07-11"^^xsd:date ;
+    esip:westBound "-179.43"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:b6bb617f-ee6d-44dc-8c1a-d2d1268428ec> bcube:hasType "place" ;
+    bcube:hasValue "U.S. Exclusive Economic Zone",
+        "U.S. territories",
+        "U.S. waters" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:e8e8b736-6670-40d9-b1d6-e0860638555f> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-09T05:24:13.865Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-09T05:24:13.865Z" ;
+    dc:identifier "urn:sha:00fe61fab0e6e15c1a8836bbb4b660518838631693268e2af53502cf" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://encdirect.noaa.gov/arcgis/rest/services/cmsp/shipping_lanes/MapServer" .
+

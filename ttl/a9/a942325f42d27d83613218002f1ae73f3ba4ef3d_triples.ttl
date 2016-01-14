@@ -1,0 +1,122 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:02563590-bb07-4643-ae80-157e1bcf1005> owl:a foaf:Organization ;
+    foaf:name "" .
+
+<urn:uuid:0b1975bf-3a23-494f-8615-2f6d96943b33> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-11-05T16:46:15.318Z" ;
+    bcube:lastUpdated "2015-11-05T16:46:15.318Z" ;
+    bcube:originatedFrom <urn:uuid:fd2259ff-db90-46fb-9202-e9532e253af1> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:bf6cacf2-31d3-46c9-9fe1-7360ef9778d7> .
+
+<urn:uuid:5b032eae-0f1c-44ba-9273-8ff7530d4a3e> bcube:hasType "place" ;
+    bcube:hasValue "01037",
+        "Coosa",
+        "County or Equivalent Entity",
+        "U.S.",
+        "United States" ;
+    dc:partOf "ANSI INCITS 38:2009 (Formerly FIPS 5-2), ANSI INCITS 31:2009 (Formerly FIPS 6-4),ANSI INCITS 454:2009 (Formerly FIPS 8-6), ANSI INCITS 455:2009(Formerly FIPS 9-1), ANSI INCITS 446:2008 (Geographic Names Information System (GNIS))" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:90796295-fcbe-4424-a01d-e900ed43f965> bcube:hasType "theme" ;
+    bcube:hasValue "Boundaries" ;
+    dc:partOf "ISO 19115 Topic Categories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:99e76b86-e1be-4646-a247-8620efa6531f> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-05T16:46:15.318Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-05T16:46:15.318Z" ;
+    dc:identifier "urn:sha:2ccfb8a096087310aef3f50f61353a50bb3ffc6a427ca9a429ed0ac5" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www2.census.gov/geo/tiger/TIGER2012/FACES/tl_2012_01037_faces.zip" .
+
+<urn:uuid:bf6cacf2-31d3-46c9-9fe1-7360ef9778d7> bcube:dateCreated "2015-11-05T16:46:15.318Z" ;
+    bcube:hasMetadataRecord <urn:uuid:0b1975bf-3a23-494f-8615-2f6d96943b33> ;
+    bcube:lastUpdated "2015-11-05T16:46:15.318Z" ;
+    dc:conformsTo <urn:uuid:5b032eae-0f1c-44ba-9273-8ff7530d4a3e>,
+        <urn:uuid:90796295-fcbe-4424-a01d-e900ed43f965>,
+        <urn:uuid:cd3e54f3-68e8-4a7e-8f0b-be79ece151ee> ;
+    dc:description "The TIGER/Line shapefiles and related database files (.dbf) are an extract of selected geographic and cartographic information from the U.S. Census Bureau's Master Address File / Topologically Integrated Geographic Encoding and Referencing (MAF/TIGER) Database (MTDB). The MTDB represents a seamless national file with no overlaps or gaps between parts, however, each TIGER/Line shapefile is designed to stand alone as an independent data set, or they can be combined to cover the entire nation. Face refers to the areal (polygon) topological primitives that make up MTDB. A face is bounded by one or more edges; its boundary includes only the edges that separate it from other faces, not any interior edges contained within the area of the face. The Topological Faces Shapefile contains the attributes of each topological primitive face. Each face has a unique topological face identifier (TFID) value. Each face in the shapefile includes the key geographic area codes for almost all geographic areas for which the Census Bureau tabulates data for both the 2010 Census and Census 2000. The geometries of each of these geographic areas can then be built by dissolving the face geometries on the appropriate key geographic area codes in the Topological Faces Shapefile." ;
+    dc:spatial "POLYGON ((-86.522283 32.753434,-86.522283 33.104702,-85.999748 33.104702,-85.999748 32.753434,-86.522283 32.753434))" ;
+    dcterms:publisher <urn:uuid:02563590-bb07-4643-ae80-157e1bcf1005> ;
+    dcterms:references <urn:uuid:99e76b86-e1be-4646-a247-8620efa6531f> ;
+    dcterms:title "TIGER/Line Shapefile, 2012, county, Coosa County, AL, Current Topological Faces (Polygons With All Geocodes) Shapefile" ;
+    esip:eastBound "-85.999748"^^xsd:float ;
+    esip:endDate "2012-06-01"^^xsd:date ;
+    esip:northBound "33.104702"^^xsd:float ;
+    esip:southBound "32.753434"^^xsd:float ;
+    esip:startDate "2011-08-01"^^xsd:date ;
+    esip:westBound "-86.522283"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:cd3e54f3-68e8-4a7e-8f0b-be79ece151ee> bcube:hasType "theme" ;
+    bcube:hasValue "1-Percent Public Use Microdata Area Code",
+        "106th congressional district Code",
+        "108th congressional district Code",
+        "3 digit ZIP Code Tabulation Area Code",
+        "5 digit ZIP Code Tabulation Area Code",
+        "5-Percent Public Use Microdata Area Code",
+        "Alaska Native Regional Corporation FIPS code",
+        "American Indian/Alaska Native/Native Hawaiian Areas Census Code",
+        "Block Group",
+        "Census Tract Number",
+        "Consolidated City FIPS Code",
+        "County FIPS Code",
+        "County Subdivision FIPS Code",
+        "County or equivalent entity",
+        "Elementary School District Local Education Agency Code",
+        "FIPS 55 Place Code For All Places",
+        "Land/water Flag",
+        "Legislative Session Year",
+        "Metropolitan Statistical Area/Consolidated Metropolitan Statistical Area FIPS Code",
+        "New England County Metropolitan Area FIPS Code",
+        "Number",
+        "Primary Metropolitan Statistical Area FIPS Code",
+        "Reservation or Off-reservation Trust Land Indicator",
+        "Secondary School District Local Education Agency Code",
+        "State FIPS Code",
+        "State Legislative District Lower Chamber Code",
+        "State Legislative District Upper Chamber Code",
+        "Sub-minor Civil Division FIPS Code in Puerto Rico",
+        "Table",
+        "Tabulation Block Number",
+        "Topological Faces",
+        "Traffic Analysis Zone Code",
+        "Tribal Subdivision Code",
+        "Unified School District Local Education Agency Code",
+        "Urban Area Code",
+        "Urban Growth Area Code",
+        "Voting District Code" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:fd2259ff-db90-46fb-9202-e9532e253af1> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-05T16:46:15.318Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-05T16:46:15.318Z" ;
+    dc:identifier "urn:sha:13cdb0e183dabe3b281b44b3f9d1dc9d6200bdc23d76588fb49bf5f4" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://meta.geo.census.gov/data/existing/decennial/GEO/GPMB/TIGERline/TL2012/FGDC/faces/tl_2012_01037_faces.shp.xml" .
+

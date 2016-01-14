@@ -1,0 +1,87 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:2deecfcf-0039-43a3-bc8d-5c95f5189f6c> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-08-11T06:31:45.484Z" ;
+    bcube:lastUpdated "2015-08-11T06:31:45.484Z" ;
+    bcube:originatedFrom <urn:uuid:9616ddb3-d048-48a8-9fbc-a73d0bf0e6e7> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:6ff42de6-263d-499c-ae56-a9e02e633882> .
+
+<urn:uuid:3c0b719e-a90f-4364-a000-fe1b94bfc6f1> dcterms:references <urn:uuid:c9077e98-a580-4ff3-b5cb-30b889864f9d> ;
+    owl:a bibo:WebPage .
+
+<urn:uuid:654df250-1847-4e52-aa9a-a4d787650956> bcube:hasType "place" ;
+    bcube:hasValue "Montana" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:6ff42de6-263d-499c-ae56-a9e02e633882> bcube:dateCreated "2015-08-11T06:31:45.484Z" ;
+    bcube:hasMetadataRecord <urn:uuid:2deecfcf-0039-43a3-bc8d-5c95f5189f6c> ;
+    bcube:lastUpdated "2015-08-11T06:31:45.484Z" ;
+    dc:conformsTo <urn:uuid:654df250-1847-4e52-aa9a-a4d787650956>,
+        <urn:uuid:d62e6799-c353-4419-acd0-712c9f95a2f0>,
+        <urn:uuid:fb18084e-3929-4576-b137-f25b2ba23374> ;
+    dc:description "Dataset of Montana railroads created to be accurate according to railroad companies and Rail in Transportation Planning. BNSF rail line has been located using GPS by BNSF, the remaining railroads were taken from the Rail network data set created by Bureau of Transportation Statistics. The file from BTS was modified slightly to meet MDT needs. MDT Transportation Planning verified data based on 2005 NAIP imagery at a scale of 1:2000. Railroad subdivision lines are measured according to Montana State Rail Plan." ;
+    dc:spatial "POLYGON ((-116.619685 44.39742,-116.619685 49.026231,-103.515949 49.026231,-103.515949 44.39742,-116.619685 44.39742))" ;
+    dcterms:publisher <urn:uuid:db843a7c-1019-4a20-87f0-acddfe880fce> ;
+    dcterms:references <urn:uuid:3c0b719e-a90f-4364-a000-fe1b94bfc6f1> ;
+    dcterms:title "Montana Railroads" ;
+    esip:eastBound "-103.515949"^^xsd:float ;
+    esip:northBound "49.026231"^^xsd:float ;
+    esip:southBound "44.39742"^^xsd:float ;
+    esip:startDate "2010-05-01"^^xsd:date ;
+    esip:westBound "-116.619685"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:9616ddb3-d048-48a8-9fbc-a73d0bf0e6e7> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-11T06:31:45.484Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-11T06:31:45.484Z" ;
+    dc:identifier "urn:sha:8833c7c07fabb6fddb570d693cb6864f2452c7f8757399854da72cde" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://mslapps.mt.gov/Geographic_Information/Data/DataList/datalist_MetadataDetailRaw.aspx?did={48D301FA-69FE-47FE-BE96-8DB02A682F7F}" .
+
+<urn:uuid:c9077e98-a580-4ff3-b5cb-30b889864f9d> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-11T06:31:45.484Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-11T06:31:45.484Z" ;
+    dc:identifier "urn:sha:f37083f671f0702a00d6b6668bc2f6ce7743ece5599f974d30bb2ba7" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www.mdt.mt.gov/other/traffcount/external/gis_datasets/railroads.zip" .
+
+<urn:uuid:d62e6799-c353-4419-acd0-712c9f95a2f0> bcube:hasType "theme" ;
+    bcube:hasValue "transportation" ;
+    dc:partOf "ISO 19115 Topic Category" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:db843a7c-1019-4a20-87f0-acddfe880fce> owl:a foaf:Organization ;
+    foaf:name "Montana Dept. of Transportation/Planning/Data & Statistics Bureau/RIM" .
+
+<urn:uuid:fb18084e-3929-4576-b137-f25b2ba23374> bcube:hasType "theme" ;
+    bcube:hasValue "rail",
+        "railroad",
+        "track",
+        "train" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+

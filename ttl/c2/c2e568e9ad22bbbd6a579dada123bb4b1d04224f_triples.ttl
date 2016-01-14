@@ -1,0 +1,84 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:460b647f-45c1-48a8-8dbc-f0b12803bf47> bcube:hasType "place" ;
+    bcube:hasValue "AK",
+        "Alaska" ;
+    dc:partOf "INCITS 38:2009" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:62493e63-278c-440d-aa34-8db83b497ed6> bcube:hasType "theme" ;
+    bcube:hasValue "2012",
+        "Cartographic Boundary",
+        "Generalized",
+        "Shapefile",
+        "State",
+        "State Legislative District",
+        "Upper Chamber" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:664ba67a-ad07-40e1-8bf9-c1e4b23e023f> bcube:dateCreated "2015-11-05T16:51:33.973Z" ;
+    bcube:hasMetadataRecord <urn:uuid:cdf3af3e-6dba-4420-bdf3-3eda760ee3e9> ;
+    bcube:lastUpdated "2015-11-05T16:51:33.973Z" ;
+    dc:conformsTo <urn:uuid:460b647f-45c1-48a8-8dbc-f0b12803bf47>,
+        <urn:uuid:62493e63-278c-440d-aa34-8db83b497ed6>,
+        <urn:uuid:9c5694e6-8a16-468b-b60d-935cf2fb3a2f> ;
+    dc:description "The 2012 cartographic boundary shapefiles are simplified representations of selected geographic areas from the Census Bureau's MAF/TIGER geographic database. These boundary files are specifically designed for small-scale thematic mapping. When possible generalization is performed with the intent to maintain the hierarchical relationships among geographies and to maintain the alignment of geographies within a file set for a given year. Geographic areas may not align with the same areas from another year. Some geographies are available as nation-based shapefiles while others are available only as state-based files." ;
+    dc:spatial "POLYGON ((172.0 71.441059,172.0 51.175092,-129.0 51.175092,-129.0 71.441059,172.0 71.441059))" ;
+    dcterms:references <urn:uuid:cc90c225-b063-42f6-9bd1-6c529e073059> ;
+    dcterms:title "2012 Cartographic Boundary File, 2013 State-State Legislative District (Upper Chamber) for Alaska, 1:500,000" ;
+    esip:eastBound "-129.0"^^xsd:float ;
+    esip:endDate "2012-12-06"^^xsd:date ;
+    esip:northBound "51.175092"^^xsd:float ;
+    esip:southBound "71.441059"^^xsd:float ;
+    esip:startDate "2012-12-06"^^xsd:date ;
+    esip:westBound "172.0"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:86760e5d-eda4-4499-a6e7-0ddf592b54a0> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-05T16:51:33.973Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-05T16:51:33.973Z" ;
+    dc:identifier "urn:sha:4c2c0387a45dfaff3fa4736f75001b4197389823eaed972bc4d901a1" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://meta.geo.census.gov/data/existing/decennial/GEO/CPMB/boundary/2013gz/sldu_500/cb_rd13_02_sldu_500k.iso.xml" .
+
+<urn:uuid:9c5694e6-8a16-468b-b60d-935cf2fb3a2f> bcube:hasValue "boundaries" ;
+    dc:partOf "IsoTopicCategories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:cc90c225-b063-42f6-9bd1-6c529e073059> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-05T16:51:33.973Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-05T16:51:33.973Z" ;
+    dc:identifier "urn:sha:51749f6103929a754231209f3cc1840a9dc6a770497c062683a16752" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www2.census.gov/geo/tiger/GENZ2012/sldu/cb_rd13_02_sldu_500k.zip" .
+
+<urn:uuid:cdf3af3e-6dba-4420-bdf3-3eda760ee3e9> a "ISO 19115:2003/19139" ;
+    bcube:dateCreated "2015-11-05T16:51:33.973Z" ;
+    bcube:lastUpdated "2015-11-05T16:51:33.973Z" ;
+    bcube:originatedFrom <urn:uuid:86760e5d-eda4-4499-a6e7-0ddf592b54a0> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:664ba67a-ad07-40e1-8bf9-c1e4b23e023f> .
+

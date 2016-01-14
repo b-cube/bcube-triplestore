@@ -1,0 +1,72 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:0622a50b-67f3-4ec2-95bf-148e25251d1f> owl:a foaf:Organization ;
+    foaf:name "" .
+
+<urn:uuid:26755eb5-340a-46dc-baa6-f864d215c293> bcube:hasType "theme" ;
+    bcube:hasValue "Idaho",
+        "LiDAR",
+        "South Mountain",
+        "biomass",
+        "juniper" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:710f1ebc-b3a9-4b4f-bb89-5bdca2c53cda> bcube:hasType "theme" ;
+    bcube:hasValue "Idaho",
+        "LiDAR",
+        "South Mountain",
+        "biomass",
+        "environment",
+        "geoscientificInformation",
+        "juniper" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:9a80d23d-138f-48f5-a4ed-41ca7be4b4c1> bcube:dateCreated "2015-08-08T13:35:14.35Z" ;
+    bcube:hasMetadataRecord <urn:uuid:b5086a66-5c9c-437d-9309-b8eb180a56f9> ;
+    bcube:lastUpdated "2015-08-08T13:35:14.35Z" ;
+    dc:conformsTo <urn:uuid:26755eb5-340a-46dc-baa6-f864d215c293>,
+        <urn:uuid:710f1ebc-b3a9-4b4f-bb89-5bdca2c53cda> ;
+    dc:description "LiDAR-derived estimates of above-ground biomass of western junipers in the South Mountain watershed area, Idaho. The layer consists of 10m grids with biomass value in kg for each grid." ;
+    dc:spatial "POLYGON ((-116.915751 42.647043,-116.915751 42.6766,-116.89423 42.6766,-116.89423 42.647043,-116.915751 42.647043))" ;
+    dcterms:publisher <urn:uuid:0622a50b-67f3-4ec2-95bf-148e25251d1f> ;
+    dcterms:title "Juniper Tree Above-ground Biomass in South Mountain Watershed (10m)" ;
+    esip:eastBound "-116.89423"^^xsd:float ;
+    esip:endDate "2010-08-01"^^xsd:date ;
+    esip:northBound "42.6766"^^xsd:float ;
+    esip:southBound "42.647043"^^xsd:float ;
+    esip:startDate "2010-07-01"^^xsd:date ;
+    esip:westBound "-116.915751"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:a4aa6466-614f-44a3-bdea-90ff5d14c0a0> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-08T13:35:14.35Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-08T13:35:14.35Z" ;
+    dc:identifier "urn:sha:7e12a780ede0086da4f4fa403d969fa37183566ff2d558640472efb7" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://data.boisestate.edu/opendap/data/MILES/Old_XMLs_2015-04-21/SMountain_Biomass_10m.tif.xml" .
+
+<urn:uuid:b5086a66-5c9c-437d-9309-b8eb180a56f9> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-08-08T13:35:14.35Z" ;
+    bcube:lastUpdated "2015-08-08T13:35:14.35Z" ;
+    bcube:originatedFrom <urn:uuid:a4aa6466-614f-44a3-bdea-90ff5d14c0a0> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:9a80d23d-138f-48f5-a4ed-41ca7be4b4c1> .
+

@@ -1,0 +1,73 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:12e4c6e8-89f2-48b9-a088-4e3ec52c00c3> owl:a foaf:Organization ;
+    foaf:name "USDA Forest Service" .
+
+<urn:uuid:1b2e5eba-ed1d-4c49-a016-0d2251eb787b> dcterms:references <urn:uuid:528b13fa-90c2-4f1f-b444-f9c26f00a749> ;
+    owl:a bibo:WebPage .
+
+<urn:uuid:31b655af-1d3e-4797-8466-9533d5448c3d> bcube:dateCreated "2015-10-16T21:48:13.41Z" ;
+    bcube:hasMetadataRecord <urn:uuid:c64bce53-7e91-43dc-a4b7-9304f3fc76d5> ;
+    bcube:lastUpdated "2015-10-16T21:48:13.41Z" ;
+    dc:conformsTo <urn:uuid:9301066a-75c9-4e6c-b160-2ca98b4a411f> ;
+    dc:description "This dataset describes county-level forest growth as predicted by the PnET-II model for the Climate Change Impacts on the United States: The Potential Consequences of Climate Variability and Change report." ;
+    dc:spatial "POLYGON ((-97.104246 23.957495,-97.104246 39.961157,-74.773082 39.961157,-74.773082 23.957495,-97.104246 23.957495))" ;
+    dcterms:publisher <urn:uuid:12e4c6e8-89f2-48b9-a088-4e3ec52c00c3> ;
+    dcterms:references <urn:uuid:1b2e5eba-ed1d-4c49-a016-0d2251eb787b> ;
+    dcterms:title "PnET-II model predictions of total potential annual southern forest growth, represented as net primary productivity (NPP) and averaged for the decade centered on 2090." ;
+    esip:eastBound "-74.773082"^^xsd:float ;
+    esip:northBound "39.961157"^^xsd:float ;
+    esip:southBound "23.957495"^^xsd:float ;
+    esip:startDate "2090-01-01"^^xsd:date ;
+    esip:westBound "-97.104246"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:528b13fa-90c2-4f1f-b444-f9c26f00a749> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-10-16T21:48:13.41Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-10-16T21:48:13.41Z" ;
+    dc:identifier "urn:sha:43ac7dfd704547bfe6ea4cbba28a3ea6103c12177897ec673497e75f" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "n/a" .
+
+<urn:uuid:9301066a-75c9-4e6c-b160-2ca98b4a411f> bcube:hasType "theme" ;
+    bcube:hasValue "biota",
+        "climatologyMeteorologyAtmosphere",
+        "environment" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:976e5fdc-3e7f-474e-94be-c52f80b8f3b6> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-10-16T21:48:13.41Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-10-16T21:48:13.41Z" ;
+    dc:identifier "urn:sha:6b37fc3138ad9fc44b3a6af2c0b869a8fdbfe8270538c47536b9629e" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www.srs.fs.usda.gov/sustain/data/hlth3f7/hlth3f7.xml" .
+
+<urn:uuid:c64bce53-7e91-43dc-a4b7-9304f3fc76d5> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-10-16T21:48:13.41Z" ;
+    bcube:lastUpdated "2015-10-16T21:48:13.41Z" ;
+    bcube:originatedFrom <urn:uuid:976e5fdc-3e7f-474e-94be-c52f80b8f3b6> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:31b655af-1d3e-4797-8466-9533d5448c3d> .
+

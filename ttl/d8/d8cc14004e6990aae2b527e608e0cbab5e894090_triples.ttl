@@ -1,0 +1,94 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:0de3ecdc-8b7c-450e-9e42-83322381557b> bcube:hasType "place" ;
+    bcube:hasValue "Hawaii",
+        "Kauai",
+        "U.S. Exclusive Economic Zone",
+        "United States" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:1050fc02-a67d-41af-9cef-cf625f6aaa1b> bcube:hasType "theme" ;
+    bcube:hasValue "SAV",
+        "aerial photography",
+        "benthic",
+        "coral",
+        "habitat",
+        "mangrove",
+        "oceans",
+        "reef",
+        "seagrass" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:5ab9849b-3926-4c30-9b33-bfe9d01329c7> bcube:dateCreated "2015-07-10T04:41:54.158Z" ;
+    bcube:hasMetadataRecord <urn:uuid:95053215-5c57-458f-8076-1551f44b41b0> ;
+    bcube:lastUpdated "2015-07-10T04:41:54.158Z" ;
+    dc:conformsTo <urn:uuid:0de3ecdc-8b7c-450e-9e42-83322381557b>,
+        <urn:uuid:1050fc02-a67d-41af-9cef-cf625f6aaa1b>,
+        <urn:uuid:836575e5-6b6f-4f8a-8ffd-b9ccac2eba02>,
+        <urn:uuid:c9b552c2-18ce-4369-b739-0dd493e44b2f> ;
+    dc:description "Habitat maps of the main Hawaiian Islands were created by visual interpretation of aerial photos and hyperspectral imagery using the Habitat Digitizer extension. Aerial photographs are valuable tools for natural resource managers and researchers since they provide an excellent record of the location and extent of habitats. However, spatial distortions in aerial photographs due to such factors as camera angle, lens characteristics, and relief displacement must be accounted for during analysis to prevent incorrect measurements of area, distance, and other spatial parameters. These distortions of scale within an image can be removed through orthorectification. During orthorectification, digital scans of aerial photos are subjected to algorithms that eliminate each source of spatial distortion. The result is a georeferenced digital mosaic of several photographs with uniform scale throughout the mosaic. Features near land are generally georeferenced with greater accuracy while the accuracy of features away from land is generally not as good. Where no land is in the original photographic frame only kinematic GPS locations and image tie points were used to georeference the images. After an orthorectified mosaic is created, photointerpreters can accurately and reliably delineate boundaries of features in the imagery as they appear on the computer monitor using a software interface such as the Habitat Digitizer." ;
+    dc:spatial "POLYGON ((-159.46 22.1654,-159.46 22.2681,-159.3399 22.2681,-159.3399 22.1654,-159.46 22.1654))" ;
+    dcterms:references <urn:uuid:66e2df1a-ec76-49d7-984e-e553d2efd40d> ;
+    dcterms:title "Orthorectification and Mosaicking of Color Aerial Photography for the Main Eight Hawaiian Islands: Kauai (103-104c-0430)" ;
+    esip:eastBound "-159.3399"^^xsd:float ;
+    esip:northBound "22.2681"^^xsd:float ;
+    esip:southBound "22.1654"^^xsd:float ;
+    esip:westBound "-159.46"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:66e2df1a-ec76-49d7-984e-e553d2efd40d> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-07-10T04:41:54.158Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-07-10T04:41:54.158Z" ;
+    dc:identifier "urn:sha:058d07c4b9a0bcf40c1607443ceacbeac027d360e4ff81de2d9071d4" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://coastalscience.noaa.gov/datasets/ccma/biogeo/hawaii/mosaics/103-104c-0430-airphotos.zip" .
+
+<urn:uuid:836575e5-6b6f-4f8a-8ffd-b9ccac2eba02> bcube:hasType "theme" ;
+    bcube:hasValue "Environmental Monitoring",
+        "Remotely Sensed Imagery/Photos" ;
+    dc:partOf "NOS Data Explorer Topic Category" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:95053215-5c57-458f-8076-1551f44b41b0> a "ISO 19115:2003/19139" ;
+    bcube:dateCreated "2015-07-10T04:41:54.158Z" ;
+    bcube:lastUpdated "2015-07-10T04:41:54.158Z" ;
+    bcube:originatedFrom <urn:uuid:f31e913d-5144-4a78-a9bc-f190b816556e> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:5ab9849b-3926-4c30-9b33-bfe9d01329c7> .
+
+<urn:uuid:c9b552c2-18ce-4369-b739-0dd493e44b2f> bcube:hasValue "environment",
+        "imageryBaseMapsEarthCover" ;
+    dc:partOf "IsoTopicCategories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:f31e913d-5144-4a78-a9bc-f190b816556e> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-07-10T04:41:54.158Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-07-10T04:41:54.158Z" ;
+    dc:identifier "urn:sha:9a345046931dad9eaa6835a8347e9dd1e0b0e4912d6429384a683bae" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "https://catalog.data.gov/harvest/object/9c66b122-675e-44a5-9a3c-2493e4cdd3c4" .
+

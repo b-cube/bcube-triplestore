@@ -1,0 +1,91 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:0a51a52a-66f4-4a42-ace1-a56fb0fc9807> bcube:hasType "place" ;
+    bcube:hasValue "Amundsen Gulf",
+        "Baffin Bay",
+        "Beaufort Sea",
+        "Bering Strait",
+        "Byam Martin Channel",
+        "Cabot Strait",
+        "Canada",
+        "Davis Strait",
+        "East Arctic",
+        "East Coast",
+        "Eureka",
+        "Foxe Basin",
+        "Great Lakes",
+        "Gulf of St.-Lawrence",
+        "High Arctic",
+        "Hudson Bay",
+        "Hudson Strait",
+        "Labrador Sea",
+        "MClure Strait",
+        "Newfoundland Waters",
+        "North West Passage",
+        "Parry Channel",
+        "Queen Maud Gulf",
+        "Resolute",
+        "Waterways",
+        "West Arctic" ;
+    dc:partOf "none at the present time" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:16113f00-ee76-4353-b003-b894c141b006> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-10-30T07:09:32.055Z" ;
+    bcube:lastUpdated "2015-10-30T07:09:32.055Z" ;
+    bcube:originatedFrom <urn:uuid:e2d941bf-4fad-4de5-91c2-043be4ef74f0> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:e82d29b0-bef2-49cb-a028-d580de165c0a> .
+
+<urn:uuid:856aebdd-266f-43e3-b34b-0a0e3a951443> bcube:hasType "theme" ;
+    bcube:hasValue "floe size",
+        "form of ice",
+        "ice age",
+        "ice concentration",
+        "ice type",
+        "sea ice" ;
+    dc:partOf "none at the present time" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:e2d941bf-4fad-4de5-91c2-043be4ef74f0> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-10-30T07:09:32.055Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-10-30T07:09:32.055Z" ;
+    dc:identifier "urn:sha:418fc412e6a0761ab3c7a1249dda7ac18ea70f29a75b1d16d152cb09" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://ec.gc.ca/data_donnees/data/ice/conditions/charts/Daily_Charts/2014/02/16/cis_SGRDAGL_20140216_pl_a.xml" .
+
+<urn:uuid:e82d29b0-bef2-49cb-a028-d580de165c0a> bcube:dateCreated "2015-10-30T07:09:32.055Z" ;
+    bcube:hasMetadataRecord <urn:uuid:16113f00-ee76-4353-b003-b894c141b006> ;
+    bcube:lastUpdated "2015-10-30T07:09:32.055Z" ;
+    dc:conformsTo <urn:uuid:0a51a52a-66f4-4a42-ace1-a56fb0fc9807>,
+        <urn:uuid:856aebdd-266f-43e3-b34b-0a0e3a951443> ;
+    dc:description "The SIGRID-3 vector archive format is one of the World Meteorological Organization (WMO) standards for archiving digital ice charts in the Global Digital Sea Ice Data Bank (GDSIDB). The WMO ice chart archiving formats are the Sea Ice Grid (SIGRID) format developed in 1981 and formalized in 1989 and its successor SIGRID-2. The Canadian Ice Service digital Ice Analysis charts (Regional, Daily and Image) are encoded in SIGRID-3 and have two main components: the shapefile containing the Ice Analysis ice information (ice polygons and related attributes) and the metadata describing the Ice Analysis data under the SIGRID-3 format. The Regional, Daily and Image Analyses are all available in SIGRID-3 format. The Daily Ice Analyses have been produced since 1959; they show the estimated ice conditions at publication date (which corresponds to the valid date) for various regions across Canada. They are based on an analysis and integration of all available data on ice conditions, including weather and oceanographic information, visual observations from shore, ship and aircraft, airborne radar, satellite imagery and climatological information. The Daily Ice Analyses describe areas of differing ice conditions using the WMO ice observing standards, and indicate where significant changes in the amount, stage of development and form of the predominant ice types have occurred. The Daily Ice Analyses for Canadian Waters are produced on a daily basis during the summer (Western Arctic, High Arctic, Eastern Arctic, Western Waterways, Foxe Basin and Newfoundland Waters) and winter (Newfoundland Waters, Gulf of St-Lawrence and Great Lakes) ice seasons. Daily Ice Analyses are also available in arc info coverages, data extraction grid point format, various chart formats and SIGRID-3 shapefile format." ;
+    dc:spatial "POLYGON ((-95.584484702680001 39.527767912199998,-95.584484702680001 50.312768022390003,-72.197453232840004 50.312768022390003,-72.197453232840004 39.527767912199998,-95.584484702680001 39.527767912199998))" ;
+    dcterms:publisher <urn:uuid:eb52df33-0d6d-47aa-b126-fa5071f729b0> ;
+    esip:eastBound "-72.1974532328"^^xsd:float ;
+    esip:northBound "50.3127680224"^^xsd:float ;
+    esip:southBound "39.5277679122"^^xsd:float ;
+    esip:startDate "2014-02-16"^^xsd:date ;
+    esip:westBound "-95.5844847027"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:eb52df33-0d6d-47aa-b126-fa5071f729b0> owl:a foaf:Organization ;
+    foaf:name "" .
+

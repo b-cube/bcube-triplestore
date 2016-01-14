@@ -1,0 +1,71 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:0f7c0431-761b-4f4c-bd09-be4a196661f3> owl:a foaf:Organization ;
+    foaf:name "Merrick & Co" .
+
+<urn:uuid:2529eb7f-13c3-4ae4-8512-8dfde6d5dd5c> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-02T15:48:49.181Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-02T15:48:49.181Z" ;
+    dc:identifier "urn:sha:74facb4c37f1e8355b6e927ad4a53b90fbf60198d0e8b1973fc28391" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www.isgs.uiuc.edu/clearinghouse/lidar/counties/monroe/monroe_2012_metadata.xml" .
+
+<urn:uuid:3201d6a0-764b-4a27-af34-b83d842e8376> bcube:hasType "place" ;
+    bcube:hasValue "Illinois" ;
+    dc:partOf "none" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:55014144-ab38-445f-a5f9-699d2b2c9fba> bcube:hasType "temporal" ;
+    bcube:hasValue "2012" ;
+    dc:partOf "none" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:b2a52d0e-8333-464f-9cc7-bcb948da232d> bcube:hasType "theme" ;
+    bcube:hasValue "DEM",
+        "First Return",
+        "LIDAR" ;
+    dc:partOf "none" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:bed94ec4-7328-4561-8d8b-fc4f7bece8c5> bcube:dateCreated "2015-11-02T15:48:49.181Z" ;
+    bcube:hasMetadataRecord <urn:uuid:dd5d2045-0b03-462e-b7f3-83d08ebd71ce> ;
+    bcube:lastUpdated "2015-11-02T15:48:49.181Z" ;
+    dc:conformsTo <urn:uuid:3201d6a0-764b-4a27-af34-b83d842e8376>,
+        <urn:uuid:55014144-ab38-445f-a5f9-699d2b2c9fba>,
+        <urn:uuid:b2a52d0e-8333-464f-9cc7-bcb948da232d> ;
+    dc:description "ASPRS v1.4 final classified LAS data grouped into 12 classifications: 0 = created, never classified, 1 = Unclassified, 2 = Ground, 3 = Low Vegetation, 4 = Medium Vegetation, 5 = High Vegetation, 6 = Building, 7 = Low point (noise), 8 = Model key-point (mass point), 9 = Water, 10 = Ignored Ground (breakline proximity), 12 = Overlap. One-meter Nominal Point Spacing." ;
+    dc:spatial "POLYGON ((-90.380811 37.78662,-90.380811 38.664056,-89.583984 38.664056,-89.583984 37.78662,-90.380811 37.78662))" ;
+    dcterms:publisher <urn:uuid:0f7c0431-761b-4f4c-bd09-be4a196661f3> ;
+    dcterms:title "LAS_one_meter" ;
+    esip:eastBound "-89.583984"^^xsd:float ;
+    esip:endDate "2012-04-02"^^xsd:date ;
+    esip:northBound "38.664056"^^xsd:float ;
+    esip:southBound "37.78662"^^xsd:float ;
+    esip:startDate "2012-03-26"^^xsd:date ;
+    esip:westBound "-90.380811"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:dd5d2045-0b03-462e-b7f3-83d08ebd71ce> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-11-02T15:48:49.181Z" ;
+    bcube:lastUpdated "2015-11-02T15:48:49.181Z" ;
+    bcube:originatedFrom <urn:uuid:2529eb7f-13c3-4ae4-8512-8dfde6d5dd5c> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:bed94ec4-7328-4561-8d8b-fc4f7bece8c5> .
+

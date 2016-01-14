@@ -1,0 +1,62 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:47d857c9-a3e8-41bf-a753-732e7e7f2689> owl:a foaf:Organization ;
+    foaf:name "" .
+
+<urn:uuid:5dbc21e4-e1a4-4c97-9c85-967fc8ef6a38> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-11-03T00:31:42.937Z" ;
+    bcube:lastUpdated "2015-11-03T00:31:42.937Z" ;
+    bcube:originatedFrom <urn:uuid:b0068520-ee51-4899-80bb-a59ccfb0c0e6> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:9c955266-7b56-4525-a429-6f765c237e4e> .
+
+<urn:uuid:9c955266-7b56-4525-a429-6f765c237e4e> bcube:dateCreated "2015-11-03T00:31:42.937Z" ;
+    bcube:hasMetadataRecord <urn:uuid:5dbc21e4-e1a4-4c97-9c85-967fc8ef6a38> ;
+    bcube:lastUpdated "2015-11-03T00:31:42.937Z" ;
+    dc:conformsTo <urn:uuid:abe520e8-9f48-432c-9b95-f63fe43fe4a0>,
+        <urn:uuid:e40f57f8-c817-40cd-aa22-20056ccf69de> ;
+    dc:description "Protraction Point is a PLSS rectangular point as identified on the official protraction diagrams, Alaska Canada Survey plat, or other supplemental information. A protraction point may be a township point, a section point, or both. A protraction point contains the protracted positions of a township/section, based on protraction of the PLSS from meridian initial points. Protraction point contains the original protracted positions, and optionally, the adjusted positions. Adjusted positions are generated when a surveyed township is entered into the system. Protracted positions are \"adjusted\" based on the General Position for the township published on the survey plat. This adjustment, shifts the protracted positions of the township and points relative to an adjustment factor. Note that points will edgematch with adjoining townships collected into the system. However, there may be edge discrepancies with adjoinining unsurveyed or uncollected townships which hold only the original positions." ;
+    dc:spatial "POLYGON ((-179.230437 51.201454,-179.230437 71.468273,179.893985 71.468273,179.893985 51.201454,-179.230437 51.201454))" ;
+    dcterms:publisher <urn:uuid:47d857c9-a3e8-41bf-a753-732e7e7f2689> ;
+    dcterms:title "PLSS Protracted Rectangular Points for Alaska (NAD83)" ;
+    esip:eastBound "179.893985"^^xsd:float ;
+    esip:northBound "71.468273"^^xsd:float ;
+    esip:southBound "51.201454"^^xsd:float ;
+    esip:startDate "2008-02-04"^^xsd:date ;
+    esip:westBound "-179.230437"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:abe520e8-9f48-432c-9b95-f63fe43fe4a0> bcube:hasType "theme" ;
+    bcube:hasValue "Framework" ;
+    dc:partOf "BLM-THEME" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:b0068520-ee51-4899-80bb-a59ccfb0c0e6> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-03T00:31:42.937Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-03T00:31:42.937Z" ;
+    dc:identifier "urn:sha:c93cad5b426b563f66baacc2e26e81a78183a5d8061a403c981573b9" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://sdms.ak.blm.gov/download/protracted_grid_gis/metadata/pro_pt83.xml" .
+
+<urn:uuid:e40f57f8-c817-40cd-aa22-20056ccf69de> bcube:hasType "place" ;
+    bcube:hasValue "Alaska" ;
+    dc:partOf "BLM-STATE" ;
+    owl:a bcube:thesaurusSubset .
+

@@ -1,0 +1,102 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:2894077a-f76a-4a92-8272-e395d053786b> bcube:hasType "theme" ;
+    bcube:hasValue "Baseline",
+        "Beach Erosion",
+        "Beach Nourishment",
+        "CMGP",
+        "Coastal Survey Map",
+        "Coastal and Marine Geology Program",
+        "ESRI polyline shapefile",
+        "Endpoint Rate",
+        "Historic Shoreline",
+        "LIDAR",
+        "Linear Regression Rate",
+        "Shoreline",
+        "Shoreline Change Rate",
+        "T-sheet",
+        "Tp-sheet",
+        "U.S. Geological Survey",
+        "USGS" ;
+    dc:partOf "General" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:41c30fda-3fda-484d-8db6-1835e113e3ec> bcube:hasType "theme" ;
+    bcube:hasValue "elevation",
+        "oceans",
+        "oceans and coastal",
+        "oceans and estuaries" ;
+    dc:partOf "ISO 19115 Topic Category" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:527c4c17-3b64-477d-a577-d39b4a366c49> owl:a foaf:Organization ;
+    foaf:name "U.S. Geological Survey, Coastal and Marine Geology Program" .
+
+<urn:uuid:889679de-1ef3-44d9-b6df-770b409bca0f> bcube:hasType "place" ;
+    bcube:hasValue "California",
+        "United States" ;
+    dc:partOf "General" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:95026ab1-8fda-4e45-ba14-1a3014f33a29> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-10-29T23:31:02.885Z" ;
+    bcube:lastUpdated "2015-10-29T23:31:02.885Z" ;
+    bcube:originatedFrom <urn:uuid:b1083ae5-f712-429f-a77f-b370eb3a637d> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:bfe56372-235c-48b2-b9d5-6e52cbc9b4b3> .
+
+<urn:uuid:b1083ae5-f712-429f-a77f-b370eb3a637d> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-10-29T23:31:02.885Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-10-29T23:31:02.885Z" ;
+    dc:identifier "urn:sha:35c7155bf81c1e1d64ac8029aef2fcc702893ec8f6793cb6dd349355" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://pubs.usgs.gov/of/2006/1251/Metadata/CentralCalifornia/cencal1945_1976.xml" .
+
+<urn:uuid:bfe56372-235c-48b2-b9d5-6e52cbc9b4b3> bcube:dateCreated "2015-10-29T23:31:02.885Z" ;
+    bcube:hasMetadataRecord <urn:uuid:95026ab1-8fda-4e45-ba14-1a3014f33a29> ;
+    bcube:lastUpdated "2015-10-29T23:31:02.885Z" ;
+    dc:conformsTo <urn:uuid:2894077a-f76a-4a92-8272-e395d053786b>,
+        <urn:uuid:41c30fda-3fda-484d-8db6-1835e113e3ec>,
+        <urn:uuid:889679de-1ef3-44d9-b6df-770b409bca0f> ;
+    dc:description "There are critical needs for a nationwide compilation of reliable shoreline data. To meet these needs, the U.S. Geological Survey (USGS) has produced a comprehensive database of digital vector shorelines by compiling shoreline positions from pre-existing historical shoreline databases and by generating historical and modern shoreline data. Shorelines are compiled by state and generally correspond to one of four time periods: 1800s, 1920s-1930s, 1970s, and 1998-2002. Each shoreline may represent a compilation of data from one or more sources for one or more dates provided by one or more agencies. Details regarding source are provided in the 'Data Quality Information' section of this metadata report. Shoreline vectors derived from historic sources (first three time periods) represent the high water line at the time of the survey, whereas modern shorelines (final time period) represent the mean high water line." ;
+    dc:spatial "POLYGON ((-123.023112 34.442189,-123.023112 38.241026,-120.001206 38.241026,-120.001206 34.442189,-123.023112 34.442189))" ;
+    dcterms:publisher <urn:uuid:527c4c17-3b64-477d-a577-d39b4a366c49> ;
+    dcterms:references <urn:uuid:e665b660-4f62-4320-b6c0-1516dc7783f4> ;
+    dcterms:title "CENCAL1945_1976 - Vectorized Shoreline of Central California Derived from 1945-1976 Source Data" ;
+    esip:eastBound "-120.001206"^^xsd:float ;
+    esip:endDate "1976-01-01"^^xsd:date ;
+    esip:northBound "38.241026"^^xsd:float ;
+    esip:southBound "34.442189"^^xsd:float ;
+    esip:startDate "1945-01-01"^^xsd:date ;
+    esip:westBound "-123.023112"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:e665b660-4f62-4320-b6c0-1516dc7783f4> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-10-29T23:31:02.885Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-10-29T23:31:02.885Z" ;
+    dc:identifier "urn:sha:1b3de1059a7e47ea85f32c5f480b4741d78d9f51c51102814030e756" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://pubs.usgs.gov/of/2006/1251/CCal.zip" .
+

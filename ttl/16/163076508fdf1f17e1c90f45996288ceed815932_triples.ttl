@@ -1,0 +1,80 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:208ff77b-c9d0-4606-894a-85bcfca55bd0> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-11-05T07:31:22.102Z" ;
+    bcube:lastUpdated "2015-11-05T07:31:22.102Z" ;
+    bcube:originatedFrom <urn:uuid:c1aa7911-f0d2-4485-9764-f75dad8a45ec> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:ec9e4895-8ff3-4ba4-a60c-3abc9d268011> .
+
+<urn:uuid:2ffafbbf-cc9f-4e64-bcbb-1970f8059023> bcube:hasType "theme" ;
+    bcube:hasValue "Highways",
+        "RCI",
+        "Roads",
+        "Roadway Characteristics Inventory",
+        "State Roads",
+        "Transportation" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:3defbe0e-15b3-423e-95f3-a8a93234b1f9> bcube:hasType "place" ;
+    bcube:hasValue "Florida" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:b6a67e26-fe2e-4bb9-b743-790e8817f6ac> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-05T07:31:22.102Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-05T07:31:22.102Z" ;
+    dc:identifier "urn:sha:032274ca5e916cf9a6b7c1e2e8e700f3ebd0fcd64f055ee586ad28ed" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "ftp://ftp.dot.state.fl.us/fdot/co/planning/transtat/gis/shapefiles/state_roads.zip" .
+
+<urn:uuid:c1aa7911-f0d2-4485-9764-f75dad8a45ec> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-05T07:31:22.102Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-05T07:31:22.102Z" ;
+    dc:identifier "urn:sha:de66680356313e013f9f68ed7c890672f95388d936af9b89c3129dbf" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www.envirobase.usgs.gov/FlGisData/FDOT/descriptions/state_roads.shp.xml" .
+
+<urn:uuid:ec9e4895-8ff3-4ba4-a60c-3abc9d268011> bcube:dateCreated "2015-11-05T07:31:22.102Z" ;
+    bcube:hasMetadataRecord <urn:uuid:208ff77b-c9d0-4606-894a-85bcfca55bd0> ;
+    bcube:lastUpdated "2015-11-05T07:31:22.102Z" ;
+    dc:conformsTo <urn:uuid:2ffafbbf-cc9f-4e64-bcbb-1970f8059023>,
+        <urn:uuid:3defbe0e-15b3-423e-95f3-a8a93234b1f9> ;
+    dc:description "The State Roads feature class covers the state of Florida at a scale of 1:24,000 with a projection system of Universal Transverse Mercator (UTM) 17 North zone and a horizontal datum of North American 1983 (NAD 1983). The map units are in meters." ;
+    dc:spatial "POLYGON ((-87.56642 24.425648,-87.56642 31.161512,-79.992695 31.161512,-79.992695 24.425648,-87.56642 24.425648))" ;
+    dcterms:publisher <urn:uuid:ed56bd9b-9f10-4be0-85ca-afc880f869b5> ;
+    dcterms:references <urn:uuid:b6a67e26-fe2e-4bb9-b743-790e8817f6ac> ;
+    dcterms:title "State Roads" ;
+    esip:eastBound "-79.992695"^^xsd:float ;
+    esip:northBound "31.161512"^^xsd:float ;
+    esip:southBound "24.425648"^^xsd:float ;
+    esip:startDate "2008-06-02"^^xsd:date ;
+    esip:westBound "-87.56642"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:ed56bd9b-9f10-4be0-85ca-afc880f869b5> owl:a foaf:Organization ;
+    foaf:name "" .
+

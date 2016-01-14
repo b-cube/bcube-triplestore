@@ -1,0 +1,90 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:63b82488-e631-4ef4-a991-f63285c69561> owl:a foaf:Organization ;
+    foaf:name "" .
+
+<urn:uuid:6cef8d3b-5d56-4c13-98c9-f11fec6ec5b8> bcube:dateCreated "2015-11-06T22:58:58.321Z" ;
+    bcube:hasMetadataRecord <urn:uuid:d64f874f-311c-456d-9e97-eb01a98e1866> ;
+    bcube:lastUpdated "2015-11-06T22:58:58.321Z" ;
+    dc:conformsTo <urn:uuid:bec4ad65-115b-4217-99cc-1a7ce4261088>,
+        <urn:uuid:cbd3a7be-a2c8-4410-a979-d5706f5708f3>,
+        <urn:uuid:f0e469d8-2089-42d6-aa00-3bac5e73b9fd> ;
+    dc:description "The TIGER/Line Files are shapefiles and related database files (.dbf) that are an extract of selected geographic and cartographic information from the U.S. Census Bureau's Master Address File / Topologically Integrated Geographic Encoding and Referencing (MAF/TIGER) Database (MTDB). The MTDB represents a seamless national file with no overlaps or gaps between parts, however, each TIGER/Line File is designed to stand alone as an independent data set, or they can be combined to cover the entire nation. Combined Statistical Areas (CSAs) are defined by the Office of Management and Budget (OMB) and consist of two or more adjacent Core Based Statistical Areas (CBSAs) that have significant employment interchanges. The CBSAs that combine to create a CSA retain separate identities within the larger CSAs. Because CSAs represent groupings of CBSAs, they should not be ranked or compared with individual CBSAs." ;
+    dc:spatial "POLYGON ((-85.605165 30.355757,-85.605165 35.000659,-80.751429 35.000659,-80.751429 30.355757,-85.605165 30.355757))" ;
+    dcterms:publisher <urn:uuid:63b82488-e631-4ef4-a991-f63285c69561> ;
+    dcterms:references <urn:uuid:e90b2ad6-7b7b-42e0-9c77-136c71a7bbca> ;
+    dcterms:title "TIGER/Line Shapefile, 2010, state, Georgia, 2010 Census Combined Statistical Area (CSA) State-based" ;
+    esip:eastBound "-80.751429"^^xsd:float ;
+    esip:endDate "2010-07-01"^^xsd:date ;
+    esip:northBound "35.000659"^^xsd:float ;
+    esip:southBound "30.355757"^^xsd:float ;
+    esip:startDate "2010-01-01"^^xsd:date ;
+    esip:westBound "-85.605165"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:bec4ad65-115b-4217-99cc-1a7ce4261088> bcube:hasType "theme" ;
+    bcube:hasValue "boundaries" ;
+    dc:partOf "ISO 19115 Topic Categories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:cbd3a7be-a2c8-4410-a979-d5706f5708f3> bcube:hasType "place" ;
+    bcube:hasValue "13",
+        "GA",
+        "Georgia",
+        "State or Equivalent Entity",
+        "U.S.",
+        "United States" ;
+    dc:partOf "INCITS.38-200x (R2004),INCITS.31-200x (R2007),INCITS.454-200x,INCITS 455-200x,INCITS 446-2008" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:d64f874f-311c-456d-9e97-eb01a98e1866> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-11-06T22:58:58.321Z" ;
+    bcube:lastUpdated "2015-11-06T22:58:58.321Z" ;
+    bcube:originatedFrom <urn:uuid:f3612fb0-3be0-4f0b-bd08-f64559bf05e0> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:6cef8d3b-5d56-4c13-98c9-f11fec6ec5b8> .
+
+<urn:uuid:e90b2ad6-7b7b-42e0-9c77-136c71a7bbca> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-06T22:58:58.321Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-06T22:58:58.321Z" ;
+    dc:identifier "urn:sha:7c7e1aa2523e50e953ef0a412d10befea177b02719f71567b255d6f0" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www2.census.gov/geo/tiger/TIGER2010/CSA/2010/tl_2010_13_csa10.zip" .
+
+<urn:uuid:f0e469d8-2089-42d6-aa00-3bac5e73b9fd> bcube:hasType "theme" ;
+    bcube:hasValue "CSA",
+        "Combined Statistical Area",
+        "Polygon",
+        "State or equivalent entity" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:f3612fb0-3be0-4f0b-bd08-f64559bf05e0> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-06T22:58:58.321Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-06T22:58:58.321Z" ;
+    dc:identifier "urn:sha:c228a457fc357760ee77b41f525df2d13a0226aca663a4cbb6c1fc15" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://meta.geo.census.gov/data/existing/decennial/GEO/GPMB/TIGERline/fe_2010/CSA/tl_2010_13_csa10_url.shp.xml" .
+

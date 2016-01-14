@@ -1,0 +1,106 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:2bfa8def-31fc-4d09-957f-a36eb4627467> bcube:hasType "theme" ;
+    bcube:hasValue "Earth Science",
+        "NCDDC",
+        "NCOM",
+        "Ocean NOMAD",
+        "oceans" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:44a7c2a5-fd1a-410d-ac4d-6be929894e30> bcube:dateCreated "2015-10-30T19:04:50.144Z" ;
+    bcube:hasMetadataRecord <urn:uuid:5f293ab7-4b04-4990-a30d-7477e340718e> ;
+    bcube:lastUpdated "2015-10-30T19:04:50.144Z" ;
+    dc:conformsTo <urn:uuid:2bfa8def-31fc-4d09-957f-a36eb4627467>,
+        <urn:uuid:89b03f6d-e01d-4399-86d3-5da6386bd721>,
+        <urn:uuid:9a197709-67b4-4067-996e-341a4a05d0a2>,
+        <urn:uuid:ae49ba16-616b-4eb9-94f6-88c2e9c8ec9e> ;
+    dc:description "Global Hycom Surace, 3-dimensional time series fields from the best time series aggregation." ;
+    dc:identifier "Hycom_sfc_3d" ;
+    dc:spatial "POLYGON ((-180 -80,-180 80,180 80,180 -80,-180 -80))" ;
+    dcterms:references <urn:uuid:9579e34f-3f7b-4ced-8933-4f3594206cfe>,
+        <urn:uuid:a84ccf7c-afc2-41e4-9f63-62e379ec0177> ;
+    dcterms:title "Global Hycom Surface, 3D aggregation" ;
+    esip:eastBound "180.0"^^xsd:float ;
+    esip:endDate "2015-11-05"^^xsd:date ;
+    esip:northBound "80.0"^^xsd:float ;
+    esip:southBound "-80.0"^^xsd:float ;
+    esip:startDate "2013-03-05"^^xsd:date ;
+    esip:westBound "-180.0"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:5f293ab7-4b04-4990-a30d-7477e340718e> a "ISO 19115:2003/19139" ;
+    bcube:dateCreated "2015-10-30T19:04:50.144Z" ;
+    bcube:lastUpdated "2015-10-30T19:04:50.144Z" ;
+    bcube:originatedFrom <urn:uuid:e0c0f182-cc55-47f3-ae68-0fcd862c5243> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:44a7c2a5-fd1a-410d-ac4d-6be929894e30> .
+
+<urn:uuid:89b03f6d-e01d-4399-86d3-5da6386bd721> bcube:hasType "project" ;
+    bcube:hasValue "Naval Oceanographic Office via NOAA NCEI" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:9579e34f-3f7b-4ced-8933-4f3594206cfe> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-10-30T19:04:50.144Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-10-30T19:04:50.144Z" ;
+    dc:identifier "urn:sha:a1ec97a69ef780c04fe5f776de6643ddc042761d75f8d628a7ca387f" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://ecowatch.ncddc.noaa.gov/erddap/griddap/Hycom_sfc_3d.graph" .
+
+<urn:uuid:9a197709-67b4-4067-996e-341a4a05d0a2> bcube:hasValue "geoscientificInformation" ;
+    dc:partOf "IsoTopicCategories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:a84ccf7c-afc2-41e4-9f63-62e379ec0177> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-10-30T19:04:50.144Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-10-30T19:04:50.144Z" ;
+    dc:identifier "urn:sha:602d591f262414ff654a09db5896723951e3879a36b071cc9538b678" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://ecowatch.ncddc.noaa.gov/erddap/griddap/Hycom_sfc_3d.html" .
+
+<urn:uuid:ae49ba16-616b-4eb9-94f6-88c2e9c8ec9e> bcube:hasType "theme" ;
+    bcube:hasValue "depth",
+        "eastward_sea_water_velocity",
+        "latitude",
+        "longitude",
+        "northward_sea_water_velocity",
+        "sea_water_salinity",
+        "sea_water_temperature",
+        "time" ;
+    dc:partOf "CF-1.0" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:e0c0f182-cc55-47f3-ae68-0fcd862c5243> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-10-30T19:04:50.144Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-10-30T19:04:50.144Z" ;
+    dc:identifier "urn:sha:4d82f4e0c346493ecf7989caa8387bf732148de40bf06a4dfff15643" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://ecowatch.ncddc.noaa.gov/erddap/metadata/iso19115/xml/Hycom_sfc_3d_iso19115.xml" .
+

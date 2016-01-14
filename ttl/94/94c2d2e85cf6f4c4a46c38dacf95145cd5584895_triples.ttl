@@ -1,0 +1,75 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:029f1530-b3d6-47a6-8c99-a0ecc7ef69ca> bcube:hasType "theme" ;
+    bcube:hasValue "elevation",
+        "environment",
+        "geoscientificInformation",
+        "imageryBaseMapsEarthCover",
+        "inlandWaters",
+        "location",
+        "structure" ;
+    dc:partOf "ISO 19115 Topic Category" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:1ea912ee-fae8-4c6e-a841-ea09bfab56eb> bcube:hasType "place" ;
+    bcube:hasValue "Montana" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:54f9c892-faa6-47c2-9feb-78696cac85fc> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-11T06:18:22.91Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-11T06:18:22.91Z" ;
+    dc:identifier "urn:sha:56bcee3df32193dfd03cf2a7d3798fae0929f2663689b86ed44242d9" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://mslapps.mt.gov/Geographic_Information/Data/DataList/datalist_MetadataDetailRaw.aspx?did={63199505-6f59-42de-9c75-e3b764ba84c9}" .
+
+<urn:uuid:66771b96-01bc-45d0-bf3e-2761b74678d8> bcube:dateCreated "2015-08-11T06:18:22.91Z" ;
+    bcube:hasMetadataRecord <urn:uuid:d99c0958-0073-46ee-8499-ab5364f00ab4> ;
+    bcube:lastUpdated "2015-08-11T06:18:22.91Z" ;
+    dc:conformsTo <urn:uuid:029f1530-b3d6-47a6-8c99-a0ecc7ef69ca>,
+        <urn:uuid:1ea912ee-fae8-4c6e-a841-ea09bfab56eb>,
+        <urn:uuid:87ef0af1-73ab-43d7-ad0a-3725901edce6> ;
+    dc:description "This is the text file that was available from the U.S. Board of Geographic Names web site (http://geonames.usgs.gov) on June 7, 2005. The data are not in a GIS format, but the file is a structured file that can easily be used with GIS. The State Library used this file for an update of the GNIS shapefile that was available on its web site in 2005, but the shapefile is no longer available. This file contains over 20,000 records for un-named mines, wells, and springs that the State Library has traditionally removed from the GNIS data that it distributes. The Geographic Names Information System (GNIS), developed by the U.S. Geological Survey in cooperation with the U.S. Board on Geographic Names (BGN), contains information about physical and cultural geographic features in the United States and associated areas, both current and historical, but not including roads and highways. The database holds the Federally recognized name of each feature and defines the location of the feature by state, county, USGS topographic map, and geographic coordinates. The GNIS is our Nation's official repository of domestic geographic feature names information. This file gives the latitude and longitude of the primary point of each feature. A geographic feature may have only one primary point regardless of size or extent. A point feature is defined by this single set of coordinates on the USGS National Base Map series at a scale of 1:24000 or 1:25000. The primary point of a linear feature depends on the feature class. If feature class equals stream, valley or arroyo, the primary point is the mouth. The primary point of a canal, channel, or trail is the center. The primary point of a ridge is the highest point. The primary point of an areal feature is the approximate geographic center with the following exceptions: The primary point of a populated place is the center of original place such as the city or town hall, main post office, or town square regardless of changes over time. The primary point of a reservoir is the center of the dam. The primary point of a summit, range, ridge, or pillar is the highest point. The primary point has a sequence number of 1. These points do not represent boundaries or geometries and should not be confused with them. An application may be displayed as latitude and longitude data or as a point in a geographic information system, and may be applied as label points." ;
+    dc:spatial "POLYGON ((-116.293263 44.238424,-116.293263 49.818297,-102.89189 49.818297,-102.89189 44.238424,-116.293263 44.238424))" ;
+    dcterms:publisher <urn:uuid:ef4ee4d6-6508-4556-b3b2-acab223e77b6> ;
+    dcterms:title "Montana Names Text File from the Geographic Names Information System, 2005" ;
+    esip:eastBound "-102.89189"^^xsd:float ;
+    esip:northBound "49.818297"^^xsd:float ;
+    esip:southBound "44.238424"^^xsd:float ;
+    esip:startDate "2005-06-07"^^xsd:date ;
+    esip:westBound "-116.293263"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:87ef0af1-73ab-43d7-ad0a-3725901edce6> bcube:hasType "theme" ;
+    bcube:hasValue "GNIS",
+        "Geographic Names",
+        "Place Names",
+        "geonames" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:d99c0958-0073-46ee-8499-ab5364f00ab4> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-08-11T06:18:22.91Z" ;
+    bcube:lastUpdated "2015-08-11T06:18:22.91Z" ;
+    bcube:originatedFrom <urn:uuid:54f9c892-faa6-47c2-9feb-78696cac85fc> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:66771b96-01bc-45d0-bf3e-2761b74678d8> .
+
+<urn:uuid:ef4ee4d6-6508-4556-b3b2-acab223e77b6> owl:a foaf:Organization ;
+    foaf:name "U.S. Geological Survey" .
+

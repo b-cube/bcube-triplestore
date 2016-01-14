@@ -1,0 +1,66 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:09cf058e-197a-4daa-8de2-34871d3b7b87> a "OGC:WMS" ;
+    bcube:contains <urn:uuid:c25f2219-13e4-494e-ad60-d74e511633a0> ;
+    bcube:dateCreated "2015-08-11T11:02:39.883Z" ;
+    bcube:lastUpdated "2015-08-11T11:02:39.883Z" ;
+    bcube:originatedFrom <urn:uuid:fa1d5e7f-3357-4273-a94c-01fd26148a8c> ;
+    dc:conformsTo <urn:uuid:068731b8-f9cf-4181-8550-d6c8024267d9> ;
+    dc:description "Scientific Data" ;
+    owl:a bcube:service .
+
+<urn:uuid:068731b8-f9cf-4181-8550-d6c8024267d9> bcube:hasValue "atmosphere",
+        "climate",
+        "earth science",
+        "meteorology",
+        "ocean" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:c25f2219-13e4-494e-ad60-d74e511633a0> bcube:dateCreated "2015-08-11T11:02:39.883Z" ;
+    bcube:lastUpdated "2015-08-11T11:02:39.883Z" ;
+    dc:description "Sea Surface Height" ;
+    dc:spatial "POLYGON ((-180.0 -79.5,-180.0 78.5,180.0 78.5,180.0 -79.5,-180.0 -79.5))" ;
+    dc:title "Sea Surface Height" ;
+    dcterms:references <urn:uuid:d2ecb05b-f099-4671-9f83-d6aa2f9e4e91> ;
+    esip:eastBound "180.0"^^xsd:float ;
+    esip:northBound "78.5"^^xsd:float ;
+    esip:southBound "-79.5"^^xsd:float ;
+    esip:westBound "-180.0"^^xsd:float ;
+    owl:a bcube:Layer .
+
+<urn:uuid:d2ecb05b-f099-4671-9f83-d6aa2f9e4e91> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-11T11:02:39.883Z" ;
+    bcube:hasConfidence "Not Sure" ;
+    bcube:hasUrlSource "Generated" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-11T11:02:39.883Z" ;
+    dc:identifier "urn:sha:0f577d6d2d89e04cfeb3d4bacca41a57b5108393adc9841472be3bf1" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://ecco.jpl.nasa.gov/thredds/wms/ecco_Smoother/PREV/20140906/dr080_2013/n10day_01_09/Have_08_08.00001_02160_240.cdf?layers=Have&width=500&version=1.3.0&bbox=-180.0%2C-79.5%2C180.0%2C78.5&service=WMS&format=image%2Fpng&styles=&crs=CRS%3A84&request=GetMap&height=500" .
+
+<urn:uuid:fa1d5e7f-3357-4273-a94c-01fd26148a8c> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-11T11:02:39.883Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-11T11:02:39.883Z" ;
+    dc:identifier "urn:sha:265c5aa4cf1aec5ebaad4029daa0bd2a54887b5e90170b0af3b599e7" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://ecco.jpl.nasa.gov/thredds/wms/ecco_Smoother/PREV/20140906/dr080_2013/n10day_01_09/Have_08_08.00001_02160_240.cdf?service=WMS&version=1.3.0&request=GetCapabilities" .
+

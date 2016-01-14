@@ -1,0 +1,81 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:224c7432-2be7-4e93-89cb-c1c2ea7d8b00> bcube:hasType "place" ;
+    bcube:hasValue "Florida" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:3ee0e53b-1a69-4c51-a46f-42cd91ab6971> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-11-03T10:01:10.262Z" ;
+    bcube:lastUpdated "2015-11-03T10:01:10.262Z" ;
+    bcube:originatedFrom <urn:uuid:cb2fe207-c57b-4d9b-aa91-7e505bc79c3a> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:87018dff-552a-41ff-9a3b-929ac74d73df> .
+
+<urn:uuid:564f5f0f-9180-4535-8845-cda60c023b4e> owl:a foaf:Organization ;
+    foaf:name "" .
+
+<urn:uuid:87018dff-552a-41ff-9a3b-929ac74d73df> bcube:dateCreated "2015-11-03T10:01:10.262Z" ;
+    bcube:hasMetadataRecord <urn:uuid:3ee0e53b-1a69-4c51-a46f-42cd91ab6971> ;
+    bcube:lastUpdated "2015-11-03T10:01:10.262Z" ;
+    dc:conformsTo <urn:uuid:224c7432-2be7-4e93-89cb-c1c2ea7d8b00>,
+        <urn:uuid:bca27628-9b11-404a-8267-92fdbde974c9> ;
+    dc:description "The Florida Intrastate Highway System (FIHS) Roads feature class covers the state of Florida at a scale of 1:24,000 with a projection system of Universal Transverse Mercator (UTM) 17 North zone and a horizontal datum of North American 1983 (NAD 1983). The map units are in meters." ;
+    dc:spatial "POLYGON ((-87.43892 24.969496,-87.43892 31.150215,-80.025726 31.150215,-80.025726 24.969496,-87.43892 24.969496))" ;
+    dcterms:publisher <urn:uuid:564f5f0f-9180-4535-8845-cda60c023b4e> ;
+    dcterms:references <urn:uuid:aae5e3b7-87bb-4d04-97ff-f2e97f54222c> ;
+    dcterms:title "Florida Intrastate Highway System" ;
+    esip:eastBound "-80.025726"^^xsd:float ;
+    esip:northBound "31.150215"^^xsd:float ;
+    esip:southBound "24.969496"^^xsd:float ;
+    esip:startDate "2008-06-02"^^xsd:date ;
+    esip:westBound "-87.43892"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:aae5e3b7-87bb-4d04-97ff-f2e97f54222c> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-03T10:01:10.262Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-03T10:01:10.262Z" ;
+    dc:identifier "urn:sha:948080cd259636437ffd3a1f9cab0c86ba9b4665326f841057624328" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "ftp://ftp.dot.state.fl.us/fdot/co/planning/transtat/gis/shapefiles/fihs.zip" .
+
+<urn:uuid:bca27628-9b11-404a-8267-92fdbde974c9> bcube:hasType "theme" ;
+    bcube:hasValue "Florida Intrastate Highway System",
+        "Highways",
+        "Intrastate",
+        "RCI",
+        "Roads",
+        "Roadway Characteristics Inventory",
+        "Transportation" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:cb2fe207-c57b-4d9b-aa91-7e505bc79c3a> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-03T10:01:10.262Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-03T10:01:10.262Z" ;
+    dc:identifier "urn:sha:ec1eb51efbc0fdd3f87b07179abb5ebda43312392f6e8baba9b8932a" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www.envirobase.usgs.gov/FlGisData/FDOT/descriptions/fihs.shp.xml" .
+

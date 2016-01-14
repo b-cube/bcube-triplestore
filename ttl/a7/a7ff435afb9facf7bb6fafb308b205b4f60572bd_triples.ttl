@@ -1,0 +1,75 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:1f7c4587-f551-4a7e-a440-eb1df581ffd5> bcube:hasType "theme" ;
+    bcube:hasValue "Bare earth",
+        "Breaklines",
+        "DEM",
+        "DTM",
+        "Elevation",
+        "First Return",
+        "Hydro Flattened",
+        "LAS",
+        "Last Return",
+        "Lidar",
+        "Model Key Points" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:230c2a59-0a4a-407f-bd59-3ffc999b3964> owl:a foaf:Organization ;
+    foaf:name "" .
+
+<urn:uuid:840b0b7c-9e00-4173-ace9-b6728e7d25ba> bcube:hasType "place" ;
+    bcube:hasValue "Connecticut",
+        "Fairfield County",
+        "Litchfield County" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:97924128-9dc2-4d71-aa0a-548a466ccbda> bcube:dateCreated "2015-07-05T01:29:15.357Z" ;
+    bcube:hasMetadataRecord <urn:uuid:e02a7279-fb25-4100-a4a2-319c1df9ff33> ;
+    bcube:lastUpdated "2015-07-05T01:29:15.357Z" ;
+    dc:conformsTo <urn:uuid:1f7c4587-f551-4a7e-a440-eb1df581ffd5>,
+        <urn:uuid:840b0b7c-9e00-4173-ace9-b6728e7d25ba> ;
+    dc:description "Earth Eye collected LiDAR data for approximately 1,703 square kilometers that partially cover the Connecticut counties of Litchfield and Fairfield. The nominal pulse spacing for this project was no greater than 1 point every 0.7 meters. Dewberry used proprietary procedures to classify the LAS according to project specifications: 1-Unclassified, 2-Ground, 7-Noise, 9-Water. Dewberry produced 3D breaklines and combined these with the final LiDAR data to produce seamless hydro flattened DEMs for the 1,742 tiles (1000 m x 1000 m) that cover the project area. Separate LiDAR files were created for bare earth only points, model key points, first echo return only points, and last echo return only points." ;
+    dc:spatial "POLYGON ((-73.513386 41.588247,-73.513386 42.051671,-72.996434 42.051671,-72.996434 41.588247,-73.513386 41.588247))" ;
+    dcterms:publisher <urn:uuid:230c2a59-0a4a-407f-bd59-3ffc999b3964> ;
+    dcterms:title "LAS" ;
+    esip:eastBound "-72.996434"^^xsd:float ;
+    esip:endDate "2011-12-19"^^xsd:date ;
+    esip:northBound "42.051671"^^xsd:float ;
+    esip:southBound "41.588247"^^xsd:float ;
+    esip:startDate "2011-12-13"^^xsd:date ;
+    esip:westBound "-73.513386"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:99f604df-c215-4eec-ade1-2075dc401a60> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-07-05T01:29:15.357Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-07-05T01:29:15.357Z" ;
+    dc:identifier "urn:sha:73b2cfb512e855369ddbf76da01b11524b7a5276425840d30a93fa2e" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www.cteco.uconn.edu/help/lidar_docs/NWLidar/FGDC_CONNECTICUT_STREAMS_RIVERS.xml" .
+
+<urn:uuid:e02a7279-fb25-4100-a4a2-319c1df9ff33> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-07-05T01:29:15.357Z" ;
+    bcube:lastUpdated "2015-07-05T01:29:15.357Z" ;
+    bcube:originatedFrom <urn:uuid:99f604df-c215-4eec-ade1-2075dc401a60> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:97924128-9dc2-4d71-aa0a-548a466ccbda> .
+

@@ -1,0 +1,92 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:1836b8d5-6c73-4200-b325-fdc9b56f90d8> owl:a foaf:Organization ;
+    foaf:name "U.S. Geological Survey" .
+
+<urn:uuid:7c76cd07-dfaf-4eae-93f0-5c845b14e3da> bcube:hasType "theme" ;
+    bcube:hasValue "geology" ;
+    dc:partOf "none" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:ae7e91b8-3920-4e50-88d5-0a420f9cfb0b> bcube:hasType "theme" ;
+    bcube:hasValue "1100 - Geology",
+        "1101 - General",
+        "3100 - Vector",
+        "3110 - ESRI",
+        "3112 - export" ;
+    dc:partOf "National Geologic Map Database Catalog themes, augmented" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:ae8f709d-bdc2-4963-a758-b43656d496a4> bcube:hasType "place" ;
+    bcube:hasValue "Maryland",
+        "USA" ;
+    dc:partOf "none" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:afa84b35-b945-4a26-916d-a505429a729c> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2014-10-30T02:35:09.42Z" ;
+    bcube:lastUpdated "2014-10-30T02:35:09.42Z" ;
+    bcube:originatedFrom <urn:uuid:d1ca165e-012b-404f-9c62-030e869ddcfa> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:c12181fd-f525-493c-bf9d-cbbea2724ac9> .
+
+<urn:uuid:b7437fa4-a6ff-44ff-bec2-bff208ffe4e3> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2014-10-30T02:35:09.42Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2014-10-30T02:35:09.42Z" ;
+    dc:identifier "urn:sha:927ebee45474aeafba1682e2da85a80335cdfd2d48d709223b37de77" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://pubs.usgs.gov/of/2005/1325/" .
+
+<urn:uuid:c12181fd-f525-493c-bf9d-cbbea2724ac9> bcube:dateCreated "2014-10-30T02:35:09.42Z" ;
+    bcube:hasMetadataRecord <urn:uuid:afa84b35-b945-4a26-916d-a505429a729c> ;
+    bcube:lastUpdated "2014-10-30T02:35:09.42Z" ;
+    dc:conformsTo <urn:uuid:7c76cd07-dfaf-4eae-93f0-5c845b14e3da>,
+        <urn:uuid:ae7e91b8-3920-4e50-88d5-0a420f9cfb0b>,
+        <urn:uuid:ae8f709d-bdc2-4963-a758-b43656d496a4>,
+        <urn:uuid:c5ea3375-18bb-42e5-9ea5-2123d8219ff0> ;
+    dc:description "This report presents the results of the USGS Mineral Resources Program activity to compile a national-scale geologic map database at a nominal scale of 1:500,000, to support national and regional level projects, including mineral resource and geoenvironmental assessments. The only comprehensive sources for input into regional- and national-scale geologic maps are state geologic maps with scales ranging from 1:100,000 to 1:1,000,000. Digital versions of these state maps form the core of what is presented here. Because no adequate geologic map exists for the state of Alaska, it is being compiled as regional blocks of 3 degree quadrangles that also form part of this national database. It is expected that this series will completed by approximately the end of 2007. These maps and databases are being released in blocks of states or, in the case of Alaska, as compiled blocks of 1:250,000-scale quadrangles as chapters in this series. For Alaska, formal maps as well as databases are being published here, whereas for the conterminous U.S. only state databases are presented, because published maps for most states already exist. For Alaska these regional compilations will form the base for compiling a new geologic map of the state. As documented in CONUS documentation, standards for the conterminous U.S. are somewhat different than those for Alaska and Hawaii." ;
+    dc:spatial "POLYGON ((-79.48745 37.886571,-79.48745 39.722987,-74.90794 39.722987,-74.90794 37.886571,-79.48745 37.886571))" ;
+    dcterms:publisher <urn:uuid:1836b8d5-6c73-4200-b325-fdc9b56f90d8> ;
+    dcterms:references <urn:uuid:b7437fa4-a6ff-44ff-bec2-bff208ffe4e3> ;
+    dcterms:title "Integrated Geologic Map Databases for the United States: Delaware, Maryland, New York, Pennsylvania, and Virginia" ;
+    esip:eastBound "-74.90794"^^xsd:float ;
+    esip:northBound "39.722987"^^xsd:float ;
+    esip:southBound "37.886571"^^xsd:float ;
+    esip:startDate "2005-01-01"^^xsd:date ;
+    esip:westBound "-79.48745"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:c5ea3375-18bb-42e5-9ea5-2123d8219ff0> bcube:hasType "place" ;
+    bcube:hasValue "US24 = Maryland" ;
+    dc:partOf "Augmented FIPS 10-4 and FIPS 6-4, version 1.0" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:d1ca165e-012b-404f-9c62-030e869ddcfa> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2014-10-30T02:35:09.42Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2014-10-30T02:35:09.42Z" ;
+    dc:identifier "urn:sha:8fe2c23ff64685bf3aaa518dc4a17bd41d08130101c55f1f134f195e" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://mrdata.usgs.gov/geology/state/metadata/md.xml" .
+

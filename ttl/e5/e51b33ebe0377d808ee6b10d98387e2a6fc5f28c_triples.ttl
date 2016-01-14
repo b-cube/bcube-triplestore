@@ -1,0 +1,87 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:0b62bbb4-403e-475d-8a7c-81a1ca3a4541> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-07-29T19:05:17.149Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-07-29T19:05:17.149Z" ;
+    dc:identifier "urn:sha:61d765b8f0dca7ff61c8b65436c0d93cb7074cf3681b9f42ef895eae" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www.idwr.idaho.gov" .
+
+<urn:uuid:27ddcfd8-cb52-4385-9375-88c7e499bcc0> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-07-29T19:05:17.149Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-07-29T19:05:17.149Z" ;
+    dc:identifier "urn:sha:fc1e8ef59f202283fdc4298c2c3b43f4ac9d9c4831ddf8fe3e4013b3" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "https://catalog.data.gov/harvest/object/3bbb1107-9d2d-4c96-afe6-c773ac65fdd8" .
+
+<urn:uuid:3f725eb8-ae46-4a6a-9780-3965a3ab8c2d> bcube:hasType "theme" ;
+    bcube:hasValue "Contours",
+        "DEM",
+        "Digital Terrain Model",
+        "Elevation Data",
+        "LIDAR",
+        "Land Surface",
+        "Relief",
+        "Topography" ;
+    dc:partOf "FEMA NFIP Topic Category" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:44c16894-7bb2-458c-a7e0-138d13a32646> a "ISO 19115:2003/19139" ;
+    bcube:dateCreated "2015-07-29T19:05:17.149Z" ;
+    bcube:lastUpdated "2015-07-29T19:05:17.149Z" ;
+    bcube:originatedFrom <urn:uuid:27ddcfd8-cb52-4385-9375-88c7e499bcc0> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:eb22ee46-0802-45cd-9779-527dd84078c4> .
+
+<urn:uuid:575e7bce-555f-4663-9455-ea1f8b692b8e> bcube:hasType "place" ;
+    bcube:hasValue "COMMUNITY Pierce County, Unincorporated and Incorporated Areas",
+        "COUNTY PIERCE",
+        "COUNTY-FIPS 530",
+        "FEMA-CID 53053C",
+        "REGION 10",
+        "STATE WA" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:b5882a23-79a5-4ad6-88a9-05c38b052efd> bcube:hasValue "elevation" ;
+    dc:partOf "IsoTopicCategories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:eb22ee46-0802-45cd-9779-527dd84078c4> bcube:dateCreated "2015-07-29T19:05:17.149Z" ;
+    bcube:hasMetadataRecord <urn:uuid:44c16894-7bb2-458c-a7e0-138d13a32646> ;
+    bcube:lastUpdated "2015-07-29T19:05:17.149Z" ;
+    dc:conformsTo <urn:uuid:3f725eb8-ae46-4a6a-9780-3965a3ab8c2d>,
+        <urn:uuid:575e7bce-555f-4663-9455-ea1f8b692b8e>,
+        <urn:uuid:b5882a23-79a5-4ad6-88a9-05c38b052efd> ;
+    dc:description "Terrain data, as defined in FEMA Guidelines and Specifications, Appendix M: Data Capture Standards, describes the digital topographic data that was used to create the elevation data representing the terrain environment of a watershed and/or floodplain. Terrain data requirements allow for flexibility in the types of information provided as sources used to produce final terrain deliverables. Once this type of data is provided, FEMA will be able to account for the origins of the flood study elevation data. (Source: FEMA Guidelines and Specifications, Appendix M, Section M.1.2)." ;
+    dc:spatial "POLYGON ((-122.852195 46.746741,-122.852195 47.425009,-121.363643 47.425009,-121.363643 46.746741,-122.852195 46.746741))" ;
+    dcterms:references <urn:uuid:0b62bbb4-403e-475d-8a7c-81a1ca3a4541> ;
+    dcterms:title "DCS Terrain Submission for White River-Pierce County, WA PMR" ;
+    esip:eastBound "-121.363643"^^xsd:float ;
+    esip:northBound "47.425009"^^xsd:float ;
+    esip:southBound "46.746741"^^xsd:float ;
+    esip:westBound "-122.852195"^^xsd:float ;
+    owl:a dcat:Dataset .
+

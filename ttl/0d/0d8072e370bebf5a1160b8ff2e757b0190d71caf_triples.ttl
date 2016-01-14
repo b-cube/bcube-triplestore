@@ -1,0 +1,95 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:38f8594e-f167-4114-a969-a3d468b10663> bcube:hasType "place" ;
+    bcube:hasValue "02100",
+        "County or Equivalent Entity",
+        "Haines",
+        "U.S.",
+        "United States" ;
+    dc:partOf "ANSI INCITS 38:2009 (Formerly FIPS 5-2), ANSI INCITS 31:2009 (Formerly FIPS 6-4),ANSI INCITS 454:2009 (Formerly FIPS 8-6), ANSI INCITS 455:2009(Formerly FIPS 9-1), ANSI INCITS 446:2008 (Geographic Names Information System (GNIS))" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:3b2fbb7d-fcd6-4437-8a88-d3e951c84115> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-11-01T06:17:59.95Z" ;
+    bcube:lastUpdated "2015-11-01T06:17:59.95Z" ;
+    bcube:originatedFrom <urn:uuid:c4281bd7-c94a-4ac9-a67d-23c46207d6c4> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:501f7ab7-86f9-4a0e-a3ad-e1584615b668> .
+
+<urn:uuid:501f7ab7-86f9-4a0e-a3ad-e1584615b668> bcube:dateCreated "2015-11-01T06:17:59.95Z" ;
+    bcube:hasMetadataRecord <urn:uuid:3b2fbb7d-fcd6-4437-8a88-d3e951c84115> ;
+    bcube:lastUpdated "2015-11-01T06:17:59.95Z" ;
+    dc:conformsTo <urn:uuid:38f8594e-f167-4114-a969-a3d468b10663>,
+        <urn:uuid:a277a316-eb26-4af1-a200-6401dc5f1e58>,
+        <urn:uuid:f5276d59-c9c3-45f9-945f-30ebbbaba071> ;
+    dc:description "The TIGER/Line shapefiles and related database files (.dbf) are an extract of selected geographic and cartographic information from the U.S. Census Bureau's Master Address File / Topologically Integrated Geographic Encoding and Referencing (MAF/TIGER) Database (MTDB). The MTDB represents a seamless national file with no overlaps or gaps between parts, however, each TIGER/Line shapefile is designed to stand alone as an independent data set, or they can be combined to cover the entire nation. The Address Ranges Relationship File (ADDR.dbf) contains the attributes of each address range. Each address range applies to a single edge and has a unique address range identifier (ARID) value. The edge to which an address range applies can be determined by linking the address range to the All Lines Shapefile (EDGES.shp) using the permanent topological edge identifier (TLID) attribute. Multiple address ranges can apply to the same edge since an edge can have multiple address ranges. Note that the most inclusive address range associated with each side of a street edge already appears in the All Lines Shapefile (EDGES.shp). The TIGER/Line Files contain potential address ranges, not individual addresses. The term \"address range\" refers to the collection of all possible structure numbers from the first structure number to the last structure number and all numbers of a specified parity in between along an edge side relative to the direction in which the edge is coded. The address ranges in the TIGER/Line Files are potential ranges that include the full range of possible structure numbers even though the actual structures may not exist." ;
+    dc:spatial "POLYGON ((-136.494084 58.12273,-136.494084 59.729629,-134.327982 59.729629,-134.327982 58.12273,-136.494084 58.12273))" ;
+    dcterms:publisher <urn:uuid:7785b253-1f49-4258-808c-2715a33875d8> ;
+    dcterms:references <urn:uuid:88428665-ca7f-4d78-956e-0255e50cd217> ;
+    dcterms:title "TIGER/Line Shapefile, 2012, county, Haines Borough, AK, Current Address Ranges Relationship File" ;
+    esip:eastBound "-134.327982"^^xsd:float ;
+    esip:endDate "2012-06-01"^^xsd:date ;
+    esip:northBound "59.729629"^^xsd:float ;
+    esip:southBound "58.12273"^^xsd:float ;
+    esip:startDate "2011-08-01"^^xsd:date ;
+    esip:westBound "-136.494084"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:7785b253-1f49-4258-808c-2715a33875d8> owl:a foaf:Organization ;
+    foaf:name "" .
+
+<urn:uuid:88428665-ca7f-4d78-956e-0255e50cd217> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-01T06:17:59.95Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-01T06:17:59.95Z" ;
+    dc:identifier "urn:sha:91401046046da2aa138622fba473af0aad7215f83cfa3dcb3c6adf81" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www2.census.gov/geo/tiger/TIGER2012/ADDR/tl_2012_02100_addr.zip" .
+
+<urn:uuid:a277a316-eb26-4af1-a200-6401dc5f1e58> bcube:hasType "theme" ;
+    bcube:hasValue "5-digit ZIP code",
+        "County ANSI Code",
+        "County FIPS Code",
+        "From House Number",
+        "Permanent edge ID",
+        "Side indicator flag",
+        "State ANSI Code",
+        "State FIPS Code",
+        "To House Number",
+        "ZIP +4 code" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:c4281bd7-c94a-4ac9-a67d-23c46207d6c4> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-01T06:17:59.95Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-01T06:17:59.95Z" ;
+    dc:identifier "urn:sha:c435c500678933585127e042a4cf3d8dfc4ae947dae74773131629a0" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://meta.geo.census.gov/data/existing/decennial/GEO/GPMB/TIGERline/TL2012/FGDC/addr/tl_2012_02100_addr.dbf.xml" .
+
+<urn:uuid:f5276d59-c9c3-45f9-945f-30ebbbaba071> bcube:hasType "theme" ;
+    bcube:hasValue "Transportation" ;
+    dc:partOf "ISO 19115 Topic Categories" ;
+    owl:a bcube:thesaurusSubset .
+

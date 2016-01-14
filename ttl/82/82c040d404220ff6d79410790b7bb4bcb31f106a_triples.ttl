@@ -1,0 +1,78 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:4eeca155-e00c-4430-86df-79f60c2e3bb8> a "ISO 19115:2003/19139" ;
+    bcube:dateCreated "2015-03-06T01:31:55.134Z" ;
+    bcube:lastUpdated "2015-03-06T01:31:55.134Z" ;
+    bcube:originatedFrom <urn:uuid:cb72b925-672a-4db8-97cb-fc83cc62a0be> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:fda016a0-3dd0-4d55-8c82-d84959c22cfb> .
+
+<urn:uuid:50130703-3761-4b7c-a6a1-f845414e0e38> bcube:hasType "theme" ;
+    bcube:hasValue "Geophysical",
+        "drift buoy",
+        "ocean currents" ;
+    dc:partOf "none" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:57288a89-3255-42c8-bde5-a4426164b39b> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-03-06T01:31:55.134Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-03-06T01:31:55.134Z" ;
+    dc:identifier "urn:sha:aff974e44a602f8185da0173a3e0cfa5c07e59f96a60158f8f54978a" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://lagic.lsu.edu/data/losco/ocean_currents_egom_Nov_MMS_1997.zip" .
+
+<urn:uuid:c8af567e-64c7-412a-88e6-ada79272da52> bcube:hasType "place" ;
+    bcube:hasValue "Alabama",
+        "Florida",
+        "Gulf of Mexico",
+        "Louisiana",
+        "Mississippi" ;
+    dc:partOf "none" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:cb72b925-672a-4db8-97cb-fc83cc62a0be> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-03-06T01:31:55.134Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-03-06T01:31:55.134Z" ;
+    dc:identifier "urn:sha:d5690327e24bb9e5449a9f88a2d0a1e657fff55a016a0b3857dc4032" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://catalog.data.gov/harvest/object/f7bd220c-8ac4-47a7-b313-1178bad1cead" .
+
+<urn:uuid:fda016a0-3dd0-4d55-8c82-d84959c22cfb> bcube:dateCreated "2015-03-06T01:31:55.134Z" ;
+    bcube:hasMetadataRecord <urn:uuid:4eeca155-e00c-4430-86df-79f60c2e3bb8> ;
+    bcube:lastUpdated "2015-03-06T01:31:55.134Z" ;
+    dc:conformsTo <urn:uuid:50130703-3761-4b7c-a6a1-f845414e0e38>,
+        <urn:uuid:c8af567e-64c7-412a-88e6-ada79272da52> ;
+    dc:description "This is one data set of a data package consisting of thirteen point data sets that have as attributes the direction and velocity of ocean currents in the 'eastern' Gulf of Mexico as determined by drift buoys from February 1996 to June 1997. The data are summarized by quarter degree cells and represent the time weighted average of drift direction and velocity for all drift buoys that entered the cell during the summary time period. Twelve of the data sets are one month averages, one data set is a one year average from all the months. The area covered is nominally the eastern Gulf of Mexico, but during the course of the study, the buoys drifted as far west as Texas. These spatial extent, object count and range attribute metadata items apply in particular to the one-year average data set, however the general characteristics of the dataset (coordinate system, attributes and attribute definitions) apply to all thirteen." ;
+    dc:spatial "POLYGON ((-97.125 25.125,-97.125 30.125,-83.125 30.125,-83.125 25.125,-97.125 25.125))" ;
+    dcterms:references <urn:uuid:57288a89-3255-42c8-bde5-a4426164b39b> ;
+    dcterms:title "Eastern Gulf of Mexico November 1997 Ocean Currents, Geographic NAD83, MMS (1999) [ocean_currents_egom_Nov_MMS_1997]" ;
+    esip:eastBound "-83.125"^^xsd:float ;
+    esip:endDate "1997-06-28"^^xsd:date ;
+    esip:northBound "30.125"^^xsd:float ;
+    esip:southBound "25.125"^^xsd:float ;
+    esip:startDate "1996-02-05"^^xsd:date ;
+    esip:westBound "-97.125"^^xsd:float ;
+    owl:a dcat:Dataset .
+

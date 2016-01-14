@@ -1,0 +1,75 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:271026af-0c97-4221-9e06-f9120dd64e0b> owl:a foaf:Organization ;
+    foaf:name "USDA - Forest Service" .
+
+<urn:uuid:33e71797-5433-4e7a-a09b-5c8d1f2c3187> bcube:dateCreated "2015-10-30T11:07:48.105Z" ;
+    bcube:hasMetadataRecord <urn:uuid:d26abc02-63f7-4384-bce1-d1bbff86bf85> ;
+    bcube:lastUpdated "2015-10-30T11:07:48.105Z" ;
+    dc:conformsTo <urn:uuid:681ddd1f-4abf-4222-9439-9a0202ef3f7f>,
+        <urn:uuid:7fac921d-312a-4b1f-8745-a7c88883f495>,
+        <urn:uuid:f3a707b8-3854-4444-abe8-4b6d874e8870> ;
+    dc:description "This data set includes polygons for ecological subsections within the conterminous United States. This data set contains regional geographic delineations for analysis of ecological relationships across ecological units. These delineations show the relationships between ECOMAP 2007 and various climate data from the PRISM climate mapping system." ;
+    dc:spatial "POLYGON ((-124.762615 24.530689,-124.762615 49.386392,-66.798038 49.386392,-66.798038 24.530689,-124.762615 24.530689))" ;
+    dcterms:publisher <urn:uuid:271026af-0c97-4221-9e06-f9120dd64e0b> ;
+    dcterms:title "S_USA.ClimateSubsections" ;
+    esip:eastBound "-66.798038"^^xsd:float ;
+    esip:northBound "49.386392"^^xsd:float ;
+    esip:southBound "24.530689"^^xsd:float ;
+    esip:westBound "-124.762615"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:681ddd1f-4abf-4222-9439-9a0202ef3f7f> bcube:hasType "theme" ;
+    bcube:hasValue "climatologyMeteorologyAtmosphere" ;
+    dc:partOf "ISO 19115 Topic Categories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:7fac921d-312a-4b1f-8745-a7c88883f495> bcube:hasType "place" ;
+    bcube:hasValue "United States" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:8e47569c-2aa3-4f6a-a97a-8bd81657f327> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-10-30T11:07:48.105Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-10-30T11:07:48.105Z" ;
+    dc:identifier "urn:sha:cde8887d6e564af856d226116ee4b8fd31885fe576ce267c3bc282dd" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://data.fs.usda.gov/geodata/edw/edw_resources/meta/S_USA.ClimateSubsections.xml" .
+
+<urn:uuid:d26abc02-63f7-4384-bce1-d1bbff86bf85> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-10-30T11:07:48.105Z" ;
+    bcube:lastUpdated "2015-10-30T11:07:48.105Z" ;
+    bcube:originatedFrom <urn:uuid:8e47569c-2aa3-4f6a-a97a-8bd81657f327> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:33e71797-5433-4e7a-a09b-5c8d1f2c3187> .
+
+<urn:uuid:f3a707b8-3854-4444-abe8-4b6d874e8870> bcube:hasType "theme" ;
+    bcube:hasValue "PRISM",
+        "climate",
+        "ecomap",
+        "ecoregion",
+        "frost free",
+        "precipitation",
+        "relative humidity",
+        "subsection",
+        "temperature" ;
+    dc:partOf "ECOMAP_2007" ;
+    owl:a bcube:thesaurusSubset .
+

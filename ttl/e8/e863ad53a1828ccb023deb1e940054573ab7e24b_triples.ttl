@@ -1,0 +1,144 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:0b512901-d217-49cf-bd30-3821f43a113c> bcube:hasType "theme" ;
+    bcube:hasValue "latitude",
+        "longitude",
+        "sea_water_electrical_conductivity",
+        "sea_water_practical_salinity",
+        "sea_water_pressure",
+        "sea_water_temperature",
+        "time" ;
+    dc:partOf "CF Standard Name Table v29" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:1d3af4db-e7b9-4d8e-9bdc-e1d4f320e388> bcube:dateCreated "2015-11-01T14:46:10.175Z" ;
+    bcube:hasMetadataRecord <urn:uuid:51135c79-94f5-4288-a876-a738e78cb613> ;
+    bcube:lastUpdated "2015-11-01T14:46:10.175Z" ;
+    dc:conformsTo <urn:uuid:0b512901-d217-49cf-bd30-3821f43a113c>,
+        <urn:uuid:2d4a60af-d3a0-4eb3-9d46-589f76e7f0b1> ;
+    dc:description "The floats are designed to drift at a fixed pressure (usually 1000 dbar) for 10 days. After this period, the floats move to a profiling pressure (usually between 1000 and 2000 dbar) then rise, collecting profiles of pressure, temperature, and salinity data on their way to the surface. Once at the surface, the floats remain there for under a day, transmitting the data collected by satellite back to NOAA/PMEL and allowing the satellite to determine their surface drift. They then sink again and repeat their mission. The floats have a nominal lifetime of five years, and will yield valuable information about large-scale ocean water property distributions and currents, including their variability over time scales from seasonal to the duration of the array. Note that a given request will return a maximum of 15000 rows of data. So if you get a response with ~15000 rows, resubmit the request as 2 or more smaller requests." ;
+    dc:spatial "POLYGON ((-180 -90,-180 90,180 90,180 -90,-180 -90))" ;
+    dcterms:publisher <urn:uuid:2e2e3323-dd37-4af0-802f-b8ca7f01fd9d> ;
+    dcterms:references <urn:uuid:49324c1b-1e27-4a26-96a3-47376234aba0>,
+        <urn:uuid:7af569fa-4a04-43a2-bf89-23fbdc0ca17e> ;
+    dcterms:title "Argo Float Data from the APDRC DAPPER Server" ;
+    esip:eastBound "180.0"^^xsd:float ;
+    esip:northBound "90.0"^^xsd:float ;
+    esip:southBound "-90.0"^^xsd:float ;
+    esip:startDate "1995-09-07"^^xsd:date ;
+    esip:westBound "-180.0"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:2d4a60af-d3a0-4eb3-9d46-589f76e7f0b1> bcube:hasType "theme" ;
+    bcube:hasValue "Oceans > Ocean Chemistry > Oxygen",
+        "Oceans > Ocean Pressure > Water Pressure",
+        "Oceans > Ocean Temperature > Water Temperature",
+        "Oceans > Salinity/Density > Conductivity",
+        "Oceans > Salinity/Density > Salinity",
+        "adjusted",
+        "argo",
+        "chemistry",
+        "conductivity",
+        "dapper",
+        "data",
+        "density",
+        "dissolved",
+        "dissolved o2",
+        "doxy",
+        "electrical",
+        "error",
+        "flag",
+        "float",
+        "from",
+        "identifier",
+        "its",
+        "its-90",
+        "mass",
+        "moles",
+        "moles_of_oxygen_per_unit_mass_in_sea_water",
+        "noaa",
+        "o2",
+        "ocean",
+        "oceans",
+        "oxygen",
+        "per",
+        "practical",
+        "pressure",
+        "quality",
+        "salinity",
+        "scale",
+        "sea",
+        "sea_water_electrical_conductivity",
+        "sea_water_practical_salinity",
+        "sea_water_pressure",
+        "sea_water_temperature",
+        "seawater",
+        "sensor",
+        "sequence",
+        "server",
+        "situ",
+        "temperature",
+        "time",
+        "unit",
+        "water" ;
+    dc:partOf "GCMD Science Keywords" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:2e2e3323-dd37-4af0-802f-b8ca7f01fd9d> owl:a foaf:Organization ;
+    foaf:name "ERDDAP, version 1.64, at NOAA NMFS SWFSC Environmental Research Division" .
+
+<urn:uuid:49324c1b-1e27-4a26-96a3-47376234aba0> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-01T14:46:10.175Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-01T14:46:10.175Z" ;
+    dc:identifier "urn:sha:ef274e32470b5d9668a0133543db4b8cff7ad909a5ae797a8fafe9c9" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://upwell.pfeg.noaa.gov/erddap/tabledap/apdrcArgoAll.graph" .
+
+<urn:uuid:4e34add4-4c5c-4a49-a5fe-8f60409a57fa> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-01T14:46:10.175Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-01T14:46:10.175Z" ;
+    dc:identifier "urn:sha:24adc8b2eb5bc36584831bc9e50997d13812fa42c5577d20efa18692" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://upwell.pfeg.noaa.gov/erddap/metadata/fgdc/xml/apdrcArgoAll_fgdc.xml" .
+
+<urn:uuid:51135c79-94f5-4288-a876-a738e78cb613> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-11-01T14:46:10.175Z" ;
+    bcube:lastUpdated "2015-11-01T14:46:10.175Z" ;
+    bcube:originatedFrom <urn:uuid:4e34add4-4c5c-4a49-a5fe-8f60409a57fa> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:1d3af4db-e7b9-4d8e-9bdc-e1d4f320e388> .
+
+<urn:uuid:7af569fa-4a04-43a2-bf89-23fbdc0ca17e> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-01T14:46:10.175Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-01T14:46:10.175Z" ;
+    dc:identifier "urn:sha:11546639e61e0e46d20408ec6749d8bbfbe9f542957a6dce0916524b" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://upwell.pfeg.noaa.gov/erddap/tabledap/apdrcArgoAll.html" .
+

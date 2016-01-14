@@ -1,0 +1,121 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:06014279-c906-4c23-a840-03ddeca85a40> bcube:hasType "theme" ;
+    bcube:hasValue "Bathymetry/Topography" ;
+    dc:partOf "NOS Data Explorer Topic Category" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:39ce943c-17ea-49f6-9037-4fc71fc5adb4> bcube:hasType "stratum" ;
+    bcube:hasValue "Seafloor" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:4fdbab1f-21fe-4e4e-9686-426d17555142> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-06-16T22:54:37.248Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-06-16T22:54:37.248Z" ;
+    dc:identifier "urn:sha:f5a1e0c92585bf9dca8df5443c4140793975672700a1e37013e72425" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "https://data.noaa.gov/harvest/object/897d18b4-6e22-4728-b7e1-3e3950a7a308" .
+
+<urn:uuid:7a1d5f57-4521-40e0-a601-d84c4600c012> a "ISO 19115:2003/19139" ;
+    bcube:dateCreated "2015-06-16T22:54:37.248Z" ;
+    bcube:lastUpdated "2015-06-16T22:54:37.248Z" ;
+    bcube:originatedFrom <urn:uuid:4fdbab1f-21fe-4e4e-9686-426d17555142> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:9fe4414e-b657-4d70-91a6-7fa32afca6da> .
+
+<urn:uuid:9fe4414e-b657-4d70-91a6-7fa32afca6da> bcube:dateCreated "2015-06-16T22:54:37.248Z" ;
+    bcube:hasMetadataRecord <urn:uuid:7a1d5f57-4521-40e0-a601-d84c4600c012> ;
+    bcube:lastUpdated "2015-06-16T22:54:37.248Z" ;
+    dc:conformsTo <urn:uuid:06014279-c906-4c23-a840-03ddeca85a40>,
+        <urn:uuid:39ce943c-17ea-49f6-9037-4fc71fc5adb4>,
+        <urn:uuid:b8e83c90-7d25-4c98-a9ca-27190bd30519>,
+        <urn:uuid:b9a30a03-de9f-42db-b74b-64799080b332>,
+        <urn:uuid:e157ded2-8ec9-43c1-9eb4-5368abdc1eab>,
+        <urn:uuid:ebf9e837-c64c-40d3-b6b9-081f51cfeea8>,
+        <urn:uuid:f2a65409-bb82-44bc-a147-81938e0ed8c0>,
+        <urn:uuid:f856b477-9fc4-4564-863b-d1f08c454850> ;
+    dc:description "This dataset contains a GeoTIFF with 8x8 meter cell size representing the bathymetry of a sharply sloping swath of the St. John Shelf, a selected portion of seafloor south of St. John, USVI, derived from data collected from 3/28/2011 to 4/14/2011. NOAA's NOS/NCCOS/CCMA Biogeography Branch, in collaboration with NOAA vessel Nancy Foster and territory, federal, and private sector partners, acquired multibeam bathymetry data south of St. Thomas and St. John, USVI, from 3/28/11 to 4/14/2011. Data was acquired with a hull-mounted Kongsberg Simrad EM 1002 multibeam echosounder (95 kHz) for water depths greater than 75 meters. It was processed by a NOAA contractor using CARIS HIPS software. Data has all correctors applied (attitude, sound velocity) and has been reduced to mean lower low water (MLLW) using final approved tides and zoning from NOAA COOPS. Data is in UTM zone 20 north, datum NAD83. The processed CARIS data was used to generate a CARIS BASE surface based on CUBE. A BAG file was exported from the BASE surface, and converted to a GeoTIFF in ESRI ArcMap 10.The project was conducted to meet IHO Order 1 and 2 accuracy standards, dependant on the project area and depth. All users should individually evaluate the suitability of this data according to their own needs and standards." ;
+    dc:spatial "POLYGON ((-64.690631 18.21051,-64.690631 18.236368,-64.650831 18.236368,-64.650831 18.21051,-64.690631 18.21051))" ;
+    dcterms:title "NOAA TIFF Image - 8m Multibeam Bathymetry , W00216 USVI 2011 , Seafloor Characterization of the US Caribbean - Nancy Foster - NF-11-1 (2011), UTM 20N NAD83" ;
+    esip:eastBound "-64.650831"^^xsd:float ;
+    esip:endDate "2011-04-14"^^xsd:date ;
+    esip:northBound "18.236368"^^xsd:float ;
+    esip:southBound "18.21051"^^xsd:float ;
+    esip:startDate "2011-03-28"^^xsd:date ;
+    esip:westBound "-64.690631"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:b8e83c90-7d25-4c98-a9ca-27190bd30519> bcube:hasType "theme" ;
+    bcube:hasValue "EARTH SCIENCE > Biosphere > Aquatic Habitat > Reef Habitat > Description",
+        "EARTH SCIENCE > Oceans > Bathymetry/Seafloor Topography > Bathymetry" ;
+    dc:partOf "CoRIS Theme Thesaurus" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:b9a30a03-de9f-42db-b74b-64799080b332> bcube:hasValue "elevation",
+        "environment",
+        "geoscientificInformation",
+        "imageryBaseMapsEarthCover",
+        "oceans" ;
+    dc:partOf "IsoTopicCategories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:e157ded2-8ec9-43c1-9eb4-5368abdc1eab> bcube:hasType "place" ;
+    bcube:hasValue "St. John",
+        "US Virgin Islands",
+        "USVI" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:ebf9e837-c64c-40d3-b6b9-081f51cfeea8> bcube:hasType "theme" ;
+    bcube:hasValue "Geographic Information > Bathymetry" ;
+    dc:partOf "CoRIS Discovery Thesaurus" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:f2a65409-bb82-44bc-a147-81938e0ed8c0> bcube:hasType "temporal" ;
+    bcube:hasValue "2011" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:f856b477-9fc4-4564-863b-d1f08c454850> bcube:hasType "theme" ;
+    bcube:hasValue "Bathymetry",
+        "Benthic",
+        "Biogeography",
+        "Coral",
+        "GIS",
+        "Grid",
+        "Habitat",
+        "IOCM",
+        "Integrated Ocean and Coastal Mapping",
+        "Kongsberg EM 1002",
+        "MBES",
+        "Multibeam",
+        "NOAA",
+        "NPS",
+        "Nancy Foster",
+        "Raster",
+        "Reef",
+        "Seafloor",
+        "Sonar",
+        "US Virgin Islands",
+        "USVI" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+

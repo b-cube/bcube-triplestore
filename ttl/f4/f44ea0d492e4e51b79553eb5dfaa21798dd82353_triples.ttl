@@ -1,0 +1,105 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:188e34b1-76b2-4237-8446-4941889c5481> owl:a foaf:Organization ;
+    foaf:name "Idaho LiDAR Consortium" .
+
+<urn:uuid:3bb23ae7-58c7-4e89-94c1-68b7396d060a> bcube:dateCreated "2015-08-05T11:31:51.268Z" ;
+    bcube:hasMetadataRecord <urn:uuid:7dbd47ae-f802-4517-adbf-09c74106bbe4> ;
+    bcube:lastUpdated "2015-08-05T11:31:51.268Z" ;
+    dc:conformsTo <urn:uuid:41f176a0-0d9b-4207-a16e-6178f36e66d9>,
+        <urn:uuid:8bf79135-c8dd-4f49-b6ad-188d0eae46d8>,
+        <urn:uuid:c768bfc8-f71e-4a71-b44e-3858ee259d42>,
+        <urn:uuid:dcac7d21-6604-4573-a6d5-3dab0e86d8cb>,
+        <urn:uuid:fa47fc91-d6c0-469f-8c1e-226cd228bf65> ;
+    dc:description "LiDAR data for Madison County was collected by Pictometry International on June 23, 2009. Pictometry processed the raw point cloud data to ensure proper alignment of data between flight lines. The data was then classified for Ground by using a series of automated filters in TerraSolid software to remove above ground vegetation and buildings. Points in water and on bridges were manually removed from the Ground class. The data was then tiled and saved in the industry standard LAS format. The quality control for LiDAR data was performed by Groundpoint Technologies LLC." ;
+    dc:spatial "POLYGON ((-111.981952 43.742562,-111.981952 43.928581,-111.628789 43.928581,-111.628789 43.742562,-111.981952 43.742562))" ;
+    dcterms:publisher <urn:uuid:188e34b1-76b2-4237-8446-4941889c5481> ;
+    dcterms:references <urn:uuid:521cdb77-89f3-4455-93fe-c29afe16c5da>,
+        <urn:uuid:ba8bbca0-547b-40e9-aad6-97c9ba419122> ;
+    dcterms:title "Madison County LiDAR 2009" ;
+    esip:eastBound "-111.628789"^^xsd:float ;
+    esip:northBound "43.928581"^^xsd:float ;
+    esip:southBound "43.742562"^^xsd:float ;
+    esip:westBound "-111.981952"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:41f176a0-0d9b-4207-a16e-6178f36e66d9> bcube:hasType "theme" ;
+    bcube:hasValue "LAS",
+        "LiDAR",
+        "lidar boundaries" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:521cdb77-89f3-4455-93fe-c29afe16c5da> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-05T11:31:51.268Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-05T11:31:51.268Z" ;
+    dc:identifier "urn:sha:980c71e327fca96daa030af40a8a23fd2634b86944dd00c43ec45c3d" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www.idaholidar.org/sites/default/files/Madison.kmz" .
+
+<urn:uuid:6420f98f-18e8-41c5-bcaf-1cfc2b3ad7a3> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-05T11:31:51.268Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-05T11:31:51.268Z" ;
+    dc:identifier "urn:sha:46c4102df206b79053849a5d1adcce317b48b47834d851ab98aad756" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www.idaholidar.org/sites/all/files/data/155_Madison_County.shp.xml" .
+
+<urn:uuid:7dbd47ae-f802-4517-adbf-09c74106bbe4> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-08-05T11:31:51.268Z" ;
+    bcube:lastUpdated "2015-08-05T11:31:51.268Z" ;
+    bcube:originatedFrom <urn:uuid:6420f98f-18e8-41c5-bcaf-1cfc2b3ad7a3> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:3bb23ae7-58c7-4e89-94c1-68b7396d060a> .
+
+<urn:uuid:8bf79135-c8dd-4f49-b6ad-188d0eae46d8> bcube:hasType "place" ;
+    bcube:hasValue "Madison" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:ba8bbca0-547b-40e9-aad6-97c9ba419122> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-05T11:31:51.268Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-05T11:31:51.268Z" ;
+    dc:identifier "urn:sha:8d6bcaaa831992fc98fa39ed828903fe22434fda7181fe0601a21576" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www.idaholidar.org/data/155" .
+
+<urn:uuid:c768bfc8-f71e-4a71-b44e-3858ee259d42> bcube:hasType "place" ;
+    bcube:hasValue "ID",
+        "Idaho" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:dcac7d21-6604-4573-a6d5-3dab0e86d8cb> bcube:hasType "theme" ;
+    bcube:hasValue "elevation" ;
+    dc:partOf "ISO 19115 Topic Categories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:fa47fc91-d6c0-469f-8c1e-226cd228bf65> bcube:hasType "place" ;
+    bcube:hasValue "USA" ;
+    owl:a bcube:thesaurusSubset .
+

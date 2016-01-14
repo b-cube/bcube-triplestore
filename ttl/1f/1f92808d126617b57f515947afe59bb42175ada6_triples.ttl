@@ -1,0 +1,84 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:15a49f61-1731-4f95-85e0-04e06aa6cb2f> owl:a foaf:Organization ;
+    foaf:name "" .
+
+<urn:uuid:1963ca3d-19a7-4999-a991-562474cd7eb7> bcube:hasType "theme" ;
+    bcube:hasValue "districts",
+        "divisions" ;
+    dc:partOf "REQUIRED: Reference to a formally registered thesaurus or a similar authoritative source of theme keywords." ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:40710d62-0870-4e1d-872d-596c6a35fd33> dcterms:references <urn:uuid:6bed6562-c133-4536-9566-c29194b3c72f> ;
+    owl:a bibo:WebPage .
+
+<urn:uuid:58a7fad8-b2cf-4246-84ec-38ad01b58bd9> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-11-12T10:03:08.217Z" ;
+    bcube:lastUpdated "2015-11-12T10:03:08.217Z" ;
+    bcube:originatedFrom <urn:uuid:bba86d91-01ff-4d8e-a3be-f2fa848a8e4b> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:63210882-3bed-4b99-8f04-7ad5633f63b9> .
+
+<urn:uuid:63210882-3bed-4b99-8f04-7ad5633f63b9> bcube:dateCreated "2015-11-12T10:03:08.217Z" ;
+    bcube:hasMetadataRecord <urn:uuid:58a7fad8-b2cf-4246-84ec-38ad01b58bd9> ;
+    bcube:lastUpdated "2015-11-12T10:03:08.217Z" ;
+    dc:conformsTo <urn:uuid:1963ca3d-19a7-4999-a991-562474cd7eb7> ;
+    dc:description "A map of the Idaho Soil Conservation Districts and Divisions" ;
+    dc:spatial "POLYGON ((-117.535397 41.956737,-117.535397 49.038317,-110.659834 49.038317,-110.659834 41.956737,-117.535397 41.956737))" ;
+    dcterms:publisher <urn:uuid:15a49f61-1731-4f95-85e0-04e06aa6cb2f> ;
+    dcterms:references <urn:uuid:40710d62-0870-4e1d-872d-596c6a35fd33>,
+        <urn:uuid:a0365ba0-1421-48a2-8860-13dfe745e726> ;
+    dcterms:title "iddistrict" ;
+    esip:eastBound "-110.659834"^^xsd:float ;
+    esip:northBound "49.038317"^^xsd:float ;
+    esip:southBound "41.956737"^^xsd:float ;
+    esip:westBound "-117.535397"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:6bed6562-c133-4536-9566-c29194b3c72f> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-12T10:03:08.217Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-12T10:03:08.217Z" ;
+    dc:identifier "urn:sha:1fffb6b453499a4312ff6e203b8544df76d5a205d8b06722bc94b438" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "\\\\\\\\\\\\\\\\A018 ad83\\\\\\\\GISData\\\\\\\\Spatial\\\\\\\\AdministrativeBoundaries\\\\\\\\SoilConservationDistricts\\\\\\\\iddistrict.shp" .
+
+<urn:uuid:a0365ba0-1421-48a2-8860-13dfe745e726> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-12T10:03:08.217Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-12T10:03:08.217Z" ;
+    dc:identifier "urn:sha:d14a028c2a3a2bc9476102bb288234c415a2b01f828ea62ac5b3e42f" ;
+    owl:a bcube:Url .
+
+<urn:uuid:bba86d91-01ff-4d8e-a3be-f2fa848a8e4b> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-12T10:03:08.217Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-12T10:03:08.217Z" ;
+    dc:identifier "urn:sha:6fb1f1a8dc8c2597e1fd417c3d7d12a416f5483c1cde76cc1653b65a" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www.idwr.idaho.gov/ftp/gisdata/Spatial/AdministrativeBoundaries/SoilConservationDistricts/iddistrict.shp.xml" .
+

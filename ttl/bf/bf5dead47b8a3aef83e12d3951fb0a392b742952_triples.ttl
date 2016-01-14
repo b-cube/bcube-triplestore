@@ -1,0 +1,114 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:011e14cc-0b96-450d-a914-65cb86ea37d8> bcube:hasType "theme" ;
+    bcube:hasValue "Earth Science > Oceans > Ocean Circulation > Ocean Currents",
+        "Earth Science > Oceans > Ocean Temperature > Potential Temperature",
+        "Earth Science > Oceans > Salinity/Density > Salinity",
+        "Earth Science > Oceans > Sea Surface Topography > Sea Surface Height",
+        "Earth Science Services > Models > Ocean General Circulation Models (OGCM)/Regional Ocean Models",
+        "Earth Science Services > Models > Weather Research/Forecast Models" ;
+    dc:partOf "GCMD Science Keywords" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:029402eb-a222-40b3-97e2-e6996a7e0323> bcube:hasType "theme" ;
+    bcube:hasValue "latitude",
+        "longitude",
+        "sea_surface_height",
+        "time" ;
+    dc:partOf "CF-1.4" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:0fcd0ab7-95c8-497d-ac39-fa8591f6dd32> dcterms:references <urn:uuid:149d4e57-c08e-43bd-a44c-895d0771f934> ;
+    owl:a bibo:WebPage .
+
+<urn:uuid:149d4e57-c08e-43bd-a44c-895d0771f934> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-07-08T15:05:32.752Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-07-08T15:05:32.752Z" ;
+    dc:identifier "urn:sha:812adf0dab3164a95dd840209a58fa335146089a5672f2379a84e031" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://oos.soest.hawaii.edu/erddap/wms/ROMS_Samoa_SSH_Best/request" .
+
+<urn:uuid:1d0a741d-0b57-4973-8003-40f26ff46a20> bcube:dateCreated "2015-07-08T15:05:32.752Z" ;
+    bcube:hasMetadataRecord <urn:uuid:79fb2388-fba3-4bc5-b740-2056d8dd820a> ;
+    bcube:lastUpdated "2015-07-08T15:05:32.752Z" ;
+    dc:conformsTo <urn:uuid:011e14cc-0b96-450d-a914-65cb86ea37d8>,
+        <urn:uuid:029402eb-a222-40b3-97e2-e6996a7e0323> ;
+    dc:description "Regional Ocean Modeling System (ROMS) 7-day, 3-hourly forecast for the region surrounding the islands of Samoa at approximately 3-km resolution. While considerable effort has been made to implement all model components in a thorough, correct, and accurate manner, numerous sources of error are possible. As such, please use these data with the caution appropriate for any ocean related activity." ;
+    dc:spatial "POLYGON ((-174.0 -15.5,-174.0 -12.49855,-168.8088 -12.49855,-168.8088 -15.5,-174.0 -15.5))" ;
+    dcterms:identifier "oos.soest.hawaii.edu:ROMS_Samoa_SSH_Best" ;
+    dcterms:publisher <urn:uuid:25725093-8487-40d8-95e5-06bcbe50d807> ;
+    dcterms:references <urn:uuid:0fcd0ab7-95c8-497d-ac39-fa8591f6dd32>,
+        <urn:uuid:ab0facbb-5ad7-43dd-933e-f6d33db56c87>,
+        <urn:uuid:f3598413-e912-4960-9a5f-8157fc707897> ;
+    dcterms:title "Regional Ocean Modeling System (ROMS): Samoa: 2-D Variables" ;
+    esip:eastBound "-168.8088"^^xsd:float ;
+    esip:endDate "2015-07-13"^^xsd:date ;
+    esip:northBound "-12.49855"^^xsd:float ;
+    esip:southBound "-15.5"^^xsd:float ;
+    esip:startDate "2015-04-15"^^xsd:date ;
+    esip:westBound "-174.0"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:25725093-8487-40d8-95e5-06bcbe50d807> owl:a foaf:Organization ;
+    foaf:name "ERDDAP, version 1.62, at Pacific Islands Ocean Ocean Observing System (PacIOOS)" .
+
+<urn:uuid:79fb2388-fba3-4bc5-b740-2056d8dd820a> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-07-08T15:05:32.752Z" ;
+    bcube:lastUpdated "2015-07-08T15:05:32.752Z" ;
+    bcube:originatedFrom <urn:uuid:d8c3230f-b5f8-4487-aee7-ae5f8e00513c> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:1d0a741d-0b57-4973-8003-40f26ff46a20> .
+
+<urn:uuid:ab0facbb-5ad7-43dd-933e-f6d33db56c87> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-07-08T15:05:32.752Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-07-08T15:05:32.752Z" ;
+    dc:identifier "urn:sha:efecb837cd8399559d94c48236a99bbf678dd935830987f8cc010b4c" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://oos.soest.hawaii.edu/erddap/griddap/ROMS_Samoa_SSH_Best.graph" .
+
+<urn:uuid:d8c3230f-b5f8-4487-aee7-ae5f8e00513c> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-07-08T15:05:32.752Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-07-08T15:05:32.752Z" ;
+    dc:identifier "urn:sha:940dd0899890a82d3f3d8c82ea6b3558965e7e1b3c212d0281d40a68" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://oos.soest.hawaii.edu/erddap/griddap/ROMS_Samoa_SSH_Best.fgdc" .
+
+<urn:uuid:f3598413-e912-4960-9a5f-8157fc707897> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-07-08T15:05:32.752Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-07-08T15:05:32.752Z" ;
+    dc:identifier "urn:sha:5003dd3ce4eca399a3b0db57a0b975091dc643ba1983c530a9dc8820" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://oos.soest.hawaii.edu/erddap/griddap/ROMS_Samoa_SSH_Best.html" .
+

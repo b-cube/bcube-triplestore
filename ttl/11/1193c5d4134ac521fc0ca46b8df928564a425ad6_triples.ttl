@@ -1,0 +1,89 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:014ba07e-8334-4b10-9128-d3f8c554bc5d> bcube:hasType "theme" ;
+    bcube:hasValue "mineral deposit areas" ;
+    dc:partOf "Alexandria Digital Library Feature Type Thesaurus" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:778620a1-e36f-40c6-9ca2-85a604669847> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2014-10-29T23:42:47.24Z" ;
+    bcube:lastUpdated "2014-10-29T23:42:47.24Z" ;
+    bcube:originatedFrom <urn:uuid:e4debc9d-a2fb-4ea9-8f33-8807755dc2b2> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:c586fba6-f55d-4ef6-a11d-7640de0bd421> .
+
+<urn:uuid:8cb14ef2-00c2-426c-a035-7053175124d8> dcterms:references <urn:uuid:d9b74da1-4b3e-4bcb-87bc-6d982c0b83e6> ;
+    owl:a bibo:WebPage .
+
+<urn:uuid:abcde2c7-6972-47bb-9888-95ac1646165f> bcube:hasType "theme" ;
+    bcube:hasValue "economic geology",
+        "natural gas resources",
+        "natural resource assessment",
+        "oil resources",
+        "petroleum" ;
+    dc:partOf "USGS Thesaurus" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:c586fba6-f55d-4ef6-a11d-7640de0bd421> bcube:dateCreated "2014-10-29T23:42:47.24Z" ;
+    bcube:hasMetadataRecord <urn:uuid:778620a1-e36f-40c6-9ca2-85a604669847> ;
+    bcube:lastUpdated "2014-10-29T23:42:47.24Z" ;
+    dc:conformsTo <urn:uuid:014ba07e-8334-4b10-9128-d3f8c554bc5d>,
+        <urn:uuid:abcde2c7-6972-47bb-9888-95ac1646165f>,
+        <urn:uuid:f550be08-6f00-4608-995d-1f3f12cb8284> ;
+    dc:description "We estimated mean volumes of technically recoverable, conventional, undiscovered petroleum resources at 123 million barrels of crude oil, 4.7 trillion cubic feet of natural gas, and 131 million barrels of natural gas liquids in these two areas." ;
+    dc:spatial "POLYGON ((25 45,25 55,45 55,45 45,25 45))" ;
+    dcterms:publisher <urn:uuid:cf3f94e3-37c4-43b7-bf51-7aefa45aa43f> ;
+    dcterms:references <urn:uuid:8cb14ef2-00c2-426c-a035-7053175124d8> ;
+    dcterms:title "Assessment of undiscovered oil and gas resources of the Dnieper-Donets Basin Province and Pripyat Basin Province, Russia, Ukraine, and Belarus, 2010" ;
+    esip:eastBound "45.0"^^xsd:float ;
+    esip:northBound "55.0"^^xsd:float ;
+    esip:southBound "45.0"^^xsd:float ;
+    esip:westBound "25.0"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:cf3f94e3-37c4-43b7-bf51-7aefa45aa43f> owl:a foaf:Organization ;
+    foaf:name "U.S. Geological Survey" .
+
+<urn:uuid:d9b74da1-4b3e-4bcb-87bc-6d982c0b83e6> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2014-10-29T23:42:47.24Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2014-10-29T23:42:47.24Z" ;
+    dc:identifier "urn:sha:33672997501da59c848c1e2b1e7ee17114333dac447922d520b96218" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://pubs.usgs.gov/fs/2011/3051/" .
+
+<urn:uuid:e4debc9d-a2fb-4ea9-8f33-8807755dc2b2> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2014-10-29T23:42:47.24Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2014-10-29T23:42:47.24Z" ;
+    dc:identifier "urn:sha:548d865d055e66178a9b744583a44826863a0effcd81ae44c8083211" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www.usgs.gov/science/xml.php?cite=2748" .
+
+<urn:uuid:f550be08-6f00-4608-995d-1f3f12cb8284> bcube:hasType "place" ;
+    bcube:hasValue "fBO = Belarus",
+        "fRS = Russia",
+        "fUP = Ukraine" ;
+    dc:partOf "Augmented FIPS 10-4 and FIPS 6-4" ;
+    owl:a bcube:thesaurusSubset .
+

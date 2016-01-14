@@ -1,0 +1,88 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:0d29f415-ebe2-4fc6-87b8-a1c752be2441> owl:a foaf:Organization ;
+    foaf:name "" .
+
+<urn:uuid:1ce8896f-f51d-435e-bdba-870b446fbbba> bcube:hasType "theme" ;
+    bcube:hasValue "boundaries" ;
+    dc:partOf "ISO 19115 Topic Categories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:2abc87e4-a18a-42e9-96c0-b95b18be303d> bcube:hasType "place" ;
+    bcube:hasValue "06",
+        "CA",
+        "California",
+        "State or Equivalent Entity",
+        "U.S.",
+        "United States" ;
+    dc:partOf "INCITS.38-200x (R2004),INCITS.31-200x (R2007),INCITS.454-200x,INCITS 455-200x,INCITS 446-2008" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:5cb5d208-9ad1-4e55-956d-25c171a572e5> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-02T11:23:32.686Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-02T11:23:32.686Z" ;
+    dc:identifier "urn:sha:161b6a9ffb5aabeeb6b9c28a94c4220f72fd9071b4d0621cea52c67a" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://meta.geo.census.gov/data/existing/decennial/GEO/GPMB/TIGERline/fe_2009/county00/tl_2009_06_county00_url.shp.xml" .
+
+<urn:uuid:5ff9c96a-049d-445d-b71d-325a1d167427> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-02T11:23:32.686Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-02T11:23:32.686Z" ;
+    dc:identifier "urn:sha:d1417a5fd94ac0309ae8746d2bb6351494da7ab482c2db438bca8040" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www2.census.gov/geo/tiger/TIGER2009/06_CALIFORNIA/tl_2009_06_county00.zip" .
+
+<urn:uuid:73222615-8f03-49b2-9658-327ebe0bc26d> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-11-02T11:23:32.686Z" ;
+    bcube:lastUpdated "2015-11-02T11:23:32.686Z" ;
+    bcube:originatedFrom <urn:uuid:5cb5d208-9ad1-4e55-956d-25c171a572e5> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:77411da9-4a4b-4f67-9e13-326d1930aff5> .
+
+<urn:uuid:77411da9-4a4b-4f67-9e13-326d1930aff5> bcube:dateCreated "2015-11-02T11:23:32.686Z" ;
+    bcube:hasMetadataRecord <urn:uuid:73222615-8f03-49b2-9658-327ebe0bc26d> ;
+    bcube:lastUpdated "2015-11-02T11:23:32.686Z" ;
+    dc:conformsTo <urn:uuid:1ce8896f-f51d-435e-bdba-870b446fbbba>,
+        <urn:uuid:2abc87e4-a18a-42e9-96c0-b95b18be303d>,
+        <urn:uuid:ee7eefb0-ef66-4bb5-9023-c3673ddf9d19> ;
+    dc:description "The TIGER/Line Shapefiles are an extract of selected geographic and cartographic information from the Census MAF/TIGER database. The Census MAF/TIGER database represents a seamless national file with no overlaps or gaps between parts. However, each TIGER/Line Shapefile is designed to stand alone as an independent data set or the shapefiles can be combined to cover the whole nation." ;
+    dc:spatial "POLYGON ((-124.482003 32.528832,-124.482003 42.009517,-114.131211 42.009517,-114.131211 32.528832,-124.482003 32.528832))" ;
+    dcterms:publisher <urn:uuid:0d29f415-ebe2-4fc6-87b8-a1c752be2441> ;
+    dcterms:references <urn:uuid:5ff9c96a-049d-445d-b71d-325a1d167427> ;
+    dcterms:title "TIGER/Line Shapefile, 2009, 2000 state, California, Census 2000 County and Equivalent State-based" ;
+    esip:eastBound "-114.131211"^^xsd:float ;
+    esip:endDate "2009-05-01"^^xsd:date ;
+    esip:northBound "42.009517"^^xsd:float ;
+    esip:southBound "32.528832"^^xsd:float ;
+    esip:startDate "2009-01-01"^^xsd:date ;
+    esip:westBound "-124.482003"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:ee7eefb0-ef66-4bb5-9023-c3673ddf9d19> bcube:hasType "theme" ;
+    bcube:hasValue "Polygon",
+        "State or equivalent entity" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+

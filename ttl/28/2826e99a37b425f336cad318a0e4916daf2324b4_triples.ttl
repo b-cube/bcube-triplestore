@@ -1,0 +1,78 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:0233676e-43e0-4bd0-80b3-092e5eff6152> bcube:hasType "place" ;
+    bcube:hasValue "IL",
+        "Illinois",
+        "Monticello",
+        "Piatt County",
+        "State",
+        "US" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:0dd90be9-8381-4580-9d33-625ebfd7e107> bcube:hasType "theme" ;
+    bcube:hasValue "Breaklines",
+        "DAT",
+        "Elevation",
+        "LAS",
+        "LiDAR",
+        "Lift",
+        "Light Detection and Ranging",
+        "Shapefiles",
+        "Survey Control",
+        "Swath",
+        "TIN" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:83009204-b3b0-420d-8b07-dec09ae3e02f> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-10-29T16:16:58.526Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-10-29T16:16:58.526Z" ;
+    dc:identifier "urn:sha:86a52f56aeb12d5418601e867f739d435390d3cf27a8f652f2faf8d2" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://isgs.illinois.edu/clearinghouse/lidar/counties/piatt/piatt_2012_metadata.xml" .
+
+<urn:uuid:85a13389-b93a-48c4-a300-7a727f2e115f> owl:a foaf:Organization ;
+    foaf:name "Quantum Spatial, Inc." .
+
+<urn:uuid:86561315-1520-47c2-aa3a-904f34c97fd6> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-10-29T16:16:58.526Z" ;
+    bcube:lastUpdated "2015-10-29T16:16:58.526Z" ;
+    bcube:originatedFrom <urn:uuid:83009204-b3b0-420d-8b07-dec09ae3e02f> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:9be6dba2-a8b6-411d-9892-34302adc691e> .
+
+<urn:uuid:9be6dba2-a8b6-411d-9892-34302adc691e> bcube:dateCreated "2015-10-29T16:16:58.526Z" ;
+    bcube:hasMetadataRecord <urn:uuid:86561315-1520-47c2-aa3a-904f34c97fd6> ;
+    bcube:lastUpdated "2015-10-29T16:16:58.526Z" ;
+    dc:conformsTo <urn:uuid:0233676e-43e0-4bd0-80b3-092e5eff6152>,
+        <urn:uuid:0dd90be9-8381-4580-9d33-625ebfd7e107> ;
+    dc:description "This task order is for planning, acquisition, processing, and derivative products of LiDAR data to be collected for areas of Illinois. LiDAR data and derivative products produced in compliance with this task order are part of the data to be obtained under Job Number P-95-052-11. Specifications listed below are based on the U.S. Geological Survey National Geospatial Program Base LiDAR Specification, Version 13." ;
+    dc:spatial "POLYGON ((-88.747 39.791,-88.747 40.283,-88.459 40.283,-88.459 39.791,-88.747 39.791))" ;
+    dcterms:publisher <urn:uuid:85a13389-b93a-48c4-a300-7a727f2e115f> ;
+    dcterms:title "Illinois Department of Transportation District 5, Piatt County LiDAR Acquisition Preliminary" ;
+    esip:eastBound "-88.459"^^xsd:float ;
+    esip:endDate "2012-11-16"^^xsd:date ;
+    esip:northBound "40.283"^^xsd:float ;
+    esip:southBound "39.791"^^xsd:float ;
+    esip:startDate "2012-02-17"^^xsd:date ;
+    esip:westBound "-88.747"^^xsd:float ;
+    owl:a dcat:Dataset .
+

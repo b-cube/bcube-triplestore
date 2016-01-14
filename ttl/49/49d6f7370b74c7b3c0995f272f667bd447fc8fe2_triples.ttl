@@ -1,0 +1,95 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:2d868597-aa55-487c-bd75-45b6b183ac86> bcube:hasType "place" ;
+    bcube:hasValue "01069",
+        "County or Equivalent Entity",
+        "Houston",
+        "U.S.",
+        "United States" ;
+    dc:partOf "FIPS Publication 5-2, FIPS Publication 6-4, FIPS Publication 8-6, FIPS Publication 9-1,FIPS Publication55-4" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:421b8c7e-4bbf-4687-9267-7f077ed47b2a> bcube:hasType "theme" ;
+    bcube:hasValue "boundaries" ;
+    dc:partOf "ISO 19115 Topic Categories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:52c3d213-dea1-4e11-9339-70f84101228f> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-11-03T00:31:37.168Z" ;
+    bcube:lastUpdated "2015-11-03T00:31:37.168Z" ;
+    bcube:originatedFrom <urn:uuid:a531ee8b-5dba-4f1f-845e-86018a2a262f> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:6fd94dbe-9e64-4328-896c-86b7322b81af> .
+
+<urn:uuid:6fd94dbe-9e64-4328-896c-86b7322b81af> bcube:dateCreated "2015-11-03T00:31:37.168Z" ;
+    bcube:hasMetadataRecord <urn:uuid:52c3d213-dea1-4e11-9339-70f84101228f> ;
+    bcube:lastUpdated "2015-11-03T00:31:37.168Z" ;
+    dc:conformsTo <urn:uuid:2d868597-aa55-487c-bd75-45b6b183ac86>,
+        <urn:uuid:421b8c7e-4bbf-4687-9267-7f077ed47b2a>,
+        <urn:uuid:70e3ab2d-46a3-4b31-ac15-e1cdccc85527> ;
+    dc:description "The TIGER/Line relationship files are an extract of selected geographic information from the Census MAF/TIGER database. Each TIGER/Line relationship file is designed to stand alone as an independent data set or can be used jointly with the shapefiles." ;
+    dc:spatial "POLYGON ((-85.712436 30.997064,-85.712436 31.314973,-84.999428 31.314973,-84.999428 30.997064,-85.712436 30.997064))" ;
+    dcterms:publisher <urn:uuid:eefb1e21-af83-4533-8369-720e51712366> ;
+    dcterms:references <urn:uuid:93ba6ad2-910b-4acc-8ae8-c292e56d6eac> ;
+    dcterms:title "TIGER/Line Shapefile, 2008, county, Houston County, AL, Topological Faces-Area Landmark" ;
+    esip:eastBound "-84.999428"^^xsd:float ;
+    esip:endDate "2008-07-01"^^xsd:date ;
+    esip:northBound "31.314973"^^xsd:float ;
+    esip:southBound "30.997064"^^xsd:float ;
+    esip:startDate "2008-01-01"^^xsd:date ;
+    esip:westBound "-85.712436"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:70e3ab2d-46a3-4b31-ac15-e1cdccc85527> bcube:hasType "theme" ;
+    bcube:hasValue "Area landmark identifier",
+        "County ANSI Code",
+        "County FIPS Code",
+        "County or equivalent entity",
+        "Landmark",
+        "Permanent face ID",
+        "State ANSI Code",
+        "State FIPS Code",
+        "Table",
+        "Topological Faces" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:93ba6ad2-910b-4acc-8ae8-c292e56d6eac> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-03T00:31:37.168Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-03T00:31:37.168Z" ;
+    dc:identifier "urn:sha:63a94d1415ab5cc6276535f71b5c93de8cf334fcdb4e438084fe009b" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www2.census.gov/geo/tiger/TIGER2008/01_ALABAMA/01069_Houston_County/tl_2008_01069_facesal.zip" .
+
+<urn:uuid:a531ee8b-5dba-4f1f-845e-86018a2a262f> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-03T00:31:37.168Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-03T00:31:37.168Z" ;
+    dc:identifier "urn:sha:972253eaced29d474b4cda81c38fb511b0d3e7a5242ca475660819d1" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://meta.geo.census.gov/data/existing/decennial/GEO/GPMB/TIGERline/fe_2008/facesal/tl_2008_01069_facesal_url.dbf.xml" .
+
+<urn:uuid:eefb1e21-af83-4533-8369-720e51712366> owl:a foaf:Organization ;
+    foaf:name "" .
+

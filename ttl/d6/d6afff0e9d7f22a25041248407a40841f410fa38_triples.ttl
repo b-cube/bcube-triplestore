@@ -1,0 +1,53 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:0e14bc07-5814-4191-93ad-d6eac3ad0ad6> a "ISO 19115:2003/19139" ;
+    bcube:dateCreated "2015-08-05T15:46:50.201Z" ;
+    bcube:lastUpdated "2015-08-05T15:46:50.201Z" ;
+    bcube:originatedFrom <urn:uuid:bc614db4-a680-4235-ba77-54e7fe235b68> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:115afc0f-1376-41ec-b91a-f04df12da27d> .
+
+<urn:uuid:115afc0f-1376-41ec-b91a-f04df12da27d> bcube:dateCreated "2015-08-05T15:46:50.201Z" ;
+    bcube:hasMetadataRecord <urn:uuid:0e14bc07-5814-4191-93ad-d6eac3ad0ad6> ;
+    bcube:lastUpdated "2015-08-05T15:46:50.201Z" ;
+    dc:conformsTo <urn:uuid:22f62b2b-5ee4-424b-94a6-d72f4b790190> ;
+    dc:description "Riparian corridors are important areas that maintain connectivity throughout the state of California. The riparian corridors complement the northern Sierra Nevada foothills wildlife connectivity project linkages to further achieve connectivity in the study area. We identified 280 riparian corridors represented by 232 named creeks, 43 named rivers, and 5 sloughs, forks or runs. The major corridors are the Sacramento, San Joaquin, Pit, Tuolumne, Merced, Feather and Stanislaus rivers. The 280 riparian corridors connect 201 landscape blocks. The riparian corridors complement the focal species linkages by providing many east-west corridors while the majority of linkages have a north-south orientation. Also by following the entire passage of the riparian area, these corridors run through many of the landscape blocks across the study area, helping to provide connectivity outside of habitat patch areas.We identified riparian corridors by selected streams, rivers and creeks from the NHD (National Hydrography Dataset) for state of California. From the NHD dataset, features named ?StreamRiver? were extracted from the ?NHDFlowline? vector dataset. A code 46006 was then used to extract perennial rivers and streams from the ?StreamRiver? dataset. However, this step resulted in a stream and river layer with many small segments. In order to reduce the number of segments and identify complete stream/river lines, we intersected the perennial rivers and streams layer with the CDFW statewide streams layer (?CA_Streams_Statewide?) using the ?Select by Location? tool in ArcMap (?CA_Streams_Statewide? layer as target layer and the streams and rivers layer we extracted from NHD as a target layer). Second, we extracted features named ?ArtificialPath? from the ?NHDFlowline? vector dataset. Artificial paths represent the flow of water into, through, and out of features delineated using area; for example, rivers wide enough to be delineated as a polygon are represented by an artificial path flowline at their center line. Therefore, large rivers are often coded as ?artificial path? in the NHD dataset. We then selected only those artificial paths with Geographic Names Information System (GNIS) names, with the assumption that artificial path features without names are ?very minor streams, only of use to hydrologist? (http://nhd.usgs.gov). Next we used the same method we implemented for streams and rivers in order to remove small segments and have complete lines. The artificial path dataset is not coded to discriminate between perennial and intermittent ones similar to stream and river features. As a result, artificial paths that intersected with perennial streams and rivers were selected to represent permanent waterways. Then, the perennial stream and river layer and the artificial paths layer were merged into one dataset. After the merge we added a 500 m buffer to each side of the riparian area.We compared this merged stream/river layer with riparian vegetation classification data as a cross check. The riparian vegetation classification data are from the 2011 Northern Sierra Nevada Foothills and 2013 Eastern Central Valley fine-scale vegetation maps developed by the Vegetation Classification and Mapping Program (VegCamp) at the California Department of Fish and Wildlife. For areas outside the foothills and eastern central valley we used land cover data compiled by California Department of Forestry and Fire Protection (CDF) Fire and Resource Assessment Program (FRAP) in 2006, representing data for the period between 1997 and 2002. The resulting perennial dataset was then merged with the wetland and riparian datasets to represent perennial water sources in California. For more information see the project report at [https://nrm.dfg.ca.gov/FileHandler.ashx?DocumentID=85358]." ;
+    dc:spatial "POLYGON ((-122.595474 36.789177,-122.595474 40.988701,-119.538689 40.988701,-119.538689 36.789177,-122.595474 36.789177))" ;
+    dcterms:title "Riparian Corridors-NSNF, CDFW [ds1018]" ;
+    esip:eastBound "-119.538689"^^xsd:float ;
+    esip:northBound "40.988701"^^xsd:float ;
+    esip:southBound "36.789177"^^xsd:float ;
+    esip:westBound "-122.595474"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:22f62b2b-5ee4-424b-94a6-d72f4b790190> bcube:hasType "theme" ;
+    bcube:hasValue "northern Sierra Nevada foothills",
+        "riparian corridors",
+        "wildlife connectivity" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:bc614db4-a680-4235-ba77-54e7fe235b68> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-05T15:46:50.201Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-05T15:46:50.201Z" ;
+    dc:identifier "urn:sha:34425d15e0737a6089747d8637c82dbe8bb8cd3b75d807d069fa950f" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "https://catalog.data.gov/harvest/object/5d5abe82-e91d-4e60-8b6a-8355ef179c01" .
+

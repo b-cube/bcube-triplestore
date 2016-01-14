@@ -1,0 +1,57 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:19276dc4-6d93-4be6-9278-d59ade630a48> bcube:hasType "theme" ;
+    bcube:hasValue "laboratories",
+        "x-ray diffraction" ;
+    dc:partOf "USGS Thesaurus" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:39d5cafd-0a8f-453f-bba3-e3244b5571c8> bcube:hasValue "geoscientificInformation" ;
+    dc:partOf "IsoTopicCategories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:a58a57ba-a819-4504-a124-adb98c0c4fd4> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2014-10-30T01:00:40.962Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2014-10-30T01:00:40.962Z" ;
+    dc:identifier "urn:sha:8381709934a9f6d9e74fa0face91cb284e9321ffd3e46f2fc2f09f36" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www.usgs.gov/science/iso.php?cite=4282" .
+
+<urn:uuid:ba3d2f18-ee31-493c-ad00-fc5ca702730b> a "ISO 19115:2003/19139" ;
+    bcube:dateCreated "2014-10-30T01:00:40.962Z" ;
+    bcube:lastUpdated "2014-10-30T01:00:40.962Z" ;
+    bcube:originatedFrom <urn:uuid:a58a57ba-a819-4504-a124-adb98c0c4fd4> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:f994dcde-7987-4733-a151-7e11a02475c1> .
+
+<urn:uuid:f994dcde-7987-4733-a151-7e11a02475c1> bcube:dateCreated "2014-10-30T01:00:40.962Z" ;
+    bcube:hasMetadataRecord <urn:uuid:ba3d2f18-ee31-493c-ad00-fc5ca702730b> ;
+    bcube:lastUpdated "2014-10-30T01:00:40.962Z" ;
+    dc:conformsTo <urn:uuid:19276dc4-6d93-4be6-9278-d59ade630a48>,
+        <urn:uuid:39d5cafd-0a8f-453f-bba3-e3244b5571c8> ;
+    dc:description "This lab provides identification and quantification of crystalline and amorphous substances, and crystallographic and atomic structure analysis for a wide variety of sample materials." ;
+    dc:spatial "POLYGON ((-77.393259 38.908241,-77.393259 39.002923,-77.304864 39.002923,-77.304864 38.908241,-77.393259 38.908241))" ;
+    dcterms:title "Powder X-ray diffraction laboratory, Reston, Virginia" ;
+    esip:eastBound "-77.304864"^^xsd:float ;
+    esip:northBound "39.002923"^^xsd:float ;
+    esip:southBound "38.908241"^^xsd:float ;
+    esip:westBound "-77.393259"^^xsd:float ;
+    owl:a dcat:Dataset .
+

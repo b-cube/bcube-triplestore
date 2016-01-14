@@ -1,0 +1,87 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:0dede85f-c0a7-4f9b-8730-f8c9e7c04af7> dcterms:references <urn:uuid:498e4737-966c-4442-8bd6-bce112f5ed6e> ;
+    owl:a bibo:WebPage .
+
+<urn:uuid:2ed53980-1097-4458-b529-cfee0fff9ebe> bcube:hasType "place" ;
+    bcube:hasValue "fUS05 = Arkansas",
+        "fUS17 = Illinois",
+        "fUS18 = Indiana",
+        "fUS21 = Kentucky",
+        "fUS28 = Mississippi",
+        "fUS29 = Missouri",
+        "fUS47 = Tennessee" ;
+    dc:partOf "Augmented FIPS 10-4 and FIPS 6-4" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:498e4737-966c-4442-8bd6-bce112f5ed6e> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2014-10-29T23:42:40.293Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2014-10-29T23:42:40.293Z" ;
+    dc:identifier "urn:sha:d9202c50881b439541716e0257fb4de74106d92fdb6b8941d624913b" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://pubs.usgs.gov/gip/115/" .
+
+<urn:uuid:70a522ca-f8ba-48d1-95bc-3c26399e900c> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2014-10-29T23:42:40.293Z" ;
+    bcube:lastUpdated "2014-10-29T23:42:40.293Z" ;
+    bcube:originatedFrom <urn:uuid:87ebe818-7846-449b-b9ad-37a1d251e65e> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:7558ef86-cce0-4c18-a303-c4f9053d1273> .
+
+<urn:uuid:7558ef86-cce0-4c18-a303-c4f9053d1273> bcube:dateCreated "2014-10-29T23:42:40.293Z" ;
+    bcube:hasMetadataRecord <urn:uuid:70a522ca-f8ba-48d1-95bc-3c26399e900c> ;
+    bcube:lastUpdated "2014-10-29T23:42:40.293Z" ;
+    dc:conformsTo <urn:uuid:2ed53980-1097-4458-b529-cfee0fff9ebe>,
+        <urn:uuid:def7d7df-fa26-4e57-8196-5b96cd1b13b4> ;
+    dc:description "Poster includes GIS data for earthquake locations in this seismically active area." ;
+    dc:spatial "POLYGON ((-93 34,-93.0 42.5,-86.0 42.5,-86 34,-93 34))" ;
+    dcterms:publisher <urn:uuid:dda8a719-59bc-4911-a9f1-11edea8a0336> ;
+    dcterms:references <urn:uuid:0dede85f-c0a7-4f9b-8730-f8c9e7c04af7> ;
+    dcterms:title "Earthquakes in the central United States, 1699-2010" ;
+    esip:eastBound "-86.0"^^xsd:float ;
+    esip:northBound "42.5"^^xsd:float ;
+    esip:southBound "34.0"^^xsd:float ;
+    esip:westBound "-93.0"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:87ebe818-7846-449b-b9ad-37a1d251e65e> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2014-10-29T23:42:40.293Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2014-10-29T23:42:40.293Z" ;
+    dc:identifier "urn:sha:b11d5b658e475ab558990f904b2d6554e1ba3edfd28ccde60e5002f3" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www.usgs.gov/science/xml.php?cite=2529" .
+
+<urn:uuid:dda8a719-59bc-4911-a9f1-11edea8a0336> owl:a foaf:Organization ;
+    foaf:name "U.S. Geological Survey" .
+
+<urn:uuid:def7d7df-fa26-4e57-8196-5b96cd1b13b4> bcube:hasType "theme" ;
+    bcube:hasValue "earthquake occurrences",
+        "geospatial datasets",
+        "hazards",
+        "posters",
+        "seismology" ;
+    dc:partOf "USGS Thesaurus" ;
+    owl:a bcube:thesaurusSubset .
+

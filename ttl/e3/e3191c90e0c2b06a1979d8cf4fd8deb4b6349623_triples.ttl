@@ -1,0 +1,66 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:0b85b630-0b59-4c89-b5b3-0e7e8951359a> bcube:hasValue "geoscientificInformation" ;
+    dc:partOf "IsoTopicCategories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:4481db61-01a6-435d-bb80-e9883bc09e00> a "ISO 19115:2003/19139" ;
+    bcube:dateCreated "2015-10-29T23:35:19.5Z" ;
+    bcube:lastUpdated "2015-10-29T23:35:19.5Z" ;
+    bcube:originatedFrom <urn:uuid:89272e3d-2db3-432c-b640-3472d00287a3> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:a79c628d-7d55-41cb-b6d7-706646875d10> .
+
+<urn:uuid:52a59714-b2e3-4036-a5ce-ec069394c16e> bcube:hasType "place" ;
+    bcube:hasValue "California" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:781dd4ed-e46a-45fc-88cf-a004ebf15d26> bcube:hasType "theme" ;
+    bcube:hasValue "Flora",
+        "NECO Plan",
+        "distribution",
+        "modeling",
+        "rare plants" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:89272e3d-2db3-432c-b640-3472d00287a3> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-10-29T23:35:19.5Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-10-29T23:35:19.5Z" ;
+    dc:identifier "urn:sha:3a45b4ebcb936ff58a6995a7209953a5856b42f307cd49efd10363b3" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://repository.stategeothermaldata.org/resources/metadata/TestNRRC/WRP/1b5c3af9-59ec-4909-bfdb-ebfad90b3b33.xml" .
+
+<urn:uuid:a79c628d-7d55-41cb-b6d7-706646875d10> bcube:dateCreated "2015-10-29T23:35:19.5Z" ;
+    bcube:hasMetadataRecord <urn:uuid:4481db61-01a6-435d-bb80-e9883bc09e00> ;
+    bcube:lastUpdated "2015-10-29T23:35:19.5Z" ;
+    dc:conformsTo <urn:uuid:0b85b630-0b59-4c89-b5b3-0e7e8951359a>,
+        <urn:uuid:52a59714-b2e3-4036-a5ce-ec069394c16e>,
+        <urn:uuid:781dd4ed-e46a-45fc-88cf-a004ebf15d26> ;
+    dc:description "Predicted distribution of Pholistoma auritum var. arizonicum, a rare plant, from NDDB data, \"new\" NDDB data, and other non-NDDB sources, NECO Plan (polygons) (n=1)" ;
+    dc:spatial "POLYGON ((-124.5656 32.5343,-124.5656 42.0,-114.1312 42.0,-114.1312 32.5343,-124.5656 32.5343))" ;
+    dcterms:title "NECO Ca Pholistoma Auritum var Arizonicum Distribution" ;
+    esip:eastBound "-114.1312"^^xsd:float ;
+    esip:endDate "1900-01-01"^^xsd:date ;
+    esip:northBound "42.0"^^xsd:float ;
+    esip:southBound "32.5343"^^xsd:float ;
+    esip:startDate "1900-01-01"^^xsd:date ;
+    esip:westBound "-124.5656"^^xsd:float ;
+    owl:a dcat:Dataset .
+

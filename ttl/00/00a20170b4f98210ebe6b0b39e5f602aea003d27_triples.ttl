@@ -1,0 +1,97 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:00f3188a-2d18-483a-98cc-a57c23bf356c> bcube:hasType "theme" ;
+    bcube:hasValue "Breaklines",
+        "Contours",
+        "DEM",
+        "Digital Terrain Model",
+        "Elevation Data",
+        "Flow vectors",
+        "LIDAR",
+        "Land Surface",
+        "Topography" ;
+    dc:partOf "FEMA NFIP Topic Category" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:04c6eae0-fa75-4059-8ffc-8726988ffe6c> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-08-05T01:13:57.394Z" ;
+    bcube:lastUpdated "2015-08-05T01:13:57.394Z" ;
+    bcube:originatedFrom <urn:uuid:ff8433f0-3eff-439e-b553-33a601efeca6> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:45f0fd3a-7cea-49d8-919f-8749c7eebcdc> .
+
+<urn:uuid:45f0fd3a-7cea-49d8-919f-8749c7eebcdc> bcube:dateCreated "2015-08-05T01:13:57.394Z" ;
+    bcube:hasMetadataRecord <urn:uuid:04c6eae0-fa75-4059-8ffc-8726988ffe6c> ;
+    bcube:lastUpdated "2015-08-05T01:13:57.394Z" ;
+    dc:conformsTo <urn:uuid:00f3188a-2d18-483a-98cc-a57c23bf356c>,
+        <urn:uuid:5ed5856f-2bcf-42c1-afe2-ef63059c8288>,
+        <urn:uuid:84858924-0567-4617-b995-255fb9e6566e> ;
+    dc:description "Terrain data, as defined in FEMA Guidelines and Specifications, Appendix N: Data Capture Standards, describes the digital topographic data that was used to create the elevation data representing the terrain environment of a watershed and/or floodplain. Terrain data requirements allow for flexibility in the types of information provided as sources used to produce final terrain deliverables. Once this type of data is provided, FEMA will be able to account for the origins of the flood study elevation data. (Source: FEMA Guidelines and Specifications, Appendix N, Section N.1.2)." ;
+    dc:spatial "POLYGON ((-85.605515 30.35713,-85.605515 35.002037,-80.841957 35.002037,-80.841957 30.35713,-85.605515 30.35713))" ;
+    dcterms:publisher <urn:uuid:b2960267-de8e-4729-94e4-5e0ed4ae8850> ;
+    dcterms:references <urn:uuid:769ecfc7-5c92-4019-b232-169b3fb6e5a7> ;
+    dcterms:title "DCS Terrain Submittal for Calhoun County, Georgia, USA" ;
+    esip:eastBound "-80.841957"^^xsd:float ;
+    esip:northBound "35.002037"^^xsd:float ;
+    esip:southBound "30.35713"^^xsd:float ;
+    esip:startDate "2008-07-07"^^xsd:date ;
+    esip:westBound "-85.605515"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:5ed5856f-2bcf-42c1-afe2-ef63059c8288> bcube:hasType "place" ;
+    bcube:hasValue "COMMUNITY Arlington",
+        "COMMUNITY Calhoun County Unincorporated Areas",
+        "COUNTY Calhoun",
+        "COUNTY-FIPS 037",
+        "FEMA-CID 130026",
+        "FEMA-CID 13037C",
+        "FEMA-CID 130571",
+        "REGION 4",
+        "STATE GEORGIA" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:769ecfc7-5c92-4019-b232-169b3fb6e5a7> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-05T01:13:57.394Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-05T01:13:57.394Z" ;
+    dc:identifier "urn:sha:37c915397238031daced09ae0e2dd3bf54e84a6477f749c2cc9dcbdf" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://hazards.fema.gov" .
+
+<urn:uuid:84858924-0567-4617-b995-255fb9e6566e> bcube:hasType "theme" ;
+    bcube:hasValue "elevation" ;
+    dc:partOf "ISO 19115 Topic Category" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:b2960267-de8e-4729-94e4-5e0ed4ae8850> owl:a foaf:Organization ;
+    foaf:name "Federal Emergency Management Agency" .
+
+<urn:uuid:ff8433f0-3eff-439e-b553-33a601efeca6> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-05T01:13:57.394Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-05T01:13:57.394Z" ;
+    dc:identifier "urn:sha:7e6eb436e4b95145ae45e775aaf5e76e5d96cdcc9b1c64e02baf6fdb" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "https://catalog.data.gov/harvest/object/3955d665-2d67-4367-945b-2ba67f8acb65/original" .
+

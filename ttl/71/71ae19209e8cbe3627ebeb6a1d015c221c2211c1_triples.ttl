@@ -1,0 +1,58 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:76ff0456-c3cc-4dea-8636-1789f60612fe> a "OGC:WCS" ;
+    bcube:contains <urn:uuid:3ea02152-f524-40d2-9a1c-10095423968f> ;
+    bcube:dateCreated "2014-07-31T01:42:21.549Z" ;
+    bcube:lastUpdated "2014-07-31T01:42:21.549Z" ;
+    bcube:originatedFrom <urn:uuid:25ffb8d5-2f19-4c29-8dd9-83fdd6596fab> ;
+    dc:description "The NOAA_RNC MapService provides a seamless collarless mosaic of the NOAA Raster Nautical Charts. Source charts are updated by the 10th of each month. This map service is not to be used for navigation." ;
+    owl:a bcube:service .
+
+<urn:uuid:056ea766-1740-45d8-8f50-59d93754c792> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2014-07-31T01:42:21.549Z" ;
+    bcube:hasConfidence "Not Sure" ;
+    bcube:hasUrlSource "Generated" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2014-07-31T01:42:21.549Z" ;
+    dc:identifier "urn:sha:b04d998d870bfdd1b9d4440109efc18351480f40b105cd7bde495123" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://egisws02.nos.noaa.gov/ArcGIS/services/RNC/NOAA_RNC/ImageServer/WCSServer?width=500&version=1.0.0&coverage=1&service=WCS&crs=CRS%3A84&format=GTiff&request=GetCoverage&bbox=-179.999988541%2C-14.6297499996%2C179.999988541%2C74.8333399996&height=500" .
+
+<urn:uuid:25ffb8d5-2f19-4c29-8dd9-83fdd6596fab> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2014-07-31T01:42:21.549Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2014-07-31T01:42:21.549Z" ;
+    dc:identifier "urn:sha:0ddbe83080b0ddb9d8d825adf3f8a3bf0e91c9277f5b20c7865c3950" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://egisws02.nos.noaa.gov/ArcGIS/services/RNC/NOAA_RNC/ImageServer/WCSServer?request=GetCapabilities&service=WCS" .
+
+<urn:uuid:3ea02152-f524-40d2-9a1c-10095423968f> bcube:dateCreated "2014-07-31T01:42:21.549Z" ;
+    bcube:lastUpdated "2014-07-31T01:42:21.549Z" ;
+    dc:description "NOAA_RNC" ;
+    dc:spatial "POLYGON ((-179.99998854099999 -14.6297499996,-179.99998854099999 74.8333399996,179.99998854099999 74.8333399996,179.99998854099999 -14.6297499996,-179.99998854099999 -14.6297499996))" ;
+    dc:title "NOAA_RNC_1" ;
+    dcterms:references <urn:uuid:056ea766-1740-45d8-8f50-59d93754c792> ;
+    esip:eastBound "179.999988541"^^xsd:float ;
+    esip:northBound "74.8333399996"^^xsd:float ;
+    esip:southBound "-14.6297499996"^^xsd:float ;
+    esip:westBound "-179.999988541"^^xsd:float ;
+    owl:a bcube:Layer .
+

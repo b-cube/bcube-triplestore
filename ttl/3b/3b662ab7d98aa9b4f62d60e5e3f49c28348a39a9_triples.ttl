@@ -1,0 +1,61 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:481084f8-892e-4f2e-ab19-5feedb39d6a6> a "OGC:WMS" ;
+    bcube:contains <urn:uuid:150b230b-0777-4dfd-a349-66d6f658353e> ;
+    bcube:dateCreated "2015-07-10T02:45:36.562Z" ;
+    bcube:lastUpdated "2015-07-10T02:45:36.562Z" ;
+    bcube:originatedFrom <urn:uuid:d572a183-e3d8-459d-a3a3-eb4d63495395> ;
+    dc:conformsTo <urn:uuid:10208cf3-e2c8-4e39-a125-c962d957ce83> ;
+    dc:description "This map service presents spatial information about Land Use in 2010 for the East River Watershed of Brown County, WI. The service was developed as part of National Oceanic and Atmospheric Administration (NOAA) Office for Coastal Management s collaboration with the Great Lakes Restoration Initiative, but contains data and information from a variety of data sources, including non-NOAA data. NOAA provides the information as-is and shall incur no responsibility or liability as to the completeness or accuracy of this information. NOAA assumes no responsibility arising from the use of this information. For additional information, please contact the NOAA Office for Coastal Management at coastal.info@noaa.gov. This map service is used in an application highlighted on the Great Lakes Coastal Resilience Planning Guide (http://greatlakesresilience.org/?page_id=867)." ;
+    owl:a bcube:service .
+
+<urn:uuid:10208cf3-e2c8-4e39-a125-c962d957ce83> bcube:hasValue "great lakes, land cover, brown county" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:150b230b-0777-4dfd-a349-66d6f658353e> bcube:dateCreated "2015-07-10T02:45:36.562Z" ;
+    bcube:lastUpdated "2015-07-10T02:45:36.562Z" ;
+    dc:spatial "POLYGON ((-88.143774 44.249689,-88.143774 44.520967,-87.836614 44.520967,-87.836614 44.249689,-88.143774 44.249689))" ;
+    dc:title "2010 Land Use" ;
+    dcterms:references <urn:uuid:debb5ae3-14ab-443e-83ca-ac0b44ea1451> ;
+    esip:eastBound "-87.836614"^^xsd:float ;
+    esip:northBound "44.520967"^^xsd:float ;
+    esip:southBound "44.249689"^^xsd:float ;
+    esip:westBound "-88.143774"^^xsd:float ;
+    owl:a bcube:Layer .
+
+<urn:uuid:d572a183-e3d8-459d-a3a3-eb4d63495395> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-07-10T02:45:36.562Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-07-10T02:45:36.562Z" ;
+    dc:identifier "urn:sha:26b7902d40727f5c2be1f214016ef50a1699c8abfa732e49d60a9c60" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www.coast.noaa.gov/arcgis/services/CSCGreatLakes/BrownCounty_2010LandUse/MapServer/WMSServer?request=GetCapabilities&service=WMS" .
+
+<urn:uuid:debb5ae3-14ab-443e-83ca-ac0b44ea1451> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-07-10T02:45:36.562Z" ;
+    bcube:hasConfidence "Not Sure" ;
+    bcube:hasUrlSource "Generated" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-07-10T02:45:36.562Z" ;
+    dc:identifier "urn:sha:0d2f15dd57ed0d7de49c0355b8ca2b9ec034cdb04a9a91ea77e47574" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www.coast.noaa.gov/arcgis/services/CSCGreatLakes/BrownCounty_2010LandUse/MapServer/WMSServer?layers=0&width=500&version=1.3.0&bbox=-88.143774%2C44.249689%2C-87.836614%2C44.520967&service=WMS&format=image%2Fpng&styles=&crs=CRS%3A84&request=GetMap&height=500" .
+

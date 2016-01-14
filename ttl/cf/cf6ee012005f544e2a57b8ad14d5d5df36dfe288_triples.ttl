@@ -1,0 +1,89 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:175d7112-78c8-485e-8def-a03eba1a2967> bcube:hasType "theme" ;
+    bcube:hasValue "County or equivalent entity",
+        "Polygon",
+        "TAZ",
+        "Traffic Analysis Zone" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:1c350416-86a7-4bd6-b3f2-38374b3ee662> bcube:hasType "theme" ;
+    bcube:hasValue "boundaries" ;
+    dc:partOf "ISO 19115 Topic Categories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:64481443-a576-43f0-8646-5411a3807903> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-11-04T11:57:57.09Z" ;
+    bcube:lastUpdated "2015-11-04T11:57:57.09Z" ;
+    bcube:originatedFrom <urn:uuid:e44ee249-047f-40a1-a840-832c230da1e5> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:652cded0-dd7c-4afe-bafd-0bdf012ff7b8> .
+
+<urn:uuid:652cded0-dd7c-4afe-bafd-0bdf012ff7b8> bcube:dateCreated "2015-11-04T11:57:57.09Z" ;
+    bcube:hasMetadataRecord <urn:uuid:64481443-a576-43f0-8646-5411a3807903> ;
+    bcube:lastUpdated "2015-11-04T11:57:57.09Z" ;
+    dc:conformsTo <urn:uuid:175d7112-78c8-485e-8def-a03eba1a2967>,
+        <urn:uuid:1c350416-86a7-4bd6-b3f2-38374b3ee662>,
+        <urn:uuid:898e3227-48e0-4f24-9337-e45f4244e182> ;
+    dc:description "The TIGER/Line Shapefiles are an extract of selected geographic and cartographic information from the Census MAF/TIGER database. The Census MAF/TIGER database represents a seamless national file with no overlaps or gaps between parts. However, each TIGER/Line Shapefile is designed to stand alone as an independent data set or the shapefiles can be combined to cover the whole nation." ;
+    dc:spatial "POLYGON ((-105.700784 39.745801,-105.700784 39.938388,-105.397174 39.938388,-105.397174 39.745801,-105.700784 39.745801))" ;
+    dcterms:publisher <urn:uuid:72c147f5-4382-4ddb-b08d-54f241cc5026> ;
+    dcterms:references <urn:uuid:d655c2b5-a447-480c-9d8a-4fb1b1614060> ;
+    dcterms:title "TIGER/Line Shapefile, 2008, 2000 county, Gilpin County, CO, Traffic Analysis Zone (TAZ)" ;
+    esip:eastBound "-105.397174"^^xsd:float ;
+    esip:endDate "2008-07-01"^^xsd:date ;
+    esip:northBound "39.938388"^^xsd:float ;
+    esip:southBound "39.745801"^^xsd:float ;
+    esip:startDate "2008-01-01"^^xsd:date ;
+    esip:westBound "-105.700784"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:72c147f5-4382-4ddb-b08d-54f241cc5026> owl:a foaf:Organization ;
+    foaf:name "" .
+
+<urn:uuid:898e3227-48e0-4f24-9337-e45f4244e182> bcube:hasType "place" ;
+    bcube:hasValue "08047",
+        "County or Equivalent Entity",
+        "Gilpin",
+        "U.S.",
+        "United States" ;
+    dc:partOf "FIPS Publication 5-2, FIPS Publication 6-4, FIPS Publication 8-6, FIPS Publication 9-1,FIPS Publication55-4" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:d655c2b5-a447-480c-9d8a-4fb1b1614060> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-04T11:57:57.09Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-04T11:57:57.09Z" ;
+    dc:identifier "urn:sha:6dd6f9d70428fa154399b3215a5ca94288a75d80ef5ead170d7169d3" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www2.census.gov/geo/tiger/TIGER2008/08_COLORADO/08047_Gilpin_County/tl_2008_08047_taz00.zip" .
+
+<urn:uuid:e44ee249-047f-40a1-a840-832c230da1e5> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-04T11:57:57.09Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-04T11:57:57.09Z" ;
+    dc:identifier "urn:sha:567516c597ad6d4e543932c7f1fcea95e25c6d846b94ecda02072d30" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://meta.geo.census.gov/data/existing/decennial/GEO/GPMB/TIGERline/fe_2008/taz00/tl_2008_08047_taz00_url.shp.xml" .
+

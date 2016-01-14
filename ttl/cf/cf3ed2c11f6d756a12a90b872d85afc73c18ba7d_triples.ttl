@@ -1,0 +1,96 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:3daac4ca-0e59-4de8-96be-c1c0a37d9c0c> bcube:hasType "theme" ;
+    bcube:hasValue "5-digit ZIP code",
+        "County ANSI Code",
+        "County FIPS Code",
+        "From House Number",
+        "Permanent edge ID",
+        "Side indicator flag",
+        "State ANSI Code",
+        "State FIPS Code",
+        "To House Number",
+        "ZIP +4 code" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:4b686b97-ded7-43ac-9164-8ccbaf47dbec> a "ISO 19115:2003/19139" ;
+    bcube:dateCreated "2015-09-02T07:05:27.804Z" ;
+    bcube:lastUpdated "2015-09-02T07:05:27.804Z" ;
+    bcube:originatedFrom <urn:uuid:ce69cc94-71f4-4fae-ba2a-c08fe94725e2> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:f227dd93-9040-4149-b03e-bbfe48e5c49c> .
+
+<urn:uuid:4c94ec4f-d305-41d9-9dbf-2b1fe3d2df3c> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-09-02T07:05:27.804Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-09-02T07:05:27.804Z" ;
+    dc:identifier "urn:sha:403bea80bb2d03e1265a492597624ff804e82850d0560b71c8466c16" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www2.census.gov/geo/tiger/TIGER2013/ADDR/tl_2013_17105_addr.zip" .
+
+<urn:uuid:874861c3-d80a-4c96-b094-50e2b08cd481> bcube:hasValue "transportation" ;
+    dc:partOf "IsoTopicCategories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:a58f5b58-a664-42e3-9992-721bd30839e3> bcube:hasType "place" ;
+    bcube:hasValue "17105",
+        "County or Equivalent Entity",
+        "Livingston",
+        "U.S.",
+        "United States" ;
+    dc:partOf "ANSI INCITS 38:2009 (Formerly FIPS 5-2), ANSI INCITS 31:2009 (Formerly FIPS 6-4),ANSI INCITS 454:2009 (Formerly FIPS 8-6), ANSI INCITS 455:2009(Formerly FIPS 9-1), ANSI INCITS 446:2008 (Geographic Names Information System (GNIS))" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:ce69cc94-71f4-4fae-ba2a-c08fe94725e2> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-09-02T07:05:27.804Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-09-02T07:05:27.804Z" ;
+    dc:identifier "urn:sha:d3c31a57eb899fd95f97c3d9d9e2bf1daa4c18833d1a0e1c90a962e5" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "https://catalog.data.gov/harvest/object/5f54ef2b-0093-45b4-b61a-81dd77180036" .
+
+<urn:uuid:f227dd93-9040-4149-b03e-bbfe48e5c49c> bcube:dateCreated "2015-09-02T07:05:27.804Z" ;
+    bcube:hasMetadataRecord <urn:uuid:4b686b97-ded7-43ac-9164-8ccbaf47dbec> ;
+    bcube:lastUpdated "2015-09-02T07:05:27.804Z" ;
+    dc:conformsTo <urn:uuid:3daac4ca-0e59-4de8-96be-c1c0a37d9c0c>,
+        <urn:uuid:874861c3-d80a-4c96-b094-50e2b08cd481>,
+        <urn:uuid:a58f5b58-a664-42e3-9992-721bd30839e3>,
+        <urn:uuid:fd4ce7c5-9be8-4e66-99a1-4a23b6dec2ee> ;
+    dc:description "The TIGER/Line shapefiles and related database files (.dbf) are an extract of selected geographic and cartographic information from the U.S. Census Bureau's Master Address File / Topologically Integrated Geographic Encoding and Referencing (MAF/TIGER) Database (MTDB). The MTDB represents a seamless national file with no overlaps or gaps between parts, however, each TIGER/Line shapefile is designed to stand alone as an independent data set, or they can be combined to cover the entire nation. The Address Ranges Relationship File (ADDR.dbf) contains the attributes of each address range. Each address range applies to a single edge and has a unique address range identifier (ARID) value. The edge to which an address range applies can be determined by linking the address range to the All Lines Shapefile (EDGES.shp) using the permanent topological edge identifier (TLID) attribute. Multiple address ranges can apply to the same edge since an edge can have multiple address ranges. Note that the most inclusive address range associated with each side of a street edge already appears in the All Lines Shapefile (EDGES.shp). The TIGER/Line Shapefiles contain potential address ranges, not individual addresses. The term \"address range\" refers to the collection of all possible structure numbers from the first structure number to the last structure number and all numbers of a specified parity in between along an edge side relative to the direction in which the edge is coded. The address ranges in the TIGER/Line Shapefiles are potential ranges that include the full range of possible structure numbers even though the actual structures may not exist." ;
+    dc:spatial "POLYGON ((-88.931476 40.61655,-88.931476 41.114229,-88.234949 41.114229,-88.234949 40.61655,-88.931476 40.61655))" ;
+    dcterms:references <urn:uuid:4c94ec4f-d305-41d9-9dbf-2b1fe3d2df3c> ;
+    dcterms:title "TIGER/Line Shapefile, 2013, county, Livingston County, IL, Current Address Ranges Relationship File" ;
+    esip:eastBound "-88.234949"^^xsd:float ;
+    esip:endDate "2013-05-01"^^xsd:date ;
+    esip:northBound "41.114229"^^xsd:float ;
+    esip:southBound "40.61655"^^xsd:float ;
+    esip:startDate "2012-06-01"^^xsd:date ;
+    esip:westBound "-88.931476"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:fd4ce7c5-9be8-4e66-99a1-4a23b6dec2ee> bcube:hasType "theme" ;
+    bcube:hasValue "Transportation" ;
+    dc:partOf "NGDA Portfolio Themes" ;
+    owl:a bcube:thesaurusSubset .
+

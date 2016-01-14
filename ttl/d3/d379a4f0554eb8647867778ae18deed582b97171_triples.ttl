@@ -1,0 +1,103 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:090e9ae7-325a-4fa6-a1de-6cfcb800c50d> owl:a foaf:Organization ;
+    foaf:name "" .
+
+<urn:uuid:5360ebff-8d16-42aa-aebb-0020d5233a3e> bcube:hasType "theme" ;
+    bcube:hasValue "2010 Census",
+        "Cartographic Boundary",
+        "Generalized",
+        "Shapefile",
+        "State" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:694f56fe-6936-46df-a514-d59e188551de> dcterms:references <urn:uuid:dad73654-8c79-48b6-9ab3-d72d88a807f7> ;
+    owl:a bibo:WebPage .
+
+<urn:uuid:7adc2200-9c43-4b86-a62c-1688fb4e8d89> bcube:hasType "place" ;
+    bcube:hasValue "MI",
+        "Michigan" ;
+    dc:partOf "INCITS 38:2009" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:8c44085b-f1cc-40c9-a546-020528ff9f08> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-10-30T03:12:55.001Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-10-30T03:12:55.001Z" ;
+    dc:identifier "urn:sha:a89f7a0210d154ffb04df106d11a164850f6cdaee91d6f2aae294b7f" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://meta.geo.census.gov/data/existing/decennial/GEO/CPMB/boundary/2011gz/Type620/gz_2010_26_620_l2_500k.xml" .
+
+<urn:uuid:8db8246f-c033-43b6-8c77-1bd985b12087> bcube:dateCreated "2015-10-30T03:12:55.001Z" ;
+    bcube:hasMetadataRecord <urn:uuid:b31e6245-5a70-4065-9a92-74a82059f480> ;
+    bcube:lastUpdated "2015-10-30T03:12:55.001Z" ;
+    dc:conformsTo <urn:uuid:5360ebff-8d16-42aa-aebb-0020d5233a3e>,
+        <urn:uuid:7adc2200-9c43-4b86-a62c-1688fb4e8d89>,
+        <urn:uuid:c70e76c1-d0e2-4030-a9f3-0e9e117b3e83> ;
+    dc:description "The 2010 cartographic boundary shapefiles are simplified representations of selected geographic areas from the Census Bureau's MAF/TIGER geographic database. These boundary files are specifically designed for small scale thematic mapping. When possible generalization is performed with intent to maintain the hierarchical relationships among geographies and to maintain the alignment of geographies within a file set for a given year. Geographic areas may not align with the same areas from another year. Some geographies are available as nation-based shapefiles while others are available only as state-based files." ;
+    dc:spatial "POLYGON ((-90.418392 41.696118,-90.418392 48.306063,-82.122971 48.306063,-82.122971 41.696118,-90.418392 41.696118))" ;
+    dcterms:publisher <urn:uuid:090e9ae7-325a-4fa6-a1de-6cfcb800c50d> ;
+    dcterms:references <urn:uuid:694f56fe-6936-46df-a514-d59e188551de>,
+        <urn:uuid:dd2f8a95-6660-4809-afe4-50f6c71b1add> ;
+    dcterms:title "2010 Cartographic Boundary File, State-State Legislative District (Lower Chamber) for Michigan, 1:500,000" ;
+    esip:eastBound "-82.122971"^^xsd:float ;
+    esip:endDate "2011-09-01"^^xsd:date ;
+    esip:northBound "48.306063"^^xsd:float ;
+    esip:southBound "41.696118"^^xsd:float ;
+    esip:startDate "2011-09-01"^^xsd:date ;
+    esip:westBound "-90.418392"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:b31e6245-5a70-4065-9a92-74a82059f480> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-10-30T03:12:55.001Z" ;
+    bcube:lastUpdated "2015-10-30T03:12:55.001Z" ;
+    bcube:originatedFrom <urn:uuid:8c44085b-f1cc-40c9-a546-020528ff9f08> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:8db8246f-c033-43b6-8c77-1bd985b12087> .
+
+<urn:uuid:c70e76c1-d0e2-4030-a9f3-0e9e117b3e83> bcube:hasType "theme" ;
+    bcube:hasValue "Boundaries" ;
+    dc:partOf "ISO 19115 Topic Categories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:dad73654-8c79-48b6-9ab3-d72d88a807f7> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-10-30T03:12:55.001Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-10-30T03:12:55.001Z" ;
+    dc:identifier "urn:sha:2c1a9f1230b6384374eb0153383256166c66f384520d6d889a6fd728" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www2.census.gov/geo/tiger/GENZ2010/" .
+
+<urn:uuid:dd2f8a95-6660-4809-afe4-50f6c71b1add> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-10-30T03:12:55.001Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-10-30T03:12:55.001Z" ;
+    dc:identifier "urn:sha:87c2c1be0602ce1fdf28aee707379c2335de3e4da52b23bc07921d86" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www.census.gov/geo/www/cob/index.html" .
+

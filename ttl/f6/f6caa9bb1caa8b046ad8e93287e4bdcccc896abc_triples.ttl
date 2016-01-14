@@ -1,0 +1,63 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:6028d5d6-3605-45d0-837d-0454ed8bc54d> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-07-29T05:40:15.664Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-07-29T05:40:15.664Z" ;
+    dc:identifier "urn:sha:ad738d855aaaa118986df06790d9188f2927a2ee9a8c59f5423b6c1c" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "https://catalog.data.gov/harvest/object/abe00c6a-f01c-4fc6-8287-c1b3876f47cc" .
+
+<urn:uuid:7bfb695f-3584-4068-afde-88746bed8d5f> a "ISO 19115:2003/19139" ;
+    bcube:dateCreated "2015-07-29T05:40:15.664Z" ;
+    bcube:lastUpdated "2015-07-29T05:40:15.664Z" ;
+    bcube:originatedFrom <urn:uuid:6028d5d6-3605-45d0-837d-0454ed8bc54d> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:e1b43033-f44c-4bb9-87ee-cbec60fbfe40> .
+
+<urn:uuid:cf8dc02f-4419-46f4-a4cb-87c9a1033b64> bcube:hasType "theme" ;
+    bcube:hasValue "Bare Ground",
+        "Digital Elevation Model (DEM)",
+        "Elevation",
+        "LiDAR",
+        "Surface Elevation" ;
+    dc:partOf "keyword" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:e1b43033-f44c-4bb9-87ee-cbec60fbfe40> bcube:dateCreated "2015-07-29T05:40:15.664Z" ;
+    bcube:hasMetadataRecord <urn:uuid:7bfb695f-3584-4068-afde-88746bed8d5f> ;
+    bcube:lastUpdated "2015-07-29T05:40:15.664Z" ;
+    dc:conformsTo <urn:uuid:cf8dc02f-4419-46f4-a4cb-87c9a1033b64>,
+        <urn:uuid:fa05a0e1-934e-49a1-b9d9-2c4c96120a85> ;
+    dc:description "LiDAR data for the Delta Area of California from the California Department of Water Resources. Bare earth grids from LiDAR.This data is in ESRI Grid format with 2 meter cell size. It represents resampling of the approximately 1 meter spacing of the LiDAR data from the source grids provided by DWR. Elevations are in meters * 10 or decameter values." ;
+    dc:spatial "POLYGON ((-121.814566 37.60106,-121.814566 38.595583,-121.161612 38.595583,-121.161612 37.60106,-121.814566 37.60106))" ;
+    dcterms:title "LiDAR data for the Delta Area of California" ;
+    esip:eastBound "-121.161612"^^xsd:float ;
+    esip:northBound "38.595583"^^xsd:float ;
+    esip:southBound "37.60106"^^xsd:float ;
+    esip:westBound "-121.814566"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:fa05a0e1-934e-49a1-b9d9-2c4c96120a85> bcube:hasType "theme" ;
+    bcube:hasValue "Elevation",
+        "Imagery",
+        "Imagery-Base Maps-Land Cover" ;
+    dc:partOf "ceres:themes" ;
+    owl:a bcube:thesaurusSubset .
+

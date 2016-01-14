@@ -1,0 +1,80 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:1645b5aa-0694-4734-836f-1e2d540da033> owl:a foaf:Organization ;
+    foaf:name "" .
+
+<urn:uuid:1b88cb9f-2f33-48c1-a5a1-f31af85a4de9> bcube:hasType "theme" ;
+    bcube:hasValue "economy",
+        "location",
+        "oceans",
+        "society" ;
+    dc:partOf "ISO 19115 Topic Categories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:2b24a73d-e7fa-453a-8595-57d0758ef31b> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-07-12T19:01:56.077Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-07-12T19:01:56.077Z" ;
+    dc:identifier "urn:sha:f088249deb76c94572d7d5083dd7f579a69042a8c547a0d7c08d8851" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "https://catalog.data.gov/harvest/object/11e053d9-bb2b-4cd6-8aa4-8802fa971831/original" .
+
+<urn:uuid:3b6ab9c5-70ef-44f8-bc8f-7bd4fdb15f49> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-07-12T19:01:56.077Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-07-12T19:01:56.077Z" ;
+    dc:identifier "urn:sha:7a67c94a510ad660ad8ad9ab9c3cf07db32da199422bbd6b37054090" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "ftp://ftp.dfg.ca.gov/R7_MR/NONCONSUMPTIVE/NCCSR/BeachActivities.zip" .
+
+<urn:uuid:55b4b2f5-9953-4780-8f6c-e33b98b59580> bcube:dateCreated "2015-07-12T19:01:56.077Z" ;
+    bcube:hasMetadataRecord <urn:uuid:c63a30aa-0c9f-4dd0-a515-0943c170952a> ;
+    bcube:lastUpdated "2015-07-12T19:01:56.077Z" ;
+    dc:conformsTo <urn:uuid:1b88cb9f-2f33-48c1-a5a1-f31af85a4de9>,
+        <urn:uuid:f6834064-520b-4eeb-8e23-1dea90effdce> ;
+    dc:description "These data are a Kernel Density layers produced using ArcGIS. The Kernel analysis is a nonparametric statistical method for estimating probability densities from a set of points. Conceptually, a smooth raster surface is fitted over each point. The surface value is highest at the location of the point and diminishes with increasing distance (i.e.search radius), eventually reaching zero. A default value is calculated by the analysis tool for the search radius based on the input data; increasing the radius has little affect on the density value. Although more points will fall inside a larger search radius the number will be divided by a larger area when calculating density resulting in a more generalized output raster. The volume under the surface equals the weighted value for the point. The weights were created by Knowledge Networks and applied to the points based on demographics. The density of the output raster is calculated by adding the values of all the individual surfaces where they overlap. The point's weighted value determines the number of times to count the point. For example, a weighted value of 1.5 would cause the point to be counted one and half times. The resulting dataset is a smooth raster surface depicting the intensity use or density of an activity. Based on previous experience and after conducting some tests, all of the activity datasets were given a search radius of one mile. In discussing a similar project with the Oregon Department of Parks and Recreation we discovered that most visitors to the coast stay within a mile of their activity location. This distance also proved to be a good match to the mapped activities.Link to the Dataset - ftp://ftp.dfg.ca.gov/R7_MR/NONCONSUMPTIVE/NCCSR/BeachActivities.zip" ;
+    dc:spatial "POLYGON ((-123.750379 37.126492,-123.750379 39.068577,-122.314094 39.068577,-122.314094 37.126492,-123.750379 37.126492))" ;
+    dcterms:publisher <urn:uuid:1645b5aa-0694-4734-836f-1e2d540da033> ;
+    dcterms:references <urn:uuid:855b6f69-2325-4bfd-892c-c70d30979ac6> ;
+    dcterms:title "An Economic and Spatial Baseline of Coastal Recreation in the North Central Coast of California - Beach Going (dog walking, kite flying, etc.)" ;
+    esip:eastBound "-122.314094"^^xsd:float ;
+    esip:northBound "39.068577"^^xsd:float ;
+    esip:southBound "37.126492"^^xsd:float ;
+    esip:westBound "-123.750379"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:855b6f69-2325-4bfd-892c-c70d30979ac6> dcterms:references <urn:uuid:3b6ab9c5-70ef-44f8-bc8f-7bd4fdb15f49> ;
+    owl:a bibo:WebPage .
+
+<urn:uuid:c63a30aa-0c9f-4dd0-a515-0943c170952a> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-07-12T19:01:56.077Z" ;
+    bcube:lastUpdated "2015-07-12T19:01:56.077Z" ;
+    bcube:originatedFrom <urn:uuid:2b24a73d-e7fa-453a-8595-57d0758ef31b> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:55b4b2f5-9953-4780-8f6c-e33b98b59580> .
+
+<urn:uuid:f6834064-520b-4eeb-8e23-1dea90effdce> bcube:hasType "place" ;
+    bcube:hasValue "California" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+

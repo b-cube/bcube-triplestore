@@ -1,0 +1,134 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:037118f9-c47c-4788-9c95-4f111d3d2557> bcube:hasType "theme" ;
+    bcube:hasValue "air_pressure",
+        "latitude",
+        "longitude",
+        "time" ;
+    dc:partOf "CF Standard Name Table v29" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:08a6e949-f7cd-480a-ae2e-3397841c223c> bcube:hasType "theme" ;
+    bcube:hasValue "Atmosphere > Atmospheric Pressure > Atmospheric Pressure Measurements",
+        "Atmosphere > Atmospheric Pressure > Sea Level Pressure",
+        "Atmosphere > Atmospheric Pressure > Static Pressure" ;
+    dc:partOf "GCMD Science Keywords" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:092b6e5a-bbbd-4a3a-8804-5859ef110020> bcube:hasType "theme" ;
+    bcube:hasValue "6-minute",
+        "air",
+        "atmosphere",
+        "atmospheric",
+        "barometric",
+        "co-ops",
+        "collection",
+        "data",
+        "date",
+        "deployment",
+        "designation",
+        "established",
+        "flag",
+        "identifier",
+        "level",
+        "limit",
+        "measurements",
+        "meteorological",
+        "minute",
+        "name",
+        "noaa",
+        "nos",
+        "ops",
+        "platform",
+        "pressure",
+        "sea",
+        "sensor",
+        "shefID",
+        "state",
+        "static",
+        "station" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:16899460-3c27-46d7-9fa8-6743d4e27f60> bcube:hasValue "geoscientificInformation" ;
+    dc:partOf "IsoTopicCategories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:2ea8b3ed-ea3d-40a8-9ae9-79be4c36cc0e> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-10-29T23:33:01.315Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-10-29T23:33:01.315Z" ;
+    dc:identifier "urn:sha:01c2a4d1391d81f34dde0a41a0eaf145bb585224ac1e5332a9cdcab3" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "https://bluehub.jrc.ec.europa.eu/erddap/tabledap/nosCoopsMBP.html" .
+
+<urn:uuid:57e05579-3406-435b-b0a9-01ca5fa02653> a "ISO 19115:2003/19139" ;
+    bcube:dateCreated "2015-10-29T23:33:01.315Z" ;
+    bcube:lastUpdated "2015-10-29T23:33:01.315Z" ;
+    bcube:originatedFrom <urn:uuid:ca373dc9-c79b-494c-ba22-8266e07fedcd> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:92348d7e-7bff-4d81-906c-c0e35a67791a> .
+
+<urn:uuid:92348d7e-7bff-4d81-906c-c0e35a67791a> bcube:dateCreated "2015-10-29T23:33:01.315Z" ;
+    bcube:hasMetadataRecord <urn:uuid:57e05579-3406-435b-b0a9-01ca5fa02653> ;
+    bcube:lastUpdated "2015-10-29T23:33:01.315Z" ;
+    dc:conformsTo <urn:uuid:037118f9-c47c-4788-9c95-4f111d3d2557>,
+        <urn:uuid:08a6e949-f7cd-480a-ae2e-3397841c223c>,
+        <urn:uuid:092b6e5a-bbbd-4a3a-8804-5859ef110020>,
+        <urn:uuid:16899460-3c27-46d7-9fa8-6743d4e27f60>,
+        <urn:uuid:9d607d9b-77cb-4e57-b411-906e3e6173d5> ;
+    dc:description "This dataset has Barometric Pressure data from NOAA NOS Center for Operational Oceanographic Products and Services (CO-OPS). WARNING: These preliminary data have not been subjected to the National Ocean Services (NOS) Quality Control procedures, and do not necessarily meet the criteria and standards of official NOS data. They are released for limited public use with appropriate caution. WARNING: * Queries for data MUST include stationID= and time>=. * Queries USUALLY include time<= (the default end time corresponds to 'now'). * Queries MUST be for less than 30 days worth of data. * The data source isn't completely reliable. If your request returns no data when you think it should: * Try revising the request (e.g., a different time range). * The list of stations offering this data may be incorrect. * Sometimes a station or the entire data service is unavailable. Wait a while and try again." ;
+    dc:identifier "nosCoopsMBP" ;
+    dc:spatial "POLYGON ((-177.3608 -14.2767,-177.3608 70.4114,167.7345 70.4114,167.7345 -14.2767,-177.3608 -14.2767))" ;
+    dcterms:references <urn:uuid:2ea8b3ed-ea3d-40a8-9ae9-79be4c36cc0e>,
+        <urn:uuid:f92ce45a-881b-4c19-94e5-792b5a3b0f38> ;
+    dcterms:title "NOS CO-OPS Meteorological Data, Barometric Pressure, 6-Minute" ;
+    esip:eastBound "167.7345"^^xsd:float ;
+    esip:northBound "70.4114"^^xsd:float ;
+    esip:southBound "-14.2767"^^xsd:float ;
+    esip:westBound "-177.3608"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:9d607d9b-77cb-4e57-b411-906e3e6173d5> bcube:hasType "project" ;
+    bcube:hasValue "NOAA NOS CO-OPS" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:ca373dc9-c79b-494c-ba22-8266e07fedcd> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-10-29T23:33:01.315Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-10-29T23:33:01.315Z" ;
+    dc:identifier "urn:sha:ed7acd10f3ac97c59508d9743aec033a9664c723d945220b12d9e781" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "https://bluehub.jrc.ec.europa.eu/erddap/metadata/iso19115/xml/nosCoopsMBP_iso19115.xml" .
+
+<urn:uuid:f92ce45a-881b-4c19-94e5-792b5a3b0f38> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-10-29T23:33:01.315Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-10-29T23:33:01.315Z" ;
+    dc:identifier "urn:sha:cc97547f79f4cbc43520f825cf1d93f76aa0a108263139baa904ea9f" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "https://bluehub.jrc.ec.europa.eu/erddap/tabledap/nosCoopsMBP.graph" .
+

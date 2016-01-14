@@ -1,0 +1,76 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:099b3e25-41ac-4f07-a700-6006cdb26e1d> bcube:hasType "theme" ;
+    bcube:hasValue "DEM",
+        "altitude",
+        "contour line",
+        "digital contours",
+        "digital elevation model",
+        "digital terrain model",
+        "height",
+        "hypsography" ;
+    dc:partOf "none" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:6a545f31-55f1-488e-8bba-cd2c11997654> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-07T07:34:31.945Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-07T07:34:31.945Z" ;
+    dc:identifier "urn:sha:d01a3bc145ccd78ff5236f8f1132b72636fa7b6b1a9655bf222eb83a" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://catalog.data.gov/harvest/object/b5780c20-7092-41a3-821a-231728cdacb2/original" .
+
+<urn:uuid:99ba5201-79f3-4c32-bdf2-ff97017e0750> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-07T07:34:31.945Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-07T07:34:31.945Z" ;
+    dc:identifier "urn:sha:c36b95020e42e8299f5cecfc70e189dfffe3e9557e4f9cce4e916374" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www.KansasGIS.org" .
+
+<urn:uuid:d1dc7269-3f00-49f8-81a4-50c82e6ffb2a> owl:a foaf:Organization ;
+    foaf:name "U. S. Geological Survey" .
+
+<urn:uuid:e2f8eaee-0f00-4900-a181-bf8889bfbb70> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-08-07T07:34:31.945Z" ;
+    bcube:lastUpdated "2015-08-07T07:34:31.945Z" ;
+    bcube:originatedFrom <urn:uuid:6a545f31-55f1-488e-8bba-cd2c11997654> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:f5069ec3-f54a-48b7-8105-303b30c08a0d> .
+
+<urn:uuid:f5069ec3-f54a-48b7-8105-303b30c08a0d> bcube:dateCreated "2015-08-07T07:34:31.945Z" ;
+    bcube:hasMetadataRecord <urn:uuid:e2f8eaee-0f00-4900-a181-bf8889bfbb70> ;
+    bcube:lastUpdated "2015-08-07T07:34:31.945Z" ;
+    dc:conformsTo <urn:uuid:099b3e25-41ac-4f07-a700-6006cdb26e1d> ;
+    dc:description "Digital Elevation Model (DEM) is the terminology adopted by the USGS to describe terrain elevation data sets in a digital raster form. The standard DEM consists of a regular array of elevations cast on a designated coordinate projection system. The DEM data are stored as a series of profiles in which the spacing of the elevations along and between each profile is in regular whole number intervals. The normal orientation of data is by columns and rows. Each column contains a series of elevations ordered from south to north with the order of the columns from west to east. The DEM is formatted as one ASCII header record (A-record), followed by a series of profile records (B-records) each of which include a short B-record header followed by a series of ASCII integer elevations per each profile. The last physical record of the DEM is an accuracy record (C-record). 1-degree DEM (3- by 3-arc second data spacing). Provides coverage in 1- by 1-degree blocks. Two products (three in some regions of Alaska) provide the same coverage as a standard USGS 1- by 2-degree quadrangle. The basic elevation model is produced by or for the Defense Mapping Agency (DMA), but is distributed by the USGS in the DEM data record format. Coverage is for the United States." ;
+    dc:spatial "POLYGON ((-104 36,-104 41,-94 41,-94 36,-104 36))" ;
+    dcterms:publisher <urn:uuid:d1dc7269-3f00-49f8-81a4-50c82e6ffb2a> ;
+    dcterms:references <urn:uuid:99ba5201-79f3-4c32-bdf2-ff97017e0750> ;
+    dcterms:title "Digtial Elevation Model (DEM) 250K" ;
+    esip:eastBound "-94.0"^^xsd:float ;
+    esip:endDate "1990-03-31"^^xsd:date ;
+    esip:northBound "41.0"^^xsd:float ;
+    esip:southBound "36.0"^^xsd:float ;
+    esip:westBound "-104.0"^^xsd:float ;
+    owl:a dcat:Dataset .
+

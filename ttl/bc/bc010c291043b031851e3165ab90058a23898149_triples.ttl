@@ -1,0 +1,77 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:0ee94fa2-9523-47fb-bc44-a95395ddf6b8> a "ISO 19115:2003/19139" ;
+    bcube:dateCreated "2015-03-06T09:16:14.781Z" ;
+    bcube:lastUpdated "2015-03-06T09:16:14.781Z" ;
+    bcube:originatedFrom <urn:uuid:9927a444-a14a-4284-9396-6d1cdc0035c3> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:db053f9b-21e1-45f2-af92-d883bbc164d9> .
+
+<urn:uuid:10de7a0f-790c-4b17-a9fb-e9d264b5784e> bcube:hasType "place" ;
+    bcube:hasValue "Coastal zone",
+        "Hawaii",
+        "Kauai",
+        "Kaunakakai",
+        "Kilauea",
+        "Lihue",
+        "Mana",
+        "Waimea Canyon" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:25ca4c97-f0bb-47c2-847a-d1e2ccb0c7fb> bcube:hasValue "climatologyMeteorologyAtmosphere" ;
+    dc:partOf "IsoTopicCategories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:5c70c222-5366-491f-9077-6217983d39cc> bcube:hasType "theme" ;
+    bcube:hasValue "Environmental Monitoring",
+        "Erosion",
+        "R-Factor",
+        "RUSLE",
+        "RUSLE2",
+        "Rainfall-Runoff Erosivity",
+        "Revised Universal Soil Loss Equation" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:9927a444-a14a-4284-9396-6d1cdc0035c3> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-03-06T09:16:14.781Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-03-06T09:16:14.781Z" ;
+    dc:identifier "urn:sha:879149b84f20fd3ad5620c405ed30d0d2e95c93112e0b2f900d8a4c6" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://catalog.data.gov/harvest/object/1c1387b4-3a71-4266-99ca-1d0c6760070b" .
+
+<urn:uuid:db053f9b-21e1-45f2-af92-d883bbc164d9> bcube:dateCreated "2015-03-06T09:16:14.781Z" ;
+    bcube:hasMetadataRecord <urn:uuid:0ee94fa2-9523-47fb-bc44-a95395ddf6b8> ;
+    bcube:lastUpdated "2015-03-06T09:16:14.781Z" ;
+    dc:conformsTo <urn:uuid:10de7a0f-790c-4b17-a9fb-e9d264b5784e>,
+        <urn:uuid:25ca4c97-f0bb-47c2-847a-d1e2ccb0c7fb>,
+        <urn:uuid:5c70c222-5366-491f-9077-6217983d39cc> ;
+    dc:description "The rainfall-runoff erosivity factor (R-Factor) quantifies the effects of raindrop impacts and reflects the amount and rate of runoff associated with the rain. The R-factor is one of the parameters used by the Revised Unified Soil Loss Equation (RUSLE) to estimate annual rates of erosion. This product is a raster representation of R-Factor derived from isoerodent maps published in the Agriculture Handbook Number 703 (Renard et al.,1997). Lines connecting points of equal rainfall ersoivity are called isoerodents. The iserodents plotted on a map of the Island of Kauai were digitized, then values between these lines were obtained by linear interpolation. The final R-Factor data are in raster GeoTiff format at 30 meter resolution in UTM, Zone 4, GRS80, NAD83." ;
+    dc:spatial "POLYGON ((-158.287559 21.243777,-158.287559 21.714257,-157.624997 21.714257,-157.624997 21.243777,-158.287559 21.243777))" ;
+    dcterms:title "R-Factor for the Island of Kauai" ;
+    esip:eastBound "-157.624997"^^xsd:float ;
+    esip:endDate "1997-01-01"^^xsd:date ;
+    esip:northBound "21.714257"^^xsd:float ;
+    esip:southBound "21.243777"^^xsd:float ;
+    esip:startDate "1975-01-01"^^xsd:date ;
+    esip:westBound "-158.287559"^^xsd:float ;
+    owl:a dcat:Dataset .
+

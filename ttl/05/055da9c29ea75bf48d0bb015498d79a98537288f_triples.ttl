@@ -1,0 +1,78 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:54f8ba2f-948c-4673-bbc2-11a587dd3f3b> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-10-29T23:30:01.586Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-10-29T23:30:01.586Z" ;
+    dc:identifier "urn:sha:e27ea7d9a0af3453db2ec5a14e8c9af89487fd2a9a0d769cc1f96e3a" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://data.denvergov.org/download/gis/american_community_survey_tracts_2006_2010/metadata/american_community_survey_tracts_2006_2010.xml" .
+
+<urn:uuid:5ba51825-9a74-4a61-be46-c860b27b20b7> bcube:hasType "theme" ;
+    bcube:hasValue "census",
+        "demographics" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:78e71dcf-520c-4e11-a18b-fb2fe5d215db> bcube:hasType "theme" ;
+    bcube:hasValue "economy",
+        "society" ;
+    dc:partOf "ISO 19115 Topic Categories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:8c6e1793-08b6-4d00-ae90-5384a736d35f> bcube:hasType "place" ;
+    bcube:hasValue "Colorado",
+        "Denver",
+        "Denver County",
+        "USA" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:a537af28-6964-44bf-9beb-27e8447ecc77> owl:a foaf:Organization ;
+    foaf:name "" .
+
+<urn:uuid:d6956b10-39cc-4610-8484-3c63d087db39> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-10-29T23:30:01.586Z" ;
+    bcube:lastUpdated "2015-10-29T23:30:01.586Z" ;
+    bcube:originatedFrom <urn:uuid:54f8ba2f-948c-4673-bbc2-11a587dd3f3b> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:e575c87b-25b0-44fc-822c-f22999ac4dcc> .
+
+<urn:uuid:e575c87b-25b0-44fc-822c-f22999ac4dcc> bcube:dateCreated "2015-10-29T23:30:01.586Z" ;
+    bcube:hasMetadataRecord <urn:uuid:d6956b10-39cc-4610-8484-3c63d087db39> ;
+    bcube:lastUpdated "2015-10-29T23:30:01.586Z" ;
+    dc:conformsTo <urn:uuid:5ba51825-9a74-4a61-be46-c860b27b20b7>,
+        <urn:uuid:78e71dcf-520c-4e11-a18b-fb2fe5d215db>,
+        <urn:uuid:8c6e1793-08b6-4d00-ae90-5384a736d35f>,
+        <urn:uuid:e9e9031e-549c-4882-9b17-20006e67656e> ;
+    dc:description "Census Tract level data from the American Community Survey; 5 year average, years 2006-2010. The original census tract boundaries have been adjusted to various Denver GIS data layers to increase the spatial accuracy of this data. Although every effort was made to ensure the accurate rectification of the data, due to geographic problems inherent in the original 2010 census tract data, errors may exist. This data-set does not contain data for any enclaves administered by other jurisdictions that are located within the City and County of Denver's boundary. This data is a sample, not a census. Results should be considered estimates. See American Community Survey website for margin of error information." ;
+    dc:spatial "POLYGON ((-105.109967 39.614311,-105.109967 39.914209,-104.599538 39.914209,-104.599538 39.614311,-105.109967 39.614311))" ;
+    dcterms:publisher <urn:uuid:a537af28-6964-44bf-9beb-27e8447ecc77> ;
+    dcterms:title "American Community Survey Tracts (2006-2010)" ;
+    esip:eastBound "-104.599538"^^xsd:float ;
+    esip:northBound "39.914209"^^xsd:float ;
+    esip:southBound "39.614311"^^xsd:float ;
+    esip:westBound "-105.109967"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:e9e9031e-549c-4882-9b17-20006e67656e> bcube:hasType "temporal" ;
+    bcube:hasValue "2006-2010" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+

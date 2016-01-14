@@ -1,0 +1,87 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:02745444-853b-4669-872c-67ac851ce3be> bcube:hasType "place" ;
+    bcube:hasValue "Florida",
+        "Portions of Lake County",
+        "Portions of Orange County",
+        "United States",
+        "Western Seminole County" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:16891ed9-fa68-4f7a-92b1-331c2db5047a> bcube:hasValue "elevation" ;
+    dc:partOf "IsoTopicCategories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:2d9d4cc9-0021-45d6-83bc-ea29a02575fd> a "ISO 19115:2003/19139" ;
+    bcube:dateCreated "2015-08-05T11:18:35.424Z" ;
+    bcube:lastUpdated "2015-08-05T11:18:35.424Z" ;
+    bcube:originatedFrom <urn:uuid:3cf6eb3f-f1de-4368-a36e-57f406956630> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:3924ead9-94fd-44ad-af68-6bbe3b9061e9> .
+
+<urn:uuid:3924ead9-94fd-44ad-af68-6bbe3b9061e9> bcube:dateCreated "2015-08-05T11:18:35.424Z" ;
+    bcube:hasMetadataRecord <urn:uuid:2d9d4cc9-0021-45d6-83bc-ea29a02575fd> ;
+    bcube:lastUpdated "2015-08-05T11:18:35.424Z" ;
+    dc:conformsTo <urn:uuid:02745444-853b-4669-872c-67ac851ce3be>,
+        <urn:uuid:16891ed9-fa68-4f7a-92b1-331c2db5047a>,
+        <urn:uuid:ae87a4d5-04eb-421c-be02-f792504ce635> ;
+    dc:description "This data set consists of a bare earth data set of 498 files covering a geographic area of 175 square miles in western Seminole County, Florida and includes small portions of adjacent Orange and Lake Counties. The lidar data was collected June 5-7, 2005. This data set seems to contain only model keypoints (points that are a thinned data set that is intended to remove extraneous data such as trees and points that are deemed redundant to the final bare earth product) that are classified as ground points. As a result, there are a lower number of points than in a full mass point lidar data set; and it is recommended that the data be downloaded as points and used with a TIN (Triangulated Irregular Network) or similar algorithm to produce a bare earth surface." ;
+    dc:spatial "POLYGON ((-81.486743 28.639242,-81.486743 28.875263,-81.240467 28.875263,-81.240467 28.639242,-81.486743 28.639242))" ;
+    dcterms:references <urn:uuid:aeb9a7f5-aeac-4cdd-a70a-f7014548c5fc> ;
+    dcterms:title "2005 St. Johns River Water Management District (SJRWMD) Lidar: Western Seminole County, Florida" ;
+    esip:eastBound "-81.240467"^^xsd:float ;
+    esip:endDate "2005-06-07"^^xsd:date ;
+    esip:northBound "28.875263"^^xsd:float ;
+    esip:southBound "28.639242"^^xsd:float ;
+    esip:startDate "2005-06-05"^^xsd:date ;
+    esip:westBound "-81.486743"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:3cf6eb3f-f1de-4368-a36e-57f406956630> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-05T11:18:35.424Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-05T11:18:35.424Z" ;
+    dc:identifier "urn:sha:5389ad255b6185436360fbee2c336d81b1d3755ec76dff7d7a7a0c41" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://coast.noaa.gov/data/Documents/Metadata/isotest/fl2005_seminole_m101_metadata_iso.xml" .
+
+<urn:uuid:ae87a4d5-04eb-421c-be02-f792504ce635> bcube:hasType "theme" ;
+    bcube:hasValue "ASCII",
+        "Bare earth",
+        "Bathymetry/Topography",
+        "Intensity image",
+        "LAS",
+        "Lidar Mapping",
+        "Topographic" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:aeb9a7f5-aeac-4cdd-a70a-f7014548c5fc> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-05T11:18:35.424Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-05T11:18:35.424Z" ;
+    dc:identifier "urn:sha:e94bed314af54c75f24736ff479abd0f30fb114cfe7e04287bf01638" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://coast.noaa.gov/dataviewer/index.html?action=advsearchVal=101" .
+

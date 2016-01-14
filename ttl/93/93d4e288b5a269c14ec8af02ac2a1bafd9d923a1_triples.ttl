@@ -1,0 +1,91 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:0312572f-92ff-46e5-8501-3e70d5501914> bcube:hasType "theme" ;
+    bcube:hasValue "1-Hour Ozone",
+        "8-Hour Ozone",
+        "Atmosphere",
+        "Boundaries",
+        "Carbon Monoxide",
+        "Environmental",
+        "Nonattainment",
+        "PM-10" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:0b73196f-42e7-4274-b725-eef670e746d0> bcube:hasType "place" ;
+    bcube:hasValue "Louisiana" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:12beaf7f-d5c8-4d5a-807d-972ad17a0ac0> bcube:dateCreated "2015-03-06T09:43:50.376Z" ;
+    bcube:hasMetadataRecord <urn:uuid:8f6ebbd5-5832-4db1-9305-a255b4492d4e> ;
+    bcube:lastUpdated "2015-03-06T09:43:50.376Z" ;
+    dc:conformsTo <urn:uuid:0312572f-92ff-46e5-8501-3e70d5501914>,
+        <urn:uuid:0b73196f-42e7-4274-b725-eef670e746d0> ;
+    dc:description "EPA Region 6 NonAttainment Areas in Louisiana, current as of May 2006. This shapefile contains parish boundaries and attributes that determine whether the parishes are considered by the US EPA to be in NonAttainment, i.e. to not have met the air quality standards for 1-hour ozone, 8-hour ozone, carbon monoxide, or PM-10 pollutants. The US EPA Green Book (http://www.epa.gov/oar/oaqps/greenbk/index.html) was used to generate this dataset. The Green Book data was reviewed May 9, 2006, and this shapefile reflects the data available on May 9, 2006.Per the Green Book documentation, the 1-hour ozone designations were determined June 15, 2005, and the other pollutants were determined as of March 2, 2006." ;
+    dc:spatial "POLYGON ((-109.050173 25.837377,-109.050173 37.002328,-88.758389 37.002328,-88.758389 25.837377,-109.050173 25.837377))" ;
+    dcterms:publisher <urn:uuid:159a15e1-f115-4501-bd5b-701dfffd1454> ;
+    dcterms:references <urn:uuid:4be4ddb2-f02d-489b-acce-02dc6b65190c>,
+        <urn:uuid:e28fd87e-749d-45f2-8774-412218f1194d> ;
+    dcterms:title "Nonattainment Areas in Louisiana, Geographic NAD83, EPA (2006) [Nonattainment_LA_EPA_2006]" ;
+    esip:eastBound "-88.758389"^^xsd:float ;
+    esip:northBound "37.002328"^^xsd:float ;
+    esip:southBound "25.837377"^^xsd:float ;
+    esip:westBound "-109.050173"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:159a15e1-f115-4501-bd5b-701dfffd1454> owl:a foaf:Organization ;
+    foaf:name "EPA Region 6" .
+
+<urn:uuid:4be4ddb2-f02d-489b-acce-02dc6b65190c> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-03-06T09:43:50.376Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-03-06T09:43:50.376Z" ;
+    dc:identifier "urn:sha:d14a028c2a3a2bc9476102bb288234c415a2b01f828ea62ac5b3e42f" ;
+    owl:a bcube:Url .
+
+<urn:uuid:8f6ebbd5-5832-4db1-9305-a255b4492d4e> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-03-06T09:43:50.376Z" ;
+    bcube:lastUpdated "2015-03-06T09:43:50.376Z" ;
+    bcube:originatedFrom <urn:uuid:cc7741ba-71d9-4222-ba89-21758bf4b4b6> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:12beaf7f-d5c8-4d5a-807d-972ad17a0ac0> .
+
+<urn:uuid:cc7741ba-71d9-4222-ba89-21758bf4b4b6> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-03-06T09:43:50.376Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-03-06T09:43:50.376Z" ;
+    dc:identifier "urn:sha:5823153b48f8fb6675e1a813736a896445e765bfa1dab3b694c48d8a" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://catalog.data.gov/harvest/object/1f365a0e-0680-4b56-ad87-7e102503004d/original" .
+
+<urn:uuid:e28fd87e-749d-45f2-8774-412218f1194d> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-03-06T09:43:50.376Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-03-06T09:43:50.376Z" ;
+    dc:identifier "urn:sha:e885cdeffea6decc3c150190404871c1aa9004d59ae8f53cab5aa502" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://lagic.lsu.edu/data/losco/Nonattainment_LA_EPA_2006.zip" .
+

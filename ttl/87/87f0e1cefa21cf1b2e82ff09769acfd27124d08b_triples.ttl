@@ -1,0 +1,78 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:12909b26-aa98-409d-a603-66ea0929bc70> bcube:hasType "theme" ;
+    bcube:hasValue "Geographic Information > Bathymetry" ;
+    dc:partOf "CoRIS Discovery Thesaurus" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:60ce4ce6-9ede-429f-9af1-a70bd7a72dff> bcube:hasType "theme" ;
+    bcube:hasValue "Bathymetry",
+        "Multibeam sonar" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:8257b307-c36a-42bd-8ea1-1efd11fa64cc> a "ISO 19115:2003/19139" ;
+    bcube:dateCreated "2014-10-28T13:54:15.04Z" ;
+    bcube:lastUpdated "2014-10-28T13:54:15.04Z" ;
+    bcube:originatedFrom <urn:uuid:e3cd4638-1f26-4b99-bc54-e412e2118f69> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:ae1fe73d-d963-492e-98ec-907984930dda> .
+
+<urn:uuid:92debc41-6d25-4301-940b-3f6a1772abb1> bcube:hasType "theme" ;
+    bcube:hasValue "EARTH SCIENCE > Oceans > Bathymetry/Seafloor Topography > Bathymetry" ;
+    dc:partOf "CoRIS Theme Thesaurus" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:ae1fe73d-d963-492e-98ec-907984930dda> bcube:dateCreated "2014-10-28T13:54:15.04Z" ;
+    bcube:hasMetadataRecord <urn:uuid:8257b307-c36a-42bd-8ea1-1efd11fa64cc> ;
+    bcube:lastUpdated "2014-10-28T13:54:15.04Z" ;
+    dc:conformsTo <urn:uuid:12909b26-aa98-409d-a603-66ea0929bc70>,
+        <urn:uuid:60ce4ce6-9ede-429f-9af1-a70bd7a72dff>,
+        <urn:uuid:92debc41-6d25-4301-940b-3f6a1772abb1>,
+        <urn:uuid:de65b97d-aa9b-4fa8-b980-0bb0f1464946>,
+        <urn:uuid:f03566e8-2416-497d-81ca-a5b570b99df4> ;
+    dc:description "EM1002 and EM120 multibeam Data were collected in October/November 2002 aboard R/V Kilo Moana between Kauai Island and Lisianski Island in the Northwestern Hawaiian Islands (NWHI). Multibeam data were collected using Simrad Neptune software, converted to the Generic Sensor Format, and processed using SABER editing software. Sound velocity corrections from CTD's and motion corrections from a POS-MV vertical reference were applied to the data in real time. No tidal correctors were applied in real-time or in post-processing. The EM1002 has heave artifacts (~0.6m) in shallow bank-top data. Horizontal accuracy is 20m (no differential GPS correctors applied), vertical accuracy is depth dependent (~1% of water depth), WGS84 datum. These data are not to be used for navigation. Depths mapped range from 30-5200 meters below sea level." ;
+    dc:spatial "POLYGON ((-174.7 21.0,-174.7 26.66,-158.0 26.66,-158 21,-174.7 21.0))" ;
+    dcterms:title "2002 EM1002 and EM120 Multibeam Sonar Data from Cruise R/V Kilo Moana KM-02-06 - Northwestern Hawaiian Islands" ;
+    esip:eastBound "-158.0"^^xsd:float ;
+    esip:endDate "2002-11-16"^^xsd:date ;
+    esip:northBound "26.66"^^xsd:float ;
+    esip:southBound "21.0"^^xsd:float ;
+    esip:startDate "2002-10-22"^^xsd:date ;
+    esip:westBound "-174.7"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:de65b97d-aa9b-4fa8-b980-0bb0f1464946> bcube:hasValue "elevation" ;
+    dc:partOf "IsoTopicCategories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:e3cd4638-1f26-4b99-bc54-e412e2118f69> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2014-10-28T13:54:15.04Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2014-10-28T13:54:15.04Z" ;
+    dc:identifier "urn:sha:5c14f6ab9b79aaf1909f299c812169c3d7ae103d0ecb3dee807c1e6f" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "https://data.noaa.gov/harvest/object/6544face-4734-4384-8f36-5c187df09393" .
+
+<urn:uuid:f03566e8-2416-497d-81ca-a5b570b99df4> bcube:hasType "place" ;
+    bcube:hasValue "Islands",
+        "Northwestern Hawaiian Islands" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+

@@ -1,0 +1,62 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:2c28c688-a69e-4b71-8429-e8c20f258a2b> a "ISO 19115:2003/19139" ;
+    bcube:dateCreated "2015-08-08T09:20:07.749Z" ;
+    bcube:lastUpdated "2015-08-08T09:20:07.749Z" ;
+    bcube:originatedFrom <urn:uuid:851cf874-71c1-438e-ac0b-13198a5531a6> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:3d2772e5-3f01-47b3-9dae-cc41beaca3f6> .
+
+<urn:uuid:3a83aa1b-c2a6-486e-916a-106b55a64163> bcube:hasValue "Downscaling",
+        "Global Climate Model",
+        "Idaho EPSCoR",
+        "MACA",
+        "Precipitation",
+        "Treasure Valley" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:3d2772e5-3f01-47b3-9dae-cc41beaca3f6> bcube:dateCreated "2015-08-08T09:20:07.749Z" ;
+    bcube:hasMetadataRecord <urn:uuid:2c28c688-a69e-4b71-8429-e8c20f258a2b> ;
+    bcube:lastUpdated "2015-08-08T09:20:07.749Z" ;
+    dc:conformsTo <urn:uuid:3a83aa1b-c2a6-486e-916a-106b55a64163>,
+        <urn:uuid:549c6738-8f05-46af-8f7d-4f242363cd2f> ;
+    dc:description "Multivariate Adaptive Constructed Analogs(MACA)Statistical Downscaling Method has been used to downscale the model output from 14 global climate models (GCMs) of the Coupled Intermodel Comparison Project 5 (CMIP5) to 4-km resolution for the historical GCM forcings (1950-2005) and the future Representative Concentration Pathways (rcp's) rcp 45/85 scenarios (2006-2100). This is the subset of the daily precipitation data for the Treasure Valley region from 2006-2015. The GCM model used is CNRM-CM5 (France). The spatial resolution is maintained to 4 km. The data format is NETCDF-4. The rcp is 45." ;
+    dc:spatial "POLYGON ((-117.0625 43.9375,-117.0625 43.1875,-115.8125 43.1875,-115.8125 43.9375,-117.0625 43.9375))" ;
+    dcterms:title "CMIP5 precipitation data statistically downscaled for the Treasure Valley" ;
+    esip:eastBound "-115.8125"^^xsd:float ;
+    esip:endDate "2015-12-31"^^xsd:date ;
+    esip:northBound "43.1875"^^xsd:float ;
+    esip:southBound "43.9375"^^xsd:float ;
+    esip:startDate "2006-01-01"^^xsd:date ;
+    esip:westBound "-117.0625"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:549c6738-8f05-46af-8f7d-4f242363cd2f> bcube:hasValue "climatologyMeteorologyAtmosphere",
+        "environment" ;
+    dc:partOf "IsoTopicCategories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:851cf874-71c1-438e-ac0b-13198a5531a6> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-08T09:20:07.749Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-08T09:20:07.749Z" ;
+    dc:identifier "urn:sha:d0f159e35fa0b17172d388c383c34ef3d2669f5cc5d545a2b9975bcc" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://data.boisestate.edu/opendap/data/MILES/Old_XMLs_2015-04-21/CMIP5_TV.xml" .
+

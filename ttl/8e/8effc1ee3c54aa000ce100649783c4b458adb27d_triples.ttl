@@ -1,0 +1,108 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:060a6f79-9191-4fbb-ad6a-b3847018adba> a "ISO 19115:2003/19139" ;
+    bcube:dateCreated "2015-06-24T05:17:46.682Z" ;
+    bcube:lastUpdated "2015-06-24T05:17:46.682Z" ;
+    bcube:originatedFrom <urn:uuid:c79dc466-6d56-4751-ae08-4583ee02c687> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:665746c6-d7e6-4211-a4b2-55d3f8efd9c4> .
+
+<urn:uuid:2293639a-add6-45f1-8664-3d0d8697cedc> bcube:hasType "theme" ;
+    bcube:hasValue "MODIS",
+        "gridded meteorological data",
+        "homogenization",
+        "kriging",
+        "land skin temperature",
+        "maximum temperature",
+        "minimum temperature" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:627a7ab4-c767-4421-8095-e1e4000b47cf> bcube:hasType "project" ;
+    bcube:hasValue "TopoWx: Topoclimatic Daily Air Temperature Dataset for the Conterminous United States" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:665746c6-d7e6-4211-a4b2-55d3f8efd9c4> bcube:dateCreated "2015-06-24T05:17:46.682Z" ;
+    bcube:hasMetadataRecord <urn:uuid:060a6f79-9191-4fbb-ad6a-b3847018adba> ;
+    bcube:lastUpdated "2015-06-24T05:17:46.682Z" ;
+    dc:conformsTo <urn:uuid:2293639a-add6-45f1-8664-3d0d8697cedc>,
+        <urn:uuid:627a7ab4-c767-4421-8095-e1e4000b47cf>,
+        <urn:uuid:8cebb003-2975-4e01-8e2f-1d2d0fae1312>,
+        <urn:uuid:c6df35a9-dec4-4973-b41f-59def42077d8>,
+        <urn:uuid:d297433d-a7b5-4c37-81a6-47910ac2e574> ;
+    dc:description "The TopoWx ('Topography Weather') dataset contains historical 30-arcsec resolution (~800-m) interpolations of daily minimum and maximum topoclimatic air temperature for the conterminous U.S. Using both DEM-based variables and MODIS land skin temperature as predictors of air temperature, interpolation procedures include moving window regression kriging and geographically weighted regression. To avoid artificial climate trends, all input station data are homogenized using the GHCN/USHCN Pairwise Homogenization Algorithm (http://www.ncdc.noaa.gov/oa/climate/research/ushcn/#phas). The interpolation model is open source and information on obtaining model code can be found at http://www.ntsg.umt.edu/project/TopoWx. The following data are available in this archive: 1948-2012 daily minimum and maximum temperature, and 1981-2010 monthly normals for minimum and maximum temperature with corresponding uncertainty (kriging prediction error)." ;
+    dc:identifier "cida.usgs.gov/topowx" ;
+    dc:spatial "POLYGON ((-125.000000553 24.124999896799999,-125.000000553 51.199999788500001,-66.675000786799998 51.199999788500001,-66.675000786799998 24.124999896799999,-125.000000553 24.124999896799999))" ;
+    dcterms:references <urn:uuid:942fe2cc-e66e-4a9c-879f-36970e46e0d8>,
+        <urn:uuid:edf98f57-592d-4e85-9939-6d4608b3437c> ;
+    dcterms:title "TopoWx: Topoclimatic Daily Air Temperature Dataset for the Conterminous United States" ;
+    esip:eastBound "-66.6750007868"^^xsd:float ;
+    esip:endDate "2012-12-31"^^xsd:date ;
+    esip:northBound "51.1999997885"^^xsd:float ;
+    esip:southBound "24.1249998968"^^xsd:float ;
+    esip:startDate "1948-01-01"^^xsd:date ;
+    esip:westBound "-125.000000553"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:8cebb003-2975-4e01-8e2f-1d2d0fae1312> bcube:hasValue "climatologyMeteorologyAtmosphere" ;
+    dc:partOf "IsoTopicCategories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:942fe2cc-e66e-4a9c-879f-36970e46e0d8> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-06-24T05:17:46.682Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-06-24T05:17:46.682Z" ;
+    dc:identifier "urn:sha:3f289e876a9d0772bbd23963066f0cffad782ca8697b32c2ff8b1593" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www.ncdc.noaa.gov/oa/wct/wct-jnlp-beta.php?singlefile=http://cida.usgs.gov/thredds/dodsC/topowx" .
+
+<urn:uuid:c6df35a9-dec4-4973-b41f-59def42077d8> bcube:hasType "theme" ;
+    bcube:hasValue "air_temperature",
+        "latitude",
+        "longitude",
+        "time" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:c79dc466-6d56-4751-ae08-4583ee02c687> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-06-24T05:17:46.682Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-06-24T05:17:46.682Z" ;
+    dc:identifier "urn:sha:a3104d9133b47c6e01b3103527b240b90a334fc0312e4561ab02bf2d" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://cida.usgs.gov/thredds/iso/topowx?catalog=http%3A%2F%2Fcida.usgs.gov%2Fthredds%2Fcatalog.html&dataset=cida.usgs.gov%2Ftopowx" .
+
+<urn:uuid:d297433d-a7b5-4c37-81a6-47910ac2e574> bcube:hasType "dataCenter" ;
+    bcube:hasValue "Center for Integrated Data Analytics" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:edf98f57-592d-4e85-9939-6d4608b3437c> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-06-24T05:17:46.682Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-06-24T05:17:46.682Z" ;
+    dc:identifier "urn:sha:a5bb2538f231aff33c451c52fcf6ffa9206326a78ff73312a98a0475" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://cida.usgs.gov/thredds/dodsC/topowx.html" .
+

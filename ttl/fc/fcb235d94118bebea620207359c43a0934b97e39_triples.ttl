@@ -1,0 +1,74 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:38f1ec37-d456-4338-8ba1-c4f9b627f3f8> owl:a foaf:Organization ;
+    foaf:name "" .
+
+<urn:uuid:3e189eb6-e022-4aeb-8e49-fc46638bf1fd> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-04T21:56:36.825Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-04T21:56:36.825Z" ;
+    dc:identifier "urn:sha:5d8382c8b7f10f7c0b7cc041a4bbd71289e3ac15b2dbdb7ee39f8988" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "https://inport.nmfs.noaa.gov/inport/item/17791/fgdc" .
+
+<urn:uuid:4366c3c3-f2a8-4983-9746-7d2873317d38> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-08-04T21:56:36.825Z" ;
+    bcube:lastUpdated "2015-08-04T21:56:36.825Z" ;
+    bcube:originatedFrom <urn:uuid:3e189eb6-e022-4aeb-8e49-fc46638bf1fd> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:560e435f-7abc-4915-946d-4c4474aba8e7> .
+
+<urn:uuid:560e435f-7abc-4915-946d-4c4474aba8e7> bcube:dateCreated "2015-08-04T21:56:36.825Z" ;
+    bcube:hasMetadataRecord <urn:uuid:4366c3c3-f2a8-4983-9746-7d2873317d38> ;
+    bcube:lastUpdated "2015-08-04T21:56:36.825Z" ;
+    dc:conformsTo <urn:uuid:8cda7aa5-1b5f-4bec-80ff-118cf80ad010>,
+        <urn:uuid:f48be6a1-acb7-47fd-bdf4-f2c2ccaf6562> ;
+    dc:description "This project examines the factors influencing fish populations including habitat, harvest, hatcheries, hydropower system operations, and climate change. It seeks to estimate impacts of these factors on Wenatchee River basin spring Chinook salmon through the use of the Shiraz life cycle model parameterized for this fish population. An evaluation of a suite of habitat restoration actions will be conducted, a reparameterized model to incorporate supplementation effects will estimate the impacts on wild fish from hatchery operations, and the influence of climate change as estimated from several bracketing Global Climate Models (and their basin impacts determined via DHSVM modeling) will be examined. The Shiraz and climate modeling work is led by Dr. Jon Honea at Emerson College (Boston, MA), an external collaborator who began this work in a post-doctoral position at the NWFSC. Model" ;
+    dc:spatial "POLYGON ((-122.306178 47.644914,-122.306178 47.828129371,-120.692138672 47.828129371,-120.692138672 47.644914,-122.306178 47.644914))" ;
+    dcterms:identifier "gov.noaa.nmfs.inport:17791" ;
+    dcterms:publisher <urn:uuid:38f1ec37-d456-4338-8ba1-c4f9b627f3f8> ;
+    dcterms:title "Shiraz model (All-H modeling spring Chinook salmon in the Wenatchee River Basin)" ;
+    esip:eastBound "-120.692138672"^^xsd:float ;
+    esip:northBound "47.828129371"^^xsd:float ;
+    esip:southBound "47.644914"^^xsd:float ;
+    esip:startDate "2005-06-01"^^xsd:date ;
+    esip:westBound "-122.306178"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:8cda7aa5-1b5f-4bec-80ff-118cf80ad010> bcube:hasType "theme" ;
+    bcube:hasValue "Biological",
+        "Wenatchee River basin",
+        "chinook salmon",
+        "climate change",
+        "hatchery",
+        "life cycle modeling",
+        "restoration" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:f48be6a1-acb7-47fd-bdf4-f2c2ccaf6562> bcube:hasType "place" ;
+    bcube:hasValue "17020011",
+        "HUC_8",
+        "Montlake",
+        "NWFSC Montlake",
+        "Subbasin",
+        "Wenatchee River Basin" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+

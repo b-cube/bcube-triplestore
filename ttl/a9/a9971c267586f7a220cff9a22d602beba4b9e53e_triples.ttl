@@ -1,0 +1,76 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:1c88d9de-85fe-429e-9782-1999801d4511> owl:a foaf:Organization ;
+    foaf:name "Montana State Library" .
+
+<urn:uuid:78e0b43a-e78b-42e6-b162-6a57438d488f> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-11T19:38:30.283Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-11T19:38:30.283Z" ;
+    dc:identifier "urn:sha:830d809cf14e00958727d5e1b3adb440793abe66b650255da1b5ccd0" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://mslapps.mt.gov/Geographic_Information/Data/DataList/datalist_MetadataDetailRaw.aspx?did={0284CD21-CE92-411D-82B4-4CB57114585F}" .
+
+<urn:uuid:8159a204-eee1-4868-9d4e-908ea5675093> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-11T19:38:30.283Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-11T19:38:30.283Z" ;
+    dc:identifier "urn:sha:4ed6defd2ed923f1b54daed6abf1f5431f4e5a51f3a726f8563a2da2" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://ftp.geoinfo.msl.mt.gov/Data/Spatial/MSDI/Imagery/2011_NAIP/24_km_tiles/00_NAIP_2011_Tile_Index.zip" .
+
+<urn:uuid:a742d043-b1ba-4836-af7f-2fc66a957315> bcube:hasType "theme" ;
+    bcube:hasValue "imageryBaseMapsEarthCover" ;
+    dc:partOf "ISO 19115 Topic Category" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:c72dad5e-8d35-4391-a4b7-86ec274289f6> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-08-11T19:38:30.283Z" ;
+    bcube:lastUpdated "2015-08-11T19:38:30.283Z" ;
+    bcube:originatedFrom <urn:uuid:78e0b43a-e78b-42e6-b162-6a57438d488f> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:ef30a5e2-75cb-4c48-b859-96d64d1cdd9b> .
+
+<urn:uuid:d38edaec-e7da-40e8-bdff-426b4db1f0f6> bcube:hasType "place" ;
+    bcube:hasValue "MT",
+        "Montana" ;
+    dc:partOf "States of the United States" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:ef30a5e2-75cb-4c48-b859-96d64d1cdd9b> bcube:dateCreated "2015-08-11T19:38:30.283Z" ;
+    bcube:hasMetadataRecord <urn:uuid:c72dad5e-8d35-4391-a4b7-86ec274289f6> ;
+    bcube:lastUpdated "2015-08-11T19:38:30.283Z" ;
+    dc:conformsTo <urn:uuid:a742d043-b1ba-4836-af7f-2fc66a957315>,
+        <urn:uuid:d38edaec-e7da-40e8-bdff-426b4db1f0f6> ;
+    dc:description "These data show the tile boundaries and image file names for the color digital aerial photos that may be downloaded from http://mslapps.mt.gov/Geographic_Information/Data/Aerial_Photos/naip_2011_default.aspx." ;
+    dc:spatial "POLYGON ((-116.125 44.25,-116.125 49.0,-104 49,-104.0 44.25,-116.125 44.25))" ;
+    dcterms:publisher <urn:uuid:1c88d9de-85fe-429e-9782-1999801d4511> ;
+    dcterms:references <urn:uuid:8159a204-eee1-4868-9d4e-908ea5675093> ;
+    dcterms:title "Index to Montana 2011 NAIP Orthophoto 24-Kilometer Tile Names" ;
+    esip:eastBound "-104.0"^^xsd:float ;
+    esip:northBound "49.0"^^xsd:float ;
+    esip:southBound "44.25"^^xsd:float ;
+    esip:startDate "2011-01-01"^^xsd:date ;
+    esip:westBound "-116.125"^^xsd:float ;
+    owl:a dcat:Dataset .
+

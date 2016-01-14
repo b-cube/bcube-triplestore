@@ -1,0 +1,62 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:0c1991fe-3e5f-4627-96b9-87a9e0eeb221> bcube:hasType "theme" ;
+    bcube:hasValue "Park",
+        "Parklands",
+        "Public Land",
+        "Recreation" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:0dadc449-5f08-4e09-9cd9-fde26a56464a> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-11-03T00:31:21.322Z" ;
+    bcube:lastUpdated "2015-11-03T00:31:21.322Z" ;
+    bcube:originatedFrom <urn:uuid:437f1319-edbf-4947-9b38-6a7b1e4a3055> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:8ea9c59a-1707-4363-bac9-214f4136136d> .
+
+<urn:uuid:437f1319-edbf-4947-9b38-6a7b1e4a3055> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-03T00:31:21.322Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-03T00:31:21.322Z" ;
+    dc:identifier "urn:sha:002403c39a123d64ccf28c3f3e091b2fe0fde39f549a342766610680" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://data.a2gov.org/feeds/GIS/AA%20Parks/AA_Parks.shp.xml" .
+
+<urn:uuid:8ea9c59a-1707-4363-bac9-214f4136136d> bcube:dateCreated "2015-11-03T00:31:21.322Z" ;
+    bcube:hasMetadataRecord <urn:uuid:0dadc449-5f08-4e09-9cd9-fde26a56464a> ;
+    bcube:lastUpdated "2015-11-03T00:31:21.322Z" ;
+    dc:conformsTo <urn:uuid:0c1991fe-3e5f-4627-96b9-87a9e0eeb221>,
+        <urn:uuid:b2108c34-632e-4390-b626-21e00e532c3a> ;
+    dc:description "City owned park land updated as park land is acquired or sold. Based on City of Ann Arbor parcels" ;
+    dc:spatial "POLYGON ((-83.799724 42.226126,-83.799724 42.323353,-83.654912 42.323353,-83.654912 42.226126,-83.799724 42.226126))" ;
+    dcterms:publisher <urn:uuid:9b95bb37-2a04-4ccc-8cec-2ad0125095a0> ;
+    dcterms:title "Parks" ;
+    esip:eastBound "-83.654912"^^xsd:float ;
+    esip:northBound "42.323353"^^xsd:float ;
+    esip:southBound "42.226126"^^xsd:float ;
+    esip:westBound "-83.799724"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:9b95bb37-2a04-4ccc-8cec-2ad0125095a0> owl:a foaf:Organization ;
+    foaf:name "" .
+
+<urn:uuid:b2108c34-632e-4390-b626-21e00e532c3a> bcube:hasType "place" ;
+    bcube:hasValue "Ann Arbor" ;
+    owl:a bcube:thesaurusSubset .
+

@@ -1,0 +1,128 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:292a6798-1e3b-4ba3-ab75-454fe858f71a> owl:a foaf:Organization ;
+    foaf:name "Louisiana Oil Spill Coordinator's Office (LOSCO)" .
+
+<urn:uuid:36a183e2-8df5-4ce3-a8b1-9e2185fc2df3> bcube:hasType "place" ;
+    bcube:hasValue "Louisiana" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:572dc389-beac-46ba-a0d3-dabddf2e0611> bcube:hasType "theme" ;
+    bcube:hasValue "1-DEGREE DEM",
+        "2-ARC-SECOND DEM",
+        "7.5-MINUTE DEM",
+        "CARTOGRAPHY",
+        "DEM",
+        "DIGITAL ELEVATION MODEL",
+        "DIGITAL MAPPING",
+        "EARTH SCIENCE",
+        "EDC",
+        "EROS",
+        "Elevation",
+        "GEODATA",
+        "GIS",
+        "LAND SURFACE",
+        "LANDFORMS",
+        "MAPPING",
+        "RASTER",
+        "TERRAIN ELEVATION",
+        "TOPOGRAPHY",
+        "USGS" ;
+    dc:partOf "GMCD Parameter Keywords" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:63844069-d4c7-4b90-bf9f-61a0414b9b28> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-07-22T15:29:03.178Z" ;
+    bcube:lastUpdated "2015-07-22T15:29:03.178Z" ;
+    bcube:originatedFrom <urn:uuid:a4563a5d-bf6f-43b9-8ab9-4a35c4fcc5f0> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:904200b2-c955-40b9-a1fa-2936e5baf0d3> .
+
+<urn:uuid:73abef8b-f4af-46a0-b70d-463bc223ebd8> bcube:hasType "theme" ;
+    bcube:hasValue "elevation",
+        "imageryBaseMapsEarthCover" ;
+    dc:partOf "ISO 19115 Topic Categories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:74133d32-fbcb-4c3c-8b49-fbfc17c04aff> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-07-22T15:29:03.178Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-07-22T15:29:03.178Z" ;
+    dc:identifier "urn:sha:168167bb928f37084780bed22d5c9e4dd4b96cd0e3323ad2970c8c0b" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://gis.deq.state.la.us" .
+
+<urn:uuid:904200b2-c955-40b9-a1fa-2936e5baf0d3> bcube:dateCreated "2015-07-22T15:29:03.178Z" ;
+    bcube:hasMetadataRecord <urn:uuid:63844069-d4c7-4b90-bf9f-61a0414b9b28> ;
+    bcube:lastUpdated "2015-07-22T15:29:03.178Z" ;
+    dc:conformsTo <urn:uuid:36a183e2-8df5-4ce3-a8b1-9e2185fc2df3>,
+        <urn:uuid:572dc389-beac-46ba-a0d3-dabddf2e0611>,
+        <urn:uuid:73abef8b-f4af-46a0-b70d-463bc223ebd8>,
+        <urn:uuid:bd428966-8109-4ef4-b1cd-a51ac9d0492b>,
+        <urn:uuid:ee3fcda4-c437-4d9d-8bbf-5f8596ec9ae9> ;
+    dc:description "The Louisiana Digital Elevation Dataset was derived from the U.S. Geological Survey National Elevation Database (NED). This data was projected to Universal Transverse Mercator Zone 15, NAD83. The vertical units have been converted from meters to feet. The U.S. Geological Survey NED is a seamless mosaic of best-available elevation data. The 7.5-minute elevation data for the conterminous United States are the primary initial source data. In addition to the availability of complete 7.5-minute data, efficient processing methods were developed to filter production artifacts in the existing data, convert to the NAD83 datum, edge-match, and fill slivers of missing data at quadrangle seams. One of the effects of the NED processing steps is a much-improved base of elevation data for calculating slope and hydrologic derivatives." ;
+    dc:spatial "POLYGON ((-94.054847 28.835872,-94.054847 33.023722,-88.619157 33.023722,-88.619157 28.835872,-94.054847 28.835872))" ;
+    dcterms:publisher <urn:uuid:292a6798-1e3b-4ba3-ab75-454fe858f71a> ;
+    dcterms:references <urn:uuid:74133d32-fbcb-4c3c-8b49-fbfc17c04aff>,
+        <urn:uuid:e8c8ea81-3277-4289-88af-4733f0549feb> ;
+    dcterms:title "Louisiana Digital Elevation Dataset from LDEQ source data, UTM Zone 15 NAD83, LOSCO (2004) [24KDEM_LDEQ_2004]" ;
+    esip:eastBound "-88.619157"^^xsd:float ;
+    esip:northBound "33.023722"^^xsd:float ;
+    esip:southBound "28.835872"^^xsd:float ;
+    esip:startDate "1999-02-01"^^xsd:date ;
+    esip:westBound "-94.054847"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:a4563a5d-bf6f-43b9-8ab9-4a35c4fcc5f0> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-07-22T15:29:03.178Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-07-22T15:29:03.178Z" ;
+    dc:identifier "urn:sha:6f876c98ac2e5bd8023a37f0c31ecd32f98446ca1a07fdfe152ad43b" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://catalog.data.gov/harvest/object/675a7f77-e524-48c9-99fb-b8b9c261f8b4/original" .
+
+<urn:uuid:bd428966-8109-4ef4-b1cd-a51ac9d0492b> bcube:hasType "theme" ;
+    bcube:hasValue "FWELEVATION" ;
+    dc:partOf "FGDC Framework Themes" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:e8c8ea81-3277-4289-88af-4733f0549feb> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-07-22T15:29:03.178Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-07-22T15:29:03.178Z" ;
+    dc:identifier "urn:sha:e9b78341b7cf4fe0e8754a779f97084a3e4a22e80179a363dccd1729" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://lagic.lsu.edu/data/losco/dem24k_ldeq_2004.zip" .
+
+<urn:uuid:ee3fcda4-c437-4d9d-8bbf-5f8596ec9ae9> bcube:hasType "place" ;
+    bcube:hasValue "NORTH AMERICA",
+        "UNITED STATE OF AMERICA",
+        "UNITED STATES" ;
+    dc:partOf "GCMD Location Keywords" ;
+    owl:a bcube:thesaurusSubset .
+

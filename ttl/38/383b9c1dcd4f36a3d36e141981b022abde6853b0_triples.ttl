@@ -1,0 +1,94 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:0b76dd21-f254-402b-85f2-f3f359fea4ea> bcube:hasType "theme" ;
+    bcube:hasValue "geoscientificinformation",
+        "oceans" ;
+    dc:partOf "ISO 19115 Topic Category" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:189c6f2c-c39f-401b-affb-de58b578ee2e> bcube:hasType "place" ;
+    bcube:hasValue "AK",
+        "Alaska",
+        "Bering Sea",
+        "North Bering Sea, Alaska",
+        "USA" ;
+    dc:partOf "Geographic Names Information System (GNIS)" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:2dff4031-d304-4475-9b34-ab696aa37530> bcube:dateCreated "2015-08-02T16:24:48.624Z" ;
+    bcube:hasMetadataRecord <urn:uuid:a209925d-d1e4-41ea-b5f2-b0f422081c2d> ;
+    bcube:lastUpdated "2015-08-02T16:24:48.624Z" ;
+    dc:conformsTo <urn:uuid:0b76dd21-f254-402b-85f2-f3f359fea4ea>,
+        <urn:uuid:189c6f2c-c39f-401b-affb-de58b578ee2e>,
+        <urn:uuid:59b2c1be-3c82-4b2a-a6f5-72617b74fbd3> ;
+    dc:description "Single-beam bathymetry, gravity, and magnetic data along with DGPS navigation data was collected as part of field activity L-6-80-BS in North Bering Sea, Alaska from 07/08/1980 to 07/28/1980, http://walrus.wr.usgs.gov/infobank/l/l680bs/html/l-6-80-bs.meta.html These data are reformatted from space-delimited ASCII text files located in the Coastal and Marine Geology Program (CMGP) InfoBank field activity catalog at http://walrus.wr.usgs.gov/infobank/l/l680bs/html/l-6-80-bs.bath.html, http://walrus.wr.usgs.gov/infobank/l/l680bs/html/l-6-80-bs.grav.html, and http://walrus.wr.usgs.gov/infobank/l/l680bs/html/l-6-80-bs.mag.html into MGD77T format provided by the NOAA's National Geophysical Data Center(NGDC). The MGD77T format includes a header (documentation) file (.h77t) and a data file (.m77t). More information regarding this format can be found in the publication listed in the Cross_reference section of this metadata file." ;
+    dc:spatial "POLYGON ((179.90149 53.0343,179.90149 65.11386,-165.72862 65.11386,-165.72862 53.0343,179.90149 53.0343))" ;
+    dcterms:publisher <urn:uuid:b4dea492-50b7-4ecc-af35-a703ba2a387c> ;
+    dcterms:references <urn:uuid:3686e97b-068f-4acb-b217-e60eddb79457> ;
+    dcterms:title "l680bs.m77t - MGD77 data file for Geophysical data from field activity L-6-80-BS in North Bering Sea, Alaska from 07/08/1980 to 07/28/1980" ;
+    esip:eastBound "-165.72862"^^xsd:float ;
+    esip:endDate "1980-07-28"^^xsd:date ;
+    esip:northBound "65.11386"^^xsd:float ;
+    esip:southBound "53.0343"^^xsd:float ;
+    esip:startDate "1980-07-08"^^xsd:date ;
+    esip:westBound "179.90149"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:3686e97b-068f-4acb-b217-e60eddb79457> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-02T16:24:48.624Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-02T16:24:48.624Z" ;
+    dc:identifier "urn:sha:a6717cf823d93efc32292cb3b9cada4171c27b2ece26f0a91f582cba" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www.ngdc.noaa.gov/mgg/trk/trackline/samuel_p._lee/l680bs/mgd77/" .
+
+<urn:uuid:59b2c1be-3c82-4b2a-a6f5-72617b74fbd3> bcube:hasType "theme" ;
+    bcube:hasValue "Bathymetry",
+        "Magnetic Anomalies",
+        "Marine Geology",
+        "Marine Geophysics",
+        "Marine Gravity Field",
+        "Marine Magnetic Field",
+        "Seafloor Topography",
+        "Water Depth" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:a209925d-d1e4-41ea-b5f2-b0f422081c2d> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-08-02T16:24:48.624Z" ;
+    bcube:lastUpdated "2015-08-02T16:24:48.624Z" ;
+    bcube:originatedFrom <urn:uuid:abd1d7b7-1c32-4e31-becb-e3b702e509cf> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:2dff4031-d304-4475-9b34-ab696aa37530> .
+
+<urn:uuid:abd1d7b7-1c32-4e31-becb-e3b702e509cf> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-02T16:24:48.624Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-02T16:24:48.624Z" ;
+    dc:identifier "urn:sha:2c6681a6d1d65115394111c4db504d04a0bff82b7eae58c7f5d5328d" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://catalog.data.gov/harvest/object/89ef56ce-8959-4ea8-83bb-d2f7c98e4a13/original" .
+
+<urn:uuid:b4dea492-50b7-4ecc-af35-a703ba2a387c> owl:a foaf:Organization ;
+    foaf:name "U.S. Geological Survey" .
+

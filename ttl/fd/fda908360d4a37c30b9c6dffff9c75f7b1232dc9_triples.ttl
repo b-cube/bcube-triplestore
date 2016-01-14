@@ -1,0 +1,75 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:505c19a1-23cc-484d-b412-cbcc189cffce> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-08-09T09:20:25.014Z" ;
+    bcube:lastUpdated "2015-08-09T09:20:25.014Z" ;
+    bcube:originatedFrom <urn:uuid:dfd7c010-3afb-483c-81c3-bc461f7d510f> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:57b3b17a-fcc7-48f4-9591-2fae3dbc86cc> .
+
+<urn:uuid:555c0ae4-cd07-4126-899a-1792bd2598c8> bcube:hasType "theme" ;
+    bcube:hasValue "centroid",
+        "lidar tile" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:57b3b17a-fcc7-48f4-9591-2fae3dbc86cc> bcube:dateCreated "2015-08-09T09:20:25.014Z" ;
+    bcube:hasMetadataRecord <urn:uuid:505c19a1-23cc-484d-b412-cbcc189cffce> ;
+    bcube:lastUpdated "2015-08-09T09:20:25.014Z" ;
+    dc:conformsTo <urn:uuid:555c0ae4-cd07-4126-899a-1792bd2598c8>,
+        <urn:uuid:a9b49ac1-a853-464e-829d-21cc3041798e> ;
+    dc:description "After flying the NASA EAARL instrument for a region, the data was divided into 2x2km tiles. These points represent the centroids of these tiles." ;
+    dc:spatial "POLYGON ((-80.455125 24.962394,-80.455125 25.198146,-80.235732 25.198146,-80.235732 24.962394,-80.455125 24.962394))" ;
+    dcterms:publisher <urn:uuid:d353df0b-6adf-4d8f-8141-f226d0bb59d2> ;
+    dcterms:references <urn:uuid:a574e742-6d4f-4576-85e5-295e4f9ecaa7> ;
+    dcterms:title "centroids" ;
+    esip:eastBound "-80.235732"^^xsd:float ;
+    esip:northBound "25.198146"^^xsd:float ;
+    esip:southBound "24.962394"^^xsd:float ;
+    esip:startDate "2006-01-01"^^xsd:date ;
+    esip:westBound "-80.455125"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:a574e742-6d4f-4576-85e5-295e4f9ecaa7> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-09T09:20:25.014Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-09T09:20:25.014Z" ;
+    dc:identifier "urn:sha:d14a028c2a3a2bc9476102bb288234c415a2b01f828ea62ac5b3e42f" ;
+    owl:a bcube:Url .
+
+<urn:uuid:a9b49ac1-a853-464e-829d-21cc3041798e> bcube:hasType "place" ;
+    bcube:hasValue "Florida",
+        "Florida Keys National Marine Sanctuary" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:d353df0b-6adf-4d8f-8141-f226d0bb59d2> owl:a foaf:Organization ;
+    foaf:name "" .
+
+<urn:uuid:dfd7c010-3afb-483c-81c3-bc461f7d510f> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-09T09:20:25.014Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-09T09:20:25.014Z" ;
+    dc:identifier "urn:sha:6db35778e7cc2ee8ff9e4628bf0e8f50f99f0b67b039c2dc02ee8f2e" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://pubs.usgs.gov/of/2007/1395/Shapefiles/centroids.shp.xml" .
+

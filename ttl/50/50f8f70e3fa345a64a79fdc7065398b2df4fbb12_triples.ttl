@@ -1,0 +1,91 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:273a3afc-ace4-4405-b52b-42dc6d796007> owl:a foaf:Organization ;
+    foaf:name "" .
+
+<urn:uuid:7fafe84d-5958-47f3-b46e-7e932ea2b4ab> bcube:hasType "theme" ;
+    bcube:hasValue "deposits",
+        "head scarp",
+        "inventory",
+        "landslide",
+        "photographs",
+        "scarps" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:9742b6af-3c27-463b-ae48-aeb141f39722> bcube:hasType "place" ;
+    bcube:hasValue "Elkhorn",
+        "Elkhorn Valley",
+        "Little North Santiam River Basin",
+        "Marion County",
+        "Oregon" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:aa9e68e8-a3d5-45b1-841b-7ad445bfbc89> bcube:dateCreated "2015-08-10T00:44:12.25Z" ;
+    bcube:hasMetadataRecord <urn:uuid:e32719f6-6e10-41e4-abb1-42b1673a5820> ;
+    bcube:lastUpdated "2015-08-10T00:44:12.25Z" ;
+    dc:conformsTo <urn:uuid:7fafe84d-5958-47f3-b46e-7e932ea2b4ab>,
+        <urn:uuid:9742b6af-3c27-463b-ae48-aeb141f39722>,
+        <urn:uuid:f8a15893-a56e-4b36-82b9-42bb94c3d0bb> ;
+    dc:description "This geodatabase is an inventory of existing landslides in the Little North Santiam River Basin, Oregon (2009). Each landslide feature shown has been classified according to a number of specific characteristics identified at the time recorded in the GIS database. The classification scheme was developed by the Oregon Department of Geology and Mineral Industries (Burns and Madin, 2009). Several significant landslide characteristics recorded in the database are portrayed with symbology on this map. The specific characteristics shown for each landslide are the activity of landsliding, landslide features, deep or shallow failure, type of landslide movement, and confidence of landslide interpretation. These landslide characteristics are determined primarily on the basis of geomorphic features, or landforms, observed for each landslide. This work was completed as part of the Master's thesis \"Turbidity Monitoring and LiDAR Imagery Indicate Landslides are Primary Source of Suspended-Sediment Load in the Little North Santiam River Basin, Oregon, Winter 2009-2010\" by Steven Sobieszczyk, Portland State University and U.S. Geological Survey. Data layers in this geodatabase include: landslide deposit boundaries (Deposits); field-verfied location imagery (Photos); head scarp or scarp flanks (Scarp_Flanks); and secondary scarp features (Scarps).The geodatabase template was developed by the Oregon Department of Geology and Mineral Industries (Burns and Madin, 2009)." ;
+    dc:spatial "POLYGON ((-122.583361 44.77622,-122.583361 44.89979,-122.135396 44.89979,-122.135396 44.77622,-122.583361 44.77622))" ;
+    dcterms:publisher <urn:uuid:273a3afc-ace4-4405-b52b-42dc6d796007> ;
+    dcterms:references <urn:uuid:f730b3f9-cd63-4a88-9823-015503e28ddb> ;
+    dcterms:title "Landslide Inventory for the Little North Santiam River Basin, Oregon" ;
+    esip:eastBound "-122.135396"^^xsd:float ;
+    esip:northBound "44.89979"^^xsd:float ;
+    esip:southBound "44.77622"^^xsd:float ;
+    esip:startDate "2009-01-01"^^xsd:date ;
+    esip:westBound "-122.583361"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:abe3c1d4-5282-4a28-83ee-11576bb8e17e> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-10T00:44:12.25Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-10T00:44:12.25Z" ;
+    dc:identifier "urn:sha:c63fdb5f8f559b2937ccd9be304afe380cc523160ba65bd8305fef01" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://water.usgs.gov/lookup/getspatial?insantiam_LandslideInventory" .
+
+<urn:uuid:e32719f6-6e10-41e4-abb1-42b1673a5820> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-08-10T00:44:12.25Z" ;
+    bcube:lastUpdated "2015-08-10T00:44:12.25Z" ;
+    bcube:originatedFrom <urn:uuid:abe3c1d4-5282-4a28-83ee-11576bb8e17e> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:aa9e68e8-a3d5-45b1-841b-7ad445bfbc89> .
+
+<urn:uuid:f730b3f9-cd63-4a88-9823-015503e28ddb> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-10T00:44:12.25Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-10T00:44:12.25Z" ;
+    dc:identifier "urn:sha:c2a1cdc2b7230bb76526836c66f83c0deafca60661fc6f1fd40c6413" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://water.usgs.gov/GIS/dsdl/LNsantiam_LandslideInventory_gdb.zip" .
+
+<urn:uuid:f8a15893-a56e-4b36-82b9-42bb94c3d0bb> bcube:hasType "temporal" ;
+    bcube:hasValue "2009",
+        "2010" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+

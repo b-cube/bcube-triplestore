@@ -1,0 +1,76 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:178f8c12-6c8c-4a56-9a26-4f26f25c6985> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-10-29T19:54:18.577Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-10-29T19:54:18.577Z" ;
+    dc:identifier "urn:sha:583e5dbb101fc5a4f7512c1ca134a1bcc31521be544479b28e7074d6" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://repository.stategeothermaldata.org/resources/metadata/TestNRRC/WRP/178d7f90-dc2a-4323-acbc-a5a17b920c5c.xml" .
+
+<urn:uuid:9fe50558-68e6-4404-9e34-e8522a54a97c> bcube:hasType "theme" ;
+    bcube:hasValue "Air Force",
+        "Army",
+        "BRAC",
+        "Base Structure Report",
+        "Defense",
+        "DoD",
+        "Federal Lands",
+        "Installations",
+        "Joint Base",
+        "Marine Corps",
+        "Military Operations",
+        "Navy",
+        "Ranges",
+        "Sites",
+        "Training Areas" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:9ffc85d4-d15b-462d-b10e-6f5fd6aac9a5> bcube:hasValue "geoscientificInformation" ;
+    dc:partOf "IsoTopicCategories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:adfa81f7-3bc7-4a50-964f-87fb2499ecb7> bcube:hasType "place" ;
+    bcube:hasValue "non geographic" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:c4b051f2-72b4-4534-a2f2-c0a7ea4b405d> a "ISO 19115:2003/19139" ;
+    bcube:dateCreated "2015-10-29T19:54:18.577Z" ;
+    bcube:lastUpdated "2015-10-29T19:54:18.577Z" ;
+    bcube:originatedFrom <urn:uuid:178f8c12-6c8c-4a56-9a26-4f26f25c6985> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:fcc136d9-645d-4108-b3f5-2dbc7d03545e> .
+
+<urn:uuid:fcc136d9-645d-4108-b3f5-2dbc7d03545e> bcube:dateCreated "2015-10-29T19:54:18.577Z" ;
+    bcube:hasMetadataRecord <urn:uuid:c4b051f2-72b4-4534-a2f2-c0a7ea4b405d> ;
+    bcube:lastUpdated "2015-10-29T19:54:18.577Z" ;
+    dc:conformsTo <urn:uuid:9fe50558-68e6-4404-9e34-e8522a54a97c>,
+        <urn:uuid:9ffc85d4-d15b-462d-b10e-6f5fd6aac9a5>,
+        <urn:uuid:adfa81f7-3bc7-4a50-964f-87fb2499ecb7> ;
+    dc:description "The dataset depicts the authoritative locations of the most commonly known Department of Defense (DoD) sites, installations, ranges, and training areas in the United States and Territories. These sites encompass land which is federally owned or otherwise managed." ;
+    dc:spatial "POLYGON ((-180 -90,-180 90,180 90,180 -90,-180 -90))" ;
+    dcterms:title "Defense Site Points" ;
+    esip:eastBound "180.0"^^xsd:float ;
+    esip:endDate "1900-01-01"^^xsd:date ;
+    esip:northBound "90.0"^^xsd:float ;
+    esip:southBound "-90.0"^^xsd:float ;
+    esip:startDate "1900-01-01"^^xsd:date ;
+    esip:westBound "-180.0"^^xsd:float ;
+    owl:a dcat:Dataset .
+

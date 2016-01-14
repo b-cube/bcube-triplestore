@@ -1,0 +1,79 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:12dc5727-d29b-41ad-baa1-85ce2a4ff596> a "ISO 19115:2003/19139" ;
+    bcube:dateCreated "2015-08-08T04:53:47.442Z" ;
+    bcube:lastUpdated "2015-08-08T04:53:47.442Z" ;
+    bcube:originatedFrom <urn:uuid:6324bc00-fa5c-43cc-8e24-7a71778684d3> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:e285e66a-307b-42bc-aba4-2dc4e4ef12da> .
+
+<urn:uuid:170c2aa1-1929-46ab-b0f1-ebb8bd8774e4> bcube:hasType "place" ;
+    bcube:hasValue "Charles City County",
+        "New Kent County",
+        "Prince George County",
+        "Virginia" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:184c3664-44b0-41fa-bf1b-ef2bb9d32dd9> bcube:hasValue "elevation" ;
+    dc:partOf "IsoTopicCategories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:6324bc00-fa5c-43cc-8e24-7a71778684d3> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-08T04:53:47.442Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-08T04:53:47.442Z" ;
+    dc:identifier "urn:sha:df9aedec813dd5dcc447753e889e5c448117d5baa37a2296f008119d" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://coast.noaa.gov/data/Documents/Metadata/isoharvest/Lidar/var/tmp/va2012_usgs_fema_middleco_m4710_ISOmetadata_cleaned.xml" .
+
+<urn:uuid:83cdf825-9745-4a52-bff0-a918f334b372> bcube:hasType "temporal" ;
+    bcube:hasValue "2011",
+        "May" ;
+    dc:partOf "none" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:e285e66a-307b-42bc-aba4-2dc4e4ef12da> bcube:dateCreated "2015-08-08T04:53:47.442Z" ;
+    bcube:hasMetadataRecord <urn:uuid:12dc5727-d29b-41ad-baa1-85ce2a4ff596> ;
+    bcube:lastUpdated "2015-08-08T04:53:47.442Z" ;
+    dc:conformsTo <urn:uuid:170c2aa1-1929-46ab-b0f1-ebb8bd8774e4>,
+        <urn:uuid:184c3664-44b0-41fa-bf1b-ef2bb9d32dd9>,
+        <urn:uuid:83cdf825-9745-4a52-bff0-a918f334b372>,
+        <urn:uuid:e74eeef4-c1a4-4f75-a9c9-3ca0559ad656> ;
+    dc:description "Dewberry collected LiDAR for ~3,341 square miles in various Virginia Counties, a part of Worcester County, and Hoopers Island. The acquisition was performed by Terrapoint. This metadata covers the LiDAR produced for the Middle Counties project area. The nominal pulse spacing for this project is 1.6 ft (0.5 meters). This project was collected with a sensor which collects intensity values for each discrete pulse extracted from the waveform. GPS Week Time, Intensity, Flightline and echo number attributes were provided for each LiDAR point. Dewberry used proprietary procedures to classify the LAS according to contract specifications: 1-Unclassified, 2-Ground, 7-Noise, 9-Water, 10-Ignored Ground due to breakline proximity, and 11-Withheld. Dewberry produced 3D breaklines and combined these with the final LiDAR data to produce seamless hydro flattened DEMs for the 918 tiles (5000 ft x 5000 ft) that cover the project area." ;
+    dc:spatial "POLYGON ((-77.401043 37.36991635,-77.401043 37.62771,-76.754699 37.62771,-76.754699 37.36991635,-77.401043 37.36991635))" ;
+    dcterms:title "2012 FEMA Lidar: Middle Counties (VA)" ;
+    esip:eastBound "-76.754699"^^xsd:float ;
+    esip:endDate "2012-04-02"^^xsd:date ;
+    esip:northBound "37.62771"^^xsd:float ;
+    esip:southBound "37.36991635"^^xsd:float ;
+    esip:startDate "2011-05-06"^^xsd:date ;
+    esip:westBound "-77.401043"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:e74eeef4-c1a4-4f75-a9c9-3ca0559ad656> bcube:hasType "theme" ;
+    bcube:hasValue "Breaklines",
+        "DEM",
+        "DTM",
+        "Elevation",
+        "LAS",
+        "Lidar" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+

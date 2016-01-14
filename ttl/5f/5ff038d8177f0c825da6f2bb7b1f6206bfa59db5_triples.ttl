@@ -1,0 +1,67 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:2fc6124a-eb90-4722-ba6a-de87adc296d3> a "ISO 19115:2003/19139" ;
+    bcube:dateCreated "2015-10-31T22:20:07.064Z" ;
+    bcube:lastUpdated "2015-10-31T22:20:07.064Z" ;
+    bcube:originatedFrom <urn:uuid:b6199e06-de0b-4e78-9ac3-43a036b4ecba> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:c81ee64f-6815-4900-ab01-8b8c3cf18a7e> .
+
+<urn:uuid:ad35ff6e-4701-447e-beb4-af923d80179d> bcube:hasType "place" ;
+    bcube:hasValue "Nevada" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:b6199e06-de0b-4e78-9ac3-43a036b4ecba> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-10-31T22:20:07.064Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-10-31T22:20:07.064Z" ;
+    dc:identifier "urn:sha:ef5691efb5a6bf5f1aedf7cc099ee7d9e91d632633502b717cff3476" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://repository.stategeothermaldata.org/resources/metadata/TestNRRC/WRP/1e5cdec0-5b95-463f-98cd-4ef810a1d1c0.xml" .
+
+<urn:uuid:c81ee64f-6815-4900-ab01-8b8c3cf18a7e> bcube:dateCreated "2015-10-31T22:20:07.064Z" ;
+    bcube:hasMetadataRecord <urn:uuid:2fc6124a-eb90-4722-ba6a-de87adc296d3> ;
+    bcube:lastUpdated "2015-10-31T22:20:07.064Z" ;
+    dc:conformsTo <urn:uuid:ad35ff6e-4701-447e-beb4-af923d80179d>,
+        <urn:uuid:d5b4136b-4c92-4e0e-8d64-7b0e7226bdbf>,
+        <urn:uuid:e7400f48-8f88-4bb4-a1c1-9294e41a8ac6> ;
+    dc:description "The TIGER/Line Files are shapefiles and related database files (.dbf) that are an extract of selected geographic and cartographic information from the U.S. Census Bureau's Master Address File / Topologically Integrated Geographic Encoding and Referencing (MAF/TIGER) Database (MTDB). The MTDB represents a seamless national file with no overlaps or gaps between parts, however, each TIGER/Line File is designed to stand alone as an independent data set, or they can be combined to cover the entire nation. Census Blocks are statistical areas bounded on all sides by visible features, such as streets, roads, streams, and railroad tracks, and/or by nonvisible boundaries such as city, town, township, and county limits, and short line-of-sight extensions of streets and roads. Census blocks are relatively small in area; for example, a block in a city bounded by streets. However, census blocks in remote areas are often large and irregular and may even be many square miles in area. A common misunderstanding is that data users think census blocks are used geographically to build all other census geographic areas, rather all other census geographic areas are updated and then used as the primary constraints, along with roads and water features, to delineate the tabulation blocks. As a result, all 2010 Census blocks nest within every other 2010 Census geographic area, so that Census Bureau statistical data can be tabulated at the block level and aggregated up to the appropriate geographic areas. Census blocks cover all territory in the United States, Puerto Rico, and the Island Areas (American Samoa, Guam, the Commonwealth of the Northern Mariana Islands, and the U.S. Virgin Islands).Blocks are the smallest geographic areas for which the Census Bureau publishes data from the decennial census. A block may consist of one or more faces." ;
+    dc:spatial "POLYGON ((-120.0056 35.0018,-120.0056 42.0,-114.0694 42.0,-114.0694 35.0018,-120.0056 35.0018))" ;
+    dcterms:title "Nevada Census Blocks 2010" ;
+    esip:eastBound "-114.0694"^^xsd:float ;
+    esip:endDate "1900-01-01"^^xsd:date ;
+    esip:northBound "42.0"^^xsd:float ;
+    esip:southBound "35.0018"^^xsd:float ;
+    esip:startDate "1900-01-01"^^xsd:date ;
+    esip:westBound "-120.0056"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:d5b4136b-4c92-4e0e-8d64-7b0e7226bdbf> bcube:hasType "theme" ;
+    bcube:hasValue "Block",
+        "Census Block",
+        "Demographics",
+        "Polygon",
+        "State or equivalent entity",
+        "boundaries" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:e7400f48-8f88-4bb4-a1c1-9294e41a8ac6> bcube:hasValue "geoscientificInformation" ;
+    dc:partOf "IsoTopicCategories" ;
+    owl:a bcube:thesaurusSubset .
+

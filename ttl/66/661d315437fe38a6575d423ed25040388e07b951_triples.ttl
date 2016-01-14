@@ -1,0 +1,63 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:0492d325-90ad-4cf2-b264-1c03074e7e30> bcube:hasType "place" ;
+    bcube:hasValue "Arizona" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:0b72a8c0-f0ad-4f7f-a14e-e2fe1e76e855> bcube:hasType "theme" ;
+    bcube:hasValue "Boundary",
+        "historical county boundaries" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:1138c0e3-f09f-4d3c-870e-6ee253bf96cc> a "ISO 19115:2003/19139" ;
+    bcube:dateCreated "2015-10-30T03:17:00.635Z" ;
+    bcube:lastUpdated "2015-10-30T03:17:00.635Z" ;
+    bcube:originatedFrom <urn:uuid:385a9c40-a57d-432e-ab1e-5cbd74236c30> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:af3d0f06-5a22-4936-b3b9-716cb70b33c8> .
+
+<urn:uuid:385a9c40-a57d-432e-ab1e-5cbd74236c30> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-10-30T03:17:00.635Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-10-30T03:17:00.635Z" ;
+    dc:identifier "urn:sha:757b2dc8008de093241651e2d012f9c8c9671034ed385dd15364b34a" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://repository.stategeothermaldata.org/resources/metadata/TestNRRC/WRP/075522a2-28ee-435d-b05c-5f40b510c01f.xml" .
+
+<urn:uuid:40cb3b8c-d32f-4193-85c0-526ae62efbc2> bcube:hasValue "geoscientificInformation" ;
+    dc:partOf "IsoTopicCategories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:af3d0f06-5a22-4936-b3b9-716cb70b33c8> bcube:dateCreated "2015-10-30T03:17:00.635Z" ;
+    bcube:hasMetadataRecord <urn:uuid:1138c0e3-f09f-4d3c-870e-6ee253bf96cc> ;
+    bcube:lastUpdated "2015-10-30T03:17:00.635Z" ;
+    dc:conformsTo <urn:uuid:0492d325-90ad-4cf2-b264-1c03074e7e30>,
+        <urn:uuid:0b72a8c0-f0ad-4f7f-a14e-e2fe1e76e855>,
+        <urn:uuid:40cb3b8c-d32f-4193-85c0-526ae62efbc2> ;
+    dc:description "This document serves as the metadata for the Arizona Historical Counties Dataset shapefile for use in a geographic information system (GIS).That file may be downloaded without charge from this Web site (http://www.newberry.org/ahcbp); see also Distribution_Information, below." ;
+    dc:spatial "POLYGON ((-114.799 31.3325,-114.799 37.0,-109.047 37.0,-109.047 31.3325,-114.799 31.3325))" ;
+    dcterms:title "Arizona Historical Boundaries" ;
+    esip:eastBound "-109.047"^^xsd:float ;
+    esip:endDate "1900-01-01"^^xsd:date ;
+    esip:northBound "37.0"^^xsd:float ;
+    esip:southBound "31.3325"^^xsd:float ;
+    esip:startDate "1900-01-01"^^xsd:date ;
+    esip:westBound "-114.799"^^xsd:float ;
+    owl:a dcat:Dataset .
+

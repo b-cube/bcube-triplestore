@@ -1,0 +1,101 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:00aa02e6-f36a-4be9-82a9-52be98ecae65> bcube:hasType "theme" ;
+    bcube:hasValue "Ebola, WWHGD, Human geography, Geospatial, United nations, NGA, Liberia, Africa, OSM, Open Street Map, Infrastructure, Places, Land Ownership" ;
+    dc:partOf "Ebola 2014" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:27e9af73-0bc2-4e0b-a827-6bf08b864b53> bcube:hasType "theme" ;
+    bcube:hasValue "location",
+        "planningCadastre",
+        "structure" ;
+    dc:partOf "ISO 19115 Topic Categories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:31d2e54f-5945-44d7-a5fa-b217285f6d72> dcterms:references <urn:uuid:43bc9b2c-894d-46e4-8e5d-5d5ae81357b7> ;
+    owl:a bibo:WebPage .
+
+<urn:uuid:34df17e2-85bf-4fb5-a41d-fa2deb370581> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-03T14:50:52.842Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-03T14:50:52.842Z" ;
+    dc:identifier "urn:sha:a8b9e56d7cdec7321dc8234231262f17b82a8e1fea3f1598aa64afbe" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://ebola-data.un.org/Liberia/Liberia_WADC00384_OSM_Places/WADC384.xml" .
+
+<urn:uuid:43bc9b2c-894d-46e4-8e5d-5d5ae81357b7> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-03T14:50:52.842Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-03T14:50:52.842Z" ;
+    dc:identifier "urn:sha:60bc02645f85adb9f1685d3a2912abe7ff7105bf7179606b12753d71" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://wiki.openstreetmap.org/wiki/2014_West_Africa_Ebola_Response" .
+
+<urn:uuid:60e28011-db45-48ed-b68f-c6c50732b982> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-11-03T14:50:52.842Z" ;
+    bcube:lastUpdated "2015-11-03T14:50:52.842Z" ;
+    bcube:originatedFrom <urn:uuid:34df17e2-85bf-4fb5-a41d-fa2deb370581> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:863182d0-7b6e-4146-ae24-f284e4545725> .
+
+<urn:uuid:863182d0-7b6e-4146-ae24-f284e4545725> bcube:dateCreated "2015-11-03T14:50:52.842Z" ;
+    bcube:hasMetadataRecord <urn:uuid:60e28011-db45-48ed-b68f-c6c50732b982> ;
+    bcube:lastUpdated "2015-11-03T14:50:52.842Z" ;
+    dc:conformsTo <urn:uuid:00aa02e6-f36a-4be9-82a9-52be98ecae65>,
+        <urn:uuid:27e9af73-0bc2-4e0b-a827-6bf08b864b53>,
+        <urn:uuid:ee2b5d37-7b8e-455d-90a1-27d31b5548af> ;
+    dc:description "Data provided by OSM and Geofabrik" ;
+    dc:spatial "POLYGON ((-11.581443 4.35,-11.581443 8.601224,-7.391724 8.601224,-7.391724 4.35,-11.581443 4.35))" ;
+    dcterms:publisher <urn:uuid:8eb1b00d-b7b8-4d92-984a-3a79221823dc> ;
+    dcterms:references <urn:uuid:31d2e54f-5945-44d7-a5fa-b217285f6d72>,
+        <urn:uuid:f31999f5-2415-47be-8ea6-5f66ae982229> ;
+    dcterms:title "Liberia_WADC00384_OSM_Places" ;
+    esip:eastBound "-7.391724"^^xsd:float ;
+    esip:northBound "8.601224"^^xsd:float ;
+    esip:southBound "4.35"^^xsd:float ;
+    esip:westBound "-11.581443"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:8eb1b00d-b7b8-4d92-984a-3a79221823dc> owl:a foaf:Organization ;
+    foaf:name "OSM" .
+
+<urn:uuid:969c4782-2773-4c66-8e85-91a016940ec5> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-03T14:50:52.842Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-03T14:50:52.842Z" ;
+    dc:identifier "urn:sha:37b0e6515b335758403f95ef12e34262bb2e282c036dfaf323cbece7" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://ebola-data.un.org/Liberia/Liberia_WADC00384_OSM_Places/Liberia_WADC00384_OSM_Places.zip" .
+
+<urn:uuid:ee2b5d37-7b8e-455d-90a1-27d31b5548af> bcube:hasType "place" ;
+    bcube:hasValue "Liberia" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:f31999f5-2415-47be-8ea6-5f66ae982229> dcterms:references <urn:uuid:969c4782-2773-4c66-8e85-91a016940ec5> ;
+    owl:a bibo:WebPage .
+

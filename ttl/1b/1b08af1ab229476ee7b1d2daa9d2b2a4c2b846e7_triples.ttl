@@ -1,0 +1,114 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:060e67b7-1c20-4ed1-8d73-f87eca767a56> owl:a foaf:Organization ;
+    foaf:name "NOAA's Ocean Service, Special Projects (SP)" .
+
+<urn:uuid:10f675fc-a4f1-46a5-8c7a-56ac3deb2e73> dcterms:references <urn:uuid:32d09e01-b06f-4b8d-93b5-aaa927b1d314> ;
+    owl:a bibo:WebPage .
+
+<urn:uuid:15adfb3d-fb16-414a-aa93-fe2758280769> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2014-10-28T17:05:15.143Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2014-10-28T17:05:15.143Z" ;
+    dc:identifier "urn:sha:94b43e0d1409f4448d86a1cd2ab192b6ec361336bc7b63c5f8b2ef4b" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "https://data.noaa.gov/harvest/object/0a710013-7b32-4683-bb66-599a2b005cd4/original" .
+
+<urn:uuid:32d09e01-b06f-4b8d-93b5-aaa927b1d314> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2014-10-28T17:05:15.143Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2014-10-28T17:05:15.143Z" ;
+    dc:identifier "urn:sha:3c0315fc8eb8f407f6d60d0d881c603352d0d0e4c142cd727301e96f" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://estuarinebathymetry.noaa.gov" .
+
+<urn:uuid:52b99cce-e177-4d28-9648-653dc8e8ecfe> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2014-10-28T17:05:15.143Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2014-10-28T17:05:15.143Z" ;
+    dc:identifier "urn:sha:1c008adbf18433a5a6db575f483d5c98917b23d5287782519276683b" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://estuarinebathymetry.noaa.gov/finddata.html" .
+
+<urn:uuid:6b5e29a3-b323-433f-a16a-8f2fd5e96c99> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2014-10-28T17:05:15.143Z" ;
+    bcube:lastUpdated "2014-10-28T17:05:15.143Z" ;
+    bcube:originatedFrom <urn:uuid:15adfb3d-fb16-414a-aa93-fe2758280769> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:880d4ee0-8817-4836-a64b-6f47c4b3d96c> .
+
+<urn:uuid:880d4ee0-8817-4836-a64b-6f47c4b3d96c> bcube:dateCreated "2014-10-28T17:05:15.143Z" ;
+    bcube:hasMetadataRecord <urn:uuid:6b5e29a3-b323-433f-a16a-8f2fd5e96c99> ;
+    bcube:lastUpdated "2014-10-28T17:05:15.143Z" ;
+    dc:conformsTo <urn:uuid:9c43e311-11d0-4c17-ada4-045def8087ed>,
+        <urn:uuid:a837511a-d44e-41e3-9da5-fd1724949e9a>,
+        <urn:uuid:f2d97c96-c559-4098-9d0d-9aa449ed3db4> ;
+    dc:description "Bathymetry for Narragansett Bay was derived from fifteen surveys containing165,184 soundings. Three older, less accurate, overlapping surveys wereentirely omitted, and the overlap from six older, less accurate surveys wasomitted before tinning the data. The average separation between soundingswas 50 meters. The fifteen surveys used dated from 1943 to 1957. The total rangeof sounding data was 1.2 meters to - 58.8 meters at mean low water. Meanhigh water values between 0.9 and 1.4 meters were assigned to the shoreline.Four points were found that were not consistent with the surrounding data.These were removed prior to tinning. DEM grid values outside theshoreline (on land) were assigned null values (-32676).Narragansett Bay has thirteen 7.5 minute DEMs and a single one degreeDEM. The 1 degree DEMs were generated from the higher resolution 7.5minute DEMs which covered the estuary. A Digital Elevation Model(DEM) contains a series of elevations ordered from south to northwith the order of the columns from west to east. The DEM isformatted as one ASCII header record (A- record), followed by aseries of profile records (B- records) each of which include a shortB-record header followed by a series of ASCII integer elevations(typically in units of 1 centimeter) per each profile. The lastphysical record of the DEM is an accuracy record (C-record).The 7.5-minute DEM (30- by 30-m data spacing) is cast on theUniversal Transverse Mercator (UTM) projection. It provides coveragein 7.5- by 7.5-minute blocks. Each product provides the samecoverage as a standard USGS 7.5-minute quadrangle but the DEMcontains over edge data. Coverage is available for many estuaries ofthe contiguous United States but is not complete." ;
+    dc:spatial "POLYGON ((-71.45964 41.426088,-71.45964 41.86796,-71.078243 41.86796,-71.078243 41.426088,-71.45964 41.426088))" ;
+    dcterms:publisher <urn:uuid:060e67b7-1c20-4ed1-8d73-f87eca767a56> ;
+    dcterms:references <urn:uuid:10f675fc-a4f1-46a5-8c7a-56ac3deb2e73>,
+        <urn:uuid:52b99cce-e177-4d28-9648-653dc8e8ecfe> ;
+    dcterms:title "Narragansett Bay, RI (M020) Bathymetric Digital ElevationModel (30 meter resolution) Derived From Source Hydrographic SurveySoundings Collected by NOAA" ;
+    esip:eastBound "-71.078243"^^xsd:float ;
+    esip:endDate "1958-01-01"^^xsd:date ;
+    esip:northBound "41.86796"^^xsd:float ;
+    esip:southBound "41.426088"^^xsd:float ;
+    esip:startDate "1943-01-01"^^xsd:date ;
+    esip:westBound "-71.45964"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:9c43e311-11d0-4c17-ada4-045def8087ed> bcube:hasType "theme" ;
+    bcube:hasValue "DEM",
+        "altitude",
+        "bathymetry",
+        "depth",
+        "digital bathymetric model",
+        "digital elevation model",
+        "digital terrain model",
+        "elevation",
+        "estuarine bathymetry",
+        "estuary",
+        "height",
+        "hydrographic survey",
+        "marine navigation" ;
+    dc:partOf "none" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:a837511a-d44e-41e3-9da5-fd1724949e9a> bcube:hasType "place" ;
+    bcube:hasValue "Narragansett Bay, RI",
+        "Rhode Island",
+        "United States" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:f2d97c96-c559-4098-9d0d-9aa449ed3db4> bcube:hasType "theme" ;
+    bcube:hasValue "ImageryBaseMapsEarthCover",
+        "elevation",
+        "oceans" ;
+    dc:partOf "ISO 19115 Topic Category" ;
+    owl:a bcube:thesaurusSubset .
+

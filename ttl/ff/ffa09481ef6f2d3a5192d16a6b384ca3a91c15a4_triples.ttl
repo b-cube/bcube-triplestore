@@ -1,0 +1,92 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:34fe34aa-5e0d-40e0-bfd2-c25364e236b0> bcube:hasType "stratum" ;
+    bcube:hasValue "First Surface" ;
+    dc:partOf "http://lidar.cr.usgs.gov/" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:378f8ab5-7181-4629-80d5-c57d534be442> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-11-09T15:11:00.848Z" ;
+    bcube:lastUpdated "2015-11-09T15:11:00.848Z" ;
+    bcube:originatedFrom <urn:uuid:acac2363-ccb1-4cea-884e-72f243aa2974> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:5e2b177f-c2dc-4399-b120-e3753a50c422> .
+
+<urn:uuid:5bad0eb2-8b14-4927-bbf3-7f8d75607c5b> bcube:hasType "theme" ;
+    bcube:hasValue "ALPS",
+        "Airborne Lidar Processing System",
+        "DSM",
+        "Digital Surface Model",
+        "EAARL",
+        "Experimental Advanced Airborne Research Lidar",
+        "Lidar",
+        "laser altimetry",
+        "remote sensing",
+        "topography" ;
+    dc:partOf "http://remotesensing.usgs.gov" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:5e2b177f-c2dc-4399-b120-e3753a50c422> bcube:dateCreated "2015-11-09T15:11:00.848Z" ;
+    bcube:hasMetadataRecord <urn:uuid:378f8ab5-7181-4629-80d5-c57d534be442> ;
+    bcube:lastUpdated "2015-11-09T15:11:00.848Z" ;
+    dc:conformsTo <urn:uuid:34fe34aa-5e0d-40e0-bfd2-c25364e236b0>,
+        <urn:uuid:5bad0eb2-8b14-4927-bbf3-7f8d75607c5b>,
+        <urn:uuid:e56b12bc-ea99-46fc-adc5-c247f53ba43b>,
+        <urn:uuid:eb2ee94d-1b84-4253-9bf9-c0daf92db1a7> ;
+    dc:description "A first surface elevation map (also known as a Digital Surface Model or DSM) of the Jean Lafitte National Historical Park in Louisiana was produced from remotely sensed, geographically referenced elevation measurements cooperatively by the U.S. Geological Survey (USGS), the National Park Service (NPS), and the National Aeronautics and Space Administration (NASA). Elevation measurements were collected over the area using the NASA Experimental Advanced Airborne Research Lidar (EAARL), a pulsed laser ranging system mounted onboard an aircraft to measure ground elevation, vegetation canopy, and coastal topography. The system uses high frequency laser beams directed at the Earth's surface through an opening in the bottom of the aircraft's fuselage. The laser system records the time difference between emission of the laser beam and the reception of the reflected laser signal in the aircraft. The plane travels over the target area at approximately 50 meters per second at an elevation of approximately 300 meters. The EAARL, developed by NASA at Wallops Flight Facility in Virginia, measures ground elevation with a vertical resolution of 15 centimeters. A sampling rate of 3 kilohertz or higher results in an extremely dense spatial elevation dataset. Over 100 kilometers of coastline can be easily surveyed within a 3- to 4-hour mission time period. When subsequent elevation maps for an area are analyzed, they provide a useful tool to make management decisions regarding land development." ;
+    dcterms:publisher <urn:uuid:cb7c3471-feeb-4e60-8ab2-0d9d8bf9ef98> ;
+    dcterms:references <urn:uuid:e324d33c-422c-45c9-b8e8-986464d1938b> ;
+    dcterms:title "EAARL Topography Jean Lafitte National Historical Park 2006" ;
+    esip:startDate "2006-09-22"^^xsd:date ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:acac2363-ccb1-4cea-884e-72f243aa2974> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-09T15:11:00.848Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-09T15:11:00.848Z" ;
+    dc:identifier "urn:sha:50cb0b02c385d84cf71ad673cd768e3dc55253f32ad4785ffe0ea947" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://pubs.usgs.gov/ds/389/data_files/fs/fs_e776_n3294_15/fs_e776_n3294_15.xyz.xml" .
+
+<urn:uuid:cb7c3471-feeb-4e60-8ab2-0d9d8bf9ef98> owl:a foaf:Organization ;
+    foaf:name "U.S. Geological Survey" .
+
+<urn:uuid:e324d33c-422c-45c9-b8e8-986464d1938b> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-09T15:11:00.848Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-09T15:11:00.848Z" ;
+    dc:identifier "urn:sha:d14a028c2a3a2bc9476102bb288234c415a2b01f828ea62ac5b3e42f" ;
+    owl:a bcube:Url .
+
+<urn:uuid:e56b12bc-ea99-46fc-adc5-c247f53ba43b> bcube:hasType "temporal" ;
+    bcube:hasValue "2006" ;
+    dc:partOf "http://www.esri.com/news/arcuser/1104/temporal.html" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:eb2ee94d-1b84-4253-9bf9-c0daf92db1a7> bcube:hasType "place" ;
+    bcube:hasValue "Jean Lafitte",
+        "Jean Lafitte National Historical Park",
+        "Louisiana" ;
+    dc:partOf "http://nationalmap.gov" ;
+    owl:a bcube:thesaurusSubset .
+

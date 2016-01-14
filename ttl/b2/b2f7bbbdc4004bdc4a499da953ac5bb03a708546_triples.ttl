@@ -1,0 +1,115 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:0c245bf4-f095-46e3-b041-87318107ca4b> bcube:hasType "theme" ;
+    bcube:hasValue "Baseline",
+        "CMGP",
+        "Cliff Edge",
+        "Cliff Erosion",
+        "Cliff Erosion Rate",
+        "Coastal Survey Map",
+        "Coastal and Marine Geology Program",
+        "ESRI polyline shapefile",
+        "Endpoint Rate",
+        "Historic Cliff Edge",
+        "LIDAR",
+        "T-sheet",
+        "Tp-sheet",
+        "U.S. Geological Survey",
+        "USGS" ;
+    dc:partOf "General" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:116c5608-6f6d-4d3b-b5fa-37055f372e3a> bcube:hasType "theme" ;
+    bcube:hasValue "geoscientificInformation",
+        "oceans",
+        "oceans and coastal",
+        "oceans and estuaries" ;
+    dc:partOf "ISO 19115 Topic Category" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:16cbe5a5-5c14-495f-93de-f3c75e312d42> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-08-07T11:51:24.321Z" ;
+    bcube:lastUpdated "2015-08-07T11:51:24.321Z" ;
+    bcube:originatedFrom <urn:uuid:c9085782-4579-4d59-93f8-b51ecda92e1a> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:6d87e789-e828-416c-80d9-a603c74e6824> .
+
+<urn:uuid:41933085-f81b-4710-a2d3-fcdcd5e3dba5> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-07T11:51:24.321Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-07T11:51:24.321Z" ;
+    dc:identifier "urn:sha:9538f8ca13c364d4d079f1640c5fe26de26c76a5fd2055c9d604de47" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://pubs.usgs.gov/of/2007/1112/CCal.zip" .
+
+<urn:uuid:684d7f55-1e25-4a26-bf7f-847e8ae7db08> dcterms:references <urn:uuid:d1c25c58-1a0e-44db-87e8-6b5a5ac5cd52> ;
+    owl:a bibo:WebPage .
+
+<urn:uuid:6d87e789-e828-416c-80d9-a603c74e6824> bcube:dateCreated "2015-08-07T11:51:24.321Z" ;
+    bcube:hasMetadataRecord <urn:uuid:16cbe5a5-5c14-495f-93de-f3c75e312d42> ;
+    bcube:lastUpdated "2015-08-07T11:51:24.321Z" ;
+    dc:conformsTo <urn:uuid:0c245bf4-f095-46e3-b041-87318107ca4b>,
+        <urn:uuid:116c5608-6f6d-4d3b-b5fa-37055f372e3a>,
+        <urn:uuid:8891577d-951f-4abe-9c5f-6204cb0a465c> ;
+    dc:description "Rates of cliff edge erosion were generated in a GIS using the Digital Shoreline Analysis System (DSAS) version 3.2; An ArcGIS extension for calculating shoreline change: U.S. Geological Survey Open-File Report 2005-1304, Thieler, E.R., Himmelstoss, E.A., Zichichi, J.L., and Miller, T.M. The extension is designed to efficiently lead a user through the major steps of shoreline change analysis. This extension to ArcGIS contains three main components that define a baseline, generate orthogonal transects at a user-defined separation along the coast, and calculate rates of change (linear regression, endpoint rate, average of rates, average of endpoints, jackknife)." ;
+    dc:spatial "POLYGON ((-123.023918 34.432397,-123.023918 38.242744,-119.812615 38.242744,-119.812615 34.432397,-123.023918 34.432397))" ;
+    dcterms:publisher <urn:uuid:b11e7b21-1262-43c4-9b2e-75d53d723126> ;
+    dcterms:references <urn:uuid:41933085-f81b-4710-a2d3-fcdcd5e3dba5>,
+        <urn:uuid:684d7f55-1e25-4a26-bf7f-847e8ae7db08> ;
+    dcterms:title "cencal_baseline.shp - Offshore Baseline for Central California Generated to Calculate Cliff Erosion Rates" ;
+    esip:eastBound "-119.812615"^^xsd:float ;
+    esip:northBound "38.242744"^^xsd:float ;
+    esip:southBound "34.432397"^^xsd:float ;
+    esip:startDate "2005-01-01"^^xsd:date ;
+    esip:westBound "-123.023918"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:8891577d-951f-4abe-9c5f-6204cb0a465c> bcube:hasType "place" ;
+    bcube:hasValue "California",
+        "United States" ;
+    dc:partOf "Geographic Names Information System, USGS, Reston, VA" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:b11e7b21-1262-43c4-9b2e-75d53d723126> owl:a foaf:Organization ;
+    foaf:name "U.S. Geological Survey, Coastal and Marine Geology Program" .
+
+<urn:uuid:c9085782-4579-4d59-93f8-b51ecda92e1a> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-07T11:51:24.321Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-07T11:51:24.321Z" ;
+    dc:identifier "urn:sha:a0e4715091426fffb8e7b2dd79d5ce1eafd789ab52343de2dce6ee79" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://pubs.usgs.gov/of/2007/1112/Metadata/Central/cencal_baseline.shp.xml" .
+
+<urn:uuid:d1c25c58-1a0e-44db-87e8-6b5a5ac5cd52> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-07T11:51:24.321Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-07T11:51:24.321Z" ;
+    dc:identifier "urn:sha:c3c22a7d2428e937cc6b0d1d5fa14185c40bba7ef897aa7f9f5d738a" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://pubs.usgs.gov/of/2007/1112/" .
+

@@ -1,0 +1,80 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:69ac87a5-ff39-4d9f-a4e1-9a376212391c> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-13T17:16:08.998Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-13T17:16:08.998Z" ;
+    dc:identifier "urn:sha:13fd577df645f80e3b522a8027d63b70d04949bace1455c947c626ba" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://coast.noaa.gov/data/Documents/Metadata/isoharvest/Imagery/CCAP_1992_2006_Parent_ISO.xml" .
+
+<urn:uuid:c433ccb1-61ce-4db7-956c-049ab628a223> a "ISO 19115:2003/19139" ;
+    bcube:dateCreated "2015-08-13T17:16:08.998Z" ;
+    bcube:lastUpdated "2015-08-13T17:16:08.998Z" ;
+    bcube:originatedFrom <urn:uuid:69ac87a5-ff39-4d9f-a4e1-9a376212391c> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:d2993c8f-af2a-415c-bdde-2025bbcfd05a> .
+
+<urn:uuid:d2993c8f-af2a-415c-bdde-2025bbcfd05a> bcube:dateCreated "2015-08-13T17:16:08.998Z" ;
+    bcube:hasMetadataRecord <urn:uuid:c433ccb1-61ce-4db7-956c-049ab628a223> ;
+    bcube:lastUpdated "2015-08-13T17:16:08.998Z" ;
+    dc:conformsTo <urn:uuid:d483d7e1-a618-4e1c-86e7-cfeaedb23313>,
+        <urn:uuid:d68f766e-f631-4906-9d7d-87021c9d68f7>,
+        <urn:uuid:efcd3d0a-da52-48f6-90e4-5f2eeb75e491>,
+        <urn:uuid:f6b5e184-f64e-4815-9a3a-3fb3c203bf4d> ;
+    dc:description "The NOAA Coastal Change Analysis Program (C-CAP) produces national standardized land cover and change products for the coastal regions of the U.S. C-CAP products inventory coastal intertidal areas, wetlands, and adjacent uplands with the goal of monitoring changes in these habitats, on a one-to-five year repeat cycle. The timeframe for this metadata is reported as 1992-2006 Era, but the actual dates of the Landsat imagery used to create the land cover may have been acquired a few years before or after each era. These maps are developed utilizing Landsat Thematic Mapper imagery, and can be used to track changes in the landscape through time. This trend information gives important feedback to managers on the success or failure of management policies and programs and aid in developing a scientific understanding of the Earth system and its response to natural and human-induced changes. This understanding allows for the prediction of impacts due to these changes and the assessment of their cumulative effects, helping coastal resource managers make more informed regional decisions. NOAA C-CAP is a contributing member to the Multi-Resolution Land Characteristics consortium and C-CAP products are included as the coastal expression of land cover within the National Land Cover Database." ;
+    dc:spatial "POLYGON ((-125.2417 36.1581,-125.2417 48.5955,-75.5926 48.5955,-75.5926 36.1581,-125.2417 36.1581))" ;
+    dcterms:title "NOAA's Coastal Change Analysis Program (C-CAP) 1992 to 2006 Regional Land Cover Change Data - Coastal United States" ;
+    esip:eastBound "-75.5926"^^xsd:float ;
+    esip:endDate "2007-05-21"^^xsd:date ;
+    esip:northBound "48.5955"^^xsd:float ;
+    esip:southBound "36.1581"^^xsd:float ;
+    esip:startDate "1990-10-06"^^xsd:date ;
+    esip:westBound "-125.2417"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:d483d7e1-a618-4e1c-86e7-cfeaedb23313> bcube:hasType "theme" ;
+    bcube:hasValue "EARTH SCIENCE : Human Dimensions : Environmental Governance/Management : Land Management : Land Use/Land Cover Classification",
+        "EARTH SCIENCE : Land Surface : Land Use/Land Cover : Land Cover",
+        "EARTH SCIENCE : Land Surface : Land Use/Land Cover : Land Use Classes" ;
+    dc:partOf "NASA/GCMD Earth Science Keywords" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:d68f766e-f631-4906-9d7d-87021c9d68f7> bcube:hasValue "imageryBaseMapsEarthCover" ;
+    dc:partOf "IsoTopicCategories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:efcd3d0a-da52-48f6-90e4-5f2eeb75e491> bcube:hasType "place" ;
+    bcube:hasValue "Delaware",
+        "Maryland",
+        "U.S.",
+        "U.S. Coastal Zone",
+        "Virginia",
+        "Washington" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:f6b5e184-f64e-4815-9a3a-3fb3c203bf4d> bcube:hasType "theme" ;
+    bcube:hasValue "CCAP",
+        "Coastal Change Analysis Program",
+        "Land Cover Analysis",
+        "Remotely Sensed Imagery/Photos" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+

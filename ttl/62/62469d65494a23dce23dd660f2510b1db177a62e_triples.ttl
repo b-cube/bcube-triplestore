@@ -1,0 +1,84 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:002132dc-8536-49ff-b80e-cced50557b5c> bcube:hasType "theme" ;
+    bcube:hasValue "Legislative District",
+        "Polygon",
+        "State or equivalent entity" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:845a0eda-8d30-4647-b65c-dfbc7d96d4bb> a "ISO 19115:2003/19139" ;
+    bcube:dateCreated "2015-10-29T23:29:20.266Z" ;
+    bcube:lastUpdated "2015-10-29T23:29:20.266Z" ;
+    bcube:originatedFrom <urn:uuid:b3ba469b-57aa-43c6-a492-5f8748de047f> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:a3f32cc6-8615-48f1-97e3-5d73bae7265f> .
+
+<urn:uuid:958deec4-25a9-4ae6-8213-6988a0fa676d> bcube:hasType "place" ;
+    bcube:hasValue "36",
+        "NY",
+        "New York",
+        "State or Equivalent Entity",
+        "U.S.",
+        "United States" ;
+    dc:partOf "ANSI INCITS 38:2009 (Formerly FIPS 5-2), ANSI INCITS 31:2009 (Formerly FIPS 6-4),ANSI INCITS 454:2009 (Formerly FIPS 8-6), ANSI INCITS 455:2009(Formerly FIPS 9-1), ANSI INCITS 446:2008 (Geographic Names Information System (GNIS))" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:a3f32cc6-8615-48f1-97e3-5d73bae7265f> bcube:dateCreated "2015-10-29T23:29:20.266Z" ;
+    bcube:hasMetadataRecord <urn:uuid:845a0eda-8d30-4647-b65c-dfbc7d96d4bb> ;
+    bcube:lastUpdated "2015-10-29T23:29:20.266Z" ;
+    dc:conformsTo <urn:uuid:002132dc-8536-49ff-b80e-cced50557b5c>,
+        <urn:uuid:958deec4-25a9-4ae6-8213-6988a0fa676d>,
+        <urn:uuid:c3b21c13-c68e-4bc2-a25e-b4decd588eb1> ;
+    dc:description "The TIGER/Line shapefiles and related database files (.dbf) are an extract of selected geographic and cartographic information from the U.S. Census Bureau's Master Address File / Topologically Integrated Geographic Encoding and Referencing (MAF/TIGER) Database (MTDB). The MTDB represents a seamless national file with no overlaps or gaps between parts, however, each TIGER/Line shapefile is designed to stand alone as an independent data set, or they can be combined to cover the entire nation. State Legislative Districts (SLDs) are the areas from which members are elected to State legislatures. The SLDs embody the upper (senate) and lower (house) chambers of the state legislature. Nebraska has a unicameral legislature and the District of Columbia has a single council, both of which the Census Bureau treats as upper-chamber legislative areas for the purpose of data presentation; there are no data by SLDL for either Nebraska or the District of Columbia. A unique three-character census code, identified by State participants, is assigned to each SLD within a state. In Connecticut, Illinois, Louisiana, Maine, Maryland, Massachusetts, Michigan, Ohio, and Puerto Rico, the Redistricting Data Program (RDP) participant did not define the SLDs to cover all of the state or state equivalent area. In these areas with no SLDs defined, the code \"ZZZ\" has been assigned, which is treated as a single SLD for purposes of data presentation. The boundaries of the 2014 State legislative districts were provided by state-level participants through the RDP and reflect the districts used to elect members in or prior to the November 2014 election." ;
+    dc:spatial "POLYGON ((-79.76259 40.477399,-79.76259 45.015865,-71.777491 45.015865,-71.777491 40.477399,-79.76259 40.477399))" ;
+    dcterms:references <urn:uuid:f52301e6-747a-4314-86b2-13aa7d04ccb6> ;
+    dcterms:title "TIGER/Line Shapefile, 2014, state, New York, Current State Legislative District (SLD) Lower Chamber State-based Shapefile" ;
+    esip:eastBound "-71.777491"^^xsd:float ;
+    esip:endDate "2014-05-03"^^xsd:date ;
+    esip:northBound "45.015865"^^xsd:float ;
+    esip:southBound "40.477399"^^xsd:float ;
+    esip:startDate "2013-06-03"^^xsd:date ;
+    esip:westBound "-79.76259"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:b3ba469b-57aa-43c6-a492-5f8748de047f> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-10-29T23:29:20.266Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-10-29T23:29:20.266Z" ;
+    dc:identifier "urn:sha:bf2ccb308f8a82fcb35b854b793125213a16912df312b5a3c4d1f72c" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://meta.geo.census.gov/data/existing/decennial/GEO/GPMB/TIGERline/TIGER2014/sldl/tl_2014_36_sldl.shp.iso.xml" .
+
+<urn:uuid:c3b21c13-c68e-4bc2-a25e-b4decd588eb1> bcube:hasValue "boundaries" ;
+    dc:partOf "IsoTopicCategories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:f52301e6-747a-4314-86b2-13aa7d04ccb6> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-10-29T23:29:20.266Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-10-29T23:29:20.266Z" ;
+    dc:identifier "urn:sha:e84f00fbc7a60f69725f097bd3e43b071a1f2a8452a15df2247fcc70" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www2.census.gov/geo/tiger/TIGER2014/SLDL/tl_2014_36_sldl.zip" .
+

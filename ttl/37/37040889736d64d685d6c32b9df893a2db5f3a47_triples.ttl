@@ -1,0 +1,77 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:26da6d40-fc1d-4bc4-b1a8-c1fc2996dd92> owl:a foaf:Organization ;
+    foaf:name "USDA-FSA Aerial Photography Field Office" .
+
+<urn:uuid:34e0a12c-9b4d-4bc1-a766-ea8b06f87d34> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-13T10:20:58.355Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-13T10:20:58.355Z" ;
+    dc:identifier "urn:sha:9d5a31a879978d06423823fad32db59d69136d58c4b8a60a112dce26" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "https://spatialdata.iu.edu/DOQQS/naip/county/y2014/in_naip_2014/in_ccm_2014/18087/ortho_1-1_1n_s_in087_2014_1.shp.xml" .
+
+<urn:uuid:5fdbaacd-776b-41a3-a5ef-7ef4c9f88180> bcube:hasType "place" ;
+    bcube:hasValue "APFO",
+        "Aerial Photography Field Office",
+        "FIPS 18087",
+        "FSA",
+        "Field Service Center",
+        "IN",
+        "LAGRANGE CO., IN",
+        "Lagrange",
+        "USA",
+        "USDA",
+        "United States Department of Agriculture (USDA)" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:768df87b-fd67-4864-a16b-4361a17446b5> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-11-13T10:20:58.355Z" ;
+    bcube:lastUpdated "2015-11-13T10:20:58.355Z" ;
+    bcube:originatedFrom <urn:uuid:34e0a12c-9b4d-4bc1-a766-ea8b06f87d34> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:ed3202d5-b2e9-4181-b1f8-193b9a455498> .
+
+<urn:uuid:c3dea015-49e2-481f-8ec0-8a38cafb3dc2> bcube:hasType "theme" ;
+    bcube:hasValue "Acquisition Date",
+        "Digital",
+        "Mosaic",
+        "Ortho Imagery",
+        "United States Department of Agriculture (USDA)",
+        "farming" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:ed3202d5-b2e9-4181-b1f8-193b9a455498> bcube:dateCreated "2015-11-13T10:20:58.355Z" ;
+    bcube:hasMetadataRecord <urn:uuid:768df87b-fd67-4864-a16b-4361a17446b5> ;
+    bcube:lastUpdated "2015-11-13T10:20:58.355Z" ;
+    dc:conformsTo <urn:uuid:5fdbaacd-776b-41a3-a5ef-7ef4c9f88180>,
+        <urn:uuid:c3dea015-49e2-481f-8ec0-8a38cafb3dc2> ;
+    dc:description "This data set contains polygons delineating the seamline boundaries of imagery acquired as part of the National Agriculture Imagery Program (NAIP), and used in the creation of DOQQs and compressed county mosaics (CCM). These seam polygons can be used as a tool in determining the image source and date of each portion of the DOQQ or the CCM. The NAIP acquires 4 band digital ortho imagery from airborne and/or space based platforms during the agricultural growing seasons in the U.S.. A primary goal of the NAIP program is to enable availability of ortho imagery within sixty days of acquisition. The NAIP provides 1 meter or 1/2 meter GSD ortho imagery rectified within +/- 6 meters to true ground at a 95% confidence level. The tiling format of NAIP imagery is based on a 3.75' x 3.75' quarter quadrangle with a 300 (plus or minus 30) pixel buffer on all four sides. The NAIP quarter quads are formatted to the UTM coordinate system using the North American Datum of 1983 (NAD83)." ;
+    dc:spatial "POLYGON ((-85.775731915600005 40.910815658,-85.775731915600005 41.857953011600003,-85.095394492699995 41.857953011600003,-85.095394492699995 40.910815658,-85.775731915600005 40.910815658))" ;
+    dcterms:publisher <urn:uuid:26da6d40-fc1d-4bc4-b1a8-c1fc2996dd92> ;
+    dcterms:title "Index of source acquisition dates." ;
+    esip:eastBound "-85.0953944927"^^xsd:float ;
+    esip:northBound "41.8579530116"^^xsd:float ;
+    esip:southBound "40.910815658"^^xsd:float ;
+    esip:startDate "2014-12-04"^^xsd:date ;
+    esip:westBound "-85.7757319156"^^xsd:float ;
+    owl:a dcat:Dataset .
+

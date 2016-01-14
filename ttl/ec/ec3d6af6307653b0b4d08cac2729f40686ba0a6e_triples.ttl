@@ -1,0 +1,76 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:18f679c0-ad81-46f1-8db8-2240fe5bca86> a "ISO 19115:2003/19139" ;
+    bcube:dateCreated "2015-08-07T08:02:15.879Z" ;
+    bcube:lastUpdated "2015-08-07T08:02:15.879Z" ;
+    bcube:originatedFrom <urn:uuid:61409dc1-0344-4f9a-b469-cd3e6bc9ad1c> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:f518f4a1-db53-4c25-814a-ff81eea32509> .
+
+<urn:uuid:2a760153-a0bb-4769-a90a-7235474fed0e> bcube:hasType "theme" ;
+    bcube:hasValue "Elevation",
+        "Ground",
+        "Laser",
+        "Lidar",
+        "Remote Sensing",
+        "Terrain",
+        "Topography" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:4d93b796-4363-4103-8bbe-feec488f6471> bcube:hasValue "elevation" ;
+    dc:partOf "IsoTopicCategories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:61409dc1-0344-4f9a-b469-cd3e6bc9ad1c> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-07T08:02:15.879Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-07T08:02:15.879Z" ;
+    dc:identifier "urn:sha:a8e40a72828f6f41181c853a94457c8226701253703cd258c7db3b89" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "https://data.noaa.gov/harvest/object/7c69d858-2aed-4d15-ac25-962bd892449f" .
+
+<urn:uuid:9b380296-98b4-476c-8421-c18f0154ed6b> bcube:hasType "temporal" ;
+    bcube:hasValue "2013",
+        "Fall" ;
+    dc:partOf "none" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:e7ca17e4-690f-43b7-9531-6d1164bb911e> bcube:hasType "place" ;
+    bcube:hasValue "Lee",
+        "Suwannee River G13PD00141 1.0 Meter LiDAR Survey Area 2" ;
+    dc:partOf "Site Location" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:f518f4a1-db53-4c25-814a-ff81eea32509> bcube:dateCreated "2015-08-07T08:02:15.879Z" ;
+    bcube:hasMetadataRecord <urn:uuid:18f679c0-ad81-46f1-8db8-2240fe5bca86> ;
+    bcube:lastUpdated "2015-08-07T08:02:15.879Z" ;
+    dc:conformsTo <urn:uuid:2a760153-a0bb-4769-a90a-7235474fed0e>,
+        <urn:uuid:4d93b796-4363-4103-8bbe-feec488f6471>,
+        <urn:uuid:9b380296-98b4-476c-8421-c18f0154ed6b>,
+        <urn:uuid:e7ca17e4-690f-43b7-9531-6d1164bb911e> ;
+    dc:description "The Light Detection and Ranging (LiDAR) dataset is a survey of Suwannee River G13PD00141 1.0 Meter LiDAR Survey Area 2, Classified Point Cloud, in north-central Florida and encompasses 10 square miles. The LiDAR point cloud was flown at a nominal post spacing of 1.0 meters for unobscured areas. The LiDAR data and derivative products produced are in compliance with the U.S. Geological Survey National Geospatial Program Guidelines and Base Specifications, Version 1. The flight lines were acquired by Digital Aerial Solutions, LLC. between Feb. 15, 2013 and Feb. 16, 2013. Derivative products from the aerial acquisition include: Raw point cloud data in LAS v1.2, classified point cloud data in LAS v1.2, bare earth surface tiles (raster DEM ESRI float GRID format), bare earth surface DEMs mosaic (raster DEM MrSID format), control points, project report, and FGDC compliant XML metadata." ;
+    dc:spatial "POLYGON ((-83.806132 29.853144,-83.806132 30.060655,-82.600024 30.060655,-82.600024 29.853144,-83.806132 29.853144))" ;
+    dcterms:title "2013 Suwannee River Water Management District Lidar: Lee (FL)" ;
+    esip:eastBound "-82.600024"^^xsd:float ;
+    esip:northBound "30.060655"^^xsd:float ;
+    esip:southBound "29.853144"^^xsd:float ;
+    esip:westBound "-83.806132"^^xsd:float ;
+    owl:a dcat:Dataset .
+

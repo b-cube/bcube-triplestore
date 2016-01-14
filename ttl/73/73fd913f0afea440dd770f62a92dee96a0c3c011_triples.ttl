@@ -1,0 +1,85 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:2daecb81-d82b-46be-8ccf-414ffe67f732> bcube:hasType "temporal" ;
+    bcube:hasValue "1991-1992",
+        "1994-1995" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:52ee15e9-d55c-4e5d-8e3b-ce2c5a38eb5a> bcube:hasType "stratum" ;
+    bcube:hasValue "Oceanic" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:8005703c-077c-45ae-b616-f51796186234> bcube:hasType "theme" ;
+    bcube:hasValue "FMB",
+        "FRMD",
+        "PIFSC",
+        "logbook",
+        "longline",
+        "pelagic species",
+        "protected species interaction",
+        "tuna" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:8def545b-8c27-4888-abe2-73ad6c34f71e> owl:a foaf:Organization ;
+    foaf:name "" .
+
+<urn:uuid:8e314cf0-e995-44c9-8579-40c31826aa19> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-08-05T04:36:51.242Z" ;
+    bcube:lastUpdated "2015-08-05T04:36:51.242Z" ;
+    bcube:originatedFrom <urn:uuid:8f3578b9-bed6-4c37-b24e-3c15935f2bea> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:b23e3641-3719-4d4e-839a-f2e4dd698153> .
+
+<urn:uuid:8f3578b9-bed6-4c37-b24e-3c15935f2bea> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-05T04:36:51.242Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-05T04:36:51.242Z" ;
+    dc:identifier "urn:sha:b522ec1989baa00137ae6fd15397b2befcd12973ff467ac2c137d9b6" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "https://inport.nmfs.noaa.gov/inport/item/1776/fgdc" .
+
+<urn:uuid:91b12ede-7106-41b4-ba50-5cc5e2c78f5b> bcube:hasType "place" ;
+    bcube:hasValue "Guam",
+        "Pacific Ocean" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:b23e3641-3719-4d4e-839a-f2e4dd698153> bcube:dateCreated "2015-08-05T04:36:51.242Z" ;
+    bcube:hasMetadataRecord <urn:uuid:8e314cf0-e995-44c9-8579-40c31826aa19> ;
+    bcube:lastUpdated "2015-08-05T04:36:51.242Z" ;
+    dc:conformsTo <urn:uuid:2daecb81-d82b-46be-8ccf-414ffe67f732>,
+        <urn:uuid:52ee15e9-d55c-4e5d-8e3b-ce2c5a38eb5a>,
+        <urn:uuid:8005703c-077c-45ae-b616-f51796186234>,
+        <urn:uuid:91b12ede-7106-41b4-ba50-5cc5e2c78f5b> ;
+    dc:description "This data set contains the logbook data of U.S. longline vessels landing in Guam from 1991 to 1992 and 1994 to 1995 that fished in the northern western Pacific (130o E 175o E and 0o N 25o N)." ;
+    dc:spatial "POLYGON ((131.533333333330006 1.63333333333,131.533333333330006 22.183333333330001,171.7 22.183333333330001,171.7 1.63333333333,131.533333333330006 1.63333333333))" ;
+    dcterms:identifier "gov.noaa.nmfs.inport:1776" ;
+    dcterms:publisher <urn:uuid:8def545b-8c27-4888-abe2-73ad6c34f71e> ;
+    dcterms:title "Guam Longline Logbook" ;
+    esip:eastBound "171.7"^^xsd:float ;
+    esip:endDate "1995-07-31"^^xsd:date ;
+    esip:northBound "22.1833333333"^^xsd:float ;
+    esip:southBound "1.63333333333"^^xsd:float ;
+    esip:startDate "1991-10-13"^^xsd:date ;
+    esip:westBound "131.533333333"^^xsd:float ;
+    owl:a dcat:Dataset .
+

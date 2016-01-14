@@ -1,0 +1,102 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:01714bc1-a62c-473a-9de8-8308ce719cb4> bcube:hasType "place" ;
+    bcube:hasValue "COMMUNITY BURLESON COUNTY AND INCORPORATED AREAS",
+        "COUNTY BURLESON",
+        "COUNTY-FIPS 48051",
+        "FEMA-CID 48051C",
+        "REGION VI",
+        "STATE TX" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:1e5006a7-762d-4bdf-be3d-93c414d30a57> owl:a foaf:Organization ;
+    foaf:name "Federal Emergency Management Agency" .
+
+<urn:uuid:30062fcc-5de3-4d03-ae91-fceeca3e7acd> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-01T06:17:52.938Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-01T06:17:52.938Z" ;
+    dc:identifier "urn:sha:4225b0a0d3492d924b43cd09ac581d8afa5cdd684d690ea06e1fb731" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://catalog.data.gov/harvest/object/358d8ef7-fc97-4dff-a392-5b49c95a9875/original" .
+
+<urn:uuid:4c99f331-5ff6-4694-8f8c-2ba25a1843e8> bcube:hasType "theme" ;
+    bcube:hasValue "enviroment",
+        "hydrology",
+        "inlandwaters" ;
+    dc:partOf "ISO 19115 Topic Category" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:587eeb3b-4030-4300-8692-8babf4db4167> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-11-01T06:17:52.938Z" ;
+    bcube:lastUpdated "2015-11-01T06:17:52.938Z" ;
+    bcube:originatedFrom <urn:uuid:30062fcc-5de3-4d03-ae91-fceeca3e7acd> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:bffdeea4-9ead-4bd9-b1a6-ab20aa3689f8> .
+
+<urn:uuid:b12ebf11-0bb9-4822-afcd-494f258198df> bcube:hasType "theme" ;
+    bcube:hasValue "Base Flood Elevation",
+        "CBRS",
+        "Coastal Barrier Resources System",
+        "Coastal Flooding",
+        "DFIRM",
+        "DFIRM Database",
+        "FEMA Flood Hazard Zone",
+        "FIRM",
+        "Flood Insurance Rate Map",
+        "Floodplain Mapping",
+        "Floodway",
+        "NFIP",
+        "Riverine Flooding",
+        "SFHA",
+        "Special Flood Hazard Area" ;
+    dc:partOf "FEMA NFIP Topic Category" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:bffdeea4-9ead-4bd9-b1a6-ab20aa3689f8> bcube:dateCreated "2015-11-01T06:17:52.938Z" ;
+    bcube:hasMetadataRecord <urn:uuid:587eeb3b-4030-4300-8692-8babf4db4167> ;
+    bcube:lastUpdated "2015-11-01T06:17:52.938Z" ;
+    dc:conformsTo <urn:uuid:01714bc1-a62c-473a-9de8-8308ce719cb4>,
+        <urn:uuid:4c99f331-5ff6-4694-8f8c-2ba25a1843e8>,
+        <urn:uuid:b12ebf11-0bb9-4822-afcd-494f258198df> ;
+    dc:description "The Floodplain Mapping/Redelineation study deliverables depict and quantify the flood risks for the study area. The primary risk classificatinos used are the 1-percent-annual-chance flood event, the 0.2-percent-annual-chance flood event, and areas of minimal flood risk. The Floodplain Mapping/Redelineation flood risk boundaries are derived from the engineering information Flood Insurance Studies (FISs), previously published Flood Insurance Rate Maps (FIRMs), flood harzard analyses performed in support of the FISs and FIRMs, and new mapping data, where available. The FISs and FIRMs are published by the Federal Emergency Managemeng Agency (FEMA)." ;
+    dc:spatial "POLYGON ((-96.96 30.3,-96.96 30.73,-96.27 30.73,-96.27 30.3,-96.96 30.3))" ;
+    dcterms:publisher <urn:uuid:1e5006a7-762d-4bdf-be3d-93c414d30a57> ;
+    dcterms:references <urn:uuid:f45a5d96-b7f6-4486-ada4-edded3fd9ea2> ;
+    dcterms:title "FLOODPLAIN, BURLESON COUNTY, TEXAS" ;
+    esip:eastBound "-96.27"^^xsd:float ;
+    esip:northBound "30.73"^^xsd:float ;
+    esip:southBound "30.3"^^xsd:float ;
+    esip:startDate "2008-10-20"^^xsd:date ;
+    esip:westBound "-96.96"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:f45a5d96-b7f6-4486-ada4-edded3fd9ea2> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-01T06:17:52.938Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-01T06:17:52.938Z" ;
+    dc:identifier "urn:sha:a03be7662235073fd4caa08367ab7ad0a475b0ae4de9c4780a3691ed" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "https://hazards.fema.gov" .
+

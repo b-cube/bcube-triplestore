@@ -1,0 +1,71 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:271a5ae1-e54b-4158-b482-e1499315599e> bcube:hasType "place" ;
+    bcube:hasValue "Colorado",
+        "Denver",
+        "Denver County",
+        "USA" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:5d923745-eed1-4172-8832-350d1507a5dc> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-10-30T14:58:07.954Z" ;
+    bcube:lastUpdated "2015-10-30T14:58:07.954Z" ;
+    bcube:originatedFrom <urn:uuid:ca6a796f-59fc-4323-aaf9-ac9627413286> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:7d89a874-8e05-496d-b271-ae868b0e7bbc> .
+
+<urn:uuid:7d89a874-8e05-496d-b271-ae868b0e7bbc> bcube:dateCreated "2015-10-30T14:58:07.954Z" ;
+    bcube:hasMetadataRecord <urn:uuid:5d923745-eed1-4172-8832-350d1507a5dc> ;
+    bcube:lastUpdated "2015-10-30T14:58:07.954Z" ;
+    dc:conformsTo <urn:uuid:271a5ae1-e54b-4158-b482-e1499315599e>,
+        <urn:uuid:a2cd7959-2863-42be-a919-c2cdb79c3144>,
+        <urn:uuid:c10bd8fc-a654-4de9-9c4e-781ef361f22f> ;
+    dc:description "Data set depicts the historic locations of street car tracks within Denver." ;
+    dc:spatial "POLYGON ((-105.053281 39.656687,-105.053281 39.791966,-104.884199 39.791966,-104.884199 39.656687,-105.053281 39.656687))" ;
+    dcterms:publisher <urn:uuid:f8769e9f-c5df-4cda-b50a-846c26f4787b> ;
+    dcterms:title "Abandoned Trolley Tracks" ;
+    esip:eastBound "-104.884199"^^xsd:float ;
+    esip:northBound "39.791966"^^xsd:float ;
+    esip:southBound "39.656687"^^xsd:float ;
+    esip:westBound "-105.053281"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:a2cd7959-2863-42be-a919-c2cdb79c3144> bcube:hasType "theme" ;
+    bcube:hasValue "historic" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:c10bd8fc-a654-4de9-9c4e-781ef361f22f> bcube:hasType "theme" ;
+    bcube:hasValue "society",
+        "transportation" ;
+    dc:partOf "ISO 19115 Topic Categories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:ca6a796f-59fc-4323-aaf9-ac9627413286> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-10-30T14:58:07.954Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-10-30T14:58:07.954Z" ;
+    dc:identifier "urn:sha:4cb27f5d0fece03a721afe57a7e5664ed6f92f23c638fd06ed74410a" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://data.denvergov.org/download/gis/abandoned_trolley_tracks/metadata/abandoned_trolley_tracks.xml" .
+
+<urn:uuid:f8769e9f-c5df-4cda-b50a-846c26f4787b> owl:a foaf:Organization ;
+    foaf:name "" .
+

@@ -1,0 +1,74 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:071bd155-7493-4dfb-b9b0-e3b018fd8afb> a "ISO 19115:2003/19139" ;
+    bcube:dateCreated "2015-08-04T21:34:08.539Z" ;
+    bcube:lastUpdated "2015-08-04T21:34:08.539Z" ;
+    bcube:originatedFrom <urn:uuid:363f9980-1f63-44db-bbf6-4fb432630ffa> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:8d5f9dae-7ced-4ee5-82d9-dfe2f40346ad> .
+
+<urn:uuid:363f9980-1f63-44db-bbf6-4fb432630ffa> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-04T21:34:08.539Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-04T21:34:08.539Z" ;
+    dc:identifier "urn:sha:1d0b0b4c1c921978f97114fb3a1c58f8e03ab80cc40a628cc746acb8" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "https://catalog.data.gov/harvest/object/23258661-1eb5-4534-8eef-48c5d1f69f02" .
+
+<urn:uuid:45e05ca2-db0a-464e-a433-2f68df456857> bcube:hasType "theme" ;
+    bcube:hasValue "DEM",
+        "Digital elevation model",
+        "Digital terrain model",
+        "Drainage Area",
+        "Elevation",
+        "Hydrographic",
+        "Hydrologic Modeling",
+        "Hydrology",
+        "LIDAR",
+        "Lidar",
+        "Surface Model" ;
+    dc:partOf "SC" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:8d5f9dae-7ced-4ee5-82d9-dfe2f40346ad> bcube:dateCreated "2015-08-04T21:34:08.539Z" ;
+    bcube:hasMetadataRecord <urn:uuid:071bd155-7493-4dfb-b9b0-e3b018fd8afb> ;
+    bcube:lastUpdated "2015-08-04T21:34:08.539Z" ;
+    dc:conformsTo <urn:uuid:45e05ca2-db0a-464e-a433-2f68df456857>,
+        <urn:uuid:9fa0caca-2311-4b66-9cf3-ddf6044cfac3>,
+        <urn:uuid:a696d4c7-5eb0-40d5-b560-f44dde825ab9> ;
+    dc:description "The South Carolina Department of Natural Resources (SCDNR) contracted with Sanborn to provide LiDAR mapping services for Florence County, SC. Utilizing multi-return systems, Light Detection and Ranging (LiDAR) data in the form of 3-dimensional positions of a dense set of mass points was collected for approximately 887 square miles between March 16th and March 19th 2009. All systems consist of geodetic GPS positioning, orientation derived from high-end inertial sensors and high-accurate lasers. The sensor is attached to the aircraft s underside and emits rapid pulses of light that are used to determine distances between the plane and terrain below. Specifically, the Leica ALS-50 LiDAR system was used to collect data for the survey campaign. During final data processing, the calibration parameters are inserted into post-processing software. A total of thirteen airborne GPS (Global Positioning System) base stations were used in the Florence County Project. Two new points, 501 and 502, were created to assist the accuracy of the network. The remaining 11 points were NGS stations. Together, these base stations were tied to the other point to create a GPS survey network. The coordinates of these stations were checked against each other with the three dimensional GPS baseline created at the airborne support set up and determined to be within project specifications. The acquired LiDAR data was processed to obtain first and last return point data. The last return data was further filtered to yield a LiDAR surface representing the bare earth." ;
+    dc:spatial "POLYGON ((-80.083923 33.765874,-80.083923 34.318263,-79.295161 34.318263,-79.295161 33.765874,-80.083923 33.765874))" ;
+    dcterms:title "2009 SCDRN Lidar: Florence County" ;
+    esip:eastBound "-79.295161"^^xsd:float ;
+    esip:endDate "2009-04-11"^^xsd:date ;
+    esip:northBound "34.318263"^^xsd:float ;
+    esip:southBound "33.765874"^^xsd:float ;
+    esip:startDate "2009-02-25"^^xsd:date ;
+    esip:westBound "-80.083923"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:9fa0caca-2311-4b66-9cf3-ddf6044cfac3> bcube:hasType "place" ;
+    bcube:hasValue "Florence" ;
+    dc:partOf "SC" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:a696d4c7-5eb0-40d5-b560-f44dde825ab9> bcube:hasValue "elevation" ;
+    dc:partOf "IsoTopicCategories" ;
+    owl:a bcube:thesaurusSubset .
+

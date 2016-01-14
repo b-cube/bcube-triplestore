@@ -1,0 +1,71 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:05d40d35-ef75-47c8-a778-bbd77cf6ecb3> owl:a foaf:Organization ;
+    foaf:name "USDA - Forest Service" .
+
+<urn:uuid:10afe3c8-ce9b-4b34-8eb3-c83feb07a885> bcube:dateCreated "2015-10-18T03:51:33.793Z" ;
+    bcube:hasMetadataRecord <urn:uuid:cdb49ced-eedd-4731-b003-2e28e29f23cd> ;
+    bcube:lastUpdated "2015-10-18T03:51:33.793Z" ;
+    dc:conformsTo <urn:uuid:818ee141-1eaa-45f0-b818-56073f934701>,
+        <urn:uuid:9ba08012-e2e5-482d-8d7c-4e6ba630fd81>,
+        <urn:uuid:fccafc93-1c21-4908-ba6a-e3248f6c9414> ;
+    dc:description "This data set includes polygons for ecological sections within the conterminous United States. This data set contains regional geographic delineations for analysis of ecological relationships across ecological units. These delineations show the relationships between ECOMAP 2007 and Kuchler's (1975, second edition) map of potential natural vegetation." ;
+    dc:spatial "POLYGON ((-124.762615 24.530689,-124.762615 49.386392,-66.798038 49.386392,-66.798038 24.530689,-124.762615 24.530689))" ;
+    dcterms:publisher <urn:uuid:05d40d35-ef75-47c8-a778-bbd77cf6ecb3> ;
+    dcterms:title "S_USA.PNV_KuchlerSections" ;
+    esip:eastBound "-66.798038"^^xsd:float ;
+    esip:northBound "49.386392"^^xsd:float ;
+    esip:southBound "24.530689"^^xsd:float ;
+    esip:westBound "-124.762615"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:818ee141-1eaa-45f0-b818-56073f934701> bcube:hasType "theme" ;
+    bcube:hasValue "biota" ;
+    dc:partOf "ISO 19115 Topic Categories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:9ba08012-e2e5-482d-8d7c-4e6ba630fd81> bcube:hasType "theme" ;
+    bcube:hasValue "Ecomap",
+        "Kuchler",
+        "PNV",
+        "Potential Natural Vegetation",
+        "Section" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:a41da4cc-391a-4d6b-9784-f48d951fad21> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-10-18T03:51:33.793Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-10-18T03:51:33.793Z" ;
+    dc:identifier "urn:sha:1a99e2fd6bb6104f9eb9d16be6819f5cd3651964a44ad7318313d916" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://data.fs.usda.gov/geodata/edw/edw_resources/meta/S_USA.PNV_KuchlerSections.xml" .
+
+<urn:uuid:cdb49ced-eedd-4731-b003-2e28e29f23cd> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-10-18T03:51:33.793Z" ;
+    bcube:lastUpdated "2015-10-18T03:51:33.793Z" ;
+    bcube:originatedFrom <urn:uuid:a41da4cc-391a-4d6b-9784-f48d951fad21> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:10afe3c8-ce9b-4b34-8eb3-c83feb07a885> .
+
+<urn:uuid:fccafc93-1c21-4908-ba6a-e3248f6c9414> bcube:hasType "place" ;
+    bcube:hasValue "United States" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+

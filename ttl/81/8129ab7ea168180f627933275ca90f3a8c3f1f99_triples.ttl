@@ -1,0 +1,89 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:06721f88-e73e-48fb-818a-7fc698f44935> owl:a foaf:Organization ;
+    foaf:name "Climate Prediction Center" .
+
+<urn:uuid:1ce300a8-7d26-44a5-bfb7-4ef0f6c6cbbf> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-06T20:25:25.559Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-06T20:25:25.559Z" ;
+    dc:identifier "urn:sha:6b79b56e1722ee3e4830e10f804aad381f8549cefee6a552c8f2fefc" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "ftp://ftp.cpc.ncep.noaa.gov/GIS/gfs/" .
+
+<urn:uuid:305541a8-b686-407e-9f31-8de1ceb4aacc> bcube:hasType "stratum" ;
+    bcube:hasValue "Vertical Location > Land Surface",
+        "Vertical Location > Sea Surface" ;
+    dc:partOf "NASA GCMD Location Keywords" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:538b4c5c-9aa1-462a-b40d-0c810c2c4fe3> bcube:dateCreated "2015-08-06T20:25:25.559Z" ;
+    bcube:hasMetadataRecord <urn:uuid:b94faf33-7963-4af0-b12d-69fa0ec9f512> ;
+    bcube:lastUpdated "2015-08-06T20:25:25.559Z" ;
+    dc:conformsTo <urn:uuid:305541a8-b686-407e-9f31-8de1ceb4aacc>,
+        <urn:uuid:97277072-b831-4939-b86e-aaba5eacb609>,
+        <urn:uuid:b949f554-5da8-4261-a23f-3829eaf0c018>,
+        <urn:uuid:c5f1a497-4685-463f-8762-e867562ec384> ;
+    dc:description "The Global Forecast System (GFS) forecast precipitation data at 37.5km resolution is created at the NOAA Climate Prediction Center for the purpose of near real-time usage by the national and international relief agencies and the general public. The users of this data include the U.S. Geological Survey (USGS), the U.S. Agency for International Development (USAID), the Joint Agricultural Weather Facility (JAWF) and the national Meteorological Centers in Africa, Asia and South America. The data is disseminated in the binary format as well as in the form of shape and tiff files for use by the GIS community. This data has seven individual 24-hour accumulated precipitation amounts (in millimeters) corresponding to the seven forecast days and one for the grand total of accumulated 7day total precipitation (in millimeters). Thus, the represented forecast fields have 8 Geotiff files and 8 shape files. All these files are zipped into a single file (per day)." ;
+    dc:spatial "POLYGON ((-180 -90,-180 90,180 90,180 -90,-180 -90))" ;
+    dcterms:identifier "gov.noaa.cpc:CPC-GFS-PREC-DLY-PF-V2009" ;
+    dcterms:publisher <urn:uuid:06721f88-e73e-48fb-818a-7fc698f44935> ;
+    dcterms:references <urn:uuid:1ce300a8-7d26-44a5-bfb7-4ef0f6c6cbbf> ;
+    dcterms:title "Climate Prediction Center (CPC) NCEP-Global Forecast System (GFS) Precipitation Forecast Product" ;
+    esip:eastBound "180.0"^^xsd:float ;
+    esip:northBound "90.0"^^xsd:float ;
+    esip:southBound "-90.0"^^xsd:float ;
+    esip:startDate "2010-04-01"^^xsd:date ;
+    esip:westBound "-180.0"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:8ab472a0-2cd5-4589-a3a0-dee4b68913a3> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-06T20:25:25.559Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-06T20:25:25.559Z" ;
+    dc:identifier "urn:sha:4d095ca8a33b4a16eba4f4c2dd28931c8f718c19c27ffa938e485a77" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "https://catalog.data.gov/harvest/object/3a68be49-746e-4d2d-866f-97f77b5084ec/original" .
+
+<urn:uuid:97277072-b831-4939-b86e-aaba5eacb609> bcube:hasType "theme" ;
+    bcube:hasValue "Atmosphere > Precipitation > Precipitation Amount" ;
+    dc:partOf "NASA GCMD Science Keywords" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:b949f554-5da8-4261-a23f-3829eaf0c018> bcube:hasType "place" ;
+    bcube:hasValue "Geographic Region > Global" ;
+    dc:partOf "NASA GCMD Location Keywords" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:b94faf33-7963-4af0-b12d-69fa0ec9f512> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-08-06T20:25:25.559Z" ;
+    bcube:lastUpdated "2015-08-06T20:25:25.559Z" ;
+    bcube:originatedFrom <urn:uuid:8ab472a0-2cd5-4589-a3a0-dee4b68913a3> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:538b4c5c-9aa1-462a-b40d-0c810c2c4fe3> .
+
+<urn:uuid:c5f1a497-4685-463f-8762-e867562ec384> bcube:hasType "theme" ;
+    bcube:hasValue "climatologyMeteorologyAtmosphere" ;
+    dc:partOf "ISO 19115 Topic Category" ;
+    owl:a bcube:thesaurusSubset .
+

@@ -1,0 +1,66 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:025a7001-73fb-4dd4-9561-6cf55e01139b> a "OGC:WMS" ;
+    bcube:contains <urn:uuid:243cdc27-ce50-435b-97df-05e17f3ccf25> ;
+    bcube:dateCreated "2015-08-12T09:04:48.182Z" ;
+    bcube:lastUpdated "2015-08-12T09:04:48.182Z" ;
+    bcube:originatedFrom <urn:uuid:f2da605e-d0ee-4527-b583-26eb5a629291> ;
+    dc:conformsTo <urn:uuid:9108dc64-8548-4d37-a332-7df449a1d329> ;
+    dc:description "Scientific Data" ;
+    owl:a bcube:service .
+
+<urn:uuid:0a0694aa-9537-46aa-b82b-a213fc37bd7f> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-12T09:04:48.182Z" ;
+    bcube:hasConfidence "Not Sure" ;
+    bcube:hasUrlSource "Generated" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-12T09:04:48.182Z" ;
+    dc:identifier "urn:sha:3c64811e63bfd8e6402ae9b42bc02c4756c75797b69871059c3e0dd9" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://ecco.jpl.nasa.gov/thredds/wms/ecco_Smoother/PREV/20140906/dr080_2014/n10day_19_21/gtIceave_08_08.04320_05040_720.cdf?layers=gtIceave&width=500&version=1.3.0&bbox=-180.0%2C-79.5%2C180.0%2C78.5&service=WMS&format=image%2Fpng&styles=&crs=CRS%3A84&request=GetMap&height=500" .
+
+<urn:uuid:243cdc27-ce50-435b-97df-05e17f3ccf25> bcube:dateCreated "2015-08-12T09:04:48.182Z" ;
+    bcube:lastUpdated "2015-08-12T09:04:48.182Z" ;
+    dc:description "Temperature tendency due to ice formation (30d)" ;
+    dc:spatial "POLYGON ((-180.0 -79.5,-180.0 78.5,180.0 78.5,180.0 -79.5,-180.0 -79.5))" ;
+    dc:title "Temperature tendency due to ice formation (30d)" ;
+    dcterms:references <urn:uuid:0a0694aa-9537-46aa-b82b-a213fc37bd7f> ;
+    esip:eastBound "180.0"^^xsd:float ;
+    esip:northBound "78.5"^^xsd:float ;
+    esip:southBound "-79.5"^^xsd:float ;
+    esip:westBound "-180.0"^^xsd:float ;
+    owl:a bcube:Layer .
+
+<urn:uuid:9108dc64-8548-4d37-a332-7df449a1d329> bcube:hasValue "atmosphere",
+        "climate",
+        "earth science",
+        "meteorology",
+        "ocean" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:f2da605e-d0ee-4527-b583-26eb5a629291> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-12T09:04:48.182Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-12T09:04:48.182Z" ;
+    dc:identifier "urn:sha:4725be2c1333a75841a6d01cdaab83f7f6a6e69b1d404a78b9dfeff6" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://ecco.jpl.nasa.gov/thredds/wms/ecco_Smoother/PREV/20140906/dr080_2014/n10day_19_21/gtIceave_08_08.04320_05040_720.cdf?service=WMS&version=1.3.0&request=GetCapabilities" .
+

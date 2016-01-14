@@ -1,0 +1,135 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:03bce79c-d33b-4237-a050-f8ad2fc8ab87> dcterms:references <urn:uuid:98c1f975-6e7a-45be-882f-bae5c03bebbb> ;
+    owl:a bibo:WebPage .
+
+<urn:uuid:08263b99-5aeb-4936-a127-11702b3ac8db> bcube:hasType "theme" ;
+    bcube:hasValue "Atmosphere > Atmospheric Temperature > Air Temperature",
+        "Atmosphere > Atmospheric Temperature > Surface Air Temperature",
+        "air",
+        "air_temperature",
+        "atmosphere",
+        "atmospheric",
+        "co-ops",
+        "collection",
+        "data",
+        "date",
+        "deployment",
+        "designation",
+        "established",
+        "flag",
+        "identifier",
+        "limit",
+        "meteorological",
+        "minute",
+        "name",
+        "noaa",
+        "nos",
+        "ops",
+        "platform",
+        "sensor",
+        "shefID",
+        "shef_id",
+        "state",
+        "station",
+        "temperature",
+        "time" ;
+    dc:partOf "GCMD Science Keywords" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:12b8ce2c-f0eb-45eb-9f6d-399e337464f2> owl:a foaf:Organization ;
+    foaf:name "ERDDAP, version 1.65, at NOAA NMFS SWFSC Environmental Research Division" .
+
+<urn:uuid:2274d90d-e047-415a-aeb5-adb4d0d911cc> bcube:dateCreated "2015-10-18T19:51:06.132Z" ;
+    bcube:hasMetadataRecord <urn:uuid:34d2aa42-a83b-4129-9e9c-703e046df5dc> ;
+    bcube:lastUpdated "2015-10-18T19:51:06.132Z" ;
+    dc:conformsTo <urn:uuid:08263b99-5aeb-4936-a127-11702b3ac8db>,
+        <urn:uuid:6efeed24-e3ca-4b9c-800f-fe15b337dc0f> ;
+    dc:description "This dataset has Air Temperature data from NOAA NOS Center for Operational Oceanographic Products and Services (CO-OPS). WARNING: These preliminary data have not been subjected to the National Ocean Services (NOS) Quality Control procedures, and do not necessarily meet the criteria and standards of official NOS data. They are released for limited public use with appropriate caution. WARNING: * Queries for data MUST include stationID= and time>=. * Queries USUALLY include time<= (the default end time corresponds to 'now'). * Queries MUST be for less than 30 days worth of data. * The data source isn't completely reliable. If your request returns no data when you think it should: * Try revising the request (e.g., a different time range). * The list of stations offering this data may be incorrect. * Sometimes a station or the entire data service is unavailable. Wait a while and try again." ;
+    dc:spatial "POLYGON ((-177.3608 -14.2767,-177.3608 70.4114,166.6175 70.4114,166.6175 -14.2767,-177.3608 -14.2767))" ;
+    dcterms:publisher <urn:uuid:12b8ce2c-f0eb-45eb-9f6d-399e337464f2> ;
+    dcterms:references <urn:uuid:03bce79c-d33b-4237-a050-f8ad2fc8ab87>,
+        <urn:uuid:65ed520f-54b5-4e81-994e-ab5b0fc76a0f>,
+        <urn:uuid:f9094658-0ebb-4ccd-a7ed-78c75e8a0c42> ;
+    dcterms:title "NOS CO-OPS Meteorological Data, Air Temperature, 6-Minute" ;
+    esip:eastBound "166.6175"^^xsd:float ;
+    esip:northBound "70.4114"^^xsd:float ;
+    esip:southBound "-14.2767"^^xsd:float ;
+    esip:westBound "-177.3608"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:34d2aa42-a83b-4129-9e9c-703e046df5dc> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-10-18T19:51:06.132Z" ;
+    bcube:lastUpdated "2015-10-18T19:51:06.132Z" ;
+    bcube:originatedFrom <urn:uuid:9fa2006b-06a0-480b-ab88-893895c0ed37> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:2274d90d-e047-415a-aeb5-adb4d0d911cc> .
+
+<urn:uuid:65ed520f-54b5-4e81-994e-ab5b0fc76a0f> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-10-18T19:51:06.132Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-10-18T19:51:06.132Z" ;
+    dc:identifier "urn:sha:b1792e9d0b9a5a5e68cc9ea6d87318267887265a08afab7eee9e5070" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://coastwatch.pfeg.noaa.gov/erddap/tabledap/nosCoopsMAT.html" .
+
+<urn:uuid:6efeed24-e3ca-4b9c-800f-fe15b337dc0f> bcube:hasType "theme" ;
+    bcube:hasValue "air_temperature",
+        "latitude",
+        "longitude",
+        "time" ;
+    dc:partOf "CF Standard Name Table v29" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:98c1f975-6e7a-45be-882f-bae5c03bebbb> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-10-18T19:51:06.132Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-10-18T19:51:06.132Z" ;
+    dc:identifier "urn:sha:2bd8132ae9e91741d5a684ece8237a2eed80c5b66e9aba70071dc8d5" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://coastwatch.pfeg.noaa.gov/erddap/tabledap/nosCoopsMAT.subset" .
+
+<urn:uuid:9fa2006b-06a0-480b-ab88-893895c0ed37> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-10-18T19:51:06.132Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-10-18T19:51:06.132Z" ;
+    dc:identifier "urn:sha:02627308c3de2a86243833c1e48e6b65d0d6e2e5d0a6cd98251b6a29" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://coastwatch.pfeg.noaa.gov/erddap/tabledap/nosCoopsMAT.fgdc" .
+
+<urn:uuid:f9094658-0ebb-4ccd-a7ed-78c75e8a0c42> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-10-18T19:51:06.132Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-10-18T19:51:06.132Z" ;
+    dc:identifier "urn:sha:bf1ad9b183a30f30997b286e57067d3d6005b83b59c260d814671b15" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://coastwatch.pfeg.noaa.gov/erddap/tabledap/nosCoopsMAT.graph" .
+

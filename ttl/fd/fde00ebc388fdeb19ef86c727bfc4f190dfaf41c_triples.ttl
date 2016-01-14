@@ -1,0 +1,79 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:04d9485a-0cb1-43b9-97a7-2749f876a51c> bcube:dateCreated "2014-10-30T04:04:43.944Z" ;
+    bcube:hasMetadataRecord <urn:uuid:9c669489-adfc-402d-9b71-5373feefd758> ;
+    bcube:lastUpdated "2014-10-30T04:04:43.944Z" ;
+    dc:conformsTo <urn:uuid:18446111-0459-49de-81bb-cdc101e6a6c3>,
+        <urn:uuid:2a7adc25-0d78-4737-b6cd-7824d287cdec>,
+        <urn:uuid:420e7d2e-0632-4555-abb8-d4c7e9a85853>,
+        <urn:uuid:72e10ea9-202f-479f-a13c-59dcfb893067>,
+        <urn:uuid:ec882d61-c674-4d36-87f9-c5fd3f4c88a0> ;
+    dc:description "WATCH meteorological forcing data methodology applied to ERA-Interim data over land merged with ERA-Interim raw data over the ocean" ;
+    dc:spatial "POLYGON ((-179.75 -89.75,-179.75 89.75,179.75 89.75,179.75 -89.75,-179.75 -89.75))" ;
+    dcterms:title "WATCH forcing data methodology applied to ERA-Interim data" ;
+    esip:eastBound "179.75"^^xsd:float ;
+    esip:endDate "2013-01-01"^^xsd:date ;
+    esip:northBound "89.75"^^xsd:float ;
+    esip:southBound "-89.75"^^xsd:float ;
+    esip:startDate "1979-01-01"^^xsd:date ;
+    esip:westBound "-179.75"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:18446111-0459-49de-81bb-cdc101e6a6c3> bcube:hasType "theme" ;
+    bcube:hasValue "latitude",
+        "longitude",
+        "surface_air_pressure",
+        "time" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:2a7adc25-0d78-4737-b6cd-7824d287cdec> bcube:hasType "project" ;
+    bcube:hasValue "Earth2Observe" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:420e7d2e-0632-4555-abb8-d4c7e9a85853> bcube:hasValue "climatologyMeteorologyAtmosphere" ;
+    dc:partOf "IsoTopicCategories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:72e10ea9-202f-479f-a13c-59dcfb893067> bcube:hasType "dataCenter" ;
+    bcube:hasValue "Emanuel Dutra" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:9c669489-adfc-402d-9b71-5373feefd758> a "ISO 19115:2003/19139" ;
+    bcube:dateCreated "2014-10-30T04:04:43.944Z" ;
+    bcube:lastUpdated "2014-10-30T04:04:43.944Z" ;
+    bcube:originatedFrom <urn:uuid:c1a125fb-8254-4299-8d45-1d8a8f107708> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:04d9485a-0cb1-43b9-97a7-2749f876a51c> .
+
+<urn:uuid:c1a125fb-8254-4299-8d45-1d8a8f107708> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2014-10-30T04:04:43.944Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2014-10-30T04:04:43.944Z" ;
+    dc:identifier "urn:sha:cb60b8698a24c71193bdd9aae901af05552c9f4d27174d1cddb63477" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "https://rsg.pml.ac.uk/thredds/iso/ecmwf/met_forcing_v0/psurf_3hourly.nc" .
+
+<urn:uuid:ec882d61-c674-4d36-87f9-c5fd3f4c88a0> bcube:hasType "theme" ;
+    bcube:hasValue "ERA-Interim",
+        "Earth2Observe",
+        "WATCH",
+        "meteorological forcing",
+        "reanalysis" ;
+    owl:a bcube:thesaurusSubset .
+

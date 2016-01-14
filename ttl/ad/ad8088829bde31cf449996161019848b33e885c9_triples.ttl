@@ -1,0 +1,81 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:114aa5b9-e5e8-44bf-8368-92e891053174> bcube:hasValue "geoscientificInformation" ;
+    dc:partOf "IsoTopicCategories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:30635d7e-24cc-4cf4-9dfb-f1099192fe4b> bcube:hasType "theme" ;
+    bcube:hasValue "geothermal",
+        "migrated depth",
+        "reflection",
+        "seismic",
+        "survey" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:3429c463-3147-467c-b2d8-458d74e618a4> bcube:hasType "place" ;
+    bcube:hasValue "Beowawe",
+        "Lander",
+        "Nevada" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:5125ca79-9710-4bed-af21-be106264b827> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-03T05:38:12.038Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-03T05:38:12.038Z" ;
+    dc:identifier "urn:sha:c83d0483ce43f5cdeb5cb3a52b98dceb8f5e8abbed7918738f471b64" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://repository.stategeothermaldata.org/resources/metadata/test-CSV-XML-tool/45a03840-a302-4c74-b7f0-e91ee432ce18.xml" .
+
+<urn:uuid:a306e68b-a51c-4d2c-a090-a299324c4c4c> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-03T05:38:12.038Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-03T05:38:12.038Z" ;
+    dc:identifier "urn:sha:82d3ef54b772eab4cf7a3b4ad0897633a672cc6749a8f607391ca73a" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "ftp://ftp.nbmg.unr.edu/pub/Geothermal/11_Documents/ReynoldsAssoc_RflctnSeismcSrvy_Beowawe_1975.pdf" .
+
+<urn:uuid:d61c7a74-76df-4b92-be75-0c42c1b0e58a> a "ISO 19115:2003/19139" ;
+    bcube:dateCreated "2015-11-03T05:38:12.038Z" ;
+    bcube:lastUpdated "2015-11-03T05:38:12.038Z" ;
+    bcube:originatedFrom <urn:uuid:5125ca79-9710-4bed-af21-be106264b827> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:da563690-9914-4851-b885-07de6d165e79> .
+
+<urn:uuid:da563690-9914-4851-b885-07de6d165e79> bcube:dateCreated "2015-11-03T05:38:12.038Z" ;
+    bcube:hasMetadataRecord <urn:uuid:d61c7a74-76df-4b92-be75-0c42c1b0e58a> ;
+    bcube:lastUpdated "2015-11-03T05:38:12.038Z" ;
+    dc:conformsTo <urn:uuid:114aa5b9-e5e8-44bf-8368-92e891053174>,
+        <urn:uuid:30635d7e-24cc-4cf4-9dfb-f1099192fe4b>,
+        <urn:uuid:3429c463-3147-467c-b2d8-458d74e618a4> ;
+    dc:description "Migrated depth section seismic line diagrams and reflection seismic line plots for BW-1 through BW-7, Beowawe Area, Chevron Oil Company Minerals Staff." ;
+    dc:spatial "POLYGON ((-116.65 40.52,-116.65 40.58,-116.58 40.58,-116.58 40.52,-116.65 40.52))" ;
+    dcterms:references <urn:uuid:a306e68b-a51c-4d2c-a090-a299324c4c4c> ;
+    dcterms:title "Reflection Seismic Surveys and Seismic Lines for Beowawe Area" ;
+    esip:eastBound "-116.58"^^xsd:float ;
+    esip:endDate "1975-10-20"^^xsd:date ;
+    esip:northBound "40.58"^^xsd:float ;
+    esip:southBound "40.52"^^xsd:float ;
+    esip:startDate "1975-10-20"^^xsd:date ;
+    esip:westBound "-116.65"^^xsd:float ;
+    owl:a dcat:Dataset .
+

@@ -1,0 +1,84 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:1a4aaa4f-f8ea-484a-a275-4269f863dac3> bcube:hasType "place" ;
+    bcube:hasValue "Apostle Islands",
+        "Ashland County",
+        "Bayfield County",
+        "Lake Superior",
+        "United States",
+        "Wisconsin" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:655b53e4-13bd-46ac-872f-ab1b6bf68367> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2014-07-31T10:07:40.083Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2014-07-31T10:07:40.083Z" ;
+    dc:identifier "urn:sha:50d98ef4cb7f3035a53bd0c35ac550e6ea5962ecae66ed3cb814aac9" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "https://data.noaa.gov/harvest/object/f13e0006-1efb-454f-9950-75f7b393b5d2" .
+
+<urn:uuid:788b56bd-90e2-4f47-b78a-ded6ce3c575b> bcube:hasType "temporal" ;
+    bcube:hasValue "2009",
+        "August",
+        "July" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:bd6a9058-f70e-4c0e-8571-1eadda751eb5> bcube:hasType "theme" ;
+    bcube:hasValue "CHARTS",
+        "JALBTCX",
+        "LAS",
+        "Lidar",
+        "SHOALS",
+        "Topography",
+        "Topography/Bathymetry",
+        "U.S. Army Corps of Engineers, Mobile District" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:c2dab5e5-19f8-43e6-b0df-e255928f175a> bcube:dateCreated "2014-07-31T10:07:40.083Z" ;
+    bcube:hasMetadataRecord <urn:uuid:d0b69a9a-685e-4e78-8a95-189da06dded8> ;
+    bcube:lastUpdated "2014-07-31T10:07:40.083Z" ;
+    dc:conformsTo <urn:uuid:1a4aaa4f-f8ea-484a-a275-4269f863dac3>,
+        <urn:uuid:788b56bd-90e2-4f47-b78a-ded6ce3c575b>,
+        <urn:uuid:bd6a9058-f70e-4c0e-8571-1eadda751eb5>,
+        <urn:uuid:e0b2a6af-c01a-49af-982f-fe99d89f2f28> ;
+    dc:description "These files contain topographic and bathymetric lidar data collected by the Compact Hydrographic Airborne Rapid Total Survey (CHARTS) system along the coast of Wisconsin. CHARTS integrates topographic and bathymetric lidar sensors, a digital camera and a hyperspectral scanner on a single remote sensing platform for use in coastal mapping and charting activities. Data coverage generally extends along the coastline from the waterline inland 500 meters (topography) and offshore 1,000 meters or to laser extinction (bathymetry). The topographic lidar sensor has a pulse repetition rate of 9 kHz at 1064 nm (near-infrared wavelength). The bathymetric lidar sensor has a pulse repetition rate of 1 kHz at 532 nm (green wavelength). Native lidar data is not generally in a format accessible to most Geographical Information Systems (GIS). Specialized in-house and commercial software packages are used to process the native lidar data into 3-dimensional positions that can be imported into GIS software for visualization and further analysis. Horizontal positions, provided in decimal degrees of latitude and longitude, are referenced to the North American Datum of 1983 (NAD83). Vertical positions were referenced to the NAD83 ellipsoid and provided in meters. The National Geodetic Survey's (NGS) GEOID03 model was used to transform the vertical positions from ellipsoid to orthometric heights referenced to the North American Vertical Datum of 1988 (NAVD88). The format of the files was LAS version 1.0. The NOAA Coastal Services Center received the data and converted the topo and hydro files from NAVD88 heights to ellipsoid heights using GEOID03. These files were converted for data storage and Digital Coast provisioning purposes. The data are classified as: 1 - Unclassified 2 - Ground 11 - Bathymetry" ;
+    dc:spatial "POLYGON ((-90.8944749 46.7496769,-90.8944749 47.1519069,-90.3411983 47.1519069,-90.3411983 46.7496769,-90.8944749 46.7496769))" ;
+    dcterms:title "2009 US Army Corps of Engineers (USACE) Joint Airborne Lidar Bathymetry Technical Center of Expertise (JALBTCX) Topobathy Lidar: Apostle Islands, WI" ;
+    esip:eastBound "-90.3411983"^^xsd:float ;
+    esip:endDate "2009-08-02"^^xsd:date ;
+    esip:northBound "47.1519069"^^xsd:float ;
+    esip:southBound "46.7496769"^^xsd:float ;
+    esip:startDate "2009-07-19"^^xsd:date ;
+    esip:westBound "-90.8944749"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:d0b69a9a-685e-4e78-8a95-189da06dded8> a "ISO 19115:2003/19139" ;
+    bcube:dateCreated "2014-07-31T10:07:40.083Z" ;
+    bcube:lastUpdated "2014-07-31T10:07:40.083Z" ;
+    bcube:originatedFrom <urn:uuid:655b53e4-13bd-46ac-872f-ab1b6bf68367> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:c2dab5e5-19f8-43e6-b0df-e255928f175a> .
+
+<urn:uuid:e0b2a6af-c01a-49af-982f-fe99d89f2f28> bcube:hasValue "elevation" ;
+    dc:partOf "IsoTopicCategories" ;
+    owl:a bcube:thesaurusSubset .
+

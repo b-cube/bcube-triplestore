@@ -1,0 +1,60 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:02c9fd68-7eec-4bfd-829b-f42877e22c54> bcube:hasType "place" ;
+    bcube:hasValue "fUS55 = Wisconsin",
+        "groundwater",
+        "groundwater flow",
+        "streamflow",
+        "water cycle" ;
+    dc:partOf "Augmented FIPS 10-4 and FIPS 6-4" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:1ec87c36-105b-433e-8342-949a12e4eeea> bcube:hasValue "geoscientificInformation" ;
+    dc:partOf "IsoTopicCategories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:96f3e20e-371f-4605-907c-e1f1fe2443e4> a "ISO 19115:2003/19139" ;
+    bcube:dateCreated "2014-10-30T01:11:48.357Z" ;
+    bcube:lastUpdated "2014-10-30T01:11:48.357Z" ;
+    bcube:originatedFrom <urn:uuid:c00a5c78-191d-4d3b-8d45-bf89e0f14408> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:d32ca566-b306-4db2-9cd4-4b9978ab0806> .
+
+<urn:uuid:c00a5c78-191d-4d3b-8d45-bf89e0f14408> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2014-10-30T01:11:48.357Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2014-10-30T01:11:48.357Z" ;
+    dc:identifier "urn:sha:8a21452031896f4287871b0e7d99e6cd9e1c1308bc270096eb5980a6" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www.usgs.gov/science/iso.php?cite=2793" .
+
+<urn:uuid:d32ca566-b306-4db2-9cd4-4b9978ab0806> bcube:dateCreated "2014-10-30T01:11:48.357Z" ;
+    bcube:hasMetadataRecord <urn:uuid:96f3e20e-371f-4605-907c-e1f1fe2443e4> ;
+    bcube:lastUpdated "2014-10-30T01:11:48.357Z" ;
+    dc:conformsTo <urn:uuid:02c9fd68-7eec-4bfd-829b-f42877e22c54>,
+        <urn:uuid:1ec87c36-105b-433e-8342-949a12e4eeea> ;
+    dc:description "The groundwater component of streamflow is important because it is indicative of the sustained flow of a stream during dry periods, is often of better quality, and has a smaller range of temperatures, than surface contributions to streamflow." ;
+    dc:spatial "POLYGON ((-93 42,-93 47,-86 47,-86 42,-93 42))" ;
+    dcterms:title "Groundwater recharge in Wisconsin--Annual estimates for 1970-99 using streamflow data" ;
+    esip:eastBound "-86.0"^^xsd:float ;
+    esip:northBound "47.0"^^xsd:float ;
+    esip:southBound "42.0"^^xsd:float ;
+    esip:westBound "-93.0"^^xsd:float ;
+    owl:a dcat:Dataset .
+

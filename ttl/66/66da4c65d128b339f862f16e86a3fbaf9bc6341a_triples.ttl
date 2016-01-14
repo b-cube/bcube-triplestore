@@ -1,0 +1,64 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:2acbd2be-b7c9-4d07-b7e4-133fb91c00b0> bcube:hasType "place" ;
+    bcube:hasValue "Microsoft Excel format",
+        "OpenDocument spreadsheet",
+        "bouguer anomaly",
+        "f04003 = Cochise",
+        "free-air anomaly",
+        "geophysics",
+        "geospatial datasets",
+        "gravimeter measurement",
+        "isostatic anomaly" ;
+    dc:partOf "Common geographic areas thesaurus" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:7f0ff5a1-7168-4ed1-b9e9-10ab3ebec2af> bcube:dateCreated "2014-10-30T01:06:06.358Z" ;
+    bcube:hasMetadataRecord <urn:uuid:f6f46976-ceff-41ad-8b86-74bc7c06bcca> ;
+    bcube:lastUpdated "2014-10-30T01:06:06.358Z" ;
+    dc:conformsTo <urn:uuid:2acbd2be-b7c9-4d07-b7e4-133fb91c00b0>,
+        <urn:uuid:84975115-ef18-4018-89ca-cb15644c8c8a> ;
+    dc:description "321 observed gravity values with free-air, simple Bouguer, and complete Bouguer anomaly values; high-precision relative-gravity surveys repeated over time, useful for aquifer-storage-change monitoring; and absolute gravity values for use as base stations." ;
+    dc:spatial "POLYGON ((-110.449711 31.3457,-110.449711 32.232448,-110.0037 32.232448,-110.0037 31.3457,-110.449711 31.3457))" ;
+    dcterms:title "Gravity data from the San Pedro River Basin, Cochise County, Arizona" ;
+    esip:eastBound "-110.0037"^^xsd:float ;
+    esip:northBound "32.232448"^^xsd:float ;
+    esip:southBound "31.3457"^^xsd:float ;
+    esip:westBound "-110.449711"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:84975115-ef18-4018-89ca-cb15644c8c8a> bcube:hasValue "geoscientificInformation" ;
+    dc:partOf "IsoTopicCategories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:f67847a3-65e6-42d0-b0bc-70dd7826f7b4> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2014-10-30T01:06:06.358Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2014-10-30T01:06:06.358Z" ;
+    dc:identifier "urn:sha:795b139275050134a79a08cf81e7fa9ffb07bfccfdba0ad8a0fc20cd" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://mrdata.usgs.gov/catalog/iso.php?cite=938" .
+
+<urn:uuid:f6f46976-ceff-41ad-8b86-74bc7c06bcca> a "ISO 19115:2003/19139" ;
+    bcube:dateCreated "2014-10-30T01:06:06.358Z" ;
+    bcube:lastUpdated "2014-10-30T01:06:06.358Z" ;
+    bcube:originatedFrom <urn:uuid:f67847a3-65e6-42d0-b0bc-70dd7826f7b4> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:7f0ff5a1-7168-4ed1-b9e9-10ab3ebec2af> .
+

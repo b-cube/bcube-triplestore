@@ -1,0 +1,89 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:0ab99361-92ad-4820-a97a-0f5559afba66> owl:a foaf:Organization ;
+    foaf:name "" .
+
+<urn:uuid:0ddb5ae5-4c80-4e1b-b4d6-c4cb333a62a3> bcube:hasType "theme" ;
+    bcube:hasValue "boundaries" ;
+    dc:partOf "ISO 19115 Topic Categories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:2c7bcbb6-209b-4b43-8e55-e4bc26b1ef78> bcube:hasType "place" ;
+    bcube:hasValue "50",
+        "State or Equivalent Entity",
+        "U.S.",
+        "United States",
+        "VT",
+        "Vermont" ;
+    dc:partOf "FIPS Publication 5-2, FIPS Publication 6-4, FIPS Publication 8-6, FIPS Publication 9-1" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:2ef93f91-2b8d-4001-b1de-431f4d9b3c57> bcube:dateCreated "2015-11-07T09:54:21.102Z" ;
+    bcube:hasMetadataRecord <urn:uuid:3807d8c4-4f8d-45d8-b40d-7275ab955f3b> ;
+    bcube:lastUpdated "2015-11-07T09:54:21.102Z" ;
+    dc:conformsTo <urn:uuid:0ddb5ae5-4c80-4e1b-b4d6-c4cb333a62a3>,
+        <urn:uuid:2c7bcbb6-209b-4b43-8e55-e4bc26b1ef78>,
+        <urn:uuid:f8cf2a6f-e1e5-42fc-9044-81b9165aae45> ;
+    dc:description "The TIGER/Line Shapefiles are an extract of selected geographic and cartographic information from the Census MAF/TIGER database. The Census MAF/TIGER database represents a seamless national file with no overlaps or gaps between parts. However, each TIGER/Line Shapefile is designed to stand alone as an independent data set or the shapefiles can be combined to cover the whole nation." ;
+    dc:spatial "POLYGON ((-73.437905 42.72685,-73.437905 45.016659,-71.465039 45.016659,-71.465039 42.72685,-73.437905 42.72685))" ;
+    dcterms:publisher <urn:uuid:0ab99361-92ad-4820-a97a-0f5559afba66> ;
+    dcterms:references <urn:uuid:57a55b65-a5f7-4bf2-adba-35b7a98ec21a> ;
+    dcterms:title "TIGER/Line Shapefile, 2007, state, Vermont, State Legislative District (SLD) Upper Chamber" ;
+    esip:eastBound "-71.465039"^^xsd:float ;
+    esip:endDate "2007-07-01"^^xsd:date ;
+    esip:northBound "45.016659"^^xsd:float ;
+    esip:southBound "42.72685"^^xsd:float ;
+    esip:startDate "2007-01-01"^^xsd:date ;
+    esip:westBound "-73.437905"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:3807d8c4-4f8d-45d8-b40d-7275ab955f3b> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-11-07T09:54:21.102Z" ;
+    bcube:lastUpdated "2015-11-07T09:54:21.102Z" ;
+    bcube:originatedFrom <urn:uuid:aea6a3b7-9a17-4abd-b85a-5f6ebf676949> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:2ef93f91-2b8d-4001-b1de-431f4d9b3c57> .
+
+<urn:uuid:57a55b65-a5f7-4bf2-adba-35b7a98ec21a> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-07T09:54:21.102Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-07T09:54:21.102Z" ;
+    dc:identifier "urn:sha:b97e2c741d83af33bb48f9822f004b396b122f5168ff7c2a374aa9f5" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www2.census.gov/geo/tiger/TIGER2007FE/50_VERMONT/fe_2007_50_sldu.zip" .
+
+<urn:uuid:aea6a3b7-9a17-4abd-b85a-5f6ebf676949> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-07T09:54:21.102Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-07T09:54:21.102Z" ;
+    dc:identifier "urn:sha:510d1b13a1e7d43000ff6f39de93ffaa0cf31d63cedb275e42c8ca50" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://meta.geo.census.gov/data/existing/decennial/GEO/GPMB/TIGERline/fe_2007/sldu/fe_2007_50_sldu_url.shp.xml" .
+
+<urn:uuid:f8cf2a6f-e1e5-42fc-9044-81b9165aae45> bcube:hasType "theme" ;
+    bcube:hasValue "Legislative District",
+        "Polygon",
+        "State or equivalent entity" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+

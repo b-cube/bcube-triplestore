@@ -1,0 +1,79 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:252c752e-7587-4141-975e-179192682f91> bcube:hasType "place" ;
+    bcube:hasValue "Charles City County",
+        "New Kent County",
+        "Prince George County",
+        "Virginia" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:264ed363-1412-48e1-a4d3-1895baf2dfbe> bcube:hasType "temporal" ;
+    bcube:hasValue "2011",
+        "May" ;
+    dc:partOf "none" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:46c92b61-2f78-41a8-8bf6-475f1bc7fb5a> bcube:dateCreated "2015-08-05T15:50:30.051Z" ;
+    bcube:hasMetadataRecord <urn:uuid:5e3a7e88-7006-4102-9d5d-edabd450a45e> ;
+    bcube:lastUpdated "2015-08-05T15:50:30.051Z" ;
+    dc:conformsTo <urn:uuid:252c752e-7587-4141-975e-179192682f91>,
+        <urn:uuid:264ed363-1412-48e1-a4d3-1895baf2dfbe>,
+        <urn:uuid:55ba6506-894f-4a54-b064-be1b97d08bbf>,
+        <urn:uuid:74c053ab-a0a9-486e-abed-d8d32c39c911> ;
+    dc:description "Dewberry collected LiDAR for ~3,341 square miles in various Virginia Counties, a part of Worcester County, and Hoopers Island. The acquisition was performed by Terrapoint. This metadata covers the LiDAR produced for the Middle Counties project area. The nominal pulse spacing for this project is 1.6 ft (0.5 meters). This project was collected with a sensor which collects intensity values for each discrete pulse extracted from the waveform. GPS Week Time, Intensity, Flightline and echo number attributes were provided for each LiDAR point. Dewberry used proprietary procedures to classify the LAS according to contract specifications: 1-Unclassified, 2-Ground, 7-Noise, 9-Water, 10-Ignored Ground due to breakline proximity, and 11-Withheld. Dewberry produced 3D breaklines and combined these with the final LiDAR data to produce seamless hydro flattened DEMs for the 918 tiles (5000 ft x 5000 ft) that cover the project area." ;
+    dc:spatial "POLYGON ((-77.401043 37.36991635,-77.401043 37.62771,-76.754699 37.62771,-76.754699 37.36991635,-77.401043 37.36991635))" ;
+    dcterms:title "2011 FEMA Lidar: Middle Counties (VA)" ;
+    esip:eastBound "-76.754699"^^xsd:float ;
+    esip:endDate "2012-04-02"^^xsd:date ;
+    esip:northBound "37.62771"^^xsd:float ;
+    esip:southBound "37.36991635"^^xsd:float ;
+    esip:startDate "2011-05-06"^^xsd:date ;
+    esip:westBound "-77.401043"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:55ba6506-894f-4a54-b064-be1b97d08bbf> bcube:hasType "theme" ;
+    bcube:hasValue "Breaklines",
+        "DEM",
+        "DTM",
+        "Elevation",
+        "LAS",
+        "Lidar" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:5e3a7e88-7006-4102-9d5d-edabd450a45e> a "ISO 19115:2003/19139" ;
+    bcube:dateCreated "2015-08-05T15:50:30.051Z" ;
+    bcube:lastUpdated "2015-08-05T15:50:30.051Z" ;
+    bcube:originatedFrom <urn:uuid:ef152133-8e7b-45df-a750-f00d47e0c800> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:46c92b61-2f78-41a8-8bf6-475f1bc7fb5a> .
+
+<urn:uuid:74c053ab-a0a9-486e-abed-d8d32c39c911> bcube:hasValue "elevation" ;
+    dc:partOf "IsoTopicCategories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:ef152133-8e7b-45df-a750-f00d47e0c800> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-05T15:50:30.051Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-05T15:50:30.051Z" ;
+    dc:identifier "urn:sha:0f8ab6755dac2753e651fc9ffd619b19ca8907d7de6a3f36bae70c85" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://coast.noaa.gov/data/Documents/Metadata/isoharvest/Lidar/va2011_usgs_fema_middlecounties_m4710_ISOmetadata.xml" .
+

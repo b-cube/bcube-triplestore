@@ -1,0 +1,90 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:0ed6688b-0a7f-4c44-b4e8-34c0a5cf9606> bcube:hasType "place" ;
+    bcube:hasValue "01059",
+        "County or Equivalent Entity",
+        "Franklin",
+        "U.S.",
+        "United States" ;
+    dc:partOf "ANSI INCITS 38:2009 (Formerly FIPS 5-2), ANSI INCITS 31:2009 (Formerly FIPS 6-4),ANSI INCITS 454:2009 (Formerly FIPS 8-6), ANSI INCITS 455:2009(Formerly FIPS 9-1), ANSI INCITS 446:2008 (Geographic Names Information System (GNIS))" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:838bcb60-d1eb-42e0-a6e1-efd45d9d88af> a "ISO 19115:2003/19139" ;
+    bcube:dateCreated "2015-10-17T20:35:11.332Z" ;
+    bcube:lastUpdated "2015-10-17T20:35:11.332Z" ;
+    bcube:originatedFrom <urn:uuid:c53b37fd-6c6c-4988-b4da-46739e4d9dd3> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:ba178199-b195-43dc-98e4-f8fd3d0170ae> .
+
+<urn:uuid:ba178199-b195-43dc-98e4-f8fd3d0170ae> bcube:dateCreated "2015-10-17T20:35:11.332Z" ;
+    bcube:hasMetadataRecord <urn:uuid:838bcb60-d1eb-42e0-a6e1-efd45d9d88af> ;
+    bcube:lastUpdated "2015-10-17T20:35:11.332Z" ;
+    dc:conformsTo <urn:uuid:0ed6688b-0a7f-4c44-b4e8-34c0a5cf9606>,
+        <urn:uuid:be5e0777-b921-4243-b4ad-a6e8ac592562>,
+        <urn:uuid:d41f2f69-9208-404b-968e-a1c009ceaf17> ;
+    dc:description "The TIGER/Line shapefiles and related database files (.dbf) are an extract of selected geographic and cartographic information from the U.S. Census Bureau's Master Address File / Topologically Integrated Geographic Encoding and Referencing (MAF/TIGER) Database (MTDB). The MTDB represents a seamless national file with no overlaps or gaps between parts, however, each TIGER/Line shapefile is designed to stand alone as an independent data set, or they can be combined to cover the entire nation. The Address Range / Feature Name Relationship File (ADDRFN.dbf) contains a record for each address range / linear feature name relationship. The purpose of this relationship file is to identify all street names associated with each address range. An edge can have several feature names; an address range located on an edge can be associated with one or any combination of the available feature names (an address range can be linked to multiple feature names). The address range is identified by the address range identifier (ARID) attribute that can be used to link to the Address Ranges Relationship File (ADDR.dbf). The linear feature name is identified by the linear feature identifier (LINEARID) attribute that can be used to link to the Feature Names Relationship File (FEATNAMES.dbf)." ;
+    dc:spatial "POLYGON ((-88.173632 34.304598,-88.173632 34.581703,-87.529667 34.581703,-87.529667 34.304598,-88.173632 34.304598))" ;
+    dcterms:references <urn:uuid:ec67f586-3df7-4908-abcc-cbc2fab3230f> ;
+    dcterms:title "TIGER/Line Shapefile, 2013, county, Franklin County, AL, Current Address Range-Feature Name Relationship File" ;
+    esip:eastBound "-87.529667"^^xsd:float ;
+    esip:endDate "2013-05-01"^^xsd:date ;
+    esip:northBound "34.581703"^^xsd:float ;
+    esip:southBound "34.304598"^^xsd:float ;
+    esip:startDate "2012-06-01"^^xsd:date ;
+    esip:westBound "-88.173632"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:be5e0777-b921-4243-b4ad-a6e8ac592562> bcube:hasValue "transportation" ;
+    dc:partOf "IsoTopicCategories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:c53b37fd-6c6c-4988-b4da-46739e4d9dd3> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-10-17T20:35:11.332Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-10-17T20:35:11.332Z" ;
+    dc:identifier "urn:sha:5d009ad7bfa52171094a7c6584f06bc64d21e3ca8568a119f9122479" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://meta.geo.census.gov/data/existing/decennial/GEO/GPMB/TIGERline/TIGER2013/addrfn/tl_2013_01059_addrfn.dbf.iso.xml" .
+
+<urn:uuid:d41f2f69-9208-404b-968e-a1c009ceaf17> bcube:hasType "theme" ;
+    bcube:hasValue "5-digit ZIP code",
+        "County ANSI Code",
+        "County FIPS Code",
+        "From House Number",
+        "Permanent edge ID",
+        "Side indicator flag",
+        "State ANSI Code",
+        "State FIPS Code",
+        "To House Number",
+        "ZIP +4 code" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:ec67f586-3df7-4908-abcc-cbc2fab3230f> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-10-17T20:35:11.332Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-10-17T20:35:11.332Z" ;
+    dc:identifier "urn:sha:6a6abf63c6cad016ef82d468e018b19eff828403707b7cad9bc185d5" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www2.census.gov/geo/tiger/TIGER2013/ADDRFN/tl_2013_01059_addrfn.zip" .
+

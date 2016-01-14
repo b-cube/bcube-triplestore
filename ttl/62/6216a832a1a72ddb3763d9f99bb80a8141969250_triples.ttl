@@ -1,0 +1,98 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:06bd0971-08f5-4322-a62c-ce81979da426> bcube:hasType "theme" ;
+    bcube:hasValue "Barrio",
+        "CCD",
+        "Census County Division",
+        "County Subdivision",
+        "County or equivalent entity",
+        "MCD",
+        "Minor Civil Division",
+        "Polygon",
+        "Subdivision",
+        "Town",
+        "Township",
+        "UT",
+        "Unorganized Territory" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:0a44ef39-fed6-48e0-abf0-146f5619dcbf> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-11-01T22:48:17.148Z" ;
+    bcube:lastUpdated "2015-11-01T22:48:17.148Z" ;
+    bcube:originatedFrom <urn:uuid:ae33875c-6ba2-46ad-85fb-83998b9320e4> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:c78b5305-4e76-4bb5-99be-4d12dda4b396> .
+
+<urn:uuid:1002b5cf-a59f-4f7e-982c-e723d89958ed> bcube:hasType "place" ;
+    bcube:hasValue "01007",
+        "Bibb",
+        "County or Equivalent Entity",
+        "U.S.",
+        "United States" ;
+    dc:partOf "FIPS Publication 5-2, FIPS Publication 6-4, FIPS Publication 8-6, FIPS Publication 9-1,FIPS Publication55-4" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:511a9c70-751b-499b-8e90-df65f3e7a9d1> owl:a foaf:Organization ;
+    foaf:name "" .
+
+<urn:uuid:6f7f10c4-a8cf-42bb-aeee-fb86dd01ed16> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-01T22:48:17.148Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-01T22:48:17.148Z" ;
+    dc:identifier "urn:sha:4cde466363f41014582ba6cd0b6a23cf3984597859283511b4ae179d" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www2.census.gov/geo/tiger/TIGER2008/01_ALABAMA/01007_Bibb_County/tl_2008_01007_cousub.zip" .
+
+<urn:uuid:ae33875c-6ba2-46ad-85fb-83998b9320e4> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-01T22:48:17.148Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-01T22:48:17.148Z" ;
+    dc:identifier "urn:sha:a69f0bad3438eb72ddd1dd08385386bd0702824796b5302eaa1e3ee2" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://meta.geo.census.gov/data/existing/decennial/GEO/GPMB/TIGERline/fe_2008/cousub/tl_2008_01007_cousub_url.shp.xml" .
+
+<urn:uuid:c78b5305-4e76-4bb5-99be-4d12dda4b396> bcube:dateCreated "2015-11-01T22:48:17.148Z" ;
+    bcube:hasMetadataRecord <urn:uuid:0a44ef39-fed6-48e0-abf0-146f5619dcbf> ;
+    bcube:lastUpdated "2015-11-01T22:48:17.148Z" ;
+    dc:conformsTo <urn:uuid:06bd0971-08f5-4322-a62c-ce81979da426>,
+        <urn:uuid:1002b5cf-a59f-4f7e-982c-e723d89958ed>,
+        <urn:uuid:e23e9c4b-918e-458c-ba5d-45fe235e702e> ;
+    dc:description "The TIGER/Line Shapefiles are an extract of selected geographic and cartographic information from the Census MAF/TIGER database. The Census MAF/TIGER database represents a seamless national file with no overlaps or gaps between parts. However, each TIGER/Line Shapefile is designed to stand alone as an independent data set or the shapefiles can be combined to cover the whole nation." ;
+    dc:spatial "POLYGON ((-87.421989 32.831522,-87.421989 33.246926,-86.876023 33.246926,-86.876023 32.831522,-87.421989 32.831522))" ;
+    dcterms:publisher <urn:uuid:511a9c70-751b-499b-8e90-df65f3e7a9d1> ;
+    dcterms:references <urn:uuid:6f7f10c4-a8cf-42bb-aeee-fb86dd01ed16> ;
+    dcterms:title "TIGER/Line Shapefile, 2008, county, Bibb County, AL, County Subdivision" ;
+    esip:eastBound "-86.876023"^^xsd:float ;
+    esip:endDate "2008-07-01"^^xsd:date ;
+    esip:northBound "33.246926"^^xsd:float ;
+    esip:southBound "32.831522"^^xsd:float ;
+    esip:startDate "2008-01-01"^^xsd:date ;
+    esip:westBound "-87.421989"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:e23e9c4b-918e-458c-ba5d-45fe235e702e> bcube:hasType "theme" ;
+    bcube:hasValue "boundaries" ;
+    dc:partOf "ISO 19115 Topic Categories" ;
+    owl:a bcube:thesaurusSubset .
+

@@ -1,0 +1,89 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:10a87286-6faf-4271-b99c-8a8842d8d2b5> owl:a foaf:Organization ;
+    foaf:name "" .
+
+<urn:uuid:365483cf-926a-451a-90cb-cd1ef46f19d8> bcube:hasType "theme" ;
+    bcube:hasValue "Census Tract",
+        "County or equivalent entity",
+        "Polygon",
+        "Tract" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:3f8c2692-5aa4-4df9-8891-4947c32286c5> bcube:hasType "theme" ;
+    bcube:hasValue "boundaries" ;
+    dc:partOf "ISO 19115 Topic Categories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:4febb6ba-17f7-4212-a323-efee68e1530f> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-11-02T07:06:59.507Z" ;
+    bcube:lastUpdated "2015-11-02T07:06:59.507Z" ;
+    bcube:originatedFrom <urn:uuid:73044992-eb0f-4750-b218-55fcf1c2c5d2> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:6a0668b6-1e29-449c-8404-8192cc1546d3> .
+
+<urn:uuid:6a0668b6-1e29-449c-8404-8192cc1546d3> bcube:dateCreated "2015-11-02T07:06:59.507Z" ;
+    bcube:hasMetadataRecord <urn:uuid:4febb6ba-17f7-4212-a323-efee68e1530f> ;
+    bcube:lastUpdated "2015-11-02T07:06:59.507Z" ;
+    dc:conformsTo <urn:uuid:365483cf-926a-451a-90cb-cd1ef46f19d8>,
+        <urn:uuid:3f8c2692-5aa4-4df9-8891-4947c32286c5>,
+        <urn:uuid:d4aeb2bb-8795-4090-9bf7-cbca3dfc8c01> ;
+    dc:description "The TIGER/Line Shapefiles are an extract of selected geographic and cartographic information from the Census MAF/TIGER database. The Census MAF/TIGER database represents a seamless national file with no overlaps or gaps between parts. However, each TIGER/Line Shapefile is designed to stand alone as an independent data set or the shapefiles can be combined to cover the whole nation." ;
+    dc:spatial "POLYGON ((-158.001499 58.60961,-158.001499 58.894948,-156.317217 58.894948,-156.317217 58.60961,-158.001499 58.60961))" ;
+    dcterms:publisher <urn:uuid:10a87286-6faf-4271-b99c-8a8842d8d2b5> ;
+    dcterms:references <urn:uuid:e7566723-5d7a-4ddc-a00e-1b8aef450d1b> ;
+    dcterms:title "TIGER/Line Shapefile, 2008, 2000 county, Bristol Bay Borough, AK, Census Tract" ;
+    esip:eastBound "-156.317217"^^xsd:float ;
+    esip:endDate "2008-07-01"^^xsd:date ;
+    esip:northBound "58.894948"^^xsd:float ;
+    esip:southBound "58.60961"^^xsd:float ;
+    esip:startDate "2008-01-01"^^xsd:date ;
+    esip:westBound "-158.001499"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:73044992-eb0f-4750-b218-55fcf1c2c5d2> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-02T07:06:59.507Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-02T07:06:59.507Z" ;
+    dc:identifier "urn:sha:e4a647592a9d0e5fcb784063b3581dae46e50bdd1b3ed4367ece917f" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://meta.geo.census.gov/data/existing/decennial/GEO/GPMB/TIGERline/fe_2008/tract00/tl_2008_02060_tract00_url.shp.xml" .
+
+<urn:uuid:d4aeb2bb-8795-4090-9bf7-cbca3dfc8c01> bcube:hasType "place" ;
+    bcube:hasValue "02060",
+        "Bristol Bay",
+        "County or Equivalent Entity",
+        "U.S.",
+        "United States" ;
+    dc:partOf "FIPS Publication 5-2, FIPS Publication 6-4, FIPS Publication 8-6, FIPS Publication 9-1,FIPS Publication55-4" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:e7566723-5d7a-4ddc-a00e-1b8aef450d1b> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-02T07:06:59.507Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-02T07:06:59.507Z" ;
+    dc:identifier "urn:sha:9f6a99922b4e4e11f221be4d8fa7c7c8eede502941bf0227a51c417f" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www2.census.gov/geo/tiger/TIGER2008/02_ALASKA/02060_Bristol_Bay_Borough/tl_2008_02060_tract00.zip" .
+

@@ -1,0 +1,88 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:20fa0d4f-1ac9-4a09-9b77-a45761c45dbd> bcube:hasType "theme" ;
+    bcube:hasValue "inlandWaters" ;
+    dc:partOf "ISO 19115 Topic Categories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:29cf5a9a-145b-4dea-addc-e6321863359c> bcube:dateCreated "2015-11-06T23:02:15.41Z" ;
+    bcube:hasMetadataRecord <urn:uuid:338b3e05-ae7e-43ce-8051-4aee5538d978> ;
+    bcube:lastUpdated "2015-11-06T23:02:15.41Z" ;
+    dc:conformsTo <urn:uuid:20fa0d4f-1ac9-4a09-9b77-a45761c45dbd>,
+        <urn:uuid:6665d57f-7c86-4427-83f4-f06f42e274b1>,
+        <urn:uuid:fbf472de-ed70-4f04-a364-1937f764ce96> ;
+    dc:description "The TIGER/Line Shapefiles are an extract of selected geographic and cartographic information from the Census MAF/TIGER database. The Census MAF/TIGER database represents a seamless national file with no overlaps or gaps between parts. However, each TIGER/Line Shapefile is designed to stand alone as an independent data set or the shapefiles can be combined to cover the whole nation." ;
+    dc:spatial "POLYGON ((-88.340432 32.991199,-88.340432 33.534008,-87.836596 33.534008,-87.836596 32.991199,-88.340432 32.991199))" ;
+    dcterms:publisher <urn:uuid:eb6d4889-8449-43ba-9074-393e8cf48b9f> ;
+    dcterms:references <urn:uuid:68185c79-edcc-4be0-be75-21999441d07b> ;
+    dcterms:title "TIGER/Line Shapefile, 2007, county, Pickens County, Area Hydrography" ;
+    esip:eastBound "-87.836596"^^xsd:float ;
+    esip:endDate "2007-07-01"^^xsd:date ;
+    esip:northBound "33.534008"^^xsd:float ;
+    esip:southBound "32.991199"^^xsd:float ;
+    esip:startDate "2007-01-01"^^xsd:date ;
+    esip:westBound "-88.340432"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:338b3e05-ae7e-43ce-8051-4aee5538d978> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-11-06T23:02:15.41Z" ;
+    bcube:lastUpdated "2015-11-06T23:02:15.41Z" ;
+    bcube:originatedFrom <urn:uuid:d309ed23-dff4-408b-b328-596089fe314c> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:29cf5a9a-145b-4dea-addc-e6321863359c> .
+
+<urn:uuid:6665d57f-7c86-4427-83f4-f06f42e274b1> bcube:hasType "place" ;
+    bcube:hasValue "01107",
+        "County or Equivalent Entity",
+        "Pickens",
+        "U.S.",
+        "United States" ;
+    dc:partOf "FIPS Publication 5-2, FIPS Publication 6-4, FIPS Publication 8-6, FIPS Publication 9-1" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:68185c79-edcc-4be0-be75-21999441d07b> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-06T23:02:15.41Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-06T23:02:15.41Z" ;
+    dc:identifier "urn:sha:29a8538e581e18e4bac1fc04432b5544c46f035398b1e59897329ec9" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www2.census.gov/geo/tiger/TIGER2007FE/01_ALABAMA/01107_Pickens/fe_2007_01107_areawater.zip" .
+
+<urn:uuid:d309ed23-dff4-408b-b328-596089fe314c> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-06T23:02:15.41Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-06T23:02:15.41Z" ;
+    dc:identifier "urn:sha:e1887e8736f9075b2f4ce75f59f4813e952cff04d023984ee11b2fa0" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://meta.geo.census.gov/data/existing/decennial/GEO/GPMB/TIGERline/fe_2007/areawater/fe_2007_01107_areawater_url.shp.xml" .
+
+<urn:uuid:eb6d4889-8449-43ba-9074-393e8cf48b9f> owl:a foaf:Organization ;
+    foaf:name "" .
+
+<urn:uuid:fbf472de-ed70-4f04-a364-1937f764ce96> bcube:hasType "theme" ;
+    bcube:hasValue "County or equivalent entity",
+        "Hydrography",
+        "Polygon" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+

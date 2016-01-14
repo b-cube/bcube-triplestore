@@ -1,0 +1,82 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:2681b3ff-c48e-49dc-b4fc-1996db8a53cc> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-05T15:49:04.383Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-05T15:49:04.383Z" ;
+    dc:identifier "urn:sha:8a9bae992125d5422c788f7d984746cf3ed1c3e9c64ceb84ae697718" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://coast.noaa.gov/data/Documents/Metadata/isoharvest/Lidar/usace2010_or_wash_m1381_ISOmetadata_cleaned.xml" .
+
+<urn:uuid:4ede1d6b-9d25-4954-8e30-b717083ec3ac> bcube:hasType "theme" ;
+    bcube:hasValue "ALS60",
+        "JALBTCX",
+        "Land use",
+        "Lidar",
+        "Topography",
+        "Topography/Bathymetry",
+        "U.S. Army Corps of Engineers, Mobile District",
+        "Unclassified LAS",
+        "oceans" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:76f92b9d-77c7-43fa-a135-f861d72166c2> bcube:hasValue "elevation" ;
+    dc:partOf "IsoTopicCategories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:8e61822e-2daf-4182-a2b3-a91f99219d5d> bcube:hasType "temporal" ;
+    bcube:hasValue "2010",
+        "2011" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:9f8e170e-bf27-45e2-8cd2-55797f16f7ce> a "ISO 19115:2003/19139" ;
+    bcube:dateCreated "2015-08-05T15:49:04.383Z" ;
+    bcube:lastUpdated "2015-08-05T15:49:04.383Z" ;
+    bcube:originatedFrom <urn:uuid:2681b3ff-c48e-49dc-b4fc-1996db8a53cc> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:f941663d-3264-4b66-b992-d370f0b182df> .
+
+<urn:uuid:ad0f153e-99e9-4b4c-be8c-0f6f818aef3e> bcube:hasType "place" ;
+    bcube:hasValue "Oregon",
+        "Pacific",
+        "United States",
+        "Washington" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:f941663d-3264-4b66-b992-d370f0b182df> bcube:dateCreated "2015-08-05T15:49:04.383Z" ;
+    bcube:hasMetadataRecord <urn:uuid:9f8e170e-bf27-45e2-8cd2-55797f16f7ce> ;
+    bcube:lastUpdated "2015-08-05T15:49:04.383Z" ;
+    dc:conformsTo <urn:uuid:4ede1d6b-9d25-4954-8e30-b717083ec3ac>,
+        <urn:uuid:76f92b9d-77c7-43fa-a135-f861d72166c2>,
+        <urn:uuid:8e61822e-2daf-4182-a2b3-a91f99219d5d>,
+        <urn:uuid:ad0f153e-99e9-4b4c-be8c-0f6f818aef3e> ;
+    dc:description "These files contain topographic and bathymetric lidar data collected with the Leica ALS60 (topo) and SHOALS-1000T (bathy) systems along the coasts of Oregon and Washington. Data coverage generally extends along the coastline from the waterline inland 500 meters and offshore 1000 meters or to laser extinction. The ALS60 topographic lidar sensor has a pulse repetition rate of 200 kHz at 1064 nm. The bathymetric lidar was collected by the SHOALS-1000T system along the coast. The SHOALS system has a pulse repetition rate of 1 kHz at 532 nm (green wavelength). Native lidar data is not generally in a format accessible to most Geographical Information Systems (GIS). Specialized in-house and commercial software packages are used to process the native lidar data into 3-dimensional positions that can be imported into GIS software for visualization and further analysis. Horizontal positions, provided in decimal degrees of latitude and longitude, were referenced to the North American Datum of 1983 (NAD83). Vertical positions were referenced to the NAD83 ellipsoid and provided in meters. The National Geodetic Survey's (NGS) GEOID09 model was used to transform the vertical positions from ellipsoid to orthometric heights referenced to the North American Vertical Datum of 1988 (NAVD88). The NOAA Office for Coastal Management received the data and converted the topo and hydro files from orthometric heights to ellipsoid heights using GEOID09. These files were converted for data storage and Digital Coast provisioning purposes. The data are classified and available from the NOAA Digital Coast as follows: Unclassified = -1 Ground = 2 Water = 9 Bathymetry = 11 Overlap = 12 Listed below are the specific dates of collection for different parts of this data set: 2010 Oregon (Coos, Curry, and Douglas Counties) Bathymetry: Date of collection: 20100618-20100702 2010-2011 Oregon (Curry County) Bathymetry: Date of collection: 20100702-20110608 2010 Oregon (Coos, Douglas, and Lane Counties) Bathymetry Date of collection: 20100618-20100705 2010 Oregon (Coos and Curry Counties) Topography: Date of collection: 20100713 2010 Oregon (Coos and Douglas Counties) Topography: Date of collection: 20100714 2010 Washington Topography: Date of collection: 20100813 2011 Oregon (Curry County) Topography: Date of collection: 20110610" ;
+    dc:spatial "POLYGON ((-124.766602 41.999017,-124.766602 48.402893,-123.928959 48.402893,-123.928959 41.999017,-124.766602 41.999017))" ;
+    dcterms:title "2010-2011 US Army Corps of Engineers (USACE) Joint Airborne Lidar Bathymetry Technical Center of Expertise (JALBTCX) Topobathy Lidar: Oregon and Washington" ;
+    esip:eastBound "-123.928959"^^xsd:float ;
+    esip:endDate "2011-06-10"^^xsd:date ;
+    esip:northBound "48.402893"^^xsd:float ;
+    esip:southBound "41.999017"^^xsd:float ;
+    esip:startDate "2010-06-18"^^xsd:date ;
+    esip:westBound "-124.766602"^^xsd:float ;
+    owl:a dcat:Dataset .
+

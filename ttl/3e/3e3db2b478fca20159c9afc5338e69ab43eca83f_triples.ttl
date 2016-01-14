@@ -1,0 +1,112 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:34a7ff8f-66cf-4917-ab29-4fce83c0984d> bcube:hasType "theme" ;
+    bcube:hasValue "Earth Science > Atmosphere > Atmospheric Radiation > Heat Flux",
+        "Earth Science > Oceans > Ocean Circulation > Fresh Water Flux",
+        "Earth Science > Oceans > Ocean Circulation > Ocean Currents",
+        "Earth Science > Oceans > Ocean Circulation > Ocean Mixed Layer",
+        "Earth Science > Oceans > Ocean Temperature > Ocean Mixed Layer",
+        "Earth Science > Oceans > Ocean Temperature > Sea Surface Temperature",
+        "Earth Science > Oceans > Salinity/Density > Salinity",
+        "Earth Science > Oceans > Sea Surface Topography > Sea Surface Height",
+        "Earth Science Services > Models > Ocean General Circulation Models (OGCM)/Regional Ocean Models",
+        "Earth Science Services > Models > Weather Research/Forecast Models" ;
+    dc:partOf "GCMD Science Keywords" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:4670bc5c-eada-428a-8eb8-d4c7b38ccdb2> bcube:hasType "theme" ;
+    bcube:hasValue "depth",
+        "eastward_sea_water_velocity",
+        "latitude",
+        "longitude",
+        "northward_sea_water_velocity",
+        "sea_water_potential_temperature",
+        "sea_water_salinity",
+        "time" ;
+    dc:partOf "CF-1.4" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:72e0e500-3a2d-4621-aee1-c73454f70749> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-10-30T14:58:11.179Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-10-30T14:58:11.179Z" ;
+    dc:identifier "urn:sha:7095f679f066a0085a5f8174e06a5891a1e49c6ce9fafe404bf54376" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://oos.soest.hawaii.edu/erddap/griddap/HYCOM_Global_3D.html" .
+
+<urn:uuid:9068a4d9-4421-4f51-95d5-d275ba26b54a> a "ISO 19115:2003/19139" ;
+    bcube:dateCreated "2015-10-30T14:58:11.179Z" ;
+    bcube:lastUpdated "2015-10-30T14:58:11.179Z" ;
+    bcube:originatedFrom <urn:uuid:f5049395-3c7b-4e8d-b74e-07764d50746f> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:96176108-99ca-4434-b17a-f07791366921> .
+
+<urn:uuid:96176108-99ca-4434-b17a-f07791366921> bcube:dateCreated "2015-10-30T14:58:11.179Z" ;
+    bcube:hasMetadataRecord <urn:uuid:9068a4d9-4421-4f51-95d5-d275ba26b54a> ;
+    bcube:lastUpdated "2015-10-30T14:58:11.179Z" ;
+    dc:conformsTo <urn:uuid:34a7ff8f-66cf-4917-ab29-4fce83c0984d>,
+        <urn:uuid:4670bc5c-eada-428a-8eb8-d4c7b38ccdb2>,
+        <urn:uuid:ca6a33cd-480a-486a-9dbd-4fb809423a0f>,
+        <urn:uuid:dbfe8a94-60ba-434f-9710-f067155faf0a> ;
+    dc:description "Global HYbrid Coordinate Ocean Model (HYCOM) and U.S. Navy Coupled Ocean Data Assimilation (NCODA) 3-day, daily forecast at approximately 9-km (1/12-degree) resolution. This is a demonstration product from the HYCOM Consortium and is provided as is. While considerable effort has been made to implement all model components in a thorough, correct, and accurate manner, numerous sources of error are possible. As such, please use these data with the caution appropriate for any ocean related activity." ;
+    dc:identifier "HYCOM_Global_3D" ;
+    dc:spatial "POLYGON ((74.16003 -78.64,74.16003 46.8781,180.0 46.8781,180.0 -78.64,74.16003 -78.64))" ;
+    dcterms:references <urn:uuid:72e0e500-3a2d-4621-aee1-c73454f70749>,
+        <urn:uuid:ecb84b28-aafd-40d2-8d2d-5eb32ca89c66> ;
+    dcterms:title "HYbrid Coordinate Ocean Model (HYCOM): Global: 3-D Variables" ;
+    esip:eastBound "180.0"^^xsd:float ;
+    esip:endDate "2016-12-31"^^xsd:date ;
+    esip:northBound "46.8781"^^xsd:float ;
+    esip:southBound "-78.64"^^xsd:float ;
+    esip:startDate "2008-05-08"^^xsd:date ;
+    esip:westBound "74.16003"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:ca6a33cd-480a-486a-9dbd-4fb809423a0f> bcube:hasType "project" ;
+    bcube:hasValue "Pacific Islands Ocean Observing System (PacIOOS)" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:dbfe8a94-60ba-434f-9710-f067155faf0a> bcube:hasValue "geoscientificInformation" ;
+    dc:partOf "IsoTopicCategories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:ecb84b28-aafd-40d2-8d2d-5eb32ca89c66> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-10-30T14:58:11.179Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-10-30T14:58:11.179Z" ;
+    dc:identifier "urn:sha:a18f6bd4d4a1896c70d55430271fd323ebe77fdd171ac8d62cb2e48b" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://oos.soest.hawaii.edu/erddap/griddap/HYCOM_Global_3D.graph" .
+
+<urn:uuid:f5049395-3c7b-4e8d-b74e-07764d50746f> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-10-30T14:58:11.179Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-10-30T14:58:11.179Z" ;
+    dc:identifier "urn:sha:d504e3719898be14e9943af367fec6f7797d58ac5b0cd9019b44a5f7" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://oos.soest.hawaii.edu/erddap/metadata/iso19115/xml/HYCOM_Global_3D_iso19115.xml" .
+

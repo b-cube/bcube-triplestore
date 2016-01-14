@@ -1,0 +1,94 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:0690fad9-d66d-4ed8-abda-40bd13dcdce7> bcube:hasType "theme" ;
+    bcube:hasValue "Elevation",
+        "Ground",
+        "Laser",
+        "Lidar",
+        "Remote Sensing",
+        "Terrain",
+        "Topography" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:06a14fed-06e5-42ad-9b95-39fe713901ce> bcube:hasType "temporal" ;
+    bcube:hasValue "2006",
+        "April",
+        "May" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:3b089f7c-1f2b-4f68-8ad2-454a40f0895c> a "ISO 19115:2003/19139" ;
+    bcube:dateCreated "2015-08-05T11:21:15.809Z" ;
+    bcube:lastUpdated "2015-08-05T11:21:15.809Z" ;
+    bcube:originatedFrom <urn:uuid:e8ebab9e-7614-44b3-a119-fd5f31ebcd4f> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:c77ac330-9fd1-4101-b665-18bb675c0f03> .
+
+<urn:uuid:53a34f99-3944-4b5d-9b42-12bc1f90d306> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-05T11:21:15.809Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-05T11:21:15.809Z" ;
+    dc:identifier "urn:sha:d380baa66e9ec4a0ce68ae0fe4bcdc07518e8250b8e98fa5647e364d" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://coast.noaa.gov/dataviewer/index.html?action=advsearchVal=4870" .
+
+<urn:uuid:8d0bb028-4120-4134-b295-3b9ac11ab131> bcube:hasType "place" ;
+    bcube:hasValue "California",
+        "San Jose",
+        "Santa Clara County",
+        "United States" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:c77ac330-9fd1-4101-b665-18bb675c0f03> bcube:dateCreated "2015-08-05T11:21:15.809Z" ;
+    bcube:hasMetadataRecord <urn:uuid:3b089f7c-1f2b-4f68-8ad2-454a40f0895c> ;
+    bcube:lastUpdated "2015-08-05T11:21:15.809Z" ;
+    dc:conformsTo <urn:uuid:0690fad9-d66d-4ed8-abda-40bd13dcdce7>,
+        <urn:uuid:06a14fed-06e5-42ad-9b95-39fe713901ce>,
+        <urn:uuid:8d0bb028-4120-4134-b295-3b9ac11ab131>,
+        <urn:uuid:d210c7f3-a13e-4911-8ed1-6828a0fb3de6> ;
+    dc:description "LAS format files, raw LiDAR data in its native format, classified bare-earth LiDAR DEM and photogrammetrically derived breaklines generated from LiDAR Intensity stereo-pairs. Breakline, Top of Bank, and contour files in ESRI personal geodatabase format, Microstation V8 .dgn format, and AutoCAD 2004 formats for the San Jose Phase 3 project of Santa Clara County, Ca. This project arrived with only unclassified data. NOAAs Office for Coastal Management performed an automated classification using lasground. Although class 1 and class 2 are available, there was no QA/QC on the points after lasground was performed." ;
+    dc:spatial "POLYGON ((-122.257507324 36.884277343800001,-122.257507324 37.508911132800002,-121.195678711 37.508911132800002,-121.195678711 36.884277343800001,-122.257507324 36.884277343800001))" ;
+    dcterms:references <urn:uuid:53a34f99-3944-4b5d-9b42-12bc1f90d306> ;
+    dcterms:title "Santa Clara County, California" ;
+    esip:eastBound "-121.195678711"^^xsd:float ;
+    esip:endDate "2006-05-01"^^xsd:date ;
+    esip:northBound "37.5089111328"^^xsd:float ;
+    esip:southBound "36.8842773438"^^xsd:float ;
+    esip:startDate "2006-04-06"^^xsd:date ;
+    esip:westBound "-122.257507324"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:d210c7f3-a13e-4911-8ed1-6828a0fb3de6> bcube:hasValue "elevation" ;
+    dc:partOf "IsoTopicCategories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:e8ebab9e-7614-44b3-a119-fd5f31ebcd4f> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-05T11:21:15.809Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-05T11:21:15.809Z" ;
+    dc:identifier "urn:sha:6cd3b9ac5b83e226afe168127dd20a08db5ecb6aa923d0923ca4f4a4" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://coast.noaa.gov/data/Documents/Metadata/isotest/ca2006_scwd_santaclara_m4870_metadata_iso.xml" .
+

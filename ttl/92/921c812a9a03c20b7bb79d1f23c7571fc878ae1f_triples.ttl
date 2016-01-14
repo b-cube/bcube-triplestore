@@ -1,0 +1,70 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:057fd141-f9fe-4b89-8d67-f390aa955327> a "ISO 19115:2003/19139" ;
+    bcube:dateCreated "2014-10-28T10:43:03.804Z" ;
+    bcube:lastUpdated "2014-10-28T10:43:03.804Z" ;
+    bcube:originatedFrom <urn:uuid:6e961e33-2758-4e01-aace-40a8b8870946> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:c88262bb-270c-4fad-a9ba-1fddbc9b1d12> .
+
+<urn:uuid:6e961e33-2758-4e01-aace-40a8b8870946> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2014-10-28T10:43:03.804Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2014-10-28T10:43:03.804Z" ;
+    dc:identifier "urn:sha:5066d694bcb72de4ab78d9fd932e9b5dfb1aa702ba57918f2284b8da" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "https://data.noaa.gov/harvest/object/143ebf7b-9d18-4e65-8b9f-6016ac4958d4" .
+
+<urn:uuid:74de87e7-b62d-408c-8d88-7235db6d399e> bcube:hasType "theme" ;
+    bcube:hasValue "Alaska",
+        "Cook Inlet",
+        "North Pacific Ocean",
+        "bathymetry",
+        "grid" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:9086212a-a149-41fc-a6a4-85a3b360d09f> bcube:hasValue "elevation",
+        "imageryBaseMapsEarthCover",
+        "oceans" ;
+    dc:partOf "IsoTopicCategories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:c88262bb-270c-4fad-a9ba-1fddbc9b1d12> bcube:dateCreated "2014-10-28T10:43:03.804Z" ;
+    bcube:hasMetadataRecord <urn:uuid:057fd141-f9fe-4b89-8d67-f390aa955327> ;
+    bcube:lastUpdated "2014-10-28T10:43:03.804Z" ;
+    dc:conformsTo <urn:uuid:74de87e7-b62d-408c-8d88-7235db6d399e>,
+        <urn:uuid:9086212a-a149-41fc-a6a4-85a3b360d09f>,
+        <urn:uuid:e91a83ee-6ee2-4118-ba5c-3dd6eccaaf86> ;
+    dc:description "We assembled 1.4 million National Ocean Service (NOS) bathymetric soundings from 98 lead-line and single-beam echosounder hydrographic surveys conducted from 1910 to 1999 in Cook Inlet, Alaska. These bathymetry data are available from the National Geophysical Data Center (NGDC: http://www.ngdc.noaa.gov), which archives and distributes data that were originally collected by the NOS and others. While various bathymetry data have been downloaded previously from NGDC, compiled, and used for a variety of projects, our effort differed in that we compared and corrected the digital bathymetry by studying the original analog source documents - digital versions of the original survey maps, called smooth sheets. Our editing included deleting erroneous and superseded values, digitizing missing values, and properly aligning all data sets to a common, modern datum. There were six areas where these older surveys were superseded by compilations of reduced-resolution multibeam surveys. We digitized 12,000 features, such as rocky reefs, kelp beds, rocks and islets, adding them to what was originally available, and creating the most thorough source (n = 18,000) of these typically shallow, inshore features. We also digitized 2,418 km of the mainland and 529 km of island shoreline, generally at a resolution of 1:20,000, and digitized 9,271 verbal surficial sediment descriptions from the smooth sheets. The depth surface, shoreline, inshore features, and sediment data sets are mostly produced at a scale of 1:20,000." ;
+    dc:spatial "POLYGON ((-154.3 58.8,-154.3 61.6,-148.9 61.6,-148.9 58.8,-154.3 58.8))" ;
+    dcterms:title "AFSC/RACE/GAP: Cook Inlet Grid" ;
+    esip:eastBound "-148.9"^^xsd:float ;
+    esip:endDate "2009-12-03"^^xsd:date ;
+    esip:northBound "61.6"^^xsd:float ;
+    esip:southBound "58.8"^^xsd:float ;
+    esip:startDate "1910-12-03"^^xsd:date ;
+    esip:westBound "-154.3"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:e91a83ee-6ee2-4118-ba5c-3dd6eccaaf86> bcube:hasType "dataCenter" ;
+    bcube:hasValue "DOC/NOAA/NMFS/AFSC > Alaska Fisheries Science Center, National Marine Fisheries Service, NOAA, U.S. Department of Commerce" ;
+    dc:partOf "NASA/GCMD Science Keywords" ;
+    owl:a bcube:thesaurusSubset .
+

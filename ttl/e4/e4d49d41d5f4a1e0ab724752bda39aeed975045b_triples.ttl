@@ -1,0 +1,100 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:04691d7a-a476-4f40-8ae2-7c53e1f16381> bcube:hasType "theme" ;
+    bcube:hasValue "elevation",
+        "environment",
+        "imageryBaseMapsEarthCover",
+        "inlandWaters",
+        "structure",
+        "transportation" ;
+    dc:partOf "ISO 19115 Topic Category" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:23dc94c0-4978-412e-a071-7dff4af4ecbc> bcube:hasType "place" ;
+    bcube:hasValue "COMMUNITY Douglas County",
+        "COUNTY Douglas",
+        "COUNTY-FIPS 0041",
+        "FEMA-CID 17041C",
+        "REGION 5",
+        "STATE ILLINOIS" ;
+    dc:partOf "Geographic Names Information System" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:4d61e5e1-da52-46b8-98e8-03a50f6082f5> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-07-18T16:31:07.321Z" ;
+    bcube:lastUpdated "2015-07-18T16:31:07.321Z" ;
+    bcube:originatedFrom <urn:uuid:e0bf814e-f74a-4842-949f-c349cf7dd2ae> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:a8492b9f-76af-482f-871e-e822b81fb17b> .
+
+<urn:uuid:8ae45916-ebed-48e2-bcba-38b917c218b7> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-07-18T16:31:07.321Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-07-18T16:31:07.321Z" ;
+    dc:identifier "urn:sha:37c915397238031daced09ae0e2dd3bf54e84a6477f749c2cc9dcbdf" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://hazards.fema.gov" .
+
+<urn:uuid:a8492b9f-76af-482f-871e-e822b81fb17b> bcube:dateCreated "2015-07-18T16:31:07.321Z" ;
+    bcube:hasMetadataRecord <urn:uuid:4d61e5e1-da52-46b8-98e8-03a50f6082f5> ;
+    bcube:lastUpdated "2015-07-18T16:31:07.321Z" ;
+    dc:conformsTo <urn:uuid:04691d7a-a476-4f40-8ae2-7c53e1f16381>,
+        <urn:uuid:23dc94c0-4978-412e-a071-7dff4af4ecbc>,
+        <urn:uuid:d1ffb145-1810-4c8d-b526-f4fe7e67c287> ;
+    dc:description "Digital orthographic imagery datasets contain georeferenced images of the Earth's surface, collected by a sensor in which object displacement has beeen removed for sensor distortions and orientation, and terrain relief. Digital orthoimages have the geometric characteristics of a map, and image qualities of a photograph. (Source: Circular A-16, p. 16)" ;
+    dc:spatial "POLYGON ((-88.6 39.6,-88.6 40.0,-87.9 40.0,-87.9 39.6,-88.6 39.6))" ;
+    dcterms:publisher <urn:uuid:dfe12048-4d12-4db1-8090-ee33405d23fc> ;
+    dcterms:references <urn:uuid:8ae45916-ebed-48e2-bcba-38b917c218b7> ;
+    dcterms:title "OrthoImagery Submission for Douglas County, Illinois, USA" ;
+    esip:eastBound "-87.9"^^xsd:float ;
+    esip:northBound "40.0"^^xsd:float ;
+    esip:southBound "39.6"^^xsd:float ;
+    esip:startDate "2005-04-06"^^xsd:date ;
+    esip:westBound "-88.6"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:d1ffb145-1810-4c8d-b526-f4fe7e67c287> bcube:hasType "theme" ;
+    bcube:hasValue "DOQ",
+        "DOQQ",
+        "Digital Orthophoto Quad",
+        "FGDC Framework",
+        "Image Map",
+        "Map",
+        "Orthoimage",
+        "Orthophoto",
+        "Rectified Image",
+        "Rectified Photograph" ;
+    dc:partOf "FEMA NFIP Topic Category" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:dfe12048-4d12-4db1-8090-ee33405d23fc> owl:a foaf:Organization ;
+    foaf:name "Federal Emergency Management Agency" .
+
+<urn:uuid:e0bf814e-f74a-4842-949f-c349cf7dd2ae> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-07-18T16:31:07.321Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-07-18T16:31:07.321Z" ;
+    dc:identifier "urn:sha:f45faa3f42c381f6fa9548fd165c42c2d3895dc472d67a79fb4a70c8" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "https://catalog.data.gov/harvest/object/5c1ec09b-4bba-4d82-9606-859640639202/original" .
+

@@ -1,0 +1,110 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:2e88d7c4-8157-4404-b9b2-6d647840e6c9> bcube:hasType "theme" ;
+    bcube:hasValue "Advanced National Seismic Systems (ANSS)",
+        "California Integrated Seismic Network (CISN)",
+        "ShakeMap",
+        "earthquake damage",
+        "instrumental intensity",
+        "peak ground motions",
+        "shaking intensity" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:3a658907-b377-4344-9b82-5e38bd2d831c> owl:a foaf:Organization ;
+    foaf:name "" .
+
+<urn:uuid:58f59d50-f4cb-4c33-a4ac-9a034b34ed2c> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-01T15:00:03.706Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-01T15:00:03.706Z" ;
+    dc:identifier "urn:sha:d3c9291b4d29e1d66af70018a67d026374bde3e1171dba4a4ff14fe2" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://earthquake.usgs.gov/earthquakes/shakemap/nc/shake/51153873/download/metadata.xml" .
+
+<urn:uuid:62270689-2b1b-4c1b-bbbe-7b22b4850303> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-01T15:00:03.706Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-01T15:00:03.706Z" ;
+    dc:identifier "urn:sha:02f0675ac4b3e59020310352a5eae15eb69bab1f893208648b224780" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://earthquake.usgs.gov/shakemap/sc/shake/51153873/download/grid.xyz.zip" .
+
+<urn:uuid:79830f4a-d556-478e-a310-b5c4c1c0e8c5> dcterms:references <urn:uuid:af076df4-ab09-4ddf-95d5-8cff4e678b08> ;
+    owl:a bibo:WebPage .
+
+<urn:uuid:88febe93-6ae2-4fd1-acf0-e18b2c25741e> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-08-01T15:00:03.706Z" ;
+    bcube:lastUpdated "2015-08-01T15:00:03.706Z" ;
+    bcube:originatedFrom <urn:uuid:58f59d50-f4cb-4c33-a4ac-9a034b34ed2c> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:953e3da2-137b-48dd-b2aa-72ed26f64aca> .
+
+<urn:uuid:953e3da2-137b-48dd-b2aa-72ed26f64aca> bcube:dateCreated "2015-08-01T15:00:03.706Z" ;
+    bcube:hasMetadataRecord <urn:uuid:88febe93-6ae2-4fd1-acf0-e18b2c25741e> ;
+    bcube:lastUpdated "2015-08-01T15:00:03.706Z" ;
+    dc:conformsTo <urn:uuid:2e88d7c4-8157-4404-b9b2-6d647840e6c9>,
+        <urn:uuid:9f9fea30-6da9-44ef-96db-feab962dc1d7> ;
+    dc:description "ShakeMap is designed as a rapid response tool to portray the extent and variation of ground shaking throughout the affected region immediately following significant earthquakes. Ground motion and intensity maps are derived from peak ground motion amplitudes recorded on seismic sensors (accelerometers), with interpolation based on both estimated amplitudes where data are lacking, and site amplification corrections. Color-coded instrumental intensity maps are derived from empirical relations between peak ground motions and Modified Mercalli intensity. This ShakeMap describes the event: 51153873, 7 km NW of Parkfield, CA" ;
+    dc:spatial "POLYGON ((-121.74 35.107,-121.74 36.773,-119.24 36.773,-119.24 35.107,-121.74 35.107))" ;
+    dcterms:publisher <urn:uuid:3a658907-b377-4344-9b82-5e38bd2d831c> ;
+    dcterms:references <urn:uuid:62270689-2b1b-4c1b-bbbe-7b22b4850303>,
+        <urn:uuid:79830f4a-d556-478e-a310-b5c4c1c0e8c5>,
+        <urn:uuid:a011a832-fbcc-44d6-8522-4a8cfc0ec10d> ;
+    dcterms:title "Advanced National Seismic System (ANSS), ShakeMap, California Region, Maps of ground shaking and intensity for event 51153873, 7 km NW of Parkfield, CA" ;
+    esip:eastBound "-119.24"^^xsd:float ;
+    esip:northBound "36.773"^^xsd:float ;
+    esip:southBound "35.107"^^xsd:float ;
+    esip:startDate "2004-11-29"^^xsd:date ;
+    esip:westBound "-121.74"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:9f9fea30-6da9-44ef-96db-feab962dc1d7> bcube:hasType "place" ;
+    bcube:hasValue "California" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:a011a832-fbcc-44d6-8522-4a8cfc0ec10d> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-01T15:00:03.706Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-01T15:00:03.706Z" ;
+    dc:identifier "urn:sha:47488c25b0c716e4874e8636fe446819de1f79214e5ae424b28125e9" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://earthquake.usgs.gov/shakemap/sc/shake/51153873/download/shape.zip" .
+
+<urn:uuid:af076df4-ab09-4ddf-95d5-8cff4e678b08> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-01T15:00:03.706Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-01T15:00:03.706Z" ;
+    dc:identifier "urn:sha:fa728173366d23164cc8423621dcd7fefdc121d8aa38fa746254c328" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://earthquake.usgs.gov/shakemap" .
+

@@ -1,0 +1,112 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:0fed4300-e8fe-4fff-ba71-007b50f307ff> owl:a foaf:Organization ;
+    foaf:name "ERDDAP, version 1.62, at Maritime Affairs Unit of the Joint Research Centre" .
+
+<urn:uuid:2c404647-4db0-47df-8494-5c0a74b36dff> bcube:hasType "theme" ;
+    bcube:hasValue "Earth Science > Oceans > Ocean Circulation > Ocean Currents",
+        "Earth Science Services > Models > Ocean General Circulation Models (OGCM)/Regional Ocean Models",
+        "Earth Science Services > Models > Weather Research/Forecast Models" ;
+    dc:partOf "GCMD Science Keywords" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:4bac1ff4-361a-42ff-b348-0841f36bef76> dcterms:references <urn:uuid:b3acf598-7ae4-457d-ae39-812c675da0bc> ;
+    owl:a bibo:WebPage .
+
+<urn:uuid:64ec25a9-c3f0-4a55-85cd-a7b8d0def9bb> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-10-17T05:53:26.515Z" ;
+    bcube:lastUpdated "2015-10-17T05:53:26.515Z" ;
+    bcube:originatedFrom <urn:uuid:aa568fea-b8cc-4ee8-af1a-84e589f9e57a> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:8c93a0dd-5aed-4100-b1d0-cceb2d264fc5> .
+
+<urn:uuid:6b647c89-a6b9-4e40-8b6a-400d6324ed28> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-10-17T05:53:26.515Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-10-17T05:53:26.515Z" ;
+    dc:identifier "urn:sha:0b4e1ce11e26b0aaa7225c4289e50517f7730766eb2373bff3f766f0" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "https://bluehub.jrc.ec.europa.eu/erddap/griddap/hawaii_0958_63c0_45d2.graph" .
+
+<urn:uuid:8c93a0dd-5aed-4100-b1d0-cceb2d264fc5> bcube:dateCreated "2015-10-17T05:53:26.515Z" ;
+    bcube:hasMetadataRecord <urn:uuid:64ec25a9-c3f0-4a55-85cd-a7b8d0def9bb> ;
+    bcube:lastUpdated "2015-10-17T05:53:26.515Z" ;
+    dc:conformsTo <urn:uuid:2c404647-4db0-47df-8494-5c0a74b36dff>,
+        <urn:uuid:9a6f06ad-2059-4e0f-891c-c6537fb57b36> ;
+    dc:description "The SCUD data product is an estimate of upper-ocean velocities computed from a diagnostic model (Surface CUrrents from a Diagnostic model). This model makes daily estimates of ocean currents by combining geostrophic and Ekman currents. The estimate is computed through derived coefficients such that the results best match ocean drifting buoys. The currents therefore are a best-estimate of currents at 15 meters (drifting buoys are drogued at 15 meters). The dataset is intended to diagnose trajectories of a tracer floating near the surface such as marine debris, oil spills, etc. The data are provided on a 1/4-degree grid for the Pacific." ;
+    dc:spatial "POLYGON ((119.875 -70.125,119.875 61.875,180.0 61.875,180.0 -70.125,119.875 -70.125))" ;
+    dcterms:identifier "https://bluehub.jrc.ec.europa.eu:hawaii_0958_63c0_45d2" ;
+    dcterms:publisher <urn:uuid:0fed4300-e8fe-4fff-ba71-007b50f307ff> ;
+    dcterms:references <urn:uuid:4bac1ff4-361a-42ff-b348-0841f36bef76>,
+        <urn:uuid:6b647c89-a6b9-4e40-8b6a-400d6324ed28>,
+        <urn:uuid:af7fb7e0-46a0-4b40-a4e8-fb73a5f0b40c> ;
+    dcterms:title "Surface CUrrents from a Diagnostic model (SCUD): Pacific" ;
+    esip:eastBound "180.0"^^xsd:float ;
+    esip:endDate "2015-10-12"^^xsd:date ;
+    esip:northBound "61.875"^^xsd:float ;
+    esip:southBound "-70.125"^^xsd:float ;
+    esip:startDate "2012-03-17"^^xsd:date ;
+    esip:westBound "119.875"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:9a6f06ad-2059-4e0f-891c-c6537fb57b36> bcube:hasType "theme" ;
+    bcube:hasValue "eastward_sea_water_velocity",
+        "latitude",
+        "longitude",
+        "northward_sea_water_velocity",
+        "time" ;
+    dc:partOf "CF-1.4" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:aa568fea-b8cc-4ee8-af1a-84e589f9e57a> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-10-17T05:53:26.515Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-10-17T05:53:26.515Z" ;
+    dc:identifier "urn:sha:f69a73a367b2dfdb54a9e82deb85dc84f086a80c0de6234e1bec0592" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "https://bluehub.jrc.ec.europa.eu/erddap/metadata/fgdc/xml/hawaii_0958_63c0_45d2_fgdc.xml" .
+
+<urn:uuid:af7fb7e0-46a0-4b40-a4e8-fb73a5f0b40c> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-10-17T05:53:26.515Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-10-17T05:53:26.515Z" ;
+    dc:identifier "urn:sha:97586fda0a9142ed84930541f7bd74077fbc2cae9ff5bdaab0b6c47d" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "https://bluehub.jrc.ec.europa.eu/erddap/griddap/hawaii_0958_63c0_45d2.html" .
+
+<urn:uuid:b3acf598-7ae4-457d-ae39-812c675da0bc> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-10-17T05:53:26.515Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-10-17T05:53:26.515Z" ;
+    dc:identifier "urn:sha:1304c789e9e490c6be5f6f600b55bd08813b2019374f680efea31ffe" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "https://bluehub.jrc.ec.europa.eu/erddap/wms/hawaii_0958_63c0_45d2/request" .
+

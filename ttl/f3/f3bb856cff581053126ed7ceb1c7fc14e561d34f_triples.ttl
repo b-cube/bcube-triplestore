@@ -1,0 +1,73 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:44168e3d-dfe7-4252-810c-ac1a7f9c2251> bcube:hasType "place" ;
+    bcube:hasValue "Puerto Rico" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:4d284641-9239-4219-9036-9665abdd1ede> bcube:hasType "theme" ;
+    bcube:hasValue "Commercial Landings",
+        "Fisheries" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:b0eb2f01-0adb-4e52-b3b7-b0b48d7b35b4> bcube:hasType "stratum" ;
+    bcube:hasValue "fishing location",
+        "gear",
+        "species" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:b2cb196a-da12-47b2-bec5-4a774e8bc81f> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-11T22:24:17.169Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-11T22:24:17.169Z" ;
+    dc:identifier "urn:sha:a1ce78b299e6257fced8f7fdd861ef82cfc290b421b19eb59ffefddf" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "https://inport.nmfs.noaa.gov/inport/item/1919/fgdc" .
+
+<urn:uuid:bb7b473a-3502-4d2b-9718-6971772bec11> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-11-11T22:24:17.169Z" ;
+    bcube:lastUpdated "2015-11-11T22:24:17.169Z" ;
+    bcube:originatedFrom <urn:uuid:b2cb196a-da12-47b2-bec5-4a774e8bc81f> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:e0fd5bc9-a972-4bae-aa2d-f463b08c103a> .
+
+<urn:uuid:e0fd5bc9-a972-4bae-aa2d-f463b08c103a> bcube:dateCreated "2015-11-11T22:24:17.169Z" ;
+    bcube:hasMetadataRecord <urn:uuid:bb7b473a-3502-4d2b-9718-6971772bec11> ;
+    bcube:lastUpdated "2015-11-11T22:24:17.169Z" ;
+    dc:conformsTo <urn:uuid:44168e3d-dfe7-4252-810c-ac1a7f9c2251>,
+        <urn:uuid:4d284641-9239-4219-9036-9665abdd1ede>,
+        <urn:uuid:b0eb2f01-0adb-4e52-b3b7-b0b48d7b35b4>,
+        <urn:uuid:f2e6c427-2aa0-4c71-9862-d4aa717183e3> ;
+    dc:description "This data set contains monthly quantities and value for all seafood products that are landed and sold by established seafood dealers and brokers at fishing centers in the Commonwealth of Puerto Rico. These landings statistics include all living marine species and are identified by species (usually the local or common name). These data are collected by field samplers employed by the Department of Natural Resources through a voluntary trip ticket program. The program collects data on the type and amount of gear, the fishing location and the fishing center where the catches are landed. Approximately, 80% of the fishermen are included in the trip ticket program. Data for the individual trips are provided to the Southeast Fisheries Science Center (SEFSC). In order to make these data consistent with other monthly landings statistics stored in the Accumulative Landings System, the data are summarized for each calendar month by gear, fishing center and fishing area and the species and gear codes are converted to the standard National Marine Fisheries Service (NMFS) codes." ;
+    dcterms:identifier "gov.noaa.nmfs.inport:1919" ;
+    dcterms:publisher <urn:uuid:faec9f13-7cb1-4dc5-a964-ad341d646b9a> ;
+    dcterms:title "Puerto Rico monthly landings statistics" ;
+    esip:startDate "1983-01-01"^^xsd:date ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:f2e6c427-2aa0-4c71-9862-d4aa717183e3> bcube:hasType "temporal" ;
+    bcube:hasValue "1983-present" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:faec9f13-7cb1-4dc5-a964-ad341d646b9a> owl:a foaf:Organization ;
+    foaf:name "" .
+

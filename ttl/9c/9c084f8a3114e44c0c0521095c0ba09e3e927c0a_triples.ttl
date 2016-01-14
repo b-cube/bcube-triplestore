@@ -1,0 +1,65 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:26ba6d95-2c40-47a1-91b4-4ce0177d10db> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-10T00:29:10.178Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-10T00:29:10.178Z" ;
+    dc:identifier "urn:sha:9a13157e6de90ebb85de21302e55d9be55ce3202ec393bbb1e4f9125" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://coast.noaa.gov/data/Documents/Metadata/isoharvest/Imagery/2010_era_as_swains_island_landcover_cleaned_ISO.xml" .
+
+<urn:uuid:3b58688e-a3ee-41e1-9482-28600a6d1874> bcube:hasType "theme" ;
+    bcube:hasValue "Land Cover",
+        "Land Cover Analysis",
+        "Remotely Sensed Imagery/Photos" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:9b0367a5-2604-41e8-9dda-6ae88c0dd166> bcube:hasType "place" ;
+    bcube:hasValue "Coastal Zone",
+        "Swains" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:a8980c80-1eb0-4e2e-9ccc-2fec33908db2> bcube:hasValue "imageryBaseMapsEarthCover" ;
+    dc:partOf "IsoTopicCategories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:d1d05406-7743-4c8d-900f-e8af5575f478> a "ISO 19115:2003/19139" ;
+    bcube:dateCreated "2015-08-10T00:29:10.178Z" ;
+    bcube:lastUpdated "2015-08-10T00:29:10.178Z" ;
+    bcube:originatedFrom <urn:uuid:26ba6d95-2c40-47a1-91b4-4ce0177d10db> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:f53382df-1e4d-4cf2-9d32-a103fea97f2e> .
+
+<urn:uuid:f53382df-1e4d-4cf2-9d32-a103fea97f2e> bcube:dateCreated "2015-08-10T00:29:10.178Z" ;
+    bcube:hasMetadataRecord <urn:uuid:d1d05406-7743-4c8d-900f-e8af5575f478> ;
+    bcube:lastUpdated "2015-08-10T00:29:10.178Z" ;
+    dc:conformsTo <urn:uuid:3b58688e-a3ee-41e1-9482-28600a6d1874>,
+        <urn:uuid:9b0367a5-2604-41e8-9dda-6ae88c0dd166>,
+        <urn:uuid:a8980c80-1eb0-4e2e-9ccc-2fec33908db2> ;
+    dc:description "This data set consists of land derived from high resolution imagery and was analyzed according to the Coastal Change Analysis Program (C-CAP) protocol to determine land cover. This data set utilized 1 full or partial 2010 WorldView2 multispectral scene and the 2002 high-resolution Swains, American Samoa C-CAP data set. The imagery and base classification were included in a multi-step change detection process to extract land cover features in the 2010 imagery." ;
+    dc:spatial "POLYGON ((-171.053454 -11.040783,-171.053454 -11.02395,-171.034769 -11.02395,-171.034769 -11.040783,-171.053454 -11.040783))" ;
+    dcterms:title "2010 C-CAP Land Cover, Territory of American Samoa, Swains" ;
+    esip:eastBound "-171.034769"^^xsd:float ;
+    esip:northBound "-11.02395"^^xsd:float ;
+    esip:southBound "-11.040783"^^xsd:float ;
+    esip:westBound "-171.053454"^^xsd:float ;
+    owl:a dcat:Dataset .
+

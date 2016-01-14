@@ -1,0 +1,87 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:23ae9e2a-6522-4e55-82a2-652b4a5c9022> owl:a foaf:Organization ;
+    foaf:name "" .
+
+<urn:uuid:41d60248-7726-46c3-a772-03133bd518c9> bcube:hasType "temporal" ;
+    bcube:hasValue "Mesozoic",
+        "Paleozoic",
+        "Proterozoic",
+        "Quaternary",
+        "Tertiary" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:887b2148-5295-48b3-9bbc-8c742698a5ae> bcube:dateCreated "2015-11-16T22:29:44.449Z" ;
+    bcube:hasMetadataRecord <urn:uuid:bed9c479-c061-4092-bdf5-52f9e2f067ce> ;
+    bcube:lastUpdated "2015-11-16T22:29:44.449Z" ;
+    dc:conformsTo <urn:uuid:41d60248-7726-46c3-a772-03133bd518c9>,
+        <urn:uuid:c5ed1307-7253-4a18-9310-1beff81b4be2>,
+        <urn:uuid:ff77ed04-cceb-4a05-9dc4-e36dbb7150a7> ;
+    dc:description "County geologic map of Graham and Greenlee Counties. Map scale 1:375,000. Contour interval is 500 feet." ;
+    dc:spatial "POLYGON ((-110.46 33.79,-110.46 32.44,-109.005 32.44,-109.005 33.79,-110.46 33.79))" ;
+    dcterms:publisher <urn:uuid:23ae9e2a-6522-4e55-82a2-652b4a5c9022> ;
+    dcterms:title "Geologic map of Graham and Greenlee Counties, Arizona" ;
+    esip:eastBound "-109.005"^^xsd:float ;
+    esip:northBound "32.44"^^xsd:float ;
+    esip:southBound "33.79"^^xsd:float ;
+    esip:westBound "-110.46"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:bed9c479-c061-4092-bdf5-52f9e2f067ce> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-11-16T22:29:44.449Z" ;
+    bcube:lastUpdated "2015-11-16T22:29:44.449Z" ;
+    bcube:originatedFrom <urn:uuid:c3d9a21a-75d6-49de-a426-a6fb499149b2> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:887b2148-5295-48b3-9bbc-8c742698a5ae> .
+
+<urn:uuid:c3d9a21a-75d6-49de-a426-a6fb499149b2> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-16T22:29:44.449Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-16T22:29:44.449Z" ;
+    dc:identifier "urn:sha:3448bbcd8c2772462b35c27dbee8d681b0a0e6b12867bb70473e6f7d" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://repository.azgs.az.gov/uri_gin/azgs/dlio/1623/fgdc.xml" .
+
+<urn:uuid:c5ed1307-7253-4a18-9310-1beff81b4be2> bcube:hasType "theme" ;
+    bcube:hasValue "Apache Group",
+        "Mescal Limestone",
+        "bedrock geology",
+        "volcanics" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:ff77ed04-cceb-4a05-9dc4-e36dbb7150a7> bcube:hasType "place" ;
+    bcube:hasValue "Arivaipa Canyon",
+        "Ash Flat",
+        "Bear Mountain",
+        "Big Prairie",
+        "Blue River",
+        "Duncan",
+        "Galiuro Mountains",
+        "Gila River",
+        "Graham County",
+        "Greenlee County",
+        "Mt Graham",
+        "Safford",
+        "Whitlock Mountains",
+        "Whitlock Valley" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+

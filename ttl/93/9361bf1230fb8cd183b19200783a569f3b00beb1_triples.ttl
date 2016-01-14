@@ -1,0 +1,89 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:69cc350a-bbf6-48b5-86c7-fefa7e3eac04> a "ISO 19115:2003/19139" ;
+    bcube:dateCreated "2015-11-07T09:55:55.598Z" ;
+    bcube:lastUpdated "2015-11-07T09:55:55.598Z" ;
+    bcube:originatedFrom <urn:uuid:fad100e1-4a82-40f3-b50f-e3e51e45aecd> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:96281d9e-d031-4ccc-808b-cef69c99e888> .
+
+<urn:uuid:75e0b80f-e4aa-4291-a324-44ea2ab0183a> bcube:hasValue "transportation" ;
+    dc:partOf "IsoTopicCategories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:96281d9e-d031-4ccc-808b-cef69c99e888> bcube:dateCreated "2015-11-07T09:55:55.598Z" ;
+    bcube:hasMetadataRecord <urn:uuid:69cc350a-bbf6-48b5-86c7-fefa7e3eac04> ;
+    bcube:lastUpdated "2015-11-07T09:55:55.598Z" ;
+    dc:conformsTo <urn:uuid:75e0b80f-e4aa-4291-a324-44ea2ab0183a>,
+        <urn:uuid:ce703807-43e0-4391-999b-ce978f84cf8e>,
+        <urn:uuid:d1096717-d58b-48b9-85c4-4ec65f766882> ;
+    dc:description "The TIGER/Line shapefiles and related database files (.dbf) are an extract of selected geographic and cartographic information from the U.S. Census Bureau's Master Address File / Topologically Integrated Geographic Encoding and Referencing (MAF/TIGER) Database (MTDB). The MTDB represents a seamless national file with no overlaps or gaps between parts, however, each TIGER/Line shapefile is designed to stand alone as an independent data set, or they can be combined to cover the entire nation. Edge refers to the linear topological primitives that make up MTDB. The All Lines Shapefile contains linear features such as roads, railroads, and hydrography. Additional attribute data associated with the linear features found in the All Lines Shapefile are available in relationship (.dbf) files that users must download separately. The All Lines Shapefile contains the geometry and attributes of each topological primitive edge. Each edge has a unique TIGER/Line identifier (TLID) value." ;
+    dc:spatial "POLYGON ((-161.368728 58.33414,-161.368728 61.00057,-155.953624 61.00057,-155.953624 58.33414,-161.368728 58.33414))" ;
+    dcterms:references <urn:uuid:998ce2b0-e024-4555-b106-b56dbc7cd25f> ;
+    dcterms:title "TIGER/Line Shapefile, 2014, county, Dillingham Census Area, AK, All Lines County-based Shapefile" ;
+    esip:eastBound "-155.953624"^^xsd:float ;
+    esip:endDate "2014-05-04"^^xsd:date ;
+    esip:northBound "61.00057"^^xsd:float ;
+    esip:southBound "58.33414"^^xsd:float ;
+    esip:startDate "2013-06-04"^^xsd:date ;
+    esip:westBound "-161.368728"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:998ce2b0-e024-4555-b106-b56dbc7cd25f> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-07T09:55:55.598Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-07T09:55:55.598Z" ;
+    dc:identifier "urn:sha:e492ce5db8f560ff46782da3bb0d21b36274b8c769cb1b37b7839024" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www2.census.gov/geo/tiger/TIGER2014/EDGES/tl_2014_02070_edges.zip" .
+
+<urn:uuid:ce703807-43e0-4391-999b-ce978f84cf8e> bcube:hasType "theme" ;
+    bcube:hasValue "Address Range",
+        "County or equivalent entity",
+        "Feature",
+        "Hydrography",
+        "Linear",
+        "Railways",
+        "Road Feature",
+        "Roads",
+        "Street Centerline" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:d1096717-d58b-48b9-85c4-4ec65f766882> bcube:hasType "place" ;
+    bcube:hasValue "02070",
+        "County or Equivalent Entity",
+        "Dillingham",
+        "U.S.",
+        "United States" ;
+    dc:partOf "ANSI INCITS 38:2009 (Formerly FIPS 5-2), ANSI INCITS 31:2009 (Formerly FIPS 6-4),ANSI INCITS 454:2009 (Formerly FIPS 8-6), ANSI INCITS 455:2009(Formerly FIPS 9-1), ANSI INCITS 446:2008 (Geographic Names Information System (GNIS))" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:fad100e1-4a82-40f3-b50f-e3e51e45aecd> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-07T09:55:55.598Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-07T09:55:55.598Z" ;
+    dc:identifier "urn:sha:b7cd9a9716c6ba99de98226c962dacb2cb6a25b4ed9005878314bfe5" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://meta.geo.census.gov/data/existing/decennial/GEO/GPMB/TIGERline/TIGER2014/edges/tl_2014_02070_edges.shp.iso.xml" .
+

@@ -1,0 +1,74 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:0e0cba16-c93f-48cf-8f71-3147138620f4> bcube:hasType "place" ;
+    bcube:hasValue "Colorado",
+        "Denver",
+        "Denver County",
+        "USA" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:66c12f45-94d1-4f0e-9dab-f78f8d3db66b> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-10-17T18:20:00.805Z" ;
+    bcube:lastUpdated "2015-10-17T18:20:00.805Z" ;
+    bcube:originatedFrom <urn:uuid:fe2d121e-02ba-4488-b3f8-e8e1f12d055e> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:d22123b9-2d4c-4974-a329-4361bdd638f8> .
+
+<urn:uuid:75d222bd-da7a-41dd-8855-e8e2dbee8b08> bcube:hasType "theme" ;
+    bcube:hasValue "boundaries",
+        "farming",
+        "planningCadastre" ;
+    dc:partOf "ISO 19115 Topic Categories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:82a9d737-3031-40d6-8bd3-1a608de216a0> owl:a foaf:Organization ;
+    foaf:name "" .
+
+<urn:uuid:d22123b9-2d4c-4974-a329-4361bdd638f8> bcube:dateCreated "2015-10-17T18:20:00.805Z" ;
+    bcube:hasMetadataRecord <urn:uuid:66c12f45-94d1-4f0e-9dab-f78f8d3db66b> ;
+    bcube:lastUpdated "2015-10-17T18:20:00.805Z" ;
+    dc:conformsTo <urn:uuid:0e0cba16-c93f-48cf-8f71-3147138620f4>,
+        <urn:uuid:75d222bd-da7a-41dd-8855-e8e2dbee8b08>,
+        <urn:uuid:fd197da3-c515-40d5-8d24-2b0520691748> ;
+    dc:description "This layer is a subset of the zoning boundaries for the City and County of Denver, Colorado to reflect the zone districts in the new code that permit plant nurseries as a primary use. Plant Nursery is an agricultural use in which plants are grown, cultivated, produced, or managed for the on-site or off-site sale of such plants or their products, or for their use in any other business, research, or commerce. Other customarily incidental products may be sold with the plants. A plant nursery may include accessory aquaculture use, when the aquaculture is integral to the growing and maintenance of the plants, and provided the accessory aquaculture occurs within a completely enclosed structure. Additional information on plant nursery can be found in Sections 11.6.3 and 11.12.6 in the official zoning code. The zoning boundaries data layer is governed by ordinance and is only changed accordingly. Please note: this layer applies to the new code only. Zones carried over from the 1956 zoning code, as well as 'DIA', 'OS-A', 'PUD', 'PUD-G' zones, need to be reviewed individually." ;
+    dc:spatial "POLYGON ((-105.109938 39.614283,-105.109938 39.81283,-104.734566 39.81283,-104.734566 39.614283,-105.109938 39.614283))" ;
+    dcterms:publisher <urn:uuid:82a9d737-3031-40d6-8bd3-1a608de216a0> ;
+    dcterms:title "Plant Nursery" ;
+    esip:eastBound "-104.734566"^^xsd:float ;
+    esip:northBound "39.81283"^^xsd:float ;
+    esip:southBound "39.614283"^^xsd:float ;
+    esip:startDate "2010-06-25"^^xsd:date ;
+    esip:westBound "-105.109938"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:fd197da3-c515-40d5-8d24-2b0520691748> bcube:hasType "theme" ;
+    bcube:hasValue "food systems",
+        "zoning" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:fe2d121e-02ba-4488-b3f8-e8e1f12d055e> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-10-17T18:20:00.805Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-10-17T18:20:00.805Z" ;
+    dc:identifier "urn:sha:cc603f9890ec0d42804d4204545582c85b12683a592699f9ed6fbff0" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://data.denvergov.org/download/gis/zoning_for_plant_nurseries/metadata/zoning_for_plant_nurseries.xml" .
+

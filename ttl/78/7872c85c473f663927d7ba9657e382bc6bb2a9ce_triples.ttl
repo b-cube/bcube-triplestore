@@ -1,0 +1,105 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:03a62319-9943-42ff-9023-6d744760f6b6> owl:a foaf:Organization ;
+    foaf:name "" .
+
+<urn:uuid:07d6c531-0beb-40f9-a0d6-b93fb10c5ab9> bcube:hasType "theme" ;
+    bcube:hasValue "Boundaries" ;
+    dc:partOf "ISO 19115 Topic Categories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:192d53cc-574d-437f-aa1d-7e09605eb02b> bcube:hasType "theme" ;
+    bcube:hasValue "2010 Census",
+        "Cartographic Boundary",
+        "Census Tract",
+        "County",
+        "Generalized",
+        "Shapefile",
+        "State" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:1cd29841-b5a1-4cd0-a0e8-a0b7c01e3bf4> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-04T11:49:41.813Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-04T11:49:41.813Z" ;
+    dc:identifier "urn:sha:2c1a9f1230b6384374eb0153383256166c66f384520d6d889a6fd728" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www2.census.gov/geo/tiger/GENZ2010/" .
+
+<urn:uuid:3e35de70-30ae-44b1-a5a4-c6f5ae8c9ff3> bcube:hasType "place" ;
+    bcube:hasValue "CA",
+        "California" ;
+    dc:partOf "INCITS 38:2009" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:52d6bb1d-8289-45e5-9d7e-07a96ba527f5> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-04T11:49:41.813Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-04T11:49:41.813Z" ;
+    dc:identifier "urn:sha:154d8866a9a144b353b18b6ff774b25957bf325a05d55418845083d6" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://meta.geo.census.gov/data/existing/decennial/GEO/CPMB/boundary/2011gz/Type140/gz_2010_06_140_00_500k.xml" .
+
+<urn:uuid:9400b984-17d5-4f72-84e3-cd6cb448f867> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-11-04T11:49:41.813Z" ;
+    bcube:lastUpdated "2015-11-04T11:49:41.813Z" ;
+    bcube:originatedFrom <urn:uuid:52d6bb1d-8289-45e5-9d7e-07a96ba527f5> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:b42bfb40-b625-440c-b44f-1579f8725698> .
+
+<urn:uuid:b42bfb40-b625-440c-b44f-1579f8725698> bcube:dateCreated "2015-11-04T11:49:41.813Z" ;
+    bcube:hasMetadataRecord <urn:uuid:9400b984-17d5-4f72-84e3-cd6cb448f867> ;
+    bcube:lastUpdated "2015-11-04T11:49:41.813Z" ;
+    dc:conformsTo <urn:uuid:07d6c531-0beb-40f9-a0d6-b93fb10c5ab9>,
+        <urn:uuid:192d53cc-574d-437f-aa1d-7e09605eb02b>,
+        <urn:uuid:3e35de70-30ae-44b1-a5a4-c6f5ae8c9ff3> ;
+    dc:description "The 2010 cartographic boundary shapefiles are simplified representations of selected geographic areas from the Census Bureau's MAF/TIGER geographic database. These boundary files are specifically designed for small scale thematic mapping. When possible generalization is performed with intent to maintain the hierarchical relationships among geographies and to maintain the alignment of geographies within a file set for a given year. Geographic areas may not align with the same areas from another year. Some geographies are available as nation-based shapefiles while others are available only as state-based files." ;
+    dc:spatial "POLYGON ((-124.482003 32.528832,-124.482003 42.009517,-114.131211 42.009517,-114.131211 32.528832,-124.482003 32.528832))" ;
+    dcterms:publisher <urn:uuid:03a62319-9943-42ff-9023-6d744760f6b6> ;
+    dcterms:references <urn:uuid:cdfb0a9b-d6ec-4a24-b52e-b531fb546405>,
+        <urn:uuid:ffd07846-e6bf-414e-8c8f-78917d832602> ;
+    dcterms:title "2010 Cartographic Boundary File, State-County-Census Tract for California, 1:500,000" ;
+    esip:eastBound "-114.131211"^^xsd:float ;
+    esip:endDate "2011-09-01"^^xsd:date ;
+    esip:northBound "42.009517"^^xsd:float ;
+    esip:southBound "32.528832"^^xsd:float ;
+    esip:startDate "2011-09-01"^^xsd:date ;
+    esip:westBound "-124.482003"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:cdfb0a9b-d6ec-4a24-b52e-b531fb546405> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-04T11:49:41.813Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-04T11:49:41.813Z" ;
+    dc:identifier "urn:sha:87c2c1be0602ce1fdf28aee707379c2335de3e4da52b23bc07921d86" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www.census.gov/geo/www/cob/index.html" .
+
+<urn:uuid:ffd07846-e6bf-414e-8c8f-78917d832602> dcterms:references <urn:uuid:1cd29841-b5a1-4cd0-a0e8-a0b7c01e3bf4> ;
+    owl:a bibo:WebPage .
+

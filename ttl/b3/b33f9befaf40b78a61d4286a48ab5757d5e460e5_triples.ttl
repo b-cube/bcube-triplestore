@@ -1,0 +1,80 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:000d8b2b-c2d9-4f26-8675-886bc8124f7c> bcube:hasType "theme" ;
+    bcube:hasValue "oceans",
+        "sea temperature",
+        "wave direction",
+        "wave energy" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:0a6013a1-4b17-45a0-a970-b19320e0800d> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-10-17T00:43:02.129Z" ;
+    bcube:lastUpdated "2015-10-17T00:43:02.129Z" ;
+    bcube:originatedFrom <urn:uuid:d18d80cb-c004-46a4-85e5-7dcad0800d6d> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:df58a3a4-9b70-4833-b9a4-5305691d0f70> .
+
+<urn:uuid:35d73c86-31fa-48d2-b6f8-e3995075b539> bcube:hasType "place" ;
+    bcube:hasValue "California - South",
+        "Camp Pendleton Nearshore, Ca",
+        "Oceanside" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:4b9c8951-0f00-4a60-af80-127b9d7d02e6> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-10-17T00:43:02.129Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-10-17T00:43:02.129Z" ;
+    dc:identifier "urn:sha:7b058d3c22f4f67780e723c39b51d7d4b2bc124ec88d2f7f4b802201" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://cdip.ucsd.edu/?sub=data&nav=historic&pub=public&stn=043&stream=p1" .
+
+<urn:uuid:a496b387-7177-4dc8-9e3f-39b1509704b0> owl:a foaf:Organization ;
+    foaf:name "" .
+
+<urn:uuid:d18d80cb-c004-46a4-85e5-7dcad0800d6d> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-10-17T00:43:02.129Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-10-17T00:43:02.129Z" ;
+    dc:identifier "urn:sha:a8b899cbecf054e4e871aef9809bace59a8ac5e7e7a99628b0d8c9e6" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://cdip.ucsd.edu/data_access/metadata/043p1.xml" .
+
+<urn:uuid:df58a3a4-9b70-4833-b9a4-5305691d0f70> bcube:dateCreated "2015-10-17T00:43:02.129Z" ;
+    bcube:hasMetadataRecord <urn:uuid:0a6013a1-4b17-45a0-a970-b19320e0800d> ;
+    bcube:lastUpdated "2015-10-17T00:43:02.129Z" ;
+    dc:conformsTo <urn:uuid:000d8b2b-c2d9-4f26-8675-886bc8124f7c>,
+        <urn:uuid:35d73c86-31fa-48d2-b6f8-e3995075b539> ;
+    dc:description "CDIP's station 043 data sets consist of coastal environment measurements taken in the vicinity of Camp Pendleton Nearshore, Ca. Wave measurements were made in water 20 meters deep. The station is operated by USMC, and funded by USMC/USACE." ;
+    dc:spatial "POLYGON ((-117.439583 33.219799,-117.439583 33.220299,-117.439102 33.220299,-117.439102 33.219799,-117.439583 33.219799))" ;
+    dcterms:publisher <urn:uuid:a496b387-7177-4dc8-9e3f-39b1509704b0> ;
+    dcterms:references <urn:uuid:4b9c8951-0f00-4a60-af80-127b9d7d02e6> ;
+    dcterms:title "CDIP Station 043, Set p1 - CAMP PENDLETON NEARSHORE, CA BUOY" ;
+    esip:eastBound "-117.439102"^^xsd:float ;
+    esip:northBound "33.220299"^^xsd:float ;
+    esip:southBound "33.219799"^^xsd:float ;
+    esip:startDate "2008-01-22"^^xsd:date ;
+    esip:westBound "-117.439583"^^xsd:float ;
+    owl:a dcat:Dataset .
+

@@ -1,0 +1,84 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:230a52d5-863d-41bd-bc17-f5c4f144a5d6> bcube:hasType "theme" ;
+    bcube:hasValue "Consolidated City",
+        "Polygon",
+        "State or equivalent entity" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:3130ac82-bb25-493f-a7a0-168ecdc6c116> a "ISO 19115:2003/19139" ;
+    bcube:dateCreated "2015-11-03T05:29:36.885Z" ;
+    bcube:lastUpdated "2015-11-03T05:29:36.885Z" ;
+    bcube:originatedFrom <urn:uuid:a5c5396c-629f-4a04-a19d-16a92fc15770> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:641f1098-b663-43ca-aa89-2bfe4762a097> .
+
+<urn:uuid:641f1098-b663-43ca-aa89-2bfe4762a097> bcube:dateCreated "2015-11-03T05:29:36.885Z" ;
+    bcube:hasMetadataRecord <urn:uuid:3130ac82-bb25-493f-a7a0-168ecdc6c116> ;
+    bcube:lastUpdated "2015-11-03T05:29:36.885Z" ;
+    dc:conformsTo <urn:uuid:230a52d5-863d-41bd-bc17-f5c4f144a5d6>,
+        <urn:uuid:641f74d9-62eb-43a1-8976-2d01a0275b83>,
+        <urn:uuid:f32e8e43-b273-4456-a139-32aa3d2d7599> ;
+    dc:description "The TIGER/Line shapefiles and related database files (.dbf) are an extract of selected geographic and cartographic information from the U.S. Census Bureau's Master Address File / Topologically Integrated Geographic Encoding and Referencing (MAF/TIGER) Database (MTDB). The MTDB represents a seamless national file with no overlaps or gaps between parts, however, each TIGER/Line shapefile is designed to stand alone as an independent data set, or they can be combined to cover the entire nation. A consolidated city is a unit of local government for which the functions of an incorporated place and its county or minor civil division (MCD) have merged. This action results in both the primary incorporated place and the county or MCD continuing to exist as legal entities, even though the county or MCD performs few or no governmental functions and has few or no elected officials. Where this occurs, and where one or more other incorporated places in the county or MCD continue to function as separate governments, even though they have been included in the consolidated government, the primary incorporated place is referred to as a consolidated city. The Census Bureau classifies the separately incorporated places within the consolidated city as place entities and creates a separate place (balance) record for the portion of the consolidated city not within any other place. The boundaries of the consolidated cities are those as of January 1of the shapefile release year, as reported through the Census Bureau's Boundary and Annexation Survey (BAS)." ;
+    dc:spatial "POLYGON ((-102.051769 36.993016,-102.051769 40.003166,-94.588387 40.003166,-94.588387 36.993016,-102.051769 36.993016))" ;
+    dcterms:references <urn:uuid:6c5fa218-c28c-4f3a-aa80-8c5e6d09302d> ;
+    dcterms:title "TIGER/Line Shapefile, 2013, state, Kansas, Current Consolidated City State-based Shapefiles" ;
+    esip:eastBound "-94.588387"^^xsd:float ;
+    esip:endDate "2013-05-03"^^xsd:date ;
+    esip:northBound "40.003166"^^xsd:float ;
+    esip:southBound "36.993016"^^xsd:float ;
+    esip:startDate "2012-06-03"^^xsd:date ;
+    esip:westBound "-102.051769"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:641f74d9-62eb-43a1-8976-2d01a0275b83> bcube:hasValue "boundaries" ;
+    dc:partOf "IsoTopicCategories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:6c5fa218-c28c-4f3a-aa80-8c5e6d09302d> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-03T05:29:36.885Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-03T05:29:36.885Z" ;
+    dc:identifier "urn:sha:3ce37395870f2b783aca687baa7d79fc842e896d80ccc773c6443679" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www2.census.gov/geo/tiger/TIGER2013/CONCITY/tl_2013_20_concity.zip" .
+
+<urn:uuid:a5c5396c-629f-4a04-a19d-16a92fc15770> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-03T05:29:36.885Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-03T05:29:36.885Z" ;
+    dc:identifier "urn:sha:420fd804060f57784903100c0aeb407d889c531317eaf98880f6ee4e" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://meta.geo.census.gov/data/existing/decennial/GEO/GPMB/TIGERline/TIGER2013/concity/tl_2013_20_concity.shp.iso.xml" .
+
+<urn:uuid:f32e8e43-b273-4456-a139-32aa3d2d7599> bcube:hasType "place" ;
+    bcube:hasValue "20",
+        "KS",
+        "Kansas",
+        "State or Equivalent Entity",
+        "U.S.",
+        "United States" ;
+    dc:partOf "ANSI INCITS 38:2009 (Formerly FIPS 5-2), ANSI INCITS 31:2009 (Formerly FIPS 6-4),ANSI INCITS 454:2009 (Formerly FIPS 8-6), ANSI INCITS 455:2009(Formerly FIPS 9-1), ANSI INCITS 446:2008 (Geographic Names Information System (GNIS))" ;
+    owl:a bcube:thesaurusSubset .
+

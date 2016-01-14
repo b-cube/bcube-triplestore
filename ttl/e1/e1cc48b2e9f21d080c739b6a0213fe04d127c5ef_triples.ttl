@@ -1,0 +1,104 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:184df17c-1736-4f8a-ac09-7ae538d9b3c4> owl:a foaf:Organization ;
+    foaf:name "U.S. Geological Survey" .
+
+<urn:uuid:56542fda-4374-4427-bf44-837f5e143a68> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-08-07T12:05:17.956Z" ;
+    bcube:lastUpdated "2015-08-07T12:05:17.956Z" ;
+    bcube:originatedFrom <urn:uuid:c9b3b032-4259-4f2a-a2d4-262b63696045> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:786b0782-df05-4890-b87e-6c4e0f32d3e7> .
+
+<urn:uuid:6a567c7c-bf75-4724-8e0c-ac88be92588a> bcube:hasType "place" ;
+    bcube:hasValue "Central Wetlands",
+        "Louisiana",
+        "North America",
+        "United States" ;
+    dc:partOf "General" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:7045b35f-d084-44f0-a29f-99452421f188> bcube:hasType "temporal" ;
+    bcube:hasValue "2010" ;
+    dc:partOf "General" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:786b0782-df05-4890-b87e-6c4e0f32d3e7> bcube:dateCreated "2015-08-07T12:05:17.956Z" ;
+    bcube:hasMetadataRecord <urn:uuid:56542fda-4374-4427-bf44-837f5e143a68> ;
+    bcube:lastUpdated "2015-08-07T12:05:17.956Z" ;
+    dc:conformsTo <urn:uuid:6a567c7c-bf75-4724-8e0c-ac88be92588a>,
+        <urn:uuid:7045b35f-d084-44f0-a29f-99452421f188>,
+        <urn:uuid:9d89e5ed-f677-461b-a820-98627ca9af90>,
+        <urn:uuid:a0f3c9f5-e902-4864-9639-5f74eed1f6e0>,
+        <urn:uuid:c581ef53-1b0c-4204-bb70-0c91db8fcb0e> ;
+    dc:description "Binary point-cloud data were produced from remotely sensed, geographically referenced elevation measurements by the U.S. Geological Survey (USGS). Elevation measurements were collected over the area on March 4 and 5, 2010 using the Experimental Advanced Airborne Research Lidar (EAARL), a pulsed laser ranging system mounted onboard an aircraft to measure ground elevation, vegetation canopy, and coastal topography. The system uses high-frequency laser beams directed at the Earth's surface through an opening in the bottom of the aircraft's fuselage. The laser system records the time difference between emission of the laser beam and the reception of the reflected laser signal in the aircraft. The plane travels over the target area at approximately 50 meters per second at an elevation of approximately 300 meters, resulting in a laser swath of approximately 240 meters with an average point spacing of 2-3 meters. The EAARL, developed originally by the National Aeronautics and Space Administration (NASA) at Wallops Flight Facility in Virginia, measures ground elevation with a vertical resolution of 15 centimeters. A sampling rate of 3 kilohertz or higher results in an extremely dense spatial elevation dataset. Over 100 kilometers of coastline can be easily surveyed within a 3- to 4-hour mission. When resultant elevation maps for an area are analyzed, they provide a useful tool to make management decisions regarding land development. The Central Wetlands data provided represent the last return pulses and were processed and filtered for bare-earth topography. The difference in water levels between data collections on March 4 and 5 resulted in elevation variations in the merged data." ;
+    dc:spatial "POLYGON ((-89.922068116286198 29.942459771539301,-89.922068116286198 29.960943459027199,-89.900842756358998 29.960943459027199,-89.900842756358998 29.942459771539301,-89.922068116286198 29.942459771539301))" ;
+    dcterms:publisher <urn:uuid:184df17c-1736-4f8a-ac09-7ae538d9b3c4> ;
+    dcterms:references <urn:uuid:eab6f58c-a64f-4eb2-92f0-ac16551b2774> ;
+    dcterms:title "EAARL Coastal Topography--Central Wetlands, Louisiana, 2010" ;
+    esip:eastBound "-89.9008427564"^^xsd:float ;
+    esip:northBound "29.960943459"^^xsd:float ;
+    esip:southBound "29.9424597715"^^xsd:float ;
+    esip:westBound "-89.9220681163"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:9d89e5ed-f677-461b-a820-98627ca9af90> bcube:hasType "stratum" ;
+    bcube:hasValue "Coastal Topography" ;
+    dc:partOf "General" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:a0f3c9f5-e902-4864-9639-5f74eed1f6e0> bcube:hasType "theme" ;
+    bcube:hasValue "elevation" ;
+    dc:partOf "ISO 19115 Topic Category" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:c581ef53-1b0c-4204-bb70-0c91db8fcb0e> bcube:hasType "theme" ;
+    bcube:hasValue "ALPS",
+        "Airborne Lidar Processing System",
+        "DEM",
+        "Digital Elevation Model",
+        "EAARL",
+        "Experimental Advanced Airborne Research Lidar",
+        "Pilatus PC-6",
+        "laser altimetry",
+        "lidar",
+        "remote sensing",
+        "topography" ;
+    dc:partOf "General" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:c9b3b032-4259-4f2a-a2d4-262b63696045> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-07T12:05:17.956Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-07T12:05:17.956Z" ;
+    dc:identifier "urn:sha:aea6bf4a0536d174cc19a3c1fb7818bacf5975e74b9e5a054a17fcec" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://pubs.usgs.gov/ds/673/data_files/ct/ct_e218_n3318_16/ct_e218_n3318_16.las.xml" .
+
+<urn:uuid:eab6f58c-a64f-4eb2-92f0-ac16551b2774> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-07T12:05:17.956Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-07T12:05:17.956Z" ;
+    dc:identifier "urn:sha:d14a028c2a3a2bc9476102bb288234c415a2b01f828ea62ac5b3e42f" ;
+    owl:a bcube:Url .
+

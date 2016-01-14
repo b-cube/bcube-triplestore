@@ -1,0 +1,63 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:008fc033-16c6-4d6e-9b05-b409dbb8b453> a "OGC:WMS" ;
+    bcube:contains <urn:uuid:2dd0efae-3837-4760-9e6d-ebf7011dd5ae> ;
+    bcube:dateCreated "2015-08-12T04:57:32.325Z" ;
+    bcube:lastUpdated "2015-08-12T04:57:32.325Z" ;
+    bcube:originatedFrom <urn:uuid:7badc7e0-1760-4c85-97df-454cea4d0255> ;
+    dc:conformsTo <urn:uuid:0f5ce45b-9bb8-4567-93c8-154278cac421> ;
+    dc:description "A compliant implementation of WMS plus most of the SLD extension (dynamic styling). Can also generate PDF, SVG, KML, GeoRSS" ;
+    owl:a bcube:service .
+
+<urn:uuid:0f5ce45b-9bb8-4567-93c8-154278cac421> bcube:hasValue "GEOSERVER",
+        "WFS",
+        "WMS" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:2dd0efae-3837-4760-9e6d-ebf7011dd5ae> bcube:dateCreated "2015-08-12T04:57:32.325Z" ;
+    bcube:lastUpdated "2015-08-12T04:57:32.325Z" ;
+    dc:spatial "POLYGON ((-5.4168688721 50.996893196800002,-5.4168688721 53.797619617899997,-2.61614245097 53.797619617899997,-2.61614245097 50.996893196800002,-5.4168688721 50.996893196800002))" ;
+    dc:title "Wales National Forest Inventory" ;
+    dcterms:references <urn:uuid:91c94076-6c31-4430-b86e-4b90e3e8d425> ;
+    esip:eastBound "-2.61614245097"^^xsd:float ;
+    esip:northBound "53.7976196179"^^xsd:float ;
+    esip:southBound "50.9968931968"^^xsd:float ;
+    esip:westBound "-5.4168688721"^^xsd:float ;
+    owl:a bcube:Layer .
+
+<urn:uuid:7badc7e0-1760-4c85-97df-454cea4d0255> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-12T04:57:32.325Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-12T04:57:32.325Z" ;
+    dc:identifier "urn:sha:147115485f384ef629d804f22ce6cfc5790c36db2beffbb08c64d1d1" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://inspire.wales.gov.uk/maps/Land_cover/wms?request=getCapabilities" .
+
+<urn:uuid:91c94076-6c31-4430-b86e-4b90e3e8d425> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-12T04:57:32.325Z" ;
+    bcube:hasConfidence "Not Sure" ;
+    bcube:hasUrlSource "Generated" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-12T04:57:32.325Z" ;
+    dc:identifier "urn:sha:4e163bb69edf127b8497a80003ecddc779e08f1686ffd18d5da7818e" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://inspire.wales.gov.uk/maps/Land_cover/wms?layers=Wales_NFI&width=500&version=1.3.0&bbox=-5.4168688721%2C50.9968931968%2C-2.61614245097%2C53.7976196179&service=WMS&format=image%2Fpng&styles=&crs=CRS%3A84&request=GetMap&height=500" .
+

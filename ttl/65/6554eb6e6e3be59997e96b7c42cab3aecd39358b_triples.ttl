@@ -1,0 +1,88 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:1bdb7b63-bd19-4c58-9ead-7bf400b5d21a> owl:a foaf:Organization ;
+    foaf:name "" .
+
+<urn:uuid:507ed117-3bff-4df5-9d41-412871ea0b5a> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-11-08T06:50:01.07Z" ;
+    bcube:lastUpdated "2015-11-08T06:50:01.07Z" ;
+    bcube:originatedFrom <urn:uuid:df48c03a-aff5-45b0-922e-a8f15c2e0c4f> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:a485f823-edbd-417d-9200-bc553cc07956> .
+
+<urn:uuid:882d6f1f-33d2-4fc5-a4d7-e26de9c699f7> bcube:hasType "place" ;
+    bcube:hasValue "72",
+        "PR",
+        "Puerto Rico",
+        "State or Equivalent Entity",
+        "U.S.",
+        "United States" ;
+    dc:partOf "FIPS Publication 5-2, FIPS Publication 6-4, FIPS Publication 8-6, FIPS Publication 9-1,FIPS Publication55-4" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:9fe4fffe-414c-458d-992d-9f27c9dc2c18> bcube:hasType "theme" ;
+    bcube:hasValue "boundaries" ;
+    dc:partOf "ISO 19115 Topic Categories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:a485f823-edbd-417d-9200-bc553cc07956> bcube:dateCreated "2015-11-08T06:50:01.07Z" ;
+    bcube:hasMetadataRecord <urn:uuid:507ed117-3bff-4df5-9d41-412871ea0b5a> ;
+    bcube:lastUpdated "2015-11-08T06:50:01.07Z" ;
+    dc:conformsTo <urn:uuid:882d6f1f-33d2-4fc5-a4d7-e26de9c699f7>,
+        <urn:uuid:9fe4fffe-414c-458d-992d-9f27c9dc2c18>,
+        <urn:uuid:c3925297-5fbb-4f6e-8fbb-bd46e2876c0a> ;
+    dc:description "The TIGER/Line Shapefiles are an extract of selected geographic and cartographic information from the Census MAF/TIGER database. The Census MAF/TIGER database represents a seamless national file with no overlaps or gaps between parts. However, each TIGER/Line Shapefile is designed to stand alone as an independent data set or the shapefiles can be combined to cover the whole nation." ;
+    dc:spatial "POLYGON ((-67.998751 17.831509,-67.998751 18.568002,-65.168503 18.568002,-65.168503 17.831509,-67.998751 17.831509))" ;
+    dcterms:publisher <urn:uuid:1bdb7b63-bd19-4c58-9ead-7bf400b5d21a> ;
+    dcterms:references <urn:uuid:de525468-dea5-4325-be02-f689c6e16905> ;
+    dcterms:title "TIGER/Line Shapefile, 2008, state, Puerto Rico, County and Equivalent" ;
+    esip:eastBound "-65.168503"^^xsd:float ;
+    esip:endDate "2008-07-01"^^xsd:date ;
+    esip:northBound "18.568002"^^xsd:float ;
+    esip:southBound "17.831509"^^xsd:float ;
+    esip:startDate "2008-01-01"^^xsd:date ;
+    esip:westBound "-67.998751"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:c3925297-5fbb-4f6e-8fbb-bd46e2876c0a> bcube:hasType "theme" ;
+    bcube:hasValue "Polygon",
+        "State or equivalent entity" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:de525468-dea5-4325-be02-f689c6e16905> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-08T06:50:01.07Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-08T06:50:01.07Z" ;
+    dc:identifier "urn:sha:50cb86ae6c89eaf37dd78d5c25df6a36db06e7fc8939c37cc2e974a4" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www2.census.gov/geo/tiger/TIGER2008/72_PUERTO_RICO/tl_2008_72_county.zip" .
+
+<urn:uuid:df48c03a-aff5-45b0-922e-a8f15c2e0c4f> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-08T06:50:01.07Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-08T06:50:01.07Z" ;
+    dc:identifier "urn:sha:835cc15e189afdbd0ac37cb29a6555f806cb4a4fc9be379d75bb5cd9" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://meta.geo.census.gov/data/existing/decennial/GEO/GPMB/TIGERline/fe_2008/county/tl_2008_72_county_url.shp.xml" .
+

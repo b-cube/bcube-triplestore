@@ -1,0 +1,93 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:26c049f8-dcc6-4cdd-a93b-87c6a68dad51> bcube:dateCreated "2015-03-19T11:52:15.568Z" ;
+    bcube:hasMetadataRecord <urn:uuid:b3209522-d38d-40a5-86d6-e0258f61a03f> ;
+    bcube:lastUpdated "2015-03-19T11:52:15.568Z" ;
+    dc:conformsTo <urn:uuid:563bd090-3406-4467-b8e1-8b76aa4e4b80>,
+        <urn:uuid:89f63513-4941-4f5e-9732-be81900ef5e3>,
+        <urn:uuid:c4e00a3e-e56f-41a8-bc62-28f63320a86e>,
+        <urn:uuid:ccace154-86e0-417b-ae2c-c1c77fd72cf7> ;
+    dc:description "USGS Topo is a topographic tile cache base map that combines the most current data (Boundaries, Names, Transportation, Elevation, Hydrography, Land Cover, and other themes) that make up The National Map. Contours generated for the US Topo product are included and are visible along with other data to the 1:18,000 zoom scale. This product is designed to provide a seamless view of the data, closely resembling The National Map's US Topo (GeoPDF) product at large scales, in a GIS accessible format." ;
+    dc:spatial "POLYGON ((-179.1666667 17.625,-179.1666667 71.5,180.0 71.5,180.0 17.625,-179.1666667 17.625))" ;
+    dcterms:references <urn:uuid:6b991359-2aed-42b9-81f0-e9b538961b64> ;
+    dcterms:title "USGS Topo Base Map Service from The National Map" ;
+    esip:eastBound "180.0"^^xsd:float ;
+    esip:northBound "71.5"^^xsd:float ;
+    esip:southBound "17.625"^^xsd:float ;
+    esip:westBound "-179.1666667"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:563bd090-3406-4467-b8e1-8b76aa4e4b80> bcube:hasValue "boundaries",
+        "elevation",
+        "imageryBaseMapsEarthCover",
+        "inlandWaters",
+        "structure",
+        "transportation" ;
+    dc:partOf "IsoTopicCategories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:6b991359-2aed-42b9-81f0-e9b538961b64> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-03-19T11:52:15.568Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-03-19T11:52:15.568Z" ;
+    dc:identifier "urn:sha:2a4aa217967b2c92e9b9017372b00b4280447e598b576ad20ee784da" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://basemap.nationalmap.gov/arcgis/rest/services/USGSTopo/MapServer" .
+
+<urn:uuid:89f63513-4941-4f5e-9732-be81900ef5e3> bcube:hasType "theme" ;
+    bcube:hasValue "Boundaries",
+        "Elevation",
+        "Geographic Names",
+        "Hydrography",
+        "Land Cover",
+        "Structures",
+        "Transportation" ;
+    dc:partOf "The National Map Theme Thesaurus" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:b3209522-d38d-40a5-86d6-e0258f61a03f> a "ISO 19115:2003/19139" ;
+    bcube:dateCreated "2015-03-19T11:52:15.568Z" ;
+    bcube:lastUpdated "2015-03-19T11:52:15.568Z" ;
+    bcube:originatedFrom <urn:uuid:b68a3eef-5840-4ba8-9cbe-13d0df56376f> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:26c049f8-dcc6-4cdd-a93b-87c6a68dad51> .
+
+<urn:uuid:b68a3eef-5840-4ba8-9cbe-13d0df56376f> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-03-19T11:52:15.568Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-03-19T11:52:15.568Z" ;
+    dc:identifier "urn:sha:53be899d0ca319061aa3f37c786d70560c7ebef70b9a7220d835260f" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "https://catalog.data.gov/harvest/object/0195722b-30a1-4226-a5ef-bab14ce44e61" .
+
+<urn:uuid:c4e00a3e-e56f-41a8-bc62-28f63320a86e> bcube:hasType "theme" ;
+    bcube:hasValue "Base Map Service" ;
+    dc:partOf "The National Map Type Thesaurus" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:ccace154-86e0-417b-ae2c-c1c77fd72cf7> bcube:hasType "place" ;
+    bcube:hasValue "US",
+        "United States" ;
+    dc:partOf "Geographic Names Information System" ;
+    owl:a bcube:thesaurusSubset .
+

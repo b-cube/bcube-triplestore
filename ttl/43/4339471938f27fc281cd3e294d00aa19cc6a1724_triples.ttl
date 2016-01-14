@@ -1,0 +1,151 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:1aa82333-f4f5-4382-831d-cdb76e53065f> dcterms:references <urn:uuid:d461cdd6-68e1-44ab-9e44-df2fbe09a91e> ;
+    owl:a bibo:WebPage .
+
+<urn:uuid:3c57c981-de6c-4798-9d9a-ea570c4e76fe> bcube:hasType "theme" ;
+    bcube:hasValue "Oceans > Coastal Processes > Tidal Height",
+        "Oceans > Sea Surface Topography > Sea Surface Height",
+        "Oceans > Tides > Tidal Height",
+        "amplitude",
+        "co-ops",
+        "coastal",
+        "data",
+        "date",
+        "datum",
+        "deployment",
+        "designation",
+        "deviation",
+        "due",
+        "established",
+        "flag",
+        "geocentric",
+        "height",
+        "hourly",
+        "identifier",
+        "inferred",
+        "level",
+        "limit",
+        "name",
+        "noaa",
+        "nos",
+        "ocean",
+        "oceans",
+        "ops",
+        "processes",
+        "sea",
+        "sea level",
+        "sea_surface_height_amplitude_due_to_geocentric_ocean_tide",
+        "seawater",
+        "shefID",
+        "shef_id",
+        "standard",
+        "state",
+        "station",
+        "surface",
+        "tidal",
+        "tide",
+        "tides",
+        "time",
+        "topography",
+        "verified",
+        "water" ;
+    dc:partOf "GCMD Science Keywords" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:3feac326-eb28-4ea1-8f10-6921719a7a8c> owl:a foaf:Organization ;
+    foaf:name "ERDDAP, version 1.65, at NOAA NMFS SWFSC Environmental Research Division" .
+
+<urn:uuid:909f53c5-4385-4f20-8293-01f728de4678> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-10-18T16:56:14.789Z" ;
+    bcube:lastUpdated "2015-10-18T16:56:14.789Z" ;
+    bcube:originatedFrom <urn:uuid:d8342298-0111-45b9-bf80-ccbe35a2b514> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:a8510ff0-283c-4cbc-9405-e098a663c626> .
+
+<urn:uuid:91767b24-11bf-4056-a579-7018247c715c> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-10-18T16:56:14.789Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-10-18T16:56:14.789Z" ;
+    dc:identifier "urn:sha:c776b7078a611bf98be6707b36ba174cb79b4fb0d6ab9bc81dadfea9" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://coastwatch.pfeg.noaa.gov/erddap/tabledap/nosCoopsWLV60.html" .
+
+<urn:uuid:a8510ff0-283c-4cbc-9405-e098a663c626> bcube:dateCreated "2015-10-18T16:56:14.789Z" ;
+    bcube:hasMetadataRecord <urn:uuid:909f53c5-4385-4f20-8293-01f728de4678> ;
+    bcube:lastUpdated "2015-10-18T16:56:14.789Z" ;
+    dc:conformsTo <urn:uuid:3c57c981-de6c-4798-9d9a-ea570c4e76fe>,
+        <urn:uuid:da618573-66e9-4cab-8a04-5e250b64eb80> ;
+    dc:description "This dataset has verified (quality-controlled), hourly, water level (tide) data from NOAA NOS Center for Operational Oceanographic Products and Services (CO-OPS). This is a delayed dataset, not a near-real-time dataset. WARNING: * Queries for data MUST include stationID=, datum=, time>=, and time<=. * Queries MUST be for less than 30 days worth of data. * Different stations support different datums. Use ERDDAP's Subset web page to find out which datums a given station supports. * The data source isn't completely reliable. If your request returns no data when you think it should: * Make sure the station you specified supports the datum you specified. * Try revising the request (e.g., a different datum or a different time range). * The list of stations offering this data (or the list of datums) may be incorrect. * Sometimes a station or the entire data service is unavailable. Wait a while and try again." ;
+    dc:spatial "POLYGON ((-177.3608 -14.2767,-177.3608 70.4114,167.7345 70.4114,167.7345 -14.2767,-177.3608 -14.2767))" ;
+    dcterms:publisher <urn:uuid:3feac326-eb28-4ea1-8f10-6921719a7a8c> ;
+    dcterms:references <urn:uuid:1aa82333-f4f5-4382-831d-cdb76e53065f>,
+        <urn:uuid:91767b24-11bf-4056-a579-7018247c715c>,
+        <urn:uuid:d8e986f7-49f1-463a-adf8-b01bf4eb5877> ;
+    dcterms:title "NOS CO-OPS Water Level Data, Verified, Hourly" ;
+    esip:eastBound "167.7345"^^xsd:float ;
+    esip:northBound "70.4114"^^xsd:float ;
+    esip:southBound "-14.2767"^^xsd:float ;
+    esip:westBound "-177.3608"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:d461cdd6-68e1-44ab-9e44-df2fbe09a91e> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-10-18T16:56:14.789Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-10-18T16:56:14.789Z" ;
+    dc:identifier "urn:sha:447ed644ce59a04b08354f8725436c78f9806562c118d8fc6c7df7e6" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://coastwatch.pfeg.noaa.gov/erddap/tabledap/nosCoopsWLV60.subset" .
+
+<urn:uuid:d8342298-0111-45b9-bf80-ccbe35a2b514> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-10-18T16:56:14.789Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-10-18T16:56:14.789Z" ;
+    dc:identifier "urn:sha:92e5ecce8d9bdb174b6e74cdca0d378fc7b9056a58d65569563318fe" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://coastwatch.pfeg.noaa.gov/erddap/tabledap/nosCoopsWLV60.fgdc" .
+
+<urn:uuid:d8e986f7-49f1-463a-adf8-b01bf4eb5877> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-10-18T16:56:14.789Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-10-18T16:56:14.789Z" ;
+    dc:identifier "urn:sha:cd85e50b14a1389211e9e1f5c2fdcec27ac15d726d7ae15e040f2f55" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://coastwatch.pfeg.noaa.gov/erddap/tabledap/nosCoopsWLV60.graph" .
+
+<urn:uuid:da618573-66e9-4cab-8a04-5e250b64eb80> bcube:hasType "theme" ;
+    bcube:hasValue "latitude",
+        "longitude",
+        "sea_surface_height_amplitude_due_to_geocentric_ocean_tide",
+        "time" ;
+    dc:partOf "CF Standard Name Table v29" ;
+    owl:a bcube:thesaurusSubset .
+

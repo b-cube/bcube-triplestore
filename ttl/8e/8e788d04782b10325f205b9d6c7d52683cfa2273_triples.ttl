@@ -1,0 +1,96 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:13a29126-2f7e-4dbf-97bb-2c63dcfa8578> bcube:hasType "theme" ;
+    bcube:hasValue "Cadastre Theme",
+        "NGDA",
+        "National Geospatial Data Asset" ;
+    dc:partOf "NGDA Portfolio Themes" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:41dcf7ec-8f5d-401b-bc60-5bd0f58040ef> bcube:hasType "theme" ;
+    bcube:hasValue "Alternative Energy",
+        "Bureau of Ocean Energy Management, BOEM",
+        "Cadastre",
+        "Fed State Boundary",
+        "Lease blocks",
+        "Limit of '8(g) Zone'",
+        "Marine Sanctuaries",
+        "OCS blocks",
+        "Offshore",
+        "Oil and gas",
+        "Outer Continental Shelf, OCS",
+        "Renewable Energy",
+        "State Seaward Boundary, SSB",
+        "Submerged Lands Act Boundary, SLA",
+        "Supplemental Official OCS Block Diagram, SOBD" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:4283ac39-21f6-42e8-84fb-579cbb29c68c> a "ISO 19115:2003/19139" ;
+    bcube:dateCreated "2015-03-06T01:34:23.888Z" ;
+    bcube:lastUpdated "2015-03-06T01:34:23.888Z" ;
+    bcube:originatedFrom <urn:uuid:c9053297-f3fb-4229-86f2-ddc3953496ca> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:5ca754bb-d56c-4f8a-a06c-a5a17a5129e1> .
+
+<urn:uuid:5ca754bb-d56c-4f8a-a06c-a5a17a5129e1> bcube:dateCreated "2015-03-06T01:34:23.888Z" ;
+    bcube:hasMetadataRecord <urn:uuid:4283ac39-21f6-42e8-84fb-579cbb29c68c> ;
+    bcube:lastUpdated "2015-03-06T01:34:23.888Z" ;
+    dc:conformsTo <urn:uuid:13a29126-2f7e-4dbf-97bb-2c63dcfa8578>,
+        <urn:uuid:41dcf7ec-8f5d-401b-bc60-5bd0f58040ef>,
+        <urn:uuid:68287773-b4ff-47b5-a7b2-5863b9040050> ;
+    dc:description "This data set contains OCS block outlines in ArcGIS shape file format for the BOEM Atlantic Region. OCS blocks are used to define small geographic areas within an Official Protraction Diagram (OPD) for leasing and administrative purposes. These blocks have been clipped along the Submerged Lands Act (SLA) boundary and along the Continental Shelf Boundaries. Additional details are available from: http://www.boemre.gov/itd/pubs/1999/99-0006.pdf Because GIS projection and topology functions can change or generalize coordinates, and because shapefiles can not represent true arcs, these GIS files are considered to be approximate and are NOT an OFFICIAL record for the exact block coordinates or areas. The Official Protraction Diagrams (OPDs) and Supplemental Official Block Diagrams (SOBDs) serve as the legal definition for BOEM offshore boundary coordinates and area descriptions." ;
+    dc:spatial "POLYGON ((-82.999844 23.817923,-82.999844 44.769023,-64.108329 44.769023,-64.108329 23.817923,-82.999844 23.817923))" ;
+    dcterms:title "Outer Continental Shelf Lease Blocks - Atlantic Region NAD83" ;
+    esip:eastBound "-64.108329"^^xsd:float ;
+    esip:endDate "2008-01-01"^^xsd:date ;
+    esip:northBound "44.769023"^^xsd:float ;
+    esip:southBound "23.817923"^^xsd:float ;
+    esip:startDate "2005-01-01"^^xsd:date ;
+    esip:westBound "-82.999844"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:68287773-b4ff-47b5-a7b2-5863b9040050> bcube:hasType "place" ;
+    bcube:hasValue "Atlantic Ocean",
+        "Delaware, DE",
+        "Exclusive Economic Zone, EEZ",
+        "Florida, FL",
+        "Georgia, GA",
+        "Maine, ME",
+        "Maryland, MD",
+        "Massachusetts, MA",
+        "New Hampshire, NH",
+        "New Jersey, NJ",
+        "New York, NY",
+        "North Carolina, NC",
+        "Rhode Island, RI",
+        "South Carolina, SC",
+        "USA",
+        "Virginia, VA" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:c9053297-f3fb-4229-86f2-ddc3953496ca> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-03-06T01:34:23.888Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-03-06T01:34:23.888Z" ;
+    dc:identifier "urn:sha:22966b78b0805885c286f78e8f1989c23a412edca6fb56927c746a56" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://catalog.data.gov/harvest/object/8a284062-d0fb-44fb-bbb0-5a716ff078ec" .
+

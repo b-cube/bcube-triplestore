@@ -1,0 +1,88 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:05f58492-6acf-42e4-84c3-7a2c859a341f> bcube:hasType "theme" ;
+    bcube:hasValue "inlandWaters" ;
+    dc:partOf "ISO 19115 Topic Categories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:26ef89b5-2c1d-4c94-8425-acd8385900c1> bcube:hasType "place" ;
+    bcube:hasValue "01015",
+        "Calhoun",
+        "County or Equivalent Entity",
+        "U.S.",
+        "United States" ;
+    dc:partOf "FIPS Publication 5-2, FIPS Publication 6-4, FIPS Publication 8-6, FIPS Publication 9-1" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:5febd667-058a-4362-8241-53bcdad283a8> bcube:hasType "theme" ;
+    bcube:hasValue "County or equivalent entity",
+        "Hydrography",
+        "Polygon" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:65a1f7cc-53fb-4305-b39f-726b06a97f8a> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-11-07T09:55:01.437Z" ;
+    bcube:lastUpdated "2015-11-07T09:55:01.437Z" ;
+    bcube:originatedFrom <urn:uuid:d498263e-8259-4a10-85a5-ee625978301c> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:6f7d771d-8151-4fde-9783-9e976208406e> .
+
+<urn:uuid:6f7d771d-8151-4fde-9783-9e976208406e> bcube:dateCreated "2015-11-07T09:55:01.437Z" ;
+    bcube:hasMetadataRecord <urn:uuid:65a1f7cc-53fb-4305-b39f-726b06a97f8a> ;
+    bcube:lastUpdated "2015-11-07T09:55:01.437Z" ;
+    dc:conformsTo <urn:uuid:05f58492-6acf-42e4-84c3-7a2c859a341f>,
+        <urn:uuid:26ef89b5-2c1d-4c94-8425-acd8385900c1>,
+        <urn:uuid:5febd667-058a-4362-8241-53bcdad283a8> ;
+    dc:description "The TIGER/Line Shapefiles are an extract of selected geographic and cartographic information from the Census MAF/TIGER database. The Census MAF/TIGER database represents a seamless national file with no overlaps or gaps between parts. However, each TIGER/Line Shapefile is designed to stand alone as an independent data set or the shapefiles can be combined to cover the whole nation." ;
+    dc:spatial "POLYGON ((-86.146225 33.55593,-86.146225 33.96846,-85.529432 33.96846,-85.529432 33.55593,-86.146225 33.55593))" ;
+    dcterms:publisher <urn:uuid:91c18736-5d01-4103-9887-01a686d2aed3> ;
+    dcterms:references <urn:uuid:d6c2bff8-ea49-4a73-b0bd-7b14cd79c7d1> ;
+    dcterms:title "TIGER/Line Shapefile, 2007, county, Calhoun County, Area Hydrography" ;
+    esip:eastBound "-85.529432"^^xsd:float ;
+    esip:endDate "2007-07-01"^^xsd:date ;
+    esip:northBound "33.96846"^^xsd:float ;
+    esip:southBound "33.55593"^^xsd:float ;
+    esip:startDate "2007-01-01"^^xsd:date ;
+    esip:westBound "-86.146225"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:91c18736-5d01-4103-9887-01a686d2aed3> owl:a foaf:Organization ;
+    foaf:name "" .
+
+<urn:uuid:d498263e-8259-4a10-85a5-ee625978301c> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-07T09:55:01.437Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-07T09:55:01.437Z" ;
+    dc:identifier "urn:sha:938cb25bd78444dbf71b866f5e56e6afbefb5b2f57ac18b929209e10" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://meta.geo.census.gov/data/existing/decennial/GEO/GPMB/TIGERline/fe_2007/areawater/fe_2007_01015_areawater_url.shp.xml" .
+
+<urn:uuid:d6c2bff8-ea49-4a73-b0bd-7b14cd79c7d1> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-07T09:55:01.437Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-07T09:55:01.437Z" ;
+    dc:identifier "urn:sha:703038f0741de174b69a9dfdfb5f6b57972569c49291f0093acf3de0" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www2.census.gov/geo/tiger/TIGER2007FE/01_ALABAMA/01015_Calhoun/fe_2007_01015_areawater.zip" .
+

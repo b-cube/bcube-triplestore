@@ -1,0 +1,113 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:0b0a63c4-6d60-4ff3-92b5-2d50dd5c66ec> bcube:hasType "theme" ;
+    bcube:hasValue "climatologyMeteorologyAtmosphere" ;
+    dc:partOf "ISO 19115 Topic Category" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:116a4ceb-431d-400c-bccb-efbb3c4a8b70> bcube:hasType "stratum" ;
+    bcube:hasValue "Vertical Location > Boundary layer" ;
+    dc:partOf "NASA GCMD Location Keywords" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:25592e2f-e9b1-487c-9376-a10993b8d079> bcube:hasType "theme" ;
+    bcube:hasValue "2 Meter Air Temperature",
+        "Min Air Temp" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:3a857be9-9f38-42f2-8fff-f4c4c97bcb3e> owl:a foaf:Organization ;
+    foaf:name "Climate Prediction Center" .
+
+<urn:uuid:4e8c38b0-959a-4554-bc5e-3d2508d36f55> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-09-04T03:17:16.173Z" ;
+    bcube:lastUpdated "2015-09-04T03:17:16.173Z" ;
+    bcube:originatedFrom <urn:uuid:f4b8b1f6-8d7c-4d70-85a6-78e8fc69a79f> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:7786e017-164e-4ed9-bfb0-433b06152259> .
+
+<urn:uuid:7786e017-164e-4ed9-bfb0-433b06152259> bcube:dateCreated "2015-09-04T03:17:16.173Z" ;
+    bcube:hasMetadataRecord <urn:uuid:4e8c38b0-959a-4554-bc5e-3d2508d36f55> ;
+    bcube:lastUpdated "2015-09-04T03:17:16.173Z" ;
+    dc:conformsTo <urn:uuid:0b0a63c4-6d60-4ff3-92b5-2d50dd5c66ec>,
+        <urn:uuid:116a4ceb-431d-400c-bccb-efbb3c4a8b70>,
+        <urn:uuid:25592e2f-e9b1-487c-9376-a10993b8d079>,
+        <urn:uuid:9ad6651d-91cb-43d6-bdda-12ac1d0fccc2>,
+        <urn:uuid:e0ac2d14-0d64-46d2-b33d-be2d7cc69366> ;
+    dc:description "Observational reports of daily air temperature (1200 UTC to 1200 UTC) are made by members of the NWS Automated Surface Observing Systems (ASOS) network; NWS Cooperative Observer Network (COOP); and the Hydrometeorological Automated Data System (HADS) network. Reports from approximately 4,500 stations across the US including Alaska, Hawaii, & Puerto Rico are sent on a daily basis to the Climate Prediction Center (CPC). CPC processes these reports once per day. All reports for the same day are put into an ASCII text file whose name includes the date of observation. These data are used by CPC in its role of supporting the Joint Agricultural Weather Facility (JAWF)." ;
+    dc:spatial "POLYGON ((-172 18,-172 72,-67 72,-67 18,-172 18))" ;
+    dcterms:identifier "gov.noaa.cpc:CPC-TEMP-MIN-AIRTEMP-DLY-v2009" ;
+    dcterms:publisher <urn:uuid:3a857be9-9f38-42f2-8fff-f4c4c97bcb3e> ;
+    dcterms:references <urn:uuid:972c9d07-f1ba-4959-bf82-13afe1ff1f92>,
+        <urn:uuid:f9215809-6f9f-41ab-a809-df7f18c6576e> ;
+    dcterms:title "Climate Prediction Center (CPC) U.S. Daily Minimum Air Temperature Observations" ;
+    esip:eastBound "-67.0"^^xsd:float ;
+    esip:northBound "72.0"^^xsd:float ;
+    esip:southBound "18.0"^^xsd:float ;
+    esip:startDate "2009-04-01"^^xsd:date ;
+    esip:westBound "-172.0"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:824c0b3d-8be9-4029-b932-f99893686228> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-09-04T03:17:16.173Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-09-04T03:17:16.173Z" ;
+    dc:identifier "urn:sha:704c30c86c658bbfd9138b551eefaa070beadb6aaaa86b2102232fd2" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www.cpc.ncep.noaa.gov/products/GIS/GIS_DATA/JAWF/temperature.php" .
+
+<urn:uuid:972c9d07-f1ba-4959-bf82-13afe1ff1f92> dcterms:references <urn:uuid:824c0b3d-8be9-4029-b932-f99893686228> ;
+    owl:a bibo:WebPage .
+
+<urn:uuid:9ad6651d-91cb-43d6-bdda-12ac1d0fccc2> bcube:hasType "place" ;
+    bcube:hasValue "Geographic Region > Continent > North America > United States of America" ;
+    dc:partOf "NASA GCMD Location Keywords" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:e0ac2d14-0d64-46d2-b33d-be2d7cc69366> bcube:hasType "theme" ;
+    bcube:hasValue "Atmosphere > Atmospheric Temperature > Air Temperature",
+        "Atmosphere > Atmospheric Temperature > Maximum/Minimum Temperature",
+        "Atmosphere > Atmospheric Temperature > Surface Air Temperature" ;
+    dc:partOf "NASA GCMD Science Keywords" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:f4b8b1f6-8d7c-4d70-85a6-78e8fc69a79f> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-09-04T03:17:16.173Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-09-04T03:17:16.173Z" ;
+    dc:identifier "urn:sha:f00ddd3ca818c7aa1128bdc20fe9eaf874719cc994fd5ac789065b38" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "https://catalog.data.gov/harvest/object/fbc850c6-dd94-4e2a-b3d7-4bb95024c7de/original" .
+
+<urn:uuid:f9215809-6f9f-41ab-a809-df7f18c6576e> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-09-04T03:17:16.173Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-09-04T03:17:16.173Z" ;
+    dc:identifier "urn:sha:abaa775f568d8e3d2a28320139af54067d3dc2046971cd5d0971766e" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "ftp://ftp.cpc.ncep.noaa.gov/GIS/JAWF/Temp" .
+

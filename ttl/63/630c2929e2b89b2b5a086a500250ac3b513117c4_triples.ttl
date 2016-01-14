@@ -1,0 +1,103 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:20d645af-913b-48c0-8b0a-6acdbe517eaf> bcube:hasType "theme" ;
+    bcube:hasValue "APFO",
+        "AgSat",
+        "ArcGIS Online",
+        "Disaster",
+        "FSA",
+        "Imagery",
+        "Web Map",
+        "drought",
+        "farming",
+        "satellite" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:2bf94635-e8f2-415a-9468-ed0cd7db9c33> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-06-19T21:19:04.633Z" ;
+    bcube:lastUpdated "2015-06-19T21:19:04.633Z" ;
+    bcube:originatedFrom <urn:uuid:f88e69f1-e60b-41d9-a28a-aa048ff21271> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:31fa88dc-594a-4d2e-9cb8-c9a5e0be7360> .
+
+<urn:uuid:31fa88dc-594a-4d2e-9cb8-c9a5e0be7360> bcube:dateCreated "2015-06-19T21:19:04.633Z" ;
+    bcube:hasMetadataRecord <urn:uuid:2bf94635-e8f2-415a-9468-ed0cd7db9c33> ;
+    bcube:lastUpdated "2015-06-19T21:19:04.633Z" ;
+    dc:conformsTo <urn:uuid:20d645af-913b-48c0-8b0a-6acdbe517eaf>,
+        <urn:uuid:515b9d43-417b-4ffd-b428-28e94ed73408> ;
+    dc:description "The AgSat Areas of Interest map contains area polygons where satellite imagery will be collected for the Farm Service Agency (FSA) to provide imagery coverage for FSA business to include image base replacement, torando damage assessment, and drought assessment. The map shows areas of interest that have been awarded (green) and areas that were planned for but did not get awarded (tan). This imagery is collected under a satellite blanket purchase agreement created for FSA by the Aerial Photography Field Office in Salt Lake City. For more information about this program please contact the contracting officer Jacque La Croix. Click on the bookmark tab in the map to zoom to each area of interest on the map. Click on a polygon inside the map to display an informational popup." ;
+    dc:spatial "POLYGON ((-175.28 12.14,-175.28 65.3,-45.47 65.3,-45.47 12.14,-175.28 12.14))" ;
+    dcterms:publisher <urn:uuid:de3e56b5-2927-42db-a0ee-675d45ea2085> ;
+    dcterms:references <urn:uuid:6ad9ff2e-e612-4449-aa27-02237e34dcf6>,
+        <urn:uuid:e3816547-b96b-4ed3-b311-d16d81f4e89c> ;
+    dcterms:title "AgSat Areas of Interest" ;
+    esip:eastBound "-45.47"^^xsd:float ;
+    esip:northBound "65.3"^^xsd:float ;
+    esip:southBound "12.14"^^xsd:float ;
+    esip:startDate "2013-01-01"^^xsd:date ;
+    esip:westBound "-175.28"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:515b9d43-417b-4ffd-b428-28e94ed73408> bcube:hasType "place" ;
+    bcube:hasValue "\"United States\"",
+        "North America",
+        "State",
+        "US" ;
+    dc:partOf "Geographic Names Information System" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:6ad9ff2e-e612-4449-aa27-02237e34dcf6> dcterms:references <urn:uuid:da7206cb-2725-4881-bc71-d32d62054661> ;
+    owl:a bibo:WebPage .
+
+<urn:uuid:da7206cb-2725-4881-bc71-d32d62054661> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-06-19T21:19:04.633Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-06-19T21:19:04.633Z" ;
+    dc:identifier "urn:sha:41f7b3dc5d0e056089e9ee383718b1bd35aa438fafa9f9194daba3bc" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www.arcgis.com/home/webmap/viewer.html?webmap=459988478b7f47c08d33318bc3862d22" .
+
+<urn:uuid:de3e56b5-2927-42db-a0ee-675d45ea2085> owl:a foaf:Organization ;
+    foaf:name "USDA-FSA-APFO Aerial Photography Field Office" .
+
+<urn:uuid:e3816547-b96b-4ed3-b311-d16d81f4e89c> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-06-19T21:19:04.633Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-06-19T21:19:04.633Z" ;
+    dc:identifier "urn:sha:9b3611fd43f826a83e86a5acd3eec6c827e38336563fb2f0fb08b419" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www.arcgis.com/home/item.html?id=459988478b7f47c08d33318bc3862d22" .
+
+<urn:uuid:f88e69f1-e60b-41d9-a28a-aa048ff21271> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-06-19T21:19:04.633Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-06-19T21:19:04.633Z" ;
+    dc:identifier "urn:sha:22af47ca9a809a3bd8e411ef81c76ccc6eeddbc1e768954a70dcb993" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://catalog.data.gov/harvest/object/e49474ba-a73c-46d4-b7cd-ea894af95ff0/original" .
+

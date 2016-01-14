@@ -1,0 +1,81 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:1c8b9385-39ed-47cd-a39f-9a70a958c031> bcube:hasType "place" ;
+    bcube:hasValue "Alaska",
+        "Alberta",
+        "British Columbia",
+        "Manitoba",
+        "Saskatchewan",
+        "Yukon" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:1dfb74de-94e4-4564-973f-1ec829fc6055> bcube:hasType "theme" ;
+    bcube:hasValue "climatologyMeteorologyAtmosphere" ;
+    dc:partOf "ISO 19115 Topic Category" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:412e7572-6fa8-4ba1-bf44-368720b456e2> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-10-30T15:01:30.79Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-10-30T15:01:30.79Z" ;
+    dc:identifier "urn:sha:cf7478567fb1edcd1362511c7cfd2a8b91b6d7929899fadfe76658ce" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://arcticlcc.org/assets/products/ARCT2011-1002/spatial_data/baseline_temp/Baseline_1961-1990_TS31_average_temp_degF.zip" .
+
+<urn:uuid:45749085-bf67-4505-8154-eb30c51b30f0> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-10-30T15:01:30.79Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-10-30T15:01:30.79Z" ;
+    dc:identifier "urn:sha:f8a3bae67f7633623f433b7f1874e94f477d90f7efa69303e4561d1b" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://arcticlcc.org/assets/products/ARCT2011-1002/spatial_data/metadata/Baseline_1961-1990_TS31_average_temp_degF_metadata.xml" .
+
+<urn:uuid:608a15bb-32a0-47bd-b6e0-963e1a0682bf> owl:a foaf:Organization ;
+    foaf:name "Arctic Landscape Conservation Cooperative" .
+
+<urn:uuid:a3bc596c-6b49-41c3-ab39-cf554b86b6ad> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-10-30T15:01:30.79Z" ;
+    bcube:lastUpdated "2015-10-30T15:01:30.79Z" ;
+    bcube:originatedFrom <urn:uuid:45749085-bf67-4505-8154-eb30c51b30f0> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:cffb8fc7-1584-4526-9bf2-f8d6203d9a9a> .
+
+<urn:uuid:cffb8fc7-1584-4526-9bf2-f8d6203d9a9a> bcube:dateCreated "2015-10-30T15:01:30.79Z" ;
+    bcube:hasMetadataRecord <urn:uuid:a3bc596c-6b49-41c3-ab39-cf554b86b6ad> ;
+    bcube:lastUpdated "2015-10-30T15:01:30.79Z" ;
+    dc:conformsTo <urn:uuid:1c8b9385-39ed-47cd-a39f-9a70a958c031>,
+        <urn:uuid:1dfb74de-94e4-4564-973f-1ec829fc6055> ;
+    dc:description "Baseline (1961-1990) average air temperature (degree F) for Alaska and Western Canada. Baseline results for 1961-1990 are derived from Climate Research Unit (CRU) TS 3.1 data. Data courtesy of Scenarios Network for Alaska and Arctic Planning. The file names identifies whether a file represents an annual (i.e., annual) mean or a seasonal mean (i.e., summer or winter). Summer is defined as June - August; winter is defined as December - February." ;
+    dc:spatial "POLYGON ((-180 36,-180 72,-88 72,-88 36,-180 36))" ;
+    dcterms:publisher <urn:uuid:608a15bb-32a0-47bd-b6e0-963e1a0682bf> ;
+    dcterms:references <urn:uuid:412e7572-6fa8-4ba1-bf44-368720b456e2> ;
+    dcterms:title "Baseline (1961-1990) average air temperature (degree F) for Alaska and Western Canada." ;
+    esip:eastBound "-88.0"^^xsd:float ;
+    esip:endDate "1990-12-31"^^xsd:date ;
+    esip:northBound "72.0"^^xsd:float ;
+    esip:southBound "36.0"^^xsd:float ;
+    esip:startDate "1961-01-01"^^xsd:date ;
+    esip:westBound "-180.0"^^xsd:float ;
+    owl:a dcat:Dataset .
+

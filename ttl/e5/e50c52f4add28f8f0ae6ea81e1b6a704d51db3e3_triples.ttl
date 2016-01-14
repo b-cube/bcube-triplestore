@@ -1,0 +1,95 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:1aa0e656-35bb-44fb-9006-d59341c57fb1> owl:a foaf:Organization ;
+    foaf:name "" .
+
+<urn:uuid:2f18c63e-3e5d-472d-b936-1197e50506c8> bcube:hasType "theme" ;
+    bcube:hasValue "boundaries",
+        "inlandWaters",
+        "transportation" ;
+    dc:partOf "ISO 19115 Topic Categories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:386baa90-77f8-4ad2-860a-2eb6ffd9d161> bcube:hasType "place" ;
+    bcube:hasValue "02068",
+        "County or Equivalent Entity",
+        "Denali",
+        "U.S.",
+        "United States" ;
+    dc:partOf "INCITS.38-200x (R2004),INCITS.31-200x (R2007),INCITS.454-200x,INCITS 455-200x,INCITS 446-2008" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:3ab4e0b2-0bbe-4268-a1b7-ae9e466f8f9b> bcube:dateCreated "2015-11-03T05:36:11.937Z" ;
+    bcube:hasMetadataRecord <urn:uuid:68b35659-b3cd-49a9-9424-db9ee819844f> ;
+    bcube:lastUpdated "2015-11-03T05:36:11.937Z" ;
+    dc:conformsTo <urn:uuid:2f18c63e-3e5d-472d-b936-1197e50506c8>,
+        <urn:uuid:386baa90-77f8-4ad2-860a-2eb6ffd9d161>,
+        <urn:uuid:fa33a9ab-5aff-412b-a279-4fbc2f4c0876> ;
+    dc:description "The TIGER/Line Shapefiles are an extract of selected geographic and cartographic information from the Census MAF/TIGER database. The Census MAF/TIGER database represents a seamless national file with no overlaps or gaps between parts. However, each TIGER/Line Shapefile is designed to stand alone as an independent data set or the shapefiles can be combined to cover the whole nation." ;
+    dc:spatial "POLYGON ((-153.001339 62.722004,-153.001339 64.365138,-146.907227 64.365138,-146.907227 62.722004,-153.001339 62.722004))" ;
+    dcterms:publisher <urn:uuid:1aa0e656-35bb-44fb-9006-d59341c57fb1> ;
+    dcterms:references <urn:uuid:913619e8-ae01-4acd-9818-a11691041dc1> ;
+    dcterms:title "TIGER/Line Shapefile, 2009, county, Denali Borough, AK, Current All Lines Shapefile" ;
+    esip:eastBound "-146.907227"^^xsd:float ;
+    esip:endDate "2009-05-01"^^xsd:date ;
+    esip:northBound "64.365138"^^xsd:float ;
+    esip:southBound "62.722004"^^xsd:float ;
+    esip:startDate "2009-01-01"^^xsd:date ;
+    esip:westBound "-153.001339"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:68b35659-b3cd-49a9-9424-db9ee819844f> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-11-03T05:36:11.937Z" ;
+    bcube:lastUpdated "2015-11-03T05:36:11.937Z" ;
+    bcube:originatedFrom <urn:uuid:f018819d-7005-46d3-ba05-95420f317821> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:3ab4e0b2-0bbe-4268-a1b7-ae9e466f8f9b> .
+
+<urn:uuid:913619e8-ae01-4acd-9818-a11691041dc1> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-03T05:36:11.937Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-03T05:36:11.937Z" ;
+    dc:identifier "urn:sha:b62da2ac60382246a09fdd166ec0b9e9ab88f2be3ddf167e109ada8f" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www2.census.gov/geo/tiger/TIGER2009/02_ALASKA/02068_Denali_Borough/tl_2009_02068_edges.zip" .
+
+<urn:uuid:f018819d-7005-46d3-ba05-95420f317821> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-03T05:36:11.937Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-03T05:36:11.937Z" ;
+    dc:identifier "urn:sha:422d1aae015a33db56335c1050901fa20ae573ab11650a4dbaae8af0" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://meta.geo.census.gov/data/existing/decennial/GEO/GPMB/TIGERline/fe_2009/edges/tl_2009_02068_edges_url.shp.xml" .
+
+<urn:uuid:fa33a9ab-5aff-412b-a279-4fbc2f4c0876> bcube:hasType "theme" ;
+    bcube:hasValue "Address Range",
+        "County or equivalent entity",
+        "Feature",
+        "Hydrography",
+        "Linear",
+        "Road Feature",
+        "Roads",
+        "Street Centerline" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+

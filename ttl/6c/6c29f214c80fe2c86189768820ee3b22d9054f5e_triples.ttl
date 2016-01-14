@@ -1,0 +1,90 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:142e7677-d309-422e-a202-8bb437c63db7> bcube:hasType "theme" ;
+    bcube:hasValue "5-digit ZIP code",
+        "County ANSI Code",
+        "County FIPS Code",
+        "From House Number",
+        "Permanent edge ID",
+        "Side indicator flag",
+        "State ANSI Code",
+        "State FIPS Code",
+        "To House Number",
+        "ZIP +4 code" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:5b258347-7d47-43ee-a9db-1b0f3d0cb04f> bcube:dateCreated "2015-11-04T11:54:08.063Z" ;
+    bcube:hasMetadataRecord <urn:uuid:b0316070-e0ec-4992-b1fd-df6d36249a4f> ;
+    bcube:lastUpdated "2015-11-04T11:54:08.063Z" ;
+    dc:conformsTo <urn:uuid:142e7677-d309-422e-a202-8bb437c63db7>,
+        <urn:uuid:da4d2bc4-c1d7-4c1b-aaff-4c5fbfaa304e>,
+        <urn:uuid:e5a46a01-e861-41ae-83b1-9893f3e4b47c> ;
+    dc:description "The TIGER/Line shapefiles and related database files (.dbf) are an extract of selected geographic and cartographic information from the U.S. Census Bureau's Master Address File / Topologically Integrated Geographic Encoding and Referencing (MAF/TIGER) Database (MTDB). The MTDB provides seamless national coverage with no overlaps or gaps between parts. Each TIGER/Line File is designed to stand alone as an independent data set, or it can be combined with shapefiles for other counties to cover a region or the entire nation. The Address Ranges Feature Shapefile (ADDRFEAT.dbf) contains the geospatial edge geometry and attributes of all unsuppressed address ranges for a county or county equivalent area. The term \"address range\" refers to the collection of all possible structure numbers from the first structure number to the last structure number and all numbers of a specified parity in between along an edge side relative to the direction in which the edge is coded. Single-address address ranges have been suppressed to maintain the confidentiality of the addresses they describe. Multiple coincident address range feature edge records are represented in the shapefile if more than one left or right address ranges are associated to the edge. The ADDRFEAT shapefile contains a record for each address range to street name combination. Address range associated to more than one street name are also represented by multiple coincident address range feature edge records. Note that the ADDRFEAT shapefile includes all unsuppressed address ranges compared to the All Lines Shapefile (EDGES.shp) which only includes the most inclusive address range associated with each side of a street edge. The TIGER/Line Shapefiles contain potential address ranges, not individual addresses. The address ranges in the TIGER/Line Shapefiles are potential ranges that include the full range of possible structure numbers even though the actual structures may not exist." ;
+    dc:spatial "POLYGON ((-165.55557 65.435857,-165.55557 68.301027,-154.132279 68.301027,-154.132279 65.435857,-165.55557 65.435857))" ;
+    dcterms:references <urn:uuid:e13af818-ebb1-4122-bad4-85fe2c6a4b83> ;
+    dcterms:title "TIGER/Line Shapefile, 2013, county, Northwest Arctic Borough, AK, Address Range-Feature County-based" ;
+    esip:eastBound "-154.132279"^^xsd:float ;
+    esip:endDate "2013-05-29"^^xsd:date ;
+    esip:northBound "68.301027"^^xsd:float ;
+    esip:southBound "65.435857"^^xsd:float ;
+    esip:startDate "2012-06-29"^^xsd:date ;
+    esip:westBound "-165.55557"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:b0316070-e0ec-4992-b1fd-df6d36249a4f> a "ISO 19115:2003/19139" ;
+    bcube:dateCreated "2015-11-04T11:54:08.063Z" ;
+    bcube:lastUpdated "2015-11-04T11:54:08.063Z" ;
+    bcube:originatedFrom <urn:uuid:b3376e03-3363-44f7-8a08-4e187758f9f5> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:5b258347-7d47-43ee-a9db-1b0f3d0cb04f> .
+
+<urn:uuid:b3376e03-3363-44f7-8a08-4e187758f9f5> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-04T11:54:08.063Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-04T11:54:08.063Z" ;
+    dc:identifier "urn:sha:1d1ef35320feff8780a1938e884eca405a568769fcbff86e8e2ab873" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://meta.geo.census.gov/data/existing/decennial/GEO/GPMB/TIGERline/TIGER2013/addrfeat/tl_2013_02188_addrfeat.shp.iso.xml" .
+
+<urn:uuid:da4d2bc4-c1d7-4c1b-aaff-4c5fbfaa304e> bcube:hasType "place" ;
+    bcube:hasValue "02188",
+        "County or Equivalent Entity",
+        "Northwest Arctic",
+        "U.S.",
+        "United States" ;
+    dc:partOf "ANSI INCITS 38:2009 (Formerly FIPS 5-2), ANSI INCITS 31:2009 (Formerly FIPS 6-4),ANSI INCITS 454:2009 (Formerly FIPS 8-6), ANSI INCITS 455:2009(Formerly FIPS 9-1), ANSI INCITS 446:2008 (Geographic Names Information System (GNIS))" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:e13af818-ebb1-4122-bad4-85fe2c6a4b83> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-04T11:54:08.063Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-04T11:54:08.063Z" ;
+    dc:identifier "urn:sha:483aedd039dcc60d9e38caba5399edcaea223f9e5c324f0e58f66145" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www2.census.gov/geo/tiger/TIGER2013/ADDRFEAT/tl_2013_02188_addrfeat.zip" .
+
+<urn:uuid:e5a46a01-e861-41ae-83b1-9893f3e4b47c> bcube:hasValue "transportation" ;
+    dc:partOf "IsoTopicCategories" ;
+    owl:a bcube:thesaurusSubset .
+

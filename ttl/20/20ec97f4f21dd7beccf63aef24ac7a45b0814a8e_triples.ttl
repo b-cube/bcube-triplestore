@@ -1,0 +1,82 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:0ccee55e-291b-44a1-a703-d5b37e6b523d> bcube:hasType "theme" ;
+    bcube:hasValue "Pedestrian",
+        "Sidewalks",
+        "Transportation" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:1da92270-8eed-46cb-ae4f-a50559b3c3bb> owl:a foaf:Organization ;
+    foaf:name "City of Asheville, NC" .
+
+<urn:uuid:39578eb8-7bb1-4f54-9956-e67230c19715> bcube:hasType "place" ;
+    bcube:hasValue "Asheville",
+        "Buncombe",
+        "North Carolina" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:57184dce-83ab-4cb1-b293-5ca1bc7761b0> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-12T09:04:47.525Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-12T09:04:47.525Z" ;
+    dc:identifier "urn:sha:52f3d15ca95855308da784dcb50e489cafc6088285cbeeaa0f28f610" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://opendatacatalog.ashevillenc.gov/gismetadata/coa_sidewalks.xml" .
+
+<urn:uuid:7177800e-443b-438f-b1fd-ba93d14e75f9> bcube:dateCreated "2015-08-12T09:04:47.525Z" ;
+    bcube:hasMetadataRecord <urn:uuid:b07d6167-8f50-4551-aab7-6ccdd0d5f443> ;
+    bcube:lastUpdated "2015-08-12T09:04:47.525Z" ;
+    dc:conformsTo <urn:uuid:0ccee55e-291b-44a1-a703-d5b37e6b523d>,
+        <urn:uuid:39578eb8-7bb1-4f54-9956-e67230c19715> ;
+    dc:description "This feature class contains sidewalks, crosswalks, and other public or semi-public pedestrian pathways and connections within the City of Asheville (COA) Corporate Limits." ;
+    dc:spatial "POLYGON ((-82.691746 35.426512,-82.691746 35.644377,-82.457198 35.644377,-82.457198 35.426512,-82.691746 35.426512))" ;
+    dcterms:publisher <urn:uuid:1da92270-8eed-46cb-ae4f-a50559b3c3bb> ;
+    dcterms:references <urn:uuid:dd0c35fa-5614-4996-b8e6-c83703b6b285> ;
+    dcterms:title "GIS.GIS.Sidewalks" ;
+    esip:eastBound "-82.457198"^^xsd:float ;
+    esip:northBound "35.644377"^^xsd:float ;
+    esip:southBound "35.426512"^^xsd:float ;
+    esip:startDate "2010-06-17"^^xsd:date ;
+    esip:westBound "-82.691746"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:b07d6167-8f50-4551-aab7-6ccdd0d5f443> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-08-12T09:04:47.525Z" ;
+    bcube:lastUpdated "2015-08-12T09:04:47.525Z" ;
+    bcube:originatedFrom <urn:uuid:57184dce-83ab-4cb1-b293-5ca1bc7761b0> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:7177800e-443b-438f-b1fd-ba93d14e75f9> .
+
+<urn:uuid:dce26a53-33e9-4239-a591-0766baf6e2a6> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-12T09:04:47.525Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-12T09:04:47.525Z" ;
+    dc:identifier "urn:sha:4311286226059fbc04c3c9df1c742b02f7957d3c8ebd9df48aa24fdb" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "Server=coa-gisdb-msql; Service=sde:sqlserver:coa-gisdb-msql; Database=GIS; Version=SDE.DEFAULT" .
+
+<urn:uuid:dd0c35fa-5614-4996-b8e6-c83703b6b285> dcterms:references <urn:uuid:dce26a53-33e9-4239-a591-0766baf6e2a6> ;
+    owl:a bibo:WebPage .
+

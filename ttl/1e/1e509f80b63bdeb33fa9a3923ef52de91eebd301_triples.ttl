@@ -1,0 +1,93 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:02c63499-96e4-4c87-a856-4d4e3559f1ed> bcube:hasType "theme" ;
+    bcube:hasValue "Contours",
+        "Digital Terrain Model",
+        "Elevation Data",
+        "LIDAR",
+        "Land Surface",
+        "Relief",
+        "Slope",
+        "Topography" ;
+    dc:partOf "FEMA NFIP Topic Category" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:3f40eb0d-db39-452a-b401-26ae379b2759> bcube:hasType "place" ;
+    bcube:hasValue "COMMUNITY PRIEST LAKE",
+        "COUNTY BONNER",
+        "COUNTY-FIPS 017",
+        "FEMA-CID 160206C",
+        "REGION 10",
+        "STATE ID" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:7f870645-1868-48b8-a36c-86b535100ca2> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-08-09T08:53:03.287Z" ;
+    bcube:lastUpdated "2015-08-09T08:53:03.287Z" ;
+    bcube:originatedFrom <urn:uuid:81a5d8df-7e94-4243-acd5-c98d5af97bf2> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:b51c40f2-9afe-4ada-a401-a40e03c7bc35> .
+
+<urn:uuid:81a5d8df-7e94-4243-acd5-c98d5af97bf2> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-09T08:53:03.287Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-09T08:53:03.287Z" ;
+    dc:identifier "urn:sha:266547945e6535017a44030b018bf1437786a3fd0b67abcd92236891" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "https://catalog.data.gov/harvest/object/500599be-77be-4892-8fef-69a972035a27/original" .
+
+<urn:uuid:9af6be0c-a710-442f-a39c-3faee8da5707> bcube:hasType "theme" ;
+    bcube:hasValue "elevation" ;
+    dc:partOf "ISO 19115 Topic Category" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:a8ef2e18-3cc2-40a8-9955-46677014c64b> owl:a foaf:Organization ;
+    foaf:name "Federal Emergency Management Agency" .
+
+<urn:uuid:b51c40f2-9afe-4ada-a401-a40e03c7bc35> bcube:dateCreated "2015-08-09T08:53:03.287Z" ;
+    bcube:hasMetadataRecord <urn:uuid:7f870645-1868-48b8-a36c-86b535100ca2> ;
+    bcube:lastUpdated "2015-08-09T08:53:03.287Z" ;
+    dc:conformsTo <urn:uuid:02c63499-96e4-4c87-a856-4d4e3559f1ed>,
+        <urn:uuid:3f40eb0d-db39-452a-b401-26ae379b2759>,
+        <urn:uuid:9af6be0c-a710-442f-a39c-3faee8da5707> ;
+    dc:description "Terrain data, as defined in FEMA Guidelines and Specifications, Appendix N: Data Capture Standards, describes the digital topographic data that was used to create the elevation data representing the terrain environment of a watershed and/or floodplain. Terrain data requirements allow for flexibility in the types of information provided as sources used to produce final terrain deliverables. Once this type of data is provided, FEMA will be able to account for the origins of the flood study elevation data. (Source: FEMA Guidelines and Specifications, Appendix N, Section N.1.2). NAD 83 UTM Zone 11 is the projection and coordinate system for this project." ;
+    dc:spatial "POLYGON ((-112.216574 43.430233,-112.216574 43.756644,-111.67977 43.756644,-111.67977 43.430233,-112.216574 43.430233))" ;
+    dcterms:publisher <urn:uuid:a8ef2e18-3cc2-40a8-9955-46677014c64b> ;
+    dcterms:references <urn:uuid:b86e04c6-26b8-40d1-a484-8d28696e2bb3> ;
+    dcterms:title "TERRAIN, Priest Lake, Bonner County, Idaho USA" ;
+    esip:eastBound "-111.67977"^^xsd:float ;
+    esip:northBound "43.756644"^^xsd:float ;
+    esip:southBound "43.430233"^^xsd:float ;
+    esip:startDate "2012-11-14"^^xsd:date ;
+    esip:westBound "-112.216574"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:b86e04c6-26b8-40d1-a484-8d28696e2bb3> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-09T08:53:03.287Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-09T08:53:03.287Z" ;
+    dc:identifier "urn:sha:37c915397238031daced09ae0e2dd3bf54e84a6477f749c2cc9dcbdf" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://hazards.fema.gov" .
+

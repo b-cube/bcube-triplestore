@@ -1,0 +1,127 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:2236f70b-2ef2-4a12-b790-362d94639a91> bcube:dateCreated "2015-10-30T11:02:15.62Z" ;
+    bcube:hasMetadataRecord <urn:uuid:7b61ae5d-9e5c-4ff3-b06a-1e9dacc182a4> ;
+    bcube:lastUpdated "2015-10-30T11:02:15.62Z" ;
+    dc:conformsTo <urn:uuid:3b0d7a09-958a-4201-b57f-3648b44d9c1b>,
+        <urn:uuid:4f080c03-9913-4cb6-a630-8d9329031444>,
+        <urn:uuid:59adc26f-204d-4fea-8424-9bf73cede279>,
+        <urn:uuid:77ce5cfe-c90c-4b62-a16d-45740a35ea06>,
+        <urn:uuid:c6b03234-3d48-4c3e-8df4-876ecf8ddc80> ;
+    dc:description "This dataset has Air Temperature data from NOAA NOS Center for Operational Oceanographic Products and Services (CO-OPS). WARNING: These preliminary data have not been subjected to the National Ocean Services (NOS) Quality Control procedures, and do not necessarily meet the criteria and standards of official NOS data. They are released for limited public use with appropriate caution. WARNING: * Queries for data MUST include stationID= and time>=. * Queries USUALLY include time<= (the default end time corresponds to 'now'). * Queries MUST be for less than 30 days worth of data. * The data source isn't completely reliable. If your request returns no data when you think it should: * Try revising the request (e.g., a different time range). * The list of stations offering this data may be incorrect. * Sometimes a station or the entire data service is unavailable. Wait a while and try again." ;
+    dc:identifier "nosCoopsMAT" ;
+    dc:spatial "POLYGON ((-177.3608 -14.2767,-177.3608 70.4114,166.6175 70.4114,166.6175 -14.2767,-177.3608 -14.2767))" ;
+    dcterms:references <urn:uuid:82d822b3-5b21-4ec4-a79f-6b5a007c7e69>,
+        <urn:uuid:f38971bd-0a65-4181-a5e3-72e13afee708> ;
+    dcterms:title "NOS CO-OPS Meteorological Data, Air Temperature, 6-Minute" ;
+    esip:eastBound "166.6175"^^xsd:float ;
+    esip:northBound "70.4114"^^xsd:float ;
+    esip:southBound "-14.2767"^^xsd:float ;
+    esip:westBound "-177.3608"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:3b0d7a09-958a-4201-b57f-3648b44d9c1b> bcube:hasType "project" ;
+    bcube:hasValue "NOAA NOS CO-OPS" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:4f080c03-9913-4cb6-a630-8d9329031444> bcube:hasType "theme" ;
+    bcube:hasValue "air",
+        "atmosphere",
+        "atmospheric",
+        "co-ops",
+        "collection",
+        "data",
+        "date",
+        "deployment",
+        "designation",
+        "established",
+        "flag",
+        "identifier",
+        "limit",
+        "meteorological",
+        "minute",
+        "name",
+        "noaa",
+        "nos",
+        "ops",
+        "platform",
+        "sensor",
+        "shefID",
+        "state",
+        "station",
+        "temperature" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:59adc26f-204d-4fea-8424-9bf73cede279> bcube:hasType "theme" ;
+    bcube:hasValue "Atmosphere > Atmospheric Temperature > Air Temperature",
+        "Atmosphere > Atmospheric Temperature > Surface Air Temperature" ;
+    dc:partOf "GCMD Science Keywords" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:77ce5cfe-c90c-4b62-a16d-45740a35ea06> bcube:hasType "theme" ;
+    bcube:hasValue "air_temperature",
+        "latitude",
+        "longitude",
+        "time" ;
+    dc:partOf "CF Standard Name Table v29" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:7b61ae5d-9e5c-4ff3-b06a-1e9dacc182a4> a "ISO 19115:2003/19139" ;
+    bcube:dateCreated "2015-10-30T11:02:15.62Z" ;
+    bcube:lastUpdated "2015-10-30T11:02:15.62Z" ;
+    bcube:originatedFrom <urn:uuid:86714159-f763-4b8d-aac0-660c10f4eecc> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:2236f70b-2ef2-4a12-b790-362d94639a91> .
+
+<urn:uuid:82d822b3-5b21-4ec4-a79f-6b5a007c7e69> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-10-30T11:02:15.62Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-10-30T11:02:15.62Z" ;
+    dc:identifier "urn:sha:5a904375976e9d62d7683c48374e2d65ec8d5445e6c5e41a867b07dc" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "https://bluehub.jrc.ec.europa.eu/erddap/tabledap/nosCoopsMAT.graph" .
+
+<urn:uuid:86714159-f763-4b8d-aac0-660c10f4eecc> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-10-30T11:02:15.62Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-10-30T11:02:15.62Z" ;
+    dc:identifier "urn:sha:08907f95a0b831b46b7be3cffa4048eb49af5fcf13b556144f80cabf" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "https://bluehub.jrc.ec.europa.eu/erddap/metadata/iso19115/xml/nosCoopsMAT_iso19115.xml" .
+
+<urn:uuid:c6b03234-3d48-4c3e-8df4-876ecf8ddc80> bcube:hasValue "geoscientificInformation" ;
+    dc:partOf "IsoTopicCategories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:f38971bd-0a65-4181-a5e3-72e13afee708> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-10-30T11:02:15.62Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-10-30T11:02:15.62Z" ;
+    dc:identifier "urn:sha:f78a53f1149941846f9e8d43e9b548216e75312c861dcfdee731aeeb" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "https://bluehub.jrc.ec.europa.eu/erddap/tabledap/nosCoopsMAT.html" .
+

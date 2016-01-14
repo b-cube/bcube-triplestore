@@ -1,0 +1,110 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:02767672-37c5-47a6-a10a-ba631b9787e5> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-10-31T22:23:15.165Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-10-31T22:23:15.165Z" ;
+    dc:identifier "urn:sha:a953c327bc59bb571a8675f8158038a5165b0dc0ca53f8520d894aab" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://meta.geo.census.gov/data/existing/decennial/GEO/GPMB/TIGERline/TIGER2015/featnames/tl_2015_01083_featnames.dbf.iso.xml" .
+
+<urn:uuid:5386475c-8077-461c-8345-eb5a326ca8a7> a "ISO 19115:2003/19139" ;
+    bcube:dateCreated "2015-10-31T22:23:15.165Z" ;
+    bcube:lastUpdated "2015-10-31T22:23:15.165Z" ;
+    bcube:originatedFrom <urn:uuid:02767672-37c5-47a6-a10a-ba631b9787e5> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:5eb523db-bdfc-41c8-97c9-d54006e10455> .
+
+<urn:uuid:5eb523db-bdfc-41c8-97c9-d54006e10455> bcube:dateCreated "2015-10-31T22:23:15.165Z" ;
+    bcube:hasMetadataRecord <urn:uuid:5386475c-8077-461c-8345-eb5a326ca8a7> ;
+    bcube:lastUpdated "2015-10-31T22:23:15.165Z" ;
+    dc:conformsTo <urn:uuid:6e1d9c70-445e-42b2-8947-bd7e18bb6012>,
+        <urn:uuid:8dae16c4-d924-4abb-a2d9-db47d36a8104>,
+        <urn:uuid:ce3a90f5-6f86-4f79-a4cc-c9d7842950df> ;
+    dc:description "The TIGER/Line shapefiles and related database files (.dbf) are an extract of selected geographic and cartographic information from the U.S. Census Bureau's Master Address File / Topologically Integrated Geographic Encoding and Referencing (MAF/TIGER) Database (MTDB). The MTDB represents a seamless national file with no overlaps or gaps between parts, however, each TIGER/Line shapefile is designed to stand alone as an independent data set, or they can be combined to cover the entire nation. The MTDB represents a seamless national file with no overlaps or gaps between parts, however, each TIGER/Line File is designed to stand alone as an independent data set, or they can be combined to cover the entire nation. The Feature Names Relationship File (FEATNAMES.dbf) contains a record for each feature name and any attributes associated with it. Each feature name can be linked to the corresponding edges that make up that feature in the All Lines Shapefile (EDGES.shp), where applicable to the corresponding address range or ranges in the Address Ranges Relationship File (ADDR.dbf), or to both files. Although this file includes feature names for all linear features, not just road features, the primary purpose of this relationship file is to identify all street names associated with each address range. An edge can have several feature names; an address range located on an edge can be associated with one or any combination of the available feature names (an address range can be linked to multiple feature names). The address range is identified by the address range identifier (ARID) attribute, which can be used to link to the Address Ranges Relationship File (ADDR.dbf). The linear feature is identified by the linear feature identifier (LINEARID) attribute, which can be used to relate the address range back to the name attributes of the feature in the Feature Names Relationship File or to the feature record in the Primary Roads, Primary and Secondary Roads, or All Roads Shapefiles. The edge to which a feature name applies can be determined by linking the feature name record to the All Lines Shapefile (EDGES.shp) using the permanent edge identifier (TLID) attribute. The address range identifier(s) (ARID) for a specific linear feature can be found by using the linear feature identifier (LINEARID) from the Feature Names Relationship File (FEATNAMES.dbf) through the Address Range / Feature Name Relationship File (ADDRFN.dbf)." ;
+    dc:spatial "POLYGON ((-87.278636 34.55079,-87.278636 34.999024,-86.783582 34.999024,-86.783582 34.55079,-87.278636 34.55079))" ;
+    dcterms:references <urn:uuid:b00d8cb8-48cc-4da3-aae3-d6b54104cf36>,
+        <urn:uuid:ff1c3427-39d5-4f5c-a65e-0cbac4f04836> ;
+    dcterms:title "TIGER/Line Shapefile, 2015, county, Limestone County, AL, Feature Names County-based Relationship File" ;
+    esip:eastBound "-86.783582"^^xsd:float ;
+    esip:endDate "2015-05-04"^^xsd:date ;
+    esip:northBound "34.999024"^^xsd:float ;
+    esip:southBound "34.55079"^^xsd:float ;
+    esip:startDate "2014-06-04"^^xsd:date ;
+    esip:westBound "-87.278636"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:6e1d9c70-445e-42b2-8947-bd7e18bb6012> bcube:hasType "theme" ;
+    bcube:hasValue "County FIPS Code",
+        "County GNIS Code",
+        "County or equivalent entity",
+        "Feature Names",
+        "MAFTIGER feature class code",
+        "Name",
+        "Permanent edge ID",
+        "Prefix Qualifier code",
+        "Prefix direction code",
+        "Prefix type code description",
+        "PrimaryAlternate code",
+        "State FIPS Code",
+        "State GNIS Code",
+        "Suffix Qualifier code",
+        "Suffix direction code",
+        "Suffix type code",
+        "Table" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:8dae16c4-d924-4abb-a2d9-db47d36a8104> bcube:hasType "place" ;
+    bcube:hasValue "01083",
+        "County or Equivalent Entity",
+        "Limestone",
+        "U.S.",
+        "United States" ;
+    dc:partOf "ANSI INCITS 38:2009 (Formerly FIPS 5-2), ANSI INCITS 31:2009 (Formerly FIPS 6-4),ANSI INCITS 454:2009 (Formerly FIPS 8-6), ANSI INCITS 455:2009(Formerly FIPS 9-1), ANSI INCITS 446:2008 (Geographic Names Information System (GNIS))" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:b00d8cb8-48cc-4da3-aae3-d6b54104cf36> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-10-31T22:23:15.165Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-10-31T22:23:15.165Z" ;
+    dc:identifier "urn:sha:061d321192bf5e82eaff5215d6083e85ae8a7e82de40976b50bb5cbb" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www2.census.gov/geo/tiger/TIGER2015/FEATNAMES/tl_2015_01083_featnames.zip" .
+
+<urn:uuid:ce3a90f5-6f86-4f79-a4cc-c9d7842950df> bcube:hasValue "transportation" ;
+    dc:partOf "IsoTopicCategories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:ff1c3427-39d5-4f5c-a65e-0cbac4f04836> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-10-31T22:23:15.165Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-10-31T22:23:15.165Z" ;
+    dc:identifier "urn:sha:01e3f1d55bd7125cf2eb8bd68431fd00a1f078cd325b2a0a30fd7381" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www.census.gov/geo/maps-data/data/tiger-line.html" .
+

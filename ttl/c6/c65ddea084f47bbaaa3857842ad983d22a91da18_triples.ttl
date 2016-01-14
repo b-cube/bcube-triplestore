@@ -1,0 +1,84 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:156f9cb0-6fdf-4bdc-bdff-bd0d7ca3f59b> owl:a foaf:Organization ;
+    foaf:name "Montana Fish, Wildlife & Parks" .
+
+<urn:uuid:3e05df13-55f7-4c6e-a372-149afa7103ac> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-11T06:43:13.214Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-11T06:43:13.214Z" ;
+    dc:identifier "urn:sha:661ab535d89f66e02be126e080510588532ec58444f4f2db5d7ad455" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://mslapps.mt.gov/Geographic_Information/Data/DataList/datalist_MetadataDetailRaw.aspx?did={9CF9A9EB-7C1D-456E-8D97-D50000BB986C}" .
+
+<urn:uuid:67f36e87-a57c-43d2-807e-c768bf2c7851> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-11T06:43:13.214Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-11T06:43:13.214Z" ;
+    dc:identifier "urn:sha:174b463dbf380139c9ac5c8472f16166bbb86fee33211667acc46bce" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://fwp.mt.gov/gisData/shapefiles/fasPoints.zip" .
+
+<urn:uuid:7d8bb8e1-16ab-44c9-9431-217c3732c197> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-08-11T06:43:13.214Z" ;
+    bcube:lastUpdated "2015-08-11T06:43:13.214Z" ;
+    bcube:originatedFrom <urn:uuid:3e05df13-55f7-4c6e-a372-149afa7103ac> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:b48053cf-67f2-47a6-a8fd-41978eb6cf34> .
+
+<urn:uuid:b48053cf-67f2-47a6-a8fd-41978eb6cf34> bcube:dateCreated "2015-08-11T06:43:13.214Z" ;
+    bcube:hasMetadataRecord <urn:uuid:7d8bb8e1-16ab-44c9-9431-217c3732c197> ;
+    bcube:lastUpdated "2015-08-11T06:43:13.214Z" ;
+    dc:conformsTo <urn:uuid:c849c205-3505-4bfe-a96a-ac6a912bc536>,
+        <urn:uuid:e3aad13f-00fc-4813-98b4-d0279ab26f6b>,
+        <urn:uuid:f80b164a-3342-40b4-aca6-37a8193de25c> ;
+    dc:description "Point locations for fishing access sites owned and/or managed by Montana Fish, Wildlife & Parks (FWP)." ;
+    dc:spatial "POLYGON ((-115.88131 44.5166,-115.88131 49.126125,-103.919628 49.126125,-103.919628 44.5166,-115.88131 44.5166))" ;
+    dcterms:publisher <urn:uuid:156f9cb0-6fdf-4bdc-bdff-bd0d7ca3f59b> ;
+    dcterms:references <urn:uuid:67f36e87-a57c-43d2-807e-c768bf2c7851> ;
+    dcterms:title "Montana Fish, Wildlife & Parks (FWP) Fishing Access Sites - Points" ;
+    esip:eastBound "-103.919628"^^xsd:float ;
+    esip:northBound "49.126125"^^xsd:float ;
+    esip:southBound "44.5166"^^xsd:float ;
+    esip:startDate "2014-07-23"^^xsd:date ;
+    esip:westBound "-115.88131"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:c849c205-3505-4bfe-a96a-ac6a912bc536> bcube:hasType "place" ;
+    bcube:hasValue "Montana" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:e3aad13f-00fc-4813-98b4-d0279ab26f6b> bcube:hasType "theme" ;
+    bcube:hasValue "boundaries",
+        "location",
+        "planningCadastre" ;
+    dc:partOf "ISO 19115 Topic Category" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:f80b164a-3342-40b4-aca6-37a8193de25c> bcube:hasType "theme" ;
+    bcube:hasValue "fishing access",
+        "lands",
+        "recreation" ;
+    dc:partOf "none" ;
+    owl:a bcube:thesaurusSubset .
+

@@ -1,0 +1,66 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:4ec8b5d7-f042-4af0-831e-a908d3ffbb4b> a "OGC:WMS" ;
+    bcube:contains <urn:uuid:dea71ac9-b605-408b-94b1-f507c6dcec88> ;
+    bcube:dateCreated "2015-08-13T08:01:41.794Z" ;
+    bcube:lastUpdated "2015-08-13T08:01:41.794Z" ;
+    bcube:originatedFrom <urn:uuid:de55e928-0c8c-4952-a394-44c1b35d7e81> ;
+    dc:conformsTo <urn:uuid:9e230b4c-1960-4bc8-9cf0-eaa332e972a1> ;
+    dc:description "Scientific Data" ;
+    owl:a bcube:service .
+
+<urn:uuid:9e230b4c-1960-4bc8-9cf0-eaa332e972a1> bcube:hasValue "atmosphere",
+        "climate",
+        "earth science",
+        "meteorology",
+        "ocean" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:c0d3751f-41ec-4d92-a505-6a44048e6d7e> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-13T08:01:41.794Z" ;
+    bcube:hasConfidence "Not Sure" ;
+    bcube:hasUrlSource "Generated" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-13T08:01:41.794Z" ;
+    dc:identifier "urn:sha:986782cf7a82c49c19b45e5630f362e26e7dbc859025ca1ef681b0fe" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://ecco.jpl.nasa.gov/thredds/wms/ecco_Smoother/PREV/20140906/dr080_2012/n10day_10_18/gsUave_08_08.02160_04320_720.cdf?layers=gsUave&width=500&version=1.3.0&bbox=-180.0%2C-79.5%2C180.0%2C78.5&service=WMS&format=image%2Fpng&styles=&crs=CRS%3A84&request=GetMap&height=500" .
+
+<urn:uuid:de55e928-0c8c-4952-a394-44c1b35d7e81> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-13T08:01:41.794Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-13T08:01:41.794Z" ;
+    dc:identifier "urn:sha:b00a3f78fc1cda9513cdbbd904d4b5ab013902de7d10f828ea190a98" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://ecco.jpl.nasa.gov/thredds/wms/ecco_Smoother/PREV/20140906/dr080_2012/n10day_10_18/gsUave_08_08.02160_04320_720.cdf?service=WMS&version=1.3.0&request=GetCapabilities" .
+
+<urn:uuid:dea71ac9-b605-408b-94b1-f507c6dcec88> bcube:dateCreated "2015-08-13T08:01:41.794Z" ;
+    bcube:lastUpdated "2015-08-13T08:01:41.794Z" ;
+    dc:description "Salinity tendency due to U advection (30d)" ;
+    dc:spatial "POLYGON ((-180.0 -79.5,-180.0 78.5,180.0 78.5,180.0 -79.5,-180.0 -79.5))" ;
+    dc:title "Salinity tendency due to U advection (30d)" ;
+    dcterms:references <urn:uuid:c0d3751f-41ec-4d92-a505-6a44048e6d7e> ;
+    esip:eastBound "180.0"^^xsd:float ;
+    esip:northBound "78.5"^^xsd:float ;
+    esip:southBound "-79.5"^^xsd:float ;
+    esip:westBound "-180.0"^^xsd:float ;
+    owl:a bcube:Layer .
+

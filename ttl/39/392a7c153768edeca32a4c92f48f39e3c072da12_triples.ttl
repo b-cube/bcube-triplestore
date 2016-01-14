@@ -1,0 +1,117 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:3370d373-d0ed-4d43-897f-745a3cf1f4ff> bcube:dateCreated "2015-08-08T16:40:15.181Z" ;
+    bcube:hasMetadataRecord <urn:uuid:9d690e9a-5b56-402a-bfd1-88847db89d4e> ;
+    bcube:lastUpdated "2015-08-08T16:40:15.181Z" ;
+    dc:conformsTo <urn:uuid:3c3b0fb0-7e4b-434c-8dac-28c128ce92d4>,
+        <urn:uuid:57981d68-d7d9-486a-a71b-e7ba8c77dbe8>,
+        <urn:uuid:682539f5-e2cc-4cc8-94d2-5a9bc723db78>,
+        <urn:uuid:864cf2e4-2111-44b1-a8b1-7c0a171ff0f4>,
+        <urn:uuid:90ab1b95-015e-456b-adcd-6777c1505888> ;
+    dc:description "As of January 1, 2001, RFE version 2.0 has been implemented by NOAAs Climate Prediction Center. Created by Ping-Ping Xie, this replaces RFE 1.0 the previous rainfall estimation algorithm that was operational from 1995 through 2000 (Herman et al., 1997). RFE 2.0 uses additional techniques to better estimate precipitation while continuing the use of cloud top temperature and station rainfall data that formed the basis of RFE 1.0. Meteosat geostationary satellite infrared data is acquired in 30-minute intervals, and areas depicting cloud top temperatures of less than 235K are used to estimate convective rainfall. WMO Global Telecommunication System (GTS) data taken from approx. 1000 stations provide accurate rainfall totals, and are assumed to be the true rainfall near each station. RFE 1.0 used an interpolation method to combine Meteosat and GTS data for daily precipitation estimates, and warm cloud information was included to obtain dekadal (10-day) estimates. The two new satellite rainfall estimation instruments that are incorporated into RFE 2.0 are the Special Sensor Microwave/Imager (SSM/I) on board Defense Meteorological Satellite Program satellites, and the Advanced Microwave Sounding Unit (AMSU). Both estimates are acquired at 6-hour intervals and have a resolution of 0.25 degrees. RFE 2.0 obtains the final daily rainfall estimation using a two part merging process, then sums daily totals to produce dekadal estimates. All satellite data is first combined using a maximum likelihood estimation method, and then GTS station data is used to remove bias. Warm cloud precipitation estimates are not included in RFE 2.0. RFE data is mainly staged for public download in binary format, but is also available in GeoTiff format." ;
+    dc:spatial "POLYGON ((-20 -40,-20 40,55 40,55 -40,-20 -40))" ;
+    dcterms:identifier "gov.noaa.cpc:CPC-FEWS-NET-DLY-RFE-AFRICA-V2001" ;
+    dcterms:publisher <urn:uuid:50ffb68c-59bc-4abd-a241-243263bfd721> ;
+    dcterms:references <urn:uuid:c3ff5f46-8784-4978-a60b-42d20ddc400c>,
+        <urn:uuid:cc25657c-2b09-4a10-8ab6-545579ec0824> ;
+    dcterms:title "Climate Prediction Center (CPC) Rainfall Estimator (RFE) for Africa" ;
+    esip:eastBound "55.0"^^xsd:float ;
+    esip:northBound "40.0"^^xsd:float ;
+    esip:southBound "-40.0"^^xsd:float ;
+    esip:startDate "2001-01-01"^^xsd:date ;
+    esip:westBound "-20.0"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:3c3b0fb0-7e4b-434c-8dac-28c128ce92d4> bcube:hasType "theme" ;
+    bcube:hasValue "Atmosphere > Precipitation > Precipitation Amount",
+        "Atmosphere > Precipitation > Precipitation Rate",
+        "Atmosphere > Precipitation > Rain" ;
+    dc:partOf "NASA GCMD Science Keywords" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:50ffb68c-59bc-4abd-a241-243263bfd721> owl:a foaf:Organization ;
+    foaf:name "Climate Prediction Center" .
+
+<urn:uuid:57981d68-d7d9-486a-a71b-e7ba8c77dbe8> bcube:hasType "theme" ;
+    bcube:hasValue "climatologyMeteorologyAtmosphere" ;
+    dc:partOf "ISO 19115 Topic Category" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:682539f5-e2cc-4cc8-94d2-5a9bc723db78> bcube:hasType "place" ;
+    bcube:hasValue "Continent > Africa" ;
+    dc:partOf "NASA GCMD Location Keywords" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:864cf2e4-2111-44b1-a8b1-7c0a171ff0f4> bcube:hasType "theme" ;
+    bcube:hasValue "ATMOSPHERE",
+        "DROUGHT",
+        "EARTH SCIENCE",
+        "FLOODING",
+        "PRECIPITATION",
+        "RAIN" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:90ab1b95-015e-456b-adcd-6777c1505888> bcube:hasType "stratum" ;
+    bcube:hasValue "Continent > Africa" ;
+    dc:partOf "NASA GCMD Location Keywords" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:9d690e9a-5b56-402a-bfd1-88847db89d4e> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-08-08T16:40:15.181Z" ;
+    bcube:lastUpdated "2015-08-08T16:40:15.181Z" ;
+    bcube:originatedFrom <urn:uuid:bba2216f-1a0e-4385-92e3-197f181d4ad8> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:3370d373-d0ed-4d43-897f-745a3cf1f4ff> .
+
+<urn:uuid:bba2216f-1a0e-4385-92e3-197f181d4ad8> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-08T16:40:15.181Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-08T16:40:15.181Z" ;
+    dc:identifier "urn:sha:c5b7d6648e5a23efa82c227c284aa2a538f5efa2541815bd66fbc309" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "https://catalog.data.gov/harvest/object/c19433b1-a7cd-49fc-afe7-825971f4ad1c/original" .
+
+<urn:uuid:c3ff5f46-8784-4978-a60b-42d20ddc400c> dcterms:references <urn:uuid:dd824984-1def-49cb-8dbf-286cec6d85eb> ;
+    owl:a bibo:WebPage .
+
+<urn:uuid:cc25657c-2b09-4a10-8ab6-545579ec0824> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-08T16:40:15.181Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-08T16:40:15.181Z" ;
+    dc:identifier "urn:sha:40b3d5bb7e532ac64ec47cd873a2e7e75b900e19f72ba539ae1d687f" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "ftp://ftp.cpc.ncep.noaa.gov/fews/fewsdata/africa/rfe2/bin/" .
+
+<urn:uuid:dd824984-1def-49cb-8dbf-286cec6d85eb> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-08T16:40:15.181Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-08T16:40:15.181Z" ;
+    dc:identifier "urn:sha:45a652a3975a0eeac5c5ddc2a787771c64b02957ea236e4041885392" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "ftp://ftp.cpc.ncep.noaa.gov/fews/fewsdata/africa/rfe2/geotiff/" .
+

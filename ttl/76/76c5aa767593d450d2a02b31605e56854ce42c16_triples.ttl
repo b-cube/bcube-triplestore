@@ -1,0 +1,144 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:04bf79bb-2124-432a-b6f7-6b43cccc7ab5> owl:a foaf:Organization ;
+    foaf:name "ERDDAP, version 1.62, at NOAA NMFS SWFSC Environmental Research Division" .
+
+<urn:uuid:18ac3a89-3918-4f39-a5e1-6ce04a6cc1aa> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-08-04T17:57:06.398Z" ;
+    bcube:lastUpdated "2015-08-04T17:57:06.398Z" ;
+    bcube:originatedFrom <urn:uuid:854096a0-79ab-4bb4-b65c-f8f42bf0ef29> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:50e77db5-f24c-48fe-9ab7-dda850422f81> .
+
+<urn:uuid:1c82e8a9-e175-430b-a711-dcf7c80523b9> bcube:hasType "theme" ;
+    bcube:hasValue "convective_rainfall_amount",
+        "latitude",
+        "longitude",
+        "time" ;
+    dc:partOf "CF Standard Name Table v27" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:3c16087d-d3e3-421b-a22a-edfdabae08d8> dcterms:references <urn:uuid:51aeaa20-8ece-400c-b2dd-3a151c671cb9> ;
+    owl:a bibo:WebPage .
+
+<urn:uuid:50e77db5-f24c-48fe-9ab7-dda850422f81> bcube:dateCreated "2015-08-04T17:57:06.398Z" ;
+    bcube:hasMetadataRecord <urn:uuid:18ac3a89-3918-4f39-a5e1-6ce04a6cc1aa> ;
+    bcube:lastUpdated "2015-08-04T17:57:06.398Z" ;
+    dc:conformsTo <urn:uuid:1c82e8a9-e175-430b-a711-dcf7c80523b9>,
+        <urn:uuid:8ceb0967-2fef-489c-bb8d-e9f9b897fb48> ;
+    dc:description "This dataset has Rain Fall data from NOAA NOS Center for Operational Oceanographic Products and Services (CO-OPS). WARNING: These preliminary data have not been subjected to the National Ocean Services (NOS) Quality Control procedures, and do not necessarily meet the criteria and standards of official NOS data. They are released for limited public use with appropriate caution. WARNING: * Queries for data MUST include stationID= and time>=. * Queries USUALLY include time<= (the default end time corresponds to 'now'). * Queries MUST be for less than 30 days worth of data. * The data source isn't completely reliable. If your request returns no data when you think it should: * Try revising the request (e.g., a different time range). * The list of stations offering this data may be incorrect. * Sometimes a station or the entire data service is unavailable. Wait a while and try again." ;
+    dc:spatial "POLYGON ((-67.16 18.0551,-67.16 18.481,-65.444 18.481,-65.444 18.0551,-67.16 18.0551))" ;
+    dcterms:publisher <urn:uuid:04bf79bb-2124-432a-b6f7-6b43cccc7ab5> ;
+    dcterms:references <urn:uuid:3c16087d-d3e3-421b-a22a-edfdabae08d8>,
+        <urn:uuid:59c97736-4078-4224-8f3d-e6e3be84b61a>,
+        <urn:uuid:f67998f0-6ec6-4fda-9bce-e67e0b3dd6ee> ;
+    dcterms:title "NOS CO-OPS Meteorological Data, Rain Fall, 6-Minute" ;
+    esip:eastBound "-65.444"^^xsd:float ;
+    esip:northBound "18.481"^^xsd:float ;
+    esip:southBound "18.0551"^^xsd:float ;
+    esip:westBound "-67.16"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:51aeaa20-8ece-400c-b2dd-3a151c671cb9> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-04T17:57:06.398Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-04T17:57:06.398Z" ;
+    dc:identifier "urn:sha:588efefe2371f9b07c22045babd9b51e7941aac2f9d12e0da917992c" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://coastwatch.pfeg.noaa.gov/erddap/tabledap/nosCoopsMRF.subset" .
+
+<urn:uuid:59c97736-4078-4224-8f3d-e6e3be84b61a> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-04T17:57:06.398Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-04T17:57:06.398Z" ;
+    dc:identifier "urn:sha:f1724a617e1ede4152b316c3990461f607e5e251cfe0d75ca5f81ab1" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://coastwatch.pfeg.noaa.gov/erddap/tabledap/nosCoopsMRF.html" .
+
+<urn:uuid:854096a0-79ab-4bb4-b65c-f8f42bf0ef29> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-04T17:57:06.398Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-04T17:57:06.398Z" ;
+    dc:identifier "urn:sha:e24fa9b63d2ce1bb0e451d767c130451a872722a89d1c93ab37d07bc" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://coastwatch.pfeg.noaa.gov/erddap/tabledap/nosCoopsMRF.fgdc" .
+
+<urn:uuid:8ceb0967-2fef-489c-bb8d-e9f9b897fb48> bcube:hasType "theme" ;
+    bcube:hasValue "6-minute",
+        "Atmosphere > Atmospheric Winds > Convection",
+        "Atmosphere > Precipitation > Precipitation Amount",
+        "Atmosphere > Precipitation > Rain",
+        "amount",
+        "atmosphere",
+        "atmospheric",
+        "co-ops",
+        "collection",
+        "convection",
+        "convective",
+        "convective_rainfall_amount",
+        "data",
+        "date",
+        "deployment",
+        "designation",
+        "established",
+        "fall",
+        "flag",
+        "identifier",
+        "limit",
+        "meteorological",
+        "meteorology",
+        "minute",
+        "name",
+        "noaa",
+        "nos",
+        "ops",
+        "platform",
+        "precipitation",
+        "rain",
+        "rainfall",
+        "sensor",
+        "shefID",
+        "shef_id",
+        "state",
+        "station",
+        "time",
+        "winds" ;
+    dc:partOf "GCMD Science Keywords" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:f67998f0-6ec6-4fda-9bce-e67e0b3dd6ee> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-04T17:57:06.398Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-04T17:57:06.398Z" ;
+    dc:identifier "urn:sha:194b91bf222870bc251f13fb9bdc8f5d4c403d7ae5c25aa0ce53dc74" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://coastwatch.pfeg.noaa.gov/erddap/tabledap/nosCoopsMRF.graph" .
+

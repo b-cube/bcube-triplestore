@@ -1,0 +1,106 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:38ae8c33-df80-4e84-ae8c-2fba592e4881> owl:a foaf:Organization ;
+    foaf:name "U.S. Geological Survey" .
+
+<urn:uuid:3a3a8707-81de-4ea4-b4ba-6e95006d577a> bcube:hasType "place" ;
+    bcube:hasValue "Alabama",
+        "Mobile-Tensaw Delta",
+        "North America",
+        "Three Mile Creek",
+        "United States" ;
+    dc:partOf "General" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:59bb21ec-6a70-4a92-8a1c-b1f1906b2096> bcube:hasType "theme" ;
+    bcube:hasValue "ALPS",
+        "Airborne Lidar Processing System",
+        "DEM",
+        "Digital Elevation Model",
+        "EAARL",
+        "Experimental Advanced Airborne Research Lidar",
+        "Pilatus PC-6",
+        "laser altimetry",
+        "lidar",
+        "remote sensing",
+        "topography" ;
+    dc:partOf "General" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:61c659c5-f5c7-41a3-ae12-d03dc82be6ae> bcube:hasType "temporal" ;
+    bcube:hasValue "2010" ;
+    dc:partOf "General" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:723329f0-c270-4849-b0a2-df31d740ff3c> bcube:dateCreated "2015-08-05T01:11:02.556Z" ;
+    bcube:hasMetadataRecord <urn:uuid:df290c37-8fdb-499b-baab-715e6ee897ac> ;
+    bcube:lastUpdated "2015-08-05T01:11:02.556Z" ;
+    dc:conformsTo <urn:uuid:3a3a8707-81de-4ea4-b4ba-6e95006d577a>,
+        <urn:uuid:59bb21ec-6a70-4a92-8a1c-b1f1906b2096>,
+        <urn:uuid:61c659c5-f5c7-41a3-ae12-d03dc82be6ae>,
+        <urn:uuid:c73b4c0b-0775-420c-a8b4-d6c73eda4523>,
+        <urn:uuid:ee120ccb-0f4e-419d-85cf-402298936b89> ;
+    dc:description "Binary point-cloud data were produced from remotely sensed, geographically referenced elevation measurements by the U.S. Geological Survey (USGS). Elevation measurements were collected over the area (bathymetry was irresolvable) using the Experimental Advanced Airborne Research Lidar (EAARL), a pulsed laser ranging system mounted onboard an aircraft to measure ground elevation, vegetation canopy, and coastal topography. The system uses high-frequency laser beams directed at the Earth's surface through an opening in the bottom of the aircraft's fuselage. The laser system records the time difference between emission of the laser beam and the reception of the reflected laser signal in the aircraft. The plane travels over the target area at approximately 50 meters per second at an elevation of approximately 300 meters, resulting in a laser swath of approximately 240 meters with an average point spacing of 2-3 meters. The EAARL, developed originally by the National Aeronautics and Space Administration (NASA) at Wallops Flight Facility in Virginia, measures ground elevation with a vertical resolution of 15 centimeters. A sampling rate of 3 kilohertz or higher results in an extremely dense spatial elevation dataset. Over 100 kilometers of coastline can be easily surveyed within a 3- to 4-hour mission. When subsequent elevation maps for an area are analyzed, they provide a useful tool to make management decisions regarding land development." ;
+    dc:spatial "POLYGON ((-88.0267050061981 30.9995118311566,-88.0267050061981 31.017720280479399,-88.005565160780094 31.017720280479399,-88.005565160780094 30.9995118311566,-88.0267050061981 30.9995118311566))" ;
+    dcterms:publisher <urn:uuid:38ae8c33-df80-4e84-ae8c-2fba592e4881> ;
+    dcterms:references <urn:uuid:f6230b8c-4dd7-420d-9fb0-009cdc588b70> ;
+    dcterms:title "EAARL Topography--Three Mile Creek and Mobile-Tensaw Delta, Alabama, 2010" ;
+    esip:eastBound "-88.0055651608"^^xsd:float ;
+    esip:northBound "31.0177202805"^^xsd:float ;
+    esip:southBound "30.9995118312"^^xsd:float ;
+    esip:startDate "2010-03-06"^^xsd:date ;
+    esip:westBound "-88.0267050062"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:c73b4c0b-0775-420c-a8b4-d6c73eda4523> bcube:hasType "theme" ;
+    bcube:hasValue "elevation" ;
+    dc:partOf "ISO 19115 Topic Category" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:df290c37-8fdb-499b-baab-715e6ee897ac> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-08-05T01:11:02.556Z" ;
+    bcube:lastUpdated "2015-08-05T01:11:02.556Z" ;
+    bcube:originatedFrom <urn:uuid:e89b2138-3f4e-430d-b129-f5a945d7a36f> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:723329f0-c270-4849-b0a2-df31d740ff3c> .
+
+<urn:uuid:e89b2138-3f4e-430d-b129-f5a945d7a36f> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-05T01:11:02.556Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-05T01:11:02.556Z" ;
+    dc:identifier "urn:sha:85f6cf1ef6b48900f5510e9be60c14a3c658f55bf97e53c262f76314" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://pubs.usgs.gov/ds/618/data_files/fs/fs_e402_n3432_16/fs_e402_n3432_16.las.xml" .
+
+<urn:uuid:ee120ccb-0f4e-419d-85cf-402298936b89> bcube:hasType "stratum" ;
+    bcube:hasValue "First Surface" ;
+    dc:partOf "General" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:f6230b8c-4dd7-420d-9fb0-009cdc588b70> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-05T01:11:02.556Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-05T01:11:02.556Z" ;
+    dc:identifier "urn:sha:d14a028c2a3a2bc9476102bb288234c415a2b01f828ea62ac5b3e42f" ;
+    owl:a bcube:Url .
+

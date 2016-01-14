@@ -1,0 +1,102 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:0081ad30-c387-4ce9-8ede-8896a87d49ac> bcube:hasType "project" ;
+    bcube:hasValue "CalCOFI" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:07e012a0-583a-4533-b444-99bc1e9a8830> bcube:hasType "theme" ;
+    bcube:hasValue "atmosphere",
+        "biology",
+        "biosphere",
+        "earth science",
+        "environment",
+        "ocean" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:0a2e0fa4-a082-4a9b-97e4-a6b2099c79d8> a "ISO 19115:2003/19139" ;
+    bcube:dateCreated "2015-07-16T05:26:29.989Z" ;
+    bcube:lastUpdated "2015-07-16T05:26:29.989Z" ;
+    bcube:originatedFrom <urn:uuid:aab8dd0f-e8a3-42d9-9530-be5b28044ee0> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:57b1e81d-75de-4989-bb18-adb100cc9f1d> .
+
+<urn:uuid:57b1e81d-75de-4989-bb18-adb100cc9f1d> bcube:dateCreated "2015-07-16T05:26:29.989Z" ;
+    bcube:hasMetadataRecord <urn:uuid:0a2e0fa4-a082-4a9b-97e4-a6b2099c79d8> ;
+    bcube:lastUpdated "2015-07-16T05:26:29.989Z" ;
+    dc:conformsTo <urn:uuid:0081ad30-c387-4ce9-8ede-8896a87d49ac>,
+        <urn:uuid:07e012a0-583a-4533-b444-99bc1e9a8830>,
+        <urn:uuid:e33aff73-255a-42e8-8909-39c46c8e2116>,
+        <urn:uuid:f895923a-b3b9-4a06-8253-45b261e0ab14> ;
+    dc:description "Fish larvae counts and standardized counts for larvae captured in CalCOFI icthyoplankton nets (primarily vertical [Calvet or Pairovet], oblique [bongo or ring nets], and surface tows [Manta nets]). Surface tows are normally standardized to count per 1,000 m3 strained. Oblique tows are normally standardized to count per 10 m2 of surface sampled. This table includes all tows by species, even if zero larvae were captured for the species, i.e., negative tows. The \"Larvae Counts Positive Tows\" table includes only tows where one or more larvae were captured for the species selected by the user." ;
+    dc:identifier "erdCalCOFIlrvcntSJtoST" ;
+    dc:spatial "POLYGON ((-179.822 0.002,-179.822 51.05,-77.228 51.05,-77.228 0.002,-179.822 0.002))" ;
+    dcterms:references <urn:uuid:5a261638-34f4-4026-8f7c-c7ec205d35b6>,
+        <urn:uuid:f1c63e6c-c5f1-45af-a561-18b33bb9f540> ;
+    dcterms:title "CalCOFI Larvae Counts, Scientific Names SJ to ST" ;
+    esip:eastBound "-77.228"^^xsd:float ;
+    esip:endDate "2011-11-01"^^xsd:date ;
+    esip:northBound "51.05"^^xsd:float ;
+    esip:southBound "0.002"^^xsd:float ;
+    esip:startDate "1951-01-09"^^xsd:date ;
+    esip:westBound "-179.822"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:5a261638-34f4-4026-8f7c-c7ec205d35b6> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-07-16T05:26:29.989Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-07-16T05:26:29.989Z" ;
+    dc:identifier "urn:sha:8e2b0f02b64350faad79f550263d76581af90a1e66fe228936dfd4cb" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://coastwatch.pfeg.noaa.gov/erddap/tabledap/erdCalCOFIlrvcntSJtoST.graph" .
+
+<urn:uuid:aab8dd0f-e8a3-42d9-9530-be5b28044ee0> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-07-16T05:26:29.989Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-07-16T05:26:29.989Z" ;
+    dc:identifier "urn:sha:197758eb5e0c2c07501c473d67ab2d9a82297b5b556873eabdda0398" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://coastwatch.pfeg.noaa.gov/erddap/metadata/iso19115/xml/erdCalCOFIlrvcntSJtoST_iso19115.xml" .
+
+<urn:uuid:e33aff73-255a-42e8-8909-39c46c8e2116> bcube:hasValue "geoscientificInformation" ;
+    dc:partOf "IsoTopicCategories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:f1c63e6c-c5f1-45af-a561-18b33bb9f540> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-07-16T05:26:29.989Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-07-16T05:26:29.989Z" ;
+    dc:identifier "urn:sha:671c222cac0e065e1e45156f7f663a7709684667a451307786e290e3" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://coastwatch.pfeg.noaa.gov/erddap/tabledap/erdCalCOFIlrvcntSJtoST.html" .
+
+<urn:uuid:f895923a-b3b9-4a06-8253-45b261e0ab14> bcube:hasType "theme" ;
+    bcube:hasValue "latitude",
+        "longitude",
+        "time" ;
+    dc:partOf "CF-11" ;
+    owl:a bcube:thesaurusSubset .
+

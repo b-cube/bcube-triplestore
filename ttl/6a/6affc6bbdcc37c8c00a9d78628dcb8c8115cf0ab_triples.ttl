@@ -1,0 +1,66 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:25ee5238-eae7-4f02-8548-ae8ca01ea6b1> owl:a foaf:Organization ;
+    foaf:name "" .
+
+<urn:uuid:3f0b1540-ad89-447c-a0c5-b2e0948a5324> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-08-05T04:55:24.287Z" ;
+    bcube:lastUpdated "2015-08-05T04:55:24.287Z" ;
+    bcube:originatedFrom <urn:uuid:f913d7b9-8c2c-4eb2-aecc-24f5cf2e580e> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:afb3445c-36e4-4214-b4b2-7278ff7dd0bb> .
+
+<urn:uuid:95316c8c-a086-4000-8230-a182ce1bdbe5> bcube:hasType "temporal" ;
+    bcube:hasValue "2000" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:afb3445c-36e4-4214-b4b2-7278ff7dd0bb> bcube:dateCreated "2015-08-05T04:55:24.287Z" ;
+    bcube:hasMetadataRecord <urn:uuid:3f0b1540-ad89-447c-a0c5-b2e0948a5324> ;
+    bcube:lastUpdated "2015-08-05T04:55:24.287Z" ;
+    dc:conformsTo <urn:uuid:95316c8c-a086-4000-8230-a182ce1bdbe5>,
+        <urn:uuid:b144e21d-c689-4406-8d59-23d3e77720e8> ;
+    dc:description "This is a federally mandated sales log which collects information on sales of raw coral, including weight and revenue. Also includes seller and buyer information. The date of sale is not so useful; since the industry stockpiles the coral then sells it at a later date mixing up the catches. Data is from 2000 only. This log may have replace the older Western Pacific Precious Coral Sales Log which collected data in 1988-1989," ;
+    dcterms:identifier "gov.noaa.nmfs.inport:1860" ;
+    dcterms:publisher <urn:uuid:25ee5238-eae7-4f02-8548-ae8ca01ea6b1> ;
+    dcterms:title "Precious Coral Sales Report Data Set" ;
+    esip:endDate "2000-11-17"^^xsd:date ;
+    esip:startDate "2000-05-10"^^xsd:date ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:b144e21d-c689-4406-8d59-23d3e77720e8> bcube:hasType "theme" ;
+    bcube:hasValue "FMB",
+        "FRMD",
+        "PIFSC",
+        "bamboo coral",
+        "gold coral",
+        "pink coral",
+        "precious coral",
+        "sales" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:f913d7b9-8c2c-4eb2-aecc-24f5cf2e580e> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-05T04:55:24.287Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-05T04:55:24.287Z" ;
+    dc:identifier "urn:sha:06a5d0a1c25f3dfd311d460796cc6e20d38dee941a019a06bfb4c928" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "https://inport.nmfs.noaa.gov/inport/item/1860/fgdc" .
+

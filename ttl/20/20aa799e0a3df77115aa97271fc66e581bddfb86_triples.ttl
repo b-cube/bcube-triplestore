@@ -1,0 +1,69 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:1f52db9d-8f40-4487-a24b-b60bb6d2ed6e> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-10-17T18:21:37.024Z" ;
+    bcube:lastUpdated "2015-10-17T18:21:37.024Z" ;
+    bcube:originatedFrom <urn:uuid:9f6329ca-cfa0-4a0d-8998-74a7101fe81b> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:ff9623e1-9d07-493c-a70e-89102d1a881f> .
+
+<urn:uuid:458c0220-fe94-4d62-a154-9f6f40cb9b26> bcube:hasType "theme" ;
+    bcube:hasValue "Aliquot Parts",
+        "Land Lines",
+        "PLSS",
+        "Range",
+        "Section",
+        "Township" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:46536081-5f0c-4d94-bae7-2312356f89f9> owl:a foaf:Organization ;
+    foaf:name "" .
+
+<urn:uuid:8eac37c2-ea36-444b-b05e-e2be7702ab75> bcube:hasType "place" ;
+    bcube:hasValue "Colorado",
+        "Denver",
+        "Denver County",
+        "USA" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:9f6329ca-cfa0-4a0d-8998-74a7101fe81b> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-10-17T18:21:37.024Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-10-17T18:21:37.024Z" ;
+    dc:identifier "urn:sha:977b71049364cec071f498033bfad0c81ca99c9942a3e5b749c2c56b" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://data.denvergov.org/download/gis/surveyed_public_land_survey_system_lines/metadata/surveyed_public_land_survey_system_lines.xml" .
+
+<urn:uuid:ff9623e1-9d07-493c-a70e-89102d1a881f> bcube:dateCreated "2015-10-17T18:21:37.024Z" ;
+    bcube:hasMetadataRecord <urn:uuid:1f52db9d-8f40-4487-a24b-b60bb6d2ed6e> ;
+    bcube:lastUpdated "2015-10-17T18:21:37.024Z" ;
+    dc:conformsTo <urn:uuid:458c0220-fe94-4d62-a154-9f6f40cb9b26>,
+        <urn:uuid:8eac37c2-ea36-444b-b05e-e2be7702ab75> ;
+    dc:description "This dataset is an index of Public Land Survey System (PLSS) lines within the City and County of Denver. It is similar to the other Township-Range-Section layers available on the CCD GIS except:1) this dataset contains quarter-section and sixteenth-section lines, and2) the extent of this dataset is limited to GPS-derived and calculated land corner positions, and does not extend as far as the other TRS layers." ;
+    dc:spatial "POLYGON ((-105.110061 39.609691,-105.110061 39.932408,-104.578687 39.932408,-104.578687 39.609691,-105.110061 39.609691))" ;
+    dcterms:publisher <urn:uuid:46536081-5f0c-4d94-bae7-2312356f89f9> ;
+    dcterms:title "Surveyed Public Land Survey System Lines" ;
+    esip:eastBound "-104.578687"^^xsd:float ;
+    esip:northBound "39.932408"^^xsd:float ;
+    esip:southBound "39.609691"^^xsd:float ;
+    esip:westBound "-105.110061"^^xsd:float ;
+    owl:a dcat:Dataset .
+

@@ -1,0 +1,79 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:32cb8626-9208-495b-bc4a-c62b10e0b15c> owl:a foaf:Organization ;
+    foaf:name "U.S. Department of Agriculture, Natural Resources Conservation Service" .
+
+<urn:uuid:33750f72-188c-4711-a1cf-af84e6e476f1> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-08-07T03:00:59.813Z" ;
+    bcube:lastUpdated "2015-08-07T03:00:59.813Z" ;
+    bcube:originatedFrom <urn:uuid:b727f94a-d5a5-43b0-aed0-b39d2e2d4c33> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:c7d9a103-abeb-43dc-b5a9-32bd4e713e18> .
+
+<urn:uuid:aa707a5e-ab0b-444c-aa16-0f93094819b8> bcube:hasType "place" ;
+    bcube:hasValue "Kansas (20)" ;
+    dc:partOf "Counties and County Equivalents of the United States and the District of Columbia (FIPS Pub 6-3)" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:b727f94a-d5a5-43b0-aed0-b39d2e2d4c33> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-07T03:00:59.813Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-07T03:00:59.813Z" ;
+    dc:identifier "urn:sha:b65de9c6bce18c69e64ea5f61065f592a1870d26639b8fd404c6a691" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://catalog.data.gov/harvest/object/4a6ad2f1-db8e-437d-8668-5895b95d889f/original" .
+
+<urn:uuid:c7d9a103-abeb-43dc-b5a9-32bd4e713e18> bcube:dateCreated "2015-08-07T03:00:59.813Z" ;
+    bcube:hasMetadataRecord <urn:uuid:33750f72-188c-4711-a1cf-af84e6e476f1> ;
+    bcube:lastUpdated "2015-08-07T03:00:59.813Z" ;
+    dc:conformsTo <urn:uuid:aa707a5e-ab0b-444c-aa16-0f93094819b8>,
+        <urn:uuid:d0dc1b44-c611-4828-84ac-78bffce28c13> ;
+    dc:description "This data set is a digital general soil association map developed by the National Cooperative Soil Survey. It consists of a broad based inventory of soils and nonsoil areas that occur in a repeatable pattern on the landscape and that can be cartographically shown at the scale mapped. The soil maps for STATSGO are compiled by generalizing more detailed soil survey maps. Where more detailed soil survey maps are not available, data on geology, topography, vegetation, and climate are assembled, together with Land Remote Sensing Satellite (LANDSAT) images. Soils of like areas are studied, and the probable classification and extent of the soils are determined. Map unit composition for a STATSGO map is determined by transecting or sampling areas on the more detailed maps and expanding the data statistically to characterize the whole map unit. This data set consists of georeferenced digital map data and computerized attribute data. The map data are collected in 1- by 2-degree topographic quadrangle units and merged and distributed as statewide coverages. The soil map units are linked to attributes in the Map Unit Interpretations Record relational data base which gives the proportionate extent of the component soils and their properties." ;
+    dc:spatial "POLYGON ((-102.5 37.0,-102.5 40.0,-94.6 40.0,-94.6 37.0,-102.5 37.0))" ;
+    dcterms:publisher <urn:uuid:32cb8626-9208-495b-bc4a-c62b10e0b15c> ;
+    dcterms:references <urn:uuid:c8c2215c-6a6b-42c5-9305-7845060d9194> ;
+    dcterms:title "STATSGO" ;
+    esip:eastBound "-94.6"^^xsd:float ;
+    esip:northBound "40.0"^^xsd:float ;
+    esip:southBound "37.0"^^xsd:float ;
+    esip:startDate "1994-01-01"^^xsd:date ;
+    esip:westBound "-102.5"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:c8c2215c-6a6b-42c5-9305-7845060d9194> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-07T03:00:59.813Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-07T03:00:59.813Z" ;
+    dc:identifier "urn:sha:c36b95020e42e8299f5cecfc70e189dfffe3e9557e4f9cce4e916374" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www.KansasGIS.org" .
+
+<urn:uuid:d0dc1b44-c611-4828-84ac-78bffce28c13> bcube:hasType "theme" ;
+    bcube:hasValue "General Soils Map",
+        "STATSGO",
+        "Soils",
+        "State Soil Geographic",
+        "geoscientificInformation" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+

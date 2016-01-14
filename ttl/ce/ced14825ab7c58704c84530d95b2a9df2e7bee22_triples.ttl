@@ -1,0 +1,96 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:057faede-d001-47be-bf74-f165573eea4c> bcube:hasType "theme" ;
+    bcube:hasValue "Breaklines",
+        "Contours",
+        "DEM",
+        "Digital Terrain Model",
+        "Elevation Data",
+        "Flow vectors",
+        "LIDAR",
+        "Land Surface",
+        "Relief",
+        "Slope",
+        "Topography" ;
+    dc:partOf "FEMA NFIP Topic Category" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:0a501870-52cf-4546-a2ba-1e3fa105868b> bcube:hasType "theme" ;
+    bcube:hasValue "elevation" ;
+    dc:partOf "ISO 19115 Topic Category" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:4691a6e8-0733-45bb-9d7b-a4c3dbc6aab6> bcube:dateCreated "2015-08-04T21:52:32.372Z" ;
+    bcube:hasMetadataRecord <urn:uuid:57cacc81-c861-48aa-90e5-90d86b71afd4> ;
+    bcube:lastUpdated "2015-08-04T21:52:32.372Z" ;
+    dc:conformsTo <urn:uuid:057faede-d001-47be-bf74-f165573eea4c>,
+        <urn:uuid:0a501870-52cf-4546-a2ba-1e3fa105868b>,
+        <urn:uuid:f60c37c3-10f2-4538-8e79-b6897a2b5c03> ;
+    dc:description "Terrain data, as defined in FEMA Guidelines and Specifications, Appendix N: Data Capture Standards, describes the digital topographic data that was used to create the elevation data representing the terrain environment of a watershed and/or floodplain. Terrain data requirements allow for flexibility in the types of information provided as sources used to produce final terrain deliverables. Once this type of data is provided, FEMA will be able to account for the origins of the flood study elevation data. (Source: FEMA Guidelines and Specifications, Appendix N, Section N.1.2)." ;
+    dc:spatial "POLYGON ((-84.827084 39.912504,-84.827084 40.359407,-84.422491 40.359407,-84.422491 39.912504,-84.827084 39.912504))" ;
+    dcterms:publisher <urn:uuid:af028290-338f-4b0f-9ebd-97e4bb8d98b7> ;
+    dcterms:references <urn:uuid:7e39c724-1678-4d2a-9521-4450c63754a2> ;
+    dcterms:title "TERRAIN, DARKE COUNTY, OH" ;
+    esip:eastBound "-84.422491"^^xsd:float ;
+    esip:northBound "40.359407"^^xsd:float ;
+    esip:southBound "39.912504"^^xsd:float ;
+    esip:startDate "2009-01-30"^^xsd:date ;
+    esip:westBound "-84.827084"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:57cacc81-c861-48aa-90e5-90d86b71afd4> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-08-04T21:52:32.372Z" ;
+    bcube:lastUpdated "2015-08-04T21:52:32.372Z" ;
+    bcube:originatedFrom <urn:uuid:7845f179-6261-4acf-bac6-8b621b98343c> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:4691a6e8-0733-45bb-9d7b-a4c3dbc6aab6> .
+
+<urn:uuid:7845f179-6261-4acf-bac6-8b621b98343c> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-04T21:52:32.372Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-04T21:52:32.372Z" ;
+    dc:identifier "urn:sha:aaf76c77e804b7e0303c4987bd5235dd66063d3a4075fe880175f36d" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://catalog.data.gov/harvest/object/d943f785-02bf-4b8a-a7a9-0bc31650ae7e/original" .
+
+<urn:uuid:7e39c724-1678-4d2a-9521-4450c63754a2> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-04T21:52:32.372Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-04T21:52:32.372Z" ;
+    dc:identifier "urn:sha:37c915397238031daced09ae0e2dd3bf54e84a6477f749c2cc9dcbdf" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://hazards.fema.gov" .
+
+<urn:uuid:af028290-338f-4b0f-9ebd-97e4bb8d98b7> owl:a foaf:Organization ;
+    foaf:name "Federal Emergency Management Agency" .
+
+<urn:uuid:f60c37c3-10f2-4538-8e79-b6897a2b5c03> bcube:hasType "place" ;
+    bcube:hasValue "COMMUNITY DARKE COUNTY",
+        "COUNTY DARKE",
+        "COUNTY-FIPS 037",
+        "FEMA-CID 39037C",
+        "REGION 05",
+        "STATE OH" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+

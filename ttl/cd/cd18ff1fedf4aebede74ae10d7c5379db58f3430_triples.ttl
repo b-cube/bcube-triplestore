@@ -1,0 +1,98 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:1a80653f-821d-489c-8fa6-999a60d5cd9d> owl:a foaf:Organization ;
+    foaf:name "Hazards and Vulnerability Research Institute (HVRI), University of South Carolina" .
+
+<urn:uuid:1d79b986-fed8-4a89-ab00-fa4781154e84> bcube:hasType "theme" ;
+    bcube:hasValue "economy",
+        "environment",
+        "oceans",
+        "society",
+        "structure",
+        "transportation" ;
+    dc:partOf "ISO 19115 Topic Category" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:5d3213c9-0d7d-4ca0-871d-8cb335badce9> bcube:dateCreated "2015-08-05T15:48:56.664Z" ;
+    bcube:hasMetadataRecord <urn:uuid:c7bb3a90-8c9f-43d6-8b4a-dad5ea805022> ;
+    bcube:lastUpdated "2015-08-05T15:48:56.664Z" ;
+    dc:conformsTo <urn:uuid:1d79b986-fed8-4a89-ab00-fa4781154e84>,
+        <urn:uuid:e40b57ec-b4bb-45ba-a44a-f314ab407120>,
+        <urn:uuid:f8c44014-1e56-4ef1-a098-196d0f2a1533> ;
+    dc:description "This data depicts the social vulnerability of North Carolina census block groups to environmental hazards. Data were culled primarily from the 2000 Decennial Census." ;
+    dc:spatial "POLYGON ((-178.217598 18.921786,-178.217598 71.406235,-66.969271 71.406235,-66.969271 18.921786,-178.217598 18.921786))" ;
+    dcterms:publisher <urn:uuid:1a80653f-821d-489c-8fa6-999a60d5cd9d> ;
+    dcterms:references <urn:uuid:5fe4df87-7073-48d5-a038-982187f9e046> ;
+    dcterms:title "Social Vulnerability Index (SoVI) for North Carolina based on 2000 Census Block Groups" ;
+    esip:eastBound "-66.969271"^^xsd:float ;
+    esip:northBound "71.406235"^^xsd:float ;
+    esip:southBound "18.921786"^^xsd:float ;
+    esip:startDate "2000-01-01"^^xsd:date ;
+    esip:westBound "-178.217598"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:5fe4df87-7073-48d5-a038-982187f9e046> dcterms:references <urn:uuid:abec7c29-8220-4787-b2a0-43c4905c48e7> ;
+    owl:a bibo:WebPage .
+
+<urn:uuid:aa2eead0-9f16-4c8e-897b-0061a1b4e21d> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-05T15:48:56.664Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-05T15:48:56.664Z" ;
+    dc:identifier "urn:sha:695290029d10e34e7708f5da955aef4975ccbae015c192b24ab93f17" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://coast.noaa.gov/data/Documents/Metadata/Demographic/harvest/SOVI_BlkGrp_2000_NC_shp.xml" .
+
+<urn:uuid:abec7c29-8220-4787-b2a0-43c4905c48e7> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-05T15:48:56.664Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-05T15:48:56.664Z" ;
+    dc:identifier "urn:sha:30cf345e633e286b856e2d494158a7a0073272646fff2597a42435eb" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www.coast.noaa.gov/digitalcoast/data/SoVI/" .
+
+<urn:uuid:c7bb3a90-8c9f-43d6-8b4a-dad5ea805022> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-08-05T15:48:56.664Z" ;
+    bcube:lastUpdated "2015-08-05T15:48:56.664Z" ;
+    bcube:originatedFrom <urn:uuid:aa2eead0-9f16-4c8e-897b-0061a1b4e21d> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:5d3213c9-0d7d-4ca0-871d-8cb335badce9> .
+
+<urn:uuid:e40b57ec-b4bb-45ba-a44a-f314ab407120> bcube:hasType "place" ;
+    bcube:hasValue "Census Block Groups",
+        "Coastal States",
+        "United States" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:f8c44014-1e56-4ef1-a098-196d0f2a1533> bcube:hasType "theme" ;
+    bcube:hasValue "Comparative Index",
+        "Demographics",
+        "Environmental Hazards",
+        "Indicators",
+        "Resilience",
+        "Social Vulnerability Index",
+        "Socioeconomics",
+        "Vulnerability" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+

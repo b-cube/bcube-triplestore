@@ -1,0 +1,71 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:19ce824b-8246-4706-bb7e-d668151f8905> owl:a foaf:Organization ;
+    foaf:name "" .
+
+<urn:uuid:3d600f1d-f768-437d-aad9-8f8c061d6283> bcube:hasType "place" ;
+    bcube:hasValue "Hawaiian Archipelago",
+        "pacific region" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:55a5e21f-db2d-4048-b9b7-1c8a0042bcac> bcube:dateCreated "2015-08-12T21:39:10.301Z" ;
+    bcube:hasMetadataRecord <urn:uuid:a29c48dd-7f39-4824-9a8f-a54da36e57d5> ;
+    bcube:lastUpdated "2015-08-12T21:39:10.301Z" ;
+    dc:conformsTo <urn:uuid:3d600f1d-f768-437d-aad9-8f8c061d6283>,
+        <urn:uuid:f46fa33a-af76-40ff-a595-9b20fc8fbb79> ;
+    dc:description "This data set includes physical specimens, paper logs and Freezerworks database of all logged information on specimens collected from Hawaiian monk seals since 1975. Information collected on specimens include animal ID's, dates, preservation methods, storage locations, where specimens were analyzed, and results of analyses. Specimens collected are either Non-invasive specimens collected either from dead animals (e.g., tissues, skeletal samples, body fluids, etc.) or samples are collected from live animals by collecting scats, molts, spews, etc. that are found on the beach near live animals. Invasive specimen collection includes tissue plugs collected when animals are tagged, or health screening/survey samples that are collected during animal restraint. Samples are collected by PSD personnel and cooperating scientists as part of the ongoing health and disease, population genetics, and foraging ecology assessment. Specimens are housed at PIFSC Dole Street office, Kewalo Research Facility, and Ford Island." ;
+    dc:spatial "POLYGON ((180 10,180 30,-150 30,-150 10,180 10))" ;
+    dcterms:identifier "gov.noaa.nmfs.inport:5671" ;
+    dcterms:publisher <urn:uuid:19ce824b-8246-4706-bb7e-d668151f8905> ;
+    dcterms:title "Specimen Data (includes physical specimens, collection information, status, storage locations, and laboratory results associated with individual specimens)" ;
+    esip:eastBound "-150.0"^^xsd:float ;
+    esip:northBound "30.0"^^xsd:float ;
+    esip:southBound "10.0"^^xsd:float ;
+    esip:startDate "1975-12-31"^^xsd:date ;
+    esip:westBound "180.0"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:a29c48dd-7f39-4824-9a8f-a54da36e57d5> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-08-12T21:39:10.301Z" ;
+    bcube:lastUpdated "2015-08-12T21:39:10.301Z" ;
+    bcube:originatedFrom <urn:uuid:a53cbe3b-c7fe-47d7-b709-0cc03e49c449> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:55a5e21f-db2d-4048-b9b7-1c8a0042bcac> .
+
+<urn:uuid:a53cbe3b-c7fe-47d7-b709-0cc03e49c449> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-12T21:39:10.301Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-12T21:39:10.301Z" ;
+    dc:identifier "urn:sha:75ed67bf903c584adda1d02eb54bafda6e95c49a994faf23912046bf" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "https://inport.nmfs.noaa.gov/inport/item/5671/fgdc" .
+
+<urn:uuid:f46fa33a-af76-40ff-a595-9b20fc8fbb79> bcube:hasType "theme" ;
+    bcube:hasValue "Hawaiian monk seal",
+        "PIFSC",
+        "PSD",
+        "health and disease program",
+        "hmsrp",
+        "laboratory results",
+        "protected species",
+        "specimens" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+

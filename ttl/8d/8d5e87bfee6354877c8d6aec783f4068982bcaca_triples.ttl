@@ -1,0 +1,58 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:51bfa85d-44c8-4da6-bbc7-56271a10ba56> bcube:hasType "theme" ;
+    bcube:hasValue "Atlantic Ocean",
+        "Caribbean Sea",
+        "Gulf of Mexico",
+        "automated landing reporting system",
+        "billfish",
+        "bluefin tuna",
+        "swordfish" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:58b4d7e0-c188-4df6-9528-55834a9eab56> owl:a foaf:Organization ;
+    foaf:name "" .
+
+<urn:uuid:f474d1fb-13cb-44ba-9415-5550b23382ac> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-04T17:53:21.332Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-04T17:53:21.332Z" ;
+    dc:identifier "urn:sha:37ca02b96a83e36cf57dee8a490d6241c0c919aa4c95a0168e8892b6" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "https://inport.nmfs.noaa.gov/inport/item/22025/fgdc" .
+
+<urn:uuid:f9450d22-4475-43d2-90d4-cebc2a5f9b63> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-08-04T17:53:21.332Z" ;
+    bcube:lastUpdated "2015-08-04T17:53:21.332Z" ;
+    bcube:originatedFrom <urn:uuid:f474d1fb-13cb-44ba-9415-5550b23382ac> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:fd8555ff-d770-4ef1-97c8-8f9caae485dd> .
+
+<urn:uuid:fd8555ff-d770-4ef1-97c8-8f9caae485dd> bcube:dateCreated "2015-08-04T17:53:21.332Z" ;
+    bcube:hasMetadataRecord <urn:uuid:f9450d22-4475-43d2-90d4-cebc2a5f9b63> ;
+    bcube:lastUpdated "2015-08-04T17:53:21.332Z" ;
+    dc:conformsTo <urn:uuid:51bfa85d-44c8-4da6-bbc7-56271a10ba56> ;
+    dc:description "Anglers are required to report all recreationally caught Atlantic bluefin tuna, billfish, and swordfish to NMFS, provided the landings are not affiliated with a registered tournament. Reports are filed via an internet website or an interactive voice recording system. The data are stored in the ALRS. Data elements collected include species landed, date of landing, date of fishing trip, port of landing, vessel name, vessel permit number, fish length, fish weight, type of trip (charter/private), fishing technique, bait type, fight time, number and species of fish released." ;
+    dcterms:identifier "gov.noaa.nmfs.inport:22025" ;
+    dcterms:publisher <urn:uuid:58b4d7e0-c188-4df6-9528-55834a9eab56> ;
+    dcterms:title "Automated Landing Reporting System (ALRS)" ;
+    esip:startDate "2002-01-01"^^xsd:date ;
+    owl:a dcat:Dataset .
+

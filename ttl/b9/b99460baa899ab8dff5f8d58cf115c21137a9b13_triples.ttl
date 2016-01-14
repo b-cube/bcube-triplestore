@@ -1,0 +1,65 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:6ae6a5d1-dd87-40e3-93ba-762d8c1da06a> bcube:hasType "theme" ;
+    bcube:hasValue "trawl" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:9a077d0f-72ac-4986-90c8-3be01e6c4f8c> bcube:hasType "place" ;
+    bcube:hasValue "Bering Sea",
+        "Gulf of Alaska",
+        "young of the year" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:a1085b72-cd22-4b28-a1ef-bb15ec7c5fe1> owl:a foaf:Organization ;
+    foaf:name "" .
+
+<urn:uuid:ed6ce093-0002-45ec-ad28-7e16bb0a2d89> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-11-12T21:12:42.862Z" ;
+    bcube:lastUpdated "2015-11-12T21:12:42.862Z" ;
+    bcube:originatedFrom <urn:uuid:f1e41a1f-9b20-43bb-9d95-5b17ea9c8ebe> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:f91b7921-0afe-49f3-943d-fff47c3b54d0> .
+
+<urn:uuid:f1e41a1f-9b20-43bb-9d95-5b17ea9c8ebe> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-12T21:12:42.862Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-12T21:12:42.862Z" ;
+    dc:identifier "urn:sha:5341cac553474d73141765b0a13c40cc05a66efeb2b94f36bb3bae54" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "https://inport.nmfs.noaa.gov/inport/item/26571/fgdc" .
+
+<urn:uuid:f91b7921-0afe-49f3-943d-fff47c3b54d0> bcube:dateCreated "2015-11-12T21:12:42.862Z" ;
+    bcube:hasMetadataRecord <urn:uuid:ed6ce093-0002-45ec-ad28-7e16bb0a2d89> ;
+    bcube:lastUpdated "2015-11-12T21:12:42.862Z" ;
+    dc:conformsTo <urn:uuid:6ae6a5d1-dd87-40e3-93ba-762d8c1da06a>,
+        <urn:uuid:9a077d0f-72ac-4986-90c8-3be01e6c4f8c> ;
+    dc:description "The trawl database contains multiple tables of data. The haul table contains the location, date, time and depth of the trawl haul. The catch table contains the numbers and weights of the taxa in each haul. The length table contains the lengths of selected taxa in each haul. There is data for the eastern Bering Sea for 2008, 2010, 2012, and 2014. There is Gulf of Alaska trawl data from 1993 to 2015." ;
+    dc:spatial "POLYGON ((-172.4 52.75,-172.4 60.0,-148 60,-148.0 52.75,-172.4 52.75))" ;
+    dcterms:identifier "gov.noaa.nmfs.inport:26571" ;
+    dcterms:publisher <urn:uuid:a1085b72-cd22-4b28-a1ef-bb15ec7c5fe1> ;
+    dcterms:title "AFSC/RACE/EcoFOCI - Trawl catch data collected in support of FOCI assessment surveys and ecosystem observations in the Bering Sea and the Gulf of Alaska 1993 to Present" ;
+    esip:eastBound "-148.0"^^xsd:float ;
+    esip:northBound "60.0"^^xsd:float ;
+    esip:southBound "52.75"^^xsd:float ;
+    esip:startDate "1993-01-01"^^xsd:date ;
+    esip:westBound "-172.4"^^xsd:float ;
+    owl:a dcat:Dataset .
+

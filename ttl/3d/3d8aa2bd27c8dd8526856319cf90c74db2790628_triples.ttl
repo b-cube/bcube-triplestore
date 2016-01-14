@@ -1,0 +1,79 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:1d0ec4d0-4b1b-4f6d-a46c-c04665855a65> bcube:hasType "theme" ;
+    bcube:hasValue "aerial photography",
+        "base map",
+        "environment",
+        "imageryBaseMapsEarthCover",
+        "orthoimagery",
+        "orthophotography",
+        "photo" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:1eb04830-68e8-486f-a5d5-c6b00eb55e7f> bcube:hasValue "boundaries" ;
+    dc:partOf "IsoTopicCategories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:38043753-874a-447f-afdd-ced81225a118> a "ISO 19115:2003/19139" ;
+    bcube:dateCreated "2015-03-06T09:07:58.93Z" ;
+    bcube:lastUpdated "2015-03-06T09:07:58.93Z" ;
+    bcube:originatedFrom <urn:uuid:fb88a7c3-5ea0-43d6-a358-4241132baf81> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:8778986d-d03a-4679-b208-fee74853e1eb> .
+
+<urn:uuid:8778986d-d03a-4679-b208-fee74853e1eb> bcube:dateCreated "2015-03-06T09:07:58.93Z" ;
+    bcube:hasMetadataRecord <urn:uuid:38043753-874a-447f-afdd-ced81225a118> ;
+    bcube:lastUpdated "2015-03-06T09:07:58.93Z" ;
+    dc:conformsTo <urn:uuid:1d0ec4d0-4b1b-4f6d-a46c-c04665855a65>,
+        <urn:uuid:1eb04830-68e8-486f-a5d5-c6b00eb55e7f>,
+        <urn:uuid:f18230ac-6020-46db-a135-5db481dae9c1> ;
+    dc:description "This imagery is derived from NDDOT interim working data and is used to digitize road centerline vector information for the DES Base Map Project.The digitized centerlines will be created with a \"sub-meter\" accuracy. The imagery will be collected during optimum viewing conditions whenever possible, however maximizing flight mission time is also a major priority. Ideal flying conditions would be during spring and fall seasons when tree and foliage cover is reduced, thus optimizing the viewing accuracy of roadway centerlines. Other factors affecting image quality can be sun angle, haze, wind speed, turbulence and cloud cover. The flight missions are also prioritized to capture certain PSAP (Public Safety Answering Point) areas ahead of other counties; However once again, weather conditions dictate where and when the flight crew can collect data.Certain image anomalies will be visible within the mosaics. These small warpages were addressed during the digitizing phase by using imagery imported from other stages of the process. It is the intent of NDDOT to eventually address all of these anomalies but at this stage of the project, production speed is a higher priority.Pixel size is approximately 0.9-feet, data is processed to UTM-14, NAD83The Base Map missions are created at a flight height above ground (HAG) of 9,000' (2743.2 meters) which creates imagery with a .90'(27.432 cm) ground sample distance (GSD). The resultant imagery covers a base corridor 12,400' (3779.52 meters) wide." ;
+    dc:spatial "POLYGON ((-104.5 45.5,-104.5 49.5,-96.5 49.5,-96.5 45.5,-104.5 45.5))" ;
+    dcterms:references <urn:uuid:8acb17e5-8715-4759-a251-d90ea9ca6f22> ;
+    dcterms:title "DES Base Map Project Aerial Photography 2009-2013" ;
+    esip:eastBound "-96.5"^^xsd:float ;
+    esip:northBound "49.5"^^xsd:float ;
+    esip:southBound "45.5"^^xsd:float ;
+    esip:westBound "-104.5"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:8acb17e5-8715-4759-a251-d90ea9ca6f22> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-03-06T09:07:58.93Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-03-06T09:07:58.93Z" ;
+    dc:identifier "urn:sha:3988f2fccebda74be674661597dac91c1d4b81f196b5f17fb62adcf1" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www.nd.gov/gis/" .
+
+<urn:uuid:f18230ac-6020-46db-a135-5db481dae9c1> bcube:hasType "place" ;
+    bcube:hasValue "North Dakota" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:fb88a7c3-5ea0-43d6-a358-4241132baf81> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-03-06T09:07:58.93Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-03-06T09:07:58.93Z" ;
+    dc:identifier "urn:sha:33f3d20b4f248c62d08819b6707c0b645b7c5a8c908db160ccbfc1d1" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://catalog.data.gov/harvest/object/7b1945a6-0bfe-469d-a47b-609255846180" .
+

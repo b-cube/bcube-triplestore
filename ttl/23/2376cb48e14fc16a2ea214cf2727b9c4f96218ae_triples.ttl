@@ -1,0 +1,55 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:07c66b8d-fc66-4ad5-896c-ade7d45113fa> bcube:hasValue "atmospheric-conditions" ;
+    dc:partOf "GEMET - INSPIRE themes" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:cf8c70f9-475e-4410-a1c8-4ea9f757d7cb> bcube:hasValue "climatologyMeteorologyAtmosphere" ;
+    dc:partOf "IsoTopicCategories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:dbf30515-0ce8-4e61-ba13-a0559f6b75df> a "ISO 19115:2003/19139" ;
+    bcube:dateCreated "2015-11-06T13:10:38.256Z" ;
+    bcube:lastUpdated "2015-11-06T13:10:38.256Z" ;
+    bcube:originatedFrom <urn:uuid:fd8517d5-b462-4714-bfb7-cb11296b85e7> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:f6d24a7b-0fb7-41f3-8391-5a48304ade2d> .
+
+<urn:uuid:f6d24a7b-0fb7-41f3-8391-5a48304ade2d> bcube:dateCreated "2015-11-06T13:10:38.256Z" ;
+    bcube:hasMetadataRecord <urn:uuid:dbf30515-0ce8-4e61-ba13-a0559f6b75df> ;
+    bcube:lastUpdated "2015-11-06T13:10:38.256Z" ;
+    dc:conformsTo <urn:uuid:07c66b8d-fc66-4ad5-896c-ade7d45113fa>,
+        <urn:uuid:cf8c70f9-475e-4410-a1c8-4ea9f757d7cb> ;
+    dc:description "The data are about the annual mean wind speeds (per 10 minutes). The speed values are obtained by processing the raw data measurements from sensors which are located on 160-170 masts throughout the country. For the processing a mass conservation model is used along with a boundary layer correction process." ;
+    dc:spatial "POLYGON ((19.291992 34.813803,19.291992 41.967659,30.102539 41.967659,30.102539 34.813803,19.291992 34.813803))" ;
+    dcterms:title "Wind potential in Greece" ;
+    esip:eastBound "30.102539"^^xsd:float ;
+    esip:northBound "41.967659"^^xsd:float ;
+    esip:southBound "34.813803"^^xsd:float ;
+    esip:westBound "19.291992"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:fd8517d5-b462-4714-bfb7-cb11296b85e7> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-06T13:10:38.256Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-06T13:10:38.256Z" ;
+    dc:identifier "urn:sha:b77362ec28da741e5d5fdbc82b983b29f8ed2120eedf95beda3c5dc0" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://labs.geodata.gov.gr/el/api/publicamundi/dataset/export/wind-potential" .
+

@@ -1,0 +1,81 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:0c7e13d6-0ef6-477b-9ba4-ae879c4e44ff> bcube:hasType "place" ;
+    bcube:hasValue "Florida" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:2ab10055-0327-433d-ace2-f9a7e75a40c9> bcube:hasType "theme" ;
+    bcube:hasValue "Highways",
+        "Off System",
+        "Off-systems Roads",
+        "RCI",
+        "Roads",
+        "Roadway Characteristics Inventory",
+        "Transportation" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:48071d7d-01e0-496b-94c2-3a5c0e8060be> bcube:dateCreated "2015-11-03T10:03:41.89Z" ;
+    bcube:hasMetadataRecord <urn:uuid:6b125de7-8f8e-4531-89fb-67814592b588> ;
+    bcube:lastUpdated "2015-11-03T10:03:41.89Z" ;
+    dc:conformsTo <urn:uuid:0c7e13d6-0ef6-477b-9ba4-ae879c4e44ff>,
+        <urn:uuid:2ab10055-0327-433d-ace2-f9a7e75a40c9> ;
+    dc:description "The Off-systems Roads feature class covers the state of Florida at a scale of 1:24,000 with a projection system of Universal Transverse Mercator (UTM) 17 North zone and a horizontal datum of North American 1983 (NAD 1983). The map units are in meters." ;
+    dc:spatial "POLYGON ((-87.590672 24.420987,-87.590672 31.158146,-79.990993 31.158146,-79.990993 24.420987,-87.590672 24.420987))" ;
+    dcterms:publisher <urn:uuid:e9841e45-16a6-42b0-8538-f40620f910b3> ;
+    dcterms:references <urn:uuid:dbc21885-56ae-46fe-9c02-32104df2c69a> ;
+    dcterms:title "Off-System" ;
+    esip:eastBound "-79.990993"^^xsd:float ;
+    esip:northBound "31.158146"^^xsd:float ;
+    esip:southBound "24.420987"^^xsd:float ;
+    esip:startDate "2008-06-02"^^xsd:date ;
+    esip:westBound "-87.590672"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:6b125de7-8f8e-4531-89fb-67814592b588> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-11-03T10:03:41.89Z" ;
+    bcube:lastUpdated "2015-11-03T10:03:41.89Z" ;
+    bcube:originatedFrom <urn:uuid:ad0d68a9-04c6-4a25-912d-c51e671877a9> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:48071d7d-01e0-496b-94c2-3a5c0e8060be> .
+
+<urn:uuid:ad0d68a9-04c6-4a25-912d-c51e671877a9> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-03T10:03:41.89Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-03T10:03:41.89Z" ;
+    dc:identifier "urn:sha:3b4c279e0c662dde14613f68c00c1f0e51c11205803b92a28e269f55" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www.envirobase.usgs.gov/FlGisData/FDOT/descriptions/off_system.shp.xml" .
+
+<urn:uuid:dbc21885-56ae-46fe-9c02-32104df2c69a> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-03T10:03:41.89Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-03T10:03:41.89Z" ;
+    dc:identifier "urn:sha:696e9e5385591073de1362c09d8d1d4ebbef692662a363820756afef" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "ftp://ftp.dot.state.fl.us/fdot/co/planning/transtat/gis/shapefiles/off_system.zip" .
+
+<urn:uuid:e9841e45-16a6-42b0-8538-f40620f910b3> owl:a foaf:Organization ;
+    foaf:name "" .
+

@@ -1,0 +1,103 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:421c8c18-13c0-45c2-883f-1dd1433c89c2> bcube:hasType "stratum" ;
+    bcube:hasValue "ground" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:65ac3840-48a7-4366-866d-6e29f0af4803> bcube:hasType "theme" ;
+    bcube:hasValue "FWGOVERNMENTALUNITS",
+        "FWROADS",
+        "FWTRANSPORTATION" ;
+    dc:partOf "FGDC Framework Themes" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:79f1e001-987c-45b0-993c-7bb03af5f9bb> bcube:hasType "temporal" ;
+    bcube:hasValue "2006",
+        "2007",
+        "2008",
+        "2009",
+        "2010",
+        "2011",
+        "2012",
+        "2013",
+        "2014",
+        "2015" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:7cfc0e63-f77e-49f3-a290-561a3069f483> a "ISO 19115:2003/19139" ;
+    bcube:dateCreated "2015-08-08T13:18:38.454Z" ;
+    bcube:lastUpdated "2015-08-08T13:18:38.454Z" ;
+    bcube:originatedFrom <urn:uuid:c9328b7a-baae-4bbf-aff0-b56fc5cd6003> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:9ecf3cdb-9591-497c-815c-608d8b4f8580> .
+
+<urn:uuid:84be777b-2ae4-4a8b-ad00-53dada5426b4> bcube:hasType "theme" ;
+    bcube:hasValue "Census Feature Class Code (CFCC)",
+        "FMCSA",
+        "Feature Identifier",
+        "Hazardous Material Route",
+        "Latitude/Longitude",
+        "Line Feature",
+        "Point/Node",
+        "TIGER/Line",
+        "TIGER/Line Identification Number (TLID)",
+        "Vector" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:9ecf3cdb-9591-497c-815c-608d8b4f8580> bcube:dateCreated "2015-08-08T13:18:38.454Z" ;
+    bcube:hasMetadataRecord <urn:uuid:7cfc0e63-f77e-49f3-a290-561a3069f483> ;
+    bcube:lastUpdated "2015-08-08T13:18:38.454Z" ;
+    dc:conformsTo <urn:uuid:421c8c18-13c0-45c2-883f-1dd1433c89c2>,
+        <urn:uuid:65ac3840-48a7-4366-866d-6e29f0af4803>,
+        <urn:uuid:79f1e001-987c-45b0-993c-7bb03af5f9bb>,
+        <urn:uuid:84be777b-2ae4-4a8b-ad00-53dada5426b4>,
+        <urn:uuid:e62ca4dc-8b31-48cc-9b48-3d6f6b7cedea>,
+        <urn:uuid:f4182268-b7fb-4d9a-97ad-37e300ca9f4d> ;
+    dc:description "The Federal Motor Carrier Safety Administration (FMCSA) Hazardous Material Routes (NTAD 2015) were developed using the 2004 First Edition TIGER/Line files. The routes are described in the National Hazardous Material Route Registry (NMHRR). The on-line NMHRR linkage is http://hazmat.fmcsa.dot.gov/nhmrr/index.asp With the exception of 13 features that were not identified with the Tiger/Lines, Hazmat routes were created by extracting the TIGER/Line segments that corresponded to each individual route. Hazmat routes in the NTAD, are organized into 3 database files, hazmat.shp, hmroutes.dbf, and hmstcnty.dbf. Each record in each database represents a unique Tiger/Line segment. These Tiger/Line segments are grouped into routes identified as character strings in the ROUTE_ID field in the hmroutes.dbf table. The route name appearing in the ROUTE_ID is assigned by FMCSA and is unique for each State [this sentence could be deleted - it doesn't add a lot to it]. The hmstcnty.dbf table allows the user to select routes by State and County. A single shapefile, called hazmat.shp, represents geometry for all routes in the United States." ;
+    dc:spatial "POLYGON ((-124.216232 26.111954,-124.216232 49.000758,-71.051495 49.000758,-71.051495 26.111954,-124.216232 26.111954))" ;
+    dcterms:title "Hazmat Routes (National)" ;
+    esip:eastBound "-71.051495"^^xsd:float ;
+    esip:northBound "49.000758"^^xsd:float ;
+    esip:southBound "26.111954"^^xsd:float ;
+    esip:westBound "-124.216232"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:c9328b7a-baae-4bbf-aff0-b56fc5cd6003> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-08T13:18:38.454Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-08T13:18:38.454Z" ;
+    dc:identifier "urn:sha:f856bce04a5460c627f652984bafe8c656b554edcbcca6c263d7a457" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://catalog.data.gov/harvest/object/bb202f6a-0d8f-44ca-be17-0f5afc421383" .
+
+<urn:uuid:e62ca4dc-8b31-48cc-9b48-3d6f6b7cedea> bcube:hasType "place" ;
+    bcube:hasValue "Puerto Rico",
+        "State",
+        "United States" ;
+    dc:partOf "FIPS Publication 6-4, FIPS Publication 55" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:f4182268-b7fb-4d9a-97ad-37e300ca9f4d> bcube:hasType "theme" ;
+    bcube:hasValue "Boundaries" ;
+    dc:partOf "none" ;
+    owl:a bcube:thesaurusSubset .
+

@@ -1,0 +1,118 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:150bcd1d-609d-4ed2-874f-e49e7f2f90e0> bcube:hasType "place" ;
+    bcube:hasValue "Continent > North America > United States of America",
+        "Ocean > Atlantic Ocean > North Atlantic Ocean > Caribbean Sea > Puerto Rico" ;
+    dc:partOf "NASA GCMD Location Keywords" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:3d0b6496-bd67-41b4-b0e4-6af5ab42e335> bcube:hasType "theme" ;
+    bcube:hasValue "drought",
+        "forecast",
+        "monthly",
+        "outlook",
+        "precipitation" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:50f49201-b8f2-48ba-a277-0e003c70e7fd> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-08T13:29:23.686Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-08T13:29:23.686Z" ;
+    dc:identifier "urn:sha:003beb567ac26469490a8886979b95d592e374bae09e5908ea8af345" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www.cpc.ncep.noaa.gov/products/GIS/GIS_DATA/droughtlook/index.shtml" .
+
+<urn:uuid:537864fa-7d89-4316-b09d-cedd53cc0717> dcterms:references <urn:uuid:d9504495-6d71-40a8-9632-2ea5aa633715> ;
+    owl:a bibo:WebPage .
+
+<urn:uuid:7da7c22b-b47e-4212-acbc-a08f4f71e735> bcube:hasType "theme" ;
+    bcube:hasValue "climatologyMeteorologyAtmosphere" ;
+    dc:partOf "ISO 19115 Topic Category" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:8de4e7f4-15b2-4720-9622-008b76748f37> bcube:hasType "stratum" ;
+    bcube:hasValue "Vertical Location > Land Surface" ;
+    dc:partOf "NASA GCMD Location Keywords" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:abc56aec-951e-4177-8be0-00cc2508033c> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-08-08T13:29:23.686Z" ;
+    bcube:lastUpdated "2015-08-08T13:29:23.686Z" ;
+    bcube:originatedFrom <urn:uuid:dbce328d-e285-41b1-b85c-9e00ea893b16> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:b800ddce-9338-4bb5-b1ae-390c7bbd133b> .
+
+<urn:uuid:b800ddce-9338-4bb5-b1ae-390c7bbd133b> bcube:dateCreated "2015-08-08T13:29:23.686Z" ;
+    bcube:hasMetadataRecord <urn:uuid:abc56aec-951e-4177-8be0-00cc2508033c> ;
+    bcube:lastUpdated "2015-08-08T13:29:23.686Z" ;
+    dc:conformsTo <urn:uuid:150bcd1d-609d-4ed2-874f-e49e7f2f90e0>,
+        <urn:uuid:3d0b6496-bd67-41b4-b0e4-6af5ab42e335>,
+        <urn:uuid:7da7c22b-b47e-4212-acbc-a08f4f71e735>,
+        <urn:uuid:8de4e7f4-15b2-4720-9622-008b76748f37>,
+        <urn:uuid:fce54597-1fa9-4091-965f-e98659cec252> ;
+    dc:description "A CPC forecaster (from a rotating schedule of 5 as of August 2013) creates the Monthly Drought Outlook map and narratives. The map, produced using GIS, shows where current drought areas are expected to improve, be removed, or persist with intensity, as well as new areas where drought may develop, at the end of the forecast period. The current drought areas are obtained from the most recent weekly U.S. Drought Monitor where drought is considered D1 (moderate drought) or worse. There are two narratives: a brief, general summary and a detailed, regional technical discussion that describes the thought process, forecast tools used, and confidence for each region on the map. These outlook products apply to the following 1-month period from the date of issue. The MDO replaced the updated SDO (which had been released on the first Thursday of the month) starting on June 30, 2013, with the MDO released on the last day of the month. The forecast applies to all 50 states of the United States plus Puerto Rico." ;
+    dc:spatial "POLYGON ((175.0 17.5,175 72,-65.5 72.0,-65.5 17.5,175.0 17.5))" ;
+    dcterms:identifier "gov.noaa.cpc:CPC-MDO" ;
+    dcterms:publisher <urn:uuid:e0213c5b-801b-4fd2-a8e8-88ba73d39935> ;
+    dcterms:references <urn:uuid:50f49201-b8f2-48ba-a277-0e003c70e7fd>,
+        <urn:uuid:537864fa-7d89-4316-b09d-cedd53cc0717> ;
+    dcterms:title "Climate Prediction Center (CPC) Monthly Drought Outlook (MDO)" ;
+    esip:eastBound "-65.5"^^xsd:float ;
+    esip:northBound "72.0"^^xsd:float ;
+    esip:southBound "17.5"^^xsd:float ;
+    esip:startDate "2013-06-30"^^xsd:date ;
+    esip:westBound "175.0"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:d9504495-6d71-40a8-9632-2ea5aa633715> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-08T13:29:23.686Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-08T13:29:23.686Z" ;
+    dc:identifier "urn:sha:252ad9fd045e5ed2701dd8b7589ed649c39045052b9103d7cc79e9cf" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www.cpc.ncep.noaa.gov/products/expert_assessment/monthly_drought.html" .
+
+<urn:uuid:dbce328d-e285-41b1-b85c-9e00ea893b16> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-08T13:29:23.686Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-08T13:29:23.686Z" ;
+    dc:identifier "urn:sha:f627fc212315460c25857978a8962a64b77e3ab31286371b6b0a618a" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://catalog.data.gov/harvest/object/80ef1540-1954-42b5-8618-3763e6ddd488/original" .
+
+<urn:uuid:e0213c5b-801b-4fd2-a8e8-88ba73d39935> owl:a foaf:Organization ;
+    foaf:name "Climate Prediction Center" .
+
+<urn:uuid:fce54597-1fa9-4091-965f-e98659cec252> bcube:hasType "theme" ;
+    bcube:hasValue "Atmosphere > Atmospheric Phenomena > Drought",
+        "Atmosphere > Precipitation > Precipitation Anomalies",
+        "Human Dimensions > Environmental Impacts > Water Management",
+        "Human Dimensions > Natural Hazards > Meteorological Hazards" ;
+    dc:partOf "NASA GCMD Science Keywords" ;
+    owl:a bcube:thesaurusSubset .
+

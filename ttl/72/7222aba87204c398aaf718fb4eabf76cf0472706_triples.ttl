@@ -1,0 +1,103 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:10b2f8bd-c67b-4479-a12f-d1edfc8300a4> bcube:hasType "place" ;
+    bcube:hasValue "Cape Cod National Seashore",
+        "Massachusetts",
+        "United States East Coast" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:1aee6fd9-170e-4d09-a12f-aff839831631> dcterms:references <urn:uuid:af429238-7293-41d1-a86c-28f252483f11> ;
+    owl:a bibo:WebPage .
+
+<urn:uuid:1d98309c-261b-4fe8-8980-94be7d231c4c> bcube:hasType "temporal" ;
+    bcube:hasValue "20050504" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:27ff6d7d-091f-44e7-9db8-2849a681799a> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-11-17T08:50:03.767Z" ;
+    bcube:lastUpdated "2015-11-17T08:50:03.767Z" ;
+    bcube:originatedFrom <urn:uuid:e2c2e2f9-8deb-4193-b4a8-7f11c1419999> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:8611407e-e24d-4e24-b314-840de9311a67> .
+
+<urn:uuid:8611407e-e24d-4e24-b314-840de9311a67> bcube:dateCreated "2015-11-17T08:50:03.767Z" ;
+    bcube:hasMetadataRecord <urn:uuid:27ff6d7d-091f-44e7-9db8-2849a681799a> ;
+    bcube:lastUpdated "2015-11-17T08:50:03.767Z" ;
+    dc:conformsTo <urn:uuid:10b2f8bd-c67b-4479-a12f-d1edfc8300a4>,
+        <urn:uuid:1d98309c-261b-4fe8-8980-94be7d231c4c>,
+        <urn:uuid:b64c5e63-9b36-4587-a7ab-a2b22866f843>,
+        <urn:uuid:dcfaca02-7ef5-4629-88c2-26b195ad6c46> ;
+    dc:description "GIS contour lines of Cape Cod National Seahore derived from a LiDAR GeoTIFF file." ;
+    dc:spatial "POLYGON ((-69.978978 41.835728,-69.978978 41.853868,-69.963483 41.853868,-69.963483 41.835728,-69.978978 41.835728))" ;
+    dcterms:publisher <urn:uuid:c22bc45a-f6ea-4ada-b3bd-95d0df60de9c> ;
+    dcterms:references <urn:uuid:1aee6fd9-170e-4d09-a12f-aff839831631>,
+        <urn:uuid:959c495f-54c3-4aef-8535-999d751aa5a9> ;
+    dcterms:title "contour_e418_n4634_z19" ;
+    esip:eastBound "-69.963483"^^xsd:float ;
+    esip:northBound "41.853868"^^xsd:float ;
+    esip:southBound "41.835728"^^xsd:float ;
+    esip:startDate "2005-05-04"^^xsd:date ;
+    esip:westBound "-69.978978"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:959c495f-54c3-4aef-8535-999d751aa5a9> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-17T08:50:03.767Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-17T08:50:03.767Z" ;
+    dc:identifier "urn:sha:d14a028c2a3a2bc9476102bb288234c415a2b01f828ea62ac5b3e42f" ;
+    owl:a bcube:Url .
+
+<urn:uuid:af429238-7293-41d1-a86c-28f252483f11> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-17T08:50:03.767Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-17T08:50:03.767Z" ;
+    dc:identifier "urn:sha:f60147855f5543e73f9bb77747835af13c6382db652fa29071b64c3a" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "\\\\\\\\\\\\\\\\" .
+
+<urn:uuid:b64c5e63-9b36-4587-a7ab-a2b22866f843> bcube:hasType "theme" ;
+    bcube:hasValue "Contour map",
+        "DEM",
+        "elevation change" ;
+    dc:partOf "NONE" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:c22bc45a-f6ea-4ada-b3bd-95d0df60de9c> owl:a foaf:Organization ;
+    foaf:name "USGS" .
+
+<urn:uuid:dcfaca02-7ef5-4629-88c2-26b195ad6c46> bcube:hasType "stratum" ;
+    bcube:hasValue "Bare earth" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:e2c2e2f9-8deb-4193-b4a8-7f11c1419999> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-17T08:50:03.767Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-17T08:50:03.767Z" ;
+    dc:identifier "urn:sha:0e887abca9ce2f6f1fb4b833e43ca4d390e4bd5efd692e044959e83f" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://pubs.usgs.gov/of/2007/1375/Lidar/be_e418_n4634/contour_e418_n4634_z19.shp.xml" .
+

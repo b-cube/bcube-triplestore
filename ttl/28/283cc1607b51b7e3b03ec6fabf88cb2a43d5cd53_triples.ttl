@@ -1,0 +1,63 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:1de15a59-2477-4be6-9f81-7772e18a363d> bcube:hasType "theme" ;
+    bcube:hasValue "Fire Retardant Avoidance",
+        "Hydrography" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:974eeec1-9710-4043-bd90-323c8feaed2e> bcube:dateCreated "2015-10-18T11:42:35.311Z" ;
+    bcube:hasMetadataRecord <urn:uuid:a3b7501f-d2dc-4c24-90c1-49c098b91a7c> ;
+    bcube:lastUpdated "2015-10-18T11:42:35.311Z" ;
+    dc:conformsTo <urn:uuid:1de15a59-2477-4be6-9f81-7772e18a363d>,
+        <urn:uuid:cfca4df2-5407-4538-968b-057af983864b> ;
+    dc:description "Aerial retardant avoidance area for hydrographic feature data are based on high resolution National Hydrographic Dataset (NHD) produced by USGS and available from the USFS Enterprise Data Warehouse. Forests and/or regions have had the opportunity to modify the default NHD water representation (300ft buffer from all water features) for their areas of interest to accurately represent aerial fire retardant avoidance areas as described in the 2011 Record of Decision for the Nationwide Aerial Application of Fire Retardant on National Forest System Land EIS. These changes have been integrated into this dataset depicting aerial fire retardant avoidance areas for hydrographic features.The following process was used to develop the hydrographic areas to be avoided by aerial fire retardant. Using the FCODE attribute, streams/rivers/waterbodies are categorized into perennial and intermittent/ephemeral types. Linear features (streams & rivers) FCODES 46003 and 46006 and polygonal features (lakes and other waterbody) FCODES 39001, 39005, 39006, 43612, 43614, 46601 are considered intermittentt/ephemeral features. All other FCODES are considered to be perennial features. Underground and covered water features (e.g., pipelines) are exlcuded. Initially, all intermittent/ephemeral and perennial features were buffered by 300 feet by the Forest/Region units. Subsequently, Forest/Region units may have extended these buffers locally based on their requirements. The resulting avoidance areas may have overlapping features due to the buffering processes.The National Hydrography Dataset (NHD) is a feature-based database that interconnects and uniquely identifies the stream segments or reaches that make up the nation's surface water drainage system. NHD data was originally developed at 1:100,000-scale and exists at that scale for the whole country. This high-resolution NHD, generally developed at 1:24,000/1:12,000 scale, adds detail to the original 1:100,000-scale NHD. (Data for Alaska, Puerto Rico and the Virgin Islands was developed at high-resolution, not 1:100,000 scale.) Local resolution NHD is being developed where partners and data exist. The NHD contains reach codes for networked features, flow direction, names, and centerline representations for areal water bodies. Reaches are also defined on waterbodies and the approximate shorelines of the Great Lakes, the Atlantic and Pacific Oceans and the Gulf of Mexico. The NHD also incorporates the National Spatial Data Infrastructure framework criteria established by the Federal Geographic Data Committee." ;
+    dc:spatial "POLYGON ((-117.178914 44.36058,-117.178914 49.001069,-96.94037 49.001069,-96.94037 44.36058,-117.178914 44.36058))" ;
+    dcterms:publisher <urn:uuid:c37daadf-8b56-48d0-8a13-92ec539f8700> ;
+    dcterms:title "S_R01.AFRAA_Hydro" ;
+    esip:eastBound "-96.94037"^^xsd:float ;
+    esip:northBound "49.001069"^^xsd:float ;
+    esip:southBound "44.36058"^^xsd:float ;
+    esip:westBound "-117.178914"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:a3b7501f-d2dc-4c24-90c1-49c098b91a7c> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-10-18T11:42:35.311Z" ;
+    bcube:lastUpdated "2015-10-18T11:42:35.311Z" ;
+    bcube:originatedFrom <urn:uuid:ddedba53-ad24-444b-b4e5-3ccc415ee79d> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:974eeec1-9710-4043-bd90-323c8feaed2e> .
+
+<urn:uuid:c37daadf-8b56-48d0-8a13-92ec539f8700> owl:a foaf:Organization ;
+    foaf:name "" .
+
+<urn:uuid:cfca4df2-5407-4538-968b-057af983864b> bcube:hasType "theme" ;
+    bcube:hasValue "inlandWaters",
+        "oceans" ;
+    dc:partOf "ISO 19115 Topic Categories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:ddedba53-ad24-444b-b4e5-3ccc415ee79d> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-10-18T11:42:35.311Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-10-18T11:42:35.311Z" ;
+    dc:identifier "urn:sha:25e82520438ef68c5cd87c72e938c89c52b2f4eb67af4b055b942e3b" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://data.fs.usda.gov/geodata/edw/edw_resources/meta/S_R01.AFRAA_Hydro.xml" .
+

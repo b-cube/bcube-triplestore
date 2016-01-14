@@ -1,0 +1,71 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:00e86e0a-c811-45db-acac-a301f87a3d1b> bcube:hasType "theme" ;
+    bcube:hasValue "2013",
+        "Alabama",
+        "LiDAR",
+        "U.S. Geological Survey",
+        "United States",
+        "geoscientific information",
+        "laser scanning",
+        "mobile mapping",
+        "topography" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:127da29f-ac76-4160-89ad-4a07d60e4f20> bcube:hasType "theme" ;
+    bcube:hasValue "elevation",
+        "geoscientificInformation",
+        "inlandWaters" ;
+    dc:partOf "ISO 19115 Topic Categories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:20e90023-3619-49f2-b946-d1df4e5fce85> owl:a foaf:Organization ;
+    foaf:name "" .
+
+<urn:uuid:26f7b5d6-7d54-4060-bad3-cc0ac4c3c2c6> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-11-08T06:50:27.69Z" ;
+    bcube:lastUpdated "2015-11-08T06:50:27.69Z" ;
+    bcube:originatedFrom <urn:uuid:ba883eb8-c475-4508-8cc6-44413a6a98ef> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:e24b397c-3415-4513-852d-78c4072fb36b> .
+
+<urn:uuid:ba883eb8-c475-4508-8cc6-44413a6a98ef> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-08T06:50:27.69Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-08T06:50:27.69Z" ;
+    dc:identifier "urn:sha:e5e37104f58ff17893c824c1d6fbe3808d627e6610a584d27567e0fb" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://pubs.usgs.gov/ds/0826/Downloads/metadata/Alabama_River_LIDAR_B.xml" .
+
+<urn:uuid:e24b397c-3415-4513-852d-78c4072fb36b> bcube:dateCreated "2015-11-08T06:50:27.69Z" ;
+    bcube:hasMetadataRecord <urn:uuid:26f7b5d6-7d54-4060-bad3-cc0ac4c3c2c6> ;
+    bcube:lastUpdated "2015-11-08T06:50:27.69Z" ;
+    dc:conformsTo <urn:uuid:00e86e0a-c811-45db-acac-a301f87a3d1b>,
+        <urn:uuid:127da29f-ac76-4160-89ad-4a07d60e4f20> ;
+    dc:description "A terrestrial laser scanner was utilized by the U.S. Geological Survey to provide topographic data of selected sites near the Alabama River near Montgomery, Alabama, USA. Data were collected in March and April 2013 using an Optech ILRIS laser scanner in conjunction with an Applanix position and orientation system mounted on a vehicle." ;
+    dc:spatial "POLYGON ((558650 3581160,558650 3585960,556270 3585960,556270 3581160,558650 3581160))" ;
+    dcterms:publisher <urn:uuid:20e90023-3619-49f2-b946-d1df4e5fce85> ;
+    dcterms:title "Alabama_River_LIDAR_B" ;
+    esip:eastBound "556270.0"^^xsd:float ;
+    esip:northBound "3585960.0"^^xsd:float ;
+    esip:southBound "3581160.0"^^xsd:float ;
+    esip:westBound "558650.0"^^xsd:float ;
+    owl:a dcat:Dataset .
+

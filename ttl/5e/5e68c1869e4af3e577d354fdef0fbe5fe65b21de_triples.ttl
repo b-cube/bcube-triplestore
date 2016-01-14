@@ -1,0 +1,96 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:06d5a642-68c2-486f-9bab-f07d91c3f9e7> bcube:hasType "theme" ;
+    bcube:hasValue "Address Range",
+        "County or equivalent entity",
+        "Feature",
+        "Hydrography",
+        "Linear",
+        "Railways",
+        "Road Feature",
+        "Roads",
+        "Street Centerline" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:87e5f773-b231-40d4-a0f9-46f436853b1a> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-11-01T06:16:41.641Z" ;
+    bcube:lastUpdated "2015-11-01T06:16:41.641Z" ;
+    bcube:originatedFrom <urn:uuid:b90ecd5c-5610-4924-93bb-4417e2e1d641> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:a3c780e7-177c-4e2c-91e2-804692d51d15> .
+
+<urn:uuid:a3c780e7-177c-4e2c-91e2-804692d51d15> bcube:dateCreated "2015-11-01T06:16:41.641Z" ;
+    bcube:hasMetadataRecord <urn:uuid:87e5f773-b231-40d4-a0f9-46f436853b1a> ;
+    bcube:lastUpdated "2015-11-01T06:16:41.641Z" ;
+    dc:conformsTo <urn:uuid:06d5a642-68c2-486f-9bab-f07d91c3f9e7>,
+        <urn:uuid:b855c06e-bfda-446c-9fe8-f7d0e2a9e351>,
+        <urn:uuid:f4d2081f-7f65-468a-b39a-b656e6ca1629> ;
+    dc:description "The TIGER/Line shapefiles and related database files (.dbf) are an extract of selected geographic and cartographic information from the U.S. Census Bureau's Master Address File / Topologically Integrated Geographic Encoding and Referencing (MAF/TIGER) Database (MTDB). The MTDB represents a seamless national file with no overlaps or gaps between parts, however, each TIGER/Line shapefile is designed to stand alone as an independent data set, or they can be combined to cover the entire nation. Edge refers to the linear topological primitives that make up MTDB. The All Lines Shapefile contains linear features such as roads, railroads, and hydrography. Additional attribute data associated with the linear features found in the All Lines Shapefile are available in relationship (.dbf) files that users must download separately. The All Lines Shapefile contains the geometry and attributes of each topological primitive edge. Each edge has a unique TIGER/Line identifier (TLID) value." ;
+    dc:spatial "POLYGON ((-166.985511 67.99894,-166.985511 71.441059,-141.002648 71.441059,-141.002648 67.99894,-166.985511 67.99894))" ;
+    dcterms:publisher <urn:uuid:cb9c639f-ce17-4a82-9a70-5a6994db9b16> ;
+    dcterms:references <urn:uuid:af20685d-b571-445a-8a9d-8446ef75dd6e> ;
+    dcterms:title "TIGER/Line Shapefile, 2012, county, North Slope Borough, AK, Current All Lines Shapefile" ;
+    esip:eastBound "-141.002648"^^xsd:float ;
+    esip:endDate "2012-06-01"^^xsd:date ;
+    esip:northBound "71.441059"^^xsd:float ;
+    esip:southBound "67.99894"^^xsd:float ;
+    esip:startDate "2011-08-01"^^xsd:date ;
+    esip:westBound "-166.985511"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:af20685d-b571-445a-8a9d-8446ef75dd6e> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-01T06:16:41.641Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-01T06:16:41.641Z" ;
+    dc:identifier "urn:sha:08d75c6c905eee3cbf10fd4ab60e6b0f04b827860023670781cf96a5" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www2.census.gov/geo/tiger/TIGER2012/EDGES/tl_2012_02185_edges.zip" .
+
+<urn:uuid:b855c06e-bfda-446c-9fe8-f7d0e2a9e351> bcube:hasType "theme" ;
+    bcube:hasValue "Boundaries",
+        "InlandWaters",
+        "Transportation" ;
+    dc:partOf "ISO 19115 Topic Categories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:b90ecd5c-5610-4924-93bb-4417e2e1d641> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-01T06:16:41.641Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-01T06:16:41.641Z" ;
+    dc:identifier "urn:sha:1f0241fede08531719475b6987f942f8339121172dea1d954459ad69" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://meta.geo.census.gov/data/existing/decennial/GEO/GPMB/TIGERline/TL2012/FGDC/edges/tl_2012_02185_edges.shp.xml" .
+
+<urn:uuid:cb9c639f-ce17-4a82-9a70-5a6994db9b16> owl:a foaf:Organization ;
+    foaf:name "" .
+
+<urn:uuid:f4d2081f-7f65-468a-b39a-b656e6ca1629> bcube:hasType "place" ;
+    bcube:hasValue "02185",
+        "County or Equivalent Entity",
+        "North Slope",
+        "U.S.",
+        "United States" ;
+    dc:partOf "ANSI INCITS 38:2009 (Formerly FIPS 5-2), ANSI INCITS 31:2009 (Formerly FIPS 6-4),ANSI INCITS 454:2009 (Formerly FIPS 8-6), ANSI INCITS 455:2009(Formerly FIPS 9-1), ANSI INCITS 446:2008 (Geographic Names Information System (GNIS))" ;
+    owl:a bcube:thesaurusSubset .
+

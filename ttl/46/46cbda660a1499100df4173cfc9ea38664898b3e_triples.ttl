@@ -1,0 +1,91 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:11dc7fd1-9500-48ce-b791-036df1c3c57f> owl:a foaf:Organization ;
+    foaf:name "U.S. Census Bureau" .
+
+<urn:uuid:25d5e176-71ec-4cd6-8d42-cff8bd0fe6f9> bcube:hasType "theme" ;
+    bcube:hasValue "Block",
+        "Census Block",
+        "Polygon",
+        "State or equivalent entity" ;
+    dc:partOf "NONE" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:30461f43-0416-471e-be5a-306ae33ca3f0> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-11-08T17:19:54.816Z" ;
+    bcube:lastUpdated "2015-11-08T17:19:54.816Z" ;
+    bcube:originatedFrom <urn:uuid:bfe74e32-ec47-4a71-a2f0-f102f1adec75> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:adbd9f27-b295-448d-ac2c-8bdd1eaeceae> .
+
+<urn:uuid:aac3a5c2-e74e-44da-baa0-2593c66f0d88> bcube:hasType "place" ;
+    bcube:hasValue "12",
+        "FL",
+        "Florida",
+        "State or Equivalent Entity",
+        "U.S.",
+        "United States" ;
+    dc:partOf "INCITS.38-200x (R2004),INCITS.31-200x (R2007),INCITS.454-200x,INCITS 455-200x,INCITS 446-2008" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:adbd9f27-b295-448d-ac2c-8bdd1eaeceae> bcube:dateCreated "2015-11-08T17:19:54.816Z" ;
+    bcube:hasMetadataRecord <urn:uuid:30461f43-0416-471e-be5a-306ae33ca3f0> ;
+    bcube:lastUpdated "2015-11-08T17:19:54.816Z" ;
+    dc:conformsTo <urn:uuid:25d5e176-71ec-4cd6-8d42-cff8bd0fe6f9>,
+        <urn:uuid:aac3a5c2-e74e-44da-baa0-2593c66f0d88>,
+        <urn:uuid:d012df05-108c-4b76-86df-4c2b7fae1f32> ;
+    dc:description "This dataset contains US Census Bureau 2000 data for the State of Florida. The data contains selected fields from the Summary 1 file that includes information on total population, race, sex, age, and household. This data is at the block level, the smallest unit of census data. Using GIS techniques, it is possible to summarize the data by Block Group, Tract, Traffic Analysis Zone (TAZ), Zip Code Tabulation Area (ZCTA), or County. This layer is an update to the existing 2000 Blocks, the record count and attribute information are the same, but the linework has been updated as part of the U.S. Census Bureau's MAF/TIGER Accuracy Improvement Project." ;
+    dc:spatial "POLYGON ((-87.42904 24.492815,-87.42904 30.983191,-79.872251 30.983191,-79.872251 24.492815,-87.42904 24.492815))" ;
+    dcterms:publisher <urn:uuid:11dc7fd1-9500-48ce-b791-036df1c3c57f> ;
+    dcterms:references <urn:uuid:b05b2eed-7561-462b-a173-81caf83d966d> ;
+    dcterms:title "US CENSUS BLOCKS IN FLORIDA - 2000 (2009 SPATIAL UPDATE)" ;
+    esip:eastBound "-79.872251"^^xsd:float ;
+    esip:endDate "2009-05-01"^^xsd:date ;
+    esip:northBound "30.983191"^^xsd:float ;
+    esip:southBound "24.492815"^^xsd:float ;
+    esip:startDate "2009-01-01"^^xsd:date ;
+    esip:westBound "-87.42904"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:b05b2eed-7561-462b-a173-81caf83d966d> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-08T17:19:54.816Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-08T17:19:54.816Z" ;
+    dc:identifier "urn:sha:1356d0ce2d4e707e0c484e14a005818c0efdd975858d603d52c4424d" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www.census.gov/geo/www/tiger" .
+
+<urn:uuid:bfe74e32-ec47-4a71-a2f0-f102f1adec75> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-08T17:19:54.816Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-08T17:19:54.816Z" ;
+    dc:identifier "urn:sha:bc1f41156750896c02c1f89144857c787ba3c1018526d4f27eee60e0" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www.fgdl.org/metadata/fgdc_xml/cenblk2000_may09.shp.xml" .
+
+<urn:uuid:d012df05-108c-4b76-86df-4c2b7fae1f32> bcube:hasType "theme" ;
+    bcube:hasValue "boundaries",
+        "society" ;
+    dc:partOf "ISO 19115 Topic Category" ;
+    owl:a bcube:thesaurusSubset .
+

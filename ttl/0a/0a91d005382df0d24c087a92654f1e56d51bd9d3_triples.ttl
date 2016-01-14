@@ -1,0 +1,71 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:184b21c6-ca9b-462c-ae6b-3fa44cf4833c> bcube:hasType "place" ;
+    bcube:hasValue "Geographic Region > Global" ;
+    dc:partOf "NASA/GCMD Location Keywords" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:27afc383-0ac1-400a-a76c-f11852596316> bcube:hasType "dataCenter" ;
+    bcube:hasValue "DOC/NOAA/NESDIS/NGDC > National Geophysical Data Center, NESDIS, NOAA, U.S. Department of Commerce" ;
+    dc:partOf "NASA/GCMD Data Center Keywords" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:54f1cdf2-16b2-454a-b717-f22c35a31060> bcube:dateCreated "2015-08-08T20:19:39.367Z" ;
+    bcube:hasMetadataRecord <urn:uuid:5a144672-465e-4895-a0bb-3f671b8320a0> ;
+    bcube:lastUpdated "2015-08-08T20:19:39.367Z" ;
+    dc:conformsTo <urn:uuid:184b21c6-ca9b-462c-ae6b-3fa44cf4833c>,
+        <urn:uuid:27afc383-0ac1-400a-a76c-f11852596316>,
+        <urn:uuid:668facb8-c707-4265-bbe2-9be2698d0d81>,
+        <urn:uuid:e52580a6-0443-497d-8a2b-ff4ef6bfd4ed> ;
+    dc:description "Declination is calculated using the current International Geomagnetic Reference Field (IGRF) model. Declination is calculated using the current World Magnetic Model (WMM) or International Geomagnetic Reference Field (IGRF) model. While results are typically accurate to 30 minutes of arc, users should be aware that several environmental factors can cause disturbances in the magnetic field." ;
+    dc:spatial "POLYGON ((-180 -90,-180 90,180 90,180 -90,-180 -90))" ;
+    dcterms:title "Declination Calculator" ;
+    esip:eastBound "180.0"^^xsd:float ;
+    esip:endDate "2014-12-31"^^xsd:date ;
+    esip:northBound "90.0"^^xsd:float ;
+    esip:southBound "-90.0"^^xsd:float ;
+    esip:startDate "1900-01-01"^^xsd:date ;
+    esip:westBound "-180.0"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:5a144672-465e-4895-a0bb-3f671b8320a0> a "ISO 19115:2003/19139" ;
+    bcube:dateCreated "2015-08-08T20:19:39.367Z" ;
+    bcube:lastUpdated "2015-08-08T20:19:39.367Z" ;
+    bcube:originatedFrom <urn:uuid:b23fed82-3e93-497d-9a80-e04094692d47> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:54f1cdf2-16b2-454a-b717-f22c35a31060> .
+
+<urn:uuid:668facb8-c707-4265-bbe2-9be2698d0d81> bcube:hasValue "geoscientificInformation" ;
+    dc:partOf "IsoTopicCategories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:b23fed82-3e93-497d-9a80-e04094692d47> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-08T20:19:39.367Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-08T20:19:39.367Z" ;
+    dc:identifier "urn:sha:9f0a281b94f28b1dcb618f1100a1e42401a5d579a65cd50435670d8d" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "https://catalog.data.gov/harvest/object/93a4d88e-f72a-4839-b772-0b31f90c9331" .
+
+<urn:uuid:e52580a6-0443-497d-8a2b-ff4ef6bfd4ed> bcube:hasType "theme" ;
+    bcube:hasValue "EARTH SCIENCE > Solid Earth > Geomagnetism > Magnetic Declination",
+        "EARTH SCIENCE > Solid Earth > Geomagnetism > Magnetic Field" ;
+    dc:partOf "NASA/GCMD Science Keywords" ;
+    owl:a bcube:thesaurusSubset .
+

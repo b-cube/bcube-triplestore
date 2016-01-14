@@ -1,0 +1,63 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:04f2e32e-0056-4bde-8f63-e9b66922e919> owl:a foaf:Organization ;
+    foaf:name "" .
+
+<urn:uuid:9d5feffd-b8cd-4e3f-92e3-416585bf384d> bcube:hasType "theme" ;
+    bcube:hasValue "FMB",
+        "FRMD",
+        "WPacFIN",
+        "dmwr",
+        "pifsc",
+        "sales",
+        "trip ticket" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:ce19097d-5b53-433a-bfb4-cf164e551ea2> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-08-05T04:47:14.478Z" ;
+    bcube:lastUpdated "2015-08-05T04:47:14.478Z" ;
+    bcube:originatedFrom <urn:uuid:f024eb2d-8361-401d-9695-a36ae6d84d6f> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:f39cc620-05a6-4875-8f07-b34d57c81660> .
+
+<urn:uuid:f024eb2d-8361-401d-9695-a36ae6d84d6f> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-05T04:47:14.478Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-05T04:47:14.478Z" ;
+    dc:identifier "urn:sha:61a58ab02d01d16ca3abb312a07b44c4bd758d1e8452e9c492938c99" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "https://inport.nmfs.noaa.gov/inport/item/5615/fgdc" .
+
+<urn:uuid:f39cc620-05a6-4875-8f07-b34d57c81660> bcube:dateCreated "2015-08-05T04:47:14.478Z" ;
+    bcube:hasMetadataRecord <urn:uuid:ce19097d-5b53-433a-bfb4-cf164e551ea2> ;
+    bcube:lastUpdated "2015-08-05T04:47:14.478Z" ;
+    dc:conformsTo <urn:uuid:9d5feffd-b8cd-4e3f-92e3-416585bf384d> ;
+    dc:description "In 1990 the local government made it mandatory for local vendors to participate in this monitoring program and it is continuing today, albeit with limited resources and success in recent years. The DMWR collects `trip ticket? or `purchase invoice? data from fish dealers, stores, restaurants, and hotels on the main island of Tutuila for those entities that buy fish directly from the fishermen. Generally speaking vendors are required to complete an invoice for each purchase and record the fisher (or boat) selling the fish, along with the species category, weight, and price for the fish purchased. Invoices are provided by and collected by DMWR and are processed into the database system. Generally speaking the fishing activities occur fairly close to the island of Tutuila as most of the boats that sell fish locally are small. There are some local sales of longline caught fish and these catches could have been made hundreds of miles from Tutuila as the longline vessels have a greater range of operation. These data are considered highly confidential." ;
+    dc:spatial "POLYGON ((-174 -20,-174 -10,-165 -10,-165 -20,-174 -20))" ;
+    dcterms:identifier "gov.noaa.nmfs.inport:5615" ;
+    dcterms:publisher <urn:uuid:04f2e32e-0056-4bde-8f63-e9b66922e919> ;
+    dcterms:title "American Samoa Commercial Purchases (Trip Ticket)" ;
+    esip:eastBound "-165.0"^^xsd:float ;
+    esip:northBound "-10.0"^^xsd:float ;
+    esip:southBound "-20.0"^^xsd:float ;
+    esip:startDate "1990-01-01"^^xsd:date ;
+    esip:westBound "-174.0"^^xsd:float ;
+    owl:a dcat:Dataset .
+

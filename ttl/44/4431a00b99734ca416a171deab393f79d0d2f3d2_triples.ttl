@@ -1,0 +1,107 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:177bdd43-c61f-4b1d-9807-d3db8ceb1af0> a "ISO 19115:2003/19139" ;
+    bcube:dateCreated "2015-07-17T06:23:37.47Z" ;
+    bcube:lastUpdated "2015-07-17T06:23:37.47Z" ;
+    bcube:originatedFrom <urn:uuid:f9295199-853b-43ed-b981-6c31ca55bc10> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:ccf23275-2713-44db-8b64-069773c944d5> .
+
+<urn:uuid:351cbe5e-0478-48a3-840e-fd9b68c73315> bcube:hasType "project" ;
+    bcube:hasValue "Pacific Islands Ocean Observing System (PacIOOS)" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:50fe099d-fd46-42dc-8cfd-f7d5fc181504> bcube:hasType "theme" ;
+    bcube:hasValue "Earth Science > Oceans > Ocean Waves > Significant Wave Height",
+        "Earth Science > Oceans > Ocean Waves > Wave Period",
+        "Earth Science > Oceans > Ocean Waves > Wave Speed/Direction",
+        "Earth Science Services > Models > Ocean General Circulation Models (OGCM)/Regional Ocean Models",
+        "Earth Science Services > Models > Weather Research/Forecast Models" ;
+    dc:partOf "GCMD Science Keywords" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:ccf23275-2713-44db-8b64-069773c944d5> bcube:dateCreated "2015-07-17T06:23:37.47Z" ;
+    bcube:hasMetadataRecord <urn:uuid:177bdd43-c61f-4b1d-9807-d3db8ceb1af0> ;
+    bcube:lastUpdated "2015-07-17T06:23:37.47Z" ;
+    dc:conformsTo <urn:uuid:351cbe5e-0478-48a3-840e-fd9b68c73315>,
+        <urn:uuid:50fe099d-fd46-42dc-8cfd-f7d5fc181504>,
+        <urn:uuid:dc465a4a-6c9a-40d1-8651-7939328d99a4>,
+        <urn:uuid:f22923ac-a400-4915-b454-6e87a1748410> ;
+    dc:description "Simulating WAves Nearshore (SWAN) regional wave model 7-day output with a 5-day hourly forecast for the island of Tutuila, American Samoa at approximately 500-m resolution. This high-resolution model is utilized to capture shallow water effects and nearshore coastal dynamics such as refracting, shoaling, and smaller scale shadowing. It is run directly after the Samoa regional WaveWatch III (WW3) wave model has completed. Please note that this nested model setup is in the testing and validation phase. While considerable effort has been made to implement all model components in a thorough, correct, and accurate manner, numerous sources of error are possible. As such, please use these data with the caution appropriate for any ocean related activity." ;
+    dc:identifier "SWAN_Tutuila_Best" ;
+    dc:spatial "POLYGON ((-171.0 -14.4,-171.0 -14.15,-170.4 -14.15,-170.4 -14.4,-171.0 -14.4))" ;
+    dcterms:references <urn:uuid:e0c77f11-26ec-4ef9-bb4b-56b096c3d649>,
+        <urn:uuid:eb171da4-60af-4e51-8303-890024b26e20> ;
+    dcterms:title "Simulating WAves Nearshore (SWAN) Regional Wave Model: Tutuila, American Samoa" ;
+    esip:eastBound "-170.4"^^xsd:float ;
+    esip:endDate "2015-07-22"^^xsd:date ;
+    esip:northBound "-14.15"^^xsd:float ;
+    esip:southBound "-14.4"^^xsd:float ;
+    esip:startDate "2013-02-16"^^xsd:date ;
+    esip:westBound "-171.0"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:dc465a4a-6c9a-40d1-8651-7939328d99a4> bcube:hasValue "geoscientificInformation" ;
+    dc:partOf "IsoTopicCategories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:e0c77f11-26ec-4ef9-bb4b-56b096c3d649> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-07-17T06:23:37.47Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-07-17T06:23:37.47Z" ;
+    dc:identifier "urn:sha:e8ad740b4905267cb5d63fa27da8469025b86b3e4ca4b33e76454139" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://oos.soest.hawaii.edu/erddap/griddap/SWAN_Tutuila_Best.graph" .
+
+<urn:uuid:eb171da4-60af-4e51-8303-890024b26e20> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-07-17T06:23:37.47Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-07-17T06:23:37.47Z" ;
+    dc:identifier "urn:sha:7756cd971961846fde88a501cbde526ab49406eaa74eb20742a6fdcb" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://oos.soest.hawaii.edu/erddap/griddap/SWAN_Tutuila_Best.html" .
+
+<urn:uuid:f22923ac-a400-4915-b454-6e87a1748410> bcube:hasType "theme" ;
+    bcube:hasValue "depth",
+        "latitude",
+        "longitude",
+        "sea_surface_wave_from_direction",
+        "sea_surface_wave_mean_period_from_variance_spectral_density_second_frequency_moment",
+        "sea_surface_wave_period_at_variance_spectral_density_maximum",
+        "sea_surface_wave_significant_height",
+        "time" ;
+    dc:partOf "CF-1.4" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:f9295199-853b-43ed-b981-6c31ca55bc10> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-07-17T06:23:37.47Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-07-17T06:23:37.47Z" ;
+    dc:identifier "urn:sha:738bdd284e2f43f5a2ee4f545a162b9cac53926e9f35550d58763350" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://oos.soest.hawaii.edu/erddap/griddap/SWAN_Tutuila_Best.iso19115" .
+

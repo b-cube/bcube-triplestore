@@ -1,0 +1,88 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:1806972d-84d1-447c-aef8-ae8c5d0a63e1> bcube:hasType "place" ;
+    bcube:hasValue "Alabama",
+        "Florida",
+        "Gulf of Mexico",
+        "Louisiana",
+        "Mississippi",
+        "Texas",
+        "United States of America" ;
+    dc:partOf "Geographic Names Information System" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:242918ff-c06d-4d77-aca2-9b745bc6f11c> a "ISO 19115:2003/19139" ;
+    bcube:dateCreated "2015-08-09T12:42:53.736Z" ;
+    bcube:lastUpdated "2015-08-09T12:42:53.736Z" ;
+    bcube:originatedFrom <urn:uuid:66bddd75-10ae-4fb0-a3c6-89d8508bcd4f> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:316606b1-2e00-4d7b-bca8-7ad91b088a13> .
+
+<urn:uuid:316606b1-2e00-4d7b-bca8-7ad91b088a13> bcube:dateCreated "2015-08-09T12:42:53.736Z" ;
+    bcube:hasMetadataRecord <urn:uuid:242918ff-c06d-4d77-aca2-9b745bc6f11c> ;
+    bcube:lastUpdated "2015-08-09T12:42:53.736Z" ;
+    dc:conformsTo <urn:uuid:1806972d-84d1-447c-aef8-ae8c5d0a63e1>,
+        <urn:uuid:eadeefba-ee4e-46d3-8a4d-83aa22784782>,
+        <urn:uuid:ff71800d-5f00-447f-9a41-a44a7b405fe4> ;
+    dc:description "A line file representing locations of the pipeline infrastructure in the Gulf of Mexico associated with the oil and gas industry is presented. These layers were modified from GIS data acquired from the U. S. Department of the Interior, Bureau of Ocean Energy Management (BOEM) website. We note that pipelines are being added or modified continuously, thus regular updates of this database are required to know the true distribution of pipelines. The current layers are non-projected with coordinates in decimal degrees." ;
+    dc:spatial "POLYGON ((-97.366877 26.021433,-97.366877 30.375579,-82.574911 30.375579,-82.574911 26.021433,-97.366877 26.021433))" ;
+    dcterms:references <urn:uuid:c91fcb84-3559-426b-bd7c-62c52f485f4b> ;
+    dcterms:title "Oil and Gas Pipelines in the Gulf of Mexico from BOEM" ;
+    esip:eastBound "-82.574911"^^xsd:float ;
+    esip:northBound "30.375579"^^xsd:float ;
+    esip:southBound "26.021433"^^xsd:float ;
+    esip:westBound "-97.366877"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:66bddd75-10ae-4fb0-a3c6-89d8508bcd4f> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-09T12:42:53.736Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-09T12:42:53.736Z" ;
+    dc:identifier "urn:sha:a05af1d8812043eaa9db2d1d2b18540ab3e8983d20dceb3af9a178df" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "https://catalog.data.gov/harvest/object/a330ed20-a313-4726-a83e-9bcee0406f8a" .
+
+<urn:uuid:c91fcb84-3559-426b-bd7c-62c52f485f4b> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-09T12:42:53.736Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-09T12:42:53.736Z" ;
+    dc:identifier "urn:sha:3127a24a84b01fd3a3c35ad27773313697c218f168fb0caff796f900" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www.ncddc.noaa.gov/arcgis/rest/services/NMSP/FGB/MapServer/5" .
+
+<urn:uuid:eadeefba-ee4e-46d3-8a4d-83aa22784782> bcube:hasType "theme" ;
+    bcube:hasValue "GIS",
+        "geographic information system",
+        "oil and gas",
+        "petroleum",
+        "pipeline" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:ff71800d-5f00-447f-9a41-a44a7b405fe4> bcube:hasValue "economy",
+        "oceans",
+        "transportation",
+        "utilitiesCommunication" ;
+    dc:partOf "IsoTopicCategories" ;
+    owl:a bcube:thesaurusSubset .
+

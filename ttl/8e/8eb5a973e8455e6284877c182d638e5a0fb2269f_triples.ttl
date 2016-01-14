@@ -1,0 +1,88 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:00a4f661-345b-4c9e-b4e0-d173141ae4aa> bcube:hasType "theme" ;
+    bcube:hasValue "AIA",
+        "AIR",
+        "American Indian Area",
+        "American Indian Reservation",
+        "Entity",
+        "Polygon",
+        "Tribal Subdivision" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:014c83c0-eea7-42fd-a8e3-656b1621ac0e> bcube:hasType "place" ;
+    bcube:hasValue "American Indian Area" ;
+    dc:partOf "FIPS Publication 5-2, FIPS Publication 6-4, FIPS Publication 8-6, FIPS Publication 9-1,FIPS Publication55-4" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:16b52008-56ea-4492-99ac-58a39cac85d2> bcube:hasType "theme" ;
+    bcube:hasValue "boundaries" ;
+    dc:partOf "ISO 19115 Topic Categories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:6ece4f8a-1532-40f7-8a0e-9a099cb9aad0> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-11-03T00:39:03.083Z" ;
+    bcube:lastUpdated "2015-11-03T00:39:03.083Z" ;
+    bcube:originatedFrom <urn:uuid:868f0481-2679-48fa-8ee7-2d395925706c> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:70d0d667-42d4-41d2-a64f-faf3d1590cd3> .
+
+<urn:uuid:70d0d667-42d4-41d2-a64f-faf3d1590cd3> bcube:dateCreated "2015-11-03T00:39:03.083Z" ;
+    bcube:hasMetadataRecord <urn:uuid:6ece4f8a-1532-40f7-8a0e-9a099cb9aad0> ;
+    bcube:lastUpdated "2015-11-03T00:39:03.083Z" ;
+    dc:conformsTo <urn:uuid:00a4f661-345b-4c9e-b4e0-d173141ae4aa>,
+        <urn:uuid:014c83c0-eea7-42fd-a8e3-656b1621ac0e>,
+        <urn:uuid:16b52008-56ea-4492-99ac-58a39cac85d2> ;
+    dc:description "The TIGER/Line Shapefiles are an extract of selected geographic and cartographic information from the Census MAF/TIGER database. The Census MAF/TIGER database represents a seamless national file with no overlaps or gaps between parts. However, each TIGER/Line Shapefile is designed to stand alone as an independent data set or the shapefiles can be combined to cover the whole nation." ;
+    dc:spatial "POLYGON ((-114.85366 47.003872,-114.85366 47.900513,-113.665384 47.900513,-113.665384 47.003872,-114.85366 47.003872))" ;
+    dcterms:publisher <urn:uuid:ae4c0714-f029-4ae6-aa7b-ccd886c4925b> ;
+    dcterms:references <urn:uuid:b87e05df-7392-4125-8019-caa749ffd0b5> ;
+    dcterms:title "TIGER/Line Shapefile, 2008, 2000 entity, Flathead Reservation, American Indian Tribal Subdivision (AITS) AIA-based Shapefile" ;
+    esip:eastBound "-113.665384"^^xsd:float ;
+    esip:endDate "2008-07-01"^^xsd:date ;
+    esip:northBound "47.900513"^^xsd:float ;
+    esip:southBound "47.003872"^^xsd:float ;
+    esip:startDate "2008-01-01"^^xsd:date ;
+    esip:westBound "-114.85366"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:868f0481-2679-48fa-8ee7-2d395925706c> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-03T00:39:03.083Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-03T00:39:03.083Z" ;
+    dc:identifier "urn:sha:0aa37561d0c8fec43bb71daba149ab4b1e334026eaf914ece8644294" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://meta.geo.census.gov/data/existing/decennial/GEO/GPMB/TIGERline/fe_2008/aitsaia00/tl_2008_1110_aitsaia00_url.shp.xml" .
+
+<urn:uuid:ae4c0714-f029-4ae6-aa7b-ccd886c4925b> owl:a foaf:Organization ;
+    foaf:name "" .
+
+<urn:uuid:b87e05df-7392-4125-8019-caa749ffd0b5> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-03T00:39:03.083Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-03T00:39:03.083Z" ;
+    dc:identifier "urn:sha:607e70fbb85c9d0d5bf73d720dae6441ac01dd2335bb978dab279c2c" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www2.census.gov/geo/tiger/TIGER2008/AITS_BY_AIA/1110_Flathead_Reservation/tl_2008_1110_aitsaia00.zip" .
+

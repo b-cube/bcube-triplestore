@@ -1,0 +1,88 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:153f9f2d-40b5-41d3-8ed4-6e3ca7c02ddc> bcube:hasType "theme" ;
+    bcube:hasValue "Atmospheric conditions",
+        "Environment",
+        "Environmental hazards",
+        "Weather" ;
+    dc:partOf "ceres:themes" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:4afdff8c-411d-47c9-97db-e6ee7ebe9872> owl:a foaf:Organization ;
+    foaf:name "" .
+
+<urn:uuid:4b1f6aa8-cee9-4e36-b5c5-99ed1a553e05> bcube:hasType "theme" ;
+    bcube:hasValue "Atmosphere & Climate" ;
+    dc:partOf "iso:categories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:6fd48bf5-1350-4e42-bc21-8486315d5d53> bcube:dateCreated "2015-07-09T20:31:20.919Z" ;
+    bcube:hasMetadataRecord <urn:uuid:e1e339c2-f1c0-4813-9f69-4abe9f03a494> ;
+    bcube:lastUpdated "2015-07-09T20:31:20.919Z" ;
+    dc:conformsTo <urn:uuid:153f9f2d-40b5-41d3-8ed4-6e3ca7c02ddc>,
+        <urn:uuid:4b1f6aa8-cee9-4e36-b5c5-99ed1a553e05>,
+        <urn:uuid:d2ab3f14-f7e0-4c21-a276-2ee849a16225> ;
+    dc:description "Map shows depicts the daily weather forecast for the Coterminous United States of America, updated 4 times a day. Two point layers are included in this document. The first is symbolized using daily maximum degrees, the other depicts daily minimum temperatures--both in fahrenheit. Both layers contain attributes that describe the long range weather forecasts plus links to National Weather Service website information." ;
+    dc:spatial "POLYGON ((0 0,0 0,0 0,0 0,0 0))" ;
+    dcterms:publisher <urn:uuid:4afdff8c-411d-47c9-97db-e6ee7ebe9872> ;
+    dcterms:references <urn:uuid:c68e45d2-07cf-4cc7-a629-420435d41fdd> ;
+    dcterms:title "US Weather Forecasts from the National Weather Service" ;
+    esip:eastBound "0.0"^^xsd:float ;
+    esip:northBound "0.0"^^xsd:float ;
+    esip:southBound "0.0"^^xsd:float ;
+    esip:westBound "0.0"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:8916d31c-13a6-4543-af35-efca7b3a7962> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-07-09T20:31:20.919Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-07-09T20:31:20.919Z" ;
+    dc:identifier "urn:sha:786e614ef17e6f9a55c6eab2000ebf448d372a5440a51e96ce0a2869" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://catalog.data.gov/harvest/object/168c6df7-928d-492b-a595-07a55ef6e491/original" .
+
+<urn:uuid:b22d9a9b-c934-4e24-a23e-51fe3bdda247> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-07-09T20:31:20.919Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-07-09T20:31:20.919Z" ;
+    dc:identifier "urn:sha:12dd7935faff3d374ab434b86b92a5116c0c3683abb7439c740fa4c2" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://atlas.resources.ca.gov/ArcGIS/rest/services/Atmosphere_Climate/USCityWeatherForecast/MapServer" .
+
+<urn:uuid:c68e45d2-07cf-4cc7-a629-420435d41fdd> dcterms:references <urn:uuid:b22d9a9b-c934-4e24-a23e-51fe3bdda247> ;
+    owl:a bibo:WebPage .
+
+<urn:uuid:d2ab3f14-f7e0-4c21-a276-2ee849a16225> bcube:hasType "theme" ;
+    bcube:hasValue "atmosphere",
+        "climate",
+        "weather" ;
+    dc:partOf "keyword" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:e1e339c2-f1c0-4813-9f69-4abe9f03a494> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-07-09T20:31:20.919Z" ;
+    bcube:lastUpdated "2015-07-09T20:31:20.919Z" ;
+    bcube:originatedFrom <urn:uuid:8916d31c-13a6-4543-af35-efca7b3a7962> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:6fd48bf5-1350-4e42-bc21-8486315d5d53> .
+

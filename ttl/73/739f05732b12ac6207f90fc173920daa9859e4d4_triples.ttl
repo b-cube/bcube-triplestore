@@ -1,0 +1,85 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:0bf93f7c-a056-4deb-9ff8-2cd36de7c00f> bcube:hasType "place" ;
+    bcube:hasValue "Mars" ;
+    dc:partOf "http://science.nasa.gov/glossary" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:12d3731a-ece4-413b-aed1-02e0348ca542> bcube:dateCreated "2015-11-01T06:11:47.664Z" ;
+    bcube:hasMetadataRecord <urn:uuid:94327305-66a3-41e2-8bad-184050ec18a6> ;
+    bcube:lastUpdated "2015-11-01T06:11:47.664Z" ;
+    dc:conformsTo <urn:uuid:0bf93f7c-a056-4deb-9ff8-2cd36de7c00f>,
+        <urn:uuid:70a24260-feb0-41ea-9385-eb1c0df47021> ;
+    dc:description "This product is an infrared image mosaic generated using Thermal Emission Imaging System (THEMIS) images from the 2001 Mars Odyssey orbiter mission. The mosaic is generated at the full resolution of the THEMIS infrared dataset, which is approximately 100 meters/pixel. The mosaic was registered horizontally to an improved Viking MDIM network that was develop by the USGS Astrogeology cartography group." ;
+    dc:spatial "POLYGON ((270 0,270 30,315 30,315 0,270 0))" ;
+    dcterms:publisher <urn:uuid:421a6674-9687-45d1-bf22-a3491ae20744> ;
+    dcterms:references <urn:uuid:b875df84-10f5-4680-bd4d-6b6f970ca614> ;
+    dcterms:title "THEMIS Daytime IR Controlled Mosaic, Lunae Palus" ;
+    esip:eastBound "315.0"^^xsd:float ;
+    esip:northBound "30.0"^^xsd:float ;
+    esip:southBound "0.0"^^xsd:float ;
+    esip:startDate "2014-01-31"^^xsd:date ;
+    esip:westBound "270.0"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:1c94f24c-5563-49d8-96d2-2b366c8e92db> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-01T06:11:47.664Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-01T06:11:47.664Z" ;
+    dc:identifier "urn:sha:be78773db4560048c4f90bd69ff568bbfc501482950ab28ee9b72451" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://astrogeology.usgs.gov/search" .
+
+<urn:uuid:22030b29-3fee-4fa4-ac58-18ec11ac08e4> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-01T06:11:47.664Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-01T06:11:47.664Z" ;
+    dc:identifier "urn:sha:985af2be9df53e38f54dda8550b808477fa21e8d88692eee860ad4b4" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://astropedia.astrogeology.usgs.gov/download/Mars/Odyssey/THEMIS-Day-IR-Controlled-Mosaic/ancillary/THEMIS_DayIR_ControlledMosaic_LunaePalus_00N270E_100mpp.xml" .
+
+<urn:uuid:421a6674-9687-45d1-bf22-a3491ae20744> owl:a foaf:Organization ;
+    foaf:name "" .
+
+<urn:uuid:70a24260-feb0-41ea-9385-eb1c0df47021> bcube:hasType "theme" ;
+    bcube:hasValue "2001 Mars Odyssey (MO)",
+        "Control Network",
+        "High Resolution Science Camera (HRSC)",
+        "Infrared",
+        "Kernel",
+        "Mars",
+        "Mars Orbiter Laser Altimeter (MOLA)",
+        "Mosaic",
+        "Thermal Emission Imaging System (THEMIS)" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:94327305-66a3-41e2-8bad-184050ec18a6> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-11-01T06:11:47.664Z" ;
+    bcube:lastUpdated "2015-11-01T06:11:47.664Z" ;
+    bcube:originatedFrom <urn:uuid:22030b29-3fee-4fa4-ac58-18ec11ac08e4> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:12d3731a-ece4-413b-aed1-02e0348ca542> .
+
+<urn:uuid:b875df84-10f5-4680-bd4d-6b6f970ca614> dcterms:references <urn:uuid:1c94f24c-5563-49d8-96d2-2b366c8e92db> ;
+    owl:a bibo:WebPage .
+

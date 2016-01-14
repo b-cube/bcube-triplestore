@@ -1,0 +1,89 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:0f3fc58c-e3e5-423e-80c0-87c986eaae79> owl:a foaf:Organization ;
+    foaf:name "" .
+
+<urn:uuid:20571c30-065b-42ec-bc63-2385bf3f3731> bcube:hasType "theme" ;
+    bcube:hasValue "Congressional Districts",
+        "Polygon",
+        "State or equivalent entity" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:3b719d9f-afff-4a58-a80c-ca3cd0abf002> bcube:dateCreated "2015-11-02T02:48:38.94Z" ;
+    bcube:hasMetadataRecord <urn:uuid:8d58bfa2-6a1d-43c1-86f1-d37d5327af99> ;
+    bcube:lastUpdated "2015-11-02T02:48:38.94Z" ;
+    dc:conformsTo <urn:uuid:20571c30-065b-42ec-bc63-2385bf3f3731>,
+        <urn:uuid:b6ebf61d-0866-490c-b8f8-6f1739fb1e64>,
+        <urn:uuid:fd1f5115-7c14-412a-9e85-17835caac50c> ;
+    dc:description "The TIGER/Line Shapefiles are an extract of selected geographic and cartographic information from the Census MAF/TIGER database. The Census MAF/TIGER database represents a seamless national file with no overlaps or gaps between parts. However, each TIGER/Line Shapefile is designed to stand alone as an independent data set or the shapefiles can be combined to cover the whole nation." ;
+    dc:spatial "POLYGON ((-94.617919 33.004106,-94.617919 36.499749,-89.644395 36.499749,-89.644395 33.004106,-94.617919 33.004106))" ;
+    dcterms:publisher <urn:uuid:0f3fc58c-e3e5-423e-80c0-87c986eaae79> ;
+    dcterms:references <urn:uuid:bce91151-dbbc-4883-9956-8178f3832391> ;
+    dcterms:title "TIGER/Line Shapefile, 2009, 2000 state, Arkansas, 108th Congressional District" ;
+    esip:eastBound "-89.644395"^^xsd:float ;
+    esip:endDate "2009-05-01"^^xsd:date ;
+    esip:northBound "36.499749"^^xsd:float ;
+    esip:southBound "33.004106"^^xsd:float ;
+    esip:startDate "2009-01-01"^^xsd:date ;
+    esip:westBound "-94.617919"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:8d58bfa2-6a1d-43c1-86f1-d37d5327af99> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-11-02T02:48:38.94Z" ;
+    bcube:lastUpdated "2015-11-02T02:48:38.94Z" ;
+    bcube:originatedFrom <urn:uuid:cfde7507-8a23-4fe5-8c84-641e313a5b2c> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:3b719d9f-afff-4a58-a80c-ca3cd0abf002> .
+
+<urn:uuid:b6ebf61d-0866-490c-b8f8-6f1739fb1e64> bcube:hasType "place" ;
+    bcube:hasValue "05",
+        "AR",
+        "Arkansas",
+        "State or Equivalent Entity",
+        "U.S.",
+        "United States" ;
+    dc:partOf "INCITS.38-200x (R2004),INCITS.31-200x (R2007),INCITS.454-200x,INCITS 455-200x,INCITS 446-2008" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:bce91151-dbbc-4883-9956-8178f3832391> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-02T02:48:38.94Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-02T02:48:38.94Z" ;
+    dc:identifier "urn:sha:9b20d2eabdbee8c7fccd80ba076a57f9200c65dea7296031bb3b122a" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www2.census.gov/geo/tiger/TIGER2009/05_ARKANSAS/tl_2009_05_cd108.zip" .
+
+<urn:uuid:cfde7507-8a23-4fe5-8c84-641e313a5b2c> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-02T02:48:38.94Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-02T02:48:38.94Z" ;
+    dc:identifier "urn:sha:dbfedf5dc9081c57b9655def3809240ef7ae1117c3149276bcacfdc8" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://meta.geo.census.gov/data/existing/decennial/GEO/GPMB/TIGERline/fe_2009/cd108/tl_2009_05_cd108_url.shp.xml" .
+
+<urn:uuid:fd1f5115-7c14-412a-9e85-17835caac50c> bcube:hasType "theme" ;
+    bcube:hasValue "boundaries" ;
+    dc:partOf "ISO 19115 Topic Categories" ;
+    owl:a bcube:thesaurusSubset .
+

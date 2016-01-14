@@ -1,0 +1,73 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:430e8487-bb40-4fda-bee2-37f526c6a395> owl:a foaf:Organization ;
+    foaf:name "U.S. Geological Survey" .
+
+<urn:uuid:7f6d2d83-5e85-47f4-a0cb-3376390f3629> bcube:hasType "theme" ;
+    bcube:hasValue "bibliographies",
+        "field methods",
+        "groundwater",
+        "groundwater flow",
+        "hydrographic datasets",
+        "hydrology",
+        "mathematical modeling",
+        "scientific software" ;
+    dc:partOf "USGS Thesaurus" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:7fc2da9b-8e9f-4265-9a35-79a64ce2f3db> bcube:dateCreated "2014-10-29T23:13:30.185Z" ;
+    bcube:hasMetadataRecord <urn:uuid:b1bc4a62-6ed0-49e7-bd32-ded96191ae8f> ;
+    bcube:lastUpdated "2014-10-29T23:13:30.185Z" ;
+    dc:conformsTo <urn:uuid:7f6d2d83-5e85-47f4-a0cb-3376390f3629> ;
+    dc:description "Lead page to connect to ground water information on the Nation's ground water resources and ground water activities of the USGS. Includes links to ground-water data, news reports, publications, field techniques, models, programs, and issues." ;
+    dcterms:publisher <urn:uuid:430e8487-bb40-4fda-bee2-37f526c6a395> ;
+    dcterms:references <urn:uuid:de8a61a7-e32f-47b1-8ad9-8a8342d4fcd8> ;
+    dcterms:title "Ground water information pages" ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:b1bc4a62-6ed0-49e7-bd32-ded96191ae8f> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2014-10-29T23:13:30.185Z" ;
+    bcube:lastUpdated "2014-10-29T23:13:30.185Z" ;
+    bcube:originatedFrom <urn:uuid:d4ab3f9c-e578-4e5d-8674-ffe22396907d> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:7fc2da9b-8e9f-4265-9a35-79a64ce2f3db> .
+
+<urn:uuid:b3df1519-5dd1-4598-b37f-d960cfe4f5cf> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2014-10-29T23:13:30.185Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2014-10-29T23:13:30.185Z" ;
+    dc:identifier "urn:sha:7f5daebc208151791ce2de271ae7842f3714213e83402d3dd4ccc44c" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://water.usgs.gov/ogw/" .
+
+<urn:uuid:d4ab3f9c-e578-4e5d-8674-ffe22396907d> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2014-10-29T23:13:30.185Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2014-10-29T23:13:30.185Z" ;
+    dc:identifier "urn:sha:de0eca77857c283096385dd511b9b5700381f2c8a59fd44fe6dd8284" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www.usgs.gov/science/xml.php?cite=141" .
+
+<urn:uuid:de8a61a7-e32f-47b1-8ad9-8a8342d4fcd8> dcterms:references <urn:uuid:b3df1519-5dd1-4598-b37f-d960cfe4f5cf> ;
+    owl:a bibo:WebPage .
+

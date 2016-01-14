@@ -1,0 +1,95 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:1707cb23-5f08-4a6e-93ea-3dca5c0a92b6> bcube:hasType "theme" ;
+    bcube:hasValue "5-digit ZIP code",
+        "County ANSI Code",
+        "County FIPS Code",
+        "From House Number",
+        "Permanent edge ID",
+        "Side indicator flag",
+        "State ANSI Code",
+        "State FIPS Code",
+        "To House Number",
+        "ZIP +4 code" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:575156a2-2827-4bee-8e01-5d132b171334> owl:a foaf:Organization ;
+    foaf:name "" .
+
+<urn:uuid:63ac05d2-9304-4cd8-8b4b-fd808e0c8d30> bcube:dateCreated "2015-11-03T09:59:25.186Z" ;
+    bcube:hasMetadataRecord <urn:uuid:6f900734-52e6-4441-9db2-e17f22565906> ;
+    bcube:lastUpdated "2015-11-03T09:59:25.186Z" ;
+    dc:conformsTo <urn:uuid:1707cb23-5f08-4a6e-93ea-3dca5c0a92b6>,
+        <urn:uuid:7045aff7-e1c8-46e9-a4ee-f1ad8b13fbaa>,
+        <urn:uuid:e850706e-27df-406b-b6e8-1449d44b85f3> ;
+    dc:description "The TIGER/Line relationship files are an extract of selected geographic information from the Census MAF/TIGER database. Each TIGER/Line relationship file is designed to stand alone as an independent data set or can be used jointly with the shapefiles." ;
+    dc:spatial "POLYGON ((-85.712436 30.997064,-85.712436 31.314973,-84.999428 31.314973,-84.999428 30.997064,-85.712436 30.997064))" ;
+    dcterms:publisher <urn:uuid:575156a2-2827-4bee-8e01-5d132b171334> ;
+    dcterms:references <urn:uuid:c460818e-02db-4045-b8ba-a08ba4fdfe7e> ;
+    dcterms:title "TIGER/Line Shapefile, 2009, county, Houston County, AL, Current Address Ranges Relationship File" ;
+    esip:eastBound "-84.999428"^^xsd:float ;
+    esip:endDate "2009-05-01"^^xsd:date ;
+    esip:northBound "31.314973"^^xsd:float ;
+    esip:southBound "30.997064"^^xsd:float ;
+    esip:startDate "2009-01-01"^^xsd:date ;
+    esip:westBound "-85.712436"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:6f900734-52e6-4441-9db2-e17f22565906> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-11-03T09:59:25.186Z" ;
+    bcube:lastUpdated "2015-11-03T09:59:25.186Z" ;
+    bcube:originatedFrom <urn:uuid:e4200ff1-3b15-42d6-bc4c-8ba74845e85e> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:63ac05d2-9304-4cd8-8b4b-fd808e0c8d30> .
+
+<urn:uuid:7045aff7-e1c8-46e9-a4ee-f1ad8b13fbaa> bcube:hasType "theme" ;
+    bcube:hasValue "transportation" ;
+    dc:partOf "ISO 19115 Topic Categories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:c460818e-02db-4045-b8ba-a08ba4fdfe7e> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-03T09:59:25.186Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-03T09:59:25.186Z" ;
+    dc:identifier "urn:sha:45756c487a72640601bb2bcedb2b0268d05a877812ddd69730017e28" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www2.census.gov/geo/tiger/TIGER2009/01_ALABAMA/01069_Houston_County/tl_2009_01069_addr.zip" .
+
+<urn:uuid:e4200ff1-3b15-42d6-bc4c-8ba74845e85e> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-03T09:59:25.186Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-03T09:59:25.186Z" ;
+    dc:identifier "urn:sha:c5ca8314373057c084d419b5484853ae9956660366ab47606b97d366" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://meta.geo.census.gov/data/existing/decennial/GEO/GPMB/TIGERline/fe_2009/addr/tl_2009_01069_addr_url.dbf.xml" .
+
+<urn:uuid:e850706e-27df-406b-b6e8-1449d44b85f3> bcube:hasType "place" ;
+    bcube:hasValue "01069",
+        "County or Equivalent Entity",
+        "Houston",
+        "U.S.",
+        "United States" ;
+    dc:partOf "INCITS.38-200x (R2004),INCITS.31-200x (R2007),INCITS.454-200x,INCITS 455-200x,INCITS 446-2008" ;
+    owl:a bcube:thesaurusSubset .
+

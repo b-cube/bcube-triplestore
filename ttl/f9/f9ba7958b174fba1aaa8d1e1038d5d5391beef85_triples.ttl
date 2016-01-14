@@ -1,0 +1,89 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:06faba56-5ed2-4613-b5fe-869507d6039c> bcube:hasType "theme" ;
+    bcube:hasValue "Block",
+        "Census Block",
+        "County or equivalent entity",
+        "Polygon" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:6e41eabe-a946-4b7d-9591-793f6a5a174b> bcube:hasType "place" ;
+    bcube:hasValue "01073",
+        "County or Equivalent Entity",
+        "Jefferson",
+        "U.S.",
+        "United States" ;
+    dc:partOf "FIPS Publication 5-2, FIPS Publication 6-4, FIPS Publication 8-6, FIPS Publication 9-1" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:7470bcfd-4686-493b-92da-af17da7969d0> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-11-07T20:23:14.47Z" ;
+    bcube:lastUpdated "2015-11-07T20:23:14.47Z" ;
+    bcube:originatedFrom <urn:uuid:e224898a-9b01-4f9d-b58c-ae73d9d552a7> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:b48f2b17-63a1-4480-a444-1c6e2a9cf20d> .
+
+<urn:uuid:b302d6d4-9325-4a08-8e4a-b3392c745f13> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-07T20:23:14.47Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-07T20:23:14.47Z" ;
+    dc:identifier "urn:sha:63204139cb7b709ba3f1b5858cbdabb59e62cc24b63f964e388468b8" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www2.census.gov/geo/tiger/TIGER2007FE/01_ALABAMA/01073_Jefferson/fe_2007_01073_tabblock.zip" .
+
+<urn:uuid:b48f2b17-63a1-4480-a444-1c6e2a9cf20d> bcube:dateCreated "2015-11-07T20:23:14.47Z" ;
+    bcube:hasMetadataRecord <urn:uuid:7470bcfd-4686-493b-92da-af17da7969d0> ;
+    bcube:lastUpdated "2015-11-07T20:23:14.47Z" ;
+    dc:conformsTo <urn:uuid:06faba56-5ed2-4613-b5fe-869507d6039c>,
+        <urn:uuid:6e41eabe-a946-4b7d-9591-793f6a5a174b>,
+        <urn:uuid:efab3b19-7ebe-4994-b6c7-a1a1d94e343a> ;
+    dc:description "The TIGER/Line Shapefiles are an extract of selected geographic and cartographic information from the Census MAF/TIGER database. The Census MAF/TIGER database represents a seamless national file with no overlaps or gaps between parts. However, each TIGER/Line Shapefile is designed to stand alone as an independent data set or the shapefiles can be combined to cover the whole nation." ;
+    dc:spatial "POLYGON ((-87.341698 33.245995,-87.341698 33.843237,-86.516662 33.843237,-86.516662 33.245995,-87.341698 33.245995))" ;
+    dcterms:publisher <urn:uuid:baf7e918-bc3a-4707-9cf6-dadee1265c6a> ;
+    dcterms:references <urn:uuid:b302d6d4-9325-4a08-8e4a-b3392c745f13> ;
+    dcterms:title "TIGER/Line Shapefile, 2007, county, Jefferson County, Block" ;
+    esip:eastBound "-86.516662"^^xsd:float ;
+    esip:endDate "2007-07-01"^^xsd:date ;
+    esip:northBound "33.843237"^^xsd:float ;
+    esip:southBound "33.245995"^^xsd:float ;
+    esip:startDate "2007-01-01"^^xsd:date ;
+    esip:westBound "-87.341698"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:baf7e918-bc3a-4707-9cf6-dadee1265c6a> owl:a foaf:Organization ;
+    foaf:name "" .
+
+<urn:uuid:e224898a-9b01-4f9d-b58c-ae73d9d552a7> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-07T20:23:14.47Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-07T20:23:14.47Z" ;
+    dc:identifier "urn:sha:4d4f5a363dbe565e82852cca619a3bceb765c06c94a6af6cd51b6974" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://meta.geo.census.gov/data/existing/decennial/GEO/GPMB/TIGERline/fe_2007/tabblock/fe_2007_01073_tabblock_url.shp.xml" .
+
+<urn:uuid:efab3b19-7ebe-4994-b6c7-a1a1d94e343a> bcube:hasType "theme" ;
+    bcube:hasValue "boundaries" ;
+    dc:partOf "ISO 19115 Topic Categories" ;
+    owl:a bcube:thesaurusSubset .
+

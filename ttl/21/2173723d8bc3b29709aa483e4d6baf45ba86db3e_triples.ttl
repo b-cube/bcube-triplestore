@@ -1,0 +1,106 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:0aa4fcf7-b658-4cc8-a0cd-c5fc14595b62> owl:a foaf:Organization ;
+    foaf:name "Climate Prediction Center" .
+
+<urn:uuid:12d4a178-20d8-4b96-800b-92694f4d9e12> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-08-09T12:44:11.034Z" ;
+    bcube:lastUpdated "2015-08-09T12:44:11.034Z" ;
+    bcube:originatedFrom <urn:uuid:aa77a5e3-ca67-48a9-a251-a0f0b9b83cca> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:1672411b-259f-4648-856b-464630044e8d> .
+
+<urn:uuid:1672411b-259f-4648-856b-464630044e8d> bcube:dateCreated "2015-08-09T12:44:11.034Z" ;
+    bcube:hasMetadataRecord <urn:uuid:12d4a178-20d8-4b96-800b-92694f4d9e12> ;
+    bcube:lastUpdated "2015-08-09T12:44:11.034Z" ;
+    dc:conformsTo <urn:uuid:5a79811a-bd45-4e27-a66a-8af218cf40b2>,
+        <urn:uuid:61294388-7fab-4d5c-91ed-f873344dc18d>,
+        <urn:uuid:665cf191-0bb9-4d26-8bfd-1df7e47d8cf4>,
+        <urn:uuid:9fb5fd9a-0f7e-4810-9a44-1255a52d8af5>,
+        <urn:uuid:cf12d57e-2cc7-4bd3-9d99-e9a45ff4a5a9> ;
+    dc:description "Climate Prediction Center (CPC) Palmer Drought Severity and Crop Moisture Indices are computed for the 344 U.S. Climate Divisions on a weekly basis based on a minimum of the previous 4 weeks (1 month) of observed temperatures and precipitation. Each climate division record includes a weekly averaged atmospheric temperature, precipitation, soil moisture in the upper and lower layers, percentage of flood capacity, potential evaporation, runoff, crop moisture and change from previous week, monthly moisture anomaly, preliminary or final Palmer Drought Severity Index (PDSI), and precipitation needed to end drought value. The CPC preliminary data are collected in near real-time from ground stations throughout the U.S., and are displayed in tabular form. The preliminary values are replaced by quality controlled data from the National Climatic Data Center with an approximate time lag of 3 to 6 months." ;
+    dc:spatial "POLYGON ((-125 24,-125 50,-66 50,-66 24,-125 24))" ;
+    dcterms:identifier "gov.noaa.cpc: gov.noaa.cpc:CPC-PDSI-WKLY-PDCMI-v2000" ;
+    dcterms:publisher <urn:uuid:0aa4fcf7-b658-4cc8-a0cd-c5fc14595b62> ;
+    dcterms:references <urn:uuid:2c2a7c35-3a58-4e90-8683-88b789fa546b> ;
+    dcterms:title "Climate Prediction Center (CPC) Palmer Drought and Crop Moisture Indices" ;
+    esip:eastBound "-66.0"^^xsd:float ;
+    esip:northBound "50.0"^^xsd:float ;
+    esip:southBound "24.0"^^xsd:float ;
+    esip:startDate "1973-03-01"^^xsd:date ;
+    esip:westBound "-125.0"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:2c2a7c35-3a58-4e90-8683-88b789fa546b> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-09T12:44:11.034Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-09T12:44:11.034Z" ;
+    dc:identifier "urn:sha:52ffea9dfe34e2fb5409bc667730b6e3c280cfdb4f1a7c5e2ec663a7" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www.cpc.ncep.noaa.gov/products/analysis_monitoring/cdus/palmer_drought/" .
+
+<urn:uuid:5a79811a-bd45-4e27-a66a-8af218cf40b2> bcube:hasType "theme" ;
+    bcube:hasValue "Crop Moisture Index",
+        "Palmer Drought Severity Index",
+        "Z Index",
+        "drought",
+        "precipitation",
+        "temperature" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:61294388-7fab-4d5c-91ed-f873344dc18d> bcube:hasType "stratum" ;
+    bcube:hasValue "Vertical Location > Land Surface" ;
+    dc:partOf "NASA GCMD Location Keywords" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:665cf191-0bb9-4d26-8bfd-1df7e47d8cf4> bcube:hasType "theme" ;
+    bcube:hasValue "Atmosphere > Atmospheric Phenomena > Drought",
+        "Atmosphere > Atmospheric Temperature > Air Temperature",
+        "Atmosphere > Atmospheric Temperature > Surface Air Temperature",
+        "Atmosphere > Precipitation > Precipitation Amount",
+        "Climate Indicators > Drought/Precipitation Indices > Crop Moisture Index",
+        "Climate Indicators > Drought/Precipitation Indices > PDSI",
+        "Climate Indicators > Drought/Precipitation Indices > Palmer Drought Crop Moisture Index",
+        "Climate Indicators > Drought/Precipitation Indices > Palmer Drought Severity Index" ;
+    dc:partOf "NASA GCMD Science Keywords" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:9fb5fd9a-0f7e-4810-9a44-1255a52d8af5> bcube:hasType "theme" ;
+    bcube:hasValue "climatologyMeteorologyAtmosphere" ;
+    dc:partOf "ISO 19115 Topic Category" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:aa77a5e3-ca67-48a9-a251-a0f0b9b83cca> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-09T12:44:11.034Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-09T12:44:11.034Z" ;
+    dc:identifier "urn:sha:244ae24487c4cfbceb18584269a1a041ea708068b56e7d8e8570372c" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "https://catalog.data.gov/harvest/object/3e2101f7-b947-47ba-ad72-7093bc901eba/original" .
+
+<urn:uuid:cf12d57e-2cc7-4bd3-9d99-e9a45ff4a5a9> bcube:hasType "place" ;
+    bcube:hasValue "Continent > North America > United States of America" ;
+    dc:partOf "NASA GCMD Location Keywords" ;
+    owl:a bcube:thesaurusSubset .
+

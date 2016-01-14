@@ -1,0 +1,92 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:0a85058b-7625-4a52-8983-9fbad1a138e3> bcube:hasType "theme" ;
+    bcube:hasValue "inlandWaters" ;
+    dc:partOf "ISO 19115 Topic Category" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:1569eb7e-5ad3-4196-8d55-9f30fce0461b> bcube:hasType "place" ;
+    bcube:hasValue "conterminous United States" ;
+    dc:partOf "none" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:864f130c-1e1f-40dd-85c6-e5b462d8a39d> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-10T00:29:14.674Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-10T00:29:14.674Z" ;
+    dc:identifier "urn:sha:0d273c8cd3b25cb6c305b8d4ce499e4e0b1434309da36aaea4e1c1ef" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://water.usgs.gov/lookup/getspatial?warpbas2012" .
+
+<urn:uuid:989d901e-758a-4a16-a20a-ff0c313813d1> bcube:dateCreated "2015-08-10T00:29:14.674Z" ;
+    bcube:hasMetadataRecord <urn:uuid:aa16f6b2-94a3-4125-8f8d-f2c589ee4b6d> ;
+    bcube:lastUpdated "2015-08-10T00:29:14.674Z" ;
+    dc:conformsTo <urn:uuid:0a85058b-7625-4a52-8983-9fbad1a138e3>,
+        <urn:uuid:1569eb7e-5ad3-4196-8d55-9f30fce0461b>,
+        <urn:uuid:9ec70957-cdf0-4d9c-a3b9-83f28c77e140> ;
+    dc:description "This data set contains 204 drainage basin boundaries for U.S. Geological Survey (USGS) stream sites analyzed in the Watershed Regressions for Pesticides (WARP) model. This dataset supercedes version 1.0 released in April 2010, and consists of revisions to 26 basin boundaries." ;
+    dc:spatial "POLYGON ((-127.87 22.87,-127.87 48.24,-65.35 48.24,-65.35 22.87,-127.87 22.87))" ;
+    dcterms:publisher <urn:uuid:c9b1e142-4aed-431c-8f25-4422f1ef8a8c> ;
+    dcterms:references <urn:uuid:ceeed5e3-2482-4cc6-9d42-866cdd608e6b> ;
+    dcterms:title "Drainage Basins used for Development of the Watershed Regressions for Pesticides (WARP) Model, 2012" ;
+    esip:eastBound "-65.35"^^xsd:float ;
+    esip:endDate "2011-01-01"^^xsd:date ;
+    esip:northBound "48.24"^^xsd:float ;
+    esip:southBound "22.87"^^xsd:float ;
+    esip:startDate "1995-01-01"^^xsd:date ;
+    esip:westBound "-127.87"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:9ec70957-cdf0-4d9c-a3b9-83f28c77e140> bcube:hasType "theme" ;
+    bcube:hasValue "NAWQA",
+        "National Water Quality Assessment",
+        "WARP",
+        "Watershed Regressions for Pesticides model",
+        "basin",
+        "basin boundary",
+        "catchment",
+        "drainage area",
+        "drainage basin",
+        "regression model",
+        "river basin" ;
+    dc:partOf "none" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:aa16f6b2-94a3-4125-8f8d-f2c589ee4b6d> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-08-10T00:29:14.674Z" ;
+    bcube:lastUpdated "2015-08-10T00:29:14.674Z" ;
+    bcube:originatedFrom <urn:uuid:864f130c-1e1f-40dd-85c6-e5b462d8a39d> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:989d901e-758a-4a16-a20a-ff0c313813d1> .
+
+<urn:uuid:c9b1e142-4aed-431c-8f25-4422f1ef8a8c> owl:a foaf:Organization ;
+    foaf:name "U.S. Geological Survey" .
+
+<urn:uuid:ceeed5e3-2482-4cc6-9d42-866cdd608e6b> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-10T00:29:14.674Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-10T00:29:14.674Z" ;
+    dc:identifier "urn:sha:8051ef415f170329dfb1eef0af72985d74b9e817b28850efeda7a2ef" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://water.usgs.gov/GIS/dsdl/warpbas2012.zip" .
+

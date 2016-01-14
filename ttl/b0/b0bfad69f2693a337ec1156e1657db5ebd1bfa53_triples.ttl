@@ -1,0 +1,78 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:3b74cd00-ed01-4df1-b426-8ad53ea14438> bcube:hasType "place" ;
+    bcube:hasValue "IL",
+        "Illinois",
+        "State",
+        "US",
+        "Woodford",
+        "Woodford County" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:56b6e691-ddd0-41c7-b1a0-d10ce15a7812> owl:a foaf:Organization ;
+    foaf:name "AeroMetric, Inc." .
+
+<urn:uuid:6854620b-43f9-48b7-a912-3cb9cf7da745> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-10-29T23:30:02.491Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-10-29T23:30:02.491Z" ;
+    dc:identifier "urn:sha:0654541edbe70f5cefba999df2b8ab9868c187f5a769f945f8aef49e" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://isgs.illinois.edu/clearinghouse/lidar/counties/woodford/woodford_2012_metadata.xml" .
+
+<urn:uuid:84a0c4bb-ad31-4f71-8128-61323ad1b267> bcube:hasType "theme" ;
+    bcube:hasValue "Breaklines",
+        "DAT",
+        "LAS",
+        "LiDAR",
+        "Lift",
+        "Light Detection and Ranging",
+        "Project",
+        "Shapefiles",
+        "Survey Control",
+        "Swath",
+        "TIN" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:f35fcff8-d772-4815-b40b-87901e757889> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-10-29T23:30:02.491Z" ;
+    bcube:lastUpdated "2015-10-29T23:30:02.491Z" ;
+    bcube:originatedFrom <urn:uuid:6854620b-43f9-48b7-a912-3cb9cf7da745> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:f5ea206e-2e8c-4920-afc8-81a3b2fd7bbf> .
+
+<urn:uuid:f5ea206e-2e8c-4920-afc8-81a3b2fd7bbf> bcube:dateCreated "2015-10-29T23:30:02.491Z" ;
+    bcube:hasMetadataRecord <urn:uuid:f35fcff8-d772-4815-b40b-87901e757889> ;
+    bcube:lastUpdated "2015-10-29T23:30:02.491Z" ;
+    dc:conformsTo <urn:uuid:3b74cd00-ed01-4df1-b426-8ad53ea14438>,
+        <urn:uuid:84a0c4bb-ad31-4f71-8128-61323ad1b267> ;
+    dc:description "This task order is for planning, acquisition, processing, and derivative products of LiDAR data to be collected for areas of Illinois. LiDAR data, and derivative products produced in compliance with this task order are part of the data to be obtained under Job Number P-94-025-10. Specifications listed below are based on the U.S. Geological Survey National Geospatial Program Base LiDAR Specification, Version 13." ;
+    dc:spatial "POLYGON ((-89.563 40.59,-89.563 40.928,-89.927 40.928,-89.927 40.59,-89.563 40.59))" ;
+    dcterms:publisher <urn:uuid:56b6e691-ddd0-41c7-b1a0-d10ce15a7812> ;
+    dcterms:title "Illinois Department of Transportation, District 4, Woodford County LiDAR Acquisition" ;
+    esip:eastBound "-89.927"^^xsd:float ;
+    esip:endDate "2012-02-12"^^xsd:date ;
+    esip:northBound "40.928"^^xsd:float ;
+    esip:southBound "40.59"^^xsd:float ;
+    esip:startDate "2011-04-05"^^xsd:date ;
+    esip:westBound "-89.563"^^xsd:float ;
+    owl:a dcat:Dataset .
+

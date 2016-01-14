@@ -1,0 +1,93 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:1da265e1-f0b0-4cca-b72f-66dc4281ea71> bcube:hasType "place" ;
+    bcube:hasValue "COMMUNITY Winneshiek County and Incorporated Areas",
+        "COUNTY WINNESHIEK",
+        "COUNTY-FIPS 191",
+        "FEMA-CID 19191C",
+        "REGION 07",
+        "STATE IA" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:2b05274d-cf1f-4ecc-b7ac-bd02dec9fdb0> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-07-17T21:41:29.18Z" ;
+    bcube:lastUpdated "2015-07-17T21:41:29.18Z" ;
+    bcube:originatedFrom <urn:uuid:ad0a4b2b-ef62-4717-8caf-cc30512f23bf> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:6f5cd3bb-9bfa-4b88-b9ec-ab6501d481ca> .
+
+<urn:uuid:533e5426-4633-4a2c-ab98-c42a2088022d> bcube:hasType "theme" ;
+    bcube:hasValue "elevation" ;
+    dc:partOf "ISO 19115 Topic Category" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:6f5cd3bb-9bfa-4b88-b9ec-ab6501d481ca> bcube:dateCreated "2015-07-17T21:41:29.18Z" ;
+    bcube:hasMetadataRecord <urn:uuid:2b05274d-cf1f-4ecc-b7ac-bd02dec9fdb0> ;
+    bcube:lastUpdated "2015-07-17T21:41:29.18Z" ;
+    dc:conformsTo <urn:uuid:1da265e1-f0b0-4cca-b72f-66dc4281ea71>,
+        <urn:uuid:533e5426-4633-4a2c-ab98-c42a2088022d>,
+        <urn:uuid:80cbde2d-ebc8-4c7a-a961-6a43c1399d25> ;
+    dc:description "Terrain data, as defined in FEMA Guidelines and Specifications, Appendix N: Data Capture Standards, describes the digital topographic data that was used to create the elevation data representing the terrain environment of a watershed and/or floodplain. Terrain data requirements allow for flexibility in the types of information provided as sources used to produce final terrain deliverables. Once this type of data is provided, FEMA will be able to account for the origins of the flood study elevation data. (Source: FEMA Guidelines and Specifications, Appendix N, Section N.1.2)." ;
+    dc:spatial "POLYGON ((-92.136017 42.993517,-92.136017 43.631493,-91.484551 43.631493,-91.484551 42.993517,-92.136017 42.993517))" ;
+    dcterms:publisher <urn:uuid:9ba8b4d4-66d2-44a3-a645-e6fef7a86e32> ;
+    dcterms:references <urn:uuid:fdff3b38-0924-4281-88c3-7a068b9828c4> ;
+    dcterms:title "TERRAIN, WINNESHIEK COUNTY, IOWA, USA" ;
+    esip:eastBound "-91.484551"^^xsd:float ;
+    esip:northBound "43.631493"^^xsd:float ;
+    esip:southBound "42.993517"^^xsd:float ;
+    esip:startDate "2010-02-08"^^xsd:date ;
+    esip:westBound "-92.136017"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:80cbde2d-ebc8-4c7a-a961-6a43c1399d25> bcube:hasType "theme" ;
+    bcube:hasValue "Contours",
+        "DEM",
+        "Digital Terrain Model",
+        "Elevation Data",
+        "Land Surface",
+        "Relief",
+        "Slope",
+        "Topography" ;
+    dc:partOf "FEMA NFIP Topic Category" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:9ba8b4d4-66d2-44a3-a645-e6fef7a86e32> owl:a foaf:Organization ;
+    foaf:name "Federal Emergency Management Agency" .
+
+<urn:uuid:ad0a4b2b-ef62-4717-8caf-cc30512f23bf> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-07-17T21:41:29.18Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-07-17T21:41:29.18Z" ;
+    dc:identifier "urn:sha:dd17411c39c580226a13745efd3ab780dc51ce7c6cdeebd0c37c21c6" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "https://catalog.data.gov/harvest/object/67c87876-551e-4a7c-9f36-f0d3670909df/original" .
+
+<urn:uuid:fdff3b38-0924-4281-88c3-7a068b9828c4> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-07-17T21:41:29.18Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-07-17T21:41:29.18Z" ;
+    dc:identifier "urn:sha:37c915397238031daced09ae0e2dd3bf54e84a6477f749c2cc9dcbdf" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://hazards.fema.gov" .
+

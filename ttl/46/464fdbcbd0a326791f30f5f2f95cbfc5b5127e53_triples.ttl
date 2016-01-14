@@ -1,0 +1,93 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:197cabec-a1a6-49b7-b0fb-9130507be86e> bcube:hasType "theme" ;
+    bcube:hasValue "boundaries" ;
+    dc:partOf "ISO 19115 Topic Categories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:1feb80a3-d52b-4f2b-9c9f-8c16c5ed68aa> bcube:hasType "theme" ;
+    bcube:hasValue "CDP",
+        "Census Designated Place",
+        "City",
+        "Polygon",
+        "State or equivalent entity",
+        "Town",
+        "Village" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:58a45ebe-2f9c-45a0-afc7-54eb11eb7634> owl:a foaf:Organization ;
+    foaf:name "" .
+
+<urn:uuid:58f7c544-9ad5-4b47-a97e-84ea9af8ab60> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-05T16:51:47.094Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-05T16:51:47.094Z" ;
+    dc:identifier "urn:sha:83c41dd8b2cb96ae808fa60c39387b17f094eba534d7f54655990dfd" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://meta.geo.census.gov/data/existing/decennial/GEO/GPMB/TIGERline/fe_2009/place00/tl_2009_05_place00_url.shp.xml" .
+
+<urn:uuid:931b4da0-9c5e-4788-8763-fabb4d9a57d1> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-11-05T16:51:47.094Z" ;
+    bcube:lastUpdated "2015-11-05T16:51:47.094Z" ;
+    bcube:originatedFrom <urn:uuid:58f7c544-9ad5-4b47-a97e-84ea9af8ab60> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:da73d9a3-00cc-4cd0-8bdf-e2e44ffd1a7d> .
+
+<urn:uuid:95bc7cf9-632c-4deb-9118-48145008bc7b> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-05T16:51:47.094Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-05T16:51:47.094Z" ;
+    dc:identifier "urn:sha:64d488764bb0b3c7fa59bc11c2616e6743695dd0018f9dffd555fe9e" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www2.census.gov/geo/tiger/TIGER2009/05_ARKANSAS/tl_2009_05_place00.zip" .
+
+<urn:uuid:da73d9a3-00cc-4cd0-8bdf-e2e44ffd1a7d> bcube:dateCreated "2015-11-05T16:51:47.094Z" ;
+    bcube:hasMetadataRecord <urn:uuid:931b4da0-9c5e-4788-8763-fabb4d9a57d1> ;
+    bcube:lastUpdated "2015-11-05T16:51:47.094Z" ;
+    dc:conformsTo <urn:uuid:197cabec-a1a6-49b7-b0fb-9130507be86e>,
+        <urn:uuid:1feb80a3-d52b-4f2b-9c9f-8c16c5ed68aa>,
+        <urn:uuid:dfde8e80-a29d-4f1f-add7-b3a08646cc56> ;
+    dc:description "The TIGER/Line Shapefiles are an extract of selected geographic and cartographic information from the Census MAF/TIGER database. The Census MAF/TIGER database represents a seamless national file with no overlaps or gaps between parts. However, each TIGER/Line Shapefile is designed to stand alone as an independent data set or the shapefiles can be combined to cover the whole nation." ;
+    dc:spatial "POLYGON ((-94.617919 33.004106,-94.617919 36.499749,-89.644395 36.499749,-89.644395 33.004106,-94.617919 33.004106))" ;
+    dcterms:publisher <urn:uuid:58a45ebe-2f9c-45a0-afc7-54eb11eb7634> ;
+    dcterms:references <urn:uuid:95bc7cf9-632c-4deb-9118-48145008bc7b> ;
+    dcterms:title "TIGER/Line Shapefile, 2009, 2000 state, Arkansas, Census 2000 Place" ;
+    esip:eastBound "-89.644395"^^xsd:float ;
+    esip:endDate "2009-05-01"^^xsd:date ;
+    esip:northBound "36.499749"^^xsd:float ;
+    esip:southBound "33.004106"^^xsd:float ;
+    esip:startDate "2009-01-01"^^xsd:date ;
+    esip:westBound "-94.617919"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:dfde8e80-a29d-4f1f-add7-b3a08646cc56> bcube:hasType "place" ;
+    bcube:hasValue "05",
+        "AR",
+        "Arkansas",
+        "State or Equivalent Entity",
+        "U.S.",
+        "United States" ;
+    dc:partOf "INCITS.38-200x (R2004),INCITS.31-200x (R2007),INCITS.454-200x,INCITS 455-200x,INCITS 446-2008" ;
+    owl:a bcube:thesaurusSubset .
+

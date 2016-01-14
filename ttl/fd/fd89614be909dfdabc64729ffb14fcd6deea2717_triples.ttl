@@ -1,0 +1,86 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:0e6beb86-5a89-424b-bdfd-2f7d7d280d87> bcube:hasType "place" ;
+    bcube:hasValue "02013",
+        "Aleutians East",
+        "County or Equivalent Entity",
+        "U.S.",
+        "United States" ;
+    dc:partOf "ANSI INCITS 38:2009 (Formerly FIPS 5-2), ANSI INCITS 31:2009 (Formerly FIPS 6-4),ANSI INCITS 454:2009 (Formerly FIPS 8-6), ANSI INCITS 455:2009(Formerly FIPS 9-1), ANSI INCITS 446:2008 (Geographic Names Information System (GNIS))" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:393acae3-7a5b-4f8d-81d7-42d98bbe6409> bcube:hasValue "transportation" ;
+    dc:partOf "IsoTopicCategories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:8573883d-6e5d-49b6-b7c8-61ef87f25c59> a "ISO 19115:2003/19139" ;
+    bcube:dateCreated "2015-10-29T23:31:12.293Z" ;
+    bcube:lastUpdated "2015-10-29T23:31:12.293Z" ;
+    bcube:originatedFrom <urn:uuid:865c80b2-396e-44f4-90e4-e33146dc8a7a> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:fc898e07-37ae-45cf-bb11-1d57f77df20c> .
+
+<urn:uuid:865c80b2-396e-44f4-90e4-e33146dc8a7a> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-10-29T23:31:12.293Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-10-29T23:31:12.293Z" ;
+    dc:identifier "urn:sha:83af571c947e665414d6bbe9b3598faf028bd17a4eda9533311bd718" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://meta.geo.census.gov/data/existing/decennial/GEO/GPMB/TIGERline/TIGER2014/roads/tl_2014_02013_roads.shp.iso.xml" .
+
+<urn:uuid:d696c434-6669-4e7d-b979-09c92af0c051> bcube:hasType "theme" ;
+    bcube:hasValue "Address Range",
+        "County or equivalent entity",
+        "Linear Feature",
+        "Road Feature",
+        "Roads",
+        "Street Centerline" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:fc898e07-37ae-45cf-bb11-1d57f77df20c> bcube:dateCreated "2015-10-29T23:31:12.293Z" ;
+    bcube:hasMetadataRecord <urn:uuid:8573883d-6e5d-49b6-b7c8-61ef87f25c59> ;
+    bcube:lastUpdated "2015-10-29T23:31:12.293Z" ;
+    dc:conformsTo <urn:uuid:0e6beb86-5a89-424b-bdfd-2f7d7d280d87>,
+        <urn:uuid:393acae3-7a5b-4f8d-81d7-42d98bbe6409>,
+        <urn:uuid:d696c434-6669-4e7d-b979-09c92af0c051> ;
+    dc:description "The TIGER/Line shapefiles and related database files (.dbf) are an extract of selected geographic and cartographic information from the U.S. Census Bureau's Master Address File / Topologically Integrated Geographic Encoding and Referencing (MAF/TIGER) Database (MTDB). The MTDB represents a seamless national file with no overlaps or gaps between parts, however, each TIGER/Line shapefile is designed to stand alone as an independent data set, or they can be combined to cover the entire nation. The All Roads Shapefile includes all features within the MTDB Super Class \"Road/Path Features\" distinguished where the MAF/TIGER Feature Classification Code (MTFCC) for the feature in MTDB that begins with \"S\". This includes all primary, secondary, local neighborhood, and rural roads, city streets, vehicular trails (4wd), ramps, service drives, alleys, parking lot roads, private roads for service vehicles (logging, oil fields, ranches, etc.), bike paths or trails, bridle/horse paths, walkways/pedestrian trails, and stairways." ;
+    dc:spatial "POLYGON ((-166.225647 53.91608,-166.225647 56.945108,-158.890818 56.945108,-158.890818 53.91608,-166.225647 53.91608))" ;
+    dcterms:references <urn:uuid:fd621b47-da62-411f-9ebb-1c4b1e4dfcd1> ;
+    dcterms:title "TIGER/Line Shapefile, 2014, county, Aleutians East Borough, AK, All Roads County-based Shapefile" ;
+    esip:eastBound "-158.890818"^^xsd:float ;
+    esip:endDate "2014-05-01"^^xsd:date ;
+    esip:northBound "56.945108"^^xsd:float ;
+    esip:southBound "53.91608"^^xsd:float ;
+    esip:startDate "2013-06-01"^^xsd:date ;
+    esip:westBound "-166.225647"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:fd621b47-da62-411f-9ebb-1c4b1e4dfcd1> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-10-29T23:31:12.293Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-10-29T23:31:12.293Z" ;
+    dc:identifier "urn:sha:987e70518a44fb3964d6d6f34e6a3d6133530334eb419095e5461b3d" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www2.census.gov/geo/tiger/TIGER2014/ROADS/tl_2014_02013_roads.zip" .
+

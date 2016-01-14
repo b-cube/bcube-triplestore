@@ -1,0 +1,81 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:01814214-4be8-46ee-aa70-50a868de3215> bcube:hasType "temporal" ;
+    bcube:hasValue "2010",
+        "November" ;
+    dc:partOf "none" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:0b7e1ccb-93e4-4b93-b13d-3d49146d60ed> bcube:hasType "theme" ;
+    bcube:hasValue "DEM",
+        "Elevation",
+        "LAS",
+        "Lidar",
+        "USGS",
+        "topography" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:3be8add5-ac9c-454b-992a-3921c4fb0fd4> bcube:hasType "place" ;
+    bcube:hasValue "California",
+        "Imperial County",
+        "Riverside County",
+        "Salton Sea",
+        "San Diego County",
+        "United States" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:88937b06-8dfe-4e4e-b6c4-df3bec7a2246> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-09T20:46:20.817Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-09T20:46:20.817Z" ;
+    dc:identifier "urn:sha:727bbc9a936730352941f488159fe0e9a7a1c2407d1192736b896e7b" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://coast.noaa.gov/data/Documents/Metadata/isoharvest/Lidar/var/tmp/ca2010_usgs_saltonsea_m4707_ISOmetadata_cleaned.xml" .
+
+<urn:uuid:98d8d86c-04ad-4d7f-9aac-2aca73ca308e> bcube:dateCreated "2015-08-09T20:46:20.817Z" ;
+    bcube:hasMetadataRecord <urn:uuid:a1dfee49-0447-4fd2-8f29-2e6497055ed2> ;
+    bcube:lastUpdated "2015-08-09T20:46:20.817Z" ;
+    dc:conformsTo <urn:uuid:01814214-4be8-46ee-aa70-50a868de3215>,
+        <urn:uuid:0b7e1ccb-93e4-4b93-b13d-3d49146d60ed>,
+        <urn:uuid:3be8add5-ac9c-454b-992a-3921c4fb0fd4>,
+        <urn:uuid:b6a45e0b-8e62-4bce-b3ac-83b6fbc1911b> ;
+    dc:description "The USGS Salton Sea project encompasses a 5-kilometer buffer around the Salton Sea, California. Dewberry classified LiDAR for a project boundary that touches 623 tiles (1500 m x 1500 m). Dewberry also created tiled DEMs with a hydro-flattened lake surface. The horizontal spatial reference system for the USGS Salton Sea project is NAD83, UTM Zone 11N, meters. Two sets of LAS are delivered that have different vertical reference systems. These include: 1. Ellipsoidal, meters and 2.NAVD88, meters." ;
+    dc:spatial "POLYGON ((-116.186244 33.015407,-116.186244 33.603545,-115.485761 33.603545,-115.485761 33.015407,-116.186244 33.015407))" ;
+    dcterms:title "2010 USGS California Lidar: Salton Sea" ;
+    esip:eastBound "-115.485761"^^xsd:float ;
+    esip:endDate "2011-02-11"^^xsd:date ;
+    esip:northBound "33.603545"^^xsd:float ;
+    esip:southBound "33.015407"^^xsd:float ;
+    esip:startDate "2010-11-09"^^xsd:date ;
+    esip:westBound "-116.186244"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:a1dfee49-0447-4fd2-8f29-2e6497055ed2> a "ISO 19115:2003/19139" ;
+    bcube:dateCreated "2015-08-09T20:46:20.817Z" ;
+    bcube:lastUpdated "2015-08-09T20:46:20.817Z" ;
+    bcube:originatedFrom <urn:uuid:88937b06-8dfe-4e4e-b6c4-df3bec7a2246> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:98d8d86c-04ad-4d7f-9aac-2aca73ca308e> .
+
+<urn:uuid:b6a45e0b-8e62-4bce-b3ac-83b6fbc1911b> bcube:hasValue "elevation" ;
+    dc:partOf "IsoTopicCategories" ;
+    owl:a bcube:thesaurusSubset .
+

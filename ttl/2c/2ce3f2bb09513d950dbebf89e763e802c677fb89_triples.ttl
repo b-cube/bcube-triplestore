@@ -1,0 +1,84 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:1ef15729-1e93-401d-8f4e-9aa9075f1475> bcube:hasType "place" ;
+    bcube:hasValue "18",
+        "IN",
+        "Indiana",
+        "State or Equivalent Entity",
+        "U.S.",
+        "United States" ;
+    dc:partOf "ANSI INCITS 38:2009 (Formerly FIPS 5-2), ANSI INCITS 31:2009 (Formerly FIPS 6-4),ANSI INCITS 454:2009 (Formerly FIPS 8-6), ANSI INCITS 455:2009(Formerly FIPS 9-1), ANSI INCITS 446:2008 (Geographic Names Information System (GNIS))" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:42920bb2-8412-4dc4-9961-80135fab8520> bcube:hasType "theme" ;
+    bcube:hasValue "Consolidated City",
+        "Polygon",
+        "State or equivalent entity" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:553f7f39-d10f-4880-9898-a79d11fa609e> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-10-30T15:01:49.538Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-10-30T15:01:49.538Z" ;
+    dc:identifier "urn:sha:28aa8605b676bac4e60eb012606113946e8c71ba4ba00be85b7f6abc" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://meta.geo.census.gov/data/existing/decennial/GEO/GPMB/TIGERline/TIGER2014/concity/tl_2014_18_concity.shp.iso.xml" .
+
+<urn:uuid:80e328c9-f103-4ad2-a06a-8969278a6d2b> a "ISO 19115:2003/19139" ;
+    bcube:dateCreated "2015-10-30T15:01:49.538Z" ;
+    bcube:lastUpdated "2015-10-30T15:01:49.538Z" ;
+    bcube:originatedFrom <urn:uuid:553f7f39-d10f-4880-9898-a79d11fa609e> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:afd3c4bc-1629-4b3c-ae1e-61f171ce6d27> .
+
+<urn:uuid:afd3c4bc-1629-4b3c-ae1e-61f171ce6d27> bcube:dateCreated "2015-10-30T15:01:49.538Z" ;
+    bcube:hasMetadataRecord <urn:uuid:80e328c9-f103-4ad2-a06a-8969278a6d2b> ;
+    bcube:lastUpdated "2015-10-30T15:01:49.538Z" ;
+    dc:conformsTo <urn:uuid:1ef15729-1e93-401d-8f4e-9aa9075f1475>,
+        <urn:uuid:42920bb2-8412-4dc4-9961-80135fab8520>,
+        <urn:uuid:f3f8db49-ad4a-4b6a-ace8-a66d0a1618d2> ;
+    dc:description "The TIGER/Line shapefiles and related database files (.dbf) are an extract of selected geographic and cartographic information from the U.S. Census Bureau's Master Address File / Topologically Integrated Geographic Encoding and Referencing (MAF/TIGER) Database (MTDB). The MTDB represents a seamless national file with no overlaps or gaps between parts, however, each TIGER/Line shapefile is designed to stand alone as an independent data set, or they can be combined to cover the entire nation. A consolidated city is a unit of local government for which the functions of an incorporated place and its county or minor civil division (MCD) have merged. This action results in both the primary incorporated place and the county or MCD continuing to exist as legal entities, even though the county or MCD performs few or no governmental functions and has few or no elected officials. Where this occurs, and where one or more other incorporated places in the county or MCD continue to function as separate governments, even though they have been included in the consolidated government, the primary incorporated place is referred to as a consolidated city. The Census Bureau classifies the separately incorporated places within the consolidated city as place entities and creates a separate place (balance) record for the portion of the consolidated city not within any other place. The boundaries of the consolidated cities are those as of January 1, 2013, as reported through the Census Bureau's Boundary and Annexation Survey (BAS)." ;
+    dc:spatial "POLYGON ((-88.097892 37.771728,-88.097892 41.761368,-84.784592 41.761368,-84.784592 37.771728,-88.097892 37.771728))" ;
+    dcterms:references <urn:uuid:ba46edd0-6b1c-4753-ac2d-86e654687407> ;
+    dcterms:title "TIGER/Line Shapefile, 2014, state, Indiana, Current Consolidated City State-based Shapefiles" ;
+    esip:eastBound "-84.784592"^^xsd:float ;
+    esip:endDate "2014-05-05"^^xsd:date ;
+    esip:northBound "41.761368"^^xsd:float ;
+    esip:southBound "37.771728"^^xsd:float ;
+    esip:startDate "2013-06-05"^^xsd:date ;
+    esip:westBound "-88.097892"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:ba46edd0-6b1c-4753-ac2d-86e654687407> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-10-30T15:01:49.538Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-10-30T15:01:49.538Z" ;
+    dc:identifier "urn:sha:287c250c8dfb521e44bc4caa3bbe9a10d5e62dedc03c2ab97aa9a25e" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www2.census.gov/geo/tiger/TIGER2014/CONCITY/tl_2014_18_concity.zip" .
+
+<urn:uuid:f3f8db49-ad4a-4b6a-ace8-a66d0a1618d2> bcube:hasValue "boundaries" ;
+    dc:partOf "IsoTopicCategories" ;
+    owl:a bcube:thesaurusSubset .
+

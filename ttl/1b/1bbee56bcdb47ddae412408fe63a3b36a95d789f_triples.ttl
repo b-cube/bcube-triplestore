@@ -1,0 +1,86 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:2d463ddd-7fe5-4d62-9721-d11482a2c51c> bcube:dateCreated "2015-08-11T06:43:11.274Z" ;
+    bcube:hasMetadataRecord <urn:uuid:809ecd00-5a59-41da-a0bf-9448675ba458> ;
+    bcube:lastUpdated "2015-08-11T06:43:11.274Z" ;
+    dc:conformsTo <urn:uuid:30806d0e-fb03-49fb-986a-6afa98965bc4>,
+        <urn:uuid:d06557a3-589d-4616-97d8-3e6012e395ad>,
+        <urn:uuid:f038fe13-76b1-44bb-b7e8-b62611859e1e> ;
+    dc:description "Locations and attribute data obtained from Wind Resource and Assessment Laboratory, Oregon State University. Map coverage created at NRIS. The raw data was collected in Montana by the Bureau of Reclamation and is available from the Energy Division at DNRC. Monitors collected either hourly measurements or \"wind run\" average monthly measurements (see TIME)." ;
+    dc:spatial "POLYGON ((-124.5 39.5,-124.5 49.9,-108.5 49.9,-108.5 39.5,-124.5 39.5))" ;
+    dcterms:publisher <urn:uuid:46afd23f-437f-42b5-9017-ef3c1643663d> ;
+    dcterms:references <urn:uuid:fa16e356-83c4-4239-96d1-be3eba293406> ;
+    dcterms:title "Wind Energy Test Sites in the Pacific Northwest" ;
+    esip:eastBound "-108.5"^^xsd:float ;
+    esip:northBound "49.9"^^xsd:float ;
+    esip:southBound "39.5"^^xsd:float ;
+    esip:startDate "1990-01-01"^^xsd:date ;
+    esip:westBound "-124.5"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:30806d0e-fb03-49fb-986a-6afa98965bc4> bcube:hasType "theme" ;
+    bcube:hasValue "climatologyMeteorologyAtmosphere",
+        "economy",
+        "utilitiesCommunication" ;
+    dc:partOf "ISO 19115 Topic Category" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:46afd23f-437f-42b5-9017-ef3c1643663d> owl:a foaf:Organization ;
+    foaf:name "Montana State Library" .
+
+<urn:uuid:809ecd00-5a59-41da-a0bf-9448675ba458> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-08-11T06:43:11.274Z" ;
+    bcube:lastUpdated "2015-08-11T06:43:11.274Z" ;
+    bcube:originatedFrom <urn:uuid:d93aee83-adf2-42c8-81e2-3350c63c5f2b> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:2d463ddd-7fe5-4d62-9721-d11482a2c51c> .
+
+<urn:uuid:d06557a3-589d-4616-97d8-3e6012e395ad> bcube:hasType "theme" ;
+    bcube:hasValue "electricity",
+        "generation",
+        "wind" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:d93aee83-adf2-42c8-81e2-3350c63c5f2b> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-11T06:43:11.274Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-11T06:43:11.274Z" ;
+    dc:identifier "urn:sha:412b1af85613f87087b8bf1b7527de3af4f6d0f89244bf023b1361f3" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://mslapps.mt.gov/Geographic_Information/Data/DataList/datalist_MetadataDetailRaw.aspx?did={2830B574-37AA-4DA6-887A-02F26A4A104F}" .
+
+<urn:uuid:f038fe13-76b1-44bb-b7e8-b62611859e1e> bcube:hasType "place" ;
+    bcube:hasValue "Idaho",
+        "Montana",
+        "Oregon",
+        "Washington" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:fa16e356-83c4-4239-96d1-be3eba293406> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-11T06:43:11.274Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-11T06:43:11.274Z" ;
+    dc:identifier "urn:sha:2396de263fdd0f1e9d3d701f8ab66ed5ed658a704a4b71f7765435d2" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "ftp://ftp.geoinfo.msl.mt.gov/Data/Spatial/NonMSDI/Shapefiles/WindTestSites1993.zip" .
+

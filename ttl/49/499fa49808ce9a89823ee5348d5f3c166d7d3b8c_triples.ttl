@@ -1,0 +1,81 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:12acc609-c465-4845-bea6-5aca157351c1> owl:a foaf:Organization ;
+    foaf:name "U.S. Geological Survey" .
+
+<urn:uuid:1fc011f7-27e4-4dd8-843b-fe1338f291ad> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-08-10T00:29:14.438Z" ;
+    bcube:lastUpdated "2015-08-10T00:29:14.438Z" ;
+    bcube:originatedFrom <urn:uuid:da20aecc-d55f-40ed-975b-bac88785aa9b> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:243027a5-3a13-4795-8f9c-62ec6b6901fa> .
+
+<urn:uuid:243027a5-3a13-4795-8f9c-62ec6b6901fa> bcube:dateCreated "2015-08-10T00:29:14.438Z" ;
+    bcube:hasMetadataRecord <urn:uuid:1fc011f7-27e4-4dd8-843b-fe1338f291ad> ;
+    bcube:lastUpdated "2015-08-10T00:29:14.438Z" ;
+    dc:conformsTo <urn:uuid:69efb557-8222-4122-8412-5c3dd4a6ee12>,
+        <urn:uuid:8265c8db-e691-4db1-91c1-f95a2e7379bd> ;
+    dc:description "This image is a mosaic of Landsat-5 images of the upper Klamath Basin. The original images were obtained from the U.S. Geological Survey Earth Resources Observation and Science Center (EROS). EROS is responsible for archive management and distribution of Landsat data products. The Landsat-5 satellite is part of an ongoing mission to provide quality remote sensing data in support of research and applications activities. The launch of Landsat-5 on March 1, 1984 marks the addition of the fifth satellite to the Landsat series. The Landsat-5 satellite carries the Thematic Mapper (TM) sensor. More information on the Landsat program can be found online at http://landsat.usgs.gov/." ;
+    dc:spatial "POLYGON ((-123.3826 41.99176,-123.3826 43.492919,-120.601579 43.492919,-120.601579 41.99176,-123.3826 41.99176))" ;
+    dcterms:publisher <urn:uuid:12acc609-c465-4845-bea6-5aca157351c1> ;
+    dcterms:references <urn:uuid:d206b299-74fd-4a7e-8cc5-3e95d75659f2> ;
+    dcterms:title "Upper Klamath Basin Landsat Image for August 20, 2004: Path 45 Rows 30 and 31" ;
+    esip:eastBound "-120.601579"^^xsd:float ;
+    esip:northBound "43.492919"^^xsd:float ;
+    esip:southBound "41.99176"^^xsd:float ;
+    esip:startDate "2004-08-20"^^xsd:date ;
+    esip:westBound "-123.3826"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:69efb557-8222-4122-8412-5c3dd4a6ee12> bcube:hasType "theme" ;
+    bcube:hasValue "Klamath Basin Restoration Agreement",
+        "Landsat",
+        "inlandWaters" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:8265c8db-e691-4db1-91c1-f95a2e7379bd> bcube:hasType "place" ;
+    bcube:hasValue "Oregon",
+        "Sprague River Basin",
+        "Upper Klamath Basin",
+        "Williamson River Basin",
+        "Wood River Basin" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:d206b299-74fd-4a7e-8cc5-3e95d75659f2> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-10T00:29:14.438Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-10T00:29:14.438Z" ;
+    dc:identifier "urn:sha:4a924c3759aea96e80449000d35d0fe6005c078e38bfb8ab47924bec" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://water.usgs.gov/GIS/dsdl/erosl1t_08202004_p45r30_l5_kl_NAD83.zip" .
+
+<urn:uuid:da20aecc-d55f-40ed-975b-bac88785aa9b> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-10T00:29:14.438Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-10T00:29:14.438Z" ;
+    dc:identifier "urn:sha:d513cd972bf6f02905e04fefbaa21059bb4af1ab02245475c1c4cba4" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://water.usgs.gov/lookup/getspatial?erosl1t_08202004_p45r30_l5_kl_NAD83" .
+

@@ -1,0 +1,91 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:4b285a01-c2f0-45e2-adae-5d3d99fbbccf> bcube:hasType "temporal" ;
+    bcube:hasValue "Mesozoic",
+        "Paleozoic",
+        "Proterozoic",
+        "Quaternary",
+        "Tertiary",
+        "cretaceous" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:525e231c-0d4d-4e12-90da-673b6192fc20> bcube:hasType "theme" ;
+    bcube:hasValue "Coconino Sandstone",
+        "Kaibab Limestone",
+        "Martin Limestone",
+        "Redwall Limestone",
+        "Supai Formation",
+        "Tonto Group",
+        "bedrock geology",
+        "mining" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:62a505b6-3f52-4ed6-80f6-93aa2f6e1320> owl:a foaf:Organization ;
+    foaf:name "" .
+
+<urn:uuid:75fa88dc-9c8b-4e9d-bfae-bc9bebbdd9e5> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-11-14T17:42:35.455Z" ;
+    bcube:lastUpdated "2015-11-14T17:42:35.455Z" ;
+    bcube:originatedFrom <urn:uuid:8e14e8f1-0c3f-4c30-99af-7b42b573c980> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:dc4f10ea-08ca-474f-97fa-5b8251f69916> .
+
+<urn:uuid:8e14e8f1-0c3f-4c30-99af-7b42b573c980> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-14T17:42:35.455Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-14T17:42:35.455Z" ;
+    dc:identifier "urn:sha:9fae1c2c42ae6771314a76e93ff127f757030f8961907eff7c403b70" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://repository.azgs.az.gov/uri_gin/azgs/dlio/1627/fgdc.xml" .
+
+<urn:uuid:b6a5ac2f-886d-4c8d-98c8-014c29ad0079> bcube:hasType "place" ;
+    bcube:hasValue "Agua Fria river",
+        "Bradshaw Mountains",
+        "Chino Valley",
+        "Clarkdale",
+        "Congress",
+        "Date Creek Mountains",
+        "Harcuvar Mountains",
+        "Juniper Mountains",
+        "Prescott",
+        "Verde River",
+        "Weaver Mountains",
+        "Wickenburg Mountains",
+        "Yavapai County" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:dc4f10ea-08ca-474f-97fa-5b8251f69916> bcube:dateCreated "2015-11-14T17:42:35.455Z" ;
+    bcube:hasMetadataRecord <urn:uuid:75fa88dc-9c8b-4e9d-bfae-bc9bebbdd9e5> ;
+    bcube:lastUpdated "2015-11-14T17:42:35.455Z" ;
+    dc:conformsTo <urn:uuid:4b285a01-c2f0-45e2-adae-5d3d99fbbccf>,
+        <urn:uuid:525e231c-0d4d-4e12-90da-673b6192fc20>,
+        <urn:uuid:b6a5ac2f-886d-4c8d-98c8-014c29ad0079> ;
+    dc:description "County geologic map of Yavapai County. Map scale 1:375,000. Contour interval is 500 feet." ;
+    dc:spatial "POLYGON ((-113.333 35.53,-113.333 33.88,-111.46 33.88,-111.46 35.53,-113.333 35.53))" ;
+    dcterms:publisher <urn:uuid:62a505b6-3f52-4ed6-80f6-93aa2f6e1320> ;
+    dcterms:title "Geologic map of Yavapai County, Arizona" ;
+    esip:eastBound "-111.46"^^xsd:float ;
+    esip:northBound "33.88"^^xsd:float ;
+    esip:southBound "35.53"^^xsd:float ;
+    esip:westBound "-113.333"^^xsd:float ;
+    owl:a dcat:Dataset .
+

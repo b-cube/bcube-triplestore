@@ -1,0 +1,98 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:0f0f3cf2-b128-42da-b010-f862d04e69a2> bcube:hasType "theme" ;
+    bcube:hasValue "economy",
+        "environment",
+        "oceans",
+        "society",
+        "structure",
+        "transportation" ;
+    dc:partOf "ISO 19115 Topic Category" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:0f9ce33c-4ad1-40cb-8f6e-d4ca1a8f036f> bcube:hasType "theme" ;
+    bcube:hasValue "Comparative Index",
+        "Demographics",
+        "Environmental Hazards",
+        "Indicators",
+        "Resilience",
+        "Social Vulnerability Index",
+        "Socioeconomics",
+        "Vulnerability" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:55984733-4d3f-4e74-ba2b-50ea84fbd57a> dcterms:references <urn:uuid:ea348975-203d-4ee9-a12b-bf4050291e14> ;
+    owl:a bibo:WebPage .
+
+<urn:uuid:67b2d551-ac4b-460b-aaf5-2f350dd36b76> bcube:dateCreated "2015-08-05T08:05:14.434Z" ;
+    bcube:hasMetadataRecord <urn:uuid:c3159df8-635a-4255-a19f-37ca3203b9eb> ;
+    bcube:lastUpdated "2015-08-05T08:05:14.434Z" ;
+    dc:conformsTo <urn:uuid:0f0f3cf2-b128-42da-b010-f862d04e69a2>,
+        <urn:uuid:0f9ce33c-4ad1-40cb-8f6e-d4ca1a8f036f>,
+        <urn:uuid:e9f63619-71d5-460b-bb94-d3b63c3ca26d> ;
+    dc:description "This data depicts the social vulnerability of Alabama census block groups to environmental hazards. Data were culled primarily from the 2000 Decennial Census." ;
+    dc:spatial "POLYGON ((-178.217598 18.921786,-178.217598 71.406235,-66.969271 71.406235,-66.969271 18.921786,-178.217598 18.921786))" ;
+    dcterms:publisher <urn:uuid:aef3adda-d384-4dc7-a958-c00bb3d866d0> ;
+    dcterms:references <urn:uuid:55984733-4d3f-4e74-ba2b-50ea84fbd57a> ;
+    dcterms:title "Social Vulnerability Index (SoVI) for Alabama based on 2000 Census Block Groups" ;
+    esip:eastBound "-66.969271"^^xsd:float ;
+    esip:northBound "71.406235"^^xsd:float ;
+    esip:southBound "18.921786"^^xsd:float ;
+    esip:startDate "2000-01-01"^^xsd:date ;
+    esip:westBound "-178.217598"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:ab2c226d-cef9-4fe4-b773-dba5aaae8e3a> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-05T08:05:14.434Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-05T08:05:14.434Z" ;
+    dc:identifier "urn:sha:3a38689afa0e45ebf29362c6af5179a00a8d3e5e52e5218ad5c1824c" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://coast.noaa.gov/data/Documents/Metadata/harvest/Demographic/SOVI_BlkGrp_2000_AL_shp.xml" .
+
+<urn:uuid:aef3adda-d384-4dc7-a958-c00bb3d866d0> owl:a foaf:Organization ;
+    foaf:name "Hazards and Vulnerability Research Institute (HVRI), University of South Carolina" .
+
+<urn:uuid:c3159df8-635a-4255-a19f-37ca3203b9eb> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-08-05T08:05:14.434Z" ;
+    bcube:lastUpdated "2015-08-05T08:05:14.434Z" ;
+    bcube:originatedFrom <urn:uuid:ab2c226d-cef9-4fe4-b773-dba5aaae8e3a> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:67b2d551-ac4b-460b-aaf5-2f350dd36b76> .
+
+<urn:uuid:e9f63619-71d5-460b-bb94-d3b63c3ca26d> bcube:hasType "place" ;
+    bcube:hasValue "Census Block Groups",
+        "Coastal States",
+        "United States" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:ea348975-203d-4ee9-a12b-bf4050291e14> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-05T08:05:14.434Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-05T08:05:14.434Z" ;
+    dc:identifier "urn:sha:30cf345e633e286b856e2d494158a7a0073272646fff2597a42435eb" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www.coast.noaa.gov/digitalcoast/data/SoVI/" .
+

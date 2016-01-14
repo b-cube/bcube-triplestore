@@ -1,0 +1,89 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:1c61127c-a0ef-47b1-b278-95830865a583> owl:a foaf:Organization ;
+    foaf:name "University of Rhode Island Environmental Data Center" .
+
+<urn:uuid:1e09bf4d-0d0a-44c6-8d97-34768b58d726> bcube:hasType "theme" ;
+    bcube:hasValue "city halls",
+        "municipal seats of government",
+        "town halls" ;
+    dc:partOf "none" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:2fd594e1-0a24-4388-bbd6-25a16db5714a> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-08-07T03:09:44.697Z" ;
+    bcube:lastUpdated "2015-08-07T03:09:44.697Z" ;
+    bcube:originatedFrom <urn:uuid:82751fea-5989-4ed6-806f-4e504143b8c1> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:74f4d847-75a0-484a-8014-75c8c4f31f96> .
+
+<urn:uuid:74f4d847-75a0-484a-8014-75c8c4f31f96> bcube:dateCreated "2015-08-07T03:09:44.697Z" ;
+    bcube:hasMetadataRecord <urn:uuid:2fd594e1-0a24-4388-bbd6-25a16db5714a> ;
+    bcube:lastUpdated "2015-08-07T03:09:44.697Z" ;
+    dc:conformsTo <urn:uuid:1e09bf4d-0d0a-44c6-8d97-34768b58d726>,
+        <urn:uuid:85bc6d5a-e206-41da-95bd-1370358e3ccf>,
+        <urn:uuid:8d891664-735b-4891-8d87-93f35ddb1f4a> ;
+    dc:description "Locations of city and town halls in Rhode Island. Derived using information originally compiled by the State of Rhode Island (http://www.ri.gov), and built upon address location data contributed to the Rhode Island Geographic Information System (RIGIS) consortium by the Rhode Island Enhanced 911 Uniform Emergency Telephone System (RIE911)." ;
+    dc:spatial "POLYGON ((-71.832852 41.17126,-71.832852 42.002602,-71.170445 42.002602,-71.170445 41.17126,-71.832852 41.17126))" ;
+    dcterms:publisher <urn:uuid:1c61127c-a0ef-47b1-b278-95830865a583> ;
+    dcterms:references <urn:uuid:fb730d48-467e-4534-a554-18eeace651ac> ;
+    dcterms:title "City and Town Halls; townHalls13" ;
+    esip:eastBound "-71.170445"^^xsd:float ;
+    esip:northBound "42.002602"^^xsd:float ;
+    esip:southBound "41.17126"^^xsd:float ;
+    esip:startDate "2013-03-12"^^xsd:date ;
+    esip:westBound "-71.832852"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:7f0a2b0f-7f6d-4075-91e8-7554483c330f> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-07T03:09:44.697Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-07T03:09:44.697Z" ;
+    dc:identifier "urn:sha:3e9757e04fa95c82527ee0fdc0a805cd4b250717c66a15c20c338035" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www.edc.uri.edu/rigis" .
+
+<urn:uuid:82751fea-5989-4ed6-806f-4e504143b8c1> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-07T03:09:44.697Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-07T03:09:44.697Z" ;
+    dc:identifier "urn:sha:c60d806ba2abdbe09d3bdc38d17955d38ca9550094f4b2541df801b1" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://catalog.data.gov/harvest/object/297ca714-d4f0-4712-991d-d20d7bbdc6a3/original" .
+
+<urn:uuid:85bc6d5a-e206-41da-95bd-1370358e3ccf> bcube:hasType "theme" ;
+    bcube:hasValue "structure" ;
+    dc:partOf "ISO 19115 Topic Categories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:8d891664-735b-4891-8d87-93f35ddb1f4a> bcube:hasType "place" ;
+    bcube:hasValue "New England",
+        "Northeast",
+        "Rhode Island",
+        "United States" ;
+    dc:partOf "none" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:fb730d48-467e-4534-a554-18eeace651ac> dcterms:references <urn:uuid:7f0a2b0f-7f6d-4075-91e8-7554483c330f> ;
+    owl:a bibo:WebPage .
+

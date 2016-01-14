@@ -1,0 +1,91 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:1b43c6c7-993e-49b0-812d-3ae3ca952f31> owl:a foaf:Organization ;
+    foaf:name "" .
+
+<urn:uuid:2963d479-8072-47f9-b0fa-44fe82be4434> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-11-01T10:27:59.957Z" ;
+    bcube:lastUpdated "2015-11-01T10:27:59.957Z" ;
+    bcube:originatedFrom <urn:uuid:e40ef60c-2197-4ecb-b5c2-c8426c8dc21d> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:515bee82-5c48-4144-afa3-26a6c0000d9e> .
+
+<urn:uuid:515bee82-5c48-4144-afa3-26a6c0000d9e> bcube:dateCreated "2015-11-01T10:27:59.957Z" ;
+    bcube:hasMetadataRecord <urn:uuid:2963d479-8072-47f9-b0fa-44fe82be4434> ;
+    bcube:lastUpdated "2015-11-01T10:27:59.957Z" ;
+    dc:conformsTo <urn:uuid:a24cc5b7-5a97-4c31-bc14-5edb195745cb>,
+        <urn:uuid:b8914c75-7c81-45e3-9da4-7c5cc8c63356>,
+        <urn:uuid:ee562752-87d3-4e99-8eef-f27b70fa6d84> ;
+    dc:description "The TIGER/Line shapefiles and related database files (.dbf) are an extract of selected geographic and cartographic information from the U.S. Census Bureau's Master Address File / Topologically Integrated Geographic Encoding and Referencing (MAF/TIGER) Database (MTDB). The MTDB represents a seamless national file with no overlaps or gaps between parts, however, each TIGER/Line shapefile is designed to stand alone as an independent data set, or they can be combined to cover the entire nation. The All Roads Shapefile includes all features within the MTDB Super Class \"Road/Path Features\" distinguished where the MAF/TIGER Feature Classification Code (MTFCC) for the feature in MTDB that begins with \"S\". This includes all primary, secondary, local neighborhood, and rural roads, city streets, vehicular trails (4wd), ramps, service drives, alleys, parking lot roads, private roads for service vehicles (logging, oil fields, ranches, etc.), bike paths or trails, bridle/horse paths, walkways/pedestrian trails, and stairways." ;
+    dc:spatial "POLYGON ((-165.55557 65.435857,-165.55557 68.301027,-154.132279 68.301027,-154.132279 65.435857,-165.55557 65.435857))" ;
+    dcterms:publisher <urn:uuid:1b43c6c7-993e-49b0-812d-3ae3ca952f31> ;
+    dcterms:references <urn:uuid:88cf284d-10f7-4314-9f10-fe296ac3c3f7> ;
+    dcterms:title "TIGER/Line Shapefile, 2012, county, Northwest Arctic Borough, AK, All Roads County-based Shapefile" ;
+    esip:eastBound "-154.132279"^^xsd:float ;
+    esip:endDate "2012-06-01"^^xsd:date ;
+    esip:northBound "68.301027"^^xsd:float ;
+    esip:southBound "65.435857"^^xsd:float ;
+    esip:startDate "2011-08-01"^^xsd:date ;
+    esip:westBound "-165.55557"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:88cf284d-10f7-4314-9f10-fe296ac3c3f7> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-01T10:27:59.957Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-01T10:27:59.957Z" ;
+    dc:identifier "urn:sha:8015aa96021c569514069182cd7a9317406fea40bc3ba18f888615ee" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www2.census.gov/geo/tiger/TIGER2012/ROADS/tl_2012_02188_roads.zip" .
+
+<urn:uuid:a24cc5b7-5a97-4c31-bc14-5edb195745cb> bcube:hasType "place" ;
+    bcube:hasValue "02188",
+        "County or Equivalent Entity",
+        "Northwest Arctic",
+        "U.S.",
+        "United States" ;
+    dc:partOf "ANSI INCITS 38:2009 (Formerly FIPS 5-2), ANSI INCITS 31:2009 (Formerly FIPS 6-4),ANSI INCITS 454:2009 (Formerly FIPS 8-6), ANSI INCITS 455:2009(Formerly FIPS 9-1), ANSI INCITS 446:2008 (Geographic Names Information System (GNIS))" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:b8914c75-7c81-45e3-9da4-7c5cc8c63356> bcube:hasType "theme" ;
+    bcube:hasValue "Transportation" ;
+    dc:partOf "ISO 19115 Topic Categories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:e40ef60c-2197-4ecb-b5c2-c8426c8dc21d> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-01T10:27:59.957Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-01T10:27:59.957Z" ;
+    dc:identifier "urn:sha:01a397932a4fb68a3be51d47c55d4c082aa47f8fc9930debca85f13c" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://meta.geo.census.gov/data/existing/decennial/GEO/GPMB/TIGERline/TL2012/FGDC/roads/tl_2012_02188_roads.shp.xml" .
+
+<urn:uuid:ee562752-87d3-4e99-8eef-f27b70fa6d84> bcube:hasType "theme" ;
+    bcube:hasValue "Address Range",
+        "County or equivalent entity",
+        "Linear Feature",
+        "Road Feature",
+        "Roads",
+        "Street Centerline" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+

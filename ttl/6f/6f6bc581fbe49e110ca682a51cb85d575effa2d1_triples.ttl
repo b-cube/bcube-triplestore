@@ -1,0 +1,61 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:20b1792f-de89-41d5-9f16-e1dffc78a4d6> a "ISO 19115:2003/19139" ;
+    bcube:dateCreated "2015-06-18T11:54:59.501Z" ;
+    bcube:lastUpdated "2015-06-18T11:54:59.501Z" ;
+    bcube:originatedFrom <urn:uuid:b112b9e9-d211-450d-a936-3c216f82cf46> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:67bd8266-8f22-4e8e-9056-ed6789ef7d56> .
+
+<urn:uuid:5d1edd39-63b7-4e55-9041-78c5df96a34d> bcube:hasType "theme" ;
+    bcube:hasValue "Planning & Cadastre",
+        "administrative boundaries",
+        "boundaries",
+        "parcel boundaries",
+        "political boundaries" ;
+    dc:partOf "ISO Topic Categories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:67bd8266-8f22-4e8e-9056-ed6789ef7d56> bcube:dateCreated "2015-06-18T11:54:59.501Z" ;
+    bcube:hasMetadataRecord <urn:uuid:20b1792f-de89-41d5-9f16-e1dffc78a4d6> ;
+    bcube:lastUpdated "2015-06-18T11:54:59.501Z" ;
+    dc:conformsTo <urn:uuid:5d1edd39-63b7-4e55-9041-78c5df96a34d>,
+        <urn:uuid:fdbbd2d8-4ffd-4aeb-8469-50f42ddf3e0f> ;
+    dc:description "In late 1996, the Dept of Conservation (DOC) surveyed state and federal agencies about the county boundary coverage they used. As a result, DOC adopted the 1:24,000 (24K) scale U.S. Bureau of Reclamation (USBR) data set (USGS source) for their Farmland Mapping and Monitoring Program (FMMP) but with several modifications. Detailed documentation of these changes is provided by FMMP and included in the Process Step section of the Feature Class metadata. A data set named cnty24k97_1 was made available (approximately 2004) through the California Department of Forestry and Fire Protection - Fire and Resource Assessment Program (CDF - FRAP) and the California Spatial Information Library (CaSIL). In late 2006, the Department of Fish and Game (DFG) reviewed cnty24k97_1. Comparisons were made to a high-quality 100K dataset (co100a/county100k from the former Teale Data Center GIS Solutions Group) and legal boundary descriptions from ( http://www.leginfo.ca.gov ). The cnty24k97_1 data set was missing Anacapa and Santa Barbara islands. DFG added the missing islands using previously-digitized coastline data (coastn27 of State Lands Commission origin), corrected a few county boundaries, built region topology, added additional attributes, and renamed the data set to county24k. In 2007, the California Mapping Coordinating Committee (CMCC) requested that the California Department of Forestry and Fire Protection (CAL FIRE) resume stewardship of the statewide county boundaries data. CAL FIRE adopted the changes made by DFG and collected additional suggestions for the county data from DFG, DOC, and local government agencies. CAL FIRE incorporated these suggestions into the latest revision, which has been renamed cnty24k09_1. Detailed documentation of changes is included in the Process Step section of the Feature Class metadata. This Geo database contains 3 feature classes representing California county boundaries (arc, polygon, and multipart-polygon feature classes) and also contains a polygon feature class representing the state boundary: 1. Line - can be useful for cartographic purposes, especially when different line symbology is needed for different boundaries (e.g. Coastline, Mexico, Nevada, etc). 2. Multipart - features from a common county are combined into a single record (equivalent to a region feature class in a coverage). May be useful for selections and overlays when all parts of a county are needed. 3. Poly - all county features are represented as individual polygons. 4. State Poly - state boundary polygon to be used for cartography or overlay analysis that requires a state polygon." ;
+    dc:spatial "POLYGON ((-37 -60,-37 45,54 45,54 -60,-37 -60))" ;
+    dcterms:title "California County Boundaries (2009)" ;
+    esip:eastBound "54.0"^^xsd:float ;
+    esip:northBound "45.0"^^xsd:float ;
+    esip:southBound "-60.0"^^xsd:float ;
+    esip:westBound "-37.0"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:b112b9e9-d211-450d-a936-3c216f82cf46> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-06-18T11:54:59.501Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-06-18T11:54:59.501Z" ;
+    dc:identifier "urn:sha:b4dd3038be329ff016678e096153a6dfb18f0bc9fe393358873acdb0" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "https://catalog.data.gov/harvest/object/ab5ecea3-c248-40b1-b4c8-a3770292ce75" .
+
+<urn:uuid:fdbbd2d8-4ffd-4aeb-8469-50f42ddf3e0f> bcube:hasType "theme" ;
+    bcube:hasValue "ca boundaries" ;
+    dc:partOf "keyword" ;
+    owl:a bcube:thesaurusSubset .
+

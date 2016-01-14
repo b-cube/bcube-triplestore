@@ -1,0 +1,112 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:08b362a6-7e5c-47bb-9c1d-dc9b1328e74d> bcube:hasType "theme" ;
+    bcube:hasValue "boundaries" ;
+    dc:partOf "ISO 19115 Topic Categories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:0cf04f84-e764-45e6-8e2b-99eb7546fd28> bcube:hasType "place" ;
+    bcube:hasValue "32001",
+        "32015",
+        "32019",
+        "Churchill County",
+        "Lander County",
+        "Lyon County",
+        "Nevada" ;
+    dc:partOf "FIPS Publication 6-4" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:226fad66-1a4e-4ac6-a392-67bd4d01967a> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-11-08T06:49:15.883Z" ;
+    bcube:lastUpdated "2015-11-08T06:49:15.883Z" ;
+    bcube:originatedFrom <urn:uuid:f947a106-f793-4913-ba43-c00dca6170bf> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:b4c50eab-085f-485c-8127-b108c85b78a5> .
+
+<urn:uuid:3bc4c43e-1c8e-4da3-97f5-5e7d9dae0c30> bcube:hasType "theme" ;
+    bcube:hasValue "Boundary",
+        "Coordinate",
+        "County/County Equivalent",
+        "Feature Identifier",
+        "Landmark Feature",
+        "Latitude",
+        "Line Feature",
+        "Longitude",
+        "Political Boundary",
+        "Street Centerline",
+        "Street Segment",
+        "TIGER",
+        "Vector",
+        "acquisition",
+        "planned" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:800c9db0-054f-4fca-ab8a-766c0da2a3bc> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-08T06:49:15.883Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-08T06:49:15.883Z" ;
+    dc:identifier "urn:sha:e888808e18b5276c21eb269870eae3db9920b1f0810e523c5643ca8f" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www.census.gov/geo/mod/maftiger.html" .
+
+<urn:uuid:8e3f3185-c911-4c23-a93a-d9cfc7204506> dcterms:references <urn:uuid:800c9db0-054f-4fca-ab8a-766c0da2a3bc> ;
+    owl:a bibo:WebPage .
+
+<urn:uuid:b4c50eab-085f-485c-8127-b108c85b78a5> bcube:dateCreated "2015-11-08T06:49:15.883Z" ;
+    bcube:hasMetadataRecord <urn:uuid:226fad66-1a4e-4ac6-a392-67bd4d01967a> ;
+    bcube:lastUpdated "2015-11-08T06:49:15.883Z" ;
+    dc:conformsTo <urn:uuid:08b362a6-7e5c-47bb-9c1d-dc9b1328e74d>,
+        <urn:uuid:0cf04f84-e764-45e6-8e2b-99eb7546fd28>,
+        <urn:uuid:3bc4c43e-1c8e-4da3-97f5-5e7d9dae0c30>,
+        <urn:uuid:eb30387b-119a-47e9-a773-bb73d99f0699> ;
+    dc:description "The Harris Corporation will have to acquire reference sources during Fiscal Year 2008 for counties for which the Census Bureau could not find an existing adequate source from its partners. Commercial Sources will be used to improve the TIGER database to a horizontal positional accuracy of CE95 7.6 meters or better. Sources used to improve the centerline accuracy may include imagery, commercial files, or GPS'd road centerline data collection." ;
+    dc:spatial "POLYGON ((-130 25,-130 50,-60 50,-60 25,-130 25))" ;
+    dcterms:publisher <urn:uuid:cdb103be-95a1-4bdb-84b1-f79ec1eaafc1> ;
+    dcterms:references <urn:uuid:8e3f3185-c911-4c23-a93a-d9cfc7204506> ;
+    dcterms:title "MAF/TIGER Accuracy Improvement Program: Needed Sources File-FY08: Commercial" ;
+    esip:eastBound "-60.0"^^xsd:float ;
+    esip:northBound "50.0"^^xsd:float ;
+    esip:southBound "25.0"^^xsd:float ;
+    esip:startDate "2006-01-01"^^xsd:date ;
+    esip:westBound "-130.0"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:cdb103be-95a1-4bdb-84b1-f79ec1eaafc1> owl:a foaf:Organization ;
+    foaf:name "U.S. Department of Commerce, U.S. Census Bureau, Geography Division" .
+
+<urn:uuid:eb30387b-119a-47e9-a773-bb73d99f0699> bcube:hasType "temporal" ;
+    bcube:hasValue "2008",
+        "FY 2008",
+        "Fiscal Year" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:f947a106-f793-4913-ba43-c00dca6170bf> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-08T06:49:15.883Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-08T06:49:15.883Z" ;
+    dc:identifier "urn:sha:05b3608224fdac86d42e147d7d81268a376a1a295559f6c2267cbcd2" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://meta.geo.census.gov/data/planned/FY08/geo_FY08HasCommercial_ver2006.xml" .
+

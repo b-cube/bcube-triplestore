@@ -1,0 +1,84 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:06ef91a6-3ff8-4b29-801f-c503ea1cc5cd> owl:a foaf:Organization ;
+    foaf:name "Boise National Forest" .
+
+<urn:uuid:23feb4ef-fd12-4074-a7f8-931e73829105> bcube:dateCreated "2015-03-06T08:28:11.134Z" ;
+    bcube:hasMetadataRecord <urn:uuid:3777b257-4b65-43ef-886e-d719cdde23f6> ;
+    bcube:lastUpdated "2015-03-06T08:28:11.134Z" ;
+    dc:conformsTo <urn:uuid:2c708183-0792-4e1a-b5b3-dd88dfe349a4>,
+        <urn:uuid:52991747-7665-4b53-acf8-c548b2500475>,
+        <urn:uuid:5b067dd0-0d34-4e9a-a5eb-dcda07d93251> ;
+    dc:description "This data set reflects fire intensity as measured by canopy scorch for 1994 for Boise National Forest, Idaho." ;
+    dc:spatial "POLYGON ((-115.94713367 43.6289117,-115.94713367 44.87771112,-115.07772325 44.87771112,-115.07772325 43.6289117,-115.94713367 43.6289117))" ;
+    dcterms:publisher <urn:uuid:06ef91a6-3ff8-4b29-801f-c503ea1cc5cd> ;
+    dcterms:references <urn:uuid:d47e401b-0ee4-4efa-b283-ad0a000f6941> ;
+    dcterms:title "Burn Intensity for fires within Boise National Forest, Idaho in 1994" ;
+    esip:eastBound "-115.07772325"^^xsd:float ;
+    esip:northBound "44.87771112"^^xsd:float ;
+    esip:southBound "43.6289117"^^xsd:float ;
+    esip:startDate "1994-01-01"^^xsd:date ;
+    esip:westBound "-115.94713367"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:2c708183-0792-4e1a-b5b3-dd88dfe349a4> bcube:hasType "theme" ;
+    bcube:hasValue "environment" ;
+    dc:partOf "ISO 19115 Topic Category" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:3777b257-4b65-43ef-886e-d719cdde23f6> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-03-06T08:28:11.134Z" ;
+    bcube:lastUpdated "2015-03-06T08:28:11.134Z" ;
+    bcube:originatedFrom <urn:uuid:d93c2cc5-cb68-404a-becc-e3fe7d70de12> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:23feb4ef-fd12-4074-a7f8-931e73829105> .
+
+<urn:uuid:52991747-7665-4b53-acf8-c548b2500475> bcube:hasType "place" ;
+    bcube:hasValue "Boise National Forest" ;
+    dc:partOf "Geographic Names Information System (GNIS). U.S. Geological Survey (<http://geonames.usgs.gov/gnishome.html>)" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:5b067dd0-0d34-4e9a-a5eb-dcda07d93251> bcube:hasType "theme" ;
+    bcube:hasValue "Burn Intensity",
+        "Canopy Scorch",
+        "Fire",
+        "Wildfire" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:d47e401b-0ee4-4efa-b283-ad0a000f6941> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-03-06T08:28:11.134Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-03-06T08:28:11.134Z" ;
+    dc:identifier "urn:sha:8c64a96edd3865028074075dffdbc2fe3bc60ec091a8798d920f27e4" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://cloud.insideidaho.org/webApps/util/zip.ashx?fn=http://cloud.insideidaho.org/data/bnf/fire1994" .
+
+<urn:uuid:d93c2cc5-cb68-404a-becc-e3fe7d70de12> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-03-06T08:28:11.134Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-03-06T08:28:11.134Z" ;
+    dc:identifier "urn:sha:4af4385ddb976d3502bddf80d5c6b8e2117442d966b9ee0650e0205d" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www.insideidaho.org/appsOutput/metadataWAF/xml/BurnIntensityforfireswithinBoiseNationalForestIdahoin1994.xml" .
+

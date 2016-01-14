@@ -1,0 +1,82 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:21f6d826-f961-438c-bad1-2cdd5b621074> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-10-18T11:27:35.471Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-10-18T11:27:35.471Z" ;
+    dc:identifier "urn:sha:89c864b67d62e62ab1a6e4550716f2843d18fc96bf52ba4f3f546775" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://water.usgs.gov/GIS/dsdl/ds31PNSLVN_A10_gdb.zip" .
+
+<urn:uuid:58a3d342-fa95-4312-9222-65549c659da4> a "ISO 19115:2003/19139" ;
+    bcube:dateCreated "2015-10-18T11:27:35.471Z" ;
+    bcube:lastUpdated "2015-10-18T11:27:35.471Z" ;
+    bcube:originatedFrom <urn:uuid:fc476cd2-99af-4cb0-a5a3-3b9ed51a65f3> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:814e661e-fba2-438f-95ca-45c6d36cf66c> .
+
+<urn:uuid:814e661e-fba2-438f-95ca-45c6d36cf66c> bcube:dateCreated "2015-10-18T11:27:35.471Z" ;
+    bcube:hasMetadataRecord <urn:uuid:58a3d342-fa95-4312-9222-65549c659da4> ;
+    bcube:lastUpdated "2015-10-18T11:27:35.471Z" ;
+    dc:conformsTo <urn:uuid:b6393fac-b0a3-4351-9cbe-8fe0ada478a0>,
+        <urn:uuid:ded3fcd0-0d63-419f-8d34-5a9e1b39b46e> ;
+    dc:description "This geodatabase includes spatial datasets that represent the Pennsylvanian aquifers in the Lower Peninsula of Michigan. Included are: (1) polygon extents; datasets that represent the entire aquifer extent in the States of Alabama, Georgia, Illinois, Indiana, Kentucky, Maryland, Michigan, Ohio, Pennsylvania, Tennessee, Virginia, and West Virginia; the entire extent subdivided into subareas or subunits where data exist (Lower Peninsula of Michigan only), (2) raster datasets for the altitude of each aquifer subarea or subunit, (3) points of altitude used to generate the surface rasters The extent of the Pennsylvanian aquifer is derived from the linework of the Pennsylvanian aquifers extent maps in U.S. Geological Survey Scientific Investigations Report 2009-5060 (USGS SIR 2009-5060), and a digital version of the aquifer extent presented in the Groundwater Atlas of the United States (the U.S. Geological Survey Hydrologic Atlas 730-J. The area with top and bottom aquifer surface data, the Lower Peninsula of Michigan, subarea 2 (SA2) of the Pennsylvanian aquifer has 2 aquifer subunits, the (A1) Upper and (A2) Lower Pennsylvania aquifers. The altitude values for each subunit available were digitized from georeferenced datasets of altitude points used in the modeling effort described in USGS SIR 2009-5060, and the resultant top and bottom altitude values were interpolated into surface rasters within a GIS using tools that create hydrologically correct surfaces from point altitude data. The primary tool was a version of \"Topo to Raster\" used in ArcGIS, ArcMap, Esri 2014. The raster surfaces were corrected for the areas where the altitude of an underlying layer of the aquifer exceeded altitude of an overlying layer bu setting the underlying surface raster to the altitude values of the overlying surface raster." ;
+    dc:spatial "POLYGON ((-91.644674466 32.163372613,-91.644674466 44.806144595,-75.76947243 44.806144595,-75.76947243 32.163372613,-91.644674466 32.163372613))" ;
+    dcterms:references <urn:uuid:21f6d826-f961-438c-bad1-2cdd5b621074> ;
+    dcterms:title "Geodatabase of the datasets used to represent the two subunits of the Pennsylvanian aquifer in the Lower Peninsula of Michigan" ;
+    esip:eastBound "-75.76947243"^^xsd:float ;
+    esip:northBound "44.806144595"^^xsd:float ;
+    esip:southBound "32.163372613"^^xsd:float ;
+    esip:westBound "-91.644674466"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:b6393fac-b0a3-4351-9cbe-8fe0ada478a0> bcube:hasType "place" ;
+    bcube:hasValue "Appalachian Plateau",
+        "Central Lowlands",
+        "Interior Low Plateau",
+        "Lower Peninsula of Michigan",
+        "Michigan",
+        "United States" ;
+    dc:partOf "Geographic Names Information System (GNIS)" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:ded3fcd0-0d63-419f-8d34-5a9e1b39b46e> bcube:hasType "theme" ;
+    bcube:hasValue "Lower Pennsylvanian",
+        "Pennsylvanian aquifer",
+        "Upper Pennsylvanian",
+        "aquifer",
+        "aquifer system",
+        "extent",
+        "groundwater",
+        "inlandWaters" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:fc476cd2-99af-4cb0-a5a3-3b9ed51a65f3> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-10-18T11:27:35.471Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-10-18T11:27:35.471Z" ;
+    dc:identifier "urn:sha:a8790965a9a0d33121d2c1acf65600f7d93ce31474de66c6c4aaf2da" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "https://catalog.data.gov/harvest/object/f25e0b3b-8485-47b0-9814-c9991ae2d28e" .
+

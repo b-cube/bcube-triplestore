@@ -1,0 +1,57 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:01d285ce-5199-4a07-93cf-f05101692948> bcube:hasType "theme" ;
+    bcube:hasValue "Atlantic Ocean",
+        "Caribbean Sea",
+        "Gulf of Mexico",
+        "Recreational landings",
+        "billfish",
+        "swordfish" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:34c7c576-5fba-47fc-bc68-f4f779989b20> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-04T15:05:18.657Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-04T15:05:18.657Z" ;
+    dc:identifier "urn:sha:4cef554122b70945cf6ba353aed16c7dc6d6bcfa04984891a4110e96" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "https://inport.nmfs.noaa.gov/inport/item/22028/fgdc" .
+
+<urn:uuid:5dd42e21-8602-4d53-961e-533bc93dafb3> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-08-04T15:05:18.657Z" ;
+    bcube:lastUpdated "2015-08-04T15:05:18.657Z" ;
+    bcube:originatedFrom <urn:uuid:34c7c576-5fba-47fc-bc68-f4f779989b20> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:c643506e-85f7-41d4-8635-56c9c7856c0a> .
+
+<urn:uuid:a511cb8e-f739-4216-90fc-28e6b6a04a03> owl:a foaf:Organization ;
+    foaf:name "" .
+
+<urn:uuid:c643506e-85f7-41d4-8635-56c9c7856c0a> bcube:dateCreated "2015-08-04T15:05:18.657Z" ;
+    bcube:hasMetadataRecord <urn:uuid:5dd42e21-8602-4d53-961e-533bc93dafb3> ;
+    bcube:lastUpdated "2015-08-04T15:05:18.657Z" ;
+    dc:conformsTo <urn:uuid:01d285ce-5199-4a07-93cf-f05101692948> ;
+    dc:description "All recreationally caught billfish and swordfish that are landed outside of a registered tournament must be reported to the National Marine Fisheries Service (NMFS). Recreational fishermen may report through a webpage or by calling the Highly Migratory Species (HMS) Recreational Reporting Line. Webpage submissions automatically update the database; reports that are called in are manually entered by HMS staff. Data elements collected include species landed, date of landing, date of fishing trip, port of landing, vessel name, vessel permit number, fish length, fish weight, type of trip (charter/private), fishing technique, bait type, fight time, number and species of fish released." ;
+    dcterms:identifier "gov.noaa.nmfs.inport:22028" ;
+    dcterms:publisher <urn:uuid:a511cb8e-f739-4216-90fc-28e6b6a04a03> ;
+    dcterms:title "Recreational (non-tournament) Billfish & Swordfish Landings" ;
+    esip:startDate "2002-01-01"^^xsd:date ;
+    owl:a dcat:Dataset .
+

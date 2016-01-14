@@ -1,0 +1,107 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:050739b4-882a-47cc-9ca2-91d95dcd72a7> bcube:hasType "theme" ;
+    bcube:hasValue "height",
+        "latitude",
+        "longitude" ;
+    dc:partOf "CF-1.4" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:087983eb-bb4b-4579-8569-9c02e5945aa4> bcube:hasType "theme" ;
+    bcube:hasValue "Earth Science > Land Surface > Topography > Terrain Elevation > Digital Elevation/Terrain Model (DEM)",
+        "Earth Science > Oceans > Bathymetry/Seafloor Topography > Bathymetry" ;
+    dc:partOf "GCMD Science Keywords" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:0cff5713-9bcd-4bd6-82ac-2a71acf5031b> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-08-10T00:54:02.13Z" ;
+    bcube:lastUpdated "2015-08-10T00:54:02.13Z" ;
+    bcube:originatedFrom <urn:uuid:fabe0b2d-3f98-48f0-bfcd-0db47b26cff4> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:c5454dca-07a5-4065-8cee-d061eaa68b02> .
+
+<urn:uuid:10b295bf-cb76-4566-9248-456c7dfc48e2> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-10T00:54:02.13Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-10T00:54:02.13Z" ;
+    dc:identifier "urn:sha:d002067e55338951a766d2fed2f8d7ad8ef9a9f828284578ccfb076a" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://oos.soest.hawaii.edu/erddap/wms/etopo5/request" .
+
+<urn:uuid:8b125e48-05aa-4ee2-946f-25caa9969b3b> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-10T00:54:02.13Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-10T00:54:02.13Z" ;
+    dc:identifier "urn:sha:d1ca65480287139174cfb1c8a58c2dd5680538910c5bb3d37ecba366" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://oos.soest.hawaii.edu/erddap/griddap/etopo5.html" .
+
+<urn:uuid:c0ae3967-faea-4c9c-9c9e-d8dcfc55bd7f> dcterms:references <urn:uuid:10b295bf-cb76-4566-9248-456c7dfc48e2> ;
+    owl:a bibo:WebPage .
+
+<urn:uuid:c5454dca-07a5-4065-8cee-d061eaa68b02> bcube:dateCreated "2015-08-10T00:54:02.13Z" ;
+    bcube:hasMetadataRecord <urn:uuid:0cff5713-9bcd-4bd6-82ac-2a71acf5031b> ;
+    bcube:lastUpdated "2015-08-10T00:54:02.13Z" ;
+    dc:conformsTo <urn:uuid:050739b4-882a-47cc-9ca2-91d95dcd72a7>,
+        <urn:uuid:087983eb-bb4b-4579-8569-9c02e5945aa4> ;
+    dc:description "ETOPO5 is a 5 arc-minute global relief model of Earth's surface that integrates land topography and ocean bathymetry. It was built from numerous global and regional data sets. This historical dataset has been deprecated in favor of the newer and higher-resolution ETOPO1 1 arc-minute global relief model." ;
+    dc:spatial "POLYGON ((-180 -90,-180 90,180 90,180 -90,-180 -90))" ;
+    dcterms:identifier "oos.soest.hawaii.edu:etopo5" ;
+    dcterms:publisher <urn:uuid:c855631b-e59b-4373-aafe-3d455a6c4637> ;
+    dcterms:references <urn:uuid:8b125e48-05aa-4ee2-946f-25caa9969b3b>,
+        <urn:uuid:c0ae3967-faea-4c9c-9c9e-d8dcfc55bd7f>,
+        <urn:uuid:d4ab0ab1-cb1c-49cf-8aa5-ea2200cacbc7> ;
+    dcterms:title "ETOPO5 Global Surface Relief" ;
+    esip:eastBound "180.0"^^xsd:float ;
+    esip:northBound "90.0"^^xsd:float ;
+    esip:southBound "-90.0"^^xsd:float ;
+    esip:westBound "-180.0"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:c855631b-e59b-4373-aafe-3d455a6c4637> owl:a foaf:Organization ;
+    foaf:name "ERDDAP, version 1.62, at Pacific Islands Ocean Ocean Observing System (PacIOOS)" .
+
+<urn:uuid:d4ab0ab1-cb1c-49cf-8aa5-ea2200cacbc7> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-10T00:54:02.13Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-10T00:54:02.13Z" ;
+    dc:identifier "urn:sha:dd2061d1891d7998988bcc26d723bc493f57757bf1351a6a29b08620" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://oos.soest.hawaii.edu/erddap/griddap/etopo5.graph" .
+
+<urn:uuid:fabe0b2d-3f98-48f0-bfcd-0db47b26cff4> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-10T00:54:02.13Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-10T00:54:02.13Z" ;
+    dc:identifier "urn:sha:949f4f3547496bf6c97c1a4bd709367a45acc07a9d493cdfb905200b" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://oos.soest.hawaii.edu/erddap/griddap/etopo5.fgdc" .
+

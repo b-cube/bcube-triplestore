@@ -1,0 +1,91 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:0a90b665-26ab-4975-9939-ff439120e49a> a "ISO 19115:2003/19139" ;
+    bcube:dateCreated "2015-03-06T05:24:27.039Z" ;
+    bcube:lastUpdated "2015-03-06T05:24:27.039Z" ;
+    bcube:originatedFrom <urn:uuid:1ecd8d9f-23c1-46d3-b146-2ae6d4c25888> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:d523da68-8ef7-4023-84b9-5886c6d64388> .
+
+<urn:uuid:1ecd8d9f-23c1-46d3-b146-2ae6d4c25888> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-03-06T05:24:27.039Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-03-06T05:24:27.039Z" ;
+    dc:identifier "urn:sha:9f6e5e9a8a2a39245bcfe3d5575bdcbf162b2f855d93b2faf8bf7546" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://catalog.data.gov/harvest/object/0af0b6be-1316-4931-ae2a-2ff8845e33b5" .
+
+<urn:uuid:81508bc7-1e19-4293-a3cc-d6050ee82f97> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-03-06T05:24:27.039Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-03-06T05:24:27.039Z" ;
+    dc:identifier "urn:sha:17c641ac0cb6c6c408bb1bbc6dcf979ebfbf4c6d189b1577302f20dd" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://cloud.insideidaho.org/webApps/util/zip.ashx?fn=http://cloud.insideidaho.org/data/blm/fireHazardRisk/augwxpot_blm" .
+
+<urn:uuid:96898b11-849b-465e-8648-f1713daaa3f3> bcube:hasType "theme" ;
+    bcube:hasValue "Fire",
+        "Fire Behavior",
+        "Fire Weather",
+        "Humidity",
+        "ROS",
+        "Rate of Spread",
+        "Temperature",
+        "Weather",
+        "Weather Potential",
+        "Wildfire",
+        "Wind" ;
+    dc:partOf "BLM-Theme" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:c95af9ba-c78b-448b-b700-0f0c39105c41> bcube:hasType "place" ;
+    bcube:hasValue "Idaho" ;
+    dc:partOf "BLM-Theme" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:d1df87c0-793b-4292-be33-f260254cce3b> bcube:hasValue "climatologyMeteorologyAtmosphere" ;
+    dc:partOf "IsoTopicCategories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:d523da68-8ef7-4023-84b9-5886c6d64388> bcube:dateCreated "2015-03-06T05:24:27.039Z" ;
+    bcube:hasMetadataRecord <urn:uuid:0a90b665-26ab-4975-9939-ff439120e49a> ;
+    bcube:lastUpdated "2015-03-06T05:24:27.039Z" ;
+    dc:conformsTo <urn:uuid:96898b11-849b-465e-8648-f1713daaa3f3>,
+        <urn:uuid:c95af9ba-c78b-448b-b700-0f0c39105c41>,
+        <urn:uuid:d1df87c0-793b-4292-be33-f260254cce3b>,
+        <urn:uuid:f72e5c25-5289-4c0c-a323-adfc379b0266> ;
+    dc:description "As used in this assessment, \"fire weather\" is analogous to \"extreme fire weather potential\" used by Schmidt et al. (2002). The 3 main components of fire weather include temperature, humidity, and wind. We used average maximum temperature and average humidity (vapor pressure) for the month of August from DAYMET (http://www.ntsg.umt.edu/); and average surface wind speed for August from the ICBEMP (www.icbemp.gov). These data were 1000-m and 9317-m resolution, respectively. We \"smoothed\" the wind data by resampling it to 1000-m resolution so that it would have a similar resolution as the temperature and humidity data. A proxy for fire weather was then generated spatially by averaging the standardized values for the 3 weather variables: Wx_potential = (max_temp + (1- rel_humidity) + rel_wind_ros) / 3" ;
+    dc:spatial "POLYGON ((-117.672126 41.852502,-117.672126 49.107907,-110.527218 49.107907,-110.527218 41.852502,-117.672126 41.852502))" ;
+    dcterms:references <urn:uuid:81508bc7-1e19-4293-a3cc-d6050ee82f97> ;
+    dcterms:title "Weather Potential in August" ;
+    esip:eastBound "-110.527218"^^xsd:float ;
+    esip:northBound "49.107907"^^xsd:float ;
+    esip:southBound "41.852502"^^xsd:float ;
+    esip:westBound "-117.672126"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:f72e5c25-5289-4c0c-a323-adfc379b0266> bcube:hasType "theme" ;
+    bcube:hasValue "Idaho State Fire Plan" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+

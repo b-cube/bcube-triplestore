@@ -1,0 +1,86 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:20f5c481-28d1-4d31-b898-0e3ccf34451d> bcube:hasType "theme" ;
+    bcube:hasValue "Contours",
+        "Elevation Data",
+        "LIDAR",
+        "Land Surface",
+        "Relief",
+        "Slope",
+        "Topography" ;
+    dc:partOf "FEMA NFIP Topic Category" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:28d3f53a-264a-4090-be49-e2a78eedf5f2> a "ISO 19115:2003/19139" ;
+    bcube:dateCreated "2015-08-05T15:53:50.052Z" ;
+    bcube:lastUpdated "2015-08-05T15:53:50.052Z" ;
+    bcube:originatedFrom <urn:uuid:a7538ec0-687c-4492-bf71-1f7349f600eb> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:8c506812-5af6-477b-8e7d-683b098509f4> .
+
+<urn:uuid:7642cb82-fb1c-4b5d-aa01-8e53997a6341> bcube:hasValue "elevation" ;
+    dc:partOf "IsoTopicCategories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:8c506812-5af6-477b-8e7d-683b098509f4> bcube:dateCreated "2015-08-05T15:53:50.052Z" ;
+    bcube:hasMetadataRecord <urn:uuid:28d3f53a-264a-4090-be49-e2a78eedf5f2> ;
+    bcube:lastUpdated "2015-08-05T15:53:50.052Z" ;
+    dc:conformsTo <urn:uuid:20f5c481-28d1-4d31-b898-0e3ccf34451d>,
+        <urn:uuid:7642cb82-fb1c-4b5d-aa01-8e53997a6341>,
+        <urn:uuid:b9d20482-66e1-4977-afc2-fb17808ca234> ;
+    dc:description "Terrain data, as defined in FEMA Guidelines and Specifications, Appendix N: Data Capture Standards, describes the digital topographic data that was used to create the elevation data representing the terrain environment of a watershed and/or floodplain. Terrain data requirements allow for flexibility in the types of information provided as sources used to produce final terrain deliverables. Once this type of data is provided, FEMA will be able to account for the origins of the flood study elevation data. (Source: FEMA Guidelines and Specifications, Appendix N, Section N.1.2)." ;
+    dc:spatial "POLYGON ((-85.659998 41.260917,-85.659998 41.532966,-85.185064 41.532966,-85.185064 41.260917,-85.659998 41.260917))" ;
+    dcterms:references <urn:uuid:f57b3e8b-a602-420b-a149-4661ad8a57ce> ;
+    dcterms:title "DCS Terrain Submission for Noble County, IN" ;
+    esip:eastBound "-85.185064"^^xsd:float ;
+    esip:northBound "41.532966"^^xsd:float ;
+    esip:southBound "41.260917"^^xsd:float ;
+    esip:westBound "-85.659998"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:a7538ec0-687c-4492-bf71-1f7349f600eb> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-05T15:53:50.052Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-05T15:53:50.052Z" ;
+    dc:identifier "urn:sha:127039ea42d6a06ad5609009ca23c1c2281f8dc97233a128a8272b3d" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "https://catalog.data.gov/harvest/object/d2f0df11-7fba-401a-b61e-889e07f76952" .
+
+<urn:uuid:b9d20482-66e1-4977-afc2-fb17808ca234> bcube:hasType "place" ;
+    bcube:hasValue "COMMUNITY Noble County, IN (Unincorporated Areas)",
+        "COUNTY NOBLE",
+        "COUNTY-FIPS 18113",
+        "FEMA-CID 18113C",
+        "REGION 05",
+        "STATE IN" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:f57b3e8b-a602-420b-a149-4661ad8a57ce> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-05T15:53:50.052Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-05T15:53:50.052Z" ;
+    dc:identifier "urn:sha:330e2f26ddd1c81851da84bd4e386772ebf3a6727540c93589ec4300" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://nationalatlas.gov/atlasftp.html" .
+

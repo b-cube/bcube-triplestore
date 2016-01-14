@@ -1,0 +1,102 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:0ad4d10a-fd10-494b-9789-22fe6378781d> bcube:hasType "place" ;
+    bcube:hasValue "Cache",
+        "Cache County",
+        "State of Utah",
+        "Utah" ;
+    dc:partOf "none" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:3702b72b-4656-48f2-a56d-a27c8ab0c83b> bcube:hasType "theme" ;
+    bcube:hasValue "Altitude",
+        "Estuary",
+        "Hole Depth",
+        "Hydrologic Data Site",
+        "Lake",
+        "Reservoir",
+        "Spring",
+        "Stream",
+        "Water Use",
+        "Well",
+        "Well Depth",
+        "inlandWaters" ;
+    dc:partOf "none" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:3d5da260-83b9-4c99-a5fc-b51a768146c4> bcube:dateCreated "2015-08-04T15:00:14.83Z" ;
+    bcube:hasMetadataRecord <urn:uuid:41b082eb-9ca1-4d5a-b15b-1dcc57b35922> ;
+    bcube:lastUpdated "2015-08-04T15:00:14.83Z" ;
+    dc:conformsTo <urn:uuid:0ad4d10a-fd10-494b-9789-22fe6378781d>,
+        <urn:uuid:3702b72b-4656-48f2-a56d-a27c8ab0c83b> ;
+    dc:description "This map shows the USGS (United States Geologic Survey), NWIS (National Water Inventory System) Hydrologic Data Sites for Cache County, Utah. The scope and purpose of NWIS is defined on the web site: http://water.usgs.gov/public/pubs/FS/FS-027-98/" ;
+    dc:spatial "POLYGON ((-112.09588623 41.4980278,-112.09588623 41.9994278,-111.50995636 41.9994278,-111.50995636 41.4980278,-112.09588623 41.4980278))" ;
+    dcterms:publisher <urn:uuid:c558123b-d73e-436d-8e4b-1f79b2093bd2> ;
+    dcterms:references <urn:uuid:59d6fe28-7c2f-42a0-829b-7e9bb96285a4>,
+        <urn:uuid:9f890a82-2605-4f61-af47-910e33219909> ;
+    dcterms:title "Hydrologic Data Sites for Cache County, Utah" ;
+    esip:eastBound "-111.50995636"^^xsd:float ;
+    esip:northBound "41.9994278"^^xsd:float ;
+    esip:southBound "41.4980278"^^xsd:float ;
+    esip:startDate "2000-02-15"^^xsd:date ;
+    esip:westBound "-112.09588623"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:41b082eb-9ca1-4d5a-b15b-1dcc57b35922> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-08-04T15:00:14.83Z" ;
+    bcube:lastUpdated "2015-08-04T15:00:14.83Z" ;
+    bcube:originatedFrom <urn:uuid:fbcac5b0-ddf5-43de-8d03-3d4910106773> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:3d5da260-83b9-4c99-a5fc-b51a768146c4> .
+
+<urn:uuid:59d6fe28-7c2f-42a0-829b-7e9bb96285a4> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-04T15:00:14.83Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-04T15:00:14.83Z" ;
+    dc:identifier "urn:sha:4128f1dd186b2cfffb872bc8fe7fe0aaf58629509083a86d1f2aef7b" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://water.usgs.gov/GIS/dsdl/ut_cache.e00" .
+
+<urn:uuid:9f890a82-2605-4f61-af47-910e33219909> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-04T15:00:14.83Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-04T15:00:14.83Z" ;
+    dc:identifier "urn:sha:0346be10c5e296237f43912e2714ade7d8a83bd32c14df1e9cdfb92e" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://water.usgs.gov/GIS/dsdl/ut_cache.tgz" .
+
+<urn:uuid:c558123b-d73e-436d-8e4b-1f79b2093bd2> owl:a foaf:Organization ;
+    foaf:name "U.S. Geological Survey" .
+
+<urn:uuid:fbcac5b0-ddf5-43de-8d03-3d4910106773> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-04T15:00:14.83Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-04T15:00:14.83Z" ;
+    dc:identifier "urn:sha:b9a975e5a203c4470c28d7aebb864d50e16d29f351fc4d8fd536bb72" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://water.usgs.gov/lookup/getspatial?ut_cache" .
+

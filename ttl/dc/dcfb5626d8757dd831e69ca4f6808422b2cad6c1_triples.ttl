@@ -1,0 +1,84 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:0f2d8039-e4fe-4e61-a9bd-0b154760af39> owl:a foaf:Organization ;
+    foaf:name "" .
+
+<urn:uuid:26df1670-7f75-4955-b736-a9db034787dc> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-11-08T17:08:12.071Z" ;
+    bcube:lastUpdated "2015-11-08T17:08:12.071Z" ;
+    bcube:originatedFrom <urn:uuid:adb72def-8ed9-40c9-87bc-ceb00e130033> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:dafb3a4c-8314-4f13-9e46-f0990a702bd8> .
+
+<urn:uuid:2b17143c-be48-49e2-bc41-01c390360053> bcube:hasType "place" ;
+    bcube:hasValue "U.S.",
+        "United States" ;
+    dc:partOf "FIPS Publication 5-2, FIPS Publication 6-4, FIPS Publication 8-6, FIPS Publication 9-1,FIPS Publication55-4" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:30540cd6-07fd-4712-8358-2c73528104ed> bcube:hasType "theme" ;
+    bcube:hasValue "boundaries" ;
+    dc:partOf "ISO 19115 Topic Categories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:749af8e8-7e58-42bc-a54e-a2590d4a86d8> bcube:hasType "theme" ;
+    bcube:hasValue "Nation",
+        "Polygon" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:adb72def-8ed9-40c9-87bc-ceb00e130033> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-08T17:08:12.071Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-08T17:08:12.071Z" ;
+    dc:identifier "urn:sha:877575ab15a4d574b1ed60943ccafe4d071ed9a4dac98234d217a7b4" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://meta.geo.census.gov/data/existing/decennial/GEO/GPMB/TIGERline/fe_2008/county00/tl_2008_us_county00_url.shp.xml" .
+
+<urn:uuid:dafb3a4c-8314-4f13-9e46-f0990a702bd8> bcube:dateCreated "2015-11-08T17:08:12.071Z" ;
+    bcube:hasMetadataRecord <urn:uuid:26df1670-7f75-4955-b736-a9db034787dc> ;
+    bcube:lastUpdated "2015-11-08T17:08:12.071Z" ;
+    dc:conformsTo <urn:uuid:2b17143c-be48-49e2-bc41-01c390360053>,
+        <urn:uuid:30540cd6-07fd-4712-8358-2c73528104ed>,
+        <urn:uuid:749af8e8-7e58-42bc-a54e-a2590d4a86d8> ;
+    dc:description "The TIGER/Line Shapefiles are an extract of selected geographic and cartographic information from the Census MAF/TIGER database. The Census MAF/TIGER database represents a seamless national file with no overlaps or gaps between parts. However, each TIGER/Line Shapefile is designed to stand alone as an independent data set or the shapefiles can be combined to cover the whole nation." ;
+    dc:spatial "POLYGON ((-179.231086 -14.601813,-179.231086 71.441059,179.859681 71.441059,179.859681 -14.601813,-179.231086 -14.601813))" ;
+    dcterms:publisher <urn:uuid:0f2d8039-e4fe-4e61-a9bd-0b154760af39> ;
+    dcterms:references <urn:uuid:ebafdf33-8fdc-4266-aaae-025902e675a1> ;
+    dcterms:title "TIGER/Line Shapefile, 2008, 2000 nation, U.S., County and Equivalent" ;
+    esip:eastBound "179.859681"^^xsd:float ;
+    esip:endDate "2008-07-01"^^xsd:date ;
+    esip:northBound "71.441059"^^xsd:float ;
+    esip:southBound "-14.601813"^^xsd:float ;
+    esip:startDate "2008-01-01"^^xsd:date ;
+    esip:westBound "-179.231086"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:ebafdf33-8fdc-4266-aaae-025902e675a1> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-08T17:08:12.071Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-08T17:08:12.071Z" ;
+    dc:identifier "urn:sha:2a4aa03fd17995277a3dfdeb88659fdc1fc894d551dec0f55dcbac29" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www2.census.gov/geo/tiger/TIGER2008/tl_2008_us_county00.zip" .
+

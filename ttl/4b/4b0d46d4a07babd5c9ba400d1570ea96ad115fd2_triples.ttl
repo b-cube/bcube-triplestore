@@ -1,0 +1,86 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:3839838e-9eb9-48cd-8ee9-be6776348be9> owl:a foaf:Organization ;
+    foaf:name "" .
+
+<urn:uuid:490cfe0d-0b68-469f-bdba-d3b22fbb042b> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-09-02T07:06:05.343Z" ;
+    bcube:lastUpdated "2015-09-02T07:06:05.343Z" ;
+    bcube:originatedFrom <urn:uuid:e7645c9a-599f-410c-8e4c-fe79f2193aec> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:9274cb1f-0079-4b40-a947-d1f5c5a1870c> .
+
+<urn:uuid:64e6efdb-a7e3-4573-89cb-529fbddf0b67> bcube:hasType "theme" ;
+    bcube:hasValue "elevation",
+        "imageryBaseMapsEarthCover",
+        "oceans" ;
+    dc:partOf "ISO 19115 Topic Categories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:9274cb1f-0079-4b40-a947-d1f5c5a1870c> bcube:dateCreated "2015-09-02T07:06:05.343Z" ;
+    bcube:hasMetadataRecord <urn:uuid:490cfe0d-0b68-469f-bdba-d3b22fbb042b> ;
+    bcube:lastUpdated "2015-09-02T07:06:05.343Z" ;
+    dc:conformsTo <urn:uuid:64e6efdb-a7e3-4573-89cb-529fbddf0b67>,
+        <urn:uuid:cdf1639b-ee5b-4377-95a9-beaf0e746b3c> ;
+    dc:description "We assembled 1.4 million National Ocean Service (NOS) bathymetric soundings from 98 lead-line and single-beam echosounder hydrographic surveys conducted from 1910 to 1999 in Cook Inlet, Alaska. These bathymetry data are available from the National Geophysical Data Center (NGDC: http://www.ngdc.noaa.gov), which archives and distributes data that were originally collected by the NOS and others. While various bathymetry data have been downloaded previously from NGDC, compiled, and used for a variety of projects, our effort differed in that we compared and corrected the digital bathymetry by studying the original analog source documents - digital versions of the original survey maps, called smooth sheets. Our editing included deleting erroneous and superseded values, digitizing missing values, and properly aligning all data sets to a common, modern datum. There were six areas where these older surveys were superseded by compilations of reduced-resolution multibeam surveys. We digitized 12,000 features, such as rocky reefs, kelp beds, rocks and islets, adding them to what was originally available, and creating the most thorough source (n = 18,000) of these typically shallow, inshore features. We also digitized 2,418 km of the mainland and 529 km of island shoreline, generally at a resolution of 1:20,000, and digitized 9,271 verbal surficial sediment descriptions from the smooth sheets. The depth surface, shoreline, inshore features, and sediment data sets are mostly produced at a scale of 1:20,000." ;
+    dc:spatial "POLYGON ((-154.3 58.8,-154.3 61.6,-148.9 61.6,-148.9 58.8,-154.3 58.8))" ;
+    dcterms:identifier "gov.noaa.nmfs.inport:22166" ;
+    dcterms:publisher <urn:uuid:3839838e-9eb9-48cd-8ee9-be6776348be9> ;
+    dcterms:references <urn:uuid:e3079688-23be-4da6-95f1-07bfcd8ec88c> ;
+    dcterms:title "AFSC/RACE/GAP/Zimmermann: Cook Inlet Grid" ;
+    esip:eastBound "-148.9"^^xsd:float ;
+    esip:endDate "2009-01-01"^^xsd:date ;
+    esip:northBound "61.6"^^xsd:float ;
+    esip:southBound "58.8"^^xsd:float ;
+    esip:startDate "1910-01-01"^^xsd:date ;
+    esip:westBound "-154.3"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:bf16deab-f1e5-49f6-8fa9-8f957cd40af7> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-09-02T07:06:05.343Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-09-02T07:06:05.343Z" ;
+    dc:identifier "urn:sha:8ad52ca70e0a50d234f9cc6e611d443203504a2308807edfcba08a32" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www.afsc.noaa.gov/RACE/groundfish/bathymetry/Cook_bathymetry_grid.zip" .
+
+<urn:uuid:cdf1639b-ee5b-4377-95a9-beaf0e746b3c> bcube:hasType "theme" ;
+    bcube:hasValue "Alaska",
+        "Cook Inlet",
+        "North Pacific Ocean",
+        "bathymetry",
+        "grid" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:e3079688-23be-4da6-95f1-07bfcd8ec88c> dcterms:references <urn:uuid:bf16deab-f1e5-49f6-8fa9-8f957cd40af7> ;
+    owl:a bibo:WebPage .
+
+<urn:uuid:e7645c9a-599f-410c-8e4c-fe79f2193aec> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-09-02T07:06:05.343Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-09-02T07:06:05.343Z" ;
+    dc:identifier "urn:sha:76e9891784a1343b5c253fff8d21ff33ccdf654318e16e1f6c5f1099" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "https://inport.nmfs.noaa.gov/inport/item/22166/fgdc" .
+

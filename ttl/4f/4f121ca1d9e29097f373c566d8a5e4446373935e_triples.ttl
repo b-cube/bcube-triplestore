@@ -1,0 +1,79 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:3e36fba3-25d6-44d4-8a0f-15c0417c2c5b> bcube:hasValue "geoscientificInformation" ;
+    dc:partOf "IsoTopicCategories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:4f0fb489-6d87-4122-9f7b-d6be16909de2> bcube:hasType "theme" ;
+    bcube:hasValue "Nevada",
+        "Tuscarora",
+        "geothermal",
+        "prospect" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:619a01c0-1ed9-4e7d-ae01-dea5259da4f8> bcube:hasType "place" ;
+    bcube:hasValue "Nevada",
+        "Tuscarora" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:aa5da700-d2b7-4d83-b91b-e1a2133bb499> bcube:dateCreated "2015-10-31T22:19:17.931Z" ;
+    bcube:hasMetadataRecord <urn:uuid:d84c0ef6-1d19-4094-acca-7e98a9f44795> ;
+    bcube:lastUpdated "2015-10-31T22:19:17.931Z" ;
+    dc:conformsTo <urn:uuid:3e36fba3-25d6-44d4-8a0f-15c0417c2c5b>,
+        <urn:uuid:4f0fb489-6d87-4122-9f7b-d6be16909de2>,
+        <urn:uuid:619a01c0-1ed9-4e7d-ae01-dea5259da4f8> ;
+    dc:description "This document is a record of a talk given about the Tuscarora geothermal prospect, including results of heatflow, sel-potential, gravity, magnetics, passive seismic, resistivity and MT surveys." ;
+    dc:spatial "POLYGON ((-116.15 41.2,-116.15 41.3,-116.05 41.3,-116.05 41.2,-116.15 41.2))" ;
+    dcterms:references <urn:uuid:e87cc821-d024-442a-bda6-b730d5034554> ;
+    dcterms:title "The Tuscarora, Nevada Geothermal Prospect, A Continuous Case History Parts 1 & 2" ;
+    esip:eastBound "-116.05"^^xsd:float ;
+    esip:endDate "1980-11-01"^^xsd:date ;
+    esip:northBound "41.3"^^xsd:float ;
+    esip:southBound "41.2"^^xsd:float ;
+    esip:startDate "1980-11-01"^^xsd:date ;
+    esip:westBound "-116.15"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:d84c0ef6-1d19-4094-acca-7e98a9f44795> a "ISO 19115:2003/19139" ;
+    bcube:dateCreated "2015-10-31T22:19:17.931Z" ;
+    bcube:lastUpdated "2015-10-31T22:19:17.931Z" ;
+    bcube:originatedFrom <urn:uuid:e12732f6-025b-488c-aa2f-13c22c5ff3af> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:aa5da700-d2b7-4d83-b91b-e1a2133bb499> .
+
+<urn:uuid:e12732f6-025b-488c-aa2f-13c22c5ff3af> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-10-31T22:19:17.931Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-10-31T22:19:17.931Z" ;
+    dc:identifier "urn:sha:6f7824e89650cec587217cc4ff834bad026b53cf76156a5489c3fabc" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://repository.stategeothermaldata.org/resources/metadata/test-CSV-XML-tool/673fcaab-5da8-412a-bfe7-97f2fd6c14d6.xml" .
+
+<urn:uuid:e87cc821-d024-442a-bda6-b730d5034554> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-10-31T22:19:17.931Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-10-31T22:19:17.931Z" ;
+    dc:identifier "urn:sha:af3d7c0e6c34470c819cfbb601516c87678d6e299bdfb9c4d5ab77b6" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "ftp://ftp.nbmg.unr.edu/pub/Geothermal/11_Documents/Berkman_TuscaroraProspect_1980.pdf" .
+

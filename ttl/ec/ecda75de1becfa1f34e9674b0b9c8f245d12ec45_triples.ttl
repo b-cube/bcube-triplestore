@@ -1,0 +1,62 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:014c7bc2-8a4c-4295-b443-b5674167074f> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-10-18T04:28:54.463Z" ;
+    bcube:lastUpdated "2015-10-18T04:28:54.463Z" ;
+    bcube:originatedFrom <urn:uuid:1902f527-dccb-4b3c-9723-28fdb4c4279e> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:98726610-b531-4748-83ba-41d511fe06a3> .
+
+<urn:uuid:1902f527-dccb-4b3c-9723-28fdb4c4279e> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-10-18T04:28:54.463Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-10-18T04:28:54.463Z" ;
+    dc:identifier "urn:sha:a07c2e79affdf695b783067d2255171f594387a93f5d41d556c879ea" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://sdms.ak.blm.gov/download/protracted_grid_gis/metadata/section83.xml" .
+
+<urn:uuid:1eda7166-e2c6-4dbb-a494-240bf2ff309f> bcube:hasType "place" ;
+    bcube:hasValue "Alaska" ;
+    dc:partOf "BLM-STATE" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:6778f7af-f717-42ed-98ac-11f1716cf15f> owl:a foaf:Organization ;
+    foaf:name "" .
+
+<urn:uuid:98726610-b531-4748-83ba-41d511fe06a3> bcube:dateCreated "2015-10-18T04:28:54.463Z" ;
+    bcube:hasMetadataRecord <urn:uuid:014c7bc2-8a4c-4295-b443-b5674167074f> ;
+    bcube:lastUpdated "2015-10-18T04:28:54.463Z" ;
+    dc:conformsTo <urn:uuid:1eda7166-e2c6-4dbb-a494-240bf2ff309f>,
+        <urn:uuid:c5d463e8-e1ef-45ae-bc53-0ca1500859cf> ;
+    dc:description "Section boundaries were generated from geodetic latitude and longitude coordinate pairs as recorded on BLM's official protraction diagrams of the state of Alaska. The SDMS_PROD protraction tables were modified to include pro_pt83, section83, and township83. The latitude and longitude values in the pro_pt83 table were transformed from geographic NAD27 coordinates to geographic NAD83 coordinates using NADCON for Alaska. The Informix Section83 table is a spatially-enabled table that contains all of the protraction information for each of the 655,483 sections. Section shapes are stored as NAD83 geographic multipolygons. Each section was individually constructed from NAD83 geographic pro_pt (Protracted Point) table and is fully densified by including all township/section offset corners from adjacent township/sections. The geometry for a single section (i.e. SEC 1, T69S, R100E, CM) may include as many as 11 coordinate pairs on the exterior ring. The section83 table identifies 655,483 sections as 655,485 multi-polygons (two sections require two polygons each), as depicted on the official BLM protraction diagrams. MTRS Number of Geometries ----------------------------------------------------------- C033S066E27 2 C066S098E34 2" ;
+    dc:spatial "POLYGON ((-179.230436 51.201455,-179.230436 71.468273,179.893985 71.468273,179.893985 51.201455,-179.230436 51.201455))" ;
+    dcterms:publisher <urn:uuid:6778f7af-f717-42ed-98ac-11f1716cf15f> ;
+    dcterms:title "Protracted Section Grid for Alaska (NAD83)" ;
+    esip:eastBound "179.893985"^^xsd:float ;
+    esip:northBound "71.468273"^^xsd:float ;
+    esip:southBound "51.201455"^^xsd:float ;
+    esip:startDate "2006-11-01"^^xsd:date ;
+    esip:westBound "-179.230436"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:c5d463e8-e1ef-45ae-bc53-0ca1500859cf> bcube:hasType "theme" ;
+    bcube:hasValue "Framework" ;
+    dc:partOf "BLM-THEME" ;
+    owl:a bcube:thesaurusSubset .
+

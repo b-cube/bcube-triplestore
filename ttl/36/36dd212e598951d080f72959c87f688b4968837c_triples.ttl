@@ -1,0 +1,71 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:16455fe0-4118-48c2-a868-024d83f68b59> bcube:hasType "place" ;
+    bcube:hasValue "Colorado",
+        "Denver",
+        "Denver County",
+        "USA" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:5ccc888c-d43e-4a36-b330-0952ed97a2c9> owl:a foaf:Organization ;
+    foaf:name "" .
+
+<urn:uuid:690ee6d3-1dd4-40d7-aef2-ca6fbc8ef89d> bcube:hasType "theme" ;
+    bcube:hasValue "emergency" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:70922aae-cff8-4a79-87e2-473d07d04b10> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-10-17T00:46:08.46Z" ;
+    bcube:lastUpdated "2015-10-17T00:46:08.46Z" ;
+    bcube:originatedFrom <urn:uuid:73ccac66-c4cb-4628-8add-3209085b2ade> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:ee437a33-6118-4879-a9d5-009acc0e87b8> .
+
+<urn:uuid:73ccac66-c4cb-4628-8add-3209085b2ade> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-10-17T00:46:08.46Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-10-17T00:46:08.46Z" ;
+    dc:identifier "urn:sha:9f851971b9b0e99e7a7d0230035688649280792178a833274cede0fb" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://data.denvergov.org/download/gis/warning_sirens/metadata/warning_sirens.xml" .
+
+<urn:uuid:eb7e91de-9b38-4aae-8584-a35f9d9fcbdd> bcube:hasType "theme" ;
+    bcube:hasValue "location",
+        "structure" ;
+    dc:partOf "ISO 19115 Topic Categories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:ee437a33-6118-4879-a9d5-009acc0e87b8> bcube:dateCreated "2015-10-17T00:46:08.46Z" ;
+    bcube:hasMetadataRecord <urn:uuid:70922aae-cff8-4a79-87e2-473d07d04b10> ;
+    bcube:lastUpdated "2015-10-17T00:46:08.46Z" ;
+    dc:conformsTo <urn:uuid:16455fe0-4118-48c2-a868-024d83f68b59>,
+        <urn:uuid:690ee6d3-1dd4-40d7-aef2-ca6fbc8ef89d>,
+        <urn:uuid:eb7e91de-9b38-4aae-8584-a35f9d9fcbdd> ;
+    dc:description "The Office of Emergency Management's warning siren dataset. This coverage contains the locations and attribute data for all warning sirens within the City and County of Denver. Sirens are placed to provide uniform coverage throughout the City and County of Denver, including DIA. The vendor, Federal Signal, developed computer models that took into account topography, atmospheric conditions, structures, and other factors to determine the optimal placement of the sirens. Once the general area was determined; field work finalized suitable areas for exact siren placement. The intent was to avoid obstruction by buildings, locations where the solar panels are blocked by trees, and also to avoid locations such as the front yard of a residential property." ;
+    dc:spatial "POLYGON ((-105.09454 39.617961,-105.09454 39.891382,-104.657108 39.891382,-104.657108 39.617961,-105.09454 39.617961))" ;
+    dcterms:publisher <urn:uuid:5ccc888c-d43e-4a36-b330-0952ed97a2c9> ;
+    dcterms:title "Warning Siren Locations" ;
+    esip:eastBound "-104.657108"^^xsd:float ;
+    esip:northBound "39.891382"^^xsd:float ;
+    esip:southBound "39.617961"^^xsd:float ;
+    esip:westBound "-105.09454"^^xsd:float ;
+    owl:a dcat:Dataset .
+

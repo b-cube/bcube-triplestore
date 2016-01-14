@@ -1,0 +1,99 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:163d023a-7954-4c71-8754-9fcf2077c50f> bcube:hasType "stratum" ;
+    bcube:hasValue "Vertical Location > Land Surface" ;
+    dc:partOf "NASA GCMD Location Keywords" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:2304c4b0-7744-4b42-85e9-e1f710acf5d2> bcube:hasType "theme" ;
+    bcube:hasValue "climatologyMeteorologyAtmosphere" ;
+    dc:partOf "ISO 19115 Topic Category" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:305962bc-6fa4-41aa-a81e-8fd8e73ac785> bcube:hasType "theme" ;
+    bcube:hasValue "Atmosphere > Atmospheric Temperature > Air Temperature",
+        "Atmosphere > Atmospheric Temperature > Surface Air Temperature" ;
+    dc:partOf "NASA GCMD Science Keywords" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:4eb5acbb-fc79-4333-b5a3-f5ba859cc800> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-09-02T07:13:42.172Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-09-02T07:13:42.172Z" ;
+    dc:identifier "urn:sha:c7ccef49c62da3aeecf39990ecb30d0b9180ffb46aebf74bb8afa8b5" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "ftp://ftp.cpc.ncep.noaa.gov/wd51yf/GHCN_CAMS/" .
+
+<urn:uuid:59f6fd1d-d9e7-4f15-91d7-79a5e5836e16> owl:a foaf:Organization ;
+    foaf:name "Climate Prediction Center" .
+
+<urn:uuid:5d4ea31f-7f64-43f8-a131-6fab9efdbfab> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-09-02T07:13:42.172Z" ;
+    bcube:lastUpdated "2015-09-02T07:13:42.172Z" ;
+    bcube:originatedFrom <urn:uuid:b5d034ef-37d5-4f3a-941c-34aebeb06602> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:64f78bee-f439-4592-9cdf-bd0927750f16> .
+
+<urn:uuid:64f78bee-f439-4592-9cdf-bd0927750f16> bcube:dateCreated "2015-09-02T07:13:42.172Z" ;
+    bcube:hasMetadataRecord <urn:uuid:5d4ea31f-7f64-43f8-a131-6fab9efdbfab> ;
+    bcube:lastUpdated "2015-09-02T07:13:42.172Z" ;
+    dc:conformsTo <urn:uuid:163d023a-7954-4c71-8754-9fcf2077c50f>,
+        <urn:uuid:2304c4b0-7744-4b42-85e9-e1f710acf5d2>,
+        <urn:uuid:305962bc-6fa4-41aa-a81e-8fd8e73ac785>,
+        <urn:uuid:d4735e9c-b1b1-4b29-a7d8-70cc13936f8b>,
+        <urn:uuid:fe900cd3-8430-49df-a707-d80886984650> ;
+    dc:description "A station observation-based global land monthly mean surface air temperature dataset at 0.5 x 0.5 latitude-longitude resolution for the period from 1948 to the present was developed at the Climate Prediction Center, National Centers for Environmental Prediction. This data set is different from some existing surface air temperature data sets in: (1) using a combination of two large individual data sets of station observations collected from the Global Historical Climatology Network version 2 and the Climate Anomaly Monitoring System (GHCN + CAMS), so it can be regularly updated in near real time with plenty of stations and (2) some unique interpolation methods, such as the anomaly interpolation approach with spatially-temporally varying temperature lapse rates derived from the observation-based Reanalysis for topographic adjustment. When compared with several existing observation-based land surface air temperature data sets, the preliminary results show that the quality of this new GHCN + CAMS land surface air temperature analysis is reasonably good and the new data set can capture most common temporal-spatial features in the observed climatology and anomaly fields over both regional and global domains. The study also reveals that there are clear biases between the observed surface air temperature and the existing Reanalysis data sets, and they vary in space and seasons. Therefore the Reanalysis 2 m temperature data sets may not be suitable for model forcing and validation. The GHCN + CAMS data set will be mainly used as one of land surface meteorological forcing inputs to derive other land surface variables, such as soil moisture, evaporation, surface runoff, snow accumulation and snow melt, etc. As a byproduct, this monthly mean surface air temperature data set can also be applied to monitor surface air temperature variations over global land routinely or to verify the performance of model simulation and prediction. Refer to this paper: Fan, Y. and H. van den Dool, 2008: A global monthly land surface air temperature analysis for 1948-present. J. Geophys. Res., 113, doi: 10.1029/2007JD008470." ;
+    dc:spatial "POLYGON ((-179.75 -89.75,-179.75 89.75,179.75 89.75,179.75 -89.75,-179.75 -89.75))" ;
+    dcterms:identifier "gov.noaa.cpc:CPC-TEMP-MLY-GLSAT-v2004" ;
+    dcterms:publisher <urn:uuid:59f6fd1d-d9e7-4f15-91d7-79a5e5836e16> ;
+    dcterms:references <urn:uuid:4eb5acbb-fc79-4333-b5a3-f5ba859cc800> ;
+    dcterms:title "Climate Prediction Center (CPC) Global Land Surface Air Temperature Analysis" ;
+    esip:eastBound "179.75"^^xsd:float ;
+    esip:northBound "89.75"^^xsd:float ;
+    esip:southBound "-89.75"^^xsd:float ;
+    esip:startDate "1948-01-01"^^xsd:date ;
+    esip:westBound "-179.75"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:b5d034ef-37d5-4f3a-941c-34aebeb06602> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-09-02T07:13:42.172Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-09-02T07:13:42.172Z" ;
+    dc:identifier "urn:sha:6c346a9a20b6c723be9e29197826c3c1340de24710ec6fcf811f77b0" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "https://catalog.data.gov/harvest/object/cc8ae2fa-49be-4512-8e60-21eb200e1baf/original" .
+
+<urn:uuid:d4735e9c-b1b1-4b29-a7d8-70cc13936f8b> bcube:hasType "place" ;
+    bcube:hasValue "Geographic Region > Global" ;
+    dc:partOf "NASA GCMD Location Keywords" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:fe900cd3-8430-49df-a707-d80886984650> bcube:hasType "theme" ;
+    bcube:hasValue "GHCN CAMS monthly temperature data",
+        "global gridded monthly temperature data",
+        "surface temperature GIS data",
+        "surface temperature gridded data",
+        "surface temperature monitoring data" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+

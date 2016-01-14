@@ -1,0 +1,156 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:085db412-390e-4dd4-a39b-6e6a5660e2c1> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-12T10:03:07.263Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-12T10:03:07.263Z" ;
+    dc:identifier "urn:sha:cb3721550c6dcf02b26f885ee4902b940eda819c23c4cd18046aa70a" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://coastwatch.pfeg.noaa.gov/erddap/tabledap/ndbcSosCurrents.fgdc" .
+
+<urn:uuid:10d4c2b8-30bd-4526-a7c9-2f5650422e44> bcube:dateCreated "2015-11-12T10:03:07.263Z" ;
+    bcube:hasMetadataRecord <urn:uuid:78cddef0-b89a-40c6-bfd2-d7bd861f7e2f> ;
+    bcube:lastUpdated "2015-11-12T10:03:07.263Z" ;
+    dc:conformsTo <urn:uuid:844f14c7-53d3-4226-a910-63d3ebcf2b56>,
+        <urn:uuid:ae9a4b7f-4a6a-4348-8f15-dcd3129edd34> ;
+    dc:description "The NOAA NDBC SOS server is part of the IOOS DIF SOS Project. The stations in this dataset have currents data. Because of the nature of SOS requests, requests for data MUST include constraints for the longitude, latitude, time, and/or station_id variables. WARNING: Always check the quality_flags before using this data. A simple criterion is: only use a row of data if the first quality_flags value for the row (overall bin status) is 3 (good data/passed quality test). You can do this by appending &quality_flags=~\"3;.*\" to your request." ;
+    dc:spatial "POLYGON ((-172.17 17.19,-172.17 60.8,-66.58 60.8,-66.58 17.19,-172.17 17.19))" ;
+    dcterms:publisher <urn:uuid:2b02ca21-14b2-4d3e-9c3b-5cf117cd2f7f> ;
+    dcterms:references <urn:uuid:498ed572-3077-435f-bebc-80d8be153fce>,
+        <urn:uuid:a4d8dcdb-35cd-4387-a3a4-a76d5b0f86a3>,
+        <urn:uuid:afdb0503-bba9-4e3e-8287-ab52ee298884> ;
+    dcterms:title "NOAA NDBC SOS - currents" ;
+    esip:eastBound "-66.58"^^xsd:float ;
+    esip:northBound "60.8"^^xsd:float ;
+    esip:southBound "17.19"^^xsd:float ;
+    esip:startDate "2007-08-15"^^xsd:date ;
+    esip:westBound "-172.17"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:2b02ca21-14b2-4d3e-9c3b-5cf117cd2f7f> owl:a foaf:Organization ;
+    foaf:name "ERDDAP, version 1.65, at NOAA NMFS SWFSC Environmental Research Division" .
+
+<urn:uuid:498ed572-3077-435f-bebc-80d8be153fce> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-12T10:03:07.263Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-12T10:03:07.263Z" ;
+    dc:identifier "urn:sha:59baf218b8e94dfe21d4488ec4bb40a95faa376dcd5ba35b240cc353" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://coastwatch.pfeg.noaa.gov/erddap/tabledap/ndbcSosCurrents.graph" .
+
+<urn:uuid:78cddef0-b89a-40c6-bfd2-d7bd861f7e2f> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-11-12T10:03:07.263Z" ;
+    bcube:lastUpdated "2015-11-12T10:03:07.263Z" ;
+    bcube:originatedFrom <urn:uuid:085db412-390e-4dd4-a39b-6e6a5660e2c1> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:10d4c2b8-30bd-4526-a7c9-2f5650422e44> .
+
+<urn:uuid:844f14c7-53d3-4226-a910-63d3ebcf2b56> bcube:hasType "theme" ;
+    bcube:hasValue "altitude",
+        "direction_of_sea_water_velocity",
+        "latitude",
+        "longitude",
+        "sea_water_speed",
+        "sea_water_temperature",
+        "time",
+        "upward_sea_water_velocity" ;
+    dc:partOf "CF Standard Name Table v29" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:a4d8dcdb-35cd-4387-a3a4-a76d5b0f86a3> dcterms:references <urn:uuid:d2b004fe-56dd-4348-96a7-9b73460808cf> ;
+    owl:a bibo:WebPage .
+
+<urn:uuid:ae9a4b7f-4a6a-4348-8f15-dcd3129edd34> bcube:hasType "theme" ;
+    bcube:hasValue "Oceans > Ocean Circulation > Ocean Currents",
+        "Oceans > Ocean Temperature > Water Temperature",
+        "angle",
+        "atmosphere",
+        "bad",
+        "beam",
+        "bin",
+        "circulation",
+        "correlation",
+        "currents",
+        "depth",
+        "direction",
+        "direction_of_sea_water_velocity",
+        "echo",
+        "error",
+        "flags",
+        "good",
+        "height",
+        "identifier",
+        "intensity",
+        "magnitude",
+        "ndbc",
+        "noaa",
+        "ocean",
+        "oceans",
+        "orientation",
+        "percent",
+        "pitch",
+        "platform",
+        "quality",
+        "rejected",
+        "roll",
+        "sea",
+        "sea_water_speed",
+        "sea_water_temperature",
+        "seawater",
+        "sensor",
+        "sos",
+        "speed",
+        "station",
+        "temperature",
+        "time",
+        "upward",
+        "upward_sea_water_velocity",
+        "velocity",
+        "water" ;
+    dc:partOf "GCMD Science Keywords" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:afdb0503-bba9-4e3e-8287-ab52ee298884> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-12T10:03:07.263Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-12T10:03:07.263Z" ;
+    dc:identifier "urn:sha:f4aaf3815c63e930d30377e7a7b2260c297cb1fb147015415fe5f674" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://coastwatch.pfeg.noaa.gov/erddap/tabledap/ndbcSosCurrents.html" .
+
+<urn:uuid:d2b004fe-56dd-4348-96a7-9b73460808cf> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-12T10:03:07.263Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-12T10:03:07.263Z" ;
+    dc:identifier "urn:sha:f10a4e32931d244fcda13fe0d2d05485b3232a3c3d1bb297156ac508" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://coastwatch.pfeg.noaa.gov/erddap/tabledap/ndbcSosCurrents.subset" .
+

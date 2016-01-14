@@ -1,0 +1,110 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:029897ad-b9ce-41a2-89c8-e4610dc91f9b> owl:a foaf:Organization ;
+    foaf:name "" .
+
+<urn:uuid:0307f7ed-d859-425e-8aa2-793caa013d32> bcube:hasType "place" ;
+    bcube:hasValue "Global" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:0fd6086f-0ee2-4220-b290-a1fad182fdfa> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-07-29T19:03:01.486Z" ;
+    bcube:lastUpdated "2015-07-29T19:03:01.486Z" ;
+    bcube:originatedFrom <urn:uuid:16e1924e-41b2-4730-98b2-ea14da16535c> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:7f048cd3-29e6-4e6d-86e1-bdb66c447891> .
+
+<urn:uuid:16e1924e-41b2-4730-98b2-ea14da16535c> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-07-29T19:03:01.486Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-07-29T19:03:01.486Z" ;
+    dc:identifier "urn:sha:766351b1e4289ba8690033482f4ad2f02cf6bbcfbbb4515eb1f75513" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://earthquake.usgs.gov/earthquakes/shakemap/atlas/shake/197409111916/download/metadata.xml" .
+
+<urn:uuid:4e73181f-cd9b-4ede-97ca-2f99b723d0da> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-07-29T19:03:01.486Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-07-29T19:03:01.486Z" ;
+    dc:identifier "urn:sha:303b6b0b18261d150b4190c294f9e910e77cc59b433c24c624d668aa" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://earthquake.usgs.gov/shakemap/global/shake/197409111916/download/grid.xyz.zip" .
+
+<urn:uuid:5d282134-06a9-466d-a52a-5985c8be3904> bcube:hasType "theme" ;
+    bcube:hasValue "Advanced National Seismic Systems (ANSS)",
+        "ShakeMap",
+        "US Geological Survey",
+        "earthquake damage",
+        "instrumental intensity",
+        "peak ground motions",
+        "shaking intensity" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:7f048cd3-29e6-4e6d-86e1-bdb66c447891> bcube:dateCreated "2015-07-29T19:03:01.486Z" ;
+    bcube:hasMetadataRecord <urn:uuid:0fd6086f-0ee2-4220-b290-a1fad182fdfa> ;
+    bcube:lastUpdated "2015-07-29T19:03:01.486Z" ;
+    dc:conformsTo <urn:uuid:0307f7ed-d859-425e-8aa2-793caa013d32>,
+        <urn:uuid:5d282134-06a9-466d-a52a-5985c8be3904> ;
+    dc:description "ShakeMap is designed as a rapid response tool to portray the extent and variation of ground shaking throughout the affected region immediately following significant earthquakes. Ground motion and intensity maps are derived from peak ground motion amplitudes recorded on seismic sensors (accelerometers), with interpolation based on both estimated amplitudes where data are lacking, and site amplification corrections. Color-coded instrumental intensity maps are derived from empirical relations between peak ground motions and Modified Mercalli intensity. This ShakeMap describes the event: 197409111916, FLORES REGION, INDONESIA" ;
+    dc:spatial "POLYGON ((119.958 -10.203,119.958 -6.303,123.908 -6.303,123.908 -10.203,119.958 -10.203))" ;
+    dcterms:publisher <urn:uuid:029897ad-b9ce-41a2-89c8-e4610dc91f9b> ;
+    dcterms:references <urn:uuid:4e73181f-cd9b-4ede-97ca-2f99b723d0da>,
+        <urn:uuid:c3247ab2-72b1-4a80-be75-13abda7386c8>,
+        <urn:uuid:eee2286e-c093-49e0-bf77-c5dc60c19a34> ;
+    dcterms:title "Advanced National Seismic System (ANSS), ShakeMap, Global Region, Maps of ground shaking and intensity for event 197409111916, FLORES REGION, INDONESIA" ;
+    esip:eastBound "123.908"^^xsd:float ;
+    esip:northBound "-6.303"^^xsd:float ;
+    esip:southBound "-10.203"^^xsd:float ;
+    esip:startDate "1974-09-11"^^xsd:date ;
+    esip:westBound "119.958"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:c3247ab2-72b1-4a80-be75-13abda7386c8> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-07-29T19:03:01.486Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-07-29T19:03:01.486Z" ;
+    dc:identifier "urn:sha:c7f96ee31d2e42021e3651c761e9574d71428cd6b17a47ae1ca0579a" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://earthquake.usgs.gov/shakemap/global/shake/197409111916/download/shape.zip" .
+
+<urn:uuid:cb21f0f4-cc38-44df-b4d0-3ddd0a9cc287> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-07-29T19:03:01.486Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-07-29T19:03:01.486Z" ;
+    dc:identifier "urn:sha:dce4b4e6487a29d3f53282273d41bf5166c839b3aee973933ca74c2c" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://earthquake.usgs.gov/eqcenter/shakemap" .
+
+<urn:uuid:eee2286e-c093-49e0-bf77-c5dc60c19a34> dcterms:references <urn:uuid:cb21f0f4-cc38-44df-b4d0-3ddd0a9cc287> ;
+    owl:a bibo:WebPage .
+

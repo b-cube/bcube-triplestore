@@ -1,0 +1,68 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:23afb6a8-d522-4377-87e5-3b2131aa95ed> a "ISO 19115:2003/19139" ;
+    bcube:dateCreated "2015-08-10T04:40:10.546Z" ;
+    bcube:lastUpdated "2015-08-10T04:40:10.546Z" ;
+    bcube:originatedFrom <urn:uuid:628bc2d3-d7d7-4959-8e4f-36895e03f57b> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:fd80c695-1089-4424-b8b1-f84445af6b60> .
+
+<urn:uuid:4b528f11-a9f4-414f-867b-402cef3c86fa> bcube:hasType "theme" ;
+    bcube:hasValue "earthquake hazards",
+        "hazard identification and mitigation",
+        "landslides",
+        "liquefaction",
+        "seismic hazard zone" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:628bc2d3-d7d7-4959-8e4f-36895e03f57b> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-10T04:40:10.546Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-10T04:40:10.546Z" ;
+    dc:identifier "urn:sha:3b0aca61f643a8a20c816221ed5154869b3c058259ad5493158ee899" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "https://catalog.data.gov/harvest/object/0c1b1daa-f77a-48b4-945b-04f0aa03cfb8" .
+
+<urn:uuid:99f8e5f9-649e-466f-9d18-361b24a3953e> bcube:hasType "place" ;
+    bcube:hasValue "City of San Francisco",
+        "San Francisco County" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:f25a5b53-3195-43c9-b13e-a36a74dc5d9d> bcube:hasType "theme" ;
+    bcube:hasValue "geoscientificInformation" ;
+    dc:partOf "http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#MD_KeywordTypeCode" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:fd80c695-1089-4424-b8b1-f84445af6b60> bcube:dateCreated "2015-08-10T04:40:10.546Z" ;
+    bcube:hasMetadataRecord <urn:uuid:23afb6a8-d522-4377-87e5-3b2131aa95ed> ;
+    bcube:lastUpdated "2015-08-10T04:40:10.546Z" ;
+    dc:conformsTo <urn:uuid:4b528f11-a9f4-414f-867b-402cef3c86fa>,
+        <urn:uuid:99f8e5f9-649e-466f-9d18-361b24a3953e>,
+        <urn:uuid:f25a5b53-3195-43c9-b13e-a36a74dc5d9d> ;
+    dc:description "This is a digital Seismic Hazard Zone Map presenting areas where liquefaction and landslides may occur during a strong earthquake. Three types of geological hazards, referred to as seismic hazard zones, may be featured on the map: 1) liquefaction, 2) earthquake-induced landslides, and 3) overlapping liquefaction and earthquake-induced landslides. Developers of properties falling within any of the three zones may be required to investigate the potential hazard and mitigate its threat during the local permitting process." ;
+    dc:spatial "POLYGON ((-122.5167 37.7083,-122.5167 37.8333,-121.0 37.8333,-121.0 37.7083,-122.5167 37.7083))" ;
+    dcterms:title "San Francisco Seismic Hazard Zones NAD83" ;
+    esip:eastBound "-121.0"^^xsd:float ;
+    esip:northBound "37.8333"^^xsd:float ;
+    esip:southBound "37.7083"^^xsd:float ;
+    esip:westBound "-122.5167"^^xsd:float ;
+    owl:a dcat:Dataset .
+

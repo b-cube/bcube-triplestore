@@ -1,0 +1,89 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:1d0883a0-0d3b-4ca1-9369-99c980600368> bcube:hasType "theme" ;
+    bcube:hasValue "Address Range",
+        "County or equivalent entity",
+        "Feature",
+        "Hydrography",
+        "Linear",
+        "Railways",
+        "Road Feature",
+        "Roads",
+        "Street Centerline" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:3025215d-ce35-4d0d-a026-4f980fd96bfa> a "ISO 19115:2003/19139" ;
+    bcube:dateCreated "2015-11-07T09:51:40.103Z" ;
+    bcube:lastUpdated "2015-11-07T09:51:40.103Z" ;
+    bcube:originatedFrom <urn:uuid:cc45dffa-f55c-44af-9e53-a3699103962d> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:8f121360-b01a-4570-b8d6-faac3b58c8b0> .
+
+<urn:uuid:40d8a5c0-ef6d-42c4-bada-08e166d62c28> bcube:hasValue "transportation" ;
+    dc:partOf "IsoTopicCategories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:5d8ae446-924e-4b73-8a8a-a1f33b2d811f> bcube:hasType "place" ;
+    bcube:hasValue "01101",
+        "County or Equivalent Entity",
+        "Montgomery",
+        "U.S.",
+        "United States" ;
+    dc:partOf "ANSI INCITS 38:2009 (Formerly FIPS 5-2), ANSI INCITS 31:2009 (Formerly FIPS 6-4),ANSI INCITS 454:2009 (Formerly FIPS 8-6), ANSI INCITS 455:2009(Formerly FIPS 9-1), ANSI INCITS 446:2008 (Geographic Names Information System (GNIS))" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:8f121360-b01a-4570-b8d6-faac3b58c8b0> bcube:dateCreated "2015-11-07T09:51:40.103Z" ;
+    bcube:hasMetadataRecord <urn:uuid:3025215d-ce35-4d0d-a026-4f980fd96bfa> ;
+    bcube:lastUpdated "2015-11-07T09:51:40.103Z" ;
+    dc:conformsTo <urn:uuid:1d0883a0-0d3b-4ca1-9369-99c980600368>,
+        <urn:uuid:40d8a5c0-ef6d-42c4-bada-08e166d62c28>,
+        <urn:uuid:5d8ae446-924e-4b73-8a8a-a1f33b2d811f> ;
+    dc:description "The TIGER/Line shapefiles and related database files (.dbf) are an extract of selected geographic and cartographic information from the U.S. Census Bureau's Master Address File / Topologically Integrated Geographic Encoding and Referencing (MAF/TIGER) Database (MTDB). The MTDB represents a seamless national file with no overlaps or gaps between parts, however, each TIGER/Line shapefile is designed to stand alone as an independent data set, or they can be combined to cover the entire nation. Edge refers to the linear topological primitives that make up MTDB. The All Lines Shapefile contains linear features such as roads, railroads, and hydrography. Additional attribute data associated with the linear features found in the All Lines Shapefile are available in relationship (.dbf) files that users must download separately. The All Lines Shapefile contains the geometry and attributes of each topological primitive edge. Each edge has a unique TIGER/Line identifier (TLID) value." ;
+    dc:spatial "POLYGON ((-86.498531 31.965065,-86.498531 32.50169,-85.918577 32.50169,-85.918577 31.965065,-86.498531 31.965065))" ;
+    dcterms:references <urn:uuid:b29396f7-890b-4fff-a6cc-4217885dbc9d> ;
+    dcterms:title "TIGER/Line Shapefile, 2014, county, Montgomery County, AL, All Lines County-based Shapefile" ;
+    esip:eastBound "-85.918577"^^xsd:float ;
+    esip:endDate "2014-05-29"^^xsd:date ;
+    esip:northBound "32.50169"^^xsd:float ;
+    esip:southBound "31.965065"^^xsd:float ;
+    esip:startDate "2013-06-29"^^xsd:date ;
+    esip:westBound "-86.498531"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:b29396f7-890b-4fff-a6cc-4217885dbc9d> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-07T09:51:40.103Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-07T09:51:40.103Z" ;
+    dc:identifier "urn:sha:32a0b29d217691bdce8578d4e919c35c1fb445332c98dfee61983de1" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www2.census.gov/geo/tiger/TIGER2014/EDGES/tl_2014_01101_edges.zip" .
+
+<urn:uuid:cc45dffa-f55c-44af-9e53-a3699103962d> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-07T09:51:40.103Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-07T09:51:40.103Z" ;
+    dc:identifier "urn:sha:05f5fcd01bdcfc90fd720a19817fe41ce7df7936427f3d949cc238e5" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://meta.geo.census.gov/data/existing/decennial/GEO/GPMB/TIGERline/TIGER2014/edges/tl_2014_01101_edges.shp.iso.xml" .
+

@@ -1,0 +1,90 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:5cbd86ca-c03e-445a-8891-426959c492da> owl:a foaf:Organization ;
+    foaf:name "" .
+
+<urn:uuid:6d2f0d76-e03d-4137-9179-e88eb9bc2a84> bcube:hasType "place" ;
+    bcube:hasValue "06",
+        "CA",
+        "California",
+        "State or Equivalent Entity",
+        "U.S.",
+        "United States" ;
+    dc:partOf "FIPS Publication 5-2, FIPS Publication 6-4, FIPS Publication 8-6, FIPS Publication 9-1,FIPS Publication55-4" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:9bd039ff-c786-43e8-95f1-2050ce6740ee> bcube:hasType "theme" ;
+    bcube:hasValue "boundaries" ;
+    dc:partOf "ISO 19115 Topic Categories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:a1ec0054-f968-4616-bbe3-74eb1a6c42bd> bcube:hasType "theme" ;
+    bcube:hasValue "Polygon",
+        "School District",
+        "Secondary School District",
+        "State or equivalent entity" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:b2a7b75f-42c6-4262-801b-fa7cc405c89b> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-03T10:00:37.679Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-03T10:00:37.679Z" ;
+    dc:identifier "urn:sha:390b55ad0651baa5db485e0338afe4880b452ceb00aa0963ade1e6bb" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www2.census.gov/geo/tiger/TIGER2008/06_CALIFORNIA/tl_2008_06_scsd00.zip" .
+
+<urn:uuid:c34ddbc8-0d5d-41e5-b7d4-c7d5eb360a83> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-11-03T10:00:37.679Z" ;
+    bcube:lastUpdated "2015-11-03T10:00:37.679Z" ;
+    bcube:originatedFrom <urn:uuid:f0c13f65-b95e-4ae8-a0d8-c6783ee654dd> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:dcef0bba-f959-4d29-a4c8-ea0fc969f0a8> .
+
+<urn:uuid:dcef0bba-f959-4d29-a4c8-ea0fc969f0a8> bcube:dateCreated "2015-11-03T10:00:37.679Z" ;
+    bcube:hasMetadataRecord <urn:uuid:c34ddbc8-0d5d-41e5-b7d4-c7d5eb360a83> ;
+    bcube:lastUpdated "2015-11-03T10:00:37.679Z" ;
+    dc:conformsTo <urn:uuid:6d2f0d76-e03d-4137-9179-e88eb9bc2a84>,
+        <urn:uuid:9bd039ff-c786-43e8-95f1-2050ce6740ee>,
+        <urn:uuid:a1ec0054-f968-4616-bbe3-74eb1a6c42bd> ;
+    dc:description "The TIGER/Line Shapefiles are an extract of selected geographic and cartographic information from the Census MAF/TIGER database. The Census MAF/TIGER database represents a seamless national file with no overlaps or gaps between parts. However, each TIGER/Line Shapefile is designed to stand alone as an independent data set or the shapefiles can be combined to cover the whole nation." ;
+    dc:spatial "POLYGON ((-124.482003 32.528832,-124.482003 42.009517,-114.131211 42.009517,-114.131211 32.528832,-124.482003 32.528832))" ;
+    dcterms:publisher <urn:uuid:5cbd86ca-c03e-445a-8891-426959c492da> ;
+    dcterms:references <urn:uuid:b2a7b75f-42c6-4262-801b-fa7cc405c89b> ;
+    dcterms:title "TIGER/Line Shapefile, 2008, 2000 state, California, Secondary School District" ;
+    esip:eastBound "-114.131211"^^xsd:float ;
+    esip:endDate "2008-07-01"^^xsd:date ;
+    esip:northBound "42.009517"^^xsd:float ;
+    esip:southBound "32.528832"^^xsd:float ;
+    esip:startDate "2008-01-01"^^xsd:date ;
+    esip:westBound "-124.482003"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:f0c13f65-b95e-4ae8-a0d8-c6783ee654dd> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-03T10:00:37.679Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-03T10:00:37.679Z" ;
+    dc:identifier "urn:sha:e64d6be500ab38468b17fa932541dc14779e64f6b9989b7e2339b6ec" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://meta.geo.census.gov/data/existing/decennial/GEO/GPMB/TIGERline/fe_2008/scsd00/tl_2008_06_scsd00_url.shp.xml" .
+

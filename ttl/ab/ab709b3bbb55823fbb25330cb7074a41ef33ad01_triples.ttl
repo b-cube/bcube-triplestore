@@ -1,0 +1,65 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:08098aa5-7dbc-4745-a282-c1cc1e022d42> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-10-27T22:54:09.699Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-10-27T22:54:09.699Z" ;
+    dc:identifier "urn:sha:bab277397335666e69dd38cd8eb5fb07de87c6fa47bf208b81a9056d" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://data.fs.usda.gov/geodata/edw/edw_resources/meta/S_USA.Tract.xml" .
+
+<urn:uuid:2fc45fcd-b546-4e68-a0b3-e7886d1b93df> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-10-27T22:54:09.699Z" ;
+    bcube:lastUpdated "2015-10-27T22:54:09.699Z" ;
+    bcube:originatedFrom <urn:uuid:08098aa5-7dbc-4745-a282-c1cc1e022d42> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:8570cd60-66b9-4e4c-b74a-d7b0b0649e56> .
+
+<urn:uuid:8570cd60-66b9-4e4c-b74a-d7b0b0649e56> bcube:dateCreated "2015-10-27T22:54:09.699Z" ;
+    bcube:hasMetadataRecord <urn:uuid:2fc45fcd-b546-4e68-a0b3-e7886d1b93df> ;
+    bcube:lastUpdated "2015-10-27T22:54:09.699Z" ;
+    dc:conformsTo <urn:uuid:ad9124af-f2d0-4497-adad-4aeb9ad8ca87>,
+        <urn:uuid:d019e1e0-ddc4-422c-a6f1-c5cc07a61d9d> ;
+    dc:description "A depiction of a survey parcel described by a metes and bounds description. Examples include: land lots, housing subdivision lots, mineral surveys, and homestead entry surveys." ;
+    dc:spatial "POLYGON ((-124.439853 17.738983,-124.439853 49.001087,-64.734329 49.001087,-64.734329 17.738983,-124.439853 17.738983))" ;
+    dcterms:publisher <urn:uuid:883eb0d6-b28a-49c0-b693-20fd07557fd9> ;
+    dcterms:title "S_USA.Tract" ;
+    esip:eastBound "-64.734329"^^xsd:float ;
+    esip:northBound "49.001087"^^xsd:float ;
+    esip:southBound "17.738983"^^xsd:float ;
+    esip:westBound "-124.439853"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:883eb0d6-b28a-49c0-b693-20fd07557fd9> owl:a foaf:Organization ;
+    foaf:name "" .
+
+<urn:uuid:ad9124af-f2d0-4497-adad-4aeb9ad8ca87> bcube:hasType "theme" ;
+    bcube:hasValue "ALP Land Dataset",
+        "Land Status",
+        "Legal Description",
+        "NFS Lands",
+        "USDA Forest Service" ;
+    dc:partOf "Tract" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:d019e1e0-ddc4-422c-a6f1-c5cc07a61d9d> bcube:hasType "theme" ;
+    bcube:hasValue "boundaries" ;
+    dc:partOf "ISO 19115 Topic Categories" ;
+    owl:a bcube:thesaurusSubset .
+

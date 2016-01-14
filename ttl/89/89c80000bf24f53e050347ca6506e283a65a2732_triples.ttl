@@ -1,0 +1,83 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:01b96f85-764a-4d37-939e-5a2f9b2685fa> bcube:dateCreated "2015-11-01T18:54:41.132Z" ;
+    bcube:hasMetadataRecord <urn:uuid:ec897b65-1a47-4d3e-9f64-0c66ddf1970c> ;
+    bcube:lastUpdated "2015-11-01T18:54:41.132Z" ;
+    dc:conformsTo <urn:uuid:128e5bb4-9caf-4250-b02e-9a45b368cc8c>,
+        <urn:uuid:7bf0a5d4-665a-4677-bfc4-35d38eb07209> ;
+    dc:description "LiDAR data for the Delta Area of California from the California Department of Water Resources. Bare earth grids from LiDAR.This data is in ESRI Grid format with 2 meter cell size. It represents resampling of the approximately 1 meter spacing of the LiDAR data from the source grids provided by DWR. Elevations are in meters * 10 or decameter values." ;
+    dc:spatial "POLYGON ((-121.814566 37.60106,-121.814566 38.595583,-121.161612 38.595583,-121.161612 37.60106,-121.814566 37.60106))" ;
+    dcterms:publisher <urn:uuid:a11a2f0b-a2cb-4dcb-8b9c-7a6d93ae3894> ;
+    dcterms:references <urn:uuid:7a0a8ea0-ea5c-4445-9b0c-46d599b72415> ;
+    dcterms:title "LiDAR data for the Delta Area of California" ;
+    esip:eastBound "-121.161612"^^xsd:float ;
+    esip:northBound "38.595583"^^xsd:float ;
+    esip:southBound "37.60106"^^xsd:float ;
+    esip:westBound "-121.814566"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:128e5bb4-9caf-4250-b02e-9a45b368cc8c> bcube:hasType "theme" ;
+    bcube:hasValue "Bare Ground",
+        "Digital Elevation Model (DEM)",
+        "Elevation",
+        "LiDAR",
+        "Surface Elevation" ;
+    dc:partOf "keyword" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:1b135e14-63ab-4685-a0c6-68ddff193f50> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-01T18:54:41.132Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-01T18:54:41.132Z" ;
+    dc:identifier "urn:sha:1d7c8e45c8486230e6f0d739914c87ae4d6e395e17d8584baad15c47" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://projects.atlas.ca.gov/frs/download.php/600/Delta2m_Dem_img.zip" .
+
+<urn:uuid:7a0a8ea0-ea5c-4445-9b0c-46d599b72415> dcterms:references <urn:uuid:1b135e14-63ab-4685-a0c6-68ddff193f50> ;
+    owl:a bibo:WebPage .
+
+<urn:uuid:7b672fff-f086-43d5-bd2d-97ee8a345988> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-01T18:54:41.132Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-01T18:54:41.132Z" ;
+    dc:identifier "urn:sha:38f527b30462ec416fcbe95966ce22186037f22c9efc4578d635c77f" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://catalog.data.gov/harvest/object/abe00c6a-f01c-4fc6-8287-c1b3876f47cc/original" .
+
+<urn:uuid:7bf0a5d4-665a-4677-bfc4-35d38eb07209> bcube:hasType "theme" ;
+    bcube:hasValue "Elevation",
+        "Imagery",
+        "Imagery-Base Maps-Land Cover" ;
+    dc:partOf "ceres:themes" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:a11a2f0b-a2cb-4dcb-8b9c-7a6d93ae3894> owl:a foaf:Organization ;
+    foaf:name "" .
+
+<urn:uuid:ec897b65-1a47-4d3e-9f64-0c66ddf1970c> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-11-01T18:54:41.132Z" ;
+    bcube:lastUpdated "2015-11-01T18:54:41.132Z" ;
+    bcube:originatedFrom <urn:uuid:7b672fff-f086-43d5-bd2d-97ee8a345988> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:01b96f85-764a-4d37-939e-5a2f9b2685fa> .
+

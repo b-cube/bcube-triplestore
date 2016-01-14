@@ -1,0 +1,105 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:2ded3108-3774-42f9-94a0-a2fbe3e917e8> owl:a foaf:Organization ;
+    foaf:name "ERDDAP, version 1.64, at NOAA NMFS SWFSC Environmental Research Division" .
+
+<urn:uuid:4a9ea06e-b7ca-40d6-9e52-37d15c575083> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-11-01T10:20:05.208Z" ;
+    bcube:lastUpdated "2015-11-01T10:20:05.208Z" ;
+    bcube:originatedFrom <urn:uuid:bfd864fd-9d50-44b8-b4a3-accf03a07177> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:5c538fd9-89eb-4866-9a1f-fbff7ea9c210> .
+
+<urn:uuid:4f86af13-2e1a-4ee7-a54e-ca2ceadda903> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-01T10:20:05.208Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-01T10:20:05.208Z" ;
+    dc:identifier "urn:sha:69753fb12297d8b730891302af143369022d87c80e4ffddf1b7a35d1" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://upwell.pfeg.noaa.gov/erddap/griddap/dist2coast_4deg.graph" .
+
+<urn:uuid:56c5bba2-3c36-414d-a501-4fde582bf2fe> dcterms:references <urn:uuid:98da1671-8ba8-4cae-9305-ff138c0b357a> ;
+    owl:a bibo:WebPage .
+
+<urn:uuid:5c538fd9-89eb-4866-9a1f-fbff7ea9c210> bcube:dateCreated "2015-11-01T10:20:05.208Z" ;
+    bcube:hasMetadataRecord <urn:uuid:4a9ea06e-b7ca-40d6-9e52-37d15c575083> ;
+    bcube:lastUpdated "2015-11-01T10:20:05.208Z" ;
+    dc:conformsTo <urn:uuid:5c7ee355-b40d-4a9b-b475-4bb40fa3ca3f>,
+        <urn:uuid:95da6779-f7d1-4845-a4ef-ed2689283ba5> ;
+    dc:description "A global data set of distances from the nearest coastline. Negative distances represent locations over land (including land-locked bodies of water), while positive distances represent the ocean. NASA's Ocean Color Group generated this data set using the Generic Mapping Tools (GMT) software package. Distances were computed with GMT using its intermediate-resolution coastline and then gridded globally at a spatial resolution of 0.04 degrees." ;
+    dc:spatial "POLYGON ((-179.98 -89.98,-179.98 89.98,179.98 89.98,179.98 -89.98,-179.98 -89.98))" ;
+    dcterms:identifier "upwell.pfeg.noaa.gov:dist2coast_4deg" ;
+    dcterms:publisher <urn:uuid:2ded3108-3774-42f9-94a0-a2fbe3e917e8> ;
+    dcterms:references <urn:uuid:4f86af13-2e1a-4ee7-a54e-ca2ceadda903>,
+        <urn:uuid:56c5bba2-3c36-414d-a501-4fde582bf2fe>,
+        <urn:uuid:860be3cd-48a8-4682-9c8b-23bf4b478798> ;
+    dcterms:title "Distance from Nearest Coastline: 0.04-Degree Grid" ;
+    esip:eastBound "179.98"^^xsd:float ;
+    esip:northBound "89.98"^^xsd:float ;
+    esip:southBound "-89.98"^^xsd:float ;
+    esip:westBound "-179.98"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:5c7ee355-b40d-4a9b-b475-4bb40fa3ca3f> bcube:hasType "theme" ;
+    bcube:hasValue "latitude",
+        "longitude" ;
+    dc:partOf "CF-1.4" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:860be3cd-48a8-4682-9c8b-23bf4b478798> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-01T10:20:05.208Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-01T10:20:05.208Z" ;
+    dc:identifier "urn:sha:2b0a08fb5737e4d1228593cc36603148c60ad6f9aeddfb8cefc134ed" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://upwell.pfeg.noaa.gov/erddap/griddap/dist2coast_4deg.html" .
+
+<urn:uuid:95da6779-f7d1-4845-a4ef-ed2689283ba5> bcube:hasType "theme" ;
+    bcube:hasValue "Earth Science > Oceans > Coastal Process > Shorelines" ;
+    dc:partOf "GCMD Science Keywords" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:98da1671-8ba8-4cae-9305-ff138c0b357a> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-01T10:20:05.208Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-01T10:20:05.208Z" ;
+    dc:identifier "urn:sha:b589b8d0b8c060064c1846075618be81f4f1bed0c036397364e0b0a6" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://upwell.pfeg.noaa.gov/erddap/wms/dist2coast_4deg/request" .
+
+<urn:uuid:bfd864fd-9d50-44b8-b4a3-accf03a07177> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-01T10:20:05.208Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-01T10:20:05.208Z" ;
+    dc:identifier "urn:sha:0a16a4c86c028d092b5857cf7d93e53cf9a1d513126ccb728880b20d" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://upwell.pfeg.noaa.gov/erddap/metadata/fgdc/xml/dist2coast_4deg_fgdc.xml" .
+

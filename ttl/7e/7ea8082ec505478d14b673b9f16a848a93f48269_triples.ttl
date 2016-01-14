@@ -1,0 +1,71 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:07665d36-48cd-4ef7-9d0e-c4f3e795a401> bcube:hasType "place" ;
+    bcube:hasValue "King William County",
+        "Virginia" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:78cf1944-6251-44b7-81c9-7a5106a37664> bcube:hasType "theme" ;
+    bcube:hasValue "Breaklines",
+        "DEM",
+        "Elevation",
+        "FEMA",
+        "LAS",
+        "Lidar",
+        "USGS" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:8e217451-55a0-465f-9c98-2460c5d08751> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-05T15:49:03.214Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-05T15:49:03.214Z" ;
+    dc:identifier "urn:sha:f58cffb375a5a6bd515c51b4305c5f97cf7ad9bfee25531c9f28427f" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://coast.noaa.gov/data/Documents/Metadata/isoharvest/Lidar/va2011_usgs_fema_kingwilliam_m4726_ISOmetadata.xml" .
+
+<urn:uuid:8ff892fa-dde4-40f6-ab2e-0025a1462956> bcube:hasValue "elevation" ;
+    dc:partOf "IsoTopicCategories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:94ea2d77-9968-468a-b604-f0648c3e369f> a "ISO 19115:2003/19139" ;
+    bcube:dateCreated "2015-08-05T15:49:03.214Z" ;
+    bcube:lastUpdated "2015-08-05T15:49:03.214Z" ;
+    bcube:originatedFrom <urn:uuid:8e217451-55a0-465f-9c98-2460c5d08751> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:b78449b8-4f30-40e1-ab37-5930f71dfd7a> .
+
+<urn:uuid:b78449b8-4f30-40e1-ab37-5930f71dfd7a> bcube:dateCreated "2015-08-05T15:49:03.214Z" ;
+    bcube:hasMetadataRecord <urn:uuid:94ea2d77-9968-468a-b604-f0648c3e369f> ;
+    bcube:lastUpdated "2015-08-05T15:49:03.214Z" ;
+    dc:conformsTo <urn:uuid:07665d36-48cd-4ef7-9d0e-c4f3e795a401>,
+        <urn:uuid:78cf1944-6251-44b7-81c9-7a5106a37664>,
+        <urn:uuid:8ff892fa-dde4-40f6-ab2e-0025a1462956> ;
+    dc:description "Dewberry collected LiDAR for ~3,341 square miles in various Virginia Counties, a part of Worcester County, and Hooper's Island. The acquisition was performed by Terrapoint. This metadata covers the LiDAR produced for the King William project area. The nominal pulse spacing for this project is 1.6 ft (0.5 meters). This project was collected with a sensor which collects intensity values for each discrete pulse extracted from the waveform. GPS Week Time, Intensity, Flightline and echo number attributes were provided for each LiDAR point. Dewberry used proprietary procedures to classify the LAS according to contract specifications: 1-Unclassified, 2-Ground, 7-Noise, 9-Water, 10-Ignored Ground due to breakline proximity, and 11-Withheld (reclassified by OCM to Class 15). Dewberry produced 3D breaklines and combined these with the final LiDAR data to produce seamless hydro flattened DEMs for the 415 tiles (5000 ft x 5000 ft) that cover the project area." ;
+    dc:spatial "POLYGON ((-77.370438879 37.510110491,-77.370438879 37.919034743,-76.716798791 37.919034743,-76.716798791 37.510110491,-77.370438879 37.510110491))" ;
+    dcterms:title "King William - VA FEMA LiDAR" ;
+    esip:eastBound "-76.716798791"^^xsd:float ;
+    esip:endDate "2011-10-27"^^xsd:date ;
+    esip:northBound "37.919034743"^^xsd:float ;
+    esip:southBound "37.510110491"^^xsd:float ;
+    esip:startDate "2011-04-19"^^xsd:date ;
+    esip:westBound "-77.370438879"^^xsd:float ;
+    owl:a dcat:Dataset .
+

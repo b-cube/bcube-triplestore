@@ -1,0 +1,72 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:220c8fa5-b34e-4323-96ec-dc7510270732> owl:a foaf:Organization ;
+    foaf:name "" .
+
+<urn:uuid:8bf53d00-adab-4370-a6ba-2e227d10baa6> bcube:hasType "theme" ;
+    bcube:hasValue "EPS-0814387",
+        "EPSCoR",
+        "NSF",
+        "Water Resources in a Changing Climate",
+        "elevation",
+        "laser",
+        "lidar",
+        "tls" ;
+    dc:partOf "http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#MD_KeywordTypeCode" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:9e5adae4-11ae-4cc3-bf19-e595db9cc58a> bcube:dateCreated "2015-08-08T09:03:12.883Z" ;
+    bcube:hasMetadataRecord <urn:uuid:bf3a3060-4eb8-4ef3-9028-d540240ee0c0> ;
+    bcube:lastUpdated "2015-08-08T09:03:12.883Z" ;
+    dc:conformsTo <urn:uuid:8bf53d00-adab-4370-a6ba-2e227d10baa6>,
+        <urn:uuid:e880491d-3b6e-4f03-8c01-f7b75f752662> ;
+    dc:description "Terrestrial Laser Scanning (TLS) data were collected using a Leica ScanStation C10 system (Leica Inc., Heerbrugg, Switzerland). A total of four scans were completed using a 360 horizontal and 90 vertical eld-of-view with a resolution producing a surface precision of <2 mm at 50 m. The pulse diameter was 4.5 mm at sensor and 50 m with minimal effect from beam divergence. Array resolution was <2 mm, with estimated distance accuracy of a single pulse at 50 m at 4 mm or better. Scanner heights were set at 1.37 m above ground level." ;
+    dc:spatial "POLYGON ((-115.069 44.29,-115.069 44.293,-115.049 44.293,-115.049 44.29,-115.069 44.29))" ;
+    dcterms:publisher <urn:uuid:220c8fa5-b34e-4323-96ec-dc7510270732> ;
+    dcterms:title "Terrestrial Laser Scanning Data from Challis National Forest, Idaho" ;
+    esip:eastBound "-115.049"^^xsd:float ;
+    esip:endDate "2011-06-30"^^xsd:date ;
+    esip:northBound "44.293"^^xsd:float ;
+    esip:southBound "44.29"^^xsd:float ;
+    esip:startDate "2011-06-28"^^xsd:date ;
+    esip:westBound "-115.069"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:bf3a3060-4eb8-4ef3-9028-d540240ee0c0> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-08-08T09:03:12.883Z" ;
+    bcube:lastUpdated "2015-08-08T09:03:12.883Z" ;
+    bcube:originatedFrom <urn:uuid:dcbabe70-f42c-41e1-8428-4cf81ce659e5> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:9e5adae4-11ae-4cc3-bf19-e595db9cc58a> .
+
+<urn:uuid:dcbabe70-f42c-41e1-8428-4cf81ce659e5> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-08T09:03:12.883Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-08T09:03:12.883Z" ;
+    dc:identifier "urn:sha:152420831e9a67123b2068819a3c3be0e23ea1e72f03b2e8df942a58" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://data.boisestate.edu/opendap/hyrax/data/MILES/New_XMLs_2015_04-21/TLS_Challis.xml" .
+
+<urn:uuid:e880491d-3b6e-4f03-8c01-f7b75f752662> bcube:hasType "place" ;
+    bcube:hasValue "Challis National Forest",
+        "Idaho",
+        "Stanley" ;
+    dc:partOf "Geographic Names Information System" ;
+    owl:a bcube:thesaurusSubset .
+

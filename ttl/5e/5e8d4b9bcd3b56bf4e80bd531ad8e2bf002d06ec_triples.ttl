@@ -1,0 +1,78 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:0b65cfdd-bd0e-4441-908c-33f646c339d8> bcube:hasType "theme" ;
+    bcube:hasValue "biota",
+        "geoscientificInformation" ;
+    dc:partOf "ISO 19115 Topic Categories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:1ef14fa2-1852-4b73-8602-a0eef7817bdf> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-10-27T22:52:45.711Z" ;
+    bcube:lastUpdated "2015-10-27T22:52:45.711Z" ;
+    bcube:originatedFrom <urn:uuid:b9854922-52d4-40d8-b3d1-72e4dd874860> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:9cabb61e-a879-4a48-9a0c-fe912117de89> .
+
+<urn:uuid:6430df31-af57-4c35-956b-e365591c71b0> bcube:hasType "place" ;
+    bcube:hasValue "United States" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:6e2fd5b4-243c-433d-bb4d-1aaae1b67857> owl:a foaf:Organization ;
+    foaf:name "USDA - Forest Service" .
+
+<urn:uuid:9cabb61e-a879-4a48-9a0c-fe912117de89> bcube:dateCreated "2015-10-27T22:52:45.711Z" ;
+    bcube:hasMetadataRecord <urn:uuid:1ef14fa2-1852-4b73-8602-a0eef7817bdf> ;
+    bcube:lastUpdated "2015-10-27T22:52:45.711Z" ;
+    dc:conformsTo <urn:uuid:0b65cfdd-bd0e-4441-908c-33f646c339d8>,
+        <urn:uuid:6430df31-af57-4c35-956b-e365591c71b0>,
+        <urn:uuid:ea4adfda-2957-4a5b-92b5-72ec812bf26b> ;
+    dc:description "This data set includes polygons for ecological subsections within the conterminous United States. This data set contains regional geographic delineations for analysis of ecological relationships across ecological units. These delineations show relationships between ECOMAP 2007 and STATSGO data from 2005." ;
+    dc:spatial "POLYGON ((-124.762615 24.530689,-124.762615 49.386392,-66.798038 49.386392,-66.798038 24.530689,-124.762615 24.530689))" ;
+    dcterms:publisher <urn:uuid:6e2fd5b4-243c-433d-bb4d-1aaae1b67857> ;
+    dcterms:title "S_USA.SoilsSubsections" ;
+    esip:eastBound "-66.798038"^^xsd:float ;
+    esip:northBound "49.386392"^^xsd:float ;
+    esip:southBound "24.530689"^^xsd:float ;
+    esip:westBound "-124.762615"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:b9854922-52d4-40d8-b3d1-72e4dd874860> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-10-27T22:52:45.711Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-10-27T22:52:45.711Z" ;
+    dc:identifier "urn:sha:77251e0ae37b5e2aeb34ab1b8f94e1554f449b62484a8ad8c29d3c5d" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://data.fs.usda.gov/geodata/edw/edw_resources/meta/S_USA.SoilsSubsections.xml" .
+
+<urn:uuid:ea4adfda-2957-4a5b-92b5-72ec812bf26b> bcube:hasType "theme" ;
+    bcube:hasValue "K factor",
+        "available water capacity",
+        "bulk density",
+        "ecomap",
+        "ecoregion",
+        "pH",
+        "permeability",
+        "plasticity",
+        "porosity",
+        "soil",
+        "subsection" ;
+    dc:partOf "ECOMAP_2007" ;
+    owl:a bcube:thesaurusSubset .
+

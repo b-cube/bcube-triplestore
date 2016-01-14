@@ -1,0 +1,92 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:42dc39f7-312d-4f12-ad71-39473abd61cc> owl:a foaf:Organization ;
+    foaf:name "Federal Emergency Management Agency" .
+
+<urn:uuid:66fcf3d8-0099-4c5d-9aa9-2f54b7af3c15> bcube:hasType "theme" ;
+    bcube:hasValue "1 Percent-Annual-Chance Flood",
+        "Channel",
+        "DFIRM",
+        "Digital Flood Insurance Rate Map",
+        "Flood Hazard data",
+        "Hydrology" ;
+    dc:partOf "FEMA NFIP Topic Category" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:8ad9c600-2cad-4cba-b82a-c3580f814d49> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-01T02:10:36.524Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-01T02:10:36.524Z" ;
+    dc:identifier "urn:sha:37c915397238031daced09ae0e2dd3bf54e84a6477f749c2cc9dcbdf" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://hazards.fema.gov" .
+
+<urn:uuid:9839acb3-1ea0-49b6-a949-6cfc2de64f87> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-01T02:10:36.524Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-01T02:10:36.524Z" ;
+    dc:identifier "urn:sha:7e3151343df0a74ceb7918b6065f7bde6ecb098dfc9cf64d03ec2561" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://catalog.data.gov/harvest/object/35b9cbb1-e3be-461b-82cb-92e3c789b1ac/original" .
+
+<urn:uuid:98757cf1-8d5e-4ccc-8768-dc5ba0ddc921> bcube:hasType "place" ;
+    bcube:hasValue "COMMUNITY BROWN COUNTY OH AND INCORPORATED AREAS",
+        "COUNTY BROWN",
+        "COUNTY-FIPS 015",
+        "FEMA-CID 39015C",
+        "REGION 5",
+        "STATE OH" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:dc684228-f0f7-4fb6-8344-4d57259ea063> bcube:hasType "theme" ;
+    bcube:hasValue "environment",
+        "inlandWaters" ;
+    dc:partOf "ISO 19115 Topic Category" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:e58dfab4-8d1d-4cca-a681-fde9689505f7> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-11-01T02:10:36.524Z" ;
+    bcube:lastUpdated "2015-11-01T02:10:36.524Z" ;
+    bcube:originatedFrom <urn:uuid:9839acb3-1ea0-49b6-a949-6cfc2de64f87> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:f9867ecb-dbf8-4044-8961-86a87e62b734> .
+
+<urn:uuid:f9867ecb-dbf8-4044-8961-86a87e62b734> bcube:dateCreated "2015-11-01T02:10:36.524Z" ;
+    bcube:hasMetadataRecord <urn:uuid:e58dfab4-8d1d-4cca-a681-fde9689505f7> ;
+    bcube:lastUpdated "2015-11-01T02:10:36.524Z" ;
+    dc:conformsTo <urn:uuid:66fcf3d8-0099-4c5d-9aa9-2f54b7af3c15>,
+        <urn:uuid:98757cf1-8d5e-4ccc-8768-dc5ba0ddc921>,
+        <urn:uuid:dc684228-f0f7-4fb6-8344-4d57259ea063> ;
+    dc:description "Hydrology data include spatial datasets and data tables necessary for documenting the hydrologic procedures for estimating flood discharges for a flood insurance study which includes the hydrologic data expected by FEMA for existing riverine studies. (Source: FEMA Guidelines and Specifications, Appendix M)" ;
+    dc:spatial "POLYGON ((-84.139924 38.583142,-84.139924 39.430972,-83.516138 39.430972,-83.516138 38.583142,-84.139924 38.583142))" ;
+    dcterms:publisher <urn:uuid:42dc39f7-312d-4f12-ad71-39473abd61cc> ;
+    dcterms:references <urn:uuid:8ad9c600-2cad-4cba-b82a-c3580f814d49> ;
+    dcterms:title "APPROXIMATE HYDROLOGY, BROWN COUNTY,OH USA" ;
+    esip:eastBound "-83.516138"^^xsd:float ;
+    esip:northBound "39.430972"^^xsd:float ;
+    esip:southBound "38.583142"^^xsd:float ;
+    esip:startDate "2008-11-14"^^xsd:date ;
+    esip:westBound "-84.139924"^^xsd:float ;
+    owl:a dcat:Dataset .
+

@@ -1,0 +1,78 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:0fc047d8-e1e1-46bc-bdac-d7df5fcbf02f> bcube:hasType "place" ;
+    bcube:hasValue "Butte quadrangle",
+        "Montana",
+        "USA" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:31eeb50b-d290-4191-b6d2-9920f6af7c5a> owl:a foaf:Organization ;
+    foaf:name "U.S. Geological Survey" .
+
+<urn:uuid:32b488f6-f2d3-411a-b3b1-04571a3005f4> bcube:dateCreated "2015-08-05T15:47:28.4Z" ;
+    bcube:hasMetadataRecord <urn:uuid:5e49346d-08a3-4edb-80e7-e15df7b62453> ;
+    bcube:lastUpdated "2015-08-05T15:47:28.4Z" ;
+    dc:conformsTo <urn:uuid:0fc047d8-e1e1-46bc-bdac-d7df5fcbf02f>,
+        <urn:uuid:b1b16ed1-586d-47cf-8d21-6a5a286539c1> ;
+    dc:description "This rectified map image was created for the purpose of directly comparing an image of the original geologic map with other geospatial information. The rectified image includes the map and coordinate labels; titles, text, explanations, cross sections, and collar information were cropped." ;
+    dc:spatial "POLYGON ((-114.085715 45.945716,-114.085715 47.050795,-111.924699 47.050795,-111.924699 45.945716,-114.085715 45.945716))" ;
+    dcterms:publisher <urn:uuid:31eeb50b-d290-4191-b6d2-9920f6af7c5a> ;
+    dcterms:references <urn:uuid:da1ab1a9-26d6-4d02-af85-6f5a54505981> ;
+    dcterms:title "Rectified images of selected geologic maps of the northern Rockies area, Idaho, Montana, Washington, and Wyoming" ;
+    esip:eastBound "-111.924699"^^xsd:float ;
+    esip:northBound "47.050795"^^xsd:float ;
+    esip:southBound "45.945716"^^xsd:float ;
+    esip:startDate "1987-01-01"^^xsd:date ;
+    esip:westBound "-114.085715"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:5e49346d-08a3-4edb-80e7-e15df7b62453> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-08-05T15:47:28.4Z" ;
+    bcube:lastUpdated "2015-08-05T15:47:28.4Z" ;
+    bcube:originatedFrom <urn:uuid:85ea83bb-fe30-4c07-84c2-d33212373eec> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:32b488f6-f2d3-411a-b3b1-04571a3005f4> .
+
+<urn:uuid:85ea83bb-fe30-4c07-84c2-d33212373eec> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-05T15:47:28.4Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-05T15:47:28.4Z" ;
+    dc:identifier "urn:sha:d4e2a809d38bbde9e6cf2bdf4ef60c66ca822587703889600d3e9bb8" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://pubs.usgs.gov/ds/106/GEOREFERENCED/Butte_MF1925_rect.sid.xml" .
+
+<urn:uuid:b1b16ed1-586d-47cf-8d21-6a5a286539c1> bcube:hasType "theme" ;
+    bcube:hasValue "digital image",
+        "geologic map",
+        "georeferenced image",
+        "rectified raster image" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:da1ab1a9-26d6-4d02-af85-6f5a54505981> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-05T15:47:28.4Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-05T15:47:28.4Z" ;
+    dc:identifier "urn:sha:d14a028c2a3a2bc9476102bb288234c415a2b01f828ea62ac5b3e42f" ;
+    owl:a bcube:Url .
+

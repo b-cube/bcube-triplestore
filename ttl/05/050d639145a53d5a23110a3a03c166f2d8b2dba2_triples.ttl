@@ -1,0 +1,71 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:029a0d87-ee9e-4cf6-9442-7854ec1ad43d> bcube:hasType "dataCenter" ;
+    bcube:hasValue "DOC/NOAA/NMFS/AFSC > Alaska Fisheries Science Center, National Marine Fisheries Service, NOAA, U.S. Department of Commerce" ;
+    dc:partOf "NASA/GCMD Science Keywords" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:12387f86-f3cf-4d38-af51-472468885d0f> bcube:hasType "theme" ;
+    bcube:hasValue "acoustic sediment classification",
+        "grain size analysis" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:3115b64c-8bc9-469d-9841-bd87578dbbfc> a "ISO 19115:2003/19139" ;
+    bcube:dateCreated "2014-10-28T10:50:26.94Z" ;
+    bcube:lastUpdated "2014-10-28T10:50:26.94Z" ;
+    bcube:originatedFrom <urn:uuid:e0bf61c1-d1fe-4a8a-897a-79163ef78b76> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:8b3daa1e-86dc-46f7-8db4-fed707ab11f2> .
+
+<urn:uuid:3e85ae85-6aba-4b1e-8dc1-8cbd2e7bb807> bcube:hasValue "geoscientificInformation" ;
+    dc:partOf "IsoTopicCategories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:8b3daa1e-86dc-46f7-8db4-fed707ab11f2> bcube:dateCreated "2014-10-28T10:50:26.94Z" ;
+    bcube:hasMetadataRecord <urn:uuid:3115b64c-8bc9-469d-9841-bd87578dbbfc> ;
+    bcube:lastUpdated "2014-10-28T10:50:26.94Z" ;
+    dc:conformsTo <urn:uuid:029a0d87-ee9e-4cf6-9442-7854ec1ad43d>,
+        <urn:uuid:12387f86-f3cf-4d38-af51-472468885d0f>,
+        <urn:uuid:3e85ae85-6aba-4b1e-8dc1-8cbd2e7bb807>,
+        <urn:uuid:fa5ac638-4590-4542-a48c-ef87f5079745> ;
+    dc:description "Environmental variables that are ecologically relevant and easily measured over large areas are useful for modelling species distributions and habitats. Continuous acoustic, sonar-backscatter data convey information about physical properties of the seabed, and hence could be a valuable addition to that suite of variables. The potential utility of acoustic backscatter was tested for improving habitat models of marine species using data from a pilot sidescan-sonar survey conducted from 28 June to 3 July 2002 in the Bristol Bay region of the eastern Bering Sea (EBS). Raw digital backscatter data were processed with QTC SIDEVIEW and CLAMS software to objectively segment bedform based on statistical analysis of the echograms. Resultant acoustic variables - Q-values (Q1, Q2, and Q3)-, representing the first three principal components of the data derived from image analysis of backscatter echoes, and a complexity metric (compx) measuring the variance of Q-values in a geographic area - were used in multiple linear regression to model individual species abundance from bottom-trawl survey data." ;
+    dc:spatial "POLYGON ((-162.242882 55.830994,-162.242882 58.32594,-159.018071 58.32594,-159.018071 55.830994,-162.242882 55.830994))" ;
+    dcterms:title "AFSC/RACE/GAP: Bristol Bay Reconnaissance Study" ;
+    esip:eastBound "-159.018071"^^xsd:float ;
+    esip:endDate "2002-07-06"^^xsd:date ;
+    esip:northBound "58.32594"^^xsd:float ;
+    esip:southBound "55.830994"^^xsd:float ;
+    esip:startDate "2002-06-06"^^xsd:date ;
+    esip:westBound "-162.242882"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:e0bf61c1-d1fe-4a8a-897a-79163ef78b76> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2014-10-28T10:50:26.94Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2014-10-28T10:50:26.94Z" ;
+    dc:identifier "urn:sha:4b41866da0d5a90a1ed71bdf332f3f4e28c894d367d794ee7ef89117" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "https://data.noaa.gov/harvest/object/8918b91e-da9e-4046-8c5a-69184701f09e" .
+
+<urn:uuid:fa5ac638-4590-4542-a48c-ef87f5079745> bcube:hasType "place" ;
+    bcube:hasValue "Bering Sea" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+

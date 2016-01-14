@@ -1,0 +1,106 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:407dc90f-79a5-4c00-8876-a5be647db44a> bcube:hasType "temporal" ;
+    bcube:hasValue "2010" ;
+    dc:partOf "General" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:4bb295b3-16f4-4678-be41-67b64a946593> bcube:dateCreated "2015-08-09T21:01:00.682Z" ;
+    bcube:hasMetadataRecord <urn:uuid:b5add351-fc73-4723-b9f1-dfa94dfc781f> ;
+    bcube:lastUpdated "2015-08-09T21:01:00.682Z" ;
+    dc:conformsTo <urn:uuid:407dc90f-79a5-4c00-8876-a5be647db44a>,
+        <urn:uuid:55e9ce14-be07-42f6-9e09-acb10adebc41>,
+        <urn:uuid:7bed04e8-6107-4547-828a-1cb1cb776039>,
+        <urn:uuid:ae1820ce-411b-43bd-ba86-038a105bde05>,
+        <urn:uuid:d56572f7-4c2c-46bf-82ac-2e26174f84d7> ;
+    dc:description "ASCII xyz point cloud data were produced from remotely sensed, geographically referenced elevation measurements by the U.S. Geological Survey (USGS). Elevation measurements were collected over the area (bathymetry was irresolvable) using the Experimental Advanced Airborne Research Lidar (EAARL), a pulsed laser ranging system mounted onboard an aircraft to measure ground elevation, vegetation canopy, and coastal topography. The system uses high-frequency laser beams directed at the Earth's surface through an opening in the bottom of the aircraft's fuselage. The laser system records the time difference between emission of the laser beam and the reception of the reflected laser signal in the aircraft. The plane travels over the target area at approximately 50 meters per second at an elevation of approximately 300 meters, resulting in a laser swath of approximately 240 meters with an average point spacing of 2-3 meters. The EAARL, developed originally by the National Aeronautics and Space Administration (NASA) at Wallops Flight Facility in Virginia, measures ground elevation with a vertical resolution of 15 centimeters. A sampling rate of 3 kilohertz or higher results in an extremely dense spatial elevation dataset. Over 100 kilometers of coastline can be easily surveyed within a 3- to 4-hour mission. When resultant elevation maps for an area are analyzed, they provide a useful tool to make management decisions regarding land development." ;
+    dc:spatial "POLYGON ((-87.901850978671504 31.0906701689029,-87.901850978671504 31.108859144384802,-87.880713304499807 31.108859144384802,-87.880713304499807 31.0906701689029,-87.901850978671504 31.0906701689029))" ;
+    dcterms:publisher <urn:uuid:bcb3a073-2d9e-4d9e-94f5-a09136328f1e> ;
+    dcterms:references <urn:uuid:fcd20e6b-bf88-4429-a8c9-4f145421df25> ;
+    dcterms:title "EAARL Topography--Three Mile Creek and Mobile-Tensaw Delta, Alabama, 2010" ;
+    esip:eastBound "-87.8807133045"^^xsd:float ;
+    esip:northBound "31.1088591444"^^xsd:float ;
+    esip:southBound "31.0906701689"^^xsd:float ;
+    esip:startDate "2010-03-06"^^xsd:date ;
+    esip:westBound "-87.9018509787"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:55e9ce14-be07-42f6-9e09-acb10adebc41> bcube:hasType "place" ;
+    bcube:hasValue "Alabama",
+        "Mobile-Tensaw Delta",
+        "North America",
+        "Three Mile Creek",
+        "United States" ;
+    dc:partOf "General" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:7bed04e8-6107-4547-828a-1cb1cb776039> bcube:hasType "theme" ;
+    bcube:hasValue "elevation" ;
+    dc:partOf "ISO 19115 Topic Category" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:ae1820ce-411b-43bd-ba86-038a105bde05> bcube:hasType "stratum" ;
+    bcube:hasValue "Bare Earth" ;
+    dc:partOf "General" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:b5add351-fc73-4723-b9f1-dfa94dfc781f> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-08-09T21:01:00.682Z" ;
+    bcube:lastUpdated "2015-08-09T21:01:00.682Z" ;
+    bcube:originatedFrom <urn:uuid:c4440547-6285-4e71-b1b5-eda99661c2b2> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:4bb295b3-16f4-4678-be41-67b64a946593> .
+
+<urn:uuid:bcb3a073-2d9e-4d9e-94f5-a09136328f1e> owl:a foaf:Organization ;
+    foaf:name "U.S. Geological Survey" .
+
+<urn:uuid:c4440547-6285-4e71-b1b5-eda99661c2b2> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-09T21:01:00.682Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-09T21:01:00.682Z" ;
+    dc:identifier "urn:sha:aaf1fe39f45aa7c2ac7573a90a5ca12d62de0753fd0c900250a99d16" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://pubs.usgs.gov/ds/618/data_files/be/be_e414_n3442_16/be_e414_n3442_16.xyz.xml" .
+
+<urn:uuid:d56572f7-4c2c-46bf-82ac-2e26174f84d7> bcube:hasType "theme" ;
+    bcube:hasValue "ALPS",
+        "Airborne Lidar Processing System",
+        "DEM",
+        "Digital Elevation Model",
+        "EAARL",
+        "Experimental Advanced Airborne Research Lidar",
+        "Pilatus PC-6",
+        "laser altimetry",
+        "lidar",
+        "remote sensing",
+        "topography" ;
+    dc:partOf "General" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:fcd20e6b-bf88-4429-a8c9-4f145421df25> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-09T21:01:00.682Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-09T21:01:00.682Z" ;
+    dc:identifier "urn:sha:d14a028c2a3a2bc9476102bb288234c415a2b01f828ea62ac5b3e42f" ;
+    owl:a bcube:Url .
+

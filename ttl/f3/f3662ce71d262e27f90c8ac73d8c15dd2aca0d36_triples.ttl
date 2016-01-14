@@ -1,0 +1,95 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:15ecfd9e-5a98-40ba-b57f-8a9e9cec2426> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-01T06:11:36.692Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-01T06:11:36.692Z" ;
+    dc:identifier "urn:sha:2e1843ec8cced837b9afe9b4f0b166b35817ea682d391e6ef1899c4c" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://meta.geo.census.gov/data/existing/decennial/GEO/GPMB/TIGERline/TL2012/FGDC/addr/tl_2012_01117_addr.dbf.xml" .
+
+<urn:uuid:80158f35-4e71-4cf3-9775-c4f55f6a4d20> bcube:hasType "theme" ;
+    bcube:hasValue "5-digit ZIP code",
+        "County ANSI Code",
+        "County FIPS Code",
+        "From House Number",
+        "Permanent edge ID",
+        "Side indicator flag",
+        "State ANSI Code",
+        "State FIPS Code",
+        "To House Number",
+        "ZIP +4 code" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:99edff45-a889-4eda-bcd3-e7433f786a51> bcube:hasType "place" ;
+    bcube:hasValue "01117",
+        "County or Equivalent Entity",
+        "Shelby",
+        "U.S.",
+        "United States" ;
+    dc:partOf "ANSI INCITS 38:2009 (Formerly FIPS 5-2), ANSI INCITS 31:2009 (Formerly FIPS 6-4),ANSI INCITS 454:2009 (Formerly FIPS 8-6), ANSI INCITS 455:2009(Formerly FIPS 9-1), ANSI INCITS 446:2008 (Geographic Names Information System (GNIS))" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:9e9a3938-54df-4bca-82d3-c06390252a73> bcube:hasType "theme" ;
+    bcube:hasValue "Transportation" ;
+    dc:partOf "ISO 19115 Topic Categories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:a8163885-d64c-449c-9d53-8935fd3d82bf> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-11-01T06:11:36.692Z" ;
+    bcube:lastUpdated "2015-11-01T06:11:36.692Z" ;
+    bcube:originatedFrom <urn:uuid:15ecfd9e-5a98-40ba-b57f-8a9e9cec2426> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:bdf8d8cf-1148-4dba-9da6-1bfa05c05dfc> .
+
+<urn:uuid:bdf8d8cf-1148-4dba-9da6-1bfa05c05dfc> bcube:dateCreated "2015-11-01T06:11:36.692Z" ;
+    bcube:hasMetadataRecord <urn:uuid:a8163885-d64c-449c-9d53-8935fd3d82bf> ;
+    bcube:lastUpdated "2015-11-01T06:11:36.692Z" ;
+    dc:conformsTo <urn:uuid:80158f35-4e71-4cf3-9775-c4f55f6a4d20>,
+        <urn:uuid:99edff45-a889-4eda-bcd3-e7433f786a51>,
+        <urn:uuid:9e9a3938-54df-4bca-82d3-c06390252a73> ;
+    dc:description "The TIGER/Line shapefiles and related database files (.dbf) are an extract of selected geographic and cartographic information from the U.S. Census Bureau's Master Address File / Topologically Integrated Geographic Encoding and Referencing (MAF/TIGER) Database (MTDB). The MTDB represents a seamless national file with no overlaps or gaps between parts, however, each TIGER/Line shapefile is designed to stand alone as an independent data set, or they can be combined to cover the entire nation. The Address Ranges Relationship File (ADDR.dbf) contains the attributes of each address range. Each address range applies to a single edge and has a unique address range identifier (ARID) value. The edge to which an address range applies can be determined by linking the address range to the All Lines Shapefile (EDGES.shp) using the permanent topological edge identifier (TLID) attribute. Multiple address ranges can apply to the same edge since an edge can have multiple address ranges. Note that the most inclusive address range associated with each side of a street edge already appears in the All Lines Shapefile (EDGES.shp). The TIGER/Line Files contain potential address ranges, not individual addresses. The term \"address range\" refers to the collection of all possible structure numbers from the first structure number to the last structure number and all numbers of a specified parity in between along an edge side relative to the direction in which the edge is coded. The address ranges in the TIGER/Line Files are potential ranges that include the full range of possible structure numbers even though the actual structures may not exist." ;
+    dc:spatial "POLYGON ((-87.026846 33.018664,-87.026846 33.546156,-86.340937 33.546156,-86.340937 33.018664,-87.026846 33.018664))" ;
+    dcterms:publisher <urn:uuid:f1a69a67-84e7-4a52-aa5d-8b93b6ef354c> ;
+    dcterms:references <urn:uuid:ea2355de-3a8f-442d-a80f-490858e8cc73> ;
+    dcterms:title "TIGER/Line Shapefile, 2012, county, Shelby County, AL, Current Address Ranges Relationship File" ;
+    esip:eastBound "-86.340937"^^xsd:float ;
+    esip:endDate "2012-06-01"^^xsd:date ;
+    esip:northBound "33.546156"^^xsd:float ;
+    esip:southBound "33.018664"^^xsd:float ;
+    esip:startDate "2011-08-01"^^xsd:date ;
+    esip:westBound "-87.026846"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:ea2355de-3a8f-442d-a80f-490858e8cc73> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-01T06:11:36.692Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-01T06:11:36.692Z" ;
+    dc:identifier "urn:sha:336a93af46800fcea8b177bf4b39ac915f65e47ff0b539e0e74d9552" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www2.census.gov/geo/tiger/TIGER2012/ADDR/tl_2012_01117_addr.zip" .
+
+<urn:uuid:f1a69a67-84e7-4a52-aa5d-8b93b6ef354c> owl:a foaf:Organization ;
+    foaf:name "" .
+

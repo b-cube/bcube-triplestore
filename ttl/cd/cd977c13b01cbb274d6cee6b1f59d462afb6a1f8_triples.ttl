@@ -1,0 +1,90 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:00d96053-4098-4b75-a3ab-e7af9bcd0950> bcube:hasType "theme" ;
+    bcube:hasValue "5-digit ZIP code",
+        "County ANSI Code",
+        "County FIPS Code",
+        "From House Number",
+        "Permanent edge ID",
+        "Side indicator flag",
+        "State ANSI Code",
+        "State FIPS Code",
+        "To House Number",
+        "ZIP +4 code" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:07d2feb1-9f12-4901-a856-cae348f040b0> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-12T14:52:41.291Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-12T14:52:41.291Z" ;
+    dc:identifier "urn:sha:0bcd19a7acd5a8139ec59b01f4fe779fe328468fb02915805337b4bc" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www2.census.gov/geo/tiger/TIGER2013/ADDRFEAT/tl_2013_48113_addrfeat.zip" .
+
+<urn:uuid:500b0b40-8dca-4004-b98a-e4e5eaf804ba> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-12T14:52:41.291Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-12T14:52:41.291Z" ;
+    dc:identifier "urn:sha:dcd1962837ea3855f29964312735463985654975c52d8e71f5fa44b7" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://meta.geo.census.gov/data/existing/decennial/GEO/GPMB/TIGERline/TIGER2013/addrfeat/tl_2013_48113_addrfeat.shp.iso.xml" .
+
+<urn:uuid:9278f96e-e9cf-4915-98c7-3e19ad1ed35b> bcube:hasValue "transportation" ;
+    dc:partOf "IsoTopicCategories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:a84d735a-3122-4510-b06a-78ba6befd2ae> bcube:hasType "place" ;
+    bcube:hasValue "48113",
+        "County or Equivalent Entity",
+        "Dallas",
+        "U.S.",
+        "United States" ;
+    dc:partOf "ANSI INCITS 38:2009 (Formerly FIPS 5-2), ANSI INCITS 31:2009 (Formerly FIPS 6-4),ANSI INCITS 454:2009 (Formerly FIPS 8-6), ANSI INCITS 455:2009(Formerly FIPS 9-1), ANSI INCITS 446:2008 (Geographic Names Information System (GNIS))" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:df115867-baf1-4681-a6b9-7afd4035a28c> a "ISO 19115:2003/19139" ;
+    bcube:dateCreated "2015-08-12T14:52:41.291Z" ;
+    bcube:lastUpdated "2015-08-12T14:52:41.291Z" ;
+    bcube:originatedFrom <urn:uuid:500b0b40-8dca-4004-b98a-e4e5eaf804ba> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:e2199371-af65-468d-ac6b-7ce99e882c8f> .
+
+<urn:uuid:e2199371-af65-468d-ac6b-7ce99e882c8f> bcube:dateCreated "2015-08-12T14:52:41.291Z" ;
+    bcube:hasMetadataRecord <urn:uuid:df115867-baf1-4681-a6b9-7afd4035a28c> ;
+    bcube:lastUpdated "2015-08-12T14:52:41.291Z" ;
+    dc:conformsTo <urn:uuid:00d96053-4098-4b75-a3ab-e7af9bcd0950>,
+        <urn:uuid:9278f96e-e9cf-4915-98c7-3e19ad1ed35b>,
+        <urn:uuid:a84d735a-3122-4510-b06a-78ba6befd2ae> ;
+    dc:description "The TIGER/Line shapefiles and related database files (.dbf) are an extract of selected geographic and cartographic information from the U.S. Census Bureau's Master Address File / Topologically Integrated Geographic Encoding and Referencing (MAF/TIGER) Database (MTDB). The MTDB provides seamless national coverage with no overlaps or gaps between parts. Each TIGER/Line File is designed to stand alone as an independent data set, or it can be combined with shapefiles for other counties to cover a region or the entire nation. The Address Ranges Feature Shapefile (ADDRFEAT.dbf) contains the geospatial edge geometry and attributes of all unsuppressed address ranges for a county or county equivalent area. The term \"address range\" refers to the collection of all possible structure numbers from the first structure number to the last structure number and all numbers of a specified parity in between along an edge side relative to the direction in which the edge is coded. Single-address address ranges have been suppressed to maintain the confidentiality of the addresses they describe. Multiple coincident address range feature edge records are represented in the shapefile if more than one left or right address ranges are associated to the edge. The ADDRFEAT shapefile contains a record for each address range to street name combination. Address range associated to more than one street name are also represented by multiple coincident address range feature edge records. Note that the ADDRFEAT shapefile includes all unsuppressed address ranges compared to the All Lines Shapefile (EDGES.shp) which only includes the most inclusive address range associated with each side of a street edge. The TIGER/Line Shapefiles contain potential address ranges, not individual addresses. The address ranges in the TIGER/Line Shapefiles are potential ranges that include the full range of possible structure numbers even though the actual structures may not exist." ;
+    dc:spatial "POLYGON ((-97.038385 32.545214,-97.038385 32.989328,-96.516866 32.989328,-96.516866 32.545214,-97.038385 32.545214))" ;
+    dcterms:references <urn:uuid:07d2feb1-9f12-4901-a856-cae348f040b0> ;
+    dcterms:title "TIGER/Line Shapefile, 2013, county, Dallas County, TX, Address Range-Feature County-based" ;
+    esip:eastBound "-96.516866"^^xsd:float ;
+    esip:endDate "2013-05-06"^^xsd:date ;
+    esip:northBound "32.989328"^^xsd:float ;
+    esip:southBound "32.545214"^^xsd:float ;
+    esip:startDate "2012-06-06"^^xsd:date ;
+    esip:westBound "-97.038385"^^xsd:float ;
+    owl:a dcat:Dataset .
+

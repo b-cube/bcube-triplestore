@@ -1,0 +1,90 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:02e20393-8d1b-4034-91a9-7dce93ad2d2c> owl:a foaf:Organization ;
+    foaf:name "U.S. Geological Survey" .
+
+<urn:uuid:2a22cadc-a51f-4a20-a885-8e0dd845ea94> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2014-10-30T01:20:25.262Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2014-10-30T01:20:25.262Z" ;
+    dc:identifier "urn:sha:efc1358b4c6ed76e68603745823c9fa0b9e3b923470d92a35848e88d" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://pubs.usgs.gov/fs/2012/3148/" .
+
+<urn:uuid:35e94395-a258-4e55-9b66-3023af417b63> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2014-10-30T01:20:25.262Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2014-10-30T01:20:25.262Z" ;
+    dc:identifier "urn:sha:5ebf513fa8bee584d30997204fe0522ae11e61c78b4e5eb3484ec142" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www.usgs.gov/science/xml.php?cite=3077" .
+
+<urn:uuid:3fe91584-6c1e-4e17-af4c-19436a78d4b8> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2014-10-30T01:20:25.262Z" ;
+    bcube:lastUpdated "2014-10-30T01:20:25.262Z" ;
+    bcube:originatedFrom <urn:uuid:35e94395-a258-4e55-9b66-3023af417b63> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:408990d4-f1a8-4365-9ead-d6f48368ea96> .
+
+<urn:uuid:408990d4-f1a8-4365-9ead-d6f48368ea96> bcube:dateCreated "2014-10-30T01:20:25.262Z" ;
+    bcube:hasMetadataRecord <urn:uuid:3fe91584-6c1e-4e17-af4c-19436a78d4b8> ;
+    bcube:lastUpdated "2014-10-30T01:20:25.262Z" ;
+    dc:conformsTo <urn:uuid:522c75ff-f175-45ad-8d77-093ce5dfe49b>,
+        <urn:uuid:5effd80d-6f38-4bb7-8265-b85866d88f76>,
+        <urn:uuid:d8b8289e-4e67-41b6-a23a-d2cd2e60290a> ;
+    dc:description "We estimated undiscovered resources of 1,321 million barrels of oil, 25,386 billion cubic feet of gas, and 604 million barrels of natural gas liquids in this area using a geology based assessment methodology." ;
+    dc:spatial "POLYGON ((-131 47,-131 62,-88 62,-88 47,-131 47))" ;
+    dcterms:publisher <urn:uuid:02e20393-8d1b-4034-91a9-7dce93ad2d2c> ;
+    dcterms:references <urn:uuid:72664dc4-b295-41eb-8393-bdd00db3e7fa> ;
+    dcterms:title "Assessment of undiscovered conventional oil and gas resources of the Western Canadian Sedimentary Basin, Canada, 2012" ;
+    esip:eastBound "-88.0"^^xsd:float ;
+    esip:northBound "62.0"^^xsd:float ;
+    esip:southBound "47.0"^^xsd:float ;
+    esip:westBound "-131.0"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:522c75ff-f175-45ad-8d77-093ce5dfe49b> bcube:hasType "place" ;
+    bcube:hasValue "fCA01 = Alberta",
+        "fCA02 = British Columbia",
+        "fCA03 = Manitoba",
+        "fCA11 = Saskatchewan",
+        "fCA13 = Northwest Territories" ;
+    dc:partOf "Augmented FIPS 10-4 and FIPS 6-4" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:5effd80d-6f38-4bb7-8265-b85866d88f76> bcube:hasType "theme" ;
+    bcube:hasValue "mineral deposit areas" ;
+    dc:partOf "Alexandria Digital Library Feature Type Thesaurus" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:72664dc4-b295-41eb-8393-bdd00db3e7fa> dcterms:references <urn:uuid:2a22cadc-a51f-4a20-a885-8e0dd845ea94> ;
+    owl:a bibo:WebPage .
+
+<urn:uuid:d8b8289e-4e67-41b6-a23a-d2cd2e60290a> bcube:hasType "theme" ;
+    bcube:hasValue "natural gas resources",
+        "natural resource assessment",
+        "oil resources",
+        "petroleum" ;
+    dc:partOf "USGS Thesaurus" ;
+    owl:a bcube:thesaurusSubset .
+

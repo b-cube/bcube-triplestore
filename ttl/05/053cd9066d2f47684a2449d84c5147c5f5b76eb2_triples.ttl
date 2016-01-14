@@ -1,0 +1,96 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:048a8efd-def3-4bc0-94ff-f48b1aee4bcc> bcube:hasType "place" ;
+    bcube:hasValue "Continent &gt; North America &gt; United States Of America &gt; Hawaii",
+        "Ocean &gt; Pacific Ocean &gt; Central Pacific Ocean &gt; Hawaiian Islands" ;
+    dc:partOf "GCMD Location Keywords" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:41ed80a4-d9ca-4773-bc54-719f554523de> bcube:hasType "theme" ;
+    bcube:hasValue "Human Dimensions > Infrastructure > Transportation" ;
+    dc:partOf "GCMD Science Keywords" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:41ff9bef-31b3-462c-80f6-59bd2adaf1c9> bcube:hasType "project" ;
+    bcube:hasValue "Pacific Islands Ocean Observing System (PacIOOS) (http://pacioos.org)" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:5dbee934-9788-40a6-9d8c-7ccc81fed00b> a "ISO 19115:2003/19139" ;
+    bcube:dateCreated "2015-03-04T14:55:21.465Z" ;
+    bcube:lastUpdated "2015-03-04T14:55:21.465Z" ;
+    bcube:originatedFrom <urn:uuid:7004a43c-fef6-4cf1-870d-7d010e88d38f> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:98996a5b-8d95-4682-a2f7-56c3dc8ad6ea> .
+
+<urn:uuid:7004a43c-fef6-4cf1-870d-7d010e88d38f> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-03-04T14:55:21.465Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-03-04T14:55:21.465Z" ;
+    dc:identifier "urn:sha:f8c23097abe2837c4a2dc7745e60c17ca8e32c96a84538e178e69516" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://oos.soest.hawaii.edu/thredds/iso/ais/ais_hi_20082009_grid?catalog=http%3A%2F%2Foos.soest.hawaii.edu%2Fthredds%2Fidd%2Fais.html&dataset=ais_hi_20082009_grid" .
+
+<urn:uuid:98996a5b-8d95-4682-a2f7-56c3dc8ad6ea> bcube:dateCreated "2015-03-04T14:55:21.465Z" ;
+    bcube:hasMetadataRecord <urn:uuid:5dbee934-9788-40a6-9d8c-7ccc81fed00b> ;
+    bcube:lastUpdated "2015-03-04T14:55:21.465Z" ;
+    dc:conformsTo <urn:uuid:048a8efd-def3-4bc0-94ff-f48b1aee4bcc>,
+        <urn:uuid:41ed80a4-d9ca-4773-bc54-719f554523de>,
+        <urn:uuid:41ff9bef-31b3-462c-80f6-59bd2adaf1c9>,
+        <urn:uuid:b9ddb91d-e2e0-4985-ae09-6d680976adc3>,
+        <urn:uuid:f9aa52b6-9871-44f5-95f9-9216e41c3139>,
+        <urn:uuid:fa7394d2-93d3-4441-b380-c300498305ca> ;
+    dc:description "Ship traffic for the State of Hawaii, identifying the number of times a vessel occupied each square kilometer during the period 2008-2009. The Automatic Identification System (AIS) is an internationally-recognized shipboard broadcast system that communicates information to shore-based stations and other AIS-equipped ships. The United States Coast Guard (USCG) has developed rules applicable to both U.S. and foreign vessels that require owners and operators of most commercial vessels to install and use AIS to increase security and safety of maritime transportation. PacIOOS obtained AIS data from the USCG Nationwide AIS (NAIS) project. While specific times for ship locations were redacted, the data represent a cumulation over the two-year period 2008-2009 from which ship frequency was computed at 1-km resolution." ;
+    dc:identifier "ais_hi_20082009_grid" ;
+    dc:spatial "POLYGON ((200.000503540000011 18.000499725299999,200.000503540000011 22.999500274700001,205.999496459999989 22.999500274700001,205.999496459999989 18.000499725299999,200.000503540000011 18.000499725299999))" ;
+    dcterms:references <urn:uuid:bef9c7aa-ea6a-4088-8249-6bf935a536ef> ;
+    dcterms:title "AIS Ship Traffic: Hawaii: 2008-2009: Binned: 1km" ;
+    esip:eastBound "205.99949646"^^xsd:float ;
+    esip:endDate "2010-01-01"^^xsd:date ;
+    esip:northBound "22.9995002747"^^xsd:float ;
+    esip:southBound "18.0004997253"^^xsd:float ;
+    esip:startDate "2008-01-01"^^xsd:date ;
+    esip:westBound "200.00050354"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:b9ddb91d-e2e0-4985-ae09-6d680976adc3> bcube:hasType "theme" ;
+    bcube:hasValue "latitude",
+        "longitude" ;
+    dc:partOf "CF-1.6" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:bef9c7aa-ea6a-4088-8249-6bf935a536ef> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-03-04T14:55:21.465Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-03-04T14:55:21.465Z" ;
+    dc:identifier "urn:sha:80dcf3bbdfa09256d1dcb11109d2961aebd73dfd5bdceef855513d9e" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://pacioos.org/voyager/index.html?o=nav:1:75:1" .
+
+<urn:uuid:f9aa52b6-9871-44f5-95f9-9216e41c3139> bcube:hasType "dataCenter" ;
+    bcube:hasValue "Pacific Islands Ocean Observing System (PacIOOS)" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:fa7394d2-93d3-4441-b380-c300498305ca> bcube:hasValue "climatologyMeteorologyAtmosphere" ;
+    dc:partOf "IsoTopicCategories" ;
+    owl:a bcube:thesaurusSubset .
+

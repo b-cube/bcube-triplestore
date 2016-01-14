@@ -1,0 +1,107 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:42026d4a-fdcd-4989-854c-795dc278b6cc> bcube:hasValue "geoscientificInformation" ;
+    dc:partOf "IsoTopicCategories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:969bc378-2f53-47f2-9caa-991c1a2bedb0> a "ISO 19115:2003/19139" ;
+    bcube:dateCreated "2015-07-16T01:44:15.27Z" ;
+    bcube:lastUpdated "2015-07-16T01:44:15.27Z" ;
+    bcube:originatedFrom <urn:uuid:ebd418bb-548f-4951-808a-b2631d0b1be7> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:a31a2790-f233-4c11-9828-00fd7c34b0c8> .
+
+<urn:uuid:9a6ec18b-3f77-42b3-af38-e65205789c16> bcube:hasType "theme" ;
+    bcube:hasValue "depth",
+        "latitude",
+        "longitude",
+        "sea_surface_wave_from_direction",
+        "sea_surface_wave_mean_period_from_variance_spectral_density_second_frequency_moment",
+        "sea_surface_wave_period_at_variance_spectral_density_maximum",
+        "sea_surface_wave_significant_height",
+        "time" ;
+    dc:partOf "CF-1.4" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:9bbbf807-3cd7-43be-ac93-60df25f6fe37> bcube:hasType "theme" ;
+    bcube:hasValue "Earth Science > Oceans > Ocean Waves > Significant Wave Height",
+        "Earth Science > Oceans > Ocean Waves > Wave Period",
+        "Earth Science > Oceans > Ocean Waves > Wave Speed/Direction",
+        "Earth Science Services > Models > Ocean General Circulation Models (OGCM)/Regional Ocean Models",
+        "Earth Science Services > Models > Weather Research/Forecast Models" ;
+    dc:partOf "GCMD Science Keywords" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:a31a2790-f233-4c11-9828-00fd7c34b0c8> bcube:dateCreated "2015-07-16T01:44:15.27Z" ;
+    bcube:hasMetadataRecord <urn:uuid:969bc378-2f53-47f2-9caa-991c1a2bedb0> ;
+    bcube:lastUpdated "2015-07-16T01:44:15.27Z" ;
+    dc:conformsTo <urn:uuid:42026d4a-fdcd-4989-854c-795dc278b6cc>,
+        <urn:uuid:9a6ec18b-3f77-42b3-af38-e65205789c16>,
+        <urn:uuid:9bbbf807-3cd7-43be-ac93-60df25f6fe37>,
+        <urn:uuid:f4cd16a5-a830-4c92-831f-ee33d14212fa> ;
+    dc:description "Simulating WAves Nearshore (SWAN) regional wave model 7-day output with a 5-day hourly forecast for the Hawaiian island of Oahu at approximately 500-m resolution. This high-resolution model is utilized to capture shallow water effects and nearshore coastal dynamics such as refracting, shoaling, and smaller scale shadowing. It is run directly after the Hawaii regional WaveWatch III (WW3) wave model has completed. Please note that this nested model setup is in the testing and validation phase. While considerable effort has been made to implement all model components in a thorough, correct, and accurate manner, numerous sources of error are possible. As such, please use these data with the caution appropriate for any ocean related activity." ;
+    dc:identifier "SWAN_Oahu_Best" ;
+    dc:spatial "POLYGON ((-158.35 21.2,-158.35 21.75,-157.6 21.75,-157.6 21.2,-158.35 21.2))" ;
+    dcterms:references <urn:uuid:b8ebb777-db08-4a70-9004-2efa1a7801d4>,
+        <urn:uuid:d1b1d2cf-8244-478d-8733-47211b44433c> ;
+    dcterms:title "Simulating WAves Nearshore (SWAN) Regional Wave Model: Oahu" ;
+    esip:eastBound "-157.6"^^xsd:float ;
+    esip:endDate "2015-07-20"^^xsd:date ;
+    esip:northBound "21.75"^^xsd:float ;
+    esip:southBound "21.2"^^xsd:float ;
+    esip:startDate "2010-06-20"^^xsd:date ;
+    esip:westBound "-158.35"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:b8ebb777-db08-4a70-9004-2efa1a7801d4> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-07-16T01:44:15.27Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-07-16T01:44:15.27Z" ;
+    dc:identifier "urn:sha:66654eb87a9059dfe4bed2af644cf61bd4bb0d2126a799e8e90d96ec" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://oos.soest.hawaii.edu/erddap/griddap/SWAN_Oahu_Best.graph" .
+
+<urn:uuid:d1b1d2cf-8244-478d-8733-47211b44433c> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-07-16T01:44:15.27Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-07-16T01:44:15.27Z" ;
+    dc:identifier "urn:sha:a55de1ee0fd44841fbcc3202ef5ccf22551201c3930ea6acdc3d90ff" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://oos.soest.hawaii.edu/erddap/griddap/SWAN_Oahu_Best.html" .
+
+<urn:uuid:ebd418bb-548f-4951-808a-b2631d0b1be7> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-07-16T01:44:15.27Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-07-16T01:44:15.27Z" ;
+    dc:identifier "urn:sha:11e7c75d8e24cdc379e942ce3b60f4c49c6ca834b892b50c2c9c125d" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://oos.soest.hawaii.edu/erddap/griddap/SWAN_Oahu_Best.iso19115" .
+
+<urn:uuid:f4cd16a5-a830-4c92-831f-ee33d14212fa> bcube:hasType "project" ;
+    bcube:hasValue "Pacific Islands Ocean Observing System (PacIOOS)" ;
+    owl:a bcube:thesaurusSubset .
+

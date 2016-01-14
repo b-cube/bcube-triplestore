@@ -1,0 +1,106 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:1a308614-7834-4b4c-8c51-3a76a2804d48> bcube:hasType "place" ;
+    bcube:hasValue "COMMUNITY ROCK COUNTY, WISCONSIN AND INCORPORATED AREAS",
+        "COUNTY ROCK",
+        "COUNTY-FIPS 105",
+        "FEMA-CID 55105C",
+        "REGION 05",
+        "STATE WI" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:2c1446b5-88a8-4443-ab78-fed0fbba44bf> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-08-08T20:40:02.38Z" ;
+    bcube:lastUpdated "2015-08-08T20:40:02.38Z" ;
+    bcube:originatedFrom <urn:uuid:8866cf6c-2652-4d28-af3e-b5f579d2212b> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:e4a3de9a-c7ff-4ff8-94af-7074dd40b6ee> .
+
+<urn:uuid:32960eca-6a39-41a9-82ae-ce8a2fd9732e> owl:a foaf:Organization ;
+    foaf:name "Federal Emergency Management Agency" .
+
+<urn:uuid:4f3b4850-67f1-4fc8-bd93-0e11e2a24860> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-08T20:40:02.38Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-08T20:40:02.38Z" ;
+    dc:identifier "urn:sha:37c915397238031daced09ae0e2dd3bf54e84a6477f749c2cc9dcbdf" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://hazards.fema.gov" .
+
+<urn:uuid:8866cf6c-2652-4d28-af3e-b5f579d2212b> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-08T20:40:02.38Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-08T20:40:02.38Z" ;
+    dc:identifier "urn:sha:87c038fb26d878309c693c35e4b659275d71b2bd69dee95806e093da" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "https://catalog.data.gov/harvest/object/9bbdfae3-7901-4c13-b90e-d765c2957936/original" .
+
+<urn:uuid:94f94726-baea-443b-81ba-544e23a965da> bcube:hasType "theme" ;
+    bcube:hasValue "environment",
+        "inlandWaters" ;
+    dc:partOf "ISO 19115 Topic Category" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:e4a3de9a-c7ff-4ff8-94af-7074dd40b6ee> bcube:dateCreated "2015-08-08T20:40:02.38Z" ;
+    bcube:hasMetadataRecord <urn:uuid:2c1446b5-88a8-4443-ab78-fed0fbba44bf> ;
+    bcube:lastUpdated "2015-08-08T20:40:02.38Z" ;
+    dc:conformsTo <urn:uuid:1a308614-7834-4b4c-8c51-3a76a2804d48>,
+        <urn:uuid:94f94726-baea-443b-81ba-544e23a965da>,
+        <urn:uuid:f29cfee2-4f48-4708-895f-253a7f3e284d> ;
+    dc:description "Hydrology data include spatial datasets and data tables necessary for documenting the hydrologic procedures for estimating flood discharges for a flood insurance study, which includes the hydrologic data expected by FEMA for new riverine studies. (Source: FEMA Guidelines and Specifications, Appendix N)" ;
+    dc:spatial "POLYGON ((-89.604 42.495,-89.604 43.784,-88.183 43.784,-88.183 42.495,-89.604 42.495))" ;
+    dcterms:publisher <urn:uuid:32960eca-6a39-41a9-82ae-ce8a2fd9732e> ;
+    dcterms:references <urn:uuid:4f3b4850-67f1-4fc8-bd93-0e11e2a24860> ;
+    dcterms:title "HYDROLOGY, ROCK COUNTY, WI, USA" ;
+    esip:eastBound "-88.183"^^xsd:float ;
+    esip:northBound "43.784"^^xsd:float ;
+    esip:southBound "42.495"^^xsd:float ;
+    esip:startDate "2010-05-14"^^xsd:date ;
+    esip:westBound "-89.604"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:f29cfee2-4f48-4708-895f-253a7f3e284d> bcube:hasType "theme" ;
+    bcube:hasValue "0.2-Percent-Annual-Chance Flood",
+        "1-Percent-Annual-Chance Flood",
+        "10-Percent-Annual-Chance Flood",
+        "2-Percent-Annual-Chance Flood",
+        "DFIRM",
+        "Digital Flood Insurance Rate Map",
+        "Flood Hazard data",
+        "Hydrograph",
+        "Hydrology",
+        "Landuse",
+        "Link",
+        "Node",
+        "Sheet Runoff",
+        "Soil",
+        "Soil Type",
+        "Stage",
+        "Stream",
+        "Unit Hydrograph",
+        "Water Body",
+        "Watershed/Basin" ;
+    dc:partOf "FEMA NFIP Topic Category" ;
+    owl:a bcube:thesaurusSubset .
+

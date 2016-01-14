@@ -1,0 +1,91 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:12e37e27-c207-4e21-86bc-8bd5f9f8a1d0> bcube:hasType "place" ;
+    bcube:hasValue "12",
+        "FL",
+        "Florida",
+        "State or Equivalent Entity",
+        "U.S.",
+        "United States" ;
+    dc:partOf "ANSI INCITS 38:2009 (Formerly FIPS 5-2), ANSI INCITS 31:2009 (Formerly FIPS 6-4),ANSI INCITS 454:2009 (Formerly FIPS 8-6), ANSI INCITS 455:2009(Formerly FIPS 9-1), ANSI INCITS 446:2008 (Geographic Names Information System (GNIS))" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:2d847fbe-b3ab-4c2f-b579-dc7ef8abbe45> bcube:dateCreated "2015-11-06T02:38:43.994Z" ;
+    bcube:hasMetadataRecord <urn:uuid:b8c17cb1-8f13-4506-8edc-e67449909238> ;
+    bcube:lastUpdated "2015-11-06T02:38:43.994Z" ;
+    dc:conformsTo <urn:uuid:12e37e27-c207-4e21-86bc-8bd5f9f8a1d0>,
+        <urn:uuid:9b0d7264-6fdc-4354-922e-a8cee7892e37>,
+        <urn:uuid:fff202b6-11b6-407f-a25e-444d9c856d41> ;
+    dc:description "The TIGER/Line shapefiles and related database files (.dbf) are an extract of selected geographic and cartographic information from the U.S. Census Bureau's Master Address File / Topologically Integrated Geographic Encoding and Referencing (MAF/TIGER) Database (MTDB). The MTDB represents a seamless national file with no overlaps or gaps between parts, however, each TIGER/Line shapefile is designed to stand alone as an independent data set, or they can be combined to cover the entire nation. The Topological Faces / Area Landmark Relationship File (FACESAL.dbf) contains a record for each face / area landmark relationship. Face refers to the areal (polygon) topological primitives that make up MTDB. A face is bounded by one or more edges; its boundary includes only the edges that separate it from other faces, not any interior edges contained within the area of the face. The face to which a record in the Topological Faces / Area Landmark Relationship File (FACESAL.dbf) applies can be determined by linking to the Topological Faces Shapefile (FACES.shp) on the permanent topological face identifier (TFID) attribute. The area landmark to which a record in the Topological Faces / Area Landmark Relationship File (FACESAL.dbf) applies can be determined by linking to the Area Landmark Shapefile (AREALM.shp) on the area landmark identifier (AREAID) attribute. A face may be part of multiple area landmarks. An area landmark may consist of multiple faces." ;
+    dc:spatial "POLYGON ((-87.634896 24.396308,-87.634896 31.000968,-79.974306 31.000968,-79.974306 24.396308,-87.634896 24.396308))" ;
+    dcterms:references <urn:uuid:e028a645-1ab5-46c2-ac9f-c9ccb1859e78> ;
+    dcterms:title "TIGER/Line Shapefile, 2013, state, Florida, Current Topological Faces-Area Landmark Relationship File" ;
+    esip:eastBound "-79.974306"^^xsd:float ;
+    esip:endDate "2013-05-05"^^xsd:date ;
+    esip:northBound "31.000968"^^xsd:float ;
+    esip:southBound "24.396308"^^xsd:float ;
+    esip:startDate "2012-06-05"^^xsd:date ;
+    esip:westBound "-87.634896"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:490b83ad-c85b-4e75-baf7-1fd0b1e5994f> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-06T02:38:43.994Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-06T02:38:43.994Z" ;
+    dc:identifier "urn:sha:5b967027340de158aa17edbeb8dd97c88f732d816aa43844cd6cf979" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://meta.geo.census.gov/data/existing/decennial/GEO/GPMB/TIGERline/TIGER2013/facesal/tl_2013_12_facesal.dbf.iso.xml" .
+
+<urn:uuid:9b0d7264-6fdc-4354-922e-a8cee7892e37> bcube:hasType "theme" ;
+    bcube:hasValue "Area landmark identifier",
+        "County ANSI Code",
+        "County FIPS Code",
+        "Landmark",
+        "Permanent face ID",
+        "State ANSI Code",
+        "State FIPS Code",
+        "State or equivalent entity",
+        "Table",
+        "Topological Faces" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:b8c17cb1-8f13-4506-8edc-e67449909238> a "ISO 19115:2003/19139" ;
+    bcube:dateCreated "2015-11-06T02:38:43.994Z" ;
+    bcube:lastUpdated "2015-11-06T02:38:43.994Z" ;
+    bcube:originatedFrom <urn:uuid:490b83ad-c85b-4e75-baf7-1fd0b1e5994f> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:2d847fbe-b3ab-4c2f-b579-dc7ef8abbe45> .
+
+<urn:uuid:e028a645-1ab5-46c2-ac9f-c9ccb1859e78> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-06T02:38:43.994Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-06T02:38:43.994Z" ;
+    dc:identifier "urn:sha:de86d832bcf1f362a5e5297c85db0e0f7964e90bc5c0b0b6ea4fb061" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www2.census.gov/geo/tiger/TIGER2013/FACESAL/tl_2013_12_facesal.zip" .
+
+<urn:uuid:fff202b6-11b6-407f-a25e-444d9c856d41> bcube:hasValue "boundaries" ;
+    dc:partOf "IsoTopicCategories" ;
+    owl:a bcube:thesaurusSubset .
+

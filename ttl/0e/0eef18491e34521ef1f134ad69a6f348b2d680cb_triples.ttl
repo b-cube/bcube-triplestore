@@ -1,0 +1,72 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:18d7736e-41d1-4ef4-bc55-a7c3defa915d> bcube:hasType "temporal" ;
+    bcube:hasValue "2010" ;
+    dc:partOf "none" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:5cc8fe28-7a5b-46f1-8a04-f609baae415b> bcube:hasType "place" ;
+    bcube:hasValue "Illinois",
+        "Kendall Co" ;
+    dc:partOf "none" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:66d6f250-bbe6-4e22-9f7a-fd47f57369f6> bcube:dateCreated "2015-11-08T17:08:58.833Z" ;
+    bcube:hasMetadataRecord <urn:uuid:c395931b-1b8e-48ad-957f-a3d88e2fd267> ;
+    bcube:lastUpdated "2015-11-08T17:08:58.833Z" ;
+    dc:conformsTo <urn:uuid:18d7736e-41d1-4ef4-bc55-a7c3defa915d>,
+        <urn:uuid:5cc8fe28-7a5b-46f1-8a04-f609baae415b>,
+        <urn:uuid:ea07fdfe-e255-4e5d-8398-824d33cd51d7> ;
+    dc:description "The Classified Point Cloud LAS ASPRS ver 1.2 files consist of 5 different classifications: Unclassified, Ground, Noise, Water and Ignored Ground. Merrick used the Leica ALS50 phase II sensor ." ;
+    dc:spatial "POLYGON ((-88.614519 41.450544,-88.614519 41.732186,-88.248153 41.732186,-88.248153 41.450544,-88.614519 41.450544))" ;
+    dcterms:publisher <urn:uuid:7c8667dc-d338-4009-953e-55e084de300d> ;
+    dcterms:title "Classified LAS" ;
+    esip:eastBound "-88.248153"^^xsd:float ;
+    esip:endDate "2010-04-03"^^xsd:date ;
+    esip:northBound "41.732186"^^xsd:float ;
+    esip:southBound "41.450544"^^xsd:float ;
+    esip:startDate "2010-03-31"^^xsd:date ;
+    esip:westBound "-88.614519"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:7c8667dc-d338-4009-953e-55e084de300d> owl:a foaf:Organization ;
+    foaf:name "Merrick & Co" .
+
+<urn:uuid:bea995ce-8d8c-458c-b7c2-77ca9100342c> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-08T17:08:58.833Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-08T17:08:58.833Z" ;
+    dc:identifier "urn:sha:41e4191482c6d8ac74ca2033acff0d70049b8bfd1c1d0db4db1d243c" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www.isgs.uiuc.edu/clearinghouse/lidar/counties/kendall/kendall_2010_metadata.xml" .
+
+<urn:uuid:c395931b-1b8e-48ad-957f-a3d88e2fd267> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-11-08T17:08:58.833Z" ;
+    bcube:lastUpdated "2015-11-08T17:08:58.833Z" ;
+    bcube:originatedFrom <urn:uuid:bea995ce-8d8c-458c-b7c2-77ca9100342c> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:66d6f250-bbe6-4e22-9f7a-fd47f57369f6> .
+
+<urn:uuid:ea07fdfe-e255-4e5d-8398-824d33cd51d7> bcube:hasType "theme" ;
+    bcube:hasValue "DTM",
+        "LAS",
+        "LiDAR" ;
+    dc:partOf "none" ;
+    owl:a bcube:thesaurusSubset .
+

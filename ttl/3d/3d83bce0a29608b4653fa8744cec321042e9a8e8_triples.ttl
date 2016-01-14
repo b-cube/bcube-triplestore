@@ -1,0 +1,81 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:144b00d4-20f7-4613-b2bb-4238ef0661af> bcube:hasType "theme" ;
+    bcube:hasValue "climatologyMeteorologyAtmosphere" ;
+    dc:partOf "ISO 19115 Topic Category" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:1823f490-85f8-4b8d-afb2-938f78ec2aac> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-10-30T11:09:06.766Z" ;
+    bcube:lastUpdated "2015-10-30T11:09:06.766Z" ;
+    bcube:originatedFrom <urn:uuid:d77bab09-92fd-4670-b2b8-55bfb9243651> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:32f17b9e-35d7-40e0-b2c7-84e525281b92> .
+
+<urn:uuid:32f17b9e-35d7-40e0-b2c7-84e525281b92> bcube:dateCreated "2015-10-30T11:09:06.766Z" ;
+    bcube:hasMetadataRecord <urn:uuid:1823f490-85f8-4b8d-afb2-938f78ec2aac> ;
+    bcube:lastUpdated "2015-10-30T11:09:06.766Z" ;
+    dc:conformsTo <urn:uuid:144b00d4-20f7-4613-b2bb-4238ef0661af>,
+        <urn:uuid:34a19c88-6aac-4e35-bda9-c10379c45b22> ;
+    dc:description "Baseline (1961-1990) average total precipitation (mm) for Alaska and Western Canada. Baseline results for 1961-1990 are derived from Climate Research Unit (CRU) TS 3.1.01 data. Data courtesy of Scenarios Network for Alaska and Arctic Planning. The file names identifies whether a file represents an annual (i.e., annual) mean or a seasonal mean (i.e., summer or winter). Summer is defined as June - August; winter is defined as December - February." ;
+    dc:spatial "POLYGON ((-180 36,-180 72,-88 72,-88 36,-180 36))" ;
+    dcterms:publisher <urn:uuid:8b93c329-a840-4aed-bb28-48a4438d99d1> ;
+    dcterms:references <urn:uuid:a60ea56b-5604-4c9f-99dc-27c321bd859f> ;
+    dcterms:title "Baseline (1961-1990) average total precipitation (mm) for Alaska and Western Canada." ;
+    esip:eastBound "-88.0"^^xsd:float ;
+    esip:endDate "1990-12-31"^^xsd:date ;
+    esip:northBound "72.0"^^xsd:float ;
+    esip:southBound "36.0"^^xsd:float ;
+    esip:startDate "1961-01-01"^^xsd:date ;
+    esip:westBound "-180.0"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:34a19c88-6aac-4e35-bda9-c10379c45b22> bcube:hasType "place" ;
+    bcube:hasValue "Alaska",
+        "Alberta",
+        "British Columbia",
+        "Manitoba",
+        "Saskatchewan",
+        "Yukon" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:8b93c329-a840-4aed-bb28-48a4438d99d1> owl:a foaf:Organization ;
+    foaf:name "Arctic Landscape Conservation Cooperative" .
+
+<urn:uuid:a60ea56b-5604-4c9f-99dc-27c321bd859f> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-10-30T11:09:06.766Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-10-30T11:09:06.766Z" ;
+    dc:identifier "urn:sha:0178e77e42cf8676895840ff62bcbafd746e481bcfdf8d37cb4dac31" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://arcticlcc.org/assets/products/ARCT2011-1002/spatial_data/baseline_precip/Baseline_1961-1990_TS31_total_precip_mm.zip" .
+
+<urn:uuid:d77bab09-92fd-4670-b2b8-55bfb9243651> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-10-30T11:09:06.766Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-10-30T11:09:06.766Z" ;
+    dc:identifier "urn:sha:b11a1bb4f13411fc63b8047548c9555211943764f3148e1551e6272d" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://arcticlcc.org/assets/products/ARCT2011-1002/spatial_data/metadata/Baseline_1961-1990_TS31_total_precip_mm_metadata.xml" .
+

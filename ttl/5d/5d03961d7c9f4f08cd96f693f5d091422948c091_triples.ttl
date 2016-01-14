@@ -1,0 +1,71 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:1a832aa3-96db-42e0-9a63-da422418999c> bcube:hasType "theme" ;
+    bcube:hasValue "economy",
+        "transportation" ;
+    dc:partOf "none" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:3d6c4c64-8247-4e1b-8ba8-476fd2a52c3e> bcube:hasType "temporal" ;
+    bcube:hasValue "2011",
+        "2012",
+        "2013",
+        "2014",
+        "2015" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:53823700-4514-46c3-bf07-d737acd99f7e> a "ISO 19115:2003/19139" ;
+    bcube:dateCreated "2015-11-01T02:11:47.139Z" ;
+    bcube:lastUpdated "2015-11-01T02:11:47.139Z" ;
+    bcube:originatedFrom <urn:uuid:eed07563-f38f-446d-be9b-68180296bf03> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:e275b799-367c-48cd-8c19-169cf9e6ea77> .
+
+<urn:uuid:9ae6df21-e356-41d9-890d-44562d0525a0> bcube:hasType "theme" ;
+    bcube:hasValue "3.4",
+        "FAF",
+        "Freight",
+        "Frieght Analysis Framework" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:e275b799-367c-48cd-8c19-169cf9e6ea77> bcube:dateCreated "2015-11-01T02:11:47.139Z" ;
+    bcube:hasMetadataRecord <urn:uuid:53823700-4514-46c3-bf07-d737acd99f7e> ;
+    bcube:lastUpdated "2015-11-01T02:11:47.139Z" ;
+    dc:conformsTo <urn:uuid:1a832aa3-96db-42e0-9a63-da422418999c>,
+        <urn:uuid:3d6c4c64-8247-4e1b-8ba8-476fd2a52c3e>,
+        <urn:uuid:9ae6df21-e356-41d9-890d-44562d0525a0> ;
+    dc:description "The spatial component of the FAF network is derived from National Highway System Version 2009.11 and contains state primary and secondary roads, National Highway System (NHS), National Network (NN) and several intermodal connectors as appropriate for the freight network modeling. The network consists of over 447,808 miles of equivalent road mileage. The data set covers the 48 contiguous States plus the District of Columbia, Alaska, and Hawaii. The nominal scale of the data set is 1:100,000 with a maximal positional error of 80 meters." ;
+    dc:spatial "POLYGON ((-176.763993 18.91502,-176.763993 71.316994,-66.979625 71.316994,-66.979625 18.91502,-176.763993 18.91502))" ;
+    dcterms:title "Freight Analysis Framework Network (National)" ;
+    esip:eastBound "-66.979625"^^xsd:float ;
+    esip:northBound "71.316994"^^xsd:float ;
+    esip:southBound "18.91502"^^xsd:float ;
+    esip:westBound "-176.763993"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:eed07563-f38f-446d-be9b-68180296bf03> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-01T02:11:47.139Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-01T02:11:47.139Z" ;
+    dc:identifier "urn:sha:260de6138edd00a3eb567434c45a4557c389d763adc4b81a099b1e1e" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "https://catalog.data.gov/harvest/object/686b39c5-262c-4669-b7c3-8d2f03ba5ca5" .
+

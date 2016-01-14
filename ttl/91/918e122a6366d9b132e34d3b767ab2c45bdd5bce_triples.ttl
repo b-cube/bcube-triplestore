@@ -1,0 +1,90 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:2e07eed2-fc14-4cb7-a84d-23c3b8520398> owl:a foaf:Organization ;
+    foaf:name "" .
+
+<urn:uuid:39b92bd9-f26b-49ab-aea2-93e77bdddf57> bcube:hasType "theme" ;
+    bcube:hasValue "Boundaries" ;
+    dc:partOf "ISO 19115 Topic Categories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:3da09660-6ae9-40d8-bdef-03e19e6edf7d> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-11-06T13:00:40.413Z" ;
+    bcube:lastUpdated "2015-11-06T13:00:40.413Z" ;
+    bcube:originatedFrom <urn:uuid:6410e00a-675b-4597-8ef8-720a2af2dde0> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:635ccbcc-94a4-454c-b76e-e6d8f9e9ac5a> .
+
+<urn:uuid:635ccbcc-94a4-454c-b76e-e6d8f9e9ac5a> bcube:dateCreated "2015-11-06T13:00:40.413Z" ;
+    bcube:hasMetadataRecord <urn:uuid:3da09660-6ae9-40d8-bdef-03e19e6edf7d> ;
+    bcube:lastUpdated "2015-11-06T13:00:40.413Z" ;
+    dc:conformsTo <urn:uuid:39b92bd9-f26b-49ab-aea2-93e77bdddf57>,
+        <urn:uuid:c92502e2-b748-4c9d-a2d7-778dd7fc2cac>,
+        <urn:uuid:df3b42dd-e445-4429-9784-e5572d4e5127> ;
+    dc:description "The TIGER/Line shapefiles and related database files (.dbf) are an extract of selected geographic and cartographic information from the U.S. Census Bureau's Master Address File / Topologically Integrated Geographic Encoding and Referencing (MAF/TIGER) Database (MTDB). The MTDB represents a seamless national file with no overlaps or gaps between parts, however, each TIGER/Line shapefile is designed to stand alone as an independent data set, or they can be combined to cover the entire nation. Block Groups (BGs) are defined before tabulation block delineation and numbering, but are clusters of blocks within the same census tract that have the same first digit of their 4-digit census block number from the same decennial census. For example, 2010 Census tabulation blocks 3001, 3002, 3003,.., 3999 within 2010 Census tract 1210.02 are also within BG 3 within that census tract. 2010 Census BGs generally contained between 600 and 3,000 people. Most BGs were delineated by local participants in the Census Bureau's Participant Statistical Areas Program (PSAP). The Census Bureau delineated BGs only where the PSAP participant declined to delineate BGs or where the Census Bureau could not identify any local PSAP participant. A BG usually covers a contiguous area. Each census tract contains at least one BG, and BGs are uniquely numbered within census tract. Within the standard census geographic hierarchy, BGs never cross county or census tract boundaries, but may cross the boundaries of other geographic entities like county subdivisions, places, urban areas, voting districts, congressional districts, and American Indian / Alaska Native / Native Hawaiian areas. BGs have a valid code range of 0 through 9. BGs coded 0 were intended to only include water area, no land area, and they are generally in territorial seas, coastal water, and Great Lakes water areas. For the 2010 Census, rather than extending a census tract boundary into the Great Lakes or out to the U.S. nautical three-mile limit, the Census Bureau delineated some census tract boundaries along the shoreline or just offshore. The Census Bureau assigned a default census tract number beginning with 99 and a BG number of 0 to these offshore, water-only areas not included in regularly numbered census tract areas." ;
+    dc:spatial "POLYGON ((-73.437905 42.72685,-73.437905 45.016659,-71.465039 45.016659,-71.465039 42.72685,-73.437905 42.72685))" ;
+    dcterms:publisher <urn:uuid:2e07eed2-fc14-4cb7-a84d-23c3b8520398> ;
+    dcterms:references <urn:uuid:715b4765-27fb-4f51-8f6c-5279ee0f1648> ;
+    dcterms:title "TIGER/Line Shapefile, 2012, state, Vermont, Current Block Group State-based" ;
+    esip:eastBound "-71.465039"^^xsd:float ;
+    esip:endDate "2012-06-01"^^xsd:date ;
+    esip:northBound "45.016659"^^xsd:float ;
+    esip:southBound "42.72685"^^xsd:float ;
+    esip:startDate "2011-08-01"^^xsd:date ;
+    esip:westBound "-73.437905"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:6410e00a-675b-4597-8ef8-720a2af2dde0> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-06T13:00:40.413Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-06T13:00:40.413Z" ;
+    dc:identifier "urn:sha:ef111f7113cceecd22628f3c971e995b4b0fe1adb7ebaf5424bfc884" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://meta.geo.census.gov/data/existing/decennial/GEO/GPMB/TIGERline/TL2012/FGDC/bg/tl_2012_50_bg.shp.xml" .
+
+<urn:uuid:715b4765-27fb-4f51-8f6c-5279ee0f1648> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-06T13:00:40.413Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-06T13:00:40.413Z" ;
+    dc:identifier "urn:sha:19679c910531796362cd8e84afa9447a8e90f4004431e1c7eacf8aff" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www2.census.gov/geo/tiger/TIGER2012/BG/tl_2012_50_bg.zip" .
+
+<urn:uuid:c92502e2-b748-4c9d-a2d7-778dd7fc2cac> bcube:hasType "place" ;
+    bcube:hasValue "50",
+        "State or Equivalent Entity",
+        "U.S.",
+        "United States",
+        "VT",
+        "Vermont" ;
+    dc:partOf "ANSI INCITS 38:2009 (Formerly FIPS 5-2), ANSI INCITS 31:2009 (Formerly FIPS 6-4),ANSI INCITS 454:2009 (Formerly FIPS 8-6), ANSI INCITS 455:2009(Formerly FIPS 9-1), ANSI INCITS 446:2008 (Geographic Names Information System (GNIS))" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:df3b42dd-e445-4429-9784-e5572d4e5127> bcube:hasType "theme" ;
+    bcube:hasValue "BG",
+        "Block Group",
+        "Polygon",
+        "State or equivalent entity" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+

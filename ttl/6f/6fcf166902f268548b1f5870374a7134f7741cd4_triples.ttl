@@ -1,0 +1,81 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:1258215b-5635-40e1-9925-6e6acf037bb3> owl:a foaf:Organization ;
+    foaf:name "Montana Fish, Wildlife & Parks" .
+
+<urn:uuid:1bda1b52-a663-4628-9c43-0770c1304a09> bcube:dateCreated "2015-08-11T11:09:03.238Z" ;
+    bcube:hasMetadataRecord <urn:uuid:b29e88b2-9eb1-4b5b-b724-cdc54c71b933> ;
+    bcube:lastUpdated "2015-08-11T11:09:03.238Z" ;
+    dc:conformsTo <urn:uuid:3740be68-68a2-4079-b3eb-58c2d1013485>,
+        <urn:uuid:642387d6-f000-4332-bc80-643c9758189b>,
+        <urn:uuid:e3a4abbc-c6c0-4d9a-9614-8f359b3cfbc8> ;
+    dc:description "Noxious weed locations on Montana Fish, Wildlife & Parks' (FWP) fishing access sites based on GPS inventories conducted by Montana Department of Agriculture each summer from 2005 through 2009." ;
+    dc:spatial "POLYGON ((-115.267527 44.712945,-115.267527 49.088515,-103.916178 49.088515,-103.916178 44.712945,-115.267527 44.712945))" ;
+    dcterms:publisher <urn:uuid:1258215b-5635-40e1-9925-6e6acf037bb3> ;
+    dcterms:references <urn:uuid:209183fd-a002-4b45-806c-d4c80ff78136> ;
+    dcterms:title "Montana Fish, Wildlife & Parks Fishing Access Site Noxious Weed Inventory Locations (2005-2009)" ;
+    esip:eastBound "-103.916178"^^xsd:float ;
+    esip:northBound "49.088515"^^xsd:float ;
+    esip:southBound "44.712945"^^xsd:float ;
+    esip:startDate "2010-01-01"^^xsd:date ;
+    esip:westBound "-115.267527"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:209183fd-a002-4b45-806c-d4c80ff78136> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-11T11:09:03.238Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-11T11:09:03.238Z" ;
+    dc:identifier "urn:sha:17f074f76cf7cf97f0cd92c204ce113ef97dfcec956e29f28213b197" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://fwp.mt.gov/gisData/shapefiles/FASweeds.zip" .
+
+<urn:uuid:3740be68-68a2-4079-b3eb-58c2d1013485> bcube:hasType "theme" ;
+    bcube:hasValue "environment" ;
+    dc:partOf "ISO 19115 Topic Category" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:642387d6-f000-4332-bc80-643c9758189b> bcube:hasType "theme" ;
+    bcube:hasValue "FAS",
+        "fishing access sites",
+        "noxious weeds" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:b29e88b2-9eb1-4b5b-b724-cdc54c71b933> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-08-11T11:09:03.238Z" ;
+    bcube:lastUpdated "2015-08-11T11:09:03.238Z" ;
+    bcube:originatedFrom <urn:uuid:cbb57af8-815d-45ce-90b9-68fb50922748> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:1bda1b52-a663-4628-9c43-0770c1304a09> .
+
+<urn:uuid:cbb57af8-815d-45ce-90b9-68fb50922748> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-11T11:09:03.238Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-11T11:09:03.238Z" ;
+    dc:identifier "urn:sha:30a5723a912395b94edeee768ce6f8cacab6cc28e294ee8b1a9fb27c" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://mslapps.mt.gov/Geographic_Information/Data/DataList/datalist_MetadataDetailRaw.aspx?did={C875D20B-A2D2-4455-8697-C3A8FDB09E3B}" .
+
+<urn:uuid:e3a4abbc-c6c0-4d9a-9614-8f359b3cfbc8> bcube:hasType "place" ;
+    bcube:hasValue "Montana" ;
+    owl:a bcube:thesaurusSubset .
+

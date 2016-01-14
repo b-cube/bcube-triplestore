@@ -1,0 +1,70 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:46f52012-8626-4abb-a668-42595d35ad74> owl:a foaf:Organization ;
+    foaf:name "" .
+
+<urn:uuid:5581fae8-eb77-4de5-9686-f1113fda0383> bcube:hasType "theme" ;
+    bcube:hasValue "property" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:7d80588f-e018-405b-b326-2ca29a77033c> bcube:hasType "place" ;
+    bcube:hasValue "Colorado",
+        "Denver",
+        "Denver County",
+        "USA" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:9f2be925-3d21-493e-9651-85d26e24339a> bcube:hasType "theme" ;
+    bcube:hasValue "planningCadastre" ;
+    dc:partOf "ISO 19115 Topic Categories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:ea27034b-c5e5-43d7-b71b-98b8cf5c1eb9> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-11-02T15:49:58.023Z" ;
+    bcube:lastUpdated "2015-11-02T15:49:58.023Z" ;
+    bcube:originatedFrom <urn:uuid:f4d7a08b-60fd-4dae-9e98-cea9fff8aa29> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:eedd7c81-2d5b-4afa-ad38-fef0087b18ea> .
+
+<urn:uuid:eedd7c81-2d5b-4afa-ad38-fef0087b18ea> bcube:dateCreated "2015-11-02T15:49:58.023Z" ;
+    bcube:hasMetadataRecord <urn:uuid:ea27034b-c5e5-43d7-b71b-98b8cf5c1eb9> ;
+    bcube:lastUpdated "2015-11-02T15:49:58.023Z" ;
+    dc:conformsTo <urn:uuid:5581fae8-eb77-4de5-9686-f1113fda0383>,
+        <urn:uuid:7d80588f-e018-405b-b326-2ca29a77033c>,
+        <urn:uuid:9f2be925-3d21-493e-9651-85d26e24339a> ;
+    dc:description "Parcels within the City and County of Denver as they are represented graphically." ;
+    dc:spatial "POLYGON ((-105.221915 39.612739,-105.221915 39.914196,-104.599538 39.914196,-104.599538 39.612739,-105.221915 39.612739))" ;
+    dcterms:publisher <urn:uuid:46f52012-8626-4abb-a668-42595d35ad74> ;
+    dcterms:title "Parcels" ;
+    esip:eastBound "-104.599538"^^xsd:float ;
+    esip:northBound "39.914196"^^xsd:float ;
+    esip:southBound "39.612739"^^xsd:float ;
+    esip:westBound "-105.221915"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:f4d7a08b-60fd-4dae-9e98-cea9fff8aa29> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-02T15:49:58.023Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-02T15:49:58.023Z" ;
+    dc:identifier "urn:sha:1d405320897c29d8770e32b470cf92ce0c66e321c7857407ddf0f6f4" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://data.denvergov.org/download/gis/parcels/metadata/parcels.xml" .
+

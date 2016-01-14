@@ -1,0 +1,74 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:077b44f0-1315-4c8e-8dd7-248188eb1aae> bcube:dateCreated "2015-10-29T16:15:01.817Z" ;
+    bcube:hasMetadataRecord <urn:uuid:353119b1-10bf-4df4-b89e-34c5291def3f> ;
+    bcube:lastUpdated "2015-10-29T16:15:01.817Z" ;
+    dc:conformsTo <urn:uuid:0e50a1d0-e069-4dd9-b17b-c9a04e7b3dfd>,
+        <urn:uuid:2a470cc2-8306-4d88-953b-f37b900fb294>,
+        <urn:uuid:ece2c1c9-3846-4ae8-8238-50a9bc27d69d> ;
+    dc:description "ASPRS v1.2 final classified LAS data grouped into 10 classifications: 1 = Unclassified, 2 = Ground, 3 = Low Vegetation, 4 = Medium Vegetation, 5 = High Vegetation, 6 = Building, 7 = Low point (noise), 8 = Model key-point (mass point), 9 = Water, 10 = Ignored Ground (breakline proximity). One-meter Nominal Point Spacing." ;
+    dc:spatial "POLYGON ((-89.285894 37.058405,-89.285894 37.528978,-88.484985 37.528978,-88.484985 37.058405,-89.285894 37.058405))" ;
+    dcterms:publisher <urn:uuid:61692cfd-9aa9-40ec-85a0-1dd7f0d4afb0> ;
+    dcterms:title "LAS" ;
+    esip:eastBound "-88.484985"^^xsd:float ;
+    esip:endDate "2012-02-17"^^xsd:date ;
+    esip:northBound "37.528978"^^xsd:float ;
+    esip:southBound "37.058405"^^xsd:float ;
+    esip:startDate "2012-02-02"^^xsd:date ;
+    esip:westBound "-89.285894"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:0e50a1d0-e069-4dd9-b17b-c9a04e7b3dfd> bcube:hasType "theme" ;
+    bcube:hasValue "DEM",
+        "First Return",
+        "LIDAR" ;
+    dc:partOf "none" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:10150ff8-06f9-4e55-85cf-bc0874dbe76a> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-10-29T16:15:01.817Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-10-29T16:15:01.817Z" ;
+    dc:identifier "urn:sha:450414b5da5495388aa8e62719492e7c04a23415a3c26c36b847a94b" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www.isgs.illinois.edu/clearinghouse/lidar/counties/pulaski/pulaski_2012_metadata.xml" .
+
+<urn:uuid:2a470cc2-8306-4d88-953b-f37b900fb294> bcube:hasType "temporal" ;
+    bcube:hasValue "2012" ;
+    dc:partOf "none" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:353119b1-10bf-4df4-b89e-34c5291def3f> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-10-29T16:15:01.817Z" ;
+    bcube:lastUpdated "2015-10-29T16:15:01.817Z" ;
+    bcube:originatedFrom <urn:uuid:10150ff8-06f9-4e55-85cf-bc0874dbe76a> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:077b44f0-1315-4c8e-8dd7-248188eb1aae> .
+
+<urn:uuid:61692cfd-9aa9-40ec-85a0-1dd7f0d4afb0> owl:a foaf:Organization ;
+    foaf:name "Merrick & Co" .
+
+<urn:uuid:ece2c1c9-3846-4ae8-8238-50a9bc27d69d> bcube:hasType "place" ;
+    bcube:hasValue "Illinois",
+        "Johnson County",
+        "Massac County",
+        "Pulaski County" ;
+    dc:partOf "none" ;
+    owl:a bcube:thesaurusSubset .
+

@@ -1,0 +1,85 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:390dab56-e47b-4f28-97d2-a010ad12a0ff> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-05T11:48:40.124Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-05T11:48:40.124Z" ;
+    dc:identifier "urn:sha:4f253241fc03db29e3490c1607587d8669f51209a52f334ba7b5492e" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://coast.noaa.gov/data/Documents/Metadata/isotest/de2011_bombay_hook_m1172_metadata_iso.xml" .
+
+<urn:uuid:3cb3bc24-a887-4bab-9e58-fd5137a139b1> a "ISO 19115:2003/19139" ;
+    bcube:dateCreated "2015-08-05T11:48:40.124Z" ;
+    bcube:lastUpdated "2015-08-05T11:48:40.124Z" ;
+    bcube:originatedFrom <urn:uuid:390dab56-e47b-4f28-97d2-a010ad12a0ff> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:ff459561-7d52-4bb3-acbe-1107b8f7e88a> .
+
+<urn:uuid:5d4f425c-f6d0-40e3-95c1-27838f5bc652> bcube:hasType "place" ;
+    bcube:hasValue "Bombay Hook National Wildlife Refuge",
+        "Delaware",
+        "Kent County",
+        "United States" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:71ca6bae-9a2f-415b-92e5-206b68ee7f8f> bcube:hasValue "elevation" ;
+    dc:partOf "IsoTopicCategories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:823f5122-c7a8-44a0-96b9-72202844ef4b> bcube:hasType "theme" ;
+    bcube:hasValue "Bathymetry/Topography",
+        "DEM",
+        "DTM",
+        "Elevation",
+        "LAS",
+        "Lidar" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:e87fdde3-3196-40d3-884b-cb1252efb6a7> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-05T11:48:40.124Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-05T11:48:40.124Z" ;
+    dc:identifier "urn:sha:abc144e98236551716fa364ca4d79a22ba6c8fc5c1dc2245d9a72e53" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://coast.noaa.gov/dataviewer/index.html?action=advsearchVal=1172" .
+
+<urn:uuid:ff459561-7d52-4bb3-acbe-1107b8f7e88a> bcube:dateCreated "2015-08-05T11:48:40.124Z" ;
+    bcube:hasMetadataRecord <urn:uuid:3cb3bc24-a887-4bab-9e58-fd5137a139b1> ;
+    bcube:lastUpdated "2015-08-05T11:48:40.124Z" ;
+    dc:conformsTo <urn:uuid:5d4f425c-f6d0-40e3-95c1-27838f5bc652>,
+        <urn:uuid:71ca6bae-9a2f-415b-92e5-206b68ee7f8f>,
+        <urn:uuid:823f5122-c7a8-44a0-96b9-72202844ef4b> ;
+    dc:description "Terrapoint collected LiDAR for over 177 square kilometers of the Bombay Hook National Wildlife Refuge in Kent County, Delaware. The nominal pulse spacing for this project was no greater than 0.75 meters. This project was collected with a sensor which collects waveform data and provides an intensity value for each discrete pulse extracted from the waveform. GPS Week Time, Intensity, Flightline and echo number attributes were provided for each LiDAR point. Dewberry used proprietary procedures to classify the LAS according to project specifications: 1-Unclassified, 2-Ground, 7-Noise, 9-Water, 12-Overlap. Once the data was received by NOAA OCM, all of the class 7 (noise) points were removed from the data set. Dewberry produced classified LAS and DEMs for the 99 tiles (1700 m x 1700 m) that cover the project area." ;
+    dc:spatial "POLYGON ((-75.530873 39.046286,-75.530873 39.309361,-75.389419 39.309361,-75.389419 39.046286,-75.530873 39.046286))" ;
+    dcterms:references <urn:uuid:e87fdde3-3196-40d3-884b-cb1252efb6a7> ;
+    dcterms:title "2011 Delaware Department of Natural Resources and Environmental Control (DNREC) Lidar: Bombay Hook National Wildlife Refuge" ;
+    esip:eastBound "-75.389419"^^xsd:float ;
+    esip:endDate "2011-04-20"^^xsd:date ;
+    esip:northBound "39.309361"^^xsd:float ;
+    esip:southBound "39.046286"^^xsd:float ;
+    esip:startDate "2011-04-18"^^xsd:date ;
+    esip:westBound "-75.530873"^^xsd:float ;
+    owl:a dcat:Dataset .
+

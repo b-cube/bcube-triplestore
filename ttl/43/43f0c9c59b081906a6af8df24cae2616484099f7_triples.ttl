@@ -1,0 +1,89 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:6cb95e47-e562-4f7a-8ce6-4c39cf9453e9> a "ISO 19115:2003/19139" ;
+    bcube:dateCreated "2015-10-18T01:38:49.696Z" ;
+    bcube:lastUpdated "2015-10-18T01:38:49.696Z" ;
+    bcube:originatedFrom <urn:uuid:6ccbfbaf-44b3-45d8-92c5-0fdbeb267e6e> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:dc3860b9-c48e-406e-8021-2ab91dbdc15d> .
+
+<urn:uuid:6ccbfbaf-44b3-45d8-92c5-0fdbeb267e6e> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-10-18T01:38:49.696Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-10-18T01:38:49.696Z" ;
+    dc:identifier "urn:sha:99e978f2a1d3a1f483e613ed01406065ea1b558d0cf39c964353d57e" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "https://catalog.data.gov/harvest/object/a01e4400-f8ea-4cd5-a7d7-61f79e7d7450" .
+
+<urn:uuid:ba654bc8-97d1-4904-8aea-90660b350010> bcube:hasType "place" ;
+    bcube:hasValue "Atlantic Ocean",
+        "Connecticut, CT",
+        "Delaware, DE",
+        "Exclusive Economic Zone, EEZ",
+        "Florida, FL",
+        "Georgia, GA",
+        "Maine, ME",
+        "Maryland, MD",
+        "Massachusetts, MA",
+        "New Hampshire, NH",
+        "New Jersey, NJ",
+        "New York, NY",
+        "North Carolina, NC",
+        "Rhode Island, RI",
+        "South Carolina, SC",
+        "USA",
+        "Virginia, VA" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:d60dcec4-a1d0-4cd1-ac52-73193bd3f42f> bcube:hasType "theme" ;
+    bcube:hasValue "Alternative Energy",
+        "Bureau of Ocean Energy Management, BOEM",
+        "Cadastre",
+        "Fed State Boundary",
+        "Lease blocks",
+        "Limit of '8(g) Zone'",
+        "Marine Sanctuaries",
+        "OCS blocks",
+        "Offshore",
+        "Oil and gas",
+        "Outer Continental Shelf, OCS",
+        "Renewable Energy",
+        "State Seaward Boundary, SSB",
+        "Submerged Lands Act Boundary, SLA",
+        "Supplemental Official OCS Block Diagram, SOBD" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:dc3860b9-c48e-406e-8021-2ab91dbdc15d> bcube:dateCreated "2015-10-18T01:38:49.696Z" ;
+    bcube:hasMetadataRecord <urn:uuid:6cb95e47-e562-4f7a-8ce6-4c39cf9453e9> ;
+    bcube:lastUpdated "2015-10-18T01:38:49.696Z" ;
+    dc:conformsTo <urn:uuid:ba654bc8-97d1-4904-8aea-90660b350010>,
+        <urn:uuid:d60dcec4-a1d0-4cd1-ac52-73193bd3f42f> ;
+    dc:description "This data set contains baseline tangent lines in ArcGIS shapefile format for the BOEM Atlantic Region. Baseline tangent lines are typically bay or river closing lines used by the BOEM to calculate the Submerged Lands Act (SLA) boundary, the Limit of '8(g) Zone', and other offshore boundary lines. These tangent lines would project staight line segments in any projected line, while baseline points would project circular arc segments to the projected boundary. A second file containing baseline points is also available. Additional details are available from: http://www.boemre.gov/itd/pubs/1999/99-0006.pdf Because GIS projection and topology functions can change or generalize coordinates, these GIS files are considered to be approximate and are NOT an OFFICIAL record for the exact baseline coordinates. The Official Protraction Diagrams (OPDs) and Supplemental Official Block Diagrams (SOBDs) serve as the legal definition for BOEM offshore boundary coordinates and area descriptions." ;
+    dc:spatial "POLYGON ((-81.44768 25.333176,-81.44768 44.662736,-67.166572 44.662736,-67.166572 25.333176,-81.44768 25.333176))" ;
+    dcterms:title "Atlantic NAD 83 SLA Baseline Tangents" ;
+    esip:eastBound "-67.166572"^^xsd:float ;
+    esip:endDate "2008-01-01"^^xsd:date ;
+    esip:northBound "44.662736"^^xsd:float ;
+    esip:southBound "25.333176"^^xsd:float ;
+    esip:startDate "2005-01-01"^^xsd:date ;
+    esip:westBound "-81.44768"^^xsd:float ;
+    owl:a dcat:Dataset .
+

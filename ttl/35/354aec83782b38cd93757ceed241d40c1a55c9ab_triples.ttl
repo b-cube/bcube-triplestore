@@ -1,0 +1,95 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:01db4a8f-1afb-4b0f-9075-f4b241bf0daf> bcube:hasType "theme" ;
+    bcube:hasValue "5-digit ZIP code",
+        "County ANSI Code",
+        "County FIPS Code",
+        "From House Number",
+        "Permanent edge ID",
+        "Side indicator flag",
+        "State ANSI Code",
+        "State FIPS Code",
+        "To House Number",
+        "ZIP +4 code" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:14fc04e9-3aa2-4b60-80b2-3d3c6c097161> owl:a foaf:Organization ;
+    foaf:name "" .
+
+<urn:uuid:3d335343-f6e2-4e4f-8c6c-6b6302e95f71> bcube:dateCreated "2015-11-05T07:25:28.551Z" ;
+    bcube:hasMetadataRecord <urn:uuid:57e11e28-77e6-4b85-87db-cc4f27f22ada> ;
+    bcube:lastUpdated "2015-11-05T07:25:28.551Z" ;
+    dc:conformsTo <urn:uuid:01db4a8f-1afb-4b0f-9075-f4b241bf0daf>,
+        <urn:uuid:84ed44d8-db94-43b4-9402-fa743f11c126>,
+        <urn:uuid:d0fb7bce-e9e8-4b00-b92e-46fb88ab132d> ;
+    dc:description "The TIGER/Line relationship files are an extract of selected geographic information from the Census MAF/TIGER database. Each TIGER/Line relationship file is designed to stand alone as an independent data set or can be used jointly with the shapefiles." ;
+    dc:spatial "POLYGON ((-85.434747 32.061708,-85.434747 32.510157,-84.888246 32.510157,-84.888246 32.061708,-85.434747 32.061708))" ;
+    dcterms:publisher <urn:uuid:14fc04e9-3aa2-4b60-80b2-3d3c6c097161> ;
+    dcterms:references <urn:uuid:b7b313e8-bce6-44c6-84dd-7ba1c37eefb3> ;
+    dcterms:title "TIGER/Line Shapefile, 2008, county, Russell County, AL, Address Ranges" ;
+    esip:eastBound "-84.888246"^^xsd:float ;
+    esip:endDate "2008-07-01"^^xsd:date ;
+    esip:northBound "32.510157"^^xsd:float ;
+    esip:southBound "32.061708"^^xsd:float ;
+    esip:startDate "2008-01-01"^^xsd:date ;
+    esip:westBound "-85.434747"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:57e11e28-77e6-4b85-87db-cc4f27f22ada> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-11-05T07:25:28.551Z" ;
+    bcube:lastUpdated "2015-11-05T07:25:28.551Z" ;
+    bcube:originatedFrom <urn:uuid:c8e6212a-ec8d-48dc-bbee-f65b1eee4d49> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:3d335343-f6e2-4e4f-8c6c-6b6302e95f71> .
+
+<urn:uuid:84ed44d8-db94-43b4-9402-fa743f11c126> bcube:hasType "theme" ;
+    bcube:hasValue "transportation" ;
+    dc:partOf "ISO 19115 Topic Categories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:b7b313e8-bce6-44c6-84dd-7ba1c37eefb3> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-05T07:25:28.551Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-05T07:25:28.551Z" ;
+    dc:identifier "urn:sha:30803bfeadba88cc71b22899829794526d699d23353b013a4e58a26d" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www2.census.gov/geo/tiger/TIGER2008/01_ALABAMA/01113_Russell_County/tl_2008_01113_addr.zip" .
+
+<urn:uuid:c8e6212a-ec8d-48dc-bbee-f65b1eee4d49> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-05T07:25:28.551Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-05T07:25:28.551Z" ;
+    dc:identifier "urn:sha:52ac90becc5472d5622cab11fa0238bb8302aa34e785b92bb6e7fad2" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://meta.geo.census.gov/data/existing/decennial/GEO/GPMB/TIGERline/fe_2008/addr/tl_2008_01113_addr_url.dbf.xml" .
+
+<urn:uuid:d0fb7bce-e9e8-4b00-b92e-46fb88ab132d> bcube:hasType "place" ;
+    bcube:hasValue "01113",
+        "County or Equivalent Entity",
+        "Russell",
+        "U.S.",
+        "United States" ;
+    dc:partOf "FIPS Publication 5-2, FIPS Publication 6-4, FIPS Publication 8-6, FIPS Publication 9-1,FIPS Publication55-4" ;
+    owl:a bcube:thesaurusSubset .
+

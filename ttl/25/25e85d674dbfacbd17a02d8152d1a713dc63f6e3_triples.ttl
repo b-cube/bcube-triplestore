@@ -1,0 +1,138 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:0ccdba14-91de-4dab-847f-e29c39550c96> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-06T16:37:46.055Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-06T16:37:46.055Z" ;
+    dc:identifier "urn:sha:b48ed04f0a056ce0b422ee9d3f8f306e5790a31e323b486e0a7f8b5a" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://coastwatch.pfeg.noaa.gov/erddap/griddap/osuChlaClimate.html" .
+
+<urn:uuid:200af118-9cf3-4525-ad3b-ade2a674a973> bcube:hasType "theme" ;
+    bcube:hasValue "Oceans > Ocean Chemistry > Chlorophyll",
+        "aqua",
+        "atmospheric",
+        "chemistry",
+        "chlorophyll",
+        "climatology",
+        "coast",
+        "college",
+        "color",
+        "concentration",
+        "concentration_of_chlorophyll_in_sea_water",
+        "earth",
+        "fields",
+        "high",
+        "modis",
+        "ocean",
+        "ocean color",
+        "oceans",
+        "oregon",
+        "resolution",
+        "sciences",
+        "sea",
+        "seawater",
+        "state",
+        "u.s.",
+        "university",
+        "water",
+        "west",
+        "west coast" ;
+    dc:partOf "GCMD Science Keywords" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:228abc84-ea6d-4c95-a94d-b43a959a7bd2> bcube:hasType "theme" ;
+    bcube:hasValue "altitude",
+        "concentration_of_chlorophyll_in_sea_water",
+        "latitude",
+        "longitude",
+        "time" ;
+    dc:partOf "CF Standard Name Table v27" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:31990459-9ae2-45f6-ab53-90cec7d633b9> bcube:dateCreated "2015-08-06T16:37:46.055Z" ;
+    bcube:hasMetadataRecord <urn:uuid:6ade1219-8776-4a7c-ae8c-22766870bd91> ;
+    bcube:lastUpdated "2015-08-06T16:37:46.055Z" ;
+    dc:conformsTo <urn:uuid:200af118-9cf3-4525-ad3b-ade2a674a973>,
+        <urn:uuid:228abc84-ea6d-4c95-a94d-b43a959a7bd2> ;
+    dc:description "This suite of CHLA and SST climatology and anomaly data products are derived from daily, 0.0125 degree x 0.0125 degree, MODIS Aqua CHLA and SST fields that cover the California Current System (22N - 51N, 155W - 105W) for the 11-year period July 2002 through June 2013. These daily fields, obtained from the NOAA CoastWatch West Coast Regional Node website, were processed using a successive 3x3, 5x5 and 7x7 grid cell hybrid median filtering technique. This technique was found to effectively reduce noise in the daily fields while maintaining features and detail in important regions such as capes and headlands. The resulting median filtered daily fields were then linearly interpolated to a 0.025 degree x 0.025 degree grid and averaged to create 132 monthly mean fields. The seasonal cycles at each 0.025 degree x 0.025 degree grid cell were obtained by fitting each multiyear time series of monthly means to a nine-parameter regression model consisting of a constant plus four harmonics (frequencies of N/(1-year), N-1,4; Risien and Chelton 2008, JPO). Even with the median filtering and the temporal averaging of the daily fields, the highly inhomogeneous nature of the MODIS fields still resulted in regression coefficients that were excessively noisy. We therefore applied the same successive 3x3, 5x5 and 7x7 hybrid median filtering technique, described above, to the regression coefficients before finally spatially smoothing the coefficients using a loess smoother (Schlax et al. 2001, JTECH) with filter cutoff wavelengths of 0.25 degree latitude by 0.25 degree longitude. The seasonal cycles were then calculated from the filtered regression coefficients for each 0.025 degree x 0.025 degree grid cell using the mean and all four harmonics. It is important to note that THIS SUITE OF DATA PRODUCTS IS HIGHLY EXPERIMENTAL and is strictly intended for scientific evaluation by experienced marine scientists." ;
+    dc:spatial "POLYGON ((-135 22,-135 51,-105 51,-105 22,-135 22))" ;
+    dcterms:identifier "coastwatch.pfeg.noaa.gov:osuChlaClimate" ;
+    dcterms:publisher <urn:uuid:3d677349-c377-42da-9cf1-af2b130f7ad2> ;
+    dcterms:references <urn:uuid:0ccdba14-91de-4dab-847f-e29c39550c96>,
+        <urn:uuid:6114d8d3-d347-4580-a63c-1274cb669258>,
+        <urn:uuid:fcbb9799-b7ec-4e76-8a69-162355b6d9eb> ;
+    dcterms:title "OSU Chlorophyll Climatology, MODIS Aqua, West US, July 2002-June 2013" ;
+    esip:eastBound "-105.0"^^xsd:float ;
+    esip:endDate "2003-06-01"^^xsd:date ;
+    esip:northBound "51.0"^^xsd:float ;
+    esip:southBound "22.0"^^xsd:float ;
+    esip:startDate "2002-07-01"^^xsd:date ;
+    esip:westBound "-135.0"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:34db3b58-bd17-443f-9fb8-28c52d08f370> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-06T16:37:46.055Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-06T16:37:46.055Z" ;
+    dc:identifier "urn:sha:78e4c7a9ad5366d5a11fa9b1dc815ee2efd0c1743a148315fa05acc6" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://coastwatch.pfeg.noaa.gov/erddap/wms/osuChlaClimate/request" .
+
+<urn:uuid:3d677349-c377-42da-9cf1-af2b130f7ad2> owl:a foaf:Organization ;
+    foaf:name "ERDDAP, version 1.62, at NOAA NMFS SWFSC Environmental Research Division" .
+
+<urn:uuid:6114d8d3-d347-4580-a63c-1274cb669258> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-06T16:37:46.055Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-06T16:37:46.055Z" ;
+    dc:identifier "urn:sha:49f9b6be60caf4304405f00579f14c76f7f871b8aef1193b1cca1fb9" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://coastwatch.pfeg.noaa.gov/erddap/griddap/osuChlaClimate.graph" .
+
+<urn:uuid:6ade1219-8776-4a7c-ae8c-22766870bd91> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-08-06T16:37:46.055Z" ;
+    bcube:lastUpdated "2015-08-06T16:37:46.055Z" ;
+    bcube:originatedFrom <urn:uuid:7a1d73e8-0f22-412d-b6b6-905a0effd954> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:31990459-9ae2-45f6-ab53-90cec7d633b9> .
+
+<urn:uuid:7a1d73e8-0f22-412d-b6b6-905a0effd954> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-06T16:37:46.055Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-06T16:37:46.055Z" ;
+    dc:identifier "urn:sha:16db7c02dd1b8d4570a953082444c93a330604668fc5b6507841a37e" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://coastwatch.pfeg.noaa.gov/erddap/griddap/osuChlaClimate.fgdc" .
+
+<urn:uuid:fcbb9799-b7ec-4e76-8a69-162355b6d9eb> dcterms:references <urn:uuid:34db3b58-bd17-443f-9fb8-28c52d08f370> ;
+    owl:a bibo:WebPage .
+

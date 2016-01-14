@@ -1,0 +1,85 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:3ba94a91-8340-4dca-afed-aa1bf23edce3> owl:a foaf:Organization ;
+    foaf:name "University of Montana" .
+
+<urn:uuid:4c7318a9-af22-45ed-9296-99b3c4c7d7f9> bcube:hasType "theme" ;
+    bcube:hasValue "biota",
+        "imageryBaseMapsEarthCover" ;
+    dc:partOf "ISO 19115 Topic Category" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:4f6594e0-7799-4a2e-8ba7-1ac0f7662d60> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-08-11T15:19:18.527Z" ;
+    bcube:lastUpdated "2015-08-11T15:19:18.527Z" ;
+    bcube:originatedFrom <urn:uuid:914f30f3-0c6a-4838-93ac-83ca9484dc50> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:b62e671d-7379-46f3-aef8-d805aa52adca> .
+
+<urn:uuid:850ebba8-c63d-4f95-9f54-4ea750a34b92> bcube:hasType "theme" ;
+    bcube:hasValue "Landsat",
+        "MNDVI",
+        "Thematic Mapper",
+        "canopy closure",
+        "land cover",
+        "land use",
+        "landcover",
+        "life form",
+        "lifeform",
+        "riparian",
+        "shrub size",
+        "tree size",
+        "vegetation" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:914f30f3-0c6a-4838-93ac-83ca9484dc50> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-11T15:19:18.527Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-11T15:19:18.527Z" ;
+    dc:identifier "urn:sha:328c7fff2d6300ca5322db180b45f69c7f2530fc4bbc36e85aaf33c5" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://mslapps.mt.gov/Geographic_Information/Data/DataList/datalist_MetadataDetailRaw.aspx?did={a631df49-bc51-4558-851f-6a3a1a1c02a6}" .
+
+<urn:uuid:b62e671d-7379-46f3-aef8-d805aa52adca> bcube:dateCreated "2015-08-11T15:19:18.527Z" ;
+    bcube:hasMetadataRecord <urn:uuid:4f6594e0-7799-4a2e-8ba7-1ac0f7662d60> ;
+    bcube:lastUpdated "2015-08-11T15:19:18.527Z" ;
+    dc:conformsTo <urn:uuid:4c7318a9-af22-45ed-9296-99b3c4c7d7f9>,
+        <urn:uuid:850ebba8-c63d-4f95-9f54-4ea750a34b92>,
+        <urn:uuid:cede7283-85f2-4d0f-a011-50a1b6dcdb2d> ;
+    dc:description "The Wildlife Spatial Analysis Lab produced several raster data sets based on 18 Landsat Thematic Mapper scenes imaged between July 6, 1991 and September 25, 1993. The images were classifed and merged into single raster datasets that cover northern Idaho, western Montana, and Yellowstone National Park. This area is approximately equivalent to the U.S. Forest Service's Northern Region (Region One). The themes created were land cover, canopy closure, lifeform type, and tree size or shrub size. The minimum mapping unit for these scenes was 2 hectares, or approximately 5 acres. A data set is included to identify riparian vegetation in stream valleys, with no minumum mapping unit. The lab published an executive summary and a in-depth report on the project and its result. These are included with the data archive and they are available at at http://ftp.geoinfo.msl.mt.gov/Documents/Metadata/SILC_1_Summary.pdf and http://ftp.geoinfo.msl.mt.gov/Documents/Metadata/SILC_1_Report.pdf." ;
+    dc:spatial "POLYGON ((-119.2093 43.2869,-119.2093 50.0487,-108.0898 50.0487,-108.0898 43.2869,-119.2093 43.2869))" ;
+    dcterms:publisher <urn:uuid:3ba94a91-8340-4dca-afed-aa1bf23edce3> ;
+    dcterms:title "Classified Landsat Thematic Mapper Data, U.S. Forest Service Northern Region, 1992" ;
+    esip:eastBound "-108.0898"^^xsd:float ;
+    esip:endDate "1993-09-25"^^xsd:date ;
+    esip:northBound "50.0487"^^xsd:float ;
+    esip:southBound "43.2869"^^xsd:float ;
+    esip:startDate "1991-07-06"^^xsd:date ;
+    esip:westBound "-119.2093"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:cede7283-85f2-4d0f-a011-50a1b6dcdb2d> bcube:hasType "place" ;
+    bcube:hasValue "Idaho",
+        "Montana",
+        "Northern Region",
+        "Region 1",
+        "Region One",
+        "Yellowstone National Park" ;
+    owl:a bcube:thesaurusSubset .
+

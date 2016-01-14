@@ -1,0 +1,72 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:2451d876-8fe7-41a7-b0fb-b92fc41f721b> owl:a foaf:Organization ;
+    foaf:name "" .
+
+<urn:uuid:46df18f5-3684-49a9-a86d-86616f8bf418> bcube:hasType "theme" ;
+    bcube:hasValue "perimeter",
+        "wildfire" ;
+    dc:partOf "REQUIRED: Reference to a formally registered thesaurus or a similar authoritative source of theme keywords." ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:52446da2-4345-4cac-8099-f47c78464e5c> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-11-17T20:14:44.664Z" ;
+    bcube:lastUpdated "2015-11-17T20:14:44.664Z" ;
+    bcube:originatedFrom <urn:uuid:8cc64da1-e934-4b06-94fe-8ea485b05029> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:730dc4e0-54fd-4c8a-871c-f0fad2789172> .
+
+<urn:uuid:730dc4e0-54fd-4c8a-871c-f0fad2789172> bcube:dateCreated "2015-11-17T20:14:44.664Z" ;
+    bcube:hasMetadataRecord <urn:uuid:52446da2-4345-4cac-8099-f47c78464e5c> ;
+    bcube:lastUpdated "2015-11-17T20:14:44.664Z" ;
+    dc:conformsTo <urn:uuid:46df18f5-3684-49a9-a86d-86616f8bf418> ;
+    dc:description "The Geospatial Multi-Agency Coordination Group, or GeoMAC, is an internet-based mapping tool originally designed for fire managers to access online maps of current fire locations and perimeters in the conterminous 48 states and Alaska. Perimeters are submitted to GeoMAC by field offices and then posted to an FTP site for downloading. This file contains all fire perimeters that were submitted to GeoMAC by field offices for the current year. The projection is geographic and the datum is NAD83." ;
+    dc:spatial "POLYGON ((-164.370754 25.863797,-164.370754 68.359367,-80.894983 68.359367,-80.894983 25.863797,-164.370754 25.863797))" ;
+    dcterms:publisher <urn:uuid:2451d876-8fe7-41a7-b0fb-b92fc41f721b> ;
+    dcterms:references <urn:uuid:c51511e3-619b-476a-8bb1-22809c939fd2> ;
+    dcterms:title "PERIMETERS_DD83" ;
+    esip:eastBound "-80.894983"^^xsd:float ;
+    esip:northBound "68.359367"^^xsd:float ;
+    esip:southBound "25.863797"^^xsd:float ;
+    esip:westBound "-164.370754"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:8cc64da1-e934-4b06-94fe-8ea485b05029> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-17T20:14:44.664Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-17T20:14:44.664Z" ;
+    dc:identifier "urn:sha:d1a4cd7dbc0d482d793070e3e9c612012c95047af83f5ff30edf6be6" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://rmgsc.cr.usgs.gov/outgoing/GeoMAC/2011_fire_data/Texas/Cotton_Ranch/tx_cotton_ranch_20110408_0000_dd83.shp.xml" .
+
+<urn:uuid:c51511e3-619b-476a-8bb1-22809c939fd2> dcterms:references <urn:uuid:ca944fd5-63d1-4f5f-87ba-532c30085480> ;
+    owl:a bibo:WebPage .
+
+<urn:uuid:ca944fd5-63d1-4f5f-87ba-532c30085480> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-17T20:14:44.664Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-17T20:14:44.664Z" ;
+    dc:identifier "urn:sha:2c7564c94869448cb367a23d2b835382f33b6303fd30bb9fcc52e6a1" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "Server=igskbtcngs084; Service=5151; Database=baselayer; User=bl_vector; Version=sde.DEFAULT" .
+

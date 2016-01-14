@@ -1,0 +1,82 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:05a0e928-2438-42f4-a660-2e408c950c51> bcube:hasType "place" ;
+    bcube:hasValue "City",
+        "Metropolitan",
+        "Micrometropolitan",
+        "facilities",
+        "points" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:0d5fbd98-9424-4079-86a0-d0d3a2bef679> bcube:hasType "temporal" ;
+    bcube:hasValue "2012",
+        "2013",
+        "2014" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:0fe31c6e-e2f6-49a0-b2fa-be94b956aec8> bcube:hasType "theme" ;
+    bcube:hasValue "Intermodal",
+        "Mass transit",
+        "Passenger",
+        "Transportation",
+        "economy",
+        "society" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:2ea55415-2817-4cdb-ab85-b45d197bf74e> a "ISO 19115:2003/19139" ;
+    bcube:dateCreated "2015-07-12T16:03:59.008Z" ;
+    bcube:lastUpdated "2015-07-12T16:03:59.008Z" ;
+    bcube:originatedFrom <urn:uuid:ed6c3539-a5b1-413d-b16a-17c12a44793d> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:d1eb804d-6c6f-4138-a516-7f4caee5602e> .
+
+<urn:uuid:b418770d-66ea-45a4-8795-53d299d7d885> bcube:hasType "theme" ;
+    bcube:hasValue "NGDA",
+        "National Geospatial Data Asset",
+        "Transportation Theme" ;
+    dc:partOf "NGDA Portfolio Themes" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:d1eb804d-6c6f-4138-a516-7f4caee5602e> bcube:dateCreated "2015-07-12T16:03:59.008Z" ;
+    bcube:hasMetadataRecord <urn:uuid:2ea55415-2817-4cdb-ab85-b45d197bf74e> ;
+    bcube:lastUpdated "2015-07-12T16:03:59.008Z" ;
+    dc:conformsTo <urn:uuid:05a0e928-2438-42f4-a660-2e408c950c51>,
+        <urn:uuid:0d5fbd98-9424-4079-86a0-d0d3a2bef679>,
+        <urn:uuid:0fe31c6e-e2f6-49a0-b2fa-be94b956aec8>,
+        <urn:uuid:b418770d-66ea-45a4-8795-53d299d7d885> ;
+    dc:description "The IPCD in 2014 now also represents locations, that share multiple mode transit choices, as only a single point (NTAD 2014).The IPCD data covers the following types of passenger transportation terminals:  Scheduled Airline Service Airports.  Intercity bus stations (includes stations served by regular scheduled intercity bus service such as Greyhound and Trailways, code sharing buses such as \"Amtrak Thruway\" feeder buses, supplemental buses that provide additional frequencies along rail routes, and airport bus services from locations that are outside of the airport Metropolitan Area.  Intercity and transit ferry terminals.  Light rail transit stations.  Heavy rail transit stations.  Passenger rail stations on the national rail network serving both commuter rail and intercity rail services." ;
+    dc:spatial "POLYGON ((-176.64603 19.72026,-176.64603 71.28545,-66.98504 71.28545,-66.98504 19.72026,-176.64603 19.72026))" ;
+    dcterms:title "Passenger Intermodal Facility (IPCD) (National) - National Geospatial Data Asset (NGDA) Intermodal (Passenger)" ;
+    esip:eastBound "-66.98504"^^xsd:float ;
+    esip:northBound "71.28545"^^xsd:float ;
+    esip:southBound "19.72026"^^xsd:float ;
+    esip:westBound "-176.64603"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:ed6c3539-a5b1-413d-b16a-17c12a44793d> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-07-12T16:03:59.008Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-07-12T16:03:59.008Z" ;
+    dc:identifier "urn:sha:c8ab8f86aa88a6e7d6d2c01edefc36560f5bf5239f0dc9bb448ffeeb" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "https://catalog.data.gov/harvest/object/08afb653-6564-4f12-a033-b1313934d017" .
+

@@ -1,0 +1,94 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:226b7dc8-dbb0-4d24-90e4-896a5c5d156b> owl:a foaf:Organization ;
+    foaf:name "U.S. Geological Survey" .
+
+<urn:uuid:2776e078-1b2c-4454-9a4f-0cdfa822a9a6> bcube:hasType "theme" ;
+    bcube:hasValue "ALPS",
+        "Advanced Lidar Processing System",
+        "Digital Elevation Model",
+        "EAARL",
+        "Experimental Advanced Airborne Research Lidar",
+        "Hurricanes",
+        "Ivan",
+        "Lidar",
+        "derived surface",
+        "elevation change",
+        "laser altimetry",
+        "resource management" ;
+    dc:partOf "http://remotesensing.usgs.gov" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:2e6eeeba-ef2c-4d7a-a8e8-0840951185cf> bcube:dateCreated "2015-11-01T02:17:00.444Z" ;
+    bcube:hasMetadataRecord <urn:uuid:c1ba8122-dc0a-4d67-8621-fd54300b0241> ;
+    bcube:lastUpdated "2015-11-01T02:17:00.444Z" ;
+    dc:conformsTo <urn:uuid:2776e078-1b2c-4454-9a4f-0cdfa822a9a6>,
+        <urn:uuid:515c5ab4-4912-44c8-aaf5-985e42c50a45>,
+        <urn:uuid:a55844a1-fe61-4c77-bc76-6772119786a8>,
+        <urn:uuid:c1c53d19-c2b9-488b-ac7b-48b8a3cd56b1> ;
+    dc:description "ASCII xyz point cloud data were produced from remotely sensed, geographically referenced elevation measurements cooperatively by the U.S. Geological Survey (USGS) and National Aeronautics and Space Administration (NASA). Elevation measurements were collected over the area using the NASA Experimental Advanced Airborne Research Lidar (EAARL), a pulsed laser ranging system mounted onboard an aircraft to measure ground elevation, vegetation canopy, and coastal topography. The system uses high-frequency laser beams directed at the Earth's surface through an opening in the bottom of the aircraft's fuselage. The laser system records the time difference between emission of the laser beam and the reception of the reflected laser signal in the aircraft. The plane travels over the target area at approximately 50 meters per second at an elevation of approximately 300 meters. The EAARL, developed by NASA at Wallops Flight Facility in Virginia, measures ground elevation with a vertical resolution of 15 centimeters. A sampling rate of 3 kilohertz or higher results in an extremely dense spatial elevation dataset. Over 100 kilometers of coastline can be easily surveyed within a 3- to 4-hour mission time period. When subsequent elevation maps for an area are analyzed, they provide a useful tool to make management decisions regarding land development." ;
+    dcterms:publisher <urn:uuid:226b7dc8-dbb0-4d24-90e4-896a5c5d156b> ;
+    dcterms:references <urn:uuid:6e2befe7-3a50-499f-9bd8-49ba6e76d857> ;
+    dcterms:title "EAARL Coastal Topography Northern Gulf of Mexico" ;
+    esip:startDate "2004-09-19"^^xsd:date ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:515c5ab4-4912-44c8-aaf5-985e42c50a45> bcube:hasType "stratum" ;
+    bcube:hasValue "First surface" ;
+    dc:partOf "http://lidar.cr.usgs.gov/" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:6e2befe7-3a50-499f-9bd8-49ba6e76d857> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-01T02:17:00.444Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-01T02:17:00.444Z" ;
+    dc:identifier "urn:sha:d14a028c2a3a2bc9476102bb288234c415a2b01f828ea62ac5b3e42f" ;
+    owl:a bcube:Url .
+
+<urn:uuid:a55844a1-fe61-4c77-bc76-6772119786a8> bcube:hasType "temporal" ;
+    bcube:hasValue "2004" ;
+    dc:partOf "http://www.esri.com/news/arcuser/1104/temporal.html" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:c1ba8122-dc0a-4d67-8621-fd54300b0241> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-11-01T02:17:00.444Z" ;
+    bcube:lastUpdated "2015-11-01T02:17:00.444Z" ;
+    bcube:originatedFrom <urn:uuid:d087b223-4450-4bb7-9a42-6c509b8cbf5c> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:2e6eeeba-ef2c-4d7a-a8e8-0840951185cf> .
+
+<urn:uuid:c1c53d19-c2b9-488b-ac7b-48b8a3cd56b1> bcube:hasType "place" ;
+    bcube:hasValue "Alabama",
+        "Florida",
+        "Mississippi" ;
+    dc:partOf "http://nationalmap.gov" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:d087b223-4450-4bb7-9a42-6c509b8cbf5c> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-01T02:17:00.444Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-01T02:17:00.444Z" ;
+    dc:identifier "urn:sha:86da9352e5badfb8b33fb3063c00413036bae156a42afd77726048cb" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://pubs.usgs.gov/ds/384/data_files/fs/30085a6c/n88_30085a6c_mf_fs.xyz.xml" .
+

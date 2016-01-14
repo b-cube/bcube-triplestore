@@ -1,0 +1,110 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:2eb67eb3-b61c-4824-8ca8-68c3e4a99905> bcube:hasType "theme" ;
+    bcube:hasValue "Advanced National Seismic Systems (ANSS)",
+        "ShakeMap",
+        "US Geological Survey",
+        "earthquake damage",
+        "instrumental intensity",
+        "peak ground motions",
+        "shaking intensity" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:33cbbfd9-8d68-4ca5-affc-fcd58439dec2> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-08-03T08:09:30.415Z" ;
+    bcube:lastUpdated "2015-08-03T08:09:30.415Z" ;
+    bcube:originatedFrom <urn:uuid:77f22dde-64d1-49d5-b2bf-8f588a9ee6da> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:921c980e-c7f7-4ba5-8627-a0222c609fd0> .
+
+<urn:uuid:6c9cfadb-eed3-4455-8175-1e091ca8c904> owl:a foaf:Organization ;
+    foaf:name "" .
+
+<urn:uuid:77f22dde-64d1-49d5-b2bf-8f588a9ee6da> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-03T08:09:30.415Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-03T08:09:30.415Z" ;
+    dc:identifier "urn:sha:2878feef5d05601e02f0cc795db8e8761dc90ab39323a1252eb306b4" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://earthquake.usgs.gov/earthquakes/shakemap/global/shake/c000eg5v/download/metadata.xml" .
+
+<urn:uuid:7838ddc7-eee0-4c9f-9611-9f94f7af48f1> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-03T08:09:30.415Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-03T08:09:30.415Z" ;
+    dc:identifier "urn:sha:dce4b4e6487a29d3f53282273d41bf5166c839b3aee973933ca74c2c" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://earthquake.usgs.gov/eqcenter/shakemap" .
+
+<urn:uuid:84d3a4e7-a289-4481-8fe3-061e2a2a86e0> dcterms:references <urn:uuid:7838ddc7-eee0-4c9f-9611-9f94f7af48f1> ;
+    owl:a bibo:WebPage .
+
+<urn:uuid:921c980e-c7f7-4ba5-8627-a0222c609fd0> bcube:dateCreated "2015-08-03T08:09:30.415Z" ;
+    bcube:hasMetadataRecord <urn:uuid:33cbbfd9-8d68-4ca5-affc-fcd58439dec2> ;
+    bcube:lastUpdated "2015-08-03T08:09:30.415Z" ;
+    dc:conformsTo <urn:uuid:2eb67eb3-b61c-4824-8ca8-68c3e4a99905>,
+        <urn:uuid:efa9a3d2-195c-4623-94b8-aa177bf77c40> ;
+    dc:description "ShakeMap is designed as a rapid response tool to portray the extent and variation of ground shaking throughout the affected region immediately following significant earthquakes. Ground motion and intensity maps are derived from peak ground motion amplitudes recorded on seismic sensors (accelerometers), with interpolation based on both estimated amplitudes where data are lacking, and site amplification corrections. Color-coded instrumental intensity maps are derived from empirical relations between peak ground motions and Modified Mercalli intensity. This ShakeMap describes the event: c000eg5v, BIO-BIO, CHILE" ;
+    dc:spatial "POLYGON ((-75.267 -38.866,-75.267 -35.682,-71.267 -35.682,-71.267 -38.866,-75.267 -38.866))" ;
+    dcterms:publisher <urn:uuid:6c9cfadb-eed3-4455-8175-1e091ca8c904> ;
+    dcterms:references <urn:uuid:84d3a4e7-a289-4481-8fe3-061e2a2a86e0>,
+        <urn:uuid:c333b219-7ede-4a46-8768-4fb81134d09b>,
+        <urn:uuid:d36dd443-969a-419f-b327-25ffb37e888e> ;
+    dcterms:title "Advanced National Seismic System (ANSS), ShakeMap, Global Region, Maps of ground shaking and intensity for event c000eg5v, BIO-BIO, CHILE" ;
+    esip:eastBound "-71.267"^^xsd:float ;
+    esip:northBound "-35.682"^^xsd:float ;
+    esip:southBound "-38.866"^^xsd:float ;
+    esip:startDate "2012-12-26"^^xsd:date ;
+    esip:westBound "-75.267"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:c333b219-7ede-4a46-8768-4fb81134d09b> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-03T08:09:30.415Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-03T08:09:30.415Z" ;
+    dc:identifier "urn:sha:8cbedd2f75a52238c55a78146288c303d1f5945b2699b8e97522db23" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://earthquake.usgs.gov/shakemap/global/shake/c000eg5v/download/shape.zip" .
+
+<urn:uuid:d36dd443-969a-419f-b327-25ffb37e888e> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-03T08:09:30.415Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-03T08:09:30.415Z" ;
+    dc:identifier "urn:sha:becb7958b342f038c852f735f0e52713bd00bceeac16654d7730efb5" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://earthquake.usgs.gov/shakemap/global/shake/c000eg5v/download/grid.xyz.zip" .
+
+<urn:uuid:efa9a3d2-195c-4623-94b8-aa177bf77c40> bcube:hasType "place" ;
+    bcube:hasValue "Global" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+

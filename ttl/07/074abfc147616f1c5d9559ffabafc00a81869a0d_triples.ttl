@@ -1,0 +1,64 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:09608b1e-ac49-4eda-ba0d-784947e2607b> owl:a foaf:Organization ;
+    foaf:name "" .
+
+<urn:uuid:0f7ef00a-ed03-470f-9126-eaef6c54aedb> bcube:dateCreated "2015-11-02T11:23:05.823Z" ;
+    bcube:hasMetadataRecord <urn:uuid:341d92b5-b8fc-4368-b630-5707d73dbda7> ;
+    bcube:lastUpdated "2015-11-02T11:23:05.823Z" ;
+    dc:conformsTo <urn:uuid:29787fae-378c-4ecc-93be-bee7a3b87b48>,
+        <urn:uuid:81ce9069-1800-417d-b09a-92e8d9f957fd> ;
+    dc:description "Points defining railroad crossings within the City and County of Denver, Colorado." ;
+    dc:spatial "POLYGON ((-105.053227 39.673077,-105.053227 39.798361,-104.833009 39.798361,-104.833009 39.673077,-105.053227 39.673077))" ;
+    dcterms:publisher <urn:uuid:09608b1e-ac49-4eda-ba0d-784947e2607b> ;
+    dcterms:title "Railroad Crossings" ;
+    esip:eastBound "-104.833009"^^xsd:float ;
+    esip:northBound "39.798361"^^xsd:float ;
+    esip:southBound "39.673077"^^xsd:float ;
+    esip:westBound "-105.053227"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:29787fae-378c-4ecc-93be-bee7a3b87b48> bcube:hasType "place" ;
+    bcube:hasValue "Colorado",
+        "Denver",
+        "Denver County",
+        "USA" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:33a8e182-03f5-4722-ba50-194e3d4a72e0> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-02T11:23:05.823Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-02T11:23:05.823Z" ;
+    dc:identifier "urn:sha:d0e5ddc5b54d320828600e548099e74cd612bde979dbaf29bb8dd034" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://data.denvergov.org/download/gis/railroad_crossings/metadata/railroad_crossings.xml" .
+
+<urn:uuid:341d92b5-b8fc-4368-b630-5707d73dbda7> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-11-02T11:23:05.823Z" ;
+    bcube:lastUpdated "2015-11-02T11:23:05.823Z" ;
+    bcube:originatedFrom <urn:uuid:33a8e182-03f5-4722-ba50-194e3d4a72e0> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:0f7ef00a-ed03-470f-9126-eaef6c54aedb> .
+
+<urn:uuid:81ce9069-1800-417d-b09a-92e8d9f957fd> bcube:hasType "theme" ;
+    bcube:hasValue "transportation" ;
+    dc:partOf "ISO 19115 Topic Categories" ;
+    owl:a bcube:thesaurusSubset .
+

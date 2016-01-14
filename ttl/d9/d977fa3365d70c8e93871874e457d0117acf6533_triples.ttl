@@ -1,0 +1,55 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:0c9b6429-5e77-49e1-a840-c5b6b3a532df> bcube:hasType "place" ;
+    bcube:hasValue "earthquake probabilities",
+        "earthquakes",
+        "fUS = United States",
+        "hazards",
+        "seismology" ;
+    dc:partOf "Augmented FIPS 10-4 and FIPS 6-4" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:8a567684-2fbd-41e5-9021-7551b8987c4b> bcube:hasValue "geoscientificInformation" ;
+    dc:partOf "IsoTopicCategories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:ad66d0e8-6795-443c-bc65-2c92556848ad> a "ISO 19115:2003/19139" ;
+    bcube:dateCreated "2014-10-30T01:21:10.613Z" ;
+    bcube:lastUpdated "2014-10-30T01:21:10.613Z" ;
+    bcube:originatedFrom <urn:uuid:e317682e-7513-454a-962f-3289a4f597fc> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:dc9d9c22-795e-4553-8046-4caf476ec9bf> .
+
+<urn:uuid:dc9d9c22-795e-4553-8046-4caf476ec9bf> bcube:dateCreated "2014-10-30T01:21:10.613Z" ;
+    bcube:hasMetadataRecord <urn:uuid:ad66d0e8-6795-443c-bc65-2c92556848ad> ;
+    bcube:lastUpdated "2014-10-30T01:21:10.613Z" ;
+    dc:conformsTo <urn:uuid:0c9b6429-5e77-49e1-a840-c5b6b3a532df>,
+        <urn:uuid:8a567684-2fbd-41e5-9021-7551b8987c4b> ;
+    dc:description "Maps indicating areas where earthquakes may cause damage or disrupt human activities, with information about how those maps are compiled." ;
+    dcterms:title "United States National Seismic Hazard Maps" ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:e317682e-7513-454a-962f-3289a4f597fc> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2014-10-30T01:21:10.613Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2014-10-30T01:21:10.613Z" ;
+    dc:identifier "urn:sha:0b0d27b66db0922e85328a3179c6984ad90d8b361220043aa2804a0a" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www.usgs.gov/science/iso.php?cite=2255" .
+

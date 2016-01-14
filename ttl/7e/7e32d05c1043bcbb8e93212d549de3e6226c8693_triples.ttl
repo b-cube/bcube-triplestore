@@ -1,0 +1,76 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:033913ff-1484-4c42-b120-d540617cb8b0> bcube:hasType "place" ;
+    bcube:hasValue "fUS18 = Indiana" ;
+    dc:partOf "Augmented FIPS 10-4 and FIPS 6-4" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:0adc1400-709a-49d9-a2fb-d087d103ea02> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2014-07-30T03:24:02.424Z" ;
+    bcube:lastUpdated "2014-07-30T03:24:02.424Z" ;
+    bcube:originatedFrom <urn:uuid:d19ac322-7867-4ebe-846d-c342b02b3101> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:82569788-ff79-4df9-98ad-1155998f8e00> .
+
+<urn:uuid:237d11e1-49c3-41fd-97a6-7a063bd026ac> bcube:hasType "theme" ;
+    bcube:hasValue "atmospheric circulation",
+        "contaminant transport",
+        "hydrology",
+        "mercury contamination",
+        "water quality" ;
+    dc:partOf "USGS Thesaurus" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:82569788-ff79-4df9-98ad-1155998f8e00> bcube:dateCreated "2014-07-30T03:24:02.424Z" ;
+    bcube:hasMetadataRecord <urn:uuid:0adc1400-709a-49d9-a2fb-d087d103ea02> ;
+    bcube:lastUpdated "2014-07-30T03:24:02.424Z" ;
+    dc:conformsTo <urn:uuid:033913ff-1484-4c42-b120-d540617cb8b0>,
+        <urn:uuid:237d11e1-49c3-41fd-97a6-7a063bd026ac> ;
+    dc:description "Precipitation-monitoring network for mercury in Indiana." ;
+    dcterms:publisher <urn:uuid:e4b9272a-2e4f-46f3-87be-81491d479f88> ;
+    dcterms:references <urn:uuid:ab99d719-b075-43e6-9aeb-8d72d76908bd> ;
+    dcterms:title "Monitoring program for mercury in precipitation in Indiana" ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:ab99d719-b075-43e6-9aeb-8d72d76908bd> dcterms:references <urn:uuid:d05840b5-11c7-4a3e-895b-75f190407d8d> ;
+    owl:a bibo:WebPage .
+
+<urn:uuid:d05840b5-11c7-4a3e-895b-75f190407d8d> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2014-07-30T03:24:02.424Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2014-07-30T03:24:02.424Z" ;
+    dc:identifier "urn:sha:0e891f9669f54e3b0c08bf60d5bba68ef891f92d31afe834d629729f" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://in.water.usgs.gov/newreports/mercury/" .
+
+<urn:uuid:d19ac322-7867-4ebe-846d-c342b02b3101> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2014-07-30T03:24:02.424Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2014-07-30T03:24:02.424Z" ;
+    dc:identifier "urn:sha:05f849b6bfa365c87d6ac95a91f2d7bf86aef02357943b40a791b0a0" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www.usgs.gov/science/xml.php?cite=1076" .
+
+<urn:uuid:e4b9272a-2e4f-46f3-87be-81491d479f88> owl:a foaf:Organization ;
+    foaf:name "U.S. Geological Survey" .
+

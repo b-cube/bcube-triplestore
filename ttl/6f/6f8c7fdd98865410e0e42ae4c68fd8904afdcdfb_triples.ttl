@@ -1,0 +1,86 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:050a9bd2-f52f-47f3-b357-69f3666e326f> owl:a foaf:Organization ;
+    foaf:name "U.S. Geological Survey" .
+
+<urn:uuid:42fc382d-367c-4aca-9c74-14ea5bd31d06> bcube:hasType "theme" ;
+    bcube:hasValue "mineral deposit areas" ;
+    dc:partOf "Alexandria Digital Library Feature Type Thesaurus" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:431d3400-bb14-4f95-9079-ba5c20cd9789> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2014-10-30T10:24:10.959Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2014-10-30T10:24:10.959Z" ;
+    dc:identifier "urn:sha:c58846b832c2fdae80dc8f3392744ce33bdcc6553786dd920b2d0a5b" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www.usgs.gov/science/xml.php?cite=3803" .
+
+<urn:uuid:4efb7c1a-3057-421b-a045-a1132106c18f> bcube:hasType "theme" ;
+    bcube:hasValue "economic geology",
+        "natural gas resources",
+        "natural resource assessment",
+        "petroleum" ;
+    dc:partOf "USGS Thesaurus" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:5945a677-0959-4f14-8e2c-55aae3f55863> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2014-10-30T10:24:10.959Z" ;
+    bcube:lastUpdated "2014-10-30T10:24:10.959Z" ;
+    bcube:originatedFrom <urn:uuid:431d3400-bb14-4f95-9079-ba5c20cd9789> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:cfcd6c4c-1ad4-43b8-806b-6a94baf22210> .
+
+<urn:uuid:65ee098e-dbaf-478f-8fb8-ee8be6179d75> dcterms:references <urn:uuid:a3194943-6634-4d87-8be7-cc780ecf86dc> ;
+    owl:a bibo:WebPage .
+
+<urn:uuid:a3194943-6634-4d87-8be7-cc780ecf86dc> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2014-10-30T10:24:10.959Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2014-10-30T10:24:10.959Z" ;
+    dc:identifier "urn:sha:d5278728d83af1a7e45e8a8817c2af673047ab89967cda4a3426e942" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://pubs.usgs.gov/fs/2013/3103/" .
+
+<urn:uuid:c14e837a-c8c7-47a3-9fc9-ce7f960ab58a> bcube:hasType "place" ;
+    bcube:hasValue "fDA = Denmark" ;
+    dc:partOf "Augmented FIPS 10-4 and FIPS 6-4" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:cfcd6c4c-1ad4-43b8-806b-6a94baf22210> bcube:dateCreated "2014-10-30T10:24:10.959Z" ;
+    bcube:hasMetadataRecord <urn:uuid:5945a677-0959-4f14-8e2c-55aae3f55863> ;
+    bcube:lastUpdated "2014-10-30T10:24:10.959Z" ;
+    dc:conformsTo <urn:uuid:42fc382d-367c-4aca-9c74-14ea5bd31d06>,
+        <urn:uuid:4efb7c1a-3057-421b-a045-a1132106c18f>,
+        <urn:uuid:c14e837a-c8c7-47a3-9fc9-ce7f960ab58a> ;
+    dc:description "We estimated a mean undiscovered volume of 6.9 trillion cubic feet of natural gas in this geologic unit using a geology-based assessment methodology." ;
+    dc:spatial "POLYGON ((7.8003 54.6738,7.8003 57.8681,17.1826 57.8681,17.1826 54.6738,7.8003 54.6738))" ;
+    dcterms:publisher <urn:uuid:050a9bd2-f52f-47f3-b357-69f3666e326f> ;
+    dcterms:references <urn:uuid:65ee098e-dbaf-478f-8fb8-ee8be6179d75> ;
+    dcterms:title "Undiscovered Gas Resources in the Alum Shale, Denmark, 2013" ;
+    esip:eastBound "17.1826"^^xsd:float ;
+    esip:northBound "57.8681"^^xsd:float ;
+    esip:southBound "54.6738"^^xsd:float ;
+    esip:westBound "7.8003"^^xsd:float ;
+    owl:a dcat:Dataset .
+

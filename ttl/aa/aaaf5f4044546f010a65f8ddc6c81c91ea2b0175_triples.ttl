@@ -1,0 +1,81 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:013ef0be-f839-41b3-97d2-775509bed7f6> bcube:hasType "place" ;
+    bcube:hasValue "Coeur d'Alene",
+        "Idaho" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:77b0a0e0-95d7-4ccd-9a47-65716be372d1> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-10-27T18:39:37.248Z" ;
+    bcube:lastUpdated "2015-10-27T18:39:37.248Z" ;
+    bcube:originatedFrom <urn:uuid:b143b3db-ceb0-450f-8bff-c44e84ed8365> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:ed44accf-22f7-4e90-b2fa-1cd597917a61> .
+
+<urn:uuid:8ef3f176-c4c2-40e5-bdd9-e65b3ca151c0> owl:a foaf:Organization ;
+    foaf:name "Idaho Department of Water Resources" .
+
+<urn:uuid:a69284e5-ef51-4033-8843-318d75b5869f> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-10-27T18:39:37.248Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-10-27T18:39:37.248Z" ;
+    dc:identifier "urn:sha:12627537e478088028ecc68dc5e0a2d16ac8b57b61f87f1d79184734" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www.idwr.idaho.gov/gisdata/gis_data.htm" .
+
+<urn:uuid:a93a7445-b357-4f22-b49b-4cd3f68b5546> dcterms:references <urn:uuid:a69284e5-ef51-4033-8843-318d75b5869f> ;
+    owl:a bibo:WebPage .
+
+<urn:uuid:b143b3db-ceb0-450f-8bff-c44e84ed8365> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-10-27T18:39:37.248Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-10-27T18:39:37.248Z" ;
+    dc:identifier "urn:sha:0492fd5e8211761201d44eed21d8ec7a3d8d636181d12a0828091364" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www.idwr.idaho.gov/ftp/gisdata/Spatial/LandCover_Vegetation/CoeurdAlene/coeur89lu.xml" .
+
+<urn:uuid:c79309aa-9e32-496b-823f-7470b2a27737> bcube:hasType "theme" ;
+    bcube:hasValue "land cover",
+        "land use" ;
+    dc:partOf "ESRI Geography Network Thesaurus" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:ed44accf-22f7-4e90-b2fa-1cd597917a61> bcube:dateCreated "2015-10-27T18:39:37.248Z" ;
+    bcube:hasMetadataRecord <urn:uuid:77b0a0e0-95d7-4ccd-9a47-65716be372d1> ;
+    bcube:lastUpdated "2015-10-27T18:39:37.248Z" ;
+    dc:conformsTo <urn:uuid:013ef0be-f839-41b3-97d2-775509bed7f6>,
+        <urn:uuid:c79309aa-9e32-496b-823f-7470b2a27737> ;
+    dc:description "Land use and land cover data of the Coeur d'Alene Basin, Idaho." ;
+    dc:spatial "POLYGON ((-117.214387 46.826933,-117.214387 48.137447,-114.96672 48.137447,-114.96672 46.826933,-117.214387 46.826933))" ;
+    dcterms:publisher <urn:uuid:8ef3f176-c4c2-40e5-bdd9-e65b3ca151c0> ;
+    dcterms:references <urn:uuid:a93a7445-b357-4f22-b49b-4cd3f68b5546> ;
+    dcterms:title "Land Use & Land Cover, 1989, Couer d'Alene Basin, Idaho" ;
+    esip:eastBound "-114.96672"^^xsd:float ;
+    esip:endDate "1989-10-31"^^xsd:date ;
+    esip:northBound "48.137447"^^xsd:float ;
+    esip:southBound "46.826933"^^xsd:float ;
+    esip:startDate "1989-05-01"^^xsd:date ;
+    esip:westBound "-117.214387"^^xsd:float ;
+    owl:a dcat:Dataset .
+

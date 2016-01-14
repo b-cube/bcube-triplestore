@@ -1,0 +1,78 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:0aca539b-8508-41dc-b34e-385d7541dff5> bcube:hasType "temporal" ;
+    bcube:hasValue "2009-2013" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:431e905f-0a67-4499-b98f-10029dcb1a77> bcube:hasType "theme" ;
+    bcube:hasValue "census",
+        "demographics" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:699cca82-245f-4b08-8ddb-79106ef43cbc> bcube:hasType "place" ;
+    bcube:hasValue "Colorado",
+        "Denver",
+        "Denver County",
+        "USA" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:84fb629c-8f2a-49c1-a508-5fdbaec51b43> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-11-01T22:56:11.422Z" ;
+    bcube:lastUpdated "2015-11-01T22:56:11.422Z" ;
+    bcube:originatedFrom <urn:uuid:8e7589dc-826e-4f0e-831e-86767c54f190> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:f5b49e94-a9ce-4489-b39e-b8b83e672e92> .
+
+<urn:uuid:8e7589dc-826e-4f0e-831e-86767c54f190> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-01T22:56:11.422Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-01T22:56:11.422Z" ;
+    dc:identifier "urn:sha:94af87738be3b246413cd85fd214d0f5b1a45e277de3eac58af1b87b" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://data.denvergov.org/download/gis/american_community_survey_nbrhd_2009_2013/metadata/american_community_survey_nbrhd_2009_2013.xml" .
+
+<urn:uuid:f0bfb74f-613d-483f-932b-b93facedb6dd> bcube:hasType "theme" ;
+    bcube:hasValue "economy",
+        "society" ;
+    dc:partOf "ISO 19115 Topic Categories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:f5b49e94-a9ce-4489-b39e-b8b83e672e92> bcube:dateCreated "2015-11-01T22:56:11.422Z" ;
+    bcube:hasMetadataRecord <urn:uuid:84fb629c-8f2a-49c1-a508-5fdbaec51b43> ;
+    bcube:lastUpdated "2015-11-01T22:56:11.422Z" ;
+    dc:conformsTo <urn:uuid:0aca539b-8508-41dc-b34e-385d7541dff5>,
+        <urn:uuid:431e905f-0a67-4499-b98f-10029dcb1a77>,
+        <urn:uuid:699cca82-245f-4b08-8ddb-79106ef43cbc>,
+        <urn:uuid:f0bfb74f-613d-483f-932b-b93facedb6dd> ;
+    dc:description "Neighborhood level data from the derived from the American Community Survey; 5 year average, years 2009-2013. Data was aggregated at the census tract level, and the summarized into neighborhoods. This information was then joined with Community Planning and Developments Neighborhoods layer. This data-set does not contain data for any enclaves administered by other jurisdictions that are located within the City and County of Denver's boundary. This data is a sample, not a census. Results should be considered estimates. See American Community Survey website for margin of error information." ;
+    dc:spatial "POLYGON ((-105.109967 39.614311,-105.109967 39.914209,-104.599538 39.914209,-104.599538 39.614311,-105.109967 39.614311))" ;
+    dcterms:publisher <urn:uuid:f8b6370b-ccf4-4cd9-af59-efbb55ef9371> ;
+    dcterms:title "American Community Survey Nbrhd (2009-2013)" ;
+    esip:eastBound "-104.599538"^^xsd:float ;
+    esip:northBound "39.914209"^^xsd:float ;
+    esip:southBound "39.614311"^^xsd:float ;
+    esip:westBound "-105.109967"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:f8b6370b-ccf4-4cd9-af59-efbb55ef9371> owl:a foaf:Organization ;
+    foaf:name "" .
+

@@ -1,0 +1,78 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:306f3589-35bf-4ba9-82a8-19c18077ce65> bcube:hasType "place" ;
+    bcube:hasValue "Connecticut",
+        "Hartford County",
+        "Middlesex County",
+        "New London County",
+        "Tolland County",
+        "Windham County" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:651ff4a1-833f-490b-8458-a650d000f543> bcube:hasType "theme" ;
+    bcube:hasValue "Bare earth",
+        "Breaklines",
+        "DEM",
+        "DTM",
+        "Elevation",
+        "First Return",
+        "Hydro Flattened",
+        "LAS",
+        "Last Return",
+        "Lidar",
+        "Model Key Points" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:65b2bd18-b646-4cc5-8524-bc604961bba6> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-07-04T16:37:54.868Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-07-04T16:37:54.868Z" ;
+    dc:identifier "urn:sha:5cab7f23025bbe4b6d91b33a3b523450e6526b2758511336e5f27ae2" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www.cteco.uconn.edu/help/lidar_docs/NRCSE/FGDC_CONNECTICUT_LAST_RETURN_LAS.xml" .
+
+<urn:uuid:72314a90-e292-457e-949f-0769a31aeb16> owl:a foaf:Organization ;
+    foaf:name "" .
+
+<urn:uuid:d02693b1-fd25-4ba2-9b17-59b450c04bf3> bcube:dateCreated "2015-07-04T16:37:54.868Z" ;
+    bcube:hasMetadataRecord <urn:uuid:f19ec2a6-e082-4d0c-91f4-3ae9f9376164> ;
+    bcube:lastUpdated "2015-07-04T16:37:54.868Z" ;
+    dc:conformsTo <urn:uuid:306f3589-35bf-4ba9-82a8-19c18077ce65>,
+        <urn:uuid:651ff4a1-833f-490b-8458-a650d000f543> ;
+    dc:description "Earth Eye collected LiDAR data for approximately 4,589 square kilometers that either fully or partially cover the Connecticut counties of Tolland, Windham, Hartford, Middlesex, and New London. The nominal pulse spacing for this project was no greater than 1 point every 0.7 meters. Dewberry used proprietary procedures to classify the LAS according to project specifications: 1-Unclassified, 2-Ground, 7-Noise, 9-Water. Dewberry produced 3D breaklines and combined these with the final LiDAR data to produce seamless hydro flattened DEMs for the 4,840 tiles (1000 m x 1000 m) that cover the project area. Separate LiDAR files were created for bare earth only points, model key points, first echo return only points, and last echo return only points." ;
+    dc:spatial "POLYGON ((-72.654199 41.313609,-72.654199 42.053551,-71.764992 42.053551,-71.764992 41.313609,-72.654199 41.313609))" ;
+    dcterms:publisher <urn:uuid:72314a90-e292-457e-949f-0769a31aeb16> ;
+    dcterms:title "LAS" ;
+    esip:eastBound "-71.764992"^^xsd:float ;
+    esip:endDate "2010-12-11"^^xsd:date ;
+    esip:northBound "42.053551"^^xsd:float ;
+    esip:southBound "41.313609"^^xsd:float ;
+    esip:startDate "2010-11-03"^^xsd:date ;
+    esip:westBound "-72.654199"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:f19ec2a6-e082-4d0c-91f4-3ae9f9376164> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-07-04T16:37:54.868Z" ;
+    bcube:lastUpdated "2015-07-04T16:37:54.868Z" ;
+    bcube:originatedFrom <urn:uuid:65b2bd18-b646-4cc5-8524-bc604961bba6> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:d02693b1-fd25-4ba2-9b17-59b450c04bf3> .
+

@@ -1,0 +1,95 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:0e7acada-89d3-40be-abe9-f6938fec6238> a "ISO 19115:2003/19139" ;
+    bcube:dateCreated "2015-07-09T15:52:26.733Z" ;
+    bcube:lastUpdated "2015-07-09T15:52:26.733Z" ;
+    bcube:originatedFrom <urn:uuid:c4682029-2576-4349-9549-868e0ebe7d68> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:6494a925-5cc7-432b-8882-6c2af87dbd30> .
+
+<urn:uuid:1fc8b9b1-c79c-4382-b747-ae00e2f4d869> bcube:hasValue "geoscientificInformation" ;
+    dc:partOf "IsoTopicCategories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:21994a05-94a8-4e95-9f99-2de7cb4e1385> bcube:hasType "theme" ;
+    bcube:hasValue "Earth Science > Oceans > Coastal Process > Shorelines" ;
+    dc:partOf "GCMD Science Keywords" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:5eb760a4-72e5-4bee-b51d-358421092841> bcube:hasType "theme" ;
+    bcube:hasValue "latitude",
+        "longitude" ;
+    dc:partOf "CF-1.4" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:6494a925-5cc7-432b-8882-6c2af87dbd30> bcube:dateCreated "2015-07-09T15:52:26.733Z" ;
+    bcube:hasMetadataRecord <urn:uuid:0e7acada-89d3-40be-abe9-f6938fec6238> ;
+    bcube:lastUpdated "2015-07-09T15:52:26.733Z" ;
+    dc:conformsTo <urn:uuid:1fc8b9b1-c79c-4382-b747-ae00e2f4d869>,
+        <urn:uuid:21994a05-94a8-4e95-9f99-2de7cb4e1385>,
+        <urn:uuid:5eb760a4-72e5-4bee-b51d-358421092841>,
+        <urn:uuid:678d6e10-e849-4221-93cb-f63070bdf260> ;
+    dc:description "A global data set of distances from the nearest coastline. Negative distances represent locations over land (including land-locked bodies of water), while positive distances represent the ocean. NASA's Ocean Color Group generated this data set using the Generic Mapping Tools (GMT) software package. Distances were computed with GMT using its intermediate-resolution coastline and then gridded globally at a spatial resolution of 0.04 degrees. Bilinear interpolation was then applied to increase the spatial resolution to 0.01 degrees. There is an uncertainty of up to 1 km in the computed distance at any given point." ;
+    dc:identifier "dist2coast_1deg" ;
+    dc:spatial "POLYGON ((-180.0 -89.99,-180 90,179.99 90.0,179.99 -89.99,-180.0 -89.99))" ;
+    dcterms:references <urn:uuid:ecbaefd1-df9b-469a-a24c-12f628bb11ee>,
+        <urn:uuid:fff26346-5c8e-4f93-b174-fa1d6a88215e> ;
+    dcterms:title "Distance from Nearest Coastline: 0.01-Degree Grid" ;
+    esip:eastBound "179.99"^^xsd:float ;
+    esip:northBound "90.0"^^xsd:float ;
+    esip:southBound "-89.99"^^xsd:float ;
+    esip:westBound "-180.0"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:678d6e10-e849-4221-93cb-f63070bdf260> bcube:hasType "project" ;
+    bcube:hasValue "Pacific Islands Ocean Observing System (PacIOOS)" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:c4682029-2576-4349-9549-868e0ebe7d68> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-07-09T15:52:26.733Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-07-09T15:52:26.733Z" ;
+    dc:identifier "urn:sha:c3d25ad66a4591b9f5a049e77646b535ae2e45e9de1921d394e401ff" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://oos.soest.hawaii.edu/erddap/griddap/dist2coast_1deg.iso19115" .
+
+<urn:uuid:ecbaefd1-df9b-469a-a24c-12f628bb11ee> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-07-09T15:52:26.733Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-07-09T15:52:26.733Z" ;
+    dc:identifier "urn:sha:90ffea45da2d9bad256b4a3191337cb3b1435048e05f06b6b65b2cda" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://oos.soest.hawaii.edu/erddap/griddap/dist2coast_1deg.graph" .
+
+<urn:uuid:fff26346-5c8e-4f93-b174-fa1d6a88215e> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-07-09T15:52:26.733Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-07-09T15:52:26.733Z" ;
+    dc:identifier "urn:sha:b7a0543449a4c2653c498b0b080cd7e942392ca39a8c50f508aad493" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://oos.soest.hawaii.edu/erddap/griddap/dist2coast_1deg.html" .
+

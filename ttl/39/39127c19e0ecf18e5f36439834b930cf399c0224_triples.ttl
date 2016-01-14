@@ -1,0 +1,54 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:4928d09c-a706-41d9-b57d-af84e42ccda6> bcube:hasType "place" ;
+    bcube:hasValue "Idaho" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:9452eaf6-5db8-4a92-93fc-d8ccd1b1f626> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-09-14T11:03:11.699Z" ;
+    bcube:lastUpdated "2015-09-14T11:03:11.699Z" ;
+    bcube:originatedFrom <urn:uuid:a82bb85c-d059-4221-a082-31229f0dc0a6> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:e858dd11-e44d-4f05-9020-a0da02fe173c> .
+
+<urn:uuid:a82bb85c-d059-4221-a082-31229f0dc0a6> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-09-14T11:03:11.699Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-09-14T11:03:11.699Z" ;
+    dc:identifier "urn:sha:68a27139f05751e4ec2e2060fb5b1c90ff2950713a05da6edffb1f24" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www.idwr.idaho.gov/ftp/gisdata/Spatial/WaterRights/WaterRights-Shapefiles/WRPOD.shp.xml" .
+
+<urn:uuid:df2de2fb-3ed1-4e8d-bb27-4daf78cd7b3f> owl:a foaf:Organization ;
+    foaf:name "" .
+
+<urn:uuid:e858dd11-e44d-4f05-9020-a0da02fe173c> bcube:dateCreated "2015-09-14T11:03:11.699Z" ;
+    bcube:hasMetadataRecord <urn:uuid:9452eaf6-5db8-4a92-93fc-d8ccd1b1f626> ;
+    bcube:lastUpdated "2015-09-14T11:03:11.699Z" ;
+    dc:conformsTo <urn:uuid:4928d09c-a706-41d9-b57d-af84e42ccda6> ;
+    dc:description "Points of Diversion (POD) represent where water is diverted from live flow, either surface water or ground water (ie springs, stream or a well), to be put to beneficial use under a water right. A water right (WR) must have at least one, and may have many, PODs. The water use(s) for which diverted water is put can be found under the WR's place of use shape(s) or report. The WRURL attribute links to the water right report. For each WR, any or all PODs can serve any or all uses. Shapes for PODs were initially developed from GCDB as QQ or QQQ centroids based on the POD legal description. Over time better locational information updates the POD shapes. The locational determination of a POD can be found in the DataSource attribute of the layer. A water right (WR) can be in one or more of six processes or stages: Application for a new WR or transfer. Permit for applicant to develop the water use. License through which IDWR has approved final configuration and amounts. Claim is a WR or Beneficial Use which has been claimed in an adjudication. Recommendation is what IDWR recommends to the court during an adjudication. A recommendation, when approved by the court, is decreed and supercedes its License, if one previously existed. Transfer of a portion of the WR or claim. Generally through a change of ownership, or change in one or more elements of the WR or claim." ;
+    dc:spatial "POLYGON ((-114.298762 42.633092,-114.298762 42.633092,-114.298762 42.633092,-114.298762 42.633092,-114.298762 42.633092))" ;
+    dcterms:publisher <urn:uuid:df2de2fb-3ed1-4e8d-bb27-4daf78cd7b3f> ;
+    dcterms:title "Licensed or Decreed Points of Diversion" ;
+    esip:eastBound "-114.298762"^^xsd:float ;
+    esip:northBound "42.633092"^^xsd:float ;
+    esip:southBound "42.633092"^^xsd:float ;
+    esip:westBound "-114.298762"^^xsd:float ;
+    owl:a dcat:Dataset .
+

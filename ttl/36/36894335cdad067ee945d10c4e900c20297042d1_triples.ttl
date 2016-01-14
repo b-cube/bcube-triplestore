@@ -1,0 +1,82 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:19d0a5a9-0518-47a6-aede-8b506efa86e1> bcube:hasType "theme" ;
+    bcube:hasValue "FLU",
+        "Future Land Use",
+        "Land Classifications",
+        "NRRC",
+        "Web",
+        "Zoning",
+        "usginres:service" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:3e23a5f0-636b-4f57-b6b4-1e95dfced5d8> bcube:hasValue "geoscientificInformation" ;
+    dc:partOf "IsoTopicCategories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:5b91c2f6-4782-4bf9-87ef-d4a627a85d43> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-10-29T19:54:14.445Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-10-29T19:54:14.445Z" ;
+    dc:identifier "urn:sha:bf0d6f13592c935785b68b92ce62aaac845627b6b13a098095bf36a6" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "https://geo.azmag.gov/gismag/rest/services/maps/FLU_2012/MapServer" .
+
+<urn:uuid:78176c14-8269-424f-8fb5-ef221c9c64e1> bcube:hasType "place" ;
+    bcube:hasValue "Arizona",
+        "Maricopa County" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:e7636273-3425-4613-87b4-c6af3aa0a603> a "ISO 19115:2003/19139" ;
+    bcube:dateCreated "2015-10-29T19:54:14.445Z" ;
+    bcube:lastUpdated "2015-10-29T19:54:14.445Z" ;
+    bcube:originatedFrom <urn:uuid:fb10e3e8-ebe0-417d-abad-ffaaea120d94> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:fda2eaca-e355-4dab-bb25-9edb326ed44a> .
+
+<urn:uuid:fb10e3e8-ebe0-417d-abad-ffaaea120d94> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-10-29T19:54:14.445Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-10-29T19:54:14.445Z" ;
+    dc:identifier "urn:sha:151d0aba5d0ec0d80babe5224bd418c1410d86df8cfba09c3a0e8001" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://repository.stategeothermaldata.org/resources/metadata/TestNRRC/0E966EFB8AA542C9AAFBFFE2DCAC469B.xml" .
+
+<urn:uuid:fda2eaca-e355-4dab-bb25-9edb326ed44a> bcube:dateCreated "2015-10-29T19:54:14.445Z" ;
+    bcube:hasMetadataRecord <urn:uuid:e7636273-3425-4613-87b4-c6af3aa0a603> ;
+    bcube:lastUpdated "2015-10-29T19:54:14.445Z" ;
+    dc:conformsTo <urn:uuid:19d0a5a9-0518-47a6-aede-8b506efa86e1>,
+        <urn:uuid:3e23a5f0-636b-4f57-b6b4-1e95dfced5d8>,
+        <urn:uuid:78176c14-8269-424f-8fb5-ef221c9c64e1> ;
+    dc:description "2012 Future Land Use (FLU) for Maricopa County compiled by MAG. To be used by member agencies for review and comments. Final" ;
+    dc:spatial "POLYGON ((-111.71 34.81,-111.71 32.58,-113.42 32.58,-113.42 34.81,-111.71 34.81))" ;
+    dcterms:references <urn:uuid:5b91c2f6-4782-4bf9-87ef-d4a627a85d43> ;
+    dcterms:title "2012 Future Land Use (FLU) for Maricopa County - FLU 2012 for Web" ;
+    esip:eastBound "-113.42"^^xsd:float ;
+    esip:endDate "1900-01-01"^^xsd:date ;
+    esip:northBound "32.58"^^xsd:float ;
+    esip:southBound "34.81"^^xsd:float ;
+    esip:startDate "1900-01-01"^^xsd:date ;
+    esip:westBound "-111.71"^^xsd:float ;
+    owl:a dcat:Dataset .
+

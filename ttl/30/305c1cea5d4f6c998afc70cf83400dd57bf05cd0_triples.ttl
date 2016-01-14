@@ -1,0 +1,72 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:09b2ec34-5040-4299-b280-0f48717aa785> bcube:hasType "place" ;
+    bcube:hasValue "Delaware",
+        "New Castle",
+        "U.S. Department of Commerce, 1987, Codes for the Identification of the States, the District of Columbia and the outlying areas of the United States, and associated areas (Federal Information Processing Standard (FIPS) 5-2): Washington, D.C., National Institute of Standards and Technology.",
+        "U.S. Department of Commerce, 1995, Countries, dependencies, areas of special sovereignty, and their principal administrative divisions, Federal Information Processing Standard (FIPS) 10-4): Washington, D.C., National Institute of Standards and Technology.",
+        "US" ;
+    dc:partOf "Geographic Names Information System" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:66e71e7e-bab1-4e6c-a14a-91fbf27a966f> bcube:dateCreated "2015-10-30T11:01:25.849Z" ;
+    bcube:hasMetadataRecord <urn:uuid:7e06445c-6b12-494e-a6db-15fcc95bcd1f> ;
+    bcube:lastUpdated "2015-10-30T11:01:25.849Z" ;
+    dc:conformsTo <urn:uuid:09b2ec34-5040-4299-b280-0f48717aa785>,
+        <urn:uuid:e3dcc64a-65d7-4750-8a9d-125f0793be90> ;
+    dc:description "This data set consists of 0.3-meter pixel resolution (approximately 1-foot), 4-band true color and near infrared (R, G, B, IR) orthoimages covering the county of New Castle in Delaware. An orthoimage is remotely sensed image data in which displacement of features in the image caused by terrain relief and sensor orientation have been mathematically removed. Orthoimagery combines the image characteristics of a photography with the geometric qualities of a map. The design accuracy is estimated not to exceed 1.52 meters NSSDA 95% confidence (0.88-meters Root Mean Squared (RMSE) Error XY (0.62 meter RMSE X or Y). Each orthoimage provides imagery over a 1700-meter by 1700-meter block on the ground. There is no image overlap between adjacent files. The projected coordinate system is Delaware State Plane Coordinate System Meters." ;
+    dcterms:publisher <urn:uuid:e0302bf7-ef10-497d-a4f2-9cf37505d9dd> ;
+    dcterms:title "New Castle, DE Ortho" ;
+    esip:eastBound "-75.405798"^^xsd:float ;
+    esip:northBound "39.83837"^^xsd:float ;
+    esip:southBound "39.289687"^^xsd:float ;
+    esip:startDate "2012-07-27"^^xsd:date ;
+    esip:westBound "-75.787726"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:7e06445c-6b12-494e-a6db-15fcc95bcd1f> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-10-30T11:01:25.849Z" ;
+    bcube:lastUpdated "2015-10-30T11:01:25.849Z" ;
+    bcube:originatedFrom <urn:uuid:ebfb5196-6e42-4630-aeec-ef68035b093e> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:66e71e7e-bab1-4e6c-a14a-91fbf27a966f> .
+
+<urn:uuid:e0302bf7-ef10-497d-a4f2-9cf37505d9dd> owl:a foaf:Organization ;
+    foaf:name "U.S. Geological Survey" .
+
+<urn:uuid:e3dcc64a-65d7-4750-8a9d-125f0793be90> bcube:hasType "theme" ;
+    bcube:hasValue "(R,G,B,IR)",
+        "0.3 meter orthoimage",
+        "4-band",
+        "image map",
+        "orthoimage",
+        "orthophoto",
+        "rectified image",
+        "rectified photograph" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:ebfb5196-6e42-4630-aeec-ef68035b093e> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-10-30T11:01:25.849Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-10-30T11:01:25.849Z" ;
+    dc:identifier "urn:sha:1924d76c45552cca4f436599883ad5e18a2b2089a1b9e656b161d325" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://map.demac.udel.edu/data/metadata/de_orthos2012-newcastle.xml" .
+

@@ -1,0 +1,96 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:1299492b-32fa-40ba-8101-32bf97e3574e> bcube:hasValue "transportation" ;
+    dc:partOf "IsoTopicCategories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:282af526-4e5c-44ac-9f42-7df63731c468> a "ISO 19115:2003/19139" ;
+    bcube:dateCreated "2015-10-30T14:54:38.99Z" ;
+    bcube:lastUpdated "2015-10-30T14:54:38.99Z" ;
+    bcube:originatedFrom <urn:uuid:b9faca72-0990-4253-a670-cc62d6c0fdef> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:429b361b-ff5f-4cc4-8f86-e023d04e8b40> .
+
+<urn:uuid:33a5252a-c470-49c8-8eb4-1132dfe7e8d3> bcube:hasType "place" ;
+    bcube:hasValue "02060",
+        "Bristol Bay",
+        "County or Equivalent Entity",
+        "U.S.",
+        "United States" ;
+    dc:partOf "ANSI INCITS 38:2009 (Formerly FIPS 5-2), ANSI INCITS 31:2009 (Formerly FIPS 6-4),ANSI INCITS 454:2009 (Formerly FIPS 8-6), ANSI INCITS 455:2009(Formerly FIPS 9-1), ANSI INCITS 446:2008 (Geographic Names Information System (GNIS))" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:429b361b-ff5f-4cc4-8f86-e023d04e8b40> bcube:dateCreated "2015-10-30T14:54:38.99Z" ;
+    bcube:hasMetadataRecord <urn:uuid:282af526-4e5c-44ac-9f42-7df63731c468> ;
+    bcube:lastUpdated "2015-10-30T14:54:38.99Z" ;
+    dc:conformsTo <urn:uuid:1299492b-32fa-40ba-8101-32bf97e3574e>,
+        <urn:uuid:33a5252a-c470-49c8-8eb4-1132dfe7e8d3>,
+        <urn:uuid:7636b930-ab9b-4bba-a736-9f68d0f876c6>,
+        <urn:uuid:850dbe18-7a3b-4ef0-b21e-46e62d463164> ;
+    dc:description "The TIGER/Line shapefiles and related database files (.dbf) are an extract of selected geographic and cartographic information from the U.S. Census Bureau's Master Address File / Topologically Integrated Geographic Encoding and Referencing (MAF/TIGER) Database (MTDB). The MTDB represents a seamless national file with no overlaps or gaps between parts, however, each TIGER/Line shapefile is designed to stand alone as an independent data set, or they can be combined to cover the entire nation. The Address Ranges Relationship File (ADDR.dbf) contains the attributes of each address range. Each address range applies to a single edge and has a unique address range identifier (ARID) value. The edge to which an address range applies can be determined by linking the address range to the All Lines Shapefile (EDGES.shp) using the permanent topological edge identifier (TLID) attribute. Multiple address ranges can apply to the same edge since an edge can have multiple address ranges. Note that the most inclusive address range associated with each side of a street edge already appears in the All Lines Shapefile (EDGES.shp). The TIGER/Line Shapefiles contain potential address ranges, not individual addresses. The term \"address range\" refers to the collection of all possible structure numbers from the first structure number to the last structure number and all numbers of a specified parity in between along an edge side relative to the direction in which the edge is coded. The address ranges in the TIGER/Line Shapefiles are potential ranges that include the full range of possible structure numbers even though the actual structures may not exist." ;
+    dc:spatial "POLYGON ((-158.001499 58.60961,-158.001499 58.894948,-156.317217 58.894948,-156.317217 58.60961,-158.001499 58.60961))" ;
+    dcterms:references <urn:uuid:90183869-80d5-4e22-823d-67a3d73382a5> ;
+    dcterms:title "TIGER/Line Shapefile, 2013, county, Bristol Bay Borough, AK, Current Address Ranges Relationship File" ;
+    esip:eastBound "-156.317217"^^xsd:float ;
+    esip:endDate "2013-05-30"^^xsd:date ;
+    esip:northBound "58.894948"^^xsd:float ;
+    esip:southBound "58.60961"^^xsd:float ;
+    esip:startDate "2012-06-30"^^xsd:date ;
+    esip:westBound "-158.001499"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:7636b930-ab9b-4bba-a736-9f68d0f876c6> bcube:hasType "theme" ;
+    bcube:hasValue "5-digit ZIP code",
+        "County ANSI Code",
+        "County FIPS Code",
+        "From House Number",
+        "Permanent edge ID",
+        "Side indicator flag",
+        "State ANSI Code",
+        "State FIPS Code",
+        "To House Number",
+        "ZIP +4 code" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:850dbe18-7a3b-4ef0-b21e-46e62d463164> bcube:hasType "theme" ;
+    bcube:hasValue "Transportation" ;
+    dc:partOf "NGDA Portfolio Themes" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:90183869-80d5-4e22-823d-67a3d73382a5> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-10-30T14:54:38.99Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-10-30T14:54:38.99Z" ;
+    dc:identifier "urn:sha:8d54264ac49e43495b7404a6dc5194b04888a93190d1254b7b0120ff" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www2.census.gov/geo/tiger/TIGER2013/ADDR/tl_2013_02060_addr.zip" .
+
+<urn:uuid:b9faca72-0990-4253-a670-cc62d6c0fdef> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-10-30T14:54:38.99Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-10-30T14:54:38.99Z" ;
+    dc:identifier "urn:sha:cbaa074428d6f370c4137cde4895d18ace8f7842261aa0f4e953bdd7" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://meta.geo.census.gov/data/existing/decennial/GEO/GPMB/TIGERline/TIGER2013/addr/tl_2013_02060_addr.dbf.iso.xml" .
+

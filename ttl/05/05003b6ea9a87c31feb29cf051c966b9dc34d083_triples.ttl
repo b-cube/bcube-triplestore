@@ -1,0 +1,92 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:0cbaa309-aac1-4ee2-b849-0b7de3ca846b> bcube:hasType "place" ;
+    bcube:hasValue "Mississippi",
+        "Natchez Trace",
+        "Natchez Trace Parkway" ;
+    dc:partOf "http://nationalmap.gov" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:0eb4ff31-8b8c-4b18-b466-a786f6c047ee> bcube:hasType "temporal" ;
+    bcube:hasValue "2007" ;
+    dc:partOf "http://www.esri.com/news/arcuser/1104/temporal.html" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:22914de5-870f-47ff-82f8-09f4d3d8985b> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-11-02T07:07:53.582Z" ;
+    bcube:lastUpdated "2015-11-02T07:07:53.582Z" ;
+    bcube:originatedFrom <urn:uuid:cbe149f5-1ff6-4419-9d25-7a24d6ae1ada> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:2aba16f6-79f1-4bc3-a8ab-2002460f32a3> .
+
+<urn:uuid:2aba16f6-79f1-4bc3-a8ab-2002460f32a3> bcube:dateCreated "2015-11-02T07:07:53.582Z" ;
+    bcube:hasMetadataRecord <urn:uuid:22914de5-870f-47ff-82f8-09f4d3d8985b> ;
+    bcube:lastUpdated "2015-11-02T07:07:53.582Z" ;
+    dc:conformsTo <urn:uuid:0cbaa309-aac1-4ee2-b849-0b7de3ca846b>,
+        <urn:uuid:0eb4ff31-8b8c-4b18-b466-a786f6c047ee>,
+        <urn:uuid:4b740fea-fef2-4444-8e05-1718d06f9cdd>,
+        <urn:uuid:b6cedd9b-8b9f-45d3-87a6-0ec93412a804> ;
+    dc:description "A first surface elevation map (also known as a Digital Surface Model or DSM) of a portion of the Natchez Trace Parkway in Mississippi was produced from remotely sensed, geographically referenced elevation measurements cooperatively by the U.S. Geological Survey (USGS), National Park Service (NPS), and National Aeronautics and Space Administration (NASA). Elevation measurements were collected over the area using the NASA Experimental Advanced Airborne Research Lidar (EAARL), a pulsed laser ranging system mounted onboard an aircraft to measure ground elevation, vegetation canopy, and coastal topography. The system uses high frequency laser beams directed at the Earth's surface through an opening in the bottom of the aircraft's fuselage. The laser system records the time difference between emission of the laser beam and the reception of the reflected laser signal in the aircraft. The plane travels over the target area at approximately 50 meters per second at an elevation of approximately 300 meters. The EAARL, developed by NASA at Wallops Flight Facility in Virginia, measures ground elevation with a vertical resolution of 15 centimeters. A sampling rate of 3 kilohertz or higher results in an extremely dense spatial elevation dataset. Over 100 kilometers of coastline can be easily surveyed within a 3- to 4-hour mission time period. When subsequent elevation maps for an area are analyzed, they provide a useful tool to make management decisions regarding land development." ;
+    dcterms:publisher <urn:uuid:d5389639-e402-4181-92a2-2fea7d79636c> ;
+    dcterms:references <urn:uuid:cd0afc38-8162-4f87-a5f4-8646f8d6cb9d> ;
+    dcterms:title "EAARL Topography Natchez Trace Parkway 2007" ;
+    esip:startDate "2007-09-14"^^xsd:date ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:4b740fea-fef2-4444-8e05-1718d06f9cdd> bcube:hasType "theme" ;
+    bcube:hasValue "ALPS",
+        "Advanced Lidar Processing System",
+        "DSM",
+        "Digital Surface Model",
+        "EAARL",
+        "Experimental Advanced Airborne Research Lidar",
+        "Lidar",
+        "laser altimetry",
+        "remote sensing",
+        "topography" ;
+    dc:partOf "http://remotesensing.usgs.gov" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:b6cedd9b-8b9f-45d3-87a6-0ec93412a804> bcube:hasType "stratum" ;
+    bcube:hasValue "first surface" ;
+    dc:partOf "http://lidar.cr.usgs.gov/" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:cbe149f5-1ff6-4419-9d25-7a24d6ae1ada> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-02T07:07:53.582Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-02T07:07:53.582Z" ;
+    dc:identifier "urn:sha:a7f4da65d717f149c82023657875bc3f6b47544749507977771bfa76" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://pubs.usgs.gov/ds/392/data_files/fs/fs_e218_n3602_16/fs_e218_n3602_16.tif.xml" .
+
+<urn:uuid:cd0afc38-8162-4f87-a5f4-8646f8d6cb9d> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-02T07:07:53.582Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-02T07:07:53.582Z" ;
+    dc:identifier "urn:sha:d14a028c2a3a2bc9476102bb288234c415a2b01f828ea62ac5b3e42f" ;
+    owl:a bcube:Url .
+
+<urn:uuid:d5389639-e402-4181-92a2-2fea7d79636c> owl:a foaf:Organization ;
+    foaf:name "U.S. Geological Survey" .
+

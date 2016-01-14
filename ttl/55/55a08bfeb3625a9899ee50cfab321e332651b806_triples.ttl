@@ -1,0 +1,71 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:409c37c7-1a4e-47d6-aa7a-d767dc43355a> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-08-11T15:25:55.418Z" ;
+    bcube:lastUpdated "2015-08-11T15:25:55.418Z" ;
+    bcube:originatedFrom <urn:uuid:f67652bc-49c4-401f-85b9-68804087c56a> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:a713bf41-66bc-47f5-a800-d2408e10a7d1> .
+
+<urn:uuid:5d1bc3c1-6d57-4bc6-8622-9c029f998e54> owl:a foaf:Organization ;
+    foaf:name "Montana State Library" .
+
+<urn:uuid:9eb1f6fa-ac29-4a35-952f-eda596dedf39> bcube:hasType "theme" ;
+    bcube:hasValue "GPS",
+        "control" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:a713bf41-66bc-47f5-a800-d2408e10a7d1> bcube:dateCreated "2015-08-11T15:25:55.418Z" ;
+    bcube:hasMetadataRecord <urn:uuid:409c37c7-1a4e-47d6-aa7a-d767dc43355a> ;
+    bcube:lastUpdated "2015-08-11T15:25:55.418Z" ;
+    dc:conformsTo <urn:uuid:9eb1f6fa-ac29-4a35-952f-eda596dedf39>,
+        <urn:uuid:ce02223a-9094-4eae-8e36-2f20fb94d006>,
+        <urn:uuid:e509fbae-0404-4e3a-953c-b67e3cc16234> ;
+    dc:description "These data were formerly available from the Montana State Library web site but were removed because they are potentially out of date. Please contact the Federal Superfund Bureau of the Montana Department of Environmental Quality if you want these data so they may tell you if newer or better data are available. If the data are not available from the Department of Environmental Quality, you may request a copy from the Montana State Library data archive. Coordinates provided by Terry Slonecker of the EPIC lab in Warrenton. GPS survey was conducted by \"USGS personell in conjunction with the EPA\". Sketch maps of the point locations are in the Butte data folder in Gerry's office. Coordinates in the attribute table are NAD27 coordinates." ;
+    dc:spatial "POLYGON ((-112.554001 45.9802017,-112.554001 46.027401,-112.506104 46.027401,-112.506104 45.9802017,-112.554001 45.9802017))" ;
+    dcterms:publisher <urn:uuid:5d1bc3c1-6d57-4bc6-8622-9c029f998e54> ;
+    dcterms:title "Butte GPS control points, 1989" ;
+    esip:eastBound "-112.506104"^^xsd:float ;
+    esip:northBound "46.027401"^^xsd:float ;
+    esip:southBound "45.9802017"^^xsd:float ;
+    esip:startDate "1989-09-01"^^xsd:date ;
+    esip:westBound "-112.554001"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:ce02223a-9094-4eae-8e36-2f20fb94d006> bcube:hasType "theme" ;
+    bcube:hasValue "location" ;
+    dc:partOf "ISO 19115 Topic Category" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:e509fbae-0404-4e3a-953c-b67e3cc16234> bcube:hasType "place" ;
+    bcube:hasValue "Butte",
+        "MT",
+        "Montana",
+        "USA",
+        "United States" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:f67652bc-49c4-401f-85b9-68804087c56a> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-11T15:25:55.418Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-11T15:25:55.418Z" ;
+    dc:identifier "urn:sha:94061c27fc77354fe02b56819611446d0be8b31911e0a275b2a5cf00" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://mslapps.mt.gov/Geographic_Information/Data/DataList/datalist_MetadataDetailRaw.aspx?did={344188CD-2AF9-487A-9C2A-505D2B938740}" .
+

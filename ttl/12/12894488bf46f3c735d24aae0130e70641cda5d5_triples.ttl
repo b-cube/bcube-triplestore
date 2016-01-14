@@ -1,0 +1,135 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:131d0966-7ed7-489d-b2dd-bb34a0ce7cf1> bcube:hasType "place" ;
+    bcube:hasValue "Atlantic Ocean",
+        "Boston",
+        "Boston Harbor",
+        "Boston Harbor Islands",
+        "Hubline",
+        "Hull",
+        "Massachusetts Bay",
+        "Nahant" ;
+    dc:partOf "General" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:17596338-8836-4af6-86b5-9c0b2f8b0c08> dcterms:references <urn:uuid:bd714ceb-2913-4082-870a-01e2d1646d62> ;
+    owl:a bibo:WebPage .
+
+<urn:uuid:3239bec8-5b79-43da-b3b7-fe3afec562cd> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-11-12T10:04:54.112Z" ;
+    bcube:lastUpdated "2015-11-12T10:04:54.112Z" ;
+    bcube:originatedFrom <urn:uuid:feac72c6-cb96-44f3-90ff-40a8c3c8926b> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:4be9fc0c-837c-498c-8895-ab26069ecc8d> .
+
+<urn:uuid:4be9fc0c-837c-498c-8895-ab26069ecc8d> bcube:dateCreated "2015-11-12T10:04:54.112Z" ;
+    bcube:hasMetadataRecord <urn:uuid:3239bec8-5b79-43da-b3b7-fe3afec562cd> ;
+    bcube:lastUpdated "2015-11-12T10:04:54.112Z" ;
+    dc:conformsTo <urn:uuid:131d0966-7ed7-489d-b2dd-bb34a0ce7cf1>,
+        <urn:uuid:7a28fc76-f32e-455f-a121-c61b40e6481a>,
+        <urn:uuid:7dfc6572-2c16-48ed-833d-de2191cdec2a>,
+        <urn:uuid:bee931cb-478e-4e3f-848a-d0b1ae74f678> ;
+    dc:description "These data are high-resolution bathymetric measurements of the seafloor from Boston Harbor and the harbor approaches, Massachusetts. Approximately 170 km of sidescan sonar and bathymetric data were collected by the National Oceanic and Atmospheric Administration (NOAA) Ship Whiting in 2000 and 2001 and reprocessed and gridded by the Massachusetts Office of Coastal Zone Management (CZM) and the U.S. Geological Survey (USGS)." ;
+    dc:spatial "POLYGON ((-71.055756 42.260371,-71.055756 42.438232,-70.814625 42.438232,-70.814625 42.260371,-71.055756 42.260371))" ;
+    dcterms:publisher <urn:uuid:60c2ce07-c2c0-4a54-aa9f-6c61f67b6692> ;
+    dcterms:references <urn:uuid:17596338-8836-4af6-86b5-9c0b2f8b0c08>,
+        <urn:uuid:f081ebb8-c739-413b-a4c2-c6df48e7d0c7> ;
+    dcterms:title "bh_2mmbbath: Multibeam Bathymetry 2 meter/pixel of Boston Harbor and Approaches" ;
+    esip:eastBound "-70.814625"^^xsd:float ;
+    esip:endDate "2001-10-30"^^xsd:date ;
+    esip:northBound "42.438232"^^xsd:float ;
+    esip:southBound "42.260371"^^xsd:float ;
+    esip:startDate "2000-09-19"^^xsd:date ;
+    esip:westBound "-71.055756"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:60c2ce07-c2c0-4a54-aa9f-6c61f67b6692> owl:a foaf:Organization ;
+    foaf:name "U.S. Geological Survey, Coastal and Marine Geology Program" .
+
+<urn:uuid:7a28fc76-f32e-455f-a121-c61b40e6481a> bcube:hasType "theme" ;
+    bcube:hasValue "elevation",
+        "imageryBaseMapsEarthCover",
+        "oceans and estuaries" ;
+    dc:partOf "ISO 19115 Topic Category" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:7dfc6572-2c16-48ed-833d-de2191cdec2a> bcube:hasType "stratum" ;
+    bcube:hasValue "Seafloor" ;
+    dc:partOf "General" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:bd714ceb-2913-4082-870a-01e2d1646d62> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-12T10:04:54.112Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-12T10:04:54.112Z" ;
+    dc:identifier "urn:sha:9862c188dfd366601dfbae3e7852d1278e77e93e6adb1dea253d27af" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://pubs.usgs.gov/of/2006/1008/gis/datazipped/mbbath.zip" .
+
+<urn:uuid:bee931cb-478e-4e3f-848a-d0b1ae74f678> bcube:hasType "theme" ;
+    bcube:hasValue "272-T",
+        "5500",
+        "ArcGIS Raster",
+        "CMGP",
+        "CZM",
+        "Coastal and Marine Geology Program",
+        "Edgetech",
+        "Hydrographic Survey",
+        "Klein",
+        "Marine Geology",
+        "Massachusetts Office of Coastal Zone Management",
+        "NOAA",
+        "NOAA Ship Whiting",
+        "NOS",
+        "National Ocean Service",
+        "National Oceanic and Atmospheric Administration",
+        "Seafloor",
+        "Sidescan",
+        "Sidescan Sonar",
+        "U.S. Geological Survey",
+        "USGS",
+        "WHSC",
+        "Woods Hole Science Center" ;
+    dc:partOf "General" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:f081ebb8-c739-413b-a4c2-c6df48e7d0c7> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-12T10:04:54.112Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-12T10:04:54.112Z" ;
+    dc:identifier "urn:sha:acc525fab93ed1d2fa04a8dab458366747a461add71605f63482fb69" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "<http://pubs.usgs.gov/of/2006/1008/gis/datazipped/mbbath.zip>" .
+
+<urn:uuid:feac72c6-cb96-44f3-90ff-40a8c3c8926b> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-12T10:04:54.112Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-12T10:04:54.112Z" ;
+    dc:identifier "urn:sha:38ff3ce734df6c0ccc7c260c06f9149dfebe33a0f12c053941c96129" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://woodshole.er.usgs.gov/pubs/of2006-1008/gis/OFR_2006_1008/grids/bh_2mmbbath/metadata.xml" .
+

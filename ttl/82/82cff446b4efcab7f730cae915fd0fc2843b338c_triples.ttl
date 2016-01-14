@@ -1,0 +1,136 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:004c755c-07f5-413f-a5fb-806ccb9c6ead> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-10-16T21:55:53.09Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-10-16T21:55:53.09Z" ;
+    dc:identifier "urn:sha:e18db3ff3ce91370fe294fc3b0510b77d9e49b1f9c387cc718f6eda0" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "https://bluehub.jrc.ec.europa.eu/erddap/tabledap/ndbcSosWind.graph" .
+
+<urn:uuid:2d767f0d-fe13-4879-a8bb-03761d1607a0> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-10-16T21:55:53.09Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-10-16T21:55:53.09Z" ;
+    dc:identifier "urn:sha:c27a571a2969a661bff57297e4cbc2a5a0febc93c798e015fda2229d" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "https://bluehub.jrc.ec.europa.eu/erddap/metadata/fgdc/xml/ndbcSosWind_fgdc.xml" .
+
+<urn:uuid:36ad0c99-c511-436d-8af9-10583249d030> dcterms:references <urn:uuid:c7da4c7a-4dec-4075-bc8f-463261559b65> ;
+    owl:a bibo:WebPage .
+
+<urn:uuid:6b550454-501e-481a-b9e9-b248ce79ae02> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-10-16T21:55:53.09Z" ;
+    bcube:lastUpdated "2015-10-16T21:55:53.09Z" ;
+    bcube:originatedFrom <urn:uuid:2d767f0d-fe13-4879-a8bb-03761d1607a0> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:b5cb30e9-8fed-44e2-91d3-efe3f8786587> .
+
+<urn:uuid:a99020bb-934a-43ed-8b92-554ec75699f4> bcube:hasType "theme" ;
+    bcube:hasValue "altitude",
+        "latitude",
+        "longitude",
+        "time",
+        "wind_from_direction",
+        "wind_speed",
+        "wind_speed_of_gust" ;
+    dc:partOf "CF Standard Name Table v29" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:b5cb30e9-8fed-44e2-91d3-efe3f8786587> bcube:dateCreated "2015-10-16T21:55:53.09Z" ;
+    bcube:hasMetadataRecord <urn:uuid:6b550454-501e-481a-b9e9-b248ce79ae02> ;
+    bcube:lastUpdated "2015-10-16T21:55:53.09Z" ;
+    dc:conformsTo <urn:uuid:a99020bb-934a-43ed-8b92-554ec75699f4>,
+        <urn:uuid:c3904004-56f8-4738-8259-1d8c7fef7484> ;
+    dc:description "The NOAA NDBC SOS server is part of the IOOS DIF SOS Project. The stations in this dataset have winds data. Because of the nature of SOS requests, requests for data MUST include constraints for the longitude, latitude, time, and/or station_id variables." ;
+    dc:spatial "POLYGON ((-177.75 -19.713,-177.75 80.81,180.0 80.81,180.0 -19.713,-177.75 -19.713))" ;
+    dcterms:publisher <urn:uuid:c109061f-b536-4f59-9e64-0776100a0dc9> ;
+    dcterms:references <urn:uuid:004c755c-07f5-413f-a5fb-806ccb9c6ead>,
+        <urn:uuid:36ad0c99-c511-436d-8af9-10583249d030>,
+        <urn:uuid:db7768ce-8641-4f84-80c6-dbba86a4c503> ;
+    dcterms:title "NOAA NDBC SOS - winds" ;
+    esip:eastBound "180.0"^^xsd:float ;
+    esip:northBound "80.81"^^xsd:float ;
+    esip:southBound "-19.713"^^xsd:float ;
+    esip:startDate "2006-01-01"^^xsd:date ;
+    esip:westBound "-177.75"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:c109061f-b536-4f59-9e64-0776100a0dc9> owl:a foaf:Organization ;
+    foaf:name "ERDDAP, version 1.62, at Maritime Affairs Unit of the Joint Research Centre" .
+
+<urn:uuid:c3904004-56f8-4738-8259-1d8c7fef7484> bcube:hasType "theme" ;
+    bcube:hasValue "Atmosphere > Altitude > Station Height",
+        "Atmosphere > Atmospheric Winds > Surface Winds",
+        "Atmosphere > Atmospheric Winds > Vertical Wind Motion",
+        "air",
+        "altitude",
+        "atmosphere",
+        "atmospheric",
+        "direction",
+        "from",
+        "gust",
+        "height",
+        "identifier",
+        "ndbc",
+        "noaa",
+        "sensor",
+        "sos",
+        "speed",
+        "station",
+        "surface",
+        "time",
+        "upward",
+        "velocity",
+        "wind",
+        "wind_from_direction",
+        "wind_speed",
+        "wind_speed_of_gust",
+        "winds" ;
+    dc:partOf "GCMD Science Keywords" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:c7da4c7a-4dec-4075-bc8f-463261559b65> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-10-16T21:55:53.09Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-10-16T21:55:53.09Z" ;
+    dc:identifier "urn:sha:f2bbaf83ad1441046c42114509a8d843a25e5b16ffc894b32e3130b5" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "https://bluehub.jrc.ec.europa.eu/erddap/tabledap/ndbcSosWind.subset" .
+
+<urn:uuid:db7768ce-8641-4f84-80c6-dbba86a4c503> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-10-16T21:55:53.09Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-10-16T21:55:53.09Z" ;
+    dc:identifier "urn:sha:bd2d4e84f39479189e916ffbe310a3d2d84a073f182e445bdb543e0f" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "https://bluehub.jrc.ec.europa.eu/erddap/tabledap/ndbcSosWind.html" .
+

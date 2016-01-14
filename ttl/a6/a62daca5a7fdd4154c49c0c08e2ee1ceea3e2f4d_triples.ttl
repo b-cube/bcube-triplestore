@@ -1,0 +1,63 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:2fd01093-ab66-4fe4-a9e2-10b9c1a4d2c9> bcube:hasType "place" ;
+    bcube:hasValue "Colorado",
+        "Denver",
+        "Denver County",
+        "USA" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:4f031d3a-4aec-49f4-81a9-06060a5a1a24> owl:a foaf:Organization ;
+    foaf:name "" .
+
+<urn:uuid:994efb26-b1e0-410c-a4c7-963780ed66b1> bcube:dateCreated "2015-10-17T11:30:18.82Z" ;
+    bcube:hasMetadataRecord <urn:uuid:dae01890-dd82-49f6-9c29-f12123745a1d> ;
+    bcube:lastUpdated "2015-10-17T11:30:18.82Z" ;
+    dc:conformsTo <urn:uuid:2fd01093-ab66-4fe4-a9e2-10b9c1a4d2c9>,
+        <urn:uuid:f84e8d8a-cfb4-421c-a88d-dda55462c296> ;
+    dc:description "Mapping locations of the Public Art collection for the City and County of Denver." ;
+    dc:spatial "POLYGON ((-105.206928 39.652025,-105.206928 39.854608,-104.67171 39.854608,-104.67171 39.652025,-105.206928 39.652025))" ;
+    dcterms:publisher <urn:uuid:4f031d3a-4aec-49f4-81a9-06060a5a1a24> ;
+    dcterms:title "Public Art" ;
+    esip:eastBound "-104.67171"^^xsd:float ;
+    esip:northBound "39.854608"^^xsd:float ;
+    esip:southBound "39.652025"^^xsd:float ;
+    esip:westBound "-105.206928"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:dae01890-dd82-49f6-9c29-f12123745a1d> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-10-17T11:30:18.82Z" ;
+    bcube:lastUpdated "2015-10-17T11:30:18.82Z" ;
+    bcube:originatedFrom <urn:uuid:dc5f172e-e3b3-4dde-b4a6-f79db9e35d85> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:994efb26-b1e0-410c-a4c7-963780ed66b1> .
+
+<urn:uuid:dc5f172e-e3b3-4dde-b4a6-f79db9e35d85> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-10-17T11:30:18.82Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-10-17T11:30:18.82Z" ;
+    dc:identifier "urn:sha:2f6841311239f89b874be29a8dad0b638b646c10556e2e21c783d4ce" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://data.denvergov.org/download/gis/public_art/metadata/public_art.xml" .
+
+<urn:uuid:f84e8d8a-cfb4-421c-a88d-dda55462c296> bcube:hasType "theme" ;
+    bcube:hasValue "cultural" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+

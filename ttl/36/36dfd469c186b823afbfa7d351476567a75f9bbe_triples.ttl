@@ -1,0 +1,98 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:1d5fec64-19cb-4f4a-a5cb-c0308c4b92b8> owl:a foaf:Organization ;
+    foaf:name "" .
+
+<urn:uuid:2b62f9d4-dbf7-4785-94b7-9abd668fe71d> bcube:hasType "theme" ;
+    bcube:hasValue "Barrio",
+        "CCD",
+        "Census County Division",
+        "County Subdivision",
+        "County or equivalent entity",
+        "MCD",
+        "Minor Civil Division",
+        "Polygon",
+        "Subdivision",
+        "Town",
+        "Township",
+        "UT",
+        "Unorganized Territory" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:6de58762-244b-401d-80ea-ff2b11caa2c3> bcube:hasType "theme" ;
+    bcube:hasValue "boundaries" ;
+    dc:partOf "ISO 19115 Topic Categories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:8a003384-6084-4d8d-86fa-d638b7ca1486> bcube:hasType "place" ;
+    bcube:hasValue "01061",
+        "County or Equivalent Entity",
+        "Geneva",
+        "U.S.",
+        "United States" ;
+    dc:partOf "FIPS Publication 5-2, FIPS Publication 6-4, FIPS Publication 8-6, FIPS Publication 9-1,FIPS Publication55-4" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:908479dd-4569-4e98-9b3d-e42945c86db9> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-03T14:52:58.172Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-03T14:52:58.172Z" ;
+    dc:identifier "urn:sha:5c0fe18f1ae8b0184f96826407a188ec4aec56a8fce2cdc0dee7bd89" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www2.census.gov/geo/tiger/TIGER2008/01_ALABAMA/01061_Geneva_County/tl_2008_01061_cousub00.zip" .
+
+<urn:uuid:c1e200de-b3b3-4d7a-8162-37d85c49186f> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-11-03T14:52:58.172Z" ;
+    bcube:lastUpdated "2015-11-03T14:52:58.172Z" ;
+    bcube:originatedFrom <urn:uuid:d79d7207-000b-4d4f-9fbb-51ebbd25fb08> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:d57fc0a7-8ada-44b2-8955-6bc9c8211cda> .
+
+<urn:uuid:d57fc0a7-8ada-44b2-8955-6bc9c8211cda> bcube:dateCreated "2015-11-03T14:52:58.172Z" ;
+    bcube:hasMetadataRecord <urn:uuid:c1e200de-b3b3-4d7a-8162-37d85c49186f> ;
+    bcube:lastUpdated "2015-11-03T14:52:58.172Z" ;
+    dc:conformsTo <urn:uuid:2b62f9d4-dbf7-4785-94b7-9abd668fe71d>,
+        <urn:uuid:6de58762-244b-401d-80ea-ff2b11caa2c3>,
+        <urn:uuid:8a003384-6084-4d8d-86fa-d638b7ca1486> ;
+    dc:description "The TIGER/Line Shapefiles are an extract of selected geographic and cartographic information from the Census MAF/TIGER database. The Census MAF/TIGER database represents a seamless national file with no overlaps or gaps between parts. However, each TIGER/Line Shapefile is designed to stand alone as an independent data set or the shapefiles can be combined to cover the whole nation." ;
+    dc:spatial "POLYGON ((-86.193476 30.992859,-86.193476 31.199886,-85.485288 31.199886,-85.485288 30.992859,-86.193476 30.992859))" ;
+    dcterms:publisher <urn:uuid:1d5fec64-19cb-4f4a-a5cb-c0308c4b92b8> ;
+    dcterms:references <urn:uuid:908479dd-4569-4e98-9b3d-e42945c86db9> ;
+    dcterms:title "TIGER/Line Shapefile, 2008, 2000 county, Geneva County, AL, County Subdivision" ;
+    esip:eastBound "-85.485288"^^xsd:float ;
+    esip:endDate "2008-07-01"^^xsd:date ;
+    esip:northBound "31.199886"^^xsd:float ;
+    esip:southBound "30.992859"^^xsd:float ;
+    esip:startDate "2008-01-01"^^xsd:date ;
+    esip:westBound "-86.193476"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:d79d7207-000b-4d4f-9fbb-51ebbd25fb08> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-03T14:52:58.172Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-03T14:52:58.172Z" ;
+    dc:identifier "urn:sha:fb94d05dd1fc47d45ec6dde842e55e48aef1d6e2e723a05ec2268cef" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://meta.geo.census.gov/data/existing/decennial/GEO/GPMB/TIGERline/fe_2008/cousub00/tl_2008_01061_cousub00_url.shp.xml" .
+

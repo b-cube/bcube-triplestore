@@ -1,0 +1,134 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:21038744-b133-452b-b030-a18acbe4fbdc> bcube:hasType "project" ;
+    bcube:hasValue "NOAA NOS CO-OPS" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:4af9994f-fde5-462a-b411-f6597a468eb2> bcube:dateCreated "2015-10-31T22:17:45.812Z" ;
+    bcube:hasMetadataRecord <urn:uuid:521e1895-98dc-43fc-8aca-0b19e218f53e> ;
+    bcube:lastUpdated "2015-10-31T22:17:45.812Z" ;
+    dc:conformsTo <urn:uuid:21038744-b133-452b-b030-a18acbe4fbdc>,
+        <urn:uuid:78a25618-c132-47ec-9d6a-f0451b7a41de>,
+        <urn:uuid:82d610f7-0856-41d7-bf94-f0c6187fd844>,
+        <urn:uuid:8ee0b571-fae4-48a6-a3c8-489a5b27c4f8>,
+        <urn:uuid:bf21fc69-94a3-4a96-8e3b-1c4dfda30bf2> ;
+    dc:description "This dataset has Barometric Pressure data from NOAA NOS Center for Operational Oceanographic Products and Services (CO-OPS). WARNING: These preliminary data have not been subjected to the National Ocean Services (NOS) Quality Control procedures, and do not necessarily meet the criteria and standards of official NOS data. They are released for limited public use with appropriate caution. WARNING: * Queries for data MUST include stationID= and time>=. * Queries USUALLY include time<= (the default end time corresponds to 'now'). * Queries MUST be for less than 30 days worth of data. * The data source isn't completely reliable. If your request returns no data when you think it should: * Try revising the request (e.g., a different time range). * The list of stations offering this data may be incorrect. * Sometimes a station or the entire data service is unavailable. Wait a while and try again." ;
+    dc:identifier "nosCoopsMBP" ;
+    dc:spatial "POLYGON ((-177.3608 -14.2767,-177.3608 70.4114,167.7345 70.4114,167.7345 -14.2767,-177.3608 -14.2767))" ;
+    dcterms:references <urn:uuid:72634bd2-15ac-4a03-8678-a6ff5de9da55>,
+        <urn:uuid:b5a4bb8c-1c49-473c-9e75-ae556fbf8b4a> ;
+    dcterms:title "NOS CO-OPS Meteorological Data, Barometric Pressure, 6-Minute" ;
+    esip:eastBound "167.7345"^^xsd:float ;
+    esip:northBound "70.4114"^^xsd:float ;
+    esip:southBound "-14.2767"^^xsd:float ;
+    esip:westBound "-177.3608"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:521e1895-98dc-43fc-8aca-0b19e218f53e> a "ISO 19115:2003/19139" ;
+    bcube:dateCreated "2015-10-31T22:17:45.812Z" ;
+    bcube:lastUpdated "2015-10-31T22:17:45.812Z" ;
+    bcube:originatedFrom <urn:uuid:738fad4b-66a0-402a-b218-6d4ac43e7647> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:4af9994f-fde5-462a-b411-f6597a468eb2> .
+
+<urn:uuid:72634bd2-15ac-4a03-8678-a6ff5de9da55> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-10-31T22:17:45.812Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-10-31T22:17:45.812Z" ;
+    dc:identifier "urn:sha:8f1fd956d40185fffc7f7b3d419a13356d8be16f0cd8e8a6a71ae4d0" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://coastwatch.pfeg.noaa.gov/erddap/tabledap/nosCoopsMBP.html" .
+
+<urn:uuid:738fad4b-66a0-402a-b218-6d4ac43e7647> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-10-31T22:17:45.812Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-10-31T22:17:45.812Z" ;
+    dc:identifier "urn:sha:983e671059cc5f3ad1d2092d88d8b5d40f6579cfc783045cf881fe0b" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://coastwatch.pfeg.noaa.gov/erddap/metadata/iso19115/xml/nosCoopsMBP_iso19115.xml" .
+
+<urn:uuid:78a25618-c132-47ec-9d6a-f0451b7a41de> bcube:hasType "theme" ;
+    bcube:hasValue "6-minute",
+        "air",
+        "atmosphere",
+        "atmospheric",
+        "barometric",
+        "co-ops",
+        "collection",
+        "data",
+        "date",
+        "deployment",
+        "designation",
+        "established",
+        "flag",
+        "identifier",
+        "level",
+        "limit",
+        "measurements",
+        "meteorological",
+        "minute",
+        "name",
+        "noaa",
+        "nos",
+        "ops",
+        "platform",
+        "pressure",
+        "sea",
+        "sensor",
+        "shefID",
+        "state",
+        "static",
+        "station" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:82d610f7-0856-41d7-bf94-f0c6187fd844> bcube:hasValue "geoscientificInformation" ;
+    dc:partOf "IsoTopicCategories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:8ee0b571-fae4-48a6-a3c8-489a5b27c4f8> bcube:hasType "theme" ;
+    bcube:hasValue "Atmosphere > Atmospheric Pressure > Atmospheric Pressure Measurements",
+        "Atmosphere > Atmospheric Pressure > Sea Level Pressure",
+        "Atmosphere > Atmospheric Pressure > Static Pressure" ;
+    dc:partOf "GCMD Science Keywords" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:b5a4bb8c-1c49-473c-9e75-ae556fbf8b4a> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-10-31T22:17:45.812Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-10-31T22:17:45.812Z" ;
+    dc:identifier "urn:sha:7ed9589fc30b05d0940dc372930ccad64c7783865af750cd434ac721" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://coastwatch.pfeg.noaa.gov/erddap/tabledap/nosCoopsMBP.graph" .
+
+<urn:uuid:bf21fc69-94a3-4a96-8e3b-1c4dfda30bf2> bcube:hasType "theme" ;
+    bcube:hasValue "air_pressure",
+        "latitude",
+        "longitude",
+        "time" ;
+    dc:partOf "CF Standard Name Table v29" ;
+    owl:a bcube:thesaurusSubset .
+

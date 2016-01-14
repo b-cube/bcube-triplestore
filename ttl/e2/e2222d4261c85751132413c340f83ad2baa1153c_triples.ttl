@@ -1,0 +1,89 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:035ddf49-eb5c-43b2-adfa-90e11697a7d1> bcube:hasType "theme" ;
+    bcube:hasValue "agribusiness",
+        "agricultural drying",
+        "aquaculture",
+        "balneology",
+        "district heating",
+        "geothermal",
+        "geothermal heat pump",
+        "greenhouse",
+        "industrial",
+        "lindal diagram",
+        "low temperature",
+        "snow melting",
+        "space heating",
+        "usginres:document:text",
+        "worldwide" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:b29f9f33-7f7c-4c0b-9607-d4bed4ac52d7> bcube:hasType "place" ;
+    bcube:hasValue "Oregon" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:ba3b42a3-d885-4253-9784-ee0ff00a062f> a "ISO 19115:2003/19139" ;
+    bcube:dateCreated "2015-11-04T22:11:04.45Z" ;
+    bcube:lastUpdated "2015-11-04T22:11:04.45Z" ;
+    bcube:originatedFrom <urn:uuid:e2c85421-2ece-4a69-be7a-4c4d44293cbc> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:e5b4058d-40b7-463a-a857-e1314cbe2d14> .
+
+<urn:uuid:c26f913e-6af6-4b7a-a867-dd3c48a90606> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-04T22:11:04.45Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-04T22:11:04.45Z" ;
+    dc:identifier "urn:sha:9e2c2ef9bb518619d7e893545f078c62697e19c23b424d808ed33133" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://geoheat.oit.edu/pdf/tp130.pdf" .
+
+<urn:uuid:e2c85421-2ece-4a69-be7a-4c4d44293cbc> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-04T22:11:04.45Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-04T22:11:04.45Z" ;
+    dc:identifier "urn:sha:e5a92f3d0a550ab27136a5e0274e529e414cd07deb74cc6047f51004" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://repository.stategeothermaldata.org/resources/metadata/OIT/OIT_task1636/9fc15089-0a4c-4ac3-ac0c-a254710f9756.xml" .
+
+<urn:uuid:e5b4058d-40b7-463a-a857-e1314cbe2d14> bcube:dateCreated "2015-11-04T22:11:04.45Z" ;
+    bcube:hasMetadataRecord <urn:uuid:ba3b42a3-d885-4253-9784-ee0ff00a062f> ;
+    bcube:lastUpdated "2015-11-04T22:11:04.45Z" ;
+    dc:conformsTo <urn:uuid:035ddf49-eb5c-43b2-adfa-90e11697a7d1>,
+        <urn:uuid:b29f9f33-7f7c-4c0b-9607-d4bed4ac52d7>,
+        <urn:uuid:fbc9be2c-2f35-4830-971c-a7f1de2d6eb6> ;
+    dc:description "The Klamath Basin Brewing Company, located in Klamath Falls, Oregon, is the only known beer brewing company in the world that uses geothermal energy in their brewing process. The brewery opened in 2005 after renovating the historic Crater Lake Creamery Building, built in 1935. The building is now known as The Creamery Brewpub and Grill. The brewery currently brews about 10 different beers" ;
+    dc:spatial "POLYGON ((-124.6129365 41.9917941,-124.6129365 46.292,-116.463262 46.292,-116.463262 41.9917941,-124.6129365 41.9917941))" ;
+    dcterms:references <urn:uuid:c26f913e-6af6-4b7a-a867-dd3c48a90606> ;
+    dcterms:title "From Creamery to Brewing with Geothermal Energy: Klamath Basin Brewing Company" ;
+    esip:eastBound "-116.463262"^^xsd:float ;
+    esip:endDate "1900-01-01"^^xsd:date ;
+    esip:northBound "46.292"^^xsd:float ;
+    esip:southBound "41.9917941"^^xsd:float ;
+    esip:startDate "1900-01-01"^^xsd:date ;
+    esip:westBound "-124.6129365"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:fbc9be2c-2f35-4830-971c-a7f1de2d6eb6> bcube:hasValue "geoscientificInformation" ;
+    dc:partOf "IsoTopicCategories" ;
+    owl:a bcube:thesaurusSubset .
+

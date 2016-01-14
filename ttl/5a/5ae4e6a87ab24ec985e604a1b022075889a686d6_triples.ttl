@@ -1,0 +1,92 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:0a57d1a4-009a-4725-8dfb-935d31d8eb26> bcube:hasType "theme" ;
+    bcube:hasValue "Communities at Risk",
+        "Fire",
+        "Fire Ignition",
+        "Fire Weather",
+        "Humidity",
+        "ROS",
+        "Rate of Spread",
+        "Temperature",
+        "Wildfire",
+        "Wildland Fire",
+        "Wildland Fire Risk",
+        "Wind" ;
+    dc:partOf "BLM-Theme" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:26a653fa-408a-4af6-b9d8-7f6d55b91121> bcube:hasType "theme" ;
+    bcube:hasValue "Idaho State Fire Plan" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:2aabd028-1d43-468e-a40a-98870a01e749> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-10-30T11:01:59.858Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-10-30T11:01:59.858Z" ;
+    dc:identifier "urn:sha:11daaf1b1fb7c736d39f6a937fe297da7d2e910660b69e62e7a440a1" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://cloud.insideidaho.org/webApps/util/zip.ashx?fn=http://cloud.insideidaho.org/data/blm/fireHazardRisk/relfirerk_blm" .
+
+<urn:uuid:3797d640-5cab-4ee2-ba71-f944a75226de> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-10-30T11:01:59.858Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-10-30T11:01:59.858Z" ;
+    dc:identifier "urn:sha:8baed58c0d8b8fc10f0ecbb1623fd25df66204924262f64a14cfec86" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "https://catalog.data.gov/harvest/object/9c8cffee-2896-4c39-98de-5664e2fab5e5" .
+
+<urn:uuid:3be4d784-11e6-4812-8873-edaf30e9c10c> bcube:hasType "place" ;
+    bcube:hasValue "Idaho" ;
+    dc:partOf "BLM-Theme" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:7615e062-bbae-4d36-a6e5-5f85d42fc4ac> bcube:hasValue "biota" ;
+    dc:partOf "IsoTopicCategories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:a4fe3916-2461-4024-862a-b309396bd472> a "ISO 19115:2003/19139" ;
+    bcube:dateCreated "2015-10-30T11:01:59.858Z" ;
+    bcube:lastUpdated "2015-10-30T11:01:59.858Z" ;
+    bcube:originatedFrom <urn:uuid:3797d640-5cab-4ee2-ba71-f944a75226de> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:c722cc8b-cf64-4c5e-befb-ae81cb970bf1> .
+
+<urn:uuid:c722cc8b-cf64-4c5e-befb-ae81cb970bf1> bcube:dateCreated "2015-10-30T11:01:59.858Z" ;
+    bcube:hasMetadataRecord <urn:uuid:a4fe3916-2461-4024-862a-b309396bd472> ;
+    bcube:lastUpdated "2015-10-30T11:01:59.858Z" ;
+    dc:conformsTo <urn:uuid:0a57d1a4-009a-4725-8dfb-935d31d8eb26>,
+        <urn:uuid:26a653fa-408a-4af6-b9d8-7f6d55b91121>,
+        <urn:uuid:3be4d784-11e6-4812-8873-edaf30e9c10c>,
+        <urn:uuid:7615e062-bbae-4d36-a6e5-5f85d42fc4ac> ;
+    dc:description "Relative Wildland Fire Risk (i.e., the likelihood that a given area will burn) was analyzed by integrating fire ignition data, fire weather data (e.g., temperature, humidity, wind), and potential rate-of-spread considering the dominant surface fuel model. It was assumed that areas were more likely to experience wildland fire if they were in locations having: (1) a higher ignition probability; (2) a higher frequency of extreme fire weather; and (3) fuels having higher rates-of-spread (ROS). All three variables contribute equally to burn probability. Also it was assumed that wildland fires do not occur on the following land cover classes; agriculture, rock, urban, and water. There were five classes rating relative wildland fire risk in Idaho from \"low\" to \"high\". Areas rated as \"high\" are likely to have more fire ignitions, higher rates of spread, and are relatively hotter, drier, and windier in August. Relative Wildland Fire Risk = (Potential Fire Weather+Ignition Probability+ROS)/3 The derivation of each of these components to generate Relative Wildland Fire Risk is described in the metadata for each of those components." ;
+    dc:spatial "POLYGON ((-117.568245 41.920974,-117.568245 49.05736,-110.622168 49.05736,-110.622168 41.920974,-117.568245 41.920974))" ;
+    dcterms:references <urn:uuid:2aabd028-1d43-468e-a40a-98870a01e749> ;
+    dcterms:title "Wildland Relative Fire Risk" ;
+    esip:eastBound "-110.622168"^^xsd:float ;
+    esip:northBound "49.05736"^^xsd:float ;
+    esip:southBound "41.920974"^^xsd:float ;
+    esip:westBound "-117.568245"^^xsd:float ;
+    owl:a dcat:Dataset .
+

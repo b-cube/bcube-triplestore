@@ -1,0 +1,95 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:04a62da2-aeee-4303-b6fb-789b1e0d3b94> bcube:hasType "place" ;
+    bcube:hasValue "World" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:1d95f411-c5c3-4d40-aa53-0b21e0e47c80> bcube:hasType "theme" ;
+    bcube:hasValue "area",
+        "boundaries",
+        "coastlines",
+        "countries",
+        "currencies",
+        "international boundaries",
+        "international codes",
+        "landlocked information",
+        "polygon",
+        "population",
+        "society",
+        "sovereignties" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:382cf76c-be94-4ff1-aee8-8b994a9dda7b> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-07-16T12:36:06.429Z" ;
+    bcube:lastUpdated "2015-07-16T12:36:06.429Z" ;
+    bcube:originatedFrom <urn:uuid:f83f7ffc-ddfc-4ad8-8583-a1fb235b88e8> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:7d79bf32-31b3-4af3-ac47-3179c16654c9> .
+
+<urn:uuid:7d79bf32-31b3-4af3-ac47-3179c16654c9> bcube:dateCreated "2015-07-16T12:36:06.429Z" ;
+    bcube:hasMetadataRecord <urn:uuid:382cf76c-be94-4ff1-aee8-8b994a9dda7b> ;
+    bcube:lastUpdated "2015-07-16T12:36:06.429Z" ;
+    dc:conformsTo <urn:uuid:04a62da2-aeee-4303-b6fb-789b1e0d3b94>,
+        <urn:uuid:1d95f411-c5c3-4d40-aa53-0b21e0e47c80>,
+        <urn:uuid:a76808c2-3bfb-49af-9f73-3aa7afaa9b05> ;
+    dc:description "World Countries 2002 represents the boundaries for the countries of the world, as they existed in 2002." ;
+    dc:spatial "POLYGON ((-180 -90,-180.0 83.623596,180.0 83.623596,180 -90,-180 -90))" ;
+    dcterms:publisher <urn:uuid:bb56c8d4-dc27-4623-867b-0f6b81fa6dbe> ;
+    dcterms:references <urn:uuid:983901cc-5eea-415d-b789-673adc9315e3> ;
+    dcterms:title "World Countries 2002" ;
+    esip:eastBound "180.0"^^xsd:float ;
+    esip:northBound "83.623596"^^xsd:float ;
+    esip:southBound "-90.0"^^xsd:float ;
+    esip:westBound "-180.0"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:983901cc-5eea-415d-b789-673adc9315e3> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-07-16T12:36:06.429Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-07-16T12:36:06.429Z" ;
+    dc:identifier "urn:sha:d14a028c2a3a2bc9476102bb288234c415a2b01f828ea62ac5b3e42f" ;
+    owl:a bcube:Url .
+
+<urn:uuid:a76808c2-3bfb-49af-9f73-3aa7afaa9b05> bcube:hasType "temporal" ;
+    bcube:hasValue "1993/1994",
+        "1994",
+        "1996",
+        "1998",
+        "2000",
+        "2001" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:bb56c8d4-dc27-4623-867b-0f6b81fa6dbe> owl:a foaf:Organization ;
+    foaf:name "Environmental Systems Research Institute, Inc. (ESRI)" .
+
+<urn:uuid:f83f7ffc-ddfc-4ad8-8583-a1fb235b88e8> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-07-16T12:36:06.429Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-07-16T12:36:06.429Z" ;
+    dc:identifier "urn:sha:8ed677780eb0244d390f9725427899f05416e91bef0fe7c319f26fd4" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://floodobservatory.colorado.edu/SurfaceWaterArchive/050e030n/mapinfofiles/cntry02.shp.xml" .
+

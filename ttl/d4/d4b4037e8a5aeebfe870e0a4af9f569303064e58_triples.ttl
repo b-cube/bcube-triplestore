@@ -1,0 +1,89 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:03de54fa-f01d-413a-b14d-14f04e5799cd> owl:a foaf:Organization ;
+    foaf:name "" .
+
+<urn:uuid:0bb3499b-9964-4af3-b4ed-531a82de180b> bcube:hasType "place" ;
+    bcube:hasValue "02050",
+        "Bethel",
+        "County or Equivalent Entity",
+        "U.S.",
+        "United States" ;
+    dc:partOf "ANSI INCITS 38:2009 (Formerly FIPS 5-2), ANSI INCITS 31:2009 (Formerly FIPS 6-4),ANSI INCITS 454:2009 (Formerly FIPS 8-6), ANSI INCITS 455:2009(Formerly FIPS 9-1), ANSI INCITS 446:2008 (Geographic Names Information System (GNIS))" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:213fdadd-c517-4467-aee7-4a7dd4f88163> bcube:hasType "theme" ;
+    bcube:hasValue "County or equivalent entity",
+        "Feature",
+        "Hydrography",
+        "Linear" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:8e0ff2ab-4a9b-42d9-9c3a-8b807114d843> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-05T07:24:57.169Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-05T07:24:57.169Z" ;
+    dc:identifier "urn:sha:bbaf5e76a73d10a23e41184f80faf5febbafba15890d55e78010f841" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://meta.geo.census.gov/data/existing/decennial/GEO/GPMB/TIGERline/TL2012/FGDC/linearwater/tl_2012_02050_linearwater.shp.xml" .
+
+<urn:uuid:a6c7fba1-3a93-4af2-8ded-dfefd73fc203> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-11-05T07:24:57.169Z" ;
+    bcube:lastUpdated "2015-11-05T07:24:57.169Z" ;
+    bcube:originatedFrom <urn:uuid:8e0ff2ab-4a9b-42d9-9c3a-8b807114d843> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:a702dd40-107f-4e20-a63f-27c38100c2ef> .
+
+<urn:uuid:a702dd40-107f-4e20-a63f-27c38100c2ef> bcube:dateCreated "2015-11-05T07:24:57.169Z" ;
+    bcube:hasMetadataRecord <urn:uuid:a6c7fba1-3a93-4af2-8ded-dfefd73fc203> ;
+    bcube:lastUpdated "2015-11-05T07:24:57.169Z" ;
+    dc:conformsTo <urn:uuid:0bb3499b-9964-4af3-b4ed-531a82de180b>,
+        <urn:uuid:213fdadd-c517-4467-aee7-4a7dd4f88163>,
+        <urn:uuid:b210956b-75ad-46c1-a0ab-860193972fbe> ;
+    dc:description "The TIGER/Line shapefiles and related database files (.dbf) are an extract of selected geographic and cartographic information from the U.S. Census Bureau's Master Address File / Topologically Integrated Geographic Encoding and Referencing (MAF/TIGER) Database (MTDB). The MTDB represents a seamless national file with no overlaps or gaps between parts, however, each TIGER/Line shapefile is designed to stand alone as an independent data set, or they can be combined to cover the entire nation. Linear Water Features includes single-line drainage water features and artificial path features that run through double-line drainage features such as rivers and streams, and serve as a linear representation of these features. The artificial path features may correspond to those in the USGS National Hydrographic Dataset (NHD). However, in many cases the features do not match NHD equivalent feature and will not carry the NHD metadata codes. These features have a MAF/TIGER Feature Classification Code (MTFCC) beginning with an \"H\" to indicate the super class of Hydrographic Features." ;
+    dc:spatial "POLYGON ((-173.23683 58.496019,-173.23683 62.295331,-153.001051 62.295331,-153.001051 58.496019,-173.23683 58.496019))" ;
+    dcterms:publisher <urn:uuid:03de54fa-f01d-413a-b14d-14f04e5799cd> ;
+    dcterms:references <urn:uuid:cca600b1-7c33-482f-b62a-1dc615d9a8a2> ;
+    dcterms:title "TIGER/Line Shapefile, 2012, county, Bethel Census Area, AK, Linear Hydrography County-based Shapefile" ;
+    esip:eastBound "-153.001051"^^xsd:float ;
+    esip:endDate "2012-06-01"^^xsd:date ;
+    esip:northBound "62.295331"^^xsd:float ;
+    esip:southBound "58.496019"^^xsd:float ;
+    esip:startDate "2011-08-01"^^xsd:date ;
+    esip:westBound "-173.23683"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:b210956b-75ad-46c1-a0ab-860193972fbe> bcube:hasType "theme" ;
+    bcube:hasValue "InlandWaters" ;
+    dc:partOf "ISO 19115 Topic Categories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:cca600b1-7c33-482f-b62a-1dc615d9a8a2> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-05T07:24:57.169Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-05T07:24:57.169Z" ;
+    dc:identifier "urn:sha:5f41d16749623df9d2c58185d0138b98142ba8f700649d9f478ac9e4" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www2.census.gov/geo/tiger/TIGER2012/LINEARWATER/tl_2012_02050_linearwater.zip" .
+

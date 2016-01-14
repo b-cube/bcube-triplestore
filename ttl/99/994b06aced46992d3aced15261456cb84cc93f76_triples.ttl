@@ -1,0 +1,100 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:1fa77027-cf62-4aeb-abdb-20ce02c6dbbf> bcube:hasType "place" ;
+    bcube:hasValue "global",
+        "marine",
+        "ocean" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:25cfd105-14ab-49ec-a71f-8be4812a7393> bcube:hasType "temporal" ;
+    bcube:hasValue "2007",
+        "2008",
+        "current" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:6b3a12b4-41bb-466f-b3e7-1f3b93435894> owl:a foaf:Organization ;
+    foaf:name "Science" .
+
+<urn:uuid:8b7fbf5e-63c2-49ca-8dce-fd6b3b65001f> bcube:hasType "theme" ;
+    bcube:hasValue "global",
+        "impact",
+        "marine",
+        "modeling" ;
+    dc:partOf "REQUIRED: Reference to a formally registered thesaurus or a similar authoritative source of theme keywords." ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:912f6f4d-26d3-4d3a-8d08-ea7083bef56d> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-07-22T18:34:22.223Z" ;
+    bcube:lastUpdated "2015-07-22T18:34:22.223Z" ;
+    bcube:originatedFrom <urn:uuid:d7c4a206-bfef-4ab5-af16-9bf058fe4a86> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:d57fe7bc-9871-4862-a44b-eac82480d11b> .
+
+<urn:uuid:93d8db0b-9847-48fc-ad7a-eefee0c77419> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-07-22T18:34:22.223Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-07-22T18:34:22.223Z" ;
+    dc:identifier "urn:sha:d14a028c2a3a2bc9476102bb288234c415a2b01f828ea62ac5b3e42f" ;
+    owl:a bcube:Url .
+
+<urn:uuid:b402ef25-09ed-4eca-b781-a1df34bd70b0> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-07-22T18:34:22.223Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-07-22T18:34:22.223Z" ;
+    dc:identifier "urn:sha:cfabea7e782945211b7015f01884cb1e4036e35abe3ef2a449462e6c" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "\\\\\\\\\\\\\\\\ebm\\\\\\\\homes\\\\\\\\data\\\\\\\\marine_threats\\\\\\\\data\\\\\\\\completed\\\\\\\\impacts ransformed\\\\\\\\shipping\\\\\\\\grid\\\\\\\\shipping" .
+
+<urn:uuid:d57fe7bc-9871-4862-a44b-eac82480d11b> bcube:dateCreated "2015-07-22T18:34:22.223Z" ;
+    bcube:hasMetadataRecord <urn:uuid:912f6f4d-26d3-4d3a-8d08-ea7083bef56d> ;
+    bcube:lastUpdated "2015-07-22T18:34:22.223Z" ;
+    dc:conformsTo <urn:uuid:1fa77027-cf62-4aeb-abdb-20ce02c6dbbf>,
+        <urn:uuid:25cfd105-14ab-49ec-a71f-8be4812a7393>,
+        <urn:uuid:8b7fbf5e-63c2-49ca-8dce-fd6b3b65001f> ;
+    dc:description "Commercial shipping activity can lead to ship strikes of large animals, noise pollution, and a risk of ship groundings or sinkings. Ships from many countries voluntarily participate in collecting meteorological data globally, and therefore also 7 report the location of the ship. We used data collected from 12 months beginning October 2004 (collected as part of the World Meteorological Organization Voluntary Observing Ships Scheme; http://www.vos.noaa.gov/vos_scheme.shtml) as this year had the most ships with vetted protocols and so provides the most representative estimate of global ship locations. The data include unique identifier codes for ships (mobile or a single datum) and stationary buoys and oil platforms (multiple data at a fixed location); we removed all stationary and single point ship data, leaving 1,189,127 mobile ship data points from a total of 3,374 commercial and research vessels, representing roughly 11% of the 30,851 merchant ships >1000 gross tonnage at sea in 2005 (S14). We then connected all mobile ship data to create ship tracks, under the assumption that ships travel in straight lines (a reasonable assumption since ships minimize travel distance in an effort to minimize fuel costs). Finally, we removed any tracks that crossed land (e.g. a single ship that records its location in the Atlantic and the Pacific would have a track connected across North America), buffered the remaining 799,853 line segments to be 1 km wide to account for the width of shipping lanes, summed all buffered line segments to account for overlapping ship tracks, and converted summed ship tracks to raster data. This produced 1 km2 raster cells with values ranging from 0 to 1,158, the maximum number of ship tracks recorded in a single 1 km2 cell. Because the VOS program is voluntary, much commercial shipping traffic is not captured by these data. Therefore our estimates of the impact of shipping are biased (in an unknown way) to locations and types of ships engaged in the program. In particular, high traffic locations may be strongly underestimated, although the relative impact on these areas versus low-traffic areas appears to be well-captured by the available data (Fig. S2), and areas identified as without shipping may actually have low levels of ship traffic. Furthermore, because ships report their location with varying distance between signals, ship tracks are estimates of the actual shipping route taken." ;
+    dc:spatial "POLYGON ((-180 -90,-180 90,180 90,180 -90,-180 -90))" ;
+    dcterms:publisher <urn:uuid:6b3a12b4-41bb-466f-b3e7-1f3b93435894> ;
+    dcterms:references <urn:uuid:93d8db0b-9847-48fc-ad7a-eefee0c77419>,
+        <urn:uuid:d6163459-27da-4c09-8533-594f5d24b827> ;
+    dcterms:title "Commercial Activity {Shipping} (transformed)" ;
+    esip:eastBound "180.0"^^xsd:float ;
+    esip:northBound "90.0"^^xsd:float ;
+    esip:southBound "-90.0"^^xsd:float ;
+    esip:westBound "-180.0"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:d6163459-27da-4c09-8533-594f5d24b827> dcterms:references <urn:uuid:b402ef25-09ed-4eca-b781-a1df34bd70b0> ;
+    owl:a bibo:WebPage .
+
+<urn:uuid:d7c4a206-bfef-4ab5-af16-9bf058fe4a86> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-07-22T18:34:22.223Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-07-22T18:34:22.223Z" ;
+    dc:identifier "urn:sha:70bae968d843f35aefff4cea1a8d66fd74318d6cf197ffb72c50c3cd" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://neptune.nceas.ucsb.edu/cumimpacts2008/impacts/transformed/fgdc/shipping.xml" .
+

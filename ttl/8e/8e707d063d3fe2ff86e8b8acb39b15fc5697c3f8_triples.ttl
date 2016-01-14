@@ -1,0 +1,80 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:50959fba-dfa2-4aef-8810-57945268d670> bcube:hasType "theme" ;
+    bcube:hasValue "NPDES",
+        "discharge",
+        "pollutant" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:5174b67a-5156-4483-b30e-95d02b425973> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-07T03:00:30.029Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-07T03:00:30.029Z" ;
+    dc:identifier "urn:sha:d14a028c2a3a2bc9476102bb288234c415a2b01f828ea62ac5b3e42f" ;
+    owl:a bcube:Url .
+
+<urn:uuid:6d75cb2e-22ca-4b8f-a120-42aae264db62> owl:a foaf:Organization ;
+    foaf:name "Washington State Department of Transportation" .
+
+<urn:uuid:8dd442f9-55a8-45cb-92ea-0e18c33fa863> bcube:hasType "place" ;
+    bcube:hasValue "Pacific Northwest",
+        "USA",
+        "United States",
+        "WA",
+        "Washington" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:8e17bb50-5e30-4a51-8c58-e41bf4f630e7> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-07T03:00:30.029Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-07T03:00:30.029Z" ;
+    dc:identifier "urn:sha:8736ffa3fe20681b3b462443ed05815456e55a55ff62e1b6225db574" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www.idwr.idaho.gov/ftp/gisdata/Spatial/Projects/SpokaneRathdrum/Measurement/npdes/WA/npdes_is_shp_shp.shp.xml" .
+
+<urn:uuid:af2267ab-ba61-4e56-91b2-66ee8edf2610> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-08-07T03:00:30.029Z" ;
+    bcube:lastUpdated "2015-08-07T03:00:30.029Z" ;
+    bcube:originatedFrom <urn:uuid:8e17bb50-5e30-4a51-8c58-e41bf4f630e7> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:b131b4bf-6d30-4f5f-89eb-b3b70975fd52> .
+
+<urn:uuid:b131b4bf-6d30-4f5f-89eb-b3b70975fd52> bcube:dateCreated "2015-08-07T03:00:30.029Z" ;
+    bcube:hasMetadataRecord <urn:uuid:af2267ab-ba61-4e56-91b2-66ee8edf2610> ;
+    bcube:lastUpdated "2015-08-07T03:00:30.029Z" ;
+    dc:conformsTo <urn:uuid:50959fba-dfa2-4aef-8810-57945268d670>,
+        <urn:uuid:8dd442f9-55a8-45cb-92ea-0e18c33fa863> ;
+    dc:description "Polygons depict National Pollutant Discharge Elimination System (NPDES) Permit Areas in Washington State. NPDES Permit Areas are areas holding permits to discharge municipal and industrial wastes to surface water. This data set includes ESRI shape files for each of Washington State's NPDES Permit Areas: Cedar/Green (npdes-cg), Clark County (npdes-cl), Island/Snohomish County (npdes-is), South Puget Sound (npdes-ps), and Spokane County (npdes-sp)." ;
+    dc:spatial "POLYGON ((-122.453271 47.34903,-122.453271 48.298708,-120.906714 48.298708,-120.906714 47.34903,-122.453271 47.34903))" ;
+    dcterms:publisher <urn:uuid:6d75cb2e-22ca-4b8f-a120-42aae264db62> ;
+    dcterms:references <urn:uuid:5174b67a-5156-4483-b30e-95d02b425973> ;
+    dcterms:title "Name of the National Pollutant Discharge Elimination System Permit area." ;
+    esip:eastBound "-120.906714"^^xsd:float ;
+    esip:northBound "48.298708"^^xsd:float ;
+    esip:southBound "47.34903"^^xsd:float ;
+    esip:startDate "1996-01-01"^^xsd:date ;
+    esip:westBound "-122.453271"^^xsd:float ;
+    owl:a dcat:Dataset .
+

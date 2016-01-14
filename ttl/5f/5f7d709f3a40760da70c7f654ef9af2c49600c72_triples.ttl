@@ -1,0 +1,138 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:190a9e1d-2f0c-4f1e-b318-22de27a2154b> bcube:hasType "theme" ;
+    bcube:hasValue "latitude",
+        "longitude",
+        "relative_humidity",
+        "time" ;
+    dc:partOf "CF Standard Name Table v29" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:2e619a7c-c6d6-4f93-956d-03369d8b8f6d> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-10-28T02:41:47.039Z" ;
+    bcube:lastUpdated "2015-10-28T02:41:47.039Z" ;
+    bcube:originatedFrom <urn:uuid:ea18ce15-b241-460f-ab65-1c44d1cf2fd8> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:69e0ba63-565b-4981-9b4a-a7263b29220c> .
+
+<urn:uuid:3f99d01c-499c-4d9c-b296-5f7cfd97370b> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-10-28T02:41:47.039Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-10-28T02:41:47.039Z" ;
+    dc:identifier "urn:sha:919451561c606202cfac774966bfa3f427715a4fb12d7e0ba10b7aa3" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://coastwatch.pfeg.noaa.gov/erddap/tabledap/nosCoopsMRH.html" .
+
+<urn:uuid:5558db14-33ae-421c-8439-a4387664cf43> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-10-28T02:41:47.039Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-10-28T02:41:47.039Z" ;
+    dc:identifier "urn:sha:a2867ff5908f8ac81c7cb717a476631df99b32b1bcef1fdbd0a3b5fb" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://coastwatch.pfeg.noaa.gov/erddap/tabledap/nosCoopsMRH.subset" .
+
+<urn:uuid:69e0ba63-565b-4981-9b4a-a7263b29220c> bcube:dateCreated "2015-10-28T02:41:47.039Z" ;
+    bcube:hasMetadataRecord <urn:uuid:2e619a7c-c6d6-4f93-956d-03369d8b8f6d> ;
+    bcube:lastUpdated "2015-10-28T02:41:47.039Z" ;
+    dc:conformsTo <urn:uuid:190a9e1d-2f0c-4f1e-b318-22de27a2154b>,
+        <urn:uuid:a0341803-e2f5-40bf-9a7a-fe2020bf1d3f> ;
+    dc:description "This dataset has Relative Humidity data from NOAA NOS Center for Operational Oceanographic Products and Services (CO-OPS). WARNING: These preliminary data have not been subjected to the National Ocean Services (NOS) Quality Control procedures, and do not necessarily meet the criteria and standards of official NOS data. They are released for limited public use with appropriate caution. WARNING: * Queries for data MUST include stationID= and time>=. * Queries USUALLY include time<= (the default end time corresponds to 'now'). * Queries MUST be for less than 30 days worth of data. * The data source isn't completely reliable. If your request returns no data when you think it should: * Try revising the request (e.g., a different time range). * The list of stations offering this data may be incorrect. * Sometimes a station or the entire data service is unavailable. Wait a while and try again." ;
+    dc:spatial "POLYGON ((-122.3971 18.3353,-122.3971 47.7478,-65.6311 47.7478,-65.6311 18.3353,-122.3971 18.3353))" ;
+    dcterms:publisher <urn:uuid:bfa5755c-21bb-4546-816a-21ea16ec49e6> ;
+    dcterms:references <urn:uuid:3f99d01c-499c-4d9c-b296-5f7cfd97370b>,
+        <urn:uuid:8e78efb3-264c-428c-a97c-de55d831db5c>,
+        <urn:uuid:b08dc14f-f873-463d-a56f-125dee4d03ef> ;
+    dcterms:title "NOS CO-OPS Meteorological Data, Relative Humidity, 6-Minute" ;
+    esip:eastBound "-65.6311"^^xsd:float ;
+    esip:northBound "47.7478"^^xsd:float ;
+    esip:southBound "18.3353"^^xsd:float ;
+    esip:westBound "-122.3971"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:8e78efb3-264c-428c-a97c-de55d831db5c> dcterms:references <urn:uuid:5558db14-33ae-421c-8439-a4387664cf43> ;
+    owl:a bibo:WebPage .
+
+<urn:uuid:a0341803-e2f5-40bf-9a7a-fe2020bf1d3f> bcube:hasType "theme" ;
+    bcube:hasValue "6-minute",
+        "Atmosphere > Atmospheric Water Vapor > Humidity",
+        "atmosphere",
+        "atmospheric",
+        "co-ops",
+        "collection",
+        "data",
+        "date",
+        "deployment",
+        "designation",
+        "established",
+        "flag",
+        "humidity",
+        "identifier",
+        "limit",
+        "meteorological",
+        "meteorology",
+        "minute",
+        "name",
+        "noaa",
+        "nos",
+        "ops",
+        "platform",
+        "relative",
+        "relative_humidity",
+        "sensor",
+        "shefID",
+        "shef_id",
+        "state",
+        "station",
+        "time",
+        "vapor",
+        "water" ;
+    dc:partOf "GCMD Science Keywords" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:b08dc14f-f873-463d-a56f-125dee4d03ef> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-10-28T02:41:47.039Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-10-28T02:41:47.039Z" ;
+    dc:identifier "urn:sha:79e029da2eff8900e18e8ca7c3b8a0b1f50d68563dc4eb2f861cb058" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://coastwatch.pfeg.noaa.gov/erddap/tabledap/nosCoopsMRH.graph" .
+
+<urn:uuid:bfa5755c-21bb-4546-816a-21ea16ec49e6> owl:a foaf:Organization ;
+    foaf:name "ERDDAP, version 1.65, at NOAA NMFS SWFSC Environmental Research Division" .
+
+<urn:uuid:ea18ce15-b241-460f-ab65-1c44d1cf2fd8> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-10-28T02:41:47.039Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-10-28T02:41:47.039Z" ;
+    dc:identifier "urn:sha:fed5311162b386d6576cef343b4a7a77d09f065b2304508c78b4041a" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://coastwatch.pfeg.noaa.gov/erddap/tabledap/nosCoopsMRH.fgdc" .
+

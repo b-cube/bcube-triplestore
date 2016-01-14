@@ -1,0 +1,74 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:1b47bb33-c082-4390-87b4-ba102a0d90c8> bcube:hasType "place" ;
+    bcube:hasValue "Hawaiian Islands" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:3909ed30-9219-444e-b326-48d684130d6d> bcube:hasType "temporal" ;
+    bcube:hasValue "1 week a year",
+        "August",
+        "Continuous for 20 minute segments" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:813b59fc-4dee-44c4-a8d8-ec7a9c526775> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-05T01:11:57.956Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-05T01:11:57.956Z" ;
+    dc:identifier "urn:sha:5201f2606e5515eedc1c6beba3dd7d98d1981c6b07cfc2222e6ae729" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "https://inport.nmfs.noaa.gov/inport/item/5588/fgdc" .
+
+<urn:uuid:8911df10-e478-4505-b173-8e9103b6cfa0> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-08-05T01:11:57.956Z" ;
+    bcube:lastUpdated "2015-08-05T01:11:57.956Z" ;
+    bcube:originatedFrom <urn:uuid:813b59fc-4dee-44c4-a8d8-ec7a9c526775> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:8c24a47f-6488-4b34-b0ef-b5fcc507bc84> .
+
+<urn:uuid:8c24a47f-6488-4b34-b0ef-b5fcc507bc84> bcube:dateCreated "2015-08-05T01:11:57.956Z" ;
+    bcube:hasMetadataRecord <urn:uuid:8911df10-e478-4505-b173-8e9103b6cfa0> ;
+    bcube:lastUpdated "2015-08-05T01:11:57.956Z" ;
+    dc:conformsTo <urn:uuid:1b47bb33-c082-4390-87b4-ba102a0d90c8>,
+        <urn:uuid:3909ed30-9219-444e-b326-48d684130d6d>,
+        <urn:uuid:f9752b5e-c649-442f-9fc7-54c245bac248> ;
+    dc:description "These data contains video of fish surveys conducted by divers in the black coral beds off of Lahaina Maui." ;
+    dc:spatial "POLYGON ((-160 20,-160 25,-155 25,-155 20,-160 20))" ;
+    dcterms:identifier "gov.noaa.nmfs.inport:5588" ;
+    dcterms:publisher <urn:uuid:ca32e747-35c9-4616-90f2-522ccc645a23> ;
+    dcterms:title "EOD Black Corals Survey" ;
+    esip:eastBound "-155.0"^^xsd:float ;
+    esip:endDate "2007-09-01"^^xsd:date ;
+    esip:northBound "25.0"^^xsd:float ;
+    esip:southBound "20.0"^^xsd:float ;
+    esip:startDate "2000-08-01"^^xsd:date ;
+    esip:westBound "-160.0"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:ca32e747-35c9-4616-90f2-522ccc645a23> owl:a foaf:Organization ;
+    foaf:name "" .
+
+<urn:uuid:f9752b5e-c649-442f-9fc7-54c245bac248> bcube:hasType "theme" ;
+    bcube:hasValue "Black Coral",
+        "Fish Assemblages",
+        "Precious Coral fishery" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+

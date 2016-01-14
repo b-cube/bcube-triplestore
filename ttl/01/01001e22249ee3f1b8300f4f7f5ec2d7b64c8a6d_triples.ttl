@@ -1,0 +1,72 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:1d9c6bc4-28f6-4f13-bf85-9358707a66c8> a "ISO 19115:2003/19139" ;
+    bcube:dateCreated "2015-08-06T20:17:48.214Z" ;
+    bcube:lastUpdated "2015-08-06T20:17:48.214Z" ;
+    bcube:originatedFrom <urn:uuid:65808728-4f60-490b-b707-a47ecea2d2ab> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:dc061823-646e-4230-b2da-28d71d5e9c49> .
+
+<urn:uuid:4ea2d325-46da-46aa-9012-3aac55675ea5> bcube:hasType "place" ;
+    bcube:hasValue "King County",
+        "Redmond",
+        "US",
+        "Washington" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:65808728-4f60-490b-b707-a47ecea2d2ab> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-06T20:17:48.214Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-06T20:17:48.214Z" ;
+    dc:identifier "urn:sha:78d09538bb33a0327eb69e2a8d456e182b88df9f397afa596b3a333e" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://coast.noaa.gov/data/Documents/Metadata/isoharvest/Lidar/var/tmp/wa2014_pslc_redmond_m4735_ISOmetadata_cleaned.xml" .
+
+<urn:uuid:a64486b3-4382-4cb2-9a72-0113866f447d> bcube:hasValue "elevation" ;
+    dc:partOf "IsoTopicCategories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:bb95310e-3916-4b6f-bfe6-f2c60ef16b1b> bcube:hasType "theme" ;
+    bcube:hasValue "Elevation",
+        "LAS",
+        "LiDAR",
+        "Model",
+        "Remote Sensing",
+        "Topography/Bathymetry" ;
+    dc:partOf "none" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:dc061823-646e-4230-b2da-28d71d5e9c49> bcube:dateCreated "2015-08-06T20:17:48.214Z" ;
+    bcube:hasMetadataRecord <urn:uuid:1d9c6bc4-28f6-4f13-bf85-9358707a66c8> ;
+    bcube:lastUpdated "2015-08-06T20:17:48.214Z" ;
+    dc:conformsTo <urn:uuid:4ea2d325-46da-46aa-9012-3aac55675ea5>,
+        <urn:uuid:a64486b3-4382-4cb2-9a72-0113866f447d>,
+        <urn:uuid:bb95310e-3916-4b6f-bfe6-f2c60ef16b1b> ;
+    dc:description "In February 2014, Quantum Spatial (QSI) was contracted by the Puget Sound LiDAR Consortium (PSLC) to collect Light Detection and Ranging (LiDAR) data for the City of Redmond site in western Washington. Data were collected to aid PSLC in assessing the topographic and geophysical properties of the study area. The accompany report discusses the delivered LiDAR data and documents contract specifications, data acquisition procedures, processing methods, and analysis of the final dataset including LiDAR accuracy and density." ;
+    dc:spatial "POLYGON ((-85.215673 32.854996,-85.215673 34.576794,-83.90863 34.576794,-83.90863 32.854996,-85.215673 32.854996))" ;
+    dcterms:title "2014 PSLC Lidar: City of Redmond" ;
+    esip:eastBound "-83.90863"^^xsd:float ;
+    esip:endDate "2014-04-09"^^xsd:date ;
+    esip:northBound "34.576794"^^xsd:float ;
+    esip:southBound "32.854996"^^xsd:float ;
+    esip:startDate "2014-04-07"^^xsd:date ;
+    esip:westBound "-85.215673"^^xsd:float ;
+    owl:a dcat:Dataset .
+

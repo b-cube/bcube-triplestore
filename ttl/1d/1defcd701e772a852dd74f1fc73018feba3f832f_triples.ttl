@@ -1,0 +1,83 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:0d86d9f7-640a-4a06-869f-f9bee12b602c> bcube:hasValue "geoscientificInformation" ;
+    dc:partOf "IsoTopicCategories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:20bc0a29-08a7-4c9a-9be3-c3deafa220b7> a "ISO 19115:2003/19139" ;
+    bcube:dateCreated "2015-10-28T16:46:42.982Z" ;
+    bcube:lastUpdated "2015-10-28T16:46:42.982Z" ;
+    bcube:originatedFrom <urn:uuid:4c9b9b1f-cada-462a-ac0b-594403619572> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:2d92ad3a-73a3-401d-bd1b-6d1ef2c5b25b> .
+
+<urn:uuid:2d92ad3a-73a3-401d-bd1b-6d1ef2c5b25b> bcube:dateCreated "2015-10-28T16:46:42.982Z" ;
+    bcube:hasMetadataRecord <urn:uuid:20bc0a29-08a7-4c9a-9be3-c3deafa220b7> ;
+    bcube:lastUpdated "2015-10-28T16:46:42.982Z" ;
+    dc:conformsTo <urn:uuid:0d86d9f7-640a-4a06-869f-f9bee12b602c>,
+        <urn:uuid:90489c74-2f65-4a31-bb13-15fbc4dd0dcc>,
+        <urn:uuid:ca46c4d4-6305-45e9-9d2e-cfe417b7a1ec> ;
+    dc:description "The objective of this map is to show the energy resources of Utah." ;
+    dc:spatial "POLYGON ((-114.126 36.9794,-114.126 42.0604,-108.545 42.0604,-108.545 36.9794,-114.126 36.9794))" ;
+    dcterms:references <urn:uuid:40816b22-3f26-4175-993e-f7bcb2fa3822> ;
+    dcterms:title "Energy Resources Map of Utah Map 36 - 1975" ;
+    esip:eastBound "-108.545"^^xsd:float ;
+    esip:endDate "1975-03-01"^^xsd:date ;
+    esip:northBound "42.0604"^^xsd:float ;
+    esip:southBound "36.9794"^^xsd:float ;
+    esip:startDate "1975-03-01"^^xsd:date ;
+    esip:westBound "-114.126"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:40816b22-3f26-4175-993e-f7bcb2fa3822> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-10-28T16:46:42.982Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-10-28T16:46:42.982Z" ;
+    dc:identifier "urn:sha:4a932163fd538ac8381a74694c7079aa0b13a42d9aaafadfb77c0c48" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "ftp://ftp.nbmg.unr.edu/pub/Geothermal/11_Documents/EnergyResources_Utah_Map36_1975_R.pdf" .
+
+<urn:uuid:4c9b9b1f-cada-462a-ac0b-594403619572> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-10-28T16:46:42.982Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-10-28T16:46:42.982Z" ;
+    dc:identifier "urn:sha:bda8afac21e249adf84f642b1b939b85afdd244559f2df7807496618" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://repository.stategeothermaldata.org/resources/metadata/test-CSV-XML-tool/33f86e92-cb16-4d6c-a428-9e280f5ccf7c.xml" .
+
+<urn:uuid:90489c74-2f65-4a31-bb13-15fbc4dd0dcc> bcube:hasType "theme" ;
+    bcube:hasValue "coal",
+        "electricity",
+        "energy resources",
+        "geology",
+        "geothermal",
+        "natural gas",
+        "oil",
+        "oil shale",
+        "uranium" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:ca46c4d4-6305-45e9-9d2e-cfe417b7a1ec> bcube:hasType "place" ;
+    bcube:hasValue "Utah" ;
+    owl:a bcube:thesaurusSubset .
+

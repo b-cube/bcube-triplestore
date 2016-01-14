@@ -1,0 +1,187 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:f9425707-0da1-468d-93a6-752bb18c3d8e> a "OGC:WMS" ;
+    bcube:contains <urn:uuid:1725b150-2da3-417d-a1ca-15a98e6368ec>,
+        <urn:uuid:692ee2ab-8e8b-43d1-a4f9-553a32047dc9>,
+        <urn:uuid:76ec0493-cf9c-482a-bd15-5a0bec6be15b>,
+        <urn:uuid:82d14cc4-3db6-4a24-8ae6-b7908465a93b>,
+        <urn:uuid:b075790b-49aa-47d1-82f6-19c442a55bd4>,
+        <urn:uuid:f3e07a3d-f126-49b5-8dea-d4157eba39a8> ;
+    bcube:dateCreated "2015-08-11T10:41:00.325Z" ;
+    bcube:lastUpdated "2015-08-11T10:41:00.325Z" ;
+    bcube:originatedFrom <urn:uuid:44d92a5c-053f-43a1-af82-6bf507921417> ;
+    dc:conformsTo <urn:uuid:6e6a6e35-a39c-4e40-8e85-cede3df0a68a> ;
+    dc:description "The Greenness Map - Illustrates locations and amounts of plant biomass. Dark green colors indicate areas containing abundant vegetation. Brown indicates sparse vegetation * Difference Map 1 - Compares current crop/vegetation change in biomass to the previous week within the same year * Difference Map 2 - Compares current crop/vegetation biomass to same period from the previous year * Difference Map 3 - Compares current vegetation/crop biomass to the 16-year greenness average * Vegetation Condition Map - Uses historic NDVI and surface temperature data to illustrate vegetation stress. See: http://www.kars.ku.edu/products/greenreport.shtml * Greenness Map - Illustrates locations and amounts of plant biomass. Dark green colors indicate areas containing abundant vegetation. Brown indicates sparse vegetation * Difference Map 1 - Compares current crop/vegetation change in biomass to the previous week within the same year * Difference Map 2 - Compares current crop/vegetation biomass to same period from the previous year * Difference Map 3 - Compares current vegetation/crop biomass to the 16-year greenness average * Vegetation Condition Map - Uses historic NDVI and surface temperature data to illustrate vegetation stress." ;
+    owl:a bcube:service .
+
+<urn:uuid:1725b150-2da3-417d-a1ca-15a98e6368ec> bcube:dateCreated "2015-08-11T10:41:00.325Z" ;
+    bcube:lastUpdated "2015-08-11T10:41:00.325Z" ;
+    dc:description "Produced from 1km AVHRR bi-weekly composites obtained from EROS data center. Difference Map 1 - Compares current crop/vegetation change in biomass to the previous bi-week within the same year. Based on the Normalized Difference Vegetation Index [NDVI]. This map can be used to monitor vegetation growth and change throughout the growing season by comparing this weeks values to last weeks." ;
+    dc:spatial "POLYGON ((-128.166888 22.708682,-128.166888 51.586664,-65.794931 51.586664,-65.794931 22.708682,-128.166888 22.708682))" ;
+    dc:title "Difference from Previous Week" ;
+    dcterms:references <urn:uuid:bf7514c9-57eb-4ec0-b7c0-4b04cf46cdec> ;
+    esip:eastBound "-65.794931"^^xsd:float ;
+    esip:northBound "51.586664"^^xsd:float ;
+    esip:southBound "22.708682"^^xsd:float ;
+    esip:westBound "-128.166888"^^xsd:float ;
+    owl:a bcube:Layer .
+
+<urn:uuid:44d92a5c-053f-43a1-af82-6bf507921417> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-11T10:41:00.325Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-11T10:41:00.325Z" ;
+    dc:identifier "urn:sha:438b88e05b56168777b1f7b6554ed60ed9bd7f811fecd39dc969b40e" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://kars.ku.edu/arcgis/services/GreenReport/MapServer/WMSServer?request=GetCapabilities&service=WMS" .
+
+<urn:uuid:6731da68-de15-4ece-9d33-8ae881089652> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-11T10:41:00.325Z" ;
+    bcube:hasConfidence "Not Sure" ;
+    bcube:hasUrlSource "Generated" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-11T10:41:00.325Z" ;
+    dc:identifier "urn:sha:c9d71667cdaaef628a63fd1bb6194a8a6489ff13ccf4282f7db48fad" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://kars.ku.edu/arcgis/services/GreenReport/MapServer/WMSServer?layers=1&width=500&version=1.3.0&bbox=-128.17187%2C22.708094%2C-65.788493%2C51.595301&service=WMS&format=image%2Fpng&styles=&crs=CRS%3A84&request=GetMap&height=500" .
+
+<urn:uuid:692ee2ab-8e8b-43d1-a4f9-553a32047dc9> bcube:dateCreated "2015-08-11T10:41:00.325Z" ;
+    bcube:lastUpdated "2015-08-11T10:41:00.325Z" ;
+    dc:description "The data set is derived from 1-km Advanced Very High Resolution Radiometer (AVHRR) data spanning a 12-month period (April 1992-March 1993) and is based on a flexible data base structure and seasonal land cover regions concepts. Seasonal land cover regions provide a framework for presenting the temporal and spatial patterns of vegetation in the database. The regions are composed of relatively homogeneous land cover associations (for example, similar floristic and physiognomic characteristics) which exhibit distinctive phenology (that is, onset, peak, and seasonal duration of greenness), and have common levels of primary production. The base data used are the International Geosphere Biosphere Programme (IGBP) 1-km AVHRR 10-day composites for April 1992 through March 1993 (Eidenshink and Faundeen, 1994). Multitemporal AVHRR NDVI data are used to divide the landscape into land cover regions, based on seasonality. While the primary AVHRR data used in the classification is NDVI, the individual channel data sets are used for postclassification characterization of certain landscape properties. A data quality evaluation was conducted and is reported by Zhu and Yang (1996). Reference: http://www.ecologyandsociety.org/vol4/iss2/art3/globdoc1_2.html" ;
+    dc:spatial "POLYGON ((-128.171729 22.697442,-128.171729 51.595672,-65.777216 51.595672,-65.777216 22.697442,-128.171729 22.697442))" ;
+    dc:title "EROS Landcover 1992-1993" ;
+    dcterms:references <urn:uuid:ab32f5e3-700d-4444-9b4d-7ae9d0cb7c68> ;
+    esip:eastBound "-65.777216"^^xsd:float ;
+    esip:northBound "51.595672"^^xsd:float ;
+    esip:southBound "22.697442"^^xsd:float ;
+    esip:westBound "-128.171729"^^xsd:float ;
+    owl:a bcube:Layer .
+
+<urn:uuid:6e6a6e35-a39c-4e40-8e85-cede3df0a68a> bcube:hasValue "AVHRR,NDVI,Greenness,Vegetation,Drought,Crops,Forest,Grassland,Range,Pasture" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:73b3396f-bbf3-4f70-9a11-e000bc61dc30> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-11T10:41:00.325Z" ;
+    bcube:hasConfidence "Not Sure" ;
+    bcube:hasUrlSource "Generated" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-11T10:41:00.325Z" ;
+    dc:identifier "urn:sha:6faec932c179457847bedd5e7e9259033caa1d950003baf737a9486b" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://kars.ku.edu/arcgis/services/GreenReport/MapServer/WMSServer?layers=5&width=500&version=1.3.0&bbox=-128.166888%2C22.708682%2C-65.794931%2C51.586664&service=WMS&format=image%2Fpng&styles=&crs=CRS%3A84&request=GetMap&height=500" .
+
+<urn:uuid:76ec0493-cf9c-482a-bd15-5a0bec6be15b> bcube:dateCreated "2015-08-11T10:41:00.325Z" ;
+    bcube:lastUpdated "2015-08-11T10:41:00.325Z" ;
+    dc:description "Produced from 1km AVHRR bi-weekly composites obtained from EROS data center. Greenness Map - Illustrates locations and amounts of green plant biomass. Dark green colors indicate areas containing abundant vegetation. Brown indicates sparse vegetation. Based on the Normalized Difference Vegetation Index [NDVI] This map can be used to monitor vegetation growth and change throughout the growing season." ;
+    dc:spatial "POLYGON ((-128.166888 22.708682,-128.166888 51.586664,-65.794931 51.586664,-65.794931 22.708682,-128.166888 22.708682))" ;
+    dc:title "NDVI Greenness Map" ;
+    dcterms:references <urn:uuid:73b3396f-bbf3-4f70-9a11-e000bc61dc30> ;
+    esip:eastBound "-65.794931"^^xsd:float ;
+    esip:northBound "51.586664"^^xsd:float ;
+    esip:southBound "22.708682"^^xsd:float ;
+    esip:westBound "-128.166888"^^xsd:float ;
+    owl:a bcube:Layer .
+
+<urn:uuid:82d14cc4-3db6-4a24-8ae6-b7908465a93b> bcube:dateCreated "2015-08-11T10:41:00.325Z" ;
+    bcube:lastUpdated "2015-08-11T10:41:00.325Z" ;
+    dc:description "Produced from 1km AVHRR bi-weekly composites obtained from EROS data center. Difference Map 3 - Compares current vegetation/crop biomass to the 20-year greenness average for the same historic period. Based on the Normalized Difference Vegetation Index [NDVI]. This map can be used to monitor vegetation growth and change throughout the growing season by comparing this weeks values to the average." ;
+    dc:spatial "POLYGON ((-128.166888 22.708682,-128.166888 51.586664,-65.794931 51.586664,-65.794931 22.708682,-128.166888 22.708682))" ;
+    dc:title "Difference from Average for This Week" ;
+    dcterms:references <urn:uuid:839b3a5b-8fb3-4b18-b21b-9ea5fd464806> ;
+    esip:eastBound "-65.794931"^^xsd:float ;
+    esip:northBound "51.586664"^^xsd:float ;
+    esip:southBound "22.708682"^^xsd:float ;
+    esip:westBound "-128.166888"^^xsd:float ;
+    owl:a bcube:Layer .
+
+<urn:uuid:839b3a5b-8fb3-4b18-b21b-9ea5fd464806> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-11T10:41:00.325Z" ;
+    bcube:hasConfidence "Not Sure" ;
+    bcube:hasUrlSource "Generated" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-11T10:41:00.325Z" ;
+    dc:identifier "urn:sha:eaa5fe07ce84c2c17b4da282014016f83dec9f5e2d268af5ccc917d8" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://kars.ku.edu/arcgis/services/GreenReport/MapServer/WMSServer?layers=2&width=500&version=1.3.0&bbox=-128.166888%2C22.708682%2C-65.794931%2C51.586664&service=WMS&format=image%2Fpng&styles=&crs=CRS%3A84&request=GetMap&height=500" .
+
+<urn:uuid:ab32f5e3-700d-4444-9b4d-7ae9d0cb7c68> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-11T10:41:00.325Z" ;
+    bcube:hasConfidence "Not Sure" ;
+    bcube:hasUrlSource "Generated" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-11T10:41:00.325Z" ;
+    dc:identifier "urn:sha:390438710cfa273c60ddeee72a96ac18a14d40873496a2adc2575228" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://kars.ku.edu/arcgis/services/GreenReport/MapServer/WMSServer?layers=0&width=500&version=1.3.0&bbox=-128.171729%2C22.697442%2C-65.777216%2C51.595672&service=WMS&format=image%2Fpng&styles=&crs=CRS%3A84&request=GetMap&height=500" .
+
+<urn:uuid:b075790b-49aa-47d1-82f6-19c442a55bd4> bcube:dateCreated "2015-08-11T10:41:00.325Z" ;
+    bcube:lastUpdated "2015-08-11T10:41:00.325Z" ;
+    dc:description "Produced from 1km AVHRR bi-weekly composites obtained from EROS data center. Difference Map 2 - Compares current crop/vegetation biomass to same period from the previous year. Based on the Normalized Difference Vegetation Index [NDVI]. This map can be used to monitor vegetation growth and change throughout the growing season by comparing this years values to last years." ;
+    dc:spatial "POLYGON ((-128.166888 22.708682,-128.166888 51.586664,-65.794931 51.586664,-65.794931 22.708682,-128.166888 22.708682))" ;
+    dc:title "Difference from Last Year" ;
+    dcterms:references <urn:uuid:dda7dd54-d74c-409a-b8a0-78615c716b41> ;
+    esip:eastBound "-65.794931"^^xsd:float ;
+    esip:northBound "51.586664"^^xsd:float ;
+    esip:southBound "22.708682"^^xsd:float ;
+    esip:westBound "-128.166888"^^xsd:float ;
+    owl:a bcube:Layer .
+
+<urn:uuid:bf7514c9-57eb-4ec0-b7c0-4b04cf46cdec> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-11T10:41:00.325Z" ;
+    bcube:hasConfidence "Not Sure" ;
+    bcube:hasUrlSource "Generated" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-11T10:41:00.325Z" ;
+    dc:identifier "urn:sha:31508dc65c32a4e35b00343300caf2ba36dc8a9f483345e094690307" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://kars.ku.edu/arcgis/services/GreenReport/MapServer/WMSServer?layers=4&width=500&version=1.3.0&bbox=-128.166888%2C22.708682%2C-65.794931%2C51.586664&service=WMS&format=image%2Fpng&styles=&crs=CRS%3A84&request=GetMap&height=500" .
+
+<urn:uuid:dda7dd54-d74c-409a-b8a0-78615c716b41> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-11T10:41:00.325Z" ;
+    bcube:hasConfidence "Not Sure" ;
+    bcube:hasUrlSource "Generated" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-11T10:41:00.325Z" ;
+    dc:identifier "urn:sha:8bcdebf85217e94839f8fe3de122494d8bd4c88be6857aca4a916d19" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://kars.ku.edu/arcgis/services/GreenReport/MapServer/WMSServer?layers=3&width=500&version=1.3.0&bbox=-128.166888%2C22.708682%2C-65.794931%2C51.586664&service=WMS&format=image%2Fpng&styles=&crs=CRS%3A84&request=GetMap&height=500" .
+
+<urn:uuid:f3e07a3d-f126-49b5-8dea-d4157eba39a8> bcube:dateCreated "2015-08-11T10:41:00.325Z" ;
+    bcube:lastUpdated "2015-08-11T10:41:00.325Z" ;
+    dc:description "Produced from 1km AVHRR bi-weekly composites obtained from EROS data center. Vegetation Condition Map - Uses historic NDVI and surface temperature data to illustrate vegetation productivity and stress. Based on the Normalized Difference Vegetation Index [NDVI]. This map can be used to monitor vegetation growth and change throughout the growing season." ;
+    dc:spatial "POLYGON ((-128.17187 22.708094,-128.17187 51.595301,-65.788493 51.595301,-65.788493 22.708094,-128.17187 22.708094))" ;
+    dc:title "Vegetation Condition Index Map" ;
+    dcterms:references <urn:uuid:6731da68-de15-4ece-9d33-8ae881089652> ;
+    esip:eastBound "-65.788493"^^xsd:float ;
+    esip:northBound "51.595301"^^xsd:float ;
+    esip:southBound "22.708094"^^xsd:float ;
+    esip:westBound "-128.17187"^^xsd:float ;
+    owl:a bcube:Layer .
+

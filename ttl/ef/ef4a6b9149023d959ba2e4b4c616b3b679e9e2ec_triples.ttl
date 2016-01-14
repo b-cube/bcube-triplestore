@@ -1,0 +1,89 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:32c1aee5-986e-4231-86c6-5077b2c17d8f> bcube:hasType "theme" ;
+    bcube:hasValue "boundaries" ;
+    dc:partOf "ISO 19115 Topic Categories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:4d080511-8e30-4578-b91e-1cbb63c6e86c> bcube:hasType "theme" ;
+    bcube:hasValue "Block",
+        "Census Block",
+        "County or equivalent entity",
+        "Polygon" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:4fe33be5-3cef-4b6c-b632-1c32585d11f8> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-11-02T02:42:22.717Z" ;
+    bcube:lastUpdated "2015-11-02T02:42:22.717Z" ;
+    bcube:originatedFrom <urn:uuid:edcface3-8fc6-4cd8-9e8e-0909f49d83ce> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:5adac671-29bf-4473-8a07-ce992c903cd6> .
+
+<urn:uuid:5adac671-29bf-4473-8a07-ce992c903cd6> bcube:dateCreated "2015-11-02T02:42:22.717Z" ;
+    bcube:hasMetadataRecord <urn:uuid:4fe33be5-3cef-4b6c-b632-1c32585d11f8> ;
+    bcube:lastUpdated "2015-11-02T02:42:22.717Z" ;
+    dc:conformsTo <urn:uuid:32c1aee5-986e-4231-86c6-5077b2c17d8f>,
+        <urn:uuid:4d080511-8e30-4578-b91e-1cbb63c6e86c>,
+        <urn:uuid:76aeb2f3-0aa1-4da6-a434-a234ea6fb444> ;
+    dc:description "The TIGER/Line Shapefiles are an extract of selected geographic and cartographic information from the Census MAF/TIGER database. The Census MAF/TIGER database represents a seamless national file with no overlaps or gaps between parts. However, each TIGER/Line Shapefile is designed to stand alone as an independent data set or the shapefiles can be combined to cover the whole nation." ;
+    dc:spatial "POLYGON ((-87.427516 31.181133,-87.427516 31.753035,-86.662082 31.753035,-86.662082 31.181133,-87.427516 31.181133))" ;
+    dcterms:publisher <urn:uuid:e19c4eb0-1fdb-449d-b2b9-0e8d33fdf87a> ;
+    dcterms:references <urn:uuid:a55365c3-c619-4e8e-943e-2ae3cbc4b583> ;
+    dcterms:title "TIGER/Line Shapefile, 2008, 2000 county, Conecuh County, AL, Block" ;
+    esip:eastBound "-86.662082"^^xsd:float ;
+    esip:endDate "2008-07-01"^^xsd:date ;
+    esip:northBound "31.753035"^^xsd:float ;
+    esip:southBound "31.181133"^^xsd:float ;
+    esip:startDate "2008-01-01"^^xsd:date ;
+    esip:westBound "-87.427516"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:76aeb2f3-0aa1-4da6-a434-a234ea6fb444> bcube:hasType "place" ;
+    bcube:hasValue "01035",
+        "Conecuh",
+        "County or Equivalent Entity",
+        "U.S.",
+        "United States" ;
+    dc:partOf "FIPS Publication 5-2, FIPS Publication 6-4, FIPS Publication 8-6, FIPS Publication 9-1,FIPS Publication55-4" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:a55365c3-c619-4e8e-943e-2ae3cbc4b583> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-02T02:42:22.717Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-02T02:42:22.717Z" ;
+    dc:identifier "urn:sha:3e9ef95b7fab0690a307991bb68c0a7d08a466e5ef7a1d0252b2065b" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www2.census.gov/geo/tiger/TIGER2008/01_ALABAMA/01035_Conecuh_County/tl_2008_01035_tabblock00.zip" .
+
+<urn:uuid:e19c4eb0-1fdb-449d-b2b9-0e8d33fdf87a> owl:a foaf:Organization ;
+    foaf:name "" .
+
+<urn:uuid:edcface3-8fc6-4cd8-9e8e-0909f49d83ce> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-02T02:42:22.717Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-02T02:42:22.717Z" ;
+    dc:identifier "urn:sha:594649b2da55bbb695bb6b120a426ee77f7ee085c95f66c6f34c7782" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://meta.geo.census.gov/data/existing/decennial/GEO/GPMB/TIGERline/fe_2008/tabblock00/tl_2008_01035_tabblock00_url.shp.xml" .
+

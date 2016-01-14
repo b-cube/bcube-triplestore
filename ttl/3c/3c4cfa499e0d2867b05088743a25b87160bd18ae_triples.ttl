@@ -1,0 +1,77 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:31fc9b5c-1098-49b5-8da0-19a51f67be32> owl:a foaf:Organization ;
+    foaf:name "AeroMetric, Inc." .
+
+<urn:uuid:4749f105-7d89-4423-8f40-b2477ee50195> bcube:hasType "place" ;
+    bcube:hasValue "IL",
+        "Illinois",
+        "Macon",
+        "State",
+        "US" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:86f2f3a6-6aa1-4a55-ba5b-162d93f7c65a> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-10-29T23:32:48.166Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-10-29T23:32:48.166Z" ;
+    dc:identifier "urn:sha:e8aef6b9ef56848205fb48044f8a425f5b2cfbb527968fae53d193a2" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www.isgs.uiuc.edu/clearinghouse/lidar/counties/macon/macon_2011_metadata.xml" .
+
+<urn:uuid:df14239e-0864-47af-9731-a67b936797e2> bcube:hasType "theme" ;
+    bcube:hasValue "Breaklines",
+        "DAT",
+        "LAS",
+        "LiDAR",
+        "Lift",
+        "Light Detection and Ranging",
+        "Project",
+        "Shapefiles",
+        "Survey Control",
+        "Swath",
+        "TIN" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:e44ae6a3-2081-4209-8a32-c91b8e86e8b3> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-10-29T23:32:48.166Z" ;
+    bcube:lastUpdated "2015-10-29T23:32:48.166Z" ;
+    bcube:originatedFrom <urn:uuid:86f2f3a6-6aa1-4a55-ba5b-162d93f7c65a> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:feee1b76-1c1b-47fd-b88b-e194653f152e> .
+
+<urn:uuid:feee1b76-1c1b-47fd-b88b-e194653f152e> bcube:dateCreated "2015-10-29T23:32:48.166Z" ;
+    bcube:hasMetadataRecord <urn:uuid:e44ae6a3-2081-4209-8a32-c91b8e86e8b3> ;
+    bcube:lastUpdated "2015-10-29T23:32:48.166Z" ;
+    dc:conformsTo <urn:uuid:4749f105-7d89-4423-8f40-b2477ee50195>,
+        <urn:uuid:df14239e-0864-47af-9731-a67b936797e2> ;
+    dc:description "This task order is for planning, acquisition, processing, and derivative products of LiDAR data to be collected for areas of Illinois. LiDAR data, and derivative products produced in compliance with this task order are part of the data to be obtained under Job Number P-99-005-10. Specifications listed below are based on the U.S. Geological Survey National Geospatial Program Base LiDAR Specification, Version 13." ;
+    dc:spatial "POLYGON ((-89.218 39.651,-89.218 40.057,-88.741 40.057,-88.741 39.651,-89.218 39.651))" ;
+    dcterms:publisher <urn:uuid:31fc9b5c-1098-49b5-8da0-19a51f67be32> ;
+    dcterms:title "Illinois Department of Transportation, District 7, Macon County LiDAR" ;
+    esip:eastBound "-88.741"^^xsd:float ;
+    esip:endDate "2011-04-01"^^xsd:date ;
+    esip:northBound "40.057"^^xsd:float ;
+    esip:southBound "39.651"^^xsd:float ;
+    esip:startDate "2011-03-01"^^xsd:date ;
+    esip:westBound "-89.218"^^xsd:float ;
+    owl:a dcat:Dataset .
+

@@ -1,0 +1,61 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:2ff0e447-ac7c-4a7f-918b-5d99ca88c17a> bcube:hasType "place" ;
+    bcube:hasValue "LIDAR",
+        "fUS08 = Colorado",
+        "geography",
+        "interagency programs",
+        "strategic plans",
+        "topography" ;
+    dc:partOf "Augmented FIPS 10-4 and FIPS 6-4" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:53502591-dc4c-4e40-95c6-5713c2c034d8> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2014-10-30T02:40:55.81Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2014-10-30T02:40:55.81Z" ;
+    dc:identifier "urn:sha:2954b028d6ab310cb22c007ceaa603c4ce46f3deede65c9127be6ea6" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www.usgs.gov/science/iso.php?cite=3141" .
+
+<urn:uuid:70a52492-298d-44c9-ae77-498c43e73c74> a "ISO 19115:2003/19139" ;
+    bcube:dateCreated "2014-10-30T02:40:55.81Z" ;
+    bcube:lastUpdated "2014-10-30T02:40:55.81Z" ;
+    bcube:originatedFrom <urn:uuid:53502591-dc4c-4e40-95c6-5713c2c034d8> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:7d382fdc-cac0-4faf-a5ae-fd768e6247cc> .
+
+<urn:uuid:7d382fdc-cac0-4faf-a5ae-fd768e6247cc> bcube:dateCreated "2014-10-30T02:40:55.81Z" ;
+    bcube:hasMetadataRecord <urn:uuid:70a52492-298d-44c9-ae77-498c43e73c74> ;
+    bcube:lastUpdated "2014-10-30T02:40:55.81Z" ;
+    dc:conformsTo <urn:uuid:2ff0e447-ac7c-4a7f-918b-5d99ca88c17a>,
+        <urn:uuid:c86772ea-3446-48b3-a7dc-0b5414708f6c> ;
+    dc:description "Summarizes the expected value over the next decade of the 3D Elevation Program for this state" ;
+    dc:spatial "POLYGON ((-109.0603 36.9924,-109.0603 41.0034,-102.0409 41.0034,-102.0409 36.9924,-109.0603 36.9924))" ;
+    dcterms:title "The 3D Elevation Program: summary for Colorado" ;
+    esip:eastBound "-102.0409"^^xsd:float ;
+    esip:northBound "41.0034"^^xsd:float ;
+    esip:southBound "36.9924"^^xsd:float ;
+    esip:westBound "-109.0603"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:c86772ea-3446-48b3-a7dc-0b5414708f6c> bcube:hasValue "geoscientificInformation" ;
+    dc:partOf "IsoTopicCategories" ;
+    owl:a bcube:thesaurusSubset .
+

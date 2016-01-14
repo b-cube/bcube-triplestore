@@ -1,0 +1,92 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:0990d7c0-03a6-493f-bd31-532ce3ac3754> owl:a foaf:Organization ;
+    foaf:name "Federal Emergency Management Agency" .
+
+<urn:uuid:66828c07-ca1c-46f7-a5b1-c896475fa295> bcube:hasType "place" ;
+    bcube:hasValue "COMMUNITY Countywide",
+        "COUNTY Ravalli",
+        "COUNTY-FIPS 081C",
+        "FEMA-CID 30081C",
+        "REGION 08",
+        "STATE MT" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:66d9a7dd-4a32-4cfb-9132-ca145e44d558> bcube:hasType "theme" ;
+    bcube:hasValue "environment",
+        "inlandWaters" ;
+    dc:partOf "ISO 19115 Topic Category" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:88aa7fc1-d6cc-4778-befe-555c13144106> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-08T20:17:00.741Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-08T20:17:00.741Z" ;
+    dc:identifier "urn:sha:c961617a9551f689dfbcf00950d56ceb7cad7bdfd06602b7afe599f4" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "https://catalog.data.gov/harvest/object/098c0597-09e9-4c6d-a39e-3050a00768e2/original" .
+
+<urn:uuid:c379509f-80dd-4890-983d-cdd1d7f4a927> bcube:dateCreated "2015-08-08T20:17:00.741Z" ;
+    bcube:hasMetadataRecord <urn:uuid:ccd7d750-cd81-4119-91c7-4a58225b3bde> ;
+    bcube:lastUpdated "2015-08-08T20:17:00.741Z" ;
+    dc:conformsTo <urn:uuid:66828c07-ca1c-46f7-a5b1-c896475fa295>,
+        <urn:uuid:66d9a7dd-4a32-4cfb-9132-ca145e44d558>,
+        <urn:uuid:c7cc14a5-ba8d-4bdf-8343-ee1fef3211e0> ;
+    dc:description "Hydrology data include spatial datasets and data tables necessary for documenting the hydrologic procedures for estimating flood discharges for a flood insurance study, which includes the hydrologic data expected by FEMA for new riverline studies. (Source: FEMA Guidelines and Specifications, Appendix N)" ;
+    dc:spatial "POLYGON ((-114.065 46.59,-114.065 46.715,-113.78 46.715,-113.78 46.59,-114.065 46.59))" ;
+    dcterms:publisher <urn:uuid:0990d7c0-03a6-493f-bd31-532ce3ac3754> ;
+    dcterms:references <urn:uuid:c59d69c7-31c5-42d7-b72b-849fe220d88b> ;
+    dcterms:title "HYDROLOGY, RAVALLI COUNTY, MONTANA" ;
+    esip:eastBound "-113.78"^^xsd:float ;
+    esip:northBound "46.715"^^xsd:float ;
+    esip:southBound "46.59"^^xsd:float ;
+    esip:startDate "2008-12-15"^^xsd:date ;
+    esip:westBound "-114.065"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:c59d69c7-31c5-42d7-b72b-849fe220d88b> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-08T20:17:00.741Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-08T20:17:00.741Z" ;
+    dc:identifier "urn:sha:37c915397238031daced09ae0e2dd3bf54e84a6477f749c2cc9dcbdf" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://hazards.fema.gov" .
+
+<urn:uuid:c7cc14a5-ba8d-4bdf-8343-ee1fef3211e0> bcube:hasType "theme" ;
+    bcube:hasValue "0.2-Percent-Annual-Chance Flood",
+        "Channel",
+        "DFIRM",
+        "Digital Flood Insurance Rate Map",
+        "Flood Hazard data",
+        "Hydrology" ;
+    dc:partOf "FEMA NFIP Topic Category" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:ccd7d750-cd81-4119-91c7-4a58225b3bde> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-08-08T20:17:00.741Z" ;
+    bcube:lastUpdated "2015-08-08T20:17:00.741Z" ;
+    bcube:originatedFrom <urn:uuid:88aa7fc1-d6cc-4778-befe-555c13144106> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:c379509f-80dd-4890-983d-cdd1d7f4a927> .
+

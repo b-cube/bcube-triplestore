@@ -1,0 +1,75 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:0d17e0e9-f09f-4de7-8345-8099bc94a9a8> bcube:hasType "theme" ;
+    bcube:hasValue "Framework" ;
+    dc:partOf "BLM-THEME" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:0d881734-cd4b-402a-842d-fcfa99b50436> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-10-18T06:36:20.807Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-10-18T06:36:20.807Z" ;
+    dc:identifier "urn:sha:6cef266411587f5b346fa444e41cd8ecf376c3ff7257fe41d0da3f32" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://sdms.ak.blm.gov/download/protracted_grid_gis/metadata/township27.xml" .
+
+<urn:uuid:1c4cc602-13c3-4414-9f46-3155e19084d7> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-10-18T06:36:20.807Z" ;
+    bcube:lastUpdated "2015-10-18T06:36:20.807Z" ;
+    bcube:originatedFrom <urn:uuid:0d881734-cd4b-402a-842d-fcfa99b50436> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:bec42f2f-9c5b-40d8-8c41-e66caafb5bb5> .
+
+<urn:uuid:afe26118-282d-47e4-a26d-601a781af534> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-10-18T06:36:20.807Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-10-18T06:36:20.807Z" ;
+    dc:identifier "urn:sha:450350b1d4fbd475fb0431cdbdaacba9a15ccc75f1cec31b228e2011" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://agdc.usgs.gov/data/blm/sdms/" .
+
+<urn:uuid:aff4a3cf-e3db-4379-a0bd-9a657c40a1d4> owl:a foaf:Organization ;
+    foaf:name "" .
+
+<urn:uuid:b3d33797-5078-4900-8910-4b680508f77c> bcube:hasType "place" ;
+    bcube:hasValue "Alaska" ;
+    dc:partOf "BLM-STATE" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:bec42f2f-9c5b-40d8-8c41-e66caafb5bb5> bcube:dateCreated "2015-10-18T06:36:20.807Z" ;
+    bcube:hasMetadataRecord <urn:uuid:1c4cc602-13c3-4414-9f46-3155e19084d7> ;
+    bcube:lastUpdated "2015-10-18T06:36:20.807Z" ;
+    dc:conformsTo <urn:uuid:0d17e0e9-f09f-4de7-8345-8099bc94a9a8>,
+        <urn:uuid:b3d33797-5078-4900-8910-4b680508f77c> ;
+    dc:description "Township boundaries were generated from geodetic latitude and longitude coordinate pairs as recorded on BLM's official protraction diagrams of the state of Alaska. The Informix Township table is a spatially-enabled table that contains all of the protraction information for each of the 18,654 townships. Township shapes are stored as NAD27 geographic multipolygons. Each township was individually constructed from NAD27 geographic pro_pt (Protracted Point) table and is fully densified by including all township/section offset corners from adjacent township/sections. The geometry for a single township may include as many as 44 coordinates on the exterior ring. The township table identifies 18,654 townships as 18,654 multi-polygons (four townships require two polygons each), as depicted on the official BLM protraction diagrams. MTR Number of Geometries ----------------------------------------------------------- C034S048E 2 C040S073E 2 C066S098E 2 C034S067E 2" ;
+    dc:spatial "POLYGON ((-179.227825 51.202992,-179.227825 71.468681,179.896724 71.468681,179.896724 51.202992,-179.227825 51.202992))" ;
+    dcterms:publisher <urn:uuid:aff4a3cf-e3db-4379-a0bd-9a657c40a1d4> ;
+    dcterms:references <urn:uuid:afe26118-282d-47e4-a26d-601a781af534> ;
+    dcterms:title "Protracted Township Grid for Alaska (NAD27)" ;
+    esip:eastBound "179.896724"^^xsd:float ;
+    esip:northBound "71.468681"^^xsd:float ;
+    esip:southBound "51.202992"^^xsd:float ;
+    esip:startDate "2008-02-04"^^xsd:date ;
+    esip:westBound "-179.227825"^^xsd:float ;
+    owl:a dcat:Dataset .
+

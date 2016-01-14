@@ -1,0 +1,90 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:280b39cb-1ae1-46b0-b732-fcb89372dd40> owl:a foaf:Organization ;
+    foaf:name "U.S. Fish and Wildlife Service" .
+
+<urn:uuid:2f2144b1-5349-4038-95bd-761cc6dcfa8d> bcube:dateCreated "2015-10-19T14:28:02.589Z" ;
+    bcube:hasMetadataRecord <urn:uuid:62c415fe-f64a-4249-8cbd-fe1c91421c96> ;
+    bcube:lastUpdated "2015-10-19T14:28:02.589Z" ;
+    dc:conformsTo <urn:uuid:80d579e4-587f-411c-a3f1-e738deaf9b96>,
+        <urn:uuid:e9df93ed-2a84-43d6-bf8b-9a17b694a323> ;
+    dc:description "This data layer depicts the external boundaries of lands and waters that are approved for acquisition by the U.S. Fish and Wildlife Service (USFWS) in North America, U.S. Trust Territories and Possessions. The primary source for this information is the USFWS Realty program." ;
+    dc:spatial "POLYGON ((-179.150067 -14.559753,-179.150067 70.329407,179.77173 70.329407,179.77173 -14.559753,-179.150067 -14.559753))" ;
+    dcterms:publisher <urn:uuid:280b39cb-1ae1-46b0-b732-fcb89372dd40> ;
+    dcterms:references <urn:uuid:380403bf-cfef-4f3d-9a11-62621a88dc45>,
+        <urn:uuid:e620a363-7a43-42c2-9be3-6119e02b8eff> ;
+    dcterms:title "FWS Approved Acquisition Boundaries" ;
+    esip:eastBound "179.77173"^^xsd:float ;
+    esip:northBound "70.329407"^^xsd:float ;
+    esip:southBound "-14.559753"^^xsd:float ;
+    esip:startDate "2015-09-04"^^xsd:date ;
+    esip:westBound "-179.150067"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:380403bf-cfef-4f3d-9a11-62621a88dc45> dcterms:references <urn:uuid:3960519a-59a9-40e3-a84a-d8c3124c0a30> ;
+    owl:a bibo:WebPage .
+
+<urn:uuid:3960519a-59a9-40e3-a84a-d8c3124c0a30> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-10-19T14:28:02.589Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-10-19T14:28:02.589Z" ;
+    dc:identifier "urn:sha:cbc14da7994ac5e1277b988abac343ec5e71d082128ae5e7f6fab48b" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www.fws.gov/gis/data/CadastralDB/index_cadastral.html" .
+
+<urn:uuid:62c415fe-f64a-4249-8cbd-fe1c91421c96> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-10-19T14:28:02.589Z" ;
+    bcube:lastUpdated "2015-10-19T14:28:02.589Z" ;
+    bcube:originatedFrom <urn:uuid:f2a24870-7b76-48cc-9240-7fec792b9bc3> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:2f2144b1-5349-4038-95bd-761cc6dcfa8d> .
+
+<urn:uuid:80d579e4-587f-411c-a3f1-e738deaf9b96> bcube:hasType "theme" ;
+    bcube:hasValue "planningCadastre, boundaries, national wildlife refuge, national fish hatchery, wetland management district, waterfowl production area, National Geospatial Data Asset, NGDA, Cadastre Theme, United States" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:e620a363-7a43-42c2-9be3-6119e02b8eff> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-10-19T14:28:02.589Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-10-19T14:28:02.589Z" ;
+    dc:identifier "urn:sha:acb14fc175795fcd6b79848c4aa39c396ad497f2e9d84762cd1db7a4" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://ecos.fws.gov/ServCatFiles/reference/holding/53983/FWSApproved.zip" .
+
+<urn:uuid:e9df93ed-2a84-43d6-bf8b-9a17b694a323> bcube:hasType "place" ;
+    bcube:hasValue "United States" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:f2a24870-7b76-48cc-9240-7fec792b9bc3> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-10-19T14:28:02.589Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-10-19T14:28:02.589Z" ;
+    dc:identifier "urn:sha:4d992d05c649a723f56bd61dd2cf4ee575c0bc43e1e0bd7b8072c403" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "https://catalog.data.gov/harvest/object/b08e3e33-8e97-45d4-9358-5740dc98bff8/original" .
+

@@ -1,0 +1,97 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:0c2255aa-cd68-4f57-ae10-41c3134e756d> bcube:hasType "place" ;
+    bcube:hasValue "02150",
+        "County or Equivalent Entity",
+        "Kodiak Island",
+        "U.S.",
+        "United States" ;
+    dc:partOf "ANSI INCITS 38:2009 (Formerly FIPS 5-2), ANSI INCITS 31:2009 (Formerly FIPS 6-4),ANSI INCITS 454:2009 (Formerly FIPS 8-6), ANSI INCITS 455:2009(Formerly FIPS 9-1), ANSI INCITS 446:2008 (Geographic Names Information System (GNIS))" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:2fa23013-9a20-498a-8549-812ae1792ac2> bcube:dateCreated "2015-11-04T22:05:55.016Z" ;
+    bcube:hasMetadataRecord <urn:uuid:5cb8a2dc-562e-4de6-9e85-9c24314176f4> ;
+    bcube:lastUpdated "2015-11-04T22:05:55.016Z" ;
+    dc:conformsTo <urn:uuid:0c2255aa-cd68-4f57-ae10-41c3134e756d>,
+        <urn:uuid:9f44eba6-d381-4a50-9ed4-98f6430daf06>,
+        <urn:uuid:d7e1ebed-cdc1-4cc7-b9bb-8a43771d7b5c> ;
+    dc:description "The TIGER/Line shapefiles and related database files (.dbf) are an extract of selected geographic and cartographic information from the U.S. Census Bureau's Master Address File / Topologically Integrated Geographic Encoding and Referencing (MAF/TIGER) Database (MTDB). The MTDB represents a seamless national file with no overlaps or gaps between parts, however, each TIGER/Line shapefile is designed to stand alone as an independent data set, or they can be combined to cover the entire nation. The Feature Names Relationship File (FEATNAMES.dbf) contains a record for each feature name and any attributes associated with it. Each feature name can be linked to the corresponding edges that make up that feature in the All Lines Shapefile (EDGES.shp), where applicable to the corresponding address range or ranges in the Address Ranges Relationship File (ADDR.dbf), or to both files. Although this file includes feature names for all linear features, not just road features, the primary purpose of this relationship file is to identify all street names associated with each address range. An edge can have several feature names; an address range located on an edge can be associated with one or any combination of the available feature names (an address range can be linked to multiple feature names). The address range is identified by the address range identifier (ARID) attribute, which can be used to link to the Address Ranges Relationship File (ADDR.dbf). The linear feature is identified by the linear feature identifier (LINEARID) attribute, which can be used to relate the address range back to the name attributes of the feature in the Feature Names Relationship File or to the feature record in the Primary Roads, Primary and Secondary Roads, or All Roads Shapefiles. The edge to which a feature name applies can be determined by linking the feature name record to the All Lines Shapefile (EDGES.shp) using the permanent edge identifier (TLID) attribute. The address range identifier(s) (ARID) for a specific linear feature can be found by using the linear feature identifier (LINEARID) from the Feature Names Relationship File (FEATNAMES.dbf) through the Address Range / Feature Name Relationship File (ADDRFN.dbf)." ;
+    dc:spatial "POLYGON ((-156.903153 55.699912,-156.903153 59.017887,-151.690505 59.017887,-151.690505 55.699912,-156.903153 55.699912))" ;
+    dcterms:references <urn:uuid:345b41e6-9411-43c5-9ecb-6766b8c8acfc> ;
+    dcterms:title "TIGER/Line Shapefile, 2013, county, Kodiak Island Borough, AK, Current Feature Names Relationship File" ;
+    esip:eastBound "-151.690505"^^xsd:float ;
+    esip:endDate "2013-05-30"^^xsd:date ;
+    esip:northBound "59.017887"^^xsd:float ;
+    esip:southBound "55.699912"^^xsd:float ;
+    esip:startDate "2012-06-30"^^xsd:date ;
+    esip:westBound "-156.903153"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:345b41e6-9411-43c5-9ecb-6766b8c8acfc> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-04T22:05:55.016Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-04T22:05:55.016Z" ;
+    dc:identifier "urn:sha:657e5c670b0a45e3a6ad762adb85d41ae4090fbbabe5b78a3b21e044" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www2.census.gov/geo/tiger/TIGER2013/FEATNAMES/tl_2013_02150_featnames.zip" .
+
+<urn:uuid:5cb8a2dc-562e-4de6-9e85-9c24314176f4> a "ISO 19115:2003/19139" ;
+    bcube:dateCreated "2015-11-04T22:05:55.016Z" ;
+    bcube:lastUpdated "2015-11-04T22:05:55.016Z" ;
+    bcube:originatedFrom <urn:uuid:6b3fd8a0-4529-4ea9-8206-275d39628310> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:2fa23013-9a20-498a-8549-812ae1792ac2> .
+
+<urn:uuid:6b3fd8a0-4529-4ea9-8206-275d39628310> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-04T22:05:55.016Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-04T22:05:55.016Z" ;
+    dc:identifier "urn:sha:d7bf21e46db2b19228f367ed917b8ed1e0d248e114f8b36a8f5c8ee3" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://meta.geo.census.gov/data/existing/decennial/GEO/GPMB/TIGERline/TIGER2013/featnames/tl_2013_02150_featnames.dbf.iso.xml" .
+
+<urn:uuid:9f44eba6-d381-4a50-9ed4-98f6430daf06> bcube:hasType "theme" ;
+    bcube:hasValue "County ANSI Code",
+        "County FIPS Code",
+        "County or equivalent entity",
+        "Feature Names",
+        "MAFTIGER feature class code",
+        "Name",
+        "Permanent edge ID",
+        "Prefix Qualifier code",
+        "Prefix direction code",
+        "Prefix type code description",
+        "PrimaryAlternate code",
+        "State ANSI Code",
+        "State FIPS Code",
+        "Suffix Qualifier code",
+        "Suffix direction code",
+        "Suffix type code",
+        "Table" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:d7e1ebed-cdc1-4cc7-b9bb-8a43771d7b5c> bcube:hasValue "transportation" ;
+    dc:partOf "IsoTopicCategories" ;
+    owl:a bcube:thesaurusSubset .
+

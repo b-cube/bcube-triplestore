@@ -1,0 +1,233 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:d49a5b83-ff18-4bc2-8072-1d079153c1b4> a "OGC:WMS" ;
+    bcube:contains <urn:uuid:3f08490f-feff-4cf5-a16b-5e10dff2c4f0>,
+        <urn:uuid:40b23c08-c7c9-4328-91c7-4285615502ed>,
+        <urn:uuid:438d18c1-08bc-4970-808a-357069b574e9>,
+        <urn:uuid:72680aa2-b968-4584-b4d2-f1de6b9df44c>,
+        <urn:uuid:78a4eb45-636f-4902-a951-acc30d8f4739>,
+        <urn:uuid:8c122947-1d42-4e23-a473-39626ac0af2d>,
+        <urn:uuid:dc2a81e4-22a5-4ff4-9914-df39276ee0b0>,
+        <urn:uuid:eb325310-a676-48be-b648-391638738a35> ;
+    bcube:dateCreated "2015-08-09T20:54:41.993Z" ;
+    bcube:lastUpdated "2015-08-09T20:54:41.993Z" ;
+    bcube:originatedFrom <urn:uuid:7e25ddf0-5e93-47dd-9402-24ef13dc92ce> ;
+    dc:description "WMS" ;
+    owl:a bcube:service .
+
+<urn:uuid:1c158d2e-7038-4558-8249-7774b56bc19d> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-09T20:54:41.993Z" ;
+    bcube:hasConfidence "Not Sure" ;
+    bcube:hasUrlSource "Generated" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-09T20:54:41.993Z" ;
+    dc:identifier "urn:sha:8c1a45c9c9fb1f0966dfd3c45e9d422579cbeb0060c4200935dc2b87" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://land.discomap.eea.europa.eu/arcgis/services/Land/NetLandscapeEcologicalPotential_Dyna_WM/MapServer/WMSServer?layers=4&width=500&version=1.3.0&bbox=-48.110686%2C26.916483%2C60.235121%2C71.899397&service=WMS&format=image%2Fpng&styles=&crs=CRS%3A84&request=GetMap&height=500" .
+
+<urn:uuid:3b771883-cc47-4dcd-a328-b3f3bf24301d> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-09T20:54:41.993Z" ;
+    bcube:hasConfidence "Not Sure" ;
+    bcube:hasUrlSource "Generated" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-09T20:54:41.993Z" ;
+    dc:identifier "urn:sha:4820fd71263d073c5d478e57c0ce7f64e8ca011518f5fa7226d4da0f" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://land.discomap.eea.europa.eu/arcgis/services/Land/NetLandscapeEcologicalPotential_Dyna_WM/MapServer/WMSServer?layers=2&width=500&version=1.3.0&bbox=-61.340328%2C20.768764%2C73.182386%2C72.814783&service=WMS&format=image%2Fpng&styles=&crs=CRS%3A84&request=GetMap&height=500" .
+
+<urn:uuid:3f08490f-feff-4cf5-a16b-5e10dff2c4f0> bcube:dateCreated "2015-08-09T20:54:41.993Z" ;
+    bcube:lastUpdated "2015-08-09T20:54:41.993Z" ;
+    dc:description "NLEP enables connecting ecological potentials and human pressure via land use and detect impacts in a systematic way. NLEP for Europe is the combination of 3 different geographical datasets (layers, indexes): 1.The so-called green background landscape index (GBLI) which expresses the vegetation potential of the territory according to land use intensity; at the most aggregated level, land cover types are aggregated in 2 classes, the green the less intensive use and the non-green the most intensive use, conventionally: artificial land and cropland. The data are computed from Corine land cover and updated accordingly. 2.The social value given to nature assessed via the importance of its designation by science and policy; this is computed from the combination of European (Natura 2000), internationally, and nationally (CDDA) designated sites maps. It captures what cannot be seen from the satellite images, namely, the species richness/habitats of landscape which has motivated designation for nature conservation. 3.The fragmentation of landscape by roads and railways, which is not captured in the previous 2 layers. The indicator retained is the effective mesh size (MEFF), for its natural logarithm (ln) value. The lower the effective mesh size, the higher the fragmentation. The Making of LNEP: GBLI = Aggregation of CLC classes 2B, 3, 4 & 5, smoothed at 5 km. Range [0-100] NATURILIS_COMB or COMB = Union of N2K and CDDA, smoothed at 5 km. Range [0-100] Gross_LEP or GLEP= GBLI + (0.5 x COMB). Range [0-150] GLEPscaled = (GLEP * 255) / max(GLEP). Range [0-255] ln(MEFF). Range [0-255] and NLEP =1 + sqrt(GLEPscaled * lnMEFF ). Range [1-255]" ;
+    dc:spatial "POLYGON ((-48.110686 26.916483,-48.110686 71.899397,60.235121 71.899397,60.235121 26.916483,-48.110686 26.916483))" ;
+    dc:title "Net Landscape Ecological Potential 1990" ;
+    dcterms:references <urn:uuid:7a12d218-5a0e-43d7-bd6f-06b004276a24> ;
+    esip:eastBound "60.235121"^^xsd:float ;
+    esip:northBound "71.899397"^^xsd:float ;
+    esip:southBound "26.916483"^^xsd:float ;
+    esip:westBound "-48.110686"^^xsd:float ;
+    owl:a bcube:Layer .
+
+<urn:uuid:40b23c08-c7c9-4328-91c7-4285615502ed> bcube:dateCreated "2015-08-09T20:54:41.993Z" ;
+    bcube:lastUpdated "2015-08-09T20:54:41.993Z" ;
+    dc:description "Agro-systems with pastures and/or mosaics of parcels, forests and other semi-natural or natural dry land, wetlands and water bodies are land cover types a priori favourable to nature. They may be or not designated and protected for their natural value. This Green Background Landscape is a natural asset in its own as well as an important component (with rivers) of the connectivity between areas of high ecological interest. GBLI is mapped from a selection of CLC classes (see annex 1) smoothed in order to compute their value in their neighbourhood (CORILIS). The methodology is presented in Land accounts for Europe 1990-2000 . GBLI is a modifiable index and map: -The standard map is based on CLC classes 2B, 3, 4 and 5 but the selection of elementary classes can be modified (the CORILIS layers are additive); -Current applications are presented with 1 km grid cells and 5 km span but smoothing can be processed with a different radius (radius used at the European scale are of 5, 10 and 20 km)." ;
+    dc:spatial "POLYGON ((-49.906705 25.537507,-49.906705 72.66441,72.910961 72.66441,72.910961 25.537507,-49.906705 25.537507))" ;
+    dc:title "Green Background Landscape Index 2006" ;
+    dcterms:references <urn:uuid:64d3933f-83f5-495f-a6c9-c661c66dd445> ;
+    esip:eastBound "72.910961"^^xsd:float ;
+    esip:northBound "72.66441"^^xsd:float ;
+    esip:southBound "25.537507"^^xsd:float ;
+    esip:westBound "-49.906705"^^xsd:float ;
+    owl:a bcube:Layer .
+
+<urn:uuid:438d18c1-08bc-4970-808a-357069b574e9> bcube:dateCreated "2015-08-09T20:54:41.993Z" ;
+    bcube:lastUpdated "2015-08-09T20:54:41.993Z" ;
+    dc:description "Agro-systems with pastures and/or mosaics of parcels, forests and other semi-natural or natural dry land, wetlands and water bodies are land cover types a priori favourable to nature. They may be or not designated and protected for their natural value. This Green Background Landscape is a natural asset in its own as well as an important component (with rivers) of the connectivity between areas of high ecological interest. GBLI is mapped from a selection of CLC classes (see annex 1) smoothed in order to compute their value in their neighbourhood (CORILIS). The methodology is presented in Land accounts for Europe 1990-2000 . GBLI is a modifiable index and map: -The standard map is based on CLC classes 2B, 3, 4 and 5 but the selection of elementary classes can be modified (the CORILIS layers are additive); -Current applications are presented with 1 km grid cells and 5 km span but smoothing can be processed with a different radius (radius used at the European scale are of 5, 10 and 20 km)." ;
+    dc:spatial "POLYGON ((-49.906705 26.409683,-49.906705 72.66441,62.616267 72.66441,62.616267 26.409683,-49.906705 26.409683))" ;
+    dc:title "Green Background Landscape Index 2000" ;
+    dcterms:references <urn:uuid:993eeac2-0b52-46fc-a008-70051adcfe0e> ;
+    esip:eastBound "62.616267"^^xsd:float ;
+    esip:northBound "72.66441"^^xsd:float ;
+    esip:southBound "26.409683"^^xsd:float ;
+    esip:westBound "-49.906705"^^xsd:float ;
+    owl:a bcube:Layer .
+
+<urn:uuid:64d3933f-83f5-495f-a6c9-c661c66dd445> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-09T20:54:41.993Z" ;
+    bcube:hasConfidence "Not Sure" ;
+    bcube:hasUrlSource "Generated" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-09T20:54:41.993Z" ;
+    dc:identifier "urn:sha:dbf23829b010a8099ba598dbf751fde883a02d8a31eb1844cb4fc1b7" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://land.discomap.eea.europa.eu/arcgis/services/Land/NetLandscapeEcologicalPotential_Dyna_WM/MapServer/WMSServer?layers=8&width=500&version=1.3.0&bbox=-49.906705%2C25.537507%2C72.910961%2C72.66441&service=WMS&format=image%2Fpng&styles=&crs=CRS%3A84&request=GetMap&height=500" .
+
+<urn:uuid:72680aa2-b968-4584-b4d2-f1de6b9df44c> bcube:dateCreated "2015-08-09T20:54:41.993Z" ;
+    bcube:lastUpdated "2015-08-09T20:54:41.993Z" ;
+    dc:description "NLEP enables connecting ecological potentials and human pressure via land use and detect impacts in a systematic way. NLEP for Europe is the combination of 3 different geographical datasets (layers, indexes): 1.The so-called green background landscape index (GBLI) which expresses the vegetation potential of the territory according to land use intensity; at the most aggregated level, land cover types are aggregated in 2 classes, the green the less intensive use and the non-green the most intensive use, conventionally: artificial land and cropland. The data are computed from Corine land cover and updated accordingly. 2.The social value given to nature assessed via the importance of its designation by science and policy; this is computed from the combination of European (Natura 2000), internationally, and nationally (CDDA) designated sites maps. It captures what cannot be seen from the satellite images, namely, the species richness/habitats of landscape which has motivated designation for nature conservation. 3.The fragmentation of landscape by roads and railways, which is not captured in the previous 2 layers. The indicator retained is the effective mesh size (MEFF), for its natural logarithm (ln) value. The lower the effective mesh size, the higher the fragmentation. The Making of LNEP: GBLI = Aggregation of CLC classes 2B, 3, 4 & 5, smoothed at 5 km. Range [0-100] NATURILIS_COMB or COMB = Union of N2K and CDDA, smoothed at 5 km. Range [0-100] Gross_LEP or GLEP= GBLI + (0.5 x COMB). Range [0-150] GLEPscaled = (GLEP * 255) / max(GLEP). Range [0-255] ln(MEFF). Range [0-255] and NLEP =1 + sqrt(GLEPscaled * lnMEFF ). Range [1-255]" ;
+    dc:spatial "POLYGON ((-48.110686 26.916483,-48.110686 71.899397,60.235121 71.899397,60.235121 26.916483,-48.110686 26.916483))" ;
+    dc:title "Net Landscape Ecological Potential 2000" ;
+    dcterms:references <urn:uuid:a730d12e-1f6c-4de8-8fc0-f83e4dd6f6c3> ;
+    esip:eastBound "60.235121"^^xsd:float ;
+    esip:northBound "71.899397"^^xsd:float ;
+    esip:southBound "26.916483"^^xsd:float ;
+    esip:westBound "-48.110686"^^xsd:float ;
+    owl:a bcube:Layer .
+
+<urn:uuid:78a4eb45-636f-4902-a951-acc30d8f4739> bcube:dateCreated "2015-08-09T20:54:41.993Z" ;
+    bcube:lastUpdated "2015-08-09T20:54:41.993Z" ;
+    dc:description "Agro-systems with pastures and/or mosaics of parcels, forests and other semi-natural or natural dry land, wetlands and water bodies are land cover types a priori favourable to nature. They may be or not designated and protected for their natural value. This Green Background Landscape is a natural asset in its own as well as an important component (with rivers) of the connectivity between areas of high ecological interest. GBLI is mapped from a selection of CLC classes (see annex 1) smoothed in order to compute their value in their neighbourhood (CORILIS). The methodology is presented in Land accounts for Europe 1990-2000 . GBLI is a modifiable index and map: -The standard map is based on CLC classes 2B, 3, 4 and 5 but the selection of elementary classes can be modified (the CORILIS layers are additive); -Current applications are presented with 1 km grid cells and 5 km span but smoothing can be processed with a different radius (radius used at the European scale are of 5, 10 and 20 km)." ;
+    dc:spatial "POLYGON ((-49.906705 26.409683,-49.906705 72.66441,62.616267 72.66441,62.616267 26.409683,-49.906705 26.409683))" ;
+    dc:title "Green Background Landscape Index 1990" ;
+    dcterms:references <urn:uuid:b4d78ebc-1fd6-4396-a7df-4d729a5099ff> ;
+    esip:eastBound "62.616267"^^xsd:float ;
+    esip:northBound "72.66441"^^xsd:float ;
+    esip:southBound "26.409683"^^xsd:float ;
+    esip:westBound "-49.906705"^^xsd:float ;
+    owl:a bcube:Layer .
+
+<urn:uuid:7a12d218-5a0e-43d7-bd6f-06b004276a24> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-09T20:54:41.993Z" ;
+    bcube:hasConfidence "Not Sure" ;
+    bcube:hasUrlSource "Generated" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-09T20:54:41.993Z" ;
+    dc:identifier "urn:sha:aa65d448581080be99dfd7c763355746be93bd0da0b42a9a6993d759" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://land.discomap.eea.europa.eu/arcgis/services/Land/NetLandscapeEcologicalPotential_Dyna_WM/MapServer/WMSServer?layers=10&width=500&version=1.3.0&bbox=-48.110686%2C26.916483%2C60.235121%2C71.899397&service=WMS&format=image%2Fpng&styles=&crs=CRS%3A84&request=GetMap&height=500" .
+
+<urn:uuid:7e25ddf0-5e93-47dd-9402-24ef13dc92ce> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-09T20:54:41.993Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-09T20:54:41.993Z" ;
+    dc:identifier "urn:sha:fb9b62a9046ab2b8b154c7ad46eee024a723075246094b365dc8b38b" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://land.discomap.eea.europa.eu/arcgis/services/Land/NetLandscapeEcologicalPotential_Dyna_WM/MapServer/WMSServer?request=GetCapabilities&service=WMS" .
+
+<urn:uuid:8c122947-1d42-4e23-a473-39626ac0af2d> bcube:dateCreated "2015-08-09T20:54:41.993Z" ;
+    bcube:lastUpdated "2015-08-09T20:54:41.993Z" ;
+    dc:description "NLEP enables connecting ecological potentials and human pressure via land use and detect impacts in a systematic way. NLEP for Europe is the combination of 3 different geographical datasets (layers, indexes): 1.The so-called green background landscape index (GBLI) which expresses the vegetation potential of the territory according to land use intensity; at the most aggregated level, land cover types are aggregated in 2 classes, the green the less intensive use and the non-green the most intensive use, conventionally: artificial land and cropland. The data are computed from Corine land cover and updated accordingly. 2.The social value given to nature assessed via the importance of its designation by science and policy; this is computed from the combination of European (Natura 2000), internationally, and nationally (CDDA) designated sites maps. It captures what cannot be seen from the satellite images, namely, the species richness/habitats of landscape which has motivated designation for nature conservation. 3.The fragmentation of landscape by roads and railways, which is not captured in the previous 2 layers. The indicator retained is the effective mesh size (MEFF), for its natural logarithm (ln) value. The lower the effective mesh size, the higher the fragmentation. The Making of LNEP: GBLI = Aggregation of CLC classes 2B, 3, 4 & 5, smoothed at 5 km. Range [0-100] NATURILIS_COMB or COMB = Union of N2K and CDDA, smoothed at 5 km. Range [0-100] Gross_LEP or GLEP= GBLI + (0.5 x COMB). Range [0-150] GLEPscaled = (GLEP * 255) / max(GLEP). Range [0-255] ln(MEFF). Range [0-255] and NLEP =1 + sqrt(GLEPscaled * lnMEFF ). Range [1-255]" ;
+    dc:spatial "POLYGON ((-48.110686 26.916483,-48.110686 71.899397,60.235121 71.899397,60.235121 26.916483,-48.110686 26.916483))" ;
+    dc:title "Net Landscape Ecological Potential 2006" ;
+    dcterms:references <urn:uuid:c433145b-c423-4060-8d66-a5369565b6d2> ;
+    esip:eastBound "60.235121"^^xsd:float ;
+    esip:northBound "71.899397"^^xsd:float ;
+    esip:southBound "26.916483"^^xsd:float ;
+    esip:westBound "-48.110686"^^xsd:float ;
+    owl:a bcube:Layer .
+
+<urn:uuid:993eeac2-0b52-46fc-a008-70051adcfe0e> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-09T20:54:41.993Z" ;
+    bcube:hasConfidence "Not Sure" ;
+    bcube:hasUrlSource "Generated" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-09T20:54:41.993Z" ;
+    dc:identifier "urn:sha:c9ddb662a066438362f2c25ec57f9a8d59edfbad2a6c8ad33d69a921" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://land.discomap.eea.europa.eu/arcgis/services/Land/NetLandscapeEcologicalPotential_Dyna_WM/MapServer/WMSServer?layers=7&width=500&version=1.3.0&bbox=-49.906705%2C26.409683%2C62.616267%2C72.66441&service=WMS&format=image%2Fpng&styles=&crs=CRS%3A84&request=GetMap&height=500" .
+
+<urn:uuid:a730d12e-1f6c-4de8-8fc0-f83e4dd6f6c3> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-09T20:54:41.993Z" ;
+    bcube:hasConfidence "Not Sure" ;
+    bcube:hasUrlSource "Generated" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-09T20:54:41.993Z" ;
+    dc:identifier "urn:sha:0e758d5364e4d6a980847bb5fa6376d0f4c40dc0e13b9748e95ac394" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://land.discomap.eea.europa.eu/arcgis/services/Land/NetLandscapeEcologicalPotential_Dyna_WM/MapServer/WMSServer?layers=11&width=500&version=1.3.0&bbox=-48.110686%2C26.916483%2C60.235121%2C71.899397&service=WMS&format=image%2Fpng&styles=&crs=CRS%3A84&request=GetMap&height=500" .
+
+<urn:uuid:b4d78ebc-1fd6-4396-a7df-4d729a5099ff> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-09T20:54:41.993Z" ;
+    bcube:hasConfidence "Not Sure" ;
+    bcube:hasUrlSource "Generated" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-09T20:54:41.993Z" ;
+    dc:identifier "urn:sha:6ba364dd65a44eb20565571ea1292eb574fd746698cf58217a199d6f" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://land.discomap.eea.europa.eu/arcgis/services/Land/NetLandscapeEcologicalPotential_Dyna_WM/MapServer/WMSServer?layers=6&width=500&version=1.3.0&bbox=-49.906705%2C26.409683%2C62.616267%2C72.66441&service=WMS&format=image%2Fpng&styles=&crs=CRS%3A84&request=GetMap&height=500" .
+
+<urn:uuid:c433145b-c423-4060-8d66-a5369565b6d2> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-09T20:54:41.993Z" ;
+    bcube:hasConfidence "Not Sure" ;
+    bcube:hasUrlSource "Generated" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-09T20:54:41.993Z" ;
+    dc:identifier "urn:sha:7b1ba4a6f9dcde4c1a71f95fa122f13a71701ed8fd6fc5926065fa7f" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://land.discomap.eea.europa.eu/arcgis/services/Land/NetLandscapeEcologicalPotential_Dyna_WM/MapServer/WMSServer?layers=12&width=500&version=1.3.0&bbox=-48.110686%2C26.916483%2C60.235121%2C71.899397&service=WMS&format=image%2Fpng&styles=&crs=CRS%3A84&request=GetMap&height=500" .
+
+<urn:uuid:dc2a81e4-22a5-4ff4-9914-df39276ee0b0> bcube:dateCreated "2015-08-09T20:54:41.993Z" ;
+    bcube:lastUpdated "2015-08-09T20:54:41.993Z" ;
+    dc:description "The Gross Landscape Ecological Potential is based on surface measurements which don t capture handicaps to wildlife resulting from barrier effect of land fragmentation by roads, railways and constructions. Fragmentation is a limiting factor of how this ecological potential can be utilized in relation to minimum size of territories as well as connectivity issues. The assessment of fragmentation is based on the Effective Mesh Size (MEFF) 'cross-boundary connections' (MEFF-CBC) methodology computed for 1km grid. It uses TeleAtlas roads and railways and UMZ data as fragmenting factors. MEFF value can be interpreted as the expected size of the area that is accessible when starting a movement at a randomly chosen point inside the reporting unit (in our case 1km grid) without encountering a physical barrier. So the higher MEFF value the less fragmented area around." ;
+    dc:spatial "POLYGON ((-48.110686 26.916483,-48.110686 71.899397,60.235121 71.899397,60.235121 26.916483,-48.110686 26.916483))" ;
+    dc:title "Effective Mesh Size" ;
+    dcterms:references <urn:uuid:1c158d2e-7038-4558-8249-7774b56bc19d> ;
+    esip:eastBound "60.235121"^^xsd:float ;
+    esip:northBound "71.899397"^^xsd:float ;
+    esip:southBound "26.916483"^^xsd:float ;
+    esip:westBound "-48.110686"^^xsd:float ;
+    owl:a bcube:Layer .
+
+<urn:uuid:eb325310-a676-48be-b648-391638738a35> bcube:dateCreated "2015-08-09T20:54:41.993Z" ;
+    bcube:lastUpdated "2015-08-09T20:54:41.993Z" ;
+    dc:description "Designated areas for nature protection do not exist in isolation to their surroundings. They are created for providing protection to natural features within their boundaries, as well as for providing refuge to nature in core areas which will in turn influence their neighbourhood and in many cases they are created to serve as corridors or nodes of ecological networks. Symmetrically, the long term sustainability of many high value habitats depends on their exchanges with their environment and/or similar habitats. Therefore, the areas of high ecological value to consider are not only important in themselves but their buffer zones as well (see definition of the ecological networks, CoE 2007 ). The buffers should reflect an influence which is proportional to the size and inversely proportional to the distance from the border of the designated area. This is the potential in the neighbourhood of designated areas. By analogy to CORILIS, the database of smoothed values of designated areas of high ecological value is called NATURILIS (or COMB_NATURILIS when several layers are combined). Without judging whether nature conservation has achieved all its objectives, the areas of high ecological value are defined, in a first instance, from the designated areas: CDDA national designations, Natura2000 sites, EMERALD sites, and other international designations. This restrictive approach, based on the value attributed by society, bears the advantage of a broad scientific consensus on the designated sites and consequently on available databases." ;
+    dc:spatial "POLYGON ((-61.340328 20.768764,-61.340328 72.814783,73.182386 72.814783,73.182386 20.768764,-61.340328 20.768764))" ;
+    dc:title "Naturalis Combined" ;
+    dcterms:references <urn:uuid:3b771883-cc47-4dcd-a328-b3f3bf24301d> ;
+    esip:eastBound "73.182386"^^xsd:float ;
+    esip:northBound "72.814783"^^xsd:float ;
+    esip:southBound "20.768764"^^xsd:float ;
+    esip:westBound "-61.340328"^^xsd:float ;
+    owl:a bcube:Layer .
+

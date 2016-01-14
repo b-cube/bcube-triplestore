@@ -1,0 +1,67 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:1f348913-1d0e-4ab8-9a98-27a118b036ea> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-09-10T09:41:04.814Z" ;
+    bcube:lastUpdated "2015-09-10T09:41:04.814Z" ;
+    bcube:originatedFrom <urn:uuid:8f7413a2-1111-4495-b644-8d9b1a90735d> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:56f155f5-38c6-4487-9cc9-4090d00a61f8> .
+
+<urn:uuid:56f155f5-38c6-4487-9cc9-4090d00a61f8> bcube:dateCreated "2015-09-10T09:41:04.814Z" ;
+    bcube:hasMetadataRecord <urn:uuid:1f348913-1d0e-4ab8-9a98-27a118b036ea> ;
+    bcube:lastUpdated "2015-09-10T09:41:04.814Z" ;
+    dc:conformsTo <urn:uuid:5fc5ba71-dd34-4a44-ba99-e0b48f51f220>,
+        <urn:uuid:ad01b684-4efb-4313-858d-720dbfd92cad>,
+        <urn:uuid:c6d8e899-5648-4050-a76b-d58632114e5e> ;
+    dc:description "The pm25Surface_12km_2001 file is the output data file from a hierarchical Bayesian model (HBM) that combines PM2.5 monitoring data from National Air Monitoring Stations/State and Local Air Monitoring Stations (NAMS/SLAMS) and simulated PM2.5 data from the deterministic prediction model, Models-3/Community Multiscale Air Quality (CMAQ). The file contains estimates of the mean and standard error for 12 km x 12 km grids across the eastern US for each day of the modeling year." ;
+    dc:spatial "POLYGON ((-100.32 25.93,-100.32 48.7,-67.1 48.7,-67.1 25.93,-100.32 25.93))" ;
+    dcterms:publisher <urn:uuid:d8adad8e-2ff3-4528-91b6-d87ee30a7933> ;
+    dcterms:title "EPA statistical predictions of PM2.5 for 2001 at 12km grid" ;
+    esip:eastBound "-67.1"^^xsd:float ;
+    esip:northBound "48.7"^^xsd:float ;
+    esip:southBound "25.93"^^xsd:float ;
+    esip:westBound "-100.32"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:5fc5ba71-dd34-4a44-ba99-e0b48f51f220> bcube:hasType "theme" ;
+    bcube:hasValue "Air" ;
+    dc:partOf "EPA GIS Keyword Thesaurus" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:8f7413a2-1111-4495-b644-8d9b1a90735d> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-09-10T09:41:04.814Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-09-10T09:41:04.814Z" ;
+    dc:identifier "urn:sha:fee43b9468c98ad5840c317d630a915a99cbf05e85ccbfdbfe9b6f67" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www.epa.gov/heasd/documents/cdc/HBM/pm25/HBM_PM25_2001_12km_metadata.xml" .
+
+<urn:uuid:ad01b684-4efb-4313-858d-720dbfd92cad> bcube:hasType "place" ;
+    bcube:hasValue "United States" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:c6d8e899-5648-4050-a76b-d58632114e5e> bcube:hasType "theme" ;
+    bcube:hasValue "environment" ;
+    dc:partOf "ISO 19115 Topic Category" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:d8adad8e-2ff3-4528-91b6-d87ee30a7933> owl:a foaf:Organization ;
+    foaf:name "U.S. EPA Office of Research & Development (ORD) - National Exposure Research Laboratory (NERL)" .
+

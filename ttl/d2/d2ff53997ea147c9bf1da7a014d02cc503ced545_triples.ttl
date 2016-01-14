@@ -1,0 +1,75 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:17090e4f-e83c-4dd9-8188-326d2468ceed> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-08-11T10:37:45.19Z" ;
+    bcube:lastUpdated "2015-08-11T10:37:45.19Z" ;
+    bcube:originatedFrom <urn:uuid:5fd85828-c42a-4357-9795-243477b461eb> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:6f843bc4-9a18-4526-b020-d50d59014e7b> .
+
+<urn:uuid:1f10f5c8-c353-4f0c-a248-11c22836930f> bcube:hasType "place" ;
+    bcube:hasValue "Montana",
+        "Yellowstone River" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:3335e7b5-7a4a-4708-b502-f6492c69ec6a> bcube:hasType "theme" ;
+    bcube:hasValue "inlandWaters" ;
+    dc:partOf "ISO 19115 Topic Category" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:5fd85828-c42a-4357-9795-243477b461eb> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-11T10:37:45.19Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-11T10:37:45.19Z" ;
+    dc:identifier "urn:sha:c553cbab4d06643b06a336dbaaab9772b4a6e2029c42d65ffc14d401" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://mslapps.mt.gov/Geographic_Information/Data/DataList/datalist_MetadataDetailRaw.aspx?did={402858AB-C0CF-4C70-A708-77F6977089A0}" .
+
+<urn:uuid:6f843bc4-9a18-4526-b020-d50d59014e7b> bcube:dateCreated "2015-08-11T10:37:45.19Z" ;
+    bcube:hasMetadataRecord <urn:uuid:17090e4f-e83c-4dd9-8188-326d2468ceed> ;
+    bcube:lastUpdated "2015-08-11T10:37:45.19Z" ;
+    dc:conformsTo <urn:uuid:1f10f5c8-c353-4f0c-a248-11c22836930f>,
+        <urn:uuid:3335e7b5-7a4a-4708-b502-f6492c69ec6a> ;
+    dc:description "This is an ESRI personal geodatabase containing the Channel Migration Zone (CMZ) developed for the Yellowstone River. The CMZ extends from Gardiner, Montana to the River's confluence with the Missouri River in McKenzie County, North Dakota. Also included are the various datasets used in the development of the CMZ, such as geology designations and channel migration vectors. CMZ mapping is based on the understanding that rivers are dynamic and move laterally across their floodplains through time. As such, over a given time period, rivers occupy a corridor area whose width is dependent on rates of channel shift. This dataset includes polygons representing areas likely to be affected by channel movement. The primary layer in this geodatabase is CMZ_complete, which shows the regions within the CMZ classified as to whether they are in the 2001 channel, the Avulsion Hazard Zone (AHZ), the Historic Migration Zone (HMZ), Alluvium, High Terrace, Low Terrace, or Outwash Terrace. Each classification may additionally be specified as being in a Restricted Migration Area (RMA), meaning that there are artificial bank protection features between the river and the RMA region. Avulsion Hazard Zones (AHZ) are areas of rapid channel avulsion. Alluvium and the three Terrace types are all areas of slow channel migration, which are collectively called \"erosion buffers.\" Erosion buffer widths are dependent on the local geology type and the rate of historic migration since 1950. Historic Migration Zones (HMZ) are areas previously occupied by the channel, based on the historic imagery. Other datasets in the geodatabase: CMZ_boundary_only -- This dataset shows the outer boundary of the CMZ, excluding Restricted Migration Areas. Geologic_Breaks -- represents the breaks used to differentiate geology when creating the erosion buffers of the CMZ. Because channel migration rates are dependent on local geology, erosion buffer widths are also variable. Each line in the dataset represents a hand-drawn boundary between two geology types and, consequently, erosion buffers of different widths. Geology_Points -- represents the points used to identify geology when creating the erosion buffers of the CMZ. This point layer identifies the geology of the areas between the breaks. Migration Lines -- Three lines were drawn at each location, tracing the path of channel migration from 1950 to 2001. The average length of the three lines determined the migration distance at that location. This distance, as well as local geology, determined the erosion buffer width at that location. RMA_Lines -- lines representing obstructions within the Channel Migration Zone. They are a demarcation of bank protection features in the floodplain that restrict natural channel migration. This feature class was used to cut the CMZ polygons so areas behind bank protection features could be attributed as RMAs. Buffers -- is a table that shows the buffer distances applied within each reach of the study area to the 2001 channel to created the CMZ." ;
+    dc:spatial "POLYGON ((-110.25 45.46,-110.25 48.11,-103.92 48.11,-103.92 45.46,-110.25 45.46))" ;
+    dcterms:publisher <urn:uuid:960afc9c-58ba-4e3b-8ab4-c7dec0559a2c> ;
+    dcterms:references <urn:uuid:f25bfeb0-a2b0-46a4-968a-40a67a1ebfbc> ;
+    dcterms:title "Channel Migration Zone of the Yellowstone River" ;
+    esip:eastBound "-103.92"^^xsd:float ;
+    esip:northBound "48.11"^^xsd:float ;
+    esip:southBound "45.46"^^xsd:float ;
+    esip:startDate "2009-01-01"^^xsd:date ;
+    esip:westBound "-110.25"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:960afc9c-58ba-4e3b-8ab4-c7dec0559a2c> owl:a foaf:Organization ;
+    foaf:name "Montana State Library" .
+
+<urn:uuid:f25bfeb0-a2b0-46a4-968a-40a67a1ebfbc> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-11T10:37:45.19Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-11T10:37:45.19Z" ;
+    dc:identifier "urn:sha:c58eefa7b8057455c0f7c83d384305c837da2f55ac135cfcd4572085" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "ftp://ftp.geoinfo.msl.mt.gov/Data/Spatial/NonMSDI/Collections/Yellowstone_River_Clearinghouse/Geodatabases/Yellowstone_CMZ.zip" .
+

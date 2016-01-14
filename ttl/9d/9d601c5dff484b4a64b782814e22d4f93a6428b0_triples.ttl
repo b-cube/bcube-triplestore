@@ -1,0 +1,78 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:3e01ddf7-aa97-40e7-a930-77d0dffd6f81> bcube:hasType "temporal" ;
+    bcube:hasValue "2001",
+        "March" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:4798b859-34de-4d76-9bcf-caab77a527de> bcube:hasType "place" ;
+    bcube:hasValue "Alachua County",
+        "Florida",
+        "Suwannee River Water Management District",
+        "United States" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:4977983b-8129-4b23-9eae-4911f77081be> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-09-09T11:50:44.506Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-09-09T11:50:44.506Z" ;
+    dc:identifier "urn:sha:dafa22f5c9e9b820875ff0c27b8503dc68057fe5f917140dcffef167" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "https://catalog.data.gov/harvest/object/b18faa94-20ff-4666-b255-0a6ad211a342" .
+
+<urn:uuid:7a9b25fd-7898-41e9-af3a-10154773ffb0> bcube:hasType "theme" ;
+    bcube:hasValue "Elevation",
+        "Ground",
+        "Laser",
+        "Lidar",
+        "Remote Sensing",
+        "Terrain",
+        "Topography" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:cc90cead-d1d2-42b4-8aed-99513c73a166> a "ISO 19115:2003/19139" ;
+    bcube:dateCreated "2015-09-09T11:50:44.506Z" ;
+    bcube:lastUpdated "2015-09-09T11:50:44.506Z" ;
+    bcube:originatedFrom <urn:uuid:4977983b-8129-4b23-9eae-4911f77081be> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:e6373a5a-94ae-42f4-99dd-9c4867698ec6> .
+
+<urn:uuid:e6373a5a-94ae-42f4-99dd-9c4867698ec6> bcube:dateCreated "2015-09-09T11:50:44.506Z" ;
+    bcube:hasMetadataRecord <urn:uuid:cc90cead-d1d2-42b4-8aed-99513c73a166> ;
+    bcube:lastUpdated "2015-09-09T11:50:44.506Z" ;
+    dc:conformsTo <urn:uuid:3e01ddf7-aa97-40e7-a930-77d0dffd6f81>,
+        <urn:uuid:4798b859-34de-4d76-9bcf-caab77a527de>,
+        <urn:uuid:7a9b25fd-7898-41e9-af3a-10154773ffb0>,
+        <urn:uuid:f561d241-e7ce-4cc5-9602-ea3601fe821f> ;
+    dc:description "This is a point dataset of elevations over the NE quadrant of the Mikesville quadrangle, Florida. The data were derived from LIDAR measurements performed in 2001. The data are 'edited' to the extent that they have been reduced to a 'bare ground' representation; most above ground level features and objects such as buildings and trees have been removed from these data. Delivered points as unclassified bare-earth processed points. NOAA OCM reclassed all points to the Ground class" ;
+    dc:spatial "POLYGON ((-82.5626 29.9375,-82.5626 30.0,-82.5 30.0,-82.5 29.9375,-82.5626 29.9375))" ;
+    dcterms:title "2001 SRWMD BE Lidar: Alachua County (FL)" ;
+    esip:eastBound "-82.5"^^xsd:float ;
+    esip:northBound "30.0"^^xsd:float ;
+    esip:southBound "29.9375"^^xsd:float ;
+    esip:westBound "-82.5626"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:f561d241-e7ce-4cc5-9602-ea3601fe821f> bcube:hasValue "elevation" ;
+    dc:partOf "IsoTopicCategories" ;
+    owl:a bcube:thesaurusSubset .
+

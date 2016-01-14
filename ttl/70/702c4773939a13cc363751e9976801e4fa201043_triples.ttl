@@ -1,0 +1,73 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:41f7b66b-e935-4213-ac3b-a1542fb94f8d> bcube:hasType "theme" ;
+    bcube:hasValue "Oceans > Bathymetry/SeafloorTopography > Bathymetry",
+        "Oceans > Bathymetry/SeafloorTopography > Seafloor Topography" ;
+    dc:partOf "Global Change Master Directory (GCMD)" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:79fd5688-cdcd-4aad-bb60-7534ced8696f> bcube:hasValue "environment",
+        "geoscientificInformation",
+        "imageryBaseMapsEarthCover",
+        "oceans" ;
+    dc:partOf "IsoTopicCategories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:7e8f9ff9-0fb3-4bd2-82c1-06495d1f17b2> bcube:hasType "place" ;
+    bcube:hasValue "Bolinas",
+        "Bolinas Lagoon",
+        "Marin County",
+        "Pacific Ocean",
+        "State of California",
+        "Stinson Beach" ;
+    dc:partOf "Geographic Names Information System (GNIS)" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:8336c2f6-9681-440f-a196-0791cf95f300> bcube:dateCreated "2015-03-06T00:50:27.366Z" ;
+    bcube:hasMetadataRecord <urn:uuid:e85ec021-1ea7-4384-83db-38e50ef8696f> ;
+    bcube:lastUpdated "2015-03-06T00:50:27.366Z" ;
+    dc:conformsTo <urn:uuid:41f7b66b-e935-4213-ac3b-a1542fb94f8d>,
+        <urn:uuid:79fd5688-cdcd-4aad-bb60-7534ced8696f>,
+        <urn:uuid:7e8f9ff9-0fb3-4bd2-82c1-06495d1f17b2> ;
+    dc:description "This part of DS 781 presents data for the bathymetric contours for several seafloor maps of the Offshore of Bolinas map area, California. The vector data file is included in \"Contours_OffshoreBolinas.zip,\" which is accessible from http://pubs.usgs.gov/ds/781/OffshoreBolinas/data_catalog_OffshoreBolinas.html. 10-m interval contours of the Offshore of Bolinas map area, California, were generated from bathymetry data collected by California State University, Monterey Bay (CSUMB), by Fugro Pelagos, and by Moss Landing Marine Laboratory (MLML). Mapping was completed between 2004 and 2010, using a combination of 200-kHz and 400-kHz Reson 7125, and 244-kHz Reson 8101 multibeam echosounders, as well as 468-kHz SEA SWATHPlus and 250-kHz GeoSwath interferometric systems. These mapping missions combined to collect bathymetry from about the 10-m isobath to beyond the 3-nautical-mile limit of California s State Waters. Bathymetric contours at 10-m intervals were generated from a modified 10-m bathymetric surface. The most continuous contour segments were preserved while smaller segments and isolated island polygons were excluded from the final output. Contours were smoothed via a polynomial approximation with exponential kernel (PAEK) algorithm using a tolerance value of 60 m. The contours were then clipped to the boundary of the map area. These data are not intended for navigational purposes." ;
+    dc:spatial "POLYGON ((-122.78 37.81,-122.78 37.97,-122.58 37.97,-122.58 37.81,-122.78 37.81))" ;
+    dcterms:title "Contours--Offshore of Bolinas, California" ;
+    esip:eastBound "-122.58"^^xsd:float ;
+    esip:endDate "2010-01-01"^^xsd:date ;
+    esip:northBound "37.97"^^xsd:float ;
+    esip:southBound "37.81"^^xsd:float ;
+    esip:startDate "2004-01-01"^^xsd:date ;
+    esip:westBound "-122.78"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:c116e279-95c7-4a84-81ad-73a19e9163a9> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-03-06T00:50:27.366Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-03-06T00:50:27.366Z" ;
+    dc:identifier "urn:sha:a30bf06512765c00c5a1dce779ac84a47e61d73e3ccfab22d978a0ff" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://catalog.data.gov/harvest/object/234bb44d-176d-42e7-87eb-8eb8232c6c5b" .
+
+<urn:uuid:e85ec021-1ea7-4384-83db-38e50ef8696f> a "ISO 19115:2003/19139" ;
+    bcube:dateCreated "2015-03-06T00:50:27.366Z" ;
+    bcube:lastUpdated "2015-03-06T00:50:27.366Z" ;
+    bcube:originatedFrom <urn:uuid:c116e279-95c7-4a84-81ad-73a19e9163a9> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:8336c2f6-9681-440f-a196-0791cf95f300> .
+

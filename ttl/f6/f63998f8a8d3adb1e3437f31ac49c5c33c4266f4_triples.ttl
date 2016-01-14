@@ -1,0 +1,93 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:2b46bbf8-18a7-4bc1-bf11-1436ab82447f> owl:a foaf:Organization ;
+    foaf:name "Bureau of the Census" .
+
+<urn:uuid:308c598a-420c-499f-98b9-8ef2ae958db5> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-01T22:48:15.003Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-01T22:48:15.003Z" ;
+    dc:identifier "urn:sha:1a49940606b24fd057067d85bdb2a8b6de54209f97bb3ca5c0bb06aa" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://cugirmetadata.mannlib.cornell.edu/005cta.xml" .
+
+<urn:uuid:3d04256c-ee48-4e43-8f45-d48e8fd4cc57> dcterms:references <urn:uuid:6620f0f2-e0dd-4c27-8d1c-b995645bb709> ;
+    owl:a bibo:WebPage .
+
+<urn:uuid:516414fd-84b2-4eab-a649-3f08d64ebaec> bcube:hasType "theme" ;
+    bcube:hasValue "Census Tracts" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:61cbd1c0-f4a0-4da4-9fb0-b120b6b3fc6e> bcube:hasType "theme" ;
+    bcube:hasValue "Census districts--New York (State)--Bronx County--Maps.",
+        "Census districts." ;
+    dc:partOf "LCSH" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:6620f0f2-e0dd-4c27-8d1c-b995645bb709> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-01T22:48:15.003Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-01T22:48:15.003Z" ;
+    dc:identifier "urn:sha:ca347611d06e72c06613042f9ff8974971b793805c9855ff8d465f88" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://cugir.mannlib.cornell.edu/bucketinfo.jsp?id=218" .
+
+<urn:uuid:76b6908e-cf07-4e09-aa03-9cb6bc6d2605> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-11-01T22:48:15.003Z" ;
+    bcube:lastUpdated "2015-11-01T22:48:15.003Z" ;
+    bcube:originatedFrom <urn:uuid:308c598a-420c-499f-98b9-8ef2ae958db5> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:c1dfa1aa-cf88-4942-a477-d13d622ced8c> .
+
+<urn:uuid:94d43ef1-528a-4237-927b-fa9657e0228a> bcube:hasType "place" ;
+    bcube:hasValue "Bronx County (N.Y.)",
+        "New York (State)" ;
+    dc:partOf "LCSH" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:c1dfa1aa-cf88-4942-a477-d13d622ced8c> bcube:dateCreated "2015-11-01T22:48:15.003Z" ;
+    bcube:hasMetadataRecord <urn:uuid:76b6908e-cf07-4e09-aa03-9cb6bc6d2605> ;
+    bcube:lastUpdated "2015-11-01T22:48:15.003Z" ;
+    dc:conformsTo <urn:uuid:516414fd-84b2-4eab-a649-3f08d64ebaec>,
+        <urn:uuid:61cbd1c0-f4a0-4da4-9fb0-b120b6b3fc6e>,
+        <urn:uuid:94d43ef1-528a-4237-927b-fa9657e0228a>,
+        <urn:uuid:e3b7e20a-6106-4a63-8d3f-3af86c236882> ;
+    dc:description "These files are an extract of selected geographic and cartographic information from the 1995 TIGER/Line files detailing census tracks and block numbering areas." ;
+    dc:spatial "POLYGON ((-73.934 40.786,-73.934 40.917,-73.748 40.917,-73.748 40.786,-73.934 40.786))" ;
+    dcterms:publisher <urn:uuid:2b46bbf8-18a7-4bc1-bf11-1436ab82447f> ;
+    dcterms:references <urn:uuid:3d04256c-ee48-4e43-8f45-d48e8fd4cc57> ;
+    dcterms:title "Census Tracts, Bronx County (ARC Export : 1998)" ;
+    esip:eastBound "-73.748"^^xsd:float ;
+    esip:northBound "40.917"^^xsd:float ;
+    esip:southBound "40.786"^^xsd:float ;
+    esip:startDate "1995-01-01"^^xsd:date ;
+    esip:westBound "-73.934"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:e3b7e20a-6106-4a63-8d3f-3af86c236882> bcube:hasType "theme" ;
+    bcube:hasValue "boundaries",
+        "society" ;
+    dc:partOf "ISO 19115 Topic Category" ;
+    owl:a bcube:thesaurusSubset .
+

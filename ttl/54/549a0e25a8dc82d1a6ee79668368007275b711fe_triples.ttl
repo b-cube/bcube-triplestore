@@ -1,0 +1,117 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:16032f51-757a-474b-acd6-89f9f108d032> bcube:hasType "theme" ;
+    bcube:hasValue "AIS",
+        "Automatic Identification System",
+        "Nautical charting",
+        "coastal and marine spatial planning",
+        "ocean planning",
+        "position report",
+        "static data report",
+        "vessel",
+        "voyage" ;
+    dc:partOf "none" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:365ef0d1-bb11-42b4-b3a8-d756b9b1cb2a> bcube:hasType "stratum" ;
+    bcube:hasValue "sea level" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:4d880c64-6075-4f02-9931-ceb2c5d997f9> dcterms:references <urn:uuid:554e9474-5b96-4993-a0a5-f67530d3cf4f> ;
+    owl:a bibo:WebPage .
+
+<urn:uuid:4debdf60-686e-4f6b-9e43-4d036bbb6ba9> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-05T07:44:46.768Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-05T07:44:46.768Z" ;
+    dc:identifier "urn:sha:8920d4d18443e7287445275e09d448a23b8b7f128a3431268a66c27a" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://marinecadastre.gov/ais/" .
+
+<urn:uuid:554e9474-5b96-4993-a0a5-f67530d3cf4f> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-05T07:44:46.768Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-05T07:44:46.768Z" ;
+    dc:identifier "urn:sha:9112d0affac28911928bf3cbae39314acbe3e585d67f411b31bd56b3" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www.uscg.mil/acquisition/nais/default.asp" .
+
+<urn:uuid:55fe37da-0d3b-4838-b433-5ee6a7752cf7> bcube:hasType "place" ;
+    bcube:hasValue "United States, Atlantic Ocean, Gulf of Mexico, Great Lakes, Pacific Ocean, Bering Sea, UTM Zone 1, UTM Zone 2, UTM Zone 3, UTM Zone 4, UTM Zone 5, UTM Zone 6, UTM Zone 7, UTM Zone 8, UTM Zone 9, UTM Zone 10, UTM Zone 11, UTM Zone 14, UTM Zone 15, UTM Zone 16, UTM Zone 17, UTM Zone 18, UTM Zone 19, UTM Zone 20" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:79ca5e25-5d3b-40a5-bc81-b416fbb0dc8b> bcube:dateCreated "2015-08-05T07:44:46.768Z" ;
+    bcube:hasMetadataRecord <urn:uuid:ffe05c72-fbfc-4ebf-9fb2-03bba067a7f8> ;
+    bcube:lastUpdated "2015-08-05T07:44:46.768Z" ;
+    dc:conformsTo <urn:uuid:16032f51-757a-474b-acd6-89f9f108d032>,
+        <urn:uuid:365ef0d1-bb11-42b4-b3a8-d756b9b1cb2a>,
+        <urn:uuid:55fe37da-0d3b-4838-b433-5ee6a7752cf7>,
+        <urn:uuid:bf825f80-f9ec-45b7-9314-87079032ada3> ;
+    dc:description "The 2012 United States Automatic Identification System Database contains vessel traffic data for planning purposes within the U.S. coastal waters. The database is composed of 216 self-contained File Geodatabases (FGDB). Each FGDB represents one month of data for a single UTM zone. The UTM zones represented cover the entire United States and include 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 14, 15, 16, 17, 18, 19, and 20. Each FGDB consists of one feature class, four tables, and two relationship classes. The Broadcast point feature class contains the position reports, which have been pre-filtered to a one-minute time step. The Voyage table contains elements of the static data reports that are updated for each ship voyage. The Vessel table contains elements of the static data reports that are specific to a particular vessel. The BaseStations table lists the base stations collecting data for a particular month/UTM zone. The AttributeUnits table contains a list of units for each of the attribute fields in the Broadcast, Voyage, and Vessel tables. The BroadcastHasVessel relationship class relates the broadcast points to the vessel table records. The BroadcastHasVoyage relationship class relates the broadcast points to the voyage table records." ;
+    dc:spatial "POLYGON ((-180 -90,-180 90,-66 90,-66 -90,-180 -90))" ;
+    dcterms:publisher <urn:uuid:84a75a0c-f39b-42de-a1b0-a8b3fbf4636f> ;
+    dcterms:references <urn:uuid:4d880c64-6075-4f02-9931-ceb2c5d997f9>,
+        <urn:uuid:8d3c68ca-4c53-4923-8636-889ec3ffda7a> ;
+    dcterms:title "2012 United States Automatic Identification System Database" ;
+    esip:eastBound "-66.0"^^xsd:float ;
+    esip:endDate "2012-12-31"^^xsd:date ;
+    esip:northBound "90.0"^^xsd:float ;
+    esip:southBound "-90.0"^^xsd:float ;
+    esip:startDate "2012-01-01"^^xsd:date ;
+    esip:westBound "-180.0"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:84a75a0c-f39b-42de-a1b0-a8b3fbf4636f> owl:a foaf:Organization ;
+    foaf:name "NOAA's Ocean Service, Office for Coastal Management (OCM)" .
+
+<urn:uuid:8d3c68ca-4c53-4923-8636-889ec3ffda7a> dcterms:references <urn:uuid:4debdf60-686e-4f6b-9e43-4d036bbb6ba9> ;
+    owl:a bibo:WebPage .
+
+<urn:uuid:991cb79a-903e-4494-a0a7-9cbf4e53038b> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-05T07:44:46.768Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-05T07:44:46.768Z" ;
+    dc:identifier "urn:sha:6fc0369822f065bac9eedbb01b8269ceff28d683c1582798c9a8fbf4" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://coast.noaa.gov/data/Documents/Metadata/harvest/MarineCadastre/AISDataHandler2012Metadata.xml" .
+
+<urn:uuid:bf825f80-f9ec-45b7-9314-87079032ada3> bcube:hasType "theme" ;
+    bcube:hasValue "oceans",
+        "planningCadastre",
+        "transportation" ;
+    dc:partOf "ISO 19115 Topic Category" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:ffe05c72-fbfc-4ebf-9fb2-03bba067a7f8> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-08-05T07:44:46.768Z" ;
+    bcube:lastUpdated "2015-08-05T07:44:46.768Z" ;
+    bcube:originatedFrom <urn:uuid:991cb79a-903e-4494-a0a7-9cbf4e53038b> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:79ca5e25-5d3b-40a5-bc81-b416fbb0dc8b> .
+

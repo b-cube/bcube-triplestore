@@ -1,0 +1,137 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:33958883-402f-4d00-b8b4-24766fcd76c8> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-10-30T14:57:10.967Z" ;
+    bcube:lastUpdated "2015-10-30T14:57:10.967Z" ;
+    bcube:originatedFrom <urn:uuid:920f7566-647f-48e2-975c-1dc2a2b4a29f> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:9fb2941a-9482-422d-a345-343380cb0c8c> .
+
+<urn:uuid:546196ad-acad-49de-8357-9c877e0817de> owl:a foaf:Organization ;
+    foaf:name "ERDDAP, version 1.65, at NOAA NMFS SWFSC Environmental Research Division" .
+
+<urn:uuid:5e274f65-6a84-4942-a6a4-e8ff4e6e4be7> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-10-30T14:57:10.967Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-10-30T14:57:10.967Z" ;
+    dc:identifier "urn:sha:660f3e84cb636c422aa1aaf6c835bf225ad2df9511f261f62a10ae94" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://coastwatch.pfeg.noaa.gov/erddap/tabledap/nosCoopsMWT.subset" .
+
+<urn:uuid:6799e1c3-3fcc-4414-862b-48dfe61091f6> bcube:hasType "theme" ;
+    bcube:hasValue "latitude",
+        "longitude",
+        "sea_water_temperature",
+        "time" ;
+    dc:partOf "CF Standard Name Table v29" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:86a839af-0547-4fa6-bced-7a31b244b021> dcterms:references <urn:uuid:5e274f65-6a84-4942-a6a4-e8ff4e6e4be7> ;
+    owl:a bibo:WebPage .
+
+<urn:uuid:920f7566-647f-48e2-975c-1dc2a2b4a29f> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-10-30T14:57:10.967Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-10-30T14:57:10.967Z" ;
+    dc:identifier "urn:sha:a4b50198764108d830569c950436d1eff61b128dea7606b8600e5b08" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://coastwatch.pfeg.noaa.gov/erddap/metadata/fgdc/xml/nosCoopsMWT_fgdc.xml" .
+
+<urn:uuid:9fb2941a-9482-422d-a345-343380cb0c8c> bcube:dateCreated "2015-10-30T14:57:10.967Z" ;
+    bcube:hasMetadataRecord <urn:uuid:33958883-402f-4d00-b8b4-24766fcd76c8> ;
+    bcube:lastUpdated "2015-10-30T14:57:10.967Z" ;
+    dc:conformsTo <urn:uuid:6799e1c3-3fcc-4414-862b-48dfe61091f6>,
+        <urn:uuid:fa5c411d-0b5e-4c20-a3ff-a3f9632cc904> ;
+    dc:description "This dataset has Water Temperature data from NOAA NOS Center for Operational Oceanographic Products and Services (CO-OPS). WARNING: These preliminary data have not been subjected to the National Ocean Services (NOS) Quality Control procedures, and do not necessarily meet the criteria and standards of official NOS data. They are released for limited public use with appropriate caution. WARNING: * Queries for data MUST include stationID= and time>=. * Queries USUALLY include time<= (the default end time corresponds to 'now'). * Queries MUST be for less than 30 days worth of data. * The data source isn't completely reliable. If your request returns no data when you think it should: * Try revising the request (e.g., a different time range). * The list of stations offering this data may be incorrect. * Sometimes a station or the entire data service is unavailable. Wait a while and try again." ;
+    dc:spatial "POLYGON ((-177.3608 -14.2767,-177.3608 70.4114,167.7345 70.4114,167.7345 -14.2767,-177.3608 -14.2767))" ;
+    dcterms:publisher <urn:uuid:546196ad-acad-49de-8357-9c877e0817de> ;
+    dcterms:references <urn:uuid:86a839af-0547-4fa6-bced-7a31b244b021>,
+        <urn:uuid:d7e3b0d6-6532-4c86-8104-c71ec064bc3c>,
+        <urn:uuid:dc72c8c5-dd0c-489a-bb91-164f272f38be> ;
+    dcterms:title "NOS CO-OPS Meteorological Data, Water Temperature, 6-Minute" ;
+    esip:eastBound "167.7345"^^xsd:float ;
+    esip:northBound "70.4114"^^xsd:float ;
+    esip:southBound "-14.2767"^^xsd:float ;
+    esip:westBound "-177.3608"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:d7e3b0d6-6532-4c86-8104-c71ec064bc3c> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-10-30T14:57:10.967Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-10-30T14:57:10.967Z" ;
+    dc:identifier "urn:sha:9ed1c3288407bc4dd13fea2f6748ec2e016a4ff4ccaceada629cf5cb" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://coastwatch.pfeg.noaa.gov/erddap/tabledap/nosCoopsMWT.graph" .
+
+<urn:uuid:dc72c8c5-dd0c-489a-bb91-164f272f38be> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-10-30T14:57:10.967Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-10-30T14:57:10.967Z" ;
+    dc:identifier "urn:sha:cc069347339ac49028057b379c0bf08fcf3e1c94b346c07871ab96c4" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://coastwatch.pfeg.noaa.gov/erddap/tabledap/nosCoopsMWT.html" .
+
+<urn:uuid:fa5c411d-0b5e-4c20-a3ff-a3f9632cc904> bcube:hasType "theme" ;
+    bcube:hasValue "6-minute",
+        "Oceans > Ocean Temperature > Water Temperature",
+        "co-ops",
+        "collection",
+        "data",
+        "date",
+        "deployment",
+        "designation",
+        "established",
+        "flag",
+        "identifier",
+        "limit",
+        "meteorological",
+        "minute",
+        "name",
+        "noaa",
+        "nos",
+        "ocean",
+        "oceans",
+        "ops",
+        "platform",
+        "sea",
+        "sea_water_temperature",
+        "seawater",
+        "sensor",
+        "shefID",
+        "shef_id",
+        "state",
+        "station",
+        "temperature",
+        "time",
+        "water" ;
+    dc:partOf "GCMD Science Keywords" ;
+    owl:a bcube:thesaurusSubset .
+

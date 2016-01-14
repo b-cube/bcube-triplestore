@@ -1,0 +1,91 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:104f3f4c-aca0-4c78-ac9d-c1a8a5f026ad> owl:a foaf:Organization ;
+    foaf:name "USGS" .
+
+<urn:uuid:3f81897c-0163-43e2-847f-db3b4c8fb476> bcube:hasType "theme" ;
+    bcube:hasValue "Contour map",
+        "elevation change" ;
+    dc:partOf "NONE" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:5db49c42-7d4b-4b9c-96d9-145fe0200230> bcube:hasType "stratum" ;
+    bcube:hasValue "Bare earth topography" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:6917efb0-9b21-45c0-8dc8-bcf301aef7cb> bcube:hasType "place" ;
+    bcube:hasValue "Florida",
+        "Gulf Islands National Seashore",
+        "Gulf of Mexico" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:8ef59720-d3b0-4d81-933e-0b787a3bd208> dcterms:references <urn:uuid:aedbcbf2-1c4f-4384-a32a-c1b2e691d824> ;
+    owl:a bibo:WebPage .
+
+<urn:uuid:95bbff56-50fd-46c3-a4d3-b17d6fc6ac44> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-10-29T16:09:16.291Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-10-29T16:09:16.291Z" ;
+    dc:identifier "urn:sha:d14a028c2a3a2bc9476102bb288234c415a2b01f828ea62ac5b3e42f" ;
+    owl:a bcube:Url .
+
+<urn:uuid:aedbcbf2-1c4f-4384-a32a-c1b2e691d824> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-10-29T16:09:16.291Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-10-29T16:09:16.291Z" ;
+    dc:identifier "urn:sha:5f5cc58869c9b2c2f60dfa3ad734a6725b23ad544254b5ff85050ae9" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "none" .
+
+<urn:uuid:b920e1b6-562f-4478-bb97-7b68273c7d97> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-10-29T16:09:16.291Z" ;
+    bcube:lastUpdated "2015-10-29T16:09:16.291Z" ;
+    bcube:originatedFrom <urn:uuid:cebb9e73-aabd-4e2f-b50b-44842d349524> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:d0b91878-31a4-463f-85ff-3ee87df29a48> .
+
+<urn:uuid:cebb9e73-aabd-4e2f-b50b-44842d349524> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-10-29T16:09:16.291Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-10-29T16:09:16.291Z" ;
+    dc:identifier "urn:sha:e6daa702ea0a48341069f7fd6e4f91e4ab82bb5cc6e6f6e7f01f3d52" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://pubs.usgs.gov/of/2007/1422/LIDAR/be_e488_n3358/contour.shp.xml" .
+
+<urn:uuid:d0b91878-31a4-463f-85ff-3ee87df29a48> bcube:dateCreated "2015-10-29T16:09:16.291Z" ;
+    bcube:hasMetadataRecord <urn:uuid:b920e1b6-562f-4478-bb97-7b68273c7d97> ;
+    bcube:lastUpdated "2015-10-29T16:09:16.291Z" ;
+    dc:conformsTo <urn:uuid:3f81897c-0163-43e2-847f-db3b4c8fb476>,
+        <urn:uuid:5db49c42-7d4b-4b9c-96d9-145fe0200230>,
+        <urn:uuid:6917efb0-9b21-45c0-8dc8-bcf301aef7cb> ;
+    dc:description "GIS contour lines of Gulf Islands National Seashore derived from a LiDAR GeoTIFF file." ;
+    dcterms:publisher <urn:uuid:104f3f4c-aca0-4c78-ac9d-c1a8a5f026ad> ;
+    dcterms:references <urn:uuid:8ef59720-d3b0-4d81-933e-0b787a3bd208>,
+        <urn:uuid:95bbff56-50fd-46c3-a4d3-b17d6fc6ac44> ;
+    dcterms:title "EAARL Topography-Gulf Islands National Seashore-Florida" ;
+    owl:a dcat:Dataset .
+

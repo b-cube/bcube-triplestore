@@ -1,0 +1,74 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:699c73db-0972-48c3-84cc-a2a5be9c3354> bcube:hasValue "transportation" ;
+    dc:partOf "IsoTopicCategories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:72500f88-74a2-417d-ad72-c925d1b90c1d> bcube:hasType "theme" ;
+    bcube:hasValue "location",
+        "mile marker",
+        "mile post",
+        "milepost",
+        "railroad",
+        "railway",
+        "transportation" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:73b4e00e-e8aa-4cb8-8f91-f83c7c92e61c> a "ISO 19115:2003/19139" ;
+    bcube:dateCreated "2015-08-05T04:36:56.116Z" ;
+    bcube:lastUpdated "2015-08-05T04:36:56.116Z" ;
+    bcube:originatedFrom <urn:uuid:d0bbecd8-37fd-40d4-9dd4-c769e578ffff> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:ba395ca4-40c2-4f40-aafa-fbd5b6508671> .
+
+<urn:uuid:ba395ca4-40c2-4f40-aafa-fbd5b6508671> bcube:dateCreated "2015-08-05T04:36:56.116Z" ;
+    bcube:hasMetadataRecord <urn:uuid:73b4e00e-e8aa-4cb8-8f91-f83c7c92e61c> ;
+    bcube:lastUpdated "2015-08-05T04:36:56.116Z" ;
+    dc:conformsTo <urn:uuid:699c73db-0972-48c3-84cc-a2a5be9c3354>,
+        <urn:uuid:72500f88-74a2-417d-ad72-c925d1b90c1d> ;
+    dc:description "Mileposts for BNSF railways in North Dakota. BNSF has given the State permission to publicly post this data." ;
+    dc:spatial "POLYGON ((-104.5 45.5,-104.5 49.5,-96.5 49.5,-96.5 45.5,-104.5 45.5))" ;
+    dcterms:references <urn:uuid:fd380e09-1b02-4f0b-a7dc-e20143338bd9> ;
+    dcterms:title "Railroad Mileposts BNSF" ;
+    esip:eastBound "-96.5"^^xsd:float ;
+    esip:northBound "49.5"^^xsd:float ;
+    esip:southBound "45.5"^^xsd:float ;
+    esip:westBound "-104.5"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:d0bbecd8-37fd-40d4-9dd4-c769e578ffff> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-05T04:36:56.116Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-05T04:36:56.116Z" ;
+    dc:identifier "urn:sha:2679124d4643ddc3e46b58e6968de805ab9b40081ba10b066ba402ff" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://catalog.data.gov/harvest/object/2f32452b-d7e1-48fd-a61c-d6ffd04bf7c3" .
+
+<urn:uuid:fd380e09-1b02-4f0b-a7dc-e20143338bd9> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-05T04:36:56.116Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-05T04:36:56.116Z" ;
+    dc:identifier "urn:sha:7cce5b94a157cc554291772b808bce37ea24e5fea08f4309574368eb" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www.nd.gov/gis" .
+

@@ -1,0 +1,74 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:0fca6ac7-551f-4bc9-b942-c967814a8fc9> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-10-29T23:30:01.222Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-10-29T23:30:01.222Z" ;
+    dc:identifier "urn:sha:f343a5877a556e05a7c3ba63233632bd15c64da6768a72e674d32289" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://data.denvergov.org/download/gis/zoning_for_primary_food_sales_or_markets/metadata/zoning_for_primary_food_sales_or_markets.xml" .
+
+<urn:uuid:22ff5282-7298-4d2d-bf73-2e325aaf2b3e> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-10-29T23:30:01.222Z" ;
+    bcube:lastUpdated "2015-10-29T23:30:01.222Z" ;
+    bcube:originatedFrom <urn:uuid:0fca6ac7-551f-4bc9-b942-c967814a8fc9> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:9907c0b3-a9f2-4af1-bd56-12c1b41efa49> .
+
+<urn:uuid:364fa144-d48b-49de-9a72-5abb44c14cd1> owl:a foaf:Organization ;
+    foaf:name "" .
+
+<urn:uuid:9907c0b3-a9f2-4af1-bd56-12c1b41efa49> bcube:dateCreated "2015-10-29T23:30:01.222Z" ;
+    bcube:hasMetadataRecord <urn:uuid:22ff5282-7298-4d2d-bf73-2e325aaf2b3e> ;
+    bcube:lastUpdated "2015-10-29T23:30:01.222Z" ;
+    dc:conformsTo <urn:uuid:bd9a86f3-40d2-4bfe-9276-a34a482a6301>,
+        <urn:uuid:d591c6bf-28ed-4fde-a1af-1c6ccb83d53e>,
+        <urn:uuid:dd071762-aa1a-45be-afd9-35f13cbf48be> ;
+    dc:description "This layer is a subset of the zoning boundaries for the City and County of Denver, Colorado to reflect the zone districts in the new code that permit food retail sales as a primary use. Primary Food Sales or Market is a subset of the Primary Commercial Sales, Services, and Repair uses category (Section 11.12.4). Food sales or markets are further defined in Section 11.12.4.7.B.4 as retail establishments primarily engaged in the retail sale of food and beverages for offsite or home consumption. Typical uses include supermarkets, groceries, markets, or delicatessens. This definition includes, but is not limited to, all uses in the following SIC group: 54 Food stores. Additional limitations can be found in Section 11.4.11.1 of the official zoning code. The zoning boundaries data layer is governed by ordinance and is only changed accordingly. Please note: this layer applies to the new code only. Zones carried over from the 1956 zoning code, as well as 'DIA', 'OS-A', 'PUD', 'PUD-G' zones, need to be reviewed individually." ;
+    dc:spatial "POLYGON ((-105.108245 39.624097,-105.108245 39.805671,-104.734566 39.805671,-104.734566 39.624097,-105.108245 39.624097))" ;
+    dcterms:publisher <urn:uuid:364fa144-d48b-49de-9a72-5abb44c14cd1> ;
+    dcterms:title "Primary Food Sales or Market" ;
+    esip:eastBound "-104.734566"^^xsd:float ;
+    esip:northBound "39.805671"^^xsd:float ;
+    esip:southBound "39.624097"^^xsd:float ;
+    esip:startDate "2010-06-25"^^xsd:date ;
+    esip:westBound "-105.108245"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:bd9a86f3-40d2-4bfe-9276-a34a482a6301> bcube:hasType "theme" ;
+    bcube:hasValue "boundaries",
+        "farming",
+        "planningCadastre" ;
+    dc:partOf "ISO 19115 Topic Categories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:d591c6bf-28ed-4fde-a1af-1c6ccb83d53e> bcube:hasType "place" ;
+    bcube:hasValue "Colorado",
+        "Denver",
+        "Denver County",
+        "USA" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:dd071762-aa1a-45be-afd9-35f13cbf48be> bcube:hasType "theme" ;
+    bcube:hasValue "food systems",
+        "zoning" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+

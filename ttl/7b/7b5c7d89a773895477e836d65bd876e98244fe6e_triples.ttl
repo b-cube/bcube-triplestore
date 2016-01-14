@@ -1,0 +1,93 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:36f69455-1fc3-4a02-8fd3-6e4089b2ace6> owl:a foaf:Organization ;
+    foaf:name "Federal Emergency Management Agency" .
+
+<urn:uuid:49e9614d-d474-451c-94d2-403c726e2f21> bcube:dateCreated "2015-11-05T07:25:32.772Z" ;
+    bcube:hasMetadataRecord <urn:uuid:5338802f-3938-452d-8f17-44171132496d> ;
+    bcube:lastUpdated "2015-11-05T07:25:32.772Z" ;
+    dc:conformsTo <urn:uuid:59516022-b2d8-4c19-b969-99d38572c371>,
+        <urn:uuid:83c1e92a-2c45-4651-b3e2-5b28a775a91a>,
+        <urn:uuid:d060ffa3-1a97-4446-b811-0776b56079d2> ;
+    dc:description "Terrain data, as defined in FEMA Guidelines and Specifications, Appendix N: Data Capture Standards, describes the digital topographic data that were used to create the elevation data representing the terrain environment of a watershed and/or floodplain. Terrain data requirements allow for flexibility in the types of information provided as sources used to produce final terrain deliverables. Once this type of data is provided, FEMA will be able to account for the origins of the flood study elevation data. (Source: FEMA Guidelines and Specifications, Appendix N, Section N.1.2)." ;
+    dc:spatial "POLYGON ((-95.162376 37.22462,-95.162376 37.775595,-94.550739 37.775595,-94.550739 37.22462,-95.162376 37.22462))" ;
+    dcterms:publisher <urn:uuid:36f69455-1fc3-4a02-8fd3-6e4089b2ace6> ;
+    dcterms:references <urn:uuid:df54d298-e3a0-49ff-a124-eb3a50e15a7c> ;
+    dcterms:title "TERRAIN, CONNECTICUT, USA" ;
+    esip:eastBound "-94.550739"^^xsd:float ;
+    esip:northBound "37.775595"^^xsd:float ;
+    esip:southBound "37.22462"^^xsd:float ;
+    esip:startDate "2007-09-14"^^xsd:date ;
+    esip:westBound "-95.162376"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:5338802f-3938-452d-8f17-44171132496d> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-11-05T07:25:32.772Z" ;
+    bcube:lastUpdated "2015-11-05T07:25:32.772Z" ;
+    bcube:originatedFrom <urn:uuid:c9800dd9-6304-4796-89ad-36a6753ac7cd> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:49e9614d-d474-451c-94d2-403c726e2f21> .
+
+<urn:uuid:59516022-b2d8-4c19-b969-99d38572c371> bcube:hasType "place" ;
+    bcube:hasValue "COMMUNITY",
+        "COUNTY",
+        "COUNTY-FIPS 34023",
+        "FEMA-CID 34023C",
+        "REGION 1",
+        "STATE CT" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:83c1e92a-2c45-4651-b3e2-5b28a775a91a> bcube:hasType "theme" ;
+    bcube:hasValue "Elevation" ;
+    dc:partOf "ISO 19115 Topic Category" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:c9800dd9-6304-4796-89ad-36a6753ac7cd> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-05T07:25:32.772Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-05T07:25:32.772Z" ;
+    dc:identifier "urn:sha:9885a4ebb708ef86585ab14ce6cbb426e4e48241340bc7a76935aa2a" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www.cteco.uconn.edu/help/lidar_docs/CTCoast2006/Metadata.xml" .
+
+<urn:uuid:d060ffa3-1a97-4446-b811-0776b56079d2> bcube:hasType "theme" ;
+    bcube:hasValue "Contours",
+        "DEM",
+        "Digital Terrain Model",
+        "Elevation Data",
+        "Land Surface",
+        "LiDAR",
+        "Relief",
+        "Topography" ;
+    dc:partOf "FEMA NFIP Topic Category" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:df54d298-e3a0-49ff-a124-eb3a50e15a7c> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-05T07:25:32.772Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-05T07:25:32.772Z" ;
+    dc:identifier "urn:sha:37c915397238031daced09ae0e2dd3bf54e84a6477f749c2cc9dcbdf" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://hazards.fema.gov" .
+

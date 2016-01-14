@@ -1,0 +1,84 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:1c5b0189-8983-4180-b571-c2951fde836a> bcube:hasType "theme" ;
+    bcube:hasValue "Bureau of Ocean Energy Management, BOEM",
+        "Cadastre",
+        "Lease blocks",
+        "OCS blocks",
+        "Official Protraction Diagram, OPD",
+        "Offshore",
+        "Oil and gas",
+        "Outer Continental Shelf, OCS",
+        "Renewable Energy" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:3a1da826-e4b0-4310-b502-aad1e67e2774> bcube:hasType "place" ;
+    bcube:hasValue "Alaska, AK",
+        "Beaufort",
+        "Chukchi",
+        "Cook Inlet",
+        "Exclusive Economic Zone, EEZ",
+        "Submerged Lands Act Boundary",
+        "USA" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:5f6465eb-84d7-4a2d-b3db-8485edafb942> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-06-18T09:02:28.926Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-06-18T09:02:28.926Z" ;
+    dc:identifier "urn:sha:c75c7ee0c266fad3f947acd43c28585b4398c26bf7f3d4a054d84171" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www.boem.gov/Oil-and-Gas-Energy-Program/Mapping-and-Data/Alaska.aspx" .
+
+<urn:uuid:6aa622fd-c36c-4993-81ae-2ef8dcd2d3b2> a "ISO 19115:2003/19139" ;
+    bcube:dateCreated "2015-06-18T09:02:28.926Z" ;
+    bcube:lastUpdated "2015-06-18T09:02:28.926Z" ;
+    bcube:originatedFrom <urn:uuid:957e04c9-6136-482d-a479-dd77cb64e464> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:b96fe2ca-0b92-4392-92df-92f033dd5153> .
+
+<urn:uuid:957e04c9-6136-482d-a479-dd77cb64e464> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-06-18T09:02:28.926Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-06-18T09:02:28.926Z" ;
+    dc:identifier "urn:sha:8ec96e9d72efd346067bb8242b11b0128b52828af2d02563322e3f5b" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://catalog.data.gov/harvest/object/b8a8d0bf-b523-4a59-aba4-f3fbc0434d4b" .
+
+<urn:uuid:b96fe2ca-0b92-4392-92df-92f033dd5153> bcube:dateCreated "2015-06-18T09:02:28.926Z" ;
+    bcube:hasMetadataRecord <urn:uuid:6aa622fd-c36c-4993-81ae-2ef8dcd2d3b2> ;
+    bcube:lastUpdated "2015-06-18T09:02:28.926Z" ;
+    dc:conformsTo <urn:uuid:1c5b0189-8983-4180-b571-c2951fde836a>,
+        <urn:uuid:3a1da826-e4b0-4310-b502-aad1e67e2774> ;
+    dc:description "This data set contains the outlines for historic (i.e., relinquished or inactive) federal oil and gas leases in the Alaska OCS Region through sale 193. They represent a close approximation, but might not be the exact coordinates for those leases. For the official coordinates please refer to the OPD or SOBD for the lease. ALSO NOTE: older leases were done on a NAD 27 grid, and their lease coordinates will not change as long as the lease remains active. Although the NAD 27 leases have been projected to NAD 83 for inclusion in this file, when plotted on the current NAD 83 leasing grid, they will not appear to \"line up\", because the NAD 83 grids represents a complete re-grid and not a re-projection of the old NAD 27 grid. All current leasing, starting with Sale 144 in September 1996 has been done on the NAD 83 grid." ;
+    dc:spatial "POLYGON ((-178.598 55.01044,-178.598 72.75106,-139.16307 72.75106,-139.16307 55.01044,-178.598 55.01044))" ;
+    dcterms:references <urn:uuid:5f6465eb-84d7-4a2d-b3db-8485edafb942> ;
+    dcterms:title "Alaska Federal Oil and Gas Historical Leases" ;
+    esip:eastBound "-139.16307"^^xsd:float ;
+    esip:northBound "72.75106"^^xsd:float ;
+    esip:southBound "55.01044"^^xsd:float ;
+    esip:westBound "-178.598"^^xsd:float ;
+    owl:a dcat:Dataset .
+

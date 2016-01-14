@@ -1,0 +1,65 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:6109d52b-0631-41e5-ba96-329d4a20ca10> bcube:hasValue "imageryBaseMapsEarthCover" ;
+    dc:partOf "IsoTopicCategories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:668fd6aa-2c5b-4df7-9bf0-0b5081ef656f> bcube:hasType "theme" ;
+    bcube:hasValue "Land Cover",
+        "Land Cover Analysis",
+        "Remotely Sensed Imagery/Photos" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:c1d86f5e-ff35-4b0f-806e-71292cad5bb8> a "ISO 19115:2003/19139" ;
+    bcube:dateCreated "2015-08-10T00:29:08.375Z" ;
+    bcube:lastUpdated "2015-08-10T00:29:08.375Z" ;
+    bcube:originatedFrom <urn:uuid:eda923f8-d6b2-4f74-aa5f-78c866f74364> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:fe2dc4d5-f1fb-4f10-82dd-9aa2bf82567d> .
+
+<urn:uuid:e3231670-06db-40f1-8e75-75750617f2dd> bcube:hasType "place" ;
+    bcube:hasValue "Coastal Zone",
+        "St Croix" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:eda923f8-d6b2-4f74-aa5f-78c866f74364> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-10T00:29:08.375Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-10T00:29:08.375Z" ;
+    dc:identifier "urn:sha:b02a7eb52251cdab36c3454a162d94e7588e1c0b04f6f2e82363604e" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://coast.noaa.gov/data/Documents/Metadata/isoharvest/Imagery/2002_USVI_stcroix_lc_ISO.xml" .
+
+<urn:uuid:fe2dc4d5-f1fb-4f10-82dd-9aa2bf82567d> bcube:dateCreated "2015-08-10T00:29:08.375Z" ;
+    bcube:hasMetadataRecord <urn:uuid:c1d86f5e-ff35-4b0f-806e-71292cad5bb8> ;
+    bcube:lastUpdated "2015-08-10T00:29:08.375Z" ;
+    dc:conformsTo <urn:uuid:6109d52b-0631-41e5-ba96-329d4a20ca10>,
+        <urn:uuid:668fd6aa-2c5b-4df7-9bf0-0b5081ef656f>,
+        <urn:uuid:e3231670-06db-40f1-8e75-75750617f2dd> ;
+    dc:description "This data set consists of land cover derived from high resolution imagery and was analyzed according to the Coastal Change Analysis Program (C-CAP) protocol to determine land cover. This data set utilized 3 Quickbird multispectral scenes. These full scenes were not sufficient to replace cloud obscured areas within the base imagery. Additional imagery was used for classifying obsucred areas. All scenes were processed to detect C-CAP land cover features on St Croix, U.S. Virgin Islands." ;
+    dc:spatial "POLYGON ((-64.905967 17.673324,-64.905967 17.791065,-64.563836 17.791065,-64.563836 17.673324,-64.905967 17.673324))" ;
+    dcterms:title "C-CAP Land Cover, United States Virgin Islands, St Croix, 2002" ;
+    esip:eastBound "-64.563836"^^xsd:float ;
+    esip:northBound "17.791065"^^xsd:float ;
+    esip:southBound "17.673324"^^xsd:float ;
+    esip:westBound "-64.905967"^^xsd:float ;
+    owl:a dcat:Dataset .
+

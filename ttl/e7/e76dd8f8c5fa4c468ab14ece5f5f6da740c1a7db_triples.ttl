@@ -1,0 +1,87 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:0059da3e-a707-45e9-8a47-6d1b746d1dfd> bcube:hasType "theme" ;
+    bcube:hasValue "Bathymetry/Topography",
+        "LAS",
+        "LiDAR",
+        "LiDARgrammetry" ;
+    dc:partOf "none" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:1ec618a2-7305-4040-90c1-7d571ee2ad03> bcube:hasValue "elevation" ;
+    dc:partOf "IsoTopicCategories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:44c9e84e-2b72-4f8c-a7d4-16fc8697fc4e> bcube:hasType "theme" ;
+    bcube:hasValue "Geographic Information > LiDAR" ;
+    dc:partOf "CoRIS Discovery Thesaurus" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:556f3629-bedf-49e1-89f3-19be961c90b6> bcube:hasType "place" ;
+    bcube:hasValue "COUNTRY/TERRITORY > United States of America > Florida",
+        "OCEAN BASIN > Atlantic Ocean > Gulf of Mexico > Florida" ;
+    dc:partOf "CoRIS Place Thesaurus" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:61ffb300-7606-4d14-8aff-a90479ec9571> bcube:hasType "temporal" ;
+    bcube:hasValue "2004",
+        "April" ;
+    dc:partOf "none" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:7558253b-143a-41fc-acf6-4e8725278539> bcube:hasType "place" ;
+    bcube:hasValue "Florida",
+        "Pasco County",
+        "US" ;
+    dc:partOf "none" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:eeb6980e-073b-4923-99a1-afb5d7ece3ac> bcube:dateCreated "2015-08-06T20:18:06.392Z" ;
+    bcube:hasMetadataRecord <urn:uuid:f7b91b2b-8c4d-40d5-be18-123fa80bc130> ;
+    bcube:lastUpdated "2015-08-06T20:18:06.392Z" ;
+    dc:conformsTo <urn:uuid:0059da3e-a707-45e9-8a47-6d1b746d1dfd>,
+        <urn:uuid:1ec618a2-7305-4040-90c1-7d571ee2ad03>,
+        <urn:uuid:44c9e84e-2b72-4f8c-a7d4-16fc8697fc4e>,
+        <urn:uuid:556f3629-bedf-49e1-89f3-19be961c90b6>,
+        <urn:uuid:61ffb300-7606-4d14-8aff-a90479ec9571>,
+        <urn:uuid:7558253b-143a-41fc-acf6-4e8725278539> ;
+    dc:description "Earthdata International was contracted to provide mapping services in Pasco County, Florida. Conventional aerial photography along with LIDAR observations were made. Earthdata subconotracted the ground survey tasks to Terrasurv. This data is identical to the 2004 Pasco County collection already available in digital coast, however in 2008 this data was classified: Class 1 - unclassified Class 2 - ground Class 9 - water" ;
+    dc:spatial "POLYGON ((-82.779724 28.182922,-82.779724 28.431274,-82.609802 28.431274,-82.609802 28.182922,-82.779724 28.182922))" ;
+    dcterms:title "2004 Southwest Florida Water Management District (SWFWMD) Lidar Project: Pasco County (Classified)" ;
+    esip:eastBound "-82.609802"^^xsd:float ;
+    esip:northBound "28.431274"^^xsd:float ;
+    esip:southBound "28.182922"^^xsd:float ;
+    esip:westBound "-82.779724"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:f53c867f-711c-41c5-8d68-ee1a17b06471> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-06T20:18:06.392Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-06T20:18:06.392Z" ;
+    dc:identifier "urn:sha:d7316fe91f51ad235f49fa93d0778ad3bd849fd4253b7aa04d0ef0e3" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://coast.noaa.gov/data/Documents/Metadata/isoharvest/Lidar/var/tmp/fl2004_swfwmd_pasco_m4732_ISOmetadata_cleaned.xml" .
+
+<urn:uuid:f7b91b2b-8c4d-40d5-be18-123fa80bc130> a "ISO 19115:2003/19139" ;
+    bcube:dateCreated "2015-08-06T20:18:06.392Z" ;
+    bcube:lastUpdated "2015-08-06T20:18:06.392Z" ;
+    bcube:originatedFrom <urn:uuid:f53c867f-711c-41c5-8d68-ee1a17b06471> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:eeb6980e-073b-4923-99a1-afb5d7ece3ac> .
+

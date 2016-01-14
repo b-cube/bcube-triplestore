@@ -1,0 +1,131 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:04e43750-8155-4982-815d-b536066e7169> bcube:hasType "theme" ;
+    bcube:hasValue "8-day",
+        "Land Surface > Land Temperature > Land Surface Temperature",
+        "Oceans > Ocean Temperature > Sea Surface Temperature",
+        "anomaly",
+        "avhrr",
+        "casey",
+        "climatology",
+        "coastwatch",
+        "cornillon",
+        "day",
+        "degrees",
+        "global",
+        "land",
+        "noaa",
+        "ocean",
+        "oceans",
+        "poes",
+        "sea",
+        "sst",
+        "surface",
+        "surface_temperature_anomaly",
+        "temperature",
+        "wcn" ;
+    dc:partOf "GCMD Science Keywords" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:3aa59199-5075-4a14-9d20-f36be3785376> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-08-10T04:12:05.243Z" ;
+    bcube:lastUpdated "2015-08-10T04:12:05.243Z" ;
+    bcube:originatedFrom <urn:uuid:ae17bdfb-e44f-46e7-bc6a-d71dfbd3c5c3> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:788d80a0-e9c0-4699-9958-e78df6a8a357> .
+
+<urn:uuid:3c4c3b43-0df2-4d7a-bfc4-674613cffa25> owl:a foaf:Organization ;
+    foaf:name "ERDDAP, version 1.62, at NOAA NMFS SWFSC Environmental Research Division" .
+
+<urn:uuid:4f6a3358-7352-46bd-b6f4-1124d7b19d42> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-10T04:12:05.243Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-10T04:12:05.243Z" ;
+    dc:identifier "urn:sha:b330797f873c15afaf116c2c9cc2b36561f0c1dd0878baecaeb88533" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://coastwatch.pfeg.noaa.gov/erddap/wms/erdAGtanm8day/request" .
+
+<urn:uuid:788d80a0-e9c0-4699-9958-e78df6a8a357> bcube:dateCreated "2015-08-10T04:12:05.243Z" ;
+    bcube:hasMetadataRecord <urn:uuid:3aa59199-5075-4a14-9d20-f36be3785376> ;
+    bcube:lastUpdated "2015-08-10T04:12:05.243Z" ;
+    dc:conformsTo <urn:uuid:04e43750-8155-4982-815d-b536066e7169>,
+        <urn:uuid:acbbe258-f9b9-4530-9c6d-43306255b706> ;
+    dc:description "NOAA CoastWatch distributes SST anomaly data using a combination of the POES AVHRR Global Area Coverage data, and data from a climatological database by Casey and Cornillon. AVHRR SST is compared with the climatological SST for the region and time period specified." ;
+    dc:spatial "POLYGON ((-180 -75,-180 75,180 75,180 -75,-180 -75))" ;
+    dcterms:identifier "coastwatch.pfeg.noaa.gov:erdAGtanm8day" ;
+    dcterms:publisher <urn:uuid:3c4c3b43-0df2-4d7a-bfc4-674613cffa25> ;
+    dcterms:references <urn:uuid:ce174a02-3f4f-4966-bb7e-928e981c868b>,
+        <urn:uuid:d4a0f99d-28b1-4bac-835e-649cc70bf33c>,
+        <urn:uuid:e99759e4-7648-4203-b811-05a8c1470c0c> ;
+    dcterms:title "SST Anomaly, POES AVHRR, Casey and Cornillon Climatology, Global (8 Day Composite)" ;
+    esip:eastBound "180.0"^^xsd:float ;
+    esip:endDate "2015-08-06"^^xsd:date ;
+    esip:northBound "75.0"^^xsd:float ;
+    esip:southBound "-75.0"^^xsd:float ;
+    esip:startDate "2005-12-29"^^xsd:date ;
+    esip:westBound "-180.0"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:acbbe258-f9b9-4530-9c6d-43306255b706> bcube:hasType "theme" ;
+    bcube:hasValue "altitude",
+        "latitude",
+        "longitude",
+        "time" ;
+    dc:partOf "CF Standard Name Table v29" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:ae17bdfb-e44f-46e7-bc6a-d71dfbd3c5c3> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-10T04:12:05.243Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-10T04:12:05.243Z" ;
+    dc:identifier "urn:sha:dfaf51f57a46e9a22d2bace0095dbe1c8f7d244258c98137697b0b59" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://upwell.pfeg.noaa.gov/erddap/griddap/erdAGtanm8day.fgdc" .
+
+<urn:uuid:ce174a02-3f4f-4966-bb7e-928e981c868b> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-10T04:12:05.243Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-10T04:12:05.243Z" ;
+    dc:identifier "urn:sha:7f61ae1f0d8cb4307039fd2488d492c8e2cb7344706067c627c450b8" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://coastwatch.pfeg.noaa.gov/erddap/griddap/erdAGtanm8day.graph" .
+
+<urn:uuid:d4a0f99d-28b1-4bac-835e-649cc70bf33c> dcterms:references <urn:uuid:4f6a3358-7352-46bd-b6f4-1124d7b19d42> ;
+    owl:a bibo:WebPage .
+
+<urn:uuid:e99759e4-7648-4203-b811-05a8c1470c0c> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-10T04:12:05.243Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-10T04:12:05.243Z" ;
+    dc:identifier "urn:sha:24979f6c9c75a222877e4a0a87378e7989058686d2ca4c8199f78d67" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://coastwatch.pfeg.noaa.gov/erddap/griddap/erdAGtanm8day.html" .
+

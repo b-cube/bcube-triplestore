@@ -1,0 +1,105 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:4d166a3c-c294-4d87-80c0-868081123ebf> bcube:hasType "place" ;
+    bcube:hasValue "Montana" ;
+    dc:partOf "FIPS Publication 55" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:7d18687b-93f6-47ef-9e5b-65c4a4840179> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-08-10T08:30:09.559Z" ;
+    bcube:lastUpdated "2015-08-10T08:30:09.559Z" ;
+    bcube:originatedFrom <urn:uuid:83b0067e-42e0-4ef8-81bd-49c13ee5881e> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:a21d7117-7a90-42fd-a517-f3fb4f78e59a> .
+
+<urn:uuid:83b0067e-42e0-4ef8-81bd-49c13ee5881e> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-10T08:30:09.559Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-10T08:30:09.559Z" ;
+    dc:identifier "urn:sha:cc2fe7e2ec6de60b3289dd8ac8bff81da3756da6763845d903317fd4" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://mslapps.mt.gov/Geographic_Information/Data/DataList/datalist_MetadataDetailRaw.aspx?did={E300F74D-6C6B-4B20-884E-BA9666FF310A}" .
+
+<urn:uuid:9defcce4-e743-42c5-abb7-5dbeb32d1fa1> owl:a foaf:Organization ;
+    foaf:name "Montana State Library" .
+
+<urn:uuid:a21d7117-7a90-42fd-a517-f3fb4f78e59a> bcube:dateCreated "2015-08-10T08:30:09.559Z" ;
+    bcube:hasMetadataRecord <urn:uuid:7d18687b-93f6-47ef-9e5b-65c4a4840179> ;
+    bcube:lastUpdated "2015-08-10T08:30:09.559Z" ;
+    dc:conformsTo <urn:uuid:4d166a3c-c294-4d87-80c0-868081123ebf>,
+        <urn:uuid:b5214fe2-afb7-4d9d-8f64-02bd6791dd94>,
+        <urn:uuid:e5cd2d21-201d-49ea-a985-c38348c17ca8> ;
+    dc:description "TIGER files lines representing road, streams, railroads, powerlines, pipelines, boundaries of administrative units, and boundaries of Census enumeration areas. TIGER files also contain polygons that may be selected or aggregated to represent various administrative units and Census enumeration areas. These data described here consist of an Arc/Info export file for each county in Montana, in Montana State Plane Coordinates, NAD83, units meters. The Montana State Library converted the raw TIGER data described below to this format using the ESRI TIGERTOOL command and joined items to the Polygon Attribute Table for Urbanized Areas/Urban Clusters and School Districts Each county folder includes an array of exported INFO files containing the TIGER Type 3, 4, 5, 6, 8, 9, A, C, H, I, S, and Z records. The various record types and database fields are listed in the PDF file from the Census Bureau that is included in the archive. TIGER, TIGER/Line, and Census TIGER are registered trademarks of the U.S. Census Bureau. The UA Census 2000 TIGER/Line files are an extract of selected geographic and cartographic information from the Census TIGER database. The geographic coverage for a single TIGER/Line file is a county or statistical equivalent entity, with the coverage area based on January 1, 2000 legal boundaries. The Census TIGER database represents a seamless national file with no overlaps or gaps between parts. However, each county-based TIGER/Line file is designed to stand alone as an independent data set or the files can be combined to cover the whole Nation. The UA Census 2000 TIGER/Line files consist of line segments representing physical features and governmental and statistical boundaries. The boundary information in the TIGER/Line files are for statistical data collection and tabulation purposes only; their depiction and designation for statistical purposes does not constitute a determination of jurisditional authority or rights of ownership or entitlement. The files contain information distributed over a series of record types for the spatial objects of a county. There are 17 record types, including the basic data record, the shape coordinate points, and geographic codes that can be used with appropriate software to prepare maps. Other geographic information contained in the files includes attributes such as feature identifiers/census feature class codes (CFCC) used to differentiate feature types, address ranges and ZIP Codes, codes for legal and statistical entities, latitude/longitude coordinates of linear and point features, landmark point features, area landmarks, key geographic features, and area boundaries. The UA Census 2000 TIGER/Line data dictionary contains a complete list of all the fields in the 17 record types." ;
+    dc:spatial "POLYGON ((-116.25 44.25,-116.25 49.0,-104 49,-104.0 44.25,-116.25 44.25))" ;
+    dcterms:publisher <urn:uuid:9defcce4-e743-42c5-abb7-5dbeb32d1fa1> ;
+    dcterms:references <urn:uuid:fe601f9e-5c65-4265-adf2-91947bdab056> ;
+    dcterms:title "TIGER 2000 UA Census Data for Montana" ;
+    esip:eastBound "-104.0"^^xsd:float ;
+    esip:northBound "49.0"^^xsd:float ;
+    esip:southBound "44.25"^^xsd:float ;
+    esip:startDate "2000-01-01"^^xsd:date ;
+    esip:westBound "-116.25"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:b5214fe2-afb7-4d9d-8f64-02bd6791dd94> bcube:hasType "theme" ;
+    bcube:hasValue "boundaries",
+        "inlandwaters",
+        "transportation" ;
+    dc:partOf "ISO 19115 Topic Category" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:e5cd2d21-201d-49ea-a985-c38348c17ca8> bcube:hasType "theme" ;
+    bcube:hasValue "Address Range",
+        "Boundary",
+        "Census Feature Class Code (CFCC)",
+        "Coordinate",
+        "County and Statistical Equivalents",
+        "Feature Identifier",
+        "Geographic Entity",
+        "Landmark Feature",
+        "Latitude/Longitude",
+        "Legal Entity",
+        "Line Feature",
+        "Point/Node",
+        "Political Boundary",
+        "Polygon",
+        "Statistical Boundary",
+        "Statistical Entity",
+        "Street Centerline",
+        "Street Segment",
+        "TIGER/Line",
+        "TIGER/Line Identification Number (TLID)",
+        "Topology",
+        "Urban Areas",
+        "Urbanized Areas",
+        "Vector",
+        "ZIP Code Tabulation Area" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:fe601f9e-5c65-4265-adf2-91947bdab056> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-10T08:30:09.559Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-10T08:30:09.559Z" ;
+    dc:identifier "urn:sha:d14a028c2a3a2bc9476102bb288234c415a2b01f828ea62ac5b3e42f" ;
+    owl:a bcube:Url .
+

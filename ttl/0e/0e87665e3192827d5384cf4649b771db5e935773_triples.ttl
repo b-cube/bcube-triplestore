@@ -1,0 +1,78 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:0a48c509-c0eb-4ca7-9718-fe00fd8846c5> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-10-30T03:23:00.894Z" ;
+    bcube:lastUpdated "2015-10-30T03:23:00.894Z" ;
+    bcube:originatedFrom <urn:uuid:d40ce458-2722-437f-b738-94e74325d70a> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:de8965e0-38f4-4567-8f8e-0b3ea81443e7> .
+
+<urn:uuid:52d6d41e-3b3e-4558-8204-7a798d335d6a> bcube:hasType "theme" ;
+    bcube:hasValue "Breaklines",
+        "DAT",
+        "LAS",
+        "LiDAR",
+        "Lift",
+        "Light Detection and Ranging",
+        "Project",
+        "Shapefiles",
+        "Survey Control",
+        "Swath",
+        "TIN" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:ad68b210-48be-4716-b995-46c2888bb084> owl:a foaf:Organization ;
+    foaf:name "AeroMetric, Inc." .
+
+<urn:uuid:d40ce458-2722-437f-b738-94e74325d70a> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-10-30T03:23:00.894Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-10-30T03:23:00.894Z" ;
+    dc:identifier "urn:sha:adfc934da7e0b6711f7ad74661489fd27a4e427195eeba20400636d5" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www.isgs.uiuc.edu/clearinghouse/lidar/counties/knox/knox_2012_metadata.xml" .
+
+<urn:uuid:ddd36d97-0ced-49d8-8b96-cafab1061e7c> bcube:hasType "place" ;
+    bcube:hasValue "IL",
+        "Illinois",
+        "Knox",
+        "Knox County",
+        "State",
+        "US" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:de8965e0-38f4-4567-8f8e-0b3ea81443e7> bcube:dateCreated "2015-10-30T03:23:00.894Z" ;
+    bcube:hasMetadataRecord <urn:uuid:0a48c509-c0eb-4ca7-9718-fe00fd8846c5> ;
+    bcube:lastUpdated "2015-10-30T03:23:00.894Z" ;
+    dc:conformsTo <urn:uuid:52d6d41e-3b3e-4558-8204-7a798d335d6a>,
+        <urn:uuid:ddd36d97-0ced-49d8-8b96-cafab1061e7c> ;
+    dc:description "This task order is for planning, acquisition, processing, and derivative products of LiDAR data to be collected for areas of Illinois. LiDAR data, and derivative products produced in compliance with this task order are part of the data to be obtained under Job Number P-94-025-10. Specifications listed below are based on the U.S. Geological Survey National Geospatial Program Base LiDAR Specification, Version 13." ;
+    dc:spatial "POLYGON ((-90.444 40.712,-90.444 41.155,-89.98 41.155,-89.98 40.712,-90.444 40.712))" ;
+    dcterms:publisher <urn:uuid:ad68b210-48be-4716-b995-46c2888bb084> ;
+    dcterms:title "Illinois Department of Transportation, District 4, Knox County LiDAR Acquisition" ;
+    esip:eastBound "-89.98"^^xsd:float ;
+    esip:endDate "2012-02-12"^^xsd:date ;
+    esip:northBound "41.155"^^xsd:float ;
+    esip:southBound "40.712"^^xsd:float ;
+    esip:startDate "2011-04-05"^^xsd:date ;
+    esip:westBound "-90.444"^^xsd:float ;
+    owl:a dcat:Dataset .
+

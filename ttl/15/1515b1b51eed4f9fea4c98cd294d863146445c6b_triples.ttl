@@ -1,0 +1,75 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:43d1bee5-3864-40c0-a405-b1199a9953a4> bcube:hasType "theme" ;
+    bcube:hasValue "24K",
+        "DRG",
+        "Map reference",
+        "index",
+        "quadrangle",
+        "topographic" ;
+    dc:partOf "none" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:7bfff12b-fe4c-4ec8-8173-588755c42cc5> bcube:dateCreated "2015-08-05T04:44:22.722Z" ;
+    bcube:hasMetadataRecord <urn:uuid:e56f77c7-2a8b-4941-ac3a-3fd48e2610c9> ;
+    bcube:lastUpdated "2015-08-05T04:44:22.722Z" ;
+    dc:conformsTo <urn:uuid:43d1bee5-3864-40c0-a405-b1199a9953a4>,
+        <urn:uuid:81877756-a939-42b3-834d-74021b45e33d> ;
+    dc:description "This is a polygon dataset delineating the geographic footprint of the 24k (7.5') series map sheets published by the USGS. Because most of these map sheets have also been scanned into DRGs, this index also represents the area of valid data on 24K DRGs for the area. Because the neatline of paper quad maps was formed by a regular grid in geographic coordinates, NAD27, this dataset was generated from a regular grid defined in that coordinate system. In subsequent processing this grid was projected to geographic coordinates, NAD83. The projection was done to make this dataset compatible with other vector data in the same coordinate system. As a result, the area enclosed by each polygon in this index represents the same geographic area depicted on the corresponding paper map, but the latitude / longitude value for each polygon side and and corner in geographic coordinates, NAD83 are not exact multiples of full and half degrees. The grid is not totally regular. In the Chandeleur Islands area, the normal footprint of USGS maps were shifted a few minutes east and west to cover the area with the fewest map sheets." ;
+    dc:spatial "POLYGON ((-94.125195 28.875261,-94.125195 33.125134,-88.791709 33.125134,-88.791709 28.875261,-94.125195 28.875261))" ;
+    dcterms:references <urn:uuid:a9f61771-3a8f-4603-af56-ac8a833b40c3> ;
+    dcterms:title "1:24,000 Papermap Quadrangle Index of Louisiana, Geographic NAD83, USGS (1999) [quad24K_papermaps_USGS_1999]" ;
+    esip:eastBound "-88.791709"^^xsd:float ;
+    esip:northBound "33.125134"^^xsd:float ;
+    esip:southBound "28.875261"^^xsd:float ;
+    esip:westBound "-94.125195"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:81877756-a939-42b3-834d-74021b45e33d> bcube:hasType "place" ;
+    bcube:hasValue "Louisiana" ;
+    dc:partOf "none" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:a9f61771-3a8f-4603-af56-ac8a833b40c3> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-05T04:44:22.722Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-05T04:44:22.722Z" ;
+    dc:identifier "urn:sha:4dbe3fb1d13ea72e1fd5045851b96b5014fdafd935cffebcb6745142" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://lagic.lsu.edu/data/losco/quad24K_papermaps_USGS_1999.zip" .
+
+<urn:uuid:d8337d5c-d2d3-47fa-af31-ef506d2f6c5f> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-05T04:44:22.722Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-05T04:44:22.722Z" ;
+    dc:identifier "urn:sha:86bcd63035d9cf74fc39d5dde0d6ce3d43b0288ad511d000bf9858a8" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "https://catalog.data.gov/harvest/object/7456131f-4091-4d5b-aad5-77d413044529" .
+
+<urn:uuid:e56f77c7-2a8b-4941-ac3a-3fd48e2610c9> a "ISO 19115:2003/19139" ;
+    bcube:dateCreated "2015-08-05T04:44:22.722Z" ;
+    bcube:lastUpdated "2015-08-05T04:44:22.722Z" ;
+    bcube:originatedFrom <urn:uuid:d8337d5c-d2d3-47fa-af31-ef506d2f6c5f> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:7bfff12b-fe4c-4ec8-8173-588755c42cc5> .
+

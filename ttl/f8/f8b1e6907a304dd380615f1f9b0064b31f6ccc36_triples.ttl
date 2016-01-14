@@ -1,0 +1,93 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:54e71a90-2f90-4b83-a5f8-a03c928a2861> owl:a foaf:Organization ;
+    foaf:name "U.S. Geological Survey" .
+
+<urn:uuid:6c187942-e44f-4c42-b051-f039f31974db> bcube:hasType "place" ;
+    bcube:hasValue "AK",
+        "Aleutian Arc",
+        "USA",
+        "Western Gulf of Alaska" ;
+    dc:partOf "Geographic Names Information System (GNIS)" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:70bdd00c-d540-4960-8860-ac03f4c1cabc> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-07-22T02:12:40.507Z" ;
+    bcube:lastUpdated "2015-07-22T02:12:40.507Z" ;
+    bcube:originatedFrom <urn:uuid:bf072c42-939a-456d-91c4-917e8c7d0d68> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:fb9ef533-361d-4713-be4e-1ac5a68c3f68> .
+
+<urn:uuid:8daaf841-33ee-4da7-a7c9-cf8174c1e1ff> bcube:hasType "theme" ;
+    bcube:hasValue "geoscientificinformation",
+        "oceans" ;
+    dc:partOf "ISO 19115 Topic Category" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:abe1dbe7-7f1e-4788-ae31-0c1985a5fc30> bcube:hasType "theme" ;
+    bcube:hasValue "Bathymetry",
+        "Magnetic Anomalies",
+        "Marine Geology",
+        "Marine Geophysics",
+        "Marine Gravity Field",
+        "Marine Magnetic Field",
+        "Seafloor Topography",
+        "Water Depth" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:bf072c42-939a-456d-91c4-917e8c7d0d68> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-07-22T02:12:40.507Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-07-22T02:12:40.507Z" ;
+    dc:identifier "urn:sha:325ae9cecbf0501476b6e9d195cb734b1100236c45980c34bd36601d" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://catalog.data.gov/harvest/object/e0d3ad1d-9b8d-4fe9-ac67-853a51ce2e0a/original" .
+
+<urn:uuid:fb9ef533-361d-4713-be4e-1ac5a68c3f68> bcube:dateCreated "2015-07-22T02:12:40.507Z" ;
+    bcube:hasMetadataRecord <urn:uuid:70bdd00c-d540-4960-8860-ac03f4c1cabc> ;
+    bcube:lastUpdated "2015-07-22T02:12:40.507Z" ;
+    dc:conformsTo <urn:uuid:6c187942-e44f-4c42-b051-f039f31974db>,
+        <urn:uuid:8daaf841-33ee-4da7-a7c9-cf8174c1e1ff>,
+        <urn:uuid:abe1dbe7-7f1e-4788-ae31-0c1985a5fc30> ;
+    dc:description "Single-beam bathymetry, gravity, and magnetic data along with DGPS navigation data was collected as part of field activity L-12-82-WG in Western Gulf of Alaska from 09/22/1982 to 10/05/1982, http://walrus.wr.usgs.gov/infobank/l/l1282wg/html/l-12-82-wg.meta.html These data are reformatted from space-delimited ASCII text files located in the Coastal and Marine Geology Program (CMGP) InfoBank field activity catalog at http://walrus.wr.usgs.gov/infobank/l/l1282wg/html/l-12-82-wg.bath.html, http://walrus.wr.usgs.gov/infobank/l/l1282wg/html/l-12-82-wg.grav.html, and http://walrus.wr.usgs.gov/infobank/l/l1282wg/html/l-12-82-wg.mag.html into MGD77T format provided by the NOAA's National Geophysical Data Center(NGDC). The MGD77T format includes a header (documentation) file (.h77t) and a data file (.m77t). More information regarding this format can be found in the publication listed in the Cross_reference section of this metadata file." ;
+    dc:spatial "POLYGON ((-166.52713 52.5388,-166.52713 55.33219,-158.30482 55.33219,-158.30482 52.5388,-166.52713 52.5388))" ;
+    dcterms:publisher <urn:uuid:54e71a90-2f90-4b83-a5f8-a03c928a2861> ;
+    dcterms:references <urn:uuid:fc0c529d-b0fe-4542-978b-59eb2f4fc0fe> ;
+    dcterms:title "l1282wg.m77t - MGD77 data file for Geophysical data from field activity L-12-82-WG in Western Gulf of Alaska from 09/22/1982 to 10/05/1982" ;
+    esip:eastBound "-158.30482"^^xsd:float ;
+    esip:endDate "1982-10-05"^^xsd:date ;
+    esip:northBound "55.33219"^^xsd:float ;
+    esip:southBound "52.5388"^^xsd:float ;
+    esip:startDate "1982-09-22"^^xsd:date ;
+    esip:westBound "-166.52713"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:fc0c529d-b0fe-4542-978b-59eb2f4fc0fe> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-07-22T02:12:40.507Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-07-22T02:12:40.507Z" ;
+    dc:identifier "urn:sha:6b6edb7ea6360bfb4ecd712b5d1fe8684e335156e3214f7d19f80762" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www.ngdc.noaa.gov/mgg/trk/trackline/samuel_p._lee/l1282wg/mgd77/" .
+

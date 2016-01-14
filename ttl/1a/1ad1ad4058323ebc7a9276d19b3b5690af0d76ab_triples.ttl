@@ -1,0 +1,87 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:6937c26a-d7db-4740-bc7b-a5a238ff8688> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-03-06T09:47:33.612Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-03-06T09:47:33.612Z" ;
+    dc:identifier "urn:sha:ba70d4e4e3999a50ff0ab1b41f7729ededfc3a4ac49138208f8f86c9" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://catalog.data.gov/harvest/object/963adaae-db08-4929-808c-c947ccc84d8d" .
+
+<urn:uuid:7316e51d-fdb7-4b22-9c43-28fd906702da> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-03-06T09:47:33.612Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-03-06T09:47:33.612Z" ;
+    dc:identifier "urn:sha:998f0cbdb92ef31ba7fb90d1549d34730276cc6bd88e8d3fae606ab1" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://rmgsc.cr.usgs.gov/outgoing/ecosystems/USdata/land_surface_forms_30m.zip" .
+
+<urn:uuid:950cad1c-f8fb-4bbb-9c20-474408adff39> bcube:hasType "theme" ;
+    bcube:hasValue "GEO",
+        "GEOSS",
+        "Geological Survey",
+        "Global Earth Observation System of Systems",
+        "Group on Earth Observations",
+        "NED",
+        "National Elevation Dataset",
+        "USGS",
+        "United States Geological Survey",
+        "biophysical stratification",
+        "ecosystem",
+        "land surface forms",
+        "landform",
+        "local relief",
+        "profile type",
+        "slope",
+        "slope position" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:cc421b6e-5c90-4185-b0e6-83868a29ab60> a "ISO 19115:2003/19139" ;
+    bcube:dateCreated "2015-03-06T09:47:33.612Z" ;
+    bcube:lastUpdated "2015-03-06T09:47:33.612Z" ;
+    bcube:originatedFrom <urn:uuid:6937c26a-d7db-4740-bc7b-a5a238ff8688> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:dcf582a3-e1df-4621-b0a6-0c29eccc096c> .
+
+<urn:uuid:dcf582a3-e1df-4621-b0a6-0c29eccc096c> bcube:dateCreated "2015-03-06T09:47:33.612Z" ;
+    bcube:hasMetadataRecord <urn:uuid:cc421b6e-5c90-4185-b0e6-83868a29ab60> ;
+    bcube:lastUpdated "2015-03-06T09:47:33.612Z" ;
+    dc:conformsTo <urn:uuid:950cad1c-f8fb-4bbb-9c20-474408adff39>,
+        <urn:uuid:eddc3f4b-8182-4156-abe0-49c5b37a8be7> ;
+    dc:description "The U.S. Geological Survey (USGS) has generated land surface form classes for the contiguous United States. These land surface form classes were created as part of an effort to map standardized, terrestrial ecosystems for the nation using a classification developed by NatureServe (Comer and others, 2003). Ecosystem distributions were modeled using a biophysical stratification approach developed for South America (Sayre and others, 2008) and now being implemented globally (Sayre and others, 2007). Land surface forms strongly influence the differentiation and distribution of terrestrial ecosystems, and are one of the key input layers in the ecosystem delineation process. The methodology used to produce these land surface form classes was developed by the Missouri Resource Assessment Partnership (MoRAP). MoRAP made modifications to Hammond's (1964a, 1964b) land surface form classification, which allowed the use of 30-meter source data and a 1 km2 window for neighborhood analysis (True 2002, True and others, 2000). While Hammond's methodology was based on three variables, slope, local relief, and profile type, MoRAP's methodology uses only slope and local relief (True 2002). Slope is classified as gently sloping or not gently sloping using a slope threshold of 8%, local relief is classified into five classes (0-15m, 15-30m, 30-90m, 90-150m, and >150m), and eight landform classes (flat plains, smooth plains, irregular plains, escarpments, low hills, hills, breaks, and low mountains) were derived by combining slope class and local relief. The USGS implementation of the MoRAP methodology was executed using the USGS 30-meter National Elevation Dataset (NED) and an existing USGS slope dataset. In this implementation, a new land surface form class, the high mountains/deep canyons class, was identified by using an additional local relief class (> 400m). The drainage channels class was derived independently from the other land surface form classes. This class was derived using two of Andrew Weiss's slope position classes, \"valley\" and \"lower slope\" (Weiss 2001, Jenness 2006). The USGS implemented Weiss's algorithm using the 30-meter NED and a 1 km2 neighborhood analysis window. The resultant drainage channel class was combined into the final land surface forms dataset." ;
+    dc:spatial "POLYGON ((-125.0 23.999926,-125.0 49.500204,-65.999444 49.500204,-65.999444 23.999926,-125.0 23.999926))" ;
+    dcterms:references <urn:uuid:7316e51d-fdb7-4b22-9c43-28fd906702da> ;
+    dcterms:title "Terrestrial Ecosystems - Land Surface Forms of the Conterminous United States" ;
+    esip:eastBound "-65.999444"^^xsd:float ;
+    esip:northBound "49.500204"^^xsd:float ;
+    esip:southBound "23.999926"^^xsd:float ;
+    esip:westBound "-125.0"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:eddc3f4b-8182-4156-abe0-49c5b37a8be7> bcube:hasType "place" ;
+    bcube:hasValue "United States of America",
+        "conterminous United States" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+

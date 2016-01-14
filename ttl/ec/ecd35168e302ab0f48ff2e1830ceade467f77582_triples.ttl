@@ -1,0 +1,141 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:1f51c71b-affb-47d6-8af3-a4f0ef4e58d9> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-10-29T16:08:25.126Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-10-29T16:08:25.126Z" ;
+    dc:identifier "urn:sha:a1415d9596f2afe7a4b0edbb35fd08f1389ccc9da939294efaa15cbc" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://coastwatch.pfeg.noaa.gov/erddap/tabledap/nosCoopsWLR1.iso19115" .
+
+<urn:uuid:4e76051e-1530-463a-a00d-b458491f5545> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-10-29T16:08:25.126Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-10-29T16:08:25.126Z" ;
+    dc:identifier "urn:sha:8a6ddde1e86039a8220fd5cad3fe563b4705ae64328b151a4cdcff67" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://coastwatch.pfeg.noaa.gov/erddap/tabledap/nosCoopsWLR1.graph" .
+
+<urn:uuid:552fcfd3-4880-41ff-af30-0b9b1cf09660> a "ISO 19115:2003/19139" ;
+    bcube:dateCreated "2015-10-29T16:08:25.126Z" ;
+    bcube:lastUpdated "2015-10-29T16:08:25.126Z" ;
+    bcube:originatedFrom <urn:uuid:1f51c71b-affb-47d6-8af3-a4f0ef4e58d9> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:7710b953-c15b-4520-ba92-81826777a048> .
+
+<urn:uuid:7710b953-c15b-4520-ba92-81826777a048> bcube:dateCreated "2015-10-29T16:08:25.126Z" ;
+    bcube:hasMetadataRecord <urn:uuid:552fcfd3-4880-41ff-af30-0b9b1cf09660> ;
+    bcube:lastUpdated "2015-10-29T16:08:25.126Z" ;
+    dc:conformsTo <urn:uuid:7d47e831-c0d4-40be-a860-5e7c7c23bbc9>,
+        <urn:uuid:a33ff166-9cc4-4cc3-88e9-8bbdff3b5647>,
+        <urn:uuid:a89af972-ba75-48c0-b566-2ac1270d002f>,
+        <urn:uuid:da99ce3c-9ff4-4503-867e-264d2d4c135f>,
+        <urn:uuid:f4d05908-beee-4487-aacd-6c0b7f131bd8> ;
+    dc:description "This dataset has recent, preliminary (not quality-controlled), 1-minute, water level (tide) data from NOAA NOS Center for Operational Oceanographic Products and Services (CO-OPS). WARNING: These raw data have not been subjected to the National Ocean Service's quality control or quality assurance procedures and do not meet the criteria and standards of official National Ocean Service data. They are released for limited public use as preliminary data to be used only with appropriate caution. WARNING: * Queries for data MUST include stationID=, datum=, and time>=. * Queries for data USUALLY include time<=. * Queries MUST be for less than 30 days worth of data. The default time<= value corresponds to 'now'. * Different stations support different datums. Use ERDDAP's Subset web page to find out which datums a given station supports. * The data source isn't completely reliable. If your request returns no data when you think it should: * Make sure the station you specified supports the datum you specified. * Try revising the request (e.g., a different datum or a different time range). * The list of stations offering this data (or the list of datums) may be incorrect. * Sometimes a station or the entire data service is unavailable. Wait a while and try again." ;
+    dc:identifier "nosCoopsWLR1" ;
+    dc:spatial "POLYGON ((-177.3608 -14.2767,-177.3608 70.4114,167.7345 70.4114,167.7345 -14.2767,-177.3608 -14.2767))" ;
+    dcterms:references <urn:uuid:4e76051e-1530-463a-a00d-b458491f5545>,
+        <urn:uuid:b885e377-3d48-4a58-ac8c-3c419dd658c7> ;
+    dcterms:title "NOS CO-OPS Water Level Data, Preliminary, 1-Minute" ;
+    esip:eastBound "167.7345"^^xsd:float ;
+    esip:northBound "70.4114"^^xsd:float ;
+    esip:southBound "-14.2767"^^xsd:float ;
+    esip:westBound "-177.3608"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:7d47e831-c0d4-40be-a860-5e7c7c23bbc9> bcube:hasType "theme" ;
+    bcube:hasValue "latitude",
+        "longitude",
+        "sea_surface_height_amplitude_due_to_geocentric_ocean_tide",
+        "time" ;
+    dc:partOf "CF Standard Name Table v29" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:a33ff166-9cc4-4cc3-88e9-8bbdff3b5647> bcube:hasType "theme" ;
+    bcube:hasValue "Oceans > Coastal Processes > Tidal Height",
+        "Oceans > Sea Surface Topography > Sea Surface Height",
+        "Oceans > Tides > Tidal Height" ;
+    dc:partOf "GCMD Science Keywords" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:a89af972-ba75-48c0-b566-2ac1270d002f> bcube:hasValue "geoscientificInformation" ;
+    dc:partOf "IsoTopicCategories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:b885e377-3d48-4a58-ac8c-3c419dd658c7> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-10-29T16:08:25.126Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-10-29T16:08:25.126Z" ;
+    dc:identifier "urn:sha:57727552257b358a7ae83848dd5b120f2f6f69c671243c708f16aa1a" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://coastwatch.pfeg.noaa.gov/erddap/tabledap/nosCoopsWLR1.html" .
+
+<urn:uuid:da99ce3c-9ff4-4503-867e-264d2d4c135f> bcube:hasType "project" ;
+    bcube:hasValue "NOAA NOS CO-OPS" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:f4d05908-beee-4487-aacd-6c0b7f131bd8> bcube:hasType "theme" ;
+    bcube:hasValue "1-minute",
+        "amplitude",
+        "co-ops",
+        "coastal",
+        "collection",
+        "data",
+        "date",
+        "datum",
+        "deployment",
+        "designation",
+        "due",
+        "established",
+        "geocentric",
+        "identifier",
+        "level",
+        "minute",
+        "name",
+        "noaa",
+        "nos",
+        "ocean",
+        "oceans",
+        "ops",
+        "platform",
+        "preliminary",
+        "processes",
+        "sea",
+        "sea level",
+        "seawater",
+        "sensor",
+        "shefID",
+        "state",
+        "station",
+        "surface",
+        "tidal",
+        "tide",
+        "tides",
+        "topography",
+        "water" ;
+    owl:a bcube:thesaurusSubset .
+

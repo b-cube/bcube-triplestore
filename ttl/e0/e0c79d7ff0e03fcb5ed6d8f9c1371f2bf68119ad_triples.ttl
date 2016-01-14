@@ -1,0 +1,105 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:154329a2-643c-4dc4-98a7-bcdd3d89d1cd> owl:a foaf:Organization ;
+    foaf:name "Federal Emergency Management Agency" .
+
+<urn:uuid:26f9d2c3-0c10-490f-9fea-a8cbe48b9f85> bcube:hasType "theme" ;
+    bcube:hasValue "elevation",
+        "environment",
+        "hydrology",
+        "inlandWaters",
+        "structure",
+        "transportation" ;
+    dc:partOf "ISO 19115 Topic Category" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:2b17d3dd-bdd3-4992-86e6-b372d4fcfde0> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-07T03:12:34.02Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-07T03:12:34.02Z" ;
+    dc:identifier "urn:sha:8794d2cc7e170500b87ad9ed2e072d151353c61ce3091a17aeba7015" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://catalog.data.gov/harvest/object/b2691393-94dc-4036-9740-72b750f69c71/original" .
+
+<urn:uuid:635b2cf7-0c3e-47ab-bbca-e9e1c587c4f9> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-08-07T03:12:34.02Z" ;
+    bcube:lastUpdated "2015-08-07T03:12:34.02Z" ;
+    bcube:originatedFrom <urn:uuid:2b17d3dd-bdd3-4992-86e6-b372d4fcfde0> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:6776fd96-3a4a-44c8-abfb-3c8ecf15a1d9> .
+
+<urn:uuid:654a8761-0b33-41b4-a88b-da1f58729c7a> bcube:hasType "place" ;
+    bcube:hasValue "COMMUNITY COUNTY",
+        "COUNTY STARK",
+        "COUNTY-FIPS 38089",
+        "FEMA-CID 38089C",
+        "REGION 08",
+        "STATE ND" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:6776fd96-3a4a-44c8-abfb-3c8ecf15a1d9> bcube:dateCreated "2015-08-07T03:12:34.02Z" ;
+    bcube:hasMetadataRecord <urn:uuid:635b2cf7-0c3e-47ab-bbca-e9e1c587c4f9> ;
+    bcube:lastUpdated "2015-08-07T03:12:34.02Z" ;
+    dc:conformsTo <urn:uuid:26f9d2c3-0c10-490f-9fea-a8cbe48b9f85>,
+        <urn:uuid:654a8761-0b33-41b4-a88b-da1f58729c7a>,
+        <urn:uuid:d2b6d2b7-abe0-4232-937d-a523a961493b> ;
+    dc:description "The Digital Flood Insurance Rate Map (DFIRM) Database depicts flood risk information and supporting data used to develop the risk data. The primary risk classifications used are the 1-percent-annual-chance flood event, the 0.2-percent-annual- chance flood event, and areas of minimal flood risk. The DFIRM Database is derived from Flood Insurance Studies (FISs), previously published Flood Insurance Rate Maps (FIRMs), flood hazard analyses performed in support of the FISs and FIRMs, and new mapping data, where available. The FISs and FIRMs are published by the Federal Emergency Management Agency (FEMA). The projection is State Plane Coordinate System 1983. The horizontal accuracy meets Guidelines and specifications for DFIRM production." ;
+    dc:spatial "POLYGON ((-104.274938 45.601721,-104.274938 48.134794,-100.989309 48.134794,-100.989309 45.601721,-104.274938 45.601721))" ;
+    dcterms:publisher <urn:uuid:154329a2-643c-4dc4-98a7-bcdd3d89d1cd> ;
+    dcterms:references <urn:uuid:f5396acc-decb-402b-9f53-7730b5f1debf> ;
+    dcterms:title "DIGITAL FLOOD INSURANCE RATE MAP DATABASE, STARK COUNTY, NORTH DAKOTA, USA" ;
+    esip:eastBound "-100.989309"^^xsd:float ;
+    esip:northBound "48.134794"^^xsd:float ;
+    esip:southBound "45.601721"^^xsd:float ;
+    esip:startDate "2010-11-04"^^xsd:date ;
+    esip:westBound "-104.274938"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:d2b6d2b7-abe0-4232-937d-a523a961493b> bcube:hasType "theme" ;
+    bcube:hasValue "Base Flood Elevation",
+        "CBRS",
+        "Coastal Barrier Resources System",
+        "Coastal Flooding",
+        "DFIRM",
+        "DFIRM Database",
+        "Digital Flood Insurance Rate Map",
+        "FEMA Flood Hazard Zone",
+        "FIRM",
+        "Flood Insurance Rate Map",
+        "Floodway",
+        "NFIP",
+        "Riverine Flooding",
+        "SFHA",
+        "Special Flood Hazard Area" ;
+    dc:partOf "FEMA NFIP Topic Category" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:f5396acc-decb-402b-9f53-7730b5f1debf> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-07T03:12:34.02Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-07T03:12:34.02Z" ;
+    dc:identifier "urn:sha:5994e2f2713f2f8ef4c668a7ed31b1398f73b7c3c4108017276569a1" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www.fema.gov/msc" .
+

@@ -1,0 +1,58 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:ba48d4f2-3cbd-44b2-a790-647099acb5ff> a "OGC:WMS" ;
+    bcube:contains <urn:uuid:24dd5b07-4bfc-4102-a3d0-ec443dc7a1aa> ;
+    bcube:dateCreated "2015-06-18T11:32:21.191Z" ;
+    bcube:lastUpdated "2015-06-18T11:32:21.191Z" ;
+    bcube:originatedFrom <urn:uuid:659556ce-199a-46cb-a18a-f253b7356164> ;
+    dc:description "WMS" ;
+    owl:a bcube:service .
+
+<urn:uuid:24dd5b07-4bfc-4102-a3d0-ec443dc7a1aa> bcube:dateCreated "2015-06-18T11:32:21.191Z" ;
+    bcube:lastUpdated "2015-06-18T11:32:21.191Z" ;
+    dc:description "ETOPO1 is a 1 arc-minute global relief model of Earth's surface that integrates land topography and ocean bathymetry. It was built from numerous global and regional data sets, and is available in \"Ice Surface\" (top of Antarctic and Greenland ice sheets) and \"Bedrock\" (base of the ice sheets) versions. Historic ETOPO2v2 and ETOPO5 global relief grids are deprecated but still available.<br><br> For more information, see <a href=\"http://www.ngdc.noaa.gov/mgg/global/global.html\">http://www.ngdc.noaa.gov/mgg/global/global.html</a>" ;
+    dc:spatial "POLYGON ((-180.0 -89.0,-180.0 89.0,179.999996 89.0,179.999996 -89.0,-180.0 -89.0))" ;
+    dc:title "ETOPO1 Hillshade" ;
+    dcterms:references <urn:uuid:d5295a47-af46-4d36-826b-6fdc6676daca> ;
+    esip:eastBound "179.999996"^^xsd:float ;
+    esip:northBound "89.0"^^xsd:float ;
+    esip:southBound "-89.0"^^xsd:float ;
+    esip:westBound "-179.999996"^^xsd:float ;
+    owl:a bcube:Layer .
+
+<urn:uuid:659556ce-199a-46cb-a18a-f253b7356164> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-06-18T11:32:21.191Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-06-18T11:32:21.191Z" ;
+    dc:identifier "urn:sha:f3923eb8172fc6b0887455b95d863b1bfa10046cb6ab572b15faa51b" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://maps.ngdc.noaa.gov/arcgis/services/web_mercator/etopo1_hillshade/MapServer/WMSServer?request=GetCapabilities&service=WMS" .
+
+<urn:uuid:d5295a47-af46-4d36-826b-6fdc6676daca> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-06-18T11:32:21.191Z" ;
+    bcube:hasConfidence "Not Sure" ;
+    bcube:hasUrlSource "Generated" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-06-18T11:32:21.191Z" ;
+    dc:identifier "urn:sha:d0742aa8d5e6034635ecfe65bcc30863a43eae0379f09045b5bc4f5d" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://maps.ngdc.noaa.gov/arcgis/services/web_mercator/etopo1_hillshade/MapServer/WMSServer?layers=ETOPO1+Hillshade&width=500&version=1.3.0&bbox=-179.999996%2C-89.0%2C179.999996%2C89.0&service=WMS&format=image%2Fpng&styles=&crs=CRS%3A84&request=GetMap&height=500" .
+

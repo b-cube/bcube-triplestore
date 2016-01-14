@@ -1,0 +1,84 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:2e43d808-a327-4426-9762-a8d37669d1d6> a "ISO 19115:2003/19139" ;
+    bcube:dateCreated "2015-11-01T02:10:30.43Z" ;
+    bcube:lastUpdated "2015-11-01T02:10:30.43Z" ;
+    bcube:originatedFrom <urn:uuid:8d55e985-047e-4983-bc59-8d88b7d1845d> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:78fc50a1-f72a-4da3-b440-58b9d8bbacf0> .
+
+<urn:uuid:4b971169-dde1-494f-9381-31cacd18d6ad> bcube:hasValue "boundaries" ;
+    dc:partOf "IsoTopicCategories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:60e3a4ca-0368-4362-8744-c83eb23096d7> bcube:hasType "place" ;
+    bcube:hasValue "MO",
+        "Missouri" ;
+    dc:partOf "INCITS 38:2009" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:78fc50a1-f72a-4da3-b440-58b9d8bbacf0> bcube:dateCreated "2015-11-01T02:10:30.43Z" ;
+    bcube:hasMetadataRecord <urn:uuid:2e43d808-a327-4426-9762-a8d37669d1d6> ;
+    bcube:lastUpdated "2015-11-01T02:10:30.43Z" ;
+    dc:conformsTo <urn:uuid:4b971169-dde1-494f-9381-31cacd18d6ad>,
+        <urn:uuid:60e3a4ca-0368-4362-8744-c83eb23096d7>,
+        <urn:uuid:98bd2805-855b-4712-8c35-95cc3a1605fd> ;
+    dc:description "The 2012 cartographic boundary shapefiles are simplified representations of selected geographic areas from the Census Bureau's MAF/TIGER geographic database. These boundary files are specifically designed for small-scale thematic mapping. When possible generalization is performed with the intent to maintain the hierarchical relationships among geographies and to maintain the alignment of geographies within a file set for a given year. Geographic areas may not align with the same areas from another year. Some geographies are available as nation-based shapefiles while others are available only as state-based files." ;
+    dc:spatial "POLYGON ((-95.774704 40.61364,-95.774704 35.995683,-89.098968 35.995683,-89.098968 40.61364,-95.774704 40.61364))" ;
+    dcterms:references <urn:uuid:956dab4c-4394-41cc-8e59-27dced4fed9f> ;
+    dcterms:title "2012 Cartographic Boundary File, 2013 State-State Legislative District (Upper Chamber) for Missouri, 1:500,000" ;
+    esip:eastBound "-89.098968"^^xsd:float ;
+    esip:endDate "2012-12-06"^^xsd:date ;
+    esip:northBound "35.995683"^^xsd:float ;
+    esip:southBound "40.61364"^^xsd:float ;
+    esip:startDate "2012-12-06"^^xsd:date ;
+    esip:westBound "-95.774704"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:8d55e985-047e-4983-bc59-8d88b7d1845d> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-01T02:10:30.43Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-01T02:10:30.43Z" ;
+    dc:identifier "urn:sha:0f0b5f5325a9f477c985fd8d1aaccef5201612c3182a50dd9af561f4" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://meta.geo.census.gov/data/existing/decennial/GEO/CPMB/boundary/2013gz/sldu_500/cb_rd13_29_sldu_500k.iso.xml" .
+
+<urn:uuid:956dab4c-4394-41cc-8e59-27dced4fed9f> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-01T02:10:30.43Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-01T02:10:30.43Z" ;
+    dc:identifier "urn:sha:976099fe9e3275aaf5eac3d27c66f5ea91cac6df1bb456d681d99751" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www2.census.gov/geo/tiger/GENZ2012/sldu/cb_rd13_29_sldu_500k.zip" .
+
+<urn:uuid:98bd2805-855b-4712-8c35-95cc3a1605fd> bcube:hasType "theme" ;
+    bcube:hasValue "2012",
+        "Cartographic Boundary",
+        "Generalized",
+        "Shapefile",
+        "State",
+        "State Legislative District",
+        "Upper Chamber" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+

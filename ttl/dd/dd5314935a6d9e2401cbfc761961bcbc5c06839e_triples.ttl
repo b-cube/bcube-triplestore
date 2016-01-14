@@ -1,0 +1,90 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:46f885fd-a286-489c-a259-372fe348611c> owl:a foaf:Organization ;
+    foaf:name "Federal Emergency Management Agency" .
+
+<urn:uuid:9a76e763-64e9-4b45-b671-61a9a3f78296> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-08-05T04:58:03.208Z" ;
+    bcube:lastUpdated "2015-08-05T04:58:03.208Z" ;
+    bcube:originatedFrom <urn:uuid:a719785d-b03e-4b92-82ff-84cb04cd7175> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:b023e966-3e16-422e-a481-aa1269e963d0> .
+
+<urn:uuid:a6af54c9-a371-4399-8702-0238755d1ef5> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-05T04:58:03.208Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-05T04:58:03.208Z" ;
+    dc:identifier "urn:sha:37c915397238031daced09ae0e2dd3bf54e84a6477f749c2cc9dcbdf" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://hazards.fema.gov" .
+
+<urn:uuid:a719785d-b03e-4b92-82ff-84cb04cd7175> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-05T04:58:03.208Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-05T04:58:03.208Z" ;
+    dc:identifier "urn:sha:720ba128565aff9eaf210492dca91d083fb0f03360e3e3b77921d0b1" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "https://catalog.data.gov/harvest/object/fb5056d9-e6ca-4612-aae6-97361ce0f9bb/original" .
+
+<urn:uuid:b015a7cd-2e94-4fa3-a1db-4b2f6c883932> bcube:hasType "theme" ;
+    bcube:hasValue "Environment",
+        "InlandWaters" ;
+    dc:partOf "ISO 19115 Topic Category" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:b023e966-3e16-422e-a481-aa1269e963d0> bcube:dateCreated "2015-08-05T04:58:03.208Z" ;
+    bcube:hasMetadataRecord <urn:uuid:9a76e763-64e9-4b45-b671-61a9a3f78296> ;
+    bcube:lastUpdated "2015-08-05T04:58:03.208Z" ;
+    dc:conformsTo <urn:uuid:b015a7cd-2e94-4fa3-a1db-4b2f6c883932>,
+        <urn:uuid:e3758a7e-d8d3-4b0c-a494-8b54fe0a8ec8>,
+        <urn:uuid:ec25b07d-45c5-4aa5-8473-c11aa457b521> ;
+    dc:description "Hydraulic data include spatial datasets and data tables necessary for documenting the hydraulic procedures for estimating flood discharges for a flood insurance study, which includes the hydraulic data expected by FEMA for new riverline studies. (Source: FEMA Guidelines and Specifications, Appendix N)" ;
+    dc:spatial "POLYGON ((-76.408 42.3088,-76.408 42.8808,-75.7463 42.8808,-75.7463 42.3088,-76.408 42.3088))" ;
+    dcterms:publisher <urn:uuid:46f885fd-a286-489c-a259-372fe348611c> ;
+    dcterms:references <urn:uuid:a6af54c9-a371-4399-8702-0238755d1ef5> ;
+    dcterms:title "Cortland Co, NY, Detailed Hydraulics" ;
+    esip:eastBound "-75.7463"^^xsd:float ;
+    esip:northBound "42.8808"^^xsd:float ;
+    esip:southBound "42.3088"^^xsd:float ;
+    esip:startDate "2008-04-18"^^xsd:date ;
+    esip:westBound "-76.408"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:e3758a7e-d8d3-4b0c-a494-8b54fe0a8ec8> bcube:hasType "theme" ;
+    bcube:hasValue "DFIRM",
+        "Digital Flood Insurance Rate Map",
+        "Flood Hazard data",
+        "Hydraulics" ;
+    dc:partOf "FEMA NFIP Topic Category" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:ec25b07d-45c5-4aa5-8473-c11aa457b521> bcube:hasType "place" ;
+    bcube:hasValue "COMMUNITY CORTLAND COUNTY All Jurisdictions",
+        "COUNTY CORTLAND",
+        "COUNTY-FIPS 36023",
+        "FEMA-CID 36023C",
+        "REGION 02",
+        "STATE NY" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+

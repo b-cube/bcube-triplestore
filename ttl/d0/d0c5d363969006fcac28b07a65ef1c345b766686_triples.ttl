@@ -1,0 +1,89 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:12c0568f-d719-4fd3-99ea-202fcd1e033b> owl:a foaf:Organization ;
+    foaf:name "" .
+
+<urn:uuid:2a38e742-2d81-499f-8a55-2667762cd399> bcube:hasType "place" ;
+    bcube:hasValue "02130",
+        "County or Equivalent Entity",
+        "Ketchikan Gateway",
+        "U.S.",
+        "United States" ;
+    dc:partOf "FIPS Publication 5-2, FIPS Publication 6-4, FIPS Publication 8-6, FIPS Publication 9-1,FIPS Publication55-4" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:609d84a4-3def-414f-82e8-901374df2dd5> bcube:dateCreated "2015-11-01T22:52:02.321Z" ;
+    bcube:hasMetadataRecord <urn:uuid:664d5af2-2ffa-43b1-ae33-c9df9f050474> ;
+    bcube:lastUpdated "2015-11-01T22:52:02.321Z" ;
+    dc:conformsTo <urn:uuid:2a38e742-2d81-499f-8a55-2667762cd399>,
+        <urn:uuid:c38c710f-8713-4eed-920e-e12553f98050>,
+        <urn:uuid:e9e1604d-b73f-43a4-bd31-afc7c6a3b11a> ;
+    dc:description "The TIGER/Line Shapefiles are an extract of selected geographic and cartographic information from the Census MAF/TIGER database. The Census MAF/TIGER database represents a seamless national file with no overlaps or gaps between parts. However, each TIGER/Line Shapefile is designed to stand alone as an independent data set or the shapefiles can be combined to cover the whole nation." ;
+    dc:spatial "POLYGON ((-131.962898 55.089824,-131.962898 55.98625,-130.902466 55.98625,-130.902466 55.089824,-131.962898 55.089824))" ;
+    dcterms:publisher <urn:uuid:12c0568f-d719-4fd3-99ea-202fcd1e033b> ;
+    dcterms:references <urn:uuid:b644ac15-ea4a-4598-a8a4-166f6d8da5c8> ;
+    dcterms:title "TIGER/Line Shapefile, 2008, 2000 county, Ketchikan Gateway Borough, AK, Block Group" ;
+    esip:eastBound "-130.902466"^^xsd:float ;
+    esip:endDate "2008-07-01"^^xsd:date ;
+    esip:northBound "55.98625"^^xsd:float ;
+    esip:southBound "55.089824"^^xsd:float ;
+    esip:startDate "2008-01-01"^^xsd:date ;
+    esip:westBound "-131.962898"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:664d5af2-2ffa-43b1-ae33-c9df9f050474> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-11-01T22:52:02.321Z" ;
+    bcube:lastUpdated "2015-11-01T22:52:02.321Z" ;
+    bcube:originatedFrom <urn:uuid:dfab3b80-373f-4ffc-8451-92981e6b374b> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:609d84a4-3def-414f-82e8-901374df2dd5> .
+
+<urn:uuid:b644ac15-ea4a-4598-a8a4-166f6d8da5c8> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-01T22:52:02.321Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-01T22:52:02.321Z" ;
+    dc:identifier "urn:sha:afc8cd00ae76bd6e4c01f522014d08acf282f119cefb26d19e710d17" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www2.census.gov/geo/tiger/TIGER2008/02_ALASKA/02130_Ketchikan_Gateway_Borough/tl_2008_02130_bg00.zip" .
+
+<urn:uuid:c38c710f-8713-4eed-920e-e12553f98050> bcube:hasType "theme" ;
+    bcube:hasValue "boundaries" ;
+    dc:partOf "ISO 19115 Topic Categories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:dfab3b80-373f-4ffc-8451-92981e6b374b> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-01T22:52:02.321Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-01T22:52:02.321Z" ;
+    dc:identifier "urn:sha:18a9d76a9002b0a1bba17ed4d3e3b68037692a5c79960d740b50df33" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://meta.geo.census.gov/data/existing/decennial/GEO/GPMB/TIGERline/fe_2008/bg00/tl_2008_02130_bg00_url.shp.xml" .
+
+<urn:uuid:e9e1604d-b73f-43a4-bd31-afc7c6a3b11a> bcube:hasType "theme" ;
+    bcube:hasValue "BG",
+        "Block Group",
+        "County or equivalent entity",
+        "Polygon" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+

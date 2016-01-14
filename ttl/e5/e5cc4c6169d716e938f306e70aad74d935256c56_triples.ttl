@@ -1,0 +1,89 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:4125d25a-85b4-4a5a-ab4d-0f8269539e62> bcube:hasType "theme" ;
+    bcube:hasValue "Legislative District",
+        "Polygon",
+        "State or equivalent entity" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:4bd62309-dd62-49ee-b818-52482521906e> bcube:hasType "place" ;
+    bcube:hasValue "17",
+        "IL",
+        "Illinois",
+        "State or Equivalent Entity",
+        "U.S.",
+        "United States" ;
+    dc:partOf "FIPS Publication 5-2, FIPS Publication 6-4, FIPS Publication 8-6, FIPS Publication 9-1" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:ba35d6b7-ebd4-438f-93ea-18c7e640adc2> bcube:dateCreated "2015-11-07T09:55:04.352Z" ;
+    bcube:hasMetadataRecord <urn:uuid:e5ce91bd-e988-4fc2-838e-811b421b2be7> ;
+    bcube:lastUpdated "2015-11-07T09:55:04.352Z" ;
+    dc:conformsTo <urn:uuid:4125d25a-85b4-4a5a-ab4d-0f8269539e62>,
+        <urn:uuid:4bd62309-dd62-49ee-b818-52482521906e>,
+        <urn:uuid:bfc8f8e9-174e-4363-9cce-fb7dc7bb5003> ;
+    dc:description "The TIGER/Line Shapefiles are an extract of selected geographic and cartographic information from the Census MAF/TIGER database. The Census MAF/TIGER database represents a seamless national file with no overlaps or gaps between parts. However, each TIGER/Line Shapefile is designed to stand alone as an independent data set or the shapefiles can be combined to cover the whole nation." ;
+    dc:spatial "POLYGON ((-91.513079 36.970298,-91.513079 42.508338,-87.019935 42.508338,-87.019935 36.970298,-91.513079 36.970298))" ;
+    dcterms:publisher <urn:uuid:fb2fbb53-30de-4c5b-aa08-02bd658a8879> ;
+    dcterms:references <urn:uuid:ec9bb019-8a3a-467d-8c55-3246dcd8417c> ;
+    dcterms:title "TIGER/Line Shapefile, 2007, state, Illinois, State Legislative District (SLD) Upper Chamber" ;
+    esip:eastBound "-87.019935"^^xsd:float ;
+    esip:endDate "2007-07-01"^^xsd:date ;
+    esip:northBound "42.508338"^^xsd:float ;
+    esip:southBound "36.970298"^^xsd:float ;
+    esip:startDate "2007-01-01"^^xsd:date ;
+    esip:westBound "-91.513079"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:bfc8f8e9-174e-4363-9cce-fb7dc7bb5003> bcube:hasType "theme" ;
+    bcube:hasValue "boundaries" ;
+    dc:partOf "ISO 19115 Topic Categories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:e5ce91bd-e988-4fc2-838e-811b421b2be7> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-11-07T09:55:04.352Z" ;
+    bcube:lastUpdated "2015-11-07T09:55:04.352Z" ;
+    bcube:originatedFrom <urn:uuid:fe2a9f37-45d9-477a-8ff3-cecaaef4153d> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:ba35d6b7-ebd4-438f-93ea-18c7e640adc2> .
+
+<urn:uuid:ec9bb019-8a3a-467d-8c55-3246dcd8417c> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-07T09:55:04.352Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-07T09:55:04.352Z" ;
+    dc:identifier "urn:sha:f192f21058d5e5d1d76370d752cb25d56fbbf48c10f002367b813c04" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www2.census.gov/geo/tiger/TIGER2007FE/17_ILLINOIS/fe_2007_17_sldu.zip" .
+
+<urn:uuid:fb2fbb53-30de-4c5b-aa08-02bd658a8879> owl:a foaf:Organization ;
+    foaf:name "" .
+
+<urn:uuid:fe2a9f37-45d9-477a-8ff3-cecaaef4153d> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-07T09:55:04.352Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-07T09:55:04.352Z" ;
+    dc:identifier "urn:sha:425b8184e2c8e2dd37e996e9a882739393c94caed9d9719270baa5f5" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://meta.geo.census.gov/data/existing/decennial/GEO/GPMB/TIGERline/fe_2007/sldu/fe_2007_17_sldu_url.shp.xml" .
+

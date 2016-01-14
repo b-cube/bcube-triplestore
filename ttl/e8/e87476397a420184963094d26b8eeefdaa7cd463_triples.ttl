@@ -1,0 +1,139 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:121d2820-bc74-4842-afe0-928196c58da1> owl:a foaf:Organization ;
+    foaf:name "NOAA's Ocean Service, Office for Coastal Management (OCM)" .
+
+<urn:uuid:23347c5d-218c-4145-859f-48bcb59df2d1> bcube:hasType "theme" ;
+    bcube:hasValue "Elevation",
+        "LAZ",
+        "LiDAR",
+        "Light Detection and Ranging",
+        "Remote Sensing",
+        "Topography/Bathymetry" ;
+    dc:partOf "none" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:2df31d30-6628-4897-b23e-4d1d4a269a8c> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-07-14T18:10:43.222Z" ;
+    bcube:lastUpdated "2015-07-14T18:10:43.222Z" ;
+    bcube:originatedFrom <urn:uuid:f6c62f19-eb56-40fd-8624-8076466266ad> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:5549d905-e450-492a-a615-1663d59b5c69> .
+
+<urn:uuid:5549d905-e450-492a-a615-1663d59b5c69> bcube:dateCreated "2015-07-14T18:10:43.222Z" ;
+    bcube:hasMetadataRecord <urn:uuid:2df31d30-6628-4897-b23e-4d1d4a269a8c> ;
+    bcube:lastUpdated "2015-07-14T18:10:43.222Z" ;
+    dc:conformsTo <urn:uuid:23347c5d-218c-4145-859f-48bcb59df2d1>,
+        <urn:uuid:599b63ac-16f4-4623-b119-968c04f1beb4>,
+        <urn:uuid:c59557ae-4aeb-450f-962b-f72e7cfaf7ca> ;
+    dc:description "This data set is an LAZ (compressed LAS) format file containing LIDAR point cloud data. The Light Detection and Ranging (LiDAR) dataset is a survey of the Hudson-Hoosic and Deerfield project area. The entire survey area for Massachusetts is approximately 690 square miles. The LiDAR point cloud was flown at a nominal post spacing of 2.0 meters for unobscured areas. The LiDAR data and derivative products produced are in compliance with the U.S. Geological Survey National Geospatial Program LiDAR Guidelines and Base Specifications, Version 13-ILMF 2010. The flight lines were acquired by Northrop Grumman, Advanced GEOINT Solutions Operating Unit. Derivative products from the aerial acquisition include: high accuracy multiple return LiDAR data, both raw and separated into several classes, along with hydro flattening breaklines, bare earth DEM tiles, control points, and FGDC compliant XML metadata." ;
+    dc:spatial "POLYGON ((-73.38316 42.398132,-73.38316 42.750152,-72.554743 42.750152,-72.554743 42.398132,-73.38316 42.398132))" ;
+    dcterms:publisher <urn:uuid:121d2820-bc74-4842-afe0-928196c58da1> ;
+    dcterms:references <urn:uuid:6373b469-5ae3-429c-b410-cd2fa3c60c4b>,
+        <urn:uuid:d6f07e68-0fe5-4cbb-b11e-590b92d26ed4>,
+        <urn:uuid:e05b4aeb-c171-4aa5-be70-cd3578f53dbd>,
+        <urn:uuid:f6c7b380-530a-438a-bbe8-59afdc0d34fb> ;
+    dcterms:title "2012 FEMA Topographic Lidar: Hudson-Hoosic and Deerfield Watersheds, Massachusetts" ;
+    esip:eastBound "-72.554743"^^xsd:float ;
+    esip:northBound "42.750152"^^xsd:float ;
+    esip:southBound "42.398132"^^xsd:float ;
+    esip:westBound "-73.38316"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:599b63ac-16f4-4623-b119-968c04f1beb4> bcube:hasType "place" ;
+    bcube:hasValue "Berkshire County",
+        "Franklin County",
+        "Massachusetts",
+        "US" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:6373b469-5ae3-429c-b410-cd2fa3c60c4b> dcterms:references <urn:uuid:94da757d-0df1-479f-8f61-cde58e52f74f> ;
+    owl:a bibo:WebPage .
+
+<urn:uuid:933aeb0a-cab1-4af7-9b64-41cb786c547a> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-07-14T18:10:43.222Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-07-14T18:10:43.222Z" ;
+    dc:identifier "urn:sha:f2371cab905bb34763e6b1406fa4ffc0c173062ac4c69efe244fcaaa" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://coast.noaa.gov/dataviewer/index.html?action=advsearch&qType=in&qFld=ID&qVal=2556" .
+
+<urn:uuid:94da757d-0df1-479f-8f61-cde58e52f74f> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-07-14T18:10:43.222Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-07-14T18:10:43.222Z" ;
+    dc:identifier "urn:sha:84938e08930479dda9e192462eea09d0a70efb1d7cc5ac388f322dd1" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://coast.noaa.gov/dataviewer" .
+
+<urn:uuid:c59557ae-4aeb-450f-962b-f72e7cfaf7ca> bcube:hasType "theme" ;
+    bcube:hasValue "elevation" ;
+    dc:partOf "ISO 19115 Topic Category" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:d6f07e68-0fe5-4cbb-b11e-590b92d26ed4> dcterms:references <urn:uuid:933aeb0a-cab1-4af7-9b64-41cb786c547a> ;
+    owl:a bibo:WebPage .
+
+<urn:uuid:da19727f-06bc-4069-9241-6bead33d3193> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-07-14T18:10:43.222Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-07-14T18:10:43.222Z" ;
+    dc:identifier "urn:sha:a5b99394df9de624ffbb3c2adc9cf66de5e977198bfd73c402bcbce4" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://coast.noaa.gov" .
+
+<urn:uuid:dcf065b6-c034-40ca-a778-dd7df4104274> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-07-14T18:10:43.222Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-07-14T18:10:43.222Z" ;
+    dc:identifier "urn:sha:df448704b0243e2c9001e9d9dc61f4ba68bd9d285f02ced89e566b66" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "ftp://coast.noaa.gov/pub/DigitalCoast/lidar1_z/geoid12a/data/2556" .
+
+<urn:uuid:e05b4aeb-c171-4aa5-be70-cd3578f53dbd> dcterms:references <urn:uuid:dcf065b6-c034-40ca-a778-dd7df4104274> ;
+    owl:a bibo:WebPage .
+
+<urn:uuid:f6c62f19-eb56-40fd-8624-8076466266ad> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-07-14T18:10:43.222Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-07-14T18:10:43.222Z" ;
+    dc:identifier "urn:sha:e6576db6c14ad749e724144eb3a4589bdbc9fa0f3cac3f1e107049b9" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://coast.noaa.gov/htdata/lidar1_z/geoid12a/data/2556/ma2012_fema_deerfield_metadata.xml" .
+
+<urn:uuid:f6c7b380-530a-438a-bbe8-59afdc0d34fb> dcterms:references <urn:uuid:da19727f-06bc-4069-9241-6bead33d3193> ;
+    owl:a bibo:WebPage .
+

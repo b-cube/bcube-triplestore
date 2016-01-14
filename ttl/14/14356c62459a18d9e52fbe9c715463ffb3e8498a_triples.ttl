@@ -1,0 +1,65 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:03329d7b-a54a-4c1c-bf83-03acdd9e9c10> bcube:hasType "theme" ;
+    bcube:hasValue "Land Cover",
+        "Land Cover Analysis",
+        "Remotely Sensed Imagery/Photos" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:094c2474-d045-44c1-b3bf-085298b97563> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-10T00:42:39.564Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-10T00:42:39.564Z" ;
+    dc:identifier "urn:sha:a2831c438c47f41d200a4dc79cda788d55e8e5b99686bfa8bc5e76c7" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://coast.noaa.gov/data/Documents/Metadata/isoharvest/Imagery/2007_era_USVI_stthomas_lc_cleaned_ISO.xml" .
+
+<urn:uuid:41bbe3c1-0a4b-46e7-b6a4-22a6fe43cdf9> bcube:hasType "place" ;
+    bcube:hasValue "Coastal Zone",
+        "St Thomas" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:978ad30f-8477-42a5-a3ad-c48a5a4a678f> bcube:dateCreated "2015-08-10T00:42:39.564Z" ;
+    bcube:hasMetadataRecord <urn:uuid:ae193c62-1d38-4e19-accf-877c39056cfe> ;
+    bcube:lastUpdated "2015-08-10T00:42:39.564Z" ;
+    dc:conformsTo <urn:uuid:03329d7b-a54a-4c1c-bf83-03acdd9e9c10>,
+        <urn:uuid:41bbe3c1-0a4b-46e7-b6a4-22a6fe43cdf9>,
+        <urn:uuid:e82cdc6d-17f0-4141-9440-622b78aa8dd4> ;
+    dc:description "This data set consists of land cover derived from high resolution imagery and was analyzed according to the Coastal Change Analysis Program (C-CAP) protocol to determine land cover. This data set utilized 32 three-band ADS40 scenes. These full scenes were not sufficient to replace cloud obscured areas within the base imagery. Additional imagery was used for classifying obsucred areas. All scenes were processed to detect C-CAP land cover features on St Thomas, U.S. Virgin Islands." ;
+    dc:spatial "POLYGON ((-65.09978 18.273179,-65.09978 18.476359,-64.790115 18.476359,-64.790115 18.273179,-65.09978 18.273179))" ;
+    dcterms:title "C-CAP Land Cover, United States Virgin Islands, St Thomas, 2007" ;
+    esip:eastBound "-64.790115"^^xsd:float ;
+    esip:northBound "18.476359"^^xsd:float ;
+    esip:southBound "18.273179"^^xsd:float ;
+    esip:westBound "-65.09978"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:ae193c62-1d38-4e19-accf-877c39056cfe> a "ISO 19115:2003/19139" ;
+    bcube:dateCreated "2015-08-10T00:42:39.564Z" ;
+    bcube:lastUpdated "2015-08-10T00:42:39.564Z" ;
+    bcube:originatedFrom <urn:uuid:094c2474-d045-44c1-b3bf-085298b97563> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:978ad30f-8477-42a5-a3ad-c48a5a4a678f> .
+
+<urn:uuid:e82cdc6d-17f0-4141-9440-622b78aa8dd4> bcube:hasValue "imageryBaseMapsEarthCover" ;
+    dc:partOf "IsoTopicCategories" ;
+    owl:a bcube:thesaurusSubset .
+

@@ -1,0 +1,86 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:0300b1f2-803e-4f25-b9a6-7ddd9792d6b6> dcterms:references <urn:uuid:f5652fd8-f717-42e5-bf5e-f74973c09945> ;
+    owl:a bibo:WebPage .
+
+<urn:uuid:46ee1c56-39e8-4b53-b7f1-21c18baa5beb> bcube:hasType "theme" ;
+    bcube:hasValue "Alaska",
+        "Gulf of Alaska",
+        "North Pacific Ocean",
+        "bathymetry",
+        "point" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:5c78890d-f6a0-4753-96d2-309888128f2c> bcube:hasType "theme" ;
+    bcube:hasValue "elevation",
+        "imageryBaseMapsEarthCover",
+        "oceans" ;
+    dc:partOf "ISO 19115 Topic Categories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:98180265-54a4-4792-9d07-e5e6ae30791a> bcube:dateCreated "2015-09-04T03:17:46.774Z" ;
+    bcube:hasMetadataRecord <urn:uuid:abf53ca8-2622-4896-8207-0143492c5caa> ;
+    bcube:lastUpdated "2015-09-04T03:17:46.774Z" ;
+    dc:conformsTo <urn:uuid:46ee1c56-39e8-4b53-b7f1-21c18baa5beb>,
+        <urn:uuid:5c78890d-f6a0-4753-96d2-309888128f2c> ;
+    dc:description "We assembled 1.75 million National Ocean Service (NOS) bathymetric soundings from 225 lead-line and single-beam echosounder hydrographic surveys conducted from 1901 to 1999 in the central Gulf of Alaska. These bathymetry data are available from the National Geophysical Data Center (NGDC: http://www.ngdc.noaa.gov), which archives and distributes data that were originally collected by the NOS and others. While various bathymetry data have been downloaded previously from NGDC, compiled, and used for a variety of projects, our effort differed in that we compared and corrected the digital bathymetry by studying the original analog source documents - digital versions of the original survey maps, called smooth sheets. There were several areas where these older surveys were superseded by more recent, higher quality multibeam surveys, mostly from the NOS (n=106). Three of these were unprocessed NOS multibeam surveys in the Sitka area, which we edited and processed into final bathymetric surfaces. We reduced the resolution of these multibeam surveys to 100 m, since some may have sub-meter resolution and many exceed a million soundings, and added them to our bathymetry compilation. In Sitka Sound was missing survey H11114. Processing and adding its bathymetric data to our compilation filled in a substantial gap in Sitka area, between Kruzof and Krestof islands." ;
+    dc:spatial "POLYGON ((-135.63 57.13,-135.63 57.23,-135.51 57.23,-135.51 57.13,-135.63 57.13))" ;
+    dcterms:identifier "gov.noaa.nmfs.inport:22957" ;
+    dcterms:publisher <urn:uuid:c90d5eba-2f0f-423a-b6cb-f80345a7240c> ;
+    dcterms:references <urn:uuid:0300b1f2-803e-4f25-b9a6-7ddd9792d6b6> ;
+    dcterms:title "AFSC/RACE/GAP/Prescott: Central Gulf of Alaska Multibeam Survey H11114" ;
+    esip:eastBound "-135.51"^^xsd:float ;
+    esip:endDate "2004-01-01"^^xsd:date ;
+    esip:northBound "57.23"^^xsd:float ;
+    esip:southBound "57.13"^^xsd:float ;
+    esip:startDate "2004-01-01"^^xsd:date ;
+    esip:westBound "-135.63"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:abf53ca8-2622-4896-8207-0143492c5caa> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-09-04T03:17:46.774Z" ;
+    bcube:lastUpdated "2015-09-04T03:17:46.774Z" ;
+    bcube:originatedFrom <urn:uuid:d050f880-2b4d-4555-93f4-bdd8e1f9d6c7> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:98180265-54a4-4792-9d07-e5e6ae30791a> .
+
+<urn:uuid:c90d5eba-2f0f-423a-b6cb-f80345a7240c> owl:a foaf:Organization ;
+    foaf:name "" .
+
+<urn:uuid:d050f880-2b4d-4555-93f4-bdd8e1f9d6c7> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-09-04T03:17:46.774Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-09-04T03:17:46.774Z" ;
+    dc:identifier "urn:sha:8c35cef4bc760c6a09ab228d773e0808474fb3b64442d6a6a6a83c5d" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "https://inport.nmfs.noaa.gov/inport/item/22957/fgdc" .
+
+<urn:uuid:f5652fd8-f717-42e5-bf5e-f74973c09945> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-09-04T03:17:46.774Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-09-04T03:17:46.774Z" ;
+    dc:identifier "urn:sha:66cb9ba73613236b0f83f2b8fa33619935463233c5f122d3d60e4ade" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www.afsc.noaa.gov/RACE/groundfish/bathymetry/CGOA_H11114.zip" .
+

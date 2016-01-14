@@ -1,0 +1,89 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:0bd4544d-fda2-46a7-a082-197e69457ec8> bcube:hasType "theme" ;
+    bcube:hasValue "elevation" ;
+    dc:partOf "ISO 19115 Topic Category" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:2ae4f735-27ab-4918-8813-bb0e71f0594a> bcube:hasType "theme" ;
+    bcube:hasValue "DTM",
+        "TIN",
+        "elevation model",
+        "triangulated irregular network" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:80b6ac54-fa1d-47fc-a9cd-d5b975515cab> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-11T19:49:40.744Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-11T19:49:40.744Z" ;
+    dc:identifier "urn:sha:96efea735ea8bf039c37a38056c42ed6f809235d59f7ef8776955950" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://ftp.geoinfo.msl.mt.gov/Data/Spatial/NonMSDI/Collections/Yellowstone_River_Clearinghouse/Elevation/Generate" .
+
+<urn:uuid:84627445-4096-409f-b2fc-adb47a764e98> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-11T19:49:40.744Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-11T19:49:40.744Z" ;
+    dc:identifier "urn:sha:a65df17217df5d33466848695c7d32353e1530e5dd03b298bb4f66d1" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://mslapps.mt.gov/Geographic_Information/Data/DataList/datalist_MetadataDetailRaw.aspx?did={9d44b178-4731-11e3-86ae-ce3f5508acd9}" .
+
+<urn:uuid:9721cb6e-21f4-4718-9d1a-ad507d2776cc> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-08-11T19:49:40.744Z" ;
+    bcube:lastUpdated "2015-08-11T19:49:40.744Z" ;
+    bcube:originatedFrom <urn:uuid:84627445-4096-409f-b2fc-adb47a764e98> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:d93c891c-aad9-4164-a49d-e14deabb9257> .
+
+<urn:uuid:ad4bbe3f-8117-4b4d-9307-82620babd495> bcube:hasType "place" ;
+    bcube:hasValue "Dawson",
+        "Montana",
+        "Stillwater",
+        "USA",
+        "Yellowstone",
+        "Yellowstone River",
+        "Yellowstone River Conservation District Council" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:ca1205b2-a2a7-4d0b-9ca1-c49c1b13a39e> owl:a foaf:Organization ;
+    foaf:name "Montana State Library" .
+
+<urn:uuid:d93c891c-aad9-4164-a49d-e14deabb9257> bcube:dateCreated "2015-08-11T19:49:40.744Z" ;
+    bcube:hasMetadataRecord <urn:uuid:9721cb6e-21f4-4718-9d1a-ad507d2776cc> ;
+    bcube:lastUpdated "2015-08-11T19:49:40.744Z" ;
+    dc:conformsTo <urn:uuid:0bd4544d-fda2-46a7-a082-197e69457ec8>,
+        <urn:uuid:2ae4f735-27ab-4918-8813-bb0e71f0594a>,
+        <urn:uuid:ad4bbe3f-8117-4b4d-9307-82620babd495> ;
+    dc:description "The data consists of pairs of ESRI Generate files storing elevation data that may be converted to TIN (triangulated irregular network) data sets. Each pair of files covers a 1200mX1200m grid tile, and there are 813 tiles in the first phase of the mapping project." ;
+    dc:spatial "POLYGON ((-109.5654 45.5775,-109.5654 47.3556,-104.3925 47.3556,-104.3925 45.5775,-109.5654 45.5775))" ;
+    dcterms:publisher <urn:uuid:ca1205b2-a2a7-4d0b-9ca1-c49c1b13a39e> ;
+    dcterms:references <urn:uuid:80b6ac54-fa1d-47fc-a9cd-d5b975515cab> ;
+    dcterms:title "Elevation Data, ESRI Generate Files, Yellowstone River Corridor, Stillwater, Yellowstone, and Dawson Counties, Montana, 2004" ;
+    esip:eastBound "-104.3925"^^xsd:float ;
+    esip:endDate "2004-05-02"^^xsd:date ;
+    esip:northBound "47.3556"^^xsd:float ;
+    esip:southBound "45.5775"^^xsd:float ;
+    esip:startDate "2004-05-01"^^xsd:date ;
+    esip:westBound "-109.5654"^^xsd:float ;
+    owl:a dcat:Dataset .
+

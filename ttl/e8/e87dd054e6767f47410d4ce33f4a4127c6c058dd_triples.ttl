@@ -1,0 +1,98 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:2efa1a98-be08-42b2-a3f0-11cddfa1bbc6> bcube:hasType "theme" ;
+    bcube:hasValue "association",
+        "geology",
+        "soil",
+        "surface",
+        "surficial" ;
+    dc:partOf "none" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:4338c21b-4851-4295-bc9c-9913d8b6f323> bcube:dateCreated "2015-07-08T04:40:10.254Z" ;
+    bcube:hasMetadataRecord <urn:uuid:5aab75b2-4a13-4c45-901f-5342673b397b> ;
+    bcube:lastUpdated "2015-07-08T04:40:10.254Z" ;
+    dc:conformsTo <urn:uuid:2efa1a98-be08-42b2-a3f0-11cddfa1bbc6>,
+        <urn:uuid:70c03d04-1e99-4da6-86b5-ed048d6d76e0> ;
+    dc:description "This is a polygon feature class showing soil associations in Illinois, from the General Soil Map of Illinois (Fehrenbacher, 1982). Created in 1984 by ESRI. A soil association is a group of related soil series that generally occur in a characteristic pattern of landscapes that have identifiable topographic features, slopes, and parent materials. The General Soil Map of Illinois (scale 1:500,000) identifies the location and extent of 50 soil association types." ;
+    dc:spatial "POLYGON ((-91.510917 36.968509,-91.510917 42.510709,-87.02234 42.510709,-87.02234 36.968509,-91.510917 36.968509))" ;
+    dcterms:publisher <urn:uuid:e7d8d8e9-2cef-49f8-ace8-f3f85e4d0775> ;
+    dcterms:references <urn:uuid:a20e06f3-0949-44d6-9881-994197d4948c>,
+        <urn:uuid:fd7b8aed-6cce-42cb-9fc6-b4f5cec8c59d> ;
+    dcterms:title "Illinois Soil Associations Map (500K)" ;
+    esip:eastBound "-87.02234"^^xsd:float ;
+    esip:northBound "42.510709"^^xsd:float ;
+    esip:southBound "36.968509"^^xsd:float ;
+    esip:startDate "1984-01-01"^^xsd:date ;
+    esip:westBound "-91.510917"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:5aab75b2-4a13-4c45-901f-5342673b397b> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-07-08T04:40:10.254Z" ;
+    bcube:lastUpdated "2015-07-08T04:40:10.254Z" ;
+    bcube:originatedFrom <urn:uuid:f3249b65-47b7-4c79-94b7-1eaa644e5018> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:4338c21b-4851-4295-bc9c-9913d8b6f323> .
+
+<urn:uuid:70c03d04-1e99-4da6-86b5-ed048d6d76e0> bcube:hasType "place" ;
+    bcube:hasValue "Illinois" ;
+    dc:partOf "none" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:a20e06f3-0949-44d6-9881-994197d4948c> dcterms:references <urn:uuid:f2f43d67-6a01-4a3a-b9ac-be2bd601d57d> ;
+    owl:a bibo:WebPage .
+
+<urn:uuid:bd276e5a-8a1c-452a-b7f5-2b1e5f193f2c> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-07-08T04:40:10.254Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-07-08T04:40:10.254Z" ;
+    dc:identifier "urn:sha:18518ff4ba422cbc493fa73b291877822fd0d15c35eb6387f86cdad8" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://illinois.edu" .
+
+<urn:uuid:e7d8d8e9-2cef-49f8-ace8-f3f85e4d0775> owl:a foaf:Organization ;
+    foaf:name "Illinois State Geological Survey" .
+
+<urn:uuid:f2f43d67-6a01-4a3a-b9ac-be2bd601d57d> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-07-08T04:40:10.254Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-07-08T04:40:10.254Z" ;
+    dc:identifier "urn:sha:7f5bafd6d7cfce26bb2eac4e5d384ed8e072dc9d12fb1a7303f5805f" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www.isgs.illinois.edu/" .
+
+<urn:uuid:f3249b65-47b7-4c79-94b7-1eaa644e5018> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-07-08T04:40:10.254Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-07-08T04:40:10.254Z" ;
+    dc:identifier "urn:sha:334ff3fa69c5aa52a09e6c6c24f183137daff609da38ecff14fba3b3" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www.isgs.uiuc.edu/nsdihome/outmeta/IL_Soil_Associations_1984_Py.xml" .
+
+<urn:uuid:fd7b8aed-6cce-42cb-9fc6-b4f5cec8c59d> dcterms:references <urn:uuid:bd276e5a-8a1c-452a-b7f5-2b1e5f193f2c> ;
+    owl:a bibo:WebPage .
+

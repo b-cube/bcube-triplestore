@@ -1,0 +1,92 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:43be5eed-0312-4e10-aaaf-bbfa5831a923> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-10-30T07:16:13.815Z" ;
+    bcube:lastUpdated "2015-10-30T07:16:13.815Z" ;
+    bcube:originatedFrom <urn:uuid:f7877f35-7047-4807-aaae-08d172d9c160> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:ff137b12-359a-4543-ac24-229bc7acc12d> .
+
+<urn:uuid:562e3bdd-7d46-4ad2-be92-7bc407b23f85> bcube:hasType "place" ;
+    bcube:hasValue "COMMUNITY Countywide",
+        "COUNTY Lake County",
+        "COUNTY-FIPS 047C",
+        "FEMA-CID 30047C",
+        "REGION 08",
+        "STATE MT" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:56fc54fb-7e85-47a2-b421-94bbd70a4a3f> bcube:hasType "theme" ;
+    bcube:hasValue "environment",
+        "inlandWaters" ;
+    dc:partOf "ISO 19115 Topic Category" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:597c43b5-8f90-474b-ba19-94227b8f81d7> bcube:hasType "theme" ;
+    bcube:hasValue "0.2-Percent-Annual-Chance Flood",
+        "Channel",
+        "DFIRM",
+        "Digital Flood Insurance Rate Map",
+        "Flood Hazard data",
+        "Hydrology" ;
+    dc:partOf "FEMA NFIP Topic Category" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:a611ca11-4731-4e12-8fee-a47bfd9a48bc> owl:a foaf:Organization ;
+    foaf:name "Federal Emergency Management Agency" .
+
+<urn:uuid:dccea9cf-793e-49f6-be11-30f9d61a9db7> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-10-30T07:16:13.815Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-10-30T07:16:13.815Z" ;
+    dc:identifier "urn:sha:37c915397238031daced09ae0e2dd3bf54e84a6477f749c2cc9dcbdf" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://hazards.fema.gov" .
+
+<urn:uuid:f7877f35-7047-4807-aaae-08d172d9c160> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-10-30T07:16:13.815Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-10-30T07:16:13.815Z" ;
+    dc:identifier "urn:sha:d28eee78c92fca6c090b4c556037d78ebdf6cf8b379fd7d4990f7bcd" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://catalog.data.gov/harvest/object/5382f6c9-e058-404c-bf9c-2c4a8ad1af84/original" .
+
+<urn:uuid:ff137b12-359a-4543-ac24-229bc7acc12d> bcube:dateCreated "2015-10-30T07:16:13.815Z" ;
+    bcube:hasMetadataRecord <urn:uuid:43be5eed-0312-4e10-aaaf-bbfa5831a923> ;
+    bcube:lastUpdated "2015-10-30T07:16:13.815Z" ;
+    dc:conformsTo <urn:uuid:562e3bdd-7d46-4ad2-be92-7bc407b23f85>,
+        <urn:uuid:56fc54fb-7e85-47a2-b421-94bbd70a4a3f>,
+        <urn:uuid:597c43b5-8f90-474b-ba19-94227b8f81d7> ;
+    dc:description "Hydrology data include spatial datasets and data tables necessary for documenting the hydrologic procedures for estimating flood discharges for a flood insurance study, which includes the hydrologic data expected by FEMA for new riverline studies. (Source: FEMA Guidelines and Specifications, Appendix N)" ;
+    dc:spatial "POLYGON ((-114.625 47.125,-114.625 48.125,-113.5 48.125,-113.5 47.125,-114.625 47.125))" ;
+    dcterms:publisher <urn:uuid:a611ca11-4731-4e12-8fee-a47bfd9a48bc> ;
+    dcterms:references <urn:uuid:dccea9cf-793e-49f6-be11-30f9d61a9db7> ;
+    dcterms:title "HYDROLOGY, LAKE COUNTY, MONTANA" ;
+    esip:eastBound "-113.5"^^xsd:float ;
+    esip:northBound "48.125"^^xsd:float ;
+    esip:southBound "47.125"^^xsd:float ;
+    esip:startDate "2010-02-15"^^xsd:date ;
+    esip:westBound "-114.625"^^xsd:float ;
+    owl:a dcat:Dataset .
+

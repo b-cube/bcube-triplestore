@@ -1,0 +1,59 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:3126b28e-dc38-47ba-a6bd-6543171b1937> bcube:hasType "place" ;
+    bcube:hasValue "New York (State)",
+        "Orange County (N.Y.) -- Maps." ;
+    dc:partOf "LCSH" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:35cd055d-5517-4c1d-a805-3a19e8660f0b> a "ISO 19115:2003/19139" ;
+    bcube:dateCreated "2015-07-29T19:11:27.548Z" ;
+    bcube:lastUpdated "2015-07-29T19:11:27.548Z" ;
+    bcube:originatedFrom <urn:uuid:64466714-f774-40e2-b606-6553d7615229> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:7ed3279b-488d-416e-82b4-bb6ea1a6033a> .
+
+<urn:uuid:43c24529-89e3-42e2-b6ec-3698716e7065> bcube:hasType "theme" ;
+    bcube:hasValue "Block Numbering Areas",
+        "Census Tracts" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:64466714-f774-40e2-b606-6553d7615229> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-07-29T19:11:27.548Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-07-29T19:11:27.548Z" ;
+    dc:identifier "urn:sha:3960a78212db932205559e84f5f9b88b5525f85382b2820998f2d24b" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "https://catalog.data.gov/harvest/object/c324348d-cc5b-41a3-a560-7a78fa3a7781" .
+
+<urn:uuid:7ed3279b-488d-416e-82b4-bb6ea1a6033a> bcube:dateCreated "2015-07-29T19:11:27.548Z" ;
+    bcube:hasMetadataRecord <urn:uuid:35cd055d-5517-4c1d-a805-3a19e8660f0b> ;
+    bcube:lastUpdated "2015-07-29T19:11:27.548Z" ;
+    dc:conformsTo <urn:uuid:3126b28e-dc38-47ba-a6bd-6543171b1937>,
+        <urn:uuid:43c24529-89e3-42e2-b6ec-3698716e7065> ;
+    dc:description "This shapefile is an extract of selected geographic and cartographic information from the 1995 TIGER/Line files detailing census tracks and block numbering areas." ;
+    dc:spatial "POLYGON ((-74.762 41.143,-74.762 41.633,-73.947 41.633,-73.947 41.143,-74.762 41.143))" ;
+    dcterms:title "Census Tracts, Orange County (Shapefile : 1998)" ;
+    esip:eastBound "-73.947"^^xsd:float ;
+    esip:northBound "41.633"^^xsd:float ;
+    esip:southBound "41.143"^^xsd:float ;
+    esip:westBound "-74.762"^^xsd:float ;
+    owl:a dcat:Dataset .
+

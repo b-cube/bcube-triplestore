@@ -1,0 +1,65 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:0fb9061b-1085-45e6-9d49-b236ac05755b> bcube:hasType "theme" ;
+    bcube:hasValue "Land Cover",
+        "Land Cover Analysis",
+        "Remotely Sensed Imagery/Photos" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:1398fec9-f9b3-4f94-b34d-37a7bc89f0d1> a "ISO 19115:2003/19139" ;
+    bcube:dateCreated "2015-08-10T08:23:52.12Z" ;
+    bcube:lastUpdated "2015-08-10T08:23:52.12Z" ;
+    bcube:originatedFrom <urn:uuid:b4223029-c40a-4afe-8c15-07546766f27d> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:80f4f05b-2eef-4519-bc78-e7abf38f0198> .
+
+<urn:uuid:80f4f05b-2eef-4519-bc78-e7abf38f0198> bcube:dateCreated "2015-08-10T08:23:52.12Z" ;
+    bcube:hasMetadataRecord <urn:uuid:1398fec9-f9b3-4f94-b34d-37a7bc89f0d1> ;
+    bcube:lastUpdated "2015-08-10T08:23:52.12Z" ;
+    dc:conformsTo <urn:uuid:0fb9061b-1085-45e6-9d49-b236ac05755b>,
+        <urn:uuid:bc9128bf-1b7e-40ce-b2b5-050a36f70ab5>,
+        <urn:uuid:f32449f3-2efd-48a6-8117-c2efde6f406c> ;
+    dc:description "This data set consists of land derived from high resolution imagery and was analyzed according to the Coastal Change Analysis Program (C-CAP) protocol to determine land cover. This data set utilized 10 full or partial WorldView2 multispectral scenes and the 2005 high-resolution Guam C-CAP data set. The imagery and base classification were included in a multi-step semi-automated change detection process to extract land cover features in the 2011 imagery." ;
+    dc:spatial "POLYGON ((144.609086 13.224058,144.609086 13.667695,144.976095 13.667695,144.976095 13.224058,144.609086 13.224058))" ;
+    dcterms:title "C-CAP Land Cover, Territory of Guam 2011" ;
+    esip:eastBound "144.976095"^^xsd:float ;
+    esip:northBound "13.667695"^^xsd:float ;
+    esip:southBound "13.224058"^^xsd:float ;
+    esip:westBound "144.609086"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:b4223029-c40a-4afe-8c15-07546766f27d> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-10T08:23:52.12Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-10T08:23:52.12Z" ;
+    dc:identifier "urn:sha:90891b350082ab8ca3f2a5a3356aac505ed711c8006f55659968826b" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://coast.noaa.gov/data/Documents/Metadata/isoharvest/Imagery/2011_era_guam_landcover_cleaned_ISO.xml" .
+
+<urn:uuid:bc9128bf-1b7e-40ce-b2b5-050a36f70ab5> bcube:hasValue "imageryBaseMapsEarthCover" ;
+    dc:partOf "IsoTopicCategories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:f32449f3-2efd-48a6-8117-c2efde6f406c> bcube:hasType "place" ;
+    bcube:hasValue "Coastal Zone",
+        "Guam" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+

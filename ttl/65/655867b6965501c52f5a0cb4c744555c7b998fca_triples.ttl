@@ -1,0 +1,77 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:4b2f16df-47a8-4b3d-bbe6-7c8836940a94> bcube:hasType "theme" ;
+    bcube:hasValue "abundance",
+        "census",
+        "distribution",
+        "floristic classification",
+        "habitat attributes",
+        "inventory",
+        "management",
+        "monitoring",
+        "planning",
+        "plant",
+        "special status species",
+        "trend",
+        "vegetation" ;
+    dc:partOf "none" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:542c9f2e-8490-4db3-9f6e-a6f3cb047b3f> bcube:hasType "place" ;
+    bcube:hasValue "California",
+        "Suisun Marsh" ;
+    dc:partOf "none" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:5cfef310-5732-4ff5-903e-d8f3c265665b> a "ISO 19115:2003/19139" ;
+    bcube:dateCreated "2015-09-07T15:55:46.966Z" ;
+    bcube:lastUpdated "2015-09-07T15:55:46.966Z" ;
+    bcube:originatedFrom <urn:uuid:e8e4ce14-e172-4ebf-bffc-2f9eb8044930> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:c299335f-493e-4311-a8f9-5ab7fa67d6ac> .
+
+<urn:uuid:c299335f-493e-4311-a8f9-5ab7fa67d6ac> bcube:dateCreated "2015-09-07T15:55:46.966Z" ;
+    bcube:hasMetadataRecord <urn:uuid:5cfef310-5732-4ff5-903e-d8f3c265665b> ;
+    bcube:lastUpdated "2015-09-07T15:55:46.966Z" ;
+    dc:conformsTo <urn:uuid:4b2f16df-47a8-4b3d-bbe6-7c8836940a94>,
+        <urn:uuid:542c9f2e-8490-4db3-9f6e-a6f3cb047b3f>,
+        <urn:uuid:de1107f1-0632-4394-9993-41b29a6d908b> ;
+    dc:description "This vegetation mapping project of Suisun Marsh blends ground-based classification, aerial photo interpretation, and GIS editing and processing. The method is based on the development of a quantitative vegetation classification, which is used to describe the vegetation map units of the marsh. The classification is defined to meet the specifications of the National and State standards for vegetation classification, but is related through a cross-walking table to other standard classifications in use locally or statewide ( http://nrm.dfg.ca.gov/documents/ContextDocs.aspx?cat=BIOS&sub=ds163 )." ;
+    dc:spatial "POLYGON ((-122.13092 38.048528,-122.13092 38.242466,-121.865701 38.242466,-121.865701 38.048528,-122.13092 38.048528))" ;
+    dcterms:title "Vegetation - Suisun Marsh, Change 1999 to 2000 [ds163]" ;
+    esip:eastBound "-121.865701"^^xsd:float ;
+    esip:northBound "38.242466"^^xsd:float ;
+    esip:southBound "38.048528"^^xsd:float ;
+    esip:westBound "-122.13092"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:de1107f1-0632-4394-9993-41b29a6d908b> bcube:hasValue "biota",
+        "environment",
+        "inlandWaters" ;
+    dc:partOf "IsoTopicCategories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:e8e4ce14-e172-4ebf-bffc-2f9eb8044930> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-09-07T15:55:46.966Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-09-07T15:55:46.966Z" ;
+    dc:identifier "urn:sha:52ba2e39e420f26048d0cd5f16b140759bc60355bc1c8b6520a75e0d" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "https://catalog.data.gov/harvest/object/93e76868-382c-4843-9e8d-474820e11125" .
+

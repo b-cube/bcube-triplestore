@@ -1,0 +1,131 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:050cd42e-eca6-4781-87ef-e96df195141c> bcube:hasType "theme" ;
+    bcube:hasValue "depth",
+        "latitude",
+        "longitude",
+        "time",
+        "wind_speed",
+        "wind_to_direction",
+        "x_wind",
+        "y_wind" ;
+    dc:partOf "CF Standard Name Table v29" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:0ddce4f3-6456-434e-8be1-26f1e0fda018> bcube:hasType "project" ;
+    bcube:hasValue "TAO/TRITON, RAMA, PIRATA" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:0e57dd06-1851-4201-9168-a340c4cdd9c1> bcube:dateCreated "2015-11-01T14:36:47.739Z" ;
+    bcube:hasMetadataRecord <urn:uuid:4850409f-35bf-4d1b-9a4c-437c1e513d41> ;
+    bcube:lastUpdated "2015-11-01T14:36:47.739Z" ;
+    dc:conformsTo <urn:uuid:050cd42e-eca6-4781-87ef-e96df195141c>,
+        <urn:uuid:0ddce4f3-6456-434e-8be1-26f1e0fda018>,
+        <urn:uuid:0fcf4893-3d8b-4cd3-b419-591e355cf26d>,
+        <urn:uuid:442be1bf-479a-4b8b-9f0c-ed8bd67cf942>,
+        <urn:uuid:b8648487-1771-4d88-b913-ef535b5ee3a7> ;
+    dc:description "This dataset has daily Wind data from the TAO/TRITON (Pacific Ocean, http://www.pmel.noaa.gov/tao/), RAMA (Indian Ocean, http://www.pmel.noaa.gov/tao/rama/), and PIRATA (Atlantic Ocean, http://www.pmel.noaa.gov/pirata/) arrays of moored buoys which transmit oceanographic and meteorological data to shore in real-time via the Argos satellite system. These buoys are major components of the CLIVAR climate analysis project and the GOOS, GCOS, and GEOSS observing systems. Daily averages are computed starting at 00:00Z and are assigned an observation 'time' of 12:00Z. For more information, see http://www.pmel.noaa.gov/tao/proj_over/proj_over.html ." ;
+    dc:identifier "pmelTaoDyW" ;
+    dc:spatial "POLYGON ((-180 -25,-180 21,180 21,180 -25,-180 -25))" ;
+    dcterms:references <urn:uuid:6f61d386-71d0-4241-95cd-e61ac7636e3b>,
+        <urn:uuid:a4149356-0c4f-45b6-ac01-00544949e6a5> ;
+    dcterms:title "TAO/TRITON, RAMA, and PIRATA Buoys, Daily, Wind" ;
+    esip:eastBound "180.0"^^xsd:float ;
+    esip:endDate "2015-10-28"^^xsd:date ;
+    esip:northBound "21.0"^^xsd:float ;
+    esip:southBound "-25.0"^^xsd:float ;
+    esip:startDate "1977-11-06"^^xsd:date ;
+    esip:westBound "-180.0"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:0fcf4893-3d8b-4cd3-b419-591e355cf26d> bcube:hasValue "geoscientificInformation" ;
+    dc:partOf "IsoTopicCategories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:442be1bf-479a-4b8b-9f0c-ed8bd67cf942> bcube:hasType "theme" ;
+    bcube:hasValue "Atmosphere > Atmospheric Winds > Surface Winds" ;
+    dc:partOf "GCMD Science Keywords" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:4850409f-35bf-4d1b-9a4c-437c1e513d41> a "ISO 19115:2003/19139" ;
+    bcube:dateCreated "2015-11-01T14:36:47.739Z" ;
+    bcube:lastUpdated "2015-11-01T14:36:47.739Z" ;
+    bcube:originatedFrom <urn:uuid:fb83e78f-ba7d-4e71-bcf8-db954c242908> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:0e57dd06-1851-4201-9168-a340c4cdd9c1> .
+
+<urn:uuid:6f61d386-71d0-4241-95cd-e61ac7636e3b> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-01T14:36:47.739Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-01T14:36:47.739Z" ;
+    dc:identifier "urn:sha:bf8e6e761bba52266446d6c7ea7ba7c4c93b932d94727be985cfa701" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://osmc.noaa.gov/erddap/tabledap/pmelTaoDyW.graph" .
+
+<urn:uuid:a4149356-0c4f-45b6-ac01-00544949e6a5> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-01T14:36:47.739Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-01T14:36:47.739Z" ;
+    dc:identifier "urn:sha:169b246c998c717451aa22f7b576ade0a276b8b7c8370345dd8285f3" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://osmc.noaa.gov/erddap/tabledap/pmelTaoDyW.html" .
+
+<urn:uuid:b8648487-1771-4d88-b913-ef535b5ee3a7> bcube:hasType "theme" ;
+    bcube:hasValue "atmosphere",
+        "atmospheric",
+        "buoys",
+        "centered",
+        "daily",
+        "direction",
+        "from",
+        "identifier",
+        "level",
+        "meridional",
+        "noaa",
+        "pirata",
+        "pmel",
+        "quality",
+        "rama",
+        "source",
+        "speed",
+        "station",
+        "surface",
+        "tao",
+        "triton",
+        "wind",
+        "winds",
+        "zonal" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:fb83e78f-ba7d-4e71-bcf8-db954c242908> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-01T14:36:47.739Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-01T14:36:47.739Z" ;
+    dc:identifier "urn:sha:1083c3036c95e883a6781a49dc2bd55231e8d55e4111095685fd4d1e" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://osmc.noaa.gov/erddap/metadata/iso19115/xml/pmelTaoDyW_iso19115.xml" .
+

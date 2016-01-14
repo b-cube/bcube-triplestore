@@ -1,0 +1,62 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:5dde55e0-16cb-446e-9e44-2e55c292e75d> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-10-27T22:43:18.936Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-10-27T22:43:18.936Z" ;
+    dc:identifier "urn:sha:51acd4a1db463f518321b889515d824357ca24630d0204efd5b0ca1d" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://frap.fire.ca.gov/data/statewide/FGDC_metadata/ownership13_2.xml" .
+
+<urn:uuid:603839d4-ad40-4452-84ce-de910e5e1972> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-10-27T22:43:18.936Z" ;
+    bcube:lastUpdated "2015-10-27T22:43:18.936Z" ;
+    bcube:originatedFrom <urn:uuid:5dde55e0-16cb-446e-9e44-2e55c292e75d> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:81820ba5-cfd9-481a-ba59-f49c71bbf6e7> .
+
+<urn:uuid:76233419-356f-44f3-a029-e858351f53df> owl:a foaf:Organization ;
+    foaf:name "" .
+
+<urn:uuid:81820ba5-cfd9-481a-ba59-f49c71bbf6e7> bcube:dateCreated "2015-10-27T22:43:18.936Z" ;
+    bcube:hasMetadataRecord <urn:uuid:603839d4-ad40-4452-84ce-de910e5e1972> ;
+    bcube:lastUpdated "2015-10-27T22:43:18.936Z" ;
+    dc:conformsTo <urn:uuid:b399e3c0-3927-4d2c-8913-6f199e080619>,
+        <urn:uuid:f3b74383-7806-4a3d-971d-b028007b78f6> ;
+    dc:description "This ownership dataset utilizes a methodology that results in a federal ownership extent that matches the Federal Responsibility Areas (FRA) footprint from CAL FIRE's State Responsibility Areas for Fire Protection (SRA) data. FRA lands are snapped to county parcel data, thus federal ownership areas will also be snapped. Since SRA Fees were first implemented in 2011, CAL FIRE has devoted significant resources to improve the quality of SRA data. This includes comparing SRA data to data from other federal, state, and local agencies, an annual comparison to county assessor roll files, and a formal SRA review process that includes input from CAL FIRE Units. As a result, FRA lands provide a solid basis as the footprint for federal lands in California (except in the southeastern desert area). The methodology for federal lands involves: 1) snapping federal data sources to parcels; 2) clipping to the FRA footprint; 3) overlaying the federal data sources and using a hierarchy when sources overlap to resolve coding issues (BIA, UFW, NPS, USF, BLM, DOD, ACE, BOR); 4) utilizing an automated process to merge unknown FRA slivers with appropriate adjacent ownerships; and 5) a manual review of FRA areas not assigned a federal agency by this process. Non-Federal ownership information was obtained from the California Protected Areas Database (CPAD), was clipped to the non-FRA area, and an automated process was used to fill in some sliver-gaps that occurred between the federal and non-federal data. Southeastern Desert Area: CAL FIRE does not devote the same level of resources for maintaining SRA data in this region of the state, since we have no fire protection responsibility. This includes almost all of Imperial County, and the desert portions of Riverside, and San Bernardino Counties. In these areas, we used federal protection areas from the current version of the Direct Protection Areas (DPA) dataset. Due to the fact that there were draw-issues with the previous version of ownership, this version does NOT fill in the areas that are not assigned to one of the owner groups (it does not cover all lands in the state). Also unlike previous versions of the dataset, this version only defines ownership down to the agency level - it does not contain more specific property information (for example, which National Forest). The option for a more detailed future release remains, however, and due to the use of automated tools, could always be created without much additional effort.This dataset includes a representation to symbolize based on the Own_Group field using the standard color scheme utilized on DPA maps.For more details about data inputs, see the Lineage section of the metadata. For detailed notes on previous versions, see the Supplemental Information section of the metadata." ;
+    dc:spatial "POLYGON ((-124.505836 32.423771,-124.505836 42.06405,-113.499115 42.06405,-113.499115 32.423771,-124.505836 32.423771))" ;
+    dcterms:publisher <urn:uuid:76233419-356f-44f3-a029-e858351f53df> ;
+    dcterms:title "California Multi-Source Land Ownership (ownership13_2)" ;
+    esip:eastBound "-113.499115"^^xsd:float ;
+    esip:northBound "42.06405"^^xsd:float ;
+    esip:southBound "32.423771"^^xsd:float ;
+    esip:westBound "-124.505836"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:b399e3c0-3927-4d2c-8913-6f199e080619> bcube:hasType "theme" ;
+    bcube:hasValue "planningCadastre" ;
+    dc:partOf "ISO 19115 Topic Categories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:f3b74383-7806-4a3d-971d-b028007b78f6> bcube:hasType "theme" ;
+    bcube:hasValue "California",
+        "ownership" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+

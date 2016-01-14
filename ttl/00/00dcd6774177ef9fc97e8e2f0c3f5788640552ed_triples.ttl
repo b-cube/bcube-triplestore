@@ -1,0 +1,93 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:0b449cd9-052c-4c6a-abcc-974600260b16> bcube:hasType "theme" ;
+    bcube:hasValue "geoscientificInformation" ;
+    dc:partOf "ISO 19115 Topic Category" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:220b5cdd-6680-4173-8884-56667237a2b5> bcube:hasType "place" ;
+    bcube:hasValue "Alaska Highway Corridor",
+        "Alaska, State of",
+        "Healy Quadrangle",
+        "Trans-Alaska Pipeline" ;
+    dc:partOf "Alaska Division of Geological & Geophysical Surveys" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:79839a95-d8e1-4c10-b192-ed3eb28a3c82> bcube:dateCreated "2015-03-06T01:20:10.228Z" ;
+    bcube:hasMetadataRecord <urn:uuid:cafbf3b0-235a-40dc-a8cb-e459bfb0d162> ;
+    bcube:lastUpdated "2015-03-06T01:20:10.228Z" ;
+    dc:conformsTo <urn:uuid:0b449cd9-052c-4c6a-abcc-974600260b16>,
+        <urn:uuid:220b5cdd-6680-4173-8884-56667237a2b5>,
+        <urn:uuid:d2ea395e-5756-4fa8-86a7-53948a584e7d> ;
+    dc:description "In advance of design, permitting, and construction of a pipeline to deliver North Slope natural gas to out-of-state customers and Alaska communities, the Division of Geological & Geophysical Surveys (DGGS) has acquired lidar (light detection and ranging) data along proposed pipeline routes, nearby areas of infrastructure, and regions where significant geologic hazards have been identified. Lidar data will serve multiple purposes, but have primarily been collected to (1) evaluate active faulting, slope instability, thaw settlement, erosion, and other engineering constraints along proposed pipeline routes, and (2) provide a base layer for the state-federal GIS database that will be used to evaluate permit applications and construction plans. The vegetation digital surface models (veg_DSM) represent the above ground elevation of the highest laser return with all vegetation greater than 20 cm above the ground included." ;
+    dc:spatial "POLYGON ((-150 63,-150 64,-147 64,-147 63,-150 63))" ;
+    dcterms:publisher <urn:uuid:ad6fe12a-9bbb-431b-a1e2-359ff0972fec> ;
+    dcterms:references <urn:uuid:8fd2b97b-7575-4ed6-84cf-c18f21e96c0d> ;
+    dcterms:title "High-resolution lidar data for infrastructure corridors, Healy Quadrangle, Alaska" ;
+    esip:eastBound "-147.0"^^xsd:float ;
+    esip:endDate "2011-01-01"^^xsd:date ;
+    esip:northBound "64.0"^^xsd:float ;
+    esip:southBound "63.0"^^xsd:float ;
+    esip:startDate "2010-01-01"^^xsd:date ;
+    esip:westBound "-150.0"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:8fd2b97b-7575-4ed6-84cf-c18f21e96c0d> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-03-06T01:20:10.228Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-03-06T01:20:10.228Z" ;
+    dc:identifier "urn:sha:777b9324765712a8ed13d13f3c7845981bf5ec092d27dcd9d2b3d7b7" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www.dggs.alaska.gov/pubs/id/23163" .
+
+<urn:uuid:a793b1fd-e3b0-4ea6-814b-df1327b9d6a6> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-03-06T01:20:10.228Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-03-06T01:20:10.228Z" ;
+    dc:identifier "urn:sha:1ec213fa3634208d67e2ddef0e7ad647dd539d5dfe094d36e4e2a331" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://catalog.data.gov/harvest/object/5f3d1b0b-053a-45c6-9f0d-d519bd922851/original" .
+
+<urn:uuid:ad6fe12a-9bbb-431b-a1e2-359ff0972fec> owl:a foaf:Organization ;
+    foaf:name "State of Alaska, Department of Natural Resources, Division of Geological & Geophysical Surveys" .
+
+<urn:uuid:cafbf3b0-235a-40dc-a8cb-e459bfb0d162> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-03-06T01:20:10.228Z" ;
+    bcube:lastUpdated "2015-03-06T01:20:10.228Z" ;
+    bcube:originatedFrom <urn:uuid:a793b1fd-e3b0-4ea6-814b-df1327b9d6a6> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:79839a95-d8e1-4c10-b192-ed3eb28a3c82> .
+
+<urn:uuid:d2ea395e-5756-4fa8-86a7-53948a584e7d> bcube:hasType "theme" ;
+    bcube:hasValue "Alaska Pipeline",
+        "Digital Surface Model (DSM)",
+        "Gasline",
+        "Geomorphology",
+        "Lidar",
+        "Proposed Natural Gas Pipeline",
+        "Raster Image",
+        "Remote Sensing",
+        "Vegetation Digital Surface Model (DSM)" ;
+    dc:partOf "Alaska Division of Geological & Geophysical Surveys" ;
+    owl:a bcube:thesaurusSubset .
+

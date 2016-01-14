@@ -1,0 +1,90 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:08901687-afa2-4857-af4f-d92c8c1a9a6e> owl:a foaf:Organization ;
+    foaf:name "" .
+
+<urn:uuid:2afb8334-2a84-4214-9225-18a47ed262b5> bcube:hasType "place" ;
+    bcube:hasValue "36",
+        "NY",
+        "New York",
+        "State or Equivalent Entity",
+        "U.S.",
+        "United States" ;
+    dc:partOf "FIPS Publication 5-2, FIPS Publication 6-4, FIPS Publication 8-6, FIPS Publication 9-1" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:90762712-8968-48f9-a3e5-4ff0bc3ab51f> bcube:hasType "theme" ;
+    bcube:hasValue "boundaries" ;
+    dc:partOf "ISO 19115 Topic Categories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:9b5806f7-4d24-4871-9022-4613791ff02e> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-11-07T20:17:18.273Z" ;
+    bcube:lastUpdated "2015-11-07T20:17:18.273Z" ;
+    bcube:originatedFrom <urn:uuid:e4fe4e95-0aca-47af-89f0-57efa9d87838> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:fb0a61af-1cad-4967-b9b6-a1d138e7cfd2> .
+
+<urn:uuid:dced5d1c-76e1-4328-a1a1-de59662b69f2> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-07T20:17:18.273Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-07T20:17:18.273Z" ;
+    dc:identifier "urn:sha:34e5cad249f928e054785aede1c8093712731aaf94c9f9e35eeda95b" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www2.census.gov/geo/tiger/TIGER2007FE/36_NEW_YORK/fe_2007_36_scsd.zip" .
+
+<urn:uuid:e4fe4e95-0aca-47af-89f0-57efa9d87838> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-07T20:17:18.273Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-07T20:17:18.273Z" ;
+    dc:identifier "urn:sha:10101275caaab5ef6731908c8acd7599108f4fa1ac1797c504871bcd" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://meta.geo.census.gov/data/existing/decennial/GEO/GPMB/TIGERline/fe_2007/scsd/fe_2007_36_scsd_url.shp.xml" .
+
+<urn:uuid:e72ca8af-395e-4933-9487-2f3766490f81> bcube:hasType "theme" ;
+    bcube:hasValue "Polygon",
+        "School District",
+        "Secondary School District",
+        "State or equivalent entity" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:fb0a61af-1cad-4967-b9b6-a1d138e7cfd2> bcube:dateCreated "2015-11-07T20:17:18.273Z" ;
+    bcube:hasMetadataRecord <urn:uuid:9b5806f7-4d24-4871-9022-4613791ff02e> ;
+    bcube:lastUpdated "2015-11-07T20:17:18.273Z" ;
+    dc:conformsTo <urn:uuid:2afb8334-2a84-4214-9225-18a47ed262b5>,
+        <urn:uuid:90762712-8968-48f9-a3e5-4ff0bc3ab51f>,
+        <urn:uuid:e72ca8af-395e-4933-9487-2f3766490f81> ;
+    dc:description "The TIGER/Line Shapefiles are an extract of selected geographic and cartographic information from the Census MAF/TIGER database. The Census MAF/TIGER database represents a seamless national file with no overlaps or gaps between parts. However, each TIGER/Line Shapefile is designed to stand alone as an independent data set or the shapefiles can be combined to cover the whole nation." ;
+    dc:spatial "POLYGON ((-79.76259 40.477399,-79.76259 45.015865,-71.777491 45.015865,-71.777491 40.477399,-79.76259 40.477399))" ;
+    dcterms:publisher <urn:uuid:08901687-afa2-4857-af4f-d92c8c1a9a6e> ;
+    dcterms:references <urn:uuid:dced5d1c-76e1-4328-a1a1-de59662b69f2> ;
+    dcterms:title "TIGER/Line Shapefile, 2007, state, New York, Secondary School District" ;
+    esip:eastBound "-71.777491"^^xsd:float ;
+    esip:endDate "2007-07-01"^^xsd:date ;
+    esip:northBound "45.015865"^^xsd:float ;
+    esip:southBound "40.477399"^^xsd:float ;
+    esip:startDate "2007-01-01"^^xsd:date ;
+    esip:westBound "-79.76259"^^xsd:float ;
+    owl:a dcat:Dataset .
+

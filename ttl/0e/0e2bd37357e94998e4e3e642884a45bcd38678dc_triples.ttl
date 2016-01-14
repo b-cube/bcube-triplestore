@@ -1,0 +1,78 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:476c0993-e115-4d2e-b991-d4be02317cb7> bcube:hasType "theme" ;
+    bcube:hasValue "Cadastre Theme",
+        "NGDA",
+        "National Geospatial Data Asset" ;
+    dc:partOf "NGDA Portfolio Themes" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:6fd573f0-7125-4548-96d1-ede8aa8f33c6> bcube:dateCreated "2015-08-06T16:48:46.769Z" ;
+    bcube:hasMetadataRecord <urn:uuid:a4cde69d-cf9a-4aad-ab28-00aff1758814> ;
+    bcube:lastUpdated "2015-08-06T16:48:46.769Z" ;
+    dc:conformsTo <urn:uuid:476c0993-e115-4d2e-b991-d4be02317cb7>,
+        <urn:uuid:bedaa607-4b15-4504-908b-df0db8128337> ;
+    dc:description "The American Indian Reservations / Federally Recognized Tribal Entities dataset depicts feature location, selected demographics and other associated data for the 561 Federally Recognized Tribal entities in the contiguous U.S. and Alaska. Categories included are: American Indian Reservations (AIR), Federally Recognized Tribal Entities (FRTE) and Alaska Native Villages (ANV)." ;
+    dc:spatial "POLYGON ((-180.0 15.820544,-180 90,180 90,180.0 15.820544,-180.0 15.820544))" ;
+    dcterms:publisher <urn:uuid:be5d62ce-1896-4ab9-b870-686c44ea3369> ;
+    dcterms:references <urn:uuid:fc514464-7b87-41e2-b324-3c13f4d29167> ;
+    dcterms:title "BIA Indian Lands Dataset (Indian Lands of the United States)" ;
+    esip:eastBound "180.0"^^xsd:float ;
+    esip:northBound "90.0"^^xsd:float ;
+    esip:southBound "15.820544"^^xsd:float ;
+    esip:startDate "2015-03-17"^^xsd:date ;
+    esip:westBound "-180.0"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:a4cde69d-cf9a-4aad-ab28-00aff1758814> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-08-06T16:48:46.769Z" ;
+    bcube:lastUpdated "2015-08-06T16:48:46.769Z" ;
+    bcube:originatedFrom <urn:uuid:f1d87812-84c2-4ed9-a088-fe88e414680a> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:6fd573f0-7125-4548-96d1-ede8aa8f33c6> .
+
+<urn:uuid:be5d62ce-1896-4ab9-b870-686c44ea3369> owl:a foaf:Organization ;
+    foaf:name "" .
+
+<urn:uuid:bedaa607-4b15-4504-908b-df0db8128337> bcube:hasType "theme" ;
+    bcube:hasValue "boundaries",
+        "location" ;
+    dc:partOf "ISO 19115 Topic Categories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:f1d87812-84c2-4ed9-a088-fe88e414680a> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-06T16:48:46.769Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-06T16:48:46.769Z" ;
+    dc:identifier "urn:sha:b8e46cf44be93711bf5a8de77a06b3333c16fed12594da336a5ce5bc" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://data.doi.gov/WAF/FGDC/IndianLands_NGDA_xslttransfo3.xml" .
+
+<urn:uuid:fc514464-7b87-41e2-b324-3c13f4d29167> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-06T16:48:46.769Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-06T16:48:46.769Z" ;
+    dc:identifier "urn:sha:1d9b693d17fd78f7b52c60ea4af5e99b9470cf7f67a144888f390754" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://commons.wim.usgs.gov/arcgis/rest/services/AIR_NDGA/MapServer" .
+

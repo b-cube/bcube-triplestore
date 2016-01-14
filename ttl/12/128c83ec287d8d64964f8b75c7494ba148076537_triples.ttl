@@ -1,0 +1,85 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:09cfc095-d3ba-49f1-857f-0eb3344db279> bcube:hasType "place" ;
+    bcube:hasValue "72",
+        "PR",
+        "Puerto Rico",
+        "State or Equivalent Entity",
+        "U.S.",
+        "United States" ;
+    dc:partOf "ANSI INCITS 38:2009 (Formerly FIPS 5-2), ANSI INCITS 31:2009 (Formerly FIPS 6-4),ANSI INCITS 454:2009 (Formerly FIPS 8-6), ANSI INCITS 455:2009(Formerly FIPS 9-1), ANSI INCITS 446:2008 (Geographic Names Information System (GNIS))" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:2c56de13-273e-4d73-8b07-31eb4302c08e> a "ISO 19115:2003/19139" ;
+    bcube:dateCreated "2015-10-30T11:00:59.894Z" ;
+    bcube:lastUpdated "2015-10-30T11:00:59.894Z" ;
+    bcube:originatedFrom <urn:uuid:ebde553c-6428-49c0-94f0-38513d27e639> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:a3dd8a58-994f-4d9c-b3c6-3f847a9bee3e> .
+
+<urn:uuid:53b331bd-789d-4370-aabd-77f73560ad18> bcube:hasValue "boundaries" ;
+    dc:partOf "IsoTopicCategories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:72e389fb-29c9-4d82-9a4e-97eb9d203e95> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-10-30T11:00:59.894Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-10-30T11:00:59.894Z" ;
+    dc:identifier "urn:sha:035eceb8cce71ebd799abb1e1e052aabf1a1387a492d4edcd8465a82" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "ftp://ftp2.census.gov/geo/tiger/TIGER2013/PUMA/tl_2013_72_puma10.zip" .
+
+<urn:uuid:79520b79-3484-4766-89e5-a6137df74030> bcube:hasType "theme" ;
+    bcube:hasValue "PUMA",
+        "Polygon",
+        "Public Use Microdata Area",
+        "State or equivalent entity" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:a3dd8a58-994f-4d9c-b3c6-3f847a9bee3e> bcube:dateCreated "2015-10-30T11:00:59.894Z" ;
+    bcube:hasMetadataRecord <urn:uuid:2c56de13-273e-4d73-8b07-31eb4302c08e> ;
+    bcube:lastUpdated "2015-10-30T11:00:59.894Z" ;
+    dc:conformsTo <urn:uuid:09cfc095-d3ba-49f1-857f-0eb3344db279>,
+        <urn:uuid:53b331bd-789d-4370-aabd-77f73560ad18>,
+        <urn:uuid:79520b79-3484-4766-89e5-a6137df74030> ;
+    dc:description "The TIGER/Line shapefiles and related database files (.dbf) are an extract of selected geographic and cartographic information from the U.S. Census Bureau's Master Address File / Topologically Integrated Geographic Encoding and Referencing (MAF/TIGER) Database (MTDB). The MTDB represents a seamless national file with no overlaps or gaps between parts, however, each TIGER/Line shapefile is designed to stand alone as an independent data set, or they can be combined to cover the entire nation. After each decennial census, the Census Bureau delineates Public Use Microdata Areas (PUMAs) for the tabulation and dissemination of decennial census Public Use Microdata Sample (PUMS) data, American Community Survey (ACS) PUMS data, and ACS period estimates. Nesting within states, or equivalent entities, PUMAs cover the entirety of the United States, Puerto Rico, Guam, and the U.S. Virgin Islands. PUMA delineations are subject to population, building block geography, geographic nesting, and contiguity criteria. Each PUMA is identified by a 5-character numeric census code that may contain leading zeros and a descriptive name." ;
+    dc:spatial "POLYGON ((-67.998751 17.831509,-67.998751 18.568002,-65.168503 18.568002,-65.168503 17.831509,-67.998751 17.831509))" ;
+    dcterms:references <urn:uuid:72e389fb-29c9-4d82-9a4e-97eb9d203e95> ;
+    dcterms:title "TIGER/Line Shapefile, 2013, 2010 state, Puerto Rico, 2010 Census Public Use Microdata Area State-based Shapefile" ;
+    esip:eastBound "-65.168503"^^xsd:float ;
+    esip:endDate "2013-05-04"^^xsd:date ;
+    esip:northBound "18.568002"^^xsd:float ;
+    esip:southBound "17.831509"^^xsd:float ;
+    esip:startDate "2012-06-04"^^xsd:date ;
+    esip:westBound "-67.998751"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:ebde553c-6428-49c0-94f0-38513d27e639> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-10-30T11:00:59.894Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-10-30T11:00:59.894Z" ;
+    dc:identifier "urn:sha:bc7cd6b2e9bb846be4b4cb417b3d0425681eebeba2b0ee2bffe3c9ea" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://meta.geo.census.gov/data/existing/decennial/GEO/GPMB/TIGERline/TIGER2013/puma10/tl_2013_72_puma10.shp.iso.xml" .
+

@@ -1,0 +1,126 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:067761de-f5c1-4367-bbbb-d0370d83e8b2> bcube:hasType "project" ;
+    bcube:hasValue "ODP" ;
+    dc:partOf "NASA/GCMD Project Keywords" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:0beb9043-62bb-4087-b927-a94f80d67d4e> bcube:hasType "instrument" ;
+    bcube:hasValue "In Situ/Laboratory Instruments > Gauges > BOTTOM PRESSURE GAUGES" ;
+    dc:partOf "NASA/GCMD Instrument Keywords" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:0f339ddf-f4af-42a1-980a-9cc6073970bd> a "ISO 19115:2003/19139" ;
+    bcube:dateCreated "2015-06-18T16:28:11.534Z" ;
+    bcube:lastUpdated "2015-06-18T16:28:11.534Z" ;
+    bcube:originatedFrom <urn:uuid:e822370b-00f6-4b42-b385-9ab2df2998b0> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:342a069e-ac93-4049-8fab-b4e1a3f646d0> .
+
+<urn:uuid:342a069e-ac93-4049-8fab-b4e1a3f646d0> bcube:dateCreated "2015-06-18T16:28:11.534Z" ;
+    bcube:hasMetadataRecord <urn:uuid:0f339ddf-f4af-42a1-980a-9cc6073970bd> ;
+    bcube:lastUpdated "2015-06-18T16:28:11.534Z" ;
+    dc:conformsTo <urn:uuid:067761de-f5c1-4367-bbbb-d0370d83e8b2>,
+        <urn:uuid:0beb9043-62bb-4087-b927-a94f80d67d4e>,
+        <urn:uuid:4aeda104-debc-4dca-b477-d21f6a88e1c4>,
+        <urn:uuid:850d312d-8aa1-4004-86b4-cca63bf12e65>,
+        <urn:uuid:a69d2323-befd-418b-9bd3-f053afa8c8cb>,
+        <urn:uuid:b3f0010d-dcad-4b7e-bb37-9d4878cce220>,
+        <urn:uuid:c569921a-c4d2-4423-9096-87efe283fe2a>,
+        <urn:uuid:e1ddd951-7383-4f5a-a223-ac251a2df6fe>,
+        <urn:uuid:f706c7c4-077a-48b5-8965-744b97109037>,
+        <urn:uuid:fced69da-8e38-43e9-863a-19b18d645e9e> ;
+    dc:description "The ASCII datasets contain pressure values measured at 10-min intervals at the seafloor and several subseafloor depths in two \"Advanced CORK\" hydrologic observatories installed by ODP in 2001 at Sites 808I and 1173B in the Nankai Trough subduction zone. The datasets were downloaded from logger memory using Japanese research submersibles at irregular intervals of 1-2 years. Currently there are 14 total datasets as follows: downloads at 808I in 2002, 2003, 2004, 2006, 2007, 2008, 2011, and 2012; downloads at 1173B in 2002, 2004, 2006, 2007, 2011, and 2012. They should be of interest to scientists studying seismogenic processes at subduction zones. Please note that much of the data from 808I may be compromised by the lack of seal for the central bore. In addition, several of the valves on both installations were bumped open by a reentry camera frame during deployment, so the first year's installment of data from both sites was compromised until the valves were closed during the 2002 Kaiko operations. There are separate data files for each of the downloads. Each data file has a header of basic metadata that describes the contents of the columns and the respective checks on logger clock drift. Typically, the clock drift was checked just before each download, and the clocks were then reset to UTC immediately after the respective downloads. In three cases, the records of the logger times checks have been misplaced and the drifts computed from other clock checks (consistent from year to year at each site, order 1-2 minutes per year) are reported. Note that the times in the data files have not been corrected for the clock drift. Also, during some of the download operations, there were attempts to calibrate the relative offsets among gauges by opening the seafloor valves to apply seafloor pressure to all the gauges. These are not reflected in the main data files. The installations have battery power for 10-15 years of operation, longer with planned addition of supplemental batteries, so there should be future downloads to add to the archive. There are likely to be future JAMSTEC download opportunities at unpredictable intervals, hopefully every 1-2 years. At approximately 5 Mb/yr, future datasets should be approximately 5-10 Mb in size." ;
+    dc:spatial "POLYGON ((134.945 32.2447,134.945 32.3536,135.0247 32.3536,135.0247 32.2447,134.945 32.2447))" ;
+    dcterms:references <urn:uuid:a7af33c5-6048-4329-87ff-458ff0d6fd09> ;
+    dcterms:title "Advanced CORK (ACORK) Data from the Nankai Trough, Ocean Drilling Program (ODP) Holes 808I and 1173B" ;
+    esip:eastBound "135.0247"^^xsd:float ;
+    esip:endDate "2012-12-31"^^xsd:date ;
+    esip:northBound "32.3536"^^xsd:float ;
+    esip:southBound "32.2447"^^xsd:float ;
+    esip:startDate "2002-01-01"^^xsd:date ;
+    esip:westBound "134.945"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:4aeda104-debc-4dca-b477-d21f6a88e1c4> bcube:hasType "theme" ;
+    bcube:hasValue "EARTH SCIENCE > Oceans > Ocean Pressure" ;
+    dc:partOf "NASA/GCMD Science Keywords" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:850d312d-8aa1-4004-86b4-cca63bf12e65> bcube:hasType "platform" ;
+    bcube:hasValue "In Situ Ocean-based Platforms > SHIPS" ;
+    dc:partOf "NASA/GCMD Platform Keywords" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:a69d2323-befd-418b-9bd3-f053afa8c8cb> bcube:hasType "dataCenter" ;
+    bcube:hasValue "DOC/NOAA/NESDIS/NGDC > National Geophysical Data Center, NESDIS, NOAA, U.S. Department of Commerce",
+        "WDC/GEOPHYSICS, BOULDER > World Data Service for Geophysics, Boulder" ;
+    dc:partOf "NASA/GCMD Data Center Keywords" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:a7af33c5-6048-4329-87ff-458ff0d6fd09> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-06-18T16:28:11.534Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-06-18T16:28:11.534Z" ;
+    dc:identifier "urn:sha:d7f91b01215fad87e89b2163ef85c36b1529a84ae711767b97cb51a7" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://dx.doi.org/10.7289/V5KW5CXW" .
+
+<urn:uuid:b3f0010d-dcad-4b7e-bb37-9d4878cce220> bcube:hasType "place" ;
+    bcube:hasValue "OCEAN > PACIFIC OCEAN" ;
+    dc:partOf "NASA/GCMD Location Keywords" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:c569921a-c4d2-4423-9096-87efe283fe2a> bcube:hasType "theme" ;
+    bcube:hasValue "Electronic records",
+        "Geology",
+        "Ocean bottom",
+        "Oceanography",
+        "Scientific archives",
+        "Submarine geology" ;
+    dc:partOf "Library of Congress Subject Headings" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:e1ddd951-7383-4f5a-a223-ac251a2df6fe> bcube:hasValue "geoscientificInformation",
+        "oceans" ;
+    dc:partOf "IsoTopicCategories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:e822370b-00f6-4b42-b385-9ab2df2998b0> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-06-18T16:28:11.534Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-06-18T16:28:11.534Z" ;
+    dc:identifier "urn:sha:dca3f9434789e31061ff84228f49c29672f89280af51801f1ec81f67" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www.ngdc.noaa.gov/geoportal/rest/document?id=%7B7CBBF160-59AD-4C4D-977E-8B65E72D82AB%7D" .
+
+<urn:uuid:f706c7c4-077a-48b5-8965-744b97109037> bcube:hasType "theme" ;
+    bcube:hasValue "Marine geology" ;
+    dc:partOf "SeaDataNet Common Vocabularies" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:fced69da-8e38-43e9-863a-19b18d645e9e> bcube:hasType "theme" ;
+    bcube:hasValue "Sea-floor characteristics" ;
+    dc:partOf "USGS Science Topics" ;
+    owl:a bcube:thesaurusSubset .
+

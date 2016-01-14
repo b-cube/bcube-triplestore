@@ -1,0 +1,73 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:2817a75d-d7fb-47b8-9123-4091471e1301> owl:a foaf:Organization ;
+    foaf:name "" .
+
+<urn:uuid:3a6ffd25-bf5e-435b-9664-ab9cc5ba9608> bcube:hasType "theme" ;
+    bcube:hasValue "environment" ;
+    dc:partOf "ISO 19115 Topic Categories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:5228e594-4bf4-4509-b349-1330c1f6a0a6> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-03T00:30:48.106Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-03T00:30:48.106Z" ;
+    dc:identifier "urn:sha:79c8bfade67f02157ca6a8b586e5895099f66437225339034545a71a" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://data.fs.usda.gov/geodata/edw/edw_resources/meta/S_USA.RoadlessArea_ID_2008.xml" .
+
+<urn:uuid:53029888-0cb4-4955-8b32-c5aa6635f3c9> bcube:hasType "theme" ;
+    bcube:hasValue "Boise National Forest",
+        "Caribou National Forest",
+        "Challis National Forest",
+        "Clearwater National Forest",
+        "Idaho",
+        "Idaho Panhandle National Forest",
+        "Idaho Roadless Area boundaries",
+        "Kootenai National Forest",
+        "Payette National Forest",
+        "Salmon National Forest",
+        "Sawtooth National Forest",
+        "Targhee National Forest",
+        "Wallowa-Whitman National Forest" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:62beef56-304e-4052-a62a-7a39a938b0e5> bcube:dateCreated "2015-11-03T00:30:48.106Z" ;
+    bcube:hasMetadataRecord <urn:uuid:df7697ab-aeec-434a-8ae6-295f2439de54> ;
+    bcube:lastUpdated "2015-11-03T00:30:48.106Z" ;
+    dc:conformsTo <urn:uuid:3a6ffd25-bf5e-435b-9664-ab9cc5ba9608>,
+        <urn:uuid:53029888-0cb4-4955-8b32-c5aa6635f3c9> ;
+    dc:description "The RoadlessArea_ID_2008 feature class describes the boundaries of Roadless Areas designated by the Idaho Roadless Rule of 2008 and managed by the US Forest Service. The final rule reflects the views and concerns of thousands of people who expressed interest during the rule-making process, which ran from October 2006 to October 2008. The public comment period generated 38,000 comments.The Idaho Roadless Rule takes a balanced approach, recognizing both local and national interests. Five management themes have been established (and are idenfiied in the MgmtClassification attribute) that provide prohibitions, with exceptions or conditioned permissions, governing timber cutting, removing and selling, road construction and reconstruction, and certain mineral activities. These management themes are: Wild Land Recreation, Special Areas of Historic or Tribal Significance, Primitive, Backcountry Restoration, and General Forest, Rangeland, and Grassland. Each theme provides management direction that varies from most restrictive to least restrictive and provides roadless character that varies from higher quality to lower quality. Forest Plan Special Areas are also identified, where management of the area is according to Forest Plan direction, not the Idaho Roadless Rule. These special areas include items such as wild and scenic river corridors, research natural areas, etc.This dataset is a compilation of the most up to date Roadless areas from the National Forests in IdahoThis dataset was compiled by taking the roadless area boundaries from each of the National Forests in Idaho and adding the management area prescription boundaries from each forest. For some forests both the existing forest plan management prescription layer and a \"proposed\" prescriptions boundaries were used. See the list of these Forests in the metadata for the each forest.Date of last update: September 2015. See Lineage for details." ;
+    dc:spatial "POLYGON ((-117.034085 41.993959,-117.034085 48.999594,-111.04299 48.999594,-111.04299 41.993959,-117.034085 41.993959))" ;
+    dcterms:publisher <urn:uuid:2817a75d-d7fb-47b8-9123-4091471e1301> ;
+    dcterms:title "S_USA.RoadlessArea_ID_2008" ;
+    esip:eastBound "-111.04299"^^xsd:float ;
+    esip:northBound "48.999594"^^xsd:float ;
+    esip:southBound "41.993959"^^xsd:float ;
+    esip:westBound "-117.034085"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:df7697ab-aeec-434a-8ae6-295f2439de54> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-11-03T00:30:48.106Z" ;
+    bcube:lastUpdated "2015-11-03T00:30:48.106Z" ;
+    bcube:originatedFrom <urn:uuid:5228e594-4bf4-4509-b349-1330c1f6a0a6> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:62beef56-304e-4052-a62a-7a39a938b0e5> .
+

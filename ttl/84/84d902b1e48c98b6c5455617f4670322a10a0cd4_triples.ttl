@@ -1,0 +1,85 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:34634ae7-0681-4911-a3d5-31cdf328b3bd> bcube:hasType "theme" ;
+    bcube:hasValue "Bathymetry/Topography",
+        "Elevation",
+        "Laser",
+        "LiDAR",
+        "Model",
+        "Surface",
+        "Terrain" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:3c29494d-fd7d-402a-9087-6d6678f4b4e1> bcube:dateCreated "2015-08-05T11:18:30.806Z" ;
+    bcube:hasMetadataRecord <urn:uuid:e100cfdc-dac9-439f-9bcb-11309b21e289> ;
+    bcube:lastUpdated "2015-08-05T11:18:30.806Z" ;
+    dc:conformsTo <urn:uuid:34634ae7-0681-4911-a3d5-31cdf328b3bd>,
+        <urn:uuid:61652140-a702-4e80-883e-4138c4506606>,
+        <urn:uuid:b1a2ec6f-5ad4-4e38-b2b2-f0664096dc3b> ;
+    dc:description "This dataset is the bare earth lidar data for St. Johns County, Florida, acquired in early January and February of 2004. This data was collected to develop comprehensive countywide base mapping and perform other GIS enhancements to support master drainage planning, transportation planning, preliminary engineering and wetland preservation studies. The surveyed area included all of St. Johns County, approximately 610 square miles. Eighty-seven (87) flight lines of high density lidar data (average GSD is 3.3 feet) were obtained at an altitude of 3000 feet AGL. This data set contains only model keypoints (points that are a thinned data set that is intended to remove extraneous data such as trees and points that are deemed redundant to the final bare earth product) that are classified as ground points. As a result, there are a lower number of points than in a full mass point lidar data set; and it is recommended that the data be downloaded as points and used with a TIN (Triangulated Irregular Network) or similar algorithm to produce a bare earth surface." ;
+    dc:spatial "POLYGON ((-81.669173 29.621896,-81.669173 30.259696,-81.212673 30.259696,-81.212673 29.621896,-81.669173 29.621896))" ;
+    dcterms:references <urn:uuid:7e273bb4-24be-445b-b5e0-8d26a2dc48ba> ;
+    dcterms:title "2004 St. Johns County, Florida Lidar" ;
+    esip:eastBound "-81.212673"^^xsd:float ;
+    esip:endDate "2004-02-07"^^xsd:date ;
+    esip:northBound "30.259696"^^xsd:float ;
+    esip:southBound "29.621896"^^xsd:float ;
+    esip:startDate "2004-01-17"^^xsd:date ;
+    esip:westBound "-81.669173"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:61652140-a702-4e80-883e-4138c4506606> bcube:hasValue "elevation" ;
+    dc:partOf "IsoTopicCategories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:7e273bb4-24be-445b-b5e0-8d26a2dc48ba> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-05T11:18:30.806Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-05T11:18:30.806Z" ;
+    dc:identifier "urn:sha:9810a3871080f36871e64665c4e1285ded2465bfeafab1e1c11952fd" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://coast.noaa.gov/dataviewer/index.html?action=advsearchVal=100" .
+
+<urn:uuid:a2d46f37-206a-4eb2-8b2c-0af1f58c8afb> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-05T11:18:30.806Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-05T11:18:30.806Z" ;
+    dc:identifier "urn:sha:e1cca6b4f2ff9d5288dea4b5a81c0f9e85bc171eead833c009ee55a5" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://coast.noaa.gov/data/Documents/Metadata/isotest/fl2004_stjohns_m100_metadata_iso.xml" .
+
+<urn:uuid:b1a2ec6f-5ad4-4e38-b2b2-f0664096dc3b> bcube:hasType "place" ;
+    bcube:hasValue "Florida",
+        "St. Johns County",
+        "US" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:e100cfdc-dac9-439f-9bcb-11309b21e289> a "ISO 19115:2003/19139" ;
+    bcube:dateCreated "2015-08-05T11:18:30.806Z" ;
+    bcube:lastUpdated "2015-08-05T11:18:30.806Z" ;
+    bcube:originatedFrom <urn:uuid:a2d46f37-206a-4eb2-8b2c-0af1f58c8afb> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:3c29494d-fd7d-402a-9087-6d6678f4b4e1> .
+

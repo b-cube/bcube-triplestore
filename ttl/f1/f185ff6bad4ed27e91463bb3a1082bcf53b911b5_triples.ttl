@@ -1,0 +1,82 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:1795e803-d0cd-4efb-a4b7-d737a996a8a4> bcube:hasType "place" ;
+    bcube:hasValue "fUS13 = Georgia",
+        "fUS37 = North Carolina",
+        "fUS45 = South Carolina" ;
+    dc:partOf "Augmented FIPS 10-4 and FIPS 6-4" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:202c96a8-7395-48f3-85ba-11d66a74c900> bcube:hasType "theme" ;
+    bcube:hasValue "floods",
+        "hydrology",
+        "risk assessment",
+        "statistical analysis" ;
+    dc:partOf "USGS Thesaurus" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:4f9891d2-df86-4de4-8238-b8d4062aa732> dcterms:references <urn:uuid:a13ffce9-e3c5-464f-a8f9-1a10dd28bb8c> ;
+    owl:a bibo:WebPage .
+
+<urn:uuid:5176d417-1376-4ae6-9999-6ddd796c8789> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2014-10-30T04:05:35.248Z" ;
+    bcube:lastUpdated "2014-10-30T04:05:35.248Z" ;
+    bcube:originatedFrom <urn:uuid:6054a297-d828-4857-8a1f-f013108ee6c3> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:730716c8-1ec1-4da0-a405-fcd6378683f6> .
+
+<urn:uuid:6054a297-d828-4857-8a1f-f013108ee6c3> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2014-10-30T04:05:35.248Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2014-10-30T04:05:35.248Z" ;
+    dc:identifier "urn:sha:6921c8aaad277f534a8bee5af166c6fd667b7a04851b9b1c009f7b93" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www.usgs.gov/science/xml.php?cite=2227" .
+
+<urn:uuid:730716c8-1ec1-4da0-a405-fcd6378683f6> bcube:dateCreated "2014-10-30T04:05:35.248Z" ;
+    bcube:hasMetadataRecord <urn:uuid:5176d417-1376-4ae6-9999-6ddd796c8789> ;
+    bcube:lastUpdated "2014-10-30T04:05:35.248Z" ;
+    dc:conformsTo <urn:uuid:1795e803-d0cd-4efb-a4b7-d737a996a8a4>,
+        <urn:uuid:202c96a8-7395-48f3-85ba-11d66a74c900> ;
+    dc:description "Flood estimates are needed for the efficient design of bridges, highway embankments, levees, to protect lives and property in flood-prone areas, and to determine flood-insurance rates." ;
+    dc:spatial "POLYGON ((-87 30,-87.0 38.5,-75.0 38.5,-75 30,-87 30))" ;
+    dcterms:publisher <urn:uuid:a2631aed-4547-4856-9008-b56755986d56> ;
+    dcterms:references <urn:uuid:4f9891d2-df86-4de4-8238-b8d4062aa732> ;
+    dcterms:title "Methods for estimating magnitude and frequency of floods in rural basins in the southeastern United States: South Carolina" ;
+    esip:eastBound "-75.0"^^xsd:float ;
+    esip:northBound "38.5"^^xsd:float ;
+    esip:southBound "30.0"^^xsd:float ;
+    esip:westBound "-87.0"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:a13ffce9-e3c5-464f-a8f9-1a10dd28bb8c> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2014-10-30T04:05:35.248Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2014-10-30T04:05:35.248Z" ;
+    dc:identifier "urn:sha:db233d7668512cd173d442e59a39bcec8d1414c3823031614ad5a208" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://pubs.usgs.gov/fs/2009/3085/" .
+
+<urn:uuid:a2631aed-4547-4856-9008-b56755986d56> owl:a foaf:Organization ;
+    foaf:name "U.S. Geological Survey" .
+

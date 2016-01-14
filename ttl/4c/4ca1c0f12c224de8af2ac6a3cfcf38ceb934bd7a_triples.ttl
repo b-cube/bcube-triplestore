@@ -1,0 +1,72 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:4a90e154-2977-40ed-91bc-b8e637e58581> bcube:hasType "theme" ;
+    bcube:hasValue "DEM",
+        "Elevation",
+        "FEMA",
+        "LAS",
+        "Lidar",
+        "USGS" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:7fa4ed7b-f97a-4a38-8bce-e55b2f78691c> bcube:hasValue "elevation" ;
+    dc:partOf "IsoTopicCategories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:a8ccadd2-57e2-4d3d-95f9-ee775692b103> bcube:dateCreated "2015-08-05T15:46:26.139Z" ;
+    bcube:hasMetadataRecord <urn:uuid:f2f54057-b0c0-4933-86f3-557b97b03b08> ;
+    bcube:lastUpdated "2015-08-05T15:46:26.139Z" ;
+    dc:conformsTo <urn:uuid:4a90e154-2977-40ed-91bc-b8e637e58581>,
+        <urn:uuid:7fa4ed7b-f97a-4a38-8bce-e55b2f78691c>,
+        <urn:uuid:de0f2386-f21b-4524-9bc2-5723cce47031> ;
+    dc:description "Dewberry collected LiDAR for ~3,341 square miles in various Virginia Counties, a part of Worcester County, and Hooper's Island. The acquisition was performed by Terrapoint. This metadata covers the LiDAR produced for the Southern Cities (Hampton and Portsmouth). The nominal pulse spacing for this project is 0.5 meters. This project was collected with a sensor which collects intensity values for each discrete pulse extracted from the waveform. GPS Week Time, Intensity, Flightline and echo number attributes were provided for each LiDAR point. Dewberry used proprietary procedures to classify the LAS according to contract specifications: 1-Unclassified, 2-Ground, 7-Noise, 9-Water, 10-Ignored Ground due to breakline proximity, and 11-Withheld. Dewberry produced 3D breaklines and combined these with the final LiDAR data to produce seamless hydro flattened DEMs for the 142 tiles (5000 ft x 5000 ft) that cover the project area." ;
+    dc:spatial "POLYGON ((-76.46057 36.783062,-76.46057 37.114795,-76.267738 37.114795,-76.267738 36.783062,-76.46057 36.783062))" ;
+    dcterms:title "Southern Cities - VA FEMA LiDAR" ;
+    esip:eastBound "-76.267738"^^xsd:float ;
+    esip:endDate "2011-09-28"^^xsd:date ;
+    esip:northBound "37.114795"^^xsd:float ;
+    esip:southBound "36.783062"^^xsd:float ;
+    esip:startDate "2011-04-19"^^xsd:date ;
+    esip:westBound "-76.46057"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:de0f2386-f21b-4524-9bc2-5723cce47031> bcube:hasType "place" ;
+    bcube:hasValue "Hampton",
+        "Portsmouth",
+        "Southern Cities",
+        "Virginina" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:e1552ce5-6fa2-4c1a-b005-39f0998a9b35> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-05T15:46:26.139Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-05T15:46:26.139Z" ;
+    dc:identifier "urn:sha:a70221befbb077e2ac76d5732909596fb1fee3823d8b0db405f21b8c" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://coast.noaa.gov/data/Documents/Metadata/isoharvest/Lidar/va2011_usgs_fema_southerncities_m4727_ISOmetadata.xml" .
+
+<urn:uuid:f2f54057-b0c0-4933-86f3-557b97b03b08> a "ISO 19115:2003/19139" ;
+    bcube:dateCreated "2015-08-05T15:46:26.139Z" ;
+    bcube:lastUpdated "2015-08-05T15:46:26.139Z" ;
+    bcube:originatedFrom <urn:uuid:e1552ce5-6fa2-4c1a-b005-39f0998a9b35> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:a8ccadd2-57e2-4d3d-95f9-ee775692b103> .
+

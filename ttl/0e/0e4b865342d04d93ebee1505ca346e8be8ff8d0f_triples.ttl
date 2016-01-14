@@ -1,0 +1,85 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:1e4cb7eb-7c75-4d55-afc9-7b61e88ad38e> owl:a foaf:Organization ;
+    foaf:name "USDA Forest Service" .
+
+<urn:uuid:3e23e48f-dbb4-4136-9296-3009671d8087> dcterms:references <urn:uuid:700beb29-a2b2-4042-87b2-2989d9b7784d> ;
+    owl:a bibo:WebPage .
+
+<urn:uuid:700beb29-a2b2-4042-87b2-2989d9b7784d> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-10-11T20:43:22.199Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-10-11T20:43:22.199Z" ;
+    dc:identifier "urn:sha:cfb379ff9c822746cd1c51ce86389057a25a89285bb40a00dc631cff" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "<http: //www.srs.fs.usda.gov/sustain/data/>" .
+
+<urn:uuid:843bc133-676f-47dd-9830-ce60674c5bd6> bcube:dateCreated "2015-10-11T20:43:22.199Z" ;
+    bcube:hasMetadataRecord <urn:uuid:8e457784-4ef9-473e-a0c8-eff6d69c8796> ;
+    bcube:lastUpdated "2015-10-11T20:43:22.199Z" ;
+    dc:conformsTo <urn:uuid:8c56ecd2-4245-42b9-9179-8c8f2ca0f3fd> ;
+    dc:description "This coverage was identified on the USGS Water Resources NSDI Node site at http://nsdi.usgs.gov. The coverage contains the County boundaries of the continental United States. These boundaries were derived from the Digital Line Graph (DLG) files representing the 1:2,000,000 scale map in the National Atlas of the United States (please see USGS_Procedures_Used in process step description p.4-6). The data was then modified by USDA Forest Service Personnel for use in the Southern Forest Resource Assessment and exported to a shapefile (please see USDA Forest Service Modifications in process step description p.6)." ;
+    dc:spatial "POLYGON ((-108.018264 23.796542,-108.018264 39.952118,-74.834524 39.952118,-74.834524 23.796542,-108.018264 23.796542))" ;
+    dcterms:publisher <urn:uuid:1e4cb7eb-7c75-4d55-afc9-7b61e88ad38e> ;
+    dcterms:references <urn:uuid:3e23e48f-dbb4-4136-9296-3009671d8087>,
+        <urn:uuid:c5909d63-445c-4fa9-b3f5-4bfd169b75ec> ;
+    dcterms:title "scounty2m" ;
+    esip:eastBound "-74.834524"^^xsd:float ;
+    esip:northBound "39.952118"^^xsd:float ;
+    esip:southBound "23.796542"^^xsd:float ;
+    esip:startDate "2000-01-01"^^xsd:date ;
+    esip:westBound "-108.018264"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:8c56ecd2-4245-42b9-9179-8c8f2ca0f3fd> bcube:hasType "theme" ;
+    bcube:hasValue "Administrative and political boundaries",
+        "boundaries",
+        "counties" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:8e457784-4ef9-473e-a0c8-eff6d69c8796> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-10-11T20:43:22.199Z" ;
+    bcube:lastUpdated "2015-10-11T20:43:22.199Z" ;
+    bcube:originatedFrom <urn:uuid:bae97803-64f0-45c6-97e7-e60c05614fc6> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:843bc133-676f-47dd-9830-ce60674c5bd6> .
+
+<urn:uuid:bae97803-64f0-45c6-97e7-e60c05614fc6> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-10-11T20:43:22.199Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-10-11T20:43:22.199Z" ;
+    dc:identifier "urn:sha:45e2385482122546c7c4bc4170b563524cfa6eb818c73ded14613b88" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www.srs.fs.usda.gov/sustain/data/scounty2m/scounty2m.xml" .
+
+<urn:uuid:c5909d63-445c-4fa9-b3f5-4bfd169b75ec> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-10-11T20:43:22.199Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-10-11T20:43:22.199Z" ;
+    dc:identifier "urn:sha:d14a028c2a3a2bc9476102bb288234c415a2b01f828ea62ac5b3e42f" ;
+    owl:a bcube:Url .
+

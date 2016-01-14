@@ -1,0 +1,56 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:168316d0-2cce-4ea9-b3a3-e9fa7c3b854a> bcube:dateCreated "2015-10-18T14:42:12.523Z" ;
+    bcube:hasMetadataRecord <urn:uuid:979bd61a-26ee-41f3-b8fa-3332048f6be7> ;
+    bcube:lastUpdated "2015-10-18T14:42:12.523Z" ;
+    dc:conformsTo <urn:uuid:ca10a097-25a6-4ee0-b48c-14198e1ff60a> ;
+    dc:description "A compiled density of threatened and endangered species built around 2000m wide hexagonal cells. The dataset was created by generating a blank hex grid, intersecting it with the May 2005 CNDDB dataset, and then counting the number if unique species from the CNDDB within each Hex cell." ;
+    dc:spatial "POLYGON ((-121.5912 34.7694,-121.5912 38.4359,-117.517 38.4359,-117.517 34.7694,-121.5912 34.7694))" ;
+    dcterms:title "Density of Threatened and Endangered Species" ;
+    esip:eastBound "-117.517"^^xsd:float ;
+    esip:northBound "38.4359"^^xsd:float ;
+    esip:southBound "34.7694"^^xsd:float ;
+    esip:westBound "-121.5912"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:1a88ae1a-98a7-4352-a6d5-68b2074742ca> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-10-18T14:42:12.523Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-10-18T14:42:12.523Z" ;
+    dc:identifier "urn:sha:358b9f58c63cdb103f0e5d65a026a195fc61611d6b2bcf11758d7e4b" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "https://catalog.data.gov/harvest/object/c653c40f-cd8e-4df7-ae7e-20a7eafc55ed" .
+
+<urn:uuid:979bd61a-26ee-41f3-b8fa-3332048f6be7> a "ISO 19115:2003/19139" ;
+    bcube:dateCreated "2015-10-18T14:42:12.523Z" ;
+    bcube:lastUpdated "2015-10-18T14:42:12.523Z" ;
+    bcube:originatedFrom <urn:uuid:1a88ae1a-98a7-4352-a6d5-68b2074742ca> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:168316d0-2cce-4ea9-b3a3-e9fa7c3b854a> .
+
+<urn:uuid:ca10a097-25a6-4ee0-b48c-14198e1ff60a> bcube:hasType "theme" ;
+    bcube:hasValue "cnddb",
+        "density",
+        "endangered",
+        "species",
+        "threatened",
+        "unclassified" ;
+    dc:partOf "keyword" ;
+    owl:a bcube:thesaurusSubset .
+

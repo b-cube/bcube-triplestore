@@ -1,0 +1,86 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:0f94f081-09c7-44c3-bfcf-7fae3bb011d6> bcube:hasType "place" ;
+    bcube:hasValue "Arizona",
+        "Maricopa County" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:19f8ecde-d79b-472e-91d2-3b829aec0bf6> a "ISO 19115:2003/19139" ;
+    bcube:dateCreated "2015-10-29T23:35:00.67Z" ;
+    bcube:lastUpdated "2015-10-29T23:35:00.67Z" ;
+    bcube:originatedFrom <urn:uuid:a316e7fa-ce82-49d4-affd-f85ddfe38552> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:5d108ea8-e117-4ef9-a9a0-adc965ad8eb2> .
+
+<urn:uuid:5d108ea8-e117-4ef9-a9a0-adc965ad8eb2> bcube:dateCreated "2015-10-29T23:35:00.67Z" ;
+    bcube:hasMetadataRecord <urn:uuid:19f8ecde-d79b-472e-91d2-3b829aec0bf6> ;
+    bcube:lastUpdated "2015-10-29T23:35:00.67Z" ;
+    dc:conformsTo <urn:uuid:0f94f081-09c7-44c3-bfcf-7fae3bb011d6>,
+        <urn:uuid:6f05c4e8-b6c5-4c7e-bfe0-9993a27b5ccd>,
+        <urn:uuid:74dbcde0-6a1e-40cc-b1a3-de2c3d226567>,
+        <urn:uuid:7b9b6f16-8837-4cd7-9dbc-6a3d527889c4> ;
+    dc:description "Arterial segments with perfromances measurements for 2011. Used by transportation performance viewer (Magnitude)." ;
+    dc:spatial "POLYGON ((-111.71 34.81,-111.71 32.58,-113.42 32.58,-113.42 34.81,-111.71 34.81))" ;
+    dcterms:references <urn:uuid:738cf1cd-6778-4ad4-8c06-06abfd8a981a> ;
+    dcterms:title "Arterial Segments with Perfromances Measurements for 2011 - maps/MagnitudeArterials2011" ;
+    esip:eastBound "-113.42"^^xsd:float ;
+    esip:endDate "1900-01-01"^^xsd:date ;
+    esip:northBound "32.58"^^xsd:float ;
+    esip:southBound "34.81"^^xsd:float ;
+    esip:startDate "1900-01-01"^^xsd:date ;
+    esip:westBound "-111.71"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:6f05c4e8-b6c5-4c7e-bfe0-9993a27b5ccd> bcube:hasType "temporal" ;
+    bcube:hasValue "2011" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:738cf1cd-6778-4ad4-8c06-06abfd8a981a> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-10-29T23:35:00.67Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-10-29T23:35:00.67Z" ;
+    dc:identifier "urn:sha:7b9e6cfe8da516aeadbc45a7682b491ca6272f3c6edfc689a995ece8" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "https://geo.azmag.gov/gismag/rest/services/maps/MagnitudeArterials2011/MapServer" .
+
+<urn:uuid:74dbcde0-6a1e-40cc-b1a3-de2c3d226567> bcube:hasType "theme" ;
+    bcube:hasValue "Arterials",
+        "Magnitude",
+        "NRRC",
+        "segments",
+        "transportation",
+        "usginres:service" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:7b9b6f16-8837-4cd7-9dbc-6a3d527889c4> bcube:hasValue "geoscientificInformation" ;
+    dc:partOf "IsoTopicCategories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:a316e7fa-ce82-49d4-affd-f85ddfe38552> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-10-29T23:35:00.67Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-10-29T23:35:00.67Z" ;
+    dc:identifier "urn:sha:72cd614461c979225fa01b9d6e3ab7d6ba81941e3766ac4ea5a3e088" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://repository.stategeothermaldata.org/resources/metadata/TestNRRC/1BAC083EBA394363801093D34C74DF82.xml" .
+

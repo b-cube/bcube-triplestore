@@ -1,0 +1,96 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:4f1d17f4-7994-4f08-a7fe-26b2baa2ab80> bcube:hasType "theme" ;
+    bcube:hasValue "geoscientificInformation" ;
+    dc:partOf "ISO 19115 Topic Category" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:6d00ed68-be84-4bce-8eb4-ca3339a997dd> bcube:hasType "place" ;
+    bcube:hasValue "California" ;
+    dc:partOf "none" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:88680ad9-e1ab-4ee2-8943-d5bc7a8e6a85> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-06T02:38:15.949Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-06T02:38:15.949Z" ;
+    dc:identifier "urn:sha:4d1e8e013579c77123082666f6e341a086dbdda6a2771e0960fce4fa" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://ngmdb.usgs.gov/geoDataGov/ngmdb/gDG_155.xml" .
+
+<urn:uuid:8f38d72f-d0b1-4153-ba75-1c6ea0e11f03> bcube:hasType "theme" ;
+    bcube:hasValue "Bedrock geology",
+        "Geologic map",
+        "Geology",
+        "NCGMP",
+        "NGMDB",
+        "National Geologic Map Database",
+        "U.S. Geological Survey",
+        "USGS" ;
+    dc:partOf "National Geologic Map Database" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:c4a626ed-a72b-44d7-adba-596412c124ef> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-11-06T02:38:15.949Z" ;
+    bcube:lastUpdated "2015-11-06T02:38:15.949Z" ;
+    bcube:originatedFrom <urn:uuid:88680ad9-e1ab-4ee2-8943-d5bc7a8e6a85> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:d0878089-08f3-4e67-84a8-7fa083213b14> .
+
+<urn:uuid:cadfb90d-9f38-4626-9f63-8d48b1bfc4da> owl:a foaf:Organization ;
+    foaf:name "U.S. Geological Survey" .
+
+<urn:uuid:cc656c27-cfc9-4c4f-99aa-6f31859893e5> dcterms:references <urn:uuid:f6b356fe-c53c-4422-a7ce-78a85d4f3998> ;
+    owl:a bibo:WebPage .
+
+<urn:uuid:d0878089-08f3-4e67-84a8-7fa083213b14> bcube:dateCreated "2015-11-06T02:38:15.949Z" ;
+    bcube:hasMetadataRecord <urn:uuid:c4a626ed-a72b-44d7-adba-596412c124ef> ;
+    bcube:lastUpdated "2015-11-06T02:38:15.949Z" ;
+    dc:conformsTo <urn:uuid:4f1d17f4-7994-4f08-a7fe-26b2baa2ab80>,
+        <urn:uuid:6d00ed68-be84-4bce-8eb4-ca3339a997dd>,
+        <urn:uuid:8f38d72f-d0b1-4153-ba75-1c6ea0e11f03>,
+        <urn:uuid:fa4e243a-6845-4ef9-994f-ec8e13c70a3d> ;
+    dc:description "This record is maintained in the National Geologic Map Database (NGMDB). The NGMDB is a Congressionally mandated national archive of geoscience maps, reports, and stratigraphic information, developed according to standards defined by the cooperators, i.e., the USGS and the Association of American State Geologists (AASG). Included in this system is a comprehensive set of publication citations, stratigraphic nomenclature, downloadable content, unpublished source information, and guidance on standards development. The NGMDB contains information on more than 90,000 maps and related geoscience reports published from the early 1800s to the present day, by more than 630 agencies, universities, associations, and private companies. For more information, please see http://ngmdb.usgs.gov/." ;
+    dc:spatial "POLYGON ((-121.875 37.75,-121.875 37.875,-121.75 37.875,-121.75 37.75,-121.875 37.75))" ;
+    dcterms:publisher <urn:uuid:cadfb90d-9f38-4626-9f63-8d48b1bfc4da> ;
+    dcterms:references <urn:uuid:cc656c27-cfc9-4c4f-99aa-6f31859893e5> ;
+    dcterms:title "Preliminary geologic map of the Tassajara quadrangle, Alameda and Contra Costa Counties, California (NGMDB)" ;
+    esip:eastBound "-121.75"^^xsd:float ;
+    esip:northBound "37.875"^^xsd:float ;
+    esip:southBound "37.75"^^xsd:float ;
+    esip:westBound "-121.875"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:f6b356fe-c53c-4422-a7ce-78a85d4f3998> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-06T02:38:15.949Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-06T02:38:15.949Z" ;
+    dc:identifier "urn:sha:96a201bdf2469fde9ca6bc372821b2ef37f9d364581cfc055d6652f6" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://ngmdb.usgs.gov/Prodesc/proddesc_155.htm" .
+
+<urn:uuid:fa4e243a-6845-4ef9-994f-ec8e13c70a3d> bcube:hasType "theme" ;
+    bcube:hasValue "CSS" ;
+    dc:partOf "Core Science Systems" ;
+    owl:a bcube:thesaurusSubset .
+

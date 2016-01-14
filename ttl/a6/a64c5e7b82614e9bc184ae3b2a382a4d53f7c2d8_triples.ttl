@@ -1,0 +1,81 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:0ef94a81-fd78-4eef-a93c-652edf062e2f> owl:a foaf:Organization ;
+    foaf:name "" .
+
+<urn:uuid:2441d43a-7da9-4a29-896e-a377d239935b> bcube:hasType "theme" ;
+    bcube:hasValue "basin surge",
+        "oceans",
+        "wave energy" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:835d2bfd-c586-468b-935f-c616b458b3c9> bcube:dateCreated "2015-10-11T16:21:46.434Z" ;
+    bcube:hasMetadataRecord <urn:uuid:8b5588e3-c424-4618-b490-c812b6dead0e> ;
+    bcube:lastUpdated "2015-10-11T16:21:46.434Z" ;
+    dc:conformsTo <urn:uuid:2441d43a-7da9-4a29-896e-a377d239935b>,
+        <urn:uuid:8a3e422f-941c-4b2b-b934-3a6bee755820> ;
+    dc:description "CDIP's station 060 data sets consist of coastal environment measurements taken in the vicinity of Barbers Point Harbor, Hi. Wave measurements were made in water 14 meters deep. The wave measurements focus on longer-period surge energy. The station is operated by CDIP, and funded by USACE." ;
+    dc:spatial "POLYGON ((-158.116348 21.32102,-158.116348 21.32102,-158.116348 21.32102,-158.116348 21.32102,-158.116348 21.32102))" ;
+    dcterms:publisher <urn:uuid:0ef94a81-fd78-4eef-a93c-652edf062e2f> ;
+    dcterms:references <urn:uuid:e94a9af7-c820-4fe2-bc42-094fda43480e> ;
+    dcterms:title "CDIP Station 060, Set p3 - BARBERS POINT HARBOR, HI SW CORNER BASIN" ;
+    esip:eastBound "-158.116348"^^xsd:float ;
+    esip:endDate "1990-04-13"^^xsd:date ;
+    esip:northBound "21.32102"^^xsd:float ;
+    esip:southBound "21.32102"^^xsd:float ;
+    esip:startDate "1986-07-03"^^xsd:date ;
+    esip:westBound "-158.116348"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:8a3e422f-941c-4b2b-b934-3a6bee755820> bcube:hasType "place" ;
+    bcube:hasValue "Barbers Point",
+        "Barbers Point Harbor, Hi",
+        "Hawaii",
+        "Oahu" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:8b5588e3-c424-4618-b490-c812b6dead0e> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-10-11T16:21:46.434Z" ;
+    bcube:lastUpdated "2015-10-11T16:21:46.434Z" ;
+    bcube:originatedFrom <urn:uuid:b22236c2-489a-45d3-92a4-4344adc8ed05> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:835d2bfd-c586-468b-935f-c616b458b3c9> .
+
+<urn:uuid:b22236c2-489a-45d3-92a4-4344adc8ed05> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-10-11T16:21:46.434Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-10-11T16:21:46.434Z" ;
+    dc:identifier "urn:sha:96270fc68ad4f34c04b3020737dbeefc2a43d2c7fd66f2e95cf9e449" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://cdip.ucsd.edu/data_access/metadata/060p3.xml" .
+
+<urn:uuid:e94a9af7-c820-4fe2-bc42-094fda43480e> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-10-11T16:21:46.434Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-10-11T16:21:46.434Z" ;
+    dc:identifier "urn:sha:2a58019a39b8d4ecd30783825a5fe4cac3b2416ecb769f5c54cd3fbe" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://cdip.ucsd.edu/?sub=data&nav=historic&pub=public&stn=060&stream=p3" .
+

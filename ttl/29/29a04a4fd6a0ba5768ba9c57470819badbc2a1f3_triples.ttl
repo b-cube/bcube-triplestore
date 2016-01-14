@@ -1,0 +1,66 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:24bf1856-0218-4967-91df-b9595231fb65> bcube:hasType "theme" ;
+    bcube:hasValue "USA",
+        "WCF",
+        "Watershed",
+        "Watershed Condition",
+        "national extent" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:29db6838-018f-4ca9-b1fb-f69702f5c5d8> bcube:hasType "theme" ;
+    bcube:hasValue "inlandWaters" ;
+    dc:partOf "ISO 19115 Topic Categories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:4858bc75-3469-4be7-9fab-cf12ac4322a2> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-10-18T11:45:56.896Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-10-18T11:45:56.896Z" ;
+    dc:identifier "urn:sha:598e76c99705f0a4d31499731319f7f692f98524cd0195da692e7407" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://data.fs.usda.gov/geodata/edw/edw_resources/meta/S_USA.WatershedConditionClass.xml" .
+
+<urn:uuid:52bccc23-1107-4e7f-b0bb-d9fe1f6da5c3> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-10-18T11:45:56.896Z" ;
+    bcube:lastUpdated "2015-10-18T11:45:56.896Z" ;
+    bcube:originatedFrom <urn:uuid:4858bc75-3469-4be7-9fab-cf12ac4322a2> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:64d6a433-d109-4299-aea2-c0c92eb2868f> .
+
+<urn:uuid:64d6a433-d109-4299-aea2-c0c92eb2868f> bcube:dateCreated "2015-10-18T11:45:56.896Z" ;
+    bcube:hasMetadataRecord <urn:uuid:52bccc23-1107-4e7f-b0bb-d9fe1f6da5c3> ;
+    bcube:lastUpdated "2015-10-18T11:45:56.896Z" ;
+    dc:conformsTo <urn:uuid:24bf1856-0218-4967-91df-b9595231fb65>,
+        <urn:uuid:29db6838-018f-4ca9-b1fb-f69702f5c5d8> ;
+    dc:description "The Watershed Condition Classification feature class represents data on Watershed Condition on Forest Service lands in HUC12 (from the Watershed Boundary Dataset) watersheds that contain more than 5% USFS ownership. The feature class also includes data on high priority watersheds identified in the Watershed Condition Framework (WCF) process. The WCF data identifies priority watersheds, rationale for their designation as such, and information on Watershed Restoration Action Plans. The data are compiled from the NRM Watershed Condition Assesment and Tracking Tool (WCATT) application." ;
+    dc:spatial "POLYGON ((-150.25288 18.18672,-150.25288 61.519028,-65.632876 61.519028,-65.632876 18.18672,-150.25288 18.18672))" ;
+    dcterms:publisher <urn:uuid:7c8d2af3-8a10-4a19-b3e4-d8089a085af1> ;
+    dcterms:title "S_USA.WatershedConditionClass" ;
+    esip:eastBound "-65.632876"^^xsd:float ;
+    esip:northBound "61.519028"^^xsd:float ;
+    esip:southBound "18.18672"^^xsd:float ;
+    esip:startDate "2011-10-01"^^xsd:date ;
+    esip:westBound "-150.25288"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:7c8d2af3-8a10-4a19-b3e4-d8089a085af1> owl:a foaf:Organization ;
+    foaf:name "" .
+

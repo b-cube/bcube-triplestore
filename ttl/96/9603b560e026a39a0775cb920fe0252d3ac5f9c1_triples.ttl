@@ -1,0 +1,95 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:13ae7b5e-53f4-43bf-bb5a-23ed1db0c853> bcube:hasType "theme" ;
+    bcube:hasValue "5-digit ZIP code",
+        "County ANSI Code",
+        "County FIPS Code",
+        "From House Number",
+        "Permanent edge ID",
+        "Side indicator flag",
+        "State ANSI Code",
+        "State FIPS Code",
+        "To House Number",
+        "ZIP +4 code" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:17114614-d3e7-42ed-8982-43f27bee2894> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-11-02T07:07:30.294Z" ;
+    bcube:lastUpdated "2015-11-02T07:07:30.294Z" ;
+    bcube:originatedFrom <urn:uuid:62e8e266-5c2b-4150-b330-60eccd7aa802> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:f5ac7dbe-ee7d-4338-ade9-3042d464e16d> .
+
+<urn:uuid:62e8e266-5c2b-4150-b330-60eccd7aa802> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-02T07:07:30.294Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-02T07:07:30.294Z" ;
+    dc:identifier "urn:sha:0aee7cb7d967c40694c4d19660a6f3e141538b11762a79e5fa4a7cfe" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://meta.geo.census.gov/data/existing/decennial/GEO/GPMB/TIGERline/fe_2008/addr/tl_2008_02020_addr_url.dbf.xml" .
+
+<urn:uuid:6faa814a-519c-42d1-908c-ec18e7da2555> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-02T07:07:30.294Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-02T07:07:30.294Z" ;
+    dc:identifier "urn:sha:a9d46d0905d7b22816a2e28a92fac5f3811a9ef1c359a269d31aa6f7" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www2.census.gov/geo/tiger/TIGER2008/02_ALASKA/02020_Anchorage_Municipality/tl_2008_02020_addr.zip" .
+
+<urn:uuid:81c9bf35-2580-4458-92af-26cd3b6f7fa6> bcube:hasType "theme" ;
+    bcube:hasValue "transportation" ;
+    dc:partOf "ISO 19115 Topic Categories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:a007e726-1344-465e-bd7f-a732e24214a5> owl:a foaf:Organization ;
+    foaf:name "" .
+
+<urn:uuid:f5ac7dbe-ee7d-4338-ade9-3042d464e16d> bcube:dateCreated "2015-11-02T07:07:30.294Z" ;
+    bcube:hasMetadataRecord <urn:uuid:17114614-d3e7-42ed-8982-43f27bee2894> ;
+    bcube:lastUpdated "2015-11-02T07:07:30.294Z" ;
+    dc:conformsTo <urn:uuid:13ae7b5e-53f4-43bf-bb5a-23ed1db0c853>,
+        <urn:uuid:81c9bf35-2580-4458-92af-26cd3b6f7fa6>,
+        <urn:uuid:f6618798-daf0-4bd7-b806-45fa50fce697> ;
+    dc:description "The TIGER/Line relationship files are an extract of selected geographic information from the Census MAF/TIGER database. Each TIGER/Line relationship file is designed to stand alone as an independent data set or can be used jointly with the shapefiles." ;
+    dc:spatial "POLYGON ((-150.420615 60.733787,-150.420615 61.483938,-148.460007 61.483938,-148.460007 60.733787,-150.420615 60.733787))" ;
+    dcterms:publisher <urn:uuid:a007e726-1344-465e-bd7f-a732e24214a5> ;
+    dcterms:references <urn:uuid:6faa814a-519c-42d1-908c-ec18e7da2555> ;
+    dcterms:title "TIGER/Line Shapefile, 2008, county, Anchorage Municipality, AK, Address Ranges" ;
+    esip:eastBound "-148.460007"^^xsd:float ;
+    esip:endDate "2008-07-01"^^xsd:date ;
+    esip:northBound "61.483938"^^xsd:float ;
+    esip:southBound "60.733787"^^xsd:float ;
+    esip:startDate "2008-01-01"^^xsd:date ;
+    esip:westBound "-150.420615"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:f6618798-daf0-4bd7-b806-45fa50fce697> bcube:hasType "place" ;
+    bcube:hasValue "02020",
+        "Anchorage",
+        "County or Equivalent Entity",
+        "U.S.",
+        "United States" ;
+    dc:partOf "FIPS Publication 5-2, FIPS Publication 6-4, FIPS Publication 8-6, FIPS Publication 9-1,FIPS Publication55-4" ;
+    owl:a bcube:thesaurusSubset .
+

@@ -1,0 +1,76 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:0f5fca4b-6fb5-4c1f-8e9e-e681c6c87df7> bcube:hasType "theme" ;
+    bcube:hasValue "Elevation",
+        "Ground",
+        "Laser",
+        "Lidar",
+        "Remote Sensing",
+        "Terrain",
+        "Topography" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:0fe6ed95-8786-47b8-86cd-f83a4f250c15> bcube:hasValue "elevation" ;
+    dc:partOf "IsoTopicCategories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:1f1bf04f-ab35-4528-bba0-92bc080c91e6> bcube:hasType "temporal" ;
+    bcube:hasValue "2013",
+        "Fall" ;
+    dc:partOf "none" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:b9bbc4bd-9fb8-4f4f-9c1e-738ec43080af> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-05T07:35:35.512Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-05T07:35:35.512Z" ;
+    dc:identifier "urn:sha:be76e56e8f3452b8ee6808e6268336a5e593b2824fb0e14e1bbfaff4" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://catalog.data.gov/harvest/object/4a5d91cd-fe08-415e-adcd-07335bb8e4b8" .
+
+<urn:uuid:eb89d0d1-23b3-415e-ac1d-9d1cc9cb3c34> a "ISO 19115:2003/19139" ;
+    bcube:dateCreated "2015-08-05T07:35:35.512Z" ;
+    bcube:lastUpdated "2015-08-05T07:35:35.512Z" ;
+    bcube:originatedFrom <urn:uuid:b9bbc4bd-9fb8-4f4f-9c1e-738ec43080af> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:f1ac4279-2c6f-4cdb-8d5e-47430e19684a> .
+
+<urn:uuid:f1ac4279-2c6f-4cdb-8d5e-47430e19684a> bcube:dateCreated "2015-08-05T07:35:35.512Z" ;
+    bcube:hasMetadataRecord <urn:uuid:eb89d0d1-23b3-415e-ac1d-9d1cc9cb3c34> ;
+    bcube:lastUpdated "2015-08-05T07:35:35.512Z" ;
+    dc:conformsTo <urn:uuid:0f5fca4b-6fb5-4c1f-8e9e-e681c6c87df7>,
+        <urn:uuid:0fe6ed95-8786-47b8-86cd-f83a4f250c15>,
+        <urn:uuid:1f1bf04f-ab35-4528-bba0-92bc080c91e6>,
+        <urn:uuid:f1d87422-1944-4cfd-9a4b-ab79a588a852> ;
+    dc:description "The Light Detection and Ranging (LiDAR) dataset is a survey of Suwannee River G12PD00242 1.0 Meter LiDAR Survey Area 4, Classified Point Cloud, in north-central Florida and encompasses 55 square miles. The LiDAR point cloud was flown at a nominal post spacing of 1.0 meters for unobscured areas. The LiDAR data and derivative products produced are in compliance with the U.S. Geological Survey National Geospatial Program Guidelines and Base Specifications, Version 1. The flight lines were acquired by Digital Aerial Solutions, LLC. between Jan. 20, 2013 and Jan. 21, 2013. Derivative products from the aerial acquisition include: Raw point cloud data in LAS v1.2, classified point cloud data in LAS v1.2, bare earth surface tiles (raster DEM ESRI float GRID format), bare earth surface DEMs mosaic (raster DEM MrSID format), control points, project report, and FGDC compliant XML metadata." ;
+    dc:spatial "POLYGON ((-83.806132 29.853144,-83.806132 30.060655,-82.600024 30.060655,-82.600024 29.853144,-83.806132 29.853144))" ;
+    dcterms:title "2013 Suwannee River Water Management District Lidar: Mayo (FL)" ;
+    esip:eastBound "-82.600024"^^xsd:float ;
+    esip:northBound "30.060655"^^xsd:float ;
+    esip:southBound "29.853144"^^xsd:float ;
+    esip:westBound "-83.806132"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:f1d87422-1944-4cfd-9a4b-ab79a588a852> bcube:hasType "place" ;
+    bcube:hasValue "Mayo",
+        "Suwannee River G12PD00242 1.0 Meter LiDAR Survey Area 4" ;
+    dc:partOf "Site Location" ;
+    owl:a bcube:thesaurusSubset .
+

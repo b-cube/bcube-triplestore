@@ -1,0 +1,89 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:1581b198-da1e-44c2-9d01-b3cae2d7b0a5> owl:a foaf:Organization ;
+    foaf:name "" .
+
+<urn:uuid:1e6bda65-8083-4462-a881-8a821798000c> bcube:hasType "theme" ;
+    bcube:hasValue "Block",
+        "Census Block",
+        "County or equivalent entity",
+        "Polygon" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:2a6cd132-8ac9-468b-a4c5-0f19c39067b5> bcube:hasType "theme" ;
+    bcube:hasValue "boundaries" ;
+    dc:partOf "ISO 19115 Topic Categories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:3a4c5c78-c746-419a-abb4-18d0c636df75> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-11-08T06:49:43.965Z" ;
+    bcube:lastUpdated "2015-11-08T06:49:43.965Z" ;
+    bcube:originatedFrom <urn:uuid:60560809-348c-44d8-8e49-4351b3c98733> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:b25319b7-e683-456b-924a-2bca7a02c1da> .
+
+<urn:uuid:60560809-348c-44d8-8e49-4351b3c98733> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-08T06:49:43.965Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-08T06:49:43.965Z" ;
+    dc:identifier "urn:sha:b1714d398066e8386d90c4dfb7093ab594ddd99fafa2eb48bfa096ce" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://meta.geo.census.gov/data/existing/decennial/GEO/GPMB/TIGERline/fe_2007/tabblock00/fe_2007_01091_tabblock00_url.shp.xml" .
+
+<urn:uuid:b25319b7-e683-456b-924a-2bca7a02c1da> bcube:dateCreated "2015-11-08T06:49:43.965Z" ;
+    bcube:hasMetadataRecord <urn:uuid:3a4c5c78-c746-419a-abb4-18d0c636df75> ;
+    bcube:lastUpdated "2015-11-08T06:49:43.965Z" ;
+    dc:conformsTo <urn:uuid:1e6bda65-8083-4462-a881-8a821798000c>,
+        <urn:uuid:2a6cd132-8ac9-468b-a4c5-0f19c39067b5>,
+        <urn:uuid:db69a576-98bc-4737-a226-907c9be4eff8> ;
+    dc:description "The TIGER/Line Shapefiles are an extract of selected geographic and cartographic information from the Census MAF/TIGER database. The Census MAF/TIGER database represents a seamless national file with no overlaps or gaps between parts. However, each TIGER/Line Shapefile is designed to stand alone as an independent data set or the shapefiles can be combined to cover the whole nation." ;
+    dc:spatial "POLYGON ((-88.118344 31.989391,-88.118344 32.547268,-87.472206 32.547268,-87.472206 31.989391,-88.118344 31.989391))" ;
+    dcterms:publisher <urn:uuid:1581b198-da1e-44c2-9d01-b3cae2d7b0a5> ;
+    dcterms:references <urn:uuid:d692ecff-0839-4158-817a-d9fb4130d354> ;
+    dcterms:title "TIGER/Line Shapefile, 2007, 2000 county, Marengo County, Block" ;
+    esip:eastBound "-87.472206"^^xsd:float ;
+    esip:endDate "2007-07-01"^^xsd:date ;
+    esip:northBound "32.547268"^^xsd:float ;
+    esip:southBound "31.989391"^^xsd:float ;
+    esip:startDate "2007-01-01"^^xsd:date ;
+    esip:westBound "-88.118344"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:d692ecff-0839-4158-817a-d9fb4130d354> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-08T06:49:43.965Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-08T06:49:43.965Z" ;
+    dc:identifier "urn:sha:ec3deff3f88dceed884e331aeb907325160a8fd4f205c0d7d76a8e6b" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www2.census.gov/geo/tiger/TIGER2007FE/01_ALABAMA/01091_Marengo/fe_2007_01091_tabblock00.zip" .
+
+<urn:uuid:db69a576-98bc-4737-a226-907c9be4eff8> bcube:hasType "place" ;
+    bcube:hasValue "01091",
+        "County or Equivalent Entity",
+        "Marengo",
+        "U.S.",
+        "United States" ;
+    dc:partOf "FIPS Publication 5-2, FIPS Publication 6-4, FIPS Publication 8-6, FIPS Publication 9-1" ;
+    owl:a bcube:thesaurusSubset .
+

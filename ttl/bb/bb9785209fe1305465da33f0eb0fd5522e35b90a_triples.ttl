@@ -1,0 +1,50 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:23d4b951-5057-4301-96c1-4b2987b213dd> a "ISO 19115:2003/19139" ;
+    bcube:dateCreated "2015-08-09T09:09:51.463Z" ;
+    bcube:lastUpdated "2015-08-09T09:09:51.463Z" ;
+    bcube:originatedFrom <urn:uuid:aedd5d16-5b5b-4056-b4e5-92517b866a6e> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:b2d51b9a-47c0-4fe0-ad27-48758a4c574f> .
+
+<urn:uuid:4404b442-963c-468f-84f2-1f24bda019e9> bcube:hasValue "geoscientificInformation, Soil, Soils, Soil Series, Soil Survey, NRCS, SCS, SSIS" ;
+    dc:partOf "IsoTopicCategories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:aedd5d16-5b5b-4056-b4e5-92517b866a6e> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-09T09:09:51.463Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-09T09:09:51.463Z" ;
+    dc:identifier "urn:sha:c21a165df5b43a4946fa52a5ffe47d375f06c2f10addbce10f04c1c8" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://catalog.data.gov/harvest/object/1c478fea-0ea9-45f7-b140-079982755d49" .
+
+<urn:uuid:b2d51b9a-47c0-4fe0-ad27-48758a4c574f> bcube:dateCreated "2015-08-09T09:09:51.463Z" ;
+    bcube:hasMetadataRecord <urn:uuid:23d4b951-5057-4301-96c1-4b2987b213dd> ;
+    bcube:lastUpdated "2015-08-09T09:09:51.463Z" ;
+    dc:conformsTo <urn:uuid:4404b442-963c-468f-84f2-1f24bda019e9> ;
+    dc:description "The original data was created from Natural Resource Conservation Service (NRCS, formerly SCS) county soil survey maps using the University of Minnesota's Soil Survey Information System (SSIS). SSIS is a non-GIS computer program originally created in the mid-to-late 1970s, that displays soil information on a section-by-section basis, along with associated soil unit attributes. SSIS data quality varies considerably since the software and methods of creating the data evolved over time. Earlier methods assumed that each public land survey section was a perfect one mile square, an assumption that created georeferencing problems later on. Many of the SSIS files were then converted to EPPL7 raster GIS format with 5 meter by 5 meter grid cells, using 1:24,000-scale section corners to establish the geo-referencing. Finally, the sections were combined into larger files; in most cases, each larger file covers one public land survey township. Most of the EPPL7 files have been converted to ARC/INFO coverages, either by the University of Minnesota or by the Land Management Information Center. Note: the GIS data sets do not include soil unit attributes found in the tables in the printed soil surveys." ;
+    dc:spatial "POLYGON ((-97.5 43.5,-97.5 49.5,-89.0 49.5,-89.0 43.5,-97.5 43.5))" ;
+    dcterms:title "Soils Derived from Soil Survey Information System (SSIS), Selected Minnesota Counties" ;
+    esip:eastBound "-89.0"^^xsd:float ;
+    esip:northBound "49.5"^^xsd:float ;
+    esip:southBound "43.5"^^xsd:float ;
+    esip:westBound "-97.5"^^xsd:float ;
+    owl:a dcat:Dataset .
+

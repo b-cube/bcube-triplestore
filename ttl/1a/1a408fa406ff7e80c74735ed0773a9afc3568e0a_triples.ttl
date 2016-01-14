@@ -1,0 +1,82 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:038eec72-44f4-4192-8d2b-838f596351db> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-11T06:18:26.412Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-11T06:18:26.412Z" ;
+    dc:identifier "urn:sha:78ecf6247876660a94e8f6d319fa29bfac6490fdd4d0feaa18469c66" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "ftp://ftp.geoinfo.msl.mt.gov/Data/Spatial/NonMSDI/Shapefiles/Stream_Lake_1993.zip" .
+
+<urn:uuid:2c71f20b-1a5b-4191-a0aa-4222e5977832> owl:a foaf:Organization ;
+    foaf:name "Montana State Library" .
+
+<urn:uuid:90cbb594-39bf-4c25-9162-35a91db3b489> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-08-11T06:18:26.412Z" ;
+    bcube:lastUpdated "2015-08-11T06:18:26.412Z" ;
+    bcube:originatedFrom <urn:uuid:abc405f3-9a94-4bc6-8669-18590a3da9e3> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:f500dabd-f1a2-4656-9c64-828e9dce5a22> .
+
+<urn:uuid:abc405f3-9a94-4bc6-8669-18590a3da9e3> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-11T06:18:26.412Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-11T06:18:26.412Z" ;
+    dc:identifier "urn:sha:1e6def7fd52a870494283e56bb023c55895dc4849e80014950ed5bf1" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://mslapps.mt.gov/Geographic_Information/Data/DataList/datalist_MetadataDetailRaw.aspx?did={61d7ca14-ae7a-4a59-aa22-11c1a506b1b2}" .
+
+<urn:uuid:bf426522-c0bb-4893-9d99-f5503b3fbf3d> bcube:hasType "theme" ;
+    bcube:hasValue "hydrography",
+        "lake",
+        "stream",
+        "water" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:c3d04a25-3f31-4284-ae03-8af0a450dfa3> bcube:hasType "theme" ;
+    bcube:hasValue "inlandWaters" ;
+    dc:partOf "ISO 19115 Topic Category" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:f500dabd-f1a2-4656-9c64-828e9dce5a22> bcube:dateCreated "2015-08-11T06:18:26.412Z" ;
+    bcube:hasMetadataRecord <urn:uuid:90cbb594-39bf-4c25-9162-35a91db3b489> ;
+    bcube:lastUpdated "2015-08-11T06:18:26.412Z" ;
+    dc:conformsTo <urn:uuid:bf426522-c0bb-4893-9d99-f5503b3fbf3d>,
+        <urn:uuid:c3d04a25-3f31-4284-ae03-8af0a450dfa3>,
+        <urn:uuid:fed30b63-eade-443c-b630-8b21dc04770a> ;
+    dc:description "This layer contains lakes and wide streams selected from 1:100,000 scale US Census Bureau TIGER files. The featues were selected to approximately match data shown in USGS 1:2,000,000 scale DLG files. In this layer, polygons may represent lakes or wide streams. These layers are intended for cartographic representation of lakes and streams rather than geographic analyses. Feature names are mostly from the TIGER files. Some were obtained from from Montana DOT county maps and USGS topographic maps." ;
+    dc:spatial "POLYGON ((-115.601898 44.2533989,-115.601898 49.0159988,-103.662498 49.0159988,-103.662498 44.2533989,-115.601898 44.2533989))" ;
+    dcterms:publisher <urn:uuid:2c71f20b-1a5b-4191-a0aa-4222e5977832> ;
+    dcterms:references <urn:uuid:038eec72-44f4-4192-8d2b-838f596351db> ;
+    dcterms:title "Montana Major Lakes" ;
+    esip:eastBound "-103.662498"^^xsd:float ;
+    esip:northBound "49.0159988"^^xsd:float ;
+    esip:southBound "44.2533989"^^xsd:float ;
+    esip:startDate "1990-01-01"^^xsd:date ;
+    esip:westBound "-115.601898"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:fed30b63-eade-443c-b630-8b21dc04770a> bcube:hasType "place" ;
+    bcube:hasValue "Montana" ;
+    owl:a bcube:thesaurusSubset .
+

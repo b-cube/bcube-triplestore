@@ -1,0 +1,63 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:b5e71458-888e-4c3e-b7f6-d14d2f7e8703> a "OGC:WMS" ;
+    bcube:contains <urn:uuid:98ef350c-c601-4ac2-a1ba-7daabebfcb4f> ;
+    bcube:dateCreated "2015-08-09T20:41:03.538Z" ;
+    bcube:lastUpdated "2015-08-09T20:41:03.538Z" ;
+    bcube:originatedFrom <urn:uuid:39ccd27c-9e0e-4831-a22c-6fdbc8c2e68f> ;
+    dc:conformsTo <urn:uuid:67c1483b-0bd1-46e4-adc3-d168e5a310ff> ;
+    dc:description "A compliant implementation of WMS plus most of the SLD extension (dynamic styling). Can also generate PDF, SVG, KML, GeoRSS" ;
+    owl:a bcube:service .
+
+<urn:uuid:39ccd27c-9e0e-4831-a22c-6fdbc8c2e68f> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-09T20:41:03.538Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-09T20:41:03.538Z" ;
+    dc:identifier "urn:sha:d3e2d7ad0334b5c69697d321c3be4fc3876f016b337ca2d4af6bf788" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://geothermal.smu.edu:9000/geoserver/aasg-heatflow/wms?request=GetCapabilities" .
+
+<urn:uuid:67c1483b-0bd1-46e4-adc3-d168e5a310ff> bcube:hasValue "GEOSERVER",
+        "WFS",
+        "WMS" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:98ef350c-c601-4ac2-a1ba-7daabebfcb4f> bcube:dateCreated "2015-08-09T20:41:03.538Z" ;
+    bcube:lastUpdated "2015-08-09T20:41:03.538Z" ;
+    dc:spatial "POLYGON ((-128.901504517 24.4343986511,-128.901504517 49.359790802,-70.666694641099994 49.359790802,-70.666694641099994 24.4343986511,-128.901504517 24.4343986511))" ;
+    dc:title "HeatFlow" ;
+    dcterms:references <urn:uuid:c510aeeb-fe13-4727-84ad-53687b164450> ;
+    esip:eastBound "-70.6666946411"^^xsd:float ;
+    esip:northBound "49.359790802"^^xsd:float ;
+    esip:southBound "24.4343986511"^^xsd:float ;
+    esip:westBound "-128.901504517"^^xsd:float ;
+    owl:a bcube:Layer .
+
+<urn:uuid:c510aeeb-fe13-4727-84ad-53687b164450> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-09T20:41:03.538Z" ;
+    bcube:hasConfidence "Not Sure" ;
+    bcube:hasUrlSource "Generated" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-09T20:41:03.538Z" ;
+    dc:identifier "urn:sha:3ed55aab1c61355d2b1092f5445be2fb15fdc45fc374c46b66370a1e" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://geothermal.smu.edu:9000/geoserver/aasg-heatflow/wms?layers=HeatFlow&width=500&version=1.3.0&bbox=-128.901504517%2C24.4343986511%2C-70.6666946411%2C49.359790802&service=WMS&format=image%2Fpng&styles=&crs=CRS%3A84&request=GetMap&height=500" .
+

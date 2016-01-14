@@ -1,0 +1,85 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:0d00ca91-8b41-4fc6-976f-5127c55507bb> owl:a foaf:Organization ;
+    foaf:name "Montana State Library" .
+
+<urn:uuid:55ef127e-4672-450b-9956-c42c1a966e7a> bcube:hasType "theme" ;
+    bcube:hasValue "Boundaries",
+        "Boundary",
+        "House Districts",
+        "Legislative Districts",
+        "Legislature",
+        "Senate Districts" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:8ca03808-b3d9-48e3-a26e-d5b26560e93e> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-08-10T08:30:43.357Z" ;
+    bcube:lastUpdated "2015-08-10T08:30:43.357Z" ;
+    bcube:originatedFrom <urn:uuid:f8793765-31cc-42e7-a5fd-82bf00770791> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:ec4ac84c-4393-4fe7-addf-8a082cfbf96d> .
+
+<urn:uuid:a528d9ce-adce-4bf9-85ae-d92c98c71d26> bcube:hasType "theme" ;
+    bcube:hasValue "boundaries" ;
+    dc:partOf "ISO 19115 Topic Category" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:c1d9de72-f80d-4251-be4a-c23d4a59db49> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-10T08:30:43.357Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-10T08:30:43.357Z" ;
+    dc:identifier "urn:sha:36bb74337628e37b2f05629a35ff40821c88b8dc19474b1b280f982c" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "ftp://ftp.geoinfo.msl.mt.gov/Data/Spatial/NonMSDI/Shapefiles/Legislature1995.zip" .
+
+<urn:uuid:c78fad32-d328-40db-81b2-db9298fef33c> bcube:hasType "place" ;
+    bcube:hasValue "Montana" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:ec4ac84c-4393-4fe7-addf-8a082cfbf96d> bcube:dateCreated "2015-08-10T08:30:43.357Z" ;
+    bcube:hasMetadataRecord <urn:uuid:8ca03808-b3d9-48e3-a26e-d5b26560e93e> ;
+    bcube:lastUpdated "2015-08-10T08:30:43.357Z" ;
+    dc:conformsTo <urn:uuid:55ef127e-4672-450b-9956-c42c1a966e7a>,
+        <urn:uuid:a528d9ce-adce-4bf9-85ae-d92c98c71d26>,
+        <urn:uuid:c78fad32-d328-40db-81b2-db9298fef33c> ;
+    dc:description "Montana Legislative Districts for the 1995 through 2003 Legislatures. Each polygon represents a House District. Senate Districts are each composed of two House Districts, whose district numbers equal twice the Senate District number and twice the Senate District number, minus one. The official boundaries from the Montana Legislative Council were modified at the State Library to remove parts of a few long, skinny Census Blocks that are in rivers." ;
+    dc:spatial "POLYGON ((-115.612701 44.2378998,-115.612701 49.0354996,-103.610802 49.0354996,-103.610802 44.2378998,-115.612701 44.2378998))" ;
+    dcterms:publisher <urn:uuid:0d00ca91-8b41-4fc6-976f-5127c55507bb> ;
+    dcterms:references <urn:uuid:c1d9de72-f80d-4251-be4a-c23d4a59db49> ;
+    dcterms:title "Montana 1995-2003 Legislative Districts" ;
+    esip:eastBound "-103.610802"^^xsd:float ;
+    esip:endDate "2003-01-01"^^xsd:date ;
+    esip:northBound "49.0354996"^^xsd:float ;
+    esip:southBound "44.2378998"^^xsd:float ;
+    esip:startDate "1995-01-01"^^xsd:date ;
+    esip:westBound "-115.612701"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:f8793765-31cc-42e7-a5fd-82bf00770791> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-10T08:30:43.357Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-10T08:30:43.357Z" ;
+    dc:identifier "urn:sha:8f010f47786e15e42b7e05a23cd9970d684a30c34fd64e820a2f2ce6" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://mslapps.mt.gov/Geographic_Information/Data/DataList/datalist_MetadataDetailRaw.aspx?did={4C2BE3E2-5859-4469-9656-B6C82489A1C0}" .
+

@@ -1,0 +1,93 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:1b74cb6b-3ce9-4e03-9630-95ffaa1c0b14> owl:a foaf:Organization ;
+    foaf:name "" .
+
+<urn:uuid:2d0f6a18-5c1f-40c6-8c3b-bd253e652a36> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-11-07T09:51:51.3Z" ;
+    bcube:lastUpdated "2015-11-07T09:51:51.3Z" ;
+    bcube:originatedFrom <urn:uuid:6315e53a-eaff-4827-a6a4-d6a6d69cd003> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:6260d2bf-a99f-4d00-918b-cb797a46d347> .
+
+<urn:uuid:383b88d4-5208-40fe-89f0-38e6cc070846> bcube:hasType "theme" ;
+    bcube:hasValue "boundaries" ;
+    dc:partOf "ISO 19115 Topic Categories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:6260d2bf-a99f-4d00-918b-cb797a46d347> bcube:dateCreated "2015-11-07T09:51:51.3Z" ;
+    bcube:hasMetadataRecord <urn:uuid:2d0f6a18-5c1f-40c6-8c3b-bd253e652a36> ;
+    bcube:lastUpdated "2015-11-07T09:51:51.3Z" ;
+    dc:conformsTo <urn:uuid:383b88d4-5208-40fe-89f0-38e6cc070846>,
+        <urn:uuid:9fe805c6-148b-4396-bfb6-d37310b8d73c>,
+        <urn:uuid:afb512b3-b88c-40e0-8545-23c0a99894a2> ;
+    dc:description "The TIGER/Line Shapefiles are an extract of selected geographic and cartographic information from the Census MAF/TIGER database. The Census MAF/TIGER database represents a seamless national file with no overlaps or gaps between parts. However, each TIGER/Line Shapefile is designed to stand alone as an independent data set or the shapefiles can be combined to cover the whole nation." ;
+    dc:spatial "POLYGON ((-73.508142 41.187053,-73.508142 42.88679,-69.858861 42.88679,-69.858861 41.187053,-73.508142 41.187053))" ;
+    dcterms:publisher <urn:uuid:1b74cb6b-3ce9-4e03-9630-95ffaa1c0b14> ;
+    dcterms:references <urn:uuid:e03cd28a-8471-4295-8d16-f48c876a5b7f> ;
+    dcterms:title "TIGER/Line Shapefile, 2007, state, Massachusetts, Place" ;
+    esip:eastBound "-69.858861"^^xsd:float ;
+    esip:endDate "2007-07-01"^^xsd:date ;
+    esip:northBound "42.88679"^^xsd:float ;
+    esip:southBound "41.187053"^^xsd:float ;
+    esip:startDate "2007-01-01"^^xsd:date ;
+    esip:westBound "-73.508142"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:6315e53a-eaff-4827-a6a4-d6a6d69cd003> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-07T09:51:51.3Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-07T09:51:51.3Z" ;
+    dc:identifier "urn:sha:a389ce51fcb19efc2af59d980f6cee1216548b014bf3fd516dbf8d50" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://meta.geo.census.gov/data/existing/decennial/GEO/GPMB/TIGERline/fe_2007/place/fe_2007_25_place_url.shp.xml" .
+
+<urn:uuid:9fe805c6-148b-4396-bfb6-d37310b8d73c> bcube:hasType "theme" ;
+    bcube:hasValue "CDP",
+        "Census Designated Place",
+        "City",
+        "Polygon",
+        "State or equivalent entity",
+        "Town",
+        "Village" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:afb512b3-b88c-40e0-8545-23c0a99894a2> bcube:hasType "place" ;
+    bcube:hasValue "25",
+        "MA",
+        "Massachusetts",
+        "State or Equivalent Entity",
+        "U.S.",
+        "United States" ;
+    dc:partOf "FIPS Publication 5-2, FIPS Publication 6-4, FIPS Publication 8-6, FIPS Publication 9-1" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:e03cd28a-8471-4295-8d16-f48c876a5b7f> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-07T09:51:51.3Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-07T09:51:51.3Z" ;
+    dc:identifier "urn:sha:a9d17c1ff293e1af1c0fdd2ef413b76ad9dbae0b89045db04a7b2bfc" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www2.census.gov/geo/tiger/TIGER2007FE/25_MASSACHUSETTS/fe_2007_25_place.zip" .
+

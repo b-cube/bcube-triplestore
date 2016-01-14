@@ -1,0 +1,67 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:312a0bb5-cbff-433d-aaa4-2054836e47f1> owl:a foaf:Organization ;
+    foaf:name "U.S. EPA Office of Research & Development (ORD) - National Exposure Research Laboratory (NERL)" .
+
+<urn:uuid:314a55c5-f57c-49ab-846e-0852483ec93f> bcube:hasType "place" ;
+    bcube:hasValue "United States" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:6ddf6e96-7f6a-489f-8d66-ad10b4d15af9> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-05T07:57:58.279Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-05T07:57:58.279Z" ;
+    dc:identifier "urn:sha:e5242ea470593027c4a42039d947e35aedf7ba6ff4124b7b63149b8f" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www.epa.gov/heasd/documents/cdc/HBM/ozone/HBM_O3_2005_12km_metadata.xml" .
+
+<urn:uuid:777f9e02-99b3-4afb-96d1-1d168e6896a7> bcube:dateCreated "2015-08-05T07:57:58.279Z" ;
+    bcube:hasMetadataRecord <urn:uuid:b28cce91-01f7-4ba1-8115-078e1b49b5b8> ;
+    bcube:lastUpdated "2015-08-05T07:57:58.279Z" ;
+    dc:conformsTo <urn:uuid:314a55c5-f57c-49ab-846e-0852483ec93f>,
+        <urn:uuid:78985000-2762-4c2f-829d-d549d0478c97>,
+        <urn:uuid:78fe67bd-c276-425d-86b6-85e520f33d67> ;
+    dc:description "The O3Surface_12km_2005 file is the output data file from a hierarchical Bayesian model (HBM) that combines ozone monitoring data from National Air Monitoring Stations/State and Local Air Monitoring Stations (NAMS/SLAMS) and simulated ozone data from the deterministic prediction model, Models-3/Community Multiscale Air Quality (CMAQ). The file contains estimates of the mean and standard error for 12 km x 12 km grids across the eastern US for each day of the modeling year." ;
+    dc:spatial "POLYGON ((-111.1 23.0,-111.1 51.25,-65.4 51.25,-65.4 23.0,-111.1 23.0))" ;
+    dcterms:publisher <urn:uuid:312a0bb5-cbff-433d-aaa4-2054836e47f1> ;
+    dcterms:title "EPA statistical predictions of Ozone for 2005 at 12km grid" ;
+    esip:eastBound "-65.4"^^xsd:float ;
+    esip:northBound "51.25"^^xsd:float ;
+    esip:southBound "23.0"^^xsd:float ;
+    esip:westBound "-111.1"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:78985000-2762-4c2f-829d-d549d0478c97> bcube:hasType "theme" ;
+    bcube:hasValue "environment" ;
+    dc:partOf "ISO 19115 Topic Category" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:78fe67bd-c276-425d-86b6-85e520f33d67> bcube:hasType "theme" ;
+    bcube:hasValue "Air" ;
+    dc:partOf "EPA GIS Keyword Thesaurus" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:b28cce91-01f7-4ba1-8115-078e1b49b5b8> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-08-05T07:57:58.279Z" ;
+    bcube:lastUpdated "2015-08-05T07:57:58.279Z" ;
+    bcube:originatedFrom <urn:uuid:6ddf6e96-7f6a-489f-8d66-ad10b4d15af9> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:777f9e02-99b3-4afb-96d1-1d168e6896a7> .
+

@@ -1,0 +1,205 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:097acef6-fd92-482d-9ea7-c59a48a690a3> bcube:hasType "theme" ;
+    bcube:hasValue "Bathymetry",
+        "Classified LAS",
+        "Coastal Zone Mapping Imaging Lidar (CZMIL)",
+        "IWG-OCM",
+        "Joint Airborne Lidar Bathymetry Technical Center of eXpertise (JALBTCX)",
+        "Mobile District",
+        "National Coastal Mapping Program (NCMP)",
+        "Topography",
+        "U.S. Army Corps of Engineers (USACE)" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:0f9b9718-d84f-4f0b-bb9b-78acac3c28aa> bcube:dateCreated "2015-08-08T16:39:57.924Z" ;
+    bcube:hasMetadataRecord <urn:uuid:a29274ae-ed1a-4b8f-bf71-6b63ad8782bb> ;
+    bcube:lastUpdated "2015-08-08T16:39:57.924Z" ;
+    dc:conformsTo <urn:uuid:097acef6-fd92-482d-9ea7-c59a48a690a3>,
+        <urn:uuid:1a7e6400-7385-43b0-9d3d-e72af988d994>,
+        <urn:uuid:2a7e150e-42f5-4b3c-a5f6-3deba7fdc099>,
+        <urn:uuid:67a0524e-3642-4e40-b6e7-4cf1afb55851>,
+        <urn:uuid:a2954408-5cf5-4400-8c41-b0f63893b2c4>,
+        <urn:uuid:a438e081-a25a-4ac8-9325-9acf1290c07a>,
+        <urn:uuid:b128a2c4-5168-446e-a3b9-2df60863b1c3>,
+        <urn:uuid:b629c77f-c64b-4679-afb2-7d46e8479ce8>,
+        <urn:uuid:c5065742-9399-4a2c-a1fa-b548f2a5738b>,
+        <urn:uuid:f1520d12-4de5-4696-8175-f262e4b2b885> ;
+    dc:description "These files contain classified topo/bathy lidar data. Data are classified as 1 (valid non-ground topographic data), 2 (valid ground topographic data), and 29 (valid bathymetric data). Classes 1 and 2 are defined in accordance with the American Society for Photogrammetry and Remote Sensing (ASPRS) classification standards. These data were collected by the Coastal Zone Mapping and Imaging Lidar (CZMIL) system. CZMIL integrates a lidar sensor with simultaneous topographic and bathymetric capabilities, a digital camera and a hyperspectral imager on a single remote sensing platform for use in coastal mapping and charting activities. Native lidar data is not generally in a format accessible to most Geographic Information Systems (GIS). Specialized in-house and commercial software packages are used to process the native lidar data into 3-dimensional positions that can be imported into GIS software for visualization and further analysis. Horizontal positions, provided in decimal degrees of latitude and longitude, are referenced to the North American Datum of 1983 National Adjustment of 2011 (NAD83 NA2011). Vertical positions are referenced to the NAD83 NA11 ellipsoid and provided in meters. The National Geodetic Survey's (NGS) GEOID12A model is used to transform the vertical positions from ellipsoid to orthometric heights referenced to the North American Vertical Datum of 1988 (NAVD88). The 3-D position data are sub-divided into a series of LAS files, which are tiled into quarter-quads or 5km boxes. The LAS file index is provided by the shape file, NH_Boxes_NCMP_and_QuarterQuads.shp, and the numbers used to identify files are in the \"Box\" field of the shape file. The data file naming convention is based on the year, effort, area name, \"Box\" number and product type. An example file name is \"2014_NAE_Isle_of_Shoals_NH_01_GeoClassified.las\", where 2014 is the year of data collection, NAE is the project under which data were collected, Isle_of_Shoals_NH is the area of data collection, 01 is the \"Box\" number, and GeoClassifiedis the product type. This project contains the following collections: Goat Island, Hampton, Isle of Shoals, Little Harbor, Rye, and Wallis Sands. Upon arrival to NOAA's Office for Coastal Management the data were converted to geographic coordinates and to GRS80 (ellipsoid) heights in meters." ;
+    dc:spatial "POLYGON ((-70.828796386700006 42.8869018555,-70.828796386700006 43.073913574199999,-70.595581054700006 43.073913574199999,-70.595581054700006 42.8869018555,-70.828796386700006 42.8869018555))" ;
+    dcterms:publisher <urn:uuid:aae1d6fe-18c0-403d-8ba0-05b745686986> ;
+    dcterms:references <urn:uuid:93450192-719c-4c04-95f2-7cf880f2073c>,
+        <urn:uuid:a3c6279e-692b-4efe-b323-af797b7d4f64>,
+        <urn:uuid:e733f7c4-366f-44db-b649-e18a5fe9905c>,
+        <urn:uuid:f2e14280-4e28-45c7-9b1b-ecc3fa7e2e63> ;
+    dcterms:title "2014 USACE NAE Topobathy Lidar: New Hampshire" ;
+    esip:eastBound "-70.5955810547"^^xsd:float ;
+    esip:endDate "2014-11-09"^^xsd:date ;
+    esip:northBound "43.0739135742"^^xsd:float ;
+    esip:southBound "42.8869018555"^^xsd:float ;
+    esip:startDate "2014-11-08"^^xsd:date ;
+    esip:westBound "-70.8287963867"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:1a7e6400-7385-43b0-9d3d-e72af988d994> bcube:hasType "theme" ;
+    bcube:hasValue "elevation",
+        "imageryBaseMapsEarthCover",
+        "location",
+        "oceans" ;
+    dc:partOf "ISO 19115 Topic Categories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:27657d96-2243-4521-be52-b71ea7d60261> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-08T16:39:57.924Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-08T16:39:57.924Z" ;
+    dc:identifier "urn:sha:d09da6c18f5782bf007a3ac6926aa89f42c515ce0ae43e38a3a3c16b" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://coast.noaa.gov/data/Documents/Metadata/Lidar/no_harvest/nh2014_usace_nae_newhampshire_m4883_metadata.xml" .
+
+<urn:uuid:2a7e150e-42f5-4b3c-a5f6-3deba7fdc099> bcube:hasType "place" ;
+    bcube:hasValue "Goat Island",
+        "Hampton",
+        "Isle of Shoals",
+        "Little Harbor",
+        "New Hampshire",
+        "Rye",
+        "United States",
+        "Wallis Sands" ;
+    dc:partOf "Geographic Names Information System" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:46b9b92e-54c2-4d3f-8ba5-155ee9ee2f98> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-08T16:39:57.924Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-08T16:39:57.924Z" ;
+    dc:identifier "urn:sha:339f885085d267558ac30a99955dd0fce1e8d22c61d6fa8d0f0a401e" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://coast.noaa.gov/dataviewer/index.html?action=advsearch&qType=in&qFld=ID&qVal=4883" .
+
+<urn:uuid:5e35eaa8-ad03-4c9e-8275-1fa81c6e6d7b> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-08T16:39:57.924Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-08T16:39:57.924Z" ;
+    dc:identifier "urn:sha:84938e08930479dda9e192462eea09d0a70efb1d7cc5ac388f322dd1" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://coast.noaa.gov/dataviewer" .
+
+<urn:uuid:67a0524e-3642-4e40-b6e7-4cf1afb55851> bcube:hasType "place" ;
+    bcube:hasValue "VERTICAL LOCATION > LAND SURFACE",
+        "VERTICAL LOCATION > SEA FLOOR" ;
+    dc:partOf "GCMD Location Keywords v7" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:93450192-719c-4c04-95f2-7cf880f2073c> dcterms:references <urn:uuid:e8bf8bed-dc23-4f70-91f4-996c0d8cb109> ;
+    owl:a bibo:WebPage .
+
+<urn:uuid:a29274ae-ed1a-4b8f-bf71-6b63ad8782bb> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-08-08T16:39:57.924Z" ;
+    bcube:lastUpdated "2015-08-08T16:39:57.924Z" ;
+    bcube:originatedFrom <urn:uuid:27657d96-2243-4521-be52-b71ea7d60261> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:0f9b9718-d84f-4f0b-bb9b-78acac3c28aa> .
+
+<urn:uuid:a2954408-5cf5-4400-8c41-b0f63893b2c4> bcube:hasType "theme" ;
+    bcube:hasValue "elevation" ;
+    dc:partOf "ISO 19115 Topic Category" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:a3c6279e-692b-4efe-b323-af797b7d4f64> dcterms:references <urn:uuid:46b9b92e-54c2-4d3f-8ba5-155ee9ee2f98> ;
+    owl:a bibo:WebPage .
+
+<urn:uuid:a438e081-a25a-4ac8-9325-9acf1290c07a> bcube:hasType "theme" ;
+    bcube:hasValue "EARTH SCIENCE > OCEANS >COASTAL PROCESSES > COASTAL ELEVATION",
+        "HUMAN DIMENSIONS > LAND USE/LAND COVER > LAND USE CLASSES",
+        "LAND SURFACE > TOPOGRAPHY> TERRAIN ELEVATION",
+        "OCEANS > BATHYMETRY/SEAFLOOR TOPOGRAPHY > BATHYMETRY",
+        "OCEANS > BATHYMETRY/SEAFLOOR TOPOGRAPHY > SEAFLOOR TOPOGRAPHY",
+        "OCEANS > COASTAL PROCESSES > COASTAL ELEVATION",
+        "SOLID EARTH > GEOMORPHOLOGY > COASTAL LANDFORMS/PROCESSES" ;
+    dc:partOf "GCMD Earth Sciences Keywords v7" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:aae1d6fe-18c0-403d-8ba0-05b745686986> owl:a foaf:Organization ;
+    foaf:name "NOAA's Ocean Service, Office for Coastal Management (OCM)" .
+
+<urn:uuid:b128a2c4-5168-446e-a3b9-2df60863b1c3> bcube:hasType "temporal" ;
+    bcube:hasValue "2014",
+        "November" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:b629c77f-c64b-4679-afb2-7d46e8479ce8> bcube:hasType "theme" ;
+    bcube:hasValue "DOD/USARMY/USACE/SAM/MOBILE/OPJ/JALBTCX > Department of Defense",
+        "Spatial Data Branch",
+        "United States Army" ;
+    dc:partOf "GCMD Data Center Keywords v7" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:c5065742-9399-4a2c-a1fa-b548f2a5738b> bcube:hasType "theme" ;
+    bcube:hasValue "LIDAR > LIGHT DETECTION AND RANGING" ;
+    dc:partOf "GCMD Instrument Keywords v7" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:e2a3ea1b-03ea-41e1-95f7-0baae9939fe2> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-08T16:39:57.924Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-08T16:39:57.924Z" ;
+    dc:identifier "urn:sha:93430ffa6c58a5e2f303f8c6d05bdf17601023d0678c5af64169b1ed" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "ftp://coast.noaa.gov/pub/DigitalCoast/lidar1_z/geoid12a/data/4883" .
+
+<urn:uuid:e733f7c4-366f-44db-b649-e18a5fe9905c> dcterms:references <urn:uuid:5e35eaa8-ad03-4c9e-8275-1fa81c6e6d7b> ;
+    owl:a bibo:WebPage .
+
+<urn:uuid:e8bf8bed-dc23-4f70-91f4-996c0d8cb109> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-08T16:39:57.924Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-08T16:39:57.924Z" ;
+    dc:identifier "urn:sha:a5b99394df9de624ffbb3c2adc9cf66de5e977198bfd73c402bcbce4" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://coast.noaa.gov" .
+
+<urn:uuid:f1520d12-4de5-4696-8175-f262e4b2b885> bcube:hasType "theme" ;
+    bcube:hasValue "elevation",
+        "imageryBaseMapsEarthCover",
+        "oceans" ;
+    dc:partOf "ISO 19115 Topic Category" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:f2e14280-4e28-45c7-9b1b-ecc3fa7e2e63> dcterms:references <urn:uuid:e2a3ea1b-03ea-41e1-95f7-0baae9939fe2> ;
+    owl:a bibo:WebPage .
+

@@ -1,0 +1,80 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:19654eb1-10b0-44d1-8ec0-3160783d36da> owl:a foaf:Organization ;
+    foaf:name "" .
+
+<urn:uuid:3bacceda-054f-4c2f-b05d-615c5f63c95d> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-05T11:29:24.109Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-05T11:29:24.109Z" ;
+    dc:identifier "urn:sha:b89a44ad4d483914da356e816ce97e175015a20709de7030079e2e4d" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "https://inport.nmfs.noaa.gov/inport/item/5609/fgdc" .
+
+<urn:uuid:3f7a7bc7-1d82-4e75-89a6-afa6fd96fa80> bcube:hasType "place" ;
+    bcube:hasValue "Kiribati",
+        "Main Hawaiian Islands (MHI)",
+        "Northwestern Hawaiian Islands (NWHI)",
+        "Pacific Ocean",
+        "Pacific Remote Island Areas (PRIA)" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:a345822c-e43d-45a0-989a-e18323644486> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-08-05T11:29:24.109Z" ;
+    bcube:lastUpdated "2015-08-05T11:29:24.109Z" ;
+    bcube:originatedFrom <urn:uuid:3bacceda-054f-4c2f-b05d-615c5f63c95d> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:bff8563f-8864-4b45-9c3e-b858dce484ab> .
+
+<urn:uuid:aa1ebb87-ecfe-4f1b-919e-11ef1e4bb3bb> bcube:hasType "temporal" ;
+    bcube:hasValue "1948 - present" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:aa3a2d60-3329-4485-87e1-3f56b4650f74> bcube:hasType "theme" ;
+    bcube:hasValue "FMB",
+        "FRMD",
+        "PIFSC",
+        "WPacFIN",
+        "catch",
+        "commercial",
+        "dar",
+        "landings" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:bff8563f-8864-4b45-9c3e-b858dce484ab> bcube:dateCreated "2015-08-05T11:29:24.109Z" ;
+    bcube:hasMetadataRecord <urn:uuid:a345822c-e43d-45a0-989a-e18323644486> ;
+    bcube:lastUpdated "2015-08-05T11:29:24.109Z" ;
+    dc:conformsTo <urn:uuid:3f7a7bc7-1d82-4e75-89a6-afa6fd96fa80>,
+        <urn:uuid:aa1ebb87-ecfe-4f1b-919e-11ef1e4bb3bb>,
+        <urn:uuid:aa3a2d60-3329-4485-87e1-3f56b4650f74> ;
+    dc:description "This data set contains the landings data from fishers who take marine life for commercial purposes and report their catch, effort, and sales on a commercial catch report form to the State of Hawaii. The fishing area extends from the Main Hawaiian Islands to the Northwestern Hawaiian Islands, with fishing also taking place on the high seas and around the Pacific Remote Island Areas (PRIA) and Kiribati (150o W - 179o E and 30o N - 0o N). These self-reported forms have been collected since the late 1940s. On October 1, 2002, new reporting forms were implemented as a result the Commercial Catch Report Revision Project, and a new data base was developed for the data collected on these forms." ;
+    dc:spatial "POLYGON ((179 0,179 30,-150 30,-150 0,179 0))" ;
+    dcterms:identifier "gov.noaa.nmfs.inport:5609" ;
+    dcterms:publisher <urn:uuid:19654eb1-10b0-44d1-8ec0-3160783d36da> ;
+    dcterms:title "Hawaii DAR Fisherman Reporting System Data (Landings)" ;
+    esip:eastBound "-150.0"^^xsd:float ;
+    esip:northBound "30.0"^^xsd:float ;
+    esip:southBound "0.0"^^xsd:float ;
+    esip:startDate "1948-01-01"^^xsd:date ;
+    esip:westBound "179.0"^^xsd:float ;
+    owl:a dcat:Dataset .
+

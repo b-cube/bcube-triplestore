@@ -1,0 +1,90 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:0748b181-edd8-4dd3-9d1c-7a0c47379c36> owl:a foaf:Organization ;
+    foaf:name "U.S. Geological Survey" .
+
+<urn:uuid:1d47455d-ada8-4b5f-ab25-3223638db64e> bcube:hasType "theme" ;
+    bcube:hasValue "contaminant transport",
+        "groundwater flow",
+        "hydrology",
+        "mathematical simulation",
+        "sediment transport",
+        "streamflow" ;
+    dc:partOf "USGS Thesaurus" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:2d106f14-5290-4b62-a404-64a03cad416d> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2014-10-30T01:05:33.618Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2014-10-30T01:05:33.618Z" ;
+    dc:identifier "urn:sha:162f261557031615a9e2bc445eafee711f694bd9fb05e97dc15985c9" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://pubs.usgs.gov/fs/2012/3005/" .
+
+<urn:uuid:50acbee3-e041-4af5-859e-9ac45aab072f> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2014-10-30T01:05:33.618Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2014-10-30T01:05:33.618Z" ;
+    dc:identifier "urn:sha:48c9b4c21685830062efb985c7d956d083d4992113e1a3ffad9a454b" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www.usgs.gov/science/xml.php?cite=2867" .
+
+<urn:uuid:8f40e430-f498-41fc-b1b3-2098e452b180> dcterms:references <urn:uuid:2d106f14-5290-4b62-a404-64a03cad416d> ;
+    owl:a bibo:WebPage .
+
+<urn:uuid:b9c75663-111d-4428-bc22-ba6ed21225fa> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2014-10-30T01:05:33.618Z" ;
+    bcube:lastUpdated "2014-10-30T01:05:33.618Z" ;
+    bcube:originatedFrom <urn:uuid:50acbee3-e041-4af5-859e-9ac45aab072f> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:f9f208be-cefe-45d7-b334-75883ba2fc77> .
+
+<urn:uuid:ea7b3c32-358e-4b9a-b5db-d6e43f2954c9> bcube:hasType "theme" ;
+    bcube:hasValue "aquifers",
+        "drainage basins",
+        "streams" ;
+    dc:partOf "Alexandria Digital Library Feature Type Thesaurus" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:f0b44779-b09c-4957-95dc-519b71c44abb> bcube:hasType "place" ;
+    bcube:hasValue "fUS48 = Texas" ;
+    dc:partOf "Augmented FIPS 10-4 and FIPS 6-4" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:f9f208be-cefe-45d7-b334-75883ba2fc77> bcube:dateCreated "2014-10-30T01:05:33.618Z" ;
+    bcube:hasMetadataRecord <urn:uuid:b9c75663-111d-4428-bc22-ba6ed21225fa> ;
+    bcube:lastUpdated "2014-10-30T01:05:33.618Z" ;
+    dc:conformsTo <urn:uuid:1d47455d-ada8-4b5f-ab25-3223638db64e>,
+        <urn:uuid:ea7b3c32-358e-4b9a-b5db-d6e43f2954c9>,
+        <urn:uuid:f0b44779-b09c-4957-95dc-519b71c44abb> ;
+    dc:description "Explains how mathematical simulations of watershed properties can help us understand the likely behavior of the water systems, putting the choices available to people in better perspective." ;
+    dc:spatial "POLYGON ((-101.0 25.75,-101.0 30.25,-96.0 30.25,-96.0 25.75,-101.0 25.75))" ;
+    dcterms:publisher <urn:uuid:0748b181-edd8-4dd3-9d1c-7a0c47379c36> ;
+    dcterms:references <urn:uuid:8f40e430-f498-41fc-b1b3-2098e452b180> ;
+    dcterms:title "Watershed modeling applications in south Texas" ;
+    esip:eastBound "-96.0"^^xsd:float ;
+    esip:northBound "30.25"^^xsd:float ;
+    esip:southBound "25.75"^^xsd:float ;
+    esip:westBound "-101.0"^^xsd:float ;
+    owl:a dcat:Dataset .
+

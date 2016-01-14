@@ -1,0 +1,101 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:049d04a1-ef91-47b7-a3d1-487cd6f010cb> bcube:hasType "theme" ;
+    bcube:hasValue "BGDS",
+        "Parking lot" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:0c1f6898-8fb0-486e-9f79-dd5086672f40> bcube:hasType "theme" ;
+    bcube:hasValue "transportation" ;
+    dc:partOf "ISO 19115 Topic Category" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:2023240a-3912-49de-820e-fc2556fc8ac3> owl:a foaf:Organization ;
+    foaf:name "U.S. Fish and Wildlife Service" .
+
+<urn:uuid:385e15b2-fb55-4985-8b1c-74fa1f835ece> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-10-30T19:04:46.661Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-10-30T19:04:46.661Z" ;
+    dc:identifier "urn:sha:e2c5039d6d675314729c4f255fe8ba515f4918cfaa351a96697d59f9" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "https://catalog.data.gov/harvest/object/8b09aa99-9ff1-498a-9482-73702fd88d78/original" .
+
+<urn:uuid:3ee2302b-05c0-4b6c-97ae-6a0ff3fa44d1> bcube:hasType "place" ;
+    bcube:hasValue "United States" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:6acf48c5-f2ac-49d9-998d-a36af58a23d8> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-10-30T19:04:46.661Z" ;
+    bcube:lastUpdated "2015-10-30T19:04:46.661Z" ;
+    bcube:originatedFrom <urn:uuid:385e15b2-fb55-4985-8b1c-74fa1f835ece> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:9e263b7c-c106-4f61-84ba-a0639191366b> .
+
+<urn:uuid:9e263b7c-c106-4f61-84ba-a0639191366b> bcube:dateCreated "2015-10-30T19:04:46.661Z" ;
+    bcube:hasMetadataRecord <urn:uuid:6acf48c5-f2ac-49d9-998d-a36af58a23d8> ;
+    bcube:lastUpdated "2015-10-30T19:04:46.661Z" ;
+    dc:conformsTo <urn:uuid:049d04a1-ef91-47b7-a3d1-487cd6f010cb>,
+        <urn:uuid:0c1f6898-8fb0-486e-9f79-dd5086672f40>,
+        <urn:uuid:3ee2302b-05c0-4b6c-97ae-6a0ff3fa44d1>,
+        <urn:uuid:b25c355f-4ff4-477e-8fe6-f0800bd6c289>,
+        <urn:uuid:d637f290-5024-4385-8a9c-902d9530948a>,
+        <urn:uuid:e0c303e3-a631-4091-8457-178d98bd51a2> ;
+    dc:description "U.S. Fish and Wildlife Service parking lot inventory includes parking lots owned and maintained by the U.S. Fish and Wildlife Service on National Wildlife Refuges, National Fish Hatcheries and other properties. In a phased 5 year project, Pacific Western Technologies, a contractor for the U.S. Department of Transportation - Federal Highway Administration conducted surveys of roads and associated road features such as parking lots on National Wildlife Refuges and other properties managed by the U.S. Fish and Wildlife Refuge. Road conditions were noted and locations collected with Trimble GPS receivers. Road Inventory Reports are available at http://resourcegis.org/egis/ds/reportsearch.aspx for each Refuge or Fish Hatchery. Each report details parking lot asset number, date visited, surface type, area in square feet, condition and cost to improve for the parking lots in each Refuge or Fish Hatchery. In addition to the information in the report, the dataset also includes information on the number of parking spaces per parking lot. U.S. Fish and Wildlife Service, Information Resource and Technology Management removed all cost related information from this dataset and added the Refuge or Fish Hatchery name. Parking lots located outside of the boundaries of lands managed by the U.S. Fish and Wildlife Service were deleted from this data set." ;
+    dc:spatial "POLYGON ((-162.89884 17.677339,-162.89884 63.333069,-64.87925 63.333069,-64.87925 17.677339,-162.89884 17.677339))" ;
+    dcterms:publisher <urn:uuid:2023240a-3912-49de-820e-fc2556fc8ac3> ;
+    dcterms:references <urn:uuid:cb1fba90-d827-4d00-b32d-82dfb4dbf12e> ;
+    dcterms:title "Parking lots owned and maintained by the U.S. Fish and Wildlife Service" ;
+    esip:eastBound "-64.87925"^^xsd:float ;
+    esip:northBound "63.333069"^^xsd:float ;
+    esip:southBound "17.677339"^^xsd:float ;
+    esip:startDate "2013-06-13"^^xsd:date ;
+    esip:westBound "-162.89884"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:b25c355f-4ff4-477e-8fe6-f0800bd6c289> bcube:hasType "theme" ;
+    bcube:hasValue "Fisheries and Conservation",
+        "Wildlife Refuge" ;
+    dc:partOf "User" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:cb1fba90-d827-4d00-b32d-82dfb4dbf12e> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-10-30T19:04:46.661Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-10-30T19:04:46.661Z" ;
+    dc:identifier "urn:sha:d60768b9e01ac777a44f50951d12f1a118a7be8f95cc591b40e7da8a" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://ecos.fws.gov/ServCatFiles/reference/holding/20936/FWS_Trans_Parking.zip" .
+
+<urn:uuid:d637f290-5024-4385-8a9c-902d9530948a> bcube:hasType "place" ;
+    bcube:hasValue "National Fish Hatchery",
+        "National Wildlife Refuge",
+        "Regions",
+        "Wetland Management District" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:e0c303e3-a631-4091-8457-178d98bd51a2> bcube:hasType "temporal" ;
+    bcube:hasValue "Cycle 4" ;
+    owl:a bcube:thesaurusSubset .
+

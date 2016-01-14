@@ -1,0 +1,84 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:07d29281-e543-41f4-898c-bdb46071705f> bcube:hasType "place" ;
+    bcube:hasValue "Boise National Forest" ;
+    dc:partOf "Geographic Names Information System (GNIS). U.S. Geological Survey (<http://geonames.usgs.gov/gnishome.html>)" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:08af5d2b-461e-4416-9eed-73cc45c89e24> bcube:hasType "theme" ;
+    bcube:hasValue "Burn Intensity",
+        "Canopy Scorch",
+        "Fire",
+        "Wildfire" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:1b8f0446-7cee-407d-953a-4f275d5666dc> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-05T16:46:14.429Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-05T16:46:14.429Z" ;
+    dc:identifier "urn:sha:909aebbebe58be79f3b04f093536514a185243ee615ea91ac0749eae" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://cloud.insideidaho.org/webApps/util/zip.ashx?fn=http://cloud.insideidaho.org/data/bnf/footfire" .
+
+<urn:uuid:84a0c263-1b8a-4704-9b8f-7d941f0ae498> owl:a foaf:Organization ;
+    foaf:name "Boise National Forest" .
+
+<urn:uuid:9571681e-1778-4490-8a09-a539495fd887> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-05T16:46:14.429Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-05T16:46:14.429Z" ;
+    dc:identifier "urn:sha:d160c6bf3c06bd671c4eebe307c9aebf811d5dea807b2e61f6d2d5f9" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://insideidaho.org/appsOutput/metadataWAF/xml/BurnIntensityforthe1992FoothillsFirewithinBoiseNationalForest.xml" .
+
+<urn:uuid:bec10539-4fcf-4683-b319-ef2e485cf282> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-11-05T16:46:14.429Z" ;
+    bcube:lastUpdated "2015-11-05T16:46:14.429Z" ;
+    bcube:originatedFrom <urn:uuid:9571681e-1778-4490-8a09-a539495fd887> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:c9eea7c0-7ea3-4146-ba59-f1bc47036fc1> .
+
+<urn:uuid:c9eea7c0-7ea3-4146-ba59-f1bc47036fc1> bcube:dateCreated "2015-11-05T16:46:14.429Z" ;
+    bcube:hasMetadataRecord <urn:uuid:bec10539-4fcf-4683-b319-ef2e485cf282> ;
+    bcube:lastUpdated "2015-11-05T16:46:14.429Z" ;
+    dc:conformsTo <urn:uuid:07d29281-e543-41f4-898c-bdb46071705f>,
+        <urn:uuid:08af5d2b-461e-4416-9eed-73cc45c89e24>,
+        <urn:uuid:fc6e5313-a63b-4a2e-9bc5-96a41b1b5393> ;
+    dc:description "This data set reflects fire intensity as measured by canopy scorch for the 1992 Foothills Fire, Boise National Forest, Idaho." ;
+    dc:spatial "POLYGON ((-116.00803765 43.32508003,-116.00803765 43.71266263,-115.48600814 43.71266263,-115.48600814 43.32508003,-116.00803765 43.32508003))" ;
+    dcterms:publisher <urn:uuid:84a0c263-1b8a-4704-9b8f-7d941f0ae498> ;
+    dcterms:references <urn:uuid:1b8f0446-7cee-407d-953a-4f275d5666dc> ;
+    dcterms:title "Burn Intensity for the 1992 Foothills Fire within Boise National Forest" ;
+    esip:eastBound "-115.48600814"^^xsd:float ;
+    esip:northBound "43.71266263"^^xsd:float ;
+    esip:southBound "43.32508003"^^xsd:float ;
+    esip:startDate "1992-01-01"^^xsd:date ;
+    esip:westBound "-116.00803765"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:fc6e5313-a63b-4a2e-9bc5-96a41b1b5393> bcube:hasType "theme" ;
+    bcube:hasValue "environment" ;
+    dc:partOf "ISO 19115 Topic Category" ;
+    owl:a bcube:thesaurusSubset .
+

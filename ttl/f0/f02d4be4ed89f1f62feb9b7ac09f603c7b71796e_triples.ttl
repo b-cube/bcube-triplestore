@@ -1,0 +1,95 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:03bc9a7c-13a7-4a1d-9159-fe2e45812411> owl:a foaf:Organization ;
+    foaf:name "" .
+
+<urn:uuid:15fda1e5-ddc0-49c9-b406-0e8b336f8ecc> bcube:hasType "place" ;
+    bcube:hasValue "02185",
+        "County or Equivalent Entity",
+        "North Slope",
+        "U.S.",
+        "United States" ;
+    dc:partOf "INCITS.38-200x (R2004),INCITS.31-200x (R2007),INCITS.454-200x,INCITS 455-200x,INCITS 446-2008" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:5fcbf461-b225-4984-aceb-a656f5ab7ff9> bcube:hasType "theme" ;
+    bcube:hasValue "transportation" ;
+    dc:partOf "ISO 19115 Topic Categories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:87912553-2f7a-4277-9ddc-0613c946a561> bcube:dateCreated "2015-11-02T02:45:50.254Z" ;
+    bcube:hasMetadataRecord <urn:uuid:ec70cc7e-5b56-4cda-ba32-a3835d1b7f6a> ;
+    bcube:lastUpdated "2015-11-02T02:45:50.254Z" ;
+    dc:conformsTo <urn:uuid:15fda1e5-ddc0-49c9-b406-0e8b336f8ecc>,
+        <urn:uuid:5fcbf461-b225-4984-aceb-a656f5ab7ff9>,
+        <urn:uuid:fd0ae42d-3a37-4397-8aa4-f44676c3002e> ;
+    dc:description "The TIGER/Line relationship files are an extract of selected geographic information from the Census MAF/TIGER database. Each TIGER/Line relationship file is designed to stand alone as an independent data set or can be used jointly with the shapefiles." ;
+    dc:spatial "POLYGON ((-166.985511 67.99894,-166.985511 71.441059,-141.002648 71.441059,-141.002648 67.99894,-166.985511 67.99894))" ;
+    dcterms:publisher <urn:uuid:03bc9a7c-13a7-4a1d-9159-fe2e45812411> ;
+    dcterms:references <urn:uuid:bd5bf264-e4ad-4ae8-ba35-6d50033dac61> ;
+    dcterms:title "TIGER/Line Shapefile, 2009, county, North Slope Borough, AK, Current Address Range-Feature Name Relationship File" ;
+    esip:eastBound "-141.002648"^^xsd:float ;
+    esip:endDate "2009-05-01"^^xsd:date ;
+    esip:northBound "71.441059"^^xsd:float ;
+    esip:southBound "67.99894"^^xsd:float ;
+    esip:startDate "2009-01-01"^^xsd:date ;
+    esip:westBound "-166.985511"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:bcf142c9-b35f-4946-8acc-9ccebbd66704> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-02T02:45:50.254Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-02T02:45:50.254Z" ;
+    dc:identifier "urn:sha:547dac787461ea4de85cf68fcea4a16164956544ea45cc638de88b70" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://meta.geo.census.gov/data/existing/decennial/GEO/GPMB/TIGERline/fe_2009/addrfn/tl_2009_02185_addrfn_url.dbf.xml" .
+
+<urn:uuid:bd5bf264-e4ad-4ae8-ba35-6d50033dac61> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-02T02:45:50.254Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-02T02:45:50.254Z" ;
+    dc:identifier "urn:sha:ee7a127bba7902153abc56b18fe029d8bb317f1aef1fdf925497c8e3" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www2.census.gov/geo/tiger/TIGER2009/02_ALASKA/02185_North_Slope_Borough/tl_2009_02185_addrfn.zip" .
+
+<urn:uuid:ec70cc7e-5b56-4cda-ba32-a3835d1b7f6a> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-11-02T02:45:50.254Z" ;
+    bcube:lastUpdated "2015-11-02T02:45:50.254Z" ;
+    bcube:originatedFrom <urn:uuid:bcf142c9-b35f-4946-8acc-9ccebbd66704> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:87912553-2f7a-4277-9ddc-0613c946a561> .
+
+<urn:uuid:fd0ae42d-3a37-4397-8aa4-f44676c3002e> bcube:hasType "theme" ;
+    bcube:hasValue "5-digit ZIP code",
+        "County ANSI Code",
+        "County FIPS Code",
+        "From House Number",
+        "Permanent edge ID",
+        "Side indicator flag",
+        "State ANSI Code",
+        "State FIPS Code",
+        "To House Number",
+        "ZIP +4 code" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+

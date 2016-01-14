@@ -1,0 +1,92 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:0a407be5-6b01-4e5d-81b6-13d6d19bb2dd> owl:a foaf:Organization ;
+    foaf:name "Arctic Landscape Conservation Cooperative" .
+
+<urn:uuid:0e6db8e8-e97d-4d7a-a471-b2b990720448> bcube:hasType "place" ;
+    bcube:hasValue "Alaska",
+        "Northern Alaska" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:1acf2a3a-6e14-41ba-8c69-f09699ab09c3> bcube:hasType "theme" ;
+    bcube:hasValue "environment" ;
+    dc:partOf "ISO 19115 Topic Category" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:67f0b29c-3be6-4dfd-b789-05bcf1862963> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-03-19T22:48:12.238Z" ;
+    bcube:lastUpdated "2015-03-19T22:48:12.238Z" ;
+    bcube:originatedFrom <urn:uuid:cd5e736b-e647-4c5a-aeb4-6bb01ce414cf> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:6f311e76-1e09-4ac2-a785-4abbbb7568c9> .
+
+<urn:uuid:6f311e76-1e09-4ac2-a785-4abbbb7568c9> bcube:dateCreated "2015-03-19T22:48:12.238Z" ;
+    bcube:hasMetadataRecord <urn:uuid:67f0b29c-3be6-4dfd-b789-05bcf1862963> ;
+    bcube:lastUpdated "2015-03-19T22:48:12.238Z" ;
+    dc:conformsTo <urn:uuid:0e6db8e8-e97d-4d7a-a471-b2b990720448>,
+        <urn:uuid:1acf2a3a-6e14-41ba-8c69-f09699ab09c3> ;
+    dc:description "Baseline (1961-1990) average annual total precipitation and projected change in precipitation for the northern portion of Alaska. The Alaska portion of the Arctic LCC's terrestrial boundary is depicted by the black line. Baseline results for 1961-1990 are derived from Climate Research Unit (CRU) TS 3.1.01 data and downscaled to 2km grids; results for the other time periods (2010-2039, 2040-2069, 2070-2099) are based on the SNAP 5-GCM composite using the AR5-RCP 6.0, downscaled to 2km grids." ;
+    dc:spatial "POLYGON ((-167.4 62.0,-167.4 77.31,-131.68 77.31,-131.68 62.0,-167.4 62.0))" ;
+    dcterms:publisher <urn:uuid:0a407be5-6b01-4e5d-81b6-13d6d19bb2dd> ;
+    dcterms:references <urn:uuid:bc8e0190-a357-4a42-a1be-3c001afa22fb>,
+        <urn:uuid:dffeb36f-e8f3-4540-a7dc-b73157ce78a3> ;
+    dcterms:title "Average historical annual total precipitation (mm) and projected relative change in total precipitation (% change from baseline) for Northern Alaska. 30-year averages. Handout format. Maps created using the SNAP 5-GCM composite (AR5-RCP 6.0) and CRU TS3.1.01 datasets." ;
+    esip:eastBound "-131.68"^^xsd:float ;
+    esip:northBound "77.31"^^xsd:float ;
+    esip:southBound "62.0"^^xsd:float ;
+    esip:startDate "2014-11-24"^^xsd:date ;
+    esip:westBound "-167.4"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:983b82ee-5fb5-4ce0-9c03-50ac7ea1b6c1> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-03-19T22:48:12.238Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-03-19T22:48:12.238Z" ;
+    dc:identifier "urn:sha:cf552dc7d7f14cf6b59882d785e8c94522357fff5805ad8fd04290cb" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://arcticlcc.org/projects/geophysical/climate-projection-maps/" .
+
+<urn:uuid:bc8e0190-a357-4a42-a1be-3c001afa22fb> dcterms:references <urn:uuid:983b82ee-5fb5-4ce0-9c03-50ac7ea1b6c1> ;
+    owl:a bibo:WebPage .
+
+<urn:uuid:cd5e736b-e647-4c5a-aeb4-6bb01ce414cf> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-03-19T22:48:12.238Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-03-19T22:48:12.238Z" ;
+    dc:identifier "urn:sha:39286189c2a46535a388439e5820d201b03d2c7f9a3544d23b930948" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://arcticlcc.org/assets/products/ARCT2011-1002/maps/metadata/ARCTLCC_AK_TS31_RCP60_annual_precip_mm_30yr_avgs_hnd_metadata.xml" .
+
+<urn:uuid:dffeb36f-e8f3-4540-a7dc-b73157ce78a3> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-03-19T22:48:12.238Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-03-19T22:48:12.238Z" ;
+    dc:identifier "urn:sha:8969e37b137c878e597b2b50916a1080f7c6caa6821702d6d92b45f8" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://arcticlcc.org/assets/products/ARCT2011-1002/maps/RCP60/ARCTLCC_AK_TS31_RCP60_annual_precip_mm_30yr_avgs_hnd.zip" .
+

@@ -1,0 +1,105 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:046725b7-6a87-44e0-abf9-c6770903714f> bcube:hasType "theme" ;
+    bcube:hasValue "Bathymetry",
+        "Depth",
+        "Depth Contour",
+        "Lake",
+        "Pond" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:080a0d52-a575-45c6-a55b-a7ea2c6d4c66> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-08-06T20:18:37.314Z" ;
+    bcube:lastUpdated "2015-08-06T20:18:37.314Z" ;
+    bcube:originatedFrom <urn:uuid:9dabe8cb-29f5-49c2-976b-3eea51cfff3e> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:81259b3a-6bde-4ed0-8806-d955a24c5fdc> .
+
+<urn:uuid:3aa0fb2b-4c79-4032-8f1d-708732f8ac70> bcube:hasType "theme" ;
+    bcube:hasValue "Environment" ;
+    dc:partOf "ISO 19115 Topic Category" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:7253e91a-ccaf-49f6-a262-ee053879a3a4> owl:a foaf:Organization ;
+    foaf:name "New Hampshire Department of Environmental Services" .
+
+<urn:uuid:81259b3a-6bde-4ed0-8806-d955a24c5fdc> bcube:dateCreated "2015-08-06T20:18:37.314Z" ;
+    bcube:hasMetadataRecord <urn:uuid:080a0d52-a575-45c6-a55b-a7ea2c6d4c66> ;
+    bcube:lastUpdated "2015-08-06T20:18:37.314Z" ;
+    dc:conformsTo <urn:uuid:046725b7-6a87-44e0-abf9-c6770903714f>,
+        <urn:uuid:3aa0fb2b-4c79-4032-8f1d-708732f8ac70>,
+        <urn:uuid:bdf1e193-0b4b-460d-ac89-e65beaf2e566> ;
+    dc:description "Provides bathymetric depth contours in feet and areas of those contour intervals for New Hampshire lakes surveyed by the New Hampshire Department of Environmental Services since 2000." ;
+    dc:spatial "POLYGON ((-72.48892 42.697692,-72.48892 45.22457,-70.729146 45.22457,-70.729146 42.697692,-72.48892 42.697692))" ;
+    dcterms:publisher <urn:uuid:7253e91a-ccaf-49f6-a262-ee053879a3a4> ;
+    dcterms:references <urn:uuid:953cc726-25a7-49c4-9973-545a9f9ee1ed>,
+        <urn:uuid:a568707e-d6fb-4576-858c-5b8afb3582bb> ;
+    dcterms:title "Bathymetric Contour Intervals" ;
+    esip:eastBound "-70.729146"^^xsd:float ;
+    esip:endDate "2011-01-01"^^xsd:date ;
+    esip:northBound "45.22457"^^xsd:float ;
+    esip:southBound "42.697692"^^xsd:float ;
+    esip:startDate "2000-01-01"^^xsd:date ;
+    esip:westBound "-72.48892"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:953cc726-25a7-49c4-9973-545a9f9ee1ed> dcterms:references <urn:uuid:e888389c-87cc-4630-88c7-969e307cf572> ;
+    owl:a bibo:WebPage .
+
+<urn:uuid:9dabe8cb-29f5-49c2-976b-3eea51cfff3e> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-06T20:18:37.314Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-06T20:18:37.314Z" ;
+    dc:identifier "urn:sha:4fb3d59b07d22f28af1b0c2c67b7499cb6e677b2c99e2b065a1344cf" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://catalog.data.gov/harvest/object/30485856-5344-4f71-ba3b-bffc4a292008/original" .
+
+<urn:uuid:a568707e-d6fb-4576-858c-5b8afb3582bb> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-06T20:18:37.314Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-06T20:18:37.314Z" ;
+    dc:identifier "urn:sha:6db2fad4db9bb048ab4ec470173bd8ff474b8483521dd8c63a82a0ee" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www.des.state.nh.us" .
+
+<urn:uuid:bdf1e193-0b4b-460d-ac89-e65beaf2e566> bcube:hasType "place" ;
+    bcube:hasValue "New England",
+        "New Hampshire",
+        "Northeast",
+        "United States" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:e888389c-87cc-4630-88c7-969e307cf572> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-06T20:18:37.314Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-06T20:18:37.314Z" ;
+    dc:identifier "urn:sha:b085a1b5d8212e29c5d834201ec24182468baf77f8608ca7b4040cc2" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "<URL:http://www.granit.unh.edu/cgi-bin/nhsearch?dset=bathymetry_p/nh>" .
+

@@ -1,0 +1,62 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:3ee65ebb-81dc-4300-a277-7e32607752b3> a "OGC:WMS" ;
+    bcube:contains <urn:uuid:d9bd5d9c-7132-4260-8c8f-98635bfffa31> ;
+    bcube:dateCreated "2015-06-28T20:20:04.853Z" ;
+    bcube:lastUpdated "2015-06-28T20:20:04.853Z" ;
+    bcube:originatedFrom <urn:uuid:05ceca69-d240-4423-96e8-20e2988c3a68> ;
+    dc:conformsTo <urn:uuid:bb16d3d4-25c8-4076-b8a3-63bcf009ebc6> ;
+    dc:description "WellLogs in the state of New Jersey" ;
+    owl:a bcube:service .
+
+<urn:uuid:05ceca69-d240-4423-96e8-20e2988c3a68> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-06-28T20:20:04.853Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-06-28T20:20:04.853Z" ;
+    dc:identifier "urn:sha:5db47684d9e2b48326ee6f7bdc59affea32f19ca2c6a328aed0e6675" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://geothermal.isgs.illinois.edu/arcgis/services/aasggeothermal/NJWellLogs/MapServer/WMSServer?request=GetCapabilities&service=WMS" .
+
+<urn:uuid:b9197369-1ac5-47a4-a6b7-e1e9802facfd> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-06-28T20:20:04.853Z" ;
+    bcube:hasConfidence "Not Sure" ;
+    bcube:hasUrlSource "Generated" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-06-28T20:20:04.853Z" ;
+    dc:identifier "urn:sha:54d9d6b91726c3dc1efe2ab858b5ff8b92f2142493f0fdedd99bcb30" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://geothermal.isgs.illinois.edu/arcgis/services/aasggeothermal/NJWellLogs/MapServer/WMSServer?layers=WellLog&width=500&version=1.3.0&bbox=-75.088384%2C38.98417%2C-74.115%2C41.314444&service=WMS&format=image%2Fpng&styles=&crs=CRS%3A84&request=GetMap&height=500" .
+
+<urn:uuid:bb16d3d4-25c8-4076-b8a3-63bcf009ebc6> bcube:hasValue "New Jersey, NJ, Well Logs, wells, Well Log Observation, state" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:d9bd5d9c-7132-4260-8c8f-98635bfffa31> bcube:dateCreated "2015-06-28T20:20:04.853Z" ;
+    bcube:lastUpdated "2015-06-28T20:20:04.853Z" ;
+    dc:description "This layer contains data related to well log observations in the state of New Jersey obtained by the AASG for the Geothermal Data Project. The data table includes information on the location of the borehole, log type, location uncertainty, file locations and remarks. Citations are included in the dataset. The WellBoreURI for a particular feature is the cross-referencing link (foreign key) used to associate the feature with other web based information. Layer files containing the symbology for these data layers can be found in the AASG repository at <a href=\"http://repository.stategeothermaldata.org/repository/resource/98ddf901b9782a25982e01af3b068fdc/\">http://repository.stategeothermaldata.org/repository/resource/98ddf901b9782a25982e01af3b068fdc/</a>. The original data and metadata can be viewed or downloaded from the AASG repository at <a href=\"http://repository.stategeothermaldata.org/repository/resource/6e84ef507102d99c8d5b44d3c2339b36/\">http://repository.stategeothermaldata.org/repository/resource/6e84ef507102d99c8d5b44d3c2339b36/</a>." ;
+    dc:spatial "POLYGON ((-75.088384 38.98417,-75.088384 41.314444,-74.115 41.314444,-74.115 38.98417,-75.088384 38.98417))" ;
+    dc:title "WellLog" ;
+    dcterms:references <urn:uuid:b9197369-1ac5-47a4-a6b7-e1e9802facfd> ;
+    esip:eastBound "-74.115"^^xsd:float ;
+    esip:northBound "41.314444"^^xsd:float ;
+    esip:southBound "38.98417"^^xsd:float ;
+    esip:westBound "-75.088384"^^xsd:float ;
+    owl:a bcube:Layer .
+

@@ -1,0 +1,129 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:2c7b8912-930a-4439-8974-12780f82ed55> owl:a foaf:Organization ;
+    foaf:name "ERDDAP, version 1.64, at NOAA NMFS SWFSC Environmental Research Division" .
+
+<urn:uuid:5cf37081-5b39-4250-b9df-eeef62da737c> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-11-01T14:38:53.65Z" ;
+    bcube:lastUpdated "2015-11-01T14:38:53.65Z" ;
+    bcube:originatedFrom <urn:uuid:86481b8d-2f56-44ac-82e4-89661d0ea8cd> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:5fb8dfd3-320a-4a4f-bc92-bc5ee7c0d68e> .
+
+<urn:uuid:5fb8dfd3-320a-4a4f-bc92-bc5ee7c0d68e> bcube:dateCreated "2015-11-01T14:38:53.65Z" ;
+    bcube:hasMetadataRecord <urn:uuid:5cf37081-5b39-4250-b9df-eeef62da737c> ;
+    bcube:lastUpdated "2015-11-01T14:38:53.65Z" ;
+    dc:conformsTo <urn:uuid:6d590096-2027-4266-9f82-6237adb162e2>,
+        <urn:uuid:c9a853f7-8b1a-4a26-a566-cae1b3b37534> ;
+    dc:description "NOAA CoastWatch provides sea surface temperature (SST) products derived from NOAA's Polar Operational Environmental Satellites (POES). This data is provided at high resolution (0.0125 degrees) for the North Pacific Ocean. Measurements are gathered by the Advanced Very High Resolution Radiometer (AVHRR) instrument, a multiband radiance sensor carried aboard the NOAA POES satellites." ;
+    dc:spatial "POLYGON ((165 45,165 75,180 75,180 45,165 45))" ;
+    dcterms:identifier "upwell.pfeg.noaa.gov:erdAKsstahday" ;
+    dcterms:publisher <urn:uuid:2c7b8912-930a-4439-8974-12780f82ed55> ;
+    dcterms:references <urn:uuid:655aabd4-0ec9-4163-8b1d-388cbf1282ce>,
+        <urn:uuid:8401c266-9ca9-4c57-af38-c2592daf5c30>,
+        <urn:uuid:9cf3f8e2-31d2-4590-a6e7-6e5dfcec5b28> ;
+    dcterms:title "SST, POES AVHRR, LAC, Alaska, Day and Night (Hourly)" ;
+    esip:eastBound "180.0"^^xsd:float ;
+    esip:endDate "2008-11-17"^^xsd:date ;
+    esip:northBound "75.0"^^xsd:float ;
+    esip:southBound "45.0"^^xsd:float ;
+    esip:startDate "2005-06-30"^^xsd:date ;
+    esip:westBound "165.0"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:655aabd4-0ec9-4163-8b1d-388cbf1282ce> dcterms:references <urn:uuid:bcf4020e-228d-4340-937d-307e12e6e471> ;
+    owl:a bibo:WebPage .
+
+<urn:uuid:6d590096-2027-4266-9f82-6237adb162e2> bcube:hasType "theme" ;
+    bcube:hasValue "altitude",
+        "latitude",
+        "longitude",
+        "sea_surface_temperature",
+        "time" ;
+    dc:partOf "CF Standard Name Table v29" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:8401c266-9ca9-4c57-af38-c2592daf5c30> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-01T14:38:53.65Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-01T14:38:53.65Z" ;
+    dc:identifier "urn:sha:c951247530519adacf5a10491a35adf5fb396c9d3479c25dbe747444" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://upwell.pfeg.noaa.gov/erddap/griddap/erdAKsstahday.html" .
+
+<urn:uuid:86481b8d-2f56-44ac-82e4-89661d0ea8cd> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-01T14:38:53.65Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-01T14:38:53.65Z" ;
+    dc:identifier "urn:sha:e58b387399789928a650ffde599efced25474dfb4d4ea295be57d0ff" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://upwell.pfeg.noaa.gov/erddap/metadata/fgdc/xml/erdAKsstahday_fgdc.xml" .
+
+<urn:uuid:9cf3f8e2-31d2-4590-a6e7-6e5dfcec5b28> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-01T14:38:53.65Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-01T14:38:53.65Z" ;
+    dc:identifier "urn:sha:785e9735c33c9e926db25767102f27ee1df8b8deaa137cd71b1066a1" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://upwell.pfeg.noaa.gov/erddap/griddap/erdAKsstahday.graph" .
+
+<urn:uuid:bcf4020e-228d-4340-937d-307e12e6e471> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-01T14:38:53.65Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-01T14:38:53.65Z" ;
+    dc:identifier "urn:sha:61e5b7afe92a4787bf619a1ba9da632e586111a128820eda2a01cbfb" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://upwell.pfeg.noaa.gov/erddap/wms/erdAKsstahday/request" .
+
+<urn:uuid:c9a853f7-8b1a-4a26-a566-cae1b3b37534> bcube:hasType "theme" ;
+    bcube:hasValue "Oceans > Ocean Temperature > Sea Surface Temperature",
+        "alaska",
+        "avhrr",
+        "coastwatch",
+        "day",
+        "degrees",
+        "lac",
+        "night",
+        "noaa",
+        "ocean",
+        "oceans",
+        "poes",
+        "scan",
+        "sea",
+        "sea_surface_temperature",
+        "single",
+        "sst",
+        "surface",
+        "temperature",
+        "wcn" ;
+    dc:partOf "GCMD Science Keywords" ;
+    owl:a bcube:thesaurusSubset .
+

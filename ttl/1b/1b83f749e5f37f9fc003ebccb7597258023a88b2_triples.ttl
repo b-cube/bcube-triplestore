@@ -1,0 +1,100 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:380e3e7f-73a0-4ea8-bab6-1efef12d8c32> bcube:hasValue "climatologyMeteorologyAtmosphere" ;
+    dc:partOf "IsoTopicCategories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:4cc364b0-d3d0-4d50-b421-f196ebc54c1d> bcube:hasType "theme" ;
+    bcube:hasValue "depth",
+        "forecast_period",
+        "forecast_reference_time",
+        "latitude",
+        "longitude",
+        "sea_surface_wave_from_direction",
+        "sea_surface_wave_mean_period_from_variance_spectral_density_second_frequency_moment",
+        "sea_surface_wave_period_at_variance_spectral_density_maximum",
+        "sea_surface_wave_significant_height",
+        "time" ;
+    dc:partOf "CF-1.4" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:854ac967-61db-4c8d-b8f9-da41f2c4b186> bcube:hasType "dataCenter" ;
+    bcube:hasValue "Pacific Islands Ocean Observing System (PacIOOS)" ;
+    dc:partOf "GCMD Data Center Keywords" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:9259ed18-ca91-45fd-93cc-b283b28b242e> a "ISO 19115:2003/19139" ;
+    bcube:dateCreated "2015-11-06T13:08:06.987Z" ;
+    bcube:lastUpdated "2015-11-06T13:08:06.987Z" ;
+    bcube:originatedFrom <urn:uuid:f07c1e56-f926-4928-89b9-145ebde5c75e> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:f05e7ade-edfd-4e3d-9803-85893f2b1779> .
+
+<urn:uuid:e4d6312f-dbe7-4c2d-b0d6-eac8f3d17f44> bcube:hasType "place" ;
+    bcube:hasValue "Continent > North America > United States Of America > Hawaii",
+        "Ocean > Pacific Ocean > Central Pacific Ocean > Hawaiian Islands > Kahoolawe",
+        "Ocean > Pacific Ocean > Central Pacific Ocean > Hawaiian Islands > Lanai",
+        "Ocean > Pacific Ocean > Central Pacific Ocean > Hawaiian Islands > Maui",
+        "Ocean > Pacific Ocean > Central Pacific Ocean > Hawaiian Islands > Molokai" ;
+    dc:partOf "GCMD Location Keywords" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:eb767a47-8bd4-470a-b047-bbcc3b325c4f> bcube:hasType "project" ;
+    bcube:hasValue "Pacific Islands Ocean Observing System (PacIOOS)" ;
+    dc:partOf "GCMD Project Keywords" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:f05e7ade-edfd-4e3d-9803-85893f2b1779> bcube:dateCreated "2015-11-06T13:08:06.987Z" ;
+    bcube:hasMetadataRecord <urn:uuid:9259ed18-ca91-45fd-93cc-b283b28b242e> ;
+    bcube:lastUpdated "2015-11-06T13:08:06.987Z" ;
+    dc:conformsTo <urn:uuid:380e3e7f-73a0-4ea8-bab6-1efef12d8c32>,
+        <urn:uuid:4cc364b0-d3d0-4d50-b421-f196ebc54c1d>,
+        <urn:uuid:854ac967-61db-4c8d-b8f9-da41f2c4b186>,
+        <urn:uuid:e4d6312f-dbe7-4c2d-b0d6-eac8f3d17f44>,
+        <urn:uuid:eb767a47-8bd4-470a-b047-bbcc3b325c4f>,
+        <urn:uuid:f600a854-3ae1-4f40-a3b7-32535ea3dcab> ;
+    dc:description "Simulating WAves Nearshore (SWAN) regional wave model 7-day output with a 5-day hourly forecast for the Hawaiian islands of Maui County (Maui, Molokai, Lanai, and Kahoolawe) at approximately 1-km resolution. This high-resolution model is utilized to capture shallow water effects and nearshore coastal dynamics such as refracting, shoaling, and smaller scale shadowing. It is run directly after the Hawaii regional WaveWatch III (WW3) wave model has completed. Please note that this nested model setup is in the testing and validation phase. While considerable effort has been made to implement all model components in a thorough, correct, and accurate manner, numerous sources of error are possible. As such, please use these data with the caution appropriate for any ocean related activity." ;
+    dc:identifier "swan_maui" ;
+    dc:spatial "POLYGON ((-157.399993896000012 20.399999618500001,-157.399993896000012 21.2999992371,-155.899993896000012 21.2999992371,-155.899993896000012 20.399999618500001,-157.399993896000012 20.399999618500001))" ;
+    dcterms:title "Simulating WAves Nearshore (SWAN) Regional Wave Model: Maui" ;
+    esip:eastBound "-155.899993896"^^xsd:float ;
+    esip:endDate "2015-11-09"^^xsd:date ;
+    esip:northBound "21.2999992371"^^xsd:float ;
+    esip:southBound "20.3999996185"^^xsd:float ;
+    esip:startDate "2010-06-29"^^xsd:date ;
+    esip:westBound "-157.399993896"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:f07c1e56-f926-4928-89b9-145ebde5c75e> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-06T13:08:06.987Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-06T13:08:06.987Z" ;
+    dc:identifier "urn:sha:d051512756a39b66c0bc523d73692b7841536c556d971c4937a0e50a" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://oos.soest.hawaii.edu/pacioos/metadata/iso/swan_maui.xml" .
+
+<urn:uuid:f600a854-3ae1-4f40-a3b7-32535ea3dcab> bcube:hasType "theme" ;
+    bcube:hasValue "Earth Science > Oceans > Ocean Waves > Significant Wave Height",
+        "Earth Science > Oceans > Ocean Waves > Wave Period",
+        "Earth Science > Oceans > Ocean Waves > Wave Speed/Direction",
+        "Earth Science Services > Models > Ocean General Circulation Models (OGCM)/Regional Ocean Models",
+        "Earth Science Services > Models > Weather Research/Forecast Models" ;
+    dc:partOf "GCMD Science Keywords" ;
+    owl:a bcube:thesaurusSubset .
+

@@ -1,0 +1,76 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:06e79f57-607c-4866-834e-a5d62e54578e> bcube:hasType "theme" ;
+    bcube:hasValue "Atmosphere > Air Quality > Carbon Monoxide",
+        "Atmosphere > Air Quality > Emissions",
+        "Atmosphere > Air Quality > Nitrogen Oxides",
+        "Atmosphere > Air Quality > Sulfur Oxides",
+        "Human Dimensions > Environmental Impacts" ;
+    dc:partOf "GCMD Keyword Thesaurus" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:2a94959f-a6f4-4c04-b978-38aa8056599c> a "ISO 19115:2003/19139" ;
+    bcube:dateCreated "2015-08-05T04:56:59.47Z" ;
+    bcube:lastUpdated "2015-08-05T04:56:59.47Z" ;
+    bcube:originatedFrom <urn:uuid:e8e106eb-2699-4526-a6e0-f8a368b69c7f> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:8910845d-ce27-4d4b-b33c-698201eb8db1> .
+
+<urn:uuid:8910845d-ce27-4d4b-b33c-698201eb8db1> bcube:dateCreated "2015-08-05T04:56:59.47Z" ;
+    bcube:hasMetadataRecord <urn:uuid:2a94959f-a6f4-4c04-b978-38aa8056599c> ;
+    bcube:lastUpdated "2015-08-05T04:56:59.47Z" ;
+    dc:conformsTo <urn:uuid:06e79f57-607c-4866-834e-a5d62e54578e>,
+        <urn:uuid:b00cd990-82e9-4570-962c-a61bc5d2cff1> ;
+    dc:description "Surface concentration of PM10 and dust aerosol based on monitoring network by INSTITUT DE CIENCIES DE LA TERRA JAUME ALMERA, Barcelona." ;
+    dc:spatial "POLYGON ((-32 26,-32 45,5 45,5 26,-32 26))" ;
+    dcterms:references <urn:uuid:eeae8b54-64b2-45e7-b477-c437c3af8438> ;
+    dcterms:title "Surface Concentration PM10, Dust" ;
+    esip:eastBound "5.0"^^xsd:float ;
+    esip:endDate "9999-01-01"^^xsd:date ;
+    esip:northBound "45.0"^^xsd:float ;
+    esip:southBound "26.0"^^xsd:float ;
+    esip:startDate "9999-01-01"^^xsd:date ;
+    esip:westBound "-32.0"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:b00cd990-82e9-4570-962c-a61bc5d2cff1> bcube:hasType "place" ;
+    bcube:hasValue "US" ;
+    dc:partOf "Uncontrolled Keywords" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:e8e106eb-2699-4526-a6e0-f8a368b69c7f> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-05T04:56:59.47Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-05T04:56:59.47Z" ;
+    dc:identifier "urn:sha:6d69dbbf360f63c3b3f84fa2b3b39787f785158620b5896cb5f88580" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://catalog.data.gov/harvest/object/5686dad2-9662-41e4-8384-416723ceb9a0" .
+
+<urn:uuid:eeae8b54-64b2-45e7-b477-c437c3af8438> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-05T04:56:59.47Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-05T04:56:59.47Z" ;
+    dc:identifier "urn:sha:6b43836f7e2b562a00618bea1c29ab7a896fe3476ebff07b522645b5" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://webapps.datafed.net/wcs_query.aspx?dataset_abbr=Africa_Dust&amp;view_id=map" .
+

@@ -1,0 +1,80 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:07358578-05e2-4a3d-8a0c-1192b81d1935> bcube:hasType "place" ;
+    bcube:hasValue "North Dakota" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:0bd0de9e-a617-4af1-a576-536bf7f912bf> a "ISO 19115:2003/19139" ;
+    bcube:dateCreated "2015-08-09T20:44:27.499Z" ;
+    bcube:lastUpdated "2015-08-09T20:44:27.499Z" ;
+    bcube:originatedFrom <urn:uuid:d4384d70-a8c9-4a1c-af01-dd98496ba097> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:6d33a355-eac3-464f-bcea-1372f4fd0512> .
+
+<urn:uuid:6d33a355-eac3-464f-bcea-1372f4fd0512> bcube:dateCreated "2015-08-09T20:44:27.499Z" ;
+    bcube:hasMetadataRecord <urn:uuid:0bd0de9e-a617-4af1-a576-536bf7f912bf> ;
+    bcube:lastUpdated "2015-08-09T20:44:27.499Z" ;
+    dc:conformsTo <urn:uuid:07358578-05e2-4a3d-8a0c-1192b81d1935>,
+        <urn:uuid:6f8bba44-13b2-453b-89a9-4532c6a2f3ba>,
+        <urn:uuid:dd66636b-e0bc-4402-9de2-9ee319100808> ;
+    dc:description "This feature class was developed from historic mine maps that were scanned and georeferenced. Additional mine locations were derived from NDGS Biennial Reports (1902 & 1912), the USGS GeoCommunicator web site (National Mine Land Inventory layer), and USGS 7.5 Minute Quadrangles. Portions of the mine locations are not verified and portions of the mines may be the same mine but operated under a different name during different time periods. Metadata was not available for the data from the USGS GeoCommunicator web site and mine locations from this USGS data set appear to have significant variability compared to known mine site locations. Updated 3/11/15 Metadata documenting changes are noted in the comments field." ;
+    dc:spatial "POLYGON ((-104.124930824 45.885749987300002,-104.124930824 49.027839831,-97.621024573900002 49.027839831,-97.621024573900002 45.885749987300002,-104.124930824 45.885749987300002))" ;
+    dcterms:references <urn:uuid:c959f234-ba0f-4a2a-ae31-6a140b855d71> ;
+    dcterms:title "Abandoned Mines" ;
+    esip:eastBound "-97.6210245739"^^xsd:float ;
+    esip:northBound "49.027839831"^^xsd:float ;
+    esip:southBound "45.8857499873"^^xsd:float ;
+    esip:westBound "-104.124930824"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:6f8bba44-13b2-453b-89a9-4532c6a2f3ba> bcube:hasType "theme" ;
+    bcube:hasValue "AML",
+        "OSM",
+        "economy",
+        "environment",
+        "geoscientificInformation",
+        "location",
+        "mines",
+        "underground" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:c959f234-ba0f-4a2a-ae31-6a140b855d71> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-09T20:44:27.499Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-09T20:44:27.499Z" ;
+    dc:identifier "urn:sha:7cce5b94a157cc554291772b808bce37ea24e5fea08f4309574368eb" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www.nd.gov/gis" .
+
+<urn:uuid:d4384d70-a8c9-4a1c-af01-dd98496ba097> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-09T20:44:27.499Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-09T20:44:27.499Z" ;
+    dc:identifier "urn:sha:6d81ef155f0cd7686400a4918cb6b07dbf9b6f328216ad023dcc52c4" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://catalog.data.gov/harvest/object/c2b52950-436e-45c0-9ec2-71a6ea6e578b" .
+
+<urn:uuid:dd66636b-e0bc-4402-9de2-9ee319100808> bcube:hasValue "boundaries" ;
+    dc:partOf "IsoTopicCategories" ;
+    owl:a bcube:thesaurusSubset .
+

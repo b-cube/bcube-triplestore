@@ -1,0 +1,62 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:d589ddf8-a116-45e0-aa54-2f5159bf7bb8> a "OGC:WMS" ;
+    bcube:contains <urn:uuid:a1173189-afdc-4836-a58f-72a120f5eb48> ;
+    bcube:dateCreated "2015-08-12T00:25:27.664Z" ;
+    bcube:lastUpdated "2015-08-12T00:25:27.664Z" ;
+    bcube:originatedFrom <urn:uuid:6144341f-013b-45b7-b142-5d9044618de1> ;
+    dc:conformsTo <urn:uuid:1b0f722e-6627-41c8-b3cb-451e9d9526ac> ;
+    dc:description "WellLogs in the state of Oklahoma" ;
+    owl:a bcube:service .
+
+<urn:uuid:1b0f722e-6627-41c8-b3cb-451e9d9526ac> bcube:hasValue "Wells, Geothermal, Oklahoma" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:6144341f-013b-45b7-b142-5d9044618de1> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-12T00:25:27.664Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-12T00:25:27.664Z" ;
+    dc:identifier "urn:sha:603bc9c89184abd6e7611c336487d958683a935aa76aa4cd0e673060" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://services.azgs.az.gov/ArcGIS/services/aasggeothermal/OKWellLogs/MapServer/WMSServer?request=GetCapabilities&service=WMS" .
+
+<urn:uuid:8afcf69e-9198-46d3-904c-64cf4a582efa> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-12T00:25:27.664Z" ;
+    bcube:hasConfidence "Not Sure" ;
+    bcube:hasUrlSource "Generated" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-12T00:25:27.664Z" ;
+    dc:identifier "urn:sha:c4ac83c9fa8a8645b6e281a4e935cf3e895c672a72e5f5b0874ac970" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://services.azgs.az.gov/ArcGIS/services/aasggeothermal/OKWellLogs/MapServer/WMSServer?layers=WellLog&width=500&version=1.3.0&bbox=-99.759618%2C33.82587%2C-94.564719%2C36.992864&service=WMS&format=image%2Fpng&styles=&crs=CRS%3A84&request=GetMap&height=500" .
+
+<urn:uuid:a1173189-afdc-4836-a58f-72a120f5eb48> bcube:dateCreated "2015-08-12T00:25:27.664Z" ;
+    bcube:lastUpdated "2015-08-12T00:25:27.664Z" ;
+    dc:description "WellLog" ;
+    dc:spatial "POLYGON ((-99.759618 33.82587,-99.759618 36.992864,-94.564719 36.992864,-94.564719 33.82587,-99.759618 33.82587))" ;
+    dc:title "WellLog" ;
+    dcterms:references <urn:uuid:8afcf69e-9198-46d3-904c-64cf4a582efa> ;
+    esip:eastBound "-94.564719"^^xsd:float ;
+    esip:northBound "36.992864"^^xsd:float ;
+    esip:southBound "33.82587"^^xsd:float ;
+    esip:westBound "-99.759618"^^xsd:float ;
+    owl:a bcube:Layer .
+

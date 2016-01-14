@@ -1,0 +1,70 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:3393ff3f-90ba-4695-b45d-1ebe3c83d8f0> bcube:hasType "place" ;
+    bcube:hasValue "Colorado",
+        "Denver",
+        "Denver County",
+        "USA" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:7090f013-6b66-4030-97cd-10dc9cae49d3> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-11-01T06:11:16.591Z" ;
+    bcube:lastUpdated "2015-11-01T06:11:16.591Z" ;
+    bcube:originatedFrom <urn:uuid:77d5fa68-21e6-43f7-b92d-9d6f0ff96ab1> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:d21876d8-8401-46e4-b9ad-f371617a911d> .
+
+<urn:uuid:77d5fa68-21e6-43f7-b92d-9d6f0ff96ab1> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-01T06:11:16.591Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-01T06:11:16.591Z" ;
+    dc:identifier "urn:sha:7154da12855780ecb9d4144dd29b66e404a1306e3b4bfd357bbaaebc" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://data.denvergov.org/download/gis/wastewater_easements/metadata/wastewater_easements.xml" .
+
+<urn:uuid:784909fe-bef4-4a3e-81e9-635ce4b90e5f> owl:a foaf:Organization ;
+    foaf:name "" .
+
+<urn:uuid:a4d1905f-213f-46b6-8d56-5db51394289e> bcube:hasType "theme" ;
+    bcube:hasValue "survey" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:b584abe2-5f2e-4a7a-9c6f-e64dddd2fa07> bcube:hasType "theme" ;
+    bcube:hasValue "location" ;
+    dc:partOf "ISO 19115 Topic Categories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:d21876d8-8401-46e4-b9ad-f371617a911d> bcube:dateCreated "2015-11-01T06:11:16.591Z" ;
+    bcube:hasMetadataRecord <urn:uuid:7090f013-6b66-4030-97cd-10dc9cae49d3> ;
+    bcube:lastUpdated "2015-11-01T06:11:16.591Z" ;
+    dc:conformsTo <urn:uuid:3393ff3f-90ba-4695-b45d-1ebe3c83d8f0>,
+        <urn:uuid:a4d1905f-213f-46b6-8d56-5db51394289e>,
+        <urn:uuid:b584abe2-5f2e-4a7a-9c6f-e64dddd2fa07> ;
+    dc:description "Each point record contains data about the document, name of the image file for the document and path to the file. When available, project number, reception number, grantor, grantee, section, date mapped, date verified, comments, and description are provided. There is also a field called feature_ID which is used to capture a key ID to be used to link this data to the Wastewater Easements (multiple feature classes) Layer." ;
+    dc:spatial "POLYGON ((-105.150099 39.613323,-105.150099 39.830894,-104.739135 39.830894,-104.739135 39.613323,-105.150099 39.613323))" ;
+    dcterms:publisher <urn:uuid:784909fe-bef4-4a3e-81e9-635ce4b90e5f> ;
+    dcterms:title "Wastewater Easement Index" ;
+    esip:eastBound "-104.739135"^^xsd:float ;
+    esip:northBound "39.830894"^^xsd:float ;
+    esip:southBound "39.613323"^^xsd:float ;
+    esip:westBound "-105.150099"^^xsd:float ;
+    owl:a dcat:Dataset .
+

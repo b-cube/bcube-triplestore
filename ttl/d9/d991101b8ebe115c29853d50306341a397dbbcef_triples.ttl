@@ -1,0 +1,90 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:43956ba5-3cca-48ff-befd-1e415f576a12> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-06T13:05:23.719Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-06T13:05:23.719Z" ;
+    dc:identifier "urn:sha:ce74e2f76fa9a49747cb9c66ca9ff4d7a4d24a7c361f9943f79c7b2e" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://meta.geo.census.gov/data/existing/decennial/GEO/GPMB/TIGERline/TIGER2013/otherid/tl_2013_01127_otherid.dbf.iso.xml" .
+
+<urn:uuid:570881f9-b8de-4744-881f-6438f9a29be0> a "ISO 19115:2003/19139" ;
+    bcube:dateCreated "2015-11-06T13:05:23.719Z" ;
+    bcube:lastUpdated "2015-11-06T13:05:23.719Z" ;
+    bcube:originatedFrom <urn:uuid:43956ba5-3cca-48ff-befd-1e415f576a12> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:ce8682ac-5cf4-4532-911e-f24bba61c3ab> .
+
+<urn:uuid:aecd6182-0983-4368-94ad-cbedb44d4a41> bcube:hasType "place" ;
+    bcube:hasValue "01127",
+        "County or Equivalent Entity",
+        "U.S.",
+        "United States",
+        "Walker" ;
+    dc:partOf "ANSI INCITS 38:2009 (Formerly FIPS 5-2), ANSI INCITS 31:2009 (Formerly FIPS 6-4),ANSI INCITS 454:2009 (Formerly FIPS 8-6), ANSI INCITS 455:2009(Formerly FIPS 9-1), ANSI INCITS 446:2008 (Geographic Names Information System (GNIS))" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:b7bbc5f3-bfc0-4707-b449-8c6aae50e8b3> bcube:hasValue "inlandWaters",
+        "transportation" ;
+    dc:partOf "IsoTopicCategories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:c108f027-fe6c-49cf-9096-8ad4594ce1a2> bcube:hasType "theme" ;
+    bcube:hasValue "County ANSI Code",
+        "County FIPS Code",
+        "County or equivalent entity",
+        "Local GIS Identifier",
+        "National Hydrography Dataset common identifier",
+        "Permanent edge ID",
+        "State ANSI Code",
+        "State FIPS Code",
+        "Table" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:ce8682ac-5cf4-4532-911e-f24bba61c3ab> bcube:dateCreated "2015-11-06T13:05:23.719Z" ;
+    bcube:hasMetadataRecord <urn:uuid:570881f9-b8de-4744-881f-6438f9a29be0> ;
+    bcube:lastUpdated "2015-11-06T13:05:23.719Z" ;
+    dc:conformsTo <urn:uuid:aecd6182-0983-4368-94ad-cbedb44d4a41>,
+        <urn:uuid:b7bbc5f3-bfc0-4707-b449-8c6aae50e8b3>,
+        <urn:uuid:c108f027-fe6c-49cf-9096-8ad4594ce1a2> ;
+    dc:description "The TIGER/Line shapefiles and related database files (.dbf) are an extract of selected geographic and cartographic information from the U.S. Census Bureau's Master Address File / Topologically Integrated Geographic Encoding and Referencing (MAF/TIGER) Database (MTDB). The MTDB represents a seamless national file with no overlaps or gaps between parts, however, each TIGER/Line shapefile is designed to stand alone as an independent data set, or they can be combined to cover the entire nation. The Other Identifiers Relationship File contains external identifier codes, such as National Hydrographic Dataset (NHD) codes and individual county identifiers. The edge to which an Other Identifiers Relationship File record applies can be determined by linking to the All Lines shapefile on the permanent edge identifier (TLID) attribute. Not every TLID has an external identifier associated with it and some TLIDs may have more than one." ;
+    dc:spatial "POLYGON ((-87.636119 33.512929,-87.636119 34.005305,-86.953616 34.005305,-86.953616 33.512929,-87.636119 33.512929))" ;
+    dcterms:references <urn:uuid:ea68db5d-e92f-4779-9228-f55e31f3223e> ;
+    dcterms:title "TIGER/Line Shapefile, 2013, county, Walker County, AL, Current Other Identifiers Relationship File" ;
+    esip:eastBound "-86.953616"^^xsd:float ;
+    esip:endDate "2013-05-03"^^xsd:date ;
+    esip:northBound "34.005305"^^xsd:float ;
+    esip:southBound "33.512929"^^xsd:float ;
+    esip:startDate "2012-06-03"^^xsd:date ;
+    esip:westBound "-87.636119"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:ea68db5d-e92f-4779-9228-f55e31f3223e> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-06T13:05:23.719Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-06T13:05:23.719Z" ;
+    dc:identifier "urn:sha:7e3e8d75f4c0145666d7e89445b206231c663ff359ad9db4ca8fcbb1" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www2.census.gov/geo/tiger/TIGER2013/OTHERID/tl_2013_01127_otherid.zip" .
+

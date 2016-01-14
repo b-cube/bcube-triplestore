@@ -1,0 +1,112 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:0be33df5-a0a4-4af0-b23a-b8a30e6aca38> a "OGC:WMS" ;
+    bcube:contains <urn:uuid:4590ba34-8367-4cdb-94ed-39b0b49482b8>,
+        <urn:uuid:5b7ad456-66f4-4d12-ac62-101f43aa1c50>,
+        <urn:uuid:c390b965-7a02-4edf-8ebb-ed7f03df8644> ;
+    bcube:dateCreated "2015-07-13T01:30:40.146Z" ;
+    bcube:lastUpdated "2015-07-13T01:30:40.146Z" ;
+    bcube:originatedFrom <urn:uuid:f6b55d25-2aa8-42f9-b136-48c9be2ce8ef> ;
+    dc:conformsTo <urn:uuid:1732ec16-2948-4e37-a6d8-bba68d8be486> ;
+    dc:description "GIS geostatistical Interpolation of a surface that models the depth to bedrock. Derived from known georeferenced locations where depths to bedrock have been observed. These primarily include bedrock outcrops and well or boring locations. for root, dirs, files in os.walk(&quot;N:/GIS/IDrive/Projects/NHGS&quot;): ##&quot;N:/GIS/IDrive/Projects/NHGS&quot; &quot;I:/projects/NHGS/&quot; for file in files: if file.endswith(&quot;.mxd&quot;): mxd = arcpy.mapping.MapDocument(os.path.join(root, file)) #output path to file print(&quot;MXD = &quot; + os.path.join(root, file)) rows = arcpy.InsertCursor(&quot;P:/Arc_Map_Scripts/File_Migration.mdb/Drive_Letter&quot;) r2 = arcpy.InsertCursor(&quot;P:/Arc_Map_Scripts/File_Migration.mdb/MXD_tbl&quot;) mxd_path = mxd.filePath r2r = r2.newRow() r2r.setValue(&quot;MXD_Path&quot;, mxd_path) r2.insertRow(r2r) #print(&quot;Passed Cursor Stuff&quot;) #l = arcpy.mapping.ListLayers(mxd)[0] #print(l.name) for lyr in arcpy.mapping.ListLayers(mxd): try: if lyr.isFeatureLayer: #print(lyr.dataSource) dr = lyr.workspacePath row= rows.newRow() row.setValue(&quot;Drive&quot;, dr[0]) row.setValue(&quot;Path&quot;, dr) row.setValue(&quot;FileName&quot;, lyr.name) row.setValue(&quot;MXD&quot;, mxd_path) rows.insertRow(row) except Exception as err: if lyr.isBroken: print(&quot;Layer is broken&quot;) else: print(&quot;FL err &quot; + mxd.filePath) rs = arcpy.InsertCursor(&quot;P:/Arc_Map_Scripts/File_Migration.mdb/Err_Tbl&quot;) r = rs.newRow() ly = lyr.dataSource #lyr.workspacePath r.setValue(&quot;Path&quot;, ly) r.setValue(&quot;FileName&quot;, lyr.name) rs.insertRow(r) for tbl in arcpy.mapping.ListTableViews(mxd): try: #print(tbl.dataSource) drv = tbl.workspacePath row1= rows.newRow() row1.setValue(&quot;Drive&quot;, dr[0]) row1.setValue(&quot;Path&quot;, dr) row1.setValue(&quot;FileName&quot;, tbl.name) row1.setValue(&quot;MXD&quot;, mxd_path) rows.insertRow(row1) except: print(&quot;Table err &quot; + mxd.filePath) rs = arcpy.InsertCursor(&quot;P:/Arc_Map_Scripts/File_Migration.mdb/Err_Tbl&quot;) r = rs.newRow() ly = lyr.dataSource #lyr.workspacePath r.setValue(&quot;Path&quot;, ly) r.setValue(&quot;FileName&quot;, lyr.name) rs.insertRow(r)#except Exception as err:# print(&quot;Error with File for&quot;) print(&quot;End of files to process&quot;)" ;
+    owl:a bcube:service .
+
+<urn:uuid:1732ec16-2948-4e37-a6d8-bba68d8be486> bcube:hasValue "bedrock depth NH New Hampshire Merrimack" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:4590ba34-8367-4cdb-94ed-39b0b49482b8> bcube:dateCreated "2015-07-13T01:30:40.146Z" ;
+    bcube:lastUpdated "2015-07-13T01:30:40.146Z" ;
+    dc:description "Depth to Bedrock Surface" ;
+    dc:spatial "POLYGON ((-71.960555 42.695061,-71.960555 43.544265,-70.817956 43.544265,-70.817956 42.695061,-71.960555 42.695061))" ;
+    dc:title "Depth to Bedrock Surface" ;
+    dcterms:references <urn:uuid:a6ddd23f-8d75-4ca3-9594-62a953d231c5> ;
+    esip:eastBound "-70.817956"^^xsd:float ;
+    esip:northBound "43.544265"^^xsd:float ;
+    esip:southBound "42.695061"^^xsd:float ;
+    esip:westBound "-71.960555"^^xsd:float ;
+    owl:a bcube:Layer .
+
+<urn:uuid:474cf1a3-236c-4e6f-9b07-daa3197cf859> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-07-13T01:30:40.146Z" ;
+    bcube:hasConfidence "Not Sure" ;
+    bcube:hasUrlSource "Generated" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-07-13T01:30:40.146Z" ;
+    dc:identifier "urn:sha:08fa7fc5a8103a07fd1c94f03c2d755382442bc85c70bb438e9aa09b" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://xml2.des.state.nh.us/arcgis/services/aasggeothermal/Merrimack_Depth_to_Bedrock/MapServer/WMSServer?layers=2&width=500&version=1.3.0&bbox=-71.956305%2C42.697698%2C-70.838533%2C43.543398&service=WMS&format=image%2Fpng&styles=&crs=CRS%3A84&request=GetMap&height=500" .
+
+<urn:uuid:5b7ad456-66f4-4d12-ac62-101f43aa1c50> bcube:dateCreated "2015-07-13T01:30:40.146Z" ;
+    bcube:lastUpdated "2015-07-13T01:30:40.146Z" ;
+    dc:description "Error Surface" ;
+    dc:spatial "POLYGON ((-71.960555 42.695061,-71.960555 43.544265,-70.817956 43.544265,-70.817956 42.695061,-71.960555 42.695061))" ;
+    dc:title "Error Surface" ;
+    dcterms:references <urn:uuid:90aef930-8247-4402-bd0a-b50672a37a50> ;
+    esip:eastBound "-70.817956"^^xsd:float ;
+    esip:northBound "43.544265"^^xsd:float ;
+    esip:southBound "42.695061"^^xsd:float ;
+    esip:westBound "-71.960555"^^xsd:float ;
+    owl:a bcube:Layer .
+
+<urn:uuid:90aef930-8247-4402-bd0a-b50672a37a50> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-07-13T01:30:40.146Z" ;
+    bcube:hasConfidence "Not Sure" ;
+    bcube:hasUrlSource "Generated" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-07-13T01:30:40.146Z" ;
+    dc:identifier "urn:sha:1799c91b9d6498fbb99134d7f2d066cbd73f23a9797d94da22345b92" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://xml2.des.state.nh.us/arcgis/services/aasggeothermal/Merrimack_Depth_to_Bedrock/MapServer/WMSServer?layers=0&width=500&version=1.3.0&bbox=-71.960555%2C42.695061%2C-70.817956%2C43.544265&service=WMS&format=image%2Fpng&styles=&crs=CRS%3A84&request=GetMap&height=500" .
+
+<urn:uuid:a6ddd23f-8d75-4ca3-9594-62a953d231c5> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-07-13T01:30:40.146Z" ;
+    bcube:hasConfidence "Not Sure" ;
+    bcube:hasUrlSource "Generated" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-07-13T01:30:40.146Z" ;
+    dc:identifier "urn:sha:5b794d8eb5beba56dbfdfaa165a0b22cec04447aea859e2a9b50049d" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://xml2.des.state.nh.us/arcgis/services/aasggeothermal/Merrimack_Depth_to_Bedrock/MapServer/WMSServer?layers=1&width=500&version=1.3.0&bbox=-71.960555%2C42.695061%2C-70.817956%2C43.544265&service=WMS&format=image%2Fpng&styles=&crs=CRS%3A84&request=GetMap&height=500" .
+
+<urn:uuid:c390b965-7a02-4edf-8ebb-ed7f03df8644> bcube:dateCreated "2015-07-13T01:30:40.146Z" ;
+    bcube:lastUpdated "2015-07-13T01:30:40.146Z" ;
+    dc:description "Depth to Bedrock Contour" ;
+    dc:spatial "POLYGON ((-71.956305 42.697698,-71.956305 43.543398,-70.838533 43.543398,-70.838533 42.697698,-71.956305 42.697698))" ;
+    dc:title "Depth to Bedrock Contour" ;
+    dcterms:references <urn:uuid:474cf1a3-236c-4e6f-9b07-daa3197cf859> ;
+    esip:eastBound "-70.838533"^^xsd:float ;
+    esip:northBound "43.543398"^^xsd:float ;
+    esip:southBound "42.697698"^^xsd:float ;
+    esip:westBound "-71.956305"^^xsd:float ;
+    owl:a bcube:Layer .
+
+<urn:uuid:f6b55d25-2aa8-42f9-b136-48c9be2ce8ef> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-07-13T01:30:40.146Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-07-13T01:30:40.146Z" ;
+    dc:identifier "urn:sha:e6d8ff4b5d546ab6054c7bb371b9d635319228e9de05c4280a24ddb9" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://xml2.des.state.nh.us/arcgis/services/aasggeothermal/Merrimack_Depth_to_Bedrock/MapServer/WMSServer?request=GetCapabilities&service=WMS" .
+

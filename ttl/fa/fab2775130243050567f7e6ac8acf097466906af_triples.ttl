@@ -1,0 +1,121 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:02eb7c39-9846-4c16-ba59-4380007b8dbb> bcube:hasType "theme" ;
+    bcube:hasValue "geoscientificInformation" ;
+    dc:partOf "ISO 19115 Topic Categories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:08133d15-590a-4d99-9822-6700cd02fe69> bcube:hasType "place" ;
+    bcube:hasValue "Alaska",
+        "Yukon Flats" ;
+    dc:partOf "none" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:0ea0a344-beb0-4979-b624-05d9b459c895> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2014-10-30T13:46:28.39Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2014-10-30T13:46:28.39Z" ;
+    dc:identifier "urn:sha:2b34dd2a4be4040d71341b96b9705fd8253ccd8a229a0bf0f7f610e1" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://geo-nsdi.er.usgs.gov/metadata/open-file/02-322/metadata.xml" .
+
+<urn:uuid:0f5e4cc1-0d03-4e25-8c2b-84c442bd8a30> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2014-10-30T13:46:28.39Z" ;
+    bcube:lastUpdated "2014-10-30T13:46:28.39Z" ;
+    bcube:originatedFrom <urn:uuid:0ea0a344-beb0-4979-b624-05d9b459c895> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:4e51e577-5dc7-4152-ab8b-3c363c04d997> .
+
+<urn:uuid:12d4ec91-9c5f-4a4e-ab4c-fcd90a45f489> bcube:hasType "theme" ;
+    bcube:hasValue "geophysics",
+        "geospatial datasets",
+        "isostatic anomaly" ;
+    dc:partOf "USGS Thesaurus" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:2e06859c-a664-42e2-92c8-60691371fa7b> bcube:hasType "place" ;
+    bcube:hasValue "02090 = Fairbanks North Star",
+        "02240 = Southeast Fairbanks",
+        "02290 = Yukon-Koyukuk" ;
+    dc:partOf "Augmented FIPS 10-4 and FIPS 6-4" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:4d8b1c88-30ab-4d47-936c-2073f1c402f9> dcterms:references <urn:uuid:5596d641-5b8a-481f-9312-07c153a46837> ;
+    owl:a bibo:WebPage .
+
+<urn:uuid:4e51e577-5dc7-4152-ab8b-3c363c04d997> bcube:dateCreated "2014-10-30T13:46:28.39Z" ;
+    bcube:hasMetadataRecord <urn:uuid:0f5e4cc1-0d03-4e25-8c2b-84c442bd8a30> ;
+    bcube:lastUpdated "2014-10-30T13:46:28.39Z" ;
+    dc:conformsTo <urn:uuid:02eb7c39-9846-4c16-ba59-4380007b8dbb>,
+        <urn:uuid:08133d15-590a-4d99-9822-6700cd02fe69>,
+        <urn:uuid:12d4ec91-9c5f-4a4e-ab4c-fcd90a45f489>,
+        <urn:uuid:2e06859c-a664-42e2-92c8-60691371fa7b> ;
+    dc:description "An isostatic gravity map of Yukon Flats at a scale of 1:500,000was prepared using all know publicly available gravity data.The data were gridded at 0.25 x 0.25 km interval and contouredat 5 mGal interval.The principal facts (gravity measurements and supporting surveydata) are provided along with the printable map." ;
+    dc:spatial "POLYGON ((-152 65,-152 68,-141 68,-141 65,-152 65))" ;
+    dcterms:publisher <urn:uuid:a7cf3829-fb2f-4fa3-81d1-9fae072ba6f8> ;
+    dcterms:references <urn:uuid:4d8b1c88-30ab-4d47-936c-2073f1c402f9>,
+        <urn:uuid:55af7fb0-28c8-47a8-8332-0c6dfb4d6287>,
+        <urn:uuid:b2b125c3-2e53-4d54-b2c0-ebfd03495961> ;
+    dcterms:title "Isostatic gravity map of Yukon Flats, east-central Alaska" ;
+    esip:eastBound "-141.0"^^xsd:float ;
+    esip:northBound "68.0"^^xsd:float ;
+    esip:southBound "65.0"^^xsd:float ;
+    esip:startDate "2002-01-01"^^xsd:date ;
+    esip:westBound "-152.0"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:5596d641-5b8a-481f-9312-07c153a46837> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2014-10-30T13:46:28.39Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2014-10-30T13:46:28.39Z" ;
+    dc:identifier "urn:sha:95699cc943f983cca1d667be3f021bb527848dba9fecd4a1d650c62c" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://pubs.usgs.gov/of/2002/0322/" .
+
+<urn:uuid:55af7fb0-28c8-47a8-8332-0c6dfb4d6287> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2014-10-30T13:46:28.39Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2014-10-30T13:46:28.39Z" ;
+    dc:identifier "urn:sha:484948e088f4507c6488ed18f6ac9149cd1b8fe699fbbb746970f1d2" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://pubs.usgs.gov/of/2002/0322/table1.doc" .
+
+<urn:uuid:a7cf3829-fb2f-4fa3-81d1-9fae072ba6f8> owl:a foaf:Organization ;
+    foaf:name "U.S. Geological Survey" .
+
+<urn:uuid:b2b125c3-2e53-4d54-b2c0-ebfd03495961> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2014-10-30T13:46:28.39Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2014-10-30T13:46:28.39Z" ;
+    dc:identifier "urn:sha:84c407739b61b595536138bdd2ee22c17292ff19e82d836c8298fc0b" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://geo-nsdi.er.usgs.gov/metadata/open-file/02-322/data.zip" .
+

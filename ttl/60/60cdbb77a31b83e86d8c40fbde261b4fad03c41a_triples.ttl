@@ -1,0 +1,77 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:5ae093f5-e37f-430a-89b9-08f3577c76c9> bcube:hasType "place" ;
+    bcube:hasValue "Idaho" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:7991095f-0b4a-4038-814f-98c97b06c8f5> owl:a foaf:Organization ;
+    foaf:name "Idaho Department of Water Resources" .
+
+<urn:uuid:99fe00e7-6eb6-4642-aa20-80cdc0759351> bcube:hasType "theme" ;
+    bcube:hasValue "Evapotranspiration",
+        "Landsat",
+        "METRIC",
+        "SEBAL",
+        "energy balance",
+        "remote sensing" ;
+    dc:partOf "REQUIRED: Reference to a formally registered thesaurus or a similar authoritative source of theme keywords." ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:c9d54042-969f-40c0-a00f-bbbe8dc3023f> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-10-30T11:05:32.999Z" ;
+    bcube:lastUpdated "2015-10-30T11:05:32.999Z" ;
+    bcube:originatedFrom <urn:uuid:f89c2109-7b34-49eb-af2a-2107ca599e14> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:ef0429cb-b127-4366-b944-abbabb4a5b05> .
+
+<urn:uuid:ef0429cb-b127-4366-b944-abbabb4a5b05> bcube:dateCreated "2015-10-30T11:05:32.999Z" ;
+    bcube:hasMetadataRecord <urn:uuid:c9d54042-969f-40c0-a00f-bbbe8dc3023f> ;
+    bcube:lastUpdated "2015-10-30T11:05:32.999Z" ;
+    dc:conformsTo <urn:uuid:5ae093f5-e37f-430a-89b9-08f3577c76c9>,
+        <urn:uuid:99fe00e7-6eb6-4642-aa20-80cdc0759351> ;
+    dc:description "Evapotranspiration data developed using METRIC (Mapping EvapoTranspiration at high Resolution with Internalized Calibration). METRIC is an image-processing model for computing ET data for large areas from satellite images. METRIC computes a complete radiation and energy balance for the earth's surface along with fluxes of sensible heat and ET. METRIC uses digital image data collected by Landsat or other remote sensing satellites measuring visible, near-infrared, and thermal infrared radiation. METRIC also incorporates USBR AgriMet weather data into the modeling process. Dr Rick Allen, Dr. M. Tasumi, and Dr. R. Trezza, of the University of Idaho, developed METRIC by making refinements to the Surface Energy Balance Algorithm for Land (SEBAL)." ;
+    dc:spatial "POLYGON ((-115.040025 43.648375,-115.040025 45.55945,-112.14802 45.55945,-112.14802 43.648375,-115.040025 43.648375))" ;
+    dcterms:publisher <urn:uuid:7991095f-0b4a-4038-814f-98c97b06c8f5> ;
+    dcterms:references <urn:uuid:f01c01de-9d18-4b1b-8ba4-2df54f183b2e> ;
+    dcterms:title "Evapotranspiration Data for Idaho" ;
+    esip:eastBound "-112.14802"^^xsd:float ;
+    esip:northBound "45.55945"^^xsd:float ;
+    esip:southBound "43.648375"^^xsd:float ;
+    esip:westBound "-115.040025"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:f01c01de-9d18-4b1b-8ba4-2df54f183b2e> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-10-30T11:05:32.999Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-10-30T11:05:32.999Z" ;
+    dc:identifier "urn:sha:d14a028c2a3a2bc9476102bb288234c415a2b01f828ea62ac5b3e42f" ;
+    owl:a bcube:Url .
+
+<urn:uuid:f89c2109-7b34-49eb-af2a-2107ca599e14> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-10-30T11:05:32.999Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-10-30T11:05:32.999Z" ;
+    dc:identifier "urn:sha:14543bbdc79b2d8d2607be223ff15e12d6f7355620bc685b29018eda" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www.idwr.idaho.gov/ftp/gisdata/Spatial/Projects/METRIC/METRICmetadata.xml" .
+

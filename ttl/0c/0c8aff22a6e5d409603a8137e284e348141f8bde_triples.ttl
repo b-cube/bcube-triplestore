@@ -1,0 +1,72 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:06487c9d-feb6-4622-a43e-c2382f8a1654> owl:a foaf:Organization ;
+    foaf:name "" .
+
+<urn:uuid:4030de23-0bc4-4911-92b5-e8df26bf1c75> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-10-27T19:02:41.234Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-10-27T19:02:41.234Z" ;
+    dc:identifier "urn:sha:54cfd5d3c0c472027b5693586291d2d9340f0db3b0cccf2005409bf6" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www.isgs.uiuc.edu/clearinghouse/lidar/counties/hardin/hardin_2014_metadata.xml" .
+
+<urn:uuid:686a0871-b146-405f-8e55-ed76689aa0df> bcube:dateCreated "2015-10-27T19:02:41.234Z" ;
+    bcube:hasMetadataRecord <urn:uuid:f2eb3651-c5dc-47dd-9f14-829281b3b3d4> ;
+    bcube:lastUpdated "2015-10-27T19:02:41.234Z" ;
+    dc:conformsTo <urn:uuid:713862ff-fad4-4192-88ea-c60aa32b2a52>,
+        <urn:uuid:972cbd8b-4cf9-48df-a7ae-df2bcf2e9826> ;
+    dc:description "This dataset is LiDAR point cloud data and derivative models of Hardin County and Pope County, Illinois. The area of acquisition is approximately 710 square miles (1838 square kilometers) in southern Illinois bordering the Ohio River. Data was collected at a nominal pulse spacing (NPS) of 0.7 meter with a contractual point spacing of 1 point per square meter. Data acquisition, processing and assessment is compliant with procedures and methods stated in U.S. Geological Survey National Geospatial Program LiDAR Base Specification Version 1.0 and Federal Emergency Management Agency Procedure Memorandum 61. This dataset consists of LiDAR LAS swath files and tiled LAS files. Tiled LAS files contain LiDAR point information which has been calibrated, controlled, and classified. Tiled LAS and derived data models are named according to the coordinates at the south west corner of the tile. Quantum Spatial Project No: 1140308" ;
+    dc:spatial "POLYGON ((-88.72 37.04,-88.72 37.612,-88.049 37.612,-88.049 37.04,-88.72 37.04))" ;
+    dcterms:publisher <urn:uuid:06487c9d-feb6-4622-a43e-c2382f8a1654> ;
+    dcterms:title "Hardin County and Pope County, Illinois, LiDAR Acquisition 2014" ;
+    esip:eastBound "-88.049"^^xsd:float ;
+    esip:endDate "2014-03-21"^^xsd:date ;
+    esip:northBound "37.612"^^xsd:float ;
+    esip:southBound "37.04"^^xsd:float ;
+    esip:startDate "2014-03-20"^^xsd:date ;
+    esip:westBound "-88.72"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:713862ff-fad4-4192-88ea-c60aa32b2a52> bcube:hasType "place" ;
+    bcube:hasValue "Elizabethtown",
+        "Golconda",
+        "Hardin County",
+        "Illinois",
+        "Pope County" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:972cbd8b-4cf9-48df-a7ae-df2bcf2e9826> bcube:hasType "theme" ;
+    bcube:hasValue "Bare Earth",
+        "Breakline",
+        "DEM",
+        "Elevation data",
+        "LAS",
+        "LiDAR" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:f2eb3651-c5dc-47dd-9f14-829281b3b3d4> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-10-27T19:02:41.234Z" ;
+    bcube:lastUpdated "2015-10-27T19:02:41.234Z" ;
+    bcube:originatedFrom <urn:uuid:4030de23-0bc4-4911-92b5-e8df26bf1c75> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:686a0871-b146-405f-8e55-ed76689aa0df> .
+

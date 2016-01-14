@@ -1,0 +1,84 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:1b730a9e-e51e-4f40-9e7d-07abeb75dedd> a "ISO 19115:2003/19139" ;
+    bcube:dateCreated "2015-10-30T07:10:48.201Z" ;
+    bcube:lastUpdated "2015-10-30T07:10:48.201Z" ;
+    bcube:originatedFrom <urn:uuid:a32d68e7-218b-4ede-bcf2-da66cf3a7625> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:6ec1dcad-f676-427e-a6f7-b89f47a6e2c6> .
+
+<urn:uuid:6ec1dcad-f676-427e-a6f7-b89f47a6e2c6> bcube:dateCreated "2015-10-30T07:10:48.201Z" ;
+    bcube:hasMetadataRecord <urn:uuid:1b730a9e-e51e-4f40-9e7d-07abeb75dedd> ;
+    bcube:lastUpdated "2015-10-30T07:10:48.201Z" ;
+    dc:conformsTo <urn:uuid:89ef460e-83c7-4f35-acc4-04d680eb2e32>,
+        <urn:uuid:acdc2c36-e998-4243-a39a-e67be45ac874>,
+        <urn:uuid:e420305b-cfb9-4ee1-b1ae-5474387c7962> ;
+    dc:description "The 2012 cartographic boundary shapefiles are simplified representations of selected geographic areas from the Census Bureau's MAF/TIGER geographic database. These boundary files are specifically designed for small-scale thematic mapping. When possible generalization is performed with the intent to maintain the hierarchical relationships among geographies and to maintain the alignment of geographies within a file set for a given year. Geographic areas may not align with the same areas from another year. Some geographies are available as nation-based shapefiles while others are available only as state-based files." ;
+    dc:spatial "POLYGON ((-89.571203 39.147732,-89.571203 36.497058,-81.964788 36.497058,-81.964788 39.147732,-89.571203 39.147732))" ;
+    dcterms:references <urn:uuid:8f3c411f-f6db-41e9-ad37-1f3525c1aedd> ;
+    dcterms:title "2012 Cartographic Boundary File, 2013 State-State Legislative District (Upper Chamber) for Kentucky, 1:500,000" ;
+    esip:eastBound "-81.964788"^^xsd:float ;
+    esip:endDate "2012-12-03"^^xsd:date ;
+    esip:northBound "36.497058"^^xsd:float ;
+    esip:southBound "39.147732"^^xsd:float ;
+    esip:startDate "2012-12-03"^^xsd:date ;
+    esip:westBound "-89.571203"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:89ef460e-83c7-4f35-acc4-04d680eb2e32> bcube:hasType "place" ;
+    bcube:hasValue "KY",
+        "Kentucky" ;
+    dc:partOf "INCITS 38:2009" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:8f3c411f-f6db-41e9-ad37-1f3525c1aedd> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-10-30T07:10:48.201Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-10-30T07:10:48.201Z" ;
+    dc:identifier "urn:sha:e21fcf9f7dcd1ec03f1d8a8c848f76f44faeb71cfe16ded6d0a32484" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www2.census.gov/geo/tiger/GENZ2012/sldu/cb_rd13_21_sldu_500k.zip" .
+
+<urn:uuid:a32d68e7-218b-4ede-bcf2-da66cf3a7625> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-10-30T07:10:48.201Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-10-30T07:10:48.201Z" ;
+    dc:identifier "urn:sha:3fc03464f07248bb2d7361028f03bc27bd3f6f02e70e69adfc82b184" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://meta.geo.census.gov/data/existing/decennial/GEO/CPMB/boundary/2013gz/sldu_500/cb_rd13_21_sldu_500k.iso.xml" .
+
+<urn:uuid:acdc2c36-e998-4243-a39a-e67be45ac874> bcube:hasType "theme" ;
+    bcube:hasValue "2012",
+        "Cartographic Boundary",
+        "Generalized",
+        "Shapefile",
+        "State",
+        "State Legislative District",
+        "Upper Chamber" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:e420305b-cfb9-4ee1-b1ae-5474387c7962> bcube:hasValue "boundaries" ;
+    dc:partOf "IsoTopicCategories" ;
+    owl:a bcube:thesaurusSubset .
+

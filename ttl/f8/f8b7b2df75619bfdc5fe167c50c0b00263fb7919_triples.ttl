@@ -1,0 +1,87 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:42fd9f29-4275-445f-bd02-4df1137e0dd2> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2014-07-31T09:26:18.022Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2014-07-31T09:26:18.022Z" ;
+    dc:identifier "urn:sha:87b448cb82ef98c52f6308d139d8b67d9853cc11d84a1cbce9d06bb1" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "https://data.noaa.gov/harvest/object/a0160028-a134-4181-89a8-6158c97c5811" .
+
+<urn:uuid:841deb90-ac7b-4162-b4c8-da632522a2e1> bcube:hasType "theme" ;
+    bcube:hasValue "Bathymetry/Topography",
+        "CHARTS",
+        "Coastal Elevation",
+        "JALBTCX",
+        "LAS",
+        "Lidar",
+        "NCMP",
+        "SHOALS",
+        "Terrain Elevation",
+        "Topobathy",
+        "U.S. Army Corps of Engineers, Mobile District",
+        "USACE" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:8b31cd05-6f83-4d38-9d1d-af865319587e> a "ISO 19115:2003/19139" ;
+    bcube:dateCreated "2014-07-31T09:26:18.022Z" ;
+    bcube:lastUpdated "2014-07-31T09:26:18.022Z" ;
+    bcube:originatedFrom <urn:uuid:42fd9f29-4275-445f-bd02-4df1137e0dd2> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:aa54b328-619f-4c9c-9afd-7ccffba87311> .
+
+<urn:uuid:a2ec38f4-5524-422a-9765-432b843c2a90> bcube:hasValue "elevation" ;
+    dc:partOf "IsoTopicCategories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:aa54b328-619f-4c9c-9afd-7ccffba87311> bcube:dateCreated "2014-07-31T09:26:18.022Z" ;
+    bcube:hasMetadataRecord <urn:uuid:8b31cd05-6f83-4d38-9d1d-af865319587e> ;
+    bcube:lastUpdated "2014-07-31T09:26:18.022Z" ;
+    dc:conformsTo <urn:uuid:841deb90-ac7b-4162-b4c8-da632522a2e1>,
+        <urn:uuid:a2ec38f4-5524-422a-9765-432b843c2a90>,
+        <urn:uuid:ed35f679-46cd-4ce2-a5dc-5ad7f928d995>,
+        <urn:uuid:ff6c7502-2c6f-431f-8817-ad69e1ac51d6> ;
+    dc:description "These files contain topographic lidar data in LAS 1.2 format classified as ground (2) and unclassified (1) in accordance with the American Society for Photogrammetry and Remote Sensing (ASPRS) classification standards. Rejected or invalid data is classified as noise (7). These data were collected by a HawkEye II (HEII) lidar sensor. The HEII integrates topographic and bathymetric lidar sensors, and a digital camera on a single remote sensing platform for use in coastal mapping and charting activities. Data coverage generally extends along the MA coastline, from the waterline onshore 500 meters. Native lidar data is not generally in a format accessible to most Geographical Information Systems (GIS). Specialized in-house and commercial software packages are used to process the native lidar data into 3D positions that can be imported into GIS software for visualization and further analysis. Horizontal positions, provided in decimal degrees of latitude and longitude, are referenced to the North American Datum of 1983 (NAD83). Vertical positions are acquired to the NAD83 ellipsoid. The National Geodetic Survey's (NGS) GEOID09 model was used to transform the vertical positions from ellipsoid to orthometric heights referenced to the North American Vertical Datum of 1988 (NAVD88). The 3D position data are sub-divided into a series of files each covering approximately 5 kilometers of shoreline." ;
+    dc:spatial "POLYGON ((-71.966003 41.288632,-71.966003 43.81846,-69.67242 43.81846,-69.67242 41.288632,-71.966003 41.288632))" ;
+    dcterms:title "2010 US Army Corps of Engineers (USACE) Joint Airborne Lidar Bathymetry Technical Center of eXpertise (JALBTCX) Lidar: Northeast (Topo)" ;
+    esip:eastBound "-69.67242"^^xsd:float ;
+    esip:endDate "2010-07-10"^^xsd:date ;
+    esip:northBound "43.81846"^^xsd:float ;
+    esip:southBound "41.288632"^^xsd:float ;
+    esip:startDate "2010-05-24"^^xsd:date ;
+    esip:westBound "-71.966003"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:ed35f679-46cd-4ce2-a5dc-5ad7f928d995> bcube:hasType "temporal" ;
+    bcube:hasValue "2010",
+        "July",
+        "May" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:ff6c7502-2c6f-431f-8817-ad69e1ac51d6> bcube:hasType "place" ;
+    bcube:hasValue "Maine",
+        "Massachusetts",
+        "New Hampshire",
+        "Rhode Island",
+        "US" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+

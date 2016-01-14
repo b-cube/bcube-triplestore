@@ -1,0 +1,60 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:185fa20d-2dcb-403e-98de-69784a985236> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2014-10-30T10:15:59.557Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2014-10-30T10:15:59.557Z" ;
+    dc:identifier "urn:sha:edde9fa91749bfde418ebb9a22801080317b885b69aaac96b0ed8ccf" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www.usgs.gov/science/iso.php?cite=2761" .
+
+<urn:uuid:431c138b-5ff7-4d32-bb07-d7184e2f0477> bcube:hasType "theme" ;
+    bcube:hasValue "fUS06 = California",
+        "groundwater level",
+        "groundwater quality",
+        "hydrology",
+        "wells" ;
+    dc:partOf "Alexandria Digital Library Feature Type Thesaurus" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:5ab39220-532f-4cd1-89c4-3ef5265646be> bcube:hasValue "geoscientificInformation" ;
+    dc:partOf "IsoTopicCategories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:fccbe23d-8b47-4e88-b5c6-82ca3772a162> a "ISO 19115:2003/19139" ;
+    bcube:dateCreated "2014-10-30T10:15:59.557Z" ;
+    bcube:lastUpdated "2014-10-30T10:15:59.557Z" ;
+    bcube:originatedFrom <urn:uuid:185fa20d-2dcb-403e-98de-69784a985236> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:ffb4a3c8-cb84-4f53-b8b1-3d0c4d6705e6> .
+
+<urn:uuid:ffb4a3c8-cb84-4f53-b8b1-3d0c4d6705e6> bcube:dateCreated "2014-10-30T10:15:59.557Z" ;
+    bcube:hasMetadataRecord <urn:uuid:fccbe23d-8b47-4e88-b5c6-82ca3772a162> ;
+    bcube:lastUpdated "2014-10-30T10:15:59.557Z" ;
+    dc:conformsTo <urn:uuid:431c138b-5ff7-4d32-bb07-d7184e2f0477>,
+        <urn:uuid:5ab39220-532f-4cd1-89c4-3ef5265646be> ;
+    dc:description "Map of California showing the number of wells (by county) with available water-level or water-quality data for Water Year 2010, with descriptions of the data and instructions for obtaining them." ;
+    dc:spatial "POLYGON ((-125.0 32.5,-125 42,-114 42,-114.0 32.5,-125.0 32.5))" ;
+    dcterms:title "Availability of groundwater data for California, water year 2010" ;
+    esip:eastBound "-114.0"^^xsd:float ;
+    esip:northBound "42.0"^^xsd:float ;
+    esip:southBound "32.5"^^xsd:float ;
+    esip:westBound "-125.0"^^xsd:float ;
+    owl:a dcat:Dataset .
+

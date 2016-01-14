@@ -1,0 +1,75 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:1ab9c68a-9817-43f4-b603-63dd81740711> owl:a foaf:Organization ;
+    foaf:name "" .
+
+<urn:uuid:2d7f1d49-ba9d-497d-921b-d5bf73604539> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-10T04:15:58.471Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-10T04:15:58.471Z" ;
+    dc:identifier "urn:sha:9fb3c80c0307bad9f72eb8403c261d1172566d8e4773dee8c5be4f5f" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "https://inport.nmfs.noaa.gov/inport/item/20562/fgdc" .
+
+<urn:uuid:66c1ccb6-4a27-4666-bb6d-bb2bf8cb1f0e> bcube:hasType "theme" ;
+    bcube:hasValue "Biomass sampling",
+        "Chinook salmon",
+        "Fishery-independent surveys",
+        "climate indicators",
+        "coho salmon",
+        "ecosystem indicator",
+        "food web",
+        "krill",
+        "oceanography",
+        "zooplankton" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:8a9bd727-b904-4487-9524-975c5fdc978e> bcube:hasType "place" ;
+    bcube:hasValue "Newport",
+        "Northwest Fisheries Science Center (NWFSC) in Newport",
+        "Oregon",
+        "Oregon coast located within marine layer area number 1" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:d6af8b7c-e60a-43ef-867b-9dcaa54eca33> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-08-10T04:15:58.471Z" ;
+    bcube:lastUpdated "2015-08-10T04:15:58.471Z" ;
+    bcube:originatedFrom <urn:uuid:2d7f1d49-ba9d-497d-921b-d5bf73604539> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:f5824e9f-a6b7-4e66-983c-61b8b9aee70c> .
+
+<urn:uuid:f5824e9f-a6b7-4e66-983c-61b8b9aee70c> bcube:dateCreated "2015-08-10T04:15:58.471Z" ;
+    bcube:hasMetadataRecord <urn:uuid:d6af8b7c-e60a-43ef-867b-9dcaa54eca33> ;
+    bcube:lastUpdated "2015-08-10T04:15:58.471Z" ;
+    dc:conformsTo <urn:uuid:66c1ccb6-4a27-4666-bb6d-bb2bf8cb1f0e>,
+        <urn:uuid:8a9bd727-b904-4487-9524-975c5fdc978e> ;
+    dc:description "This project currently supports two main efforts: 1. A bi-weekly sampling regime of the hydrology and plankton along a transect over the Continental Shelf starting at Newport. This consistent survey has generated significant information on within-year variability in the California Current Marine Ecosystem, and has yielded valuable insights into the food web involving juvenile salmon. Parameters collected during this effort are used in forecasts involving species, assemblages, and ecosystems. 2. The SAIP work has supported studies of the prey field that juvenile salmon interact with. Some of this data is used to forecast juvenile salmon returns, and can also assist in preliminary evaluations of hatchery wild interactions and other density-dependent questions. We towed a Nordic trawl (30x18 m) at 30 m at all stations" ;
+    dc:spatial "POLYGON ((-126.053466797 44.622924,-126.053466797 45.863466996,-124.047214 45.863466996,-124.047214 44.622924,-126.053466797 44.622924))" ;
+    dcterms:identifier "gov.noaa.nmfs.inport:20562" ;
+    dcterms:publisher <urn:uuid:1ab9c68a-9817-43f4-b603-63dd81740711> ;
+    dcterms:title "Juvenile Fish Data (Stock Assessment and Improvement Program)" ;
+    esip:eastBound "-124.047214"^^xsd:float ;
+    esip:northBound "45.863466996"^^xsd:float ;
+    esip:southBound "44.622924"^^xsd:float ;
+    esip:startDate "2004-05-15"^^xsd:date ;
+    esip:westBound "-126.053466797"^^xsd:float ;
+    owl:a dcat:Dataset .
+

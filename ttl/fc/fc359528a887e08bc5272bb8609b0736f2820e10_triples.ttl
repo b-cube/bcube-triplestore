@@ -1,0 +1,62 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:6618a283-b22e-43cd-835b-0451943b8d8f> a "OGC:WMS" ;
+    bcube:contains <urn:uuid:3822e30a-5092-4faa-b742-b475e0cf24c8> ;
+    bcube:dateCreated "2015-07-10T00:32:57.77Z" ;
+    bcube:lastUpdated "2015-07-10T00:32:57.77Z" ;
+    bcube:originatedFrom <urn:uuid:cbf5b8d0-72a1-4928-892e-bd4395a78d8d> ;
+    dc:conformsTo <urn:uuid:976d86d1-88f8-4c96-9e0f-6d74d88565f9> ;
+    dc:description "WellLogs in the state of Maine" ;
+    owl:a bcube:service .
+
+<urn:uuid:3822e30a-5092-4faa-b742-b475e0cf24c8> bcube:dateCreated "2015-07-10T00:32:57.77Z" ;
+    bcube:lastUpdated "2015-07-10T00:32:57.77Z" ;
+    dc:description "This layer contains data observations from well logs from the State of Maine, obtained by the AASG Geothermal Data Project. These will be point features that locate the well origin for a well bore from which a well log is available. The well log observation record describes the log (type, top and bottom of logged interval) and provides links to representations of the actual log data, which typically will be either a paper copy, scanned image, or LAS file. In some cases the log may be represented in an Excel Spreadsheet. The data table includes basic information describing the well and wellbore from which the log was obtained for use in search and filtering to discover logs of interest. For logs that are scanned or digitized and availble as online resources, ScannedFileURLs will be provided. The WellBoreURI for the logged wellbore is the cross-referencing link (foreign key) used to associate the header record, well log records, temperature measurements, and other information from a particular borehole. The original data and metadata can be viewed or downloaded from the USGIN Repository at <a href=\"http://repository.stategeothermaldata.org/repository/resource/cf53f876662f70c8350fac5d97016661/\">State Geothermal Data Repository</a>" ;
+    dc:spatial "POLYGON ((-70.905052 43.813946,-70.905052 46.025974,-67.82663 46.025974,-67.82663 43.813946,-70.905052 43.813946))" ;
+    dc:title "WellLog" ;
+    dcterms:references <urn:uuid:8abc9468-7f91-42a6-83c7-71a6b8322f48> ;
+    esip:eastBound "-67.82663"^^xsd:float ;
+    esip:northBound "46.025974"^^xsd:float ;
+    esip:southBound "43.813946"^^xsd:float ;
+    esip:westBound "-70.905052"^^xsd:float ;
+    owl:a bcube:Layer .
+
+<urn:uuid:8abc9468-7f91-42a6-83c7-71a6b8322f48> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-07-10T00:32:57.77Z" ;
+    bcube:hasConfidence "Not Sure" ;
+    bcube:hasUrlSource "Generated" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-07-10T00:32:57.77Z" ;
+    dc:identifier "urn:sha:00c0a05ee8f506fd9d28b2da4ab3d89c903c406a6ea9f70a591b642f" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://geothermal.isgs.illinois.edu/ArcGIS/services/aasggeothermal/MEWellLogs/MapServer/WMSServer?layers=WellLog&width=500&version=1.3.0&bbox=-70.905052%2C43.813946%2C-67.82663%2C46.025974&service=WMS&format=image%2Fpng&styles=&crs=CRS%3A84&request=GetMap&height=500" .
+
+<urn:uuid:976d86d1-88f8-4c96-9e0f-6d74d88565f9> bcube:hasValue "Maine, well, borehole, geothermal, AASG, WFS, WMS" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:cbf5b8d0-72a1-4928-892e-bd4395a78d8d> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-07-10T00:32:57.77Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-07-10T00:32:57.77Z" ;
+    dc:identifier "urn:sha:757cff51191f295d66e5a7d0ae9fd34b97c2062dcffb9c9fb1484480" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://geothermal.isgs.illinois.edu/ArcGIS/services/aasggeothermal/MEWellLogs/MapServer/WMSServer?request=GetCapabilities&service=WMS" .
+

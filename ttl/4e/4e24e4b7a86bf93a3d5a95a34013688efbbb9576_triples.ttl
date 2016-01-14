@@ -1,0 +1,101 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:1978a87c-d45a-4c5e-9a9f-c7c446be43e6> bcube:dateCreated "2015-11-01T06:13:29.406Z" ;
+    bcube:hasMetadataRecord <urn:uuid:905b2a71-dc3f-4926-99b7-3361c718e12a> ;
+    bcube:lastUpdated "2015-11-01T06:13:29.406Z" ;
+    dc:conformsTo <urn:uuid:376d5606-ec04-4c6b-bd17-6eb216d50395>,
+        <urn:uuid:6befcee1-487c-4d94-8958-1d7d3b999839> ;
+    dc:description "Amseas data from April 05, 2013 to present. (includes 3 day forecast)" ;
+    dc:spatial "POLYGON ((-98 5,-98.0 32.09729,-54.904297 32.09729,-54.904297 5.0,-98 5))" ;
+    dcterms:identifier "ecowatch.ncddc.noaa.gov:NCOM_amseas_latest3d" ;
+    dcterms:publisher <urn:uuid:a3c6ff83-930a-4496-82d2-cd655687d6a2> ;
+    dcterms:references <urn:uuid:d9b168d2-4d6f-43f5-b600-d22ca155afb5>,
+        <urn:uuid:f2cc5d58-59c3-4127-a405-0d06abc75ec3> ;
+    dcterms:title "Amseas Latest 3D" ;
+    esip:eastBound "-54.904297"^^xsd:float ;
+    esip:endDate "2015-11-04"^^xsd:date ;
+    esip:northBound "32.09729"^^xsd:float ;
+    esip:southBound "5.0"^^xsd:float ;
+    esip:startDate "2013-04-05"^^xsd:date ;
+    esip:westBound "-98.0"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:376d5606-ec04-4c6b-bd17-6eb216d50395> bcube:hasType "theme" ;
+    bcube:hasValue "depth",
+        "eastward_sea_water_velocity",
+        "latitude",
+        "longitude",
+        "northward_sea_water_velocity",
+        "sea_water_salinity",
+        "sea_water_temperature",
+        "time" ;
+    dc:partOf "CF-1.0" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:6befcee1-487c-4d94-8958-1d7d3b999839> bcube:hasType "theme" ;
+    bcube:hasValue "Earth Science",
+        "NCDDC",
+        "NCOM",
+        "Ocean NOMAD",
+        "oceans" ;
+    dc:partOf "Uncontrolled" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:905b2a71-dc3f-4926-99b7-3361c718e12a> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-11-01T06:13:29.406Z" ;
+    bcube:lastUpdated "2015-11-01T06:13:29.406Z" ;
+    bcube:originatedFrom <urn:uuid:cd3c917f-2d74-4516-9107-d4f0b17525b9> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:1978a87c-d45a-4c5e-9a9f-c7c446be43e6> .
+
+<urn:uuid:a3c6ff83-930a-4496-82d2-cd655687d6a2> owl:a foaf:Organization ;
+    foaf:name "ERDDAP, version 1.56, at NCDDC" .
+
+<urn:uuid:cd3c917f-2d74-4516-9107-d4f0b17525b9> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-01T06:13:29.406Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-01T06:13:29.406Z" ;
+    dc:identifier "urn:sha:25d48c20e5130269ed65ce0caee51e02309a4c89f8658c56b1255839" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://ecowatch.ncddc.noaa.gov/erddap/griddap/NCOM_amseas_latest3d.fgdc" .
+
+<urn:uuid:d9b168d2-4d6f-43f5-b600-d22ca155afb5> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-01T06:13:29.406Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-01T06:13:29.406Z" ;
+    dc:identifier "urn:sha:6f1e57c1a37d20c4459100b2172ad1c15a7c8e50c7c37e14544f06f6" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://ecowatch.ncddc.noaa.gov/erddap/griddap/NCOM_amseas_latest3d.graph" .
+
+<urn:uuid:f2cc5d58-59c3-4127-a405-0d06abc75ec3> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-01T06:13:29.406Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-01T06:13:29.406Z" ;
+    dc:identifier "urn:sha:51bbf1010f5806a786c353f3f5d957306d3c008b1d1bb0e696e17e50" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://ecowatch.ncddc.noaa.gov/erddap/griddap/NCOM_amseas_latest3d.html" .
+

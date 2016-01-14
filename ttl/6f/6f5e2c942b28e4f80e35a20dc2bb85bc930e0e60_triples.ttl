@@ -1,0 +1,104 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:093ab839-4f4d-4e09-81e3-d240f50bab80> bcube:hasType "place" ;
+    bcube:hasValue "Geographic Region > Continent > North America > United States Of America" ;
+    dc:partOf "NASA GCMD Location Keywords" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:3ccf6e67-92ab-4623-bc6a-2348f06928da> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-09-02T07:05:32.134Z" ;
+    bcube:lastUpdated "2015-09-02T07:05:32.134Z" ;
+    bcube:originatedFrom <urn:uuid:eac0a1e6-a6a1-43d5-b2c1-4e580c9f8c0f> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:b5f98bd6-754d-4492-b8cd-c031ab3cde4a> .
+
+<urn:uuid:47fb565e-9895-4af4-95fa-2be23e78ff1b> bcube:hasType "theme" ;
+    bcube:hasValue "Pan Evaporation" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:6a1de28b-279a-494c-83e9-350a6a00a1d9> bcube:hasType "stratum" ;
+    bcube:hasValue "Vertical Location > Boundary layer" ;
+    dc:partOf "NASA GCMD Location Keywords" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:72d92f80-994e-4eef-8f3a-70685ab6a92e> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-09-02T07:05:32.134Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-09-02T07:05:32.134Z" ;
+    dc:identifier "urn:sha:73283b187b9e17227326afa42e7f30e3f3c453698aaa5ca64278db5d" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www.cpc.ncep.noaa.gov/products/GIS/GIS_DATA/JAWF" .
+
+<urn:uuid:9db8e66b-4a10-4aab-9870-44d42143851a> owl:a foaf:Organization ;
+    foaf:name "Climate Prediction Center" .
+
+<urn:uuid:b045c117-62bc-4a69-80cb-ff9f0d99768c> bcube:hasType "theme" ;
+    bcube:hasValue "climatologyMeteorologyAtmosphere" ;
+    dc:partOf "ISO 19115 Topic Category" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:b5f98bd6-754d-4492-b8cd-c031ab3cde4a> bcube:dateCreated "2015-09-02T07:05:32.134Z" ;
+    bcube:hasMetadataRecord <urn:uuid:3ccf6e67-92ab-4623-bc6a-2348f06928da> ;
+    bcube:lastUpdated "2015-09-02T07:05:32.134Z" ;
+    dc:conformsTo <urn:uuid:093ab839-4f4d-4e09-81e3-d240f50bab80>,
+        <urn:uuid:47fb565e-9895-4af4-95fa-2be23e78ff1b>,
+        <urn:uuid:6a1de28b-279a-494c-83e9-350a6a00a1d9>,
+        <urn:uuid:b045c117-62bc-4a69-80cb-ff9f0d99768c> ;
+    dc:description "Observational reports of daily pan evaporation (1200 UTC to 1200 UTC) are made by members of the NWS Cooperative Network (COOP) or supplemental networks of NOAA's regional climate centers. Reports from approximately 100 stations across the southern and mid-western tier of the US are collected by local NWS Weather Forecast Offices (WFO) and sent on a daily basis to the Climate Prediction Center (CPC). CPC processes these reports once per day. All reports for the same day are put into an ASCII text file whose name includes the date of observation. These data are used by CPC in its role of supporting the Joint Agricultural Weather Facility (JAWF)." ;
+    dc:spatial "POLYGON ((-125 24,-125 50,-67 50,-67 24,-125 24))" ;
+    dcterms:identifier "gov.noaa.cpc:CPC-SOIL-PAN-EVAP-DLY-v2009" ;
+    dcterms:publisher <urn:uuid:9db8e66b-4a10-4aab-9870-44d42143851a> ;
+    dcterms:references <urn:uuid:bf532ff6-13fe-44a8-9bae-57d08799776e>,
+        <urn:uuid:e16dae1f-9cc2-4f4a-914d-f4a7d311d74b> ;
+    dcterms:title "Climate Prediction Center (CPC) U.S. Pan Evaporation Observations" ;
+    esip:eastBound "-67.0"^^xsd:float ;
+    esip:northBound "50.0"^^xsd:float ;
+    esip:southBound "24.0"^^xsd:float ;
+    esip:startDate "2009-04-01"^^xsd:date ;
+    esip:westBound "-125.0"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:bf532ff6-13fe-44a8-9bae-57d08799776e> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-09-02T07:05:32.134Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-09-02T07:05:32.134Z" ;
+    dc:identifier "urn:sha:ce1211959d8dc7d97a8357a0914125aeadc92c47b49ded24599a1299" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "ftp://ftp.cpc.ncep.noaa.gov/GIS/JAWF/Evap" .
+
+<urn:uuid:e16dae1f-9cc2-4f4a-914d-f4a7d311d74b> dcterms:references <urn:uuid:72d92f80-994e-4eef-8f3a-70685ab6a92e> ;
+    owl:a bibo:WebPage .
+
+<urn:uuid:eac0a1e6-a6a1-43d5-b2c1-4e580c9f8c0f> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-09-02T07:05:32.134Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-09-02T07:05:32.134Z" ;
+    dc:identifier "urn:sha:724cd7047cff8eac5de360ff64aa25cb2bba0883e7b65a91c5037ff4" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "https://catalog.data.gov/harvest/object/0e877c97-e864-420a-8fa7-2e3dc6a9727c/original" .
+

@@ -1,0 +1,109 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:0eb9d1bb-922e-4d41-b025-b53c6c7d28be> bcube:hasType "stratum" ;
+    bcube:hasValue "Bare earth" ;
+    dc:partOf "http://lidar.cr.usgs.gov/" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:109cd954-924a-4a39-8c58-937920933d81> owl:a foaf:Organization ;
+    foaf:name "U.S. Geological Survey" .
+
+<urn:uuid:15997ada-acc0-4e38-a288-fb3e2b5685cc> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-11-11T00:38:42.674Z" ;
+    bcube:lastUpdated "2015-11-11T00:38:42.674Z" ;
+    bcube:originatedFrom <urn:uuid:7569e7d9-b1d9-419b-a9ee-d65a81c90b1d> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:8f5e1d0b-1613-4b88-b52b-2e22093f6f3a> .
+
+<urn:uuid:29b30435-c563-4944-8311-417b1403b75b> bcube:hasType "theme" ;
+    bcube:hasValue "ALPS",
+        "Advanced Lidar Processing System",
+        "Digital Elevation Model",
+        "EAARL",
+        "Experimental Advanced Airborne Research Lidar",
+        "Hurricanes",
+        "Lidar",
+        "derived surface",
+        "elevation change",
+        "laser altimetry",
+        "resource management" ;
+    dc:partOf "http://remotesensing.usgs.gov/" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:424363bd-b619-493a-8245-d777d36ad7a4> bcube:hasType "place" ;
+    bcube:hasValue "Alabama",
+        "Cat Island",
+        "Chandeleur Islands",
+        "Dauphin Island",
+        "Florida",
+        "Gulf of Mexico",
+        "Horn Island",
+        "Mississippi",
+        "Naval Live Oaks",
+        "Perdido Key",
+        "Petit Bois Island",
+        "Santa Rosa Island",
+        "Ship Island" ;
+    dc:partOf "http://nationalmap.gov/" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:7569e7d9-b1d9-419b-a9ee-d65a81c90b1d> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-11T00:38:42.674Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-11T00:38:42.674Z" ;
+    dc:identifier "urn:sha:a7bbce8261540e3b18d9b984ca1d39020232e6f823bbe7c0999fa858" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://pubs.usgs.gov/ds/400/data_files/be/30088b6b/30088b6b.las.xml" .
+
+<urn:uuid:8f5e1d0b-1613-4b88-b52b-2e22093f6f3a> bcube:dateCreated "2015-11-11T00:38:42.674Z" ;
+    bcube:hasMetadataRecord <urn:uuid:15997ada-acc0-4e38-a288-fb3e2b5685cc> ;
+    bcube:lastUpdated "2015-11-11T00:38:42.674Z" ;
+    dc:conformsTo <urn:uuid:0eb9d1bb-922e-4d41-b025-b53c6c7d28be>,
+        <urn:uuid:29b30435-c563-4944-8311-417b1403b75b>,
+        <urn:uuid:424363bd-b619-493a-8245-d777d36ad7a4>,
+        <urn:uuid:b0785a8e-3c9c-431b-80ae-a0ef4dc68fad> ;
+    dc:description "A bare earth elevation map (also known as a Digital Elevation Model, or DEM) of the northern Gulf of Mexico barrier islands and Naval Live Oaks was produced from remotely sensed, geographically referenced elevation measurements cooperatively by the U.S. Geological Survey (USGS), the National Park Service (NPS), and the National Aeronautics and Space Administration (NASA). Elevation measurements were collected over the area using the NASA Experimental Advanced Airborne Research Lidar (EAARL), a pulsed-laser ranging system mounted onboard an aircraft to measure ground elevation, vegetation canopy, and coastal topography. The system uses high-frequency laser beams directed at the Earth's surface through an opening in the bottom of the aircraft's fuselage. The laser system records the time difference between emission of the laser beam and the reception of the reflected laser signal in the aircraft. The plane travels over the target area at approximately 50 meters per second at an elevation of approximately 300 meters. The EAARL, developed by NASA at Wallops Flight Facility in Virginia, measures ground elevation with a vertical resolution of 15 centimeters. A sampling rate of 3 kilohertz or higher results in an extremely dense spatial elevation dataset. Over 100 kilometers of coastline can be surveyed easily within a 3- to 4-hour mission. When subsequent elevation maps for an area are analyzed, they provide managers with a useful tool to make management decisions regarding land development." ;
+    dc:spatial "POLYGON ((343656.439606514002662 3340677.877694169990718,343656.439606514002662 3347692.604570799972862,337539.663391455018427 3347692.604570799972862,337539.663391455018427 3340677.877694169990718,343656.439606514002662 3340677.877694169990718))" ;
+    dcterms:publisher <urn:uuid:109cd954-924a-4a39-8c58-937920933d81> ;
+    dcterms:references <urn:uuid:c0bfe275-ae6e-4c19-9fd5-f72dfb82f99b> ;
+    dcterms:title "EAARL Coastal Topography - Northern Gulf of Mexico, 2007: Bare Earth" ;
+    esip:eastBound "337539.663391"^^xsd:float ;
+    esip:endDate "2007-06-30"^^xsd:date ;
+    esip:northBound "3347692.60457"^^xsd:float ;
+    esip:southBound "3340677.87769"^^xsd:float ;
+    esip:startDate "2007-06-27"^^xsd:date ;
+    esip:westBound "343656.439607"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:b0785a8e-3c9c-431b-80ae-a0ef4dc68fad> bcube:hasType "temporal" ;
+    bcube:hasValue "2007" ;
+    dc:partOf "http://www.esri.com/news/arcuser/1104/temporal.html" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:c0bfe275-ae6e-4c19-9fd5-f72dfb82f99b> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-11T00:38:42.674Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-11T00:38:42.674Z" ;
+    dc:identifier "urn:sha:d14a028c2a3a2bc9476102bb288234c415a2b01f828ea62ac5b3e42f" ;
+    owl:a bcube:Url .
+

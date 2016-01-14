@@ -1,0 +1,106 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:02b3b9ae-d58c-4777-bb16-8ca9a6a0c080> bcube:hasType "theme" ;
+    bcube:hasValue "ALPS",
+        "Airborne Lidar Processing System",
+        "DEM",
+        "Digital Elevation Model",
+        "EAARL",
+        "Experimental Advanced Airborne Research Lidar",
+        "Pilatus PC-6",
+        "laser altimetry",
+        "lidar",
+        "remote sensing",
+        "topography" ;
+    dc:partOf "General" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:0455e65d-ff7b-4d75-bcd1-0c922ad65295> bcube:hasType "place" ;
+    bcube:hasValue "Alabama",
+        "Mobile-Tensaw Delta",
+        "North America",
+        "Three Mile Creek",
+        "United States" ;
+    dc:partOf "General" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:1535db0f-3a0a-46a0-bf7c-8d39d8807b85> bcube:dateCreated "2015-08-06T20:28:28.308Z" ;
+    bcube:hasMetadataRecord <urn:uuid:241bf391-4d5c-499b-a94f-26959bd4d1e6> ;
+    bcube:lastUpdated "2015-08-06T20:28:28.308Z" ;
+    dc:conformsTo <urn:uuid:02b3b9ae-d58c-4777-bb16-8ca9a6a0c080>,
+        <urn:uuid:0455e65d-ff7b-4d75-bcd1-0c922ad65295>,
+        <urn:uuid:4beb1bbc-b72d-4a68-b0bd-1b1cee8641ba>,
+        <urn:uuid:6b9d7040-cff9-4704-ac4b-e47dfb865162>,
+        <urn:uuid:ff7382a6-44b8-4d97-9f56-c1d2993bf3cd> ;
+    dc:description "Binary point-cloud data were produced from remotely sensed, geographically referenced elevation measurements by the U.S. Geological Survey (USGS). Elevation measurements were collected over the area (bathymetry was irresolvable) using the Experimental Advanced Airborne Research Lidar (EAARL), a pulsed laser ranging system mounted onboard an aircraft to measure ground elevation, vegetation canopy, and coastal topography. The system uses high-frequency laser beams directed at the Earth's surface through an opening in the bottom of the aircraft's fuselage. The laser system records the time difference between emission of the laser beam and the reception of the reflected laser signal in the aircraft. The plane travels over the target area at approximately 50 meters per second at an elevation of approximately 300 meters, resulting in a laser swath of approximately 240 meters with an average point spacing of 2-3 meters. The EAARL, developed originally by the National Aeronautics and Space Administration (NASA) at Wallops Flight Facility in Virginia, measures ground elevation with a vertical resolution of 15 centimeters. A sampling rate of 3 kilohertz or higher results in an extremely dense spatial elevation dataset. Over 100 kilometers of coastline can be easily surveyed within a 3- to 4-hour mission. When resultant elevation maps for an area are analyzed, they provide a useful tool to make management decisions regarding land development." ;
+    dc:spatial "POLYGON ((-87.902021615371694 31.108714097293099,-87.902021615371694 31.1269031240979,-87.880879824620905 31.1269031240979,-87.880879824620905 31.108714097293099,-87.902021615371694 31.108714097293099))" ;
+    dcterms:publisher <urn:uuid:87bc0d39-defb-455b-9197-dffc3746f3d4> ;
+    dcterms:references <urn:uuid:ee622627-4e2b-444a-bef4-dc9c10d8ad7a> ;
+    dcterms:title "EAARL Topography--Three Mile Creek and Mobile-Tensaw Delta, Alabama, 2010" ;
+    esip:eastBound "-87.8808798246"^^xsd:float ;
+    esip:northBound "31.1269031241"^^xsd:float ;
+    esip:southBound "31.1087140973"^^xsd:float ;
+    esip:startDate "2010-03-06"^^xsd:date ;
+    esip:westBound "-87.9020216154"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:241bf391-4d5c-499b-a94f-26959bd4d1e6> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-08-06T20:28:28.308Z" ;
+    bcube:lastUpdated "2015-08-06T20:28:28.308Z" ;
+    bcube:originatedFrom <urn:uuid:d4b2581e-a1d1-480a-9289-48b296fa6cea> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:1535db0f-3a0a-46a0-bf7c-8d39d8807b85> .
+
+<urn:uuid:4beb1bbc-b72d-4a68-b0bd-1b1cee8641ba> bcube:hasType "theme" ;
+    bcube:hasValue "elevation" ;
+    dc:partOf "ISO 19115 Topic Category" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:6b9d7040-cff9-4704-ac4b-e47dfb865162> bcube:hasType "stratum" ;
+    bcube:hasValue "Bare Earth" ;
+    dc:partOf "General" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:87bc0d39-defb-455b-9197-dffc3746f3d4> owl:a foaf:Organization ;
+    foaf:name "U.S. Geological Survey" .
+
+<urn:uuid:d4b2581e-a1d1-480a-9289-48b296fa6cea> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-06T20:28:28.308Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-06T20:28:28.308Z" ;
+    dc:identifier "urn:sha:033b3416ea7fa5747f9b5fc697aab815ced1dfae13e731ed2772f737" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://pubs.usgs.gov/ds/618/data_files/be/be_e414_n3444_16/be_e414_n3444_16.las.xml" .
+
+<urn:uuid:ee622627-4e2b-444a-bef4-dc9c10d8ad7a> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-06T20:28:28.308Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-06T20:28:28.308Z" ;
+    dc:identifier "urn:sha:d14a028c2a3a2bc9476102bb288234c415a2b01f828ea62ac5b3e42f" ;
+    owl:a bcube:Url .
+
+<urn:uuid:ff7382a6-44b8-4d97-9f56-c1d2993bf3cd> bcube:hasType "temporal" ;
+    bcube:hasValue "2010" ;
+    dc:partOf "General" ;
+    owl:a bcube:thesaurusSubset .
+

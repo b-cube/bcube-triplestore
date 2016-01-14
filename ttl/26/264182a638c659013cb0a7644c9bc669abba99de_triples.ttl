@@ -1,0 +1,95 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:2a2208da-f2ed-4a8a-a55c-ebf08d49c8d7> bcube:hasType "theme" ;
+    bcube:hasValue "Census districts -- New York (State) -- Clinton County -- Maps.",
+        "Zoning -- New York (State) -- Clinton County -- Maps." ;
+    dc:partOf "LCSH" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:2ea5f0a0-e15d-477e-9236-73273fe60bdf> bcube:hasType "place" ;
+    bcube:hasValue "Clinton County (N.Y.) -- Maps.",
+        "New York (State) -- Clinton County -- Maps." ;
+    dc:partOf "LCSH" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:7143a8e4-9dea-43b7-8f60-80763785ca5f> bcube:dateCreated "2015-03-06T02:25:55.359Z" ;
+    bcube:hasMetadataRecord <urn:uuid:cf45d728-130c-4eef-9c58-ae067f538e31> ;
+    bcube:lastUpdated "2015-03-06T02:25:55.359Z" ;
+    dc:conformsTo <urn:uuid:2a2208da-f2ed-4a8a-a55c-ebf08d49c8d7>,
+        <urn:uuid:2ea5f0a0-e15d-477e-9236-73273fe60bdf>,
+        <urn:uuid:86e8af29-400d-4fdb-9dfc-db85c2cb0c2c>,
+        <urn:uuid:d21bb34f-5cd7-49d8-8bfa-61008679f1ce> ;
+    dc:description "This shapefile is an extract of selected geographic and cartographic information from the 1995 TIGER/Line files detailing census blocks. This dataset includes census block numbers, water blocks, and current geography." ;
+    dc:spatial "POLYGON ((-74.027 44.43,-74.027 45.011,-73.333 45.011,-73.333 44.43,-74.027 44.43))" ;
+    dcterms:publisher <urn:uuid:87da057a-9d7c-47cd-83ab-0072d46adc68> ;
+    dcterms:references <urn:uuid:786c3255-9b9c-4e14-a620-c154ec64dae6> ;
+    dcterms:title "Census Blocks, Clinton County (Shapefile : 1998)" ;
+    esip:eastBound "-73.333"^^xsd:float ;
+    esip:northBound "45.011"^^xsd:float ;
+    esip:southBound "44.43"^^xsd:float ;
+    esip:startDate "1995-01-01"^^xsd:date ;
+    esip:westBound "-74.027"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:786c3255-9b9c-4e14-a620-c154ec64dae6> dcterms:references <urn:uuid:fb4ebfae-3146-4943-8470-99d1faf31902> ;
+    owl:a bibo:WebPage .
+
+<urn:uuid:86e8af29-400d-4fdb-9dfc-db85c2cb0c2c> bcube:hasType "theme" ;
+    bcube:hasValue "Census Block Numbers",
+        "Census Blocks",
+        "Current Geography",
+        "Water Blocks" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:87da057a-9d7c-47cd-83ab-0072d46adc68> owl:a foaf:Organization ;
+    foaf:name "Bureau of the Census" .
+
+<urn:uuid:91137497-6284-431a-bdbf-9a9d6dfcd49f> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-03-06T02:25:55.359Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-03-06T02:25:55.359Z" ;
+    dc:identifier "urn:sha:df7d9924883b67cfbdfda26146308ff7614958feb5d254933c07cb3a" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://cugirmetadata.mannlib.cornell.edu/019cbs.xml" .
+
+<urn:uuid:cf45d728-130c-4eef-9c58-ae067f538e31> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-03-06T02:25:55.359Z" ;
+    bcube:lastUpdated "2015-03-06T02:25:55.359Z" ;
+    bcube:originatedFrom <urn:uuid:91137497-6284-431a-bdbf-9a9d6dfcd49f> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:7143a8e4-9dea-43b7-8f60-80763785ca5f> .
+
+<urn:uuid:d21bb34f-5cd7-49d8-8bfa-61008679f1ce> bcube:hasType "theme" ;
+    bcube:hasValue "boundaries",
+        "society" ;
+    dc:partOf "ISO 19115 Topic Category" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:fb4ebfae-3146-4943-8470-99d1faf31902> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-03-06T02:25:55.359Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-03-06T02:25:55.359Z" ;
+    dc:identifier "urn:sha:3171c9327ca98a6d66f942ac582169eb596a37bddfc830461cda4a78" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://cugir.mannlib.cornell.edu/bucketinfo.jsp?id=391" .
+

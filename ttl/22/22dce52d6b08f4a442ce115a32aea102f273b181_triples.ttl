@@ -1,0 +1,66 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:133a2fe8-cf0b-4a2e-8a6c-229b02957deb> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-09-10T01:02:56.264Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-09-10T01:02:56.264Z" ;
+    dc:identifier "urn:sha:072f39ce94722722744dc19c41e849ccad1be19b105b340cb9048804" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://data.fs.usda.gov/geodata/edw/edw_resources/meta/S_USA.BasicOwnership.xml" .
+
+<urn:uuid:165f1293-6ce8-46b5-a50a-706474e252f8> owl:a foaf:Organization ;
+    foaf:name "" .
+
+<urn:uuid:1a082a1f-e7a3-4e4f-88b3-8d7b02203273> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-09-10T01:02:56.264Z" ;
+    bcube:lastUpdated "2015-09-10T01:02:56.264Z" ;
+    bcube:originatedFrom <urn:uuid:133a2fe8-cf0b-4a2e-8a6c-229b02957deb> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:308013f8-32de-4fb2-a654-aab0fbb58eec> .
+
+<urn:uuid:308013f8-32de-4fb2-a654-aab0fbb58eec> bcube:dateCreated "2015-09-10T01:02:56.264Z" ;
+    bcube:hasMetadataRecord <urn:uuid:1a082a1f-e7a3-4e4f-88b3-8d7b02203273> ;
+    bcube:lastUpdated "2015-09-10T01:02:56.264Z" ;
+    dc:conformsTo <urn:uuid:ca6013a3-052d-4836-824d-7d6a365004f3>,
+        <urn:uuid:f737321f-4a30-44bb-a5d4-f347982e906f> ;
+    dc:description "An area depicted as surface ownership parcels dissolved on the same ownership classification." ;
+    dc:spatial "POLYGON ((-150.007671 17.738983,-150.007671 61.51899,-64.734329 61.51899,-64.734329 17.738983,-150.007671 17.738983))" ;
+    dcterms:publisher <urn:uuid:165f1293-6ce8-46b5-a50a-706474e252f8> ;
+    dcterms:title "S_USA.BasicOwnership" ;
+    esip:eastBound "-64.734329"^^xsd:float ;
+    esip:northBound "61.51899"^^xsd:float ;
+    esip:southBound "17.738983"^^xsd:float ;
+    esip:westBound "-150.007671"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:ca6013a3-052d-4836-824d-7d6a365004f3> bcube:hasType "theme" ;
+    bcube:hasValue "boundaries",
+        "planningCadastre" ;
+    dc:partOf "ISO 19115 Topic Categories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:f737321f-4a30-44bb-a5d4-f347982e906f> bcube:hasType "theme" ;
+    bcube:hasValue "ALP Land Dataset",
+        "Land Status",
+        "NFS Lands",
+        "Owner Name",
+        "USDA Forest Service" ;
+    dc:partOf "Basic Ownership" ;
+    owl:a bcube:thesaurusSubset .
+

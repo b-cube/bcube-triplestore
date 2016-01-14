@@ -1,0 +1,75 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:1fd69e74-a22f-4150-9d1c-e4772649b1e1> bcube:hasType "theme" ;
+    bcube:hasValue "Address matching",
+        "Blocks",
+        "Census",
+        "Streets",
+        "TIGER",
+        "Tracts",
+        "boundaries" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:3080cc6f-4dbf-4da5-8a96-4b1ac09853d9> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-08-05T04:46:29.548Z" ;
+    bcube:lastUpdated "2015-08-05T04:46:29.548Z" ;
+    bcube:originatedFrom <urn:uuid:cd785f73-eb0b-4bd2-b462-2817e39a2edd> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:ffe7c1ea-faf3-4d08-a620-4e8f39f15dec> .
+
+<urn:uuid:7e46b5d6-af16-4690-99a2-1c436a2613b3> owl:a foaf:Organization ;
+    foaf:name "" .
+
+<urn:uuid:cd785f73-eb0b-4bd2-b462-2817e39a2edd> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-05T04:46:29.548Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-05T04:46:29.548Z" ;
+    dc:identifier "urn:sha:9851e0cb83ac531b744be45d676186d64d3c375da6ac2c388da6af2b" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "https://catalog.data.gov/harvest/object/cf10a909-2300-410f-a4ed-77cc6432ed54/original" .
+
+<urn:uuid:e0867368-417d-4b9f-a67c-e93878d01103> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-05T04:46:29.548Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-05T04:46:29.548Z" ;
+    dc:identifier "urn:sha:c36b95020e42e8299f5cecfc70e189dfffe3e9557e4f9cce4e916374" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www.KansasGIS.org" .
+
+<urn:uuid:ffe7c1ea-faf3-4d08-a620-4e8f39f15dec> bcube:dateCreated "2015-08-05T04:46:29.548Z" ;
+    bcube:hasMetadataRecord <urn:uuid:3080cc6f-4dbf-4da5-8a96-4b1ac09853d9> ;
+    bcube:lastUpdated "2015-08-05T04:46:29.548Z" ;
+    dc:conformsTo <urn:uuid:1fd69e74-a22f-4150-9d1c-e4772649b1e1> ;
+    dc:description "The 2010 Census TIGER/Line data was merged together into a statewide layer if originally available by county from the US Census Bureau. The spatial data was then joined to the 2010 Census Summary File 1 via the common GEOID10 field for additional population attribution." ;
+    dc:spatial "POLYGON ((-102.5 37.0,-102.5 40.0,-94.6 40.0,-94.6 37.0,-102.5 37.0))" ;
+    dcterms:publisher <urn:uuid:7e46b5d6-af16-4690-99a2-1c436a2613b3> ;
+    dcterms:references <urn:uuid:e0867368-417d-4b9f-a67c-e93878d01103> ;
+    dcterms:title "TIGER 2010" ;
+    esip:eastBound "-94.6"^^xsd:float ;
+    esip:northBound "40.0"^^xsd:float ;
+    esip:southBound "37.0"^^xsd:float ;
+    esip:startDate "2010-01-01"^^xsd:date ;
+    esip:westBound "-102.5"^^xsd:float ;
+    owl:a dcat:Dataset .
+

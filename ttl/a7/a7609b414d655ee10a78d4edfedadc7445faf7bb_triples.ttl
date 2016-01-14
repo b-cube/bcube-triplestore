@@ -1,0 +1,100 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:007396f4-780e-497e-b0b6-d5fd15dee0ec> bcube:hasType "theme" ;
+    bcube:hasValue "environment",
+        "oceans" ;
+    dc:partOf "ISO 19115 Topic Category" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:25e11370-33dd-4176-bc8e-7557be5dd023> bcube:hasType "theme" ;
+    bcube:hasValue "Environmental Monitoring" ;
+    dc:partOf "NOS Topic Category" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:74eb4484-3fc4-417a-8b32-1f9a98dcfaac> bcube:hasType "theme" ;
+    bcube:hasValue "Bird",
+        "Coastal Zone Management",
+        "Coastal resources",
+        "ESI",
+        "Nest",
+        "Oil spill planning",
+        "Sensitivity maps",
+        "Wildlife" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:7ea4f2c3-4b46-4857-ae8d-bae315b46c05> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-08T16:43:54.88Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-08T16:43:54.88Z" ;
+    dc:identifier "urn:sha:cc7e6972d4082c8d7915e557416f5c072ca01017a811220098682652" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://response.restoration.noaa.gov/esi" .
+
+<urn:uuid:b3e6f7bd-da77-446c-9b3b-b24aef585100> owl:a foaf:Organization ;
+    foaf:name "National Oceanic and Atmospheric Administration (NOAA), National Ocean Service, Office of Response and Restoration, Hazardous Materials Response Division, Seattle, Washington." .
+
+<urn:uuid:cd0019ec-fb9e-44f6-8016-e5db7fe9c862> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-08-08T16:43:54.88Z" ;
+    bcube:lastUpdated "2015-08-08T16:43:54.88Z" ;
+    bcube:originatedFrom <urn:uuid:fdeb3c4f-9e10-47f1-9b17-dad502fb91ad> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:df7724a4-95a9-44fd-9ce9-823fceacb420> .
+
+<urn:uuid:df7724a4-95a9-44fd-9ce9-823fceacb420> bcube:dateCreated "2015-08-08T16:43:54.88Z" ;
+    bcube:hasMetadataRecord <urn:uuid:cd0019ec-fb9e-44f6-8016-e5db7fe9c862> ;
+    bcube:lastUpdated "2015-08-08T16:43:54.88Z" ;
+    dc:conformsTo <urn:uuid:007396f4-780e-497e-b0b6-d5fd15dee0ec>,
+        <urn:uuid:25e11370-33dd-4176-bc8e-7557be5dd023>,
+        <urn:uuid:74eb4484-3fc4-417a-8b32-1f9a98dcfaac>,
+        <urn:uuid:f060769f-4c3b-47b6-96a5-9a329269b333> ;
+    dc:description "This data set contains sensitive biological resource data for nesting seabirds (alcids, pelagic birds), gulls, terns, diving birds, and raptors in the Bristol Bay Subarea. The Subarea includes marine and coastal areas of Bristol Bay and part of the southern Alaska Peninsula. (This area extends from directly south of Goodnews Bay to slightly north of Port Seniavan along the Bristol Bay side of the Alaska Peninsula, as well as the Pacific Ocean side of the Alaska Peninsula from Cape Providence to Kupreanof Peninsula.) Vector points in this data set represent locations of nesting birds. Species-specific abundance, seasonality, status, life history, and source information are stored in relational data tables (described below) designed to be used in conjunction with this spatial data layer.This data set comprises a portion of the Environmental Sensitivity Index (ESI) data for the Bristol Bay Subarea. ESI data characterize the marine and coastal environments and wildlife by their sensitivity to spilled oil. The ESI data include information for three main components: shoreline habitats, sensitive biological resources, and human-use resources. See also the BIRDS (Bird Polygons) data layer, part of the larger Bristol Bay Subarea ESI database, for additional breeding bird information." ;
+    dc:spatial "POLYGON ((-162.5 55.5,-162.5 59.083,-156.0 59.083,-156.0 55.5,-162.5 55.5))" ;
+    dcterms:publisher <urn:uuid:b3e6f7bd-da77-446c-9b3b-b24aef585100> ;
+    dcterms:references <urn:uuid:f90ce8ea-ba8d-45ef-84d0-5293bfb2486f> ;
+    dcterms:title "Bristol Bay, Alaska Subarea ESI: NESTS (Nest Points)" ;
+    esip:eastBound "-156.0"^^xsd:float ;
+    esip:endDate "2004-01-01"^^xsd:date ;
+    esip:northBound "59.083"^^xsd:float ;
+    esip:southBound "55.5"^^xsd:float ;
+    esip:startDate "2003-01-01"^^xsd:date ;
+    esip:westBound "-162.5"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:f060769f-4c3b-47b6-96a5-9a329269b333> bcube:hasType "place" ;
+    bcube:hasValue "Alaska",
+        "Bristol Bay" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:f90ce8ea-ba8d-45ef-84d0-5293bfb2486f> dcterms:references <urn:uuid:7ea4f2c3-4b46-4857-ae8d-bae315b46c05> ;
+    owl:a bibo:WebPage .
+
+<urn:uuid:fdeb3c4f-9e10-47f1-9b17-dad502fb91ad> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-08T16:43:54.88Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-08T16:43:54.88Z" ;
+    dc:identifier "urn:sha:630d9739421c117dc4478c70698f2fd0fbac50505260bb026f658506" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://catalog.data.gov/harvest/object/ee7e09e6-baba-44b2-afd5-80efb26432fa/original" .
+

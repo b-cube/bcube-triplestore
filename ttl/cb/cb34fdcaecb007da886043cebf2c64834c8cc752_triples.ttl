@@ -1,0 +1,90 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:0099d8a6-4b59-4ae0-92d5-932c755e84bf> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-10-17T10:53:57.195Z" ;
+    bcube:lastUpdated "2015-10-17T10:53:57.195Z" ;
+    bcube:originatedFrom <urn:uuid:a3b48896-1957-4844-b66a-9e30c3487906> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:19ba741a-beb3-4f2f-9978-d579a633f183> .
+
+<urn:uuid:0ac11016-537b-4ed0-972f-32d222249a24> bcube:hasType "place" ;
+    bcube:hasValue "Colorado",
+        "Denver",
+        "Denver County",
+        "USA" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:19ba741a-beb3-4f2f-9978-d579a633f183> bcube:dateCreated "2015-10-17T10:53:57.195Z" ;
+    bcube:hasMetadataRecord <urn:uuid:0099d8a6-4b59-4ae0-92d5-932c755e84bf> ;
+    bcube:lastUpdated "2015-10-17T10:53:57.195Z" ;
+    dc:conformsTo <urn:uuid:0ac11016-537b-4ed0-972f-32d222249a24>,
+        <urn:uuid:1b090ae4-8be8-44a0-8c5f-1affe0b9dc30>,
+        <urn:uuid:8992ddd5-df3c-46db-b84b-561911199d68>,
+        <urn:uuid:bb8252ca-c46f-473a-9ef4-c55e34e5db3b> ;
+    dc:description "Block Group level data from the American Community Survey; 5 year average, years 2009-2013. The original census block group boundaries have been adjusted to various Denver GIS data layers to increase the spatial accuracy of this data. Although every effort was made to ensure the accurate rectification of the data, due to geographic problems inherent in the original 2010 census block group data, errors may exist. The data-set does not contain data for any enclaves administered by other jurisdictions that are located within the City and County of Denver's boundary. This data is a sample, not a census. Results should be considered estimates. See American Community Survey website for margin of error information." ;
+    dc:spatial "POLYGON ((-105.109967 39.614311,-105.109967 39.914209,-104.599538 39.914209,-104.599538 39.614311,-105.109967 39.614311))" ;
+    dcterms:publisher <urn:uuid:9483ca57-27aa-4240-bf07-cd94be24df92> ;
+    dcterms:references <urn:uuid:28a9ce47-0dce-4cc5-8460-fbed8135bfd4> ;
+    dcterms:title "American Community Survey Blk Grp (2009-2013)" ;
+    esip:eastBound "-104.599538"^^xsd:float ;
+    esip:northBound "39.914209"^^xsd:float ;
+    esip:southBound "39.614311"^^xsd:float ;
+    esip:westBound "-105.109967"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:1b090ae4-8be8-44a0-8c5f-1affe0b9dc30> bcube:hasType "theme" ;
+    bcube:hasValue "census",
+        "demographics" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:28a9ce47-0dce-4cc5-8460-fbed8135bfd4> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-10-17T10:53:57.195Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-10-17T10:53:57.195Z" ;
+    dc:identifier "urn:sha:d14a028c2a3a2bc9476102bb288234c415a2b01f828ea62ac5b3e42f" ;
+    owl:a bcube:Url .
+
+<urn:uuid:8992ddd5-df3c-46db-b84b-561911199d68> bcube:hasType "temporal" ;
+    bcube:hasValue "2009-2013" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:9483ca57-27aa-4240-bf07-cd94be24df92> owl:a foaf:Organization ;
+    foaf:name "" .
+
+<urn:uuid:a3b48896-1957-4844-b66a-9e30c3487906> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-10-17T10:53:57.195Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-10-17T10:53:57.195Z" ;
+    dc:identifier "urn:sha:a7c8c353c5a50ee2f40cee429623a7841912c7f883db2520b4765b3c" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://data.denvergov.org/download/gis/american_community_survey_blk_grp_2009_2013/metadata/american_community_survey_blk_grp_2009_2013.xml" .
+
+<urn:uuid:bb8252ca-c46f-473a-9ef4-c55e34e5db3b> bcube:hasType "theme" ;
+    bcube:hasValue "economy",
+        "society" ;
+    dc:partOf "ISO 19115 Topic Categories" ;
+    owl:a bcube:thesaurusSubset .
+

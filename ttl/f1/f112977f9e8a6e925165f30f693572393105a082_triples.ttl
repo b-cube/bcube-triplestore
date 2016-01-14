@@ -1,0 +1,78 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:43b8cddb-b528-4539-bf6e-34ab42061e20> bcube:hasType "temporal" ;
+    bcube:hasValue "2006-2010" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:51e40d77-3512-47b1-8eee-a8ffc8400bfa> bcube:hasType "theme" ;
+    bcube:hasValue "economy",
+        "society" ;
+    dc:partOf "ISO 19115 Topic Categories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:76fc00eb-7b1e-4e6b-8901-6d0f8c5560e4> owl:a foaf:Organization ;
+    foaf:name "" .
+
+<urn:uuid:82fcf3b8-069d-433a-880f-3aca68b10551> bcube:hasType "theme" ;
+    bcube:hasValue "census",
+        "demographics" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:9e0942b7-2467-4d0b-b1a6-f10b9358a1fd> bcube:hasType "place" ;
+    bcube:hasValue "Colorado",
+        "Denver",
+        "Denver County",
+        "USA" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:a71e4eaf-39b6-43f0-b5de-dcf5fa6d692f> bcube:dateCreated "2015-11-04T11:53:32.572Z" ;
+    bcube:hasMetadataRecord <urn:uuid:cd7c8d4e-007e-4764-a1f4-f15da13ededf> ;
+    bcube:lastUpdated "2015-11-04T11:53:32.572Z" ;
+    dc:conformsTo <urn:uuid:43b8cddb-b528-4539-bf6e-34ab42061e20>,
+        <urn:uuid:51e40d77-3512-47b1-8eee-a8ffc8400bfa>,
+        <urn:uuid:82fcf3b8-069d-433a-880f-3aca68b10551>,
+        <urn:uuid:9e0942b7-2467-4d0b-b1a6-f10b9358a1fd> ;
+    dc:description "Neighborhood level data from the derived from the American Community Survey; 5 year average, years 2006-2010. Data was aggregated at the census tract level, and the summarized into neighborhoods. This information was then joined with Community Planning and Developments Neighborhoods layer. This data-set does not contain data for any enclaves administered by other jurisdictions that are located within the City and County of Denver's boundary. This data is a sample, not a census. Results should be considered estimates. See American Community Survey website for margin of error information." ;
+    dc:spatial "POLYGON ((-105.109967 39.614311,-105.109967 39.914209,-104.599538 39.914209,-104.599538 39.614311,-105.109967 39.614311))" ;
+    dcterms:publisher <urn:uuid:76fc00eb-7b1e-4e6b-8901-6d0f8c5560e4> ;
+    dcterms:title "American Community Survey Nbrhd (2006-2010)" ;
+    esip:eastBound "-104.599538"^^xsd:float ;
+    esip:northBound "39.914209"^^xsd:float ;
+    esip:southBound "39.614311"^^xsd:float ;
+    esip:westBound "-105.109967"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:cb7115ac-3c91-4ac8-a1ea-7c8f0938dfa7> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-04T11:53:32.572Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-04T11:53:32.572Z" ;
+    dc:identifier "urn:sha:d34b4b513965e3fc86b2cf42869ed0bdc9e462ccfd65387841b5857a" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://data.denvergov.org/download/gis/american_community_survey_nbrhd_2006_2010/metadata/american_community_survey_nbrhd_2006_2010.xml" .
+
+<urn:uuid:cd7c8d4e-007e-4764-a1f4-f15da13ededf> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-11-04T11:53:32.572Z" ;
+    bcube:lastUpdated "2015-11-04T11:53:32.572Z" ;
+    bcube:originatedFrom <urn:uuid:cb7115ac-3c91-4ac8-a1ea-7c8f0938dfa7> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:a71e4eaf-39b6-43f0-b5de-dcf5fa6d692f> .
+

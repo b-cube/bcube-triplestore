@@ -1,0 +1,80 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:05602f15-ea89-49d3-af1c-59de4f62212f> bcube:hasType "theme" ;
+    bcube:hasValue "Bare earth",
+        "Breaklines",
+        "DEM",
+        "DTM",
+        "Elevation",
+        "Hydro Flattened",
+        "LAS",
+        "Lidar" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:80d070ab-171e-46f3-a76b-c1b5cb284a81> bcube:dateCreated "2015-08-07T03:02:15.75Z" ;
+    bcube:hasMetadataRecord <urn:uuid:fd284acb-e7a4-4907-a887-e373be1a4e77> ;
+    bcube:lastUpdated "2015-08-07T03:02:15.75Z" ;
+    dc:conformsTo <urn:uuid:05602f15-ea89-49d3-af1c-59de4f62212f>,
+        <urn:uuid:850240a3-ac80-4b02-bf95-dea5cfdd20e0> ;
+    dc:description "Laser Mapping Specialist, Inc (LMSI) and The Atlantic Group (Atlantic) provided high accuracy, calibrated multiple return LiDAR for roughly 1,130 square miles around Norfolk, Virgina that either fully or partially cover the Virginia counties of Chesapeake, Hampton, James City, Newport News, Norfolk, Poquoson City, Portsmouth, Suffolk, Virginia Beach, Williamsburg, and York as well as the North Carolina counties of Camden and Currituck. The nominal point spacing for this project was no greater than 1 point every 0.7 meters. Dewberry used proprietary procedures to classify the LAS according to project specifications: 1-Unclassified, 2-Ground, 7-Noise, 9-Water, 10-Ignored Ground, 11-Withheld Points. OCM reclassified class 11 points to Class 15 - (as needed: Witheld Points). Dewberry produced 3D breaklines and combined these with the final LiDAR data to produce seamless hydro flattened DEMs for the 1,458 (1500 m x 1500 m) UTM tiles and the 1,400 (5000 ft x 5000ft) State Plane tiles that cover the project area." ;
+    dc:spatial "POLYGON ((-76.759887 36.522422,-76.759887 37.382867,-75.860149 37.382867,-75.860149 36.522422,-76.759887 36.522422))" ;
+    dcterms:title "2013 USGS Lidar: Norfolk (VA)" ;
+    esip:eastBound "-75.860149"^^xsd:float ;
+    esip:endDate "2013-04-05"^^xsd:date ;
+    esip:northBound "37.382867"^^xsd:float ;
+    esip:southBound "36.522422"^^xsd:float ;
+    esip:startDate "2013-03-21"^^xsd:date ;
+    esip:westBound "-76.759887"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:850240a3-ac80-4b02-bf95-dea5cfdd20e0> bcube:hasType "place" ;
+    bcube:hasValue "Camden County",
+        "Chesapeakes County",
+        "Currituck County",
+        "Hampton County",
+        "James City County",
+        "Newport News County",
+        "Norfolk County",
+        "North Carolina",
+        "Poquoson City County",
+        "Portsmouth County",
+        "Suffolk County",
+        "Virginia",
+        "Virginia Beach County",
+        "Williamsburg County",
+        "York County" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:bb511616-e3a1-4a30-8480-629e001ee152> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-07T03:02:15.75Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-07T03:02:15.75Z" ;
+    dc:identifier "urn:sha:ad8faeeff95b73112eda0b889e753f10cbc0dc954a6a4a0153420f71" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://coast.noaa.gov/data/Documents/Metadata/isoharvest/Lidar/var/tmp/va2013_usgs_norfolk_m4699_ISOmetadata_cleaned.xml" .
+
+<urn:uuid:fd284acb-e7a4-4907-a887-e373be1a4e77> a "ISO 19115:2003/19139" ;
+    bcube:dateCreated "2015-08-07T03:02:15.75Z" ;
+    bcube:lastUpdated "2015-08-07T03:02:15.75Z" ;
+    bcube:originatedFrom <urn:uuid:bb511616-e3a1-4a30-8480-629e001ee152> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:80d070ab-171e-46f3-a76b-c1b5cb284a81> .
+

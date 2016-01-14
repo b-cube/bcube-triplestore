@@ -1,0 +1,54 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:46b73fb3-fa5b-4ef3-a6b6-6dce33734917> owl:a foaf:Organization ;
+    foaf:name "" .
+
+<urn:uuid:497619df-b268-4c03-94ed-78a4fd2f21fb> bcube:dateCreated "2015-08-05T05:03:50.843Z" ;
+    bcube:hasMetadataRecord <urn:uuid:8cebebb7-defd-480c-b844-56241622bc67> ;
+    bcube:lastUpdated "2015-08-05T05:03:50.843Z" ;
+    dc:conformsTo <urn:uuid:6de7a17c-1fc2-47ec-a117-db198f44876c> ;
+    dc:description "This dataset depicts the point locations of street and park trees, along with stumps and vacant planting sites. Davey Resource Group performed a public tree inventory for the City of Ann Arbor from February-April, 2009. Data concerning these trees have been collected and analyzed, providing information about species composition, condition, and maintenance requirements." ;
+    dc:spatial "POLYGON ((-83.799831 42.22752,-83.799831 42.323256,-83.67736 42.323256,-83.67736 42.22752,-83.799831 42.22752))" ;
+    dcterms:publisher <urn:uuid:46b73fb3-fa5b-4ef3-a6b6-6dce33734917> ;
+    esip:eastBound "-83.67736"^^xsd:float ;
+    esip:northBound "42.323256"^^xsd:float ;
+    esip:southBound "42.22752"^^xsd:float ;
+    esip:westBound "-83.799831"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:6de7a17c-1fc2-47ec-a117-db198f44876c> bcube:hasType "theme" ;
+    bcube:hasValue "Tree Inventory" ;
+    dc:partOf "REQUIRED: Reference to a formally registered thesaurus or a similar authoritative source of theme keywords." ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:8cebebb7-defd-480c-b844-56241622bc67> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-08-05T05:03:50.843Z" ;
+    bcube:lastUpdated "2015-08-05T05:03:50.843Z" ;
+    bcube:originatedFrom <urn:uuid:cc0d7bca-67ea-4127-8f51-3183f5fe9ede> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:497619df-b268-4c03-94ed-78a4fd2f21fb> .
+
+<urn:uuid:cc0d7bca-67ea-4127-8f51-3183f5fe9ede> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-05T05:03:50.843Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-05T05:03:50.843Z" ;
+    dc:identifier "urn:sha:32249c2b8f07e1f0f8d94ee91a77fed09348970f7907df2a950db025" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://data.a2gov.org/feeds/GIS/Trees/a2treemetadata.xml" .
+

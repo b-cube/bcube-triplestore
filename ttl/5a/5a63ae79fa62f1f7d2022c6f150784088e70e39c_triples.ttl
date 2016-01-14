@@ -1,0 +1,72 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:825e3fd0-87b0-4900-96b5-b4452ae08536> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-10-17T08:36:40.891Z" ;
+    bcube:lastUpdated "2015-10-17T08:36:40.891Z" ;
+    bcube:originatedFrom <urn:uuid:d9da5818-c73b-49f8-b62a-32189fc949b8> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:ccad4cee-54eb-40ba-8ffb-2aaf9ae53fd6> .
+
+<urn:uuid:8c1d42cf-b507-4ef8-904b-f0e97e181f85> owl:a foaf:Organization ;
+    foaf:name "" .
+
+<urn:uuid:99939c5e-7f2f-4412-9a08-f7fab35c5961> bcube:hasType "place" ;
+    bcube:hasValue "Colorado",
+        "Denver",
+        "Denver County",
+        "USA" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:bc75d362-1e43-4704-a2e2-a5913ee2e8ea> bcube:hasType "theme" ;
+    bcube:hasValue "elevation",
+        "location",
+        "planningCadastre" ;
+    dc:partOf "ISO 19115 Topic Categories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:ccad4cee-54eb-40ba-8ffb-2aaf9ae53fd6> bcube:dateCreated "2015-10-17T08:36:40.891Z" ;
+    bcube:hasMetadataRecord <urn:uuid:825e3fd0-87b0-4900-96b5-b4452ae08536> ;
+    bcube:lastUpdated "2015-10-17T08:36:40.891Z" ;
+    dc:conformsTo <urn:uuid:99939c5e-7f2f-4412-9a08-f7fab35c5961>,
+        <urn:uuid:bc75d362-1e43-4704-a2e2-a5913ee2e8ea>,
+        <urn:uuid:fc4ab63f-c3f2-496f-b4a7-c1df9484afe4> ;
+    dc:description "This dataset contains vertical benchmark data for the City and County of Denver. Monumentation for this dataset includes U.S. Coast and Geodetic Survey (USCGS), National Geodetic Survey (NGS), and City and County of Denver (CCD) benchmarks. Elevations for bench marks are typically determined by standard differential leveling activity. NGS High-Accuracy Reference Network (HARN) points are portrayed in the ENG_SRVNGSHARN_P dataset." ;
+    dc:spatial "POLYGON ((-105.109367 39.608125,-105.109367 39.800205,-104.667902 39.800205,-104.667902 39.608125,-105.109367 39.608125))" ;
+    dcterms:publisher <urn:uuid:8c1d42cf-b507-4ef8-904b-f0e97e181f85> ;
+    dcterms:title "Benchmarks" ;
+    esip:eastBound "-104.667902"^^xsd:float ;
+    esip:northBound "39.800205"^^xsd:float ;
+    esip:southBound "39.608125"^^xsd:float ;
+    esip:westBound "-105.109367"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:d9da5818-c73b-49f8-b62a-32189fc949b8> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-10-17T08:36:40.891Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-10-17T08:36:40.891Z" ;
+    dc:identifier "urn:sha:6afbe65957930feeda752f1103f9b71affffc5144d275bc8fd0a6700" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://data.denvergov.org/download/gis/benchmarks/metadata/benchmarks.xml" .
+
+<urn:uuid:fc4ab63f-c3f2-496f-b4a7-c1df9484afe4> bcube:hasType "theme" ;
+    bcube:hasValue "survey" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+

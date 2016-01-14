@@ -1,0 +1,98 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:19b3b4d4-69fd-4880-b649-dc6ff576f636> bcube:hasType "theme" ;
+    bcube:hasValue "Barrio",
+        "CCD",
+        "Census County Division",
+        "County Subdivision",
+        "County or equivalent entity",
+        "MCD",
+        "Minor Civil Division",
+        "Polygon",
+        "Subdivision",
+        "Town",
+        "Township",
+        "UT",
+        "Unorganized Territory" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:4a109e0e-90d5-4a98-a1ea-10b20e9d0c07> bcube:hasType "theme" ;
+    bcube:hasValue "boundaries" ;
+    dc:partOf "ISO 19115 Topic Categories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:72da2ad5-15b6-4600-9ead-b820966f173b> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-11-02T07:08:06.702Z" ;
+    bcube:lastUpdated "2015-11-02T07:08:06.702Z" ;
+    bcube:originatedFrom <urn:uuid:e913c46b-284f-476f-bc36-f828070eb7d9> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:9cf87e39-01a3-4f92-b2e3-ff013448357b> .
+
+<urn:uuid:9cf87e39-01a3-4f92-b2e3-ff013448357b> bcube:dateCreated "2015-11-02T07:08:06.702Z" ;
+    bcube:hasMetadataRecord <urn:uuid:72da2ad5-15b6-4600-9ead-b820966f173b> ;
+    bcube:lastUpdated "2015-11-02T07:08:06.702Z" ;
+    dc:conformsTo <urn:uuid:19b3b4d4-69fd-4880-b649-dc6ff576f636>,
+        <urn:uuid:4a109e0e-90d5-4a98-a1ea-10b20e9d0c07>,
+        <urn:uuid:a8abb2ea-10b1-40e9-b67b-e2e5b3279247> ;
+    dc:description "The TIGER/Line Shapefiles are an extract of selected geographic and cartographic information from the Census MAF/TIGER database. The Census MAF/TIGER database represents a seamless national file with no overlaps or gaps between parts. However, each TIGER/Line Shapefile is designed to stand alone as an independent data set or the shapefiles can be combined to cover the whole nation." ;
+    dc:spatial "POLYGON ((-158.001499 58.60961,-158.001499 58.894948,-156.317217 58.894948,-156.317217 58.60961,-158.001499 58.60961))" ;
+    dcterms:publisher <urn:uuid:f0d62259-15a8-491d-8db0-afafadc58e9a> ;
+    dcterms:references <urn:uuid:f825a503-188e-493f-ab2a-2555cb66f42a> ;
+    dcterms:title "TIGER/Line Shapefile, 2009, county, Bristol Bay Borough, AK, Current County Subdivision" ;
+    esip:eastBound "-156.317217"^^xsd:float ;
+    esip:endDate "2009-05-01"^^xsd:date ;
+    esip:northBound "58.894948"^^xsd:float ;
+    esip:southBound "58.60961"^^xsd:float ;
+    esip:startDate "2009-01-01"^^xsd:date ;
+    esip:westBound "-158.001499"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:a8abb2ea-10b1-40e9-b67b-e2e5b3279247> bcube:hasType "place" ;
+    bcube:hasValue "02060",
+        "Bristol Bay",
+        "County or Equivalent Entity",
+        "U.S.",
+        "United States" ;
+    dc:partOf "INCITS.38-200x (R2004),INCITS.31-200x (R2007),INCITS.454-200x,INCITS 455-200x,INCITS 446-2008" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:e913c46b-284f-476f-bc36-f828070eb7d9> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-02T07:08:06.702Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-02T07:08:06.702Z" ;
+    dc:identifier "urn:sha:45f32cc340917f7b653b8401938095c9ea124ad12d46c768ca6c650a" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://meta.geo.census.gov/data/existing/decennial/GEO/GPMB/TIGERline/fe_2009/cousub/tl_2009_02060_cousub_url.shp.xml" .
+
+<urn:uuid:f0d62259-15a8-491d-8db0-afafadc58e9a> owl:a foaf:Organization ;
+    foaf:name "" .
+
+<urn:uuid:f825a503-188e-493f-ab2a-2555cb66f42a> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-02T07:08:06.702Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-02T07:08:06.702Z" ;
+    dc:identifier "urn:sha:afd06acb1d8a4dab04a407dea4392c203da881475698933da4ec3132" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www2.census.gov/geo/tiger/TIGER2009/02_ALASKA/02060_Bristol_Bay_Borough/tl_2009_02060_cousub.zip" .
+

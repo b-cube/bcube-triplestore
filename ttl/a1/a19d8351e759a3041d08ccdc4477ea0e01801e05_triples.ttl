@@ -1,0 +1,76 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:40a1c49f-ec2d-439b-a806-f645c76ef702> bcube:hasType "place" ;
+    bcube:hasValue "US" ;
+    dc:partOf "Uncontrolled Keywords" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:43adb2f7-5270-4f53-95fa-ef4848eee403> bcube:hasType "theme" ;
+    bcube:hasValue "Atmosphere > Air Quality > Carbon Monoxide",
+        "Atmosphere > Air Quality > Emissions",
+        "Atmosphere > Air Quality > Nitrogen Oxides",
+        "Atmosphere > Air Quality > Sulfur Oxides",
+        "Human Dimensions > Environmental Impacts" ;
+    dc:partOf "GCMD Keyword Thesaurus" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:6e110318-7865-47f4-8fb0-bfc31c2a6a01> a "ISO 19115:2003/19139" ;
+    bcube:dateCreated "2015-08-08T13:07:11.322Z" ;
+    bcube:lastUpdated "2015-08-08T13:07:11.322Z" ;
+    bcube:originatedFrom <urn:uuid:a3821ec4-64f8-4e10-9fe0-7a23be2504be> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:fb0f533e-b2d5-4156-b174-5c033b004b06> .
+
+<urn:uuid:723f8cdf-0b60-424e-a58b-4f29a5d2ae25> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-08T13:07:11.322Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-08T13:07:11.322Z" ;
+    dc:identifier "urn:sha:118fe1986e6d7e21be576af7fc5a69dce9166c84c87369031b83561a" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://webapps.datafed.net/wcs_query.aspx?dataset_abbr=TOMS_AI_G&amp;view_id=map" .
+
+<urn:uuid:a3821ec4-64f8-4e10-9fe0-7a23be2504be> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-08T13:07:11.322Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-08T13:07:11.322Z" ;
+    dc:identifier "urn:sha:3d81d775e8ef920f55d715f4e093c480c820ffe8e67e8836c8988499" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://catalog.data.gov/harvest/object/05cf8688-d07e-427b-b5b2-49750f5b6651" .
+
+<urn:uuid:fb0f533e-b2d5-4156-b174-5c033b004b06> bcube:dateCreated "2015-08-08T13:07:11.322Z" ;
+    bcube:hasMetadataRecord <urn:uuid:6e110318-7865-47f4-8fb0-bfc31c2a6a01> ;
+    bcube:lastUpdated "2015-08-08T13:07:11.322Z" ;
+    dc:conformsTo <urn:uuid:40a1c49f-ec2d-439b-a806-f645c76ef702>,
+        <urn:uuid:43adb2f7-5270-4f53-95fa-ef4848eee403> ;
+    dc:description "TOMS_AI_G is an aerosol related dataset derived from the Total Ozone Monitoring Satellite (TOMS) Sensor. The TOMS aerosol index arises from absorbing aerosols such as dust and smoke in the upper layers of the atmosphere." ;
+    dc:spatial "POLYGON ((-180 -90,-180 90,180 90,180 -90,-180 -90))" ;
+    dcterms:references <urn:uuid:723f8cdf-0b60-424e-a58b-4f29a5d2ae25> ;
+    dcterms:title "TOMS Absorbing Aerosol Index" ;
+    esip:eastBound "180.0"^^xsd:float ;
+    esip:endDate "9999-01-01"^^xsd:date ;
+    esip:northBound "90.0"^^xsd:float ;
+    esip:southBound "-90.0"^^xsd:float ;
+    esip:startDate "9999-01-01"^^xsd:date ;
+    esip:westBound "-180.0"^^xsd:float ;
+    owl:a dcat:Dataset .
+

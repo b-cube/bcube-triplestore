@@ -1,0 +1,83 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:15f49fdb-8bb7-4c9d-9e0a-6c3325d85c12> bcube:hasType "place" ;
+    bcube:hasValue "01119",
+        "County or Equivalent Entity",
+        "Sumter",
+        "U.S.",
+        "United States" ;
+    dc:partOf "ANSI INCITS 38:2009 (Formerly FIPS 5-2), ANSI INCITS 31:2009 (Formerly FIPS 6-4),ANSI INCITS 454:2009 (Formerly FIPS 8-6), ANSI INCITS 455:2009(Formerly FIPS 9-1), ANSI INCITS 446:2008 (Geographic Names Information System (GNIS))" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:2a8163aa-25da-4e4b-b3f1-9dc38438f55d> bcube:hasValue "inlandWaters" ;
+    dc:partOf "IsoTopicCategories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:2b4bde99-4564-4c3c-8dae-05741cdf8533> a "ISO 19115:2003/19139" ;
+    bcube:dateCreated "2015-09-09T11:57:53.488Z" ;
+    bcube:lastUpdated "2015-09-09T11:57:53.488Z" ;
+    bcube:originatedFrom <urn:uuid:482eaded-707d-4c58-9c4f-c0b494a506a5> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:6db6fe05-b48b-4dc8-a593-23783faee132> .
+
+<urn:uuid:482eaded-707d-4c58-9c4f-c0b494a506a5> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-09-09T11:57:53.488Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-09-09T11:57:53.488Z" ;
+    dc:identifier "urn:sha:7afc8ec1f05d9f99df7664addc314f5bbcadd4d424d1fda9d5d765de" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "https://catalog.data.gov/harvest/object/e38e0a6e-9033-4b75-9d7f-f26ab135db0c" .
+
+<urn:uuid:6db6fe05-b48b-4dc8-a593-23783faee132> bcube:dateCreated "2015-09-09T11:57:53.488Z" ;
+    bcube:hasMetadataRecord <urn:uuid:2b4bde99-4564-4c3c-8dae-05741cdf8533> ;
+    bcube:lastUpdated "2015-09-09T11:57:53.488Z" ;
+    dc:conformsTo <urn:uuid:15f49fdb-8bb7-4c9d-9e0a-6c3325d85c12>,
+        <urn:uuid:2a8163aa-25da-4e4b-b3f1-9dc38438f55d>,
+        <urn:uuid:71a8ba24-d208-4a2d-ad54-510aa00b7de9> ;
+    dc:description "The TIGER/Line shapefiles and related database files (.dbf) are an extract of selected geographic and cartographic information from the U.S. Census Bureau's Master Address File / Topologically Integrated Geographic Encoding and Referencing (MAF/TIGER) Database (MTDB). The MTDB represents a seamless national file with no overlaps or gaps between parts, however, each TIGER/Line File is designed to stand alone as an independent data set, or they can be combined to cover the entire nation. The Area Hydrography Shapefile contains the geometry and attributes of both perennial and intermittent area hydrography features, including ponds, lakes, oceans, swamps (up to the U.S. nautical three-mile limit), glaciers, and the area covered by large rivers, streams, and/or canals that are represented as double-line drainage. Single-line drainage water features can be found in the Linear Hydrography Shapefile (LINEARWATER.shp). Linear water features includes single-line drainage water features and artificial path features, where they exist, that run through double-line drainage features such as rivers, streams, and/or canals, and serve as a linear representation of these features." ;
+    dc:spatial "POLYGON ((-88.421453 32.307437,-88.421453 32.99586,-87.840858 32.99586,-87.840858 32.307437,-88.421453 32.307437))" ;
+    dcterms:references <urn:uuid:dbeae48d-e09c-443d-bdcf-c119d446d98b> ;
+    dcterms:title "TIGER/Line Shapefile, 2014, county, Sumter County, AL, Area Hydrography County-based Shapefile" ;
+    esip:eastBound "-87.840858"^^xsd:float ;
+    esip:endDate "2014-05-05"^^xsd:date ;
+    esip:northBound "32.99586"^^xsd:float ;
+    esip:southBound "32.307437"^^xsd:float ;
+    esip:startDate "2013-06-05"^^xsd:date ;
+    esip:westBound "-88.421453"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:71a8ba24-d208-4a2d-ad54-510aa00b7de9> bcube:hasType "theme" ;
+    bcube:hasValue "County or equivalent entity",
+        "Hydrography",
+        "Polygon" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:dbeae48d-e09c-443d-bdcf-c119d446d98b> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-09-09T11:57:53.488Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-09-09T11:57:53.488Z" ;
+    dc:identifier "urn:sha:275a5637ac37177b863a2770dae66cb71af9eb2ae06851cc094c1a81" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www2.census.gov/geo/tiger/TIGER2014/AREAWATER/tl_2014_01119_areawater.zip" .
+

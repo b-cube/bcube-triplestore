@@ -1,0 +1,85 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:02732d3f-2127-4718-81c9-0426663083ae> a "ISO 19115:2003/19139" ;
+    bcube:dateCreated "2015-08-08T01:02:42.815Z" ;
+    bcube:lastUpdated "2015-08-08T01:02:42.815Z" ;
+    bcube:originatedFrom <urn:uuid:ef93e78b-5614-44ea-b28b-0708ad1e52d7> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:242d847a-9785-4bcc-ac82-f69822676bd7> .
+
+<urn:uuid:18dfcfca-7556-46cd-8314-fc4d5058e73b> bcube:hasType "theme" ;
+    bcube:hasValue "Digital Terrain Model",
+        "Elevation Data",
+        "Land Surface",
+        "LiDAR",
+        "Relief",
+        "Topography" ;
+    dc:partOf "FEMA NFIP Topic Category" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:242d847a-9785-4bcc-ac82-f69822676bd7> bcube:dateCreated "2015-08-08T01:02:42.815Z" ;
+    bcube:hasMetadataRecord <urn:uuid:02732d3f-2127-4718-81c9-0426663083ae> ;
+    bcube:lastUpdated "2015-08-08T01:02:42.815Z" ;
+    dc:conformsTo <urn:uuid:18dfcfca-7556-46cd-8314-fc4d5058e73b>,
+        <urn:uuid:4ee1defd-6b19-41ce-b2f8-1380a2e79113>,
+        <urn:uuid:7388946b-67dd-4577-bc37-898c323b72e1> ;
+    dc:description "For Oneida County, NY, there were two types of elevation datasets. The first type is LiDAR and the second one is Auto-correlation DEM. Auto-correlation DEM data was developed wherever LiDAR data was not available. LiDAR data was made available to this project through two different initiatives. The first set of LiDAR data was made available through HMTAP-1650 project, which consisted of area of 3 miles buffers around Mohawk River. Though data was available for the whole length of Mohawk, only data that pertained to the county was used for this project.The second set of LiDAR data was made available for DFIRM. DFIRM data was delivered at two different times. The first delivery done in 2008 (covers middle part of the county) and the second delivery done in 2009 (covers a small area in the west, around Oneida lake). As the two coverages did not have issues dealing with overlaps, they were used as they are. For the auto correlated data, in an effort to provide an alternative to the collection of LiDAR data and utilization of the National Elevation Dataset (NED), Dewberry has tested the methodology for the generation of a photogrammetrically derived surface model appropriate for Hydrologic and Hydraulic modeling and conforming to FEMA standards.The autocorrelated surface was generated using imagery from the 2003 New York statewide collection along with the Aerial Triangulation (AT) solution provided with the source imagery. The surface was subsequently edited through manual processes and improved with breaklines in order to meet ASPRS Class 1 accuracy requirements for 4 foot contour mapping.The final terrain is named as Oneida_Terrain.gdb. Please check the image from the PDF report in the General folder of the MIP submitted data." ;
+    dc:spatial "POLYGON ((-75.897 42.863,-75.897 43.616,-75.062 43.616,-75.062 42.863,-75.897 42.863))" ;
+    dcterms:references <urn:uuid:8f4da190-ff06-491e-88f7-985a5718dc7c> ;
+    dcterms:title "DCS TERRAIN SUBMISSION for ONEIDA COUNTY, NEW York, USA" ;
+    esip:eastBound "-75.062"^^xsd:float ;
+    esip:northBound "43.616"^^xsd:float ;
+    esip:southBound "42.863"^^xsd:float ;
+    esip:westBound "-75.897"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:4ee1defd-6b19-41ce-b2f8-1380a2e79113> bcube:hasValue "Elevation" ;
+    dc:partOf "IsoTopicCategories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:7388946b-67dd-4577-bc37-898c323b72e1> bcube:hasType "place" ;
+    bcube:hasValue "COMMUNITY ONEIDA",
+        "COUNTY ONEIDA",
+        "COUNTY-FIPS 36065",
+        "FEMA-CID 36065C",
+        "REGION 2",
+        "STATE NY" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:8f4da190-ff06-491e-88f7-985a5718dc7c> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-08T01:02:42.815Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-08T01:02:42.815Z" ;
+    dc:identifier "urn:sha:37c915397238031daced09ae0e2dd3bf54e84a6477f749c2cc9dcbdf" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://hazards.fema.gov" .
+
+<urn:uuid:ef93e78b-5614-44ea-b28b-0708ad1e52d7> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-08T01:02:42.815Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-08T01:02:42.815Z" ;
+    dc:identifier "urn:sha:3727f00cd7e95fe5faa9d1c09029b8a85e827ed1b820e10e137ca410" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://catalog.data.gov/harvest/object/a5451758-b3ec-41bb-b312-e1ec3a2c1a32" .
+

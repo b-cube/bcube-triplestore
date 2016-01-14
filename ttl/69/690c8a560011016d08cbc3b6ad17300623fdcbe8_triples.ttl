@@ -1,0 +1,84 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:24b5c2a3-ea3d-43e9-ab51-f23964204b28> bcube:hasType "theme" ;
+    bcube:hasValue "Bureau of Ocean Energy Management, BOEM",
+        "Cadastre",
+        "Lease blocks",
+        "OCS blocks",
+        "Official Protraction Diagram, OPD",
+        "Offshore",
+        "Oil and gas",
+        "Outer Continental Shelf, OCS",
+        "Renewable Energy" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:2ac07e97-5302-4256-a06c-2160ad606183> bcube:dateCreated "2015-06-18T09:01:51.175Z" ;
+    bcube:hasMetadataRecord <urn:uuid:7a3de9c0-18fe-41d2-848e-ed45aa747f33> ;
+    bcube:lastUpdated "2015-06-18T09:01:51.175Z" ;
+    dc:conformsTo <urn:uuid:24b5c2a3-ea3d-43e9-ab51-f23964204b28>,
+        <urn:uuid:eaff05e0-ffc5-4884-9556-8cb6aa82cee2> ;
+    dc:description "This data set contains the outlines for historic (i.e., relinquished or inactive) federal oil and gas leases in the Alaska OCS Region through sale 193. They represent a close approximation, but might not be the exact coordinates for those leases. For the official coordinates please refer to the OPD or SOBD for the lease. ALSO NOTE: older leases were done on a NAD 27 grid, and their lease coordinates will not change as long as the lease remains active. Although the NAD 27 leases have been projected to NAD 83 for inclusion in this file, when plotted on the current NAD 83 leasing grid, they will not appear to \"line up\", because the NAD 83 grids represents a complete re-grid and not a re-projection of the old NAD 27 grid. All current leasing, starting with Sale 144 in September 1996 has been done on the NAD 83 grid." ;
+    dc:spatial "POLYGON ((-178.598 55.01044,-178.598 72.75106,-139.16307 72.75106,-139.16307 55.01044,-178.598 55.01044))" ;
+    dcterms:references <urn:uuid:fed97f55-9ddb-49ad-9289-54bd5a2409be> ;
+    dcterms:title "Alaska Federal Oil and Gas Historical Leases" ;
+    esip:eastBound "-139.16307"^^xsd:float ;
+    esip:northBound "72.75106"^^xsd:float ;
+    esip:southBound "55.01044"^^xsd:float ;
+    esip:westBound "-178.598"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:7a3de9c0-18fe-41d2-848e-ed45aa747f33> a "ISO 19115:2003/19139" ;
+    bcube:dateCreated "2015-06-18T09:01:51.175Z" ;
+    bcube:lastUpdated "2015-06-18T09:01:51.175Z" ;
+    bcube:originatedFrom <urn:uuid:ea316380-29af-41e0-b9a9-fe700fa35a8f> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:2ac07e97-5302-4256-a06c-2160ad606183> .
+
+<urn:uuid:ea316380-29af-41e0-b9a9-fe700fa35a8f> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-06-18T09:01:51.175Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-06-18T09:01:51.175Z" ;
+    dc:identifier "urn:sha:fda6bb5de838e65a4561e31e6edad6b32c37a32e0d86f4d8d6227b3b" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "https://catalog.data.gov/harvest/object/b8a8d0bf-b523-4a59-aba4-f3fbc0434d4b" .
+
+<urn:uuid:eaff05e0-ffc5-4884-9556-8cb6aa82cee2> bcube:hasType "place" ;
+    bcube:hasValue "Alaska, AK",
+        "Beaufort",
+        "Chukchi",
+        "Cook Inlet",
+        "Exclusive Economic Zone, EEZ",
+        "Submerged Lands Act Boundary",
+        "USA" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:fed97f55-9ddb-49ad-9289-54bd5a2409be> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-06-18T09:01:51.175Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-06-18T09:01:51.175Z" ;
+    dc:identifier "urn:sha:c75c7ee0c266fad3f947acd43c28585b4398c26bf7f3d4a054d84171" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www.boem.gov/Oil-and-Gas-Energy-Program/Mapping-and-Data/Alaska.aspx" .
+

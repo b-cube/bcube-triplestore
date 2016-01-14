@@ -1,0 +1,70 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:42f69cda-5e26-4855-ab70-16d7c8a205fc> owl:a foaf:Organization ;
+    foaf:name "" .
+
+<urn:uuid:6ee445d1-b711-420a-bbf1-2c513a2e8b5b> bcube:dateCreated "2015-10-29T16:07:32.805Z" ;
+    bcube:hasMetadataRecord <urn:uuid:a0d0e0fc-867c-48de-b716-fd7db61638c5> ;
+    bcube:lastUpdated "2015-10-29T16:07:32.805Z" ;
+    dc:conformsTo <urn:uuid:84ed6f07-f927-4372-be11-bc85a5938733>,
+        <urn:uuid:fed99427-bfef-405f-8390-0f19aad4dd1d> ;
+    dc:description "This dataset represents completed fire hazard reduction projects (often related to the removal of vegetative fuels) by CAL FIRE. All Fire Hazard reduction projects completed since 2009 are publicly available. Completed projects prior to 2008 have also been added, but are not comprehensive. As staff time and budgets permit, additional historical information will likely be added. Any additional projects not yet represented in this database are being transferred from field records into the CalMAPPER core database. \"Project Polygons\" are the top level reporting unit for treatment activities tracked within this geodatabase. Project polygons are areas that encompass all treatments for a project. This can be the sum of all treatment areas, or could be a property boundary, or a buffer area around the treatments polygons. A Composite relationship is defined between project polygons and treatment polygons. If you delete a project polygon, all treatments Related to that polygon will also be deleted. Treatment Polygons are the areas within a Project Polygon where work on the ground is accomplished. A Project Polygon may include multiple discrete Treatment Polygons. Treatment polygons are related to project polygons (as a destination row) and Activity records (as an origin row). Deleting a Treatment polygon deletes all Related activity records in the destination table. Activities are a description of the actual work done on a Treatment area over time (pruning, chipping, etc.). This information is contained in a table, which is related to the treatment polygons in which the activities took place." ;
+    dc:spatial "POLYGON ((-124.223726 32.609418,-124.223726 41.961281,-115.994578 41.961281,-115.994578 32.609418,-124.223726 32.609418))" ;
+    dcterms:publisher <urn:uuid:42f69cda-5e26-4855-ab70-16d7c8a205fc> ;
+    dcterms:title "CAL FIRE - Fire Hazard Reduction Projects" ;
+    esip:eastBound "-115.994578"^^xsd:float ;
+    esip:northBound "41.961281"^^xsd:float ;
+    esip:southBound "32.609418"^^xsd:float ;
+    esip:westBound "-124.223726"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:84ed6f07-f927-4372-be11-bc85a5938733> bcube:hasType "theme" ;
+    bcube:hasValue "CFIP",
+        "Cal MAPPER",
+        "Fire",
+        "Fire Hazard",
+        "Fire Plan",
+        "Forest Health",
+        "Forest Stewardship",
+        "Fuels",
+        "Fuels Reduction",
+        "VMP" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:a0d0e0fc-867c-48de-b716-fd7db61638c5> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-10-29T16:07:32.805Z" ;
+    bcube:lastUpdated "2015-10-29T16:07:32.805Z" ;
+    bcube:originatedFrom <urn:uuid:ba6767fe-9001-4ac5-bbff-eabbaae854bb> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:6ee445d1-b711-420a-bbf1-2c513a2e8b5b> .
+
+<urn:uuid:ba6767fe-9001-4ac5-bbff-eabbaae854bb> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-10-29T16:07:32.805Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-10-29T16:07:32.805Z" ;
+    dc:identifier "urn:sha:c1348ebb9eb6dcf19bceb212f74636e2e989f2afe0984e8d232d76a1" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://frap.cdf.ca.gov/data/statewide/FGDC_metadata/CalFireHazReductProjects2013v1_7.xml" .
+
+<urn:uuid:fed99427-bfef-405f-8390-0f19aad4dd1d> bcube:hasType "theme" ;
+    bcube:hasValue "health" ;
+    dc:partOf "ISO 19115 Topic Categories" ;
+    owl:a bcube:thesaurusSubset .
+

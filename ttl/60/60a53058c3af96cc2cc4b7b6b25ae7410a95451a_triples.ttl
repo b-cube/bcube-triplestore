@@ -1,0 +1,71 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:22b4c889-9a01-4699-ae8a-120cb1aa8921> bcube:hasType "place" ;
+    bcube:hasValue "Colorado",
+        "Denver",
+        "Denver County",
+        "USA" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:41eec0cf-2b4a-4722-b58e-73b38acce272> owl:a foaf:Organization ;
+    foaf:name "" .
+
+<urn:uuid:aa186d47-5554-4ede-aa23-b117480045b0> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-10-30T11:08:32.761Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-10-30T11:08:32.761Z" ;
+    dc:identifier "urn:sha:09da603bc4de831b5326bf5105ecf4b6ca79d896ec544d5ccb32a65a" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://data.denvergov.org/download/gis/general_improvement_districts/metadata/general_improvement_districts.xml" .
+
+<urn:uuid:c3759ea7-f721-4a10-85aa-3d3c1815edbd> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-10-30T11:08:32.761Z" ;
+    bcube:lastUpdated "2015-10-30T11:08:32.761Z" ;
+    bcube:originatedFrom <urn:uuid:aa186d47-5554-4ede-aa23-b117480045b0> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:eb647411-a680-47c9-a727-fb6584288a24> .
+
+<urn:uuid:e6222ae5-d092-404e-a818-4ef870c218ef> bcube:hasType "theme" ;
+    bcube:hasValue "Assessments",
+        "Creation Boundary",
+        "District",
+        "GID",
+        "General Improvement Districts",
+        "Improvement",
+        "Ordinance",
+        "Tax Districts" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:eb647411-a680-47c9-a727-fb6584288a24> bcube:dateCreated "2015-10-30T11:08:32.761Z" ;
+    bcube:hasMetadataRecord <urn:uuid:c3759ea7-f721-4a10-85aa-3d3c1815edbd> ;
+    bcube:lastUpdated "2015-10-30T11:08:32.761Z" ;
+    dc:conformsTo <urn:uuid:22b4c889-9a01-4699-ae8a-120cb1aa8921>,
+        <urn:uuid:e6222ae5-d092-404e-a818-4ef870c218ef> ;
+    dc:description "GIDs are allowed to construct, install or acquire any public improvement except solid waste disposal improvements and services. They may assess ad valorem taxes and charge rates, tolls and charges for services or facilities. The may issue general obligation and revenue bonds. Debt in excess of $5,000 must be approved by the electors within the district. They may operate district improvements.They are initiated by a petition filed with the City Clerk, signed by the lesser of 30% or 200 electors owning taxable real or personal property within the district. Subareas within the district may be formed. The City Council is the board of directors of the district. By ordinance, an advisory board may be created to oversee the GID." ;
+    dc:spatial "POLYGON ((-105.000888 39.74022,-105.000888 39.791105,-104.809876 39.791105,-104.809876 39.74022,-105.000888 39.74022))" ;
+    dcterms:publisher <urn:uuid:41eec0cf-2b4a-4722-b58e-73b38acce272> ;
+    dcterms:title "General Improvement Districts" ;
+    esip:eastBound "-104.809876"^^xsd:float ;
+    esip:northBound "39.791105"^^xsd:float ;
+    esip:southBound "39.74022"^^xsd:float ;
+    esip:westBound "-105.000888"^^xsd:float ;
+    owl:a dcat:Dataset .
+

@@ -1,0 +1,58 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:1959356f-05ad-448c-8dd3-e116036033d8> bcube:hasValue "economy",
+        "location",
+        "oceans" ;
+    dc:partOf "IsoTopicCategories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:46c796ca-4726-466c-bbf6-79249f4c520b> bcube:hasType "place" ;
+    bcube:hasValue "California" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:5c0531da-0c62-43aa-afc8-9f854387ab2f> a "ISO 19115:2003/19139" ;
+    bcube:dateCreated "2015-07-31T15:17:29.807Z" ;
+    bcube:lastUpdated "2015-07-31T15:17:29.807Z" ;
+    bcube:originatedFrom <urn:uuid:6e08f9dc-9ddb-4808-9a03-2064bb71cc41> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:c0c4277c-181c-4657-8b56-27e8e76e2535> .
+
+<urn:uuid:6e08f9dc-9ddb-4808-9a03-2064bb71cc41> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-07-31T15:17:29.807Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-07-31T15:17:29.807Z" ;
+    dc:identifier "urn:sha:1aa2d0a6cade53c11ad445d8f163e9e70fdfb1842ac912a1c23500e3" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "https://catalog.data.gov/harvest/object/cad7f624-298b-479e-80f2-21c87c6e51a2" .
+
+<urn:uuid:c0c4277c-181c-4657-8b56-27e8e76e2535> bcube:dateCreated "2015-07-31T15:17:29.807Z" ;
+    bcube:hasMetadataRecord <urn:uuid:5c0531da-0c62-43aa-afc8-9f854387ab2f> ;
+    bcube:lastUpdated "2015-07-31T15:17:29.807Z" ;
+    dc:conformsTo <urn:uuid:1959356f-05ad-448c-8dd3-e116036033d8>,
+        <urn:uuid:46c796ca-4726-466c-bbf6-79249f4c520b> ;
+    dc:description "These data are a Kernel Density layers produced using ArcGIS. The Kernel analysis is a nonparametric statistical method for estimating probability densities from a set of points. Conceptually, a smooth raster surface is fitted over each point. The surface value is highest at the location of the point and diminishes with increasing distance (i.e.search radius), eventually reaching zero. A default value is calculated by the analysis tool for the search radius based on the input data; increasing the radius has little affect on the density value. Although more points will fall inside a larger search radius the number will be divided by a larger area when calculating density resulting in a more generalized output raster. The volume under the surface equals the weighted value for the point. The weights were created by Knowledge Networks and applied to the points based on demographics. The density of the output raster is calculated by adding the values of all the individual surfaces where they overlap. The point's weighted value determines the number of times to count the point. For example, a weighted value of 1.5 would cause the point to be counted one and half times. The resulting dataset is a smooth raster surface depicting the intensity use or density of an activity. Based on previous experience and after conducting some tests, all of the activity datasets were given a search radius of one mile. In discussing a similar project with the Oregon Department of Parks and Recreation we discovered that most visitors to the coast stay within a mile of their activity location. This distance also proved to be a good match to the mapped activities. Link to the Dataset - ftp://ftp.dfg.ca.gov/R7_MR/NONCONSUMPTIVE/NCCSR/BeachCombing.zip" ;
+    dc:spatial "POLYGON ((-123.750389 37.126487,-123.750389 39.068752,-122.30959 39.068752,-122.30959 37.126487,-123.750389 37.126487))" ;
+    dcterms:title "An Economic and Spatial Baseline of Coastal Recreation in the North Central Coast of California - Beach Combing" ;
+    esip:eastBound "-122.30959"^^xsd:float ;
+    esip:northBound "39.068752"^^xsd:float ;
+    esip:southBound "37.126487"^^xsd:float ;
+    esip:westBound "-123.750389"^^xsd:float ;
+    owl:a dcat:Dataset .
+

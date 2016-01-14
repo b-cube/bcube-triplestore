@@ -1,0 +1,190 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:0a332583-e12a-4993-8462-47c5ce5edd5c> bcube:hasType "theme" ;
+    bcube:hasValue "BLM",
+        "Bureau of Land Management",
+        "DOI",
+        "REA",
+        "Rapid Ecoregional Assessment" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:2c7f3919-98e0-4571-8920-bf68b1100b1e> bcube:hasType "theme" ;
+    bcube:hasValue "economy",
+        "planningCadastre" ;
+    dc:partOf "ISO 19115 Topic Category" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:314f6107-c865-4633-876e-7f0f9ea9e8d2> bcube:hasType "theme" ;
+    bcube:hasValue "Recreation" ;
+    dc:partOf "BLM-Theme" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:322f79e3-d0d2-4857-87ac-73f3fbfc49aa> bcube:hasType "theme" ;
+    bcube:hasValue "Recreation_Site_pt",
+        "boat ramp",
+        "campground",
+        "fishing",
+        "picnic area",
+        "recreation site",
+        "trailhead",
+        "viewing" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:3f66eae3-d181-4e55-bb4e-79276fc8dbf7> bcube:hasType "theme" ;
+    bcube:hasValue "SOD 2010",
+        "Sonoran Desert" ;
+    dc:partOf "BLM-REA" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:50a48858-240a-4b8f-87e2-09aa7f9ed6f4> dcterms:references <urn:uuid:e02caf80-a6f9-4c43-ad85-b01b437d9f2a> ;
+    owl:a bibo:WebPage .
+
+<urn:uuid:55573261-8072-4f87-b843-e91ea66b7574> bcube:hasType "theme" ;
+    bcube:hasValue "Recreation" ;
+    dc:partOf "BLM-Theme" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:62521061-ea54-4b85-b310-962ec108bf65> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-10-29T23:31:14.712Z" ;
+    bcube:lastUpdated "2015-10-29T23:31:14.712Z" ;
+    bcube:originatedFrom <urn:uuid:870c736a-f92f-4d4b-9add-ecc409649468> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:71877237-96d7-4092-ae08-e188e2d009bd> .
+
+<urn:uuid:71877237-96d7-4092-ae08-e188e2d009bd> bcube:dateCreated "2015-10-29T23:31:14.712Z" ;
+    bcube:hasMetadataRecord <urn:uuid:62521061-ea54-4b85-b310-962ec108bf65> ;
+    bcube:lastUpdated "2015-10-29T23:31:14.712Z" ;
+    dc:conformsTo <urn:uuid:0a332583-e12a-4993-8462-47c5ce5edd5c>,
+        <urn:uuid:2c7f3919-98e0-4571-8920-bf68b1100b1e>,
+        <urn:uuid:314f6107-c865-4633-876e-7f0f9ea9e8d2>,
+        <urn:uuid:322f79e3-d0d2-4857-87ac-73f3fbfc49aa>,
+        <urn:uuid:3f66eae3-d181-4e55-bb4e-79276fc8dbf7>,
+        <urn:uuid:55573261-8072-4f87-b843-e91ea66b7574>,
+        <urn:uuid:8405c3c0-9aaa-4c23-a7fe-2e4f9524b135>,
+        <urn:uuid:9de4fe73-6d5d-4870-aee3-64e372b6b2b3>,
+        <urn:uuid:a7b88d36-e372-47ac-80f0-2c5f532ce28e>,
+        <urn:uuid:b2420160-9c94-453b-ab29-dee512784388>,
+        <urn:uuid:e71955c8-8735-474c-982b-cb5b107ec53b>,
+        <urn:uuid:fe493d93-cf9d-4dc4-8a05-5e9617052117> ;
+    dc:description "This feature class Describes the spatial location of recreation sites within or in close proximity to an administrative unit. Recreation sites are stored in three feature classes. The feature class Recreation_Site_pt represents recreation sites so small they are displayed as points, Recreation_Site_pl represents recreation sites large enough to be represented by area features, and Recreation_Site_ln represents recreation sites that are represented by lines. Any type of recreation site may be contained in any of the feature classes but any given recreation site must be contained in only one of the three feature classes. Recreation sites are grouped hierarchically. For example, a campground may be composed of many loops, which may be composed of many campsites. The campground may also include other facilities such as boating areas and picnic grounds. Campgrounds may be grouped into complexes. There are four levels to this hierarchy but not all levels are necessarily used for any given site and some recreation subtypes may occur at more than one level of the hierarchy, depending on which other recreation sites they are associated with on the ground. Although this hierarchy is not described in the GIS Core Data, it is described in the associated INFRA ORACLE tables. Associated National Application: Infrastructure (INFRA) Recreation INFRA Web Page: http://infra.wo.fs.fed.us/infra/" ;
+    dc:spatial "POLYGON ((-111.0926645 31.38523538,-111.0926645 32.51887759,-110.562627 32.51887759,-110.562627 31.38523538,-111.0926645 31.38523538))" ;
+    dcterms:publisher <urn:uuid:7fad6c09-6521-4fe4-a192-8180d412ae81> ;
+    dcterms:references <urn:uuid:50a48858-240a-4b8f-87e2-09aa7f9ed6f4>,
+        <urn:uuid:c0ccaf06-5471-4825-b330-d979caa4a6b8>,
+        <urn:uuid:d59de76a-3d01-4df3-8ffd-f0ba77754208> ;
+    dcterms:title "BLM REA SOD 2010 USFS Coronado National Forest Recreation Sites" ;
+    esip:eastBound "-110.562627"^^xsd:float ;
+    esip:northBound "32.51887759"^^xsd:float ;
+    esip:southBound "31.38523538"^^xsd:float ;
+    esip:startDate "2009-03-25"^^xsd:date ;
+    esip:westBound "-111.0926645"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:7fad6c09-6521-4fe4-a192-8180d412ae81> owl:a foaf:Organization ;
+    foaf:name "Coronado National Forest" .
+
+<urn:uuid:8405c3c0-9aaa-4c23-a7fe-2e4f9524b135> bcube:hasType "place" ;
+    bcube:hasValue "U.S.",
+        "US",
+        "United States" ;
+    dc:partOf "U.S. Department of Commerce, 1995, Countries, dependencies, areas of special sovereignty, and their principal administrative divisions, Federal Information Processing Standard 10-4,): Washington, D.C., National Institute of Standards and Technology" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:870c736a-f92f-4d4b-9add-ecc409649468> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-10-29T23:31:14.712Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-10-29T23:31:14.712Z" ;
+    dc:identifier "urn:sha:42edb087ce01ff6e6a41b2b03fc543c3a9bf8cf352885a2888803b71" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www.landscape.blm.gov/SOD_2010_metadata/SOD_USFS_Coronado_RecSites_pt.xml" .
+
+<urn:uuid:9291d40b-ac78-413d-8b8e-ada1f46c7357> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-10-29T23:31:14.712Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-10-29T23:31:14.712Z" ;
+    dc:identifier "urn:sha:cc0bbc591f6a515b7292bb8f82ae8a2c99c32d6bbc2eb1fa7661c2dd" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "\\\\\\\\\\\\\\\\PCHP8210VH3\\\\\\\\C$\\\\\\\\WorkSpace\\\\\\\\R03\\\\\\\\COR\\\\\\\\Web\\\\\\\\Recreation_Site_pt.shp" .
+
+<urn:uuid:9de4fe73-6d5d-4870-aee3-64e372b6b2b3> bcube:hasType "place" ;
+    bcube:hasValue "Arizona",
+        "Coronado National Forest",
+        "Douglas",
+        "Nogales",
+        "Safford",
+        "Sierra Vista",
+        "Southwestern Region",
+        "Tucson" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:a7b88d36-e372-47ac-80f0-2c5f532ce28e> bcube:hasType "theme" ;
+    bcube:hasValue "Arizona",
+        "California" ;
+    dc:partOf "BLM-State" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:b2420160-9c94-453b-ab29-dee512784388> bcube:hasType "place" ;
+    bcube:hasValue "Arizona",
+        "California" ;
+    dc:partOf "BLM-State" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:c0ccaf06-5471-4825-b330-d979caa4a6b8> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-10-29T23:31:14.712Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-10-29T23:31:14.712Z" ;
+    dc:identifier "urn:sha:d14a028c2a3a2bc9476102bb288234c415a2b01f828ea62ac5b3e42f" ;
+    owl:a bcube:Url .
+
+<urn:uuid:d59de76a-3d01-4df3-8ffd-f0ba77754208> dcterms:references <urn:uuid:9291d40b-ac78-413d-8b8e-ada1f46c7357> ;
+    owl:a bibo:WebPage .
+
+<urn:uuid:e02caf80-a6f9-4c43-ad85-b01b437d9f2a> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-10-29T23:31:14.712Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-10-29T23:31:14.712Z" ;
+    dc:identifier "urn:sha:4603c0ad969790fda0c99d18a4d76915b189cb4ee3fb7f2ec827c44c" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www.landscape.blm.gov/SOD_2010_layerpackages/SOD_USFS_Coronado_RecSites_pt.lpk" .
+
+<urn:uuid:e71955c8-8735-474c-982b-cb5b107ec53b> bcube:hasType "place" ;
+    bcube:hasValue "Sonoran Desert" ;
+    dc:partOf "BLM-Ecoregion" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:fe493d93-cf9d-4dc4-8a05-5e9617052117> bcube:hasType "theme" ;
+    bcube:hasValue "society" ;
+    dc:partOf "ISO 19115 Topic Category" ;
+    owl:a bcube:thesaurusSubset .
+

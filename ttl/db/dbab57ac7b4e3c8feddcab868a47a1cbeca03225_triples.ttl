@@ -1,0 +1,97 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:2599ff28-475d-41a6-88d3-8c27e5782bd7> owl:a foaf:Organization ;
+    foaf:name "" .
+
+<urn:uuid:43a45de9-3035-4b5e-9aec-1b75a6658149> bcube:hasType "place" ;
+    bcube:hasValue "04001",
+        "Apache",
+        "County or Equivalent Entity",
+        "U.S.",
+        "United States" ;
+    dc:partOf "FIPS Publication 5-2, FIPS Publication 6-4, FIPS Publication 8-6, FIPS Publication 9-1,FIPS Publication55-4" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:5c808e73-622f-490c-863c-6bc0fcec18bf> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-11-03T05:29:39.814Z" ;
+    bcube:lastUpdated "2015-11-03T05:29:39.814Z" ;
+    bcube:originatedFrom <urn:uuid:df196bb1-73f2-4aff-a452-e8a4dd2f38b9> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:694d2b95-c7eb-408e-9bfa-aa0dce0e31b8> .
+
+<urn:uuid:694d2b95-c7eb-408e-9bfa-aa0dce0e31b8> bcube:dateCreated "2015-11-03T05:29:39.814Z" ;
+    bcube:hasMetadataRecord <urn:uuid:5c808e73-622f-490c-863c-6bc0fcec18bf> ;
+    bcube:lastUpdated "2015-11-03T05:29:39.814Z" ;
+    dc:conformsTo <urn:uuid:43a45de9-3035-4b5e-9aec-1b75a6658149>,
+        <urn:uuid:bbd214c4-0f13-40c8-9fcf-b04c8405c867>,
+        <urn:uuid:ed54fbaf-db8d-4110-bfc4-1c09487b6734> ;
+    dc:description "The TIGER/Line relationship files are an extract of selected geographic information from the Census MAF/TIGER database. Each TIGER/Line relationship file is designed to stand alone as an independent data set or can be used jointly with the shapefiles." ;
+    dc:spatial "POLYGON ((-110.000705 33.475417,-110.000705 36.999389,-109.045223 36.999389,-109.045223 33.475417,-110.000705 33.475417))" ;
+    dcterms:publisher <urn:uuid:2599ff28-475d-41a6-88d3-8c27e5782bd7> ;
+    dcterms:references <urn:uuid:c7af94d9-c61f-4bff-a3dc-6adcf7225823> ;
+    dcterms:title "TIGER/Line Shapefile, 2008, county, Apache County, AZ, Topological Faces-Area Hydrography" ;
+    esip:eastBound "-109.045223"^^xsd:float ;
+    esip:endDate "2008-07-01"^^xsd:date ;
+    esip:northBound "36.999389"^^xsd:float ;
+    esip:southBound "33.475417"^^xsd:float ;
+    esip:startDate "2008-01-01"^^xsd:date ;
+    esip:westBound "-110.000705"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:bbd214c4-0f13-40c8-9fcf-b04c8405c867> bcube:hasType "theme" ;
+    bcube:hasValue "Area hydrography identifier",
+        "County ANSI Code",
+        "County FIPS Code",
+        "County or equivalent entity",
+        "Hydrography",
+        "Land/water flag",
+        "Permanent face ID",
+        "State ANSI Code",
+        "State FIPS Code",
+        "Table",
+        "Topological Faces" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:c7af94d9-c61f-4bff-a3dc-6adcf7225823> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-03T05:29:39.814Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-03T05:29:39.814Z" ;
+    dc:identifier "urn:sha:9220996ea7c6954a2d16c77a32c6a9ef0616bb3a169d692d7b497c27" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www2.census.gov/geo/tiger/TIGER2008/04_ARIZONA/04001_Apache_County/tl_2008_04001_facesah.zip" .
+
+<urn:uuid:df196bb1-73f2-4aff-a452-e8a4dd2f38b9> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-03T05:29:39.814Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-03T05:29:39.814Z" ;
+    dc:identifier "urn:sha:302c0d38a8a7c626a1b6d660d66842fa2528dbf296b6182068a632c6" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://meta.geo.census.gov/data/existing/decennial/GEO/GPMB/TIGERline/fe_2008/facesah/tl_2008_04001_facesah_url.dbf.xml" .
+
+<urn:uuid:ed54fbaf-db8d-4110-bfc4-1c09487b6734> bcube:hasType "theme" ;
+    bcube:hasValue "boundaries",
+        "inlandWaters" ;
+    dc:partOf "ISO 19115 Topic Categories" ;
+    owl:a bcube:thesaurusSubset .
+

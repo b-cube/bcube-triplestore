@@ -1,0 +1,103 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:03e794e8-0cb5-4a0f-ad17-0ce5b26f30cb> bcube:hasType "theme" ;
+    bcube:hasValue "EARTH SCIENCE > Oceans > Coastal Processes > Coral Reefs",
+        "EARTH SCIENCE > Oceans > Coastal Processes > Coral Reefs > Coral Reef Ecology > Benthic biology",
+        "EARTH SCIENCE > Oceans > Coastal Processes > Coral Reefs > Coral Reef Ecology > Habitats" ;
+    dc:partOf "CoRIS Theme Thesaurus" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:0e27f3c8-0d55-428f-879a-c617d12a6a7a> a "ISO 19115:2003/19139" ;
+    bcube:dateCreated "2015-06-27T22:57:48.785Z" ;
+    bcube:lastUpdated "2015-06-27T22:57:48.785Z" ;
+    bcube:originatedFrom <urn:uuid:f071b415-18fc-4cfa-a8db-217d432c02a9> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:6a500db7-49d0-42b9-a30a-d3c36d0f5e96> .
+
+<urn:uuid:6a500db7-49d0-42b9-a30a-d3c36d0f5e96> bcube:dateCreated "2015-06-27T22:57:48.785Z" ;
+    bcube:hasMetadataRecord <urn:uuid:0e27f3c8-0d55-428f-879a-c617d12a6a7a> ;
+    bcube:lastUpdated "2015-06-27T22:57:48.785Z" ;
+    dc:conformsTo <urn:uuid:03e794e8-0cb5-4a0f-ad17-0ce5b26f30cb>,
+        <urn:uuid:6c99580b-ddd6-41de-bb60-a4f174f55b3c>,
+        <urn:uuid:6d37d3cf-190d-4175-8ef3-823623f26779>,
+        <urn:uuid:76f9e162-cc60-4218-bb72-b55fad42d3a5>,
+        <urn:uuid:9141d92a-0bba-4707-8891-016fa59efa7e>,
+        <urn:uuid:cce2dd6b-70ba-4409-8654-6630078589ce> ;
+    dc:description "This shapefile contains information about the shallow-water (&lt;40 meters) geology and biology of the seafloor in Coral Bay, St. John in the U.S. Virgin Islands (USVI). It was created by manually delineating and classifying habitats visible in a 0.3x0.3 meter aerial photograph mosaic, and by using edge detection algorithms and boosted regression trees to automatically delineate and classify habitat features visible in 0.3x0.3 meter LiDAR surfaces. Habitat features less than 100 square meters were not delineated from the orthomosaic, and were removed from habitat polygons derived from the LiDAR surfaces using ET Geowizards ArcGIS extension. Manually delineated habitat polygons were digitized at a scale of 1:1,000. Habitat polygon boundaries derived from the LiDAR surfaces were smoothed in ArcGIS to more closely match the 1:1,000 scale used for manual digitizing. Georeferenced underwater video &amp; photos were used to train the analyst and algorithm to classify the major and detailed geomorphological structure, percent hard bottom, major and detailed biological cover and live coral cover for each polygon. The thematic accuracy of the map was assessed qualitatively by local experts and quantitatively using randomly sampled locations stratified by detailed geomorpholoigcal structure type. Thematic accuracies for major and detailed geomorphological structure, percent hardbottom, major and detailed biological cover, live coral cover and dominant coral type were: 93.0%, 75.1%, 86.2%, 86.5%, 74.5%, 83.3% and 88.2%, respectively. These thematic accuracies are similar to the thematic accuracies reported for other NOAA benthic habitat mapping efforts around Buck Island in St. Croix (&gt;81.4%), in St. John (&gt;80%), in the Main Eight Hawaiian Islands (&gt;84.0%) and in the Republic of Palau (&gt;80.0%)." ;
+    dc:identifier "6943" ;
+    dc:spatial "POLYGON ((-64.912227 18.282291,-64.912227 18.367313,-64.635668 18.367313,-64.635668 18.282291,-64.912227 18.282291))" ;
+    dcterms:references <urn:uuid:82a80302-0a53-4493-8b65-6a28df2137fa> ;
+    dcterms:title "Shallow-water Benthic Habitat Map (2013) for Coral Bay, St. John" ;
+    esip:eastBound "-64.635668"^^xsd:float ;
+    esip:endDate "2013-11-30"^^xsd:date ;
+    esip:northBound "18.367313"^^xsd:float ;
+    esip:southBound "18.282291"^^xsd:float ;
+    esip:startDate "2013-11-30"^^xsd:date ;
+    esip:westBound "-64.912227"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:6c99580b-ddd6-41de-bb60-a4f174f55b3c> bcube:hasType "temporal" ;
+    bcube:hasValue "November 30, 2013" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:6d37d3cf-190d-4175-8ef3-823623f26779> bcube:hasValue "environment",
+        "geoscientificInformation",
+        "imageryBaseMapsEarthCover",
+        "oceans" ;
+    dc:partOf "IsoTopicCategories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:76f9e162-cc60-4218-bb72-b55fad42d3a5> bcube:hasValue "Downloadable Data" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:82a80302-0a53-4493-8b65-6a28df2137fa> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-06-27T22:57:48.785Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-06-27T22:57:48.785Z" ;
+    dc:identifier "urn:sha:6920e1e8fd902a1a1a60a0e4fe33908be4b7d6628713d26522ee4044" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://coastalscience.noaa.gov/projects/detail?key=33" .
+
+<urn:uuid:9141d92a-0bba-4707-8891-016fa59efa7e> bcube:hasType "theme" ;
+    bcube:hasValue "Map Images > Habitats" ;
+    dc:partOf "CoRIS Discovery Thesaurus" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:cce2dd6b-70ba-4409-8654-6630078589ce> bcube:hasType "place" ;
+    bcube:hasValue "COUNTRY/TERRITORY > United States of America > U. S. Virgin Islands > St. John > Coral Bay (18N064W0067)",
+        "COUNTRY/TERRITORY > United States of America > U. S. Virgin Islands > St. John > St. John (18N064W0011)",
+        "COUNTRY/TERRITORY > United States of America > U. S. Virgin Islands > St. Thomas > St. Thomas (18N064W0033)",
+        "OCEAN BASIN > Atlantic Ocean > Caribbean Sea > Virgin Islands > Leeward Islands > St. Thomas (18N064W0033)",
+        "OCEAN BASIN > Atlantic Ocean > Caribbean Sea > Virgin Islands > St. John > Coral Bay (18N064W0067)",
+        "OCEAN BASIN > Atlantic Ocean > Caribbean Sea > Virgin Islands > Virgin Islands > St. John (18N064W0011)" ;
+    dc:partOf "CoRIS Place Thesaurus" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:f071b415-18fc-4cfa-a8db-217d432c02a9> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-06-27T22:57:48.785Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-06-27T22:57:48.785Z" ;
+    dc:identifier "urn:sha:4eba57071d036acbfeae2f050b6964632ed5bfdaa7897e9245435fe3" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www.coris.noaa.gov/geoportal/rest/document?id=%7B728B013C-9D4D-4B78-A392-97230F861512%7D" .
+

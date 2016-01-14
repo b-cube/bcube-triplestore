@@ -1,0 +1,84 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:1d358028-c9f2-43ee-a031-509db65501d0> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-10-30T07:11:44.834Z" ;
+    bcube:lastUpdated "2015-10-30T07:11:44.834Z" ;
+    bcube:originatedFrom <urn:uuid:9baaff3d-378e-4d21-9b6f-42c56bfb83be> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:f141eaff-0e52-4b07-abb1-e46b7f4df0d3> .
+
+<urn:uuid:27705d78-992a-48c9-ae28-0bf65b06dfd9> bcube:hasType "theme" ;
+    bcube:hasValue "LiDAR",
+        "elevation",
+        "elevation contours" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:284a7468-e4de-4d88-8855-c11749322b09> bcube:hasType "place" ;
+    bcube:hasValue "New England",
+        "Rhode Island",
+        "United States" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:33593732-52c9-4d98-8b90-d6f2c5d234b2> owl:a foaf:Organization ;
+    foaf:name "University of Rhode Island Environmental Data Center" .
+
+<urn:uuid:7560f37e-d3df-4eeb-98a0-b670ec5bb2f6> bcube:hasType "theme" ;
+    bcube:hasValue "elevation" ;
+    dc:partOf "ISO 19115 Topic Categories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:9baaff3d-378e-4d21-9b6f-42c56bfb83be> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-10-30T07:11:44.834Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-10-30T07:11:44.834Z" ;
+    dc:identifier "urn:sha:7f5c181b7be43da05a21576f04ee630e164707f90a478b26c8fe25dd" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www.edc.uri.edu/rigis/data/download/2011USGS/contours5ft11.xml" .
+
+<urn:uuid:d5525f50-148b-434c-a149-22be0fa20ab5> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-10-30T07:11:44.834Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-10-30T07:11:44.834Z" ;
+    dc:identifier "urn:sha:3e9757e04fa95c82527ee0fdc0a805cd4b250717c66a15c20c338035" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www.edc.uri.edu/rigis" .
+
+<urn:uuid:f141eaff-0e52-4b07-abb1-e46b7f4df0d3> bcube:dateCreated "2015-10-30T07:11:44.834Z" ;
+    bcube:hasMetadataRecord <urn:uuid:1d358028-c9f2-43ee-a031-509db65501d0> ;
+    bcube:lastUpdated "2015-10-30T07:11:44.834Z" ;
+    dc:conformsTo <urn:uuid:27705d78-992a-48c9-ae28-0bf65b06dfd9>,
+        <urn:uuid:284a7468-e4de-4d88-8855-c11749322b09>,
+        <urn:uuid:7560f37e-d3df-4eeb-98a0-b670ec5bb2f6> ;
+    dc:description "Statewide elevation contour lines (5-ft intervals) derived from a digital elevation model originally produced as part of the Northeast LiDAR Project in 2011." ;
+    dc:spatial "POLYGON ((-71.896514 41.145978,-71.896514 42.018926,-71.117465 42.018926,-71.117465 41.145978,-71.896514 41.145978))" ;
+    dcterms:publisher <urn:uuid:33593732-52c9-4d98-8b90-d6f2c5d234b2> ;
+    dcterms:references <urn:uuid:d5525f50-148b-434c-a149-22be0fa20ab5> ;
+    dcterms:title "Elevation Contours, 5 Foot Interval; contours5ft11" ;
+    esip:eastBound "-71.117465"^^xsd:float ;
+    esip:northBound "42.018926"^^xsd:float ;
+    esip:southBound "41.145978"^^xsd:float ;
+    esip:westBound "-71.896514"^^xsd:float ;
+    owl:a dcat:Dataset .
+

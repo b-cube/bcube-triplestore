@@ -1,0 +1,102 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:11872551-6a2d-4851-9798-e92e5f783c4a> owl:a foaf:Organization ;
+    foaf:name "" .
+
+<urn:uuid:1971e7fd-ec96-445a-930a-9fd9282f3cc8> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-11-08T17:07:25.594Z" ;
+    bcube:lastUpdated "2015-11-08T17:07:25.594Z" ;
+    bcube:originatedFrom <urn:uuid:42f53746-75d2-4a78-9d62-914ab21c830b> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:1c1a0e05-248a-4e4c-a215-3598d9ee9f29> .
+
+<urn:uuid:1c1a0e05-248a-4e4c-a215-3598d9ee9f29> bcube:dateCreated "2015-11-08T17:07:25.594Z" ;
+    bcube:hasMetadataRecord <urn:uuid:1971e7fd-ec96-445a-930a-9fd9282f3cc8> ;
+    bcube:lastUpdated "2015-11-08T17:07:25.594Z" ;
+    dc:conformsTo <urn:uuid:4db4fa61-f0c5-4ab8-8bc0-3c18fef3c698>,
+        <urn:uuid:a394a182-70a5-4e2f-8719-bc6927f00dd3>,
+        <urn:uuid:aa1baf7f-b68d-4dfb-bee8-bf0bb06a590b> ;
+    dc:description "The TIGER/Line relationship files are an extract of selected geographic information from the Census MAF/TIGER database. Each TIGER/Line relationship file is designed to stand alone as an independent data set or can be used jointly with the shapefiles." ;
+    dc:spatial "POLYGON ((-161.047706 61.945451,-161.047706 68.507297,-141.00246 68.507297,-141.00246 61.945451,-161.047706 61.945451))" ;
+    dcterms:publisher <urn:uuid:11872551-6a2d-4851-9798-e92e5f783c4a> ;
+    dcterms:references <urn:uuid:c57f6b95-39c0-4c03-9334-a888edb8ee9b> ;
+    dcterms:title "TIGER/Line Shapefile, 2008, county, Yukon-Koyukuk Census Area, AK, Feature Names" ;
+    esip:eastBound "-141.00246"^^xsd:float ;
+    esip:endDate "2008-07-01"^^xsd:date ;
+    esip:northBound "68.507297"^^xsd:float ;
+    esip:southBound "61.945451"^^xsd:float ;
+    esip:startDate "2008-01-01"^^xsd:date ;
+    esip:westBound "-161.047706"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:42f53746-75d2-4a78-9d62-914ab21c830b> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-08T17:07:25.594Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-08T17:07:25.594Z" ;
+    dc:identifier "urn:sha:8c7c9ab1cd697d2ceb06ce794043a55b2222bbfb310194b0e0815912" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://meta.geo.census.gov/data/existing/decennial/GEO/GPMB/TIGERline/fe_2008/featnames/tl_2008_02290_featnames_url.dbf.xml" .
+
+<urn:uuid:4db4fa61-f0c5-4ab8-8bc0-3c18fef3c698> bcube:hasType "theme" ;
+    bcube:hasValue "transportation" ;
+    dc:partOf "ISO 19115 Topic Categories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:a394a182-70a5-4e2f-8719-bc6927f00dd3> bcube:hasType "place" ;
+    bcube:hasValue "02290",
+        "County or Equivalent Entity",
+        "U.S.",
+        "United States",
+        "Yukon-Koyukuk" ;
+    dc:partOf "FIPS Publication 5-2, FIPS Publication 6-4, FIPS Publication 8-6, FIPS Publication 9-1,FIPS Publication55-4" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:aa1baf7f-b68d-4dfb-bee8-bf0bb06a590b> bcube:hasType "theme" ;
+    bcube:hasValue "County ANSI Code",
+        "County FIPS Code",
+        "County or equivalent entity",
+        "Feature Names",
+        "MAFTIGER feature class code",
+        "Name",
+        "Permanent edge ID",
+        "Prefix Qualifier code",
+        "Prefix direction code",
+        "Prefix type code description",
+        "PrimaryAlternate code",
+        "State ANSI Code",
+        "State FIPS Code",
+        "Suffix Qualifier code",
+        "Suffix direction code",
+        "Suffix type code",
+        "Table" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:c57f6b95-39c0-4c03-9334-a888edb8ee9b> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-08T17:07:25.594Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-08T17:07:25.594Z" ;
+    dc:identifier "urn:sha:aa11c1fd2347d2c0e5c1b90a49b56bc84f391f19135c63d775bc23e1" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www2.census.gov/geo/tiger/TIGER2008/02_ALASKA/02290_Yukon-Koyukuk_Census_Area/tl_2008_02290_featnames.zip" .
+

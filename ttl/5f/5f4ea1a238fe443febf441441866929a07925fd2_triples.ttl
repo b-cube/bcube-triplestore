@@ -1,0 +1,72 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:21e85306-c9ae-43d0-92ca-5dcab97ebc0e> bcube:hasType "theme" ;
+    bcube:hasValue "environment",
+        "geoscientificinformation",
+        "oceans",
+        "structure" ;
+    dc:partOf "ISO 19115 Topic Category" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:2d02ec6e-c411-48b3-9e73-24e0255c9152> owl:a foaf:Organization ;
+    foaf:name "" .
+
+<urn:uuid:6b9c776f-58c9-43e0-8710-f1a23633c8d7> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-11-07T20:17:00.757Z" ;
+    bcube:lastUpdated "2015-11-07T20:17:00.757Z" ;
+    bcube:originatedFrom <urn:uuid:edcb1a40-b0a4-4524-be4f-5fe0d9e37ea6> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:bb37d810-2b32-4e3a-b0de-456124d5faa9> .
+
+<urn:uuid:bb37d810-2b32-4e3a-b0de-456124d5faa9> bcube:dateCreated "2015-11-07T20:17:00.757Z" ;
+    bcube:hasMetadataRecord <urn:uuid:6b9c776f-58c9-43e0-8710-f1a23633c8d7> ;
+    bcube:lastUpdated "2015-11-07T20:17:00.757Z" ;
+    dc:conformsTo <urn:uuid:21e85306-c9ae-43d0-92ca-5dcab97ebc0e>,
+        <urn:uuid:ded520ff-9c9e-4432-8c1f-40ebaf2459df> ;
+    dc:description "This part of SIM 3225 presents data for the curvature map (see sheet 11, SIM 3225) of Hueneme Canyon, California. The raster data file is included in \"Curvature_HuenemeCanyon.zip,\" which is accessible from http://pubs.usgs.gov/ds/781/HuenemeCanyon/data_catalog_HuenemeCanyon.html. This metadata describes a raster data set of smoothed curvature used as an interpretation aid for mapping geomorphology of Hueneme Canyon. The curvature raster, in conjunction with bathymetry data, amplitude data, and seismic reflection profiles, was used to interpret geology and geomorphology of Hueneme Canyon. The curvature raster was generated in two steps. First, the source elevation data were combined into a single elevation raster and smoothed using a FocalMean algorithm in ArcGIS 9.3.1, as follows: focalmean([elevation_source], circle, 4, data) This operation smoothes the data by calculating the mean of all cells for which the cell center is within a 4-cell radius of the target cell - essentially calculating a rolling mean of elevation over the entire grid. Second, the curvature of the smoothed source elevation data was calculated using the curvature function in ArcGIS 9.3.1. Curvature is the second derivative of the elevation surface (the slope of the slope) calculated using the methods of Zeverbergen and Thorne (1987). The ArcGIS calculation for total curvature is more accurately described as representing the difference between the cell's value and the average value along the four cardinal directions. Differences between the ArcGIS implementation and the original equations of Zeverbergen and Thorne (1987) are (1) the sign is reversed, and (2) the end value is multiplied by 100. Although curvature was also decomposed into plan and profile curvature to aid in geologic mapping, those products are not shown. Reference Cited: Zeverbergen, L.W., and Thorne, C.R., 1987, Quantitative analysis of land surface topography: Earth Surface Processes and Landforms, v. 12, p. 47-56." ;
+    dc:spatial "POLYGON ((-119.256437 34.061609,-119.256437 34.144867,-119.207298 34.144867,-119.207298 34.061609,-119.256437 34.061609))" ;
+    dcterms:publisher <urn:uuid:2d02ec6e-c411-48b3-9e73-24e0255c9152> ;
+    dcterms:title "Curvature--Hueneme Canyon, California" ;
+    esip:eastBound "-119.207298"^^xsd:float ;
+    esip:endDate "2007-01-01"^^xsd:date ;
+    esip:northBound "34.144867"^^xsd:float ;
+    esip:southBound "34.061609"^^xsd:float ;
+    esip:startDate "2006-01-01"^^xsd:date ;
+    esip:westBound "-119.256437"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:ded520ff-9c9e-4432-8c1f-40ebaf2459df> bcube:hasType "place" ;
+    bcube:hasValue "California",
+        "Channel Islands Harbor",
+        "Hueneme Canyon",
+        "Pacific Ocean",
+        "Port of Hueneme",
+        "Santa Barbara Channel",
+        "Ventura County" ;
+    dc:partOf "Geographic Names Information System (GNIS)" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:edcb1a40-b0a4-4524-be4f-5fe0d9e37ea6> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-07T20:17:00.757Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-07T20:17:00.757Z" ;
+    dc:identifier "urn:sha:c68eaad87867d3257122833f7a98696ea1251c9b1a7ea68d605f3b7d" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://pubs.usgs.gov/ds/781/HuenemeCanyon/metadata/Curvature_HuenemeCanyon_metadata.xml" .
+

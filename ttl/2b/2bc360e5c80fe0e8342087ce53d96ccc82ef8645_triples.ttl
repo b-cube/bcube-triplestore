@@ -1,0 +1,66 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:024889c4-dbf6-4e33-9261-b9b2695aa658> bcube:hasType "theme" ;
+    bcube:hasValue "fire",
+        "fire history",
+        "fire protection",
+        "firehistory",
+        "historic fires",
+        "state responsibility areas" ;
+    dc:partOf "keyword" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:84061973-b77b-4baf-8eaf-a1462f6ca48b> a "ISO 19115:2003/19139" ;
+    bcube:dateCreated "2015-10-19T04:22:04.948Z" ;
+    bcube:lastUpdated "2015-10-19T04:22:04.948Z" ;
+    bcube:originatedFrom <urn:uuid:f0c0cc38-5114-4c21-8353-1589e3c00ff5> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:cfc57c4a-5abd-4af1-951b-75eea60ab9bb> .
+
+<urn:uuid:cc92f17a-f657-48de-99a9-fb56e177db60> bcube:hasType "theme" ;
+    bcube:hasValue "economy",
+        "environment",
+        "environmental hazards",
+        "environmental risk",
+        "natural resources" ;
+    dc:partOf "ISO Topic Categories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:cfc57c4a-5abd-4af1-951b-75eea60ab9bb> bcube:dateCreated "2015-10-19T04:22:04.948Z" ;
+    bcube:hasMetadataRecord <urn:uuid:84061973-b77b-4baf-8eaf-a1462f6ca48b> ;
+    bcube:lastUpdated "2015-10-19T04:22:04.948Z" ;
+    dc:conformsTo <urn:uuid:024889c4-dbf6-4e33-9261-b9b2695aa658>,
+        <urn:uuid:cc92f17a-f657-48de-99a9-fb56e177db60> ;
+    dc:description "The Fire Perimeters data consists of CDF fires 300 acres and greater in size and USFS fires 10 acres and greater throughout California from 1950 to 2002. Some fires before 1950, and some CDF fires smaller than 300 acres are also included. In 2002 CDF's criteria expanded to include timber fires 10 acres and greater, brush fires 50 acres and greater, and grass fires 300 acres and greater, wildland fires destroying three or more structures, and wildland fires causeing $300,000 or more in damage. Also in 2002 BLM and NPS joined the effort, collecting fires10 acres and greater. So far only Sequoia-Kings Canyon and Yosemite National Parks have turned in data from NPS, and BLM has only turned in 2002 fires." ;
+    dc:spatial "POLYGON ((-124.498273 32.436743,-124.498273 42.10357,-113.836109 42.10357,-113.836109 32.436743,-124.498273 32.436743))" ;
+    dcterms:title "Fire History" ;
+    esip:eastBound "-113.836109"^^xsd:float ;
+    esip:northBound "42.10357"^^xsd:float ;
+    esip:southBound "32.436743"^^xsd:float ;
+    esip:westBound "-124.498273"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:f0c0cc38-5114-4c21-8353-1589e3c00ff5> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-10-19T04:22:04.948Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-10-19T04:22:04.948Z" ;
+    dc:identifier "urn:sha:3bd2ca89e3d2858688e2f098388a79312b2c9a97bce3d21bb821d888" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "https://catalog.data.gov/harvest/object/a0de51c0-3b61-4312-a240-fdd9cf33ef6b" .
+

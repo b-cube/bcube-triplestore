@@ -1,0 +1,66 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:020a0619-a22a-4f6f-93f0-8ab92e838ca2> bcube:hasType "theme" ;
+    bcube:hasValue "Land Cover",
+        "Land Cover Analysis",
+        "Remotely Sensed Imagery/Photos" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:1bf61583-f693-4b20-8cf1-e06b93ae0445> bcube:hasValue "imageryBaseMapsEarthCover" ;
+    dc:partOf "IsoTopicCategories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:5a5d2b5c-65de-4241-8dd3-10d25360dca0> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-10T00:30:28.62Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-10T00:30:28.62Z" ;
+    dc:identifier "urn:sha:52923a73dcb1eeaaeeea44a843ee164099f009589f545f8b5faef306" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://coast.noaa.gov/data/Documents/Metadata/isoharvest/Imagery/2004_pajaros_landcover_ISO.xml" .
+
+<urn:uuid:a85f5b3e-ecbb-4493-bed6-dfda7a8ca0a5> bcube:hasType "place" ;
+    bcube:hasValue "CNMI",
+        "Coastal Zone",
+        "Farallon de Pajaros" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:ca11feac-268a-4006-90bc-ead060f10bc7> a "ISO 19115:2003/19139" ;
+    bcube:dateCreated "2015-08-10T00:30:28.62Z" ;
+    bcube:lastUpdated "2015-08-10T00:30:28.62Z" ;
+    bcube:originatedFrom <urn:uuid:5a5d2b5c-65de-4241-8dd3-10d25360dca0> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:daa4cfd6-4c5b-4980-8c49-28d1a346d6ae> .
+
+<urn:uuid:daa4cfd6-4c5b-4980-8c49-28d1a346d6ae> bcube:dateCreated "2015-08-10T00:30:28.62Z" ;
+    bcube:hasMetadataRecord <urn:uuid:ca11feac-268a-4006-90bc-ead060f10bc7> ;
+    bcube:lastUpdated "2015-08-10T00:30:28.62Z" ;
+    dc:conformsTo <urn:uuid:020a0619-a22a-4f6f-93f0-8ab92e838ca2>,
+        <urn:uuid:1bf61583-f693-4b20-8cf1-e06b93ae0445>,
+        <urn:uuid:a85f5b3e-ecbb-4493-bed6-dfda7a8ca0a5> ;
+    dc:description "This data set consists of land derived from high resolution imagery and was analyzed according to the Coastal Change Analysis Program (C-CAP) protocol to determine land cover. This data set utilized a single Quickbird multispectral scene which was processed to detect C-CAP land cover features on the island of Farallon de Pajaros." ;
+    dc:spatial "POLYGON ((144.8814 20.533064,144.8814 20.556577,144.906567 20.556577,144.906567 20.533064,144.8814 20.533064))" ;
+    dcterms:title "C-CAP Land Cover, Commonwealth of the Northern Mariana Islands (CNMI), Farallon de Pajaros, 2004" ;
+    esip:eastBound "144.906567"^^xsd:float ;
+    esip:northBound "20.556577"^^xsd:float ;
+    esip:southBound "20.533064"^^xsd:float ;
+    esip:westBound "144.8814"^^xsd:float ;
+    owl:a dcat:Dataset .
+

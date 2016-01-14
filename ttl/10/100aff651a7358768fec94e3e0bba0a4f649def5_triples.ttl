@@ -1,0 +1,63 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:606d0302-deba-43e6-9400-2d97d90bb1fe> bcube:hasType "theme" ;
+    bcube:hasValue "ArcInfo ungenerate",
+        "f32023 = Nye",
+        "faults",
+        "geologic structure",
+        "geophysics",
+        "geospatial datasets",
+        "mathematical modeling",
+        "p176 = Nevada Test Site" ;
+    dc:partOf "Alexandria Digital Library Feature Type Thesaurus" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:aabb093d-63a4-4ca0-ac4a-0eb34c56302d> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2014-10-30T05:34:57.022Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2014-10-30T05:34:57.022Z" ;
+    dc:identifier "urn:sha:ec0acffd8dbcc5bd3651bf0c031a378f14367d1e5e31baea687a8f22" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://mrdata.usgs.gov/catalog/iso.php?cite=247" .
+
+<urn:uuid:c39b93a8-56c5-4e01-b6a4-6682c254a075> a "ISO 19115:2003/19139" ;
+    bcube:dateCreated "2014-10-30T05:34:57.022Z" ;
+    bcube:lastUpdated "2014-10-30T05:34:57.022Z" ;
+    bcube:originatedFrom <urn:uuid:aabb093d-63a4-4ca0-ac4a-0eb34c56302d> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:f667bc20-919d-4193-bd7b-5e29d1de8dfa> .
+
+<urn:uuid:d9ec620f-1d99-4613-bfb1-b129f127304f> bcube:hasValue "geoscientificInformation" ;
+    dc:partOf "IsoTopicCategories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:f667bc20-919d-4193-bd7b-5e29d1de8dfa> bcube:dateCreated "2014-10-30T05:34:57.022Z" ;
+    bcube:hasMetadataRecord <urn:uuid:c39b93a8-56c5-4e01-b6a4-6682c254a075> ;
+    bcube:lastUpdated "2014-10-30T05:34:57.022Z" ;
+    dc:conformsTo <urn:uuid:606d0302-deba-43e6-9400-2d97d90bb1fe>,
+        <urn:uuid:d9ec620f-1d99-4613-bfb1-b129f127304f> ;
+    dc:description "A fault map and digital fault dataset were constructed based on offsets of the basement surface. Because these faults are, in large part, not present at the surface, they are interpreted to be inactive faults, older than the alluvial basin fill." ;
+    dc:spatial "POLYGON ((-116.2 36.75,-116.2 37.25,-115.8 37.25,-115.8 36.75,-116.2 36.75))" ;
+    dcterms:title "High-angle faults in the basement of Yucca Flats, Nevada Test Site, Nevada, based on analysis of a constrained gravity inversion surface" ;
+    esip:eastBound "-115.8"^^xsd:float ;
+    esip:northBound "37.25"^^xsd:float ;
+    esip:southBound "36.75"^^xsd:float ;
+    esip:westBound "-116.2"^^xsd:float ;
+    owl:a dcat:Dataset .
+

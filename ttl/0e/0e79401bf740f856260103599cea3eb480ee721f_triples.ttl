@@ -1,0 +1,77 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:0fe03114-7723-48e8-845e-aa86d8216b5e> bcube:hasType "theme" ;
+    bcube:hasValue "Atmosphere > Precipitation > Precipitation Amount Atmosphere > Precipitation > Rain" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:2122eb2a-bb1c-405e-8193-fb316a1a829b> bcube:hasValue "gov.usgs.cida.gdp.wps.algorithm.FeatureCoverageOPeNDAPIntersectionAlgorithm",
+        "gov.usgs.cida.gdp.wps.algorithm.FeatureGridStatisticsAlgorithm",
+        "gov.usgs.cida.gdp.wps.algorithm.FeatureWeightedGridStatisticsAlgorithm" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:7823c612-2c1b-4c85-9d93-4832de620264> a "ISO 19115:2003/19139" ;
+    bcube:dateCreated "2015-03-06T00:56:18.039Z" ;
+    bcube:lastUpdated "2015-03-06T00:56:18.039Z" ;
+    bcube:originatedFrom <urn:uuid:eaa6822f-a4f3-4377-bacc-8992c7e37d0d> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:e35d84f6-699a-44da-b90a-35e01281a77c> .
+
+<urn:uuid:da5ba0fa-d15d-4a41-870f-84a03c506d81> bcube:hasValue "climatologyMeteorologyAtmosphere" ;
+    dc:partOf "IsoTopicCategories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:e35d84f6-699a-44da-b90a-35e01281a77c> bcube:dateCreated "2015-03-06T00:56:18.039Z" ;
+    bcube:hasMetadataRecord <urn:uuid:7823c612-2c1b-4c85-9d93-4832de620264> ;
+    bcube:lastUpdated "2015-03-06T00:56:18.039Z" ;
+    dc:conformsTo <urn:uuid:0fe03114-7723-48e8-845e-aa86d8216b5e>,
+        <urn:uuid:2122eb2a-bb1c-405e-8193-fb316a1a829b>,
+        <urn:uuid:da5ba0fa-d15d-4a41-870f-84a03c506d81> ;
+    dc:description "Radar indicated-rain gage verified and corrected hourly precipitation estimate on a corrected ~4km HRAP grid. This archive contains hourly estimates of precipitation from the river forecasting centers' archives that the data were available from. Documentation of the data and publication methodology is available here: http://pubs.usgs.gov/fs/2013/3035 The Northwest, Southwest, and Colorado basin RFCs are not included in this archive because hourly data were not available from their archives. The time series represented here are not serially complete. Some periods are missing for unknown reasons. As these data were produced and quality controlled through a real time-manual process, there will be other unforseen issues with the data. Users are encouraged to analyze the data they receive to determine suitability and completeness prior to any application of the data.Real time data is being made available using an automated process that is prone to failures. No assurances are made that this service will continue to be available.Disclaimer: The U.S. Geological Survey assumes no responsibility for the accuracy, use, or validity of this data." ;
+    dc:identifier "cida.usgs.gov/thredds/rfc_qpe" ;
+    dc:spatial "POLYGON ((-125 24,-125 53,-59 53,-59 24,-125 24))" ;
+    dcterms:references <urn:uuid:edaa0da3-bb21-41ce-b0a6-d730176af4aa> ;
+    dcterms:title "Real Time River Forecasting Center Quantitative Precipitation Estimate" ;
+    esip:eastBound "-59.0"^^xsd:float ;
+    esip:endDate "2013-03-31"^^xsd:date ;
+    esip:northBound "53.0"^^xsd:float ;
+    esip:southBound "24.0"^^xsd:float ;
+    esip:startDate "2000-06-14"^^xsd:date ;
+    esip:westBound "-125.0"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:eaa6822f-a4f3-4377-bacc-8992c7e37d0d> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-03-06T00:56:18.039Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-03-06T00:56:18.039Z" ;
+    dc:identifier "urn:sha:a4cd86473c5fcb688294e37963de20221f3dcb420f8d226edbb355f8" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://catalog.data.gov/harvest/object/b99c8e98-f7ad-4805-a6a4-0a78585135ae" .
+
+<urn:uuid:edaa0da3-bb21-41ce-b0a6-d730176af4aa> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-03-06T00:56:18.039Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-03-06T00:56:18.039Z" ;
+    dc:identifier "urn:sha:11b45d5a86f1231a24f4a27060603d34b96d88ee5cc041d97f47c78a" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://cida.usgs.gov/thredds/rfc_qpe/" .
+

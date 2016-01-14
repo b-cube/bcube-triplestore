@@ -1,0 +1,85 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:258b51e3-0ca7-4c3d-bc09-60ec690d23de> owl:a foaf:Organization ;
+    foaf:name "U.S. Geological Survey" .
+
+<urn:uuid:57fbf2b9-e321-4b42-a825-b21ffadfe53d> bcube:hasType "place" ;
+    bcube:hasValue "Idaho",
+        "Major River Basins",
+        "Montana",
+        "Oregon",
+        "PNW",
+        "Pacific Northwest",
+        "Washington" ;
+    dc:partOf "none" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:5b2f78be-3189-4886-8c7e-c8cac972eaad> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-10T00:34:21.811Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-10T00:34:21.811Z" ;
+    dc:identifier "urn:sha:4c783ea5a61a6834eba51ccee068e853139efa4deed1578c8552f5b9" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://water.usgs.gov/GIS/dsdl/sir2013-5103_PNW_SPARROW.zip" .
+
+<urn:uuid:5e6d0513-e260-4234-9316-1d419587bb8a> bcube:dateCreated "2015-08-10T00:34:21.811Z" ;
+    bcube:hasMetadataRecord <urn:uuid:6706137a-7486-4043-af7e-8be7359c9afa> ;
+    bcube:lastUpdated "2015-08-10T00:34:21.811Z" ;
+    dc:conformsTo <urn:uuid:57fbf2b9-e321-4b42-a825-b21ffadfe53d>,
+        <urn:uuid:7b3b2353-e11f-4219-8592-51057ee3a5f9> ;
+    dc:description "This spatial data set was created by the U.S. Geological Survey (USGS) to represent the amount of dry deposition of oxidized nitrogen in the Pacific Northwest region of the United States (Hydro Region 17; Major River Basin 7 (MRB7)) during 2002." ;
+    dc:spatial "POLYGON ((-129.664306 37.499283,-129.664306 51.985035,-105.779754 51.985035,-105.779754 37.499283,-129.664306 37.499283))" ;
+    dcterms:publisher <urn:uuid:258b51e3-0ca7-4c3d-bc09-60ec690d23de> ;
+    dcterms:references <urn:uuid:5b2f78be-3189-4886-8c7e-c8cac972eaad> ;
+    dcterms:title "Dry deposition of oxidized nitrogen in the United States Pacific Northwest for 2002" ;
+    esip:eastBound "-105.779754"^^xsd:float ;
+    esip:northBound "51.985035"^^xsd:float ;
+    esip:southBound "37.499283"^^xsd:float ;
+    esip:startDate "2002-01-01"^^xsd:date ;
+    esip:westBound "-129.664306"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:6706137a-7486-4043-af7e-8be7359c9afa> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-08-10T00:34:21.811Z" ;
+    bcube:lastUpdated "2015-08-10T00:34:21.811Z" ;
+    bcube:originatedFrom <urn:uuid:bf95df75-f059-48de-af2e-fc0aab5d7289> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:5e6d0513-e260-4234-9316-1d419587bb8a> .
+
+<urn:uuid:7b3b2353-e11f-4219-8592-51057ee3a5f9> bcube:hasType "theme" ;
+    bcube:hasValue "NAWQA",
+        "SPARROW",
+        "atmospheric deposition",
+        "inlandWaters",
+        "nitrogen" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:bf95df75-f059-48de-af2e-fc0aab5d7289> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-10T00:34:21.811Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-10T00:34:21.811Z" ;
+    dc:identifier "urn:sha:511838de27043047cb3f51a17c6819716d049e45e571a8111302acfc" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://water.usgs.gov/lookup/getspatial?sir2013-5103_PNW_SPARROW_AtmosphericDeposition_dd_oxn" .
+

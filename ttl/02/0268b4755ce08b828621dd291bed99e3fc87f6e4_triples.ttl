@@ -1,0 +1,62 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:07b13304-14fb-459e-b658-17a3475d914c> bcube:hasType "place" ;
+    bcube:hasValue "Alaska" ;
+    dc:partOf "BLM-STATE" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:49cabd94-8e19-4428-b246-602023462455> bcube:hasType "theme" ;
+    bcube:hasValue "Framework" ;
+    dc:partOf "BLM-THEME" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:810d314b-18e0-4f62-82e1-f20a532c6b45> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-10-18T16:55:43.045Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-10-18T16:55:43.045Z" ;
+    dc:identifier "urn:sha:2192e3bf3e264fdbea57358cf1cf207397dcbf4ad3f33e82054adea2" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://sdms.ak.blm.gov/download/protracted_grid_gis/metadata/pro_pt27.xml" .
+
+<urn:uuid:c068504c-b701-42d5-896d-3ebb5f27c651> owl:a foaf:Organization ;
+    foaf:name "" .
+
+<urn:uuid:c2902ac6-e035-4ec3-be17-7efdd57cff0f> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-10-18T16:55:43.045Z" ;
+    bcube:lastUpdated "2015-10-18T16:55:43.045Z" ;
+    bcube:originatedFrom <urn:uuid:810d314b-18e0-4f62-82e1-f20a532c6b45> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:de9c234f-0ca8-4055-9443-fd2306e8e4a9> .
+
+<urn:uuid:de9c234f-0ca8-4055-9443-fd2306e8e4a9> bcube:dateCreated "2015-10-18T16:55:43.045Z" ;
+    bcube:hasMetadataRecord <urn:uuid:c2902ac6-e035-4ec3-be17-7efdd57cff0f> ;
+    bcube:lastUpdated "2015-10-18T16:55:43.045Z" ;
+    dc:conformsTo <urn:uuid:07b13304-14fb-459e-b658-17a3475d914c>,
+        <urn:uuid:49cabd94-8e19-4428-b246-602023462455> ;
+    dc:description "Protraction Point is a PLSS rectangular point as identified on the official protraction diagrams, Alaska Canada Survey plat, or other supplemental information. A protraction point may be a township point, a section point, or both. A protraction point contains the protracted positions of a township/section, based on protraction of the PLSS from meridian initial points. Protraction point contains the original protracted positions, and optionally, the adjusted positions. Adjusted positions are generated when a surveyed township is entered into the system. Protracted positions are \"adjusted\" based on the General Position for the township published on the survey plat. This adjustment, shifts the protracted positions of the township and points relative to an adjustment factor. Note that points will edgematch with adjoining townships collected into the system. However, there may be edge discrepancies with adjoinining unsurveyed or uncollected townships which hold only the original positions." ;
+    dc:spatial "POLYGON ((-179.227825 51.202992,-179.227825 71.468681,179.896724 71.468681,179.896724 51.202992,-179.227825 51.202992))" ;
+    dcterms:publisher <urn:uuid:c068504c-b701-42d5-896d-3ebb5f27c651> ;
+    dcterms:title "PLSS Protracted Rectangular Points for Alaska (NAD27)" ;
+    esip:eastBound "179.896724"^^xsd:float ;
+    esip:northBound "71.468681"^^xsd:float ;
+    esip:southBound "51.202992"^^xsd:float ;
+    esip:startDate "2008-02-04"^^xsd:date ;
+    esip:westBound "-179.227825"^^xsd:float ;
+    owl:a dcat:Dataset .
+

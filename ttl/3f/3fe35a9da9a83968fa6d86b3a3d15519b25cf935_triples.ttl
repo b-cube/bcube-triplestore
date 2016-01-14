@@ -1,0 +1,74 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:233c2012-c681-4c59-af11-46ed57936742> bcube:hasType "place" ;
+    bcube:hasValue "Alabama",
+        "Florida",
+        "Louisiana",
+        "Mississippi",
+        "U.S. Coastline" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:29328ece-0bad-4f04-aa03-45b32901dbe7> bcube:hasValue "elevation" ;
+    dc:partOf "IsoTopicCategories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:59632cc9-7e0b-436c-92f1-e2d16e843691> a "ISO 19115:2003/19139" ;
+    bcube:dateCreated "2015-07-30T17:01:08.123Z" ;
+    bcube:lastUpdated "2015-07-30T17:01:08.123Z" ;
+    bcube:originatedFrom <urn:uuid:bc5069ad-3842-448e-84e5-e7622c2eec47> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:81969a46-2097-4ccb-9b9a-2c12385f41be> .
+
+<urn:uuid:81969a46-2097-4ccb-9b9a-2c12385f41be> bcube:dateCreated "2015-07-30T17:01:08.123Z" ;
+    bcube:hasMetadataRecord <urn:uuid:59632cc9-7e0b-436c-92f1-e2d16e843691> ;
+    bcube:lastUpdated "2015-07-30T17:01:08.123Z" ;
+    dc:conformsTo <urn:uuid:233c2012-c681-4c59-af11-46ed57936742>,
+        <urn:uuid:29328ece-0bad-4f04-aa03-45b32901dbe7>,
+        <urn:uuid:d410b38b-59af-4e0f-a030-dad2c10c4e67> ;
+    dc:description "This data set includes data collected during Fall 1998 and covers coastlines of the states of Louisiana, Mississippi, Alabama, and Florida. Laser beach mapping uses a pulsed laser ranging system mounted onboard an aircraft to measure ground elevation and coastal topography. The laser emits laser beams at high frequency and is directed downward at the earth's surface through a port opening in the bottom of the aircraft's fuselage. The laser system records the time difference between emission of the laser beam and the reception of the reflected laser signal in the aircraft. The aircraft travels over the beach at approximately 60 meters per second while surveying from the low water line to the landward base of the sand dunes." ;
+    dc:spatial "POLYGON ((-90.967803 26.384175,-90.967803 30.400007,-81.872129 30.400007,-81.872129 26.384175,-90.967803 26.384175))" ;
+    dcterms:title "1998 Fall Gulf Coast NOAA/USGS/NASA Airborne LiDAR Assessment of Coastal Erosion (ALACE) Project for the US Coastline" ;
+    esip:eastBound "-81.872129"^^xsd:float ;
+    esip:endDate "1998-11-09"^^xsd:date ;
+    esip:northBound "30.400007"^^xsd:float ;
+    esip:southBound "26.384175"^^xsd:float ;
+    esip:startDate "1998-10-29"^^xsd:date ;
+    esip:westBound "-90.967803"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:bc5069ad-3842-448e-84e5-e7622c2eec47> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-07-30T17:01:08.123Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-07-30T17:01:08.123Z" ;
+    dc:identifier "urn:sha:607184a18312442fec9bd3c9c251ff8387820127b85ac14364042baa" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://catalog.data.gov/harvest/object/8062acab-8a60-46a6-b9d4-eb61e63977a9" .
+
+<urn:uuid:d410b38b-59af-4e0f-a030-dad2c10c4e67> bcube:hasType "theme" ;
+    bcube:hasValue "DEM",
+        "Topography",
+        "beach",
+        "digital elevation model",
+        "erosion",
+        "laser",
+        "lidar" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+

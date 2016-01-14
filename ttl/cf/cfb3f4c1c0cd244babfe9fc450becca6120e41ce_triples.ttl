@@ -1,0 +1,78 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:4047fe34-6653-4848-a48e-4c4b0bb2f8dc> owl:a foaf:Organization ;
+    foaf:name "" .
+
+<urn:uuid:4236223f-a039-407c-980f-af1931cdda6d> bcube:hasType "place" ;
+    bcube:hasValue "Connecticut",
+        "Hartford County",
+        "Middlesex County",
+        "New London County",
+        "Tolland County",
+        "Windham County" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:6e4b91f7-1d99-4a5a-bb73-b0bff4715604> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-07-09T03:41:10.013Z" ;
+    bcube:lastUpdated "2015-07-09T03:41:10.013Z" ;
+    bcube:originatedFrom <urn:uuid:fb524e03-a365-4b67-8675-229c6aec0342> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:b2d9ca76-6792-4dad-93d4-b7233b36152c> .
+
+<urn:uuid:7a1c8eeb-1cf1-4e51-b465-9f1e7e09be02> bcube:hasType "theme" ;
+    bcube:hasValue "Bare earth",
+        "Breaklines",
+        "DEM",
+        "DTM",
+        "Elevation",
+        "First Return",
+        "Hydro Flattened",
+        "LAS",
+        "Last Return",
+        "Lidar",
+        "Model Key Points" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:b2d9ca76-6792-4dad-93d4-b7233b36152c> bcube:dateCreated "2015-07-09T03:41:10.013Z" ;
+    bcube:hasMetadataRecord <urn:uuid:6e4b91f7-1d99-4a5a-bb73-b0bff4715604> ;
+    bcube:lastUpdated "2015-07-09T03:41:10.013Z" ;
+    dc:conformsTo <urn:uuid:4236223f-a039-407c-980f-af1931cdda6d>,
+        <urn:uuid:7a1c8eeb-1cf1-4e51-b465-9f1e7e09be02> ;
+    dc:description "Earth Eye collected LiDAR data for approximately 4,589 square kilometers that either fully or partially cover the Connecticut counties of Tolland, Windham, Hartford, Middlesex, and New London. The nominal pulse spacing for this project was no greater than 1 point every 0.7 meters. Dewberry used proprietary procedures to classify the LAS according to project specifications: 1-Unclassified, 2-Ground, 7-Noise, 9-Water. Dewberry produced 3D breaklines and combined these with the final LiDAR data to produce seamless hydro flattened DEMs for the 4,840 tiles (1000 m x 1000 m) that cover the project area. Separate LiDAR files were created for bare earth only points, model key points, first echo return only points, and last echo return only points." ;
+    dc:spatial "POLYGON ((-72.654199 41.313609,-72.654199 42.053551,-71.764992 42.053551,-71.764992 41.313609,-72.654199 41.313609))" ;
+    dcterms:publisher <urn:uuid:4047fe34-6653-4848-a48e-4c4b0bb2f8dc> ;
+    dcterms:title "Inland_Ponds_and_Lakes" ;
+    esip:eastBound "-71.764992"^^xsd:float ;
+    esip:endDate "2010-12-11"^^xsd:date ;
+    esip:northBound "42.053551"^^xsd:float ;
+    esip:southBound "41.313609"^^xsd:float ;
+    esip:startDate "2010-11-03"^^xsd:date ;
+    esip:westBound "-72.654199"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:fb524e03-a365-4b67-8675-229c6aec0342> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-07-09T03:41:10.013Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-07-09T03:41:10.013Z" ;
+    dc:identifier "urn:sha:00ef5b02f3ceb98b553bd0a84052e962371199765e4adeacebe5b235" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www.cteco.uconn.edu/help/lidar_docs/NRCSE/FGDC_CONNECTICUT_LAKES_PONDS.xml" .
+

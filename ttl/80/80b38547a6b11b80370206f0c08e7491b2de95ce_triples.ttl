@@ -1,0 +1,114 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:0bf73452-02e5-42d8-8109-f74ed23c6d24> owl:a foaf:Organization ;
+    foaf:name "Montana State Library" .
+
+<urn:uuid:2556c510-8abf-42ba-bd24-98d6a43a22f1> dcterms:references <urn:uuid:95b4a0c2-f6d8-4d57-a188-d5b704e0fe06> ;
+    owl:a bibo:WebPage .
+
+<urn:uuid:33bc3bea-7d0e-49b1-abfa-ef72a740894e> bcube:dateCreated "2015-08-11T15:40:00.36Z" ;
+    bcube:hasMetadataRecord <urn:uuid:53cd3182-aa05-427c-86dd-6431f083c4ed> ;
+    bcube:lastUpdated "2015-08-11T15:40:00.36Z" ;
+    dc:conformsTo <urn:uuid:6470ebe8-32d8-4fe9-bff8-511b39f39fad>,
+        <urn:uuid:7dfe3365-6f57-4660-8adf-a6b0b8dd0db0>,
+        <urn:uuid:92342103-e806-4396-93d4-49798673f1e5>,
+        <urn:uuid:c8d4b168-1b2e-4178-8fc1-72cc983b1d14> ;
+    dc:description "These data depict the Public Land Survey System (PLSS) for the state of Montana and are based on Geographic Coordinate Data Base (GCDB) coordinate data. GCDB is the authoritative source for PLSS data. These data are represented in the following feature classes: PLSSTownship is a polygon feature class representing PLSS Townships; PLSSFirstDivision is a polygon feature class representing PLSS Sections; PLSSSecondDivision is a polygon feature class representing PLSS Quarter Quarter Sections; PLSSPoints is a point feature class representing PLSS Corner Points; PLSSSpecialSurvey is a polygon feature class representing special survey areas, which include include but are not limited to, homestead entry surveys, mineral surveys, metes and bounds surveys, and town site surveys; PLSSHistoricSpecialSurvey is a polygon feature class representing historic special survey areas; PLSSHistoricSecondDivision is a polygon feature class representing historic PLSS Quarter Quarter Sections; Conflicted Areas is a polygon feature class representing known areas of gaps or overlaps between Townships or state boundaries;and PLSSMeanderedWater is a polygon feature class representing meandered water polygons, most commonly riparian areas and lakes, present during the original survey for the state." ;
+    dc:spatial "POLYGON ((-116.161717 44.166676,-116.161717 49.20934,-103.501873 49.20934,-103.501873 44.166676,-116.161717 44.166676))" ;
+    dcterms:publisher <urn:uuid:0bf73452-02e5-42d8-8109-f74ed23c6d24> ;
+    dcterms:references <urn:uuid:2556c510-8abf-42ba-bd24-98d6a43a22f1> ;
+    dcterms:title "PLSS Framework CadNSDIV2_Montana" ;
+    esip:eastBound "-103.501873"^^xsd:float ;
+    esip:northBound "49.20934"^^xsd:float ;
+    esip:southBound "44.166676"^^xsd:float ;
+    esip:westBound "-116.161717"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:53cd3182-aa05-427c-86dd-6431f083c4ed> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-08-11T15:40:00.36Z" ;
+    bcube:lastUpdated "2015-08-11T15:40:00.36Z" ;
+    bcube:originatedFrom <urn:uuid:c6ee7965-4c46-489b-a86e-69fb894ae5de> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:33bc3bea-7d0e-49b1-abfa-ef72a740894e> .
+
+<urn:uuid:6470ebe8-32d8-4fe9-bff8-511b39f39fad> bcube:hasType "theme" ;
+    bcube:hasValue "boundaries",
+        "location",
+        "planningCadastre" ;
+    dc:partOf "ISO 19115 Topic Category" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:7dfe3365-6f57-4660-8adf-a6b0b8dd0db0> bcube:hasType "theme" ;
+    bcube:hasValue "BLM",
+        "Bureau of Land Management",
+        "Cadastral",
+        "Framework",
+        "GCDB",
+        "GLO",
+        "General Land Office",
+        "Geographic Coordinate Data Base",
+        "LIS",
+        "Land Information System",
+        "MSDI",
+        "Montana Spatial Data Infrastructure",
+        "NILS",
+        "NSDI",
+        "National Integrated Land System",
+        "National Spatial Data Infrastructure",
+        "PLSS",
+        "Public Land Survey System",
+        "Quarter Section",
+        "Range",
+        "Section",
+        "Special Survey",
+        "Township" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:92342103-e806-4396-93d4-49798673f1e5> bcube:hasType "place" ;
+    bcube:hasValue "USA" ;
+    dc:partOf "U.S. Department of Commerce, 1987, Codes for the Identification of the States, the District of Columbia and the Outlying Areas of the United States, and Associated Areas (FIPS 5-2): Washington, DC, National Institute of Standards and Technology." ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:95b4a0c2-f6d8-4d57-a188-d5b704e0fe06> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-11T15:40:00.36Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-11T15:40:00.36Z" ;
+    dc:identifier "urn:sha:2c787fc50db231aa44533277ac845283ac8d67d3da87b4eb22c3af50" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "ftp://ftp.geoinfo.msl.mt.gov/Data/Spatial/MSDI/Cadastral/PLSS" .
+
+<urn:uuid:c6ee7965-4c46-489b-a86e-69fb894ae5de> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-11T15:40:00.36Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-11T15:40:00.36Z" ;
+    dc:identifier "urn:sha:5c95246d7cff7cf0d383f459d187c953a498c6a5f0884eb9c936fd88" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://mslapps.mt.gov/Geographic_Information/Data/DataList/datalist_MetadataDetailRaw.aspx?did={9025D5DE-05C1-406F-A8B4-6A3E39EF3B8D}" .
+
+<urn:uuid:c8d4b168-1b2e-4178-8fc1-72cc983b1d14> bcube:hasType "place" ;
+    bcube:hasValue "Montana",
+        "United States" ;
+    dc:partOf "U.S. Department of Commerce, 1977, Countries, Dependencies, Areas of Special Sovereignty, and Their Principal Administrative Divisions (Federal Information Processing Standard (FIPS) 10-3): Washington, DC, National Institute of Standards and Technology." ;
+    owl:a bcube:thesaurusSubset .
+

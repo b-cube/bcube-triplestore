@@ -1,0 +1,76 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:24f2ae3b-05ee-4cb5-a9bf-903b4010dad3> bcube:hasType "theme" ;
+    bcube:hasValue "Geophysical",
+        "drift buoy",
+        "ocean currents" ;
+    dc:partOf "none" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:370d4633-c789-473a-87c1-499eaec92311> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-05T01:25:16.326Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-05T01:25:16.326Z" ;
+    dc:identifier "urn:sha:8f5f284c24d85a0b1b89afe093e9b176307fbf4d2c60ed48440c42c5" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://catalog.data.gov/harvest/object/7c51a8ab-8920-4f47-a1d0-c1ba38dded49" .
+
+<urn:uuid:461be591-f10c-4769-bb60-3e8b624049a8> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-05T01:25:16.326Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-05T01:25:16.326Z" ;
+    dc:identifier "urn:sha:133826fc4c99ad77bdd9a4198035207b4e22682c352ae7c6bd5b368a" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://lagic.lsu.edu/data/losco/ocean_currents_wgom_Dec_MMS_1994.zip" .
+
+<urn:uuid:5104c4bc-a4d7-4ee6-b514-617866a708f1> a "ISO 19115:2003/19139" ;
+    bcube:dateCreated "2015-08-05T01:25:16.326Z" ;
+    bcube:lastUpdated "2015-08-05T01:25:16.326Z" ;
+    bcube:originatedFrom <urn:uuid:370d4633-c789-473a-87c1-499eaec92311> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:eecf6f10-e9bd-4488-9bab-81cfa93719b4> .
+
+<urn:uuid:bfbb0b56-d0eb-432a-8ec3-ed3a9883968b> bcube:hasType "place" ;
+    bcube:hasValue "Gulf of Mexico",
+        "Louisiana",
+        "Texas" ;
+    dc:partOf "none" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:eecf6f10-e9bd-4488-9bab-81cfa93719b4> bcube:dateCreated "2015-08-05T01:25:16.326Z" ;
+    bcube:hasMetadataRecord <urn:uuid:5104c4bc-a4d7-4ee6-b514-617866a708f1> ;
+    bcube:lastUpdated "2015-08-05T01:25:16.326Z" ;
+    dc:conformsTo <urn:uuid:24f2ae3b-05ee-4cb5-a9bf-903b4010dad3>,
+        <urn:uuid:bfbb0b56-d0eb-432a-8ec3-ed3a9883968b> ;
+    dc:description "This is one data set of a data package consisting of thirteen point data sets that have as attributes the direction and velocity of ocean currents in the western Gulf of Mexico as determined by drift buoys from June 1993 to June 1994. The data are summarized by quarter degree cells and represent the time weighted average of drift direction and velocity for all drift buoys that entered the cell during the summary time period. Twelve of the data sets are one month averages, one data set is a one year average from all the months. These spatial extent, object count and range attribute metadata items apply in particular to the one-year average data set, however the general characteristics of the dataset (coordinate system, attributes and attribute definitions) apply to all thirteen." ;
+    dc:spatial "POLYGON ((-97.375 24.125,-97.375 29.625,-91.125 29.625,-91.125 24.125,-97.375 24.125))" ;
+    dcterms:references <urn:uuid:461be591-f10c-4769-bb60-3e8b624049a8> ;
+    dcterms:title "Western Gulf of Mexico December 1994 Ocean Currents, Geographic NAD83, MMS (1999) [ocean_currents_wgom_Dec_MMS_1994]" ;
+    esip:eastBound "-91.125"^^xsd:float ;
+    esip:endDate "1994-06-19"^^xsd:date ;
+    esip:northBound "29.625"^^xsd:float ;
+    esip:southBound "24.125"^^xsd:float ;
+    esip:startDate "1993-06-14"^^xsd:date ;
+    esip:westBound "-97.375"^^xsd:float ;
+    owl:a dcat:Dataset .
+

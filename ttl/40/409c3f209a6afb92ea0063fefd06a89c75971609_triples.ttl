@@ -1,0 +1,85 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:27284d79-be6b-4e94-9f11-7e57ed310557> owl:a foaf:Organization ;
+    foaf:name "U.S. Geological Survey" .
+
+<urn:uuid:49dc47ce-faa5-4180-bb86-74c9d9116de4> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-04T14:49:58.186Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-04T14:49:58.186Z" ;
+    dc:identifier "urn:sha:f8d96da97a3161b1c77b19683bc0070ec11456e323fb5461c02d4279" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://water.usgs.gov/lookup/getspatial?agpest92grd" .
+
+<urn:uuid:6c60033e-26a5-4d35-94d9-6b54728c54bf> bcube:hasType "theme" ;
+    bcube:hasValue "National Water Quality Assessment (NAWQA) Program",
+        "agricultural",
+        "defoliant",
+        "fumigant",
+        "fungicide",
+        "growth regulator",
+        "herbicide",
+        "inlandWaters",
+        "insecticide",
+        "pesticide" ;
+    dc:partOf "none" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:79be8e0f-e587-4c16-b676-5a21b85de97a> bcube:dateCreated "2015-08-04T14:49:58.186Z" ;
+    bcube:hasMetadataRecord <urn:uuid:e4a3eba8-14ba-4f75-9624-1fb26c83fc82> ;
+    bcube:lastUpdated "2015-08-04T14:49:58.186Z" ;
+    dc:conformsTo <urn:uuid:6c60033e-26a5-4d35-94d9-6b54728c54bf>,
+        <urn:uuid:e767803c-656d-42b5-b139-1d44b2856f07> ;
+    dc:description "This spatial dataset consists of 199 1-kilometer (km) resolution grids depicting estimated agricultural use of 199 pesticides in 1992 for the conterminous United States. Each grid cell value in the national grids of this dataset is the estimated total kilograms (kg) of a pesticide applied to row crops, small grain crops and fallow land, pasture and hay crops, and orchard and vineyard crops within the 1- by 1-km area. Nonagricultural uses of pesticides are not included in this dataset. Of the 199 pesticides represented in the grids, 92 are herbicides, 58 are insecticides, and 32 are fungicides. The remaining 17 grids are composed of the category \"other pesticides\", which consists of fumigants, growth regulators, and defoliants. Although this data set is referenced to 1992, it generally represents a composite of estimated pesticide use during the early 1990s." ;
+    dc:spatial "POLYGON ((-128.307859 22.736598,-128.307859 51.857984,-65.143387 51.857984,-65.143387 22.736598,-128.307859 22.736598))" ;
+    dcterms:publisher <urn:uuid:27284d79-be6b-4e94-9f11-7e57ed310557> ;
+    dcterms:references <urn:uuid:e6b19529-7a17-4238-9546-d17d863ef438> ;
+    dcterms:title "Grids of Agricultural Pesticide Use in the Conterminous United States, 1992" ;
+    esip:eastBound "-65.143387"^^xsd:float ;
+    esip:endDate "1993-01-01"^^xsd:date ;
+    esip:northBound "51.857984"^^xsd:float ;
+    esip:southBound "22.736598"^^xsd:float ;
+    esip:startDate "1990-01-01"^^xsd:date ;
+    esip:westBound "-128.307859"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:e4a3eba8-14ba-4f75-9624-1fb26c83fc82> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-08-04T14:49:58.186Z" ;
+    bcube:lastUpdated "2015-08-04T14:49:58.186Z" ;
+    bcube:originatedFrom <urn:uuid:49dc47ce-faa5-4180-bb86-74c9d9116de4> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:79be8e0f-e587-4c16-b676-5a21b85de97a> .
+
+<urn:uuid:e6b19529-7a17-4238-9546-d17d863ef438> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-04T14:49:58.186Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-04T14:49:58.186Z" ;
+    dc:identifier "urn:sha:00bcdb99ac7c86c1e16686fc2957e2473dd50d3fdc02cc50a881a6d5" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://water.usgs.gov/GIS/dsdl/agpest92grd/index92.html" .
+
+<urn:uuid:e767803c-656d-42b5-b139-1d44b2856f07> bcube:hasType "place" ;
+    bcube:hasValue "Conterminous United States" ;
+    dc:partOf "none" ;
+    owl:a bcube:thesaurusSubset .
+

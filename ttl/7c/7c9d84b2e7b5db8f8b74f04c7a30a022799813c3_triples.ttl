@@ -1,0 +1,79 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:18840704-1978-4229-a41f-fe4cca308b7f> bcube:hasType "temporal" ;
+    bcube:hasValue "Daily",
+        "every 6 hours to every hour" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:3ccb0def-8c32-4581-9292-0f15d5303e59> bcube:hasType "theme" ;
+    bcube:hasValue "Cross Seamount",
+        "Makapuu",
+        "NWHI",
+        "Seafloor temperature records",
+        "precious corals",
+        "subphotic depths" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:7b0581ec-e0f4-4b9a-b017-2a849e98f99e> bcube:hasType "place" ;
+    bcube:hasValue "Cross Seamount",
+        "Hawaiian Archipelago",
+        "Makapuu",
+        "Subphotic French Frigate Shoals (FFS)" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:980d3854-0053-4ba3-ac34-38daee5c8ccd> owl:a foaf:Organization ;
+    foaf:name "" .
+
+<urn:uuid:9b9c0e9e-353c-4753-b6d4-c924f976c9d3> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-11-11T22:26:29.677Z" ;
+    bcube:lastUpdated "2015-11-11T22:26:29.677Z" ;
+    bcube:originatedFrom <urn:uuid:c0738b7d-db58-4c69-92dc-ba199187c714> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:ae121fd9-59c1-4cbe-b271-bc4dd164a26e> .
+
+<urn:uuid:ae121fd9-59c1-4cbe-b271-bc4dd164a26e> bcube:dateCreated "2015-11-11T22:26:29.677Z" ;
+    bcube:hasMetadataRecord <urn:uuid:9b9c0e9e-353c-4753-b6d4-c924f976c9d3> ;
+    bcube:lastUpdated "2015-11-11T22:26:29.677Z" ;
+    dc:conformsTo <urn:uuid:18840704-1978-4229-a41f-fe4cca308b7f>,
+        <urn:uuid:3ccb0def-8c32-4581-9292-0f15d5303e59>,
+        <urn:uuid:7b0581ec-e0f4-4b9a-b017-2a849e98f99e> ;
+    dc:description "Thermographs were deployed opportunistically in patches of deep coral at depths greater than 300 m. Sites included the Makapuu precious coral bed, the Cross Seamount bed, the bed on the east extension of French Frigate Shoals and the black coral bed in the channel waters off Maui. Some other shallower sites (<100 m) in the NWHI were instrumented for a shorter periods are included as separate files within the data set." ;
+    dc:spatial "POLYGON ((-165.385 18.722222222220001,-165.385 23.918055555559999,-158.259166666670012 23.918055555559999,-158.259166666670012 18.722222222220001,-165.385 18.722222222220001))" ;
+    dcterms:identifier "gov.noaa.nmfs.inport:8985" ;
+    dcterms:publisher <urn:uuid:980d3854-0053-4ba3-ac34-38daee5c8ccd> ;
+    dcterms:title "EOD Temperature data for deep corals" ;
+    esip:eastBound "-158.259166667"^^xsd:float ;
+    esip:endDate "2006-01-01"^^xsd:date ;
+    esip:northBound "23.9180555556"^^xsd:float ;
+    esip:southBound "18.7222222222"^^xsd:float ;
+    esip:startDate "2000-01-01"^^xsd:date ;
+    esip:westBound "-165.385"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:c0738b7d-db58-4c69-92dc-ba199187c714> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-11T22:26:29.677Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-11T22:26:29.677Z" ;
+    dc:identifier "urn:sha:12434cde55fb06c0929c04562b8f932e2788233a863bf88818816418" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "https://inport.nmfs.noaa.gov/inport/item/8985/fgdc" .
+

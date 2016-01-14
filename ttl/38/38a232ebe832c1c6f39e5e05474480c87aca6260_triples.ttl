@@ -1,0 +1,90 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:09e74d67-318e-4430-af1a-1025fe147316> owl:a foaf:Organization ;
+    foaf:name "" .
+
+<urn:uuid:13f40e1d-5a03-4e95-b288-1f7874e4ea12> bcube:dateCreated "2015-11-05T16:49:00.088Z" ;
+    bcube:hasMetadataRecord <urn:uuid:5d0302d9-97a6-4e75-86ac-347f4039cbb9> ;
+    bcube:lastUpdated "2015-11-05T16:49:00.088Z" ;
+    dc:conformsTo <urn:uuid:3efde9db-0337-4c25-8b15-b972fd3f5e8e>,
+        <urn:uuid:5c97899e-f67f-44b1-89a5-3334e9f4d99b>,
+        <urn:uuid:d1b2053e-37d2-444a-917d-a932014003a4> ;
+    dc:description "The TIGER/Line Files are shapefiles and related database files (.dbf) that are an extract of selected geographic and cartographic information from the U.S. Census Bureau's Master Address File / Topologically Integrated Geographic Encoding and Referencing (MAF/TIGER) Database (MTDB). The MTDB represents a seamless national file with no overlaps or gaps between parts, however, each TIGER/Line File is designed to stand alone as an independent data set, or they can be combined to cover the entire nation. After each decennial census, the Census Bureau delineates Public Use Microdata Areas (PUMAs) for the tabulation and dissemination of decennial census Public Use Microdata Sample (PUMS) data, American Community Survey (ACS) PUMS data, and ACS period estimates. Nesting within states, or equivalent entities, PUMAs cover the entirety of the United States, Puerto Rico, Guam, and the U.S. Virgin Islands. PUMA delineations are subject to population, building block geography, geographic nesting, and contiguity criteria. Each PUMA is identified by a 5-character numeric census code that may contain leading zeros and a descriptive name." ;
+    dc:spatial "POLYGON ((-96.639485 40.37544,-96.639485 43.501196,-90.140061 43.501196,-90.140061 40.37544,-96.639485 40.37544))" ;
+    dcterms:publisher <urn:uuid:09e74d67-318e-4430-af1a-1025fe147316> ;
+    dcterms:references <urn:uuid:fd20c8d5-6bc7-4ecc-a13c-fe090be066d2> ;
+    dcterms:title "TIGER/Line Shapefile, 2010, 2010 state, Iowa, 2010 Census Public Use Microdata Area State-based" ;
+    esip:eastBound "-90.140061"^^xsd:float ;
+    esip:endDate "2011-12-01"^^xsd:date ;
+    esip:northBound "43.501196"^^xsd:float ;
+    esip:southBound "40.37544"^^xsd:float ;
+    esip:startDate "2011-03-01"^^xsd:date ;
+    esip:westBound "-96.639485"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:3efde9db-0337-4c25-8b15-b972fd3f5e8e> bcube:hasType "theme" ;
+    bcube:hasValue "boundaries" ;
+    dc:partOf "ISO 19115 Topic Categories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:5c97899e-f67f-44b1-89a5-3334e9f4d99b> bcube:hasType "theme" ;
+    bcube:hasValue "PUMA",
+        "Polygon",
+        "Public Use Microdata Area",
+        "State or equivalent entity" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:5d0302d9-97a6-4e75-86ac-347f4039cbb9> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-11-05T16:49:00.088Z" ;
+    bcube:lastUpdated "2015-11-05T16:49:00.088Z" ;
+    bcube:originatedFrom <urn:uuid:cafe63c2-b720-4fa0-820c-f98b5b826375> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:13f40e1d-5a03-4e95-b288-1f7874e4ea12> .
+
+<urn:uuid:cafe63c2-b720-4fa0-820c-f98b5b826375> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-05T16:49:00.088Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-05T16:49:00.088Z" ;
+    dc:identifier "urn:sha:eb3e21ce40b98efe7519408f9c44c72eb6e66437c7e89da971643578" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://meta.geo.census.gov/data/existing/decennial/GEO/CPMB/boundary/TS/tl_2010_19_puma10.shp.xml" .
+
+<urn:uuid:d1b2053e-37d2-444a-917d-a932014003a4> bcube:hasType "place" ;
+    bcube:hasValue "19",
+        "IA",
+        "Iowa",
+        "State or Equivalent Entity",
+        "U.S.",
+        "United States" ;
+    dc:partOf "ANSI INCITS 38:2009 (Formerly FIPS 5-2), ANSI INCITS 31:2009 (Formerly FIPS 6-4),ANSI INCITS 454:2009 (Formerly FIPS 8-6), ANSI INCITS 455:2009(Formerly FIPS 9-1), ANSI INCITS 446:2008 (Geographic Names Information System (GNIS))" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:fd20c8d5-6bc7-4ecc-a13c-fe090be066d2> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-05T16:49:00.088Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-05T16:49:00.088Z" ;
+    dc:identifier "urn:sha:34f53b3561ed2fb03b54f193f8a8957078592cd251348fdaeb7ef908" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www2.census.gov/geo/tiger/TIGER2010/PUMA10/tl_2010_19_puma10.zip" .
+

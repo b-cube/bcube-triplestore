@@ -1,0 +1,77 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:0232e829-5ce5-4d80-8a2e-c5bc2f69454f> owl:a foaf:Organization ;
+    foaf:name "" .
+
+<urn:uuid:47025991-545b-46cb-8dd3-f6cf5911a95d> bcube:hasType "theme" ;
+    bcube:hasValue "boundaries" ;
+    dc:partOf "ISO 19115 Topic Categories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:613215d5-c0f9-46b1-ad2a-6853289e87bc> bcube:hasType "theme" ;
+    bcube:hasValue "ALP Land Dataset",
+        "Land Status",
+        "NFS Lands",
+        "USDA Forest Service",
+        "Wilderness Name" ;
+    dc:partOf "Wilderness" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:72bff8ed-c36e-427d-90d6-7da3f1896eaf> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-01T14:44:34.205Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-01T14:44:34.205Z" ;
+    dc:identifier "urn:sha:44e0ee52311ed9cab93792005558f6b9d46f8ad4cd8a9be5bc397bb1" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://data.fs.usda.gov/geodata/edw/edw_resources/meta/S_USA.Wilderness.xml" .
+
+<urn:uuid:81036b35-162b-4ae0-b159-63fd4f1412a0> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-11-01T14:44:34.205Z" ;
+    bcube:lastUpdated "2015-11-01T14:44:34.205Z" ;
+    bcube:originatedFrom <urn:uuid:72bff8ed-c36e-427d-90d6-7da3f1896eaf> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:a013463d-a5e0-4647-b764-16afb48ca26d> .
+
+<urn:uuid:a013463d-a5e0-4647-b764-16afb48ca26d> bcube:dateCreated "2015-11-01T14:44:34.205Z" ;
+    bcube:hasMetadataRecord <urn:uuid:81036b35-162b-4ae0-b159-63fd4f1412a0> ;
+    bcube:lastUpdated "2015-11-01T14:44:34.205Z" ;
+    dc:conformsTo <urn:uuid:47025991-545b-46cb-8dd3-f6cf5911a95d>,
+        <urn:uuid:613215d5-c0f9-46b1-ad2a-6853289e87bc> ;
+    dc:description "A parcel of Forest Service land congressionally designated as wilderness such as National Wilderness Area." ;
+    dc:spatial "POLYGON ((-139.64067 18.248406,-139.64067 59.999703,-65.77081 59.999703,-65.77081 18.248406,-139.64067 18.248406))" ;
+    dcterms:publisher <urn:uuid:0232e829-5ce5-4d80-8a2e-c5bc2f69454f> ;
+    dcterms:references <urn:uuid:dbf4fc30-651b-4697-82b6-0468a0f1b25f> ;
+    dcterms:title "S_USA.Wilderness" ;
+    esip:eastBound "-65.77081"^^xsd:float ;
+    esip:northBound "59.999703"^^xsd:float ;
+    esip:southBound "18.248406"^^xsd:float ;
+    esip:westBound "-139.64067"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:dbf4fc30-651b-4697-82b6-0468a0f1b25f> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-01T14:44:34.205Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-01T14:44:34.205Z" ;
+    dc:identifier "urn:sha:d14a028c2a3a2bc9476102bb288234c415a2b01f828ea62ac5b3e42f" ;
+    owl:a bcube:Url .
+

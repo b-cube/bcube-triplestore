@@ -1,0 +1,69 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:037d8c81-210e-4d4c-814c-890601a5408d> bcube:hasType "place" ;
+    bcube:hasValue "Colorado",
+        "Denver",
+        "Denver County",
+        "Denver-Arapahoe-Disposal-site",
+        "Mountain-Parks",
+        "USA" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:2f6ba41a-5054-4bc1-bf6d-ccf843f34ba5> bcube:hasType "theme" ;
+    bcube:hasValue "LAS-point-cloud",
+        "LiDAR" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:6f14abec-02e4-492c-aa30-de225597f60b> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-10-17T11:11:34.644Z" ;
+    bcube:lastUpdated "2015-10-17T11:11:34.644Z" ;
+    bcube:originatedFrom <urn:uuid:e629b2c3-9862-4da7-b0bf-e9ae1f54b123> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:9dff3f06-f926-4a58-9184-1cf8d15b1610> .
+
+<urn:uuid:9dff3f06-f926-4a58-9184-1cf8d15b1610> bcube:dateCreated "2015-10-17T11:11:34.644Z" ;
+    bcube:hasMetadataRecord <urn:uuid:6f14abec-02e4-492c-aa30-de225597f60b> ;
+    bcube:lastUpdated "2015-10-17T11:11:34.644Z" ;
+    dc:conformsTo <urn:uuid:037d8c81-210e-4d4c-814c-890601a5408d>,
+        <urn:uuid:2f6ba41a-5054-4bc1-bf6d-ccf843f34ba5> ;
+    dc:description "Geographic Extent: City and County of Denver plus a one mile buffer; Denver Arapahoe Disposal Site plus a one mile buffer; City and County of Denver Mountain Parks plus a quarter mile buffer. Dataset Description: The Colorado Flood LiDAR project called for the Planning, Acquisition, processing and derivative products of LIDAR data to be collected at a nominal pulse spacing (NPS) of 0.7 meter. Project specifications are based on the U.S. Geological Survey National Geospatial Program Base LIDAR Specification, Version 1. The data was developed based on a horizontal projection/datum of UTM Zone 13 North, NAD83, meters and vertical datum of NAVD1988 (GEOID12A), meters. LiDAR data was delivered in RAW flight line swath format, processed to create Classified LAS 1.2 Files formatted to individual 1500m x 1500m tiles, and corresponding 0.75 meter gridded Hydro Flattened Raster DEM Files tiled to the same 1500m x 1500m schema, tiled Intensity Images, and Hydro-Flattening Breaklines in ESRI Shapefile format. Another dataset that includes contours will be developed from the UTM 13 dataset on a State Plane Coordinate System. Ground Conditions: LiDAR was collected in Fall 2013, while no snow was on the ground and rivers were at or below normal levels. In order to post process the LiDAR data to meet task order specifications, Photo Science established a total of 229 control points that were used to calibrate the LIDAR to known ground locations established throughout the Colorado Flood project area." ;
+    dc:spatial "POLYGON ((-105.579866676790004 40.638986727186598,-105.579866676790004 40.638986727186598,-104.297861778753003 40.638986727186598,-104.297861778753003 40.638986727186598,-105.579866676790004 40.638986727186598))" ;
+    dcterms:publisher <urn:uuid:d2e8f27b-7abb-4557-96fb-d05b36fc724b> ;
+    dcterms:title "Contours One Foot (2014)" ;
+    esip:eastBound "-104.297861779"^^xsd:float ;
+    esip:endDate "2014-07-22"^^xsd:date ;
+    esip:northBound "40.6389867272"^^xsd:float ;
+    esip:southBound "40.6389867272"^^xsd:float ;
+    esip:startDate "2013-10-16"^^xsd:date ;
+    esip:westBound "-105.579866677"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:d2e8f27b-7abb-4557-96fb-d05b36fc724b> owl:a foaf:Organization ;
+    foaf:name "" .
+
+<urn:uuid:e629b2c3-9862-4da7-b0bf-e9ae1f54b123> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-10-17T11:11:34.644Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-10-17T11:11:34.644Z" ;
+    dc:identifier "urn:sha:3604ac7904401c0dda9746b00e2cbf69b0d5910f2d614f81232056d6" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://data.denvergov.org/download/gis/contours_one_foot_2014/metadata/contours_one_foot_2014.xml" .
+

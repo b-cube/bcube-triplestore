@@ -1,0 +1,103 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:395eeecc-d633-4f7e-9ef7-91067ac4a3da> bcube:hasType "theme" ;
+    bcube:hasValue "geoscientificinformation",
+        "oceans" ;
+    dc:partOf "ISO 19115 Topic Category" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:3a253f01-1f74-4dcb-b5df-4c73fe0a94b4> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-13T22:24:42.335Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-13T22:24:42.335Z" ;
+    dc:identifier "urn:sha:4bb9798dff87a5b62189a034a4999251cdbb5727b67d6bcff2222c48" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://pubs.usgs.gov/ds/514/" .
+
+<urn:uuid:401f731c-eb1f-4971-ae29-b9bd478550f9> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-08-13T22:24:42.335Z" ;
+    bcube:lastUpdated "2015-08-13T22:24:42.335Z" ;
+    bcube:originatedFrom <urn:uuid:8f196af9-762e-4bce-a79d-25d129f8bfd8> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:466aa36f-276b-4f79-aab8-379760ace4ae> .
+
+<urn:uuid:466aa36f-276b-4f79-aab8-379760ace4ae> bcube:dateCreated "2015-08-13T22:24:42.335Z" ;
+    bcube:hasMetadataRecord <urn:uuid:401f731c-eb1f-4971-ae29-b9bd478550f9> ;
+    bcube:lastUpdated "2015-08-13T22:24:42.335Z" ;
+    dc:conformsTo <urn:uuid:395eeecc-d633-4f7e-9ef7-91067ac4a3da>,
+        <urn:uuid:4c55e4a2-83c3-4779-94ec-4077711a61e0>,
+        <urn:uuid:52fcca7c-e47b-48ac-8e43-4cb54f82b1ed>,
+        <urn:uuid:b50e9b87-b249-4adc-8856-8eb75d7ca2e9> ;
+    dc:description "USGS Western Coastal & Marine Geology scientists mapped the Monterey Bay area from Ano Nuevo to Moss landing between August and December 2009 using a SEA SWATHplus interferometric sonar system. Data were collected as part of the cooperative California Seafloor Mapping program, during field activities S-7-09-MB and S-10-09-MB. Raw sonar data were processed with SEA Swath Processor (version 3.05.18.04) before being cleaned and prepared for CARIS with sxpegn (build 151) by David Finlayson (USGS). Data were then imported to CARIS HIPS and SIPS (version 7.0.1.0 Service Pack 1). Within CARIS, field sheets were created to tile the data into smaller work areas, and survey lines were trimmed to optimize overlap, water column noise was removed, and data were gridded to 2m resolution using a swath angle BASE surface. Data were then exported from CARIS as ascii XYZ files and imported to ARCGIS where they were combined into a single grid. holes were filled after noise removal with a Natural Neighbors Interpolation algorithm. Data were exported as a single continuous ASCII grid and converted into xyz triplets with a python script. XYZ data were processed with CS2CS(Version 4.4.6) to convert from WGS84(G1150)/ITRF00 epoch 2002.0 to NAD83(CORS96/NSRS2007) epoch 2002.0. Elevation values were adjusted to NAVD88 with VDatum (Version 2.2.7). Data were then re-gridded in ArcGIS." ;
+    dc:spatial "POLYGON ((-122.339066 36.793533,-122.339066 37.111513,-121.785442 37.111513,-121.785442 36.793533,-122.339066 36.793533))" ;
+    dcterms:publisher <urn:uuid:c27705ed-facb-430f-8330-1b202998e981> ;
+    dcterms:references <urn:uuid:3a253f01-1f74-4dcb-b5df-4c73fe0a94b4> ;
+    dcterms:title "MB_2m_DEM - 2m ESRI ASCII GRID of unfilled bathymetry for field activities S-7-09 MB and S-10-09-MB from Moss Landing to Ano Nuevo from August - December 2009" ;
+    esip:eastBound "-121.785442"^^xsd:float ;
+    esip:endDate "2009-12-22"^^xsd:date ;
+    esip:northBound "37.111513"^^xsd:float ;
+    esip:southBound "36.793533"^^xsd:float ;
+    esip:startDate "2009-08-13"^^xsd:date ;
+    esip:westBound "-122.339066"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:4c55e4a2-83c3-4779-94ec-4077711a61e0> bcube:hasType "theme" ;
+    bcube:hasValue "Marine Geology",
+        "bathymetry",
+        "geoscientific information",
+        "oceans" ;
+    dc:partOf "USGS CMG InfoBank" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:52fcca7c-e47b-48ac-8e43-4cb54f82b1ed> bcube:hasType "place" ;
+    bcube:hasValue "Ano Nuevo",
+        "California",
+        "Monterey Bay",
+        "Moss Landing",
+        "Pacific Ocean" ;
+    dc:partOf "Geographic Names Information System (GNIS)" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:8f196af9-762e-4bce-a79d-25d129f8bfd8> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-13T22:24:42.335Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-13T22:24:42.335Z" ;
+    dc:identifier "urn:sha:f4296818c20a860a4ff140124fb12591748cfed12f7232e5c6fb36d2" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://pubs.usgs.gov/ds/514/metadata/MB_2mBathyDEM_NAD83.xml" .
+
+<urn:uuid:b50e9b87-b249-4adc-8856-8eb75d7ca2e9> bcube:hasType "place" ;
+    bcube:hasValue "\"Monterey Bay, CA\"",
+        "CA",
+        "Monterey Bay",
+        "Moss Landing to Ano Nuevo",
+        "North Pacific Ocean",
+        "Northern California",
+        "Northern Pacific Ocean",
+        "USA" ;
+    dc:partOf "USGS CMG InfoBank" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:c27705ed-facb-430f-8330-1b202998e981> owl:a foaf:Organization ;
+    foaf:name "" .
+

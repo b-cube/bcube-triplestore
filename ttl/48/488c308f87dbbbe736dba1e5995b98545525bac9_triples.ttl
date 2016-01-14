@@ -1,0 +1,89 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:1497ff41-4679-4de3-8e66-095c51ca50ea> bcube:hasType "theme" ;
+    bcube:hasValue "boundaries" ;
+    dc:partOf "ISO 19115 Topic Categories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:62879004-35e9-46e4-8f98-98889ec350e6> bcube:hasType "theme" ;
+    bcube:hasValue "County or equivalent entity",
+        "Polygon",
+        "TAZ",
+        "Traffic Analysis Zone" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:66e48b5a-146d-4d16-9251-b09ee80241d3> owl:a foaf:Organization ;
+    foaf:name "" .
+
+<urn:uuid:827c0d68-b7fc-4a2d-8f5b-4dcb24339880> bcube:hasType "place" ;
+    bcube:hasValue "06073",
+        "County or Equivalent Entity",
+        "San Diego",
+        "U.S.",
+        "United States" ;
+    dc:partOf "FIPS Publication 5-2, FIPS Publication 6-4, FIPS Publication 8-6, FIPS Publication 9-1,FIPS Publication55-4" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:888ce9fa-881a-4102-bfa8-46b4f6d969a7> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-11-06T02:45:27.545Z" ;
+    bcube:lastUpdated "2015-11-06T02:45:27.545Z" ;
+    bcube:originatedFrom <urn:uuid:b891db80-f5e9-44f4-a414-65c1fabb22ee> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:93dc01a3-da48-4c28-91ff-6ca68feccf92> .
+
+<urn:uuid:93dc01a3-da48-4c28-91ff-6ca68feccf92> bcube:dateCreated "2015-11-06T02:45:27.545Z" ;
+    bcube:hasMetadataRecord <urn:uuid:888ce9fa-881a-4102-bfa8-46b4f6d969a7> ;
+    bcube:lastUpdated "2015-11-06T02:45:27.545Z" ;
+    dc:conformsTo <urn:uuid:1497ff41-4679-4de3-8e66-095c51ca50ea>,
+        <urn:uuid:62879004-35e9-46e4-8f98-98889ec350e6>,
+        <urn:uuid:827c0d68-b7fc-4a2d-8f5b-4dcb24339880> ;
+    dc:description "The TIGER/Line Shapefiles are an extract of selected geographic and cartographic information from the Census MAF/TIGER database. The Census MAF/TIGER database represents a seamless national file with no overlaps or gaps between parts. However, each TIGER/Line Shapefile is designed to stand alone as an independent data set or the shapefiles can be combined to cover the whole nation." ;
+    dc:spatial "POLYGON ((-117.611081 32.528832,-117.611081 33.505025,-116.08094 33.505025,-116.08094 32.528832,-117.611081 32.528832))" ;
+    dcterms:publisher <urn:uuid:66e48b5a-146d-4d16-9251-b09ee80241d3> ;
+    dcterms:references <urn:uuid:eafde48e-3cf3-4a73-a842-3db91df8d72b> ;
+    dcterms:title "TIGER/Line Shapefile, 2008, 2000 county, San Diego County, CA, Traffic Analysis Zone (TAZ)" ;
+    esip:eastBound "-116.08094"^^xsd:float ;
+    esip:endDate "2008-07-01"^^xsd:date ;
+    esip:northBound "33.505025"^^xsd:float ;
+    esip:southBound "32.528832"^^xsd:float ;
+    esip:startDate "2008-01-01"^^xsd:date ;
+    esip:westBound "-117.611081"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:b891db80-f5e9-44f4-a414-65c1fabb22ee> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-06T02:45:27.545Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-06T02:45:27.545Z" ;
+    dc:identifier "urn:sha:85a670dfc9138098f34f88854bfa32154d0bf7686bfbed8b90b8c42a" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://meta.geo.census.gov/data/existing/decennial/GEO/GPMB/TIGERline/fe_2008/taz00/tl_2008_06073_taz00_url.shp.xml" .
+
+<urn:uuid:eafde48e-3cf3-4a73-a842-3db91df8d72b> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-06T02:45:27.545Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-06T02:45:27.545Z" ;
+    dc:identifier "urn:sha:b76a59b79099b7de926452194d98e59b18be381f3bc1046350ec276f" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www2.census.gov/geo/tiger/TIGER2008/06_CALIFORNIA/06073_San_Diego_County/tl_2008_06073_taz00.zip" .
+

@@ -1,0 +1,87 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:3b96cd4c-a9dc-4727-b873-d2b9c7f28313> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-11T15:41:33.431Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-11T15:41:33.431Z" ;
+    dc:identifier "urn:sha:186d1187a921549ba8541255e65558c5fe43fac0ef1a1b6c7f58f260" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://mslapps.mt.gov/Geographic_Information/Data/DataList/datalist_MetadataDetailRaw.aspx?did={b06235cd-7f0e-49d5-96b9-f3123a527df6}" .
+
+<urn:uuid:41c47d7b-b290-41e5-9d99-d9e92a7354ec> bcube:dateCreated "2015-08-11T15:41:33.431Z" ;
+    bcube:hasMetadataRecord <urn:uuid:681e1b0f-ffea-4ce0-a12c-27b810f0c0a2> ;
+    bcube:lastUpdated "2015-08-11T15:41:33.431Z" ;
+    dc:conformsTo <urn:uuid:63dc900e-aa2a-4d97-8793-7cbe4e643644>,
+        <urn:uuid:a43366bd-6b42-406f-aa4c-e3dbd7e4b6f3>,
+        <urn:uuid:e60e7df9-df3e-4004-abf0-06dcaeed766c> ;
+    dc:description "This is the Montana subwatershed layer as it existed in 2006. This dataset has been superseded by newer data and should only be used as a historical snapshot of one stage of the subwatershed deliniation process. This data set is a hydrologic unit boundary layer to the Subwatershed (12-digit) 6th level for the State of Montana. This data set consists of geo-referenced digital data and associated attributes created in accordance with the \"FGDC Proposal, Version 2.0 - Federal Standards For Delineation of Hydrologic Unit Boundaries 10/01/04\" (http://www.ftw.nrcs.usda.gov/huc_data.html). Polygons are attributed with hydrologic unit codes for 4th level sub-basins, 5th level watersheds, 6th level subwatersheds, name, size, downstream hydrologic unit, type of watershed, non-contributing areas and flow modification." ;
+    dc:spatial "POLYGON ((-116.413582 43.764268,-116.413582 49.173993,-102.791553 49.173993,-102.791553 43.764268,-116.413582 43.764268))" ;
+    dcterms:publisher <urn:uuid:a0634e7b-324f-4d02-8429-b5f65b958d57> ;
+    dcterms:title "Montana Subwatershed Basins, 2006 Version" ;
+    esip:eastBound "-102.791553"^^xsd:float ;
+    esip:northBound "49.173993"^^xsd:float ;
+    esip:southBound "43.764268"^^xsd:float ;
+    esip:startDate "2006-01-01"^^xsd:date ;
+    esip:westBound "-116.413582"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:63dc900e-aa2a-4d97-8793-7cbe4e643644> bcube:hasType "place" ;
+    bcube:hasValue "Columbia River",
+        "Missouri River",
+        "Montana",
+        "South Saskatchewan River" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:681e1b0f-ffea-4ce0-a12c-27b810f0c0a2> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-08-11T15:41:33.431Z" ;
+    bcube:lastUpdated "2015-08-11T15:41:33.431Z" ;
+    bcube:originatedFrom <urn:uuid:3b96cd4c-a9dc-4727-b873-d2b9c7f28313> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:41c47d7b-b290-41e5-9d99-d9e92a7354ec> .
+
+<urn:uuid:a0634e7b-324f-4d02-8429-b5f65b958d57> owl:a foaf:Organization ;
+    foaf:name "Montana State Library" .
+
+<urn:uuid:a43366bd-6b42-406f-aa4c-e3dbd7e4b6f3> bcube:hasType "theme" ;
+    bcube:hasValue "4th-code",
+        "5th-code",
+        "6th-code",
+        "Basin",
+        "HUC",
+        "Hydrologic Unit Code",
+        "Hydrologic Units",
+        "Region",
+        "Sub-basin",
+        "Sub-region",
+        "Sub-watershed",
+        "Subbasin",
+        "Subwatershed",
+        "WBD",
+        "Watershed",
+        "Watershed Boundaries",
+        "Watershed Boundary Dataset",
+        "boundaries" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:e60e7df9-df3e-4004-abf0-06dcaeed766c> bcube:hasType "theme" ;
+    bcube:hasValue "geoscientificInformation",
+        "inlandWaters" ;
+    dc:partOf "ISO 19115 Topic Category" ;
+    owl:a bcube:thesaurusSubset .
+

@@ -1,0 +1,67 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:15bf03eb-95bb-4103-8561-7115a5159d8f> bcube:hasType "place" ;
+    bcube:hasValue "United States" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:7919a793-8981-4c08-a995-de236bbeb4d5> owl:a foaf:Organization ;
+    foaf:name "U.S. EPA Office of Research & Development (ORD) - National Exposure Research Laboratory (NERL)" .
+
+<urn:uuid:9e8c2016-6c76-40ec-aaa6-249bb5663f94> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-09-10T01:02:57.337Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-09-10T01:02:57.337Z" ;
+    dc:identifier "urn:sha:c0b7e18410d86a174a9b59f4492ca62fbb6a7c4f15248973a9055e6c" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www.epa.gov/heasd/documents/cdc/HBM/pm25/HBM_PM25_2007_12km_metadata.xml" .
+
+<urn:uuid:a7a559ee-2383-4461-ba65-4d94767c19e8> bcube:hasType "theme" ;
+    bcube:hasValue "environment" ;
+    dc:partOf "ISO 19115 Topic Category" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:d056c35d-a633-418b-b13f-2bed8e8d66b2> bcube:dateCreated "2015-09-10T01:02:57.337Z" ;
+    bcube:hasMetadataRecord <urn:uuid:e8bdb28e-66ad-4cb1-8bec-ea454f91d4e5> ;
+    bcube:lastUpdated "2015-09-10T01:02:57.337Z" ;
+    dc:conformsTo <urn:uuid:15bf03eb-95bb-4103-8561-7115a5159d8f>,
+        <urn:uuid:a7a559ee-2383-4461-ba65-4d94767c19e8>,
+        <urn:uuid:e50026bf-517a-46c9-9b86-92afd3dc070b> ;
+    dc:description "The pm25Surface_12km_2007 file is the output data file from a hierarchical Bayesian model (HBM) that combines PM2.5 monitoring data from National Air Monitoring Stations/State and Local Air Monitoring Stations (NAMS/SLAMS) and simulated PM2.5 data from the deterministic prediction model, Models-3/Community Multiscale Air Quality (CMAQ). The file contains estimates of the mean and standard error for 12 km x 12 km grids across the entire US for each day of the modeling year." ;
+    dc:spatial "POLYGON ((-111.1 23.0,-111.1 51.25,-65.4 51.25,-65.4 23.0,-111.1 23.0))" ;
+    dcterms:publisher <urn:uuid:7919a793-8981-4c08-a995-de236bbeb4d5> ;
+    dcterms:title "EPA statistical predictions of PM2.5 for 2007 at 12km grid" ;
+    esip:eastBound "-65.4"^^xsd:float ;
+    esip:northBound "51.25"^^xsd:float ;
+    esip:southBound "23.0"^^xsd:float ;
+    esip:westBound "-111.1"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:e50026bf-517a-46c9-9b86-92afd3dc070b> bcube:hasType "theme" ;
+    bcube:hasValue "Air" ;
+    dc:partOf "EPA GIS Keyword Thesaurus" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:e8bdb28e-66ad-4cb1-8bec-ea454f91d4e5> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-09-10T01:02:57.337Z" ;
+    bcube:lastUpdated "2015-09-10T01:02:57.337Z" ;
+    bcube:originatedFrom <urn:uuid:9e8c2016-6c76-40ec-aaa6-249bb5663f94> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:d056c35d-a633-418b-b13f-2bed8e8d66b2> .
+

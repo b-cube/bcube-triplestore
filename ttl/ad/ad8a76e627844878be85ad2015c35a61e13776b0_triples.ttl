@@ -1,0 +1,80 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:02d0c81b-6c31-4827-9427-6a135d8eacf7> bcube:hasType "theme" ;
+    bcube:hasValue "air_temperature",
+        "latitude",
+        "longitude",
+        "precipitation_flux",
+        "time" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:05d63f1b-db84-4e59-a009-4cb7ae5acde4> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-02T02:42:23.754Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-02T02:42:23.754Z" ;
+    dc:identifier "urn:sha:e7a25df4ecaa50e8f42f455b6d75f6fe28c45b77a45a7558770e2a63" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://esgdata1.nccs.nasa.gov/thredds/catalog/bypass/NEX-DCP30/bcsd/catalog.html" .
+
+<urn:uuid:1fcc6b9b-259f-4982-812d-a5181897ab53> bcube:dateCreated "2015-11-02T02:42:23.754Z" ;
+    bcube:hasMetadataRecord <urn:uuid:78c2faa8-39c5-43ff-ae45-ea9ab1bd4c64> ;
+    bcube:lastUpdated "2015-11-02T02:42:23.754Z" ;
+    dc:conformsTo <urn:uuid:02d0c81b-6c31-4827-9427-6a135d8eacf7>,
+        <urn:uuid:5cbba4af-b2a7-49d1-8def-b284c2a15940>,
+        <urn:uuid:efb9bef0-fa81-4961-9967-683228765146> ;
+    dc:description "NOTICE: This dataset's 800m spatial resolution requires special consideration when executing Geo Data Portal Processing. Raw data subsets are not available for this dataset. Please test short time periods prior to running large processing runs. Report any issues experiencedto the Geo Data Portal team at gdp@usgs.gov. Thanks! Description: http://portal.nccs.nasa.gov/portal_home/published/NEX.html The NASA Earth Exchange (NEX) Downscaled Climate Projections (NEX-DCP30) dataset is comprised of downscaled climate scenarios for the conterminous United States that are derived from the General Circulation Model (GCM) runs conducted under the Coupled Model Intercomparison Project Phase 5 (CMIP5) [Taylor et al. 2012] and across the four greenhouse gas emissions scenarios known as Representative Concentration Pathways (RCPs) [Meinshausen et al. 2011] developed for the Fifth Assessment Report of the Intergovernmental Panel on Climate Change (IPCC AR5). The dataset includes downscaled projections from 33 models, as well as ensemble statistics calculated for each RCP from all model runs available. The purpose of these datasets is to provide a set of high resolution, bias-corrected climate change projections that can be used to evaluate climate change impacts on processes that are sensitive to finer-scale climate gradients and the effects of local topography on climate conditions. Each of the climate projections includes monthly averaged maximum temperature, minimum temperature, and precipitation for the periods from 1950 through 2005 (Retrospective Run) and from 2006 to 2099 (Prospective Run)." ;
+    dc:identifier "bypass/NEX-DCP30/bcsd/" ;
+    dc:spatial "POLYGON ((-126.4375 24.34375,-126.4375 50.0078125,-58.5859375 50.0078125,-58.5859375 24.34375,-126.4375 24.34375))" ;
+    dcterms:references <urn:uuid:05d63f1b-db84-4e59-a009-4cb7ae5acde4> ;
+    dcterms:title "800m Downscaled NEX CMIP5 Climate Projections for the Continental US" ;
+    esip:eastBound "-58.5859375"^^xsd:float ;
+    esip:endDate "2100-01-01"^^xsd:date ;
+    esip:northBound "50.0078125"^^xsd:float ;
+    esip:southBound "24.34375"^^xsd:float ;
+    esip:startDate "1950-01-14"^^xsd:date ;
+    esip:westBound "-126.4375"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:5cbba4af-b2a7-49d1-8def-b284c2a15940> bcube:hasValue "gov.usgs.cida.gdp.wps.algorithm.FeatureGridStatisticsAlgorithm",
+        "gov.usgs.cida.gdp.wps.algorithm.FeatureWeightedGridStatisticsAlgorithm" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:78c2faa8-39c5-43ff-ae45-ea9ab1bd4c64> a "ISO 19115:2003/19139" ;
+    bcube:dateCreated "2015-11-02T02:42:23.754Z" ;
+    bcube:lastUpdated "2015-11-02T02:42:23.754Z" ;
+    bcube:originatedFrom <urn:uuid:9148ab27-08f2-470f-b182-4750c8ea7809> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:1fcc6b9b-259f-4982-812d-a5181897ab53> .
+
+<urn:uuid:9148ab27-08f2-470f-b182-4750c8ea7809> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-02T02:42:23.754Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-02T02:42:23.754Z" ;
+    dc:identifier "urn:sha:9526052572956c3352f857cff970cc353dd5c5de3aa59cdd8e5937d1" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://catalog.data.gov/harvest/object/bf90ccbd-4725-4990-8db6-9335370423b1" .
+
+<urn:uuid:efb9bef0-fa81-4961-9967-683228765146> bcube:hasValue "climatologyMeteorologyAtmosphere" ;
+    dc:partOf "IsoTopicCategories" ;
+    owl:a bcube:thesaurusSubset .
+

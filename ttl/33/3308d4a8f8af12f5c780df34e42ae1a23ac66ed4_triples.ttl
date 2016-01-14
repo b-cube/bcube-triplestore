@@ -1,0 +1,83 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:199af210-229a-4e1b-bbc6-be1375780fbe> owl:a foaf:Organization ;
+    foaf:name "Idaho Geospatial Data Clearinghouse" .
+
+<urn:uuid:37da9900-4e57-4ea5-a339-9ac8234078e5> bcube:hasType "theme" ;
+    bcube:hasValue "Hillshade",
+        "Shaded Relief",
+        "Topography" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:4130e9f5-a0b3-4ec9-98c0-308403a6604d> bcube:hasType "theme" ;
+    bcube:hasValue "elevation" ;
+    dc:partOf "ISO 19115 Topic Category" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:5e25c218-db82-41bc-8c44-edaf0ea19eaa> bcube:hasType "place" ;
+    bcube:hasValue "Idaho State" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:9ca0d11a-8a04-49c2-94ba-0fd9810c29c9> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-10-17T20:14:15.101Z" ;
+    bcube:lastUpdated "2015-10-17T20:14:15.101Z" ;
+    bcube:originatedFrom <urn:uuid:f3e1bcab-10c6-4389-b940-0e0b4cc54ca0> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:ccfa3967-5f59-4624-a5e1-62748352124e> .
+
+<urn:uuid:b5d6e6ee-fa0f-4b8e-9205-496099a2fd74> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-10-17T20:14:15.101Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-10-17T20:14:15.101Z" ;
+    dc:identifier "urn:sha:4d63dc351a9ddf9c48e159d5f1c08fd7754af69e3895b72b99ac66ab" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://cloud.insideidaho.org/webApps/util/zip.ashx?fn=http://cloud.insideidaho.org/data/igdc/shdrlfcolor10m_id_igdc.sid" .
+
+<urn:uuid:ccfa3967-5f59-4624-a5e1-62748352124e> bcube:dateCreated "2015-10-17T20:14:15.101Z" ;
+    bcube:hasMetadataRecord <urn:uuid:9ca0d11a-8a04-49c2-94ba-0fd9810c29c9> ;
+    bcube:lastUpdated "2015-10-17T20:14:15.101Z" ;
+    dc:conformsTo <urn:uuid:37da9900-4e57-4ea5-a339-9ac8234078e5>,
+        <urn:uuid:4130e9f5-a0b3-4ec9-98c0-308403a6604d>,
+        <urn:uuid:5e25c218-db82-41bc-8c44-edaf0ea19eaa> ;
+    dc:description "The 10-meter Color Shaded Relief of Idaho data set was derived from the 1/3 arc second National Elevation Dataset and USGS DEM elevation data. The NED is a seamless mosaic of best-available elevation data. The 7.5-minute elevation data for the conterminous United States are the primary initial source data. In addition to the availability of complete 7.5-minute data, efficient processing methods were developed to filter production artifacts in the existing data, convert to the NAD83 datum, edge-match, and fill slivers of missing data at quadrangle seams. One of the effects of the NED processing steps is a much-improved base of elevation data for calculating slope and hydrologic derivatives. The specifications for the NED 1 arc second and 1/3 arc second data are: Geographic coordinate system Horizontal datum of NAD83, except for AK which is NAD27 Vertical datum of NAVD88, except for AK which is NAVD29 Z units of meters." ;
+    dc:spatial "POLYGON ((-117.531929 41.9451,-117.531929 49.039899,-110.655133 49.039899,-110.655133 41.9451,-117.531929 41.9451))" ;
+    dcterms:publisher <urn:uuid:199af210-229a-4e1b-bbc6-be1375780fbe> ;
+    dcterms:references <urn:uuid:b5d6e6ee-fa0f-4b8e-9205-496099a2fd74> ;
+    dcterms:title "Color Shaded Relief of Idaho with a Horizontal Grid Spacing of 10-meters" ;
+    esip:eastBound "-110.655133"^^xsd:float ;
+    esip:northBound "49.039899"^^xsd:float ;
+    esip:southBound "41.9451"^^xsd:float ;
+    esip:startDate "1999-01-01"^^xsd:date ;
+    esip:westBound "-117.531929"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:f3e1bcab-10c6-4389-b940-0e0b4cc54ca0> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-10-17T20:14:15.101Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-10-17T20:14:15.101Z" ;
+    dc:identifier "urn:sha:342558208005763605dd442be0537c8f96a6525b226d8fe474fce4b9" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://insideidaho.org/appsOutput/metadataWAF/xml/ColorShadedReliefofIdahowithaHorizontalGridSpacingof10meters.xml" .
+

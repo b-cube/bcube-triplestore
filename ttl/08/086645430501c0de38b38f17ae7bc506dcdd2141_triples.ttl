@@ -1,0 +1,102 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:1d2c39e0-6830-4ae1-93d5-827d62a3b98c> owl:a foaf:Organization ;
+    foaf:name "" .
+
+<urn:uuid:22220196-cb38-42fb-b982-782a0acb8f75> bcube:dateCreated "2015-11-05T07:28:16.378Z" ;
+    bcube:hasMetadataRecord <urn:uuid:feb711e5-885b-4e23-957a-4de580602c52> ;
+    bcube:lastUpdated "2015-11-05T07:28:16.378Z" ;
+    dc:conformsTo <urn:uuid:507d29bf-cfea-4830-95c3-35898a5e90f6>,
+        <urn:uuid:65fa66bc-d032-4f50-bec0-8651fbc56760>,
+        <urn:uuid:887f3321-6333-42f4-959e-74f362cc3171> ;
+    dc:description "The TIGER/Line shapefiles and related database files (.dbf) are an extract of selected geographic and cartographic information from the U.S. Census Bureau's Master Address File / Topologically Integrated Geographic Encoding and Referencing (MAF/TIGER) Database (MTDB). The MTDB represents a seamless national file with no overlaps or gaps between parts, however, each TIGER/Line shapefile is designed to stand alone as an independent data set, or they can be combined to cover the entire nation. The Feature Names Relationship File (FEATNAMES.dbf) contains a record for each feature name and any attributes associated with it. Each feature name can be linked to the corresponding edges that make up that feature in the All Lines Shapefile (EDGES.shp), where applicable to the corresponding address range or ranges in the Address Ranges Relationship File (ADDR.dbf), or to both files. Although this file includes feature names for all linear features, not just road features, the primary purpose of this relationship file is to identify all street names associated with each address range. An edge can have several feature names; an address range located on an edge can be associated with one or any combination of the available feature names (an address range can be linked to multiple feature names). The address range is identified by the address range identifier (ARID) attribute, which can be used to link to the Address Ranges Relationship File (ADDR.dbf). The linear feature is identified by the linear feature identifier (LINEARID) attribute, which can be used to relate the address range back to the name attributes of the feature in the Feature Names Relationship File or to the feature record in the Primary Roads, Primary and Secondary Roads, or All Roads Shapefiles. The edge to which a feature name applies can be determined by linking the feature name record to the All Lines Shapefile (EDGES.shp) using the permanent edge identifier (TLID) attribute. The address range identifier(s) (ARID) for a specific linear feature can be found by using the linear feature identifier (LINEARID) from the Feature Names Relationship File (FEATNAMES.dbf) through the Address Range / Feature Name Relationship File (ADDRFN.dbf)." ;
+    dc:spatial "POLYGON ((-143.889952 58.781314,-143.889952 60.527746,-137.498558 60.527746,-137.498558 58.781314,-143.889952 58.781314))" ;
+    dcterms:publisher <urn:uuid:1d2c39e0-6830-4ae1-93d5-827d62a3b98c> ;
+    dcterms:references <urn:uuid:b66a4d5a-1f6e-4d9f-a8ee-b70fdb5e1b94> ;
+    dcterms:title "TIGER/Line Shapefile, 2012, county, Yakutat City and Borough, AK, Current Feature Names Relationship File" ;
+    esip:eastBound "-137.498558"^^xsd:float ;
+    esip:endDate "2012-06-01"^^xsd:date ;
+    esip:northBound "60.527746"^^xsd:float ;
+    esip:southBound "58.781314"^^xsd:float ;
+    esip:startDate "2011-08-01"^^xsd:date ;
+    esip:westBound "-143.889952"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:507d29bf-cfea-4830-95c3-35898a5e90f6> bcube:hasType "theme" ;
+    bcube:hasValue "Transportation" ;
+    dc:partOf "ISO 19115 Topic Categories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:65fa66bc-d032-4f50-bec0-8651fbc56760> bcube:hasType "theme" ;
+    bcube:hasValue "County ANSI Code",
+        "County FIPS Code",
+        "County or equivalent entity",
+        "Feature Names",
+        "MAFTIGER feature class code",
+        "Name",
+        "Permanent edge ID",
+        "Prefix Qualifier code",
+        "Prefix direction code",
+        "Prefix type code description",
+        "PrimaryAlternate code",
+        "State ANSI Code",
+        "State FIPS Code",
+        "Suffix Qualifier code",
+        "Suffix direction code",
+        "Suffix type code",
+        "Table" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:887f3321-6333-42f4-959e-74f362cc3171> bcube:hasType "place" ;
+    bcube:hasValue "02282",
+        "County or Equivalent Entity",
+        "U.S.",
+        "United States",
+        "Yakutat" ;
+    dc:partOf "ANSI INCITS 38:2009 (Formerly FIPS 5-2), ANSI INCITS 31:2009 (Formerly FIPS 6-4),ANSI INCITS 454:2009 (Formerly FIPS 8-6), ANSI INCITS 455:2009(Formerly FIPS 9-1), ANSI INCITS 446:2008 (Geographic Names Information System (GNIS))" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:97db9b96-f028-4a8c-96e8-b125a2bba644> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-05T07:28:16.378Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-05T07:28:16.378Z" ;
+    dc:identifier "urn:sha:ab7f2705f2fbf1725c44ba13689126b9b7de3daebe329ce0ca093db5" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://meta.geo.census.gov/data/existing/decennial/GEO/GPMB/TIGERline/TL2012/FGDC/featnames/tl_2012_02282_featnames.dbf.xml" .
+
+<urn:uuid:b66a4d5a-1f6e-4d9f-a8ee-b70fdb5e1b94> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-05T07:28:16.378Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-05T07:28:16.378Z" ;
+    dc:identifier "urn:sha:660c7e05e0de833552aa9a624932c97595d1446ede5ae5c1dd1f3a84" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www2.census.gov/geo/tiger/TIGER2012/FEATNAMES/tl_2012_02282_featnames.zip" .
+
+<urn:uuid:feb711e5-885b-4e23-957a-4de580602c52> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-11-05T07:28:16.378Z" ;
+    bcube:lastUpdated "2015-11-05T07:28:16.378Z" ;
+    bcube:originatedFrom <urn:uuid:97db9b96-f028-4a8c-96e8-b125a2bba644> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:22220196-cb38-42fb-b982-782a0acb8f75> .
+

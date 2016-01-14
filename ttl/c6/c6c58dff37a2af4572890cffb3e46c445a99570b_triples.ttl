@@ -1,0 +1,71 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:2ad6fa44-e26c-4059-ac7f-5d06a98baae1> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-10-30T11:01:25.883Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-10-30T11:01:25.883Z" ;
+    dc:identifier "urn:sha:438531977936f4d8975646d6e417c480d213bffcb3386386c3deaab2" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://data.denvergov.org/download/gis/parkways/metadata/parkways.xml" .
+
+<urn:uuid:3519a50d-9a0c-43f8-9a81-4876dd2d0f8b> bcube:hasType "place" ;
+    bcube:hasValue "Colorado",
+        "Denver",
+        "Denver County",
+        "USA" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:4ed1a767-25a3-4294-b388-6b8ae0b8005d> bcube:dateCreated "2015-10-30T11:01:25.883Z" ;
+    bcube:hasMetadataRecord <urn:uuid:583f6a52-b41d-4178-a602-b1be74a99aae> ;
+    bcube:lastUpdated "2015-10-30T11:01:25.883Z" ;
+    dc:conformsTo <urn:uuid:3519a50d-9a0c-43f8-9a81-4876dd2d0f8b>,
+        <urn:uuid:8f9e0fde-f6b8-4579-b293-90f6cf91b036>,
+        <urn:uuid:e7010736-a871-4273-a0a3-7f45cfa8e343> ;
+    dc:description "This dataset is polygon representation of designated parkways managed by the Department of Parks and Recreation in the City and County of Denver. Data is based on the right of way boundary and then buffered to graphically represent the area affected by the setback regulations." ;
+    dc:spatial "POLYGON ((-105.110037 39.612661,-105.110037 39.825192,-104.734005 39.825192,-104.734005 39.612661,-105.110037 39.612661))" ;
+    dcterms:publisher <urn:uuid:64968c67-af51-4ed5-a002-be314238d4cc> ;
+    dcterms:title "Parkways" ;
+    esip:eastBound "-104.734005"^^xsd:float ;
+    esip:northBound "39.825192"^^xsd:float ;
+    esip:southBound "39.612661"^^xsd:float ;
+    esip:westBound "-105.110037"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:583f6a52-b41d-4178-a602-b1be74a99aae> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-10-30T11:01:25.883Z" ;
+    bcube:lastUpdated "2015-10-30T11:01:25.883Z" ;
+    bcube:originatedFrom <urn:uuid:2ad6fa44-e26c-4059-ac7f-5d06a98baae1> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:4ed1a767-25a3-4294-b388-6b8ae0b8005d> .
+
+<urn:uuid:64968c67-af51-4ed5-a002-be314238d4cc> owl:a foaf:Organization ;
+    foaf:name "" .
+
+<urn:uuid:8f9e0fde-f6b8-4579-b293-90f6cf91b036> bcube:hasType "theme" ;
+    bcube:hasValue "parks" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:e7010736-a871-4273-a0a3-7f45cfa8e343> bcube:hasType "theme" ;
+    bcube:hasValue "boundaries",
+        "society" ;
+    dc:partOf "ISO 19115 Topic Categories" ;
+    owl:a bcube:thesaurusSubset .
+

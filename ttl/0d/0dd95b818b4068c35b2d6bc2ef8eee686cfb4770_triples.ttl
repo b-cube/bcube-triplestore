@@ -1,0 +1,72 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:1ae46bac-47c4-45ce-8096-8f576395d220> owl:a foaf:Organization ;
+    foaf:name "" .
+
+<urn:uuid:1fb04b00-7d6b-4e3f-9c56-252730a5f3f3> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-10-18T06:26:11.1Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-10-18T06:26:11.1Z" ;
+    dc:identifier "urn:sha:1ec3f5ffc1030d1c8cc2f2a12b6a1364e0acec526167951f42580240" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://data.denvergov.org/download/gis/quarter_sections/metadata/quarter_sections.xml" .
+
+<urn:uuid:3ac54c72-00c0-4a19-bfd0-05e3466d0dc9> bcube:hasType "theme" ;
+    bcube:hasValue "boundaries",
+        "planningCadastre" ;
+    dc:partOf "ISO 19115 Topic Categories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:4fb11a39-3e0c-47d9-acbe-8d53d3d00258> bcube:hasType "place" ;
+    bcube:hasValue "Colorado",
+        "Denver",
+        "Denver County",
+        "USA" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:739051aa-81e4-471b-bf8e-a5b39f051350> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-10-18T06:26:11.1Z" ;
+    bcube:lastUpdated "2015-10-18T06:26:11.1Z" ;
+    bcube:originatedFrom <urn:uuid:1fb04b00-7d6b-4e3f-9c56-252730a5f3f3> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:a83e6deb-2a4d-4cfd-9273-a2f4f9258b94> .
+
+<urn:uuid:8b10384a-d18e-4472-ab2f-bee710dc78f8> bcube:hasType "theme" ;
+    bcube:hasValue "index",
+        "survey" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:a83e6deb-2a4d-4cfd-9273-a2f4f9258b94> bcube:dateCreated "2015-10-18T06:26:11.1Z" ;
+    bcube:hasMetadataRecord <urn:uuid:739051aa-81e4-471b-bf8e-a5b39f051350> ;
+    bcube:lastUpdated "2015-10-18T06:26:11.1Z" ;
+    dc:conformsTo <urn:uuid:3ac54c72-00c0-4a19-bfd0-05e3466d0dc9>,
+        <urn:uuid:4fb11a39-3e0c-47d9-acbe-8d53d3d00258>,
+        <urn:uuid:8b10384a-d18e-4472-ab2f-bee710dc78f8> ;
+    dc:description "The City Engineering Quarter Section Map Index contains information regarding City Engineering quarter section numbers and Public Land Survey System (PLSS) information for each quarter section in the City and County of Denver, as well as a few of the surrounding section quarters. For each quarter section of the PLSS in the City and County of Denver, the City Engineering (later the City Surveyor's office) developed and maintained a linen sheet depicting subdivision, lot, ordinance, and easement data in that quarter section. Using Broadway and Colfax Avenue as the dividing lines, the CCD is broken into four quadrants, and the quarter sections for each quadrant are numbered beginning with 1. NOTE: Maintenance of these quarter section sheets was discontinued after 1996 due to the development of the CCD GIS." ;
+    dc:spatial "POLYGON ((-105.119306 39.609691,-105.119306 39.914226,-104.593266 39.914226,-104.593266 39.609691,-105.119306 39.609691))" ;
+    dcterms:publisher <urn:uuid:1ae46bac-47c4-45ce-8096-8f576395d220> ;
+    dcterms:title "Quarter Section" ;
+    esip:eastBound "-104.593266"^^xsd:float ;
+    esip:northBound "39.914226"^^xsd:float ;
+    esip:southBound "39.609691"^^xsd:float ;
+    esip:westBound "-105.119306"^^xsd:float ;
+    owl:a dcat:Dataset .
+

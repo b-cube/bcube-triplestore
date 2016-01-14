@@ -1,0 +1,108 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:67086b06-bfb8-4df3-b01e-3feea299508f> bcube:hasType "theme" ;
+    bcube:hasValue "elevation" ;
+    dc:partOf "ISO 19115 Topic Category" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:85b5a966-fc87-4c0e-a147-cef74e072cf8> bcube:hasType "place" ;
+    bcube:hasValue "Apalachicola River basin",
+        "Chattahoochee River basin",
+        "Flint River basin",
+        "Georgia",
+        "North America",
+        "Potato Creek",
+        "United States" ;
+    dc:partOf "General" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:9899a532-7f71-4dc9-a22d-26efd309bb34> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-08-07T07:37:43.638Z" ;
+    bcube:lastUpdated "2015-08-07T07:37:43.638Z" ;
+    bcube:originatedFrom <urn:uuid:ebb2b418-0a56-4a86-bae5-9317c2b7d4fa> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:ddde6bde-46c9-4baa-bf0f-1a6e077c7b5e> .
+
+<urn:uuid:cabd6977-88a6-42cc-90f6-bc697b359669> bcube:hasType "temporal" ;
+    bcube:hasValue "2010" ;
+    dc:partOf "General" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:d640fb69-fe0a-45d6-bfa2-48ec41fe4165> owl:a foaf:Organization ;
+    foaf:name "U.S. Geological Survey" .
+
+<urn:uuid:ddde6bde-46c9-4baa-bf0f-1a6e077c7b5e> bcube:dateCreated "2015-08-07T07:37:43.638Z" ;
+    bcube:hasMetadataRecord <urn:uuid:9899a532-7f71-4dc9-a22d-26efd309bb34> ;
+    bcube:lastUpdated "2015-08-07T07:37:43.638Z" ;
+    dc:conformsTo <urn:uuid:67086b06-bfb8-4df3-b01e-3feea299508f>,
+        <urn:uuid:85b5a966-fc87-4c0e-a147-cef74e072cf8>,
+        <urn:uuid:cabd6977-88a6-42cc-90f6-bc697b359669>,
+        <urn:uuid:e772a9db-6328-4b52-9353-c9aa6a860159>,
+        <urn:uuid:f20f52ee-08da-4bc8-9469-2f66020c3bb9> ;
+    dc:description "Binary point-cloud data were produced from remotely sensed, geographically referenced elevation measurements by the U.S. Geological Survey (USGS). Elevation measurements were collected over the area on February 27, 2010 using the Experimental Advanced Airborne Research Lidar (EAARL), a pulsed laser ranging system mounted onboard an aircraft to measure ground elevation, vegetation canopy, and coastal topography. The system uses high-frequency laser beams directed at the Earth's surface through an opening in the bottom of the aircraft's fuselage. The laser system records the time difference between emission of the laser beam and the reception of the reflected laser signal in the aircraft. The plane travels over the target area at approximately 50 meters per second at an elevation of approximately 300 meters, resulting in a laser swath of approximately 240 meters with an average point spacing of 2-3 meters. The EAARL, developed originally by the National Aeronautics and Space Administration (NASA) at Wallops Flight Facility in Virginia, measures ground elevation with a vertical resolution of 15 centimeters. A sampling rate of 3 kilohertz or higher results in an extremely dense spatial elevation dataset. Over 100 kilometers of coastline can be easily surveyed within a 3- to 4-hour mission. When resultant elevation maps for an area are analyzed, they provide a useful tool to make management decisions regarding land development." ;
+    dc:spatial "POLYGON ((-84.254006681052701 33.1921348262305,-84.254006681052701 33.210629206609703,-84.232007878461602 33.210629206609703,-84.232007878461602 33.1921348262305,-84.254006681052701 33.1921348262305))" ;
+    dcterms:publisher <urn:uuid:d640fb69-fe0a-45d6-bfa2-48ec41fe4165> ;
+    dcterms:references <urn:uuid:e7bb6042-9cc1-4bbd-ab1a-08419d9460e7> ;
+    dcterms:title "EAARL Topography--Potato Creek Watershed, Georgia, 2010" ;
+    esip:eastBound "-84.2320078785"^^xsd:float ;
+    esip:northBound "33.2106292066"^^xsd:float ;
+    esip:southBound "33.1921348262"^^xsd:float ;
+    esip:startDate "2010-02-27"^^xsd:date ;
+    esip:westBound "-84.2540066811"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:e772a9db-6328-4b52-9353-c9aa6a860159> bcube:hasType "stratum" ;
+    bcube:hasValue "First Surface" ;
+    dc:partOf "General" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:e7bb6042-9cc1-4bbd-ab1a-08419d9460e7> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-07T07:37:43.638Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-07T07:37:43.638Z" ;
+    dc:identifier "urn:sha:d14a028c2a3a2bc9476102bb288234c415a2b01f828ea62ac5b3e42f" ;
+    owl:a bcube:Url .
+
+<urn:uuid:ebb2b418-0a56-4a86-bae5-9317c2b7d4fa> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-07T07:37:43.638Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-07T07:37:43.638Z" ;
+    dc:identifier "urn:sha:0af47620779704167451da6c4493eb1a950c9160d2a30969aa676895" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://pubs.usgs.gov/ds/617/data_files/fs/fs_e756_n3678_16/fs_e756_n3678_16.las.xml" .
+
+<urn:uuid:f20f52ee-08da-4bc8-9469-2f66020c3bb9> bcube:hasType "theme" ;
+    bcube:hasValue "ALPS",
+        "Airborne Lidar Processing System",
+        "DEM",
+        "Digital Elevation Model",
+        "EAARL",
+        "Experimental Advanced Airborne Research Lidar",
+        "Pilatus PC-6",
+        "laser altimetry",
+        "lidar",
+        "remote sensing",
+        "topography" ;
+    dc:partOf "General" ;
+    owl:a bcube:thesaurusSubset .
+

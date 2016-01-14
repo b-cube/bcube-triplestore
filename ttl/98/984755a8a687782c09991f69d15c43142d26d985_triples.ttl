@@ -1,0 +1,97 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:044fc56a-fad5-48da-ba13-da363f34aebf> bcube:hasType "theme" ;
+    bcube:hasValue "Area hydrography identifier",
+        "County ANSI Code",
+        "County FIPS Code",
+        "County or equivalent entity",
+        "Hydrography",
+        "Land/water flag",
+        "Permanent face ID",
+        "State ANSI Code",
+        "State FIPS Code",
+        "Table",
+        "Topological Faces" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:48ab3b20-c6e6-4a5b-af6e-ce6d9829ca37> bcube:hasType "theme" ;
+    bcube:hasValue "boundaries",
+        "inlandWaters" ;
+    dc:partOf "ISO 19115 Topic Categories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:81f24bd8-6c2c-415d-ad87-06cc2d514829> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-11-08T06:49:37.946Z" ;
+    bcube:lastUpdated "2015-11-08T06:49:37.946Z" ;
+    bcube:originatedFrom <urn:uuid:f2019498-a816-4d01-bad2-5964543e90e1> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:96ce750f-3cee-4923-9303-4fca301a83af> .
+
+<urn:uuid:84893bec-6987-4861-933a-9e0fc6664880> owl:a foaf:Organization ;
+    foaf:name "" .
+
+<urn:uuid:96ce750f-3cee-4923-9303-4fca301a83af> bcube:dateCreated "2015-11-08T06:49:37.946Z" ;
+    bcube:hasMetadataRecord <urn:uuid:81f24bd8-6c2c-415d-ad87-06cc2d514829> ;
+    bcube:lastUpdated "2015-11-08T06:49:37.946Z" ;
+    dc:conformsTo <urn:uuid:044fc56a-fad5-48da-ba13-da363f34aebf>,
+        <urn:uuid:48ab3b20-c6e6-4a5b-af6e-ce6d9829ca37>,
+        <urn:uuid:ccff1ffe-53ee-41c4-b76b-8f16731f31c6> ;
+    dc:description "The TIGER/Line relationship files are an extract of selected geographic information from the Census MAF/TIGER database. Each TIGER/Line relationship file is designed to stand alone as an independent data set or can be used jointly with the shapefiles." ;
+    dc:spatial "POLYGON ((-161.047821 61.945454,-161.047821 68.507297,-141.00246 68.507297,-141.00246 61.945454,-161.047821 61.945454))" ;
+    dcterms:publisher <urn:uuid:84893bec-6987-4861-933a-9e0fc6664880> ;
+    dcterms:references <urn:uuid:bfbc963b-2bd2-46ff-af65-1aceb9587e00> ;
+    dcterms:title "TIGER/Line Shapefile, 2009, county, Yukon-Koyukuk Census Area, AK, Current Topological Faces-Area Hydrography Relationship File" ;
+    esip:eastBound "-141.00246"^^xsd:float ;
+    esip:endDate "2009-05-01"^^xsd:date ;
+    esip:northBound "68.507297"^^xsd:float ;
+    esip:southBound "61.945454"^^xsd:float ;
+    esip:startDate "2009-01-01"^^xsd:date ;
+    esip:westBound "-161.047821"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:bfbc963b-2bd2-46ff-af65-1aceb9587e00> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-08T06:49:37.946Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-08T06:49:37.946Z" ;
+    dc:identifier "urn:sha:add3ceb60c87313b1793e5a15797f16b1170bfeeba6cc18d2cb9fe32" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www2.census.gov/geo/tiger/TIGER2009/02_ALASKA/02290_Yukon-Koyukuk_Census_Area/tl_2009_02290_facesah.zip" .
+
+<urn:uuid:ccff1ffe-53ee-41c4-b76b-8f16731f31c6> bcube:hasType "place" ;
+    bcube:hasValue "02290",
+        "County or Equivalent Entity",
+        "U.S.",
+        "United States",
+        "Yukon-Koyukuk" ;
+    dc:partOf "INCITS.38-200x (R2004),INCITS.31-200x (R2007),INCITS.454-200x,INCITS 455-200x,INCITS 446-2008" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:f2019498-a816-4d01-bad2-5964543e90e1> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-08T06:49:37.946Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-08T06:49:37.946Z" ;
+    dc:identifier "urn:sha:6f56acff37f60cf3b0763fbb955324125d3c3612f9684d88c1126cf2" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://meta.geo.census.gov/data/existing/decennial/GEO/GPMB/TIGERline/fe_2009/facesah/tl_2009_02290_facesah_url.dbf.xml" .
+

@@ -1,0 +1,92 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:12d7a913-280c-47b5-9f9c-cd9aa2da1310> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-07-30T17:00:20.146Z" ;
+    bcube:lastUpdated "2015-07-30T17:00:20.146Z" ;
+    bcube:originatedFrom <urn:uuid:2f5c3a3d-65dd-48f0-a3e2-5471859fa68c> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:7aea8f34-eba9-484a-af3a-0550f00d3210> .
+
+<urn:uuid:2f5c3a3d-65dd-48f0-a3e2-5471859fa68c> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-07-30T17:00:20.146Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-07-30T17:00:20.146Z" ;
+    dc:identifier "urn:sha:e97b790ca177a92fee30c86be0833b86c41171cccdcc2798fd55c003" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://catalog.data.gov/harvest/object/0facc91e-8982-446d-9935-fbbde424d147/original" .
+
+<urn:uuid:6c16b15a-f9e0-4667-9ca6-2703469d1b96> bcube:hasType "theme" ;
+    bcube:hasValue "Bathymetry",
+        "Magnetic Anomalies",
+        "Marine Geology",
+        "Marine Geophysics",
+        "Marine Gravity Field",
+        "Marine Magnetic Field",
+        "Seafloor Topography",
+        "Water Depth" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:7aea8f34-eba9-484a-af3a-0550f00d3210> bcube:dateCreated "2015-07-30T17:00:20.146Z" ;
+    bcube:hasMetadataRecord <urn:uuid:12d7a913-280c-47b5-9f9c-cd9aa2da1310> ;
+    bcube:lastUpdated "2015-07-30T17:00:20.146Z" ;
+    dc:conformsTo <urn:uuid:6c16b15a-f9e0-4667-9ca6-2703469d1b96>,
+        <urn:uuid:ca1a23f3-e2d0-41c2-9f9f-d14a49aab9e7>,
+        <urn:uuid:fa8924e0-105e-451b-b55d-57a8ae8bd00f> ;
+    dc:description "Single-beam bathymetry, gravity, and magnetic data along with DGPS navigation data was collected as part of field activity L-13-80-NP in Northern Pacific from 11/18/1980 to 12/11/1980, http://walrus.wr.usgs.gov/infobank/l/l1380np/html/l-13-80-np.meta.html These data are reformatted from space-delimited ASCII text files located in the Coastal and Marine Geology Program (CMGP) InfoBank field activity catalog at http://walrus.wr.usgs.gov/infobank/l/l1380np/html/l-13-80-np.bath.html, http://walrus.wr.usgs.gov/infobank/l/l1380np/html/l-13-80-np.grav.html, and http://walrus.wr.usgs.gov/infobank/l/l1380np/html/l-13-80-np.mag.html into MGD77T format provided by the NOAA's National Geophysical Data Center(NGDC). The MGD77T format includes a header (documentation) file (.h77t) and a data file (.m77t). More information regarding this format can be found in the publication listed in the Cross_reference section of this metadata file." ;
+    dc:spatial "POLYGON ((-144.29501 33.57783,-144.29501 37.81569,-122.39103 37.81569,-122.39103 33.57783,-144.29501 33.57783))" ;
+    dcterms:publisher <urn:uuid:d40fef53-05c5-40b8-adf3-bd8eb0571838> ;
+    dcterms:references <urn:uuid:fd862369-ce7b-4484-a647-c44744873dc7> ;
+    dcterms:title "l1380np.m77t - MGD77 data file for Geophysical data from field activity L-13-80-NP in Northern Pacific from 11/18/1980 to 12/11/1980" ;
+    esip:eastBound "-122.39103"^^xsd:float ;
+    esip:endDate "1980-12-11"^^xsd:date ;
+    esip:northBound "37.81569"^^xsd:float ;
+    esip:southBound "33.57783"^^xsd:float ;
+    esip:startDate "1980-11-18"^^xsd:date ;
+    esip:westBound "-144.29501"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:ca1a23f3-e2d0-41c2-9f9f-d14a49aab9e7> bcube:hasType "theme" ;
+    bcube:hasValue "geoscientificinformation",
+        "oceans" ;
+    dc:partOf "ISO 19115 Topic Category" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:d40fef53-05c5-40b8-adf3-bd8eb0571838> owl:a foaf:Organization ;
+    foaf:name "U.S. Geological Survey" .
+
+<urn:uuid:fa8924e0-105e-451b-b55d-57a8ae8bd00f> bcube:hasType "place" ;
+    bcube:hasValue "North Pacific Ocean",
+        "Northern Pacific",
+        "Northern Pacific Ocean" ;
+    dc:partOf "Geographic Names Information System (GNIS)" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:fd862369-ce7b-4484-a647-c44744873dc7> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-07-30T17:00:20.146Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-07-30T17:00:20.146Z" ;
+    dc:identifier "urn:sha:2abce7a37918473711f0412930eb19f1c4cedff697352b6af0719c29" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www.ngdc.noaa.gov/mgg/trk/trackline/samuel_p._lee/l1380np/mgd77/" .
+

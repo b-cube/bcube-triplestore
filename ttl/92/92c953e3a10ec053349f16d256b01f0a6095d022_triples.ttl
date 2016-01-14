@@ -1,0 +1,71 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:3f91ac38-73c6-4c12-ac24-dce92bb3bcdb> bcube:hasType "theme" ;
+    bcube:hasValue "snow-plowing",
+        "street-maintenance" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:5ec03fb5-9d5e-418f-92f5-f3c44a459623> bcube:hasType "theme" ;
+    bcube:hasValue "transportation" ;
+    dc:partOf "ISO 19115 Topic Categories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:733c1ef9-ad0b-48bc-8769-19df865d89e2> bcube:hasType "place" ;
+    bcube:hasValue "Colorado",
+        "Denver",
+        "Denver County",
+        "USA" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:8d7af80b-1cc1-40f0-9c13-b21891c82d9b> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-10-17T00:45:47.135Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-10-17T00:45:47.135Z" ;
+    dc:identifier "urn:sha:c0719aecfd428ec9274b3baef3a7931e4d8fdc0afe6d8702de626058" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://data.denvergov.org/download/gis/snow_routes/metadata/snow_routes.xml" .
+
+<urn:uuid:8d93e54c-5313-402c-a5cc-cbe524646c17> owl:a foaf:Organization ;
+    foaf:name "" .
+
+<urn:uuid:9c28dd1a-22a3-4765-a661-4ab002a03cc1> bcube:dateCreated "2015-10-17T00:45:47.135Z" ;
+    bcube:hasMetadataRecord <urn:uuid:ef9fe8c8-fd62-4365-8f0f-8144dd7e2318> ;
+    bcube:lastUpdated "2015-10-17T00:45:47.135Z" ;
+    dc:conformsTo <urn:uuid:3f91ac38-73c6-4c12-ac24-dce92bb3bcdb>,
+        <urn:uuid:5ec03fb5-9d5e-418f-92f5-f3c44a459623>,
+        <urn:uuid:733c1ef9-ad0b-48bc-8769-19df865d89e2> ;
+    dc:description "The snow routes are linear-referenced (i.e., m-enabled. This means that each feature has a measure coordinate that generally starts at zero and ends at the feature length. The measure units are US Survey Feet." ;
+    dc:spatial "POLYGON ((-105.109901 39.614371,-105.109901 39.833437,-104.734377 39.833437,-104.734377 39.614371,-105.109901 39.614371))" ;
+    dcterms:publisher <urn:uuid:8d93e54c-5313-402c-a5cc-cbe524646c17> ;
+    dcterms:title "Snow Routes" ;
+    esip:eastBound "-104.734377"^^xsd:float ;
+    esip:northBound "39.833437"^^xsd:float ;
+    esip:southBound "39.614371"^^xsd:float ;
+    esip:westBound "-105.109901"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:ef9fe8c8-fd62-4365-8f0f-8144dd7e2318> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-10-17T00:45:47.135Z" ;
+    bcube:lastUpdated "2015-10-17T00:45:47.135Z" ;
+    bcube:originatedFrom <urn:uuid:8d7af80b-1cc1-40f0-9c13-b21891c82d9b> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:9c28dd1a-22a3-4765-a661-4ab002a03cc1> .
+

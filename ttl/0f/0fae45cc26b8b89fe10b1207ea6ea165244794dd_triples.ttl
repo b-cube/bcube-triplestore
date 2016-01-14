@@ -1,0 +1,90 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:0080ac31-aab2-4a6b-8766-b8bb101bdd41> bcube:hasType "theme" ;
+    bcube:hasValue "CBSA",
+        "Core Based Statistical Area",
+        "Polygon",
+        "State or equivalent entity" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:18284176-3e19-4c93-b4af-ed1269102599> bcube:hasType "place" ;
+    bcube:hasValue "11",
+        "DC",
+        "District of Columbia",
+        "State or Equivalent Entity",
+        "U.S.",
+        "United States" ;
+    dc:partOf "INCITS.38-200x (R2004),INCITS.31-200x (R2007),INCITS.454-200x,INCITS 455-200x,INCITS 446-2008" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:1e939409-9b73-476e-868b-50490ed062a4> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-04T11:56:18.621Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-04T11:56:18.621Z" ;
+    dc:identifier "urn:sha:b1cb738bf06d759f07d472d62834269aac806e28acdfb388fdf5406d" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://meta.geo.census.gov/data/existing/decennial/GEO/GPMB/TIGERline/fe_2010/CBSA/tl_2010_11_cbsa10_url.shp.xml" .
+
+<urn:uuid:30c066c2-05ec-453d-8c1e-ce75d4247651> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-11-04T11:56:18.621Z" ;
+    bcube:lastUpdated "2015-11-04T11:56:18.621Z" ;
+    bcube:originatedFrom <urn:uuid:1e939409-9b73-476e-868b-50490ed062a4> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:5baa70d8-69c3-4678-881e-d5d95e413728> .
+
+<urn:uuid:5baa70d8-69c3-4678-881e-d5d95e413728> bcube:dateCreated "2015-11-04T11:56:18.621Z" ;
+    bcube:hasMetadataRecord <urn:uuid:30c066c2-05ec-453d-8c1e-ce75d4247651> ;
+    bcube:lastUpdated "2015-11-04T11:56:18.621Z" ;
+    dc:conformsTo <urn:uuid:0080ac31-aab2-4a6b-8766-b8bb101bdd41>,
+        <urn:uuid:18284176-3e19-4c93-b4af-ed1269102599>,
+        <urn:uuid:9cc9040d-cba3-4a8a-b128-033d3a05c333> ;
+    dc:description "The TIGER/Line Files are shapefiles and related database files (.dbf) that are an extract of selected geographic and cartographic information from the U.S. Census Bureau's Master Address File / Topologically Integrated Geographic Encoding and Referencing (MAF/TIGER) Database (MTDB). The MTDB represents a seamless national file with no overlaps or gaps between parts, however, each TIGER/Line File is designed to stand alone as an independent data set, or they can be combined to cover the entire nation. Metropolitan and Micropolitan Statistical Areas are together termed Core Based Statistical Areas (CBSAs) and are defined by the Office of Management and Budget (OMB) and consist of the county or counties or equivalent entities associated with at least one urban core (urbanized area or urban cluster) of at least 10,000 population, plus adjacent counties having a high degree of social and economic integration with the core as measured through commuting ties with the counties containing the core. Categories of CBSAs are: Metropolitan Statistical Areas, based on urbanized areas of 50,000 or more population, and Micropolitan Statistical Areas, based on urban clusters of at least 10,000 population but less than 50,000 population. The CBSAs for the 2010 Census are those defined by OMB and published in December 2009." ;
+    dc:spatial "POLYGON ((-77.119759 38.791645,-77.119759 38.995548,-76.909393 38.995548,-76.909393 38.791645,-77.119759 38.791645))" ;
+    dcterms:publisher <urn:uuid:6fe379f5-3bc5-4fcd-a7b7-28081d925c8b> ;
+    dcterms:references <urn:uuid:d7812627-fd4f-4ab3-a6f6-a2f142f67ff2> ;
+    dcterms:title "TIGER/Line Shapefile, 2010, state, District of Columbia, 2010 Census Metropolitan Statistical Area/Micropolitan Statistical Area (CBSA) State-based" ;
+    esip:eastBound "-76.909393"^^xsd:float ;
+    esip:endDate "2010-07-01"^^xsd:date ;
+    esip:northBound "38.995548"^^xsd:float ;
+    esip:southBound "38.791645"^^xsd:float ;
+    esip:startDate "2010-01-01"^^xsd:date ;
+    esip:westBound "-77.119759"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:6fe379f5-3bc5-4fcd-a7b7-28081d925c8b> owl:a foaf:Organization ;
+    foaf:name "" .
+
+<urn:uuid:9cc9040d-cba3-4a8a-b128-033d3a05c333> bcube:hasType "theme" ;
+    bcube:hasValue "boundaries" ;
+    dc:partOf "ISO 19115 Topic Categories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:d7812627-fd4f-4ab3-a6f6-a2f142f67ff2> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-04T11:56:18.621Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-04T11:56:18.621Z" ;
+    dc:identifier "urn:sha:e1f858785cfe98f0c4bc9cf2890f6d066a94364e8f9a14e894da4b49" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www2.census.gov/geo/tiger/TIGER2010/CBSA/2010/tl_2010_11_cbsa10.zip" .
+

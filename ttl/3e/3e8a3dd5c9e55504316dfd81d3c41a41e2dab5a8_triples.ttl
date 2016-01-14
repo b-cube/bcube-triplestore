@@ -1,0 +1,69 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:39840457-1bd9-4f0b-b8aa-909d36f4607d> bcube:hasType "place" ;
+    bcube:hasValue "Colorado",
+        "Denver",
+        "Denver County",
+        "USA" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:54d72cc1-b87c-47c8-bdb4-48d4d577ff16> bcube:hasType "theme" ;
+    bcube:hasValue "Aliquot Parts",
+        "Land Lines",
+        "PLSS",
+        "Range",
+        "Section",
+        "Township" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:72c64e19-222d-4a2d-9d78-00ae25841c70> bcube:dateCreated "2015-11-02T15:44:52.085Z" ;
+    bcube:hasMetadataRecord <urn:uuid:94ee8f6e-6051-4490-aa77-9c728a1292f1> ;
+    bcube:lastUpdated "2015-11-02T15:44:52.085Z" ;
+    dc:conformsTo <urn:uuid:39840457-1bd9-4f0b-b8aa-909d36f4607d>,
+        <urn:uuid:54d72cc1-b87c-47c8-bdb4-48d4d577ff16> ;
+    dc:description "This dataset is an index of Public Land Survey System (PLSS) Township, Range, and Section lines containing the City and County of Denver." ;
+    dc:spatial "POLYGON ((-105.165996 39.565992,-105.165996 39.932408,-104.578687 39.932408,-104.578687 39.565992,-105.165996 39.565992))" ;
+    dcterms:publisher <urn:uuid:bbcf60e6-c1fa-475f-999f-8ac7845411dd> ;
+    dcterms:title "Township-Range-Section Grid (Line)" ;
+    esip:eastBound "-104.578687"^^xsd:float ;
+    esip:northBound "39.932408"^^xsd:float ;
+    esip:southBound "39.565992"^^xsd:float ;
+    esip:westBound "-105.165996"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:94ee8f6e-6051-4490-aa77-9c728a1292f1> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-11-02T15:44:52.085Z" ;
+    bcube:lastUpdated "2015-11-02T15:44:52.085Z" ;
+    bcube:originatedFrom <urn:uuid:e2874f39-5578-4f5c-9e49-30e120884a83> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:72c64e19-222d-4a2d-9d78-00ae25841c70> .
+
+<urn:uuid:bbcf60e6-c1fa-475f-999f-8ac7845411dd> owl:a foaf:Organization ;
+    foaf:name "" .
+
+<urn:uuid:e2874f39-5578-4f5c-9e49-30e120884a83> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-02T15:44:52.085Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-02T15:44:52.085Z" ;
+    dc:identifier "urn:sha:58d745420bd24fedd3c66f89a7c49d9fabd098e5ecd7fe2275d4e9b1" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://data.denvergov.org/download/gis/township_range_section_grid/metadata/township_range_section_grid.xml" .
+

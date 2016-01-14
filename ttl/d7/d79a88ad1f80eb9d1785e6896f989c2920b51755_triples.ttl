@@ -1,0 +1,79 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:4f19736f-f46c-4e51-8c9e-035eb89108f7> bcube:hasType "theme" ;
+    bcube:hasValue "geothermal",
+        "heating system",
+        "industrial" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:6867b30a-20bb-48dd-aa62-c2e9802251ee> bcube:hasType "place" ;
+    bcube:hasValue "Nevada",
+        "Reno",
+        "Steamboat Springs" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:691e8c3b-96e5-49cb-8ac7-424eccc31e69> bcube:hasValue "geoscientificInformation" ;
+    dc:partOf "IsoTopicCategories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:920b7a2d-8aa2-40cd-8cdc-475949c8009e> a "ISO 19115:2003/19139" ;
+    bcube:dateCreated "2015-10-30T07:16:18.625Z" ;
+    bcube:lastUpdated "2015-10-30T07:16:18.625Z" ;
+    bcube:originatedFrom <urn:uuid:f14fd73a-6e89-4e86-a0af-14f86ab752ba> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:d2d532dc-fe9c-4bac-b50e-ad91d7b3efce> .
+
+<urn:uuid:d2d532dc-fe9c-4bac-b50e-ad91d7b3efce> bcube:dateCreated "2015-10-30T07:16:18.625Z" ;
+    bcube:hasMetadataRecord <urn:uuid:920b7a2d-8aa2-40cd-8cdc-475949c8009e> ;
+    bcube:lastUpdated "2015-10-30T07:16:18.625Z" ;
+    dc:conformsTo <urn:uuid:4f19736f-f46c-4e51-8c9e-035eb89108f7>,
+        <urn:uuid:6867b30a-20bb-48dd-aa62-c2e9802251ee>,
+        <urn:uuid:691e8c3b-96e5-49cb-8ac7-424eccc31e69> ;
+    dc:description "An overview of the location of the geothermal district heating system for Reno Industrial Park in 1997." ;
+    dc:spatial "POLYGON ((-119.8 39.34,-119.8 39.57,-119.66 39.57,-119.66 39.34,-119.8 39.34))" ;
+    dcterms:references <urn:uuid:dbb91a38-1c34-4bd7-908e-7e68c5da4d2f> ;
+    dcterms:title "Reno Industrial Park Geothermal District Heating System" ;
+    esip:eastBound "-119.66"^^xsd:float ;
+    esip:endDate "1997-04-01"^^xsd:date ;
+    esip:northBound "39.57"^^xsd:float ;
+    esip:southBound "39.34"^^xsd:float ;
+    esip:startDate "1997-04-01"^^xsd:date ;
+    esip:westBound "-119.8"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:dbb91a38-1c34-4bd7-908e-7e68c5da4d2f> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-10-30T07:16:18.625Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-10-30T07:16:18.625Z" ;
+    dc:identifier "urn:sha:0fad31a784f2492b8dd1c386041a0403d6d69dcc0e413eaa408a458f" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "ftp://ftp.nbmg.unr.edu/pub/Geothermal/11_Documents/Lienau_DistHtng_RenoIndPrk_1997.pdf" .
+
+<urn:uuid:f14fd73a-6e89-4e86-a0af-14f86ab752ba> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-10-30T07:16:18.625Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-10-30T07:16:18.625Z" ;
+    dc:identifier "urn:sha:3730b1be10f6f07e4cd320b923e42f16ce35fade45b52f9ade9a7c5c" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://repository.stategeothermaldata.org/resources/metadata/test-CSV-XML-tool/378fa105-c384-46ce-85fc-419adb3112b1.xml" .
+

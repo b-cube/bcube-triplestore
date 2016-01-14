@@ -1,0 +1,105 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:06ffba32-6303-4670-b825-c71e1803f34d> bcube:hasType "theme" ;
+    bcube:hasValue "ALPS",
+        "Airborne Lidar Processing System",
+        "DEM",
+        "Digital Elevation Model",
+        "EAARL",
+        "Experimental Advanced Airborne Research Lidar",
+        "Pilatus PC-6",
+        "laser altimetry",
+        "lidar",
+        "remote sensing",
+        "topography" ;
+    dc:partOf "General" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:0d104591-f2fb-416c-915b-ef45f4c8023e> bcube:hasType "stratum" ;
+    bcube:hasValue "First Surface" ;
+    dc:partOf "General" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:34ee99cb-1a17-4749-adca-8b5ebce955cb> bcube:dateCreated "2015-08-09T20:51:46.172Z" ;
+    bcube:hasMetadataRecord <urn:uuid:5d24e451-4084-4589-aab8-44d9729b5d6e> ;
+    bcube:lastUpdated "2015-08-09T20:51:46.172Z" ;
+    dc:conformsTo <urn:uuid:06ffba32-6303-4670-b825-c71e1803f34d>,
+        <urn:uuid:0d104591-f2fb-416c-915b-ef45f4c8023e>,
+        <urn:uuid:ab1286cc-b1ff-4f1a-be73-b180c6bdd3eb>,
+        <urn:uuid:f7f25ce8-9177-44a7-8054-9f166fd82857>,
+        <urn:uuid:f91e4ed0-45ab-468e-a3dd-c00bfc00cffd> ;
+    dc:description "ASCII xyz point cloud data were produced from remotely sensed, geographically referenced elevation measurements by the U.S. Geological Survey (USGS). Elevation measurements were collected over the area using the Experimental Advanced Airborne Research Lidar (EAARL), a pulsed laser ranging system mounted onboard an aircraft to measure ground elevation, vegetation canopy, and coastal topography. The EAARL sensor suite includes the raster-scanning, water-penetrating full-waveform adaptive lidar, a down-looking red-green-blue (RGB) digital camera, a high-resolution multispectral color-infrared (CIR) camera, two precision dual frequency kinematic carrier-phase GPS receivers, and an integrated miniature digital inertial measurement unit, which provide for sub-meter georeferencing of each laser sample. The system uses high-frequency laser beams directed at the Earth's surface through an opening in the bottom of the aircraft's fuselage. The laser system records the time difference between emission of the laser beam and the reception of the reflected laser signal in the aircraft. The plane travels over the target area at approximately 50 meters per second at an elevation of approximately 300 meters, resulting in a laser swath of approximately 240 meters with an average point spacing of 2-3 meters. The EAARL, developed originally by the National Aeronautics and Space Administration (NASA) at Wallops Flight Facility in Virginia, measures ground elevation with a vertical resolution of 15 centimeters. A sampling rate of 3 kilohertz or higher results in an extremely dense spatial elevation dataset. Over 100 kilometers of coastline can be easily surveyed within a 3- to 4-hour mission. When resultant elevation maps for an area are analyzed, they provide a useful tool to make management decisions regarding land development." ;
+    dc:spatial "POLYGON ((-75.756532562199794 36.196422439242397,-75.756532562199794 36.214590722425399,-75.734114877755303 36.214590722425399,-75.734114877755303 36.196422439242397,-75.756532562199794 36.196422439242397))" ;
+    dcterms:publisher <urn:uuid:a6b5a471-1c3a-41af-9e09-f5c2fb84e1c2> ;
+    dcterms:references <urn:uuid:5f6dbc09-d828-44b3-8fa3-96e783ab7384> ;
+    dcterms:title "EAARL Coastal Topography--Northern Outer Banks, North Carolina, Post-Nor'Ida, 2009" ;
+    esip:eastBound "-75.7341148778"^^xsd:float ;
+    esip:northBound "36.2145907224"^^xsd:float ;
+    esip:southBound "36.1964224392"^^xsd:float ;
+    esip:westBound "-75.7565325622"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:5d24e451-4084-4589-aab8-44d9729b5d6e> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-08-09T20:51:46.172Z" ;
+    bcube:lastUpdated "2015-08-09T20:51:46.172Z" ;
+    bcube:originatedFrom <urn:uuid:6733f999-8043-4e05-9794-a7404d60a536> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:34ee99cb-1a17-4749-adca-8b5ebce955cb> .
+
+<urn:uuid:5f6dbc09-d828-44b3-8fa3-96e783ab7384> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-09T20:51:46.172Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-09T20:51:46.172Z" ;
+    dc:identifier "urn:sha:d14a028c2a3a2bc9476102bb288234c415a2b01f828ea62ac5b3e42f" ;
+    owl:a bcube:Url .
+
+<urn:uuid:6733f999-8043-4e05-9794-a7404d60a536> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-09T20:51:46.172Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-09T20:51:46.172Z" ;
+    dc:identifier "urn:sha:5e3d3fe0305dfc6f8d63ade24635989ce8d81f519ba743b45ffdb222" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://pubs.usgs.gov/ds/616/data_files/fs/fs_e432_n4008_18/fs_e432_n4008_18.xyz.xml" .
+
+<urn:uuid:a6b5a471-1c3a-41af-9e09-f5c2fb84e1c2> owl:a foaf:Organization ;
+    foaf:name "U.S. Geological Survey" .
+
+<urn:uuid:ab1286cc-b1ff-4f1a-be73-b180c6bdd3eb> bcube:hasType "temporal" ;
+    bcube:hasValue "2009",
+        "Post-Nor'Ida" ;
+    dc:partOf "General" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:f7f25ce8-9177-44a7-8054-9f166fd82857> bcube:hasType "place" ;
+    bcube:hasValue "North America",
+        "North Carolina",
+        "Outer Banks",
+        "United States" ;
+    dc:partOf "General" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:f91e4ed0-45ab-468e-a3dd-c00bfc00cffd> bcube:hasType "theme" ;
+    bcube:hasValue "elevation" ;
+    dc:partOf "ISO 19115 Topic Category" ;
+    owl:a bcube:thesaurusSubset .
+

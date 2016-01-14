@@ -1,0 +1,118 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:3aa81b51-aa7d-45e5-8fdb-6cdcc6a985ce> bcube:hasType "theme" ;
+    bcube:hasValue "bathymetry",
+        "multibeam sonar",
+        "terrain",
+        "topography" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:42c7f040-c14c-40f5-a93b-419d4353470b> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-11-13T21:31:18.962Z" ;
+    bcube:lastUpdated "2015-11-13T21:31:18.962Z" ;
+    bcube:originatedFrom <urn:uuid:ae3f211f-2049-48f5-961f-cd0704a61890> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:ae7b8652-c4f1-4de9-be15-f3b88c095ae2> .
+
+<urn:uuid:6a741af2-c1eb-4366-90aa-6761ff8e47ce> dcterms:references <urn:uuid:a78a8281-451a-4621-a3d0-c472dfb07aaf> ;
+    owl:a bibo:WebPage .
+
+<urn:uuid:6c530cc3-0bca-413e-a828-36ca1fde7d6f> bcube:hasType "place" ;
+    bcube:hasValue "Cedar County",
+        "Missouri River",
+        "Nebraska",
+        "South Dakota",
+        "Yankton County" ;
+    dc:partOf "Geographic Names Information System" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:a78a8281-451a-4621-a3d0-c472dfb07aaf> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-13T21:31:18.962Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-13T21:31:18.962Z" ;
+    dc:identifier "urn:sha:f8216f3277dde56d360583d32cb6b83f79b0adbf3774c68d629904a8" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://water.usgs.gov/lookup/getspatial?pp1798J_Yankton_Pipeline_20110720_csar" .
+
+<urn:uuid:ae3f211f-2049-48f5-961f-cd0704a61890> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-13T21:31:18.962Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-13T21:31:18.962Z" ;
+    dc:identifier "urn:sha:5c2d925acf5bc1e0ecab2cdbade054a18d1f06031d7f9356bc83f95e" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://water.usgs.gov/GIS/metadata/usgswrd/XML/pp1798J_Yankton_Pipeline_20110720_csar.xml" .
+
+<urn:uuid:ae7b8652-c4f1-4de9-be15-f3b88c095ae2> bcube:dateCreated "2015-11-13T21:31:18.962Z" ;
+    bcube:hasMetadataRecord <urn:uuid:42c7f040-c14c-40f5-a93b-419d4353470b> ;
+    bcube:lastUpdated "2015-11-13T21:31:18.962Z" ;
+    dc:conformsTo <urn:uuid:3aa81b51-aa7d-45e5-8fdb-6cdcc6a985ce>,
+        <urn:uuid:6c530cc3-0bca-413e-a828-36ca1fde7d6f>,
+        <urn:uuid:ecc8c70e-46cc-4411-befc-8e9f1ce770b8> ;
+    dc:description "A RESON SeaBat 7125 multibeam echosounder in conjunction with an Applanix Position Orientation Solution for Marine Vessels (POS MV ) WaveMaster system motion sensor, HYPACK /HYSWEEP navigation software, and Ashtech Z-Xtreme GPS receivers or Trimble R8 receivers was used to survey the Missouri River bed at 15 pipeline crossings at four different locations, at three power plant locations, and at one transmission tower during the 2011 flood event. The format of this data is a grid with each cell covering 0.5 meter by 0.5 meter. The elevation value (North American Vertical Datum, NAVD88) represented by each cell is the most probable elevation for that cell based on calculated Total Propagated Uncertainty (TPU) as calculated in Caris HIPS and SIPS software. Calculated TPS values are then used by Caris to create a Combined Uncertainty and Bathymetric Estimator (CUBE) surface. The surface grid was used to export the cell centroid position (Northing, Easting in UTM zone 14 North, in meters) along with the cell elevation (referenced to NAVD88, in meters) to create the text file. The data were collected by the U.S. Geological Survey in cooperation with the Environmental Protection Agency (EPA) and the Omaha Public Power District (OPPD)." ;
+    dc:spatial "POLYGON ((97.3764 42.86141,97.3764 42.8669,97.38455 42.8669,97.38455 42.86141,97.3764 42.86141))" ;
+    dcterms:publisher <urn:uuid:c978685a-c619-4c7f-af6b-42be12113383> ;
+    dcterms:references <urn:uuid:6a741af2-c1eb-4366-90aa-6761ff8e47ce>,
+        <urn:uuid:f00d1ba7-e8a6-48f1-94c4-dc78c59be40a>,
+        <urn:uuid:faaaea98-58e3-4403-9c7d-687d0eaeae3b> ;
+    dcterms:title "Missouri River bed elevations at pipeline crossing near Yankton, South Dakota surveyed during 2011 flood on July, 20" ;
+    esip:eastBound "97.38455"^^xsd:float ;
+    esip:northBound "42.8669"^^xsd:float ;
+    esip:southBound "42.86141"^^xsd:float ;
+    esip:startDate "2011-07-20"^^xsd:date ;
+    esip:westBound "97.3764"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:c978685a-c619-4c7f-af6b-42be12113383> owl:a foaf:Organization ;
+    foaf:name "U.S. Geological Survey" .
+
+<urn:uuid:ecc8c70e-46cc-4411-befc-8e9f1ce770b8> bcube:hasType "theme" ;
+    bcube:hasValue "ISO 19115",
+        "inlandWaters" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:f00d1ba7-e8a6-48f1-94c4-dc78c59be40a> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-13T21:31:18.962Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-13T21:31:18.962Z" ;
+    dc:identifier "urn:sha:e64a28164bff5862bf5bc3f4d871f714ec4bc02de29a6881122fa8f0" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://water.usgs.gov/GIS/dsdl/pp1798J_Yankton_Pipeline_20110720_csar.zip" .
+
+<urn:uuid:faaaea98-58e3-4403-9c7d-687d0eaeae3b> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-13T21:31:18.962Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-13T21:31:18.962Z" ;
+    dc:identifier "urn:sha:ec1dd96c2f38ce523a314093e5669b8f20a732c55a22b3043e36830b" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://water.usgs.gov/GIS/dsdl/pp1798J_Yankton_Pipeline_20110720_txt.zip" .
+

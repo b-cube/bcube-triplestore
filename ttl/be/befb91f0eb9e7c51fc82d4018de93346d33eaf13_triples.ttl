@@ -1,0 +1,98 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:25feab18-7e97-4bbe-9e45-f7c53faee41a> owl:a foaf:Organization ;
+    foaf:name "" .
+
+<urn:uuid:303c2f33-085e-4c32-9de0-f6fd922a0a2e> bcube:hasType "theme" ;
+    bcube:hasValue "boundaries" ;
+    dc:partOf "ISO 19115 Topic Categories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:3bb844fd-f10c-4fbb-8418-6aef649a53d3> bcube:hasType "theme" ;
+    bcube:hasValue "Census",
+        "block",
+        "block number",
+        "boundary",
+        "census 2000",
+        "census data" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:6a6ff62c-38a5-4149-8dc3-f556bfde99f2> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-02T15:44:55.613Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-02T15:44:55.613Z" ;
+    dc:identifier "urn:sha:68b1ba6322f5beabe144f3b1f5a14caba73d9be9e7ac10771097a9d4" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www.census.gov/geo/www/maps/descriptwindows/census_blockmaps.htm" .
+
+<urn:uuid:836f8830-7b38-4a5d-8530-ddc35bce3621> dcterms:references <urn:uuid:6a6ff62c-38a5-4149-8dc3-f556bfde99f2> ;
+    owl:a bibo:WebPage .
+
+<urn:uuid:b0a7d397-ff66-42b6-a5cc-2f25577301b1> bcube:dateCreated "2015-11-02T15:44:55.613Z" ;
+    bcube:hasMetadataRecord <urn:uuid:b694b99e-c1a1-4192-85ed-7774d8dd07e1> ;
+    bcube:lastUpdated "2015-11-02T15:44:55.613Z" ;
+    dc:conformsTo <urn:uuid:303c2f33-085e-4c32-9de0-f6fd922a0a2e>,
+        <urn:uuid:3bb844fd-f10c-4fbb-8418-6aef649a53d3>,
+        <urn:uuid:c14bda2e-3f4c-471c-a1ce-efbbf9b4e8e9>,
+        <urn:uuid:c9d73373-d1d0-456f-9c15-b48c798ed465> ;
+    dc:description "The Census 2000 Block Maps depict the extent and bounds of geographic entities for which the U.S. Census Bureau presents data from Census 2000. The smallest of these entities is the census block, an area enclosed by physical features such as streets or waterways. In some cases nonvisible features such as legal boundaries form block boundaries. The maps show each block with its number and identify the features forming its boundary. The boundaries, names, and codes of American Indian areas/Alaska Native areas/Hawaiian home lands, counties, county subdivisions, places, and census tracts are also shown. A set of Census 2000 Block Maps has been produced for each county, each county subdivision, each place (both incorporated places and Census Designated Places), and each consolidated city in the United States, Puerto Rico, and the Island Areas of the United States. In areas where counties, county subdivisions, or places do not exist, map sets have been prepared for entities that are considered statistically equivalent to them. Each map set consists of one or more numbered parent sheets that cover the entire entity. If necessary, separate inset sheets show areas of dense features at a larger scale. Inset areas are identified with letters. If the set has more than one parent sheet, an index sheet is also included which depicts the arrangement of the parent sheets and inset areas in relation to the entity boundary and selected major features. All of the parent sheets within an entity are produced at the same scale, while maps for adjacent entities may be at different scales. The objective of each map set is to use the smallest number of sheets while preserving legibility of geographic entity names and feature identifiers. The physical size of the entity and the density of features also affects the number of parent sheets and insets." ;
+    dc:spatial "POLYGON ((-83.675499 36.5406,-83.675499 39.465916,-75.24295 39.465916,-75.24295 36.5406,-83.675499 36.5406))" ;
+    dcterms:publisher <urn:uuid:25feab18-7e97-4bbe-9e45-f7c53faee41a> ;
+    dcterms:references <urn:uuid:836f8830-7b38-4a5d-8530-ddc35bce3621> ;
+    dcterms:title "2000 Census Block Map, Virginia" ;
+    esip:eastBound "-75.24295"^^xsd:float ;
+    esip:northBound "39.465916"^^xsd:float ;
+    esip:southBound "36.5406"^^xsd:float ;
+    esip:startDate "2000-01-01"^^xsd:date ;
+    esip:westBound "-83.675499"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:b694b99e-c1a1-4192-85ed-7774d8dd07e1> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-11-02T15:44:55.613Z" ;
+    bcube:lastUpdated "2015-11-02T15:44:55.613Z" ;
+    bcube:originatedFrom <urn:uuid:cee6e94e-8e67-4923-8354-3c7c9c4ab388> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:b0a7d397-ff66-42b6-a5cc-2f25577301b1> .
+
+<urn:uuid:c14bda2e-3f4c-471c-a1ce-efbbf9b4e8e9> bcube:hasType "theme" ;
+    bcube:hasValue "FWGOVERNMENTALUNITS" ;
+    dc:partOf "FGDC Framework Themes" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:c9d73373-d1d0-456f-9c15-b48c798ed465> bcube:hasType "place" ;
+    bcube:hasValue "51",
+        "State",
+        "United States",
+        "Virginia" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:cee6e94e-8e67-4923-8354-3c7c9c4ab388> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-02T15:44:55.613Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-02T15:44:55.613Z" ;
+    dc:identifier "urn:sha:1c3f8a91a912e28fda0e66fb5d4296f93ec6a8f7874b4d79c00cf998" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://meta.geo.census.gov/data/existing/decennial/GEO/CPMB/boundary/censusTab/blkmap/2000/geo_2000blkmap_51_ISO.xml" .
+

@@ -1,0 +1,56 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:2b54109f-846b-48f4-ab04-abbdf5966bea> bcube:hasType "theme" ;
+    bcube:hasValue "swamp" ;
+    dc:partOf "Arkansas Geographic Information Office" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:79ca5955-a250-404b-8ef7-3d082e02a748> bcube:hasValue "inlandWaters" ;
+    dc:partOf "IsoTopicCategories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:d972222c-1ed9-4964-b36c-9ae26255f129> a "ISO 19115:2003/19139" ;
+    bcube:dateCreated "2015-11-10T13:45:53.113Z" ;
+    bcube:lastUpdated "2015-11-10T13:45:53.113Z" ;
+    bcube:originatedFrom <urn:uuid:db6c16d0-bb08-49c4-9145-5c5ccc4bce92> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:ec1b1c36-8f20-4dd9-99ed-4ba6d0a0929f> .
+
+<urn:uuid:db6c16d0-bb08-49c4-9145-5c5ccc4bce92> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-10T13:45:53.113Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-10T13:45:53.113Z" ;
+    dc:identifier "urn:sha:86a53b9068ee14d6a5e7a36dce922aa08781259413ebe20e1ae57ffb" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "https://catalog.data.gov/harvest/object/40d52273-0811-4d04-a256-e02ad2a8ba41" .
+
+<urn:uuid:ec1b1c36-8f20-4dd9-99ed-4ba6d0a0929f> bcube:dateCreated "2015-11-10T13:45:53.113Z" ;
+    bcube:hasMetadataRecord <urn:uuid:d972222c-1ed9-4964-b36c-9ae26255f129> ;
+    bcube:lastUpdated "2015-11-10T13:45:53.113Z" ;
+    dc:conformsTo <urn:uuid:2b54109f-846b-48f4-ab04-abbdf5966bea>,
+        <urn:uuid:79ca5955-a250-404b-8ef7-3d082e02a748> ;
+    dc:description "Swamps are the combination of the digitized line-work from AHTD's county maps that represent the individual Cartographer's interpretation of a swamp from aerial photography." ;
+    dc:spatial "POLYGON ((-94.505668 32.970087,-94.505668 36.52556,-90.004305 36.52556,-90.004305 32.970087,-94.505668 32.970087))" ;
+    dcterms:title "Swamp (line)" ;
+    esip:eastBound "-90.004305"^^xsd:float ;
+    esip:northBound "36.52556"^^xsd:float ;
+    esip:southBound "32.970087"^^xsd:float ;
+    esip:westBound "-94.505668"^^xsd:float ;
+    owl:a dcat:Dataset .
+

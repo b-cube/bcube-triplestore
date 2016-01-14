@@ -1,0 +1,75 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:0f4cd930-1b70-4dab-ba22-9a9281600ee6> bcube:hasType "place" ;
+    bcube:hasValue "Breton Island",
+        "Gulf of Mexico",
+        "Louisiana" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:129c9f20-e2ba-49f0-b52d-bdc637b3d60e> bcube:hasType "theme" ;
+    bcube:hasValue "Bathymetry",
+        "DEM",
+        "Depth",
+        "Digital Elevation Model",
+        "Elevation data",
+        "Intensity Image",
+        "LAS Point Cloud",
+        "LiDAR",
+        "Light Detection and Ranging",
+        "Topobathy",
+        "Topography" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:26d894c2-fe57-4891-93e8-8ddfba15519f> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-05T11:20:31.272Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-05T11:20:31.272Z" ;
+    dc:identifier "urn:sha:3f0e7a5621303f381607afc5d68ed473907c24997d62c9f60560a18b" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://coast.noaa.gov/data/Documents/Metadata/USIEI/Breton_Project_Level_Metadata.xml" .
+
+<urn:uuid:73147171-7874-4e32-8097-a8e4e56aa802> bcube:dateCreated "2015-08-05T11:20:31.272Z" ;
+    bcube:hasMetadataRecord <urn:uuid:b51c58f5-ae3a-4959-afb0-85a89e2cad86> ;
+    bcube:lastUpdated "2015-08-05T11:20:31.272Z" ;
+    dc:conformsTo <urn:uuid:0f4cd930-1b70-4dab-ba22-9a9281600ee6>,
+        <urn:uuid:129c9f20-e2ba-49f0-b52d-bdc637b3d60e> ;
+    dc:description "Geographic Extent: This dataset is topobathymetric LiDAR data encompassing the Breton Island, LA study area. The original area of interest was buffered by 100m to ensure complete coverage resulting in approximately 75 square miles of LiDAR data. Dataset Description: The Breton Island LiDAR project called for the planning, acquisition, processing, and derivative products of topobathymetric LIDAR data, to be collected at a nominal pulse spacing (NPS) of 0.5-0.45 meters (4-5 pts/square meter). Project specifications are based on the U.S. Geological Survey National Geospatial Program Base LIDAR Specification, Version 1. The data was developed based on a horizontal projection/datum of UTM Zone 16 North, NAD83(2011), meters and vertical datum of NAVD1988 (Geoid12A), meters. LiDAR point cloud data was delivered in RAW flight line swath format and classified LAS 1.2 files. Derived products include 1 meter gridded topobathymetric DEMs, 1 meter intensity images, and 1 meter gridded depth models. The classified point cloud and derived products consist of 253 tiles delineated in 1000m x 1000m squares and named according to the US National Grid conventions. Ground Conditions: LiDAR acquisition was prioritized to coincide with the lowest tide possible. Water clarity was also assessed and deemed acceptable prior to acquisition flights." ;
+    dc:spatial "POLYGON ((-89.236817 29.435997,-89.236817 29.705582,-88.915383 29.705582,-88.915383 29.435997,-89.236817 29.435997))" ;
+    dcterms:publisher <urn:uuid:b9b70c2f-4a8b-40ec-963a-7dafcf30ed2f> ;
+    dcterms:title "Breton Island LiDAR USGS Contract:G10PC00026 Task Order Number:G14PD00046 Activity Number: 14LGC02" ;
+    esip:eastBound "-88.915383"^^xsd:float ;
+    esip:endDate "2014-01-18"^^xsd:date ;
+    esip:northBound "29.705582"^^xsd:float ;
+    esip:southBound "29.435997"^^xsd:float ;
+    esip:startDate "2014-01-16"^^xsd:date ;
+    esip:westBound "-89.236817"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:b51c58f5-ae3a-4959-afb0-85a89e2cad86> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-08-05T11:20:31.272Z" ;
+    bcube:lastUpdated "2015-08-05T11:20:31.272Z" ;
+    bcube:originatedFrom <urn:uuid:26d894c2-fe57-4891-93e8-8ddfba15519f> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:73147171-7874-4e32-8097-a8e4e56aa802> .
+
+<urn:uuid:b9b70c2f-4a8b-40ec-963a-7dafcf30ed2f> owl:a foaf:Organization ;
+    foaf:name "" .
+

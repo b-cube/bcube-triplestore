@@ -1,0 +1,98 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:08a85349-0ab3-46b3-84aa-2c69ed3d4bc0> owl:a foaf:Organization ;
+    foaf:name "Bureau of the Census" .
+
+<urn:uuid:2bf59a6c-8cc0-484d-b1b2-e5acd7f12bc0> bcube:hasType "theme" ;
+    bcube:hasValue "Car Lines",
+        "Cog Railroads",
+        "Line Feature",
+        "Point Feature",
+        "Polygon Feature",
+        "Railroad Ferry Crossings",
+        "Railroad Main Lines",
+        "Railroad Spurs",
+        "Railroad Tracks",
+        "Railroad Yards",
+        "Railroads",
+        "Shapefile",
+        "TIGER/Line",
+        "Vector" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:3aa5814b-1420-4e5a-8b95-ad2310774976> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-11-01T02:13:04.937Z" ;
+    bcube:lastUpdated "2015-11-01T02:13:04.937Z" ;
+    bcube:originatedFrom <urn:uuid:9ed91b33-6b9f-4105-8d04-43b7eaf96618> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:a845ac7b-e643-4938-a084-49a2de7268d7> .
+
+<urn:uuid:4c9c0064-a382-409a-9d3f-a163e7dc3917> bcube:hasType "theme" ;
+    bcube:hasValue "transportation" ;
+    dc:partOf "ISO 19115 Topic Category" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:7dceb9cd-9b47-4c6a-85bd-7a7dedfee82b> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-01T02:13:04.937Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-01T02:13:04.937Z" ;
+    dc:identifier "urn:sha:c92434a4ec9e5156905be5bae2f70c46e2daeab8e131a32aa79b8df9" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://cugir.mannlib.cornell.edu/bucketinfo.jsp?id=1476" .
+
+<urn:uuid:9ed91b33-6b9f-4105-8d04-43b7eaf96618> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-01T02:13:04.937Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-01T02:13:04.937Z" ;
+    dc:identifier "urn:sha:cb9f2af25eb15364fc39cca6715f328bbd4725d369e39f2e4dbe17b9" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://cugirmetadata.mannlib.cornell.edu/005rrs.xml" .
+
+<urn:uuid:a845ac7b-e643-4938-a084-49a2de7268d7> bcube:dateCreated "2015-11-01T02:13:04.937Z" ;
+    bcube:hasMetadataRecord <urn:uuid:3aa5814b-1420-4e5a-8b95-ad2310774976> ;
+    bcube:lastUpdated "2015-11-01T02:13:04.937Z" ;
+    dc:conformsTo <urn:uuid:2bf59a6c-8cc0-484d-b1b2-e5acd7f12bc0>,
+        <urn:uuid:4c9c0064-a382-409a-9d3f-a163e7dc3917>,
+        <urn:uuid:c56e29c0-0bdc-4ea3-bbe1-b5b4161f9fb7> ;
+    dc:description "This shapefile is an extract of selected geographic and cartographic information from the 1995 TIGER/Line files detailing railroads. This dataset includes railroad tracks, railroad main lines, railroad spurs, railroad yards, railroad ferry crossings, car lines, and cog railroads." ;
+    dc:spatial "POLYGON ((-73.934 40.786,-73.934 40.917,-73.748 40.917,-73.748 40.786,-73.934 40.786))" ;
+    dcterms:publisher <urn:uuid:08a85349-0ab3-46b3-84aa-2c69ed3d4bc0> ;
+    dcterms:references <urn:uuid:c765d13e-74eb-41d2-b5a2-674d1a485bfa> ;
+    dcterms:title "Railroads, Bronx County (Shapefile : 1998)" ;
+    esip:eastBound "-73.748"^^xsd:float ;
+    esip:northBound "40.917"^^xsd:float ;
+    esip:southBound "40.786"^^xsd:float ;
+    esip:startDate "1995-01-01"^^xsd:date ;
+    esip:westBound "-73.934"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:c56e29c0-0bdc-4ea3-bbe1-b5b4161f9fb7> bcube:hasType "place" ;
+    bcube:hasValue "005",
+        "Bronx" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:c765d13e-74eb-41d2-b5a2-674d1a485bfa> dcterms:references <urn:uuid:7dceb9cd-9b47-4c6a-85bd-7a7dedfee82b> ;
+    owl:a bibo:WebPage .
+

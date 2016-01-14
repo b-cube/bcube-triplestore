@@ -1,0 +1,143 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:0916b3be-c65a-479d-b161-3bf3f100aa8a> bcube:hasType "theme" ;
+    bcube:hasValue "500 meter bathymetry contours",
+        "ArcView shapefile",
+        "CMGP",
+        "Coastal and Marine",
+        "ETOPO2",
+        "GIS",
+        "Geographic Information System",
+        "U.S. Geological Survey",
+        "USGS",
+        "WHSC",
+        "Woods Hole Science Center",
+        "polyline",
+        "seafloor mapping" ;
+    dc:partOf "General" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:2d848f1c-71fb-4be4-ade6-b9237ea7ac1f> bcube:hasType "place" ;
+    bcube:hasValue "Anguilla",
+        "Antigua",
+        "Aruba",
+        "Atlantic Ocean",
+        "Bahamas",
+        "Barbados",
+        "Barbuda",
+        "British Virgin Islands",
+        "Caicos Islands",
+        "Caribbean Sea",
+        "Cayman Islands",
+        "Cuba",
+        "Dominica",
+        "Dominica Republic",
+        "Grenada",
+        "Grenadines",
+        "Guadeloupe",
+        "Haiti",
+        "Jamaica",
+        "Martinique",
+        "Montserrat",
+        "Netherlands Antilles",
+        "Nevis",
+        "North America",
+        "North Atlantic",
+        "Puerto Rico",
+        "Puerto Rico Trench",
+        "St Kitts",
+        "St Lucia",
+        "St Vincent",
+        "Tobago",
+        "Trinidad",
+        "Turks Islands",
+        "Virgin Islands" ;
+    dc:partOf "General" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:6d9b3273-5a14-4952-98f1-da1eb5772640> dcterms:references <urn:uuid:9250c044-fc98-44e1-916a-49f00c354a02> ;
+    owl:a bibo:WebPage .
+
+<urn:uuid:7d68f0a9-0ea8-449f-9b5b-2bd31d23fbc7> bcube:hasType "theme" ;
+    bcube:hasValue "elevation",
+        "geoscientificInformation",
+        "oceans" ;
+    dc:partOf "ISO 19115 Topic Category" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:9250c044-fc98-44e1-916a-49f00c354a02> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-13T03:10:40.296Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-13T03:10:40.296Z" ;
+    dc:identifier "urn:sha:e0698d227766225baa82a44b3aced18facbd2ad7bf6c52d2f124d90d" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://pubs.usgs.gov/of/2004/1400/data/bathymetry/bathy_500m/bathy_500m.zip" .
+
+<urn:uuid:a068f6ee-17e8-425e-afa4-2d371c8e8f78> bcube:dateCreated "2015-08-13T03:10:40.296Z" ;
+    bcube:hasMetadataRecord <urn:uuid:b17c07e9-f3fb-47c5-877c-5332c7bdb70d> ;
+    bcube:lastUpdated "2015-08-13T03:10:40.296Z" ;
+    dc:conformsTo <urn:uuid:0916b3be-c65a-479d-b161-3bf3f100aa8a>,
+        <urn:uuid:2d848f1c-71fb-4be4-ade6-b9237ea7ac1f>,
+        <urn:uuid:7d68f0a9-0ea8-449f-9b5b-2bd31d23fbc7> ;
+    dc:description "This bathymetry contour data is in ESRI shapefile format and was derived from a National Oceanic Atmospheric Administration, National Geophysical Data Center (NOAA-NGDC) ETOPO2 data set; using an ESRI ArcView extension, Spatial Analyst, to create 500m intervals from a gridded database file (2-minute latitude - longitude resolution)." ;
+    dc:spatial "POLYGON ((-78.988024 9.934132,-78.988024 23.982036,-54.880239 23.982036,-54.880239 9.934132,-78.988024 9.934132))" ;
+    dcterms:publisher <urn:uuid:a6f9425c-7e92-4424-988b-1835b290b6b3> ;
+    dcterms:references <urn:uuid:6d9b3273-5a14-4952-98f1-da1eb5772640>,
+        <urn:uuid:bb068677-eec8-4905-80a0-7e0a3f88ab01> ;
+    dcterms:title "bathy_500m - 500m Bathy Contours Derived from ETOPO2 Global 2' Elevations" ;
+    esip:eastBound "-54.880239"^^xsd:float ;
+    esip:northBound "23.982036"^^xsd:float ;
+    esip:southBound "9.934132"^^xsd:float ;
+    esip:startDate "2001-01-01"^^xsd:date ;
+    esip:westBound "-78.988024"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:a6f9425c-7e92-4424-988b-1835b290b6b3> owl:a foaf:Organization ;
+    foaf:name "U.S. Geological Survey, Coastal and Marine Geology Program" .
+
+<urn:uuid:b17c07e9-f3fb-47c5-877c-5332c7bdb70d> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-08-13T03:10:40.296Z" ;
+    bcube:lastUpdated "2015-08-13T03:10:40.296Z" ;
+    bcube:originatedFrom <urn:uuid:d8ec95c8-8f88-486c-823a-639d438d0d45> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:a068f6ee-17e8-425e-afa4-2d371c8e8f78> .
+
+<urn:uuid:bb068677-eec8-4905-80a0-7e0a3f88ab01> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-13T03:10:40.296Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-13T03:10:40.296Z" ;
+    dc:identifier "urn:sha:d14a028c2a3a2bc9476102bb288234c415a2b01f828ea62ac5b3e42f" ;
+    owl:a bcube:Url .
+
+<urn:uuid:d8ec95c8-8f88-486c-823a-639d438d0d45> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-13T03:10:40.296Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-13T03:10:40.296Z" ;
+    dc:identifier "urn:sha:b355c03869558875ea57b7b409ad2606021231932ad1c40c14e5c162" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://pubs.usgs.gov/of/2004/1400/data/bathymetry/bathy_500m/bathy_500m.shp.xml" .
+

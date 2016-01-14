@@ -1,0 +1,88 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:1dd73c1e-59d3-47da-a595-8085d0d9ff33> bcube:hasType "theme" ;
+    bcube:hasValue "boundaries" ;
+    dc:partOf "ISO 19115 Topic Categories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:22298c4c-c8de-423d-8a13-59b919fc6156> bcube:dateCreated "2015-11-05T07:25:48.694Z" ;
+    bcube:hasMetadataRecord <urn:uuid:cc5f39a1-1635-405b-a272-0958bf6891a6> ;
+    bcube:lastUpdated "2015-11-05T07:25:48.694Z" ;
+    dc:conformsTo <urn:uuid:1dd73c1e-59d3-47da-a595-8085d0d9ff33>,
+        <urn:uuid:3c4fe52d-cfa8-4b09-a0ba-8d08aa991f76>,
+        <urn:uuid:fff01278-6e45-4230-8893-4a35b8450d65> ;
+    dc:description "The TIGER/Line Shapefiles are an extract of selected geographic and cartographic information from the Census MAF/TIGER database. The Census MAF/TIGER database represents a seamless national file with no overlaps or gaps between parts. However, each TIGER/Line Shapefile is designed to stand alone as an independent data set or the shapefiles can be combined to cover the whole nation." ;
+    dc:spatial "POLYGON ((-116.050002 44.358209,-116.050002 49.00139,-104.039138 49.00139,-104.039138 44.358209,-116.050002 44.358209))" ;
+    dcterms:publisher <urn:uuid:5f8f9ddd-f03e-4a0d-b930-d90c4ec53891> ;
+    dcterms:references <urn:uuid:c469b113-8b2a-45da-90fb-f1beb94d3a8a> ;
+    dcterms:title "TIGER/Line Shapefile, 2009, state, Montana, Current County and Equivalent State-based" ;
+    esip:eastBound "-104.039138"^^xsd:float ;
+    esip:endDate "2009-05-01"^^xsd:date ;
+    esip:northBound "49.00139"^^xsd:float ;
+    esip:southBound "44.358209"^^xsd:float ;
+    esip:startDate "2009-01-01"^^xsd:date ;
+    esip:westBound "-116.050002"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:3c4fe52d-cfa8-4b09-a0ba-8d08aa991f76> bcube:hasType "place" ;
+    bcube:hasValue "30",
+        "MT",
+        "Montana",
+        "State or Equivalent Entity",
+        "U.S.",
+        "United States" ;
+    dc:partOf "INCITS.38-200x (R2004),INCITS.31-200x (R2007),INCITS.454-200x,INCITS 455-200x,INCITS 446-2008" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:5f8f9ddd-f03e-4a0d-b930-d90c4ec53891> owl:a foaf:Organization ;
+    foaf:name "" .
+
+<urn:uuid:9e0275b7-b3fc-46ba-ba0c-18387d46d58f> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-05T07:25:48.694Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-05T07:25:48.694Z" ;
+    dc:identifier "urn:sha:5d012c90209db768c1e961f5ca8df60f4fa050c39dc119c0be401056" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://meta.geo.census.gov/data/existing/decennial/GEO/GPMB/TIGERline/fe_2009/county/tl_2009_30_county_url.shp.xml" .
+
+<urn:uuid:c469b113-8b2a-45da-90fb-f1beb94d3a8a> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-05T07:25:48.694Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-05T07:25:48.694Z" ;
+    dc:identifier "urn:sha:ca69e2231aa5171c66c8eba289268688bbcecbe2406e8c08e16854de" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www2.census.gov/geo/tiger/TIGER2009/30_MONTANA/tl_2009_30_county.zip" .
+
+<urn:uuid:cc5f39a1-1635-405b-a272-0958bf6891a6> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-11-05T07:25:48.694Z" ;
+    bcube:lastUpdated "2015-11-05T07:25:48.694Z" ;
+    bcube:originatedFrom <urn:uuid:9e0275b7-b3fc-46ba-ba0c-18387d46d58f> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:22298c4c-c8de-423d-8a13-59b919fc6156> .
+
+<urn:uuid:fff01278-6e45-4230-8893-4a35b8450d65> bcube:hasType "theme" ;
+    bcube:hasValue "Polygon",
+        "State or equivalent entity" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+

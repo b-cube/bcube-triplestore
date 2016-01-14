@@ -1,0 +1,56 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:0e871a2a-6ecd-4707-8020-ad6863cacff7> owl:a foaf:Organization ;
+    foaf:name "" .
+
+<urn:uuid:149e1826-330a-4c84-8bd1-79c5d8c7eee3> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-06-26T19:48:33.856Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-06-26T19:48:33.856Z" ;
+    dc:identifier "urn:sha:a1160d352cda967e1ca5864e4dddadacb1576111938975d57e49a025" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "https://maps.pitkincounty.com/download/Contour2ft_AspenArea_Index/metadata/Contour2ft_AspenArea_Index.xml" .
+
+<urn:uuid:1874e7bb-2ff5-4fca-b929-98802dfd3afc> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-06-26T19:48:33.856Z" ;
+    bcube:lastUpdated "2015-06-26T19:48:33.856Z" ;
+    bcube:originatedFrom <urn:uuid:149e1826-330a-4c84-8bd1-79c5d8c7eee3> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:e305b802-5d32-4d24-a2b0-93e7b7a6e03d> .
+
+<urn:uuid:6fb12a03-927a-4a1b-86ec-93f9680ffa95> bcube:hasType "theme" ;
+    bcube:hasValue "Pitkin County GIS",
+        "elevation" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:e305b802-5d32-4d24-a2b0-93e7b7a6e03d> bcube:dateCreated "2015-06-26T19:48:33.856Z" ;
+    bcube:hasMetadataRecord <urn:uuid:1874e7bb-2ff5-4fca-b929-98802dfd3afc> ;
+    bcube:lastUpdated "2015-06-26T19:48:33.856Z" ;
+    dc:conformsTo <urn:uuid:6fb12a03-927a-4a1b-86ec-93f9680ffa95> ;
+    dc:description "Extent of the two foot contour layer for the Aspen Area, including tile name, township, section and range." ;
+    dc:spatial "POLYGON ((-106.879 39.170795,-106.879 39.233339,-106.793157 39.233339,-106.793157 39.170795,-106.879 39.170795))" ;
+    dcterms:publisher <urn:uuid:0e871a2a-6ecd-4707-8020-ad6863cacff7> ;
+    dcterms:title "2 ft Contour Index (Aspen Area)" ;
+    esip:eastBound "-106.793157"^^xsd:float ;
+    esip:northBound "39.233339"^^xsd:float ;
+    esip:southBound "39.170795"^^xsd:float ;
+    esip:westBound "-106.879"^^xsd:float ;
+    owl:a dcat:Dataset .
+

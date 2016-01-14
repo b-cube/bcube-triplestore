@@ -1,0 +1,104 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:33b35e13-51d2-4b04-ba27-fbb3366c8a79> bcube:hasType "stratum" ;
+    bcube:hasValue "bare earth topography" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:4055778e-2454-40a2-95e2-0425e64122d4> bcube:hasType "theme" ;
+    bcube:hasValue "ALPS",
+        "Airborne Lidar Processing System",
+        "Experimental Advanced Airborne Research Lidar",
+        "LIDAR",
+        "bare earth elevation",
+        "derived surface",
+        "digital elevation model",
+        "elevation change",
+        "laser altimetry",
+        "resource management" ;
+    dc:partOf "NONE" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:40c05f59-3cab-4011-b94c-bfe91d8d164e> bcube:dateCreated "2015-11-17T08:49:27.998Z" ;
+    bcube:hasMetadataRecord <urn:uuid:4907fc84-6075-4f2b-b6f9-6d710cf6abb6> ;
+    bcube:lastUpdated "2015-11-17T08:49:27.998Z" ;
+    dc:conformsTo <urn:uuid:33b35e13-51d2-4b04-ba27-fbb3366c8a79>,
+        <urn:uuid:4055778e-2454-40a2-95e2-0425e64122d4>,
+        <urn:uuid:da522b18-68c1-4dac-86ca-f1d307502553> ;
+    dc:description "Elevation maps (also known as Digital Elevation Models or DEMs) of Gulf Islands National Seashore were produced from remotely-sensed, geographically-referenced elevation measurements in cooperation with NASA and NPS. Point data in ascii text files were interpolated in a GIS to create a grid or digital elevation model (DEM) of each beach surface. Elevation measurements were collected in Florida, Mississippi and Texas, over Gulf Islands National Seashore, using the NASA Experimental Advanced Airborne Research LiDAR (EAARL), a pulsed laser ranging system mounted onboard an aircraft to measure ground elevation and coastal topography. The system uses high frequency laser beams directed at the earth's surface through an opening in the bottom of the aircraft's fuselage. The laser system records the time difference between emission of the laser beam and the reception of the reflected laser signal in the aircraft. The plane travels over the beach at approximately 60 meters per second while surveying from the low-water line to the landward base of the sand dunes. The EAARL, developed by the National Aeronautics and Space Administration (NASA) located at Wallops Flight Facility in Virginia, measures ground elevation with a vertical resolution of 15 centimeters. A sampling rate of 3 kHz or higher results in an extremely dense spatial elevation data set. Over 100 kilometers of coastline can be easily surveyed within a 3- to 4-hour mission time period. The ability to sample large areas rapidly and accurately is especially useful in morphologically dynamic areas such as barrier beaches. Quick assessment of topographic change can be made following storms comparing measurements against baseline data. When subsequent elevation maps for an area are analyzed, they provide a useful tool to make management decisions regarding coastal development." ;
+    dc:spatial "POLYGON ((-86.99999 30.353886,-86.99999 30.371945,-86.979164 30.371945,-86.979164 30.353886,-86.99999 30.353886))" ;
+    dcterms:publisher <urn:uuid:5cfb239a-f1fc-48e3-aff6-a0a27a43d059> ;
+    dcterms:references <urn:uuid:ab982423-654f-4eb7-9516-dee60c3eb346>,
+        <urn:uuid:bcd26a75-a3df-4644-bac0-7cca2f6e3bd4> ;
+    dcterms:title "EAARL Topography-Gulf Islands National Seashore-Florida" ;
+    esip:eastBound "-86.979164"^^xsd:float ;
+    esip:northBound "30.371945"^^xsd:float ;
+    esip:southBound "30.353886"^^xsd:float ;
+    esip:westBound "-86.99999"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:4907fc84-6075-4f2b-b6f9-6d710cf6abb6> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-11-17T08:49:27.998Z" ;
+    bcube:lastUpdated "2015-11-17T08:49:27.998Z" ;
+    bcube:originatedFrom <urn:uuid:a4402d13-524c-4e71-82f0-159e6e4bc120> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:40c05f59-3cab-4011-b94c-bfe91d8d164e> .
+
+<urn:uuid:5cfb239a-f1fc-48e3-aff6-a0a27a43d059> owl:a foaf:Organization ;
+    foaf:name "USGS" .
+
+<urn:uuid:a4402d13-524c-4e71-82f0-159e6e4bc120> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-17T08:49:27.998Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-17T08:49:27.998Z" ;
+    dc:identifier "urn:sha:c9b6dab7c3049d6ac83a07ba6cc299d10535660024d276c475ccc9be" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://pubs.usgs.gov/of/2007/1422/LIDAR/be_e500_n3360/be_e500_n3360ed2.tif.xml" .
+
+<urn:uuid:ab982423-654f-4eb7-9516-dee60c3eb346> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-17T08:49:27.998Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-17T08:49:27.998Z" ;
+    dc:identifier "urn:sha:d14a028c2a3a2bc9476102bb288234c415a2b01f828ea62ac5b3e42f" ;
+    owl:a bcube:Url .
+
+<urn:uuid:bcd26a75-a3df-4644-bac0-7cca2f6e3bd4> dcterms:references <urn:uuid:f1bee730-69c9-4888-bca3-808ae3602c67> ;
+    owl:a bibo:WebPage .
+
+<urn:uuid:da522b18-68c1-4dac-86ca-f1d307502553> bcube:hasType "place" ;
+    bcube:hasValue "Florida",
+        "Gulf Islands National Seashore",
+        "Gulf of Mexico" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:f1bee730-69c9-4888-bca3-808ae3602c67> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-17T08:49:27.998Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-17T08:49:27.998Z" ;
+    dc:identifier "urn:sha:a02c99b91835d7464cd5dc36be249494e1b320030294f7cfdf133b8d" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "//" .
+

@@ -1,0 +1,83 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:20c871a7-5fec-4592-bc45-56662d034d5b> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-11-04T11:50:43.555Z" ;
+    bcube:lastUpdated "2015-11-04T11:50:43.555Z" ;
+    bcube:originatedFrom <urn:uuid:bb621ffa-be4f-4d01-835e-8595627756fe> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:4e0ec6d1-21dd-4560-bfc9-878cd5d1ea6b> .
+
+<urn:uuid:288e33be-b4eb-4c33-affb-e9e131a28222> owl:a foaf:Organization ;
+    foaf:name "" .
+
+<urn:uuid:4e0ec6d1-21dd-4560-bfc9-878cd5d1ea6b> bcube:dateCreated "2015-11-04T11:50:43.555Z" ;
+    bcube:hasMetadataRecord <urn:uuid:20c871a7-5fec-4592-bc45-56662d034d5b> ;
+    bcube:lastUpdated "2015-11-04T11:50:43.555Z" ;
+    dc:conformsTo <urn:uuid:4ed7aecb-d907-4a23-a4d2-b4a86d2a3c67>,
+        <urn:uuid:b37b7c44-7fde-473d-a6d9-cdbb5367f5db> ;
+    dc:description "The Toll Roads feature class covers the state of Florida at a scale of 1:24,000 with a projection system of Universal Transverse Mercator (UTM) 17 North zone and a horizontal datum of North American 1983 (NAD 1983). The map units are in meters." ;
+    dc:spatial "POLYGON ((-87.30122 25.1585,-87.30122 30.601698,-80.090452 30.601698,-80.090452 25.1585,-87.30122 25.1585))" ;
+    dcterms:publisher <urn:uuid:288e33be-b4eb-4c33-affb-e9e131a28222> ;
+    dcterms:references <urn:uuid:9f76078a-f15d-45ea-bd84-41578db030b6> ;
+    dcterms:title "Toll Roads" ;
+    esip:eastBound "-80.090452"^^xsd:float ;
+    esip:northBound "30.601698"^^xsd:float ;
+    esip:southBound "25.1585"^^xsd:float ;
+    esip:startDate "2008-06-02"^^xsd:date ;
+    esip:westBound "-87.30122"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:4ed7aecb-d907-4a23-a4d2-b4a86d2a3c67> bcube:hasType "place" ;
+    bcube:hasValue "Florida" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:9f76078a-f15d-45ea-bd84-41578db030b6> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-04T11:50:43.555Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-04T11:50:43.555Z" ;
+    dc:identifier "urn:sha:8cb6eadde600ab8027f335595f954604020458648547af3590cbd53d" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "ftp://ftp.dot.state.fl.us/fdot/co/planning/transtat/gis/shapefiles/toll_roads.zip" .
+
+<urn:uuid:b37b7c44-7fde-473d-a6d9-cdbb5367f5db> bcube:hasType "theme" ;
+    bcube:hasValue "Florida Turnpike Enterprise",
+        "Highways",
+        "RCI",
+        "Roads",
+        "Roadway Characteristics Inventory",
+        "State Roads",
+        "Toll Roads",
+        "Transportation",
+        "Turnpike" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:bb621ffa-be4f-4d01-835e-8595627756fe> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-04T11:50:43.555Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-04T11:50:43.555Z" ;
+    dc:identifier "urn:sha:3628a237fee455d65c876e409a49b96011ea6c7b5838d7066500bf30" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www.envirobase.usgs.gov/FlGisData/FDOT/metadata/toll_roads.shp.xml" .
+

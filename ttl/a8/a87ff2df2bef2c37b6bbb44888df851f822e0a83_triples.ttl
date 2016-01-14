@@ -1,0 +1,85 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:4be83258-0595-4e29-85f6-aa6b7f50fa0e> bcube:hasType "place" ;
+    bcube:hasValue "Arizona",
+        "Maricopa County" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:5d97b24b-67dc-4c26-b3db-6f3b57cd05da> a "ISO 19115:2003/19139" ;
+    bcube:dateCreated "2015-10-29T16:11:54.459Z" ;
+    bcube:lastUpdated "2015-10-29T16:11:54.459Z" ;
+    bcube:originatedFrom <urn:uuid:e2315bc4-55f7-4fef-bab4-4f986ce6ce4c> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:f777cd38-425e-4df6-bb4f-99f9f2a54edd> .
+
+<urn:uuid:62c20f52-0a11-43a2-ac9e-5cddd381266d> bcube:hasType "theme" ;
+    bcube:hasValue "Fms",
+        "Magnitude",
+        "NRRC",
+        "Segments",
+        "usginres:service" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:93b695d7-37ec-43c0-be75-65e61642b15e> bcube:hasValue "geoscientificInformation" ;
+    dc:partOf "IsoTopicCategories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:d5ba8823-9101-4f0a-8c02-28e579631206> bcube:hasType "temporal" ;
+    bcube:hasValue "2011" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:e2315bc4-55f7-4fef-bab4-4f986ce6ce4c> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-10-29T16:11:54.459Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-10-29T16:11:54.459Z" ;
+    dc:identifier "urn:sha:b7a913484ac670b6b624366d2060f60baa96b3de2fc6c261410b04af" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://repository.stategeothermaldata.org/resources/metadata/TestNRRC/5DE41C6B5BEB4F1EA7CCA38345858562.xml" .
+
+<urn:uuid:f343707a-40ce-46d8-b363-3046c17951e9> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-10-29T16:11:54.459Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-10-29T16:11:54.459Z" ;
+    dc:identifier "urn:sha:2f4a825652e5e5f505c06874a384ac355294373b024ce8f5ee518e53" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "https://geo.azmag.gov/gismag/rest/services/maps/MagnitudeFmsSegments2011/MapServer" .
+
+<urn:uuid:f777cd38-425e-4df6-bb4f-99f9f2a54edd> bcube:dateCreated "2015-10-29T16:11:54.459Z" ;
+    bcube:hasMetadataRecord <urn:uuid:5d97b24b-67dc-4c26-b3db-6f3b57cd05da> ;
+    bcube:lastUpdated "2015-10-29T16:11:54.459Z" ;
+    dc:conformsTo <urn:uuid:4be83258-0595-4e29-85f6-aa6b7f50fa0e>,
+        <urn:uuid:62c20f52-0a11-43a2-ac9e-5cddd381266d>,
+        <urn:uuid:93b695d7-37ec-43c0-be75-65e61642b15e>,
+        <urn:uuid:d5ba8823-9101-4f0a-8c02-28e579631206> ;
+    dc:description "Freeway FMS segments with perfromance measurements for 2011. Used by the transportation perfromance (Magnitude) viewer." ;
+    dc:spatial "POLYGON ((-111.71 34.81,-111.71 32.58,-113.42 32.58,-113.42 34.81,-111.71 34.81))" ;
+    dcterms:references <urn:uuid:f343707a-40ce-46d8-b363-3046c17951e9> ;
+    dcterms:title "Freeway FMS segments with Performance Measurements for 2011 - maps/MagnitudeFmsSegments2011" ;
+    esip:eastBound "-113.42"^^xsd:float ;
+    esip:endDate "1900-01-01"^^xsd:date ;
+    esip:northBound "32.58"^^xsd:float ;
+    esip:southBound "34.81"^^xsd:float ;
+    esip:startDate "1900-01-01"^^xsd:date ;
+    esip:westBound "-111.71"^^xsd:float ;
+    owl:a dcat:Dataset .
+

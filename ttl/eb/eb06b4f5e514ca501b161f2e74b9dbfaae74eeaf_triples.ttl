@@ -1,0 +1,86 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:19685baa-38ef-4660-9228-06d4e4606f83> owl:a foaf:Organization ;
+    foaf:name "USDA, NASS" .
+
+<urn:uuid:324e0f16-a380-48ac-b76f-045e74a1aa49> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-09-16T19:53:13.431Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-09-16T19:53:13.431Z" ;
+    dc:identifier "urn:sha:6f55cf1e823acca6418c89fd6c9fa04d0454af471f2bdcd6515b1769" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://gisdata.nd.gov/LandClass/NASSColorCorrected/LANDCLASS_NASS_2007.tif.xml" .
+
+<urn:uuid:3d49737c-d610-4c5a-95f0-75206c9cc656> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-09-16T19:53:13.431Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-09-16T19:53:13.431Z" ;
+    dc:identifier "urn:sha:772a3c84d6895ed5dc04ecc756aeac91d0bc81f41cc62c00fc26ebe0" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "<http://datagateway.nrcs.usda.gov/>" .
+
+<urn:uuid:5b193f08-eafd-4031-b2df-355dd21274a6> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-09-16T19:53:13.431Z" ;
+    bcube:lastUpdated "2015-09-16T19:53:13.431Z" ;
+    bcube:originatedFrom <urn:uuid:324e0f16-a380-48ac-b76f-045e74a1aa49> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:a224ccf9-1972-44de-98ae-22a45c7774b5> .
+
+<urn:uuid:62815f75-801f-40fe-bdab-a6980cd0b3c7> bcube:hasType "theme" ;
+    bcube:hasValue "environment, 007",
+        "farming, 001",
+        "imageryBaseMapsEarthCover, 010" ;
+    dc:partOf "ISO 19115 Topic Category" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:794aee76-bae0-4ced-9d87-a5b19bc3e20c> dcterms:references <urn:uuid:df1eb070-0da2-4b1a-a11e-63ea2ae400b3> ;
+    owl:a bibo:WebPage .
+
+<urn:uuid:a224ccf9-1972-44de-98ae-22a45c7774b5> bcube:dateCreated "2015-09-16T19:53:13.431Z" ;
+    bcube:hasMetadataRecord <urn:uuid:5b193f08-eafd-4031-b2df-355dd21274a6> ;
+    bcube:lastUpdated "2015-09-16T19:53:13.431Z" ;
+    dc:conformsTo <urn:uuid:62815f75-801f-40fe-bdab-a6980cd0b3c7> ;
+    dc:description "The USDA, NASS Cropland Data Layer (CDL) is a raster, geo-referenced, crop-specific land cover data layer with a ground resolution of 56 meters. The CDL is produced using satellite imagery from the Indian Remote Sensing RESOURCESAT-1 (IRS-P6) Advanced Wide Field Sensor (AWiFS) collected during the current growing season. Ancillary classification inputs include: the United States Geological Survey (USGS) National Elevation Dataset (NED), the USGS National Land Cover Dataset 2001 (NLCD 2001), and the National Aeronautics and Space Administration (NASA) Moderate Resolution Imaging Spectroradiometer (MODIS) 250 meter 16 day Normalized Difference Vegetation Index (NDVI) composites. Agricultural training and validation data are derived from the Farm Service Agency (FSA) Common Land Unit (CLU) Program. The NLCD 2001 is used as non-agricultural training and validation data. The strength and emphasis of the CDL is agricultural land cover. Please note that no farmer reported data are derivable from the Cropland Data Layer." ;
+    dc:spatial "POLYGON ((-104.444778 45.695617,-104.444778 49.2537,-96.394309 49.2537,-96.394309 45.695617,-104.444778 45.695617))" ;
+    dcterms:publisher <urn:uuid:19685baa-38ef-4660-9228-06d4e4606f83> ;
+    dcterms:references <urn:uuid:3d49737c-d610-4c5a-95f0-75206c9cc656>,
+        <urn:uuid:794aee76-bae0-4ced-9d87-a5b19bc3e20c> ;
+    dcterms:title "USDA-NASS 2007 North Dakota Cropland Data Layer" ;
+    esip:eastBound "-96.394309"^^xsd:float ;
+    esip:northBound "49.2537"^^xsd:float ;
+    esip:southBound "45.695617"^^xsd:float ;
+    esip:westBound "-104.444778"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:df1eb070-0da2-4b1a-a11e-63ea2ae400b3> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-09-16T19:53:13.431Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-09-16T19:53:13.431Z" ;
+    dc:identifier "urn:sha:8ae9587e0f3d2fc4deadbcaa6b102bc16cbbe1f1430f7be2258c95a4" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "\\\\\\\\\\\\\\\\GNFBHOSEK\\\\\\\\D$\\\\\\\\My Documents\\\\\\\\FTPGIS\\\\\\\\LANDCLASS_NASS_2007.tif" .
+

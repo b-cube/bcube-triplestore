@@ -1,0 +1,61 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:0067c727-1c34-4bf3-b451-6959e150b6e9> a "OGC:WMS" ;
+    bcube:contains <urn:uuid:0e66b868-edc1-4204-976d-5bae5536ffc1> ;
+    bcube:dateCreated "2015-06-26T19:53:11.823Z" ;
+    bcube:lastUpdated "2015-06-26T19:53:11.823Z" ;
+    bcube:originatedFrom <urn:uuid:5b074e9b-ec59-4c87-835d-0235e92041dd> ;
+    dc:conformsTo <urn:uuid:7faf6410-0ea8-4061-ba17-90b82fd9f45f> ;
+    dc:description "WellLogs in the state of Massachusetts" ;
+    owl:a bcube:service .
+
+<urn:uuid:0e66b868-edc1-4204-976d-5bae5536ffc1> bcube:dateCreated "2015-06-26T19:53:11.823Z" ;
+    bcube:lastUpdated "2015-06-26T19:53:11.823Z" ;
+    dc:spatial "POLYGON ((-71.76484 42.12079,-71.76484 42.64228,-70.62566 42.64228,-70.62566 42.12079,-71.76484 42.12079))" ;
+    dc:title "WellLog" ;
+    dcterms:references <urn:uuid:a78b4261-982e-4ad5-9c51-905b8c265215> ;
+    esip:eastBound "-70.62566"^^xsd:float ;
+    esip:northBound "42.64228"^^xsd:float ;
+    esip:southBound "42.12079"^^xsd:float ;
+    esip:westBound "-71.76484"^^xsd:float ;
+    owl:a bcube:Layer .
+
+<urn:uuid:5b074e9b-ec59-4c87-835d-0235e92041dd> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-06-26T19:53:11.823Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-06-26T19:53:11.823Z" ;
+    dc:identifier "urn:sha:e92add9573dde87c2aa18a53d43c89d1bd68c314070937967ead48e0" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://geothermal.isgs.illinois.edu/arcgis/services/aasggeothermal/MAWellLogs/MapServer/WMSServer?request=GetCapabilities&service=WMS" .
+
+<urn:uuid:7faf6410-0ea8-4061-ba17-90b82fd9f45f> bcube:hasValue "Massachusetts, Well, Well Logs, Geothermal, Water Wells" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:a78b4261-982e-4ad5-9c51-905b8c265215> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-06-26T19:53:11.823Z" ;
+    bcube:hasConfidence "Not Sure" ;
+    bcube:hasUrlSource "Generated" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-06-26T19:53:11.823Z" ;
+    dc:identifier "urn:sha:4751147702f7dc9014c38a2e392a3e44bdda59f0543b0bb6a7d84ee9" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://geothermal.isgs.illinois.edu/arcgis/services/aasggeothermal/MAWellLogs/MapServer/WMSServer?layers=WellLog&width=500&version=1.3.0&bbox=-71.76484%2C42.12079%2C-70.62566%2C42.64228&service=WMS&format=image%2Fpng&styles=&crs=CRS%3A84&request=GetMap&height=500" .
+

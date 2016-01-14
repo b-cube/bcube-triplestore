@@ -1,0 +1,89 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:0b1b04d4-1002-4035-b474-2082b8749d68> owl:a foaf:Organization ;
+    foaf:name "" .
+
+<urn:uuid:182aff31-dd61-40cc-97d8-8850ae72cb56> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-05T04:44:48.672Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-05T04:44:48.672Z" ;
+    dc:identifier "urn:sha:0248d29a67cb588c21cf5188b6daeab7dd3ab3c30f8026e2d177c457" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://data.usgs.gov/metadata/Upper_Midwest_Environmental_Sciences_Center_Data/54f4bec5e4b02419550d00c8.xml" .
+
+<urn:uuid:4ca230a5-b6e0-4562-8805-de092ea373a7> bcube:hasType "theme" ;
+    bcube:hasValue "Contour",
+        "DEM",
+        "Surface Model",
+        "digital elevation model",
+        "elevation",
+        "laser",
+        "lidar",
+        "topography" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:526f1e4d-2496-42c8-b553-958be9ffb168> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-05T04:44:48.672Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-05T04:44:48.672Z" ;
+    dc:identifier "urn:sha:0c01cdab243d2f029cd5cea4363dc882eb09604230bed9eb2d88a4f8" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www.umesc.usgs.gov/data_library/gis_data/lidar.html" .
+
+<urn:uuid:744187a8-86b3-465c-9891-ee2bd7dd059c> bcube:hasType "place" ;
+    bcube:hasValue "Illinois" ;
+    dc:partOf "State location" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:823624ad-f238-4dfc-9dd8-1862ec5393d9> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-08-05T04:44:48.672Z" ;
+    bcube:lastUpdated "2015-08-05T04:44:48.672Z" ;
+    bcube:originatedFrom <urn:uuid:182aff31-dd61-40cc-97d8-8850ae72cb56> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:bfd49732-22d2-426d-aecf-32598b380ffa> .
+
+<urn:uuid:bfd49732-22d2-426d-aecf-32598b380ffa> bcube:dateCreated "2015-08-05T04:44:48.672Z" ;
+    bcube:hasMetadataRecord <urn:uuid:823624ad-f238-4dfc-9dd8-1862ec5393d9> ;
+    bcube:lastUpdated "2015-08-05T04:44:48.672Z" ;
+    dc:conformsTo <urn:uuid:4ca230a5-b6e0-4562-8805-de092ea373a7>,
+        <urn:uuid:744187a8-86b3-465c-9891-ee2bd7dd059c>,
+        <urn:uuid:c8cd38a6-11e4-40e0-a6f5-03ea24c37b22> ;
+    dc:description "LiDAR data is remotely sensed high-resolution elevation data collected by an airborne collection platform. Using a combination of laser rangefinding, GPS positioning and inertial measurement technologies; LiDAR instruments are able to make highly detailed Digital Elevation Models (DEMs) of the earth's terrain, man-made structures and vegetation." ;
+    dc:spatial "POLYGON ((-88.770779131 41.319101156,-88.770779131 41.345905755,-88.74838604599999 41.345905755,-88.74838604599999 41.319101156,-88.770779131 41.319101156))" ;
+    dcterms:publisher <urn:uuid:0b1b04d4-1002-4035-b474-2082b8749d68> ;
+    dcterms:references <urn:uuid:526f1e4d-2496-42c8-b553-958be9ffb168> ;
+    dcterms:title "Illinois River, Marseilles Pool 0.5m Contour" ;
+    esip:eastBound "-88.748386046"^^xsd:float ;
+    esip:endDate "2011-12-28"^^xsd:date ;
+    esip:northBound "41.345905755"^^xsd:float ;
+    esip:southBound "41.319101156"^^xsd:float ;
+    esip:startDate "2008-05-23"^^xsd:date ;
+    esip:westBound "-88.770779131"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:c8cd38a6-11e4-40e0-a6f5-03ea24c37b22> bcube:hasType "place" ;
+    bcube:hasValue "US" ;
+    dc:partOf "U.S. Department of Commerce, 1995, Countries, Dependencies, Areas of Special Sovereignty, and Their Principal Administrative Divisions (Federal Information Processing Standard (FIPS) 10-4): Washington, D.C., National Institute of Standards and Technology" ;
+    owl:a bcube:thesaurusSubset .
+

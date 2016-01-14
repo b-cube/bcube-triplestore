@@ -1,0 +1,63 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:0ce8cccb-ddb8-4a51-9a11-2bdc31a73e59> owl:a foaf:Organization ;
+    foaf:name "Orange County Property Appraiser's Office" .
+
+<urn:uuid:6a580114-ff67-4990-a4bd-465930d05b13> bcube:hasType "theme" ;
+    bcube:hasValue "planningCadastre" ;
+    dc:partOf "Ramona GIS Inventory" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:6e8263d9-f67f-421a-9acc-106095a42e97> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-09-16T00:00:40.178Z" ;
+    bcube:lastUpdated "2015-09-16T00:00:40.178Z" ;
+    bcube:originatedFrom <urn:uuid:f6926acc-1027-46e3-8571-0df85a25c461> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:a3194c57-333c-4b5d-9b0d-aad8cac73fb0> .
+
+<urn:uuid:777aef3e-1920-44c9-8a0e-f9c53914b156> bcube:hasType "place" ;
+    bcube:hasValue "Florida",
+        "Orange County" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:a3194c57-333c-4b5d-9b0d-aad8cac73fb0> bcube:dateCreated "2015-09-16T00:00:40.178Z" ;
+    bcube:hasMetadataRecord <urn:uuid:6e8263d9-f67f-421a-9acc-106095a42e97> ;
+    bcube:lastUpdated "2015-09-16T00:00:40.178Z" ;
+    dc:conformsTo <urn:uuid:6a580114-ff67-4990-a4bd-465930d05b13>,
+        <urn:uuid:777aef3e-1920-44c9-8a0e-f9c53914b156> ;
+    dc:description "This PLSS Townships and Sections dataset, published at 1:600 (1in=50ft) scale, was produced all or in part from Field Survey/GPS information as of 2009. It is described as 'PLSS'. Data by this publisher are often provided in State Plane coordinate system; in a Transverse Mercator projection; The extent of these data is generally Orange County, FL. This metadata was auto-generated through the Ramona GIS Inventory System (www.gisinventory.net) and does not represent all information about this data set." ;
+    dc:spatial "POLYGON ((-81.65858459 28.34710884,-81.65858459 28.78612709,-80.86318207 28.78612709,-80.86318207 28.34710884,-81.65858459 28.34710884))" ;
+    dcterms:publisher <urn:uuid:0ce8cccb-ddb8-4a51-9a11-2bdc31a73e59> ;
+    dcterms:title "PLSS Townships and Sections, PLSS, Published in 2009, 1:600 (1in=50ft) scale, Orange County Property Appraiser's Office." ;
+    esip:eastBound "-80.86318207"^^xsd:float ;
+    esip:northBound "28.78612709"^^xsd:float ;
+    esip:southBound "28.34710884"^^xsd:float ;
+    esip:startDate "2009-01-01"^^xsd:date ;
+    esip:westBound "-81.65858459"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:f6926acc-1027-46e3-8571-0df85a25c461> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-09-16T00:00:40.178Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-09-16T00:00:40.178Z" ;
+    dc:identifier "urn:sha:e3e23672ade195943cdbb4db2c6f8d8c5117ea832e8d0c59f84adad7" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://gisinventory.net/metadata/gis-inventory-metadata-4794-14170.xml" .
+

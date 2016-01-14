@@ -1,0 +1,90 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:108ced0b-3c64-4237-b717-f597bba9c3a2> bcube:hasType "theme" ;
+    bcube:hasValue "Breaklines",
+        "Contours",
+        "DEM",
+        "Digital Terrain Model",
+        "Elevation Data",
+        "Flow vectors",
+        "LIDAR",
+        "Land Surface",
+        "Relief",
+        "Slope",
+        "Topography" ;
+    dc:partOf "FEMA NFIP Topic Category" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:34c0d566-4380-41cb-86a9-75caeec83b51> a "ISO 19115:2003/19139" ;
+    bcube:dateCreated "2015-08-09T12:43:40.027Z" ;
+    bcube:lastUpdated "2015-08-09T12:43:40.027Z" ;
+    bcube:originatedFrom <urn:uuid:ca8e27a3-2848-4c01-8b08-10a43f4a821e> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:48ad9975-0f84-4cbf-bb2e-8dee5913ee7f> .
+
+<urn:uuid:39a7992b-5d0e-42ca-874a-ece281919347> bcube:hasValue "elevation" ;
+    dc:partOf "IsoTopicCategories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:48ad9975-0f84-4cbf-bb2e-8dee5913ee7f> bcube:dateCreated "2015-08-09T12:43:40.027Z" ;
+    bcube:hasMetadataRecord <urn:uuid:34c0d566-4380-41cb-86a9-75caeec83b51> ;
+    bcube:lastUpdated "2015-08-09T12:43:40.027Z" ;
+    dc:conformsTo <urn:uuid:108ced0b-3c64-4237-b717-f597bba9c3a2>,
+        <urn:uuid:39a7992b-5d0e-42ca-874a-ece281919347>,
+        <urn:uuid:affbeb68-c694-48fd-b6e2-c898b3018811> ;
+    dc:description "Terrain data includes digital elevation models, LIDAR derived contours, LIDAR three-dimensional spot elevations and breaklines, field surveyed ground elevations and data tables for this study area." ;
+    dc:spatial "POLYGON ((-78.4 39.96,-78.4 40.8,-77.6 40.8,-77.6 39.96,-78.4 39.96))" ;
+    dcterms:references <urn:uuid:6e2623f7-175e-4be8-8ba6-eb78267b1c1b> ;
+    dcterms:title "TERRAIN DATA CAPTURE STANDARDS, Huntingdon PA, USA" ;
+    esip:eastBound "-77.6"^^xsd:float ;
+    esip:northBound "40.8"^^xsd:float ;
+    esip:southBound "39.96"^^xsd:float ;
+    esip:westBound "-78.4"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:6e2623f7-175e-4be8-8ba6-eb78267b1c1b> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-09T12:43:40.027Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-09T12:43:40.027Z" ;
+    dc:identifier "urn:sha:37c915397238031daced09ae0e2dd3bf54e84a6477f749c2cc9dcbdf" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://hazards.fema.gov" .
+
+<urn:uuid:affbeb68-c694-48fd-b6e2-c898b3018811> bcube:hasType "place" ;
+    bcube:hasValue "COMMUNITY HUNTINGDON County (all jurisdictions)",
+        "COUNTY HUNTINGDON",
+        "COUNTY-FIPS 061",
+        "FEMA-CID 42061C",
+        "REGION 3",
+        "STATE PA" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:ca8e27a3-2848-4c01-8b08-10a43f4a821e> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-09T12:43:40.027Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-09T12:43:40.027Z" ;
+    dc:identifier "urn:sha:8f2b1a786e48fc3ee03febbd33de9fb4e71a8f53d33452fdba28d434" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "https://catalog.data.gov/harvest/object/17c101bf-9786-4892-a208-0d84ab0a1907" .
+

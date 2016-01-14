@@ -1,0 +1,101 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:29666d6e-a2e4-471f-9b7f-0830c90153be> bcube:hasType "theme" ;
+    bcube:hasValue "Earth Science > Oceans > Ocean Pressure > Water Pressure",
+        "Earth Science > Oceans > Ocean Temperature > Water Temperature",
+        "Earth Science > Oceans > Salinity/Density > Conductivity",
+        "Earth Science > Oceans > Salinity/Density > Density",
+        "Earth Science > Oceans > Salinity/Density > Salinity" ;
+    dc:partOf "GCMD Science Keywords" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:3e0f25a3-0932-4800-8bde-814eb5cd30a0> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-10-29T16:08:53.567Z" ;
+    bcube:lastUpdated "2015-10-29T16:08:53.567Z" ;
+    bcube:originatedFrom <urn:uuid:f9face4a-f3cf-4cc1-9ef3-01fc63270ea2> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:c227d100-5a3a-42b5-9bac-cd7da3aa38b8> .
+
+<urn:uuid:4725d9c3-8d57-475c-8a46-fcf13319722f> owl:a foaf:Organization ;
+    foaf:name "ERDDAP, version 1.64, at Pacific Islands Ocean Ocean Observing System (PacIOOS)" .
+
+<urn:uuid:64036f55-3c12-48e8-a289-53736e7da024> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-10-29T16:08:53.567Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-10-29T16:08:53.567Z" ;
+    dc:identifier "urn:sha:9e2a0817e54075c8e7434e00732a5f7e6767ee8c673031b61800cf6c" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://oos.soest.hawaii.edu/erddap/tabledap/sg139_7.graph" .
+
+<urn:uuid:b6278715-73a3-48cc-8729-66ab397a5faf> bcube:hasType "theme" ;
+    bcube:hasValue "depth",
+        "latitude",
+        "longitude",
+        "sea_water_density",
+        "sea_water_electrical_conductivity",
+        "sea_water_pressure",
+        "sea_water_salinity",
+        "sea_water_temperature",
+        "time" ;
+    dc:partOf "CF-1.6" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:c227d100-5a3a-42b5-9bac-cd7da3aa38b8> bcube:dateCreated "2015-10-29T16:08:53.567Z" ;
+    bcube:hasMetadataRecord <urn:uuid:3e0f25a3-0932-4800-8bde-814eb5cd30a0> ;
+    bcube:lastUpdated "2015-10-29T16:08:53.567Z" ;
+    dc:conformsTo <urn:uuid:29666d6e-a2e4-471f-9b7f-0830c90153be>,
+        <urn:uuid:b6278715-73a3-48cc-8729-66ab397a5faf> ;
+    dc:description "As a part of PacIOOS, ocean gliders provide very detailed information about the physical and chemical condition of the waters around the Hawaiian Islands. Additionally, these data get used in computer models to make predictions about currents. Ocean gliders are small, free-swimming, unmanned vehicles that can cruise the ocean for several months gathering information about the temperature, salinity, and other water properties between the surface and 1000 m depth. A pressure sensor on the glider is able to record the depth throughout the dive. Because gliders are unmanned, they communicate with scientists on land when they are at the surface using an antenna on the end of the glider. The SeaGlider autonomous underwater vehicle (AUV) was designed at the University of Washington (UW) Applied Physics Laboratory (APL). These data are taken from Mission 7 of SeaGlider 139." ;
+    dc:spatial "POLYGON ((-158.0652 20.84706,-158.0652 21.2755,-157.7038 21.2755,-157.7038 20.84706,-158.0652 20.84706))" ;
+    dcterms:publisher <urn:uuid:4725d9c3-8d57-475c-8a46-fcf13319722f> ;
+    dcterms:references <urn:uuid:64036f55-3c12-48e8-a289-53736e7da024>,
+        <urn:uuid:cf23bf99-8526-4e60-943c-191880443abc> ;
+    dcterms:title "PacIOOS Ocean Gliders: SeaGlider 139: Mission 7" ;
+    esip:eastBound "-157.7038"^^xsd:float ;
+    esip:endDate "2010-07-14"^^xsd:date ;
+    esip:northBound "21.2755"^^xsd:float ;
+    esip:southBound "20.84706"^^xsd:float ;
+    esip:startDate "2010-04-12"^^xsd:date ;
+    esip:westBound "-158.0652"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:cf23bf99-8526-4e60-943c-191880443abc> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-10-29T16:08:53.567Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-10-29T16:08:53.567Z" ;
+    dc:identifier "urn:sha:854b52bf9e1931ecbe32abd2bf2f0576303822d4726ee64abe815d9a" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://oos.soest.hawaii.edu/erddap/tabledap/sg139_7.html" .
+
+<urn:uuid:f9face4a-f3cf-4cc1-9ef3-01fc63270ea2> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-10-29T16:08:53.567Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-10-29T16:08:53.567Z" ;
+    dc:identifier "urn:sha:c62fc6270a604c357843dffb2765309b14ccecf4deaa7adfaf43964d" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://oos.soest.hawaii.edu/erddap/metadata/fgdc/xml/sg139_7_fgdc.xml" .
+

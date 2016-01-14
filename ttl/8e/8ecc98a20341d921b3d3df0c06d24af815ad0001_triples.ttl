@@ -1,0 +1,80 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:363b8496-e785-4046-ade7-cc0aca82b562> bcube:hasType "theme" ;
+    bcube:hasValue "urban growth" ;
+    dc:partOf "keyword" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:39c0de40-ae85-4c90-b280-c1361fa72a9e> bcube:dateCreated "2015-08-05T01:29:54.487Z" ;
+    bcube:hasMetadataRecord <urn:uuid:9bcf3196-b74d-4641-b1e5-8492376ee196> ;
+    bcube:lastUpdated "2015-08-05T01:29:54.487Z" ;
+    dc:conformsTo <urn:uuid:363b8496-e785-4046-ade7-cc0aca82b562>,
+        <urn:uuid:b95aa781-226f-43d7-a870-0ed0e1d4cbe8> ;
+    dc:description "50 year Projected Urban Growth scenarios. Base year is 2000. Projected year in this dataset is 2020." ;
+    dc:spatial "POLYGON ((-123.557869 32.437212,-123.557869 39.496325,-114.023453 39.496325,-114.023453 32.437212,-123.557869 32.437212))" ;
+    dcterms:publisher <urn:uuid:e73730f7-4b6d-440b-b329-e79445f34c3d> ;
+    dcterms:references <urn:uuid:a06ab8ba-82bf-475b-8c7c-d6e67b7136a2> ;
+    dcterms:title "Urban Growth Projected 2050" ;
+    esip:eastBound "-114.023453"^^xsd:float ;
+    esip:northBound "39.496325"^^xsd:float ;
+    esip:southBound "32.437212"^^xsd:float ;
+    esip:westBound "-123.557869"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:9bcf3196-b74d-4641-b1e5-8492376ee196> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-08-05T01:29:54.487Z" ;
+    bcube:lastUpdated "2015-08-05T01:29:54.487Z" ;
+    bcube:originatedFrom <urn:uuid:d5d61e40-e1b3-47ad-8feb-88148df297ab> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:39c0de40-ae85-4c90-b280-c1361fa72a9e> .
+
+<urn:uuid:a06ab8ba-82bf-475b-8c7c-d6e67b7136a2> dcterms:references <urn:uuid:f5054f73-1445-435c-8932-907f44d92f60> ;
+    owl:a bibo:WebPage .
+
+<urn:uuid:b95aa781-226f-43d7-a870-0ed0e1d4cbe8> bcube:hasType "theme" ;
+    bcube:hasValue "Demographics",
+        "Planning & Cadastre Planning & Development",
+        "Population",
+        "Society" ;
+    dc:partOf "ceres:themes" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:d5d61e40-e1b3-47ad-8feb-88148df297ab> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-05T01:29:54.487Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-05T01:29:54.487Z" ;
+    dc:identifier "urn:sha:0d38c3935b2f69748d73a82b61cc1ad2cd0980fb301b47f95fbc46f8" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "https://catalog.data.gov/harvest/object/ba8d7f01-db6a-4017-8f79-8c2b25b13818/original" .
+
+<urn:uuid:e73730f7-4b6d-440b-b329-e79445f34c3d> owl:a foaf:Organization ;
+    foaf:name "" .
+
+<urn:uuid:f5054f73-1445-435c-8932-907f44d92f60> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-05T01:29:54.487Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-05T01:29:54.487Z" ;
+    dc:identifier "urn:sha:29d9c2be6d11b7cdf03791d2e07eccd9c462da521987a6e8975c501f" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://projects.atlas.ca.gov/frs/download.php/531/urban2050_ca.zip" .
+

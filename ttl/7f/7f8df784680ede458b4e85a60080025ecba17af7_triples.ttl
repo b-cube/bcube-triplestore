@@ -1,0 +1,94 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:10f0138d-7489-44f4-81e1-3921304fa5e1> bcube:hasType "temporal" ;
+    bcube:hasValue "Mesozoic",
+        "Paleozoic",
+        "Quaternary",
+        "Tertiary" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:17749a0a-91be-4e78-bddf-ae6ad775ba4f> a "ISO 19115:2003/19139" ;
+    bcube:dateCreated "2015-11-15T04:12:25.555Z" ;
+    bcube:lastUpdated "2015-11-15T04:12:25.555Z" ;
+    bcube:originatedFrom <urn:uuid:e72794de-fc37-4c60-b136-131aa13496e6> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:85e38347-6132-40a0-80db-36d9b2065a7a> .
+
+<urn:uuid:70a87cca-39f2-441f-8a85-ddc5db123d0f> bcube:hasType "theme" ;
+    bcube:hasValue "Bolsa Quartzite",
+        "Coconino Sandstone",
+        "Diabase",
+        "Kaibab Limestone",
+        "Moenkopi Formation",
+        "Redwall Limestone",
+        "Socorro Granite",
+        "Socorro Mine",
+        "Supai Formation",
+        "bedrock",
+        "core complex" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:85e38347-6132-40a0-80db-36d9b2065a7a> bcube:dateCreated "2015-11-15T04:12:25.555Z" ;
+    bcube:hasMetadataRecord <urn:uuid:17749a0a-91be-4e78-bddf-ae6ad775ba4f> ;
+    bcube:lastUpdated "2015-11-15T04:12:25.555Z" ;
+    dc:conformsTo <urn:uuid:10f0138d-7489-44f4-81e1-3921304fa5e1>,
+        <urn:uuid:70a87cca-39f2-441f-8a85-ddc5db123d0f>,
+        <urn:uuid:894188f4-08b8-46e3-b942-c519d4df5737>,
+        <urn:uuid:c26dcbb8-fc3c-407e-a15c-60f6fe48632e> ;
+    dc:description "Geologic map of bedrock of the Western Harquahala Mountains of west-central Arizona." ;
+    dc:identifier "MM-76-A" ;
+    dc:spatial "POLYGON ((-113.492 33.7221,-113.492 33.7952,-113.409 33.7952,-113.409 33.7221,-113.492 33.7221))" ;
+    dcterms:references <urn:uuid:c119c391-7dab-47ee-8000-e61b9c42857d> ;
+    dcterms:title "Geologic Map and Sections of a Portion of the Western Harquahala Mountains, Arizona" ;
+    esip:eastBound "-113.409"^^xsd:float ;
+    esip:northBound "33.7952"^^xsd:float ;
+    esip:southBound "33.7221"^^xsd:float ;
+    esip:westBound "-113.492"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:894188f4-08b8-46e3-b942-c519d4df5737> bcube:hasType "place" ;
+    bcube:hasValue "Maricopa County",
+        "Socorro Peak",
+        "west-central Arizona" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:c119c391-7dab-47ee-8000-e61b9c42857d> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-15T04:12:25.555Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-15T04:12:25.555Z" ;
+    dc:identifier "urn:sha:e3481e4d728a39eec89a53bf77bc7c6531cc7eb92924df6ab7317301" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://repository.azgs.az.gov/uri_gin/azgs/dlio/1409" .
+
+<urn:uuid:c26dcbb8-fc3c-407e-a15c-60f6fe48632e> bcube:hasValue "geoscientificInformation" ;
+    dc:partOf "IsoTopicCategories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:e72794de-fc37-4c60-b136-131aa13496e6> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-15T04:12:25.555Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-15T04:12:25.555Z" ;
+    dc:identifier "urn:sha:94523c9b89bfc0460ff7cc78290ac7e9efb2d6581980d6b184baaf87" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://repository.azgs.az.gov/uri_gin/azgs/dlio/1409/iso19139.xml" .
+

@@ -1,0 +1,62 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:1655a7dc-5f9c-4b23-8bf2-709004b5f6fd> a "OGC:WMS" ;
+    bcube:contains <urn:uuid:d1d414f9-a44a-411f-99ad-61a0a296d724> ;
+    bcube:dateCreated "2015-06-29T21:16:55.795Z" ;
+    bcube:lastUpdated "2015-06-29T21:16:55.795Z" ;
+    bcube:originatedFrom <urn:uuid:88dd9590-a125-419b-ab78-9e90036831ec> ;
+    dc:conformsTo <urn:uuid:18d2254f-ffd9-480c-9dc5-8b07c8de2db9> ;
+    dc:description "WellHeaders in the state of Missouri" ;
+    owl:a bcube:service .
+
+<urn:uuid:18d2254f-ffd9-480c-9dc5-8b07c8de2db9> bcube:hasValue "wells, well depth, geothermal, lithology" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:88dd9590-a125-419b-ab78-9e90036831ec> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-06-29T21:16:55.795Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-06-29T21:16:55.795Z" ;
+    dc:identifier "urn:sha:0be3211368b006d81e0e79dae8464254de7f6ee1244b318cd6c71c39" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://geothermal.isgs.illinois.edu/arcgis/services/aasggeothermal/MOWellHeaders/MapServer/WMSServer?request=GetCapabilities&service=WMS" .
+
+<urn:uuid:d1d414f9-a44a-411f-99ad-61a0a296d724> bcube:dateCreated "2015-06-29T21:16:55.795Z" ;
+    bcube:lastUpdated "2015-06-29T21:16:55.795Z" ;
+    dc:description "This layer contains data describing well headers in the state of Missouri, obtained by the AASG for the Geothermal Data Project. The data table includes general information on the location of the borehole, well construction information, location uncertainty and remarks. Information sources are included in the dataset. The HeaderURI for a particular borehole is the cross-referencing link (foreign key) used to associate the borehole with web based information on the well construction, pictures or other information, specific to one feature. The data is displayed using a circle with a transparent center. Layer files containing the symbology for these data layers can be found in the AASG repository at <a href=\"http://repository.stategeothermaldata.org/repository/resource/98ddf901b9782a25982e01af3b068fdc/\">http://repository.stategeothermaldata.org/repository/resource/98ddf901b9782a25982e01af3b068fdc/</a>. The original data and metadata can be viewed or downloaded from the AASG repository at <a href=\"http://repository.stategeothermaldata.org/repository/resource/50ec3aefb656b70647f32e38bc01bf17/\">http://repository.stategeothermaldata.org/repository/resource/50ec3aefb656b70647f32e38bc01bf17/</a>." ;
+    dc:spatial "POLYGON ((-95.64243 36.04034,-95.64243 40.60638,-89.254792 40.60638,-89.254792 36.04034,-95.64243 36.04034))" ;
+    dc:title "Wellheader" ;
+    dcterms:references <urn:uuid:fcae9613-d17e-4622-87ed-ea7e2c493865> ;
+    esip:eastBound "-89.254792"^^xsd:float ;
+    esip:northBound "40.60638"^^xsd:float ;
+    esip:southBound "36.04034"^^xsd:float ;
+    esip:westBound "-95.64243"^^xsd:float ;
+    owl:a bcube:Layer .
+
+<urn:uuid:fcae9613-d17e-4622-87ed-ea7e2c493865> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-06-29T21:16:55.795Z" ;
+    bcube:hasConfidence "Not Sure" ;
+    bcube:hasUrlSource "Generated" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-06-29T21:16:55.795Z" ;
+    dc:identifier "urn:sha:6f7c8cfe1750a9f0f6dd1ad1ba027d22e10633d5cf2730453c7c97aa" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://geothermal.isgs.illinois.edu/arcgis/services/aasggeothermal/MOWellHeaders/MapServer/WMSServer?layers=Wellheader&width=500&version=1.3.0&bbox=-95.64243%2C36.04034%2C-89.254792%2C40.60638&service=WMS&format=image%2Fpng&styles=&crs=CRS%3A84&request=GetMap&height=500" .
+

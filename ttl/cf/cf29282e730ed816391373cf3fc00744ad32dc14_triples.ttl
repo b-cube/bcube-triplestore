@@ -1,0 +1,64 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:1f28a030-c1b2-4605-864e-88ecfe386be8> owl:a foaf:Organization ;
+    foaf:name "" .
+
+<urn:uuid:3ded8673-b082-4620-ab8e-3d32353ce670> bcube:hasType "theme" ;
+    bcube:hasValue "wastewater" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:6237eb2f-ec50-4360-a483-3ac46c4f5cef> bcube:hasType "place" ;
+    bcube:hasValue "Colorado",
+        "Denver",
+        "Denver County",
+        "USA" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:88087205-e365-4e14-8d08-44697fde4c7a> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-10-17T10:54:24.543Z" ;
+    bcube:lastUpdated "2015-10-17T10:54:24.543Z" ;
+    bcube:originatedFrom <urn:uuid:e928d965-244c-4b5d-851c-e0189bf600dc> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:a1c150fe-0d86-4908-9089-bb589801912e> .
+
+<urn:uuid:a1c150fe-0d86-4908-9089-bb589801912e> bcube:dateCreated "2015-10-17T10:54:24.543Z" ;
+    bcube:hasMetadataRecord <urn:uuid:88087205-e365-4e14-8d08-44697fde4c7a> ;
+    bcube:lastUpdated "2015-10-17T10:54:24.543Z" ;
+    dc:conformsTo <urn:uuid:3ded8673-b082-4620-ab8e-3d32353ce670>,
+        <urn:uuid:6237eb2f-ec50-4360-a483-3ac46c4f5cef> ;
+    dc:description "City and County of Denver Wastewater Management Storm Facility Data - Storm Major Basins." ;
+    dc:spatial "POLYGON ((-105.110139 39.612136,-105.110139 39.839927,-104.690292 39.839927,-104.690292 39.612136,-105.110139 39.612136))" ;
+    dcterms:publisher <urn:uuid:1f28a030-c1b2-4605-864e-88ecfe386be8> ;
+    dcterms:title "Storm Major Basins" ;
+    esip:eastBound "-104.690292"^^xsd:float ;
+    esip:northBound "39.839927"^^xsd:float ;
+    esip:southBound "39.612136"^^xsd:float ;
+    esip:westBound "-105.110139"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:e928d965-244c-4b5d-851c-e0189bf600dc> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-10-17T10:54:24.543Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-10-17T10:54:24.543Z" ;
+    dc:identifier "urn:sha:ad35019a532f845073c2047cd049c4a112034183d142cfb151b80479" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://data.denvergov.org/download/gis/storm_major_basins/metadata/storm_major_basins.xml" .
+

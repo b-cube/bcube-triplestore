@@ -1,0 +1,82 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:0a0fd14d-cc7e-4b61-83bc-f2e8cc326e20> bcube:hasValue "geoscientificInformation" ;
+    dc:partOf "IsoTopicCategories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:4bebc71b-557b-4184-a7c9-c90218904236> bcube:hasType "theme" ;
+    bcube:hasValue "development",
+        "geothermal",
+        "low-temperature",
+        "moderate-temperature",
+        "municipal" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:7df7d3a6-4e72-45a2-98e7-6e4b59af8992> bcube:dateCreated "2015-11-03T09:59:18.804Z" ;
+    bcube:hasMetadataRecord <urn:uuid:abe2c7d8-2c51-463c-80f4-1d97f777fb58> ;
+    bcube:lastUpdated "2015-11-03T09:59:18.804Z" ;
+    dc:conformsTo <urn:uuid:0a0fd14d-cc7e-4b61-83bc-f2e8cc326e20>,
+        <urn:uuid:4bebc71b-557b-4184-a7c9-c90218904236>,
+        <urn:uuid:97051dd7-44a7-4512-83a9-ee03989484b9> ;
+    dc:description "This document summarizes and explores geothermal wells in the Moana area up to 2001." ;
+    dc:spatial "POLYGON ((-119.87 39.53,-119.87 39.9,-119.67 39.9,-119.67 39.53,-119.87 39.53))" ;
+    dcterms:references <urn:uuid:acc30b7c-32f9-4e0d-9dcc-819d72e4f5f4> ;
+    dcterms:title "Moana Geothermal Area, Reno, Nevada - 2001 Update" ;
+    esip:eastBound "-119.67"^^xsd:float ;
+    esip:endDate "2001-09-01"^^xsd:date ;
+    esip:northBound "39.9"^^xsd:float ;
+    esip:southBound "39.53"^^xsd:float ;
+    esip:startDate "2001-09-01"^^xsd:date ;
+    esip:westBound "-119.87"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:97051dd7-44a7-4512-83a9-ee03989484b9> bcube:hasType "place" ;
+    bcube:hasValue "Moana",
+        "Nevada",
+        "United States",
+        "Washoe County" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:abe2c7d8-2c51-463c-80f4-1d97f777fb58> a "ISO 19115:2003/19139" ;
+    bcube:dateCreated "2015-11-03T09:59:18.804Z" ;
+    bcube:lastUpdated "2015-11-03T09:59:18.804Z" ;
+    bcube:originatedFrom <urn:uuid:c960c387-7279-4e6b-ac3a-0f5597180c17> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:7df7d3a6-4e72-45a2-98e7-6e4b59af8992> .
+
+<urn:uuid:acc30b7c-32f9-4e0d-9dcc-819d72e4f5f4> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-03T09:59:18.804Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-03T09:59:18.804Z" ;
+    dc:identifier "urn:sha:032a20ac110f766ff82852c6eb116fa1bb1f05d8ab325666aac2c8ed" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "ftp://ftp.nbmg.unr.edu/pub/Geothermal/11_Documents/Flynn_MoanaGeothermal_2001.pdf" .
+
+<urn:uuid:c960c387-7279-4e6b-ac3a-0f5597180c17> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-03T09:59:18.804Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-03T09:59:18.804Z" ;
+    dc:identifier "urn:sha:9d45ad69b2408349141bd57990f1cc0f132a5b2be8c4fa967cf0f951" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://repository.stategeothermaldata.org/resources/metadata/test-CSV-XML-tool/03e1d2ff-d892-4c51-aa44-c374a2251dd8.xml" .
+

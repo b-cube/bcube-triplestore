@@ -1,0 +1,88 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:10075a0c-e226-42e9-8010-f461b3b3a7b5> bcube:hasType "place" ;
+    bcube:hasValue "19165C",
+        "COUNTY SHELBY",
+        "COUNTY-FIPS 19165",
+        "FEMA-CID 19165C",
+        "REGION 7",
+        "STATE IA" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:10b5fe50-004d-43e5-b975-fa320d2786f5> bcube:hasType "theme" ;
+    bcube:hasValue "geoscientificInformation",
+        "imageryBaseMapsEarthCover",
+        "transportation" ;
+    dc:partOf "ISO 19115 Topic Category" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:2b2686a2-f5f8-40ca-b5d0-18737db3cd52> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-08-05T01:26:15.75Z" ;
+    bcube:lastUpdated "2015-08-05T01:26:15.75Z" ;
+    bcube:originatedFrom <urn:uuid:9ae62d40-9609-4426-aa1a-e5709ba071ca> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:76e11bdf-8f36-49a8-9f86-f81aa63d46ac> .
+
+<urn:uuid:527c4605-b60b-4cbe-a6e8-ea018c33dfb2> bcube:hasType "theme" ;
+    bcube:hasValue "Basemap" ;
+    dc:partOf "FEMA NFIP Topic Category" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:76e11bdf-8f36-49a8-9f86-f81aa63d46ac> bcube:dateCreated "2015-08-05T01:26:15.75Z" ;
+    bcube:hasMetadataRecord <urn:uuid:2b2686a2-f5f8-40ca-b5d0-18737db3cd52> ;
+    bcube:lastUpdated "2015-08-05T01:26:15.75Z" ;
+    dc:conformsTo <urn:uuid:10075a0c-e226-42e9-8010-f461b3b3a7b5>,
+        <urn:uuid:10b5fe50-004d-43e5-b975-fa320d2786f5>,
+        <urn:uuid:527c4605-b60b-4cbe-a6e8-ea018c33dfb2> ;
+    dc:description "Digital 4 band ortho imagery covering 41 counties in southwest Iowa was flown Spring 2009. Imagery was collected with Lecia ADS80-SH82 and ADS40-SH51 digital cameras at a flight height of 20'000 agl. 4Band imagery in tif format was rectified and cut into a tiled grid for the Iowa DNR. County mosaics were created in MrSid format using 3 bands." ;
+    dc:spatial "POLYGON ((-93.721829 41.846299,-93.721829 42.232687,-93.203484 42.232687,-93.203484 41.846299,-93.721829 41.846299))" ;
+    dcterms:publisher <urn:uuid:7da84979-ce2b-4ce2-826b-6304dc78aa57> ;
+    dcterms:references <urn:uuid:beb79f47-dca9-42ee-89f0-55bfa49338b6> ;
+    dcterms:title "Basemap Framework Submission for Shelby County IA" ;
+    esip:eastBound "-93.203484"^^xsd:float ;
+    esip:northBound "42.232687"^^xsd:float ;
+    esip:southBound "41.846299"^^xsd:float ;
+    esip:startDate "2009-04-17"^^xsd:date ;
+    esip:westBound "-93.721829"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:7da84979-ce2b-4ce2-826b-6304dc78aa57> owl:a foaf:Organization ;
+    foaf:name "Federal Emergency Management Agency" .
+
+<urn:uuid:9ae62d40-9609-4426-aa1a-e5709ba071ca> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-05T01:26:15.75Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-05T01:26:15.75Z" ;
+    dc:identifier "urn:sha:409e5bbb1948cac6da90a52995968ab0b9418c017b64627a62d29d1e" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "https://catalog.data.gov/harvest/object/92cea666-180d-488f-a58a-44e7a380f49a/original" .
+
+<urn:uuid:beb79f47-dca9-42ee-89f0-55bfa49338b6> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-05T01:26:15.75Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-05T01:26:15.75Z" ;
+    dc:identifier "urn:sha:37c915397238031daced09ae0e2dd3bf54e84a6477f749c2cc9dcbdf" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://hazards.fema.gov" .
+

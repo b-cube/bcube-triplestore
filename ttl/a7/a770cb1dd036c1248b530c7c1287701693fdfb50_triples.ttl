@@ -1,0 +1,89 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:4077de10-6764-4560-bf6c-09a55833616f> owl:a foaf:Organization ;
+    foaf:name "" .
+
+<urn:uuid:7d43e2df-5691-4f4e-b5d0-c7f2b410ea6a> bcube:hasType "theme" ;
+    bcube:hasValue "boundaries" ;
+    dc:partOf "ISO 19115 Topic Categories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:8b3ba4e9-50f8-4692-bfdb-ef139ba972ba> bcube:hasType "theme" ;
+    bcube:hasValue "Block",
+        "Census Block",
+        "County or equivalent entity",
+        "Polygon" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:9aedb06c-176e-41fa-a0a9-1d938b5eb995> bcube:hasType "place" ;
+    bcube:hasValue "01131",
+        "County or Equivalent Entity",
+        "U.S.",
+        "United States",
+        "Wilcox" ;
+    dc:partOf "FIPS Publication 5-2, FIPS Publication 6-4, FIPS Publication 8-6, FIPS Publication 9-1" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:9e089a20-a63e-4e41-b93a-61d06ddafd77> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-11-08T06:47:00.214Z" ;
+    bcube:lastUpdated "2015-11-08T06:47:00.214Z" ;
+    bcube:originatedFrom <urn:uuid:a1f20581-26da-4048-acad-29c64ba934a5> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:dc968843-243d-4f90-9a9e-d61a0dfdba28> .
+
+<urn:uuid:a1f20581-26da-4048-acad-29c64ba934a5> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-08T06:47:00.214Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-08T06:47:00.214Z" ;
+    dc:identifier "urn:sha:9c01e8378ce90228a5b20b0d66f4a3868dbbb4f5649de0856defb5b0" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://meta.geo.census.gov/data/existing/decennial/GEO/GPMB/TIGERline/fe_2007/tabblock/fe_2007_01131_tabblock_url.shp.xml" .
+
+<urn:uuid:b64a3e05-076e-4d66-9c28-c637612943c5> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-08T06:47:00.214Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-08T06:47:00.214Z" ;
+    dc:identifier "urn:sha:5530be0e40d0e83dd772eca20e8d0ce46015269ed049d7142d3767ad" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www2.census.gov/geo/tiger/TIGER2007FE/01_ALABAMA/01131_Wilcox/fe_2007_01131_tabblock.zip" .
+
+<urn:uuid:dc968843-243d-4f90-9a9e-d61a0dfdba28> bcube:dateCreated "2015-11-08T06:47:00.214Z" ;
+    bcube:hasMetadataRecord <urn:uuid:9e089a20-a63e-4e41-b93a-61d06ddafd77> ;
+    bcube:lastUpdated "2015-11-08T06:47:00.214Z" ;
+    dc:conformsTo <urn:uuid:7d43e2df-5691-4f4e-b5d0-c7f2b410ea6a>,
+        <urn:uuid:8b3ba4e9-50f8-4692-bfdb-ef139ba972ba>,
+        <urn:uuid:9aedb06c-176e-41fa-a0a9-1d938b5eb995> ;
+    dc:description "The TIGER/Line Shapefiles are an extract of selected geographic and cartographic information from the Census MAF/TIGER database. The Census MAF/TIGER database represents a seamless national file with no overlaps or gaps between parts. However, each TIGER/Line Shapefile is designed to stand alone as an independent data set or the shapefiles can be combined to cover the whole nation." ;
+    dc:spatial "POLYGON ((-87.667945 31.827123,-87.667945 32.269036,-86.856576 32.269036,-86.856576 31.827123,-87.667945 31.827123))" ;
+    dcterms:publisher <urn:uuid:4077de10-6764-4560-bf6c-09a55833616f> ;
+    dcterms:references <urn:uuid:b64a3e05-076e-4d66-9c28-c637612943c5> ;
+    dcterms:title "TIGER/Line Shapefile, 2007, county, Wilcox County, Block" ;
+    esip:eastBound "-86.856576"^^xsd:float ;
+    esip:endDate "2007-07-01"^^xsd:date ;
+    esip:northBound "32.269036"^^xsd:float ;
+    esip:southBound "31.827123"^^xsd:float ;
+    esip:startDate "2007-01-01"^^xsd:date ;
+    esip:westBound "-87.667945"^^xsd:float ;
+    owl:a dcat:Dataset .
+

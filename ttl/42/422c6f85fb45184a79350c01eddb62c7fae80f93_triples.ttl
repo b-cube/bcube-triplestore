@@ -1,0 +1,64 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:02687ed1-b162-4f5d-8396-3d7a5f70506c> bcube:hasType "place" ;
+    bcube:hasValue "California" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:237619e7-c831-4f8c-8152-5884c8901d1c> a "ISO 19115:2003/19139" ;
+    bcube:dateCreated "2015-09-07T16:05:03.815Z" ;
+    bcube:lastUpdated "2015-09-07T16:05:03.815Z" ;
+    bcube:originatedFrom <urn:uuid:6a164cc6-55bf-4e1b-8207-2120660df46e> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:39f33bc1-a9e9-4b4d-99e0-76bd1dee2a5d> .
+
+<urn:uuid:39f33bc1-a9e9-4b4d-99e0-76bd1dee2a5d> bcube:dateCreated "2015-09-07T16:05:03.815Z" ;
+    bcube:hasMetadataRecord <urn:uuid:237619e7-c831-4f8c-8152-5884c8901d1c> ;
+    bcube:lastUpdated "2015-09-07T16:05:03.815Z" ;
+    dc:conformsTo <urn:uuid:02687ed1-b162-4f5d-8396-3d7a5f70506c>,
+        <urn:uuid:b266b0ba-5a03-4273-9e1b-6e083d274cb9>,
+        <urn:uuid:bc447d29-087a-4a2d-b63e-fa4e56514ef7> ;
+    dc:description "This metadata layer shows the footprint of vegetation mapping projects completed in California that have used the Manual California of Vegetation ( MCV 1st edition) or the National Vegatation Classification Standards (MCV 2nd edition) as a basis. It provides basic information about each project" ;
+    dc:spatial "POLYGON ((-124.157914 32.437893,-124.157914 41.846905,-113.835508 41.846905,-113.835508 32.437893,-124.157914 32.437893))" ;
+    dcterms:title "Vegetation (MCV / NVCS) Mapping Projects - California [ds515]" ;
+    esip:eastBound "-113.835508"^^xsd:float ;
+    esip:northBound "41.846905"^^xsd:float ;
+    esip:southBound "32.437893"^^xsd:float ;
+    esip:westBound "-124.157914"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:6a164cc6-55bf-4e1b-8207-2120660df46e> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-09-07T16:05:03.815Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-09-07T16:05:03.815Z" ;
+    dc:identifier "urn:sha:f591c8cda4e8c8c0f125bd6c6eb84ba0f2d6e2ea77a03661d9fc28b9" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "https://catalog.data.gov/harvest/object/93ffbf6a-9663-46f5-8d2e-71bc9f892d9b" .
+
+<urn:uuid:b266b0ba-5a03-4273-9e1b-6e083d274cb9> bcube:hasType "theme" ;
+    bcube:hasValue "vegetation" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:bc447d29-087a-4a2d-b63e-fa4e56514ef7> bcube:hasValue "biota",
+        "environment",
+        "imageryBaseMapsEarthCover" ;
+    dc:partOf "IsoTopicCategories" ;
+    owl:a bcube:thesaurusSubset .
+

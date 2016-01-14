@@ -1,0 +1,94 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:3387953d-cc02-4082-a457-262d8974088a> owl:a foaf:Organization ;
+    foaf:name "Bureau of the Census" .
+
+<urn:uuid:3e9d9da5-5082-435e-b723-1712e7ef4bb7> bcube:hasType "theme" ;
+    bcube:hasValue "boundaries",
+        "society" ;
+    dc:partOf "ISO 19115 Topic Category" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:43b1733c-18db-4691-9215-b1b82a75e181> bcube:hasType "place" ;
+    bcube:hasValue "36003",
+        "Allegany" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:5988d5af-8899-4ddd-8a67-b1b3c42a7cb0> dcterms:references <urn:uuid:f02767a4-3c49-4d44-bf7a-f0783e118f66> ;
+    owl:a bibo:WebPage .
+
+<urn:uuid:7e0a2d30-10cc-46df-acb3-34f135f8013b> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-10-29T19:50:49.961Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-10-29T19:50:49.961Z" ;
+    dc:identifier "urn:sha:10ad6c1dca27dde8f428b74aa5e21da425d58dfe5a9d3cca780473b6" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://cugirmetadata.mannlib.cornell.edu/003cba.xml" .
+
+<urn:uuid:93cc6569-dd3f-4ccc-a718-b824e61a56e6> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-10-29T19:50:49.961Z" ;
+    bcube:lastUpdated "2015-10-29T19:50:49.961Z" ;
+    bcube:originatedFrom <urn:uuid:7e0a2d30-10cc-46df-acb3-34f135f8013b> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:c0c8240b-9f9d-4641-b857-f76f01f56908> .
+
+<urn:uuid:c0c8240b-9f9d-4641-b857-f76f01f56908> bcube:dateCreated "2015-10-29T19:50:49.961Z" ;
+    bcube:hasMetadataRecord <urn:uuid:93cc6569-dd3f-4ccc-a718-b824e61a56e6> ;
+    bcube:lastUpdated "2015-10-29T19:50:49.961Z" ;
+    dc:conformsTo <urn:uuid:3e9d9da5-5082-435e-b723-1712e7ef4bb7>,
+        <urn:uuid:43b1733c-18db-4691-9215-b1b82a75e181>,
+        <urn:uuid:da048050-44d5-4398-b392-84a55f940a41> ;
+    dc:description "These files are an extract of selected geographic and cartographic information from the 1995 TIGER/Line files detailing census blocks. This dataset includes census block numbers, water blocks, and current geography." ;
+    dc:spatial "POLYGON ((-78.309 41.998,-78.309 42.522,-77.723 42.522,-77.723 41.998,-78.309 41.998))" ;
+    dcterms:publisher <urn:uuid:3387953d-cc02-4082-a457-262d8974088a> ;
+    dcterms:references <urn:uuid:5988d5af-8899-4ddd-8a67-b1b3c42a7cb0> ;
+    dcterms:title "Census Blocks, Allegany County (ARC Export : 1998)" ;
+    esip:eastBound "-77.723"^^xsd:float ;
+    esip:northBound "42.522"^^xsd:float ;
+    esip:southBound "41.998"^^xsd:float ;
+    esip:startDate "1995-01-01"^^xsd:date ;
+    esip:westBound "-78.309"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:da048050-44d5-4398-b392-84a55f940a41> bcube:hasType "theme" ;
+    bcube:hasValue "Census Block Numbers",
+        "Census Blocks",
+        "Current Geography",
+        "Line Feature",
+        "Point Feature",
+        "Polygon Feature",
+        "TIGER/Line",
+        "Vector",
+        "Water Blocks" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:f02767a4-3c49-4d44-bf7a-f0783e118f66> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-10-29T19:50:49.961Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-10-29T19:50:49.961Z" ;
+    dc:identifier "urn:sha:74d73b1c862c0ddbf675cc5e7546a3ae4a1baad42fa6c430bfbeb150" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://cugir.mannlib.cornell.edu/bucketinfo.jsp?id=155" .
+

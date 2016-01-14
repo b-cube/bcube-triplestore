@@ -1,0 +1,89 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:07f44897-acef-4126-95cd-a5947a0c0a18> bcube:hasType "place" ;
+    bcube:hasValue "District of Columbia",
+        "United States",
+        "cities",
+        "counties",
+        "minor civil divisions",
+        "states" ;
+    dc:partOf "none" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:0abe9392-40cc-40bc-9144-124204489b93> bcube:hasType "theme" ;
+    bcube:hasValue "population",
+        "population estimates",
+        "statistics" ;
+    dc:partOf "none" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:5572a6ee-3b55-419e-9544-f69060b3c122> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-09T04:08:14.437Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-09T04:08:14.437Z" ;
+    dc:identifier "urn:sha:71d4330059d5d63176f99a30cc73d0e1a57075440126d9f5c01aec6c" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://meta.geo.census.gov/data/existing/demographic/POP/placeCounty/pop_2000plcntyEst_ISO.xml" .
+
+<urn:uuid:664c7442-a952-4fce-828d-490e521c4ea7> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-09T04:08:14.437Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-09T04:08:14.437Z" ;
+    dc:identifier "urn:sha:e5d88f027009f2647cbfa3928f7c11f99b4c5e1c9f12245cfdf1b1c1" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www.census.gov/population/www/estimates/countypop.html" .
+
+<urn:uuid:68234744-629f-4bb5-88b8-cc0abee48e3c> owl:a foaf:Organization ;
+    foaf:name "U.S. Dept. of Commerce Economic & Statistics Administration Census Bureau" .
+
+<urn:uuid:b36dc945-ff9b-4fe0-ad4c-56dc5159db0c> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-11-09T04:08:14.437Z" ;
+    bcube:lastUpdated "2015-11-09T04:08:14.437Z" ;
+    bcube:originatedFrom <urn:uuid:5572a6ee-3b55-419e-9544-f69060b3c122> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:e41bf960-6fb5-4018-96a1-0b0e6d333dfc> .
+
+<urn:uuid:e16be5ac-6c5e-4997-97f0-87b7ba26b68c> bcube:hasType "theme" ;
+    bcube:hasValue "society" ;
+    dc:partOf "ISO 19115 Topic Categories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:e41bf960-6fb5-4018-96a1-0b0e6d333dfc> bcube:dateCreated "2015-11-09T04:08:14.437Z" ;
+    bcube:hasMetadataRecord <urn:uuid:b36dc945-ff9b-4fe0-ad4c-56dc5159db0c> ;
+    bcube:lastUpdated "2015-11-09T04:08:14.437Z" ;
+    dc:conformsTo <urn:uuid:07f44897-acef-4126-95cd-a5947a0c0a18>,
+        <urn:uuid:0abe9392-40cc-40bc-9144-124204489b93>,
+        <urn:uuid:e16be5ac-6c5e-4997-97f0-87b7ba26b68c> ;
+    dc:description "This data product consists of 5 individual tables and 5 sets of tables. Two sets with county subdivision (minor civil division or MCD) data consist of 21 tables; one for each of the \"strong MCD states\" and one consisting of MCDs from all of the 20 strong MCD states. Three sets with incorporated place population or place and county subdivison estimates each consists of 52 tables; one for each state, one for the District of Columbia, and one for the United States. The tables together provide estimates of the population of places and county subdivisions and the population change from 1990 to 1999. Some tables provide rankings (state and national) of places and county subdivisions by size and population change. Annual time series estimates from 1990 to 1999 also are provided." ;
+    dc:spatial "POLYGON ((172.46087 18.91382599,172.46087 71.34294128,-66.98038483 71.34294128,-66.98038483 18.91382599,172.46087 18.91382599))" ;
+    dcterms:publisher <urn:uuid:68234744-629f-4bb5-88b8-cc0abee48e3c> ;
+    dcterms:references <urn:uuid:664c7442-a952-4fce-828d-490e521c4ea7> ;
+    dcterms:title "Place and County Subdivision Population Estimates" ;
+    esip:eastBound "-66.98038483"^^xsd:float ;
+    esip:endDate "1999-07-01"^^xsd:date ;
+    esip:northBound "71.34294128"^^xsd:float ;
+    esip:southBound "18.91382599"^^xsd:float ;
+    esip:startDate "1990-04-01"^^xsd:date ;
+    esip:westBound "172.46087"^^xsd:float ;
+    owl:a dcat:Dataset .
+

@@ -1,0 +1,108 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:174ade67-08aa-4896-8db7-3e1438c15ae3> bcube:hasType "theme" ;
+    bcube:hasValue "Geographic Information > Bathymetry" ;
+    dc:partOf "CoRIS Discovery Thesaurus" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:21956a96-94a4-4b58-9b69-812643eac5d4> bcube:hasType "theme" ;
+    bcube:hasValue "467",
+        "Benthic Habitat Mapping and Characterization in the Pacific Islands Region" ;
+    dc:partOf "CRCP Project" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:2ebbeeee-d9f9-4cba-93f1-f16a06e26452> bcube:hasType "place" ;
+    bcube:hasValue "COUNTRY/TERRITORY > Northern Mariana Islands > Agrihan Island > Agrihan Island (18N145E0002)",
+        "OCEAN BASIN > Pacific Ocean > Western Pacific Ocean > Agrihan Island > Agrihan Island (18N145E0002)" ;
+    dc:partOf "CoRIS Place Thesaurus" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:45ef14ca-087a-4350-84ee-a28e6e9d4691> bcube:hasType "theme" ;
+    bcube:hasValue "EARTH SCIENCE > Biosphere > Zoology > Corals > Reef Monitoring and Assessment > Remote Sensing > Satellite (digital scans) > World View-2",
+        "EARTH SCIENCE > Oceans > Bathymetry/Seafloor Topography > Bathymetry",
+        "EARTH SCIENCE > Oceans > Bathymetry/Seafloor Topography > Water Depth" ;
+    dc:partOf "CoRIS Theme Thesaurus" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:4a3bfb6f-1927-45e1-be9c-aff75a24938d> bcube:hasValue "elevation" ;
+    dc:partOf "IsoTopicCategories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:548ffa93-efb3-426e-b1d9-2502068f9157> bcube:hasType "theme" ;
+    bcube:hasValue "Bathymetry",
+        "Slope" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:8bc8a978-90a6-47e2-a1b2-dedd91a5674c> a "ISO 19115:2003/19139" ;
+    bcube:dateCreated "2015-08-05T08:01:54.783Z" ;
+    bcube:lastUpdated "2015-08-05T08:01:54.783Z" ;
+    bcube:originatedFrom <urn:uuid:df065e5c-2770-4558-a03b-745a444a15f4> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:d62cbbaf-73cf-4e86-8ace-d40c66ec7304> .
+
+<urn:uuid:c11b8b12-f8a0-4896-852e-f24d1fe9d00a> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-05T08:01:54.783Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-05T08:01:54.783Z" ;
+    dc:identifier "urn:sha:bdac915370b562b31ea20e479fbfb389cba4938d2b52e11f5e37eb1d" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "ftp://ftp.soest.hawaii.edu/pibhmc/website/data/cnmi-guam/bathymetry/agr_dball_2m.zip" .
+
+<urn:uuid:d62cbbaf-73cf-4e86-8ace-d40c66ec7304> bcube:dateCreated "2015-08-05T08:01:54.783Z" ;
+    bcube:hasMetadataRecord <urn:uuid:8bc8a978-90a6-47e2-a1b2-dedd91a5674c> ;
+    bcube:lastUpdated "2015-08-05T08:01:54.783Z" ;
+    dc:conformsTo <urn:uuid:174ade67-08aa-4896-8db7-3e1438c15ae3>,
+        <urn:uuid:21956a96-94a4-4b58-9b69-812643eac5d4>,
+        <urn:uuid:2ebbeeee-d9f9-4cba-93f1-f16a06e26452>,
+        <urn:uuid:45ef14ca-087a-4350-84ee-a28e6e9d4691>,
+        <urn:uuid:4a3bfb6f-1927-45e1-be9c-aff75a24938d>,
+        <urn:uuid:548ffa93-efb3-426e-b1d9-2502068f9157>,
+        <urn:uuid:f4a9f1c4-40e6-4820-9e9f-2409ce773fa4> ;
+    dc:description "Bathymetric data derived from a multispectral World View-2 satellite image mosaiced to provide near complete coverage of nearshore terrain around the islands. Bathymetry values shallower than ~20 m were derived by gauging the relative attenuation of coastal, blue, green and yellow spectral radiance as a function of depth. A multiple linear regression analysis of coastal, blue, green and yellow band spectral values against depth determined the variables of y-intercept, coastal,blue, green and yellow slope values. Variables then used in multivariate slope intercept formula to derive depth. Variables were adjusted to improve the statistical accuracy and spatial coverage of the final derived bathymetry product. Digital image processing to derive depths conducted with the ENVI 4.8 software program while data editing and integration was performed using ArcGIS 10. This data set is for the shelf environment of Agrihan Island, Mariana." ;
+    dc:spatial "POLYGON ((145.597 18.705,145.597 18.842,145.725 18.842,145.725 18.705,145.597 18.705))" ;
+    dcterms:references <urn:uuid:c11b8b12-f8a0-4896-852e-f24d1fe9d00a> ;
+    dcterms:title "Mosaic of bathymetry derived from multispectral WV-2 satellite imagery of Agrihan Island, Territory of Mariana, USA (NODC Accession 0126914)" ;
+    esip:eastBound "145.725"^^xsd:float ;
+    esip:endDate "2012-05-03"^^xsd:date ;
+    esip:northBound "18.842"^^xsd:float ;
+    esip:southBound "18.705"^^xsd:float ;
+    esip:startDate "2003-08-26"^^xsd:date ;
+    esip:westBound "145.597"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:df065e5c-2770-4558-a03b-745a444a15f4> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-05T08:01:54.783Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-05T08:01:54.783Z" ;
+    dc:identifier "urn:sha:6ecabad7f0da7def42b9d5cb21dba3755deb0abec29bd3640db18730" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www.coris.noaa.gov/metadata/records/CREDISO/AGR_Metadata_DBALL_2m_ISO.xml" .
+
+<urn:uuid:f4a9f1c4-40e6-4820-9e9f-2409ce773fa4> bcube:hasType "place" ;
+    bcube:hasValue "Agrihan Island",
+        "Commonwealth of the Northern Mariana Islands",
+        "United States of America" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+

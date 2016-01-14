@@ -1,0 +1,124 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:40af96f2-854c-4a03-84a7-982ea8c10c6e> bcube:hasType "theme" ;
+    bcube:hasValue "Earth Science > Atmosphere > Atmospheric Pressure > Surface Pressure",
+        "Earth Science > Atmosphere > Atmospheric Radiation > Longwave Radiation",
+        "Earth Science > Atmosphere > Atmospheric Radiation > Shortwave Radiation",
+        "Earth Science > Atmosphere > Atmospheric Temperature > Surface Air Temperature",
+        "Earth Science > Atmosphere > Atmospheric Water Vapor > Humidity",
+        "Earth Science > Atmosphere > Atmospheric Winds > Surface Winds",
+        "Earth Science > Atmosphere > Precipitation > Rain",
+        "Earth Science Services > Models > Weather Research/Forecast Models" ;
+    dc:partOf "GCMD Science Keywords" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:60f094d9-982f-4006-bcc8-ec4b2454bdcf> bcube:hasType "theme" ;
+    bcube:hasValue "air_temperature",
+        "eastward_wind",
+        "latitude",
+        "longitude",
+        "northward_wind",
+        "precipitation_flux",
+        "relative_humidity",
+        "sea_surface_temperature",
+        "surface_air_pressure",
+        "surface_downwelling_shortwave_flux",
+        "surface_net_downward_longwave_flux",
+        "time" ;
+    dc:partOf "CF-1.4" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:69cb8ce2-3496-4101-9a40-edc40a51a864> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-11-01T02:11:54.404Z" ;
+    bcube:lastUpdated "2015-11-01T02:11:54.404Z" ;
+    bcube:originatedFrom <urn:uuid:c08cdea6-8fc0-4ecd-8d7b-550874a2f573> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:7dd5da56-8686-4db0-9f5e-d887f0bd5d83> .
+
+<urn:uuid:7dd5da56-8686-4db0-9f5e-d887f0bd5d83> bcube:dateCreated "2015-11-01T02:11:54.404Z" ;
+    bcube:hasMetadataRecord <urn:uuid:69cb8ce2-3496-4101-9a40-edc40a51a864> ;
+    bcube:lastUpdated "2015-11-01T02:11:54.404Z" ;
+    dc:conformsTo <urn:uuid:40af96f2-854c-4a03-84a7-982ea8c10c6e>,
+        <urn:uuid:60f094d9-982f-4006-bcc8-ec4b2454bdcf> ;
+    dc:description "Weather Research and Forecasting (WRF) mesoscale numerical weather prediction model 7-day hourly forecast for the region surrounding the Hawaiian islands of Oahu, Maui, Molokai, Lanai, and Kahoolawe at approximately 2-km resolution. Uses the Advanced Research WRF (ARW) dynamical solver developed and maintained by the Mesoscale and Microscale Meteorology Division of the National Center for Atmospheric Research (NCAR). Model runs produced at the University of Hawaii by Yi-Leng Chen." ;
+    dc:spatial "POLYGON ((-159.12 20.2,-159.12 21.892,-155.64 21.892,-155.64 20.2,-159.12 20.2))" ;
+    dcterms:identifier "oos.soest.hawaii.edu:WRF_MO_Best" ;
+    dcterms:publisher <urn:uuid:a0d53f0b-f00b-4213-b42c-f73083653e5e> ;
+    dcterms:references <urn:uuid:b5ebd347-0691-45a3-8efe-1d4fbb24a55f>,
+        <urn:uuid:c5ddb13a-59e7-4a17-8b91-bc7fee36a45e>,
+        <urn:uuid:c5ffd52e-477d-4d7c-9d70-c88024907246> ;
+    dcterms:title "Weather Research and Forecasting (WRF) Regional Atmospheric Model: Maui-Oahu" ;
+    esip:eastBound "-155.64"^^xsd:float ;
+    esip:endDate "2015-11-07"^^xsd:date ;
+    esip:northBound "21.892"^^xsd:float ;
+    esip:southBound "20.2"^^xsd:float ;
+    esip:startDate "2010-05-14"^^xsd:date ;
+    esip:westBound "-159.12"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:a0d53f0b-f00b-4213-b42c-f73083653e5e> owl:a foaf:Organization ;
+    foaf:name "ERDDAP, version 1.64, at Pacific Islands Ocean Ocean Observing System (PacIOOS)" .
+
+<urn:uuid:b0597e27-bf51-41dd-866b-20dff3d639a4> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-01T02:11:54.404Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-01T02:11:54.404Z" ;
+    dc:identifier "urn:sha:8ae4738d3488b92ce8022a348c0f480c6a5627ace9de3bc54747aaf4" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://oos.soest.hawaii.edu/erddap/wms/WRF_MO_Best/request" .
+
+<urn:uuid:b5ebd347-0691-45a3-8efe-1d4fbb24a55f> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-01T02:11:54.404Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-01T02:11:54.404Z" ;
+    dc:identifier "urn:sha:46023566421934d8cba71931fc5313620ac159a44945a7264314858a" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://oos.soest.hawaii.edu/erddap/griddap/WRF_MO_Best.html" .
+
+<urn:uuid:c08cdea6-8fc0-4ecd-8d7b-550874a2f573> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-01T02:11:54.404Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-01T02:11:54.404Z" ;
+    dc:identifier "urn:sha:d7dae32db5a1c39b03aa6803e20efc5f6418793bcf101684607f0f5c" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://oos.soest.hawaii.edu/erddap/metadata/fgdc/xml/WRF_MO_Best_fgdc.xml" .
+
+<urn:uuid:c5ddb13a-59e7-4a17-8b91-bc7fee36a45e> dcterms:references <urn:uuid:b0597e27-bf51-41dd-866b-20dff3d639a4> ;
+    owl:a bibo:WebPage .
+
+<urn:uuid:c5ffd52e-477d-4d7c-9d70-c88024907246> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-01T02:11:54.404Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-01T02:11:54.404Z" ;
+    dc:identifier "urn:sha:647d9952f3ca9ac587e5200634b850562323ba1c5ce5be7f496fedf9" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://oos.soest.hawaii.edu/erddap/griddap/WRF_MO_Best.graph" .
+

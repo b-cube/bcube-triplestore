@@ -1,0 +1,86 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:092df454-e1be-4566-ac5c-53d01dd699ff> owl:a foaf:Organization ;
+    foaf:name "Federal Emergency Management Agency" .
+
+<urn:uuid:548df9fd-dcbe-4ac9-8d8a-1d7ccea844eb> bcube:hasType "place" ;
+    bcube:hasValue "COMMUNITY Monroe County ALL JURISDICTIONS",
+        "COUNTY Monroe",
+        "COUNTY-FIPS 111",
+        "FEMA-CID 39111C",
+        "REGION 5",
+        "STATE OH" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:574ba500-f00e-4dff-80ff-bf15b0049574> bcube:dateCreated "2015-07-17T09:45:51.249Z" ;
+    bcube:hasMetadataRecord <urn:uuid:a7ec68f2-e5a8-42f5-ad8e-36d8591f796d> ;
+    bcube:lastUpdated "2015-07-17T09:45:51.249Z" ;
+    dc:conformsTo <urn:uuid:548df9fd-dcbe-4ac9-8d8a-1d7ccea844eb>,
+        <urn:uuid:8f0d2bc6-2e1d-4081-8c57-46d2a4cb2bbd>,
+        <urn:uuid:f1427a1d-afa5-4907-8b0f-cc6b51651440> ;
+    dc:description "FEMA Framework Basemap datasets comprise six of the seven FGDC themes of geospatial data that are used by most GIS applications (Note: the seventh framework theme, orthographic imagery, is packaged in a separate NFIP Metadata Profile): cadastral, geodetic control, governmental unit, transportation, general structures, hydrography (water areas & lines. These data include an encoding of the geographic extent of the features and a minimal number of attributes needed to identify and describe the features. (Source: Circular A16, p. 13)" ;
+    dc:spatial "POLYGON ((-81.905 39.162,-81.905 40.212,-80.352 40.212,-80.352 39.162,-81.905 39.162))" ;
+    dcterms:publisher <urn:uuid:092df454-e1be-4566-ac5c-53d01dd699ff> ;
+    dcterms:references <urn:uuid:e72a550a-8af3-4709-8f32-8b007c38b607> ;
+    dcterms:title "DIGITAL FLOOD INSURANCE RATE MAP DATABASE, MONROE COUNTY, OHIO, USA" ;
+    esip:eastBound "-80.352"^^xsd:float ;
+    esip:northBound "40.212"^^xsd:float ;
+    esip:southBound "39.162"^^xsd:float ;
+    esip:startDate "2008-11-24"^^xsd:date ;
+    esip:westBound "-81.905"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:5b199459-c43e-4b6b-a18d-2c9c3c59be07> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-07-17T09:45:51.249Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-07-17T09:45:51.249Z" ;
+    dc:identifier "urn:sha:7a2a56e2814e97bb6649f7ed072c9958b4dd3c65f02c78ec88d8d64d" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "https://catalog.data.gov/harvest/object/b3f38a37-d4e5-4696-bf83-33b1f52e2f62/original" .
+
+<urn:uuid:8f0d2bc6-2e1d-4081-8c57-46d2a4cb2bbd> bcube:hasType "theme" ;
+    bcube:hasValue "Basemap" ;
+    dc:partOf "FEMA NFIP Topic Category" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:a7ec68f2-e5a8-42f5-ad8e-36d8591f796d> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-07-17T09:45:51.249Z" ;
+    bcube:lastUpdated "2015-07-17T09:45:51.249Z" ;
+    bcube:originatedFrom <urn:uuid:5b199459-c43e-4b6b-a18d-2c9c3c59be07> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:574ba500-f00e-4dff-80ff-bf15b0049574> .
+
+<urn:uuid:e72a550a-8af3-4709-8f32-8b007c38b607> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-07-17T09:45:51.249Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-07-17T09:45:51.249Z" ;
+    dc:identifier "urn:sha:37c915397238031daced09ae0e2dd3bf54e84a6477f749c2cc9dcbdf" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://hazards.fema.gov" .
+
+<urn:uuid:f1427a1d-afa5-4907-8b0f-cc6b51651440> bcube:hasType "theme" ;
+    bcube:hasValue "transportation" ;
+    dc:partOf "ISO 19115 Topic Category" ;
+    owl:a bcube:thesaurusSubset .
+

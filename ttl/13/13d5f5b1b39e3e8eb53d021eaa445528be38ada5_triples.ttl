@@ -1,0 +1,107 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:123e5205-0186-401c-b795-577ad03f7449> bcube:hasType "theme" ;
+    bcube:hasValue "Elevation",
+        "LiDAR",
+        "lidar boundaries" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:238396fc-321d-42fa-8142-04f1456f4a57> bcube:hasType "place" ;
+    bcube:hasValue "Boise",
+        "Gem",
+        "Payette",
+        "Washington" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:4f8dea6c-e4ed-4a90-a07b-13d69a6d0a26> bcube:hasType "place" ;
+    bcube:hasValue "Gem Valley",
+        "Payette River" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:78af0f20-817f-4331-bcc8-03daeb462266> bcube:hasType "place" ;
+    bcube:hasValue "ID",
+        "Idaho" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:78c36e51-63cd-49e1-a1f6-61336f65a199> bcube:dateCreated "2015-08-08T09:01:48.218Z" ;
+    bcube:hasMetadataRecord <urn:uuid:943ecac3-3642-4c79-bd42-2b2f2f99aabe> ;
+    bcube:lastUpdated "2015-08-08T09:01:48.218Z" ;
+    dc:conformsTo <urn:uuid:123e5205-0186-401c-b795-577ad03f7449>,
+        <urn:uuid:238396fc-321d-42fa-8142-04f1456f4a57>,
+        <urn:uuid:4f8dea6c-e4ed-4a90-a07b-13d69a6d0a26>,
+        <urn:uuid:78af0f20-817f-4331-bcc8-03daeb462266>,
+        <urn:uuid:7de06714-bb5b-480f-8548-18f90d68e381> ;
+    dc:description "LiDAR data was acquiried for an area that consisted of approximately 228 square miles of the Payette River Valley, Idaho (covering Boise, Gem, Payette and Washington Counties). This data was collected for STARR as a part of FEMAs Risk MAP program." ;
+    dc:spatial "POLYGON ((-117.007317 43.822938,-117.007317 44.270132,-116.161131 44.270132,-116.161131 43.822938,-117.007317 43.822938))" ;
+    dcterms:publisher <urn:uuid:bc6cd2a3-7a7a-4178-9599-2fd4c81dca62> ;
+    dcterms:references <urn:uuid:a81d754c-8965-458b-8071-bf02f8046daf>,
+        <urn:uuid:f5595205-1b74-4600-8ae2-c36b555724ac> ;
+    dcterms:title "LiDAR Point Clouds Payette River and Gem Valley 2011" ;
+    esip:eastBound "-116.161131"^^xsd:float ;
+    esip:northBound "44.270132"^^xsd:float ;
+    esip:southBound "43.822938"^^xsd:float ;
+    esip:westBound "-117.007317"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:7de06714-bb5b-480f-8548-18f90d68e381> bcube:hasType "place" ;
+    bcube:hasValue "USA" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:943ecac3-3642-4c79-bd42-2b2f2f99aabe> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-08-08T09:01:48.218Z" ;
+    bcube:lastUpdated "2015-08-08T09:01:48.218Z" ;
+    bcube:originatedFrom <urn:uuid:cd0de902-9a20-4445-b01a-3a6522f48ed1> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:78c36e51-63cd-49e1-a1f6-61336f65a199> .
+
+<urn:uuid:a81d754c-8965-458b-8071-bf02f8046daf> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-08T09:01:48.218Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-08T09:01:48.218Z" ;
+    dc:identifier "urn:sha:59a5cebde5f08ce2a4477aca3ddeb837fad23b7efd1984f5ac8ad74b" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www.idaholidar.org/sites/default/files/Payette_Gem_Valley_0.kmz" .
+
+<urn:uuid:bc6cd2a3-7a7a-4178-9599-2fd4c81dca62> owl:a foaf:Organization ;
+    foaf:name "Idaho LiDAR Consortium" .
+
+<urn:uuid:cd0de902-9a20-4445-b01a-3a6522f48ed1> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-08T09:01:48.218Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-08T09:01:48.218Z" ;
+    dc:identifier "urn:sha:e93b3ecbea118d833a9ac0d1eba1b89beeb338939630b1653ee9e619" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://data.boisestate.edu/opendap/data/MILES/Old_XMLs_2015-04-21/Payette_Gem_LiDAR.shp.xml" .
+
+<urn:uuid:f5595205-1b74-4600-8ae2-c36b555724ac> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-08T09:01:48.218Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-08T09:01:48.218Z" ;
+    dc:identifier "urn:sha:96587ef2fc7428c2f8a7d71a03c88a38096e87589ec91b792ca4f0c0" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www.idaholidar.org/data/134" .
+

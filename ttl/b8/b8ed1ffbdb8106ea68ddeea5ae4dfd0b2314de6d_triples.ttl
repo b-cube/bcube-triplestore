@@ -1,0 +1,94 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:3f64f828-58a0-4690-9d3f-581bddfcfc2f> bcube:hasType "place" ;
+    bcube:hasValue "Atlantic",
+        "National",
+        "Pacific",
+        "United States" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:64ae6798-6999-4858-a8dd-7c342ce2b08d> bcube:hasType "theme" ;
+    bcube:hasValue "oceans" ;
+    dc:partOf "ISO 19115 Topic Category" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:705948fb-6c7e-4948-8cce-dd6dde4fc617> owl:a foaf:Organization ;
+    foaf:name "NOAA's Ocean Service, Office for Coastal Management (OCM)" .
+
+<urn:uuid:75ea83e9-527a-4666-bfef-49123bb40570> dcterms:references <urn:uuid:e686dc1d-29e6-4bea-a168-069aea489161> ;
+    owl:a bibo:WebPage .
+
+<urn:uuid:887fbc4c-13d9-4d17-bacb-b7052b5a8231> bcube:hasType "theme" ;
+    bcube:hasValue "alternative energy",
+        "energy",
+        "military",
+        "ocean planning",
+        "oceans",
+        "offshore wind",
+        "renewable energy",
+        "wind" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:9dad29a4-3f70-420c-ac35-b5afa5b82809> bcube:dateCreated "2015-08-05T15:49:04.023Z" ;
+    bcube:hasMetadataRecord <urn:uuid:b6c349cc-c440-4371-8568-0aafc22dfaa8> ;
+    bcube:lastUpdated "2015-08-05T15:49:04.023Z" ;
+    dc:conformsTo <urn:uuid:3f64f828-58a0-4690-9d3f-581bddfcfc2f>,
+        <urn:uuid:64ae6798-6999-4858-a8dd-7c342ce2b08d>,
+        <urn:uuid:887fbc4c-13d9-4d17-bacb-b7052b5a8231> ;
+    dc:description "This data set represents the results of analyses conducted by the Department of Defense to assess the compatibility of offshore wind development with military assets and activities. The assessments were developed for the renewable energy task force process being led by the Bureau of Ocean Energy Management (BOEM). The task force process is being carried out as part of the offshore renewable energy rule that stems from authority granted to BOEM for leasing Outer Continental Shelf (OCS) lands for energy development and allows government agencies with an interest in activities on the OCS to provide information describing their existing activities. These data should not be used to infer compatibility or conflict between military assets or activities with any use other than offshore wind. The data set contains 4 categories of OCS lease blocks: No Restrictions - No significant conflicts with offshore wind development were identified. Site Specific Stipulations - Potential conflicts exist and may require site specific measures be developed to avoid or limit impacts to military assets or activities. Recommended Wind Exclusion - Significant conflicts exist between offshore wind and military assets or activities. Not Assessed - Areas without a red, yellow, or green color fill have not been assessed for compatibility with offshore wind." ;
+    dc:spatial "POLYGON ((-130.251636 23.817923,-130.251636 48.505897,-64.108329 48.505897,-64.108329 23.817923,-130.251636 23.817923))" ;
+    dcterms:publisher <urn:uuid:705948fb-6c7e-4948-8cce-dd6dde4fc617> ;
+    dcterms:references <urn:uuid:75ea83e9-527a-4666-bfef-49123bb40570> ;
+    dcterms:title "DOD Offshore Wind Mission Compatibility Assessments" ;
+    esip:eastBound "-64.108329"^^xsd:float ;
+    esip:northBound "48.505897"^^xsd:float ;
+    esip:southBound "23.817923"^^xsd:float ;
+    esip:startDate "2014-04-30"^^xsd:date ;
+    esip:westBound "-130.251636"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:b6c349cc-c440-4371-8568-0aafc22dfaa8> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-08-05T15:49:04.023Z" ;
+    bcube:lastUpdated "2015-08-05T15:49:04.023Z" ;
+    bcube:originatedFrom <urn:uuid:e6838556-2034-4e10-a1f4-9197f9b02f2c> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:9dad29a4-3f70-420c-ac35-b5afa5b82809> .
+
+<urn:uuid:e6838556-2034-4e10-a1f4-9197f9b02f2c> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-05T15:49:04.023Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-05T15:49:04.023Z" ;
+    dc:identifier "urn:sha:e9cbacf144b4c295fa80690f22800be1465f8fbfb14ba0bbb04ade9d" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://coast.noaa.gov/data/Documents/Metadata/MarineCadastre/harvest/DODOffshoreWindMissionCompatibilityAssessments.xml" .
+
+<urn:uuid:e686dc1d-29e6-4bea-a168-069aea489161> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-05T15:49:04.023Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-05T15:49:04.023Z" ;
+    dc:identifier "urn:sha:33bd9ea554197f8d5cacdb92c9d95862532dbb704927ee6201578241" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www.boem.gov/Oil-and-Gas-Energy-Program/Mapping-and-Data/Index.aspx" .
+

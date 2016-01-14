@@ -1,0 +1,86 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:00b76bd2-28ca-491c-ab80-d33adeede3f1> bcube:hasType "theme" ;
+    bcube:hasValue "hazardous material",
+        "leaking underground tanks" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:0121c23d-cb16-44b4-bb0f-6310f8ab94df> owl:a foaf:Organization ;
+    foaf:name "RIGIS" .
+
+<urn:uuid:32d16a96-3f90-4364-a90c-1a1c685b5a4e> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-10-18T06:26:51.616Z" ;
+    bcube:lastUpdated "2015-10-18T06:26:51.616Z" ;
+    bcube:originatedFrom <urn:uuid:dcb2f819-393e-46a6-b23e-a3cb7c78a4ae> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:65e0823d-d808-4857-b674-692bce418e07> .
+
+<urn:uuid:4396b837-0b49-40b4-9389-a1675535bd0c> bcube:hasType "place" ;
+    bcube:hasValue "New England",
+        "Northeast",
+        "Rhode Island",
+        "United States" ;
+    dc:partOf "none" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:65e0823d-d808-4857-b674-692bce418e07> bcube:dateCreated "2015-10-18T06:26:51.616Z" ;
+    bcube:hasMetadataRecord <urn:uuid:32d16a96-3f90-4364-a90c-1a1c685b5a4e> ;
+    bcube:lastUpdated "2015-10-18T06:26:51.616Z" ;
+    dc:conformsTo <urn:uuid:00b76bd2-28ca-491c-ab80-d33adeede3f1>,
+        <urn:uuid:4396b837-0b49-40b4-9389-a1675535bd0c>,
+        <urn:uuid:de1f8780-f0c3-46b5-95a7-4a98e98d002f> ;
+    dc:description "This dataset shows the location of storage tanks and associated piping used for petroleum and certain hazardous substances that have experienced leaks as determined by RIDEM" ;
+    dc:spatial "POLYGON ((-71.860899 41.168857,-71.860899 42.016057,-71.144033 42.016057,-71.144033 41.168857,-71.860899 41.168857))" ;
+    dcterms:publisher <urn:uuid:0121c23d-cb16-44b4-bb0f-6310f8ab94df> ;
+    dcterms:references <urn:uuid:82691dee-8753-495d-a38d-f17133c05c29> ;
+    dcterms:title "Leaking Underground Tanks in Rhode Island; LUSTs12" ;
+    esip:eastBound "-71.144033"^^xsd:float ;
+    esip:endDate "2012-12-18"^^xsd:date ;
+    esip:northBound "42.016057"^^xsd:float ;
+    esip:southBound "41.168857"^^xsd:float ;
+    esip:startDate "1992-01-01"^^xsd:date ;
+    esip:westBound "-71.860899"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:82691dee-8753-495d-a38d-f17133c05c29> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-10-18T06:26:51.616Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-10-18T06:26:51.616Z" ;
+    dc:identifier "urn:sha:3e9757e04fa95c82527ee0fdc0a805cd4b250717c66a15c20c338035" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www.edc.uri.edu/rigis" .
+
+<urn:uuid:dcb2f819-393e-46a6-b23e-a3cb7c78a4ae> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-10-18T06:26:51.616Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-10-18T06:26:51.616Z" ;
+    dc:identifier "urn:sha:b728d57f2f33f791e0be9cd230364f7ec1e7f86ecdc8c476b7ae4485" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "https://catalog.data.gov/harvest/object/3bab751d-eaae-45fe-abe8-afcbaf22fce8/original" .
+
+<urn:uuid:de1f8780-f0c3-46b5-95a7-4a98e98d002f> bcube:hasType "theme" ;
+    bcube:hasValue "environment" ;
+    dc:partOf "ISO 19115 Topic Category" ;
+    owl:a bcube:thesaurusSubset .
+

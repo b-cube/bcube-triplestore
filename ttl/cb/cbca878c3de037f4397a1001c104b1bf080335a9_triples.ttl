@@ -1,0 +1,98 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:12762af5-25f2-4b8a-a0f4-e7b1b0bef465> bcube:hasType "theme" ;
+    bcube:hasValue "2013",
+        "Boundaries",
+        "Cartographic Boundary",
+        "Census Tract",
+        "County",
+        "Generalized",
+        "Shapefile",
+        "State" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:176cf336-96dd-4f5f-8bc6-fa6228b10b9a> bcube:hasType "place" ;
+    bcube:hasValue "US",
+        "United States" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:1f5d72e3-eb30-4c5e-8400-b63501fa2726> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-06T02:38:40.842Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-06T02:38:40.842Z" ;
+    dc:identifier "urn:sha:17abfa476fb67b7004130277a8ef8acc4563711a855289bfba233c6b" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://meta.geo.census.gov/data/existing/decennial/GEO/CPMB/boundary/2014gz/SeriesCollection/ISO_SeriesCollection_cb_2013_ua10_500k.xml" .
+
+<urn:uuid:42c45f0d-8c45-4a15-8cfd-274f4d2498c8> a "ISO 19115:2003/19139" ;
+    bcube:dateCreated "2015-11-06T02:38:40.842Z" ;
+    bcube:lastUpdated "2015-11-06T02:38:40.842Z" ;
+    bcube:originatedFrom <urn:uuid:1f5d72e3-eb30-4c5e-8400-b63501fa2726> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:ab3b5dee-6dac-43b9-810b-368499da9306> .
+
+<urn:uuid:50742bb2-b9e3-4dee-91ab-a3497b58129a> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-06T02:38:40.842Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-06T02:38:40.842Z" ;
+    dc:identifier "urn:sha:552d895f7b0e92d9d25b67e216ffe712650b11818c00145292db459e" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www2.census.gov/geo/tiger/GENZ2013/cb_2013_us_ua10_500k.zip" .
+
+<urn:uuid:ab3b5dee-6dac-43b9-810b-368499da9306> bcube:dateCreated "2015-11-06T02:38:40.842Z" ;
+    bcube:hasMetadataRecord <urn:uuid:42c45f0d-8c45-4a15-8cfd-274f4d2498c8> ;
+    bcube:lastUpdated "2015-11-06T02:38:40.842Z" ;
+    dc:conformsTo <urn:uuid:12762af5-25f2-4b8a-a0f4-e7b1b0bef465>,
+        <urn:uuid:176cf336-96dd-4f5f-8bc6-fa6228b10b9a>,
+        <urn:uuid:f4ce1719-076d-4bee-8521-33e909f6e04e> ;
+    dc:description "The 2013 cartographic boundary shapefiles are simplified representations of selected geographic areas from the U.S. Census Bureau's Master Address File / Topologically Integrated Geographic Encoding and Referencing (MAF/TIGER) Database (MTDB). These boundary files are specifically designed for small-scale thematic mapping. When possible generalization is performed with the intent to maintain the hierarchical relationships among geographies and to maintain the alignment of geographies within a file set for a given year. Geographic areas may not align with the same areas from another year. Some geographies are available as nation-based shapefiles while others are available only as state-based files." ;
+    dc:spatial "POLYGON ((-179.231086 -14.601813,-179.231086 71.441059,179.859681 71.441059,179.859681 -14.601813,-179.231086 -14.601813))" ;
+    dcterms:references <urn:uuid:50742bb2-b9e3-4dee-91ab-a3497b58129a>,
+        <urn:uuid:ca95b62b-8fc0-4f3e-bd91-04389f5f80e8> ;
+    dcterms:title "2013 Cartographic Boundary File, 2010 Urban Area for United States, 1:500,000" ;
+    esip:eastBound "179.859681"^^xsd:float ;
+    esip:endDate "2014-04-30"^^xsd:date ;
+    esip:northBound "71.441059"^^xsd:float ;
+    esip:southBound "-14.601813"^^xsd:float ;
+    esip:startDate "2014-04-30"^^xsd:date ;
+    esip:westBound "-179.231086"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:ca95b62b-8fc0-4f3e-bd91-04389f5f80e8> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-06T02:38:40.842Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-06T02:38:40.842Z" ;
+    dc:identifier "urn:sha:a552ec971b26ccbcf3dd5a42b4c521740e244b4d5ec9f9c56e51dabe" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www.census.gov/geo/maps-data/data/tiger.html" .
+
+<urn:uuid:f4ce1719-076d-4bee-8521-33e909f6e04e> bcube:hasValue "boundaries" ;
+    dc:partOf "IsoTopicCategories" ;
+    owl:a bcube:thesaurusSubset .
+

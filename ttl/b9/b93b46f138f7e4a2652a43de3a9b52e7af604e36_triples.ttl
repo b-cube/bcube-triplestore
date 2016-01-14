@@ -1,0 +1,92 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:08daee75-068d-4dc1-b73d-84486a678384> owl:a foaf:Organization ;
+    foaf:name "Federal Emergency Management Agency" .
+
+<urn:uuid:265acae4-79bc-4c5f-b4a1-7c34c0f16d6e> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-07-29T19:07:58.68Z" ;
+    bcube:lastUpdated "2015-07-29T19:07:58.68Z" ;
+    bcube:originatedFrom <urn:uuid:6e42b096-8870-407b-957e-06eee4b50593> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:d20e214d-ef83-42d3-a6ee-d143a3820f2a> .
+
+<urn:uuid:3f7e1d48-8768-4147-9fca-3c0ebf4c3af6> bcube:hasType "theme" ;
+    bcube:hasValue "1-Percent-Annual-Chance Flood",
+        "Channel",
+        "DFIRM",
+        "Digital Flood Insurance Rate Map",
+        "Flood Hazard data",
+        "Hydrology" ;
+    dc:partOf "FEMA NFIP Topic Category" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:6e42b096-8870-407b-957e-06eee4b50593> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-07-29T19:07:58.68Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-07-29T19:07:58.68Z" ;
+    dc:identifier "urn:sha:5d6e1dcbbc45fbe9768ec71db6186b6a9089c062af3660f0c17c2c7b" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "https://catalog.data.gov/harvest/object/73dbf599-4e06-4bfe-b7ea-21e153143e3d/original" .
+
+<urn:uuid:b058d7fe-bd20-42a5-9e71-1a3182e8676a> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-07-29T19:07:58.68Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-07-29T19:07:58.68Z" ;
+    dc:identifier "urn:sha:37c915397238031daced09ae0e2dd3bf54e84a6477f749c2cc9dcbdf" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://hazards.fema.gov" .
+
+<urn:uuid:c4a69347-e4bf-4464-a0f9-93e8102aa2c2> bcube:hasType "theme" ;
+    bcube:hasValue "environment",
+        "inlandWaters" ;
+    dc:partOf "ISO 19115 Topic Category" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:d20e214d-ef83-42d3-a6ee-d143a3820f2a> bcube:dateCreated "2015-07-29T19:07:58.68Z" ;
+    bcube:hasMetadataRecord <urn:uuid:265acae4-79bc-4c5f-b4a1-7c34c0f16d6e> ;
+    bcube:lastUpdated "2015-07-29T19:07:58.68Z" ;
+    dc:conformsTo <urn:uuid:3f7e1d48-8768-4147-9fca-3c0ebf4c3af6>,
+        <urn:uuid:c4a69347-e4bf-4464-a0f9-93e8102aa2c2>,
+        <urn:uuid:f9e05d8a-2667-4cfd-b18f-e3271c25f331> ;
+    dc:description "Hydrology data include spatial datasets and data tables necessary for documenting the hydrologic procedures for estimating flood discharges for a flood insurance study, which includes the hydrologic data expected by FEMA for new riverline studies. (Source: FEMA Guidelines and Specifications, Appendix N)" ;
+    dc:spatial "POLYGON ((-121.37 39.27,-121.37 40.31,-119.56 40.31,-119.56 39.27,-121.37 39.27))" ;
+    dcterms:publisher <urn:uuid:08daee75-068d-4dc1-b73d-84486a678384> ;
+    dcterms:references <urn:uuid:b058d7fe-bd20-42a5-9e71-1a3182e8676a> ;
+    dcterms:title "DCS Hydrology, Sierra Valley TSDN for Plumas and Sierra Counties, CA" ;
+    esip:eastBound "-119.56"^^xsd:float ;
+    esip:northBound "40.31"^^xsd:float ;
+    esip:southBound "39.27"^^xsd:float ;
+    esip:startDate "2012-12-20"^^xsd:date ;
+    esip:westBound "-121.37"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:f9e05d8a-2667-4cfd-b18f-e3271c25f331> bcube:hasType "place" ;
+    bcube:hasValue "COMMUNITY Plumas County",
+        "COUNTY Plumas County",
+        "COUNTY-FIPS 063",
+        "FEMA-CID 06063C",
+        "REGION 09",
+        "STATE CA" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+

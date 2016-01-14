@@ -1,0 +1,80 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:152e6872-c025-4fb5-aaed-a8cd3ddefc8f> bcube:hasType "place" ;
+    bcube:hasValue "Global" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:419339ed-d5b3-4694-a828-28974fef2a0c> bcube:dateCreated "2015-10-30T19:12:03.613Z" ;
+    bcube:hasMetadataRecord <urn:uuid:4f177473-4923-40c6-b451-ab6e594e2449> ;
+    bcube:lastUpdated "2015-10-30T19:12:03.613Z" ;
+    dc:conformsTo <urn:uuid:152e6872-c025-4fb5-aaed-a8cd3ddefc8f>,
+        <urn:uuid:514d2e7f-be6e-465f-a69e-eab52b532221>,
+        <urn:uuid:afcbfe4b-61f8-4560-9197-41a9c6e59722> ;
+    dc:description "The dataset contains satellite-derived sea-surface ocean color (chlorophyll-a) measurements collected by means of the Moderate Resolution Imaging Spectroradiometer (MODIS) sensor onboard the NASA Aqua satellite. The data is available at weekly and monthly intervals at a spatial resolution of 0.05 degrees. The geographic coverage is global, and the temporal coverage ranges from 2002-present." ;
+    dc:spatial "POLYGON ((-180 -70,-180 70,180 70,180 -70,-180 -70))" ;
+    dcterms:identifier "gov.noaa.nmfs.inport:5694" ;
+    dcterms:publisher <urn:uuid:86429661-a5ba-4ce4-9eff-80215951788e> ;
+    dcterms:title "OW NASA MODIS Aqua Ocean Color" ;
+    esip:eastBound "180.0"^^xsd:float ;
+    esip:northBound "70.0"^^xsd:float ;
+    esip:southBound "-70.0"^^xsd:float ;
+    esip:startDate "2002-07-04"^^xsd:date ;
+    esip:westBound "-180.0"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:4f177473-4923-40c6-b451-ab6e594e2449> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-10-30T19:12:03.613Z" ;
+    bcube:lastUpdated "2015-10-30T19:12:03.613Z" ;
+    bcube:originatedFrom <urn:uuid:8aed1239-7d8b-48a1-a67c-3594f25826ff> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:419339ed-d5b3-4694-a828-28974fef2a0c> .
+
+<urn:uuid:514d2e7f-be6e-465f-a69e-eab52b532221> bcube:hasType "temporal" ;
+    bcube:hasValue "Daily",
+        "Monthly",
+        "Near Real-time Weekly",
+        "Weekly" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:86429661-a5ba-4ce4-9eff-80215951788e> owl:a foaf:Organization ;
+    foaf:name "" .
+
+<urn:uuid:8aed1239-7d8b-48a1-a67c-3594f25826ff> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-10-30T19:12:03.613Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-10-30T19:12:03.613Z" ;
+    dc:identifier "urn:sha:133555af975ebf2d27ddbd17029890f3fc6349db38192c0221a1d144" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "https://inport.nmfs.noaa.gov/inport/item/5694/fgdc" .
+
+<urn:uuid:afcbfe4b-61f8-4560-9197-41a9c6e59722> bcube:hasType "theme" ;
+    bcube:hasValue "Aqua",
+        "MODIS",
+        "NASA",
+        "Ocean Color",
+        "chlorophyll",
+        "ow",
+        "pifsc",
+        "remote sensing",
+        "satellite" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+

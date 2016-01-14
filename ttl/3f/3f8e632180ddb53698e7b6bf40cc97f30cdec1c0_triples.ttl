@@ -1,0 +1,79 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:2743fa01-88fa-4957-aa06-c5840d194eca> bcube:hasType "theme" ;
+    bcube:hasValue "barriers",
+        "biota",
+        "bridges",
+        "cascades",
+        "culverts",
+        "dams",
+        "environment",
+        "falls",
+        "fish passage",
+        "fish passage barriers",
+        "fords",
+        "geoscientificInformation",
+        "inlandWaters",
+        "tide gates",
+        "water diversions",
+        "weirs" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:44bdb1ba-2328-4a69-9366-31c162805abb> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-03-06T03:49:33.258Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-03-06T03:49:33.258Z" ;
+    dc:identifier "urn:sha:f6a40056af3374fb7c2ad74b664ee67529b79dbdd7c93bd158bb460a" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www.streamnet.org/gisdata/map_data_physical/SN_Barriers_201310_fgdc.xml" .
+
+<urn:uuid:64e7c7b8-fdb8-4212-9738-e1cd6068fa77> bcube:hasType "theme" ;
+    bcube:hasValue "biota",
+        "environment",
+        "inlandWaters",
+        "structure" ;
+    dc:partOf "ISO 19115 Topic Categories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:b809520a-f26f-4c89-bd4c-6fe910f478be> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-03-06T03:49:33.258Z" ;
+    bcube:lastUpdated "2015-03-06T03:49:33.258Z" ;
+    bcube:originatedFrom <urn:uuid:44bdb1ba-2328-4a69-9366-31c162805abb> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:d50ba324-3321-401b-9ad5-acd82c975145> .
+
+<urn:uuid:d2191000-10e8-45ad-89a5-fbb02c2538aa> owl:a foaf:Organization ;
+    foaf:name "" .
+
+<urn:uuid:d50ba324-3321-401b-9ad5-acd82c975145> bcube:dateCreated "2015-03-06T03:49:33.258Z" ;
+    bcube:hasMetadataRecord <urn:uuid:b809520a-f26f-4c89-bd4c-6fe910f478be> ;
+    bcube:lastUpdated "2015-03-06T03:49:33.258Z" ;
+    dc:conformsTo <urn:uuid:2743fa01-88fa-4957-aa06-c5840d194eca>,
+        <urn:uuid:64e7c7b8-fdb8-4212-9738-e1cd6068fa77> ;
+    dc:description "StreamNet's Potential Fish Passage Barrier dataset captures both natural and man-made in stream features that have the potential to block fish passage (culverts, dams, debris jams, cascades, falls, etc.). Where information exists, fish passage ability is captured. This dataset is maintained and updated on an annual or semi-annual basis. The OCTOBER, 2013 publication dataset includes 63,399 features across the states of Washington, Oregon, California and Idaho. Where possible, all barrier locations are georeferenced to StreamNet's regionally standardized routed hydrography layer (MSHv3.1) enabling comparison and analysis of barrier locations within the context of StreamNet's larger data holdings (fish counts, hatchery returns, redd counts, harvest records, generalized fish distribution, etc.,). These data are available for direct download as spatial data and may also be queried online using the StreamNet Data Query System." ;
+    dc:spatial "POLYGON ((-125.541357 32.370547,-125.541357 49.170714,-110.411554 49.170714,-110.411554 32.370547,-125.541357 32.370547))" ;
+    dcterms:publisher <urn:uuid:d2191000-10e8-45ad-89a5-fbb02c2538aa> ;
+    dcterms:title "StreamNet - Potential Fish Passage Barriers (October, 2013)" ;
+    esip:eastBound "-110.411554"^^xsd:float ;
+    esip:northBound "49.170714"^^xsd:float ;
+    esip:southBound "32.370547"^^xsd:float ;
+    esip:westBound "-125.541357"^^xsd:float ;
+    owl:a dcat:Dataset .
+

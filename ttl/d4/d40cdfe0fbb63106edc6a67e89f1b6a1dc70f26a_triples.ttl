@@ -1,0 +1,89 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:0311ac9c-a556-4e18-9093-697cc7eb91f7> owl:a foaf:Organization ;
+    foaf:name "Bureau of the Census" .
+
+<urn:uuid:09107f5e-2698-4dd2-96e3-473371ffc8f4> bcube:hasType "place" ;
+    bcube:hasValue "Broome County (N.Y.) -- Administrative and political divisions -- Maps.",
+        "Broome County (N.Y.) -- Maps.",
+        "New York (State)" ;
+    dc:partOf "LCSH" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:1e54df5d-1f52-43d2-94ed-6a72ea5b1cce> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-01T22:44:37.625Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-01T22:44:37.625Z" ;
+    dc:identifier "urn:sha:ce14ebede61ebc8df88c29032e938dbdaec93fb10394ad3970fd361b" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://cugirmetadata.mannlib.cornell.edu/007cya.xml" .
+
+<urn:uuid:4125f2bd-8562-406a-878f-f82d4d1c0c63> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-01T22:44:37.625Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-01T22:44:37.625Z" ;
+    dc:identifier "urn:sha:49a2df20a3232afa11e8d2361e772037239badcd47d0a335120d7ed8" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://cugir.mannlib.cornell.edu/bucketinfo.jsp?id=501" .
+
+<urn:uuid:55dd81e0-e228-40c4-8887-10798d28341a> bcube:hasType "theme" ;
+    bcube:hasValue "Counties",
+        "County Boundaries",
+        "Polygon Feature" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:607da56a-80df-4dda-8879-6a2dc6c74f44> bcube:hasType "theme" ;
+    bcube:hasValue "boundaries",
+        "society" ;
+    dc:partOf "ISO 19115 Topic Category" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:661ac57b-3ea3-40b7-a810-cd1b88b22d1c> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-11-01T22:44:37.625Z" ;
+    bcube:lastUpdated "2015-11-01T22:44:37.625Z" ;
+    bcube:originatedFrom <urn:uuid:1e54df5d-1f52-43d2-94ed-6a72ea5b1cce> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:85e36cea-31b3-4b40-88b1-1c2b5b54c8ea> .
+
+<urn:uuid:85e36cea-31b3-4b40-88b1-1c2b5b54c8ea> bcube:dateCreated "2015-11-01T22:44:37.625Z" ;
+    bcube:hasMetadataRecord <urn:uuid:661ac57b-3ea3-40b7-a810-cd1b88b22d1c> ;
+    bcube:lastUpdated "2015-11-01T22:44:37.625Z" ;
+    dc:conformsTo <urn:uuid:09107f5e-2698-4dd2-96e3-473371ffc8f4>,
+        <urn:uuid:55dd81e0-e228-40c4-8887-10798d28341a>,
+        <urn:uuid:607da56a-80df-4dda-8879-6a2dc6c74f44> ;
+    dc:description "These files are an extract of selected geographic and cartographic information from the 1995 TIGER/Line files detailing counties and statistically equivalent entities." ;
+    dc:spatial "POLYGON ((-76.13 41.998,-76.13 42.416,-75.36 42.416,-75.36 41.998,-76.13 41.998))" ;
+    dcterms:publisher <urn:uuid:0311ac9c-a556-4e18-9093-697cc7eb91f7> ;
+    dcterms:references <urn:uuid:8d273166-6bba-46b5-a866-184ed58ebe8a> ;
+    dcterms:title "County Boundaries, Broome County (ARC Export : 1998)" ;
+    esip:eastBound "-75.36"^^xsd:float ;
+    esip:northBound "42.416"^^xsd:float ;
+    esip:southBound "41.998"^^xsd:float ;
+    esip:startDate "1995-01-01"^^xsd:date ;
+    esip:westBound "-76.13"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:8d273166-6bba-46b5-a866-184ed58ebe8a> dcterms:references <urn:uuid:4125f2bd-8562-406a-878f-f82d4d1c0c63> ;
+    owl:a bibo:WebPage .
+

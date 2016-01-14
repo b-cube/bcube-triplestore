@@ -1,0 +1,80 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:1c6a3eae-d11b-415e-80c7-3127a38a46dd> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-11-02T15:51:51.41Z" ;
+    bcube:lastUpdated "2015-11-02T15:51:51.41Z" ;
+    bcube:originatedFrom <urn:uuid:4c1194d1-79cf-4ea7-9d03-d2bacf9f52a4> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:5de6dff3-ebbf-4480-afac-e3af5b9bbdd6> .
+
+<urn:uuid:4c1194d1-79cf-4ea7-9d03-d2bacf9f52a4> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-02T15:51:51.41Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-02T15:51:51.41Z" ;
+    dc:identifier "urn:sha:e2cacbb9ad82488bcca4020e31b344b39847d897654dab920f877719" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "https://inport.nmfs.noaa.gov/inport/item/3140/fgdc" .
+
+<urn:uuid:5a762424-a558-4e8c-832c-121c7298fa03> bcube:hasType "theme" ;
+    bcube:hasValue "DMSP",
+        "SSMI",
+        "direction",
+        "ow",
+        "pifsc",
+        "remote sensing",
+        "satellite",
+        "speed",
+        "wind" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:5de6dff3-ebbf-4480-afac-e3af5b9bbdd6> bcube:dateCreated "2015-11-02T15:51:51.41Z" ;
+    bcube:hasMetadataRecord <urn:uuid:1c6a3eae-d11b-415e-80c7-3127a38a46dd> ;
+    bcube:lastUpdated "2015-11-02T15:51:51.41Z" ;
+    dc:conformsTo <urn:uuid:5a762424-a558-4e8c-832c-121c7298fa03>,
+        <urn:uuid:812d83b1-3b04-4a9d-9ea1-64952075c31a>,
+        <urn:uuid:e3e3a66d-39c1-4a66-9562-0214053e1e40> ;
+    dc:description "The dataset contains satellite-derived wind speed and wind direction measurements collected by means of the SSM/I microwave radiometer onboard the NOAA DMSP satellite constellation. The data is available at 3-day and weekly intervals at a spatial resolution of 0.25 degrees. The geographic coverage is global, and the temporal coverage ranges from 2004-2009." ;
+    dc:spatial "POLYGON ((-180 -70,-180 70,180 70,180 -70,-180 -70))" ;
+    dcterms:identifier "gov.noaa.nmfs.inport:3140" ;
+    dcterms:publisher <urn:uuid:94a06ab5-6e82-47f0-bd90-a492ef789075> ;
+    dcterms:title "OW SSMI Wind Speed" ;
+    esip:eastBound "180.0"^^xsd:float ;
+    esip:endDate "2009-11-19"^^xsd:date ;
+    esip:northBound "70.0"^^xsd:float ;
+    esip:southBound "-70.0"^^xsd:float ;
+    esip:startDate "2004-09-29"^^xsd:date ;
+    esip:westBound "-180.0"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:812d83b1-3b04-4a9d-9ea1-64952075c31a> bcube:hasType "temporal" ;
+    bcube:hasValue "3-day",
+        "daily",
+        "weekly" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:94a06ab5-6e82-47f0-bd90-a492ef789075> owl:a foaf:Organization ;
+    foaf:name "" .
+
+<urn:uuid:e3e3a66d-39c1-4a66-9562-0214053e1e40> bcube:hasType "place" ;
+    bcube:hasValue "Global" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+

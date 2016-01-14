@@ -1,0 +1,71 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:1386d35e-0fd8-42ba-bf17-87943a5014ba> bcube:hasType "place" ;
+    bcube:hasValue "Franklin City",
+        "Southampton County",
+        "Virginia" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:56ddd28a-f195-4d20-8e08-3e0bbe69b7f6> bcube:dateCreated "2015-08-09T16:59:01.962Z" ;
+    bcube:hasMetadataRecord <urn:uuid:c5e159ad-0c87-4203-8979-7e73b2573432> ;
+    bcube:lastUpdated "2015-08-09T16:59:01.962Z" ;
+    dc:conformsTo <urn:uuid:1386d35e-0fd8-42ba-bf17-87943a5014ba>,
+        <urn:uuid:6ba97435-e9f1-4da7-b1ad-b58e9189a096>,
+        <urn:uuid:ef39a410-457e-49cd-8bae-716994d4b0f9> ;
+    dc:description "Dewberry collected LiDAR for ~3,341 square miles in various Virginia Counties, a part of Worcester County, and Hoopers Island. The acquisition was performed by Terrapoint. This metadata covers the LiDAR produced for the King William project area. The nominal pulse spacing for this project is 1.6 ft (0.5 meters). This project was collected with a sensor which collects intensity values for each discrete pulse extracted from the waveform. GPS Week Time, Intensity, Flightline and echo number attributes were provided for each LiDAR point. Dewberry used proprietary procedures to classify the LAS according to contract specifications: 1-Unclassified, 2-Ground, 7-Noise, 9-Water, 10-Ignored Ground due to breakline proximity, and 11-Withheld (reclassed to 15 by OCM). Dewberry produced 3D breaklines and combined these with the final LiDAR data to produce seamless hydro flattened DEMs for the 774 tiles (5000 ft x 5000 ft) that cover the project area." ;
+    dc:spatial "POLYGON ((-77.4991925 36.5376074,-77.4991925 37.0049261,-76.821323 37.0049261,-76.821323 36.5376074,-77.4991925 36.5376074))" ;
+    dcterms:title "South Counties - VA FEMA LiDAR" ;
+    esip:eastBound "-76.821323"^^xsd:float ;
+    esip:endDate "2011-10-27"^^xsd:date ;
+    esip:northBound "37.0049261"^^xsd:float ;
+    esip:southBound "36.5376074"^^xsd:float ;
+    esip:startDate "2011-04-19"^^xsd:date ;
+    esip:westBound "-77.4991925"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:6ba97435-e9f1-4da7-b1ad-b58e9189a096> bcube:hasValue "elevation" ;
+    dc:partOf "IsoTopicCategories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:7eda85a2-57ab-4609-b67a-a4b2c7a511df> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-09T16:59:01.962Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-09T16:59:01.962Z" ;
+    dc:identifier "urn:sha:cebb13f4e639794945b7aa49c46b67cc6d825c1fb4006b8347630dcb" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://coast.noaa.gov/data/Documents/Metadata/isoharvest/Lidar/va2011_usgs_fema_southerncounties_m2635_ISOmetadata.xml" .
+
+<urn:uuid:c5e159ad-0c87-4203-8979-7e73b2573432> a "ISO 19115:2003/19139" ;
+    bcube:dateCreated "2015-08-09T16:59:01.962Z" ;
+    bcube:lastUpdated "2015-08-09T16:59:01.962Z" ;
+    bcube:originatedFrom <urn:uuid:7eda85a2-57ab-4609-b67a-a4b2c7a511df> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:56ddd28a-f195-4d20-8e08-3e0bbe69b7f6> .
+
+<urn:uuid:ef39a410-457e-49cd-8bae-716994d4b0f9> bcube:hasType "theme" ;
+    bcube:hasValue "DEM",
+        "Elevation",
+        "FEMA",
+        "LAS",
+        "Lidar",
+        "USGS" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+

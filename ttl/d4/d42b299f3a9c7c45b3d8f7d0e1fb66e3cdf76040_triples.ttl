@@ -1,0 +1,76 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:59007f56-443c-4370-b718-cbd5499c1ad7> bcube:hasType "place" ;
+    bcube:hasValue "Chicago",
+        "Cook",
+        "DuPage",
+        "IL",
+        "Kane",
+        "Lake",
+        "McHenry",
+        "US",
+        "Will" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:71abf4aa-4faf-49ec-90ef-ca7d18f1ee6d> owl:a foaf:Organization ;
+    foaf:name "Illinois State Geological Survey" .
+
+<urn:uuid:8644f556-46ab-4672-a17b-956685d1d388> bcube:dateCreated "2015-07-07T20:19:36.621Z" ;
+    bcube:hasMetadataRecord <urn:uuid:b9465cfa-ed67-437b-bf54-a9bbb030324a> ;
+    bcube:lastUpdated "2015-07-07T20:19:36.621Z" ;
+    dc:conformsTo <urn:uuid:59007f56-443c-4370-b718-cbd5499c1ad7>,
+        <urn:uuid:cddc68c6-329e-4396-862d-6760174f0f5f> ;
+    dc:description "This data set is an ArcSDE raster mosaic of orthorectified color (3-band) aerial photography for the Chicago urban area in Illinois, covering Cook, DuPage, Kane, Lake, McHenry and Will counties. The data are stored in the \"as delivered\" spatial reference of UTM Zone 16, NAD83 with a 1-foot ground resolution. The mosaic was constructed using georeferenced GeoTIFFs with ArcCatalog 9.1, ArcSDE 9.1 and Oracle 10g. They are stored in the SDE database with LZ77 (non-lossy) compression and exact pixel registration to the original images. The raster consumes 409 gigabytes in the SDE database, has 13.4 million database rows, and 120 billion pixels. If viewed in ArcMap, a more photo-realistic rendering can be obtained by setting the symbology to use a maximum-minimum stretch. Do not set the display to use any kind of histogram function - this attempts to read every row from the database and will freeze your software. The original USGS metadata for the source images is included with this XML metadata document as a binary attachment. Excerpts have been included in this metadata. [Begin excerpt from original metadata] An orthoimage is remotely sensed image data in which displacement of features in the image caused by terrain relief and sensor orientation have been mathematically removed. Orthoimagery combines the image characteristics of a photograph with the geometric qualities of a map. The projected coordinate system is UTM with a NAD83 datum. There is no image overlap between adjacent files. [End excerpt from original metadata]" ;
+    dc:spatial "POLYGON ((-88.722164 41.192507,-88.722164 42.514205,-87.506905 42.514205,-87.506905 41.192507,-88.722164 41.192507))" ;
+    dcterms:publisher <urn:uuid:71abf4aa-4faf-49ec-90ef-ca7d18f1ee6d> ;
+    dcterms:title "Mosaic of Chicago Urban Area Color Aerial Photography, 2005" ;
+    esip:eastBound "-87.506905"^^xsd:float ;
+    esip:endDate "2005-04-08"^^xsd:date ;
+    esip:northBound "42.514205"^^xsd:float ;
+    esip:southBound "41.192507"^^xsd:float ;
+    esip:startDate "2005-03-28"^^xsd:date ;
+    esip:westBound "-88.722164"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:b9465cfa-ed67-437b-bf54-a9bbb030324a> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-07-07T20:19:36.621Z" ;
+    bcube:lastUpdated "2015-07-07T20:19:36.621Z" ;
+    bcube:originatedFrom <urn:uuid:df5f1187-2fbd-4d0d-ba2a-f4fc2a5abd64> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:8644f556-46ab-4672-a17b-956685d1d388> .
+
+<urn:uuid:cddc68c6-329e-4396-862d-6760174f0f5f> bcube:hasType "theme" ;
+    bcube:hasValue "aerial photograph",
+        "digital image",
+        "digital orthophoto",
+        "imageryBaseMapsEarthCover",
+        "rectified image",
+        "rectified photograph" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:df5f1187-2fbd-4d0d-ba2a-f4fc2a5abd64> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-07-07T20:19:36.621Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-07-07T20:19:36.621Z" ;
+    dc:identifier "urn:sha:cd1256f0beb20c73bca210bc1c19b3f948c088d6a3c6a908760f01de" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www.isgs.uiuc.edu/nsdihome/outmeta/IL_CUA_2005_MOSAIC_UTM16_RAS.xml" .
+

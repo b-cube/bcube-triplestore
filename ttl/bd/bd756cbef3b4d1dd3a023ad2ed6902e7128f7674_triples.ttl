@@ -1,0 +1,96 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:1c8095ec-fd08-4cd9-9e45-7f4f648ea353> bcube:hasType "theme" ;
+    bcube:hasValue "age",
+        "female",
+        "male",
+        "population",
+        "population estimates",
+        "sex",
+        "states",
+        "statistics" ;
+    dc:partOf "none" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:2452fb4d-4400-448d-b8d5-74036e138cc6> owl:a foaf:Organization ;
+    foaf:name "U.S. Dept. of Commerce Economic & Statistics Administration Census Bureau" .
+
+<urn:uuid:89c67e8f-5053-4d85-a290-dbba840e9308> bcube:hasType "theme" ;
+    bcube:hasValue "society" ;
+    dc:partOf "ISO 19115 Topic Categories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:c0e4f04f-5307-4155-aa9a-86fa44d767e6> bcube:dateCreated "2015-11-09T04:00:16.553Z" ;
+    bcube:hasMetadataRecord <urn:uuid:ece73301-9f97-40fe-aca2-cfe140f79089> ;
+    bcube:lastUpdated "2015-11-09T04:00:16.553Z" ;
+    dc:conformsTo <urn:uuid:1c8095ec-fd08-4cd9-9e45-7f4f648ea353>,
+        <urn:uuid:89c67e8f-5053-4d85-a290-dbba840e9308>,
+        <urn:uuid:f541ad1a-b3c8-4185-9f7d-855ee0909ca7> ;
+    dc:description "This data product consists of fourteen tables. Thirteen of them together provide estimates of the population of states by five year age groups and sex, by selected age groups (under 5 years, 5 to 17 years, etc.) and sex, and by single year of age and sex for each year from 1990 to 1999. One additional table provides estimates of the median age of the population for the United States, Census regions, Census divisions, and states for the years 1990 and 1999." ;
+    dc:spatial "POLYGON ((172.46087 18.91382599,172.46087 71.34294128,-66.98038483 71.34294128,-66.98038483 18.91382599,172.46087 18.91382599))" ;
+    dcterms:publisher <urn:uuid:2452fb4d-4400-448d-b8d5-74036e138cc6> ;
+    dcterms:references <urn:uuid:f4db33e9-68ea-4b54-869d-b00335342a3b> ;
+    dcterms:title "State Population Estimates by Age and Sex" ;
+    esip:eastBound "-66.98038483"^^xsd:float ;
+    esip:endDate "1999-07-01"^^xsd:date ;
+    esip:northBound "71.34294128"^^xsd:float ;
+    esip:southBound "18.91382599"^^xsd:float ;
+    esip:startDate "1990-04-01"^^xsd:date ;
+    esip:westBound "172.46087"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:ece73301-9f97-40fe-aca2-cfe140f79089> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-11-09T04:00:16.553Z" ;
+    bcube:lastUpdated "2015-11-09T04:00:16.553Z" ;
+    bcube:originatedFrom <urn:uuid:ef1a792e-aed4-4938-863a-aa6bf732e1ac> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:c0e4f04f-5307-4155-aa9a-86fa44d767e6> .
+
+<urn:uuid:ef1a792e-aed4-4938-863a-aa6bf732e1ac> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-09T04:00:16.553Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-09T04:00:16.553Z" ;
+    dc:identifier "urn:sha:3f43e9117cf792ea36c521f686c755a9415eb0855fea7b663959a699" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://meta.geo.census.gov/data/existing/demographic/POP/state/pop_1999stEst_ISO.xml" .
+
+<urn:uuid:f4db33e9-68ea-4b54-869d-b00335342a3b> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-09T04:00:16.553Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-09T04:00:16.553Z" ;
+    dc:identifier "urn:sha:3d174a5cd36fa1ca185005998d9d78c4d6fb5f78e26494d43b6cafa6" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www.census.gov/population/www/estimates/statepop.html" .
+
+<urn:uuid:f541ad1a-b3c8-4185-9f7d-855ee0909ca7> bcube:hasType "place" ;
+    bcube:hasValue "Midwest",
+        "Northwest",
+        "South",
+        "United States",
+        "West",
+        "divisions",
+        "regions",
+        "states" ;
+    dc:partOf "none" ;
+    owl:a bcube:thesaurusSubset .
+

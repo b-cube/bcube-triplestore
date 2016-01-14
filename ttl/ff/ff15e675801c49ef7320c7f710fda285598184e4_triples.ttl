@@ -1,0 +1,95 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:1a479be7-444a-40e0-b8b9-3af8d5b73a51> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-01T06:11:14.35Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-01T06:11:14.35Z" ;
+    dc:identifier "urn:sha:03ab31c96b4f28bfa5ab8ef4b48fdf2ab698eacf53343501742f6937" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www2.census.gov/geo/tiger/TIGER2012/ADDR/tl_2012_01073_addr.zip" .
+
+<urn:uuid:426553e1-59eb-46a3-9994-3c6a030d4608> bcube:hasType "theme" ;
+    bcube:hasValue "5-digit ZIP code",
+        "County ANSI Code",
+        "County FIPS Code",
+        "From House Number",
+        "Permanent edge ID",
+        "Side indicator flag",
+        "State ANSI Code",
+        "State FIPS Code",
+        "To House Number",
+        "ZIP +4 code" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:49d86bb0-3729-4689-89a1-6eedd9a8d8d6> owl:a foaf:Organization ;
+    foaf:name "" .
+
+<urn:uuid:68410be3-293a-463d-bb45-d64291715dcd> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-01T06:11:14.35Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-01T06:11:14.35Z" ;
+    dc:identifier "urn:sha:e6ae6d15cf2055687ce3ac2eba5c582fbd60bc240be5995929714b87" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://meta.geo.census.gov/data/existing/decennial/GEO/GPMB/TIGERline/TL2012/FGDC/addr/tl_2012_01073_addr.dbf.xml" .
+
+<urn:uuid:99b3c433-15c2-42a8-90e9-5d3b811b8c33> bcube:hasType "place" ;
+    bcube:hasValue "01073",
+        "County or Equivalent Entity",
+        "Jefferson",
+        "U.S.",
+        "United States" ;
+    dc:partOf "ANSI INCITS 38:2009 (Formerly FIPS 5-2), ANSI INCITS 31:2009 (Formerly FIPS 6-4),ANSI INCITS 454:2009 (Formerly FIPS 8-6), ANSI INCITS 455:2009(Formerly FIPS 9-1), ANSI INCITS 446:2008 (Geographic Names Information System (GNIS))" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:9e3acd45-4eea-483a-9b54-653f6e759770> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-11-01T06:11:14.35Z" ;
+    bcube:lastUpdated "2015-11-01T06:11:14.35Z" ;
+    bcube:originatedFrom <urn:uuid:68410be3-293a-463d-bb45-d64291715dcd> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:c521ef7e-a1aa-414f-93e8-3b11d1f8838e> .
+
+<urn:uuid:c521ef7e-a1aa-414f-93e8-3b11d1f8838e> bcube:dateCreated "2015-11-01T06:11:14.35Z" ;
+    bcube:hasMetadataRecord <urn:uuid:9e3acd45-4eea-483a-9b54-653f6e759770> ;
+    bcube:lastUpdated "2015-11-01T06:11:14.35Z" ;
+    dc:conformsTo <urn:uuid:426553e1-59eb-46a3-9994-3c6a030d4608>,
+        <urn:uuid:99b3c433-15c2-42a8-90e9-5d3b811b8c33>,
+        <urn:uuid:f2e4234a-2bdf-4bd1-b783-0694a274d844> ;
+    dc:description "The TIGER/Line shapefiles and related database files (.dbf) are an extract of selected geographic and cartographic information from the U.S. Census Bureau's Master Address File / Topologically Integrated Geographic Encoding and Referencing (MAF/TIGER) Database (MTDB). The MTDB represents a seamless national file with no overlaps or gaps between parts, however, each TIGER/Line shapefile is designed to stand alone as an independent data set, or they can be combined to cover the entire nation. The Address Ranges Relationship File (ADDR.dbf) contains the attributes of each address range. Each address range applies to a single edge and has a unique address range identifier (ARID) value. The edge to which an address range applies can be determined by linking the address range to the All Lines Shapefile (EDGES.shp) using the permanent topological edge identifier (TLID) attribute. Multiple address ranges can apply to the same edge since an edge can have multiple address ranges. Note that the most inclusive address range associated with each side of a street edge already appears in the All Lines Shapefile (EDGES.shp). The TIGER/Line Files contain potential address ranges, not individual addresses. The term \"address range\" refers to the collection of all possible structure numbers from the first structure number to the last structure number and all numbers of a specified parity in between along an edge side relative to the direction in which the edge is coded. The address ranges in the TIGER/Line Files are potential ranges that include the full range of possible structure numbers even though the actual structures may not exist." ;
+    dc:spatial "POLYGON ((-87.341698 33.245995,-87.341698 33.843237,-86.516662 33.843237,-86.516662 33.245995,-87.341698 33.245995))" ;
+    dcterms:publisher <urn:uuid:49d86bb0-3729-4689-89a1-6eedd9a8d8d6> ;
+    dcterms:references <urn:uuid:1a479be7-444a-40e0-b8b9-3af8d5b73a51> ;
+    dcterms:title "TIGER/Line Shapefile, 2012, county, Jefferson County, AL, Current Address Ranges Relationship File" ;
+    esip:eastBound "-86.516662"^^xsd:float ;
+    esip:endDate "2012-06-01"^^xsd:date ;
+    esip:northBound "33.843237"^^xsd:float ;
+    esip:southBound "33.245995"^^xsd:float ;
+    esip:startDate "2011-08-01"^^xsd:date ;
+    esip:westBound "-87.341698"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:f2e4234a-2bdf-4bd1-b783-0694a274d844> bcube:hasType "theme" ;
+    bcube:hasValue "Transportation" ;
+    dc:partOf "ISO 19115 Topic Categories" ;
+    owl:a bcube:thesaurusSubset .
+

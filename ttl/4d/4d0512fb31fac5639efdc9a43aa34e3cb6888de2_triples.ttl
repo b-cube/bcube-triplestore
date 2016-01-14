@@ -1,0 +1,84 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:01f15ef4-3cda-4bab-8218-f73232cf2661> bcube:hasType "theme" ;
+    bcube:hasValue "elevation" ;
+    dc:partOf "ISO 19115 Topic Categories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:51c80c86-c05c-4c7a-90b9-102bda724ae1> bcube:hasType "place" ;
+    bcube:hasValue "New England",
+        "Rhode Island",
+        "United States" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:6130d9c8-f274-4868-af20-28379d8905ba> bcube:dateCreated "2015-11-04T11:55:18.082Z" ;
+    bcube:hasMetadataRecord <urn:uuid:9c8e7cec-e63c-482d-8912-3c32ba926b06> ;
+    bcube:lastUpdated "2015-11-04T11:55:18.082Z" ;
+    dc:conformsTo <urn:uuid:01f15ef4-3cda-4bab-8218-f73232cf2661>,
+        <urn:uuid:51c80c86-c05c-4c7a-90b9-102bda724ae1>,
+        <urn:uuid:d9f3f28d-909f-476c-b327-8a31cdd2e170> ;
+    dc:description "Statewide elevation contour lines (2-ft intervals) derived from a digital elevation model originally produced as part of the Northeast LiDAR Project in 2011." ;
+    dc:spatial "POLYGON ((-71.896514 41.145978,-71.896514 42.018926,-71.117465 42.018926,-71.117465 41.145978,-71.896514 41.145978))" ;
+    dcterms:publisher <urn:uuid:f3e20ba1-9951-433f-b2ac-fceceebb3c98> ;
+    dcterms:references <urn:uuid:89869e7f-0b8c-4bd0-9bbf-0913afbcb424> ;
+    dcterms:title "Elevation Contours, 2 Foot Interval; contours2ft11" ;
+    esip:eastBound "-71.117465"^^xsd:float ;
+    esip:northBound "42.018926"^^xsd:float ;
+    esip:southBound "41.145978"^^xsd:float ;
+    esip:westBound "-71.896514"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:89869e7f-0b8c-4bd0-9bbf-0913afbcb424> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-04T11:55:18.082Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-04T11:55:18.082Z" ;
+    dc:identifier "urn:sha:3e9757e04fa95c82527ee0fdc0a805cd4b250717c66a15c20c338035" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www.edc.uri.edu/rigis" .
+
+<urn:uuid:9c8e7cec-e63c-482d-8912-3c32ba926b06> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-11-04T11:55:18.082Z" ;
+    bcube:lastUpdated "2015-11-04T11:55:18.082Z" ;
+    bcube:originatedFrom <urn:uuid:f2ea0e89-7389-4664-899f-8905e8df6323> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:6130d9c8-f274-4868-af20-28379d8905ba> .
+
+<urn:uuid:d9f3f28d-909f-476c-b327-8a31cdd2e170> bcube:hasType "theme" ;
+    bcube:hasValue "LiDAR",
+        "elevation",
+        "elevation contours" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:f2ea0e89-7389-4664-899f-8905e8df6323> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-04T11:55:18.082Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-04T11:55:18.082Z" ;
+    dc:identifier "urn:sha:c3cabccdaf314d993290253e1b1a498ef964ac86fbf490220b19a1d2" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www.edc.uri.edu/rigis/data/download/2011USGS/contours2ft11.xml" .
+
+<urn:uuid:f3e20ba1-9951-433f-b2ac-fceceebb3c98> owl:a foaf:Organization ;
+    foaf:name "University of Rhode Island Environmental Data Center" .
+

@@ -1,0 +1,87 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:01cf627c-e4c2-4191-9137-33b0016bd801> owl:a foaf:Organization ;
+    foaf:name "" .
+
+<urn:uuid:464b4972-f301-4c0b-9579-63792d822d2e> dcterms:references <urn:uuid:83d2fb33-bd96-4aa1-b351-36cee330eeaa> ;
+    owl:a bibo:WebPage .
+
+<urn:uuid:5dd98463-1173-450c-8133-19dd88b6bee5> bcube:hasType "place" ;
+    bcube:hasValue "Earth",
+        "The Moon" ;
+    dc:partOf "http://www.lmmp.nasa.gov/redmine/projects/lmmpwiki/wiki/Glossary" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:828af2d1-f1a3-4aa1-a8f0-0575fd1bb7ae> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-07-29T19:03:58.287Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-07-29T19:03:58.287Z" ;
+    dc:identifier "urn:sha:a83c123a53a279e8cc27bb288d9ace48d7516aa26f5e59b5727318b1" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://astropedia.astrogeology.usgs.gov/download/Moon/LMMP/AitkenCrater/derived/ancillary/LRO_NAC_Conf_17S173E_150cmp.xml" .
+
+<urn:uuid:83d2fb33-bd96-4aa1-b351-36cee330eeaa> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-07-29T19:03:58.287Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-07-29T19:03:58.287Z" ;
+    dc:identifier "urn:sha:8bf49cca67c4ef868d593929f5538138555b69f3c9c40baf4d5974bc" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www.lmmp.nasa.gov" .
+
+<urn:uuid:b394ae88-0155-46cc-b6e0-63bb404159d8> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-07-29T19:03:58.287Z" ;
+    bcube:lastUpdated "2015-07-29T19:03:58.287Z" ;
+    bcube:originatedFrom <urn:uuid:828af2d1-f1a3-4aa1-a8f0-0575fd1bb7ae> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:fcc66fd7-1eb9-46ba-8980-a05978e96984> .
+
+<urn:uuid:ee172645-f885-4ccc-b240-74acfb56a282> bcube:hasType "theme" ;
+    bcube:hasValue "Digital Elevation Model (DEM)",
+        "Digital Terrain Model (DTM)",
+        "Elevation",
+        "LOLA Gridded Data Record (GDR)",
+        "Lunar Mapping and Modeling Project (LMMP)",
+        "Lunar Orbiter Laser Altimeter (LOLA)",
+        "Lunar Reconnaissance Orbiter (LRO)",
+        "Lunar Reconnaissance Orbiter Camera (LROC)",
+        "Topography" ;
+    dc:partOf "http://www.lmmp.nasa.gov/redmine/projects/lmmpwiki/wiki/Glossary" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:fcc66fd7-1eb9-46ba-8980-a05978e96984> bcube:dateCreated "2015-07-29T19:03:58.287Z" ;
+    bcube:hasMetadataRecord <urn:uuid:b394ae88-0155-46cc-b6e0-63bb404159d8> ;
+    bcube:lastUpdated "2015-07-29T19:03:58.287Z" ;
+    dc:conformsTo <urn:uuid:5dd98463-1173-450c-8133-19dd88b6bee5>,
+        <urn:uuid:ee172645-f885-4ccc-b240-74acfb56a282> ;
+    dc:description "This raster dataset represents a confidence value or figure of merit (FOM) for each pixel for the digital elevation model (DEM) as extracted from the Lunar Reconnaissance Orbiter Camera (LROC) Narrow Angle Camera (NAC) stereo images. The original DEM product is generated from stereo images acquired at approximately 0.5 meters/pixel resolution, which allows an output DEM resolution of 1.5 to 2.0 meters/pixel using a softcopy photogrammetry system. However, in some cases, LROC DEMs were also generated at lower resolutions. The DEM was registered horizontally and vertically to LRO's Lunar Orbiter Laser Altimeter (LOLA) data." ;
+    dc:spatial "POLYGON ((173.157146 -17.436019,173.157146 -15.975362,173.718644 -15.975362,173.718644 -17.436019,173.157146 -17.436019))" ;
+    dcterms:publisher <urn:uuid:01cf627c-e4c2-4191-9137-33b0016bd801> ;
+    dcterms:references <urn:uuid:464b4972-f301-4c0b-9579-63792d822d2e> ;
+    dcterms:title "LRO LROC DEM, Aitken Crater, Confidence" ;
+    esip:eastBound "173.718644"^^xsd:float ;
+    esip:northBound "-15.975362"^^xsd:float ;
+    esip:southBound "-17.436019"^^xsd:float ;
+    esip:startDate "2011-01-01"^^xsd:date ;
+    esip:westBound "173.157146"^^xsd:float ;
+    owl:a dcat:Dataset .
+

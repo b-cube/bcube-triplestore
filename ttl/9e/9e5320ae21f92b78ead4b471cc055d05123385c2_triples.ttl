@@ -1,0 +1,67 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:20c50578-7117-4622-abd1-0b057eb243d6> owl:a foaf:Organization ;
+    foaf:name "U.S. EPA Office of Research & Development (ORD) - National Exposure Research Laboratory (NERL)" .
+
+<urn:uuid:2cf07d70-a935-40cb-ad19-880a903ea48a> bcube:hasType "theme" ;
+    bcube:hasValue "Air" ;
+    dc:partOf "EPA GIS Keyword Thesaurus" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:4df0c740-2317-4412-9754-62d5d642d8f9> bcube:hasType "place" ;
+    bcube:hasValue "United States" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:644ec764-0b43-4d64-9dcf-ac5c878de97f> bcube:dateCreated "2015-09-10T20:52:11.081Z" ;
+    bcube:hasMetadataRecord <urn:uuid:ec925f98-987f-4561-8913-a6e870968a18> ;
+    bcube:lastUpdated "2015-09-10T20:52:11.081Z" ;
+    dc:conformsTo <urn:uuid:2cf07d70-a935-40cb-ad19-880a903ea48a>,
+        <urn:uuid:4df0c740-2317-4412-9754-62d5d642d8f9>,
+        <urn:uuid:ca2145ae-8fb6-4020-b13a-b462b88b704c> ;
+    dc:description "The O3Surface_36km_2004 file is the output data file from a hierarchical Bayesian model (HBM) that combines ozone monitoring data from National Air Monitoring Stations/State and Local Air Monitoring Stations (NAMS/SLAMS) and simulated ozone data from the deterministic prediction model, Models-3/Community Multiscale Air Quality (CMAQ). The file contains estimates of the mean and standard error for 36 km x 36 km grids across the contiguous US for each day of the modeling year." ;
+    dc:spatial "POLYGON ((-128.09 23.1,-128.09 51.46,-65.47 51.46,-65.47 23.1,-128.09 23.1))" ;
+    dcterms:publisher <urn:uuid:20c50578-7117-4622-abd1-0b057eb243d6> ;
+    dcterms:title "EPA statistical predictions of Ozone for 2004 at 36km grid" ;
+    esip:eastBound "-65.47"^^xsd:float ;
+    esip:northBound "51.46"^^xsd:float ;
+    esip:southBound "23.1"^^xsd:float ;
+    esip:westBound "-128.09"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:c827a805-0702-4ea2-9edb-2c5810c30246> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-09-10T20:52:11.081Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-09-10T20:52:11.081Z" ;
+    dc:identifier "urn:sha:c715fccd51e4b064c34307e8f1a026e348e82ce5dec023ed1895eada" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www.epa.gov/heasd/documents/cdc/HBM/ozone/HBM_O3_2004_36km_metadata.xml" .
+
+<urn:uuid:ca2145ae-8fb6-4020-b13a-b462b88b704c> bcube:hasType "theme" ;
+    bcube:hasValue "environment" ;
+    dc:partOf "ISO 19115 Topic Category" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:ec925f98-987f-4561-8913-a6e870968a18> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-09-10T20:52:11.081Z" ;
+    bcube:lastUpdated "2015-09-10T20:52:11.081Z" ;
+    bcube:originatedFrom <urn:uuid:c827a805-0702-4ea2-9edb-2c5810c30246> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:644ec764-0b43-4d64-9dcf-ac5c878de97f> .
+

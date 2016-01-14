@@ -1,0 +1,74 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:1a364589-49d7-4805-9950-44262ba6d32c> owl:a foaf:Organization ;
+    foaf:name "U.S. Geological Survey" .
+
+<urn:uuid:1bf36e34-53ff-4d24-8d86-e206789956e6> bcube:hasType "theme" ;
+    bcube:hasValue "geography",
+        "geospatial analysis",
+        "geospatial datasets",
+        "land use and land cover" ;
+    dc:partOf "USGS Thesaurus" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:3f826649-5fdd-446f-9cf6-a7658b6bcce6> bcube:dateCreated "2014-07-30T01:02:32.842Z" ;
+    bcube:hasMetadataRecord <urn:uuid:ee3888e2-591f-4a98-9902-37f6425f5c70> ;
+    bcube:lastUpdated "2014-07-30T01:02:32.842Z" ;
+    dc:conformsTo <urn:uuid:1bf36e34-53ff-4d24-8d86-e206789956e6> ;
+    dc:description "The National Land Cover Database (NLCD) serves as the definitive Landsat-based, 30-meter resolution, land cover database for the Nation." ;
+    dc:spatial "POLYGON ((-124.8 24.5,-124.8 45.533333333332997,-66.95 45.533333333332997,-66.95 24.5,-124.8 24.5))" ;
+    dcterms:publisher <urn:uuid:1a364589-49d7-4805-9950-44262ba6d32c> ;
+    dcterms:references <urn:uuid:fedb62ce-60ec-44e8-b64c-c8ad3ee7a8d2> ;
+    dcterms:title "The National Land Cover Database" ;
+    esip:eastBound "-66.95"^^xsd:float ;
+    esip:northBound "45.5333333333"^^xsd:float ;
+    esip:southBound "24.5"^^xsd:float ;
+    esip:westBound "-124.8"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:e0da3454-ee31-48db-9aa8-63bef4849972> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2014-07-30T01:02:32.842Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2014-07-30T01:02:32.842Z" ;
+    dc:identifier "urn:sha:869c01aec83707c32184f31d5a6cbc390afc56e85f1b4e559e97c106" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www.usgs.gov/science/xml.php?cite=2885" .
+
+<urn:uuid:e65d55d5-5c7d-4d1e-970b-554c1c7c6533> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2014-07-30T01:02:32.842Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2014-07-30T01:02:32.842Z" ;
+    dc:identifier "urn:sha:5e1d06fd27fa21a208ffd8ba95953635af8a7a90236efdfcd9aa8bf7" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://pubs.usgs.gov/fs/2012/3020/" .
+
+<urn:uuid:ee3888e2-591f-4a98-9902-37f6425f5c70> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2014-07-30T01:02:32.842Z" ;
+    bcube:lastUpdated "2014-07-30T01:02:32.842Z" ;
+    bcube:originatedFrom <urn:uuid:e0da3454-ee31-48db-9aa8-63bef4849972> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:3f826649-5fdd-446f-9cf6-a7658b6bcce6> .
+
+<urn:uuid:fedb62ce-60ec-44e8-b64c-c8ad3ee7a8d2> dcterms:references <urn:uuid:e65d55d5-5c7d-4d1e-970b-554c1c7c6533> ;
+    owl:a bibo:WebPage .
+

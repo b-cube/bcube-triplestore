@@ -1,0 +1,74 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:0f587193-1a0f-4a7e-b790-000212541f67> owl:a foaf:Organization ;
+    foaf:name "U.S. Geological Survey" .
+
+<urn:uuid:10f0e88c-25e4-4122-90e8-0a8b85091eb2> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2014-10-30T04:21:46.369Z" ;
+    bcube:lastUpdated "2014-10-30T04:21:46.369Z" ;
+    bcube:originatedFrom <urn:uuid:c8d9c376-8392-44c1-bb52-aad9ba808167> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:4bf50cec-de21-42f1-a35e-141b47fe78ab> .
+
+<urn:uuid:4bf50cec-de21-42f1-a35e-141b47fe78ab> bcube:dateCreated "2014-10-30T04:21:46.369Z" ;
+    bcube:hasMetadataRecord <urn:uuid:10f0e88c-25e4-4122-90e8-0a8b85091eb2> ;
+    bcube:lastUpdated "2014-10-30T04:21:46.369Z" ;
+    dc:conformsTo <urn:uuid:83db1f27-38bd-41cd-a590-3b688c82a5ff>,
+        <urn:uuid:dad4c77a-753e-4755-bf67-53308294e5e7> ;
+    dc:description "Download or view digital elevation models of this area." ;
+    dcterms:publisher <urn:uuid:0f587193-1a0f-4a7e-b790-000212541f67> ;
+    dcterms:references <urn:uuid:9187917a-0b8c-425d-9e4d-e9654b55534d> ;
+    dcterms:title "San Francisco Bay Area Regional Database (BARD)" ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:83db1f27-38bd-41cd-a590-3b688c82a5ff> bcube:hasType "place" ;
+    bcube:hasValue "h1805 = San Francisco Bay" ;
+    dc:partOf "Augmented FIPS 10-4 and FIPS 6-4" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:9187917a-0b8c-425d-9e4d-e9654b55534d> dcterms:references <urn:uuid:af70b26a-0bf0-4b1a-9a80-77c285a9fb7d> ;
+    owl:a bibo:WebPage .
+
+<urn:uuid:af70b26a-0bf0-4b1a-9a80-77c285a9fb7d> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2014-10-30T04:21:46.369Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2014-10-30T04:21:46.369Z" ;
+    dc:identifier "urn:sha:59e224d5976ed670d4f93869fad6afe7b0882a85cce5e72a6101153f" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://bard.wr.usgs.gov/" .
+
+<urn:uuid:c8d9c376-8392-44c1-bb52-aad9ba808167> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2014-10-30T04:21:46.369Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2014-10-30T04:21:46.369Z" ;
+    dc:identifier "urn:sha:eaa865047075daee76d62ae3589646f06678d3960a30dbffe433d6dc" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www.usgs.gov/science/xml.php?cite=343" .
+
+<urn:uuid:dad4c77a-753e-4755-bf67-53308294e5e7> bcube:hasType "theme" ;
+    bcube:hasValue "cartography",
+        "geospatial datasets",
+        "maps and atlases" ;
+    dc:partOf "USGS Thesaurus" ;
+    owl:a bcube:thesaurusSubset .
+

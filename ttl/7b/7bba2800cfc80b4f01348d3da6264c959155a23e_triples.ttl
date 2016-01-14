@@ -1,0 +1,101 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:3a598646-3443-4567-88db-bfb913456fff> bcube:hasType "place" ;
+    bcube:hasValue "FIPS code of State or Province" ;
+    dc:partOf "U.S. Department of Commerce, 1987, Codes for the identificationof the States, the District of Columbia and the outlying areas ofThe United States, and associated areas(Federal Information Processing Standard 5-2): Washington, D. C.,National Institute of Standards and Technology." ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:3b47616a-f7ff-40a9-9666-799a60d12f39> bcube:hasType "theme" ;
+    bcube:hasValue "1-meter orthophoto",
+        "3.75- x 3.75-minute orthophoto",
+        "DOQ",
+        "DOQQ",
+        "aerial photograph",
+        "digital image map",
+        "digital orthophoto",
+        "digital orthophotoquad",
+        "imageryBaseMapsEarthCover",
+        "orthophoto",
+        "quarter-quadrangle orthophoto",
+        "rectified image",
+        "rectified photograph" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:48c653c3-8187-40d5-9a03-2c5dda91b665> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-03-06T01:23:31.835Z" ;
+    bcube:lastUpdated "2015-03-06T01:23:31.835Z" ;
+    bcube:originatedFrom <urn:uuid:6f62b1bd-e06f-489a-b362-b8c8ff29c5b5> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:49f63c5b-eec7-4cd9-881c-a0f6709e1812> .
+
+<urn:uuid:49f63c5b-eec7-4cd9-881c-a0f6709e1812> bcube:dateCreated "2015-03-06T01:23:31.835Z" ;
+    bcube:hasMetadataRecord <urn:uuid:48c653c3-8187-40d5-9a03-2c5dda91b665> ;
+    bcube:lastUpdated "2015-03-06T01:23:31.835Z" ;
+    dc:conformsTo <urn:uuid:3a598646-3443-4567-88db-bfb913456fff>,
+        <urn:uuid:3b47616a-f7ff-40a9-9666-799a60d12f39>,
+        <urn:uuid:718f42c0-de36-40c5-82ee-91970caeeae6>,
+        <urn:uuid:a8123689-5722-45e0-bf50-5200d756f964> ;
+    dc:description "Orthophotos combine the image characteristics of aphotograph with the geometric qualities of a map. Theprimary digital orthophotoquad (DOQ) is a 1-meter groundresolution, quarter-quadrangle (3.75-minutes of latitudeby 3.75-minutes of longitude) image cast on the UniversalTransverse Mercator Projection (UTM) on the NorthAmerican Datum of 1983 (NAD83).The geographic extent ofthe DOQ is equivalent to a quarter-quad plus The overedgeranges a minimum of 50 meters to a maximum of 300 metersbeyond the extremes of the primary and secondary cornerpoints. The overedge is included to facilitate tonalmatching for mosaicking and for the placement of the NAD83and secondary datum corner ticks. The normal orientationof data is by lines (rows) and samples (columns). Eachline contains a series of pixels ordered from west toeast with the order of the lines from north to south.The standard, archived digital orthophoto is formatted asfour ASCII header records, followed by a series of 8-bitbinary image data records. The radiometric imagebrightness values are stored as 256 gray levels rangingfrom 0 to 255. The metadata provided in the digitalorthophoto contain a wide range of descriptiveinformation including format source information,production instrumentation and dates, and data to assistwith displaying and georeferencing the image. Thestandard distribution format of DOQs will be JPEGcompressed images on CD-ROM by counties or specialregions. The reconstituted image from the CD-ROM willexhibit some radiometric differences when compared to itsuncompressed original but will retain the geometry of theuncompressed DOQ. Uncompressed DOQs are distributed ontape." ;
+    dc:spatial "POLYGON ((-102.125 36.875,-102.125 40.125,-94.5 40.125,-94.5 36.875,-102.125 36.875))" ;
+    dcterms:publisher <urn:uuid:ecbca47a-3811-4577-9809-4a6ed3227718> ;
+    dcterms:references <urn:uuid:b7f9559c-4de1-4bbb-a0ad-51e5ae5323b8> ;
+    dcterms:title "Digital Orthophoto Quarter Quadrangles (DOQQ) 1991" ;
+    esip:eastBound "-94.5"^^xsd:float ;
+    esip:northBound "40.125"^^xsd:float ;
+    esip:southBound "36.875"^^xsd:float ;
+    esip:startDate "1994-02-22"^^xsd:date ;
+    esip:westBound "-102.125"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:6f62b1bd-e06f-489a-b362-b8c8ff29c5b5> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-03-06T01:23:31.835Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-03-06T01:23:31.835Z" ;
+    dc:identifier "urn:sha:db5ffaf5cef678926c06c544dc2a9c04df81cc3bfbed38c79a3b2bc4" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://catalog.data.gov/harvest/object/7a251985-21b1-4877-9824-40a3690636b3/original" .
+
+<urn:uuid:718f42c0-de36-40c5-82ee-91970caeeae6> bcube:hasType "place" ;
+    bcube:hasValue "CA",
+        "MX",
+        "US" ;
+    dc:partOf "U.S. Department of Commerce, 1977, Countries, dependencies,areas of special sovereignty, and their principal administrative divisions(Federal Information Processing Standard 10-3):Washington, D.C.,National Institute of Standards and Technology." ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:a8123689-5722-45e0-bf50-5200d756f964> bcube:hasType "place" ;
+    bcube:hasValue "FIPS code for county or counties." ;
+    dc:partOf "U.S. Department of Commerce,1990, Counties and equivalententities of The United States, its possessions, and associated areas(Federal Information Processing Standard 6-4): Washington, D.C.National Institute of Standards and Technology." ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:b7f9559c-4de1-4bbb-a0ad-51e5ae5323b8> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-03-06T01:23:31.835Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-03-06T01:23:31.835Z" ;
+    dc:identifier "urn:sha:c36b95020e42e8299f5cecfc70e189dfffe3e9557e4f9cce4e916374" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www.KansasGIS.org" .
+
+<urn:uuid:ecbca47a-3811-4577-9809-4a6ed3227718> owl:a foaf:Organization ;
+    foaf:name "U.S. Geological Survey" .
+

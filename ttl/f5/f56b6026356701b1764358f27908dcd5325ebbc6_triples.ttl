@@ -1,0 +1,95 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:03ba1bbc-9ee9-4831-97be-56da13b94121> bcube:hasType "theme" ;
+    bcube:hasValue "County ANSI Code",
+        "County FIPS Code",
+        "County or equivalent entity",
+        "Local GIS Identifier",
+        "National Hydrography Dataset common identifier",
+        "Permanent edge ID",
+        "State ANSI Code",
+        "State FIPS Code",
+        "Table" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:17a21e19-7ded-44fd-b92c-1ef0d2c798ff> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-11-04T22:08:30.677Z" ;
+    bcube:lastUpdated "2015-11-04T22:08:30.677Z" ;
+    bcube:originatedFrom <urn:uuid:cae7b1c9-8357-4f6c-8136-e7d12182febd> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:2620d09c-f908-440f-817e-1a4b73b88ab7> .
+
+<urn:uuid:2620d09c-f908-440f-817e-1a4b73b88ab7> bcube:dateCreated "2015-11-04T22:08:30.677Z" ;
+    bcube:hasMetadataRecord <urn:uuid:17a21e19-7ded-44fd-b92c-1ef0d2c798ff> ;
+    bcube:lastUpdated "2015-11-04T22:08:30.677Z" ;
+    dc:conformsTo <urn:uuid:03ba1bbc-9ee9-4831-97be-56da13b94121>,
+        <urn:uuid:2fa939db-8ada-4370-bf85-565637ac8190>,
+        <urn:uuid:cce5ecdb-92ca-43ca-a6e1-051d8a70b3a7> ;
+    dc:description "The TIGER/Line shapefiles and related database files (.dbf) are an extract of selected geographic and cartographic information from the U.S. Census Bureau's Master Address File / Topologically Integrated Geographic Encoding and Referencing (MAF/TIGER) Database (MTDB). The MTDB represents a seamless national file with no overlaps or gaps between parts, however, each TIGER/Line shapefile is designed to stand alone as an independent data set, or they can be combined to cover the entire nation. The Other Identifiers Relationship File contains external identifier codes, such as National Hydrographic Dataset (NHD) codes and individual county identifiers. The edge to which an Other Identifiers Relationship File record applies can be determined by linking to the All Lines shapefile on the permanent edge identifier (TLID) attribute. Not every TLID has an external identifier associated with it and some TLIDs may have more than one." ;
+    dc:spatial "POLYGON ((-90.806616 36.200528,-90.806616 36.498676,-90.062733 36.498676,-90.062733 36.200528,-90.806616 36.200528))" ;
+    dcterms:publisher <urn:uuid:4dcf8592-ef6c-434e-b448-1ed770e5cfcb> ;
+    dcterms:references <urn:uuid:de5a4f9d-462f-4a81-886f-ef4a423cc839> ;
+    dcterms:title "TIGER/Line Shapefile, 2012, county, Clay County, AR, Current Other Identifiers Relationship File" ;
+    esip:eastBound "-90.062733"^^xsd:float ;
+    esip:endDate "2012-06-01"^^xsd:date ;
+    esip:northBound "36.498676"^^xsd:float ;
+    esip:southBound "36.200528"^^xsd:float ;
+    esip:startDate "2011-08-01"^^xsd:date ;
+    esip:westBound "-90.806616"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:2fa939db-8ada-4370-bf85-565637ac8190> bcube:hasType "theme" ;
+    bcube:hasValue "InlandWaters",
+        "Transportation" ;
+    dc:partOf "ISO 19115 Topic Categories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:4dcf8592-ef6c-434e-b448-1ed770e5cfcb> owl:a foaf:Organization ;
+    foaf:name "" .
+
+<urn:uuid:cae7b1c9-8357-4f6c-8136-e7d12182febd> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-04T22:08:30.677Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-04T22:08:30.677Z" ;
+    dc:identifier "urn:sha:9bc37b2c6631fb87b810960cf889ff63fd564e6ce81f636fe2ee5b1e" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://meta.geo.census.gov/data/existing/decennial/GEO/GPMB/TIGERline/TL2012/FGDC/otherid/tl_2012_05021_otherid.dbf.xml" .
+
+<urn:uuid:cce5ecdb-92ca-43ca-a6e1-051d8a70b3a7> bcube:hasType "place" ;
+    bcube:hasValue "05021",
+        "Clay",
+        "County or Equivalent Entity",
+        "U.S.",
+        "United States" ;
+    dc:partOf "ANSI INCITS 38:2009 (Formerly FIPS 5-2), ANSI INCITS 31:2009 (Formerly FIPS 6-4),ANSI INCITS 454:2009 (Formerly FIPS 8-6), ANSI INCITS 455:2009(Formerly FIPS 9-1), ANSI INCITS 446:2008 (Geographic Names Information System (GNIS))" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:de5a4f9d-462f-4a81-886f-ef4a423cc839> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-04T22:08:30.677Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-04T22:08:30.677Z" ;
+    dc:identifier "urn:sha:fe9d2ae2425666ffb99a67c6f820aa6bb221c2e82aa39d9e4b9f5724" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www2.census.gov/geo/tiger/TIGER2012/OTHERID/tl_2012_05021_otherid.zip" .
+

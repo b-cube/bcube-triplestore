@@ -1,0 +1,98 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:027fddda-7d2e-4757-a765-9fb67bc43c01> bcube:hasType "place" ;
+    bcube:hasValue "Census Block Groups",
+        "Coastal States",
+        "United States" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:0b4022ef-11de-4b7b-bee8-11e50b243ec0> bcube:hasType "theme" ;
+    bcube:hasValue "Comparative Index",
+        "Demographics",
+        "Environmental Hazards",
+        "Indicators",
+        "Resilience",
+        "Social Vulnerability Index",
+        "Socioeconomics",
+        "Vulnerability" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:1b1e6041-229f-4966-a428-3294e8a0dced> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-05T15:46:27.998Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-05T15:46:27.998Z" ;
+    dc:identifier "urn:sha:f23214e97036c19b3fa91ceaf5df38f881dda0db71204ef758c7fb17" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://coast.noaa.gov/data/Documents/Metadata/Demographic/harvest/SOVI_BlkGrp_2000_ME_shp.xml" .
+
+<urn:uuid:382c574a-fdbe-4328-a3fc-c2635384b648> owl:a foaf:Organization ;
+    foaf:name "Hazards and Vulnerability Research Institute (HVRI), University of South Carolina" .
+
+<urn:uuid:3c99666a-16c0-40ea-b38e-1f0681e19e45> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-05T15:46:27.998Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-05T15:46:27.998Z" ;
+    dc:identifier "urn:sha:30cf345e633e286b856e2d494158a7a0073272646fff2597a42435eb" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www.coast.noaa.gov/digitalcoast/data/SoVI/" .
+
+<urn:uuid:576434b5-1031-4b45-95e5-49ba9140b1aa> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-08-05T15:46:27.998Z" ;
+    bcube:lastUpdated "2015-08-05T15:46:27.998Z" ;
+    bcube:originatedFrom <urn:uuid:1b1e6041-229f-4966-a428-3294e8a0dced> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:c60a1842-b657-48c7-9af3-7a7684850cf4> .
+
+<urn:uuid:c60a1842-b657-48c7-9af3-7a7684850cf4> bcube:dateCreated "2015-08-05T15:46:27.998Z" ;
+    bcube:hasMetadataRecord <urn:uuid:576434b5-1031-4b45-95e5-49ba9140b1aa> ;
+    bcube:lastUpdated "2015-08-05T15:46:27.998Z" ;
+    dc:conformsTo <urn:uuid:027fddda-7d2e-4757-a765-9fb67bc43c01>,
+        <urn:uuid:0b4022ef-11de-4b7b-bee8-11e50b243ec0>,
+        <urn:uuid:d5e44fa0-e224-494c-b953-32b4571de1af> ;
+    dc:description "This data depicts the social vulnerability of Maine census block groups to environmental hazards. Data were culled primarily from the 2000 Decennial Census." ;
+    dc:spatial "POLYGON ((-178.217598 18.921786,-178.217598 71.406235,-66.969271 71.406235,-66.969271 18.921786,-178.217598 18.921786))" ;
+    dcterms:publisher <urn:uuid:382c574a-fdbe-4328-a3fc-c2635384b648> ;
+    dcterms:references <urn:uuid:f7ff8792-10d9-40b6-a314-f7663c5bc4bf> ;
+    dcterms:title "Social Vulnerability Index (SoVI) for Maine based on 2000 Census Block Groups" ;
+    esip:eastBound "-66.969271"^^xsd:float ;
+    esip:northBound "71.406235"^^xsd:float ;
+    esip:southBound "18.921786"^^xsd:float ;
+    esip:startDate "2000-01-01"^^xsd:date ;
+    esip:westBound "-178.217598"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:d5e44fa0-e224-494c-b953-32b4571de1af> bcube:hasType "theme" ;
+    bcube:hasValue "economy",
+        "environment",
+        "oceans",
+        "society",
+        "structure",
+        "transportation" ;
+    dc:partOf "ISO 19115 Topic Category" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:f7ff8792-10d9-40b6-a314-f7663c5bc4bf> dcterms:references <urn:uuid:3c99666a-16c0-40ea-b38e-1f0681e19e45> ;
+    owl:a bibo:WebPage .
+

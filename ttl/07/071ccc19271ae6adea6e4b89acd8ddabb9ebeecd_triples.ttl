@@ -1,0 +1,72 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:021e2f7e-ac1c-41e1-8276-6af8b67a66cf> bcube:hasType "place" ;
+    bcube:hasValue "Colorado",
+        "Denver",
+        "Denver County",
+        "USA" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:338931b5-c881-4dbe-afa2-d1727252be01> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-03T14:44:02.91Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-03T14:44:02.91Z" ;
+    dc:identifier "urn:sha:6aea1d40751ac6962b7e6af20fd1abb922e39f58a9f3662624c719e8" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://data.denvergov.org/download/gis/subdivisions/metadata/subdivisions.xml" .
+
+<urn:uuid:499caa24-dd54-499a-a3d5-3bcd9db0ac11> owl:a foaf:Organization ;
+    foaf:name "" .
+
+<urn:uuid:6e6b6669-d641-432d-a581-6ead1fb302c6> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-11-03T14:44:02.91Z" ;
+    bcube:lastUpdated "2015-11-03T14:44:02.91Z" ;
+    bcube:originatedFrom <urn:uuid:338931b5-c881-4dbe-afa2-d1727252be01> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:b454a8bf-64a1-4a43-a090-935136d6fa14> .
+
+<urn:uuid:86854343-0605-429e-8383-0d88fe1ac9f1> bcube:hasType "theme" ;
+    bcube:hasValue "property",
+        "survey" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:b454a8bf-64a1-4a43-a090-935136d6fa14> bcube:dateCreated "2015-11-03T14:44:02.91Z" ;
+    bcube:hasMetadataRecord <urn:uuid:6e6b6669-d641-432d-a581-6ead1fb302c6> ;
+    bcube:lastUpdated "2015-11-03T14:44:02.91Z" ;
+    dc:conformsTo <urn:uuid:021e2f7e-ac1c-41e1-8276-6af8b67a66cf>,
+        <urn:uuid:86854343-0605-429e-8383-0d88fe1ac9f1>,
+        <urn:uuid:e0f91747-5f4f-4838-bcbc-ed29c7a801b0> ;
+    dc:description "There are two sources for the subdivision boundary layer. The first is a legacy shapefile of subdivision boundaries which was created and edited separately from the subdivision lots and ownership parcel layers. Due to the independent creation and maintenance of these layers, it is common to see line data separation between subdivision boundaries, lots, and parcels where no legal separation exists. Editing of this dataset more or less ceased at the end of 2010.Beginning in January 2011, new subdivisions have been created and maintained using the ESRI Parcel Fabric data model. In addition, as conditions permit, older subdivisions are re-drawn to original plat and/or City-resurveyed dimensions, and added to the Parcel Fabric dataset. When these older subdivisions are added to the Parcel Fabric, the legacy shapefile representation of the subdivision boundary is deleted.For display on the City website and download from the Open Data Catalog, these two sources are combined into one subdivision layer. Subdivisions based on the Parcel Fabric data model will have a SYSTEM_START_DATE value of January 2011 or later, and will be consistent with underlying lot and parcel data." ;
+    dc:spatial "POLYGON ((-105.109967 39.614309,-105.109967 39.82727,-104.73449 39.82727,-104.73449 39.614309,-105.109967 39.614309))" ;
+    dcterms:publisher <urn:uuid:499caa24-dd54-499a-a3d5-3bcd9db0ac11> ;
+    dcterms:title "Subdivisions" ;
+    esip:eastBound "-104.73449"^^xsd:float ;
+    esip:northBound "39.82727"^^xsd:float ;
+    esip:southBound "39.614309"^^xsd:float ;
+    esip:westBound "-105.109967"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:e0f91747-5f4f-4838-bcbc-ed29c7a801b0> bcube:hasType "theme" ;
+    bcube:hasValue "boundaries",
+        "planningCadastre" ;
+    dc:partOf "ISO 19115 Topic Categories" ;
+    owl:a bcube:thesaurusSubset .
+

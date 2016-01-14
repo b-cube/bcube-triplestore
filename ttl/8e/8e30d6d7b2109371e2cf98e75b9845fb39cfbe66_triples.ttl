@@ -1,0 +1,98 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:0210a643-046f-40bf-a36b-2e251aaf97be> bcube:hasType "place" ;
+    bcube:hasValue "Alaska",
+        "Alaska Peninsula",
+        "Brooks Camp",
+        "Katmai National Park",
+        "United States" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:57508c6d-df64-40f7-84f5-290c303cdee9> bcube:hasType "temporal" ;
+    bcube:hasValue "2012",
+        "May" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:668857e9-65fe-43f7-bf26-64a12337e902> bcube:hasType "stratum" ;
+    bcube:hasValue "Ground" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:78bdb783-e833-4282-99bb-46dbae0c6a4f> bcube:hasValue "elevation" ;
+    dc:partOf "IsoTopicCategories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:8691e541-166a-432c-b9dd-271cfbff93ed> a "ISO 19115:2003/19139" ;
+    bcube:dateCreated "2015-08-05T15:46:30.957Z" ;
+    bcube:lastUpdated "2015-08-05T15:46:30.957Z" ;
+    bcube:originatedFrom <urn:uuid:d5af2296-c499-422a-807f-1b831aab0da2> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:af510b02-9aae-4eb9-89c7-ac1cc7d7a69b> .
+
+<urn:uuid:a49c9dfa-3a80-4dca-9bf2-0815fcfc97fd> bcube:hasType "theme" ;
+    bcube:hasValue "Elevation",
+        "Ground",
+        "Laser",
+        "Lidar",
+        "Remote Sensing",
+        "Terrain",
+        "Topography" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:af510b02-9aae-4eb9-89c7-ac1cc7d7a69b> bcube:dateCreated "2015-08-05T15:46:30.957Z" ;
+    bcube:hasMetadataRecord <urn:uuid:8691e541-166a-432c-b9dd-271cfbff93ed> ;
+    bcube:lastUpdated "2015-08-05T15:46:30.957Z" ;
+    dc:conformsTo <urn:uuid:0210a643-046f-40bf-a36b-2e251aaf97be>,
+        <urn:uuid:57508c6d-df64-40f7-84f5-290c303cdee9>,
+        <urn:uuid:668857e9-65fe-43f7-bf26-64a12337e902>,
+        <urn:uuid:78bdb783-e833-4282-99bb-46dbae0c6a4f>,
+        <urn:uuid:a49c9dfa-3a80-4dca-9bf2-0815fcfc97fd> ;
+    dc:description "The U.S. Geological Survey (USGS) had a requirement for high resolution Lidar needed for mapping the Brooks Camp region of Katmai National Park in Alaska. Aero-Metric, Inc. (AeroMetric) acquired highly accurate Lidar data for an area that comprises of approximately 17.5 square miles for the USGS. This acquisition was carried out to satisfy the need for high resolution elevation data in the region. A Leica ALS70 Lidar system was used in the collection of data for this project. This project involves new Lidar data acquisition at an approximate pulse spacing of 0.6 meters. This data was to be calibrated such that all systematic errors were accounted for. The project required bare-earth classification and hydroenforcement of water bodies for the production of contours and digital elevation models. Data was to conform to a vertical accuracy of 18.5 cm RMSE in open terrain. The accuracy as tested and published in this report has met vertical accuracy requirements as specified by the client." ;
+    dc:spatial "POLYGON ((-155.833677 58.471457,-155.833677 58.577462,-155.602523 58.577462,-155.602523 58.471457,-155.833677 58.471457))" ;
+    dcterms:references <urn:uuid:babd8bbd-8be9-400c-b80d-a8d7d51f0836> ;
+    dcterms:title "2012 USGS Lidar: Brooks Camp (AK)" ;
+    esip:eastBound "-155.602523"^^xsd:float ;
+    esip:northBound "58.577462"^^xsd:float ;
+    esip:southBound "58.471457"^^xsd:float ;
+    esip:westBound "-155.833677"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:babd8bbd-8be9-400c-b80d-a8d7d51f0836> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-05T15:46:30.957Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-05T15:46:30.957Z" ;
+    dc:identifier "urn:sha:982cddc325f3247fb3478714389e6f00566bdfc62ac15071e8b73bfa" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://coast.noaa.gov/dataviewer/index.html?action=advsearchVal=4797" .
+
+<urn:uuid:d5af2296-c499-422a-807f-1b831aab0da2> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-05T15:46:30.957Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-05T15:46:30.957Z" ;
+    dc:identifier "urn:sha:9835879106ac5278d461e9e1405d1e8f5016cad7f1985d00a2264f1e" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://coast.noaa.gov/data/Documents/Metadata/isotest/ak2012_usgs_brooks_camp_m4797_metadata_iso.xml" .
+

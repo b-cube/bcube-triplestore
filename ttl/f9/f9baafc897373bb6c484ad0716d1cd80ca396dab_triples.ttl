@@ -1,0 +1,96 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:00ad7b22-07d9-4813-a723-78b5f0e8d48e> bcube:hasType "theme" ;
+    bcube:hasValue "Bathymetry",
+        "Magnetic Anomalies",
+        "Marine Geology",
+        "Marine Geophysics",
+        "Marine Gravity Field",
+        "Marine Magnetic Field",
+        "Seafloor Topography",
+        "Water Depth" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:2e10ec30-611a-415d-9995-0f9950c63f3e> bcube:hasType "place" ;
+    bcube:hasValue "CA",
+        "Monterey Bay National Marine Sanctuary, CA",
+        "North Pacific Ocean",
+        "Northern California",
+        "Northern Pacific Ocean",
+        "Off San Mateo County, Northern California",
+        "USA" ;
+    dc:partOf "Geographic Names Information System (GNIS)" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:3cbcff10-0efe-45ac-9256-85cfd5c6d083> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-07T11:58:56.46Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-07T11:58:56.46Z" ;
+    dc:identifier "urn:sha:a7b9ba03ce8064a88cfb9110853feb342becbb797629fa237d5a75e7" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://catalog.data.gov/harvest/object/07d135b7-5882-4898-8247-5fb6a67d749b/original" .
+
+<urn:uuid:7b1b1062-4f09-4b17-972f-74562d56549c> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-08-07T11:58:56.46Z" ;
+    bcube:lastUpdated "2015-08-07T11:58:56.46Z" ;
+    bcube:originatedFrom <urn:uuid:3cbcff10-0efe-45ac-9256-85cfd5c6d083> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:a5fd457c-e766-47b6-98e4-a4e53caaa025> .
+
+<urn:uuid:a5fd457c-e766-47b6-98e4-a4e53caaa025> bcube:dateCreated "2015-08-07T11:58:56.46Z" ;
+    bcube:hasMetadataRecord <urn:uuid:7b1b1062-4f09-4b17-972f-74562d56549c> ;
+    bcube:lastUpdated "2015-08-07T11:58:56.46Z" ;
+    dc:conformsTo <urn:uuid:00ad7b22-07d9-4813-a723-78b5f0e8d48e>,
+        <urn:uuid:2e10ec30-611a-415d-9995-0f9950c63f3e>,
+        <urn:uuid:c867489c-605e-4be1-a9c5-04cf43a9d41b> ;
+    dc:description "Single-beam bathymetry, gravity, and magnetic data along with DGPS navigation data was collected as part of field activity L-3-82-NC in Off San Mateo County, Northern California from 02/27/1982 to 03/01/1982, http://walrus.wr.usgs.gov/infobank/l/l382nc/html/l-3-82-nc.meta.html These data are reformatted from space-delimited ASCII text files located in the Coastal and Marine Geology Program (CMGP) InfoBank field activity catalog at http://walrus.wr.usgs.gov/infobank/l/l382nc/html/l-3-82-nc.bath.html, http://walrus.wr.usgs.gov/infobank/l/l382nc/html/l-3-82-nc.grav.html, and http://walrus.wr.usgs.gov/infobank/l/l382nc/html/l-3-82-nc.mag.html into MGD77T format provided by the NOAA's National Geophysical Data Center(NGDC). The MGD77T format includes a header (documentation) file (.h77t) and a data file (.m77t). More information regarding this format can be found in the publication listed in the Cross_reference section of this metadata file." ;
+    dc:spatial "POLYGON ((-123.06543 36.52442,-123.06543 37.83523,-122.22763 37.83523,-122.22763 36.52442,-123.06543 36.52442))" ;
+    dcterms:publisher <urn:uuid:bbcf0420-dd7c-42d9-9294-36f4018c8362> ;
+    dcterms:references <urn:uuid:dfc13a51-1327-4c80-b31f-9499fe2337c5> ;
+    dcterms:title "l382nc.m77t - MGD77 data file for Geophysical data from field activity L-3-82-NC in Off San Mateo County, Northern California from 02/27/1982 to 03/01/1982" ;
+    esip:eastBound "-122.22763"^^xsd:float ;
+    esip:endDate "1982-03-01"^^xsd:date ;
+    esip:northBound "37.83523"^^xsd:float ;
+    esip:southBound "36.52442"^^xsd:float ;
+    esip:startDate "1982-02-27"^^xsd:date ;
+    esip:westBound "-123.06543"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:bbcf0420-dd7c-42d9-9294-36f4018c8362> owl:a foaf:Organization ;
+    foaf:name "U.S. Geological Survey" .
+
+<urn:uuid:c867489c-605e-4be1-a9c5-04cf43a9d41b> bcube:hasType "theme" ;
+    bcube:hasValue "geoscientificinformation",
+        "oceans" ;
+    dc:partOf "ISO 19115 Topic Category" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:dfc13a51-1327-4c80-b31f-9499fe2337c5> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-07T11:58:56.46Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-07T11:58:56.46Z" ;
+    dc:identifier "urn:sha:e780687859533be3642bcd46ef71777c93b9acc4f7c2b61306b3f918" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www.ngdc.noaa.gov/mgg/trk/trackline/samuel_p._lee/l382nc/mgd77/" .
+

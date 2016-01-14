@@ -1,0 +1,85 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:15c5b1f5-bd65-492d-9ec6-df6435480629> owl:a foaf:Organization ;
+    foaf:name "" .
+
+<urn:uuid:32fbc0ff-c5d1-4a99-93fb-38dcfc1cfeda> bcube:hasType "theme" ;
+    bcube:hasValue "AIA",
+        "American Indian Area",
+        "Polygon",
+        "Tribal Block Group" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:3481b0e8-183a-444d-add5-b26b0b2e05ce> bcube:dateCreated "2015-11-02T07:07:01.035Z" ;
+    bcube:hasMetadataRecord <urn:uuid:66601844-195d-4b36-b97b-c601a59c48a7> ;
+    bcube:lastUpdated "2015-11-02T07:07:01.035Z" ;
+    dc:conformsTo <urn:uuid:32fbc0ff-c5d1-4a99-93fb-38dcfc1cfeda>,
+        <urn:uuid:7b935e0c-0a35-4aa6-8ed9-e927d1e29e63>,
+        <urn:uuid:d2edfefe-efaf-4e94-b53d-eb1d8ec6bc16> ;
+    dc:description "The TIGER/Line Files are shapefiles and related database files (.dbf) that are an extract of selected geographic and cartographic information from the U.S. Census Bureau's Master Address File / Topologically Integrated Geographic Encoding and Referencing (MAF/TIGER) Database (MTDB). The MTDB represents a seamless national file with no overlaps or gaps between parts, however, each TIGER/Line File is designed to stand alone as an independent data set, or they can be combined to cover the entire nation. A tribal block group is a cluster of census tabulation blocks within a single tribal census tract delineated by American Indian tribal participants or the Census Bureau for the purpose of presenting demographic data on their reservation and/or off-reservation trust land. The 2010 Census tribal block groups are defined independently of the standard county-based block group delineation. For federally recognized American Indian Tribes with reservations and/or off-reservation trust lands with a population less than 1,200, a single tribal block group is defined. Qualifying reservations and/or off-reservation trust lands with a population greater than 1,200 could define additional tribal block groups within their area without regard to the standard block group configuration. For the 2010 Census, tribal block groups do not necessarily contain tabulation blocks always beginning with the same number and could contain seemingly duplicate block numbers. For the 2010 Census, tabulation block numbers are still assigned only using by standard block group, not the tribal block groups. To better identify tribal block groups, the letter code range A through K (except I, which could be confused with a number 1) is used uniquely within each tribal census tract. For the 2010 Census, tribal block groups and tribal census tracts were delineated through the Tribal Statistical Areas Praogram (TSAP)." ;
+    dc:spatial "POLYGON ((-118.432131 37.353746,-118.432131 37.375914,-118.408055 37.375914,-118.408055 37.353746,-118.432131 37.353746))" ;
+    dcterms:publisher <urn:uuid:15c5b1f5-bd65-492d-9ec6-df6435480629> ;
+    dcterms:references <urn:uuid:86ace926-c4a1-410b-b619-39753b59d291> ;
+    dcterms:title "TIGER/Line Shapefile, 2010, 2010 entity, Bishop Reservation, 2010 Census Tribal Block Group AIA-based" ;
+    esip:eastBound "-118.408055"^^xsd:float ;
+    esip:endDate "2010-07-01"^^xsd:date ;
+    esip:northBound "37.375914"^^xsd:float ;
+    esip:southBound "37.353746"^^xsd:float ;
+    esip:startDate "2010-01-01"^^xsd:date ;
+    esip:westBound "-118.432131"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:66601844-195d-4b36-b97b-c601a59c48a7> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-11-02T07:07:01.035Z" ;
+    bcube:lastUpdated "2015-11-02T07:07:01.035Z" ;
+    bcube:originatedFrom <urn:uuid:78418538-6cd7-4b37-9cea-8ae051de5991> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:3481b0e8-183a-444d-add5-b26b0b2e05ce> .
+
+<urn:uuid:78418538-6cd7-4b37-9cea-8ae051de5991> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-02T07:07:01.035Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-02T07:07:01.035Z" ;
+    dc:identifier "urn:sha:557c7c04f372312e98496797f5f1ea9de86d8ec364725248c73bad5b" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://meta.geo.census.gov/data/existing/decennial/GEO/GPMB/TIGERline/fe_2010/TBG/TBG10/tl_2010_0290_tbg10_url.shp.xml" .
+
+<urn:uuid:7b935e0c-0a35-4aa6-8ed9-e927d1e29e63> bcube:hasType "place" ;
+    bcube:hasValue "American Indian Area" ;
+    dc:partOf "INCITS.38-200x (R2004),INCITS.31-200x (R2007),INCITS.454-200x,INCITS 455-200x,INCITS 446-2008" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:86ace926-c4a1-410b-b619-39753b59d291> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-02T07:07:01.035Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-02T07:07:01.035Z" ;
+    dc:identifier "urn:sha:2621e4a0356aa4d803932af450a620e1271e2c9af2acc50525fe9213" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www2.census.gov/geo/tiger/TIGER2010/TBG/2010/tl_2010_0290_tbg10.zip" .
+
+<urn:uuid:d2edfefe-efaf-4e94-b53d-eb1d8ec6bc16> bcube:hasType "theme" ;
+    bcube:hasValue "boundaries" ;
+    dc:partOf "ISO 19115 Topic Categories" ;
+    owl:a bcube:thesaurusSubset .
+

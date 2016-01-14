@@ -1,0 +1,91 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:14da8a3c-c79d-457e-904f-ec3fd9710dc3> bcube:hasType "theme" ;
+    bcube:hasValue "Bathymetry",
+        "CMGP",
+        "Contours",
+        "Marine Geology",
+        "Multibeam",
+        "Ocean Floor Topography",
+        "Pacific Coastal and Marine Science Center",
+        "U.S. Geological Survey",
+        "USGS",
+        "Water Depth" ;
+    dc:partOf "General" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:16460729-337d-4fd8-b6d2-3f6dde67ce97> bcube:dateCreated "2014-07-30T01:12:38.849Z" ;
+    bcube:hasMetadataRecord <urn:uuid:3603ce66-c225-4a3b-87d1-4b7940a9cc21> ;
+    bcube:lastUpdated "2014-07-30T01:12:38.849Z" ;
+    dc:conformsTo <urn:uuid:14da8a3c-c79d-457e-904f-ec3fd9710dc3>,
+        <urn:uuid:19fbfa89-ab06-42ec-9d2b-007205ee366d>,
+        <urn:uuid:1c7f37bd-f070-4170-b504-8ff6b87d0360>,
+        <urn:uuid:558e295e-bb1f-4ec4-bdfa-a45c4b5e89c7> ;
+    dc:description "This part of SIM 3254 presents data for the bathymetric contours for several seafloor maps (see sheets 1, 2, 3, 7, 10, SIM 3254) of the Offshore of Ventura map area, California. The vector data file is included in \"Contours_OffshoreVentura.zip,\" which is accessible from http://pubs.usgs.gov/ds/781/OffshoreVentura/data_catalog_OffshoreVentura.html.The bathymetry and shaded-relief maps of the Offshore of Ventura map area, California, were generated from bathymetry data collected by California State University, Monterey Bay, Seafloor Mapping Lab (CSUMB) and by the U.S. Geological Survey (USGS). Most of the offshore area was mapped by CSUMB in the summers of 2006 and 2007, using a 244-kHz Reson 8101 multibeam echosounder. The seafloor west of Ventura Harbor was mapped by the USGS in 2006 and 2010, using 117-kHz (2006) and 234.5-kHz (2010) SEA (AP) Ltd. SWATHplus-M phase-differencing sidescan sonars. These mapping missions combined to collect bathymetry from about the 10-m isobath to beyond the 3-nautical-mile limit of California's State Waters. A smooth arithmetic mean convolution function applying a weight of one-ninth to each cell in a 3-pixel by 3-pixel matrix was then applied iteratively to the grid ten times. Following smoothing, contour lines were generated at 10-m intervals, from -10 m to -100 m, and at 50-m intervals, from -100 m to -400 m, then the contours were clipped to the boundary of the map area." ;
+    dc:spatial "POLYGON ((-119.447454 34.214948,-119.447454 34.358147,-119.271429 34.358147,-119.271429 34.214948,-119.447454 34.214948))" ;
+    dcterms:publisher <urn:uuid:9f728541-105e-4a40-bc1c-54e69b756b99> ;
+    dcterms:title "Contours--Offshore of Ventura, California" ;
+    esip:eastBound "-119.271429"^^xsd:float ;
+    esip:endDate "2010-01-01"^^xsd:date ;
+    esip:northBound "34.358147"^^xsd:float ;
+    esip:southBound "34.214948"^^xsd:float ;
+    esip:startDate "2006-01-01"^^xsd:date ;
+    esip:westBound "-119.447454"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:19fbfa89-ab06-42ec-9d2b-007205ee366d> bcube:hasType "theme" ;
+    bcube:hasValue "geoscientificinformation",
+        "imageryBaseMapsEarthCover",
+        "oceans" ;
+    dc:partOf "ISO 19115 Topic Category" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:1c7f37bd-f070-4170-b504-8ff6b87d0360> bcube:hasType "theme" ;
+    bcube:hasValue "Oceans > Bathymetry/SeafloorTopography > Bathymetry",
+        "Oceans > Bathymetry/SeafloorTopography > Seafloor Topography" ;
+    dc:partOf "Global Change Master Directory (GCMD)" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:3603ce66-c225-4a3b-87d1-4b7940a9cc21> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2014-07-30T01:12:38.849Z" ;
+    bcube:lastUpdated "2014-07-30T01:12:38.849Z" ;
+    bcube:originatedFrom <urn:uuid:563ae60a-abdd-44a1-bcd6-3e0e999bc171> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:16460729-337d-4fd8-b6d2-3f6dde67ce97> .
+
+<urn:uuid:558e295e-bb1f-4ec4-bdfa-a45c4b5e89c7> bcube:hasType "place" ;
+    bcube:hasValue "California",
+        "Pacific Ocean",
+        "Santa Barbara Channel",
+        "Ventura",
+        "Ventura Harbor" ;
+    dc:partOf "Geographic Names Information System (GNIS)" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:563ae60a-abdd-44a1-bcd6-3e0e999bc171> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2014-07-30T01:12:38.849Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2014-07-30T01:12:38.849Z" ;
+    dc:identifier "urn:sha:eb1f48bab003f6c81ea7cab068b00ffaf7d84a2bbad633d05ca69bee" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://pubs.usgs.gov/ds/781/OffshoreVentura/metadata/Contours_OffshoreVentura_metadata.xml" .
+
+<urn:uuid:9f728541-105e-4a40-bc1c-54e69b756b99> owl:a foaf:Organization ;
+    foaf:name "" .
+

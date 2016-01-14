@@ -1,0 +1,83 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:319b2869-3e49-4736-8a0b-54a61aec7a09> bcube:hasType "theme" ;
+    bcube:hasValue "Highways",
+        "Intermodal",
+        "RCI",
+        "Roads",
+        "Roadway Characteristics Inventory",
+        "SIS",
+        "Strategic Intermodal System",
+        "Strategic Intermodal System Roads",
+        "Transportation" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:3d033fc6-c096-4977-8d71-fc5aaa9f8722> bcube:hasType "place" ;
+    bcube:hasValue "Florida" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:52e92bf9-5f59-4c7f-9621-88b64c4fc448> owl:a foaf:Organization ;
+    foaf:name "" .
+
+<urn:uuid:76e1d660-8a38-4058-aab4-1b8ec9c03cdf> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-04T11:54:21.529Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-04T11:54:21.529Z" ;
+    dc:identifier "urn:sha:b938d927fbfda8fe88e8c4f2116456fdc2387e79ed7d98fc8bc2730e" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "ftp://ftp.dot.state.fl.us/fdot/co/planning/transtat/gis/shapefiles/sis_roads.zip" .
+
+<urn:uuid:8b0f992f-5dd0-4c48-8d0b-060ab4a3fe52> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-11-04T11:54:21.529Z" ;
+    bcube:lastUpdated "2015-11-04T11:54:21.529Z" ;
+    bcube:originatedFrom <urn:uuid:fe773d09-3bb3-4c09-aff9-33710ef19339> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:d10991d8-ea1d-478d-b86e-1b86414f9057> .
+
+<urn:uuid:d10991d8-ea1d-478d-b86e-1b86414f9057> bcube:dateCreated "2015-11-04T11:54:21.529Z" ;
+    bcube:hasMetadataRecord <urn:uuid:8b0f992f-5dd0-4c48-8d0b-060ab4a3fe52> ;
+    bcube:lastUpdated "2015-11-04T11:54:21.529Z" ;
+    dc:conformsTo <urn:uuid:319b2869-3e49-4736-8a0b-54a61aec7a09>,
+        <urn:uuid:3d033fc6-c096-4977-8d71-fc5aaa9f8722> ;
+    dc:description "The Strategic Intermodal System Roads feature class covers the state of Florida at a scale of 1:24,000 with a projection system of Universal Transverse Mercator (UTM) 17 North zone and a horizontal datum of North American 1983 (NAD 1983). The map units are in meters." ;
+    dc:spatial "POLYGON ((-87.43892 24.969496,-87.43892 31.150215,-80.014536 31.150215,-80.014536 24.969496,-87.43892 24.969496))" ;
+    dcterms:publisher <urn:uuid:52e92bf9-5f59-4c7f-9621-88b64c4fc448> ;
+    dcterms:references <urn:uuid:76e1d660-8a38-4058-aab4-1b8ec9c03cdf> ;
+    dcterms:title "Strategic Intermodal System" ;
+    esip:eastBound "-80.014536"^^xsd:float ;
+    esip:northBound "31.150215"^^xsd:float ;
+    esip:southBound "24.969496"^^xsd:float ;
+    esip:startDate "2008-06-02"^^xsd:date ;
+    esip:westBound "-87.43892"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:fe773d09-3bb3-4c09-aff9-33710ef19339> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-04T11:54:21.529Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-04T11:54:21.529Z" ;
+    dc:identifier "urn:sha:73aee080479c232cf2150cb10acb70584d94284d7e6580db550848ab" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www.envirobase.usgs.gov/FlGisData/FDOT/metadata/sis_roads.shp.xml" .
+

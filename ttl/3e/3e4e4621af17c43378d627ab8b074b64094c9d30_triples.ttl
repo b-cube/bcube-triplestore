@@ -1,0 +1,72 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:411fb8fc-47f0-4a6b-a333-e7df02a7a02f> bcube:hasType "theme" ;
+    bcube:hasValue "elevation",
+        "location",
+        "planningCadastre" ;
+    dc:partOf "ISO 19115 Topic Categories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:61acf894-85de-45ec-9638-f22b514bcc1c> bcube:hasType "place" ;
+    bcube:hasValue "Colorado",
+        "Denver",
+        "Denver County",
+        "USA" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:6b5964b5-49d1-4807-8319-833ed6bef1a4> owl:a foaf:Organization ;
+    foaf:name "" .
+
+<urn:uuid:7f83be65-1ff3-44f4-8dcf-4cb23835de91> bcube:hasType "theme" ;
+    bcube:hasValue "survey" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:a318a641-e8e3-4d25-a227-6da1c1ae09f9> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-10-29T16:11:44.724Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-10-29T16:11:44.724Z" ;
+    dc:identifier "urn:sha:c8d96ec0214288f978520cae6c0292d90b37f1dd150a3ccdf7f65610" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://data.denvergov.org/download/gis/land_corners/metadata/land_corners.xml" .
+
+<urn:uuid:dafc109a-dfac-4c70-ad34-d122a5d3bd83> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-10-29T16:11:44.724Z" ;
+    bcube:lastUpdated "2015-10-29T16:11:44.724Z" ;
+    bcube:originatedFrom <urn:uuid:a318a641-e8e3-4d25-a227-6da1c1ae09f9> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:de9e9205-8e0c-4852-89b4-1c97767ce29b> .
+
+<urn:uuid:de9e9205-8e0c-4852-89b4-1c97767ce29b> bcube:dateCreated "2015-10-29T16:11:44.724Z" ;
+    bcube:hasMetadataRecord <urn:uuid:dafc109a-dfac-4c70-ad34-d122a5d3bd83> ;
+    bcube:lastUpdated "2015-10-29T16:11:44.724Z" ;
+    dc:conformsTo <urn:uuid:411fb8fc-47f0-4a6b-a333-e7df02a7a02f>,
+        <urn:uuid:61acf894-85de-45ec-9638-f22b514bcc1c>,
+        <urn:uuid:7f83be65-1ff3-44f4-8dcf-4cb23835de91> ;
+    dc:description "This dataset contains location and monument data for Public Land Survey System land corners lying within the City and County of Denver, and in selected areas of interest. These corners define the endpoints of PLSS section lines, quarter section lines, and other \"aliquot parts\" of the PLSS." ;
+    dc:spatial "POLYGON ((-105.299083 39.471305,-105.299083 39.932408,-104.578687 39.932408,-104.578687 39.471305,-105.299083 39.471305))" ;
+    dcterms:publisher <urn:uuid:6b5964b5-49d1-4807-8319-833ed6bef1a4> ;
+    dcterms:title "Land Corners" ;
+    esip:eastBound "-104.578687"^^xsd:float ;
+    esip:northBound "39.932408"^^xsd:float ;
+    esip:southBound "39.471305"^^xsd:float ;
+    esip:westBound "-105.299083"^^xsd:float ;
+    owl:a dcat:Dataset .
+

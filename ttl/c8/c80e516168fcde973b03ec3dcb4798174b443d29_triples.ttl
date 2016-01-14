@@ -1,0 +1,101 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:13e4b174-4e04-42f7-a4af-823d5a635455> owl:a foaf:Organization ;
+    foaf:name "U.S. Geological Survey" .
+
+<urn:uuid:6ef2764c-34cd-4fdf-a483-50d41288290a> dcterms:references <urn:uuid:7c9ece78-880b-4be4-ae09-e515dd5d8af2> ;
+    owl:a bibo:WebPage .
+
+<urn:uuid:6f7b48b5-39c4-4e26-94d3-3111cadc6dee> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-10-18T09:37:48.204Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-10-18T09:37:48.204Z" ;
+    dc:identifier "urn:sha:a3b4ca2ddfb9d060ac24e126ad5edf53553631f16ee2a46b653e24fc" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://pubs.usgs.gov/sir/2012/5290/SIR2012_5290_ACAD_SaltmarshSLRLayers.gdb.zip" .
+
+<urn:uuid:7c9ece78-880b-4be4-ae09-e515dd5d8af2> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-10-18T09:37:48.204Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-10-18T09:37:48.204Z" ;
+    dc:identifier "urn:sha:181bb274a88ce881cbe912b3579dfcf1ed8bc988be7193d33bfa3932" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://pubs.usgs.gov/sir/2012/5290/" .
+
+<urn:uuid:b329c1f5-49c5-46a5-b3f8-ace408bfd95d> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-10-18T09:37:48.204Z" ;
+    bcube:lastUpdated "2015-10-18T09:37:48.204Z" ;
+    bcube:originatedFrom <urn:uuid:d7d8918e-389d-467d-8da4-84946e1cde5d> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:d69acaae-1868-4921-90bb-f6a1c0264938> .
+
+<urn:uuid:c4aca990-96fb-4e0e-9b49-a3a31867b275> bcube:hasType "place" ;
+    bcube:hasValue "Acadia National Park",
+        "Hancock County",
+        "Maine",
+        "Mount Desert Island",
+        "Penobscot Bay",
+        "Schoodic Peninsula",
+        "Swans Island" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:d69acaae-1868-4921-90bb-f6a1c0264938> bcube:dateCreated "2015-10-18T09:37:48.204Z" ;
+    bcube:hasMetadataRecord <urn:uuid:b329c1f5-49c5-46a5-b3f8-ace408bfd95d> ;
+    bcube:lastUpdated "2015-10-18T09:37:48.204Z" ;
+    dc:conformsTo <urn:uuid:c4aca990-96fb-4e0e-9b49-a3a31867b275>,
+        <urn:uuid:dd85ed9c-2c95-4ee5-bf69-6ad008e7b5c7> ;
+    dc:description "Marsh surface points surveyed in July 2010 at 20 marshes in the Acadia National Park area. Each point references a wooden stake installed at the marsh surface. Elevations of these points are accurate to +/- 2.5 centimeters (cm). These points were used to determine the root mean squared error (RMSE) of the LiDAR data in this study area, and the 95 percent confidence intervals." ;
+    dc:spatial "POLYGON ((-68.751374 44.287125,-68.751374 44.486092,-68.112956 44.486092,-68.112956 44.287125,-68.751374 44.287125))" ;
+    dcterms:publisher <urn:uuid:13e4b174-4e04-42f7-a4af-823d5a635455> ;
+    dcterms:references <urn:uuid:6ef2764c-34cd-4fdf-a483-50d41288290a>,
+        <urn:uuid:6f7b48b5-39c4-4e26-94d3-3111cadc6dee> ;
+    dcterms:title "SIR2012_5290_ACAD_Surveyedmarshpoints" ;
+    esip:eastBound "-68.112956"^^xsd:float ;
+    esip:endDate "2010-07-28"^^xsd:date ;
+    esip:northBound "44.486092"^^xsd:float ;
+    esip:southBound "44.287125"^^xsd:float ;
+    esip:startDate "2010-07-12"^^xsd:date ;
+    esip:westBound "-68.751374"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:d7d8918e-389d-467d-8da4-84946e1cde5d> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-10-18T09:37:48.204Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-10-18T09:37:48.204Z" ;
+    dc:identifier "urn:sha:eebc443fac8c658d335e7fd8de072cd775b85efd7d4af1253de1c089" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://pubs.usgs.gov/sir/2012/5290/Appendix1/Metadata/surveyedmarshpoints.xml" .
+
+<urn:uuid:dd85ed9c-2c95-4ee5-bf69-6ad008e7b5c7> bcube:hasType "theme" ;
+    bcube:hasValue "coasts",
+        "elevation",
+        "environment",
+        "geoscientificInformation" ;
+    dc:partOf "ISO 19115 Topic Categories" ;
+    owl:a bcube:thesaurusSubset .
+

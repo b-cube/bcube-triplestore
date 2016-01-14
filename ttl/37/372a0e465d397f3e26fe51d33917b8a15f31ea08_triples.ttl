@@ -1,0 +1,62 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:26a285b1-4937-41ae-96f8-8d9f58bf0b35> bcube:hasType "theme" ;
+    bcube:hasValue "Global Elevation, GMTED2010, Digital Elevation Model" ;
+    dc:partOf "Elevation" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:2a1d3215-cdf1-4188-8a89-608ece578d6b> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-10-30T03:17:20.223Z" ;
+    bcube:lastUpdated "2015-10-30T03:17:20.223Z" ;
+    bcube:originatedFrom <urn:uuid:e4de5ca8-d18d-4166-9d4b-5b3a99889c1b> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:6916929a-6f18-4223-a1ba-ea7c83759901> .
+
+<urn:uuid:6916929a-6f18-4223-a1ba-ea7c83759901> bcube:dateCreated "2015-10-30T03:17:20.223Z" ;
+    bcube:hasMetadataRecord <urn:uuid:2a1d3215-cdf1-4188-8a89-608ece578d6b> ;
+    bcube:lastUpdated "2015-10-30T03:17:20.223Z" ;
+    dc:conformsTo <urn:uuid:26a285b1-4937-41ae-96f8-8d9f58bf0b35>,
+        <urn:uuid:ccf011e1-595f-448f-854c-4d73783e2fd2> ;
+    dc:description "The Global Multi-resolution Terrain Elevation Data 2010 (GMTED2010) provides a new level of detail in global topographic data. Previously, the best available global DEM was GTOPO30 with a horizontal grid spacing of 30 arc-seconds. The GMTED2010 product suite contains seven new raster elevation products for each of the 30-, 15-, and 7.5-arc-second spatial resolutions and incorporates the current best available global elevation data. The new elevation products have been produced using the following aggregation methods: minimum elevation, maximum elevation, mean elevation, median elevation, standard deviation of elevation, systematic subsample, and breakline emphasis. Metadata have also been produced to identify the source and attributes of all the input elevation data used to derive the output products. Many of these products will be suitable for various regional continental-scale land cover mapping, extraction of drainage features for hydrologic modeling, and geometric and radiometric correction of medium and coarse resolution satellite image data. The global aggregated vertical accuracy of GMTED2010 can be summarized in terms of the resolution and RMSE of the products with respect to a global set of control points (estimated global accuracy of 6 m RMSE) provided by the National Geospatial-Intelligence Agency (NGA). At 30 arc-seconds, the GMTED2010 RMSE range is between 25 and 42 meters; at 15 arc-seconds, the RMSE range is between 29 and 32 meters; and at 7.5 arc-seconds, the RMSE range is between 26 and 30 meters. GMTED2010 is a major improvement in consistency and vertical accuracy over GTOPO30, which has a 66 m RMSE globally compared to the same NGA control points. In areas where new sources of higher resolution data were available, the GMTED2010 products are substantially better than the aggregated global statistics; however, large areas still exist, particularly above 60 degrees North latitude, that lack good elevation data. As new data become available, especially in areas that have poor coverage in the current model, it is hoped that new versions of GMTED2010 might be generated and thus gradually improve the global model." ;
+    dc:spatial "POLYGON ((-180.0001388 -90.0001388,-180.0001388 83.9998611,179.9998611 83.9998611,179.9998611 -90.0001388,-180.0001388 -90.0001388))" ;
+    dcterms:publisher <urn:uuid:69265a7d-9d21-4117-84f2-36ee20dc439a> ;
+    dcterms:title "GMTED2010" ;
+    esip:eastBound "179.9998611"^^xsd:float ;
+    esip:northBound "83.9998611"^^xsd:float ;
+    esip:southBound "-90.0001388"^^xsd:float ;
+    esip:startDate "2011-01-01"^^xsd:date ;
+    esip:westBound "-180.0001388"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:69265a7d-9d21-4117-84f2-36ee20dc439a> owl:a foaf:Organization ;
+    foaf:name "" .
+
+<urn:uuid:ccf011e1-595f-448f-854c-4d73783e2fd2> bcube:hasType "place" ;
+    bcube:hasValue "Global" ;
+    dc:partOf "Global" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:e4de5ca8-d18d-4166-9d4b-5b3a99889c1b> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-10-30T03:17:20.223Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-10-30T03:17:20.223Z" ;
+    dc:identifier "urn:sha:382cf902e405bf6c0c8b6690c07745e793437712f26268e2a04c0267" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://topotools.cr.usgs.gov/gmted_viewer/gmted2010_fgdc_metadata.xml" .
+

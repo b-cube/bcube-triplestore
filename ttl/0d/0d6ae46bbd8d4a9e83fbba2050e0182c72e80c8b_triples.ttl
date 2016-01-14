@@ -1,0 +1,76 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:13fd87d7-0ca3-46e3-889b-052b175e4635> bcube:hasType "theme" ;
+    bcube:hasValue "biota",
+        "inlandWaters" ;
+    dc:partOf "ISO 19915 Topic" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:2ea15845-36a0-48b1-849e-ff6c71270a6d> owl:a foaf:Organization ;
+    foaf:name "Montana Fish, Wildlife & Parks" .
+
+<urn:uuid:7d667c50-26e7-47c0-b107-bf21e2fed412> bcube:hasType "place" ;
+    bcube:hasValue "Montana" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:a123f321-7948-40c4-9eae-da1d5e20e709> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-08-11T06:43:56.232Z" ;
+    bcube:lastUpdated "2015-08-11T06:43:56.232Z" ;
+    bcube:originatedFrom <urn:uuid:e817d8e3-9b23-4266-bcf7-07ffff030347> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:a771a09a-093c-4345-8f14-7a6aa975a0e4> .
+
+<urn:uuid:a771a09a-093c-4345-8f14-7a6aa975a0e4> bcube:dateCreated "2015-08-11T06:43:56.232Z" ;
+    bcube:hasMetadataRecord <urn:uuid:a123f321-7948-40c4-9eae-da1d5e20e709> ;
+    bcube:lastUpdated "2015-08-11T06:43:56.232Z" ;
+    dc:conformsTo <urn:uuid:13fd87d7-0ca3-46e3-889b-052b175e4635>,
+        <urn:uuid:7d667c50-26e7-47c0-b107-bf21e2fed412> ;
+    dc:description "Lake fish distribution compiled and maintained by Montana Fish, Wildlife & Parks (FWP)." ;
+    dc:spatial "POLYGON ((-116.110903 44.324291,-116.110903 49.165276,-103.697343 49.165276,-103.697343 44.324291,-116.110903 44.324291))" ;
+    dcterms:publisher <urn:uuid:2ea15845-36a0-48b1-849e-ff6c71270a6d> ;
+    dcterms:references <urn:uuid:bf575960-349b-4b63-96ee-933d601e8b9d> ;
+    dcterms:title "Montana Fish Distribution - Lakes" ;
+    esip:eastBound "-103.697343"^^xsd:float ;
+    esip:endDate "2010-05-17"^^xsd:date ;
+    esip:northBound "49.165276"^^xsd:float ;
+    esip:southBound "44.324291"^^xsd:float ;
+    esip:startDate "1999-01-01"^^xsd:date ;
+    esip:westBound "-116.110903"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:bf575960-349b-4b63-96ee-933d601e8b9d> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-11T06:43:56.232Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-11T06:43:56.232Z" ;
+    dc:identifier "urn:sha:04bd66c5703415ecd0a0fc39f891cb91a0cacc0db77f489ff97125da" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://fwp.mt.gov/gisData/shapefiles/fishDistributionLakes.zip" .
+
+<urn:uuid:e817d8e3-9b23-4266-bcf7-07ffff030347> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-11T06:43:56.232Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-11T06:43:56.232Z" ;
+    dc:identifier "urn:sha:af067f7369e5b143cf82d8f80e495e9c9f1b225bd0e610446b69e85e" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://mslapps.mt.gov/Geographic_Information/Data/DataList/datalist_MetadataDetailRaw.aspx?did={D30B53B7-521E-4383-AA8B-FF902030CFC8}" .
+

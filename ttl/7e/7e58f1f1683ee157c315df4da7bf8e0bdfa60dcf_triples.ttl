@@ -1,0 +1,85 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:0dc262d1-4245-4efe-b146-427aad5f57e6> bcube:hasType "theme" ;
+    bcube:hasValue "economy",
+        "timber industry",
+        "wages" ;
+    dc:partOf "USDA Forest Service and ISO" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:30b0d361-3e09-439f-a731-a4dd0aeec828> dcterms:references <urn:uuid:e7587f6f-0245-4121-b5b6-35d8cc4e1431> ;
+    owl:a bibo:WebPage .
+
+<urn:uuid:40bbacb3-8e21-4cbd-b190-d3d215e7ed5e> owl:a foaf:Organization ;
+    foaf:name "USDA Forest Service" .
+
+<urn:uuid:a0d86a69-f159-4902-bf12-7ac3be4b87a5> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-10-30T07:10:22.201Z" ;
+    bcube:lastUpdated "2015-10-30T07:10:22.201Z" ;
+    bcube:originatedFrom <urn:uuid:abafb8aa-9b97-4a8f-abaa-1879684b2842> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:a847ac65-fd29-468d-950f-350ab22fd44d> .
+
+<urn:uuid:a847ac65-fd29-468d-950f-350ab22fd44d> bcube:dateCreated "2015-10-30T07:10:22.201Z" ;
+    bcube:hasMetadataRecord <urn:uuid:a0d86a69-f159-4902-bf12-7ac3be4b87a5> ;
+    bcube:lastUpdated "2015-10-30T07:10:22.201Z" ;
+    dc:conformsTo <urn:uuid:0dc262d1-4245-4efe-b146-427aad5f57e6> ;
+    dc:description "Wage data obtained from IMPLAN database (Minnesota IMPLAN Group, 1997)." ;
+    dc:spatial "POLYGON ((-97.104246 23.957495,-97.104246 39.961157,-74.773082 39.961157,-74.773082 23.957495,-97.104246 23.957495))" ;
+    dcterms:publisher <urn:uuid:40bbacb3-8e21-4cbd-b190-d3d215e7ed5e> ;
+    dcterms:references <urn:uuid:30b0d361-3e09-439f-a731-a4dd0aeec828>,
+        <urn:uuid:a84dad4a-061b-4d85-b672-1445a79ced35> ;
+    dcterms:title "wages" ;
+    esip:eastBound "-74.773082"^^xsd:float ;
+    esip:northBound "39.961157"^^xsd:float ;
+    esip:southBound "23.957495"^^xsd:float ;
+    esip:westBound "-97.104246"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:a84dad4a-061b-4d85-b672-1445a79ced35> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-10-30T07:10:22.201Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-10-30T07:10:22.201Z" ;
+    dc:identifier "urn:sha:d14a028c2a3a2bc9476102bb288234c415a2b01f828ea62ac5b3e42f" ;
+    owl:a bcube:Url .
+
+<urn:uuid:abafb8aa-9b97-4a8f-abaa-1879684b2842> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-10-30T07:10:22.201Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-10-30T07:10:22.201Z" ;
+    dc:identifier "urn:sha:6df98ec68626f30f15b4ffc63c2801943bf7a91415f2c0d82d4540b6" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www.srs.fs.usda.gov/sustain/data/wages/wages.xml" .
+
+<urn:uuid:e7587f6f-0245-4121-b5b6-35d8cc4e1431> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-10-30T07:10:22.201Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-10-30T07:10:22.201Z" ;
+    dc:identifier "urn:sha:18584722f6f6f8821a70f73be9b25d490cc59455b4c15a03d6fc8218" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "www.rtp.srs.fs.fed.us/econ/" .
+

@@ -1,0 +1,56 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:7457b5b9-43ea-4297-b331-656b795ff094> bcube:hasValue "Hoogtegegevens" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:a0f68049-110e-4796-9604-5fbb41363442> a "ISO 19115:2003/19139" ;
+    bcube:dateCreated "2015-11-03T00:32:01.951Z" ;
+    bcube:lastUpdated "2015-11-03T00:32:01.951Z" ;
+    bcube:originatedFrom <urn:uuid:a7361c92-c00c-42ac-884a-a4a1778a4977> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:c79d6380-fddd-4783-8830-e0c83e2a8a25> .
+
+<urn:uuid:a7361c92-c00c-42ac-884a-a4a1778a4977> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-03T00:32:01.951Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-03T00:32:01.951Z" ;
+    dc:identifier "urn:sha:dd9fd99244e3428cb51e0460a48aaefaf44e52b6fc382de32ae0f1fc" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www.rijkswaterstaat.nl/apps/geoservices/geodata/dmc/kust_2009_5/geogegevens/raster/24/24hn1/metadata.xml" .
+
+<urn:uuid:c79d6380-fddd-4783-8830-e0c83e2a8a25> bcube:dateCreated "2015-11-03T00:32:01.951Z" ;
+    bcube:hasMetadataRecord <urn:uuid:a0f68049-110e-4796-9604-5fbb41363442> ;
+    bcube:lastUpdated "2015-11-03T00:32:01.951Z" ;
+    dc:conformsTo <urn:uuid:7457b5b9-43ea-4297-b331-656b795ff094>,
+        <urn:uuid:e1fa7a54-cdda-40d0-b40b-5d5d8c7ebb82> ;
+    dc:description "Hoogtemodel van de kust in de vorm van een grid met een resolutie van 5 meter waarbij de hoogtewaarde is opgenomen in meters. Delen van de zandige kust van Nederland worden elk jaar in hoogte vastgelegd t.b.v. het vervaardigen van strandprofielen t.b.v. monitoring kustlijn. Een digitaal hoogte model (DHM) is een bestand waarbij de hoogte wordt weergegeven volgens een regelmatig, rechthoekig raster. Iedere cel van het raster (ook wel een gridcel genoemd) krijgt een hoogtewaarde. Deze hoogtewaarde wordt berekend uit de omliggende laserpunten van het gefilterde basisbestand. De hiervoor gebruikte techniek is een zogenaamde \"gewogen gemiddelde interpolatie\". Meer informatie en uitleg over de interpolatie vindt U in de handleiding \"de grids van het AHN\" te vinden op www.ahn.nl. Als er geen laserpunten in de buurt van een gridcel liggen blijft de cel leeg (de cel krijgt een \"nodata\" waarde). Belangrijk om te weten is dat de waarde van een 5x5 meter gridcel wordt berekend uit meerdere laserpunten (het aantal is afhankelijk van de puntdichtheid van het basisbestand). Hierdoor neemt de invloed van de meetruis en uitschieters af en treedt er een lichte mate van vervlakking op. Laseraltimetrie hoogtegegevens volgens RWS voorschriften ingewonnen. Voor gedetailleerde informatie zie bijgevoegd kwaliteitsdocument" ;
+    dc:spatial "POLYGON ((3.35505 51.36622,3.35505 53.52188,6.40784 53.52188,6.40784 51.36622,3.35505 51.36622))" ;
+    dcterms:title "Hoogtebestand kust 2009" ;
+    esip:eastBound "6.40784"^^xsd:float ;
+    esip:endDate "2009-04-05"^^xsd:date ;
+    esip:northBound "53.52188"^^xsd:float ;
+    esip:southBound "51.36622"^^xsd:float ;
+    esip:startDate "2009-03-16"^^xsd:date ;
+    esip:westBound "3.35505"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:e1fa7a54-cdda-40d0-b40b-5d5d8c7ebb82> bcube:hasValue "elevation" ;
+    dc:partOf "IsoTopicCategories" ;
+    owl:a bcube:thesaurusSubset .
+

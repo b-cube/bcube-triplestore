@@ -1,0 +1,75 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:1005c8c6-2bb9-491a-81bf-4126a028af4f> bcube:hasType "place" ;
+    bcube:hasValue "United States" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:43b01c27-cbf6-4c4d-8f8e-2658fb29c227> bcube:hasType "theme" ;
+    bcube:hasValue "002",
+        "biota" ;
+    dc:partOf "ISO19115 Topic Category" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:453b7c8e-a453-4499-81aa-f28e1134c64a> a "ISO 19115:2003/19139" ;
+    bcube:dateCreated "2015-11-01T02:08:44.38Z" ;
+    bcube:lastUpdated "2015-11-01T02:08:44.38Z" ;
+    bcube:originatedFrom <urn:uuid:875e80d0-69f7-4191-9809-3285d01996c9> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:ca0e5198-b538-4051-8b03-faf3feda6998> .
+
+<urn:uuid:46ad7ab8-9547-46eb-8231-1e5122826fe8> bcube:hasType "temporal" ;
+    bcube:hasValue "midwinter" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:875e80d0-69f7-4191-9809-3285d01996c9> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-01T02:08:44.38Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-01T02:08:44.38Z" ;
+    dc:identifier "urn:sha:3bffbfe3e5b96078c7130c676444e6e6714203bcdf9a3d38dc06038c" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://catalog.data.gov/harvest/object/210deb86-aa14-425e-a570-14c9fe6f4e8d" .
+
+<urn:uuid:b43c9fbf-64b2-4be1-ad48-d721128610b8> bcube:hasType "theme" ;
+    bcube:hasValue "count",
+        "surveys",
+        "trends",
+        "wintering" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:ca0e5198-b538-4051-8b03-faf3feda6998> bcube:dateCreated "2015-11-01T02:08:44.38Z" ;
+    bcube:hasMetadataRecord <urn:uuid:453b7c8e-a453-4499-81aa-f28e1134c64a> ;
+    bcube:lastUpdated "2015-11-01T02:08:44.38Z" ;
+    dc:conformsTo <urn:uuid:1005c8c6-2bb9-491a-81bf-4126a028af4f>,
+        <urn:uuid:43b01c27-cbf6-4c4d-8f8e-2658fb29c227>,
+        <urn:uuid:46ad7ab8-9547-46eb-8231-1e5122826fe8>,
+        <urn:uuid:b43c9fbf-64b2-4be1-ad48-d721128610b8> ;
+    dc:description "as part of a survey initiated in 1979 by the National Wildlife Federation. This database includes data from 1986-2005 midwinter counts and includes some statewide, regional and national trends. Survey routes are included in the database only if they were surveyed consistently in at least 4 years and where at least 4 eagles were counted in a single year." ;
+    dc:spatial "POLYGON ((-125 24,-125 49,-66 49,-66 24,-125 24))" ;
+    dcterms:title "Midwinter Bald Eagle Counts, 1986-2005 (update 2008)" ;
+    esip:eastBound "-66.0"^^xsd:float ;
+    esip:endDate "2005-01-01"^^xsd:date ;
+    esip:northBound "49.0"^^xsd:float ;
+    esip:southBound "24.0"^^xsd:float ;
+    esip:startDate "1986-01-01"^^xsd:date ;
+    esip:westBound "-125.0"^^xsd:float ;
+    owl:a dcat:Dataset .
+

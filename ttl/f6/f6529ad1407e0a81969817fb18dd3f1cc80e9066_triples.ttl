@@ -1,0 +1,62 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:4f987d61-db39-4bd4-b8f6-d4883c50ed17> a "OGC:WMS" ;
+    bcube:contains <urn:uuid:336c27d9-2d0c-4bb7-beb5-df962aac1521> ;
+    bcube:dateCreated "2015-08-10T00:37:56.701Z" ;
+    bcube:lastUpdated "2015-08-10T00:37:56.701Z" ;
+    bcube:originatedFrom <urn:uuid:3c66da41-73fb-4212-81c6-0b74c75daaea> ;
+    dc:conformsTo <urn:uuid:dc2f41f1-82c5-4e38-a653-ec8463764aea> ;
+    dc:description "The USGS Imagery Only base map service for The National Map is a cached, composite map service combining the following imagery sources:* Blue Marble: Next Generation - Global through 1:2.3M - worldwide coverage* NAIP - 1:1.15M through 1:18k - CONUS plus Hawaii* Landsat - 1:1.15M through 1:72k - Alaska, Puerto Rico, other US Territorial Islands" ;
+    owl:a bcube:service .
+
+<urn:uuid:336c27d9-2d0c-4bb7-beb5-df962aac1521> bcube:dateCreated "2015-08-10T00:37:56.701Z" ;
+    bcube:lastUpdated "2015-08-10T00:37:56.701Z" ;
+    dc:description "The USGS Imagery Only base map service for The National Map is a cached, composite map service combining the following imagery sources:* Blue Marble: Next Generation - Global through 1:2.3M - worldwide coverage* NAIP - 1:1.15M through 1:18k - CONUS plus Hawaii* Landsat - 1:1.15M through 1:72k - Alaska, Puerto Rico, other US Territorial Islands" ;
+    dc:spatial "POLYGON ((-180.0 -89.0,-180.0 89.0,179.999996 89.0,179.999996 -89.0,-180.0 -89.0))" ;
+    dc:title "USGS ImageryOnly Basemap - 18k and smaller" ;
+    dcterms:references <urn:uuid:8aac66e0-1a66-4d09-ae41-eb4278e3a4f1> ;
+    esip:eastBound "179.999996"^^xsd:float ;
+    esip:northBound "89.0"^^xsd:float ;
+    esip:southBound "-89.0"^^xsd:float ;
+    esip:westBound "-179.999996"^^xsd:float ;
+    owl:a bcube:Layer .
+
+<urn:uuid:3c66da41-73fb-4212-81c6-0b74c75daaea> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-10T00:37:56.701Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-10T00:37:56.701Z" ;
+    dc:identifier "urn:sha:412f0a6ef750d32cef617ba944e4ffc9c43b55a409fd0229d086587a" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://basemap.nationalmap.gov/arcgis/services/USGSImageryOnly/MapServer/WMSServer?request=GetCapabilities&service=WMS" .
+
+<urn:uuid:8aac66e0-1a66-4d09-ae41-eb4278e3a4f1> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-10T00:37:56.701Z" ;
+    bcube:hasConfidence "Not Sure" ;
+    bcube:hasUrlSource "Generated" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-10T00:37:56.701Z" ;
+    dc:identifier "urn:sha:840392f1f834b584e7351055a32e78b3909ced289872b78e25283f4c" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://basemap.nationalmap.gov/arcgis/services/USGSImageryOnly/MapServer/WMSServer?layers=0&width=500&version=1.3.0&bbox=-179.999996%2C-89.0%2C179.999996%2C89.0&service=WMS&format=image%2Fpng&styles=&crs=CRS%3A84&request=GetMap&height=500" .
+
+<urn:uuid:dc2f41f1-82c5-4e38-a653-ec8463764aea> bcube:hasValue "USGS Imagery Basemap Small Scale" ;
+    owl:a bcube:thesaurusSubset .
+

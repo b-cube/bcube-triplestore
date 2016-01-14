@@ -1,0 +1,87 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:237ccfbc-0024-4e1a-9dad-25f0384b0b6c> owl:a foaf:Organization ;
+    foaf:name "" .
+
+<urn:uuid:2ae50a54-6284-4b0b-9f8a-cd158f0f3e23> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-10-29T19:54:43.672Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-10-29T19:54:43.672Z" ;
+    dc:identifier "urn:sha:48cf43b6335e9a6085527bdb78c19c2e8d27ec3d3ba7e9494d13d475" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://data.fs.usda.gov/geodata/edw/datasets.php" .
+
+<urn:uuid:7d528fc7-a5db-499c-b00a-12baada56d60> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-10-29T19:54:43.672Z" ;
+    bcube:lastUpdated "2015-10-29T19:54:43.672Z" ;
+    bcube:originatedFrom <urn:uuid:ca93719e-2d2a-489c-9ac5-089f5e830fe1> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:e0a71b37-da7b-4ba3-b2a2-65232ead7fde> .
+
+<urn:uuid:9455cf4b-20af-4359-9ee4-50af4579a577> bcube:hasType "theme" ;
+    bcube:hasValue "boundaries" ;
+    dc:partOf "ISO 19115 Topic Categories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:b419709e-e957-4f20-8205-2b1adcce9199> bcube:hasType "theme" ;
+    bcube:hasValue "District Name",
+        "District Number",
+        "Forest Name",
+        "Forest Service Land Dataset",
+        "Forest Service Lands Program",
+        "Land Status",
+        "NFS Lands",
+        "Ranger District",
+        "Region",
+        "USDA Forest Service" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:ca93719e-2d2a-489c-9ac5-089f5e830fe1> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-10-29T19:54:43.672Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-10-29T19:54:43.672Z" ;
+    dc:identifier "urn:sha:fa8222c9c46db3631113a077d940a124a8a8582a0d918f98ba539fd2" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://data.fs.usda.gov/geodata/edw/edw_resources/meta/S_USA.RangerDistrict.xml" .
+
+<urn:uuid:cbcc22d5-40ff-46dc-9ea6-f55295ddbb40> dcterms:references <urn:uuid:2ae50a54-6284-4b0b-9f8a-cd158f0f3e23> ;
+    owl:a bibo:WebPage .
+
+<urn:uuid:e0a71b37-da7b-4ba3-b2a2-65232ead7fde> bcube:dateCreated "2015-10-29T19:54:43.672Z" ;
+    bcube:hasMetadataRecord <urn:uuid:7d528fc7-a5db-499c-b00a-12baada56d60> ;
+    bcube:lastUpdated "2015-10-29T19:54:43.672Z" ;
+    dc:conformsTo <urn:uuid:9455cf4b-20af-4359-9ee4-50af4579a577>,
+        <urn:uuid:b419709e-e957-4f20-8205-2b1adcce9199> ;
+    dc:description "A depiction of the boundary that encompasses a Ranger District." ;
+    dc:spatial "POLYGON ((-150.007694 18.231236,-150.007694 61.518992,-65.699668 61.518992,-65.699668 18.231236,-150.007694 18.231236))" ;
+    dcterms:publisher <urn:uuid:237ccfbc-0024-4e1a-9dad-25f0384b0b6c> ;
+    dcterms:references <urn:uuid:cbcc22d5-40ff-46dc-9ea6-f55295ddbb40> ;
+    dcterms:title "S_USA.RangerDistrict" ;
+    esip:eastBound "-65.699668"^^xsd:float ;
+    esip:northBound "61.518992"^^xsd:float ;
+    esip:southBound "18.231236"^^xsd:float ;
+    esip:startDate "2015-08-26"^^xsd:date ;
+    esip:westBound "-150.007694"^^xsd:float ;
+    owl:a dcat:Dataset .
+

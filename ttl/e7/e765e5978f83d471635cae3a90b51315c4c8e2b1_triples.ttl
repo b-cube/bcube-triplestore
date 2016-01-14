@@ -1,0 +1,98 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:037a6e27-e876-46d4-afd8-213d0ad10a31> bcube:hasType "theme" ;
+    bcube:hasValue "Barrio",
+        "CCD",
+        "Census County Division",
+        "County Subdivision",
+        "County or equivalent entity",
+        "MCD",
+        "Minor Civil Division",
+        "Polygon",
+        "Subdivision",
+        "Town",
+        "Township",
+        "UT",
+        "Unorganized Territory" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:123f2931-07ae-41ba-8ff6-259646997b41> bcube:hasType "theme" ;
+    bcube:hasValue "boundaries" ;
+    dc:partOf "ISO 19115 Topic Categories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:478b7aac-1ef9-4837-8395-35b23d18e55d> owl:a foaf:Organization ;
+    foaf:name "" .
+
+<urn:uuid:4ec7e911-c5c4-4f09-b2cf-4529066bb8c2> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-11-07T09:58:01.159Z" ;
+    bcube:lastUpdated "2015-11-07T09:58:01.159Z" ;
+    bcube:originatedFrom <urn:uuid:727b94df-8171-45ce-9356-262bf53c8524> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:6146c867-32ce-4ccc-a5c9-a0922c5ecc7b> .
+
+<urn:uuid:6146c867-32ce-4ccc-a5c9-a0922c5ecc7b> bcube:dateCreated "2015-11-07T09:58:01.159Z" ;
+    bcube:hasMetadataRecord <urn:uuid:4ec7e911-c5c4-4f09-b2cf-4529066bb8c2> ;
+    bcube:lastUpdated "2015-11-07T09:58:01.159Z" ;
+    dc:conformsTo <urn:uuid:037a6e27-e876-46d4-afd8-213d0ad10a31>,
+        <urn:uuid:123f2931-07ae-41ba-8ff6-259646997b41>,
+        <urn:uuid:c0c3534b-a10e-481a-be5f-9b2214bb7fb9> ;
+    dc:description "The TIGER/Line Shapefiles are an extract of selected geographic and cartographic information from the Census MAF/TIGER database. The Census MAF/TIGER database represents a seamless national file with no overlaps or gaps between parts. However, each TIGER/Line Shapefile is designed to stand alone as an independent data set or the shapefiles can be combined to cover the whole nation." ;
+    dc:spatial "POLYGON ((-173.23683 58.496019,-173.23683 62.295331,-153.001064 62.295331,-153.001064 58.496019,-173.23683 58.496019))" ;
+    dcterms:publisher <urn:uuid:478b7aac-1ef9-4837-8395-35b23d18e55d> ;
+    dcterms:references <urn:uuid:fd79d79e-131c-42b8-b1b9-38fa321dad37> ;
+    dcterms:title "TIGER/Line Shapefile, 2007, 2000 county, Bethel Census Area, County Subdivision" ;
+    esip:eastBound "-153.001064"^^xsd:float ;
+    esip:endDate "2007-07-01"^^xsd:date ;
+    esip:northBound "62.295331"^^xsd:float ;
+    esip:southBound "58.496019"^^xsd:float ;
+    esip:startDate "2007-01-01"^^xsd:date ;
+    esip:westBound "-173.23683"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:727b94df-8171-45ce-9356-262bf53c8524> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-07T09:58:01.159Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-07T09:58:01.159Z" ;
+    dc:identifier "urn:sha:23095e8b05646e145993d6c9e96e9df02700e81000c32bfb8a3bc742" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://meta.geo.census.gov/data/existing/decennial/GEO/GPMB/TIGERline/fe_2007/cousub00/fe_2007_02050_cousub00_url.shp.xml" .
+
+<urn:uuid:c0c3534b-a10e-481a-be5f-9b2214bb7fb9> bcube:hasType "place" ;
+    bcube:hasValue "02050",
+        "Bethel",
+        "County or Equivalent Entity",
+        "U.S.",
+        "United States" ;
+    dc:partOf "FIPS Publication 5-2, FIPS Publication 6-4, FIPS Publication 8-6, FIPS Publication 9-1" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:fd79d79e-131c-42b8-b1b9-38fa321dad37> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-07T09:58:01.159Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-07T09:58:01.159Z" ;
+    dc:identifier "urn:sha:d9ffc924ba773bd4189a8e634e1d2b5c5aa8c19a1f365c147e0393d8" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www2.census.gov/geo/tiger/TIGER2007FE/02_ALASKA/02050_Bethel/fe_2007_02050_cousub00.zip" .
+

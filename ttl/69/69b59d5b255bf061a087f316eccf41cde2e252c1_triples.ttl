@@ -1,0 +1,59 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:71850005-48f0-4121-b9fe-2117731a8d14> bcube:hasType "place" ;
+    bcube:hasValue "New York (State)",
+        "Schuyler County (N.Y.) -- Maps." ;
+    dc:partOf "LCSH" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:8a82e94d-331c-4773-81f6-3a9350e9928b> bcube:hasType "theme" ;
+    bcube:hasValue "Block Numbering Areas",
+        "Census Tracts" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:9b8decef-5cf0-4d5d-aadc-85ec7d8d6c1e> a "ISO 19115:2003/19139" ;
+    bcube:dateCreated "2015-08-07T16:34:58.367Z" ;
+    bcube:lastUpdated "2015-08-07T16:34:58.367Z" ;
+    bcube:originatedFrom <urn:uuid:d877b0c4-0cfa-41e2-b5bb-5fe00fb4ac05> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:f1e31fe9-0995-407d-8515-1e82c4048c13> .
+
+<urn:uuid:d877b0c4-0cfa-41e2-b5bb-5fe00fb4ac05> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-07T16:34:58.367Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-07T16:34:58.367Z" ;
+    dc:identifier "urn:sha:a528bb372c7afe14c3b3902628e97a44586e3e618d03a857682550a1" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "https://catalog.data.gov/harvest/object/a616cf9d-d6bd-4ddd-ae3a-29baaff89267" .
+
+<urn:uuid:f1e31fe9-0995-407d-8515-1e82c4048c13> bcube:dateCreated "2015-08-07T16:34:58.367Z" ;
+    bcube:hasMetadataRecord <urn:uuid:9b8decef-5cf0-4d5d-aadc-85ec7d8d6c1e> ;
+    bcube:lastUpdated "2015-08-07T16:34:58.367Z" ;
+    dc:conformsTo <urn:uuid:71850005-48f0-4121-b9fe-2117731a8d14>,
+        <urn:uuid:8a82e94d-331c-4773-81f6-3a9350e9928b> ;
+    dc:description "This shapefile is an extract of selected geographic and cartographic information from the 1995 TIGER/Line files detailing census tracks and block numbering areas." ;
+    dc:spatial "POLYGON ((-77.107 42.234,-77.107 42.547,-76.619 42.547,-76.619 42.234,-77.107 42.234))" ;
+    dcterms:title "Census Tracts, Schuyler County (Shapefile : 1998)" ;
+    esip:eastBound "-76.619"^^xsd:float ;
+    esip:northBound "42.547"^^xsd:float ;
+    esip:southBound "42.234"^^xsd:float ;
+    esip:westBound "-77.107"^^xsd:float ;
+    owl:a dcat:Dataset .
+

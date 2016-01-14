@@ -1,0 +1,98 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:0102b8f0-0b0d-40cc-8d54-d31ab5f63dba> bcube:hasType "theme" ;
+    bcube:hasValue "economy",
+        "environment",
+        "oceans",
+        "society",
+        "structure",
+        "transportation" ;
+    dc:partOf "ISO 19115 Topic Category" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:0e3523b9-b505-4759-bb94-848a4f3b60dc> bcube:hasType "theme" ;
+    bcube:hasValue "Comparative Index",
+        "Demographics",
+        "Environmental Hazards",
+        "Indicators",
+        "Resilience",
+        "Social Vulnerability Index",
+        "Socioeconomics",
+        "Vulnerability" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:131de726-26e3-4e0f-8615-049877f02bf6> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-08T16:38:08.503Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-08T16:38:08.503Z" ;
+    dc:identifier "urn:sha:30cf345e633e286b856e2d494158a7a0073272646fff2597a42435eb" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www.coast.noaa.gov/digitalcoast/data/SoVI/" .
+
+<urn:uuid:2b6e3dd6-a4ef-48ae-b9ee-548681269dd1> bcube:dateCreated "2015-08-08T16:38:08.503Z" ;
+    bcube:hasMetadataRecord <urn:uuid:b2d9db9f-b9e9-419e-92f0-22408eb748e8> ;
+    bcube:lastUpdated "2015-08-08T16:38:08.503Z" ;
+    dc:conformsTo <urn:uuid:0102b8f0-0b0d-40cc-8d54-d31ab5f63dba>,
+        <urn:uuid:0e3523b9-b505-4759-bb94-848a4f3b60dc>,
+        <urn:uuid:cf9d8728-8b1d-4d74-87ec-8b870f1bfb3b> ;
+    dc:description "This data depicts the social vulnerability of Alaska census block groups to environmental hazards. Data were culled primarily from the 2000 Decennial Census." ;
+    dc:spatial "POLYGON ((-178.217598 18.921786,-178.217598 71.406235,-66.969271 71.406235,-66.969271 18.921786,-178.217598 18.921786))" ;
+    dcterms:publisher <urn:uuid:91333814-8114-4e28-aeef-86419327df39> ;
+    dcterms:references <urn:uuid:846e6d73-f368-4e07-a274-58e9f287fe06> ;
+    dcterms:title "Social Vulnerability Index (SoVI) for Alaska based on 2000 Census Block Groups" ;
+    esip:eastBound "-66.969271"^^xsd:float ;
+    esip:northBound "71.406235"^^xsd:float ;
+    esip:southBound "18.921786"^^xsd:float ;
+    esip:startDate "2000-01-01"^^xsd:date ;
+    esip:westBound "-178.217598"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:846e6d73-f368-4e07-a274-58e9f287fe06> dcterms:references <urn:uuid:131de726-26e3-4e0f-8615-049877f02bf6> ;
+    owl:a bibo:WebPage .
+
+<urn:uuid:91333814-8114-4e28-aeef-86419327df39> owl:a foaf:Organization ;
+    foaf:name "Hazards and Vulnerability Research Institute (HVRI), University of South Carolina" .
+
+<urn:uuid:9c2d7b13-445e-47e1-bb0d-458629ead7a2> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-08T16:38:08.503Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-08T16:38:08.503Z" ;
+    dc:identifier "urn:sha:0deb6b6a1a67ff5b4bf7da06b0c1457f23c28c2511ecb3d941c33d4e" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://catalog.data.gov/harvest/object/53043914-1910-4658-a8ff-e7a6344a0e47/original" .
+
+<urn:uuid:b2d9db9f-b9e9-419e-92f0-22408eb748e8> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-08-08T16:38:08.503Z" ;
+    bcube:lastUpdated "2015-08-08T16:38:08.503Z" ;
+    bcube:originatedFrom <urn:uuid:9c2d7b13-445e-47e1-bb0d-458629ead7a2> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:2b6e3dd6-a4ef-48ae-b9ee-548681269dd1> .
+
+<urn:uuid:cf9d8728-8b1d-4d74-87ec-8b870f1bfb3b> bcube:hasType "place" ;
+    bcube:hasValue "Census Block Groups",
+        "Coastal States",
+        "United States" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+

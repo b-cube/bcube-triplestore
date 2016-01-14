@@ -1,0 +1,70 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:0247a5ec-7dbd-47ae-adc7-a81713e1d265> bcube:hasType "theme" ;
+    bcube:hasValue "boundaries" ;
+    dc:partOf "ISO 19115 Topic Categories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:1c854020-78a6-444f-8145-83e566a8ed87> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-10-31T22:27:04.31Z" ;
+    bcube:lastUpdated "2015-10-31T22:27:04.31Z" ;
+    bcube:originatedFrom <urn:uuid:3cadcc85-3938-48a1-b630-a0624b550430> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:c8ac5222-2ac6-4fe8-acd8-cdc9d8140a02> .
+
+<urn:uuid:3cadcc85-3938-48a1-b630-a0624b550430> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-10-31T22:27:04.31Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-10-31T22:27:04.31Z" ;
+    dc:identifier "urn:sha:76d4d5665deae3910b2b9f1ebf30d6c6d09ada61e7cf572923698dc3" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://data.fs.usda.gov/geodata/edw/edw_resources/meta/S_USA.SpecialStatusArea.xml" .
+
+<urn:uuid:863c9446-2d2c-42a7-bb33-248342280261> owl:a foaf:Organization ;
+    foaf:name "" .
+
+<urn:uuid:b20308e2-c4a4-438f-b372-ab5b4f9f5b06> bcube:hasType "theme" ;
+    bcube:hasValue "ALP Land Dataset",
+        "Cost Share Agreement Area",
+        "Exchange Authority Area",
+        "Forest Reserve",
+        "Intended Wilderness",
+        "Land Adjustment Plan Area",
+        "Land Status",
+        "NFS Lands",
+        "Secretary's Order Area",
+        "USDA Forest Service" ;
+    dc:partOf "Special Status Area" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:c8ac5222-2ac6-4fe8-acd8-cdc9d8140a02> bcube:dateCreated "2015-10-31T22:27:04.31Z" ;
+    bcube:hasMetadataRecord <urn:uuid:1c854020-78a6-444f-8145-83e566a8ed87> ;
+    bcube:lastUpdated "2015-10-31T22:27:04.31Z" ;
+    dc:conformsTo <urn:uuid:0247a5ec-7dbd-47ae-adc7-a81713e1d265>,
+        <urn:uuid:b20308e2-c4a4-438f-b372-ab5b4f9f5b06> ;
+    dc:description "A land area that has distinct management/use authorities or agreements for Forest Service action. Includes: Cost Share Agreement Areas, Exchange Authority Areas, Land Adjustment Plan Areas, Forest Reserves, and Secretary's Order Areas." ;
+    dc:spatial "POLYGON ((-150.007671 35.200172,-150.007671 61.51899,-96.928134 61.51899,-96.928134 35.200172,-150.007671 35.200172))" ;
+    dcterms:publisher <urn:uuid:863c9446-2d2c-42a7-bb33-248342280261> ;
+    dcterms:title "S_USA.SpecialStatusArea" ;
+    esip:eastBound "-96.928134"^^xsd:float ;
+    esip:northBound "61.51899"^^xsd:float ;
+    esip:southBound "35.200172"^^xsd:float ;
+    esip:westBound "-150.007671"^^xsd:float ;
+    owl:a dcat:Dataset .
+

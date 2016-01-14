@@ -1,0 +1,57 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:7b4e018d-ee5d-42ac-9d20-fe4090634da1> bcube:hasType "theme" ;
+    bcube:hasValue "fires",
+        "floods",
+        "geography",
+        "hazards",
+        "image collections",
+        "land surface characteristics",
+        "multispectral imaging" ;
+    dc:partOf "USGS Thesaurus" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:8ccd7069-0286-4ad2-86bd-7dbfcbe1a2fd> a "ISO 19115:2003/19139" ;
+    bcube:dateCreated "2014-07-30T02:24:16.795Z" ;
+    bcube:lastUpdated "2014-07-30T02:24:16.795Z" ;
+    bcube:originatedFrom <urn:uuid:b3120217-38f1-41ba-b588-275984fe8012> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:e22a5ef3-4052-4131-a989-63b17839f11e> .
+
+<urn:uuid:b3120217-38f1-41ba-b588-275984fe8012> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2014-07-30T02:24:16.795Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2014-07-30T02:24:16.795Z" ;
+    dc:identifier "urn:sha:6363eb137ebf03af96c8564ddc49b07abbd8089ae42eb0fc7e391740" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www.usgs.gov/science/iso.php?cite=2871" .
+
+<urn:uuid:e22a5ef3-4052-4131-a989-63b17839f11e> bcube:dateCreated "2014-07-30T02:24:16.795Z" ;
+    bcube:hasMetadataRecord <urn:uuid:8ccd7069-0286-4ad2-86bd-7dbfcbe1a2fd> ;
+    bcube:lastUpdated "2014-07-30T02:24:16.795Z" ;
+    dc:conformsTo <urn:uuid:7b4e018d-ee5d-42ac-9d20-fe4090634da1>,
+        <urn:uuid:eb35a873-d4ba-4088-b510-411cd15b77ab> ;
+    dc:description "Examples showing the use of historical satellite imagery for assessing the extent and severity of landscape hazards such as fires and floods." ;
+    dcterms:title "Monitoring floods and fires during the summer of 2011--The value of the Landsat satellite 40-year archives" ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:eb35a873-d4ba-4088-b510-411cd15b77ab> bcube:hasValue "geoscientificInformation" ;
+    dc:partOf "IsoTopicCategories" ;
+    owl:a bcube:thesaurusSubset .
+

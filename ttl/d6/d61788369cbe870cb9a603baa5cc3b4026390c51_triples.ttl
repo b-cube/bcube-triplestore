@@ -1,0 +1,102 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:14d7a285-daa3-4912-a920-c89927b3a22b> bcube:hasType "theme" ;
+    bcube:hasValue "elevation",
+        "environment",
+        "hydrology",
+        "inlandWaters",
+        "structure",
+        "transportation" ;
+    dc:partOf "ISO 19115 Topic Category" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:2531fd47-331c-45e9-b328-6b4b66bae639> bcube:hasType "place" ;
+    bcube:hasValue "COMMUNITY Bourbon County and Incorporated Areas",
+        "COUNTY Bourbon",
+        "COUNTY-FIPS 20011",
+        "FEMA-CID 20011C",
+        "REGION 07",
+        "STATE KS" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:293a2d62-6cd8-4e87-bdd0-ae0e9e8d9aa1> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-07-29T19:09:30.433Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-07-29T19:09:30.433Z" ;
+    dc:identifier "urn:sha:25d07fd76505485f9e86a9111f77239c111b48b5e08359a01d4f95ce" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "https://catalog.data.gov/harvest/object/d71e4fdb-abbb-4afd-aa9c-04c2e9fa660a/original" .
+
+<urn:uuid:64d115f4-d50a-42f8-a963-6f73811cc739> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-07-29T19:09:30.433Z" ;
+    bcube:lastUpdated "2015-07-29T19:09:30.433Z" ;
+    bcube:originatedFrom <urn:uuid:293a2d62-6cd8-4e87-bdd0-ae0e9e8d9aa1> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:7d4b4a2f-0025-4d77-a5f2-26f4301af22d> .
+
+<urn:uuid:7d4b4a2f-0025-4d77-a5f2-26f4301af22d> bcube:dateCreated "2015-07-29T19:09:30.433Z" ;
+    bcube:hasMetadataRecord <urn:uuid:64d115f4-d50a-42f8-a963-6f73811cc739> ;
+    bcube:lastUpdated "2015-07-29T19:09:30.433Z" ;
+    dc:conformsTo <urn:uuid:14d7a285-daa3-4912-a920-c89927b3a22b>,
+        <urn:uuid:2531fd47-331c-45e9-b328-6b4b66bae639>,
+        <urn:uuid:bd202320-b601-475e-8116-b5b4da450f36> ;
+    dc:description "The Digital Flood Insurance Rate Map (DFIRM) Database depicts flood risk information and supporting data used to develop the risk data. The primary risk classifications used are the 1-percent-annual-chance flood event, the 0.2-percent-annual- chance flood event, and areas of minimal flood risk. The DFIRM Database is derived from Flood Insurance Studies (FISs), previously published Flood Insurance Rate Maps (FIRMs), flood hazard analyses performed in support of the FISs and FIRMs, and new mapping data, where available. The FISs and FIRMs are published by the Federal Emergency Management Agency (FEMA). The file is georeferenced to earth's surface using the UTM projection and coordinate system. The specifications for the horizontal control of DFIRM data files are consistent with those required for mapping at a scale of 1:6,000, 1:12,000, and 1:24,000." ;
+    dc:spatial "POLYGON ((-95.25 37.5,-95.25 38.25,-94.25 38.25,-94.25 37.5,-95.25 37.5))" ;
+    dcterms:publisher <urn:uuid:95b267f6-ed42-4762-a824-a4d2956282ad> ;
+    dcterms:references <urn:uuid:d965587a-6688-43e2-a85d-616acae35535> ;
+    dcterms:title "DIGITAL FLOOD INSURANCE RATE MAP DATABASE, BOURBON COUNTY, USA" ;
+    esip:eastBound "-94.25"^^xsd:float ;
+    esip:northBound "38.25"^^xsd:float ;
+    esip:southBound "37.5"^^xsd:float ;
+    esip:startDate "2009-01-02"^^xsd:date ;
+    esip:westBound "-95.25"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:95b267f6-ed42-4762-a824-a4d2956282ad> owl:a foaf:Organization ;
+    foaf:name "Federal Emergency Management Agency" .
+
+<urn:uuid:bd202320-b601-475e-8116-b5b4da450f36> bcube:hasType "theme" ;
+    bcube:hasValue "Base Flood Elevation",
+        "DFIRM",
+        "DFIRM Database",
+        "Digital Flood Insurance Rate Map",
+        "FEMA Flood Hazard Zone",
+        "FIRM",
+        "Flood Insurance Rate Map",
+        "Floodway",
+        "NFIP",
+        "Riverine Flooding",
+        "SFHA",
+        "Special Flood Hazard Zone" ;
+    dc:partOf "FEMA NFIP Topic Category" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:d965587a-6688-43e2-a85d-616acae35535> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-07-29T19:09:30.433Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-07-29T19:09:30.433Z" ;
+    dc:identifier "urn:sha:db5e84964d0242b305958997a8c568ab657626b041eff2afcce66563" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://hazards.fema.gov/" .
+

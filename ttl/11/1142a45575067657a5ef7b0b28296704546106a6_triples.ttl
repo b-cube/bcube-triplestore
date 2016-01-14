@@ -1,0 +1,90 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:4294f8d0-f169-402d-9498-2a3f9995f735> owl:a foaf:Organization ;
+    foaf:name "" .
+
+<urn:uuid:482ed1cb-7e44-42dd-ab07-2d8c632109c3> bcube:hasType "theme" ;
+    bcube:hasValue "Polygon",
+        "School District",
+        "State or equivalent entity",
+        "Unified School District" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:50429708-4d8f-4d66-9872-6bc35e90b60e> bcube:hasType "place" ;
+    bcube:hasValue "42",
+        "PA",
+        "Pennsylvania",
+        "State or Equivalent Entity",
+        "U.S.",
+        "United States" ;
+    dc:partOf "FIPS Publication 5-2, FIPS Publication 6-4, FIPS Publication 8-6, FIPS Publication 9-1" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:92a7ee8b-e045-4b05-a9c6-e88be2e68a50> bcube:dateCreated "2015-11-07T09:51:20.942Z" ;
+    bcube:hasMetadataRecord <urn:uuid:efdd735c-9e97-4e3a-83b4-296895eaf963> ;
+    bcube:lastUpdated "2015-11-07T09:51:20.942Z" ;
+    dc:conformsTo <urn:uuid:482ed1cb-7e44-42dd-ab07-2d8c632109c3>,
+        <urn:uuid:50429708-4d8f-4d66-9872-6bc35e90b60e>,
+        <urn:uuid:fbb35320-3892-4c68-a431-f8c45b2d19a7> ;
+    dc:description "The TIGER/Line Shapefiles are an extract of selected geographic and cartographic information from the Census MAF/TIGER database. The Census MAF/TIGER database represents a seamless national file with no overlaps or gaps between parts. However, each TIGER/Line Shapefile is designed to stand alone as an independent data set or the shapefiles can be combined to cover the whole nation." ;
+    dc:spatial "POLYGON ((-80.519895 39.719799,-80.519895 42.516072,-74.689502 42.516072,-74.689502 39.719799,-80.519895 39.719799))" ;
+    dcterms:publisher <urn:uuid:4294f8d0-f169-402d-9498-2a3f9995f735> ;
+    dcterms:references <urn:uuid:948abe5c-dd27-47d0-a653-42b4ed672414> ;
+    dcterms:title "TIGER/Line Shapefile, 2007, state, Pennsylvania, Unified School District" ;
+    esip:eastBound "-74.689502"^^xsd:float ;
+    esip:endDate "2007-07-01"^^xsd:date ;
+    esip:northBound "42.516072"^^xsd:float ;
+    esip:southBound "39.719799"^^xsd:float ;
+    esip:startDate "2007-01-01"^^xsd:date ;
+    esip:westBound "-80.519895"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:948abe5c-dd27-47d0-a653-42b4ed672414> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-07T09:51:20.942Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-07T09:51:20.942Z" ;
+    dc:identifier "urn:sha:cbd0e78c67861a86cc59583900e7dbfdb65584795a0d0b5ef4c8df8d" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www2.census.gov/geo/tiger/TIGER2007FE/42_PENNSYLVANIA/fe_2007_42_unsd.zip" .
+
+<urn:uuid:bdc4f0bd-e596-485c-b37f-30674d5c6279> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-07T09:51:20.942Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-07T09:51:20.942Z" ;
+    dc:identifier "urn:sha:7e40a334bd7fa0307088ef94a38634d47a95f5a19602de513dfae7ea" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://meta.geo.census.gov/data/existing/decennial/GEO/GPMB/TIGERline/fe_2007/unsd/fe_2007_42_unsd_url.shp.xml" .
+
+<urn:uuid:efdd735c-9e97-4e3a-83b4-296895eaf963> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-11-07T09:51:20.942Z" ;
+    bcube:lastUpdated "2015-11-07T09:51:20.942Z" ;
+    bcube:originatedFrom <urn:uuid:bdc4f0bd-e596-485c-b37f-30674d5c6279> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:92a7ee8b-e045-4b05-a9c6-e88be2e68a50> .
+
+<urn:uuid:fbb35320-3892-4c68-a431-f8c45b2d19a7> bcube:hasType "theme" ;
+    bcube:hasValue "boundaries" ;
+    dc:partOf "ISO 19115 Topic Categories" ;
+    owl:a bcube:thesaurusSubset .
+

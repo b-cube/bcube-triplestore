@@ -1,0 +1,71 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:87154024-e994-467f-9ef2-1dc30781e5f5> owl:a foaf:Organization ;
+    foaf:name "" .
+
+<urn:uuid:8b4832e5-2c9d-4b3f-a114-ead40ca09f17> bcube:dateCreated "2015-10-29T19:51:07.747Z" ;
+    bcube:hasMetadataRecord <urn:uuid:90c9f760-77b2-4a8d-acda-4bcc97d9a055> ;
+    bcube:lastUpdated "2015-10-29T19:51:07.747Z" ;
+    dc:conformsTo <urn:uuid:ded047be-264b-4339-9d15-d7a1ac4f4920>,
+        <urn:uuid:f59ad5eb-4670-4e7a-aa1e-a0be15c4d51f> ;
+    dc:description "This dataset is 1 ppsm LiDAR point cloud data and derivative models of Kankakee County, Illinois. Kankakee County is approximately 677 square miles (1753 square kilometers) in north eastern Illinois. Data was collected at a nominal pulse spacing (NPS) of 0.7 meter. Data acquisition, processing and assessment is compliant with procedures and methods stated in U.S. Geological Survey National Geospatial Program LiDAR Base Specification Version 1.0 and Federal Emergency Management Agency Procedure Memorandum 61. This dataset consists of LiDAR LAS swath files and tiled LAS files. Tiled LAS files contain LiDAR point information which has been calibrated, controlled, and classified. Tiled LAS and derived data models are named according to the coordinates at the south west corner of the tile. Quantum Spatial Project No: 1140310.01" ;
+    dc:spatial "POLYGON ((-88.288 40.991,-88.288 41.744,-87.512 41.744,-87.512 40.991,-88.288 40.991))" ;
+    dcterms:publisher <urn:uuid:87154024-e994-467f-9ef2-1dc30781e5f5> ;
+    dcterms:title "Kankakee County Illinois, LiDAR Acquisition 2014" ;
+    esip:eastBound "-87.512"^^xsd:float ;
+    esip:endDate "2014-04-19"^^xsd:date ;
+    esip:northBound "41.744"^^xsd:float ;
+    esip:southBound "40.991"^^xsd:float ;
+    esip:startDate "2014-04-12"^^xsd:date ;
+    esip:westBound "-88.288"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:90c9f760-77b2-4a8d-acda-4bcc97d9a055> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-10-29T19:51:07.747Z" ;
+    bcube:lastUpdated "2015-10-29T19:51:07.747Z" ;
+    bcube:originatedFrom <urn:uuid:c5935618-7bb1-4f7d-9a3c-14c3ac7f573d> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:8b4832e5-2c9d-4b3f-a114-ead40ca09f17> .
+
+<urn:uuid:c5935618-7bb1-4f7d-9a3c-14c3ac7f573d> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-10-29T19:51:07.747Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-10-29T19:51:07.747Z" ;
+    dc:identifier "urn:sha:a5fc56e4c4151f151855d97dc3223ccb5e19fe6adf31135d1f852676" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www.isgs.uiuc.edu/clearinghouse/lidar/counties/kankakee/kankakee_2014_metadata.xml" .
+
+<urn:uuid:ded047be-264b-4339-9d15-d7a1ac4f4920> bcube:hasType "theme" ;
+    bcube:hasValue "Bare Earth",
+        "Breakline",
+        "DEM",
+        "Elevation data",
+        "LAS",
+        "LiDAR" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:f59ad5eb-4670-4e7a-aa1e-a0be15c4d51f> bcube:hasType "place" ;
+    bcube:hasValue "Illinois",
+        "Kankakee",
+        "Kankakee County",
+        "Manteno" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+

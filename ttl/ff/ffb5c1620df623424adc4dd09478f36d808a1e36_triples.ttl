@@ -1,0 +1,62 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:3e664c22-54f7-46a2-98a5-97719dae9b60> a "OGC:WMS" ;
+    bcube:contains <urn:uuid:579c4877-a5e7-483c-b6d6-9d118f3d6be1> ;
+    bcube:dateCreated "2015-08-09T20:44:26.238Z" ;
+    bcube:lastUpdated "2015-08-09T20:44:26.238Z" ;
+    bcube:originatedFrom <urn:uuid:03a8023d-da03-450b-b9ae-1c4b7d411031> ;
+    dc:conformsTo <urn:uuid:6125f4cb-bde3-4147-ae2d-347fca8f0a04> ;
+    dc:description "This map service presents spatial information for Coastal and Marine Spatial Planning. The service is maintained by National Oceanic and Atmospheric Administration (NOAA) Office for Coastal Management (OCM), in partnership with Department of the Interior (DOI) Bureau of Ocean Energy Management (BOEM). More information about this product can be found at www.MarineCadastre.gov." ;
+    owl:a bcube:service .
+
+<urn:uuid:03a8023d-da03-450b-b9ae-1c4b7d411031> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-09T20:44:26.238Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-09T20:44:26.238Z" ;
+    dc:identifier "urn:sha:9aba30571da288b1a36d0a197e2fc8bbab30cfa4cdc7262df7d485a3" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://coast.noaa.gov/arcgis/services/MarineCadastre/CommercialVesselDensityOctober2009_2010/MapServer/WMSServer?request=GetCapabilities&service=WMS" .
+
+<urn:uuid:1ff5d085-be80-4982-8fa5-926d79f2e1cc> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-09T20:44:26.238Z" ;
+    bcube:hasConfidence "Not Sure" ;
+    bcube:hasUrlSource "Generated" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-09T20:44:26.238Z" ;
+    dc:identifier "urn:sha:2fce5d27c4ab3422da6377da16c9c588cfda5ee0c1677197f67343ba" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://coast.noaa.gov/arcgis/services/MarineCadastre/CommercialVesselDensityOctober2009_2010/MapServer/WMSServer?layers=0&width=500&version=1.3.0&bbox=-126.142653%2C22.65559%2C-65.565865%2C49.228432&service=WMS&format=image%2Fpng&styles=&crs=CRS%3A84&request=GetMap&height=500" .
+
+<urn:uuid:579c4877-a5e7-483c-b6d6-9d118f3d6be1> bcube:dateCreated "2015-08-09T20:44:26.238Z" ;
+    bcube:lastUpdated "2015-08-09T20:44:26.238Z" ;
+    dc:description "These data was generated to provide insight into traffic patterns on a macro scale so they could be analyzed across the coastal waters of the Continental United States. For this dataset a transit is counted for every unique vessel intersecting a 1 kilometer square grid cell each day. This data represents the total number of vessel transits from October 2009 - October 2010. There were some grid cells which were unable to be processed, but we do not believe this interferes with the integrity of this dataset. Please note multiple connection errors occurred during the time frame of this study. In most cases data gaps were filled by making subsequent request to the coastguard or other groups receiving the same data feed. However, due to resource constraints uninterrupted coverage was not obtained. Overall data outages were minimal on the order less than a day per month and because random and affect all areas uniformly do not has a significant effect on the integrity of the data. Also as stated on the USCG NAIS website AIS data is not representative of all vessel traffic and USCG NAIS receivers do not fully cover the entire extent of this study area. Please take time to understand both of these limitations." ;
+    dc:spatial "POLYGON ((-126.142653 22.65559,-126.142653 49.228432,-65.565865 49.228432,-65.565865 22.65559,-126.142653 22.65559))" ;
+    dc:title "Commercial Vessel Density October 2009-2010" ;
+    dcterms:references <urn:uuid:1ff5d085-be80-4982-8fa5-926d79f2e1cc> ;
+    esip:eastBound "-65.565865"^^xsd:float ;
+    esip:northBound "49.228432"^^xsd:float ;
+    esip:southBound "22.65559"^^xsd:float ;
+    esip:westBound "-126.142653"^^xsd:float ;
+    owl:a bcube:Layer .
+
+<urn:uuid:6125f4cb-bde3-4147-ae2d-347fca8f0a04> bcube:hasValue "Oceans, Marine, National, Renewable energy, offshore, NOAA OCM, BOEM" ;
+    owl:a bcube:thesaurusSubset .
+

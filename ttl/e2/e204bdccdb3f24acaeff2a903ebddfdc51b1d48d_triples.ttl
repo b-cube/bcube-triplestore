@@ -1,0 +1,59 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:073ffeec-544e-44f6-9374-1f12d761431b> bcube:hasType "theme" ;
+    bcube:hasValue "General Soils Map",
+        "STATSGO",
+        "State Soil Geographic" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:89afb9d6-e2a8-4d7e-ac13-42bd8ca677ef> bcube:hasType "place" ;
+    bcube:hasValue "New York (36)" ;
+    dc:partOf "Counties and Count Equivalents of the United States and the District of Columbia (FIPS Pub 6-3)" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:aeb14a93-93f0-4fae-af7c-e7fbbad902af> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-05T01:24:59.86Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-05T01:24:59.86Z" ;
+    dc:identifier "urn:sha:801a99542d320c150978180b4d2c68e035ccf5f9b8605287878b1efa" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "https://catalog.data.gov/harvest/object/0da7332d-330a-43fe-b927-67bdb2d1838e" .
+
+<urn:uuid:c0ef6aa6-6c2d-4041-97ab-14ca92c4d6a8> a "ISO 19115:2003/19139" ;
+    bcube:dateCreated "2015-08-05T01:24:59.86Z" ;
+    bcube:lastUpdated "2015-08-05T01:24:59.86Z" ;
+    bcube:originatedFrom <urn:uuid:aeb14a93-93f0-4fae-af7c-e7fbbad902af> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:f51e07db-986b-44dc-909c-f13bae487631> .
+
+<urn:uuid:f51e07db-986b-44dc-909c-f13bae487631> bcube:dateCreated "2015-08-05T01:24:59.86Z" ;
+    bcube:hasMetadataRecord <urn:uuid:c0ef6aa6-6c2d-4041-97ab-14ca92c4d6a8> ;
+    bcube:lastUpdated "2015-08-05T01:24:59.86Z" ;
+    dc:conformsTo <urn:uuid:073ffeec-544e-44f6-9374-1f12d761431b>,
+        <urn:uuid:89afb9d6-e2a8-4d7e-ac13-42bd8ca677ef> ;
+    dc:description "This data set is a digital general soil association map developed by the National Cooperative Soil Survey. It consists of a broad based inventory of soils and non soil areas that occur in a repeatable pattern on the landscape and that can be cartographic ally shown at the scale mapped. The soil maps for STATSGO are compiled by generalizing more detailed soil survey maps. Where more detailed soil survey maps are not available, data on geology, topography, vegetation, and climate are assembled, together with Land Remote Sensing Satellite (LANDSAT) images. Soils of like areas are studied, and the probable classification and extent of the soils are determined. Map unit composition for a STATSGO map is determined by transecting or sampling areas on the more detailed maps and expanding the data statistically to characterize the whole map unit. This data set consists of georeferenced digital map data and computerized attribute data. The map data are collected in 1- by 2-degree topographic quadrangle units and merged and distributed as statewide coverages. The soil map units are linked to attributes in the Map Unit Interpretations Record relational data base which gives the proportionate extent of the component soils and their properties. These data are certified as a part of the State Soil Geographic (STATSGO) data base. The original mapping scale was 1: 250,000." ;
+    dc:spatial "POLYGON ((-80 40,-80 45,-70 45,-70 40,-80 40))" ;
+    dcterms:title "State Soil Geographic (STATSGO) data base for New York State" ;
+    esip:eastBound "-70.0"^^xsd:float ;
+    esip:northBound "45.0"^^xsd:float ;
+    esip:southBound "40.0"^^xsd:float ;
+    esip:westBound "-80.0"^^xsd:float ;
+    owl:a dcat:Dataset .
+

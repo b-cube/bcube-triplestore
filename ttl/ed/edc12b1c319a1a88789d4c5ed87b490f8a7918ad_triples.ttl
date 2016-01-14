@@ -1,0 +1,90 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:359f05fd-e34d-4541-9b88-c69c008d8cb5> bcube:hasType "place" ;
+    bcube:hasValue "20035",
+        "County or Equivalent Entity",
+        "Cowley",
+        "U.S.",
+        "United States" ;
+    dc:partOf "ANSI INCITS 38:2009 (Formerly FIPS 5-2), ANSI INCITS 31:2009 (Formerly FIPS 6-4),ANSI INCITS 454:2009 (Formerly FIPS 8-6), ANSI INCITS 455:2009(Formerly FIPS 9-1), ANSI INCITS 446:2008 (Geographic Names Information System (GNIS))" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:4cd4aaae-a874-49af-9280-3ef19f24a748> bcube:hasValue "transportation" ;
+    dc:partOf "IsoTopicCategories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:798904f6-68d6-4944-8074-b7249cedcaa6> bcube:hasType "theme" ;
+    bcube:hasValue "5-digit ZIP code",
+        "County ANSI Code",
+        "County FIPS Code",
+        "From House Number",
+        "Permanent edge ID",
+        "Side indicator flag",
+        "State ANSI Code",
+        "State FIPS Code",
+        "To House Number",
+        "ZIP +4 code" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:7e5ef558-4ef7-489a-ac3f-9e70c5cd8dae> a "ISO 19115:2003/19139" ;
+    bcube:dateCreated "2015-08-12T21:39:14.311Z" ;
+    bcube:lastUpdated "2015-08-12T21:39:14.311Z" ;
+    bcube:originatedFrom <urn:uuid:c6c93276-4590-4502-a3cb-a1544070d540> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:b225c118-44df-4a8e-ac10-b09e7453bc40> .
+
+<urn:uuid:b225c118-44df-4a8e-ac10-b09e7453bc40> bcube:dateCreated "2015-08-12T21:39:14.311Z" ;
+    bcube:hasMetadataRecord <urn:uuid:7e5ef558-4ef7-489a-ac3f-9e70c5cd8dae> ;
+    bcube:lastUpdated "2015-08-12T21:39:14.311Z" ;
+    dc:conformsTo <urn:uuid:359f05fd-e34d-4541-9b88-c69c008d8cb5>,
+        <urn:uuid:4cd4aaae-a874-49af-9280-3ef19f24a748>,
+        <urn:uuid:798904f6-68d6-4944-8074-b7249cedcaa6> ;
+    dc:description "The TIGER/Line shapefiles and related database files (.dbf) are an extract of selected geographic and cartographic information from the U.S. Census Bureau's Master Address File / Topologically Integrated Geographic Encoding and Referencing (MAF/TIGER) Database (MTDB). The MTDB provides seamless national coverage with no overlaps or gaps between parts. Each TIGER/Line File is designed to stand alone as an independent data set, or it can be combined with shapefiles for other counties to cover a region or the entire nation. The Address Ranges Feature Shapefile (ADDRFEAT.dbf) contains the geospatial edge geometry and attributes of all unsuppressed address ranges for a county or county equivalent area. The term \"address range\" refers to the collection of all possible structure numbers from the first structure number to the last structure number and all numbers of a specified parity in between along an edge side relative to the direction in which the edge is coded. Single-address address ranges have been suppressed to maintain the confidentiality of the addresses they describe. Multiple coincident address range feature edge records are represented in the shapefile if more than one left or right address ranges are associated to the edge. The ADDRFEAT shapefile contains a record for each address range to street name combination. Address range associated to more than one street name are also represented by multiple coincident address range feature edge records. Note that the ADDRFEAT shapefile includes all unsuppressed address ranges compared to the All Lines Shapefile (EDGES.shp) which only includes the most inclusive address range associated with each side of a street edge. The TIGER/Line Shapefiles contain potential address ranges, not individual addresses. The address ranges in the TIGER/Line Shapefiles are potential ranges that include the full range of possible structure numbers even though the actual structures may not exist." ;
+    dc:spatial "POLYGON ((-97.153331 36.99871,-97.153331 37.476643,-96.5247 37.476643,-96.5247 36.99871,-97.153331 36.99871))" ;
+    dcterms:references <urn:uuid:c41a8d96-2734-4af7-b310-e0ac52b25437> ;
+    dcterms:title "TIGER/Line Shapefile, 2013, county, Cowley County, KS, Address Range-Feature County-based" ;
+    esip:eastBound "-96.5247"^^xsd:float ;
+    esip:endDate "2013-05-05"^^xsd:date ;
+    esip:northBound "37.476643"^^xsd:float ;
+    esip:southBound "36.99871"^^xsd:float ;
+    esip:startDate "2012-06-05"^^xsd:date ;
+    esip:westBound "-97.153331"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:c41a8d96-2734-4af7-b310-e0ac52b25437> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-12T21:39:14.311Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-12T21:39:14.311Z" ;
+    dc:identifier "urn:sha:9074d5b4242450fe00fca3bf0f83eb0020b9125dbb8392e2194ef692" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www2.census.gov/geo/tiger/TIGER2013/ADDRFEAT/tl_2013_20035_addrfeat.zip" .
+
+<urn:uuid:c6c93276-4590-4502-a3cb-a1544070d540> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-12T21:39:14.311Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-12T21:39:14.311Z" ;
+    dc:identifier "urn:sha:81998233ffcd9fe6fc567afb65da62dc1f69f15c796fb50e36a64af4" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://meta.geo.census.gov/data/existing/decennial/GEO/GPMB/TIGERline/TIGER2013/addrfeat/tl_2013_20035_addrfeat.shp.iso.xml" .
+

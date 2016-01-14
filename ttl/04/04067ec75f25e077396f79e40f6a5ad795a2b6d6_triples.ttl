@@ -1,0 +1,62 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:02060760-9a8e-43f0-a014-f224835ee187> owl:a foaf:Organization ;
+    foaf:name "" .
+
+<urn:uuid:0bc17deb-3df4-46d9-8332-e11d895bb217> bcube:hasType "place" ;
+    bcube:hasValue "Ann Arbor" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:1286f007-81f9-40fb-ba50-8c57bf2f9f2f> bcube:hasType "theme" ;
+    bcube:hasValue "Administrative",
+        "Political" ;
+    dc:partOf "REQUIRED: Reference to a formally registered thesaurus or a similar authoritative source of theme keywords." ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:33146209-4434-4b7f-8da8-24429e1215c5> bcube:dateCreated "2015-10-30T19:06:31.254Z" ;
+    bcube:hasMetadataRecord <urn:uuid:8605b042-ccd5-4d2d-9a89-2feadb3606c7> ;
+    bcube:lastUpdated "2015-10-30T19:06:31.254Z" ;
+    dc:conformsTo <urn:uuid:0bc17deb-3df4-46d9-8332-e11d895bb217>,
+        <urn:uuid:1286f007-81f9-40fb-ba50-8c57bf2f9f2f> ;
+    dc:description "Any and all Parcel land owned by the City of Ann Arbor near or in the City Boundary." ;
+    dc:spatial "POLYGON ((-83.799836 42.213916,-83.799836 42.323353,-83.675716 42.323353,-83.675716 42.213916,-83.799836 42.213916))" ;
+    dcterms:publisher <urn:uuid:02060760-9a8e-43f0-a014-f224835ee187> ;
+    dcterms:title "City of Ann Arbor City Owned Land" ;
+    esip:eastBound "-83.675716"^^xsd:float ;
+    esip:northBound "42.323353"^^xsd:float ;
+    esip:southBound "42.213916"^^xsd:float ;
+    esip:startDate "2010-01-01"^^xsd:date ;
+    esip:westBound "-83.799836"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:8605b042-ccd5-4d2d-9a89-2feadb3606c7> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-10-30T19:06:31.254Z" ;
+    bcube:lastUpdated "2015-10-30T19:06:31.254Z" ;
+    bcube:originatedFrom <urn:uuid:8ef8c02b-e92d-491d-a82d-e67f8841b586> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:33146209-4434-4b7f-8da8-24429e1215c5> .
+
+<urn:uuid:8ef8c02b-e92d-491d-a82d-e67f8841b586> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-10-30T19:06:31.254Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-10-30T19:06:31.254Z" ;
+    dc:identifier "urn:sha:e50c96b5dcc89ea826f8c4df3c2f9ce36c3587e0fa8aa7880901a09a" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://data.a2gov.org/feeds/GIS/AA%20City%20Owned%20Land/AA_City_Owned_Land.shp.xml" .
+

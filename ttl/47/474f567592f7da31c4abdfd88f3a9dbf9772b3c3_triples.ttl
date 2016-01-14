@@ -1,0 +1,94 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:053236bb-2bef-43d1-96af-fd8caee40c88> bcube:hasType "theme" ;
+    bcube:hasValue "NASQAN",
+        "NAWQA",
+        "NMN",
+        "National Monitoring Network",
+        "National Stream Quality Accounting Network",
+        "National Water-Quality Assessment",
+        "basin boundary",
+        "catchment",
+        "drainage area",
+        "drainage basin",
+        "pesticides",
+        "river basin",
+        "water quality" ;
+    dc:partOf "none" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:0a27030b-8800-451e-9db5-f9c2d7a2ec6e> bcube:dateCreated "2015-08-04T15:02:13.044Z" ;
+    bcube:hasMetadataRecord <urn:uuid:146a6fac-311c-4b1f-b07c-d599a43d2f66> ;
+    bcube:lastUpdated "2015-08-04T15:02:13.044Z" ;
+    dc:conformsTo <urn:uuid:053236bb-2bef-43d1-96af-fd8caee40c88>,
+        <urn:uuid:8f1ad5cd-04da-4086-86d0-b3f4e76fcfa3>,
+        <urn:uuid:d00dbb07-b3a0-4b0f-a9d1-156b80484a17> ;
+    dc:description "This dataset consists of drainage basin boundaries for 212 U.S. Geological Survey (USGS) stream sites sampled in the National Water-Quality Assessment (NAWQA) Program, the National Stream Quality Accounting Network (NASQAN), and the National Monitoring Network (NMN). Of the 212 sites, 206 have either a contributing or total drainage basin boundary, and the remaining 6 have both a total drainage basin boundary and a smaller contributing basin boundary. Collectively, these 218 basin boundaries have been used in a geographic information system (GIS) to generate basin characteristics for the assessment of trends in concentrations of pesticides streams of the United States." ;
+    dc:spatial "POLYGON ((-127.87 22.87,-127.87 48.24,-65.35 48.24,-65.35 22.87,-127.87 22.87))" ;
+    dcterms:publisher <urn:uuid:9cfbd5a2-8317-4d72-ba1c-68e3229af9c3> ;
+    dcterms:references <urn:uuid:b5a81c71-2ed9-463a-a8c1-7251ccbaafc9> ;
+    dcterms:title "Drainage Basins Used for Assessing Trends in Concentration of Pesticides in Streams of the United States, 1992-2010" ;
+    esip:eastBound "-65.35"^^xsd:float ;
+    esip:endDate "2011-01-01"^^xsd:date ;
+    esip:northBound "48.24"^^xsd:float ;
+    esip:southBound "22.87"^^xsd:float ;
+    esip:startDate "1995-01-01"^^xsd:date ;
+    esip:westBound "-127.87"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:146a6fac-311c-4b1f-b07c-d599a43d2f66> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-08-04T15:02:13.044Z" ;
+    bcube:lastUpdated "2015-08-04T15:02:13.044Z" ;
+    bcube:originatedFrom <urn:uuid:9e5f8bfe-607f-4e32-90da-e428b84f653e> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:0a27030b-8800-451e-9db5-f9c2d7a2ec6e> .
+
+<urn:uuid:8f1ad5cd-04da-4086-86d0-b3f4e76fcfa3> bcube:hasType "place" ;
+    bcube:hasValue "Conterminous United States" ;
+    dc:partOf "none" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:9cfbd5a2-8317-4d72-ba1c-68e3229af9c3> owl:a foaf:Organization ;
+    foaf:name "U.S. Geological Survey" .
+
+<urn:uuid:9e5f8bfe-607f-4e32-90da-e428b84f653e> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-04T15:02:13.044Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-04T15:02:13.044Z" ;
+    dc:identifier "urn:sha:0973276975f7f098dae046102a44753e90d9291522e4e5ae07e3312e" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://water.usgs.gov/lookup/getspatial?ds655_basins" .
+
+<urn:uuid:b5a81c71-2ed9-463a-a8c1-7251ccbaafc9> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-04T15:02:13.044Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-04T15:02:13.044Z" ;
+    dc:identifier "urn:sha:02f6a6516c0e3e51dba2fbc5c337f6261c5becff4e38e8cd1b06c6f4" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://water.usgs.gov/GIS/dsdl/ds655_basins.zip" .
+
+<urn:uuid:d00dbb07-b3a0-4b0f-a9d1-156b80484a17> bcube:hasType "theme" ;
+    bcube:hasValue "inlandWaters" ;
+    dc:partOf "ISO 19115 Topic Category" ;
+    owl:a bcube:thesaurusSubset .
+

@@ -1,0 +1,94 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:2ef14be0-9f86-4093-a5ee-463950556afb> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-01T14:44:26.362Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-01T14:44:26.362Z" ;
+    dc:identifier "urn:sha:5258b54c109f2879a39210675118f12df92e08eda9e948b07948efc8" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://cugir.mannlib.cornell.edu/datatheme.jsp?id=23" .
+
+<urn:uuid:813f5b00-4ffb-48ce-8ac2-8f2b8370dd4f> a "ISO 19115:2003/19139" ;
+    bcube:dateCreated "2015-08-01T14:44:26.362Z" ;
+    bcube:lastUpdated "2015-08-01T14:44:26.362Z" ;
+    bcube:originatedFrom <urn:uuid:dd48cafe-eeeb-4fce-8689-39de2ad6cc90> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:a134fb03-59cb-4825-a48c-8c1f4ac6e194> .
+
+<urn:uuid:85a2ad83-95fa-48ac-9f3a-498abcf71644> bcube:hasType "place" ;
+    bcube:hasValue "36",
+        "NY",
+        "New York" ;
+    dc:partOf "Department of Commerce, 1987, Codes for the Identification of the States, The District of Columbia and the Outlying Areas of the U.S., and Associated Areas (Federal Information Processing Standard 5-2): Washington, Department of Commerce, National Institute of Standards and Technology (http://www.itl.nist.gov/fipspubs/fip5-2.htm)" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:91fa3afb-a7e4-4599-a891-7b572e93c56b> bcube:hasType "place" ;
+    bcube:hasValue "New York (State)" ;
+    dc:partOf "Library of Congress Subject Headings" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:a134fb03-59cb-4825-a48c-8c1f4ac6e194> bcube:dateCreated "2015-08-01T14:44:26.362Z" ;
+    bcube:hasMetadataRecord <urn:uuid:813f5b00-4ffb-48ce-8ac2-8f2b8370dd4f> ;
+    bcube:lastUpdated "2015-08-01T14:44:26.362Z" ;
+    dc:conformsTo <urn:uuid:85a2ad83-95fa-48ac-9f3a-498abcf71644>,
+        <urn:uuid:91fa3afb-a7e4-4599-a891-7b572e93c56b>,
+        <urn:uuid:a6405577-f96e-4a66-9811-59db0874be02>,
+        <urn:uuid:c757b002-5e1e-45cf-b329-c6d3a60b5573> ;
+    dc:description "A Digital Elevation Model (DEM) contains a series of elevations ordered from south to north with the order of the columns from west to east. The DEM is formatted as one ASCII header record (A-record), followed by a series of profile records (B-records) each of which include a short B-record header followed by a series of ASCII integer elevations per each profile. The last physical record of the DEM is an accuracy record (C-record). The 7.5-minute DEM (10- by 10-m data spacing, elevations in decimeters) is cast on the Universal Transverse Mercator (UTM) projection (the quads UTM zone can be found in the header record (Record A)) in the North American Datum of 1927. It provides coverage in 7.5- by 7.5-minute blocks. Each product provides the same coverage as a standard USGS 7.5-minute quadrangle, but overedges are published as separate DEM files. Coverage is available for all quads completely contained within New York State, plus some additional ones falling along the borders and containing significant area of the State's land." ;
+    dc:spatial "POLYGON ((-79.77 40.49,-79.77 45.02,-71.85 45.02,-71.85 40.49,-79.77 40.49))" ;
+    dcterms:references <urn:uuid:2ef14be0-9f86-4093-a5ee-463950556afb> ;
+    dcterms:title "Digital Elevation Models (DEM) - New York State" ;
+    esip:eastBound "-71.85"^^xsd:float ;
+    esip:northBound "45.02"^^xsd:float ;
+    esip:southBound "40.49"^^xsd:float ;
+    esip:westBound "-79.77"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:a6405577-f96e-4a66-9811-59db0874be02> bcube:hasType "theme" ;
+    bcube:hasValue "altitude",
+        "cell",
+        "digital elevation model",
+        "digital terrain model",
+        "grid",
+        "height",
+        "hypsography",
+        "landforms",
+        "raster",
+        "relief",
+        "topography" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:c757b002-5e1e-45cf-b329-c6d3a60b5573> bcube:hasType "place" ;
+    bcube:hasValue "New York State" ;
+    dc:partOf "Geographic Names Information System http://geonames.usgs.gov/pls/gnispublic" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:dd48cafe-eeeb-4fce-8689-39de2ad6cc90> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-01T14:44:26.362Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-01T14:44:26.362Z" ;
+    dc:identifier "urn:sha:4d3871165d7918f7de9edd0e6b5affc6c3d3dfefbc03653b8294e7b5" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "https://catalog.data.gov/harvest/object/891676c3-4f00-4b79-ba4e-6df7f64e4e78" .
+

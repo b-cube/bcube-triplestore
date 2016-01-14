@@ -1,0 +1,85 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:095cbecc-a49a-45bf-9859-0a6f8a31a6e5> owl:a foaf:Organization ;
+    foaf:name "" .
+
+<urn:uuid:293e8753-b0a0-4565-be01-21d7c60385df> bcube:hasType "theme" ;
+    bcube:hasValue "Metropolitan Division",
+        "Nation",
+        "Polygon" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:636e9742-f3a8-4504-8f54-2efc7c0f6a2d> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-10-29T23:29:23.394Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-10-29T23:29:23.394Z" ;
+    dc:identifier "urn:sha:b534c5fedb33752e804c1f2a46cf21e7390cd489441250b11baa5bc4" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://meta.geo.census.gov/data/existing/decennial/GEO/GPMB/TIGERline/fe_2010/METDIV/tl_2010_us_metdiv10_url.shp.xml" .
+
+<urn:uuid:9de7e5b8-e18e-481d-920b-a53f129e1e3a> bcube:hasType "theme" ;
+    bcube:hasValue "boundaries" ;
+    dc:partOf "ISO 19115 Topic Categories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:acab4861-6887-4a17-8e74-c57f072f2f58> bcube:hasType "place" ;
+    bcube:hasValue "U.S.",
+        "United States" ;
+    dc:partOf "INCITS.38-200x (R2004),INCITS.31-200x (R2007),INCITS.454-200x,INCITS 455-200x,INCITS 446-2008" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:bd7d5033-36d8-4e88-bb20-e0bdc3714f89> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-10-29T23:29:23.394Z" ;
+    bcube:lastUpdated "2015-10-29T23:29:23.394Z" ;
+    bcube:originatedFrom <urn:uuid:636e9742-f3a8-4504-8f54-2efc7c0f6a2d> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:d0b292c0-8a72-4518-98e7-5e427588d6cc> .
+
+<urn:uuid:d0b292c0-8a72-4518-98e7-5e427588d6cc> bcube:dateCreated "2015-10-29T23:29:23.394Z" ;
+    bcube:hasMetadataRecord <urn:uuid:bd7d5033-36d8-4e88-bb20-e0bdc3714f89> ;
+    bcube:lastUpdated "2015-10-29T23:29:23.394Z" ;
+    dc:conformsTo <urn:uuid:293e8753-b0a0-4565-be01-21d7c60385df>,
+        <urn:uuid:9de7e5b8-e18e-481d-920b-a53f129e1e3a>,
+        <urn:uuid:acab4861-6887-4a17-8e74-c57f072f2f58> ;
+    dc:description "The TIGER/Line Files are shapefiles and related database files (.dbf) that are an extract of selected geographic and cartographic information from the U.S. Census Bureau's Master Address File / Topologically Integrated Geographic Encoding and Referencing (MAF/TIGER) Database (MTDB). The MTDB represents a seamless national file with no overlaps or gaps between parts, however, each TIGER/Line File is designed to stand alone as an independent data set, or they can be combined to cover the entire nation. Metropolitan Divisions subdivide a Metropolitan Statistical Area containing a single core urban area that has a population of at least 2.5 million to form smaller groupings of counties or equivalent entities. Not all Metropolitan Statistical Areas with urban areas of this size will contain Metropolitan Divisions. Metropolitan Division are defined by the Office of Management and Budget (OMB) and consist of one or more main counties or equivalent entities that represent an employment center or centers, plus adjacent counties associated with the main county or counties through commuting ties. Because Metropolitan Divisions represent subdivisions of larger Metropolitan Statistical Areas, it is not appropriate to rank or compare Metropolitan Divisions with Metropolitan and Micropolitan Statistical Areas. The Metropolitan Divisions for the 2010 Census are those defined by OMB and published in December 2009." ;
+    dc:spatial "POLYGON ((-179.231086 17.831509,-179.231086 71.441059,179.859681 71.441059,179.859681 17.831509,-179.231086 17.831509))" ;
+    dcterms:publisher <urn:uuid:095cbecc-a49a-45bf-9859-0a6f8a31a6e5> ;
+    dcterms:references <urn:uuid:daf5b19d-381e-4584-afd3-ff03375271b9> ;
+    dcterms:title "TIGER/Line Shapefile, 2010, nation, U.S., 2010 Census Metropolitan Division National" ;
+    esip:eastBound "179.859681"^^xsd:float ;
+    esip:endDate "2010-07-01"^^xsd:date ;
+    esip:northBound "71.441059"^^xsd:float ;
+    esip:southBound "17.831509"^^xsd:float ;
+    esip:startDate "2010-01-01"^^xsd:date ;
+    esip:westBound "-179.231086"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:daf5b19d-381e-4584-afd3-ff03375271b9> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-10-29T23:29:23.394Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-10-29T23:29:23.394Z" ;
+    dc:identifier "urn:sha:91aae60a1c24ffa268932a01334daf22ac34192c81d171da738d24d9" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www2.census.gov/geo/tiger/TIGER2010/METDIV/2010/tl_2010_us_metdiv10.zip" .
+

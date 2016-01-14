@@ -1,0 +1,131 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:280b4cad-d422-4172-8aea-0d70a07d7ae4> bcube:hasType "theme" ;
+    bcube:hasValue "Oceans > Ocean Temperature > Water Temperature",
+        "buoys",
+        "centered",
+        "daily",
+        "depth",
+        "identifier",
+        "noaa",
+        "ocean",
+        "oceans",
+        "pirata",
+        "pmel",
+        "quality",
+        "rama",
+        "sea",
+        "sea_water_temperature",
+        "seawater",
+        "source",
+        "station",
+        "tao",
+        "temperature",
+        "time",
+        "triton",
+        "water" ;
+    dc:partOf "GCMD Science Keywords" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:2e59b5be-bdf5-4e34-82be-2ac270d9d999> owl:a foaf:Organization ;
+    foaf:name "ERDDAP, version 1.46, at Your Institution" .
+
+<urn:uuid:33048777-2cff-4e6e-983d-2c893a70f321> bcube:dateCreated "2015-11-05T07:26:15.204Z" ;
+    bcube:hasMetadataRecord <urn:uuid:d58523f4-a855-4456-a683-90e4e918156b> ;
+    bcube:lastUpdated "2015-11-05T07:26:15.204Z" ;
+    dc:conformsTo <urn:uuid:280b4cad-d422-4172-8aea-0d70a07d7ae4>,
+        <urn:uuid:95adebb2-7716-43df-b5d4-3d4ca797d351> ;
+    dc:description "This dataset has daily Temperature data from the TAO/TRITON (Pacific Ocean, http://www.pmel.noaa.gov/tao/), RAMA (Indian Ocean, http://www.pmel.noaa.gov/tao/rama/), and PIRATA (Atlantic Ocean, http://www.pmel.noaa.gov/pirata/) arrays of moored buoys which transmit oceanographic and meteorological data to shore in real-time via the Argos satellite system. These buoys are major components of the CLIVAR climate analysis project and the GOOS, GCOS, and GEOSS observing systems. Daily averages are computed starting at 00:00Z and are assigned an observation 'time' of 12:00Z. For more information, see http://www.pmel.noaa.gov/tao/proj_over/proj_over.html ." ;
+    dc:spatial "POLYGON ((-180 -25,-180 21,180 21,180 -25,-180 -25))" ;
+    dcterms:publisher <urn:uuid:2e59b5be-bdf5-4e34-82be-2ac270d9d999> ;
+    dcterms:references <urn:uuid:5e4c8be0-e094-4f97-a952-e3702eeb3007>,
+        <urn:uuid:a1b799cd-3b3c-4210-a175-187fdb2433a5>,
+        <urn:uuid:b8ee977c-0869-498f-9ff8-5af768dd1b33> ;
+    dcterms:title "TAO/TRITON, RAMA, and PIRATA Buoys, Daily, Temperature" ;
+    esip:eastBound "180.0"^^xsd:float ;
+    esip:endDate "2015-10-28"^^xsd:date ;
+    esip:northBound "21.0"^^xsd:float ;
+    esip:southBound "-25.0"^^xsd:float ;
+    esip:startDate "1977-11-03"^^xsd:date ;
+    esip:westBound "-180.0"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:5e4c8be0-e094-4f97-a952-e3702eeb3007> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-05T07:26:15.204Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-05T07:26:15.204Z" ;
+    dc:identifier "urn:sha:0a881ba3d42116e9672353f58e38612bd1de5e564536efe22c91c9af" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://osmc.noaa.gov/erddap/tabledap/pmelTaoDyT.html" .
+
+<urn:uuid:703ac127-7af4-4149-a4a4-ec2832890445> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-05T07:26:15.204Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-05T07:26:15.204Z" ;
+    dc:identifier "urn:sha:ac4d5b7ee5751096f4daa5e85e7540bb1b7de2fd8a55523762f43ddf" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://osmc.noaa.gov/erddap/tabledap/pmelTaoDyT.subset" .
+
+<urn:uuid:95adebb2-7716-43df-b5d4-3d4ca797d351> bcube:hasType "theme" ;
+    bcube:hasValue "depth",
+        "latitude",
+        "longitude",
+        "sea_water_temperature",
+        "time" ;
+    dc:partOf "CF Standard Name Table v29" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:a1b799cd-3b3c-4210-a175-187fdb2433a5> dcterms:references <urn:uuid:703ac127-7af4-4149-a4a4-ec2832890445> ;
+    owl:a bibo:WebPage .
+
+<urn:uuid:b8ee977c-0869-498f-9ff8-5af768dd1b33> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-05T07:26:15.204Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-05T07:26:15.204Z" ;
+    dc:identifier "urn:sha:8e526b2567d5c8ef63841bbd7bb2846e74a913654cbcd84bc4026685" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://osmc.noaa.gov/erddap/tabledap/pmelTaoDyT.graph" .
+
+<urn:uuid:d58523f4-a855-4456-a683-90e4e918156b> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-11-05T07:26:15.204Z" ;
+    bcube:lastUpdated "2015-11-05T07:26:15.204Z" ;
+    bcube:originatedFrom <urn:uuid:f39e7b42-214e-4515-b267-8c08d966d7a8> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:33048777-2cff-4e6e-983d-2c893a70f321> .
+
+<urn:uuid:f39e7b42-214e-4515-b267-8c08d966d7a8> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-05T07:26:15.204Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-05T07:26:15.204Z" ;
+    dc:identifier "urn:sha:92e1fdcc2e78c90c1091472cf8bb0a75ba3ac5eeaf3dd92eb5bdd822" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://osmc.noaa.gov/erddap/metadata/fgdc/xml/pmelTaoDyT_fgdc.xml" .
+

@@ -1,0 +1,68 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:5439a7e6-ee87-48b4-a133-d2c037442ecf> a "ISO 19115:2003/19139" ;
+    bcube:dateCreated "2015-11-05T16:48:04.55Z" ;
+    bcube:lastUpdated "2015-11-05T16:48:04.55Z" ;
+    bcube:originatedFrom <urn:uuid:b14fed91-44cb-4322-a826-e60c3b0dd460> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:ba0a3942-dd8c-432d-9ef6-201ff710cab2> .
+
+<urn:uuid:b14fed91-44cb-4322-a826-e60c3b0dd460> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-05T16:48:04.55Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-05T16:48:04.55Z" ;
+    dc:identifier "urn:sha:6727be5bcf7380395680d2214d3106259cdc066150c9e64b26628c16" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://repository.stategeothermaldata.org/resources/metadata/TestNRRC/WRP/07f88b44-dd77-41f1-8c20-d64bb0d0a5dd.xml" .
+
+<urn:uuid:b76b82fd-7234-48f9-9e9e-9905376bba4d> bcube:hasType "place" ;
+    bcube:hasValue "United States" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:ba0a3942-dd8c-432d-9ef6-201ff710cab2> bcube:dateCreated "2015-11-05T16:48:04.55Z" ;
+    bcube:hasMetadataRecord <urn:uuid:5439a7e6-ee87-48b4-a133-d2c037442ecf> ;
+    bcube:lastUpdated "2015-11-05T16:48:04.55Z" ;
+    dc:conformsTo <urn:uuid:b76b82fd-7234-48f9-9e9e-9905376bba4d>,
+        <urn:uuid:c450f530-092e-4127-9e06-ba6421bd518d>,
+        <urn:uuid:fede2dce-0807-4849-8700-bd9c3f3786fb> ;
+    dc:description "The data included in the GIS Traffic Stations Version database have been assimilated from station description files provided by FHWA for Weigh-in-Motion (WIM), and Automatic Traffic Counters (ATR). Location referencing information was derived from the National Highway Planning Network version 4.0.and State offices of Transportation. The attributes on the point elements of the database have come from two primary sources, the Station Description Records and the National Highway Planning Network's Linear Referencing System. The attributes for these databases have been intentionally limited to location referencing attributes since the core station description attribute data are contained within the Station Description Tables (SDT). There is a separate Station Description Table (SDT) for each of the different station types; WIM, and ATR. The attributes in the Station Description Table correspond with the Station Description Record found in Chapter 6 of the latest Traffic Monitoring Guide. The SDT contains the most recent stations available for each state and station type. This table was derived from files provided UTCTR by FHWA. The Station Description Table can be linked to the station shapefile via the STNNKEY field . A single exception table containing records for those stations that could not be located is provided for WIM, and ATR stations. Generally, this table contains records where location descriptions were not clear enough to locate a station. It is hoped that FHWA will be able to contact the States for a more detailed description" ;
+    dc:spatial "POLYGON ((-172.4378 18.9108,-172.4378 74.3889,-66.9497 74.3889,-66.9497 18.9108,-172.4378 18.9108))" ;
+    dcterms:title "US Automatic Traffic Recorders" ;
+    esip:eastBound "-66.9497"^^xsd:float ;
+    esip:endDate "1900-01-01"^^xsd:date ;
+    esip:northBound "74.3889"^^xsd:float ;
+    esip:southBound "18.9108"^^xsd:float ;
+    esip:startDate "1900-01-01"^^xsd:date ;
+    esip:westBound "-172.4378"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:c450f530-092e-4127-9e06-ba6421bd518d> bcube:hasValue "geoscientificInformation" ;
+    dc:partOf "IsoTopicCategories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:fede2dce-0807-4849-8700-bd9c3f3786fb> bcube:hasType "theme" ;
+    bcube:hasValue "ATR",
+        "Automatic Traffic Recoder",
+        "Traffic",
+        "Transportation",
+        "WIM",
+        "Weigh Station",
+        "Weigh in motion" ;
+    owl:a bcube:thesaurusSubset .
+

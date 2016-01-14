@@ -1,0 +1,106 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:0604d4f7-9402-4eea-9953-00f7b50ff506> bcube:hasType "theme" ;
+    bcube:hasValue "Oceans > Bathymetry/Seafloor Topography > Bathymetry" ;
+    dc:partOf "GCMD Science Keywords" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:0a46feb5-abc7-4c12-b4e8-97e81c205f9d> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-10-17T05:53:17.364Z" ;
+    bcube:lastUpdated "2015-10-17T05:53:17.364Z" ;
+    bcube:originatedFrom <urn:uuid:ee9c4055-4a19-4cc4-96f5-a37499ddd7e4> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:146c3d51-379d-4c75-a4e6-f6a2d87f3fbe> .
+
+<urn:uuid:146c3d51-379d-4c75-a4e6-f6a2d87f3fbe> bcube:dateCreated "2015-10-17T05:53:17.364Z" ;
+    bcube:hasMetadataRecord <urn:uuid:0a46feb5-abc7-4c12-b4e8-97e81c205f9d> ;
+    bcube:lastUpdated "2015-10-17T05:53:17.364Z" ;
+    dc:conformsTo <urn:uuid:0604d4f7-9402-4eea-9953-00f7b50ff506>,
+        <urn:uuid:c01de9e2-aaf7-403a-8ef4-d85f0701d4e3> ;
+    dc:description "ETOPO1 is a 1 arc-minute global relief model of Earth's surface that integrates land topography and ocean bathymetry. It was built from numerous global and regional data sets. This is the 'Ice Surface' version, with the top of the Antarctic and Greenland ice sheets. The horizontal datum is WGS-84, the vertical datum is Mean Sea Level. Keywords: Bathymetry, Digital Elevation. This is the grid/node-registered version: the dataset's latitude and longitude values mark the centers of the cells." ;
+    dc:spatial "POLYGON ((-180 -90,-180 90,180 90,180 -90,-180 -90))" ;
+    dcterms:identifier "https://bluehub.jrc.ec.europa.eu:etopo360" ;
+    dcterms:publisher <urn:uuid:ff7ea5e1-8705-41e1-a36c-fbca23ca39eb> ;
+    dcterms:references <urn:uuid:1b7ccc4d-b84c-4ce1-95f5-ac749ba547fb>,
+        <urn:uuid:63043d68-3746-44d8-ab5e-e40f697ef7e4>,
+        <urn:uuid:6a094f40-4a27-4cfc-be72-0132e634e05a> ;
+    dcterms:title "Topography, ETOPO1, 0.0166667 degrees, Global (longitude 0 to 360), (Ice Sheet Surface)" ;
+    esip:eastBound "180.0"^^xsd:float ;
+    esip:northBound "90.0"^^xsd:float ;
+    esip:southBound "-90.0"^^xsd:float ;
+    esip:westBound "-180.0"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:1b7ccc4d-b84c-4ce1-95f5-ac749ba547fb> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-10-17T05:53:17.364Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-10-17T05:53:17.364Z" ;
+    dc:identifier "urn:sha:9c27b1f72f487e3282313acbbc6442f656ae976e0fe1d3c04021c267" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "https://bluehub.jrc.ec.europa.eu/erddap/griddap/etopo360.graph" .
+
+<urn:uuid:63043d68-3746-44d8-ab5e-e40f697ef7e4> dcterms:references <urn:uuid:c992c7ac-14af-42e9-bdce-9dacc4c9e56a> ;
+    owl:a bibo:WebPage .
+
+<urn:uuid:6a094f40-4a27-4cfc-be72-0132e634e05a> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-10-17T05:53:17.364Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-10-17T05:53:17.364Z" ;
+    dc:identifier "urn:sha:7785633fa65bef66fd9f9798f4082c635ae90602a0a85225e02a247a" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "https://bluehub.jrc.ec.europa.eu/erddap/griddap/etopo360.html" .
+
+<urn:uuid:c01de9e2-aaf7-403a-8ef4-d85f0701d4e3> bcube:hasType "theme" ;
+    bcube:hasValue "altitude",
+        "latitude",
+        "longitude" ;
+    dc:partOf "CF Standard Name Table v27" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:c992c7ac-14af-42e9-bdce-9dacc4c9e56a> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-10-17T05:53:17.364Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-10-17T05:53:17.364Z" ;
+    dc:identifier "urn:sha:7debff833d5fd74e984c9c0e9a37d65e2639d62da3261bdf55690770" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "https://bluehub.jrc.ec.europa.eu/erddap/wms/etopo360/request" .
+
+<urn:uuid:ee9c4055-4a19-4cc4-96f5-a37499ddd7e4> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-10-17T05:53:17.364Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-10-17T05:53:17.364Z" ;
+    dc:identifier "urn:sha:255d3153712bef7bb0111025d758f6098e034f2de18e0765c7e3a93a" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "https://bluehub.jrc.ec.europa.eu/erddap/griddap/etopo360.fgdc" .
+
+<urn:uuid:ff7ea5e1-8705-41e1-a36c-fbca23ca39eb> owl:a foaf:Organization ;
+    foaf:name "ERDDAP, version 1.62, at Maritime Affairs Unit of the Joint Research Centre" .
+

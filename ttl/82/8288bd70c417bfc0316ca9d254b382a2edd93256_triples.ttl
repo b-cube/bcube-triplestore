@@ -1,0 +1,107 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:06827905-1271-4aa8-bb1b-6800023a0ac3> bcube:hasType "theme" ;
+    bcube:hasValue "environment" ;
+    dc:partOf "ISO 19115 Topic Category" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:220ec218-fb4a-42f0-97c3-8a01fb721bd9> bcube:dateCreated "2015-08-06T16:27:51.03Z" ;
+    bcube:hasMetadataRecord <urn:uuid:3c9ccc0d-1c29-44f9-a0ac-7021020ebb2c> ;
+    bcube:lastUpdated "2015-08-06T16:27:51.03Z" ;
+    dc:conformsTo <urn:uuid:06827905-1271-4aa8-bb1b-6800023a0ac3>,
+        <urn:uuid:36438c8f-fec7-447f-ae25-d56ca06c234f>,
+        <urn:uuid:3e1d2ab2-cf73-4038-af35-b99e1742b9ac> ;
+    dc:description "This is a map service for the Coastal Flood Hazard Composite dataset. This dataset was created by combining hazard zones from the following datasets: FEMA V zones, FEMA A zones, FEMA shaded X zones, NOAA OCM Flood Frequency zones, NOAA OCM potential sea level rise inundation of 3 ft above current Mean Higher High Water (MHHW), and SLOSH MOMs for category 3 hurricanes. This dataset was created to support the National Oceanic and Atmospheric Administration Office for Coastal Management's Coastal Flood Exposure Mapper application. The purpose of the online mapping tool is to provide coastal managers, planners, and stakeholders a preliminary look at exposures to coastal flooding hazards. The Mapper is a screening-level tool that uses nationally consistent data sets and analyses. Data and maps provided can be used at several scales to help communities initiate resilience planning efforts. Currently the extent of this dataset covers U. S. coastal areas along the Gulf of Mexico and Atlantic coasts. This is a cached map service. Tiles have been cached down to Level ID 15 (1:18,055)." ;
+    dc:spatial "POLYGON ((-75.9 38.5,-75.9 41.3,-71.4 41.3,-71.4 38.5,-75.9 38.5))" ;
+    dcterms:publisher <urn:uuid:c3c0d315-49a3-4ebd-96e6-c275717e2993> ;
+    dcterms:references <urn:uuid:d9a79e9d-9385-4629-9900-c8358fb54672>,
+        <urn:uuid:fcf0d31e-e603-4f11-8a56-4d8e60215d47> ;
+    dcterms:title "Coastal Flood Hazard Composite Layer for the Coastal Flood Exposure Mapper" ;
+    esip:eastBound "-71.4"^^xsd:float ;
+    esip:endDate "2013-01-01"^^xsd:date ;
+    esip:northBound "41.3"^^xsd:float ;
+    esip:southBound "38.5"^^xsd:float ;
+    esip:startDate "2008-01-01"^^xsd:date ;
+    esip:westBound "-75.9"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:36438c8f-fec7-447f-ae25-d56ca06c234f> bcube:hasType "theme" ;
+    bcube:hasValue "Hurricanes",
+        "Shoreline",
+        "flooding",
+        "inundation",
+        "sea level rise" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:3c9ccc0d-1c29-44f9-a0ac-7021020ebb2c> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-08-06T16:27:51.03Z" ;
+    bcube:lastUpdated "2015-08-06T16:27:51.03Z" ;
+    bcube:originatedFrom <urn:uuid:cbcddd72-2107-4ff5-894b-2de8bd043acd> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:220ec218-fb4a-42f0-97c3-8a01fb721bd9> .
+
+<urn:uuid:3e1d2ab2-cf73-4038-af35-b99e1742b9ac> bcube:hasType "place" ;
+    bcube:hasValue "Atlantic coastal counties",
+        "Gulf of Mexico coastal counties",
+        "United States" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:5fdb614e-5086-452d-9489-dc2adf0e5855> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-06T16:27:51.03Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-06T16:27:51.03Z" ;
+    dc:identifier "urn:sha:f51935e6e27588420356e7a8d2f65ff4c63ceeab099adea67c6d17aa" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www.coast.noaa.gov/" .
+
+<urn:uuid:c3c0d315-49a3-4ebd-96e6-c275717e2993> owl:a foaf:Organization ;
+    foaf:name "NOAA's Ocean Service, Office for Coastal Management (OCM)" .
+
+<urn:uuid:cbcddd72-2107-4ff5-894b-2de8bd043acd> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-06T16:27:51.03Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-06T16:27:51.03Z" ;
+    dc:identifier "urn:sha:539652a20e61b6141ccee3db51ce6efe4bff630d6b080043c20af41c" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://coast.noaa.gov/data/Documents/Metadata/ParentRecords/harvest/cscFloodComposite.xml" .
+
+<urn:uuid:d9a79e9d-9385-4629-9900-c8358fb54672> dcterms:references <urn:uuid:5fdb614e-5086-452d-9489-dc2adf0e5855> ;
+    owl:a bibo:WebPage .
+
+<urn:uuid:e60f3b8e-37d1-483c-98a3-17eb996a8447> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-06T16:27:51.03Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-06T16:27:51.03Z" ;
+    dc:identifier "urn:sha:572e8ceb3b6a384e7e10b81dd7704eb0987b1d3ceec5521298de6bad" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://coast.noaa.gov/arcgis/rest/services/FloodExposureMapper/CFEM_CoastalFloodHazardComposite/MapServer" .
+
+<urn:uuid:fcf0d31e-e603-4f11-8a56-4d8e60215d47> dcterms:references <urn:uuid:e60f3b8e-37d1-483c-98a3-17eb996a8447> ;
+    owl:a bibo:WebPage .
+

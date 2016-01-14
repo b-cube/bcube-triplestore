@@ -1,0 +1,94 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:040fd0c3-611d-4bd5-9c5b-69d7e465e599> bcube:hasType "theme" ;
+    bcube:hasValue "Boundaries",
+        "Elevation",
+        "Geographic Names",
+        "Hydrography",
+        "Land Cover",
+        "Orthoimagery",
+        "Structures",
+        "Transportation" ;
+    dc:partOf "The National Map Theme Thesaurus" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:0471dc23-bfd8-4771-b5ba-090fdec378b9> bcube:hasType "place" ;
+    bcube:hasValue "US",
+        "United States" ;
+    dc:partOf "Geographic Names Information System" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:19bdfdb6-1dcb-480c-ab76-d6f5298f696e> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-10-31T22:16:56.25Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-10-31T22:16:56.25Z" ;
+    dc:identifier "urn:sha:64532081c15c2abd0569a127af8e6ba8e2b454fa9fcd575f3010c160" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "https://catalog.data.gov/harvest/object/47dceb57-ed31-4a7d-b6a6-2334df78efd4" .
+
+<urn:uuid:34b7c322-74f3-4615-b8e6-8fb1df1bd988> a "ISO 19115:2003/19139" ;
+    bcube:dateCreated "2015-10-31T22:16:56.25Z" ;
+    bcube:lastUpdated "2015-10-31T22:16:56.25Z" ;
+    bcube:originatedFrom <urn:uuid:19bdfdb6-1dcb-480c-ab76-d6f5298f696e> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:a8d56c06-5fe2-4c31-b86f-8f1ec11f1073> .
+
+<urn:uuid:a8d56c06-5fe2-4c31-b86f-8f1ec11f1073> bcube:dateCreated "2015-10-31T22:16:56.25Z" ;
+    bcube:hasMetadataRecord <urn:uuid:34b7c322-74f3-4615-b8e6-8fb1df1bd988> ;
+    bcube:lastUpdated "2015-10-31T22:16:56.25Z" ;
+    dc:conformsTo <urn:uuid:040fd0c3-611d-4bd5-9c5b-69d7e465e599>,
+        <urn:uuid:0471dc23-bfd8-4771-b5ba-090fdec378b9>,
+        <urn:uuid:ae5e3071-da38-4211-b550-78f8c6bbb800>,
+        <urn:uuid:cec1a4b7-cf14-4a0d-af8f-786a8c54c3e0> ;
+    dc:description "USGS Imagery Topo is a topographic tile cache base map with orthoimagery as a backdrop, and combines the most current data (Boundaries, Names, Transportation, Elevation, Hydrography, and other themes) that make up The National Map. Contours generated for the US Topo product are included and are visible along with other data to the 1:18,000 zoom scale. This product is designed to provide a seamless view of the data, closely resembling The National Map's US Topo (GeoPDF) product at large scales, in a GIS accessible format. Orthoimagery data are typically high resolution aerial images that combine the visual attributes of an aerial photograph with the spatial accuracy and reliability of a map. Digital orthoimage resolution may vary from 6 inches to 1 meter. In the former resolution, every pixel in an orthoimage covers a six inch square of the earth's surface, while in the latter resolution, one meter square is represented by each pixel. Blue Marble: Next Generation and Landsat imagery data sources are displayed at small to medium scales, however, the majority of the imagery service source is from the National Agriculture Imagery Program (NAIP) for the conterminous United States. The data is 1-meter pixel resolution with \"leaf-on\". Collection of NAIP imagery is administered by the U.S. Department of Agriculture's Farm Service Agency (FSA). In areas where NAIP data is not available other imagery may be acquired through partnerships by the USGS. The National Map Program is working on acquisition of large scale imagery for the nonconterminous States of Alaska and Hawaii. For the most part, any new Alaska orthoimagery data will not be available in this service due to license restrictions." ;
+    dc:spatial "POLYGON ((-179.1666667 17.625,-179.1666667 71.5,180.0 71.5,180.0 17.625,-179.1666667 17.625))" ;
+    dcterms:references <urn:uuid:bbe14c23-d4b0-40c6-8f49-73f1f1c14cc0> ;
+    dcterms:title "USGS Imagery Topo Base Map Service from The National Map" ;
+    esip:eastBound "180.0"^^xsd:float ;
+    esip:northBound "71.5"^^xsd:float ;
+    esip:southBound "17.625"^^xsd:float ;
+    esip:westBound "-179.1666667"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:ae5e3071-da38-4211-b550-78f8c6bbb800> bcube:hasValue "boundaries",
+        "elevation",
+        "imageryBaseMapsEarthCover",
+        "inlandWaters",
+        "structure",
+        "transportation" ;
+    dc:partOf "IsoTopicCategories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:bbe14c23-d4b0-40c6-8f49-73f1f1c14cc0> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-10-31T22:16:56.25Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-10-31T22:16:56.25Z" ;
+    dc:identifier "urn:sha:9aa7c0308c6c44dc757a985776e301ddc9558495172681272d16786e" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://basemap.nationalmap.gov/arcgis/rest/services/USGSImageryTopo/MapServer" .
+
+<urn:uuid:cec1a4b7-cf14-4a0d-af8f-786a8c54c3e0> bcube:hasType "theme" ;
+    bcube:hasValue "Base Map Service" ;
+    dc:partOf "The National Map Type Thesaurus" ;
+    owl:a bcube:thesaurusSubset .
+

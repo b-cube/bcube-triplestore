@@ -1,0 +1,87 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:16444de8-a2de-4bde-b29a-6f653f91bc44> a "ISO 19115:2003/19139" ;
+    bcube:dateCreated "2015-09-06T15:03:15.924Z" ;
+    bcube:lastUpdated "2015-09-06T15:03:15.924Z" ;
+    bcube:originatedFrom <urn:uuid:a9f2bf94-8beb-43db-ab1a-6591ee516329> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:a2e4901b-91a4-4cbd-9e5f-c9cb0ee8e831> .
+
+<urn:uuid:1c3489f0-1600-4c27-9456-db4e97833d29> bcube:hasType "theme" ;
+    bcube:hasValue "Base Map",
+        "DFIRM",
+        "DFIRM Database",
+        "FEMA Flood Hazard Zone",
+        "FIRM",
+        "Flood Insurance Rate Map",
+        "SFHA",
+        "Special Flood Hazard Area" ;
+    dc:partOf "FEMA NFIP Topic Category" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:6f867572-f753-470d-ac36-c3dfb076b8f9> bcube:hasType "place" ;
+    bcube:hasValue "COMMUNITY WEBSTER UNINCORORATED AREAS",
+        "COUNTY WEBSTER",
+        "COUNTY-FIPS 119C",
+        "FEMA-CID 22119C",
+        "REGION 06",
+        "STATE LA" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:a2e4901b-91a4-4cbd-9e5f-c9cb0ee8e831> bcube:dateCreated "2015-09-06T15:03:15.924Z" ;
+    bcube:hasMetadataRecord <urn:uuid:16444de8-a2de-4bde-b29a-6f653f91bc44> ;
+    bcube:lastUpdated "2015-09-06T15:03:15.924Z" ;
+    dc:conformsTo <urn:uuid:1c3489f0-1600-4c27-9456-db4e97833d29>,
+        <urn:uuid:6f867572-f753-470d-ac36-c3dfb076b8f9>,
+        <urn:uuid:ae929136-0142-4490-87b7-05c2a858bd2f> ;
+    dc:description "FEMA Framework Basemap datasets comprise six of the seven FGDC themes of geospatial data that are used by most GIS applications (Note: the seventh framework theme, orthographic imagery, is packaged in a separate NFIP Metadata Profile): cadastral, geodetic control, governmental unit, transportation, hydrography (water areas & lines. These data include an encoding of the geographic extent of the features and a minimal number of attributes needed to identify and describe the features." ;
+    dc:spatial "POLYGON ((-93.355885 30.176017,-93.355885 31.465753,-92.317191 31.465753,-92.317191 30.176017,-93.355885 30.176017))" ;
+    dcterms:references <urn:uuid:d842d7eb-617d-47a2-9454-0b5352e88304> ;
+    dcterms:title "Basemap Framework Submission for Webster Parish, LA, USA" ;
+    esip:eastBound "-92.317191"^^xsd:float ;
+    esip:northBound "31.465753"^^xsd:float ;
+    esip:southBound "30.176017"^^xsd:float ;
+    esip:westBound "-93.355885"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:a9f2bf94-8beb-43db-ab1a-6591ee516329> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-09-06T15:03:15.924Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-09-06T15:03:15.924Z" ;
+    dc:identifier "urn:sha:d4f93de54315c979e37896177b944e4673b034a33d9bc7e17e24a891" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "https://catalog.data.gov/harvest/object/d899626d-c126-4ace-9a4b-ee47f6fb6f0a" .
+
+<urn:uuid:ae929136-0142-4490-87b7-05c2a858bd2f> bcube:hasValue "transportation" ;
+    dc:partOf "IsoTopicCategories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:d842d7eb-617d-47a2-9454-0b5352e88304> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-09-06T15:03:15.924Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-09-06T15:03:15.924Z" ;
+    dc:identifier "urn:sha:37c915397238031daced09ae0e2dd3bf54e84a6477f749c2cc9dcbdf" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://hazards.fema.gov" .
+

@@ -1,0 +1,66 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:a4007fc3-ad21-415a-9c0a-4babe99d3e11> bcube:hasType "theme" ;
+    bcube:hasValue "Hydrography",
+        "hydrography",
+        "inlandWaters",
+        "lakes",
+        "polygon" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:b50dff83-e37f-4e8f-a5ee-80353ddb8444> bcube:hasType "place" ;
+    bcube:hasValue "United States" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:b8f32193-9746-4104-b8b7-e61571b58471> bcube:hasValue "geoscientificInformation" ;
+    dc:partOf "IsoTopicCategories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:dcf1271b-8b6b-41b2-b814-4ae3426b2963> bcube:dateCreated "2015-11-04T22:08:13.532Z" ;
+    bcube:hasMetadataRecord <urn:uuid:fbea6739-d111-432c-9c74-c11453c5e291> ;
+    bcube:lastUpdated "2015-11-04T22:08:13.532Z" ;
+    dc:conformsTo <urn:uuid:a4007fc3-ad21-415a-9c0a-4babe99d3e11>,
+        <urn:uuid:b50dff83-e37f-4e8f-a5ee-80353ddb8444>,
+        <urn:uuid:b8f32193-9746-4104-b8b7-e61571b58471> ;
+    dc:description "U.S. Lakes (Generalized) represents the major lakes within United States." ;
+    dc:spatial "POLYGON ((-172.4378 18.9108,-172.4378 74.3889,-66.9497 74.3889,-66.9497 18.9108,-172.4378 18.9108))" ;
+    dcterms:title "US Major Lakes" ;
+    esip:eastBound "-66.9497"^^xsd:float ;
+    esip:endDate "1900-01-01"^^xsd:date ;
+    esip:northBound "74.3889"^^xsd:float ;
+    esip:southBound "18.9108"^^xsd:float ;
+    esip:startDate "1900-01-01"^^xsd:date ;
+    esip:westBound "-172.4378"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:faf5802f-c5fb-4ad7-a666-ee84b3d65322> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-04T22:08:13.532Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-04T22:08:13.532Z" ;
+    dc:identifier "urn:sha:0f828ade06a3a0ead8fada963eb797dda0c94093b0d3bb0b6e9eb7e1" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://repository.stategeothermaldata.org/resources/metadata/TestNRRC/WRP/05956d9b-5315-4767-a1fd-3e16b6aae044.xml" .
+
+<urn:uuid:fbea6739-d111-432c-9c74-c11453c5e291> a "ISO 19115:2003/19139" ;
+    bcube:dateCreated "2015-11-04T22:08:13.532Z" ;
+    bcube:lastUpdated "2015-11-04T22:08:13.532Z" ;
+    bcube:originatedFrom <urn:uuid:faf5802f-c5fb-4ad7-a666-ee84b3d65322> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:dcf1271b-8b6b-41b2-b814-4ae3426b2963> .
+

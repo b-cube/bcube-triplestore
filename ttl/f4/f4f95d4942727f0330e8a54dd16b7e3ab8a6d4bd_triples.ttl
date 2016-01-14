@@ -1,0 +1,83 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:12436c16-3828-4e93-bb06-a4576539707c> bcube:hasType "theme" ;
+    bcube:hasValue "12k, 1:12000",
+        "Aerial Photo",
+        "Base Maps",
+        "Cover",
+        "DOQQ",
+        "Earth",
+        "Mosaic",
+        "USGS",
+        "imagery",
+        "orthophoto",
+        "quarter quadrangle" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:1b9372c5-cbc1-4560-9049-0d89ebf2b1d5> bcube:dateCreated "2015-09-07T16:12:19.652Z" ;
+    bcube:hasMetadataRecord <urn:uuid:56c2b686-f2a7-4cbc-9f1d-3fda31dbd49c> ;
+    bcube:lastUpdated "2015-09-07T16:12:19.652Z" ;
+    dc:conformsTo <urn:uuid:12436c16-3828-4e93-bb06-a4576539707c>,
+        <urn:uuid:2328a3c4-c586-439b-ba68-dea034ee922f>,
+        <urn:uuid:c2a232af-8bef-4bd1-8a06-98041da4099c> ;
+    dc:description "Digital Orthophoto Quarter Quadrangles for North Dakota. The aerial image files in this archive are copies of standard digital orthophoto quarter quadrangles (DOQQ) received from the Natural Resource and Conservation Service which they obtained from the US Geological Survey. We have also updated the mosaic with DOQQs obtained directly from the USGS. The projection for the mosaic is UTM, NAD83, Zone 14." ;
+    dc:spatial "POLYGON ((-104.437372 45.760333,-104.437372 49.111223,-96.343383 49.111223,-96.343383 45.760333,-104.437372 45.760333))" ;
+    dcterms:references <urn:uuid:ff41ffc1-08ee-4d51-9a24-282e59e0fe1a> ;
+    dcterms:title "USGS DOQQ Aerial Photography 1995-1998" ;
+    esip:eastBound "-96.343383"^^xsd:float ;
+    esip:northBound "49.111223"^^xsd:float ;
+    esip:southBound "45.760333"^^xsd:float ;
+    esip:westBound "-104.437372"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:2328a3c4-c586-439b-ba68-dea034ee922f> bcube:hasValue "imageryBaseMapsEarthCover" ;
+    dc:partOf "IsoTopicCategories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:56c2b686-f2a7-4cbc-9f1d-3fda31dbd49c> a "ISO 19115:2003/19139" ;
+    bcube:dateCreated "2015-09-07T16:12:19.652Z" ;
+    bcube:lastUpdated "2015-09-07T16:12:19.652Z" ;
+    bcube:originatedFrom <urn:uuid:8b20481d-3b35-427d-811a-604d7bec2773> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:1b9372c5-cbc1-4560-9049-0d89ebf2b1d5> .
+
+<urn:uuid:8b20481d-3b35-427d-811a-604d7bec2773> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-09-07T16:12:19.652Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-09-07T16:12:19.652Z" ;
+    dc:identifier "urn:sha:3068dbc77a73dcf22aff059d36229d910e746fce357f2a693547bb49" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "https://catalog.data.gov/harvest/object/35b0848c-49e0-430b-a783-3f182eeaaa15" .
+
+<urn:uuid:c2a232af-8bef-4bd1-8a06-98041da4099c> bcube:hasType "place" ;
+    bcube:hasValue "North Dakota" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:ff41ffc1-08ee-4d51-9a24-282e59e0fe1a> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-09-07T16:12:19.652Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-09-07T16:12:19.652Z" ;
+    dc:identifier "urn:sha:7cce5b94a157cc554291772b808bce37ea24e5fea08f4309574368eb" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www.nd.gov/gis" .
+

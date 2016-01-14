@@ -1,0 +1,81 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:a28359fc-0af2-4847-b134-4f0035e36bd7> bcube:hasType "place" ;
+    bcube:hasValue "fOC16 = Gulf of Mexico",
+        "fUS12 = Florida",
+        "fUS22 = Louisiana",
+        "h080902 = Lake Pontchartrain" ;
+    dc:partOf "Augmented FIPS 10-4 and FIPS 6-4" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:a471fe8e-0af5-4441-88ab-bf3f23abff03> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2014-10-30T00:16:16.013Z" ;
+    bcube:lastUpdated "2014-10-30T00:16:16.013Z" ;
+    bcube:originatedFrom <urn:uuid:ecb1b2d5-10f5-4d8d-b3cb-f52ac3192e32> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:eb92888e-6e76-4190-b9b6-9539f652d00b> .
+
+<urn:uuid:c7b38d80-125c-48f3-9e08-b3d165c36fa6> bcube:hasType "theme" ;
+    bcube:hasValue "AVHRR",
+        "algal blooms",
+        "estuarine ecosystems",
+        "image collections",
+        "ocean sciences",
+        "remote sensing",
+        "sea surface temperature" ;
+    dc:partOf "USGS Thesaurus" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:cd732826-a347-442b-96b1-ac571478fdfb> owl:a foaf:Organization ;
+    foaf:name "U.S. Geological Survey" .
+
+<urn:uuid:eb92888e-6e76-4190-b9b6-9539f652d00b> bcube:dateCreated "2014-10-30T00:16:16.013Z" ;
+    bcube:hasMetadataRecord <urn:uuid:a471fe8e-0af5-4441-88ab-bf3f23abff03> ;
+    bcube:lastUpdated "2014-10-30T00:16:16.013Z" ;
+    dc:conformsTo <urn:uuid:a28359fc-0af2-4847-b134-4f0035e36bd7>,
+        <urn:uuid:c7b38d80-125c-48f3-9e08-b3d165c36fa6> ;
+    dc:description "Report on satellite imagery collected by the NOAA Advanced Very High Resolution Radiometer (AVHRR) on NOAA polar-orbiting weather satellites. Links are provided to imagery of north-central Gulf of Mexico and of the Lake Pontchartrain." ;
+    dcterms:publisher <urn:uuid:cd732826-a347-442b-96b1-ac571478fdfb> ;
+    dcterms:references <urn:uuid:f2c8451c-b47b-4610-8330-0178b55f8043> ;
+    dcterms:title "Satellite imagery: Lake Pontchartrain Basin and Gulf of Mexico" ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:ecb1b2d5-10f5-4d8d-b3cb-f52ac3192e32> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2014-10-30T00:16:16.013Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2014-10-30T00:16:16.013Z" ;
+    dc:identifier "urn:sha:5c1051b1f52aad27141834999703dc515cd21a5d4f8b35c86b8df3d3" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www.usgs.gov/science/xml.php?cite=162" .
+
+<urn:uuid:f2c8451c-b47b-4610-8330-0178b55f8043> dcterms:references <urn:uuid:f33a0e34-4db2-4f9e-8702-42841322bbf8> ;
+    owl:a bibo:WebPage .
+
+<urn:uuid:f33a0e34-4db2-4f9e-8702-42841322bbf8> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2014-10-30T00:16:16.013Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2014-10-30T00:16:16.013Z" ;
+    dc:identifier "urn:sha:42654146f32ca40156917dc71d90e4cbb8d6cabe66d974d40ce8935e" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://pubs.usgs.gov/of/of98-805/html/stumpf.htm" .
+

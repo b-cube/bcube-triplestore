@@ -1,0 +1,64 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:04e8ca61-50b1-4c09-af6e-f3a37259b027> bcube:hasType "theme" ;
+    bcube:hasValue "Air" ;
+    dc:partOf "EPA GIS Keyword Thesaurus" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:250625b5-47a2-46d1-a7ba-6c785ce7e209> bcube:hasType "place" ;
+    bcube:hasValue "United States" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:4a198be7-63f5-4b21-9df6-f6a17380ef66> a "ISO 19115:2003/19139" ;
+    bcube:dateCreated "2015-08-04T21:41:04.241Z" ;
+    bcube:lastUpdated "2015-08-04T21:41:04.241Z" ;
+    bcube:originatedFrom <urn:uuid:d77f3553-eecb-491a-8a23-b8c2671e0d0b> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:c064cbd0-9709-4adb-8671-8e9f5e18bbe8> .
+
+<urn:uuid:c064cbd0-9709-4adb-8671-8e9f5e18bbe8> bcube:dateCreated "2015-08-04T21:41:04.241Z" ;
+    bcube:hasMetadataRecord <urn:uuid:4a198be7-63f5-4b21-9df6-f6a17380ef66> ;
+    bcube:lastUpdated "2015-08-04T21:41:04.241Z" ;
+    dc:conformsTo <urn:uuid:04e8ca61-50b1-4c09-af6e-f3a37259b027>,
+        <urn:uuid:250625b5-47a2-46d1-a7ba-6c785ce7e209>,
+        <urn:uuid:d5a81c27-5f42-4b6b-ace6-76a7e3213389> ;
+    dc:description "The EPHT air quality indicator files are from a SAS program which calculates the air indicators as developed by CDC's Environmental Public Health Tracking (EPHT) Air Team and approved by the Content Working Group (CWG) steering committee. The indicators use EPA air quality data (from ambient air monitors) and the methodology described in the air team's indicator report. Each file contains, for each county having complete monitoring data: the year, state FIPS code (individually and combined with county FIPS), county name, county population, number of days by county above O3 benchmark (default federal NAAQS), the person-days by county above O3 benchmark (default federal NAAQS), county PM2.5 annual avarage, percent of monitored days above benchmark (default: US Federal NAAQS), and the number of person-days above benchmark (default: Federal NAAQS)." ;
+    dc:spatial "POLYGON ((-124.409721 32.53416,-124.409721 42.009522,-114.131208 42.009522,-114.131208 32.53416,-124.409721 32.53416))" ;
+    dcterms:title "EPHT air quality (county PM2.5 and Ozone) indicators, 2001-2006" ;
+    esip:eastBound "-114.131208"^^xsd:float ;
+    esip:endDate "2006-01-01"^^xsd:date ;
+    esip:northBound "42.009522"^^xsd:float ;
+    esip:southBound "32.53416"^^xsd:float ;
+    esip:startDate "2001-01-01"^^xsd:date ;
+    esip:westBound "-124.409721"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:d5a81c27-5f42-4b6b-ace6-76a7e3213389> bcube:hasValue "environment" ;
+    dc:partOf "IsoTopicCategories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:d77f3553-eecb-491a-8a23-b8c2671e0d0b> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-04T21:41:04.241Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-04T21:41:04.241Z" ;
+    dc:identifier "urn:sha:0fd6369dcf06ed3312b1c77f6b7ecf33ff7fd07c994bd70379c5496e" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "https://catalog.data.gov/harvest/object/d623ad4c-00cc-4b54-aacf-3202df8f1e04" .
+

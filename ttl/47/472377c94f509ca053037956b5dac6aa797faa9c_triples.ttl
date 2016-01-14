@@ -1,0 +1,68 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:32c9c192-8e66-4025-aaaa-b20142bc17d1> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-07T20:18:32.82Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-07T20:18:32.82Z" ;
+    dc:identifier "urn:sha:5ddcd2352922a97bbc7c3e6587e89d01f0e86ee80455c40ddefeb415" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://rmgsc.cr.usgs.gov/outgoing/GeoMAC/2010_fire_data/Washington/Speelyai/wa_speelyai_20100726_0000_dd83.shp.xml" .
+
+<urn:uuid:53a5b2c4-3620-4cc9-bf37-761d862672a5> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-11-07T20:18:32.82Z" ;
+    bcube:lastUpdated "2015-11-07T20:18:32.82Z" ;
+    bcube:originatedFrom <urn:uuid:32c9c192-8e66-4025-aaaa-b20142bc17d1> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:d7484466-2733-4991-826c-2aa996994b20> .
+
+<urn:uuid:93cbf7ab-11f3-4d08-8150-2441b817a3c7> owl:a foaf:Organization ;
+    foaf:name "" .
+
+<urn:uuid:96b787bf-4369-4678-ae41-7e015524c329> bcube:hasType "place" ;
+    bcube:hasValue "Oregon",
+        "Washington" ;
+    dc:partOf "BLM-State" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:cc84889f-26b6-439c-871b-92e7ceea7b82> bcube:hasType "theme" ;
+    bcube:hasValue "Fire" ;
+    dc:partOf "BLM-Theme" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:d7484466-2733-4991-826c-2aa996994b20> bcube:dateCreated "2015-11-07T20:18:32.82Z" ;
+    bcube:hasMetadataRecord <urn:uuid:53a5b2c4-3620-4cc9-bf37-761d862672a5> ;
+    bcube:lastUpdated "2015-11-07T20:18:32.82Z" ;
+    dc:conformsTo <urn:uuid:96b787bf-4369-4678-ae41-7e015524c329>,
+        <urn:uuid:cc84889f-26b6-439c-871b-92e7ceea7b82>,
+        <urn:uuid:ec1c3768-01e8-4426-9aed-9bd154ea2976> ;
+    dc:description "Fire History polygons represent the final mapped wildfire perimeter. These data are maintained at the District level to track the area affected by fire." ;
+    dc:spatial "POLYGON ((-124.009726 42.017364,-124.009726 48.694898,-117.623353 48.694898,-117.623353 42.017364,-124.009726 42.017364))" ;
+    dcterms:publisher <urn:uuid:93cbf7ab-11f3-4d08-8150-2441b817a3c7> ;
+    dcterms:title "NWCC_POLY_2010" ;
+    esip:eastBound "-117.623353"^^xsd:float ;
+    esip:northBound "48.694898"^^xsd:float ;
+    esip:southBound "42.017364"^^xsd:float ;
+    esip:westBound "-124.009726"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:ec1c3768-01e8-4426-9aed-9bd154ea2976> bcube:hasType "theme" ;
+    bcube:hasValue "Environment",
+        "Fire History" ;
+    owl:a bcube:thesaurusSubset .
+

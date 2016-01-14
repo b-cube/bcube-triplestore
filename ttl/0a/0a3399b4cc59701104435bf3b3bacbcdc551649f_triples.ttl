@@ -1,0 +1,89 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:6573fbe1-7e60-4d01-b54c-dad5f10e4631> bcube:hasType "theme" ;
+    bcube:hasValue "boundaries" ;
+    dc:partOf "ISO 19115 Topic Categories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:cee0210a-8e2e-4bf9-af26-99f29ceeaa92> bcube:hasType "place" ;
+    bcube:hasValue "02282",
+        "County or Equivalent Entity",
+        "U.S.",
+        "United States",
+        "Yakutat" ;
+    dc:partOf "FIPS Publication 5-2, FIPS Publication 6-4, FIPS Publication 8-6, FIPS Publication 9-1,FIPS Publication55-4" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:d1adaf0c-0d95-446c-8afb-6c323e0a310b> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-11-01T18:49:32.267Z" ;
+    bcube:lastUpdated "2015-11-01T18:49:32.267Z" ;
+    bcube:originatedFrom <urn:uuid:f3f759b9-9251-4c59-9357-f7fba592824b> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:d719cbf0-55f9-4e1c-a130-4604dc115943> .
+
+<urn:uuid:d719cbf0-55f9-4e1c-a130-4604dc115943> bcube:dateCreated "2015-11-01T18:49:32.267Z" ;
+    bcube:hasMetadataRecord <urn:uuid:d1adaf0c-0d95-446c-8afb-6c323e0a310b> ;
+    bcube:lastUpdated "2015-11-01T18:49:32.267Z" ;
+    dc:conformsTo <urn:uuid:6573fbe1-7e60-4d01-b54c-dad5f10e4631>,
+        <urn:uuid:cee0210a-8e2e-4bf9-af26-99f29ceeaa92>,
+        <urn:uuid:eb6eb649-7901-4e91-af87-2eb529149b56> ;
+    dc:description "The TIGER/Line Shapefiles are an extract of selected geographic and cartographic information from the Census MAF/TIGER database. The Census MAF/TIGER database represents a seamless national file with no overlaps or gaps between parts. However, each TIGER/Line Shapefile is designed to stand alone as an independent data set or the shapefiles can be combined to cover the whole nation." ;
+    dc:spatial "POLYGON ((-143.889952 58.781314,-143.889952 60.527746,-137.498558 60.527746,-137.498558 58.781314,-143.889952 58.781314))" ;
+    dcterms:publisher <urn:uuid:df1c6377-a767-4e85-a78b-9798edfe077a> ;
+    dcterms:references <urn:uuid:f7890732-a069-4c14-921f-12c668f0ccbb> ;
+    dcterms:title "TIGER/Line Shapefile, 2008, 2000 county, Yakutat City and Borough, AK, Voting District (VTD)" ;
+    esip:eastBound "-137.498558"^^xsd:float ;
+    esip:endDate "2008-07-01"^^xsd:date ;
+    esip:northBound "60.527746"^^xsd:float ;
+    esip:southBound "58.781314"^^xsd:float ;
+    esip:startDate "2008-01-01"^^xsd:date ;
+    esip:westBound "-143.889952"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:df1c6377-a767-4e85-a78b-9798edfe077a> owl:a foaf:Organization ;
+    foaf:name "" .
+
+<urn:uuid:eb6eb649-7901-4e91-af87-2eb529149b56> bcube:hasType "theme" ;
+    bcube:hasValue "County or equivalent entity",
+        "Polygon",
+        "State Legislative District",
+        "Voting District" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:f3f759b9-9251-4c59-9357-f7fba592824b> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-01T18:49:32.267Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-01T18:49:32.267Z" ;
+    dc:identifier "urn:sha:513aaca417f7c932fbf834f6fdced4c409d929c72aeb228fe891e731" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://meta.geo.census.gov/data/existing/decennial/GEO/GPMB/TIGERline/fe_2008/vtd00/tl_2008_02282_vtd00_url.shp.xml" .
+
+<urn:uuid:f7890732-a069-4c14-921f-12c668f0ccbb> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-01T18:49:32.267Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-01T18:49:32.267Z" ;
+    dc:identifier "urn:sha:a620097f86df694a2533ebd0bcda2203a414085046d9231a2aa8908b" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www2.census.gov/geo/tiger/TIGER2008/02_ALASKA/02282_Yakutat_City_and_Borough/tl_2008_02282_vtd00.zip" .
+

@@ -1,0 +1,131 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:18cff67a-ebf5-4c39-a5ed-b4394db83dcb> bcube:hasType "temporal" ;
+    bcube:hasValue "2000 to 2005" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:1b150f5f-6bd0-4a91-b2ea-82ca3b5e5b37> bcube:hasType "place" ;
+    bcube:hasValue "Colorado",
+        "Great Plains",
+        "High Plains",
+        "Kansas",
+        "Nebraska",
+        "New Mexico",
+        "Oklahoma",
+        "South Dakota",
+        "Texas",
+        "Wyoming" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:2868ea11-e326-4c8d-b776-a76a049986bc> owl:a foaf:Organization ;
+    foaf:name "U.S. Geological Survey" .
+
+<urn:uuid:307865a6-5dd1-475b-a258-6032950ae8ce> bcube:hasType "theme" ;
+    bcube:hasValue "geoscientificInformation",
+        "inlandWaters" ;
+    dc:partOf "ISO 19115 Topic Category" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:3c57c931-1ae8-4e05-887c-66f8141b8109> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-04T17:49:55.03Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-04T17:49:55.03Z" ;
+    dc:identifier "urn:sha:c528218c55ac0f341654fbc4e34cd8a92dbf15d6e960cd6fd46f7808" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://water.usgs.gov/GIS/dsdl/hp_wlc0005.zip" .
+
+<urn:uuid:4703884a-3b21-4006-a47c-c50b388dae70> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-08-04T17:49:55.03Z" ;
+    bcube:lastUpdated "2015-08-04T17:49:55.03Z" ;
+    bcube:originatedFrom <urn:uuid:6fb2fc83-af42-46c8-bf97-3a347923171b> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:57400dbb-4e5e-400b-9e0b-e57abae4b817> .
+
+<urn:uuid:57400dbb-4e5e-400b-9e0b-e57abae4b817> bcube:dateCreated "2015-08-04T17:49:55.03Z" ;
+    bcube:hasMetadataRecord <urn:uuid:4703884a-3b21-4006-a47c-c50b388dae70> ;
+    bcube:lastUpdated "2015-08-04T17:49:55.03Z" ;
+    dc:conformsTo <urn:uuid:18cff67a-ebf5-4c39-a5ed-b4394db83dcb>,
+        <urn:uuid:1b150f5f-6bd0-4a91-b2ea-82ca3b5e5b37>,
+        <urn:uuid:307865a6-5dd1-475b-a258-6032950ae8ce>,
+        <urn:uuid:813cd6db-8fa8-4cf0-91d8-68ad6541aef4> ;
+    dc:description "This raster data set represents water-level change in the High Plains aquifer of the United States from 2000 to 2005, in feet. The High Plains aquifer underlies 112.6 million acres (176,000 square miles) in parts of eight States: Colorado, Kansas, Nebraska, New Mexico, Oklahoma, South Dakota, Texas, and Wyoming. Water-level declines occurred in parts of the High Plains aquifer soon after the onset of substantial irrigation with groundwater (about 1950). This data set was generated in ESRI ArcInfo Workstation Version 9.3, which is a geographic information system (GIS), using water-level-change data from wells measured in 2000 and 2005 and from some additional wells in New Mexico, which were measured in 2001, 2002, 2006, and 2007. For this data set, areas of no substantial change were designated as areas where water-level change was between a rise of 1 foot and a decline of 1 foot; the raster was set to zero in the areas of no substantial change." ;
+    dc:spatial "POLYGON ((-106.016217 31.598356,-106.016217 43.80642,-96.225303 43.80642,-96.225303 31.598356,-106.016217 31.598356))" ;
+    dcterms:publisher <urn:uuid:2868ea11-e326-4c8d-b776-a76a049986bc> ;
+    dcterms:references <urn:uuid:3c57c931-1ae8-4e05-887c-66f8141b8109>,
+        <urn:uuid:9872f25c-2d19-4513-8319-114ed34cc94d>,
+        <urn:uuid:d3725c4c-c12c-4591-b972-3dff6d1444c4> ;
+    dcterms:title "Water-level change, High Plains aquifer, 2000 to 2005" ;
+    esip:eastBound "-96.225303"^^xsd:float ;
+    esip:northBound "43.80642"^^xsd:float ;
+    esip:southBound "31.598356"^^xsd:float ;
+    esip:startDate "2009-01-01"^^xsd:date ;
+    esip:westBound "-106.016217"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:6fb2fc83-af42-46c8-bf97-3a347923171b> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-04T17:49:55.03Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-04T17:49:55.03Z" ;
+    dc:identifier "urn:sha:4234b7e1a77960458af2da8414639ddd6e28711c7be5f1b7d4fa7b11" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://water.usgs.gov/GIS/metadata/usgswrd/XML/sir12-5177_hp_wlc0005.xml" .
+
+<urn:uuid:813cd6db-8fa8-4cf0-91d8-68ad6541aef4> bcube:hasType "theme" ;
+    bcube:hasValue "High Plains aquifer",
+        "Ogallala aquifer",
+        "aquifers",
+        "ground water",
+        "groundwater",
+        "water-level change" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:9872f25c-2d19-4513-8319-114ed34cc94d> dcterms:references <urn:uuid:b102874b-9a6a-4748-aa61-8bfacfaaf366> ;
+    owl:a bibo:WebPage .
+
+<urn:uuid:b102874b-9a6a-4748-aa61-8bfacfaaf366> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-04T17:49:55.03Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-04T17:49:55.03Z" ;
+    dc:identifier "urn:sha:4a48fc7831a6c3f1f833ac36986264a2c33afd59967646d857801065" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://water.usgs.gov/lookup/getspatial?sir12-5177_hp_wlc0005" .
+
+<urn:uuid:d3725c4c-c12c-4591-b972-3dff6d1444c4> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-04T17:49:55.03Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-04T17:49:55.03Z" ;
+    dc:identifier "urn:sha:405c98158c11769fa6ce8aa02c5ee902467cbb5494afe0e2379528e9" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://water.usgs.gov/GIS/dsdl/hp_wlc0005a.zip" .
+

@@ -1,0 +1,145 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:0451a995-aa4e-439c-9291-de84e84000da> bcube:hasType "theme" ;
+    bcube:hasValue "Bathymetry/Topography",
+        "LIDAR",
+        "Topography" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:2426f7c9-8f57-4cf2-84a0-f1d7e1f8a7ed> dcterms:references <urn:uuid:eb5ac94c-704c-49cb-b8a5-4302d26c8416> ;
+    owl:a bibo:WebPage .
+
+<urn:uuid:25001f71-8267-4e25-b838-fe6586aff205> bcube:dateCreated "2015-08-05T01:22:25.83Z" ;
+    bcube:hasMetadataRecord <urn:uuid:f2ff129a-4445-463b-906d-24b20a9d2f59> ;
+    bcube:lastUpdated "2015-08-05T01:22:25.83Z" ;
+    dc:conformsTo <urn:uuid:0451a995-aa4e-439c-9291-de84e84000da>,
+        <urn:uuid:29bc81a0-85bf-4486-956d-187494de528d>,
+        <urn:uuid:2d74f9af-e84d-4b62-b875-ac0c3489f4b9>,
+        <urn:uuid:6d89e3dd-5ea8-4f18-8fd7-8db6cc7e9f02> ;
+    dc:description "This data set is an LAZ (compressed LAS) format file containing LIDAR point cloud data. These data were collected by the National Oceanic Atmospheric Administration National Geodetic Survey Remote Sensing Division using a Riegl VQ820G system. The data is for Barnegat Light, New Jersey, in Ocean County. The data were acquired from 20130923 - 20130924. The data includes topobathy data in an LAS 1.2 format file classified as: unclassified (1), ground (2), noise (7), high point (21), bathymetric point (26), bathy noise (27). For Digital Coast storage purposes, NOAA OCM reclassified the following classes: 21 (high points) reclassed to 7 (low point, noise), 26 (bathymetric point) reclassed to 11 (NOAA OCM bathymetric lidar point), 27 (bathy noise) reclassed to 9 (water). Therefore, the classes of data available from the NOAA Digital Coast are: 1 Unclassified 2 Ground 7 Noise 9 Water 11 Bathymetric lidar This data set also includes lidar intensity values and encoded RGB image values." ;
+    dc:spatial "POLYGON ((-74.177391 39.722735,-74.177391 39.823027,-74.067471 39.823027,-74.067471 39.722735,-74.177391 39.722735))" ;
+    dcterms:publisher <urn:uuid:5bee5c43-ce5c-42ac-9ead-4ba1d7a9bce6> ;
+    dcterms:references <urn:uuid:2426f7c9-8f57-4cf2-84a0-f1d7e1f8a7ed>,
+        <urn:uuid:8d0b4c3b-6ef3-4f3a-8fc1-1d8d90f61e08>,
+        <urn:uuid:99c17c1f-377c-4f39-8045-e16285fa8036>,
+        <urn:uuid:de119c2a-e6ec-46b2-9554-b83325bc572e> ;
+    dcterms:title "2013 NOAA National Geodetic Survey (NGS) LIDAR of New Jersey: Barnegat Light Integrated Ocean and Coastal Mapping Product" ;
+    esip:eastBound "-74.067471"^^xsd:float ;
+    esip:endDate "2013-09-24"^^xsd:date ;
+    esip:northBound "39.823027"^^xsd:float ;
+    esip:southBound "39.722735"^^xsd:float ;
+    esip:startDate "2013-09-23"^^xsd:date ;
+    esip:westBound "-74.177391"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:29bc81a0-85bf-4486-956d-187494de528d> bcube:hasType "theme" ;
+    bcube:hasValue "elevation" ;
+    dc:partOf "ISO 19115 Topic Category" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:2d74f9af-e84d-4b62-b875-ac0c3489f4b9> bcube:hasType "temporal" ;
+    bcube:hasValue "20130923",
+        "20130924" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:51f432b0-f0af-4776-8439-c0eb1c0058a8> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-05T01:22:25.83Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-05T01:22:25.83Z" ;
+    dc:identifier "urn:sha:84938e08930479dda9e192462eea09d0a70efb1d7cc5ac388f322dd1" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://coast.noaa.gov/dataviewer" .
+
+<urn:uuid:5bee5c43-ce5c-42ac-9ead-4ba1d7a9bce6> owl:a foaf:Organization ;
+    foaf:name "NOAA's Ocean Service (NOS), Office for Coastal Management (OCM)" .
+
+<urn:uuid:5f1ece53-3c7d-4e91-81b3-a9dec178af40> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-05T01:22:25.83Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-05T01:22:25.83Z" ;
+    dc:identifier "urn:sha:a309de9257e99c5ec8aa5028e2b535da04d0a686192c54b4aaf3e81b" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "ftp://coast.noaa.gov/pub/DigitalCoast/lidar1_z/geoid12a/data/2643" .
+
+<urn:uuid:6d89e3dd-5ea8-4f18-8fd7-8db6cc7e9f02> bcube:hasType "place" ;
+    bcube:hasValue "Barnegat Light",
+        "New Jersey",
+        "Ocean County",
+        "United States" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:73a1f82f-bff0-4b0c-80c5-501a0e89d2eb> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-05T01:22:25.83Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-05T01:22:25.83Z" ;
+    dc:identifier "urn:sha:41ae6cc7a2696adc2fc99a718468031c7a5713503fa47189f8832440" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://coast.noaa.gov/htdata/lidar1_z/geoid12a/data/2643/2013_Barnegat_NJ_IOCM_metadata.xml" .
+
+<urn:uuid:8d0b4c3b-6ef3-4f3a-8fc1-1d8d90f61e08> dcterms:references <urn:uuid:51f432b0-f0af-4776-8439-c0eb1c0058a8> ;
+    owl:a bibo:WebPage .
+
+<urn:uuid:99c17c1f-377c-4f39-8045-e16285fa8036> dcterms:references <urn:uuid:ea6c159a-4125-43fb-b8b2-fac7b1a2aac2> ;
+    owl:a bibo:WebPage .
+
+<urn:uuid:de119c2a-e6ec-46b2-9554-b83325bc572e> dcterms:references <urn:uuid:5f1ece53-3c7d-4e91-81b3-a9dec178af40> ;
+    owl:a bibo:WebPage .
+
+<urn:uuid:ea6c159a-4125-43fb-b8b2-fac7b1a2aac2> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-05T01:22:25.83Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-05T01:22:25.83Z" ;
+    dc:identifier "urn:sha:fb96a9093be4bf907341b284670becc67fe83e37e2519933ec36ace2" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://coast.noaa.gov/dataviewer/index.html?action=advsearch&qType=in&qFld=ID&qVal=2643" .
+
+<urn:uuid:eb5ac94c-704c-49cb-b8a5-4302d26c8416> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-05T01:22:25.83Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-05T01:22:25.83Z" ;
+    dc:identifier "urn:sha:a5b99394df9de624ffbb3c2adc9cf66de5e977198bfd73c402bcbce4" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://coast.noaa.gov" .
+
+<urn:uuid:f2ff129a-4445-463b-906d-24b20a9d2f59> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-08-05T01:22:25.83Z" ;
+    bcube:lastUpdated "2015-08-05T01:22:25.83Z" ;
+    bcube:originatedFrom <urn:uuid:73a1f82f-bff0-4b0c-80c5-501a0e89d2eb> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:25001f71-8267-4e25-b838-fe6586aff205> .
+

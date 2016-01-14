@@ -1,0 +1,66 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:009cc386-1640-4530-b2c9-4d820cb89001> bcube:hasType "theme" ;
+    bcube:hasValue "overfished",
+        "rebuilding",
+        "stock status" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:0ce2d1b5-01c6-40b8-af18-4d1556d54738> bcube:dateCreated "2015-07-29T19:03:27.004Z" ;
+    bcube:hasMetadataRecord <urn:uuid:c8be34d3-f1fd-4f5a-8584-e3d29fac435d> ;
+    bcube:lastUpdated "2015-07-29T19:03:27.004Z" ;
+    dc:conformsTo <urn:uuid:009cc386-1640-4530-b2c9-4d820cb89001>,
+        <urn:uuid:0d181022-ade3-4298-806a-e3c9c5e2a084>,
+        <urn:uuid:181ec0fc-a137-474b-93b2-866600861e62> ;
+    dc:description "These data inform the public of all stocks and stock complexes that have been overfished since 2000. If stocks are no longer overfished, the year the stock was taken off the overfished listed is indicated. The data excludes stocks that were later determined should not have been on the overfished list (i.e. individual stocks were listed instead of correctly listing a single stock complex, listing was in error)." ;
+    dcterms:identifier "gov.noaa.nmfs.inport:12820" ;
+    dcterms:publisher <urn:uuid:329a41a8-bffd-4119-a4c5-d2c9ee6258de> ;
+    dcterms:title "Overfished history" ;
+    esip:startDate "2000-01-01"^^xsd:date ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:0d181022-ade3-4298-806a-e3c9c5e2a084> bcube:hasType "temporal" ;
+    bcube:hasValue "quarterly" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:181ec0fc-a137-474b-93b2-866600861e62> bcube:hasType "place" ;
+    bcube:hasValue "US EEZ" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:329a41a8-bffd-4119-a4c5-d2c9ee6258de> owl:a foaf:Organization ;
+    foaf:name "" .
+
+<urn:uuid:60958bcf-53b0-4f15-8bed-71836e9d0da8> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-07-29T19:03:27.004Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-07-29T19:03:27.004Z" ;
+    dc:identifier "urn:sha:5dfd331b9e3c287f93f6aeb235d7d281fb807f6082346edcf460cc77" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "https://inport.nmfs.noaa.gov/inport/item/12820/fgdc" .
+
+<urn:uuid:c8be34d3-f1fd-4f5a-8584-e3d29fac435d> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-07-29T19:03:27.004Z" ;
+    bcube:lastUpdated "2015-07-29T19:03:27.004Z" ;
+    bcube:originatedFrom <urn:uuid:60958bcf-53b0-4f15-8bed-71836e9d0da8> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:0ce2d1b5-01c6-40b8-af18-4d1556d54738> .
+

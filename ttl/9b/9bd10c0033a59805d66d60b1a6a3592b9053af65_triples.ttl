@@ -1,0 +1,88 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:4645d323-c3ac-4ca4-8a66-0faa09bcc808> bcube:hasType "place" ;
+    bcube:hasValue "American Indian Area" ;
+    dc:partOf "INCITS.38-200x (R2004),INCITS.31-200x (R2007),INCITS.454-200x,INCITS 455-200x,INCITS 446-2008" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:666c9a0f-d165-4052-be6e-22664cb50bd8> bcube:hasType "theme" ;
+    bcube:hasValue "AIA",
+        "AIR",
+        "American Indian Area",
+        "American Indian Reservation",
+        "Entity",
+        "Polygon",
+        "Tribal Subdivision" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:959a6638-1126-477e-94df-9d1eb16bb2b7> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-11-03T14:53:03.147Z" ;
+    bcube:lastUpdated "2015-11-03T14:53:03.147Z" ;
+    bcube:originatedFrom <urn:uuid:ef8d2901-4a95-4e76-baf8-126d30a45a15> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:aac2165d-2cb9-4592-b427-38ba9db0bdd0> .
+
+<urn:uuid:aac2165d-2cb9-4592-b427-38ba9db0bdd0> bcube:dateCreated "2015-11-03T14:53:03.147Z" ;
+    bcube:hasMetadataRecord <urn:uuid:959a6638-1126-477e-94df-9d1eb16bb2b7> ;
+    bcube:lastUpdated "2015-11-03T14:53:03.147Z" ;
+    dc:conformsTo <urn:uuid:4645d323-c3ac-4ca4-8a66-0faa09bcc808>,
+        <urn:uuid:666c9a0f-d165-4052-be6e-22664cb50bd8>,
+        <urn:uuid:d77a8faf-8894-47f6-9e77-ba123725353b> ;
+    dc:description "The TIGER/Line Shapefiles are an extract of selected geographic and cartographic information from the Census MAF/TIGER database. The Census MAF/TIGER database represents a seamless national file with no overlaps or gaps between parts. However, each TIGER/Line Shapefile is designed to stand alone as an independent data set or the shapefiles can be combined to cover the whole nation." ;
+    dc:spatial "POLYGON ((-93.596455 47.802915,-93.596455 48.179558,-92.307979 48.179558,-92.307979 47.802915,-93.596455 47.802915))" ;
+    dcterms:publisher <urn:uuid:c4602748-5833-4a44-8aa8-621027b15250> ;
+    dcterms:references <urn:uuid:df567248-7238-4a3d-9bcb-aef3044d2ddf> ;
+    dcterms:title "TIGER/Line Shapefile, 2009, entity, Bois Forte Reservation, Current American Indian Tribal Subdivision (AITS) AIA-based" ;
+    esip:eastBound "-92.307979"^^xsd:float ;
+    esip:endDate "2009-05-01"^^xsd:date ;
+    esip:northBound "48.179558"^^xsd:float ;
+    esip:southBound "47.802915"^^xsd:float ;
+    esip:startDate "2009-01-01"^^xsd:date ;
+    esip:westBound "-93.596455"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:c4602748-5833-4a44-8aa8-621027b15250> owl:a foaf:Organization ;
+    foaf:name "" .
+
+<urn:uuid:d77a8faf-8894-47f6-9e77-ba123725353b> bcube:hasType "theme" ;
+    bcube:hasValue "boundaries" ;
+    dc:partOf "ISO 19115 Topic Categories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:df567248-7238-4a3d-9bcb-aef3044d2ddf> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-03T14:53:03.147Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-03T14:53:03.147Z" ;
+    dc:identifier "urn:sha:ad54629ece93d38d3445d5b2a6603b4ec097e2b315a4b71656ecc259" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www2.census.gov/geo/tiger/TIGER2009/AITS_BY_AIA/0335_Bois_Forte_Reservation/tl_2009_0335_aitsaia.zip" .
+
+<urn:uuid:ef8d2901-4a95-4e76-baf8-126d30a45a15> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-03T14:53:03.147Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-03T14:53:03.147Z" ;
+    dc:identifier "urn:sha:463a4db3d9c5f94c89b67d6d6db79a96e601505bdb2050bee0d80738" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://meta.geo.census.gov/data/existing/decennial/GEO/GPMB/TIGERline/fe_2009/aitsaia/tl_2009_0335_aitsaia_url.shp.xml" .
+

@@ -1,0 +1,89 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:75d5d70b-4b42-4be3-9f76-44c6565299b0> bcube:hasType "theme" ;
+    bcube:hasValue "boundaries" ;
+    dc:partOf "ISO 19115 Topic Categories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:96f70061-993f-4e97-b0d5-eb7df1d08aaa> bcube:hasType "place" ;
+    bcube:hasValue "04",
+        "AZ",
+        "Arizona",
+        "State or Equivalent Entity",
+        "U.S.",
+        "United States" ;
+    dc:partOf "INCITS.38-200x (R2004),INCITS.31-200x (R2007),INCITS.454-200x,INCITS 455-200x,INCITS 446-2008" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:a1b1a1ea-8cea-4fc6-9073-898441414e44> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-11-02T02:46:47.65Z" ;
+    bcube:lastUpdated "2015-11-02T02:46:47.65Z" ;
+    bcube:originatedFrom <urn:uuid:d3663420-6ddc-48f2-8d51-ded6ada028b1> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:ade36fb4-7eb8-4754-a08d-c84a1849d011> .
+
+<urn:uuid:ade36fb4-7eb8-4754-a08d-c84a1849d011> bcube:dateCreated "2015-11-02T02:46:47.65Z" ;
+    bcube:hasMetadataRecord <urn:uuid:a1b1a1ea-8cea-4fc6-9073-898441414e44> ;
+    bcube:lastUpdated "2015-11-02T02:46:47.65Z" ;
+    dc:conformsTo <urn:uuid:75d5d70b-4b42-4be3-9f76-44c6565299b0>,
+        <urn:uuid:96f70061-993f-4e97-b0d5-eb7df1d08aaa>,
+        <urn:uuid:ebb31105-5b71-4cfc-aee7-0046dc64295f> ;
+    dc:description "The TIGER/Line Shapefiles are an extract of selected geographic and cartographic information from the Census MAF/TIGER database. The Census MAF/TIGER database represents a seamless national file with no overlaps or gaps between parts. However, each TIGER/Line Shapefile is designed to stand alone as an independent data set or the shapefiles can be combined to cover the whole nation." ;
+    dc:spatial "POLYGON ((-114.816591 31.332177,-114.816591 37.01115,-109.045223 37.01115,-109.045223 31.332177,-114.816591 31.332177))" ;
+    dcterms:publisher <urn:uuid:f0954b27-4587-4fba-9a63-07f2ca7be744> ;
+    dcterms:references <urn:uuid:e90cd073-841d-4e83-bb5c-b7b3731761a1> ;
+    dcterms:title "TIGER/Line Shapefile, 2009, 2000 state, Arizona, 108th Congressional District" ;
+    esip:eastBound "-109.045223"^^xsd:float ;
+    esip:endDate "2009-05-01"^^xsd:date ;
+    esip:northBound "37.01115"^^xsd:float ;
+    esip:southBound "31.332177"^^xsd:float ;
+    esip:startDate "2009-01-01"^^xsd:date ;
+    esip:westBound "-114.816591"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:d3663420-6ddc-48f2-8d51-ded6ada028b1> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-02T02:46:47.65Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-02T02:46:47.65Z" ;
+    dc:identifier "urn:sha:f33dd86e1cdc6ad4637f7e9fc1210abc3daacbe73572f54bbef323e4" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://meta.geo.census.gov/data/existing/decennial/GEO/GPMB/TIGERline/fe_2009/cd108/tl_2009_04_cd108_url.shp.xml" .
+
+<urn:uuid:e90cd073-841d-4e83-bb5c-b7b3731761a1> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-02T02:46:47.65Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-02T02:46:47.65Z" ;
+    dc:identifier "urn:sha:c4ccdbb65624651d89be0edce4bee53eb7eab9f33774debbda51a2ed" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www2.census.gov/geo/tiger/TIGER2009/04_ARIZONA/tl_2009_04_cd108.zip" .
+
+<urn:uuid:ebb31105-5b71-4cfc-aee7-0046dc64295f> bcube:hasType "theme" ;
+    bcube:hasValue "Congressional Districts",
+        "Polygon",
+        "State or equivalent entity" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:f0954b27-4587-4fba-9a63-07f2ca7be744> owl:a foaf:Organization ;
+    foaf:name "" .
+

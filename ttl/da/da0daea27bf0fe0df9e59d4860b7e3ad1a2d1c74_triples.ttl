@@ -1,0 +1,75 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:1420e76f-534e-4eba-8749-4b95d1faf133> owl:a foaf:Organization ;
+    foaf:name "IDWR" .
+
+<urn:uuid:44a755ad-888e-4113-9c1f-e421c8c97907> bcube:dateCreated "2015-10-18T17:16:55.208Z" ;
+    bcube:hasMetadataRecord <urn:uuid:6f15927a-3e31-4c0b-9dc3-56959cdc1072> ;
+    bcube:lastUpdated "2015-10-18T17:16:55.208Z" ;
+    dc:conformsTo <urn:uuid:a3e09f15-1900-458d-9aee-993d6e12bce9>,
+        <urn:uuid:f8d32ed3-2969-4d4a-8b0b-01e86846089b> ;
+    dc:description "Idaho Department of Water Resources administrative basin boundaries - basin 01-03. Shapefile should be used as a guide since basins 01-03 are defined as diversions from the snake river along specific reaches. Basin 01 are diversions from the Snake River (Eastern Idaho Border) to Milner Dam. Basin 02 is from Milner Dam to the Oregon border. Basin 03 is from where the Snake River reenters the State from Oregon up to Lewiston." ;
+    dc:spatial "POLYGON ((-117.361428 42.452047,-117.361428 46.466214,-110.864701 46.466214,-110.864701 42.452047,-117.361428 42.452047))" ;
+    dcterms:publisher <urn:uuid:1420e76f-534e-4eba-8749-4b95d1faf133> ;
+    dcterms:references <urn:uuid:9bb7eff8-b8c2-4ec6-9918-1eac23634fc2> ;
+    dcterms:title "Administrative Basins 01-03" ;
+    esip:eastBound "-110.864701"^^xsd:float ;
+    esip:northBound "46.466214"^^xsd:float ;
+    esip:southBound "42.452047"^^xsd:float ;
+    esip:startDate "1999-01-01"^^xsd:date ;
+    esip:westBound "-117.361428"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:6f15927a-3e31-4c0b-9dc3-56959cdc1072> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-10-18T17:16:55.208Z" ;
+    bcube:lastUpdated "2015-10-18T17:16:55.208Z" ;
+    bcube:originatedFrom <urn:uuid:aadcb699-0241-48d3-94fd-5aeef5e24b16> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:44a755ad-888e-4113-9c1f-e421c8c97907> .
+
+<urn:uuid:9bb7eff8-b8c2-4ec6-9918-1eac23634fc2> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-10-18T17:16:55.208Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-10-18T17:16:55.208Z" ;
+    dc:identifier "urn:sha:aae299bda285b360bc2f94fc467436c0f423c4d0845a1b236ebd9af5" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "<http://www.idwr.state.id.us/idwr>" .
+
+<urn:uuid:a3e09f15-1900-458d-9aee-993d6e12bce9> bcube:hasType "place" ;
+    bcube:hasValue "Idaho" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:aadcb699-0241-48d3-94fd-5aeef5e24b16> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-10-18T17:16:55.208Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-10-18T17:16:55.208Z" ;
+    dc:identifier "urn:sha:5aeb569de1878d353acc60cf67daf4453d2f85a2c9627e23c545579f" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www.idwr.idaho.gov/ftp/gisdata/Spatial/AdministrativeBoundaries/IDWRAdminBasins/adminbasin01-03.shp.xml" .
+
+<urn:uuid:f8d32ed3-2969-4d4a-8b0b-01e86846089b> bcube:hasType "theme" ;
+    bcube:hasValue "boundaries" ;
+    dc:partOf "ESRI Geography Network Thesaurus" ;
+    owl:a bcube:thesaurusSubset .
+

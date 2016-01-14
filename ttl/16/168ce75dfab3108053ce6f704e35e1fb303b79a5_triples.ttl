@@ -1,0 +1,89 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:17ddc41e-60ae-4d92-b2f1-4af9a615e9ed> bcube:hasType "theme" ;
+    bcube:hasValue "field methods",
+        "geology",
+        "geomorphology",
+        "geophysics",
+        "hazards",
+        "land surface characteristics",
+        "maps and atlases",
+        "paleontology",
+        "rocks and deposits",
+        "science centers" ;
+    dc:partOf "USGS Thesaurus" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:3f0dad58-ee88-4ac3-a924-fb424d328559> bcube:hasType "place" ;
+    bcube:hasValue "fUS02 = Alaska",
+        "fUS04 = Arizona",
+        "fUS06 = California",
+        "fUS15 = Hawaii",
+        "fUS16 = Idaho",
+        "fUS32 = Nevada",
+        "fUS41 = Oregon",
+        "fUS49 = Utah",
+        "fUS53 = Washington" ;
+    dc:partOf "Augmented FIPS 10-4 and FIPS 6-4" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:713ed08b-213e-4ac0-97bc-1b3c6d3cb611> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2014-10-30T05:39:02.836Z" ;
+    bcube:lastUpdated "2014-10-30T05:39:02.836Z" ;
+    bcube:originatedFrom <urn:uuid:8c6e58d5-d7b8-4c20-a170-e9a6a332d7a2> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:d276e2b8-a96c-404e-b86a-8192b2f65601> .
+
+<urn:uuid:72ed4251-b801-4e44-8d64-27279b7a1463> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2014-10-30T05:39:02.836Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2014-10-30T05:39:02.836Z" ;
+    dc:identifier "urn:sha:9fee641e44deb4ee4da6eb095eae39ffb673e58a770bc64d2ebcfcd9" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://geomaps.wr.usgs.gov/" .
+
+<urn:uuid:8c6e58d5-d7b8-4c20-a170-e9a6a332d7a2> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2014-10-30T05:39:02.836Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2014-10-30T05:39:02.836Z" ;
+    dc:identifier "urn:sha:f74c4976d14b244c39cbd762297bb4ca33d4843831dcd9de2b651999" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www.usgs.gov/science/xml.php?cite=856" .
+
+<urn:uuid:d276e2b8-a96c-404e-b86a-8192b2f65601> bcube:dateCreated "2014-10-30T05:39:02.836Z" ;
+    bcube:hasMetadataRecord <urn:uuid:713ed08b-213e-4ac0-97bc-1b3c6d3cb611> ;
+    bcube:lastUpdated "2014-10-30T05:39:02.836Z" ;
+    dc:conformsTo <urn:uuid:17ddc41e-60ae-4d92-b2f1-4af9a615e9ed>,
+        <urn:uuid:3f0dad58-ee88-4ac3-a924-fb424d328559> ;
+    dc:description "Overview of the research of this organizational unit with links to projects and activities and to geologic information on the western U.S." ;
+    dcterms:publisher <urn:uuid:dc4d4a3f-c22a-438d-bf6c-fe1b3abe1dd5> ;
+    dcterms:references <urn:uuid:d53cf47c-d4a5-4b14-b6e6-27e523f88c38> ;
+    dcterms:title "Western Region Geology and Geophysics Center" ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:d53cf47c-d4a5-4b14-b6e6-27e523f88c38> dcterms:references <urn:uuid:72ed4251-b801-4e44-8d64-27279b7a1463> ;
+    owl:a bibo:WebPage .
+
+<urn:uuid:dc4d4a3f-c22a-438d-bf6c-fe1b3abe1dd5> owl:a foaf:Organization ;
+    foaf:name "U.S. Geological Survey" .
+

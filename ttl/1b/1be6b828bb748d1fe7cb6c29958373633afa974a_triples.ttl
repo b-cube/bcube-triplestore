@@ -1,0 +1,93 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:24285cfa-8d67-4a97-bccc-016c28ac068e> owl:a foaf:Organization ;
+    foaf:name "" .
+
+<urn:uuid:4c93185f-a2d2-4b37-b1b4-ef0dfcab09d1> bcube:hasType "theme" ;
+    bcube:hasValue "CDP",
+        "Census Designated Place",
+        "City",
+        "Polygon",
+        "State or equivalent entity",
+        "Town",
+        "Village" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:74ff8ab6-0f00-44dd-bb45-24cbd22606bb> bcube:hasType "place" ;
+    bcube:hasValue "46",
+        "SD",
+        "South Dakota",
+        "State or Equivalent Entity",
+        "U.S.",
+        "United States" ;
+    dc:partOf "INCITS.38-200x (R2004),INCITS.31-200x (R2007),INCITS.454-200x,INCITS 455-200x,INCITS 446-2008" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:786c0f93-7cc0-4a1f-bdfc-f49ca69d3070> bcube:hasType "theme" ;
+    bcube:hasValue "boundaries" ;
+    dc:partOf "ISO 19115 Topic Categories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:840b2989-107a-4f4c-8d23-59605adfa22c> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-03T05:35:03.51Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-03T05:35:03.51Z" ;
+    dc:identifier "urn:sha:94f2f5ed80a672a84fbdac6e16979bd49e607a7a1fc2fed5f85c2361" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://meta.geo.census.gov/data/existing/decennial/GEO/GPMB/TIGERline/fe_2009/placeec/tl_2009_46_placeec_url.shp.xml" .
+
+<urn:uuid:8f528773-b9dd-436b-9f7c-82923f13fa52> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-03T05:35:03.51Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-03T05:35:03.51Z" ;
+    dc:identifier "urn:sha:fc6c486ed0fb8a53ab1cb4c3885fda6d4f9dd86d44a12e8a8a88c85f" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www2.census.gov/geo/tiger/TIGER2009/46_SOUTH_DAKOTA/tl_2009_46_placeec.zip" .
+
+<urn:uuid:9d58ef3f-22f7-4dbb-bb0b-8246495e9812> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-11-03T05:35:03.51Z" ;
+    bcube:lastUpdated "2015-11-03T05:35:03.51Z" ;
+    bcube:originatedFrom <urn:uuid:840b2989-107a-4f4c-8d23-59605adfa22c> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:fe37fe54-faf3-4235-9331-61d4203a8277> .
+
+<urn:uuid:fe37fe54-faf3-4235-9331-61d4203a8277> bcube:dateCreated "2015-11-03T05:35:03.51Z" ;
+    bcube:hasMetadataRecord <urn:uuid:9d58ef3f-22f7-4dbb-bb0b-8246495e9812> ;
+    bcube:lastUpdated "2015-11-03T05:35:03.51Z" ;
+    dc:conformsTo <urn:uuid:4c93185f-a2d2-4b37-b1b4-ef0dfcab09d1>,
+        <urn:uuid:74ff8ab6-0f00-44dd-bb45-24cbd22606bb>,
+        <urn:uuid:786c0f93-7cc0-4a1f-bdfc-f49ca69d3070> ;
+    dc:description "The TIGER/Line Shapefiles are an extract of selected geographic and cartographic information from the Census MAF/TIGER database. The Census MAF/TIGER database represents a seamless national file with no overlaps or gaps between parts. However, each TIGER/Line Shapefile is designed to stand alone as an independent data set or the shapefiles can be combined to cover the whole nation." ;
+    dc:spatial "POLYGON ((-104.057739 42.479686,-104.057739 45.945716,-96.436472 45.945716,-96.436472 42.479686,-104.057739 42.479686))" ;
+    dcterms:publisher <urn:uuid:24285cfa-8d67-4a97-bccc-016c28ac068e> ;
+    dcterms:references <urn:uuid:8f528773-b9dd-436b-9f7c-82923f13fa52> ;
+    dcterms:title "TIGER/Line Shapefile, 2009, econ state, South Dakota, Economic Census Place Shapefile" ;
+    esip:eastBound "-96.436472"^^xsd:float ;
+    esip:endDate "2009-05-01"^^xsd:date ;
+    esip:northBound "45.945716"^^xsd:float ;
+    esip:southBound "42.479686"^^xsd:float ;
+    esip:startDate "2009-01-01"^^xsd:date ;
+    esip:westBound "-104.057739"^^xsd:float ;
+    owl:a dcat:Dataset .
+

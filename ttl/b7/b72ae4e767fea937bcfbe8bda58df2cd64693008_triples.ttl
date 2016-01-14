@@ -1,0 +1,89 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:11138900-9c41-47b2-8309-ed46fb973cb6> owl:a foaf:Organization ;
+    foaf:name "" .
+
+<urn:uuid:12e6ef3f-edd6-4eea-99b2-08f3d15effa9> bcube:hasType "theme" ;
+    bcube:hasValue "boundaries" ;
+    dc:partOf "ISO 19115 Topic Categories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:19c1fd6a-c3f9-46b7-8b63-2e5d04d731b9> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-11-02T15:53:04.35Z" ;
+    bcube:lastUpdated "2015-11-02T15:53:04.35Z" ;
+    bcube:originatedFrom <urn:uuid:ad729f75-e975-4f2f-bc38-44ee7e9d1441> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:34a5d847-21dc-4055-9216-df088d20b38f> .
+
+<urn:uuid:281f9886-615a-48d5-bc36-37d0ad711221> bcube:hasType "theme" ;
+    bcube:hasValue "Census Tract",
+        "County or equivalent entity",
+        "Polygon",
+        "Tract" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:2dd0ca97-593a-482f-8475-377371200df2> bcube:hasType "place" ;
+    bcube:hasValue "01107",
+        "County or Equivalent Entity",
+        "Pickens",
+        "U.S.",
+        "United States" ;
+    dc:partOf "FIPS Publication 5-2, FIPS Publication 6-4, FIPS Publication 8-6, FIPS Publication 9-1,FIPS Publication55-4" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:34a5d847-21dc-4055-9216-df088d20b38f> bcube:dateCreated "2015-11-02T15:53:04.35Z" ;
+    bcube:hasMetadataRecord <urn:uuid:19c1fd6a-c3f9-46b7-8b63-2e5d04d731b9> ;
+    bcube:lastUpdated "2015-11-02T15:53:04.35Z" ;
+    dc:conformsTo <urn:uuid:12e6ef3f-edd6-4eea-99b2-08f3d15effa9>,
+        <urn:uuid:281f9886-615a-48d5-bc36-37d0ad711221>,
+        <urn:uuid:2dd0ca97-593a-482f-8475-377371200df2> ;
+    dc:description "The TIGER/Line Shapefiles are an extract of selected geographic and cartographic information from the Census MAF/TIGER database. The Census MAF/TIGER database represents a seamless national file with no overlaps or gaps between parts. However, each TIGER/Line Shapefile is designed to stand alone as an independent data set or the shapefiles can be combined to cover the whole nation." ;
+    dc:spatial "POLYGON ((-88.340432 32.991199,-88.340432 33.534008,-87.836596 33.534008,-87.836596 32.991199,-88.340432 32.991199))" ;
+    dcterms:publisher <urn:uuid:11138900-9c41-47b2-8309-ed46fb973cb6> ;
+    dcterms:references <urn:uuid:862f4759-8f79-41e0-84e1-7788532508f7> ;
+    dcterms:title "TIGER/Line Shapefile, 2008, 2000 county, Pickens County, AL, Census Tract" ;
+    esip:eastBound "-87.836596"^^xsd:float ;
+    esip:endDate "2008-07-01"^^xsd:date ;
+    esip:northBound "33.534008"^^xsd:float ;
+    esip:southBound "32.991199"^^xsd:float ;
+    esip:startDate "2008-01-01"^^xsd:date ;
+    esip:westBound "-88.340432"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:862f4759-8f79-41e0-84e1-7788532508f7> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-02T15:53:04.35Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-02T15:53:04.35Z" ;
+    dc:identifier "urn:sha:d88c0eba262f7e7f9620e959f6c5120a50bc542848af3dcd4723a946" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www2.census.gov/geo/tiger/TIGER2008/01_ALABAMA/01107_Pickens_County/tl_2008_01107_tract00.zip" .
+
+<urn:uuid:ad729f75-e975-4f2f-bc38-44ee7e9d1441> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-02T15:53:04.35Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-02T15:53:04.35Z" ;
+    dc:identifier "urn:sha:0185577a0951152a285f3e1b6bf3359750a21ca703348ce6c5b91762" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://meta.geo.census.gov/data/existing/decennial/GEO/GPMB/TIGERline/fe_2008/tract00/tl_2008_01107_tract00_url.shp.xml" .
+

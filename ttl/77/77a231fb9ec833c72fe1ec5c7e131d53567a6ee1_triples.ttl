@@ -1,0 +1,82 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:139afb93-6072-408e-9a07-083faa6ef80f> bcube:dateCreated "2015-11-17T08:52:19.91Z" ;
+    bcube:hasMetadataRecord <urn:uuid:20cf0f8c-c88f-4366-ba46-ee198fd13aa9> ;
+    bcube:lastUpdated "2015-11-17T08:52:19.91Z" ;
+    dc:conformsTo <urn:uuid:30e39eb9-1549-4f7e-8a63-efd8b201c465>,
+        <urn:uuid:45194409-0c4b-41a6-ba91-d2139672170c>,
+        <urn:uuid:a1579151-abdd-4325-a9dd-607870ed7556> ;
+    dc:description "This shapefile is a simple point datafile of Idaho campgrounds. The intial dataset was obtained from the Idaho Department of Lands. Additional points were added from the Idaho Outdoor Recreation Facility Inventory and the 2008 RV Idaho Guide." ;
+    dc:spatial "POLYGON ((-117.502588 42.005581,-117.502588 49.005759,-110.718578 49.005759,-110.718578 42.005581,-117.502588 42.005581))" ;
+    dcterms:publisher <urn:uuid:4d6f5093-27ee-4457-9abb-fb779f89198d> ;
+    dcterms:references <urn:uuid:9c948e5f-843b-4919-a76a-0318c4515939> ;
+    dcterms:title "Campgrounds of Idaho" ;
+    esip:eastBound "-110.718578"^^xsd:float ;
+    esip:northBound "49.005759"^^xsd:float ;
+    esip:southBound "42.005581"^^xsd:float ;
+    esip:startDate "2008-01-01"^^xsd:date ;
+    esip:westBound "-117.502588"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:20cf0f8c-c88f-4366-ba46-ee198fd13aa9> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-11-17T08:52:19.91Z" ;
+    bcube:lastUpdated "2015-11-17T08:52:19.91Z" ;
+    bcube:originatedFrom <urn:uuid:86d23ff4-374b-449b-8e5c-0ffd41d87e04> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:139afb93-6072-408e-9a07-083faa6ef80f> .
+
+<urn:uuid:30e39eb9-1549-4f7e-8a63-efd8b201c465> bcube:hasType "place" ;
+    bcube:hasValue "Idaho" ;
+    dc:partOf "State" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:45194409-0c4b-41a6-ba91-d2139672170c> bcube:hasType "theme" ;
+    bcube:hasValue "Camp",
+        "Campgrounds" ;
+    dc:partOf "Camping" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:4d6f5093-27ee-4457-9abb-fb779f89198d> owl:a foaf:Organization ;
+    foaf:name "Idaho Department of Parks and Recreation" .
+
+<urn:uuid:86d23ff4-374b-449b-8e5c-0ffd41d87e04> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-17T08:52:19.91Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-17T08:52:19.91Z" ;
+    dc:identifier "urn:sha:c8cbfcd8e9540d2c733856563aa08fa115cd77c7f193858570f1c10e" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://insideidaho.org/appsOutput/metadataWAF/xml/CampgroundsofIdaho.xml" .
+
+<urn:uuid:9c948e5f-843b-4919-a76a-0318c4515939> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-17T08:52:19.91Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-17T08:52:19.91Z" ;
+    dc:identifier "urn:sha:41ad07017c123571e54fe6fe05eeb58354ab83931ffc1fb986092fd3" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://cloud.insideidaho.org/webApps/util/zip.ashx?fn=http://cloud.insideidaho.org/data/idpr/campgrounds_id_idpr.shp" .
+
+<urn:uuid:a1579151-abdd-4325-a9dd-607870ed7556> bcube:hasType "theme" ;
+    bcube:hasValue "location" ;
+    dc:partOf "ISO 19115 Topic Category" ;
+    owl:a bcube:thesaurusSubset .
+

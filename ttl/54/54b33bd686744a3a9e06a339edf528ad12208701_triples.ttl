@@ -1,0 +1,71 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:5d94890d-cae2-4ce7-802b-b9e9ed9db3bf> owl:a foaf:Organization ;
+    foaf:name "" .
+
+<urn:uuid:828d3276-5b30-424a-9fa9-41dd05b423c6> bcube:hasType "theme" ;
+    bcube:hasValue "safety",
+        "service" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:89580684-53c4-447c-bc88-d0ee5406ad96> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-10-18T06:40:43.344Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-10-18T06:40:43.344Z" ;
+    dc:identifier "urn:sha:5e9864d0103d48e8287fa06b4c9efa6ee43efca565ba2f9e81f2f4a0" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://data.denvergov.org/download/gis/sheriffs_office_locations/metadata/sheriffs_office_locations.xml" .
+
+<urn:uuid:a270efb5-c3d2-41a4-9a52-7e291c3ec61f> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-10-18T06:40:43.344Z" ;
+    bcube:lastUpdated "2015-10-18T06:40:43.344Z" ;
+    bcube:originatedFrom <urn:uuid:89580684-53c4-447c-bc88-d0ee5406ad96> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:cf4fec4f-aa27-44bb-8f05-adb4ca24bc7c> .
+
+<urn:uuid:cf4fec4f-aa27-44bb-8f05-adb4ca24bc7c> bcube:dateCreated "2015-10-18T06:40:43.344Z" ;
+    bcube:hasMetadataRecord <urn:uuid:a270efb5-c3d2-41a4-9a52-7e291c3ec61f> ;
+    bcube:lastUpdated "2015-10-18T06:40:43.344Z" ;
+    dc:conformsTo <urn:uuid:828d3276-5b30-424a-9fa9-41dd05b423c6>,
+        <urn:uuid:d207de14-cd18-4616-8a38-2d72274d2eee>,
+        <urn:uuid:fd459e5c-9f42-4b50-8a78-182e8a654e02> ;
+    dc:description "Location of Denver Sheriff's offices. Tabular data includes the location name as defined by the Sheriff's Office, street address, additional information to assist the public in locating the sheriff's office, office phone numbers, primary and secondary email address, hours of operation, additional office description information, services available at specified location, and an image name associated with the sheriff's office." ;
+    dc:spatial "POLYGON ((-104.994855 39.727014,-104.994855 39.79585,-104.860696 39.79585,-104.860696 39.727014,-104.994855 39.727014))" ;
+    dcterms:publisher <urn:uuid:5d94890d-cae2-4ce7-802b-b9e9ed9db3bf> ;
+    dcterms:title "Sheriff Office Locations" ;
+    esip:eastBound "-104.860696"^^xsd:float ;
+    esip:northBound "39.79585"^^xsd:float ;
+    esip:southBound "39.727014"^^xsd:float ;
+    esip:westBound "-104.994855"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:d207de14-cd18-4616-8a38-2d72274d2eee> bcube:hasType "theme" ;
+    bcube:hasValue "society" ;
+    dc:partOf "ISO 19115 Topic Categories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:fd459e5c-9f42-4b50-8a78-182e8a654e02> bcube:hasType "place" ;
+    bcube:hasValue "Colorado",
+        "Denver",
+        "Denver County",
+        "USA" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+

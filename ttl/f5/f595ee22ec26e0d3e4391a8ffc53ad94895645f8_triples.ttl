@@ -1,0 +1,61 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:1d3d4d02-de66-46a0-8c0b-93c4b1dcd5cf> bcube:hasType "theme" ;
+    bcube:hasValue "PI",
+        "Public Information",
+        "TIMS PI Dump" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:6982c59c-bb56-4ff5-969e-c05489f3c9e5> bcube:hasType "theme" ;
+    bcube:hasValue "Geology Theme",
+        "NGDA",
+        "National Geospatial Data Asset" ;
+    dc:partOf "NGDA Portfolio Themes" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:78e82298-dbfa-4936-b4fb-2577bcbab28e> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-03-06T00:50:18.926Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-03-06T00:50:18.926Z" ;
+    dc:identifier "urn:sha:ac04988e28339423e60ad439c0add73a59c80aab975c8a6e69735e81" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://catalog.data.gov/harvest/object/87847951-bd7e-445e-aa32-12c3c1c900af" .
+
+<urn:uuid:7ba02a0c-68dc-4e78-9087-28ceb0d54977> a "ISO 19115:2003/19139" ;
+    bcube:dateCreated "2015-03-06T00:50:18.926Z" ;
+    bcube:lastUpdated "2015-03-06T00:50:18.926Z" ;
+    bcube:originatedFrom <urn:uuid:78e82298-dbfa-4936-b4fb-2577bcbab28e> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:c65feadd-74a8-4eba-bd55-95142122d93a> .
+
+<urn:uuid:c65feadd-74a8-4eba-bd55-95142122d93a> bcube:dateCreated "2015-03-06T00:50:18.926Z" ;
+    bcube:hasMetadataRecord <urn:uuid:7ba02a0c-68dc-4e78-9087-28ceb0d54977> ;
+    bcube:lastUpdated "2015-03-06T00:50:18.926Z" ;
+    dc:conformsTo <urn:uuid:1d3d4d02-de66-46a0-8c0b-93c4b1dcd5cf>,
+        <urn:uuid:6982c59c-bb56-4ff5-969e-c05489f3c9e5> ;
+    dc:description "This data set contains surface locations for oil and gas wells located in the Gulf of Mexico federal waters. Note: Wells are being added or modified continuously; obtaining updates of this database are required to know the true distribution of well data.Because GIS projection and topology functions can change or generalize coordinates, these GIS files are considered to be approximate and are NOT an OFFICIAL record.Contains the well surface locations as of March 2015." ;
+    dc:spatial "POLYGON ((-97.202903 25.946713,-97.202903 30.19592,-83.398249 30.19592,-83.398249 25.946713,-97.202903 25.946713))" ;
+    dcterms:title "Outer Continental Shelf Oil and Natural Gas Wells - Gulf of Mexico Region NAD 27" ;
+    esip:eastBound "-83.398249"^^xsd:float ;
+    esip:northBound "30.19592"^^xsd:float ;
+    esip:southBound "25.946713"^^xsd:float ;
+    esip:westBound "-97.202903"^^xsd:float ;
+    owl:a dcat:Dataset .
+

@@ -1,0 +1,61 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:335a51e2-b435-4dd9-9f48-bad2f802dba5> bcube:hasType "place" ;
+    bcube:hasValue "LIDAR",
+        "fUS01 = Alabama",
+        "geography",
+        "interagency programs",
+        "strategic plans",
+        "topography" ;
+    dc:partOf "Augmented FIPS 10-4 and FIPS 6-4" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:529236c0-5b5d-44e9-af4b-53c48dd8c2c0> a "ISO 19115:2003/19139" ;
+    bcube:dateCreated "2014-10-30T01:11:32.027Z" ;
+    bcube:lastUpdated "2014-10-30T01:11:32.027Z" ;
+    bcube:originatedFrom <urn:uuid:f85bb0c1-85c0-4531-8de8-78f7eeeaee4c> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:78ca522f-01e0-4c5a-a052-b88aa8cdae55> .
+
+<urn:uuid:78ca522f-01e0-4c5a-a052-b88aa8cdae55> bcube:dateCreated "2014-10-30T01:11:32.027Z" ;
+    bcube:hasMetadataRecord <urn:uuid:529236c0-5b5d-44e9-af4b-53c48dd8c2c0> ;
+    bcube:lastUpdated "2014-10-30T01:11:32.027Z" ;
+    dc:conformsTo <urn:uuid:335a51e2-b435-4dd9-9f48-bad2f802dba5>,
+        <urn:uuid:a36a9eac-04f8-4c51-8972-349de6c209a9> ;
+    dc:description "Summarizes the expected value over the next decade of the 3D Elevation Program for this state" ;
+    dc:spatial "POLYGON ((-88.47 30.14,-88.47 35.01,-84.89 35.01,-84.89 30.14,-88.47 30.14))" ;
+    dcterms:title "The 3D Elevation Program: summary for Alabama" ;
+    esip:eastBound "-84.89"^^xsd:float ;
+    esip:northBound "35.01"^^xsd:float ;
+    esip:southBound "30.14"^^xsd:float ;
+    esip:westBound "-88.47"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:a36a9eac-04f8-4c51-8972-349de6c209a9> bcube:hasValue "geoscientificInformation" ;
+    dc:partOf "IsoTopicCategories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:f85bb0c1-85c0-4531-8de8-78f7eeeaee4c> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2014-10-30T01:11:32.027Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2014-10-30T01:11:32.027Z" ;
+    dc:identifier "urn:sha:5c7d68c66778a1458a5d36c46de9e3ec79bccd4671ef7256994cebc3" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www.usgs.gov/science/iso.php?cite=3652" .
+

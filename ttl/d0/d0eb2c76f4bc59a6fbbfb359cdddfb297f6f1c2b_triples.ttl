@@ -1,0 +1,129 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:3240dc02-3d8f-4343-8013-72920a9097a2> bcube:hasType "theme" ;
+    bcube:hasValue "Bathymetry/Topography",
+        "DEM",
+        "Digital Elevation Model",
+        "elevation",
+        "flooding",
+        "inundation",
+        "lidar",
+        "sea level rise",
+        "topography" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:3503474c-e901-4730-9470-e28365d296f7> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-08-05T07:38:40.208Z" ;
+    bcube:lastUpdated "2015-08-05T07:38:40.208Z" ;
+    bcube:originatedFrom <urn:uuid:5eca0324-6708-4f70-a8ca-6e23c2a669a9> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:3bc5f206-f66d-4b06-8405-bbd0a6e83721> .
+
+<urn:uuid:3bc5f206-f66d-4b06-8405-bbd0a6e83721> bcube:dateCreated "2015-08-05T07:38:40.208Z" ;
+    bcube:hasMetadataRecord <urn:uuid:3503474c-e901-4730-9470-e28365d296f7> ;
+    bcube:lastUpdated "2015-08-05T07:38:40.208Z" ;
+    dc:conformsTo <urn:uuid:3240dc02-3d8f-4343-8013-72920a9097a2>,
+        <urn:uuid:6f0ea79b-ecc9-4a26-9e98-e7fec17e993b>,
+        <urn:uuid:941cb186-a1b4-45c6-9d8b-22d1f0d6ebad> ;
+    dc:description "These data were created as part of the National Oceanic and Atmospheric Administration Office for Coastal Management's efforts to create an online mapping viewer called the Sea Level Rise and Coastal Flooding Impacts Viewer. It depicts potential sea level rise and its associated impacts on the nation's coastal areas. The purpose of the mapping viewer is to provide coastal managers and scientists with a preliminary look at sea level rise (slr) and coastal flooding impacts. The viewer is a screening-level tool that uses nationally consistent data sets and analyses. Data and maps provided can be used at several scales to help gauge trends and prioritize actions for different scenarios. The Sea Level Rise and Coastal Flooding Impacts Viewer may be accessed at: http://www.coast.noaa.gov/slr This metadata record describes the Caribou Weather Forecast Office (CAR WFO) digital elevation model (DEM), which is a part of a series of DEMs produced for the National Oceanic and Atmospheric Administration Office for Coastal Management's Sea Level Rise and Coastal Flooding Impacts Viewer described above. The DEMs created for this project were developed using the NOAA National Weather Service's Weather Forecast Office (WFO) boundaries. This DEM includes the best available lidar known to exist at the time of DEM creation that met project specifications for the Caribou WFO, which includes the coastal areas of the counties of Washington, Hancock, and Penobscot in Maine. The DEM was produced from LiDAR datasets acquired by the U.S. Geological Survey (USGS) under the LiDAR for the Northeast Project. Hydrographic breaklines were delineated from LiDAR intensity imagery generated from the LiDAR dataset. The final DEM is hydro flattened such that water elevations are less than or equal to -0.5 meters. The DEM is referenced vertically to the North American Vertical Datum of 1988 (NAVD88) with vertical units of meters and horizontally to the North American Datum of 1983 (NAD83). The resolution of the DEM is approximately 10 meters." ;
+    dc:spatial "POLYGON ((-69.35708 44.027496,-69.35708 46.396623,-66.883748 46.396623,-66.883748 44.027496,-69.35708 44.027496))" ;
+    dcterms:publisher <urn:uuid:4f818b97-00e5-4ce2-a319-e7ad2f9bd595> ;
+    dcterms:references <urn:uuid:add83785-8805-4f80-8294-09b2ec50d32d>,
+        <urn:uuid:d885c644-0b13-4af7-b1d8-3493dec3bceb>,
+        <urn:uuid:ee6d4f44-d22c-4d90-b277-6dad075029ac> ;
+    dcterms:title "NOAA Office for Coastal Management Coastal Inundation Digital Elevation Model: Caribou Weather Forecast Office (CAR WFO) - Maine" ;
+    esip:eastBound "-66.883748"^^xsd:float ;
+    esip:endDate "2013-03-01"^^xsd:date ;
+    esip:northBound "46.396623"^^xsd:float ;
+    esip:southBound "44.027496"^^xsd:float ;
+    esip:startDate "2012-01-01"^^xsd:date ;
+    esip:westBound "-69.35708"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:4f818b97-00e5-4ce2-a319-e7ad2f9bd595> owl:a foaf:Organization ;
+    foaf:name "NOAA's Ocean Service, Office for Coastal Management (OCM)" .
+
+<urn:uuid:5eca0324-6708-4f70-a8ca-6e23c2a669a9> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-05T07:38:40.208Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-05T07:38:40.208Z" ;
+    dc:identifier "urn:sha:65069df5b97a625fbc655b90d321fd88ee702b749ca2cf88e83128e2" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://coast.noaa.gov/data/Documents/Metadata/harvest/Inundation/ME_CAR_metadata.xml" .
+
+<urn:uuid:6f0ea79b-ecc9-4a26-9e98-e7fec17e993b> bcube:hasType "theme" ;
+    bcube:hasValue "elevation" ;
+    dc:partOf "ISO 19115 Topic Category" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:941cb186-a1b4-45c6-9d8b-22d1f0d6ebad> bcube:hasType "place" ;
+    bcube:hasValue "Hancock County",
+        "Maine",
+        "Penobscot County",
+        "US",
+        "Washington County" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:9538590e-fbd4-4a9f-ac46-0385a604d307> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-05T07:38:40.208Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-05T07:38:40.208Z" ;
+    dc:identifier "urn:sha:6d17e38c3329efb562984a0e88eabe471de47ed43937c134947364ed" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://coast.noaa.gov/digitalcoast/tools/slr" .
+
+<urn:uuid:a8527353-9bea-45e3-bf7e-251d076ab1a0> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-05T07:38:40.208Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-05T07:38:40.208Z" ;
+    dc:identifier "urn:sha:a9e0cd6c5f81c4a477032dac0a236b52234e449cf874f49ba1750886" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://coast.noaa.gov/" .
+
+<urn:uuid:add83785-8805-4f80-8294-09b2ec50d32d> dcterms:references <urn:uuid:e863eb6a-8e2b-4f70-8fe5-e73cc8e2c489> ;
+    owl:a bibo:WebPage .
+
+<urn:uuid:d885c644-0b13-4af7-b1d8-3493dec3bceb> dcterms:references <urn:uuid:9538590e-fbd4-4a9f-ac46-0385a604d307> ;
+    owl:a bibo:WebPage .
+
+<urn:uuid:e863eb6a-8e2b-4f70-8fe5-e73cc8e2c489> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-08-05T07:38:40.208Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-08-05T07:38:40.208Z" ;
+    dc:identifier "urn:sha:241f1dd755c42fed742ab0e7f085204514f2cd992055aa5acc755ffe" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://coast.noaa.gov/slr" .
+
+<urn:uuid:ee6d4f44-d22c-4d90-b277-6dad075029ac> dcterms:references <urn:uuid:a8527353-9bea-45e3-bf7e-251d076ab1a0> ;
+    owl:a bibo:WebPage .
+

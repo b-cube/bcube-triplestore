@@ -1,0 +1,67 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:2f5eeac6-711f-454e-881b-6e70d9563898> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-11-01T10:22:02.592Z" ;
+    bcube:lastUpdated "2015-11-01T10:22:02.592Z" ;
+    bcube:originatedFrom <urn:uuid:f2447378-bc9d-466f-aaa6-c55d613da45b> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:fb84e25c-a816-4cf8-8640-1a1ef663db80> .
+
+<urn:uuid:4212bcc4-028c-4dfa-90ee-c1fab1c612c2> bcube:hasType "theme" ;
+    bcube:hasValue "ALP Land Dataset",
+        "Land Status",
+        "NFS Lands",
+        "Owner Parcel",
+        "PILT",
+        "USDA Forest Service" ;
+    dc:partOf "Surface Ownership" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:900dff42-0577-4677-9bbd-e5fb5503a219> owl:a foaf:Organization ;
+    foaf:name "" .
+
+<urn:uuid:eb174cba-1ba7-4bf1-b217-69f22c932fb4> bcube:hasType "theme" ;
+    bcube:hasValue "boundaries",
+        "planningCadastre" ;
+    dc:partOf "ISO 19115 Topic Categories" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:f2447378-bc9d-466f-aaa6-c55d613da45b> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-11-01T10:22:02.592Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-11-01T10:22:02.592Z" ;
+    dc:identifier "urn:sha:ed997e27dc15f2b1ba08a76e65f0b00d53edf36ef69eef005d386942" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://data.fs.usda.gov/geodata/edw/edw_resources/meta/S_USA.SurfaceOwnership.xml" .
+
+<urn:uuid:fb84e25c-a816-4cf8-8640-1a1ef663db80> bcube:dateCreated "2015-11-01T10:22:02.592Z" ;
+    bcube:hasMetadataRecord <urn:uuid:2f5eeac6-711f-454e-881b-6e70d9563898> ;
+    bcube:lastUpdated "2015-11-01T10:22:02.592Z" ;
+    dc:conformsTo <urn:uuid:4212bcc4-028c-4dfa-90ee-c1fab1c612c2>,
+        <urn:uuid:eb174cba-1ba7-4bf1-b217-69f22c932fb4> ;
+    dc:description "An area depicting ownership parcels of the surface estate. Each surface ownership parcel is tied to a particular legal transaction. The same individual or organization may currently own many parcels that may or may not have been acquired through the same legal transaction. Therefore, they are captured as separate entities rather than merged together. This is in contrast to Basic Ownership, in which the surface ownership parcels having the same owner are merged together. Basic Ownership provides the general user with the Forest Service versus non-Forest Service view of land ownership within National Forest boundaries. Surface Ownership provides the land status user with a current snapshot of ownership within National Forest boundaries." ;
+    dc:spatial "POLYGON ((-150.007671 17.738983,-150.007671 61.51899,-64.734329 61.51899,-64.734329 17.738983,-150.007671 17.738983))" ;
+    dcterms:publisher <urn:uuid:900dff42-0577-4677-9bbd-e5fb5503a219> ;
+    dcterms:title "S_USA.SurfaceOwnership" ;
+    esip:eastBound "-64.734329"^^xsd:float ;
+    esip:northBound "61.51899"^^xsd:float ;
+    esip:southBound "17.738983"^^xsd:float ;
+    esip:westBound "-150.007671"^^xsd:float ;
+    owl:a dcat:Dataset .
+

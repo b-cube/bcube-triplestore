@@ -1,0 +1,104 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:06caecd7-78db-4628-81b1-7fae92d35b72> owl:a foaf:Organization ;
+    foaf:name "State of Connecticut, Department of Environmental Protection" .
+
+<urn:uuid:15fdf73a-0338-4f39-8a69-9cf2f71d58b7> bcube:hasType "place" ;
+    bcube:hasValue "USA",
+        "United States of America" ;
+    dc:partOf "U.S. Department of Commerce, 1995, Countries, Dependencies, Areas of Special Sovereignty, and Their Principal Administrative Divisions (Federal Information Processing Standard (FIPS) 10-4): Washington, D.C., National Institute of Standards and Technology." ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:21d99d04-a1f0-4a8c-8867-705bbdee4c55> bcube:hasType "theme" ;
+    bcube:hasValue "environment",
+        "location",
+        "society",
+        "structure" ;
+    dc:partOf "ISO 19115 Topic Category" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:2fe7c596-5927-4fc9-8e6f-3a969202b0d9> bcube:dateCreated "2015-10-29T16:14:07.474Z" ;
+    bcube:hasMetadataRecord <urn:uuid:33d2e370-9235-4b68-806c-5556039f0b55> ;
+    bcube:lastUpdated "2015-10-29T16:14:07.474Z" ;
+    dc:conformsTo <urn:uuid:15fdf73a-0338-4f39-8a69-9cf2f71d58b7>,
+        <urn:uuid:21d99d04-a1f0-4a8c-8867-705bbdee4c55>,
+        <urn:uuid:62b323de-d58b-44aa-bbd8-77ecd8b78413>,
+        <urn:uuid:d09a8d6e-ae83-421c-a1d4-841d92b2ca3c> ;
+    dc:description "Connecticut Geographic Place is a point feature-based layer that includes cultural features such as airports, bridges, government buildings, hospitals, railroad stations and schools. The layer is based on information from lists from various sources available during 2008. The layer represents conditions at a particular point in time. The layer includes public and private airports, major bridges, the State Capitol, acute care hospitals and medical centers, railroad stations serving three major railroad companies and most public and some private educational institutions in the categories of elementary schools, middle schools, high schools, colleges and universities. It does not include other types of schools such as kindergartens or business schools, a complete set of bridges or government buildings other than the State Capitol. Features are point locations that represent the approximate center location of the feature as seen on the Connecticut 2004 Orthophotographs. The layer was created for the purpose of labeling geographic places on maps and is not intended to be a complete list of any of the categories included in the layer. Attribute information is comprised of NAME to uniquely identify individual features, TOWN to provide general location and CLASS and CATEGORY to encode type information and cartographically represent (symbolize) point features on a map. This data is not updated." ;
+    dc:spatial "POLYGON ((-73.676443 41.00166,-73.676443 42.045491,-71.817113 42.045491,-71.817113 41.00166,-73.676443 41.00166))" ;
+    dcterms:publisher <urn:uuid:06caecd7-78db-4628-81b1-7fae92d35b72> ;
+    dcterms:references <urn:uuid:942efcc8-a961-4ab2-a09e-35398c5f3218> ;
+    dcterms:title "Connecticut Geographic Places" ;
+    esip:eastBound "-71.817113"^^xsd:float ;
+    esip:northBound "42.045491"^^xsd:float ;
+    esip:southBound "41.00166"^^xsd:float ;
+    esip:startDate "2009-04-01"^^xsd:date ;
+    esip:westBound "-73.676443"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:33d2e370-9235-4b68-806c-5556039f0b55> a "FGDC:CSDGM" ;
+    bcube:dateCreated "2015-10-29T16:14:07.474Z" ;
+    bcube:lastUpdated "2015-10-29T16:14:07.474Z" ;
+    bcube:originatedFrom <urn:uuid:87635d85-9e7d-47c5-a987-6dd37f7d4081> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:2fe7c596-5927-4fc9-8e6f-3a969202b0d9> .
+
+<urn:uuid:62b323de-d58b-44aa-bbd8-77ecd8b78413> bcube:hasType "theme" ;
+    bcube:hasValue "airport",
+        "bridge",
+        "college",
+        "elementary school",
+        "high school",
+        "higher education",
+        "hospital",
+        "medical center",
+        "middle school",
+        "railroad station",
+        "school",
+        "train station",
+        "university" ;
+    dc:partOf "none" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:87635d85-9e7d-47c5-a987-6dd37f7d4081> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-10-29T16:14:07.474Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-10-29T16:14:07.474Z" ;
+    dc:identifier "urn:sha:f94ae01c6ac598358adf115f8d699215fcfb0b1d10622dd5843da370" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www.cteco.uconn.edu/metadata/dep/document/geographic_place.xml" .
+
+<urn:uuid:942efcc8-a961-4ab2-a09e-35398c5f3218> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-10-29T16:14:07.474Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-10-29T16:14:07.474Z" ;
+    dc:identifier "urn:sha:5da6bf4c42df751d83182a3c9d4acd0a16808c2f111b75ef20d2b231" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://www.ct.gov/deep" .
+
+<urn:uuid:d09a8d6e-ae83-421c-a1d4-841d92b2ca3c> bcube:hasType "place" ;
+    bcube:hasValue "CT",
+        "Connecticut" ;
+    dc:partOf "U.S. Department of Commerce, 1987, Codes for the Identification of the States, the District of Columbia and the Outlying Areas of The United States, and Associated Areas (Federal Information Processing Standard 5-2): Washington, DC, National Institute of Standards and Technology." ;
+    owl:a bcube:thesaurusSubset .
+

@@ -1,0 +1,91 @@
+@prefix bcube: <http://purl.org/BCube/#> .
+@prefix bibo: <http://purl.org/ontology/bibo/#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/TR/vocab-dcat/#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix esip: <http://purl.org/esip/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/TR/vcard-rdf/#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:1ec1828b-fba2-4408-aa4c-b26c4d891afb> a "ISO 19115:2003/19139" ;
+    bcube:dateCreated "2015-10-30T03:16:56.013Z" ;
+    bcube:lastUpdated "2015-10-30T03:16:56.013Z" ;
+    bcube:originatedFrom <urn:uuid:aa0a7bf0-dff5-4312-911c-f9723a095a3e> ;
+    owl:a dcat:CatalogRecord ;
+    foaf:primaryTopic <urn:uuid:c9344957-57ed-4f72-994c-968ca96b38e6> .
+
+<urn:uuid:7487d88b-8b07-481a-92b3-77ca85eb2bd0> bcube:hasType "theme" ;
+    bcube:hasValue "canopy evaporation",
+        "evapotranspiration",
+        "fog interception",
+        "groundwater recharge",
+        "inlandWaters",
+        "irrigation",
+        "rainfall",
+        "runoff",
+        "soil-water balance",
+        "storm-drain capture",
+        "water-budget model" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:9c85d5df-6ac2-402c-ace1-442350123353> bcube:hasType "place" ;
+    bcube:hasValue "Hawaii",
+        "Oahu",
+        "Pacific islands" ;
+    dc:partOf "None" ;
+    owl:a bcube:thesaurusSubset .
+
+<urn:uuid:aa0a7bf0-dff5-4312-911c-f9723a095a3e> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-10-30T03:16:56.013Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-10-30T03:16:56.013Z" ;
+    dc:identifier "urn:sha:eecf1584e5c6c016daf9a027cf51bc4fbf5ecd0d0dbe13923f0e484b" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://catalog.data.gov/harvest/object/f0f5a5a8-bafa-46d1-85e1-fade7e76c37d" .
+
+<urn:uuid:bdc8cfb5-1647-4d02-bd1a-d57a8eb2a7b2> bcube:HTTPStatusCodeValue 200 ;
+    bcube:HTTPStatusFamilyCode 200 ;
+    bcube:HTTPStatusFamilyType "Success message" ;
+    bcube:atTime "2015-10-30T03:16:56.013Z" ;
+    bcube:hasConfidence "Good" ;
+    bcube:hasUrlSource "Harvested" ;
+    bcube:reasonPhrase "OK" ;
+    bcube:validatedOn "2015-10-30T03:16:56.013Z" ;
+    dc:identifier "urn:sha:0fc016806d36d9a416edfd2725b60b339a1bb8252f00a6b91a64ec5a" ;
+    owl:a bcube:Url ;
+    vcard:hasUrl "http://water.usgs.gov/GIS/dsdl/SIR_2015-5010_Oahu_WB_components_avg_climate.zip" .
+
+<urn:uuid:c9344957-57ed-4f72-994c-968ca96b38e6> bcube:dateCreated "2015-10-30T03:16:56.013Z" ;
+    bcube:hasMetadataRecord <urn:uuid:1ec1828b-fba2-4408-aa4c-b26c4d891afb> ;
+    bcube:lastUpdated "2015-10-30T03:16:56.013Z" ;
+    dc:conformsTo <urn:uuid:7487d88b-8b07-481a-92b3-77ca85eb2bd0>,
+        <urn:uuid:9c85d5df-6ac2-402c-ace1-442350123353>,
+        <urn:uuid:fb19037f-62ab-440a-aced-8681d9e8d337> ;
+    dc:description "The shapefile associated with this metadata file represents the spatial distribution of mean annual water-budget components, in inches, for the Island of Oahu, Hawaii. The water-budget components in the shapefile were computed by a water-budget model for a scenario representative of average climate conditions (1978 2007 rainfall) and 2010 land cover, as described in USGS Scientific Investigations Report (SIR) 2015-5010. The model was developed for estimating groundwater recharge and other water-budget components for each subarea of the model. The model subareas were generated using Esri ArcGIS software by intersecting (merging) multiple spatial data sets that characterize the spatial distribution of rainfall, fog interception, irrigation, reference evapotranspiration, direct runoff, soil type, and land cover. These spatial data sets characterize the spatial distribution of hydrologic and physical conditions that the model uses to compute groundwater recharge and other water-budget components.The model-subarea data set (387,533 polygons) was subsequently intersected with the 0-ft elevation contour of the top of the basalt aquifer to produce the 395,955 polygons in this shapefile. This metadata file describes the process of merging these spatial data sets, The shapefile attribute information associated with each polygon present an estimate of mean annual rainfall, fog interception, irrigation, septic-system leachate, runoff, canopy evaporation, actual evapotranspiration, storm-drain capture, net precipitation, total evapotranspiration, recharge, and seepage from reservoirs and cesspools. This shapefile also includes select geographic and land-cover attributes of the polygons. Brief descriptions of the water-budget components and attributes are included in this metadata file. Refer to USGS SIR 2015-5010 for further details of the methods and sources used to determine these components and attributes." ;
+    dc:spatial "POLYGON ((-158.282291463 21.253656969,-158.282291463 21.714009852,-157.644933809 21.714009852,-157.644933809 21.253656969,-158.282291463 21.253656969))" ;
+    dcterms:references <urn:uuid:bdc8cfb5-1647-4d02-bd1a-d57a8eb2a7b2> ;
+    dcterms:title "Mean annual water-budget components for the Island of Oahu, Hawaii, for average climate conditions, 1978-2007 rainfall and 2010 land cover" ;
+    esip:eastBound "-157.644933809"^^xsd:float ;
+    esip:endDate "2010-12-31"^^xsd:date ;
+    esip:northBound "21.714009852"^^xsd:float ;
+    esip:southBound "21.253656969"^^xsd:float ;
+    esip:startDate "1978-01-01"^^xsd:date ;
+    esip:westBound "-158.282291463"^^xsd:float ;
+    owl:a dcat:Dataset .
+
+<urn:uuid:fb19037f-62ab-440a-aced-8681d9e8d337> bcube:hasValue "environment",
+        "geoscientificInformation",
+        "inlandWaters" ;
+    dc:partOf "IsoTopicCategories" ;
+    owl:a bcube:thesaurusSubset .
+
